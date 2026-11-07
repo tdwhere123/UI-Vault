@@ -30,7 +30,7 @@ G0 不需要额外最小索引即可 sources/validate；未抢做完整 catalog�
 
 ## 本地原始验证
 
-原始输出 raw.log（271行），绑定上述受测源码树；负控原始输出 negative-control.log。
+原始输出 raw.log（270行），绑定上述受测源码树；负控原始输出 negative-control.log。
 
 ```text
 pnpm install --ignore-scripts --frozen-lockfile  EXIT_CODE=0
