@@ -1,0 +1,36 @@
+> Public portability/disclosure revision. Original records and original checksum manifests are archived privately; this text is not the original sealed execution record and does not claim those checksums still match the public tree.
+
+> Public excerpt of historical evidence. Original raw records and original checksum manifests are archived privately. Listed old counts, SHA references and results are historical facts, NOT a verification of this cleaned tree.
+
+# UI-Vault active collection integration (not independent acceptance)
+
+## Version / concurrent integration
+- Lineage: c3f9fd5b8f2ba683d4dee004235265bd8e9c53c9 → domain 63d327058afa7515cf8848d6c32e3b0d914850fd → core 749aefa2b6be29ea77e96695a23a11b306e6a10d → restore 7d7711e0559acbfe982f37d29adbf1f2dba0eefd / evidence 6f39ff6734d446fb42547dd7b7ab697bbb7fc84c → reference append 74b4fa9f6d95805d3d9e34750b150ac392afa9c6 → Explorer bec8fa81d2c42bf5088a24c5f8c4c7817ee116b7 → domain evidence correction b99bce30c9f1dcabccae834defc9c11f273a02e1.
+- Current integration base/observed HEAD: b99bce30c9f1dcabccae834defc9c11f273a02e1. Platform changes remain uncommitted; final candidate SHA must be recorded after the parent commits and rechecks. No claim the shared worktree is clean. No staging, commits, pushes, remote calls, model requests, upstream scripts or legacy deletions by this executor.
+
+## Actual data and boundaries
+- Unique authority: inventory/collection.json → deterministic root catalog.json. Current actual data: 4 origins, **20 source + 6 reference**, 142 archived files. Exactly two origins supply source. No fallback to old 20-only catalog.
+- 20 source records and all original archive bytes match lineage base; see raw/dataset-preservation-latest.log. Source commits remain agent-elements b04b36cb6381a1dd1a0e86cc7c90564ddcd56d37 and bencho c65992417427bb09e661674ffa800bef29adef49.
+- Root catalog SHA256: e191f23db4903f9b8812ee786ee7c8e7e48a587c709459a01ea0a94359a98c18. Inventory SHA256: 848af6527458ba350099ca99c6aed972327d0beab38c269f6b5675dc855ef140.
+- Metadata validation is not license truth, filesystem verification, installed dependency availability or restored success. Availability is recorded source_snapshot/registration_only/reference. Untested recovery is not_checked. No source code is executed by CLI/Explorer.
+- Source/reference schema, commit-null reference origins, bilingual tags, optional explicit techStack and query filters share core authority. Existing source classification data is still coarse (agent-ui/interactive-ui), sparse bilingual tags and absent techStack; filters work but enrichment is **not complete**. Six references are metadata-only, not six additional source snapshots.
+
+## Reproducibility and active commands
+- Active configuration is standalone tsconfig.collection.json; core build extends it; restore config is standalone. Neither active build depends on dirty old root tsconfig.json, old complex tests, v3/facade or authorization implementations. Compiler graphs/effective configs are in raw/.
+- CLI emits under root dist/packages/cli/src and resolves package-local packages/restore/dist via an emitted-file-relative URL. It never resolves service code from caller cwd.
+- pnpm build / pnpm typecheck / pnpm schema: exit 0. Explorer is plain JS; its applicable build/type check is explicitly **syntax checking**, not a fabricated TypeScript result.
+- pnpm unit: core+CLI 27, restore 17, Explorer 14, evidence verifier 5; total 63, all pass. Existing core 18 tests + 4 classification tests = 22 core; CLI adds 5 for 27 in unit:core. Stopped root tests/ were not run or counted.
+- Real CLI index twice gives identical latest catalog; validate/inspect/verify and materialize/repeat execute on bencho:folding-bill, retaining three@0.169.0; see raw/latest-cli.log.
+- pnpm smoke:collection uses existing frontend HTTP/text-reader smoke across all 142 source files and denies actual six reference source reads; raw/latest-explorer-smoke.log. This is local HTTP/renderer testing, not a visual browser signoff.
+- pnpm test:offline replays the **safety-owned existing engineering test** against current inputs: 20 sources, 142 files, 3,624,327 bytes, controlled local CONNECT503 for source URLs, repeat unchanged, fetchAttempts=0. No assertion of a natural upstream outage or independent acceptance; raw/latest-offline-replay.log. Historical safety evidence remains bound to 7d7711e/core749a and INPUTS.sha256 in its own directory.
+- node evidence/collection-platform/reference-probe.mjs independently executes 24 schema negatives + 12 verify/materialize denials against the six actual references. This is not reused domain negative output; raw/actual-reference-probe.log.
+- node evidence/collection-platform/reproduce.mjs copies only scoped active source/config/data, no root tsconfig.json or old complex modules/tests or prior dist, reuses the installed lockfile dependencies through a node_modules link, and rebuilds/typechecks/tests/indexes/HTTP-smokes from that isolated tree. PASS: raw/latest-isolated-reproduction-complete.log. It is not an offline package installation or dependency closure claim.
+
+## Evidence / exclusions / pending review
+- New scope is final/scope.json, byte inputs final/tested-tree.json, exact bidirectional membership and SHA256 final/SUMS.sha256; verifier rejects omitted/orphan/duplicate entries, same-size edits and symlinks (5 real temporary filesystem tests).
+- Scope includes exact active core/CLI/root configs/catalog, core tests, restore and Explorer including evidence, all actual archive bytes, inventory registry/acquisition/reference provenance, and this platform evidence. It intentionally excludes stopped complex dirty modules/fixtures/root tests/root tsconfig, generated dist, node_modules, .git, legacy evidence and unrelated root files. It is not a whole-worktree manifest.
+- Manifest excludes itself and the explicitly unsealed final/commit-binding.json and final/verification.log tail records to avoid circular SHA/log writes. They cannot replace fresh verification.
+- Historical G0 evidence command is explicitly pnpm evidence:historical <full-SHA> <manifest>; pnpm evidence:verify now checks only this new scope. Old evidence is retained, not overwritten.
+- Source/function sizes audited in raw/structure-and-boundaries.log: active handwritten files max185 lines; functions max34, below 500/800 and 50/80/120 review gates. Archive is third-party inert payload, not platform handwritten code.
+- **Domain six-reference evidence correction b99bce30 is submitted; lead review remains pending**: schema probe/negative-control reporting was returned by engineering lead. Old claims of reproducible historical generation were withdrawn in its new CORRECTION.md; old and correction raw files are preserved for provenance, not endorsed as review-passed. Platform own raw probes above are independently executed. No overall engineering-review or independent-validation pass is claimed.
+- Parent must commit only PLATFORM-PATHS.txt plus any separately reviewed colleague corrections, then run pnpm evidence:verify and bind actual commit SHA to tested-tree inputs. If scoped files change after sealing (including domain corrections), regenerate and verify the new manifest; do not reuse stale SUMS.

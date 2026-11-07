@@ -8,12 +8,21 @@
     "node": ">=22 <25"
   },
   "scripts": {
-    "build": "tsc -p tsconfig.json",
-    "typecheck": "tsc -p tsconfig.json --noEmit",
-    "unit": "node --test dist/tests/*.test.js",
-    "schema": "node dist/packages/cli/src/main.js validate",
+    "build": "tsc -p packages/core/tsconfig.build.json && tsc -p packages/restore/tsconfig.build.json && tsc -p tsconfig.collection.json && pnpm check:explorer",
+    "typecheck": "tsc -p packages/core/tsconfig.build.json --noEmit && tsc -p packages/restore/tsconfig.build.json --noEmit && tsc -p tsconfig.collection.json --noEmit && pnpm check:explorer",
+    "unit": "pnpm unit:core && pnpm unit:restore && pnpm unit:explorer && pnpm unit:evidence",
+    "schema": "node dist/packages/cli/src/main.js schema",
     "vault": "node dist/packages/cli/src/main.js",
-    "evidence:verify": "node scripts/evidence.mjs verify"
+    "evidence:verify": "node evidence/collection-platform/verify.mjs verify",
+    "check:explorer": "node --check apps/explorer/server.mjs && node --check apps/explorer/local-explorer.mjs && node --check apps/explorer/start.mjs && node --check apps/explorer/public/app.js",
+    "unit:core": "node --test packages/core/tests/*.test.mjs",
+    "unit:restore": "pnpm --dir packages/restore test",
+    "unit:explorer": "pnpm --dir apps/explorer test",
+    "unit:evidence": "node --test evidence/collection-platform/verify.test.mjs",
+    "smoke:collection": "node apps/explorer/test/catalog-smoke.mjs",
+    "test:offline": "pnpm --dir packages/restore test:real",
+    "evidence:write": "node evidence/collection-platform/verify.mjs write",
+    "evidence:historical": "node scripts/evidence.mjs historical"
   },
   "dependencies": {
     "@sinclair/typebox": "0.34.41",

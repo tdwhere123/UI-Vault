@@ -1,0 +1,82 @@
+TAP version 13
+# Subtest: local reader serves verified text, rejects binary and registration/reference source access without writing
+ok 1 - local reader serves verified text, rejects binary and registration/reference source access without writing
+  ---
+  duration_ms: 64.235173
+  type: 'test'
+  ...
+# Subtest: HTTP reader rejects a tampered sibling and recovers after exact bytes are restored
+ok 2 - HTTP reader rejects a tampered sibling and recovers after exact bytes are restored
+  ---
+  duration_ms: 18.520011
+  type: 'test'
+  ...
+# Subtest: renderer displays upstream markup as text and sends filtering to shared catalog API
+ok 3 - renderer displays upstream markup as text and sends filtering to shared catalog API
+  ---
+  duration_ms: 5.661328
+  type: 'test'
+  ...
+# Subtest: renderer source is inert text and stale replies cannot overwrite a newer file selection
+ok 4 - renderer source is inert text and stale replies cannot overwrite a newer file selection
+  ---
+  duration_ms: 2.876285
+  type: 'test'
+  ...
+# Subtest: renderer does not turn a failed search into legitimate empty results
+ok 5 - renderer does not turn a failed search into legitimate empty results
+  ---
+  duration_ms: 1.456405
+  type: 'test'
+  ...
+# Subtest: reference entries are visibly separate, label inference and never expose a source picker
+ok 6 - reference entries are visibly separate, label inference and never expose a source picker
+  ---
+  duration_ms: 2.039574
+  type: 'test'
+  ...
+# Subtest: real HTTP lists shared catalog and delegates category and tag search
+ok 7 - real HTTP lists shared catalog and delegates category and tag search
+  ---
+  duration_ms: 45.771152
+  type: 'test'
+  ...
+# Subtest: missing or invalid catalog fails explicitly and recovers without a server restart
+ok 8 - missing or invalid catalog fails explicitly and recovers without a server restart
+  ---
+  duration_ms: 9.541533
+  type: 'test'
+  ...
+# Subtest: source API calls verified reader with exact catalog selection and returns inert JSON text
+ok 9 - source API calls verified reader with exact catalog selection and returns inert JSON text
+  ---
+  duration_ms: 3.896633
+  type: 'test'
+  ...
+# Subtest: source failures do not leak raw local filesystem errors or return success
+ok 10 - source failures do not leak raw local filesystem errors or return success
+  ---
+  duration_ms: 4.182179
+  type: 'test'
+  ...
+# Subtest: read-only boundary rejects writes, foreign hosts, foreign and malformed origins
+ok 11 - read-only boundary rejects writes, foreign hosts, foreign and malformed origins
+  ---
+  duration_ms: 9.681379
+  type: 'test'
+  ...
+# Subtest: only fixed application assets are served with no third-party execution policy
+ok 12 - only fixed application assets are served with no third-party execution policy
+  ---
+  duration_ms: 5.433825
+  type: 'test'
+  ...
+1..12
+# tests 12
+# suites 0
+# pass 12
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 293.849817

@@ -1,0 +1,118 @@
+$ node dist/packages/cli/src/main.js index
+catalog.json: 2 sources; 20 source components; 0 references
+6e65ac00f2bcb300d7893a106f38ecb4746ee755e78d628bcae99676d6165689  catalog.json
+$ node dist/packages/cli/src/main.js index (repeat)
+catalog.json: 2 sources; 20 source components; 0 references
+6e65ac00f2bcb300d7893a106f38ecb4746ee755e78d628bcae99676d6165689  catalog.json
+$ node dist/packages/cli/src/main.js validate
+VALID: 2 sources; 20 source components; 0 references; filesystem and license review are separate checks
+$ node dist/packages/cli/src/main.js inspect bencho:folding-bill
+{
+  "id": "bencho:folding-bill",
+  "sourceId": "bencho",
+  "name": "Folding Bill",
+  "category": "interactive-ui",
+  "tags": [
+    "bencho",
+    "react"
+  ],
+  "upstreamUrl": "https://github.com/cabralorenzo/bencho/blob/c65992417427bb09e661674ffa800bef29adef49/blocks/folding-bill/FoldingBill.tsx",
+  "upstreamCommit": "c65992417427bb09e661674ffa800bef29adef49",
+  "license": {
+    "status": "allowed",
+    "evidencePath": "archive/bencho/c65992417427bb09e661674ffa800bef29adef49/folding-bill/LICENSE",
+    "noticePaths": [
+      "archive/bencho/c65992417427bb09e661674ffa800bef29adef49/folding-bill/LICENSE",
+      "archive/bencho/c65992417427bb09e661674ffa800bef29adef49/folding-bill/THIRD_PARTY.md"
+    ]
+  },
+  "snapshotPath": "archive/bencho/c65992417427bb09e661674ffa800bef29adef49/folding-bill",
+  "files": [
+    {
+      "path": "LICENSE",
+      "sha256": "9f9d2eedd3383d018e343db1205e9b41f07fa49632050482fb40cc1a03dd64fe",
+      "size": 1270
+    },
+    {
+      "path": "THIRD_PARTY.md",
+      "sha256": "5a06fa88b258e8f876f93d900fda3b7efd8a17908fbdab5f557eb2f3f1eef969",
+      "size": 1505
+    },
+    {
+      "path": "blocks/folding-bill/FoldingBill.css",
+      "sha256": "8f2b80eede1760dd55a4e893c51d3b763c2ca496b9b9660538b5135bbd37edd0",
+      "size": 468
+    },
+    {
+      "path": "blocks/folding-bill/FoldingBill.tsx",
+      "sha256": "397c73866dd921248ad8385705962a049bed43907444c443ed63de22920faa38",
+      "size": 25433
+    },
+    {
+      "path": "blocks/folding-bill/README.md",
+      "sha256": "2cb51e20038b03946b841827d43da3ded10867541b4c5389e93907c586c29899",
+      "size": 1141
+    },
+    {
+      "path": "package.json",
+      "sha256": "28189aafe441d73fa344a97fdf092f146e961afcd82ff1ae53f8cbc3ddc2e6c2",
+      "size": 829
+    },
+    {
+      "path": "tokens.css",
+      "sha256": "abb75ad433a1b7ec6f0136b603c279b5c9e53afa067c0b5f9cd10c95529d0f1a",
+      "size": 3064
+    }
+  ],
+  "dependencies": {
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "three": "0.169.0"
+  },
+  "limitations": [
+    "Static source archive only; upstream scripts and components were not executed or visually tested.",
+    "dependencies pins direct imports and documented host style/peer requirements; npm transitive packages are not vendored. Offline source recovery is not offline dependency installation.",
+    "Entry: blocks/folding-bill/FoldingBill.tsx",
+    "Import tokens.css and the component CSS explicitly; keep blocks/<name>/ layout. React 19.2.8 is a collection pin within upstream ^19.2.8, not an upstream lockfile.",
+    "No Bencho Pro, name/mark assets, website photographs or sounds included; see LICENSE exclusions and THIRD_PARTY.md."
+  ],
+  "assetKind": "source"
+}
+$ node dist/packages/cli/src/main.js verify bencho:folding-bill
+{
+  "componentId": "bencho:folding-bill",
+  "files": 7,
+  "bytes": 33710
+}
+$ materialize destination=/tmp/ui-vault-cli-real-VdlHQk
+{
+  "componentId": "bencho:folding-bill",
+  "destination": "/tmp/ui-vault-cli-real-VdlHQk",
+  "created": [
+    "LICENSE",
+    "THIRD_PARTY.md",
+    "blocks/folding-bill/FoldingBill.css",
+    "blocks/folding-bill/FoldingBill.tsx",
+    "blocks/folding-bill/README.md",
+    "package.json",
+    "tokens.css"
+  ],
+  "unchanged": [],
+  "bytes": 33710
+}
+$ repeat materialize
+{
+  "componentId": "bencho:folding-bill",
+  "destination": "/tmp/ui-vault-cli-real-VdlHQk",
+  "created": [],
+  "unchanged": [
+    "LICENSE",
+    "THIRD_PARTY.md",
+    "blocks/folding-bill/FoldingBill.css",
+    "blocks/folding-bill/FoldingBill.tsx",
+    "blocks/folding-bill/README.md",
+    "package.json",
+    "tokens.css"
+  ],
+  "bytes": 33710
+}

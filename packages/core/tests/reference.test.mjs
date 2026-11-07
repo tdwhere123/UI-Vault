@@ -26,3 +26,9 @@ test('reference local assets use the shared path authority',()=>{
  const input=sample();input.components[0].localAssetPaths=['../unsafe'];assert.throws(()=>core.validateCatalog(input));
  assert.throws(()=>core.assertCatalogPath('C:/unsafe'));
 });
+
+test('public references can register an origin with no git commit without inventing a source version',()=>{
+ const input=sample();input.sources[0].upstreamCommit=null;
+ assert.equal(core.validateCatalog(input).sources[0].upstreamCommit,null);
+ assert.deepEqual(core.getSourceComponents(input),[]);
+});

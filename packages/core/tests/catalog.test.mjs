@@ -85,3 +85,9 @@ test('dependency names cannot evade exact version checks through unmatched recor
   assert.throws(()=>validateCatalog(data),name);
  }
 });
+
+test('source components still require pinned versions and cannot use an unversioned reference origin',()=>{
+ for(const change of [d=>d.components[0].upstreamCommit=null,d=>d.sources[0].upstreamCommit=null]) {
+  const input=sample();change(input);assert.throws(()=>validateCatalog(input));
+ }
+});

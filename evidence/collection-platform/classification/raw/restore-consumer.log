@@ -1,0 +1,112 @@
+TAP version 13
+# Subtest: offline restoration preserves source and style bytes, repeats without replacing files, and never executes source
+ok 1 - offline restoration preserves source and style bytes, repeats without replacing files, and never executes source
+  ---
+  duration_ms: 49.973427
+  type: 'test'
+  ...
+# Subtest: a same-size source corruption fails hashing before creating destination
+ok 2 - a same-size source corruption fails hashing before creating destination
+  ---
+  duration_ms: 3.492347
+  type: 'test'
+  ...
+# Subtest: missing and wrong-size snapshot files fail without writing destination
+ok 3 - missing and wrong-size snapshot files fail without writing destination
+  ---
+  duration_ms: 5.322812
+  type: 'test'
+  ...
+# Subtest: catalog path traversal, absolute paths, duplicate files, and file-directory collisions are rejected
+ok 4 - catalog path traversal, absolute paths, duplicate files, and file-directory collisions are rejected
+  ---
+  duration_ms: 6.982933
+  type: 'test'
+  ...
+# Subtest: unknown and restricted records cannot materialize even if files are supplied
+ok 5 - unknown and restricted records cannot materialize even if files are supplied
+  ---
+  duration_ms: 2.341984
+  type: 'test'
+  ...
+# Subtest: license and notices must be included in the hashed snapshot
+ok 6 - license and notices must be included in the hashed snapshot
+  ---
+  duration_ms: 1.726719
+  type: 'test'
+  ...
+# Subtest: source symlink files, symlink directories, and hardlinks are rejected
+ok 7 - source symlink files, symlink directories, and hardlinks are rejected
+  ---
+  duration_ms: 6.49474
+  type: 'test'
+  ...
+# Subtest: destination symlink roots and parent directories never write to an outside target
+ok 8 - destination symlink roots and parent directories never write to an outside target
+  ---
+  duration_ms: 6.286762
+  type: 'test'
+  ...
+# Subtest: existing destination conflicts are not overwritten and prevent new payload writes
+ok 9 - existing destination conflicts are not overwritten and prevent new payload writes
+  ---
+  duration_ms: 10.228364
+  type: 'test'
+  ...
+# Subtest: an existing matching subset resumes without replacing already restored files
+ok 10 - an existing matching subset resumes without replacing already restored files
+  ---
+  duration_ms: 14.869305
+  type: 'test'
+  ...
+# Subtest: archive overlap and byte limits reject before output writes
+ok 11 - archive overlap and byte limits reject before output writes
+  ---
+  duration_ms: 5.482829
+  type: 'test'
+  ...
+# Subtest: directory descriptors stay pinned when their visible path is replaced by a symlink
+ok 12 - directory descriptors stay pinned when their visible path is replaced by a symlink
+  ---
+  duration_ms: 4.079684
+  type: 'test'
+  ...
+# Subtest: destination file symlinks and hardlinks reject without modifying their targets
+ok 13 - destination file symlinks and hardlinks reject without modifying their targets
+  ---
+  duration_ms: 12.058726
+  type: 'test'
+  ...
+# Subtest: write failure reports partial output and a repeat resumes after filesystem repair
+ok 14 - write failure reports partial output and a repeat resumes after filesystem repair
+  ---
+  duration_ms: 76.872278
+  type: 'test'
+  ...
+# Subtest: reference records remain view-only even when their license status is allowed
+ok 15 - reference records remain view-only even when their license status is allowed
+  ---
+  duration_ms: 3.94901
+  type: 'test'
+  ...
+# Subtest: unlisted source files and directories fail the exact manifest set check
+ok 16 - unlisted source files and directories fail the exact manifest set check
+  ---
+  duration_ms: 18.547172
+  type: 'test'
+  ...
+# Subtest: read-only verification and Explorer reads share integrity checks and never materialize output
+ok 17 - read-only verification and Explorer reads share integrity checks and never materialize output
+  ---
+  duration_ms: 25.849554
+  type: 'test'
+  ...
+1..17
+# tests 17
+# suites 0
+# pass 17
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 428.476883

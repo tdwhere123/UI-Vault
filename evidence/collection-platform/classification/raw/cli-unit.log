@@ -1,0 +1,41 @@
+TAP version 13
+# public package exports and 27 deep paths checked; old proof has no public authorization entry
+# Subtest: CLI indexes, validates, searches, lists and prints schema in a real temporary cwd
+ok 1 - CLI indexes, validates, searches, lists and prints schema in a real temporary cwd
+  ---
+  duration_ms: 1521.539873
+  type: 'test'
+  ...
+# Subtest: public package exports only collection APIs and blocks every packaged deep path
+ok 2 - public package exports only collection APIs and blocks every packaged deep path
+  ---
+  duration_ms: 126.676881
+  type: 'test'
+  ...
+# Subtest: CLI inspect and materialize use the actual restoration service and never execute source
+ok 3 - CLI inspect and materialize use the actual restoration service and never execute source
+  ---
+  duration_ms: 880.680843
+  type: 'test'
+  ...
+# Subtest: CLI counts references separately and restore commands reject display-only records
+ok 4 - CLI counts references separately and restore commands reject display-only records
+  ---
+  duration_ms: 671.884053
+  type: 'test'
+  ...
+# Subtest: CLI classification filters reuse core query validation and preserve old unknown metadata
+ok 5 - CLI classification filters reuse core query validation and preserve old unknown metadata
+  ---
+  duration_ms: 986.293455
+  type: 'test'
+  ...
+1..5
+# tests 5
+# suites 0
+# pass 5
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 4231.380314

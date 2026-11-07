@@ -1,0 +1,131 @@
+TAP version 13
+# Subtest: catalog validates independent copies and searches category, tags and source
+ok 1 - catalog validates independent copies and searches category, tags and source
+  ---
+  duration_ms: 5.304878
+  type: 'test'
+  ...
+# Subtest: unknown and restricted entries are registration only
+ok 2 - unknown and restricted entries are registration only
+  ---
+  duration_ms: 0.411581
+  type: 'test'
+  ...
+# Subtest: allowed snapshots require evidence and actual file listings
+ok 3 - allowed snapshots require evidence and actual file listings
+  ---
+  duration_ms: 0.229751
+  type: 'test'
+  ...
+# Subtest: duplicate identities, missing sources and unpinned dependencies fail
+ok 4 - duplicate identities, missing sources and unpinned dependencies fail
+  ---
+  duration_ms: 0.380316
+  type: 'test'
+  ...
+# Subtest: unsafe paths, conflicting file mappings and invalid hashes fail
+ok 5 - unsafe paths, conflicting file mappings and invalid hashes fail
+  ---
+  duration_ms: 0.339428
+  type: 'test'
+  ...
+# Subtest: catalog derivation is deterministic without mutating inventory
+ok 6 - catalog derivation is deterministic without mutating inventory
+  ---
+  duration_ms: 0.292141
+  type: 'test'
+  ...
+# Subtest: portable file mapping rejects case aliases and case-folded parent collisions
+ok 7 - portable file mapping rejects case aliases and case-folded parent collisions
+  ---
+  duration_ms: 0.283632
+  type: 'test'
+  ...
+# Subtest: dependency versions are exact valid semver, not merely digit-shaped strings
+ok 8 - dependency versions are exact valid semver, not merely digit-shaped strings
+  ---
+  duration_ms: 0.597167
+  type: 'test'
+  ...
+# Subtest: derivation uses environment-independent code point ordering
+ok 9 - derivation uses environment-independent code point ordering
+  ---
+  duration_ms: 0.395929
+  type: 'test'
+  ...
+# Subtest: all catalog path fields reject traversal and nonportable characters
+ok 10 - all catalog path fields reject traversal and nonportable characters
+  ---
+  duration_ms: 2.172487
+  type: 'test'
+  ...
+# Subtest: source selection and search results are detached from caller state
+ok 11 - source selection and search results are detached from caller state
+  ---
+  duration_ms: 6.363832
+  type: 'test'
+  ...
+# Subtest: dependency names cannot evade exact version checks through unmatched record keys
+ok 12 - dependency names cannot evade exact version checks through unmatched record keys
+  ---
+  duration_ms: 0.345087
+  type: 'test'
+  ...
+# public package exports and 27 deep paths checked; old proof has no public authorization entry
+# Subtest: CLI indexes, validates, searches, lists and prints schema in a real temporary cwd
+ok 13 - CLI indexes, validates, searches, lists and prints schema in a real temporary cwd
+  ---
+  duration_ms: 1595.181702
+  type: 'test'
+  ...
+# Subtest: public package exports only collection APIs and blocks every packaged deep path
+ok 14 - public package exports only collection APIs and blocks every packaged deep path
+  ---
+  duration_ms: 127.103654
+  type: 'test'
+  ...
+# Subtest: CLI inspect and materialize use the actual restoration service and never execute source
+ok 15 - CLI inspect and materialize use the actual restoration service and never execute source
+  ---
+  duration_ms: 909.084508
+  type: 'test'
+  ...
+# Subtest: CLI counts references separately and restore commands reject display-only records
+ok 16 - CLI counts references separately and restore commands reject display-only records
+  ---
+  duration_ms: 667.106026
+  type: 'test'
+  ...
+# Subtest: references remain searchable display records, never counted as source
+ok 17 - references remain searchable display records, never counted as source
+  ---
+  duration_ms: 4.788533
+  type: 'test'
+  ...
+# Subtest: reference cannot contain fake source, dependencies or snapshots even when allowed
+ok 18 - reference cannot contain fake source, dependencies or snapshots even when allowed
+  ---
+  duration_ms: 0.957697
+  type: 'test'
+  ...
+# Subtest: asset kind and required reference description fields cannot be omitted
+ok 19 - asset kind and required reference description fields cannot be omitted
+  ---
+  duration_ms: 0.727929
+  type: 'test'
+  ...
+# Subtest: reference local assets use the shared path authority
+ok 20 - reference local assets use the shared path authority
+  ---
+  duration_ms: 0.252476
+  type: 'test'
+  ...
+1..20
+# tests 20
+# suites 0
+# pass 20
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 3351.082617

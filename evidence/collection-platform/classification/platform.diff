@@ -1,0 +1,259 @@
+diff --git a/packages/cli/src/main.ts b/packages/cli/src/main.ts
+index 383dae0..ec097fb 100644
+--- a/packages/cli/src/main.ts
++++ b/packages/cli/src/main.ts
+@@ -1,29 +1,67 @@
+-import { readFile } from 'node:fs/promises';
+-import { fileURLToPath } from 'node:url';
+-import { MetadataSchema, validateMetadata, validateSources, assembleMetadata, projectCatalog, verifyLicenseEvidence } from '../../core/src/index.js';
+-
+-const root = new URL('../../../../', import.meta.url);
+-const load = async (path: string): Promise<unknown> => JSON.parse(await readFile(new URL(path, root), 'utf8'));
++import { readFile, writeFile } from 'node:fs/promises';
++import { resolve } from 'node:path';
++import { CatalogSchema, validateCatalog, buildCatalog, searchCatalog, getSourceComponents, validateCatalogQuery } from '../../core/src/index.js';
+ 
++// Paths are relative to the caller's repository directory, never the compiled file.
++async function load(path: string): Promise<unknown> { return JSON.parse(await readFile(resolve(path), 'utf8')); }
++// The active CLI emits under root dist/packages/cli/src, while restore has package-local dist.
++async function restoreService(): Promise<typeof import('../../restore/dist/index.js')> {
++  return import(new URL('../../../../packages/restore/dist/index.js', import.meta.url).href);
++}
++function counts(catalog: ReturnType<typeof validateCatalog>): string {
++  const sources = getSourceComponents(catalog).length;
++  return `${catalog.sources.length} sources; ${sources} source components; ${catalog.components.length - sources} references`;
++}
++function queryArguments(args: string[], allowText: boolean): ReturnType<typeof validateCatalogQuery> {
++  const names: Record<string, string> = {
++    '--source': 'sourceId', '--category': 'category', '--tag': 'tag', '--dependency': 'dependency',
++    '--framework': 'framework', '--language': 'language', '--styling': 'styling',
++    '--kind': 'assetKind', '--license': 'licenseStatus', '--availability': 'availability', '--query': 'query'
++  };
++  const options: Record<string, unknown> = {};
++  for (let index = 0; index < args.length; index++) {
++    const arg = args[index]!;
++    if (!arg.startsWith('--')) {
++      if (!allowText || Object.hasOwn(options, 'query')) throw new Error('Only search accepts one text argument');
++      options.query = arg; continue;
++    }
++    const key = names[arg], value = args[++index];
++    if (!key || value === undefined || value.startsWith('--')) throw new Error(`Unknown filter or missing value: ${arg}`);
++    if (Object.hasOwn(options, key)) throw new Error(`Duplicate filter: ${arg}`);
++    options[key] = ['framework', 'language', 'styling'].includes(key) && value === 'unknown' ? null : value;
++  }
++  return validateCatalogQuery(options);
++}
+ async function main(): Promise<void> {
+   const [command, ...args] = process.argv.slice(2);
+-  if (command === 'sources' && !args.length) {
+-    const sources = validateSources(await load('config/sources.json'));
+-    for (const source of sources) console.log(`${source.sourceId}\t${source.checkStatus}\t${source.rights.can_archive_source.state}`);
+-    console.log(`sources=${sources.length}; live_verified=0 (seed inventory only)`);
+-  } else if (command === 'validate' && !args.length) {
+-    const sources = validateSources(await load('config/sources.json'));
+-    const fixture = validateMetadata(await load('fixtures/metadata.json'));
+-    validateMetadata(await load('fixtures/empty-inventory.json'));
+-    await verifyLicenseEvidence(fixture, fileURLToPath(root));
+-    console.log(`VALID: ${sources.length} source seeds; ${fixture.entries.length} fictional entry; metadata+cross-record invariants checked`);
+-  } else if (command === 'index' && args.length <= 1) {
+-    const metadata = args[0] ? await load(args[0]) : assembleMetadata(await load('config/sources.json'), await load('inventory/metadata.json'));
+-    console.log(JSON.stringify(projectCatalog(metadata), null, 2));
+-  } else if (command === 'schema' && !args.length) {
+-    console.log(JSON.stringify(MetadataSchema, null, 2));
+-  } else {
+-    throw new Error(`Usage: pnpm vault sources|validate|schema|index [metadata.json] (project root: ${fileURLToPath(root)})`);
+-  }
++  if (command === 'schema' && !args.length) console.log(JSON.stringify(CatalogSchema, null, 2));
++  else if (command === 'index' && args.length <= 1) {
++    const catalog = buildCatalog(await load(args[0] ?? 'inventory/collection.json'));
++    await writeFile('catalog.json', `${JSON.stringify(catalog, null, 2)}\n`, { flag: 'w' });
++    console.log(`catalog.json: ${counts(catalog)}`);
++  } else if (command === 'validate' && args.length <= 1) {
++    const catalog = validateCatalog(await load(args[0] ?? 'catalog.json'));
++    console.log(`VALID: ${counts(catalog)}; filesystem and license review are separate checks`);
++  } else if (command === 'search' || command === 'list') {
++    console.log(JSON.stringify(searchCatalog(await load('catalog.json'), queryArguments(args, command === 'search')), null, 2));
++  } else if (command === 'inspect' && args.length === 1) {
++    const catalog = validateCatalog(await load('catalog.json'));
++    const component = catalog.components.find(item => item.id === args[0]);
++    if (!component) throw new Error(`Unknown component: ${args[0]}`);
++    console.log(JSON.stringify(component, null, 2));
++  } else if (command === 'verify' && args.length === 1) {
++    const catalog = await load('catalog.json');
++    const service = await restoreService();
++    console.log(JSON.stringify(await service.verifyComponent({
++      catalog, componentId: args[0]!, archiveRoot: resolve('.')
++    }), null, 2));
++  } else if (command === 'materialize' && args.length === 2) {
++    const catalog = await load('catalog.json');
++    const service = await restoreService();
++    console.log(JSON.stringify(await service.restoreComponent({
++      catalog, componentId: args[0]!, archiveRoot: resolve('.'), destination: resolve(args[1]!)
++    }), null, 2));
++
++  } else throw new Error('Usage: pnpm vault schema|index [inventory/collection.json]|validate [catalog.json]|list [filters]|search [text] [filters]|inspect <id>|verify <id>|materialize <id> <destination>; filters: --source --category --framework --language --styling --dependency --tag --kind --license --availability; stack unknown means unrecorded');
+ }
+ main().catch(error => { console.error(error instanceof Error ? error.message : error); process.exitCode = 1; });
+diff --git a/packages/core/src/catalog.ts b/packages/core/src/catalog.ts
+index fd4c539..e97da6a 100644
+--- a/packages/core/src/catalog.ts
++++ b/packages/core/src/catalog.ts
+@@ -12,9 +12,11 @@ const fixedVersion = Type.String({ pattern: `^${numeric}\\.${numeric}\\.${numeri
+ const object = <T extends Parameters<typeof Type.Object>[0]>(properties: T) => Type.Object(properties, { additionalProperties: false });
+ const license = object({ status: Type.Union([Type.Literal('allowed'), Type.Literal('unknown'), Type.Literal('restricted')]),
+   evidencePath: Type.Union([path, Type.Null()]), noticePaths: Type.Array(path) });
++const knownOrUnknown = Type.Union([Type.Array(text), Type.Null()]);
++const techStack = object({ frameworks: knownOrUnknown, languages: knownOrUnknown, styling: knownOrUnknown });
+ const description = {
+   id: text, sourceId: text, name: text, category: text, tags: Type.Array(text), upstreamUrl: url,
+-  license, limitations: Type.Array(text)
++  license, limitations: Type.Array(text), techStack: Type.Optional(techStack)
+ };
+ const sourceComponent = object({
+   ...description, assetKind: Type.Literal('source'), upstreamCommit: commit,
+@@ -32,14 +34,34 @@ const referenceComponent = object({
+   useCases: Type.Array(text, { minItems: 1 }), implementationNotes: text
+ });
+ export const CatalogSchema = object({
+-  sources: Type.Array(object({ id: text, name: text, upstreamUrl: url, upstreamCommit: commit })),
++  sources: Type.Array(object({ id: text, name: text, upstreamUrl: url, upstreamCommit: Type.Union([commit, Type.Null()]) })),
+   components: Type.Array(Type.Union([sourceComponent, referenceComponent]))
+ });
+ export type Catalog = Static<typeof CatalogSchema>;
+ export type CatalogComponent = Catalog['components'][number];
+ export type SourceComponent = Extract<CatalogComponent, { assetKind: 'source' }>;
+-export type CatalogQuery = { query?: string; category?: string; sourceId?: string };
+-const validator = new Ajv({ strict: true, allErrors: true }).compile<Catalog>(CatalogSchema);
++const assetKind = Type.Union([Type.Literal('source'), Type.Literal('reference')]);
++const licenseStatus = license.properties.status;
++const availability = Type.Union([Type.Literal('source_snapshot'), Type.Literal('registration_only'), Type.Literal('reference')]);
++export const CatalogQuerySchema = object({
++  query: Type.Optional(Type.String()), category: Type.Optional(Type.String()), sourceId: Type.Optional(Type.String()),
++  tag: Type.Optional(text), dependency: Type.Optional(text),
++  framework: Type.Optional(Type.Union([text, Type.Null()])),
++  language: Type.Optional(Type.Union([text, Type.Null()])),
++  styling: Type.Optional(Type.Union([text, Type.Null()])),
++  assetKind: Type.Optional(assetKind), licenseStatus: Type.Optional(licenseStatus), availability: Type.Optional(availability)
++});
++export type CatalogQuery = Static<typeof CatalogQuerySchema>;
++export type CatalogAvailability = Static<typeof availability>;
++const ajv = new Ajv({ strict: true, allErrors: true });
++const validator = ajv.compile<Catalog>(CatalogSchema);
++const queryValidator = ajv.compile<CatalogQuery>(CatalogQuerySchema);
++
++export function validateCatalogQuery(input: unknown): CatalogQuery {
++  const captured: unknown = structuredClone(input);
++  if (!queryValidator(captured)) throw new Error(`Invalid catalog query: ${JSON.stringify(queryValidator.errors)}`);
++  return captured;
++}
+ 
+ function unique(values: string[], label: string): void {
+   if (new Set(values).size !== values.length) throw new Error(`Duplicate ${label}`);
+@@ -89,7 +111,13 @@ export function validateCatalog(input: unknown): Catalog {
+   unique(captured.sources.map(source => source.id), 'source id');
+   unique(captured.components.map(component => component.id), 'component id');
+   const sources = new Set(captured.sources.map(source => source.id));
+-  captured.components.forEach(component => checkComponent(component, sources));
++  const unversioned = new Set(captured.sources.filter(source => source.upstreamCommit === null).map(source => source.id));
++  captured.components.forEach(component => {
++    checkComponent(component, sources);
++    if (component.assetKind === 'source' && unversioned.has(component.sourceId)) {
++      throw new Error(`Source snapshot requires a pinned origin: ${component.sourceId}`);
++    }
++  });
+   return captured;
+ }
+ 
+@@ -104,6 +132,7 @@ export function buildCatalog(input: unknown): Catalog {
+     if (component.assetKind === 'reference') {
+       component.screenshotUrls?.sort(); component.demoUrls?.sort(); component.localAssetPaths?.sort();
+     }
++    if (component.techStack) for (const values of Object.values(component.techStack)) values?.sort();
+     component.tags.sort();
+     component.license.noticePaths.sort();
+     component.dependencies = Object.fromEntries(Object.entries(component.dependencies).sort(([a], [b]) => compare(a, b)));
+@@ -111,17 +140,41 @@ export function buildCatalog(input: unknown): Catalog {
+   return result;
+ }
+ 
++/** Recorded availability is not filesystem verification or a successful recovery. */
++export function getComponentAvailability(component: CatalogComponent): CatalogAvailability {
++  if (component.assetKind === 'reference') return 'reference';
++  return component.license.status === 'allowed' && component.snapshotPath !== null && component.files.length > 0
++    ? 'source_snapshot' : 'registration_only';
++}
++
++function matchesTechnology(component: CatalogComponent, options: CatalogQuery): boolean {
++  const keys = { framework: 'frameworks', language: 'languages', styling: 'styling' } as const;
++  return (Object.keys(keys) as (keyof typeof keys)[]).every(key => {
++    const requested = options[key];
++    if (requested === undefined) return true;
++    const known = component.techStack?.[keys[key]];
++    return requested === null ? known == null : known?.includes(requested) === true;
++  });
++}
++
+ export function searchCatalog(input: unknown, options: CatalogQuery = {}): CatalogComponent[] {
+   const catalog = validateCatalog(input);
+-  const query = options.query?.trim().toLowerCase() ?? '';
+-  return catalog.components.filter(component => (!options.category || component.category === options.category)
+-    && (!options.sourceId || component.sourceId === options.sourceId)
+-    && (!query || searchableText(component)
+-      .some(value => value.toLowerCase().includes(query))));
++  const filters = validateCatalogQuery(options);
++  const query = filters.query?.trim().toLowerCase() ?? '';
++  return catalog.components.filter(component => (!filters.category || component.category === filters.category)
++    && (!filters.sourceId || component.sourceId === filters.sourceId)
++    && (!filters.assetKind || component.assetKind === filters.assetKind)
++    && (!filters.licenseStatus || component.license.status === filters.licenseStatus)
++    && (!filters.availability || getComponentAvailability(component) === filters.availability)
++    && (!filters.tag || component.tags.includes(filters.tag))
++    && (!filters.dependency || Object.hasOwn(component.dependencies, filters.dependency))
++    && matchesTechnology(component, filters)
++    && (!query || searchableText(component).some(value => value.toLowerCase().includes(query))));
+ }
+ 
+ function searchableText(component: CatalogComponent): string[] {
+-  const common = [component.id, component.name, component.sourceId, component.category, ...component.tags];
++  const common = [component.id, component.name, component.sourceId, component.category, ...component.tags,
++    ...Object.keys(component.dependencies), ...Object.values(component.techStack ?? {}).flatMap(values => values ?? [])];
+   return component.assetKind === 'source' ? common : [...common, component.publicUrl,
+     ...component.interactionFlow, ...Object.values(component.visualNotes), ...component.useCases, component.implementationNotes];
+ }
+diff --git a/packages/core/src/index.ts b/packages/core/src/index.ts
+index 62cdffc..879cab4 100644
+--- a/packages/core/src/index.ts
++++ b/packages/core/src/index.ts
+@@ -1,2 +1,2 @@
+-export { CatalogSchema, assertCatalogPath, validateCatalog, buildCatalog, searchCatalog, getSourceComponents } from './catalog.js';
+-export type { Catalog, CatalogComponent, SourceComponent, CatalogQuery } from './catalog.js';
++export { CatalogSchema, CatalogQuerySchema, validateCatalogQuery, getComponentAvailability, assertCatalogPath, validateCatalog, buildCatalog, searchCatalog, getSourceComponents } from './catalog.js';
++export type { Catalog, CatalogComponent, SourceComponent, CatalogQuery, CatalogAvailability } from './catalog.js';
+diff --git a/packages/core/tests/catalog.test.mjs b/packages/core/tests/catalog.test.mjs
+index e6853ba..7a97060 100644
+--- a/packages/core/tests/catalog.test.mjs
++++ b/packages/core/tests/catalog.test.mjs
+@@ -85,3 +85,9 @@ test('dependency names cannot evade exact version checks through unmatched recor
+   assert.throws(()=>validateCatalog(data),name);
+  }
+ });
++
++test('source components still require pinned versions and cannot use an unversioned reference origin',()=>{
++ for(const change of [d=>d.components[0].upstreamCommit=null,d=>d.sources[0].upstreamCommit=null]) {
++  const input=sample();change(input);assert.throws(()=>validateCatalog(input));
++ }
++});
+diff --git a/packages/core/tests/reference.test.mjs b/packages/core/tests/reference.test.mjs
+index f011320..216ce12 100644
+--- a/packages/core/tests/reference.test.mjs
++++ b/packages/core/tests/reference.test.mjs
+@@ -26,3 +26,9 @@ test('reference local assets use the shared path authority',()=>{
+  const input=sample();input.components[0].localAssetPaths=['../unsafe'];assert.throws(()=>core.validateCatalog(input));
+  assert.throws(()=>core.assertCatalogPath('C:/unsafe'));
+ });
++
++test('public references can register an origin with no git commit without inventing a source version',()=>{
++ const input=sample();input.sources[0].upstreamCommit=null;
++ assert.equal(core.validateCatalog(input).sources[0].upstreamCommit,null);
++ assert.deepEqual(core.getSourceComponents(input),[]);
++});

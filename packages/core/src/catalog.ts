@@ -12,9 +12,11 @@ const fixedVersion = Type.String({ pattern: `^${numeric}\\.${numeric}\\.${numeri
 const object = <T extends Parameters<typeof Type.Object>[0]>(properties: T) => Type.Object(properties, { additionalProperties: false });
 const license = object({ status: Type.Union([Type.Literal('allowed'), Type.Literal('unknown'), Type.Literal('restricted')]),
   evidencePath: Type.Union([path, Type.Null()]), noticePaths: Type.Array(path) });
+const knownOrUnknown = Type.Union([Type.Array(text), Type.Null()]);
+const techStack = object({ frameworks: knownOrUnknown, languages: knownOrUnknown, styling: knownOrUnknown });
 const description = {
   id: text, sourceId: text, name: text, category: text, tags: Type.Array(text), upstreamUrl: url,
-  license, limitations: Type.Array(text)
+  license, limitations: Type.Array(text), techStack: Type.Optional(techStack)
 };
 const sourceComponent = object({
   ...description, assetKind: Type.Literal('source'), upstreamCommit: commit,
@@ -32,14 +34,34 @@ const referenceComponent = object({
   useCases: Type.Array(text, { minItems: 1 }), implementationNotes: text
 });
 export const CatalogSchema = object({
-  sources: Type.Array(object({ id: text, name: text, upstreamUrl: url, upstreamCommit: commit })),
+  sources: Type.Array(object({ id: text, name: text, upstreamUrl: url, upstreamCommit: Type.Union([commit, Type.Null()]) })),
   components: Type.Array(Type.Union([sourceComponent, referenceComponent]))
 });
 export type Catalog = Static<typeof CatalogSchema>;
 export type CatalogComponent = Catalog['components'][number];
 export type SourceComponent = Extract<CatalogComponent, { assetKind: 'source' }>;
-export type CatalogQuery = { query?: string; category?: string; sourceId?: string };
-const validator = new Ajv({ strict: true, allErrors: true }).compile<Catalog>(CatalogSchema);
+const assetKind = Type.Union([Type.Literal('source'), Type.Literal('reference')]);
+const licenseStatus = license.properties.status;
+const availability = Type.Union([Type.Literal('source_snapshot'), Type.Literal('registration_only'), Type.Literal('reference')]);
+export const CatalogQuerySchema = object({
+  query: Type.Optional(Type.String()), category: Type.Optional(Type.String()), sourceId: Type.Optional(Type.String()),
+  tag: Type.Optional(text), dependency: Type.Optional(text),
+  framework: Type.Optional(Type.Union([text, Type.Null()])),
+  language: Type.Optional(Type.Union([text, Type.Null()])),
+  styling: Type.Optional(Type.Union([text, Type.Null()])),
+  assetKind: Type.Optional(assetKind), licenseStatus: Type.Optional(licenseStatus), availability: Type.Optional(availability)
+});
+export type CatalogQuery = Static<typeof CatalogQuerySchema>;
+export type CatalogAvailability = Static<typeof availability>;
+const ajv = new Ajv({ strict: true, allErrors: true });
+const validator = ajv.compile<Catalog>(CatalogSchema);
+const queryValidator = ajv.compile<CatalogQuery>(CatalogQuerySchema);
+
+export function validateCatalogQuery(input: unknown): CatalogQuery {
+  const captured: unknown = structuredClone(input);
+  if (!queryValidator(captured)) throw new Error(`Invalid catalog query: ${JSON.stringify(queryValidator.errors)}`);
+  return captured;
+}
 
 function unique(values: string[], label: string): void {
   if (new Set(values).size !== values.length) throw new Error(`Duplicate ${label}`);
@@ -89,7 +111,13 @@ export function validateCatalog(input: unknown): Catalog {
   unique(captured.sources.map(source => source.id), 'source id');
   unique(captured.components.map(component => component.id), 'component id');
   const sources = new Set(captured.sources.map(source => source.id));
-  captured.components.forEach(component => checkComponent(component, sources));
+  const unversioned = new Set(captured.sources.filter(source => source.upstreamCommit === null).map(source => source.id));
+  captured.components.forEach(component => {
+    checkComponent(component, sources);
+    if (component.assetKind === 'source' && unversioned.has(component.sourceId)) {
+      throw new Error(`Source snapshot requires a pinned origin: ${component.sourceId}`);
+    }
+  });
   return captured;
 }
 
@@ -104,6 +132,7 @@ export function buildCatalog(input: unknown): Catalog {
     if (component.assetKind === 'reference') {
       component.screenshotUrls?.sort(); component.demoUrls?.sort(); component.localAssetPaths?.sort();
     }
+    if (component.techStack) for (const values of Object.values(component.techStack)) values?.sort();
     component.tags.sort();
     component.license.noticePaths.sort();
     component.dependencies = Object.fromEntries(Object.entries(component.dependencies).sort(([a], [b]) => compare(a, b)));
@@ -111,17 +140,41 @@ export function buildCatalog(input: unknown): Catalog {
   return result;
 }
 
+/** Recorded availability is not filesystem verification or a successful recovery. */
+export function getComponentAvailability(component: CatalogComponent): CatalogAvailability {
+  if (component.assetKind === 'reference') return 'reference';
+  return component.license.status === 'allowed' && component.snapshotPath !== null && component.files.length > 0
+    ? 'source_snapshot' : 'registration_only';
+}
+
+function matchesTechnology(component: CatalogComponent, options: CatalogQuery): boolean {
+  const keys = { framework: 'frameworks', language: 'languages', styling: 'styling' } as const;
+  return (Object.keys(keys) as (keyof typeof keys)[]).every(key => {
+    const requested = options[key];
+    if (requested === undefined) return true;
+    const known = component.techStack?.[keys[key]];
+    return requested === null ? known == null : known?.includes(requested) === true;
+  });
+}
+
 export function searchCatalog(input: unknown, options: CatalogQuery = {}): CatalogComponent[] {
   const catalog = validateCatalog(input);
-  const query = options.query?.trim().toLowerCase() ?? '';
-  return catalog.components.filter(component => (!options.category || component.category === options.category)
-    && (!options.sourceId || component.sourceId === options.sourceId)
-    && (!query || searchableText(component)
-      .some(value => value.toLowerCase().includes(query))));
+  const filters = validateCatalogQuery(options);
+  const query = filters.query?.trim().toLowerCase() ?? '';
+  return catalog.components.filter(component => (!filters.category || component.category === filters.category)
+    && (!filters.sourceId || component.sourceId === filters.sourceId)
+    && (!filters.assetKind || component.assetKind === filters.assetKind)
+    && (!filters.licenseStatus || component.license.status === filters.licenseStatus)
+    && (!filters.availability || getComponentAvailability(component) === filters.availability)
+    && (!filters.tag || component.tags.includes(filters.tag))
+    && (!filters.dependency || Object.hasOwn(component.dependencies, filters.dependency))
+    && matchesTechnology(component, filters)
+    && (!query || searchableText(component).some(value => value.toLowerCase().includes(query))));
 }
 
 function searchableText(component: CatalogComponent): string[] {
-  const common = [component.id, component.name, component.sourceId, component.category, ...component.tags];
+  const common = [component.id, component.name, component.sourceId, component.category, ...component.tags,
+    ...Object.keys(component.dependencies), ...Object.values(component.techStack ?? {}).flatMap(values => values ?? [])];
   return component.assetKind === 'source' ? common : [...common, component.publicUrl,
     ...component.interactionFlow, ...Object.values(component.visualNotes), ...component.useCases, component.implementationNotes];
 }
