@@ -15,10 +15,17 @@ function renderDetail(component) {
   selected = component.id;
   sourceSequence++;
   const detail = $('detail');
-  detail.replaceChildren(node('h2', component.name), node('strong', component.assetKind === 'reference' ? '审美/交互参考 · 不含可导出源码' : '源码登记'));
+  detail.replaceChildren(node('h2', `${component.name} · ${component.sourceId}`), node('strong', component.assetKind === 'reference' ? '审美/交互参考 · 不含可导出源码' : '源码登记'));
   const dl = node('dl');
   const source = catalog.sources.find(item => item.id === component.sourceId);
-  field(dl, '来源', source?.name || component.sourceId);
+  field(dl, '来源', `${source?.name || component.sourceId} (${component.sourceId})`);
+  field(dl, '类型', component.assetKind);
+  field(dl, '可取用登记', component.availability);
+  field(dl, '本次恢复状态', '未实测 / not_checked（此 Explorer 不执行恢复）');
+  for (const [key, label] of [['frameworks', '框架'], ['languages', '语言'], ['styling', '样式']]) {
+    const values = component.techStack?.[key];
+    field(dl, label, values == null ? '未知（未登记）' : values.length ? values.join(', ') : '明确无');
+  }
   field(dl, '分类 / 标签', [component.category, ...component.tags].join(' · '));
   field(dl, '固定版本', component.upstreamCommit ?? '参考记录，无源码版本');
   field(dl, '许可登记', component.license.status);
@@ -81,11 +88,14 @@ async function search() {
   status.textContent = '搜索中…';
   try {
     const params = new URLSearchParams({ query: $('query').value, category: $('category').value, sourceId: $('source').value });
+    for (const key of ['tag', 'dependency', 'framework', 'language', 'styling', 'assetKind', 'licenseStatus', 'availability']) {
+      if ($(key).value) params.set(key, $(key).value);
+    }
     const components = await json(`/api/components?${params}`);
     if (sequence !== searchSequence) return;
     $('list').replaceChildren();
     for (const component of components) {
-      const button = node('button', `${component.assetKind === 'reference' ? '审美/交互参考' : '源码登记'} · ${component.name} · ${component.category} · ${component.license.status}`);
+      const button = node('button', `${component.assetKind === 'reference' ? '审美/交互参考' : '源码登记'} · ${component.name} (${component.sourceId}) · ${component.category} · ${component.license.status} · ${component.availability}`);
       button.type = 'button'; button.setAttribute('aria-current', String(component.id === selected));
       button.addEventListener('click', () => {
         for (const sibling of $('list').children) sibling.setAttribute('aria-current', String(sibling === button));
@@ -108,11 +118,23 @@ async function search() {
   }
 }
 $('filters').addEventListener('submit', event => { event.preventDefault(); search(); });
+// Facet options are recorded values only, never inferred from dependencies or names.
+function addOptions(id, values, encode = value => value) {
+  for (const value of [...new Set(values)].sort()) $(id).append(new Option(value, encode(value)));
+}
+function populateFilters() {
+  addOptions('category', catalog.components.map(item => item.category));
+  addOptions('tag', catalog.components.flatMap(item => item.tags));
+  addOptions('dependency', catalog.components.flatMap(item => Object.keys(item.dependencies)));
+  for (const [id, key] of [['framework', 'frameworks'], ['language', 'languages'], ['styling', 'styling']]) {
+    addOptions(id, catalog.components.flatMap(item => item.techStack?.[key] ?? []), JSON.stringify);
+  }
+  for (const source of catalog.sources) $('source').append(new Option(`${source.name} (${source.id})`, source.id));
+}
 async function init() {
   try {
     catalog = await json('/api/catalog');
-    for (const category of [...new Set(catalog.components.map(item => item.category))].sort()) $('category').append(new Option(category, category));
-    for (const source of catalog.sources) $('source').append(new Option(source.name, source.id));
+    populateFilters();
     await search();
   } catch (error) { status.textContent = `catalog 不可用：${error.message}；修复后刷新页面。`; }
 }

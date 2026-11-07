@@ -2,7 +2,7 @@ import { createServer } from 'node:http';
 import { readFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import { resolve } from 'node:path';
-import { validateCatalog, searchCatalog } from '../../dist/packages/core/src/index.js';
+import { validateCatalog, searchCatalog, getComponentAvailability } from '../../dist/packages/core/src/index.js';
 
 const assets = new Map([
   ['/', ['index.html', 'text/html; charset=utf-8']],
@@ -18,6 +18,17 @@ function respond(response, status, body, contentType = 'application/json; charse
     'Referrer-Policy': 'no-referrer',
   });
   response.end(typeof body === 'string' || Buffer.isBuffer(body) ? body : JSON.stringify(body));
+}
+
+// API-only projection: catalog availability never implies an observed restore result.
+const projectComponent = component => ({ ...component, availability: getComponentAvailability(component), restoreStatus: 'not_checked' });
+function searchQuery(params) {
+  if (new Set(params.keys()).size !== [...params].length) throw new Error('Duplicate query parameter');
+  const query = Object.fromEntries(params);
+  for (const key of ['framework', 'language', 'styling']) {
+    if (params.has(key)) query[key] = JSON.parse(params.get(key));
+  }
+  return query;
 }
 
 // The caller supplies the restore package's verified reader, never a raw file read.
@@ -41,10 +52,10 @@ export function createExplorer({ catalogPath, readSource, port = 4173 }) {
         respond(response, 404, { error: '未找到' }); return;
       }
       const catalog = validateCatalog(JSON.parse(await readFile(catalogPath, 'utf8')));
-      if (url.pathname === '/api/catalog') { respond(response, 200, catalog); return; }
+      if (url.pathname === '/api/catalog') { respond(response, 200, { ...catalog, components: catalog.components.map(projectComponent) }); return; }
       if (url.pathname === '/api/components') {
-        const query = Object.fromEntries(['query', 'category', 'sourceId'].map(key => [key, url.searchParams.get(key) ?? '']));
-        respond(response, 200, searchCatalog(catalog, query)); return;
+        const query = searchQuery(url.searchParams);
+        respond(response, 200, searchCatalog(catalog, query).map(projectComponent)); return;
       }
       if (typeof readSource !== 'function') { respond(response, 503, { error: '安全源码读取入口未接通' }); return; }
       const result = await readSource(catalog, url.searchParams.get('id') ?? '', url.searchParams.get('path') ?? '');

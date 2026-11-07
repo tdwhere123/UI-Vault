@@ -81,3 +81,27 @@ test('only fixed application assets are served with no third-party execution pol
     assert.equal((await fetch(`${url}${path}`)).status, 404);
   }
 });
+test('HTTP composes recorded facets via core and projects availability without claiming restoration', async t => {
+  const { url, catalogPath } = await setup(t);
+  const data = sample();
+  data.components[0].techStack = { frameworks: ['React'], languages: ['TypeScript'], styling: [] };
+  data.components[1].techStack = { frameworks: null, languages: [], styling: null };
+  await writeFile(catalogPath, JSON.stringify(data));
+  const query = new URLSearchParams({ sourceId: 'sample', category: 'button', tag: 'keyboard', dependency: 'react',
+    framework: JSON.stringify('React'), language: JSON.stringify('TypeScript'), assetKind: 'source', licenseStatus: 'allowed', availability: 'source_snapshot' });
+  const matches = await (await fetch(`${url}/api/components?${query}`)).json();
+  assert.equal(matches.length, 1);
+  assert.equal(matches[0].id, 'sample:button');
+  assert.equal(matches[0].availability, 'source_snapshot'); assert.equal(matches[0].restoreStatus, 'not_checked');
+  const unknown = await (await fetch(`${url}/api/components?framework=null`)).json();
+  assert.deepEqual(unknown.map(item => item.id), ['sample:unknown']);
+  const emptyIsNotUnknown = await (await fetch(`${url}/api/components?language=null`)).json();
+  assert.deepEqual(emptyIsNotUnknown, []);
+  assert.equal((await fetch(`${url}/api/components?availability=restored`)).status, 422);
+  assert.equal((await fetch(`${url}/api/components?framework=invalid-json`)).status, 422);
+  assert.equal((await fetch(`${url}/api/components?framework=null&framework=%22React%22`)).status, 422);
+  assert.equal((await fetch(`${url}/api/components?unsupported=value`)).status, 422);
+  const projected = await (await fetch(`${url}/api/catalog`)).json();
+  assert.equal(projected.components[1].availability, 'registration_only');
+  assert.equal(projected.components[1].restoreStatus, 'not_checked');
+});
