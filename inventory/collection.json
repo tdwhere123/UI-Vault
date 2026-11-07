@@ -1,0 +1,1441 @@
+{
+  "sources": [
+    {
+      "id": "agent-elements",
+      "name": "agent-elements",
+      "upstreamUrl": "https://github.com/21st-dev/agent-elements",
+      "upstreamCommit": "b04b36cb6381a1dd1a0e86cc7c90564ddcd56d37"
+    },
+    {
+      "id": "bencho",
+      "name": "bencho",
+      "upstreamUrl": "https://github.com/cabralorenzo/bencho",
+      "upstreamCommit": "c65992417427bb09e661674ffa800bef29adef49"
+    }
+  ],
+  "components": [
+    {
+      "id": "agent-elements:error-message",
+      "sourceId": "agent-elements",
+      "name": "Error Message",
+      "category": "agent-ui",
+      "tags": [
+        "react",
+        "agent-elements"
+      ],
+      "upstreamUrl": "https://github.com/21st-dev/agent-elements/blob/b04b36cb6381a1dd1a0e86cc7c90564ddcd56d37/lib/agent-ui/components/error-message.tsx",
+      "upstreamCommit": "b04b36cb6381a1dd1a0e86cc7c90564ddcd56d37",
+      "license": {
+        "status": "allowed",
+        "evidencePath": "archive/agent-elements/b04b36cb6381a1dd1a0e86cc7c90564ddcd56d37/error-message/LICENSE",
+        "noticePaths": [
+          "archive/agent-elements/b04b36cb6381a1dd1a0e86cc7c90564ddcd56d37/error-message/LICENSE"
+        ]
+      },
+      "snapshotPath": "archive/agent-elements/b04b36cb6381a1dd1a0e86cc7c90564ddcd56d37/error-message",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "8bc26817d6b5c323f8cb5e5da77182fe0db8a5ad0e0b563903f9382bba06dc9a",
+          "size": 1065
+        },
+        {
+          "path": "lib/agent-ui/agent-ui.css",
+          "sha256": "20817c261c1ff7fca12a8ca93332a27bdcf5def6928fc7e19c2fed398b3ed5f5",
+          "size": 8409
+        },
+        {
+          "path": "lib/agent-ui/components/error-message.tsx",
+          "sha256": "8a89747429823d2ee4450e957f476613ad9cc70ebf0e8b4e80af6715cc03b9a5",
+          "size": 662
+        },
+        {
+          "path": "lib/agent-ui/utils/cn.ts",
+          "sha256": "d1f1e0d62cb8d8d1e04c26e14de842d8a151f75812d81b046c65b5d1fe8e4b27",
+          "size": 169
+        },
+        {
+          "path": "package.json",
+          "sha256": "ff0ad05f8e917a861a28d36d50c389967b8863d9c3024e02155da78b5decdf51",
+          "size": 1538
+        },
+        {
+          "path": "pnpm-lock.yaml",
+          "sha256": "01a33419cf9d55dd460e78c74d21e9895f24c267f73cea5d0f3baeb6d1e3ad49",
+          "size": 319376
+        }
+      ],
+      "dependencies": {
+        "clsx": "2.1.1",
+        "react": "19.2.3",
+        "react-dom": "19.2.3",
+        "tailwind-merge": "2.6.1",
+        "tailwindcss": "4.2.1"
+      },
+      "limitations": [
+        "Static source archive only; upstream scripts and components were not executed or visually tested.",
+        "dependencies pins direct imports and documented host style/peer requirements; npm transitive packages are not vendored. Offline source recovery is not offline dependency installation.",
+        "Entry: lib/agent-ui/components/error-message.tsx",
+        "Import lib/agent-ui/agent-ui.css in a Tailwind CSS 4 host; preserve original lib/agent-ui relative layout. No host app or API integration included."
+      ],
+      "assetKind": "source"
+    },
+    {
+      "id": "agent-elements:text-shimmer",
+      "sourceId": "agent-elements",
+      "name": "Text Shimmer",
+      "category": "agent-ui",
+      "tags": [
+        "react",
+        "agent-elements"
+      ],
+      "upstreamUrl": "https://github.com/21st-dev/agent-elements/blob/b04b36cb6381a1dd1a0e86cc7c90564ddcd56d37/lib/agent-ui/components/text-shimmer.tsx",
+      "upstreamCommit": "b04b36cb6381a1dd1a0e86cc7c90564ddcd56d37",
+      "license": {
+        "status": "allowed",
+        "evidencePath": "archive/agent-elements/b04b36cb6381a1dd1a0e86cc7c90564ddcd56d37/text-shimmer/LICENSE",
+        "noticePaths": [
+          "archive/agent-elements/b04b36cb6381a1dd1a0e86cc7c90564ddcd56d37/text-shimmer/LICENSE"
+        ]
+      },
+      "snapshotPath": "archive/agent-elements/b04b36cb6381a1dd1a0e86cc7c90564ddcd56d37/text-shimmer",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "8bc26817d6b5c323f8cb5e5da77182fe0db8a5ad0e0b563903f9382bba06dc9a",
+          "size": 1065
+        },
+        {
+          "path": "lib/agent-ui/agent-ui.css",
+          "sha256": "20817c261c1ff7fca12a8ca93332a27bdcf5def6928fc7e19c2fed398b3ed5f5",
+          "size": 8409
+        },
+        {
+          "path": "lib/agent-ui/components/text-shimmer.tsx",
+          "sha256": "7f6bb9c4aa8a3efd9823ce2dc82a8e0d5b8776f9b0fe060f4b9512394de7fdb9",
+          "size": 925
+        },
+        {
+          "path": "lib/agent-ui/utils/cn.ts",
+          "sha256": "d1f1e0d62cb8d8d1e04c26e14de842d8a151f75812d81b046c65b5d1fe8e4b27",
+          "size": 169
+        },
+        {
+          "path": "package.json",
+          "sha256": "ff0ad05f8e917a861a28d36d50c389967b8863d9c3024e02155da78b5decdf51",
+          "size": 1538
+        },
+        {
+          "path": "pnpm-lock.yaml",
+          "sha256": "01a33419cf9d55dd460e78c74d21e9895f24c267f73cea5d0f3baeb6d1e3ad49",
+          "size": 319376
+        }
+      ],
+      "dependencies": {
+        "clsx": "2.1.1",
+        "react": "19.2.3",
+        "react-dom": "19.2.3",
+        "tailwind-merge": "2.6.1",
+        "tailwindcss": "4.2.1"
+      },
+      "limitations": [
+        "Static source archive only; upstream scripts and components were not executed or visually tested.",
+        "dependencies pins direct imports and documented host style/peer requirements; npm transitive packages are not vendored. Offline source recovery is not offline dependency installation.",
+        "Entry: lib/agent-ui/components/text-shimmer.tsx",
+        "Import lib/agent-ui/agent-ui.css in a Tailwind CSS 4 host; preserve original lib/agent-ui relative layout. No host app or API integration included."
+      ],
+      "assetKind": "source"
+    },
+    {
+      "id": "agent-elements:input-typing",
+      "sourceId": "agent-elements",
+      "name": "Input Typing",
+      "category": "agent-ui",
+      "tags": [
+        "react",
+        "agent-elements"
+      ],
+      "upstreamUrl": "https://github.com/21st-dev/agent-elements/blob/b04b36cb6381a1dd1a0e86cc7c90564ddcd56d37/lib/agent-ui/components/input/input-typing.tsx",
+      "upstreamCommit": "b04b36cb6381a1dd1a0e86cc7c90564ddcd56d37",
+      "license": {
+        "status": "allowed",
+        "evidencePath": "archive/agent-elements/b04b36cb6381a1dd1a0e86cc7c90564ddcd56d37/input-typing/LICENSE",
+        "noticePaths": [
+          "archive/agent-elements/b04b36cb6381a1dd1a0e86cc7c90564ddcd56d37/input-typing/LICENSE"
+        ]
+      },
+      "snapshotPath": "archive/agent-elements/b04b36cb6381a1dd1a0e86cc7c90564ddcd56d37/input-typing",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "8bc26817d6b5c323f8cb5e5da77182fe0db8a5ad0e0b563903f9382bba06dc9a",
+          "size": 1065
+        },
+        {
+          "path": "lib/agent-ui/agent-ui.css",
+          "sha256": "20817c261c1ff7fca12a8ca93332a27bdcf5def6928fc7e19c2fed398b3ed5f5",
+          "size": 8409
+        },
+        {
+          "path": "lib/agent-ui/components/input/input-typing.tsx",
+          "sha256": "b80ebb92bed404d01e783c8a88d5b5dee5798dbe3a3b94bf6fad2793d28f9403",
+          "size": 1304
+        },
+        {
+          "path": "package.json",
+          "sha256": "ff0ad05f8e917a861a28d36d50c389967b8863d9c3024e02155da78b5decdf51",
+          "size": 1538
+        },
+        {
+          "path": "pnpm-lock.yaml",
+          "sha256": "01a33419cf9d55dd460e78c74d21e9895f24c267f73cea5d0f3baeb6d1e3ad49",
+          "size": 319376
+        }
+      ],
+      "dependencies": {
+        "react": "19.2.3",
+        "react-dom": "19.2.3",
+        "tailwindcss": "4.2.1"
+      },
+      "limitations": [
+        "Static source archive only; upstream scripts and components were not executed or visually tested.",
+        "dependencies pins direct imports and documented host style/peer requirements; npm transitive packages are not vendored. Offline source recovery is not offline dependency installation.",
+        "Entry: lib/agent-ui/components/input/input-typing.tsx",
+        "Import lib/agent-ui/agent-ui.css in a Tailwind CSS 4 host; preserve original lib/agent-ui relative layout. No host app or API integration included."
+      ],
+      "assetKind": "source"
+    },
+    {
+      "id": "agent-elements:send-button",
+      "sourceId": "agent-elements",
+      "name": "Send Button",
+      "category": "agent-ui",
+      "tags": [
+        "react",
+        "agent-elements"
+      ],
+      "upstreamUrl": "https://github.com/21st-dev/agent-elements/blob/b04b36cb6381a1dd1a0e86cc7c90564ddcd56d37/lib/agent-ui/components/input/send-button.tsx",
+      "upstreamCommit": "b04b36cb6381a1dd1a0e86cc7c90564ddcd56d37",
+      "license": {
+        "status": "allowed",
+        "evidencePath": "archive/agent-elements/b04b36cb6381a1dd1a0e86cc7c90564ddcd56d37/send-button/LICENSE",
+        "noticePaths": [
+          "archive/agent-elements/b04b36cb6381a1dd1a0e86cc7c90564ddcd56d37/send-button/LICENSE"
+        ]
+      },
+      "snapshotPath": "archive/agent-elements/b04b36cb6381a1dd1a0e86cc7c90564ddcd56d37/send-button",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "8bc26817d6b5c323f8cb5e5da77182fe0db8a5ad0e0b563903f9382bba06dc9a",
+          "size": 1065
+        },
+        {
+          "path": "lib/agent-ui/agent-ui.css",
+          "sha256": "20817c261c1ff7fca12a8ca93332a27bdcf5def6928fc7e19c2fed398b3ed5f5",
+          "size": 8409
+        },
+        {
+          "path": "lib/agent-ui/components/input/send-button.tsx",
+          "sha256": "13f7b8dcf9050a5cbe9e86b3af91f51d888eb5d5c3818321264c8eabc543886d",
+          "size": 1007
+        },
+        {
+          "path": "lib/agent-ui/utils/cn.ts",
+          "sha256": "d1f1e0d62cb8d8d1e04c26e14de842d8a151f75812d81b046c65b5d1fe8e4b27",
+          "size": 169
+        },
+        {
+          "path": "package.json",
+          "sha256": "ff0ad05f8e917a861a28d36d50c389967b8863d9c3024e02155da78b5decdf51",
+          "size": 1538
+        },
+        {
+          "path": "pnpm-lock.yaml",
+          "sha256": "01a33419cf9d55dd460e78c74d21e9895f24c267f73cea5d0f3baeb6d1e3ad49",
+          "size": 319376
+        }
+      ],
+      "dependencies": {
+        "@tabler/icons-react": "3.40.0",
+        "clsx": "2.1.1",
+        "react": "19.2.3",
+        "react-dom": "19.2.3",
+        "tailwind-merge": "2.6.1",
+        "tailwindcss": "4.2.1"
+      },
+      "limitations": [
+        "Static source archive only; upstream scripts and components were not executed or visually tested.",
+        "dependencies pins direct imports and documented host style/peer requirements; npm transitive packages are not vendored. Offline source recovery is not offline dependency installation.",
+        "Entry: lib/agent-ui/components/input/send-button.tsx",
+        "Import lib/agent-ui/agent-ui.css in a Tailwind CSS 4 host; preserve original lib/agent-ui relative layout. No host app or API integration included."
+      ],
+      "assetKind": "source"
+    },
+    {
+      "id": "agent-elements:suggestions",
+      "sourceId": "agent-elements",
+      "name": "Suggestions",
+      "category": "agent-ui",
+      "tags": [
+        "react",
+        "agent-elements"
+      ],
+      "upstreamUrl": "https://github.com/21st-dev/agent-elements/blob/b04b36cb6381a1dd1a0e86cc7c90564ddcd56d37/lib/agent-ui/components/input/suggestions.tsx",
+      "upstreamCommit": "b04b36cb6381a1dd1a0e86cc7c90564ddcd56d37",
+      "license": {
+        "status": "allowed",
+        "evidencePath": "archive/agent-elements/b04b36cb6381a1dd1a0e86cc7c90564ddcd56d37/suggestions/LICENSE",
+        "noticePaths": [
+          "archive/agent-elements/b04b36cb6381a1dd1a0e86cc7c90564ddcd56d37/suggestions/LICENSE"
+        ]
+      },
+      "snapshotPath": "archive/agent-elements/b04b36cb6381a1dd1a0e86cc7c90564ddcd56d37/suggestions",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "8bc26817d6b5c323f8cb5e5da77182fe0db8a5ad0e0b563903f9382bba06dc9a",
+          "size": 1065
+        },
+        {
+          "path": "lib/agent-ui/agent-ui.css",
+          "sha256": "20817c261c1ff7fca12a8ca93332a27bdcf5def6928fc7e19c2fed398b3ed5f5",
+          "size": 8409
+        },
+        {
+          "path": "lib/agent-ui/components/input/suggestions.tsx",
+          "sha256": "622088e3658b624810c1c592d4d0dbe9b307788be5d8c96bd9bca1447947fcc1",
+          "size": 1358
+        },
+        {
+          "path": "lib/agent-ui/utils/cn.ts",
+          "sha256": "d1f1e0d62cb8d8d1e04c26e14de842d8a151f75812d81b046c65b5d1fe8e4b27",
+          "size": 169
+        },
+        {
+          "path": "package.json",
+          "sha256": "ff0ad05f8e917a861a28d36d50c389967b8863d9c3024e02155da78b5decdf51",
+          "size": 1538
+        },
+        {
+          "path": "pnpm-lock.yaml",
+          "sha256": "01a33419cf9d55dd460e78c74d21e9895f24c267f73cea5d0f3baeb6d1e3ad49",
+          "size": 319376
+        }
+      ],
+      "dependencies": {
+        "clsx": "2.1.1",
+        "react": "19.2.3",
+        "react-dom": "19.2.3",
+        "tailwind-merge": "2.6.1",
+        "tailwindcss": "4.2.1"
+      },
+      "limitations": [
+        "Static source archive only; upstream scripts and components were not executed or visually tested.",
+        "dependencies pins direct imports and documented host style/peer requirements; npm transitive packages are not vendored. Offline source recovery is not offline dependency installation.",
+        "Entry: lib/agent-ui/components/input/suggestions.tsx",
+        "Import lib/agent-ui/agent-ui.css in a Tailwind CSS 4 host; preserve original lib/agent-ui relative layout. No host app or API integration included."
+      ],
+      "assetKind": "source"
+    },
+    {
+      "id": "agent-elements:attachment-button",
+      "sourceId": "agent-elements",
+      "name": "Attachment Button",
+      "category": "agent-ui",
+      "tags": [
+        "react",
+        "agent-elements"
+      ],
+      "upstreamUrl": "https://github.com/21st-dev/agent-elements/blob/b04b36cb6381a1dd1a0e86cc7c90564ddcd56d37/lib/agent-ui/components/input/attachment-button.tsx",
+      "upstreamCommit": "b04b36cb6381a1dd1a0e86cc7c90564ddcd56d37",
+      "license": {
+        "status": "allowed",
+        "evidencePath": "archive/agent-elements/b04b36cb6381a1dd1a0e86cc7c90564ddcd56d37/attachment-button/LICENSE",
+        "noticePaths": [
+          "archive/agent-elements/b04b36cb6381a1dd1a0e86cc7c90564ddcd56d37/attachment-button/LICENSE"
+        ]
+      },
+      "snapshotPath": "archive/agent-elements/b04b36cb6381a1dd1a0e86cc7c90564ddcd56d37/attachment-button",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "8bc26817d6b5c323f8cb5e5da77182fe0db8a5ad0e0b563903f9382bba06dc9a",
+          "size": 1065
+        },
+        {
+          "path": "lib/agent-ui/agent-ui.css",
+          "sha256": "20817c261c1ff7fca12a8ca93332a27bdcf5def6928fc7e19c2fed398b3ed5f5",
+          "size": 8409
+        },
+        {
+          "path": "lib/agent-ui/components/input/attachment-button.tsx",
+          "sha256": "dd91d50da400e1881918be0b1a1382badf6e8a6853fa3d58245802a5bb7da47d",
+          "size": 1576
+        },
+        {
+          "path": "package.json",
+          "sha256": "ff0ad05f8e917a861a28d36d50c389967b8863d9c3024e02155da78b5decdf51",
+          "size": 1538
+        },
+        {
+          "path": "pnpm-lock.yaml",
+          "sha256": "01a33419cf9d55dd460e78c74d21e9895f24c267f73cea5d0f3baeb6d1e3ad49",
+          "size": 319376
+        }
+      ],
+      "dependencies": {
+        "@tabler/icons-react": "3.40.0",
+        "react": "19.2.3",
+        "react-dom": "19.2.3",
+        "tailwindcss": "4.2.1"
+      },
+      "limitations": [
+        "Static source archive only; upstream scripts and components were not executed or visually tested.",
+        "dependencies pins direct imports and documented host style/peer requirements; npm transitive packages are not vendored. Offline source recovery is not offline dependency installation.",
+        "Entry: lib/agent-ui/components/input/attachment-button.tsx",
+        "Import lib/agent-ui/agent-ui.css in a Tailwind CSS 4 host; preserve original lib/agent-ui relative layout. No host app or API integration included."
+      ],
+      "assetKind": "source"
+    },
+    {
+      "id": "agent-elements:question-prompt",
+      "sourceId": "agent-elements",
+      "name": "Question Prompt",
+      "category": "agent-ui",
+      "tags": [
+        "react",
+        "agent-elements"
+      ],
+      "upstreamUrl": "https://github.com/21st-dev/agent-elements/blob/b04b36cb6381a1dd1a0e86cc7c90564ddcd56d37/lib/agent-ui/components/question/question-prompt.tsx",
+      "upstreamCommit": "b04b36cb6381a1dd1a0e86cc7c90564ddcd56d37",
+      "license": {
+        "status": "allowed",
+        "evidencePath": "archive/agent-elements/b04b36cb6381a1dd1a0e86cc7c90564ddcd56d37/question-prompt/LICENSE",
+        "noticePaths": [
+          "archive/agent-elements/b04b36cb6381a1dd1a0e86cc7c90564ddcd56d37/question-prompt/LICENSE"
+        ]
+      },
+      "snapshotPath": "archive/agent-elements/b04b36cb6381a1dd1a0e86cc7c90564ddcd56d37/question-prompt",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "8bc26817d6b5c323f8cb5e5da77182fe0db8a5ad0e0b563903f9382bba06dc9a",
+          "size": 1065
+        },
+        {
+          "path": "lib/agent-ui/agent-ui.css",
+          "sha256": "20817c261c1ff7fca12a8ca93332a27bdcf5def6928fc7e19c2fed398b3ed5f5",
+          "size": 8409
+        },
+        {
+          "path": "lib/agent-ui/components/question/question-prompt.tsx",
+          "sha256": "8ad8143975886f0d607ce3d863e47e55bca7943bfcaa79be7ff312617387cb03",
+          "size": 11331
+        },
+        {
+          "path": "lib/agent-ui/utils/cn.ts",
+          "sha256": "d1f1e0d62cb8d8d1e04c26e14de842d8a151f75812d81b046c65b5d1fe8e4b27",
+          "size": 169
+        },
+        {
+          "path": "package.json",
+          "sha256": "ff0ad05f8e917a861a28d36d50c389967b8863d9c3024e02155da78b5decdf51",
+          "size": 1538
+        },
+        {
+          "path": "pnpm-lock.yaml",
+          "sha256": "01a33419cf9d55dd460e78c74d21e9895f24c267f73cea5d0f3baeb6d1e3ad49",
+          "size": 319376
+        }
+      ],
+      "dependencies": {
+        "clsx": "2.1.1",
+        "react": "19.2.3",
+        "react-dom": "19.2.3",
+        "tailwind-merge": "2.6.1",
+        "tailwindcss": "4.2.1"
+      },
+      "limitations": [
+        "Static source archive only; upstream scripts and components were not executed or visually tested.",
+        "dependencies pins direct imports and documented host style/peer requirements; npm transitive packages are not vendored. Offline source recovery is not offline dependency installation.",
+        "Entry: lib/agent-ui/components/question/question-prompt.tsx",
+        "Import lib/agent-ui/agent-ui.css in a Tailwind CSS 4 host; preserve original lib/agent-ui relative layout. No host app or API integration included."
+      ],
+      "assetKind": "source"
+    },
+    {
+      "id": "agent-elements:bash-tool",
+      "sourceId": "agent-elements",
+      "name": "Bash Tool",
+      "category": "agent-ui",
+      "tags": [
+        "react",
+        "agent-elements"
+      ],
+      "upstreamUrl": "https://github.com/21st-dev/agent-elements/blob/b04b36cb6381a1dd1a0e86cc7c90564ddcd56d37/lib/agent-ui/components/tools/bash-tool.tsx",
+      "upstreamCommit": "b04b36cb6381a1dd1a0e86cc7c90564ddcd56d37",
+      "license": {
+        "status": "allowed",
+        "evidencePath": "archive/agent-elements/b04b36cb6381a1dd1a0e86cc7c90564ddcd56d37/bash-tool/LICENSE",
+        "noticePaths": [
+          "archive/agent-elements/b04b36cb6381a1dd1a0e86cc7c90564ddcd56d37/bash-tool/LICENSE"
+        ]
+      },
+      "snapshotPath": "archive/agent-elements/b04b36cb6381a1dd1a0e86cc7c90564ddcd56d37/bash-tool",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "8bc26817d6b5c323f8cb5e5da77182fe0db8a5ad0e0b563903f9382bba06dc9a",
+          "size": 1065
+        },
+        {
+          "path": "lib/agent-ui/agent-ui.css",
+          "sha256": "20817c261c1ff7fca12a8ca93332a27bdcf5def6928fc7e19c2fed398b3ed5f5",
+          "size": 8409
+        },
+        {
+          "path": "lib/agent-ui/components/text-shimmer.tsx",
+          "sha256": "7f6bb9c4aa8a3efd9823ce2dc82a8e0d5b8776f9b0fe060f4b9512394de7fdb9",
+          "size": 925
+        },
+        {
+          "path": "lib/agent-ui/components/tools/bash-tool.tsx",
+          "sha256": "0114f88b11958cd78cd9987d8d0b62330ddfc48d764fc6b581f448cee1a9d806",
+          "size": 3903
+        },
+        {
+          "path": "lib/agent-ui/components/tools/tool-approval-footer.tsx",
+          "sha256": "8f8cdd2d50196246c68e21e7e7564dbffd3acce011814b5814d538f87aa9385e",
+          "size": 3267
+        },
+        {
+          "path": "lib/agent-ui/hooks/use-tool-complete.ts",
+          "sha256": "8ebcacc22b933095ce04a8ca71c2954d758f2a6955ef09fcb1241a924f011da7",
+          "size": 418
+        },
+        {
+          "path": "lib/agent-ui/types/timeline.ts",
+          "sha256": "473a2eee0935a7095af87ce5906fb13b3ee8f102bf7e09cfe5811d4c0711faf7",
+          "size": 1036
+        },
+        {
+          "path": "lib/agent-ui/utils/cn.ts",
+          "sha256": "d1f1e0d62cb8d8d1e04c26e14de842d8a151f75812d81b046c65b5d1fe8e4b27",
+          "size": 169
+        },
+        {
+          "path": "lib/agent-ui/utils/tool-adapters.ts",
+          "sha256": "1f3a748c20aed59deb3f12cb1b640b8a9c4110f63202041ddd2b8b31d45451c1",
+          "size": 5838
+        },
+        {
+          "path": "package.json",
+          "sha256": "ff0ad05f8e917a861a28d36d50c389967b8863d9c3024e02155da78b5decdf51",
+          "size": 1538
+        },
+        {
+          "path": "pnpm-lock.yaml",
+          "sha256": "01a33419cf9d55dd460e78c74d21e9895f24c267f73cea5d0f3baeb6d1e3ad49",
+          "size": 319376
+        }
+      ],
+      "dependencies": {
+        "clsx": "2.1.1",
+        "react": "19.2.3",
+        "react-dom": "19.2.3",
+        "tailwind-merge": "2.6.1",
+        "tailwindcss": "4.2.1"
+      },
+      "limitations": [
+        "Static source archive only; upstream scripts and components were not executed or visually tested.",
+        "dependencies pins direct imports and documented host style/peer requirements; npm transitive packages are not vendored. Offline source recovery is not offline dependency installation.",
+        "Entry: lib/agent-ui/components/tools/bash-tool.tsx",
+        "Import lib/agent-ui/agent-ui.css in a Tailwind CSS 4 host; preserve original lib/agent-ui relative layout. No host app or API integration included."
+      ],
+      "assetKind": "source"
+    },
+    {
+      "id": "agent-elements:generic-tool",
+      "sourceId": "agent-elements",
+      "name": "Generic Tool",
+      "category": "agent-ui",
+      "tags": [
+        "react",
+        "agent-elements"
+      ],
+      "upstreamUrl": "https://github.com/21st-dev/agent-elements/blob/b04b36cb6381a1dd1a0e86cc7c90564ddcd56d37/lib/agent-ui/components/tools/generic-tool.tsx",
+      "upstreamCommit": "b04b36cb6381a1dd1a0e86cc7c90564ddcd56d37",
+      "license": {
+        "status": "allowed",
+        "evidencePath": "archive/agent-elements/b04b36cb6381a1dd1a0e86cc7c90564ddcd56d37/generic-tool/LICENSE",
+        "noticePaths": [
+          "archive/agent-elements/b04b36cb6381a1dd1a0e86cc7c90564ddcd56d37/generic-tool/LICENSE"
+        ]
+      },
+      "snapshotPath": "archive/agent-elements/b04b36cb6381a1dd1a0e86cc7c90564ddcd56d37/generic-tool",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "8bc26817d6b5c323f8cb5e5da77182fe0db8a5ad0e0b563903f9382bba06dc9a",
+          "size": 1065
+        },
+        {
+          "path": "lib/agent-ui/agent-ui.css",
+          "sha256": "20817c261c1ff7fca12a8ca93332a27bdcf5def6928fc7e19c2fed398b3ed5f5",
+          "size": 8409
+        },
+        {
+          "path": "lib/agent-ui/components/text-shimmer.tsx",
+          "sha256": "7f6bb9c4aa8a3efd9823ce2dc82a8e0d5b8776f9b0fe060f4b9512394de7fdb9",
+          "size": 925
+        },
+        {
+          "path": "lib/agent-ui/components/tools/generic-tool.tsx",
+          "sha256": "6524fe47461b5c9f45f7dab7c135062ee895a1c5053f4f4f2a54a3adbac32c0f",
+          "size": 1340
+        },
+        {
+          "path": "lib/agent-ui/components/tools/tool-row-base.tsx",
+          "sha256": "419468447b16035d5056747a732a52845a7752c4db075d10d616112f90584bd7",
+          "size": 3199
+        },
+        {
+          "path": "lib/agent-ui/hooks/use-tool-complete.ts",
+          "sha256": "8ebcacc22b933095ce04a8ca71c2954d758f2a6955ef09fcb1241a924f011da7",
+          "size": 418
+        },
+        {
+          "path": "lib/agent-ui/types/timeline.ts",
+          "sha256": "473a2eee0935a7095af87ce5906fb13b3ee8f102bf7e09cfe5811d4c0711faf7",
+          "size": 1036
+        },
+        {
+          "path": "lib/agent-ui/utils/cn.ts",
+          "sha256": "d1f1e0d62cb8d8d1e04c26e14de842d8a151f75812d81b046c65b5d1fe8e4b27",
+          "size": 169
+        },
+        {
+          "path": "package.json",
+          "sha256": "ff0ad05f8e917a861a28d36d50c389967b8863d9c3024e02155da78b5decdf51",
+          "size": 1538
+        },
+        {
+          "path": "pnpm-lock.yaml",
+          "sha256": "01a33419cf9d55dd460e78c74d21e9895f24c267f73cea5d0f3baeb6d1e3ad49",
+          "size": 319376
+        }
+      ],
+      "dependencies": {
+        "@base-ui/react": "1.3.0",
+        "@tabler/icons-react": "3.40.0",
+        "clsx": "2.1.1",
+        "react": "19.2.3",
+        "react-dom": "19.2.3",
+        "tailwind-merge": "2.6.1",
+        "tailwindcss": "4.2.1"
+      },
+      "limitations": [
+        "Static source archive only; upstream scripts and components were not executed or visually tested.",
+        "dependencies pins direct imports and documented host style/peer requirements; npm transitive packages are not vendored. Offline source recovery is not offline dependency installation.",
+        "Entry: lib/agent-ui/components/tools/generic-tool.tsx",
+        "Import lib/agent-ui/agent-ui.css in a Tailwind CSS 4 host; preserve original lib/agent-ui relative layout. No host app or API integration included."
+      ],
+      "assetKind": "source"
+    },
+    {
+      "id": "agent-elements:thinking-tool",
+      "sourceId": "agent-elements",
+      "name": "Thinking Tool",
+      "category": "agent-ui",
+      "tags": [
+        "react",
+        "agent-elements"
+      ],
+      "upstreamUrl": "https://github.com/21st-dev/agent-elements/blob/b04b36cb6381a1dd1a0e86cc7c90564ddcd56d37/lib/agent-ui/components/tools/thinking-tool.tsx",
+      "upstreamCommit": "b04b36cb6381a1dd1a0e86cc7c90564ddcd56d37",
+      "license": {
+        "status": "allowed",
+        "evidencePath": "archive/agent-elements/b04b36cb6381a1dd1a0e86cc7c90564ddcd56d37/thinking-tool/LICENSE",
+        "noticePaths": [
+          "archive/agent-elements/b04b36cb6381a1dd1a0e86cc7c90564ddcd56d37/thinking-tool/LICENSE"
+        ]
+      },
+      "snapshotPath": "archive/agent-elements/b04b36cb6381a1dd1a0e86cc7c90564ddcd56d37/thinking-tool",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "8bc26817d6b5c323f8cb5e5da77182fe0db8a5ad0e0b563903f9382bba06dc9a",
+          "size": 1065
+        },
+        {
+          "path": "lib/agent-ui/agent-ui.css",
+          "sha256": "20817c261c1ff7fca12a8ca93332a27bdcf5def6928fc7e19c2fed398b3ed5f5",
+          "size": 8409
+        },
+        {
+          "path": "lib/agent-ui/components/text-shimmer.tsx",
+          "sha256": "7f6bb9c4aa8a3efd9823ce2dc82a8e0d5b8776f9b0fe060f4b9512394de7fdb9",
+          "size": 925
+        },
+        {
+          "path": "lib/agent-ui/components/tools/thinking-tool.tsx",
+          "sha256": "319a85289fd51196bf231f4984b4ccaadfdbd0ff59aae5c62d7015f5983e1d59",
+          "size": 2815
+        },
+        {
+          "path": "lib/agent-ui/components/tools/tool-row-base.tsx",
+          "sha256": "419468447b16035d5056747a732a52845a7752c4db075d10d616112f90584bd7",
+          "size": 3199
+        },
+        {
+          "path": "lib/agent-ui/hooks/use-tool-complete.ts",
+          "sha256": "8ebcacc22b933095ce04a8ca71c2954d758f2a6955ef09fcb1241a924f011da7",
+          "size": 418
+        },
+        {
+          "path": "lib/agent-ui/types/timeline.ts",
+          "sha256": "473a2eee0935a7095af87ce5906fb13b3ee8f102bf7e09cfe5811d4c0711faf7",
+          "size": 1036
+        },
+        {
+          "path": "lib/agent-ui/utils/cn.ts",
+          "sha256": "d1f1e0d62cb8d8d1e04c26e14de842d8a151f75812d81b046c65b5d1fe8e4b27",
+          "size": 169
+        },
+        {
+          "path": "lib/agent-ui/utils/tool-adapters.ts",
+          "sha256": "1f3a748c20aed59deb3f12cb1b640b8a9c4110f63202041ddd2b8b31d45451c1",
+          "size": 5838
+        },
+        {
+          "path": "package.json",
+          "sha256": "ff0ad05f8e917a861a28d36d50c389967b8863d9c3024e02155da78b5decdf51",
+          "size": 1538
+        },
+        {
+          "path": "pnpm-lock.yaml",
+          "sha256": "01a33419cf9d55dd460e78c74d21e9895f24c267f73cea5d0f3baeb6d1e3ad49",
+          "size": 319376
+        }
+      ],
+      "dependencies": {
+        "@base-ui/react": "1.3.0",
+        "@tabler/icons-react": "3.40.0",
+        "clsx": "2.1.1",
+        "react": "19.2.3",
+        "react-dom": "19.2.3",
+        "tailwind-merge": "2.6.1",
+        "tailwindcss": "4.2.1"
+      },
+      "limitations": [
+        "Static source archive only; upstream scripts and components were not executed or visually tested.",
+        "dependencies pins direct imports and documented host style/peer requirements; npm transitive packages are not vendored. Offline source recovery is not offline dependency installation.",
+        "Entry: lib/agent-ui/components/tools/thinking-tool.tsx",
+        "Import lib/agent-ui/agent-ui.css in a Tailwind CSS 4 host; preserve original lib/agent-ui relative layout. No host app or API integration included."
+      ],
+      "assetKind": "source"
+    },
+    {
+      "id": "bencho:ascii-wake",
+      "sourceId": "bencho",
+      "name": "Ascii Wake",
+      "category": "interactive-ui",
+      "tags": [
+        "react",
+        "bencho"
+      ],
+      "upstreamUrl": "https://github.com/cabralorenzo/bencho/blob/c65992417427bb09e661674ffa800bef29adef49/blocks/ascii-wake/AsciiWake.tsx",
+      "upstreamCommit": "c65992417427bb09e661674ffa800bef29adef49",
+      "license": {
+        "status": "allowed",
+        "evidencePath": "archive/bencho/c65992417427bb09e661674ffa800bef29adef49/ascii-wake/LICENSE",
+        "noticePaths": [
+          "archive/bencho/c65992417427bb09e661674ffa800bef29adef49/ascii-wake/LICENSE",
+          "archive/bencho/c65992417427bb09e661674ffa800bef29adef49/ascii-wake/THIRD_PARTY.md"
+        ]
+      },
+      "snapshotPath": "archive/bencho/c65992417427bb09e661674ffa800bef29adef49/ascii-wake",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "9f9d2eedd3383d018e343db1205e9b41f07fa49632050482fb40cc1a03dd64fe",
+          "size": 1270
+        },
+        {
+          "path": "THIRD_PARTY.md",
+          "sha256": "5a06fa88b258e8f876f93d900fda3b7efd8a17908fbdab5f557eb2f3f1eef969",
+          "size": 1505
+        },
+        {
+          "path": "blocks/ascii-wake/AsciiWake.css",
+          "sha256": "22b79d9260b3dd2c572c8c984df36eaa521b9e96da0fd304b5f37a50cfa23adb",
+          "size": 392
+        },
+        {
+          "path": "blocks/ascii-wake/AsciiWake.tsx",
+          "sha256": "c34f9fd41f086a5c550d0a9c16bcfc390bcb534750d8603388b5a159f32ac230",
+          "size": 15647
+        },
+        {
+          "path": "blocks/ascii-wake/README.md",
+          "sha256": "b1102923de98bd60e9f785773e8642a15c306f88602e6d1f3ce1c2a67bc2c64b",
+          "size": 1285
+        },
+        {
+          "path": "package.json",
+          "sha256": "28189aafe441d73fa344a97fdf092f146e961afcd82ff1ae53f8cbc3ddc2e6c2",
+          "size": 829
+        },
+        {
+          "path": "tokens.css",
+          "sha256": "abb75ad433a1b7ec6f0136b603c279b5c9e53afa067c0b5f9cd10c95529d0f1a",
+          "size": 3064
+        }
+      ],
+      "dependencies": {
+        "react": "19.2.8",
+        "react-dom": "19.2.8"
+      },
+      "limitations": [
+        "Static source archive only; upstream scripts and components were not executed or visually tested.",
+        "dependencies pins direct imports and documented host style/peer requirements; npm transitive packages are not vendored. Offline source recovery is not offline dependency installation.",
+        "Entry: blocks/ascii-wake/AsciiWake.tsx",
+        "Import tokens.css and the component CSS explicitly; keep blocks/<name>/ layout. React 19.2.8 is a collection pin within upstream ^19.2.8, not an upstream lockfile.",
+        "No Bencho Pro, name/mark assets, website photographs or sounds included; see LICENSE exclusions and THIRD_PARTY.md."
+      ],
+      "assetKind": "source"
+    },
+    {
+      "id": "bencho:escape",
+      "sourceId": "bencho",
+      "name": "Escape",
+      "category": "interactive-ui",
+      "tags": [
+        "react",
+        "bencho"
+      ],
+      "upstreamUrl": "https://github.com/cabralorenzo/bencho/blob/c65992417427bb09e661674ffa800bef29adef49/blocks/escape/Escape.tsx",
+      "upstreamCommit": "c65992417427bb09e661674ffa800bef29adef49",
+      "license": {
+        "status": "allowed",
+        "evidencePath": "archive/bencho/c65992417427bb09e661674ffa800bef29adef49/escape/LICENSE",
+        "noticePaths": [
+          "archive/bencho/c65992417427bb09e661674ffa800bef29adef49/escape/LICENSE",
+          "archive/bencho/c65992417427bb09e661674ffa800bef29adef49/escape/THIRD_PARTY.md"
+        ]
+      },
+      "snapshotPath": "archive/bencho/c65992417427bb09e661674ffa800bef29adef49/escape",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "9f9d2eedd3383d018e343db1205e9b41f07fa49632050482fb40cc1a03dd64fe",
+          "size": 1270
+        },
+        {
+          "path": "THIRD_PARTY.md",
+          "sha256": "5a06fa88b258e8f876f93d900fda3b7efd8a17908fbdab5f557eb2f3f1eef969",
+          "size": 1505
+        },
+        {
+          "path": "blocks/escape/Escape.css",
+          "sha256": "4d5571da640d098f58f2c1306f43f20298a6d5afd4864a841fba26ae3c9e8ef1",
+          "size": 8169
+        },
+        {
+          "path": "blocks/escape/Escape.tsx",
+          "sha256": "5a045e9cfe8c10a24477c26f7e4fc9e3dc646d5feb49732d1bc50a837e7a0699",
+          "size": 13853
+        },
+        {
+          "path": "blocks/escape/README.md",
+          "sha256": "2ff978fdb4cb6b803fd7446cca9d5885faf89ae420b4289f9e55ae497d1e3185",
+          "size": 1144
+        },
+        {
+          "path": "package.json",
+          "sha256": "28189aafe441d73fa344a97fdf092f146e961afcd82ff1ae53f8cbc3ddc2e6c2",
+          "size": 829
+        },
+        {
+          "path": "tokens.css",
+          "sha256": "abb75ad433a1b7ec6f0136b603c279b5c9e53afa067c0b5f9cd10c95529d0f1a",
+          "size": 3064
+        }
+      ],
+      "dependencies": {
+        "react": "19.2.8",
+        "react-dom": "19.2.8"
+      },
+      "limitations": [
+        "Static source archive only; upstream scripts and components were not executed or visually tested.",
+        "dependencies pins direct imports and documented host style/peer requirements; npm transitive packages are not vendored. Offline source recovery is not offline dependency installation.",
+        "Entry: blocks/escape/Escape.tsx",
+        "Import tokens.css and the component CSS explicitly; keep blocks/<name>/ layout. React 19.2.8 is a collection pin within upstream ^19.2.8, not an upstream lockfile.",
+        "No Bencho Pro, name/mark assets, website photographs or sounds included; see LICENSE exclusions and THIRD_PARTY.md."
+      ],
+      "assetKind": "source"
+    },
+    {
+      "id": "bencho:eye-tracker",
+      "sourceId": "bencho",
+      "name": "Eye Tracker",
+      "category": "interactive-ui",
+      "tags": [
+        "react",
+        "bencho"
+      ],
+      "upstreamUrl": "https://github.com/cabralorenzo/bencho/blob/c65992417427bb09e661674ffa800bef29adef49/blocks/eye-tracker/Watcher.tsx",
+      "upstreamCommit": "c65992417427bb09e661674ffa800bef29adef49",
+      "license": {
+        "status": "allowed",
+        "evidencePath": "archive/bencho/c65992417427bb09e661674ffa800bef29adef49/eye-tracker/LICENSE",
+        "noticePaths": [
+          "archive/bencho/c65992417427bb09e661674ffa800bef29adef49/eye-tracker/LICENSE",
+          "archive/bencho/c65992417427bb09e661674ffa800bef29adef49/eye-tracker/THIRD_PARTY.md"
+        ]
+      },
+      "snapshotPath": "archive/bencho/c65992417427bb09e661674ffa800bef29adef49/eye-tracker",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "9f9d2eedd3383d018e343db1205e9b41f07fa49632050482fb40cc1a03dd64fe",
+          "size": 1270
+        },
+        {
+          "path": "THIRD_PARTY.md",
+          "sha256": "5a06fa88b258e8f876f93d900fda3b7efd8a17908fbdab5f557eb2f3f1eef969",
+          "size": 1505
+        },
+        {
+          "path": "blocks/eye-tracker/README.md",
+          "sha256": "e6eef559fdfb8ff5e23e35972af56f875cf85bd8cac39bbe3e84110ea312237a",
+          "size": 1197
+        },
+        {
+          "path": "blocks/eye-tracker/Watcher.css",
+          "sha256": "6cfe0e9458dca7d4f598a4dff68c28a1b81138cee21f7357034d9ca09822edf0",
+          "size": 2742
+        },
+        {
+          "path": "blocks/eye-tracker/Watcher.tsx",
+          "sha256": "a0b2ca16b454c80c1935aca06f619a4737389e1407e7dd3111103ef0d881c848",
+          "size": 20820
+        },
+        {
+          "path": "package.json",
+          "sha256": "28189aafe441d73fa344a97fdf092f146e961afcd82ff1ae53f8cbc3ddc2e6c2",
+          "size": 829
+        },
+        {
+          "path": "tokens.css",
+          "sha256": "abb75ad433a1b7ec6f0136b603c279b5c9e53afa067c0b5f9cd10c95529d0f1a",
+          "size": 3064
+        }
+      ],
+      "dependencies": {
+        "react": "19.2.8",
+        "react-dom": "19.2.8"
+      },
+      "limitations": [
+        "Static source archive only; upstream scripts and components were not executed or visually tested.",
+        "dependencies pins direct imports and documented host style/peer requirements; npm transitive packages are not vendored. Offline source recovery is not offline dependency installation.",
+        "Entry: blocks/eye-tracker/Watcher.tsx",
+        "Import tokens.css and the component CSS explicitly; keep blocks/<name>/ layout. React 19.2.8 is a collection pin within upstream ^19.2.8, not an upstream lockfile.",
+        "No Bencho Pro, name/mark assets, website photographs or sounds included; see LICENSE exclusions and THIRD_PARTY.md."
+      ],
+      "assetKind": "source"
+    },
+    {
+      "id": "bencho:folding-bill",
+      "sourceId": "bencho",
+      "name": "Folding Bill",
+      "category": "interactive-ui",
+      "tags": [
+        "react",
+        "bencho"
+      ],
+      "upstreamUrl": "https://github.com/cabralorenzo/bencho/blob/c65992417427bb09e661674ffa800bef29adef49/blocks/folding-bill/FoldingBill.tsx",
+      "upstreamCommit": "c65992417427bb09e661674ffa800bef29adef49",
+      "license": {
+        "status": "allowed",
+        "evidencePath": "archive/bencho/c65992417427bb09e661674ffa800bef29adef49/folding-bill/LICENSE",
+        "noticePaths": [
+          "archive/bencho/c65992417427bb09e661674ffa800bef29adef49/folding-bill/LICENSE",
+          "archive/bencho/c65992417427bb09e661674ffa800bef29adef49/folding-bill/THIRD_PARTY.md"
+        ]
+      },
+      "snapshotPath": "archive/bencho/c65992417427bb09e661674ffa800bef29adef49/folding-bill",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "9f9d2eedd3383d018e343db1205e9b41f07fa49632050482fb40cc1a03dd64fe",
+          "size": 1270
+        },
+        {
+          "path": "THIRD_PARTY.md",
+          "sha256": "5a06fa88b258e8f876f93d900fda3b7efd8a17908fbdab5f557eb2f3f1eef969",
+          "size": 1505
+        },
+        {
+          "path": "blocks/folding-bill/FoldingBill.css",
+          "sha256": "8f2b80eede1760dd55a4e893c51d3b763c2ca496b9b9660538b5135bbd37edd0",
+          "size": 468
+        },
+        {
+          "path": "blocks/folding-bill/FoldingBill.tsx",
+          "sha256": "397c73866dd921248ad8385705962a049bed43907444c443ed63de22920faa38",
+          "size": 25433
+        },
+        {
+          "path": "blocks/folding-bill/README.md",
+          "sha256": "2cb51e20038b03946b841827d43da3ded10867541b4c5389e93907c586c29899",
+          "size": 1141
+        },
+        {
+          "path": "package.json",
+          "sha256": "28189aafe441d73fa344a97fdf092f146e961afcd82ff1ae53f8cbc3ddc2e6c2",
+          "size": 829
+        },
+        {
+          "path": "tokens.css",
+          "sha256": "abb75ad433a1b7ec6f0136b603c279b5c9e53afa067c0b5f9cd10c95529d0f1a",
+          "size": 3064
+        }
+      ],
+      "dependencies": {
+        "react": "19.2.8",
+        "react-dom": "19.2.8",
+        "three": "0.169.0"
+      },
+      "limitations": [
+        "Static source archive only; upstream scripts and components were not executed or visually tested.",
+        "dependencies pins direct imports and documented host style/peer requirements; npm transitive packages are not vendored. Offline source recovery is not offline dependency installation.",
+        "Entry: blocks/folding-bill/FoldingBill.tsx",
+        "Import tokens.css and the component CSS explicitly; keep blocks/<name>/ layout. React 19.2.8 is a collection pin within upstream ^19.2.8, not an upstream lockfile.",
+        "No Bencho Pro, name/mark assets, website photographs or sounds included; see LICENSE exclusions and THIRD_PARTY.md."
+      ],
+      "assetKind": "source"
+    },
+    {
+      "id": "bencho:generate",
+      "sourceId": "bencho",
+      "name": "Generate",
+      "category": "interactive-ui",
+      "tags": [
+        "react",
+        "bencho"
+      ],
+      "upstreamUrl": "https://github.com/cabralorenzo/bencho/blob/c65992417427bb09e661674ffa800bef29adef49/blocks/generate/Generate.tsx",
+      "upstreamCommit": "c65992417427bb09e661674ffa800bef29adef49",
+      "license": {
+        "status": "allowed",
+        "evidencePath": "archive/bencho/c65992417427bb09e661674ffa800bef29adef49/generate/LICENSE",
+        "noticePaths": [
+          "archive/bencho/c65992417427bb09e661674ffa800bef29adef49/generate/LICENSE",
+          "archive/bencho/c65992417427bb09e661674ffa800bef29adef49/generate/THIRD_PARTY.md"
+        ]
+      },
+      "snapshotPath": "archive/bencho/c65992417427bb09e661674ffa800bef29adef49/generate",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "9f9d2eedd3383d018e343db1205e9b41f07fa49632050482fb40cc1a03dd64fe",
+          "size": 1270
+        },
+        {
+          "path": "THIRD_PARTY.md",
+          "sha256": "5a06fa88b258e8f876f93d900fda3b7efd8a17908fbdab5f557eb2f3f1eef969",
+          "size": 1505
+        },
+        {
+          "path": "blocks/generate/Generate.css",
+          "sha256": "b3dfa398d6b07647c4eb3dc443d8dddd212a993fa63e3b6518c89b70f8426782",
+          "size": 5711
+        },
+        {
+          "path": "blocks/generate/Generate.tsx",
+          "sha256": "37f805ea08835c88ff7a635f69551ae04516385eb370b30f6c0c3a3590ef69cc",
+          "size": 12997
+        },
+        {
+          "path": "blocks/generate/README.md",
+          "sha256": "e61fb9c8844cba739e01f8083e11bd56f0789f9282b7cb77592d70fc06e8576e",
+          "size": 1273
+        },
+        {
+          "path": "package.json",
+          "sha256": "28189aafe441d73fa344a97fdf092f146e961afcd82ff1ae53f8cbc3ddc2e6c2",
+          "size": 829
+        },
+        {
+          "path": "tokens.css",
+          "sha256": "abb75ad433a1b7ec6f0136b603c279b5c9e53afa067c0b5f9cd10c95529d0f1a",
+          "size": 3064
+        }
+      ],
+      "dependencies": {
+        "react": "19.2.8",
+        "react-dom": "19.2.8"
+      },
+      "limitations": [
+        "Static source archive only; upstream scripts and components were not executed or visually tested.",
+        "dependencies pins direct imports and documented host style/peer requirements; npm transitive packages are not vendored. Offline source recovery is not offline dependency installation.",
+        "Entry: blocks/generate/Generate.tsx",
+        "Import tokens.css and the component CSS explicitly; keep blocks/<name>/ layout. React 19.2.8 is a collection pin within upstream ^19.2.8, not an upstream lockfile.",
+        "No Bencho Pro, name/mark assets, website photographs or sounds included; see LICENSE exclusions and THIRD_PARTY.md."
+      ],
+      "assetKind": "source"
+    },
+    {
+      "id": "bencho:heat-word",
+      "sourceId": "bencho",
+      "name": "Heat Word",
+      "category": "interactive-ui",
+      "tags": [
+        "react",
+        "bencho"
+      ],
+      "upstreamUrl": "https://github.com/cabralorenzo/bencho/blob/c65992417427bb09e661674ffa800bef29adef49/blocks/heat-word/HeatWord.tsx",
+      "upstreamCommit": "c65992417427bb09e661674ffa800bef29adef49",
+      "license": {
+        "status": "allowed",
+        "evidencePath": "archive/bencho/c65992417427bb09e661674ffa800bef29adef49/heat-word/LICENSE",
+        "noticePaths": [
+          "archive/bencho/c65992417427bb09e661674ffa800bef29adef49/heat-word/LICENSE",
+          "archive/bencho/c65992417427bb09e661674ffa800bef29adef49/heat-word/THIRD_PARTY.md"
+        ]
+      },
+      "snapshotPath": "archive/bencho/c65992417427bb09e661674ffa800bef29adef49/heat-word",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "9f9d2eedd3383d018e343db1205e9b41f07fa49632050482fb40cc1a03dd64fe",
+          "size": 1270
+        },
+        {
+          "path": "THIRD_PARTY.md",
+          "sha256": "5a06fa88b258e8f876f93d900fda3b7efd8a17908fbdab5f557eb2f3f1eef969",
+          "size": 1505
+        },
+        {
+          "path": "blocks/heat-word/HeatWord.css",
+          "sha256": "db7f62aec10887971021a163f19d2898699e4fb39e9e390564935a4583ad0316",
+          "size": 367
+        },
+        {
+          "path": "blocks/heat-word/HeatWord.tsx",
+          "sha256": "c69446804020df4d917648d032fb1fc16a4ca2f7108536eb50e7a48e1b35c7f9",
+          "size": 16478
+        },
+        {
+          "path": "blocks/heat-word/README.md",
+          "sha256": "6b30a24d7d1fdf2c26ea1f1271ca14769c6eb4ad70b022be5df9d3ea849969aa",
+          "size": 1082
+        },
+        {
+          "path": "package.json",
+          "sha256": "28189aafe441d73fa344a97fdf092f146e961afcd82ff1ae53f8cbc3ddc2e6c2",
+          "size": 829
+        },
+        {
+          "path": "tokens.css",
+          "sha256": "abb75ad433a1b7ec6f0136b603c279b5c9e53afa067c0b5f9cd10c95529d0f1a",
+          "size": 3064
+        }
+      ],
+      "dependencies": {
+        "react": "19.2.8",
+        "react-dom": "19.2.8"
+      },
+      "limitations": [
+        "Static source archive only; upstream scripts and components were not executed or visually tested.",
+        "dependencies pins direct imports and documented host style/peer requirements; npm transitive packages are not vendored. Offline source recovery is not offline dependency installation.",
+        "Entry: blocks/heat-word/HeatWord.tsx",
+        "Import tokens.css and the component CSS explicitly; keep blocks/<name>/ layout. React 19.2.8 is a collection pin within upstream ^19.2.8, not an upstream lockfile.",
+        "No Bencho Pro, name/mark assets, website photographs or sounds included; see LICENSE exclusions and THIRD_PARTY.md."
+      ],
+      "assetKind": "source"
+    },
+    {
+      "id": "bencho:particles",
+      "sourceId": "bencho",
+      "name": "Particles",
+      "category": "interactive-ui",
+      "tags": [
+        "react",
+        "bencho"
+      ],
+      "upstreamUrl": "https://github.com/cabralorenzo/bencho/blob/c65992417427bb09e661674ffa800bef29adef49/blocks/particles/Particles.tsx",
+      "upstreamCommit": "c65992417427bb09e661674ffa800bef29adef49",
+      "license": {
+        "status": "allowed",
+        "evidencePath": "archive/bencho/c65992417427bb09e661674ffa800bef29adef49/particles/LICENSE",
+        "noticePaths": [
+          "archive/bencho/c65992417427bb09e661674ffa800bef29adef49/particles/LICENSE",
+          "archive/bencho/c65992417427bb09e661674ffa800bef29adef49/particles/THIRD_PARTY.md"
+        ]
+      },
+      "snapshotPath": "archive/bencho/c65992417427bb09e661674ffa800bef29adef49/particles",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "9f9d2eedd3383d018e343db1205e9b41f07fa49632050482fb40cc1a03dd64fe",
+          "size": 1270
+        },
+        {
+          "path": "THIRD_PARTY.md",
+          "sha256": "5a06fa88b258e8f876f93d900fda3b7efd8a17908fbdab5f557eb2f3f1eef969",
+          "size": 1505
+        },
+        {
+          "path": "blocks/particles/Particles.css",
+          "sha256": "c61a2c4b82bd45d56d3698f7031634682302bc4354b8203d4b512a681d217140",
+          "size": 481
+        },
+        {
+          "path": "blocks/particles/Particles.tsx",
+          "sha256": "f3a8db8c012c225e0cf6a0d56b5c162ac2c4b8c05a7ff7f8f9bc7d377449ab72",
+          "size": 10814
+        },
+        {
+          "path": "blocks/particles/README.md",
+          "sha256": "4508f05f345049be034e4a4c81f91aadbfc280a4683af4a54f9750ee3da93f03",
+          "size": 1127
+        },
+        {
+          "path": "package.json",
+          "sha256": "28189aafe441d73fa344a97fdf092f146e961afcd82ff1ae53f8cbc3ddc2e6c2",
+          "size": 829
+        },
+        {
+          "path": "tokens.css",
+          "sha256": "abb75ad433a1b7ec6f0136b603c279b5c9e53afa067c0b5f9cd10c95529d0f1a",
+          "size": 3064
+        }
+      ],
+      "dependencies": {
+        "react": "19.2.8",
+        "react-dom": "19.2.8"
+      },
+      "limitations": [
+        "Static source archive only; upstream scripts and components were not executed or visually tested.",
+        "dependencies pins direct imports and documented host style/peer requirements; npm transitive packages are not vendored. Offline source recovery is not offline dependency installation.",
+        "Entry: blocks/particles/Particles.tsx",
+        "Import tokens.css and the component CSS explicitly; keep blocks/<name>/ layout. React 19.2.8 is a collection pin within upstream ^19.2.8, not an upstream lockfile.",
+        "No Bencho Pro, name/mark assets, website photographs or sounds included; see LICENSE exclusions and THIRD_PARTY.md."
+      ],
+      "assetKind": "source"
+    },
+    {
+      "id": "bencho:slosh",
+      "sourceId": "bencho",
+      "name": "Slosh",
+      "category": "interactive-ui",
+      "tags": [
+        "react",
+        "bencho"
+      ],
+      "upstreamUrl": "https://github.com/cabralorenzo/bencho/blob/c65992417427bb09e661674ffa800bef29adef49/blocks/slosh/Slosh.tsx",
+      "upstreamCommit": "c65992417427bb09e661674ffa800bef29adef49",
+      "license": {
+        "status": "allowed",
+        "evidencePath": "archive/bencho/c65992417427bb09e661674ffa800bef29adef49/slosh/LICENSE",
+        "noticePaths": [
+          "archive/bencho/c65992417427bb09e661674ffa800bef29adef49/slosh/LICENSE",
+          "archive/bencho/c65992417427bb09e661674ffa800bef29adef49/slosh/THIRD_PARTY.md"
+        ]
+      },
+      "snapshotPath": "archive/bencho/c65992417427bb09e661674ffa800bef29adef49/slosh",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "9f9d2eedd3383d018e343db1205e9b41f07fa49632050482fb40cc1a03dd64fe",
+          "size": 1270
+        },
+        {
+          "path": "THIRD_PARTY.md",
+          "sha256": "5a06fa88b258e8f876f93d900fda3b7efd8a17908fbdab5f557eb2f3f1eef969",
+          "size": 1505
+        },
+        {
+          "path": "blocks/slosh/README.md",
+          "sha256": "41521fcab864f14e38acb3d08ce462f8863be0e305bc954c0ccd6046284739f6",
+          "size": 1186
+        },
+        {
+          "path": "blocks/slosh/Slosh.css",
+          "sha256": "6d36ee19ebcfd8fb9fab3c4efa06ab085e4805207c1de35b0e5bf61e56f11fff",
+          "size": 9484
+        },
+        {
+          "path": "blocks/slosh/Slosh.tsx",
+          "sha256": "5babfc753f3602f7399d49744f0591df6b59f8c1aa1b7878147b15cb12378d1c",
+          "size": 10992
+        },
+        {
+          "path": "package.json",
+          "sha256": "28189aafe441d73fa344a97fdf092f146e961afcd82ff1ae53f8cbc3ddc2e6c2",
+          "size": 829
+        },
+        {
+          "path": "tokens.css",
+          "sha256": "abb75ad433a1b7ec6f0136b603c279b5c9e53afa067c0b5f9cd10c95529d0f1a",
+          "size": 3064
+        }
+      ],
+      "dependencies": {
+        "react": "19.2.8",
+        "react-dom": "19.2.8"
+      },
+      "limitations": [
+        "Static source archive only; upstream scripts and components were not executed or visually tested.",
+        "dependencies pins direct imports and documented host style/peer requirements; npm transitive packages are not vendored. Offline source recovery is not offline dependency installation.",
+        "Entry: blocks/slosh/Slosh.tsx",
+        "Import tokens.css and the component CSS explicitly; keep blocks/<name>/ layout. React 19.2.8 is a collection pin within upstream ^19.2.8, not an upstream lockfile.",
+        "No Bencho Pro, name/mark assets, website photographs or sounds included; see LICENSE exclusions and THIRD_PARTY.md."
+      ],
+      "assetKind": "source"
+    },
+    {
+      "id": "bencho:step-player",
+      "sourceId": "bencho",
+      "name": "Step Player",
+      "category": "interactive-ui",
+      "tags": [
+        "react",
+        "bencho"
+      ],
+      "upstreamUrl": "https://github.com/cabralorenzo/bencho/blob/c65992417427bb09e661674ffa800bef29adef49/blocks/step-player/StepPlayer.tsx",
+      "upstreamCommit": "c65992417427bb09e661674ffa800bef29adef49",
+      "license": {
+        "status": "allowed",
+        "evidencePath": "archive/bencho/c65992417427bb09e661674ffa800bef29adef49/step-player/LICENSE",
+        "noticePaths": [
+          "archive/bencho/c65992417427bb09e661674ffa800bef29adef49/step-player/LICENSE",
+          "archive/bencho/c65992417427bb09e661674ffa800bef29adef49/step-player/THIRD_PARTY.md"
+        ]
+      },
+      "snapshotPath": "archive/bencho/c65992417427bb09e661674ffa800bef29adef49/step-player",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "9f9d2eedd3383d018e343db1205e9b41f07fa49632050482fb40cc1a03dd64fe",
+          "size": 1270
+        },
+        {
+          "path": "THIRD_PARTY.md",
+          "sha256": "5a06fa88b258e8f876f93d900fda3b7efd8a17908fbdab5f557eb2f3f1eef969",
+          "size": 1505
+        },
+        {
+          "path": "blocks/step-player/README.md",
+          "sha256": "9ad5842fa63af1972ab19438f0dce34ea49f5a4f40d960718797e05b8a22a1be",
+          "size": 1112
+        },
+        {
+          "path": "blocks/step-player/StepPlayer.css",
+          "sha256": "5a758a27e4bc48cfbf3375b38b94d6033ff2b5a8f40d690e0ee2c738d0089e1e",
+          "size": 2630
+        },
+        {
+          "path": "blocks/step-player/StepPlayer.tsx",
+          "sha256": "be6e2e0f7e7508dd1c65ef426d2b8fd6515e0ee5c36ba749603277f584e5e129",
+          "size": 21110
+        },
+        {
+          "path": "package.json",
+          "sha256": "28189aafe441d73fa344a97fdf092f146e961afcd82ff1ae53f8cbc3ddc2e6c2",
+          "size": 829
+        },
+        {
+          "path": "tokens.css",
+          "sha256": "abb75ad433a1b7ec6f0136b603c279b5c9e53afa067c0b5f9cd10c95529d0f1a",
+          "size": 3064
+        }
+      ],
+      "dependencies": {
+        "react": "19.2.8",
+        "react-dom": "19.2.8"
+      },
+      "limitations": [
+        "Static source archive only; upstream scripts and components were not executed or visually tested.",
+        "dependencies pins direct imports and documented host style/peer requirements; npm transitive packages are not vendored. Offline source recovery is not offline dependency installation.",
+        "Entry: blocks/step-player/StepPlayer.tsx",
+        "Import tokens.css and the component CSS explicitly; keep blocks/<name>/ layout. React 19.2.8 is a collection pin within upstream ^19.2.8, not an upstream lockfile.",
+        "No Bencho Pro, name/mark assets, website photographs or sounds included; see LICENSE exclusions and THIRD_PARTY.md."
+      ],
+      "assetKind": "source"
+    },
+    {
+      "id": "bencho:wake-slider",
+      "sourceId": "bencho",
+      "name": "Wake Slider",
+      "category": "interactive-ui",
+      "tags": [
+        "react",
+        "bencho"
+      ],
+      "upstreamUrl": "https://github.com/cabralorenzo/bencho/blob/c65992417427bb09e661674ffa800bef29adef49/blocks/wake-slider/WakeSlider.tsx",
+      "upstreamCommit": "c65992417427bb09e661674ffa800bef29adef49",
+      "license": {
+        "status": "allowed",
+        "evidencePath": "archive/bencho/c65992417427bb09e661674ffa800bef29adef49/wake-slider/LICENSE",
+        "noticePaths": [
+          "archive/bencho/c65992417427bb09e661674ffa800bef29adef49/wake-slider/LICENSE",
+          "archive/bencho/c65992417427bb09e661674ffa800bef29adef49/wake-slider/THIRD_PARTY.md"
+        ]
+      },
+      "snapshotPath": "archive/bencho/c65992417427bb09e661674ffa800bef29adef49/wake-slider",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "9f9d2eedd3383d018e343db1205e9b41f07fa49632050482fb40cc1a03dd64fe",
+          "size": 1270
+        },
+        {
+          "path": "THIRD_PARTY.md",
+          "sha256": "5a06fa88b258e8f876f93d900fda3b7efd8a17908fbdab5f557eb2f3f1eef969",
+          "size": 1505
+        },
+        {
+          "path": "blocks/wake-slider/README.md",
+          "sha256": "1941252aa16ba3af774c5cc73d4f9df925a7495cc775528bfcf2bb7ef5aeb915",
+          "size": 1050
+        },
+        {
+          "path": "blocks/wake-slider/WakeSlider.css",
+          "sha256": "febe6fcef5f859f2b1430d0ec5a7d26356b325c359ec2498a407cf75cb5b2203",
+          "size": 1266
+        },
+        {
+          "path": "blocks/wake-slider/WakeSlider.tsx",
+          "sha256": "104a2de223f844dcefe3cc14b6136ddc8fe28d5d4e7e3b8f425639bed1cc8a6b",
+          "size": 6265
+        },
+        {
+          "path": "package.json",
+          "sha256": "28189aafe441d73fa344a97fdf092f146e961afcd82ff1ae53f8cbc3ddc2e6c2",
+          "size": 829
+        },
+        {
+          "path": "tokens.css",
+          "sha256": "abb75ad433a1b7ec6f0136b603c279b5c9e53afa067c0b5f9cd10c95529d0f1a",
+          "size": 3064
+        }
+      ],
+      "dependencies": {
+        "react": "19.2.8",
+        "react-dom": "19.2.8"
+      },
+      "limitations": [
+        "Static source archive only; upstream scripts and components were not executed or visually tested.",
+        "dependencies pins direct imports and documented host style/peer requirements; npm transitive packages are not vendored. Offline source recovery is not offline dependency installation.",
+        "Entry: blocks/wake-slider/WakeSlider.tsx",
+        "Import tokens.css and the component CSS explicitly; keep blocks/<name>/ layout. React 19.2.8 is a collection pin within upstream ^19.2.8, not an upstream lockfile.",
+        "No Bencho Pro, name/mark assets, website photographs or sounds included; see LICENSE exclusions and THIRD_PARTY.md."
+      ],
+      "assetKind": "source"
+    }
+  ]
+}
