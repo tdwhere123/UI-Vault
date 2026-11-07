@@ -1,0 +1,26 @@
+{
+  "name": "ui-vault",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "packageManager": "pnpm@10.34.6",
+  "engines": {
+    "node": ">=22 <25"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "unit": "node --test dist/tests/*.test.js",
+    "schema": "node dist/packages/cli/src/main.js validate",
+    "vault": "node dist/packages/cli/src/main.js",
+    "evidence:verify": "node scripts/evidence.mjs verify"
+  },
+  "dependencies": {
+    "@sinclair/typebox": "0.34.41",
+    "ajv": "8.17.1"
+  },
+  "devDependencies": {
+    "@types/node": "22.19.0",
+    "typescript": "5.9.3"
+  }
+}
