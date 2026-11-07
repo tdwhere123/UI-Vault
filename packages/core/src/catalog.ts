@@ -1,3 +1,4 @@
+import { matchesCatalogQuery, catalogSearchText } from './query-view.js';
 import { Type, type Static } from '@sinclair/typebox';
 import { Ajv } from 'ajv';
 
@@ -147,34 +148,17 @@ export function getComponentAvailability(component: CatalogComponent): CatalogAv
     ? 'source_snapshot' : 'registration_only';
 }
 
-function matchesTechnology(component: CatalogComponent, options: CatalogQuery): boolean {
-  const keys = { framework: 'frameworks', language: 'languages', styling: 'styling' } as const;
-  return (Object.keys(keys) as (keyof typeof keys)[]).every(key => {
-    const requested = options[key];
-    if (requested === undefined) return true;
-    const known = component.techStack?.[keys[key]];
-    return requested === null ? known == null : known?.includes(requested) === true;
-  });
-}
-
 export function searchCatalog(input: unknown, options: CatalogQuery = {}): CatalogComponent[] {
   const catalog = validateCatalog(input);
   const filters = validateCatalogQuery(options);
-  const query = filters.query?.trim().toLowerCase() ?? '';
-  return catalog.components.filter(component => (!filters.category || component.category === filters.category)
-    && (!filters.sourceId || component.sourceId === filters.sourceId)
-    && (!filters.assetKind || component.assetKind === filters.assetKind)
-    && (!filters.licenseStatus || component.license.status === filters.licenseStatus)
-    && (!filters.availability || getComponentAvailability(component) === filters.availability)
-    && (!filters.tag || component.tags.includes(filters.tag))
-    && (!filters.dependency || Object.hasOwn(component.dependencies, filters.dependency))
-    && matchesTechnology(component, filters)
-    && (!query || searchableText(component).some(value => value.toLowerCase().includes(query))));
+  return catalog.components.filter(component => matchesCatalogQuery({
+    ...component, licenseStatus: component.license.status,
+    availability: getComponentAvailability(component), searchText: searchableText(component)
+  }, filters));
 }
 
 function searchableText(component: CatalogComponent): string[] {
-  const common = [component.id, component.name, component.sourceId, component.category, ...component.tags,
-    ...Object.keys(component.dependencies), ...Object.values(component.techStack ?? {}).flatMap(values => values ?? [])];
+  const common = catalogSearchText(component);
   return component.assetKind === 'source' ? common : [...common, component.publicUrl,
     ...component.interactionFlow, ...Object.values(component.visualNotes), ...component.useCases, component.implementationNotes];
 }

@@ -44,3 +44,31 @@ pnpm --dir apps/explorer start
 - NOT_VERIFIED 仍包括浏览器实机、键盘/读屏/窄屏；新增技术栈/参考显示由合成数据验证，最新真实 catalog 含20source及6reference（4个登记来源，其中2个提供源码）；未登记的技术栈不补猜。根目录 catalog 更新后需刷新筛选选项。
 
 并发记录：一次测试中 catalog 由20source更新为20source+6reference，依赖SUMS复核按预期报不一致，原始输出保留在 `evidence/classification/concurrent-catalog-change-raw.txt`；最终结果以重新钉定输入并复跑的 `after-raw.txt` 为准。
+
+
+## 公开静态审核目录（仅本地产物，不是发布授权）
+
+从干净候选 SHA 编译后，在仓库外新建空输出目录：
+
+```sh
+pnpm build
+node apps/explorer/static-export.mjs /absolute/new/output /UI-Vault/
+```
+
+支持 `/` 与以 `/` 起止的子目录；页面/模块/数据采用相对 URL，子目录入口须带尾斜杠（托管方重定向未核）。复用 Explorer 的 HTML、CSS、筛选布局；静态 renderer 只呈现公开字段，不打包本地源码阅读器。没有自动部署 workflow，无下载/源码 API；源码入口明确 disabled。禁止把仓库根、普通 dist、archive 或本地 Explorer 原 API 一起上传。
+
+### 安全边界与语义权威
+
+- `public-review.json` 是逐项审定字段的精确锁，不是完整 catalog。投影显式挑字段，输出必须与审定值完全一致；新增记录、名称、分类、依赖、技术栈或许可/availability 变化须重新审查该锁，不能自动“批准”。任意内部说明、限制、证据路径、快照文件/哈希、截图、上游演示链接均不输出。审定公开链接仅四个上游入口，不使用组件原 URL（其可能为截图或 Demo）；不是允许任意外链。
+- 公开字段：sources 的 id/name/upstreamUrl；components 的 id/sourceId/name/category/tags/dependencies/assetKind/licenseStatus/availability/restoreStatus/upstreamUrl，以及原有可选 techStack。所有字段及嵌套字段拒绝未知键，所有文字另经安全形状检查。精确锁才是任意文字的发布审核边界；敏感词扫描不是授权证明。
+- `getComponentAvailability` 仍是唯一登记状态派生函数。source_snapshot 仅表示登记了快照，不代表已恢复；全体 restoreStatus 固定 not_checked。未知/Pro 留可见警示。公开查询视图不满足 CatalogSchema，绝不可作为恢复、许可、归档输入。
+- `query-view.ts` 是唯一筛选谓词与公共可搜索字段构造；查询验证器从原 CatalogQuerySchema 生成（含 AJV MIT 运行时许可），无另一套查询校验规则。生成命令：`node --input-type=module -e "import {writeFileSync} from 'node:fs'; import {compileQueryValidator} from './apps/explorer/compile-query-validator.mjs'; writeFileSync('apps/explorer/query-validator.mjs',compileQueryValidator())"`。测试逐字节核验生成结果，避免漂移；浏览器不带 AJV 整包或完整 CatalogSchema。
+- **检索范围有意不同**：内部 searchCatalog 仍先完整校验，并保留 reference publicUrl、交互、视觉、用途、实现说明的全文检索。公开页仅搜索审定 id/name/sourceId/category/tags、依赖名及显式技术栈；内部 reference 文字不可检出。精确筛选条件及 undefined/null/[] 语义共用同一谓词；缺省或子字段 null 为未知，[] 为明确空，不从名字/依赖推断。没有接受原 schema 不支持的 techStack 整对象 null。
+
+### 全产物审核与版本
+
+导出仅九个固定文件：index.html、style.css、app.js、public-catalog.js、query-view.js、query-validator.js、catalog.json、version.json、manifest.json。没有 source map、图片、截图、完整输入 catalog、测试、源组件或内部路径。version.json 标记完整候选 codeSha、输入和审定锁 SHA256、basePath 与 worktreeDirty。dirty 构建只供工程自测，不能作为冻结送审产物。
+
+manifest.json 记录其余八个文件的长度与 SHA256（不能循环哈希自身）；导出 stdout 审核报告另列全部九个文件，包括 manifest 自身 SHA256。`auditStatic(output)` 枚举全部目录项，拒额外文件、目录和符号链接，逐字节重建比对固定输入，再核 JSON 字段与 manifest，不只是对 manifest 自洽或整串敏感词检查。**输入编译文件须先通过 build/测试和 review**；字节一致不替代代码审核、许可或上线批准。
+
+本地真实 HTTP 测试覆盖根与子目录页面/资产读取、查询数据与 20 source + 6 reference、不可用端点返回404及哈希核对；其 HTTP server 仅为工程测试夹具，不配置正式托管/响应头。Node 查询与 DOM 测试不冒充浏览器实机。托管资格、公开上线、CDN/响应头、缓存/回滚与浏览器实机视觉仍须独立验证。源仓库保持 private，无 Pages 启用或付费操作。
