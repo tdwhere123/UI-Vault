@@ -10,7 +10,7 @@ for (const path of (await projectFiles(root)).filter(path => !path.startsWith('e
   files.push({ path, size: bytes.length, sha256: sha256(bytes) });
 }
 const digest = manifestDigest(files);
-const target = 'evidence/g0/tested-tree.json';
+const target = 'evidence/metadata-contract/tested-tree.json';
 if (process.argv[2] === 'capture') {
   const record = { scope: 'all project files except evidence/, .git/, all node_modules/, root dist/',
     baseline: execFileSync('git', ['rev-parse', 'HEAD'], { encoding: 'utf8' }).trim(),

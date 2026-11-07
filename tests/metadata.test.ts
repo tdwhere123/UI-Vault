@@ -5,7 +5,7 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { Ajv } from 'ajv';
 import { MetadataSchema, SourceSchema, EntrySchema, SnapshotSchema, FileSchema, DependencySchema,
-  LicenseEvidenceSchema, RightsSchema, validateMetadata, validateSources, authorize, componentId,
+  LicenseEvidenceSchema, RightsSchema, validateMetadata, validateSources, authorize, assessLegalPermission, componentId,
   snapshotId, archiveDirectory, manifestDigest, sha256, assertRelativePath, verifySnapshotFiles,
   type Metadata } from '../packages/core/src/index.js';
 
@@ -15,7 +15,7 @@ const copy = (): Metadata => structuredClone(fixture);
 const first = (data: Metadata) => data.snapshots[0]!;
 const commercial = 'can_use_commercially' as const;
 const candidate = () => { const data = copy(); data.fixture = false; return data; };
-const permitted = (data: Metadata) => authorize(data, first(data).componentId, first(data).snapshotId, commercial);
+const permitted = (data: Metadata) => assessLegalPermission(data, first(data).componentId, first(data).snapshotId, commercial).legal === 'allowed';
 
 async function onDisk(run: (root: string, data: Metadata) => Promise<void>): Promise<void> {
   const temp = await mkdtemp(join(tmpdir(), 'ui-vault-contract-'));
@@ -41,7 +41,7 @@ test('exactly twelve unique unverified source seeds keep all rights unknown and 
   for (const source of sources) {
     assert.equal(source.lastCheckedAt, null);
     assert.equal(source.checkStatus, 'not_live_verified');
-    for (const decision of Object.values(source.rights)) assert.deepEqual(decision, { state: 'unknown', evidenceRefs: [] });
+    for (const decision of Object.values(source.rights)) assert.deepEqual(decision, { state: 'unknown', evidenceRefs: [], scope: { kind: 'source', sourceId: source.sourceId }, conditionRefs: [] });
   }
   assert.deepEqual(sources.find(s => s.sourceId === 'watermelon')!.entrypoints.map(e => e.url), [
     'https://github.com/WatermelonCorp/watermelon-platform', 'https://github.com/WatermelonCorp/watermellon-registry']);
@@ -61,26 +61,27 @@ test('strict validation rejects missing fields, extra fields, coercion and legac
 test('unknown never grants permission even though the string itself is truthy', () => {
   const data = candidate();
   assert.equal(permitted(data), true);
-  first(data).rights[commercial] = { state: 'unknown', evidenceRefs: [] };
+  first(data).rights[commercial] = { ...first(data).rights[commercial], state: 'unknown', evidenceRefs: [], conditionRefs: [] };
   assert.equal(permitted(data), false);
-  first(data).rights[commercial] = { state: 'denied', evidenceRefs: ['fixture-permission'] };
+  first(data).rights[commercial] = { ...first(data).rights[commercial], state: 'denied', evidenceRefs: ['fixture-permission'] };
   assert.equal(permitted(data), false);
 });
 
 test('one file exception blocks commercial use independently from permitted source archiving', () => {
   const data = candidate();
-  first(data).files[0]!.rights[commercial] = { state: 'unknown', evidenceRefs: [] };
+  first(data).files[0]!.rights[commercial] = { ...first(data).files[0]!.rights[commercial], state: 'unknown', evidenceRefs: [], conditionRefs: [] };
   assert.equal(permitted(data), false);
   assert.equal(first(validateMetadata(data)).archive.status, 'archived_complete');
 });
 
-test('fictional records can validate but can never authorize a real action', () => {
-  assert.equal(permitted(copy()), false);
+test('fictional records can validate but can never authorize a real action', async () => {
+  const data = copy();
+  assert.equal((await authorize(data, first(data).componentId, first(data).snapshotId, commercial)).readiness, 'blocked');
 });
 
 test('allowed and denied require evidence and dangling evidence references are rejected', () => {
   for (const state of ['allowed', 'denied'] as const) {
-    const data = copy(); first(data).rights[commercial] = { state, evidenceRefs: [] };
+    const data = copy(); first(data).rights[commercial] = { ...first(data).rights[commercial], state, evidenceRefs: [], conditionRefs: [] };
     assert.throws(() => validateMetadata(data), /Missing evidence/);
   }
   const data = copy(); data.licenseEvidence = [];
@@ -163,7 +164,7 @@ test('unresolved or missing internal dependency blocks a complete snapshot', () 
 
 test('unknown archive rights reject even a partial file collection', () => {
   const data = copy(); first(data).archive.status = 'archived_partial'; first(data).archive.offlineRestorable = null;
-  first(data).rights.can_archive_source = { state: 'unknown', evidenceRefs: [] };
+  first(data).rights.can_archive_source = { ...first(data).rights.can_archive_source, state: 'unknown', evidenceRefs: [], conditionRefs: [] };
   assert.throws(() => validateMetadata(data), /permission/);
 });
 

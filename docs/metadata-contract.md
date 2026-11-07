@@ -1,91 +1,105 @@
-# 元数据合同 v1
+# 元数据合同 v2（工程复核候选，未冻结）
 
-## 权威与消费者
+## 权威与版本
 
-`packages/core/src/schema.ts` 的 TypeBox 值是唯一机器结构 Schema；TS `Static` 类型从其派生。
-`validation.ts` 唯一持有跨记录不变量与授权聚合；不得只跑 JSON Schema 就声明业务合同有效。
-`identity.ts` 唯一持有 ID、路径、文件/manifest 摘要材料规范。
-`filesystem.ts` 是只读实文件验证，不是写入器。`index.ts` 只暴露未来消费者公共合同。
-JSON/JSONL 记录是事实权威。Source 种子只在 `config/sources.json`，不另存 YAML；
-原件 §2/§9 的 YAML 是建议形态，此调整不改变来源事实。派生索引可丢弃重建。
+`schema.ts` 的 TypeBox 值为唯一机器结构 Schema；TS `Static` 从中派生。
+枚举类型由同一值数组的 `T[number]` 派生，无第二份手写元数据类型。
+`validation.ts` 持有全图一致性；`rights-policy.ts` 持有证据范围、条件和法律聚合；
+`authorization.ts` 持有操作就绪和真实证据/履约校验。消费者只能用公共入口，不另写同义许可规则。
+`identity.ts` 持有稳定ID、路径和摘要材料，`file-mapping.ts` 持有可恢复路径映射约束。
+JSON/JSONL 是事实权威，catalog/Explorer 只派生。Source唯一配置是 `config/sources.json`，
+替代PLAN建议YAML；`inventory/metadata.json` 不允许 sources 字段，由 `assembleMetadata` 严格装配，避免重复权威。
+
+v2 是未冻结合同的显式修订：强制四权的scope/conditionRefs、Entry.restrictions、Snapshot.preview、
+LicenseEvidence.applicableRights。v1 数据不会自动补成允许；历史 evidence/g0 不迁移、不改写。
+生产尚无真实采集数据；本轮只更新现有种子与明确虚构 fixtures。PLAN.md 保持原哈希。
 
 | 对象 | 必要语义 |
 |---|---|
-| Source | sourceId、website、entrypoints/url/adapter、priority、riskGroup、lastCheckedAt、checkStatus、rights |
-| Entry | §4 componentId/sourceId/upstreamName/upstreamSlug/kind/primaryCategory/secondaryCategories/tags/descriptionZh/frameworks/exodusUseCases；entryUrl、status、rights |
-| Snapshot | componentId、snapshotId、upstream、fetchedAt、provenanceUrl、rights、archive、offline_runtime_complete、files、dependencies |
+| Source | sourceId、website、entrypoints、priority、riskGroup、lastCheckedAt、checkStatus、rights |
+| Entry | §4身份/分类/标签/描述/框架/exodusUseCases；entryUrl、status、rights、restrictions |
+| Snapshot | componentId、snapshotId、upstream、fetchedAt、provenanceUrl、rights、archive、offline_runtime_complete、preview、files、dependencies |
 | File | path/originalPath/type/size/sha256/internalReferences/rights |
-| Dependency | internal/asset 的已保存文件路径；npm 的固定 name/version/integrity/peerConstraint；remote 与 unresolved 的原因 |
-| LicenseEvidence | evidenceId/sourceUrl/retrievedAt/upstreamVersion/scope/textPath/sha256/review/spdx/obligations/notices |
+| Dependency | internal/asset已保存路径；npm固定name/version/integrity/peerConstraint；remote/unresolved原因 |
+| LicenseEvidence | evidenceId/sourceUrl/retrievedAt/upstreamVersion/scope/textPath/sha256/review/spdx/applicableRights/obligations/notices |
 
-URL、许可文本副本、授权判断分开记录；scope 不从 URL 推断。LicenseEvidence.textPath 为库内相对路径，
-notices 为原始 NOTICE 路径，完整快照必须保留相应 `notice` 文件；许可文本以 digest 对照 `license` 文件。
-spdx=null 是未得出 SPDX 结论，非 MIT 默认值。review 是明确审查记录，不是机器替代法律判断。
-结构验证不会联网确认 URL/commit 真实性，也不会证明许可审查结论正确。
+## 法律许可与操作就绪分离
 
-## 四权与三态
+只用§5.4四字段：can_archive_source、can_modify_and_use、can_use_commercially、can_redistribute_component_collection。
+每权 `{state: allowed|denied|unknown, scope, evidenceRefs, conditionRefs}`。
+三态是工程补充，不声称PLAN原文定义过此类型；unknown≠false≠true，不用truthy或默认值折叠。
+allowed/denied有证据；unknown可无证据。决策scope须与所属Source/Entry/Snapshot/File精确一致。
+证据范围可更宽，不能更窄或属于另一对象；用于Snapshot/File的upstreamVersion必须匹配snapshotId。
 
-仅用 §5.4 原字段：
-`can_archive_source`、`can_modify_and_use`、`can_use_commercially`、`can_redistribute_component_collection`。
-每权是 `{state: allowed|denied|unknown, evidenceRefs: string[]}`。
-三态是 G0 工程补充；原文规定四权与 license_unknown，并未定义这组三态类型。
-未知不等于禁止，也不等于许可；不可用 truthy、`!!`、`Boolean` 或默认 false 归并。
-allowed/denied 必须有证据，unknown 可无证据；每个引用都必须存在且覆盖该对象。
-范围分 source/entry/snapshot/file；窄证据不能授权宽对象，任何用于快照/文件判断的证据（含来源级证据）其 upstreamVersion 必须匹配 snapshotId。
-source 权利是来源层审查摘要，不强行把混合来源定为一张通行证；具体操作检查 Entry+Snapshot+所有 File，
-每一项都必须该权 allowed。来源 unknown 不能替代任何具体对象授权，来源 denied 也不能掩盖文件例外。
-`authorize` 先验证全图，再聚合具体权利；fixture 永不授权真实操作。
-它是元数据前置许可条件，不是执行器、法律审核或物理归档完整性的替代；不得绕过后续文件/隔离检查。
-§4.3 示例旧布尔别名不继续维护第二套语义。
+LicenseEvidence中的obligations是该审查记录的条件原文，不是自动已履行；applicableRights明确其审查针对哪些权利。
+同一许可证原文字节可对应不同具名审查记录（不同权利、范围、条款解释），不能用一个再分发条件推定私人归档也被禁止。
+决策引用只允许覆盖该权利的证据。每个条件ID=`SHA256(UTF8("obligation\0"+evidenceId+"\0"+obligationText))`。
+\0是NUL字节；conditionRefs必须精确等于被引用证据全部obligations的条件ID集合，遗漏/虚构均拒绝。
+条件文字只有证据一处权威；四权引用条件ID，不另复制一套判断。
+Source权利是来源审查摘要，不代替具体对象许可；具体法律判断聚合Entry+Snapshot+所有File和适用restrictions。
 
-## 身份与版本
+- `assessLegalPermission`：全图验证后返回legal=allowed/denied/unknown、具scope的conditions、evidenceRefs、reasons。
+- `authorize`：异步返回同一法律判断，另加readiness=ready/blocked/unknown和逐条件fulfillment。
+- 缺vaultRoot或履约上下文、缺条件履约、缺证据文件保留unknown；明确未履约、哈希不符、链接等失败为blocked。
+- 条件未履行仍可legal=allowed，但不能ready；条件满足且真实证据通过才ready，不能只读legal当操作通行证。
+- fixture永不ready。未完整归档的快照不ready；此入口用于已存快照操作，不是未来采集器的前置落盘许可。
 
-componentId=`sourceId:upstreamSlug`，slug 可以是规范相对路径以消歧，身份不含版本。
-snapshotId 精确从 upstream 派生：
-- git: 完整小写40位（Git SHA1）或64位（Git SHA256）提交哈希，拒绝分支、短 SHA。
-- npm: 固定包名@精确三段版本+规范 SRI（sha256/sha512），拒绝 latest/range，保留 peer 约束但不拿它当版本。
-- registry: 保存的原始响应字节 SHA256，不是 URL 或抓取时间。
+履约上下文 `{vaultRoot, fulfillments:[{conditionId, scope, state:satisfied|unsatisfied|unknown, proof:{path,sha256}|null}]}`。
+receipt须精确匹配被请求条件的对象scope；重复或越界receipt拒绝。satisfied但无proof仍unknown，proof路径/字节SHA256必须实读核对。
+receipt是受信审查人的履约声明，哈希不证明法律判断正确或声明人可信；后续执行器仍负责调用者身份、实际动作和合规流程。
 
-ID 格式通过不等于真实上游存在；未来采集器必须保存官方取得证据，不能拿 fixture 占位符当采集结果。
-归档目录固定为 `archive/components/<sourceId>/c-<SHA256(component\0+componentId)>/s-<SHA256(snapshot\0+snapshotId)>`；
-上述 `\0` 是单个 NUL 字节，输入 UTF8，不是两个字符。原始含冒号、斜线的 ID 不直接拼路径。
-文件名和原路径严格校验；未来不支持的上游名字须先设计无损映射，不能静默清洗成同名。
-旧 snapshot 不覆盖；相同 ID 复采须比较全部已保存字节、manifest 和来源/许可元数据，完全相同才幂等，
-否则拒写/查明版本证据并另建有真实依据的新快照；锁目录本身不是不可变保证。G0 没有写入器。
+## 发现状态与局部权利限制
 
-## 摘要与路径
+Entry.status保留PLAN的发现/许可/失败状态；不能靠一个status字符串另建全权禁止/允许策略。
+pro_only/restricted/license_unknown必须有显式restrictions，否则是矛盾输入；license_unknown至少有一项unknown限制。
+每限制携带scope、rights、denied/unknown、reason和证据引用；scope只限该Entry/其Snapshot/File。
+判断某权时仅聚合覆盖目标且包含该权的限制，denied优先于unknown优先于allowed。
+例：文件商用未知可以保持合法私人归档ready，但商用unknown不ready；不会把商业限制扩大到全部权利。
+fetch_failed是本次取得失败，不会改写旧快照法律许可；状态不能反向绕过有scope的限制。
 
-文件 sha256：原始字节 SHA256 小写 hex；不改换行、编码或空白。
-archive.sha256：`SHA256(UTF8(JSON.stringify(sortedTuples)))`，tuple=`[path,size,sha256]`。
-按经过验证的 ASCII path 原码点升序，重复路径拒绝；不依赖 locale、对象字段顺序、目录枚举顺序。
-路径必须相对、非空、正斜线分段，拒绝 `. / ..`、绝对路径、盘符、反斜线、空分段、百分号编码、
-控制字符、保留设备名、尾点。不对输入做 percent decode 或静默 normalize。
-Manifest 声明与磁盘文件集合必须双向相等，漏项/孤儿均拒绝，再检查各文件大小和字节哈希。
+## 稳定身份与摘要
 
-## 三轴与状态约束
+componentId=`sourceId:upstreamSlug`，不含版本；slug可用规范路径消歧。
+snapshotId从上游固定证据精确派生：git完整小写40/64位；npm固定包@精确semver+规范sha256/sha512 SRI；registry原始响应字节SHA256。
+拒绝分支、短SHA、latest/range。格式通过不证明上游真实性；fixture固定SHA只是虚构测试。
+目录=`archive/components/<sourceId>/c-<SHA256(component\0+componentId)>/s-<SHA256(snapshot\0+snapshotId)>`，不直接拼带冒号斜线的ID。
+
+文件sha256对原字节计算，不改编码、换行或空白。
+archive.sha256=`SHA256(UTF8(JSON.stringify(sortedTuples)))`，tuple=[path,size,sha256]，按ASCII path码点升序。
+路径拒绝绝对路径、盘符、反斜线、空分段、`.`/`..`、百分号编码、控制字符、保留设备名、尾点。
+每快照的path和originalPath各自唯一且无文件/目录前缀冲突；拒绝两个存储文件还原到同一原路径。
+磁盘文件集合与manifest双向一致，缺文件/孤儿均拒绝，再检查大小/哈希。
+锁不等于快照不可变：未来同ID复采须逐字节/manifest/来源许可元数据一致才幂等，否则拒写并查明新版本证据；本轮没有写入器。
+
+## 四条独立状态轴
 
 - archive.status：not_archived / archived_partial / archived_complete。
-- archive.offlineRestorable：null=未验证，false=恢复失败，true=恢复验证通过。
-- offline_runtime_complete：null=未验证，false=离线运行不完整，true=已证明离线运行完整。
+- archive.offlineRestorable：null未验证、false恢复失败、true验证通过。
+- offline_runtime_complete：null未验证、false离线运行不完整、true离线运行完整。
+- preview.status：not_built / preview_ready / preview_unavailable / needs_adapter / unsafe_to_run，另有localPath/upstreamUrl/lastCheckedAt/reason。
 
-完整归档要求非空文件、许可副本、归档权限、无 unresolved、offlineRestorable=true；
-但可有 remote 依赖且 offline_runtime_complete=false。恢复成功不代表 Demo 运行成功。
-完整离线运行声明不可存在 remote/unresolved 且必须完整归档；实际运行证据由后续隔离执行主责保存。
-null/false/true 都保留，不 coerce；空数组仅表示已声明无成员，不自动证明依赖解析已穷尽。
-Entry.status 是发现/许可/失败结果；Snapshot 三轴另存历史事实，采集失败不能改写旧快照许可。
-该版本验证声明的一致性，不实现完整发现任务调度状态机或依赖分析器。
+完整归档仍要求非空文件、保存许可/NOTICE、归档权限、无unresolved、offlineRestorable=true，
+但可有remote依赖且offline_runtime_complete=false。离线运行true不得有remote/unresolved。
+preview_ready需要已核验的本地或上游demo位置；在线demo可ready而本地运行不完整，not_built/unsafe也不抹掉已保存源码。
+该合同验证声明一致性，不假称运行了第三方Demo、完整依赖分析或真实断网materialize。
 
-## 安全边界与版本界限
+## 实文件与安全入口
 
-只读 verifySnapshotFiles 逐段 lstat+realpath，拒绝文件/目录/根及根祖先符号链接，校验根内范围。
-测试经真实临时文件系统覆盖成功、缺文件、孤儿、内容变更、符号链接内外逃逸。
-调用者必须持有可信、静止的根；存在 lstat/read 之间的 TOCTOU，不得用于对抗并发恶意写入。
-**不提供写入、解压、物化、权限隔离或资源预算护栏**；未来采集/恢复必须有真实 FS 的原子写入、
-拒绝跟随链接、根约束、大小限额和不可变冲突处理。这些合同不能代替实际写入护栏。
-完整快照的许可证哈希检查只证明声明对应保存字节，不验证法律事实；实际证据路径内容仍要按库根实读校验。
-fixture=true 和 example.invalid 的记录是假数据，内容及 Git SHA 都不是采集事实。
+`verifyLicenseEvidence`先跑全图scope验证，再按库根逐段lstat/realpath实读textPath，拒绝缺失、非普通文件、哈希不符、路径/符号链接/根祖先逃逸。
+`authorize`校验所需许可证原文、目标快照全部实文件及履约proof；不能只凭shape通过真实授权。
+`verifySnapshotFiles`的root是该快照文件根；许可证textPath和proof.path的root是vaultRoot，二者不能混淆。
+notices记录原始NOTICE路径；完整快照保存对应notice文件并经文件校验；后续独立NOTICE证据需扩展内容记录，不能省略现有保留政策。
+FS检查只用于可信静止根，仍有lstat/read TOCTOU；没有实现对抗并发写入、解压、原子落盘、大小预算和执行隔离。
+未来写入/采集/恢复必须另经真实FS安全主责，这些只读合同不代替实际写入护栏。
 
-## 经验使用
+## 最小派生index
 
-证据文件↔SUMS 双向查漏；manifest↔实文件双向查漏。
-三态为工程扩展，不伪称原文。
+`pnpm --silent vault index`从config/sources.json + inventory/metadata.json构建确定性JSON projection；
+`pnpm vault index fixtures/metadata.json`展示虚构样本。都调用core的全图校验和法律评估，不维护第二套许可/状态逻辑。
+projection输出readiness=not_checked，不是可导出列表；随时可删除重建。不做完整搜索、Explorer或采集。
+
+## 证据版本与经验
+
+新证据在evidence/metadata-contract；current SUMS的scope.json显式覆盖全库普通文件，排除根.git、全部node_modules、根dist及各SUMS文件自身。
+旧evidence/g0保持逐字节不变，只按完整Git提交0bd1e87ea5506b2d6194781f8d503f6dd713d3ef的历史scope核验，不能宣称覆盖当前工作树。
+SUMS和manifest均双向查漏。

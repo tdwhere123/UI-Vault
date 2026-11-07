@@ -12,19 +12,11 @@ const instant = Type.String({ pattern: '^\\d{4}-\\d\\d-\\d\\dT\\d\\d:\\d\\d:\\d\
 const strings = () => Type.Array(text, { uniqueItems: true });
 const component = Type.String({ pattern: '^[a-z][a-z0-9-]*:[A-Za-z0-9_@+./-]+$' });
 const snapshot = text;
-const enumeration = <T extends string>(values: readonly T[]) => Type.Union(values.map(v => Type.Literal(v)));
+const enumeration = <const T extends readonly string[]>(values: T) => Type.Unsafe<T[number]>(Type.Union(values.map(v => Type.Literal(v))));
 
 export const rightNames = ['can_archive_source', 'can_modify_and_use', 'can_use_commercially',
   'can_redistribute_component_collection'] as const;
 export type RightName = typeof rightNames[number];
-export const RightDecisionSchema = object({ state: enumeration(['allowed', 'denied', 'unknown']), evidenceRefs: strings() });
-export const RightsSchema = object({
-  can_archive_source: RightDecisionSchema,
-  can_modify_and_use: RightDecisionSchema,
-  can_use_commercially: RightDecisionSchema,
-  can_redistribute_component_collection: RightDecisionSchema,
-});
-export type Rights = Static<typeof RightsSchema>;
 export const ScopeSchema = Type.Union([
   object({ kind: Type.Literal('source'), sourceId }),
   object({ kind: Type.Literal('entry'), componentId: component }),
@@ -33,10 +25,20 @@ export const ScopeSchema = Type.Union([
 ]);
 export type Scope = Static<typeof ScopeSchema>;
 
+export const RightDecisionSchema = object({ state: enumeration(['allowed', 'denied', 'unknown']), evidenceRefs: strings(), scope: ScopeSchema, conditionRefs: strings() });
+export const RightsSchema = object({
+  can_archive_source: RightDecisionSchema,
+  can_modify_and_use: RightDecisionSchema,
+  can_use_commercially: RightDecisionSchema,
+  can_redistribute_component_collection: RightDecisionSchema,
+});
+export type Rights = Static<typeof RightsSchema>;
+
 export const LicenseEvidenceSchema = object({
   evidenceId: text, sourceUrl: url, retrievedAt: instant,
   upstreamVersion: text, scope: ScopeSchema, textPath: path, sha256: hash,
   review: object({ method: enumeration(['manual', 'programmatic']), reviewer: text, notes: text }),
+  applicableRights: Type.Array(enumeration(rightNames), { minItems: 1, uniqueItems: true }),
   spdx: Type.Union([text, Type.Null()]), obligations: strings(), notices: Type.Array(path, { uniqueItems: true }),
 });
 export const SourceSchema = object({
@@ -48,14 +50,23 @@ export const SourceSchema = object({
 });
 export const categories = ['foundation', 'input-form', 'navigation-layout', 'chat-ai', 'agent-workflow',
   'data-visualization', 'editor-files', 'feedback-motion', 'media-visual', 'page-pattern'] as const;
+export const RestrictionSchema = object({
+  scope: ScopeSchema, rights: Type.Array(enumeration(rightNames), { minItems: 1, uniqueItems: true }),
+  state: enumeration(['denied', 'unknown']), reason: text, evidenceRefs: strings(),
+});
+export const PreviewSchema = object({
+  status: enumeration(['not_built', 'preview_ready', 'preview_unavailable', 'needs_adapter', 'unsafe_to_run']),
+  localPath: Type.Union([path, Type.Null()]), upstreamUrl: Type.Union([url, Type.Null()]),
+  lastCheckedAt: Type.Union([instant, Type.Null()]), reason: Type.Union([text, Type.Null()]),
+});
 export const EntrySchema = object({
-  schemaVersion: Type.Literal(1), componentId: component, sourceId,
+  schemaVersion: Type.Literal(2), componentId: component, sourceId,
   upstreamName: text, upstreamSlug: path,
   kind: enumeration(['component', 'block', 'template', 'effect', 'icon', 'sound', 'pattern', 'library']),
   primaryCategory: enumeration(categories), secondaryCategories: Type.Array(enumeration(categories), { uniqueItems: true }),
   tags: strings(), descriptionZh: text, frameworks: strings(), exodusUseCases: strings(), entryUrl: url,
   status: enumeration(['discovered', 'license_reviewed', 'pro_only', 'restricted', 'license_unknown', 'source_missing', 'fetch_failed', 'unsafe_to_run']),
-  rights: RightsSchema,
+  rights: RightsSchema, restrictions: Type.Array(RestrictionSchema),
 });
 export const UpstreamSchema = Type.Union([
   object({ kind: Type.Literal('git'), commit: Type.String({ pattern: gitShaPattern }) }),
@@ -81,13 +92,24 @@ export const SnapshotSchema = object({
   fetchedAt: instant, provenanceUrl: url, rights: RightsSchema,
   archive: object({ status: enumeration(['not_archived', 'archived_partial', 'archived_complete']),
     path, sha256: hash, offlineRestorable: Type.Union([Type.Boolean(), Type.Null()]) }),
+  preview: PreviewSchema,
   offline_runtime_complete: Type.Union([Type.Boolean(), Type.Null()]),
   files: Type.Array(FileSchema), dependencies: Type.Array(DependencySchema),
 });
 export const MetadataSchema = object({
-  schemaVersion: Type.Literal(1), fixture: Type.Boolean(), sources: Type.Array(SourceSchema),
+  schemaVersion: Type.Literal(2), fixture: Type.Boolean(), sources: Type.Array(SourceSchema),
   entries: Type.Array(EntrySchema), snapshots: Type.Array(SnapshotSchema), licenseEvidence: Type.Array(LicenseEvidenceSchema),
 });
+export const AuthorizationContextSchema = object({
+  vaultRoot: text,
+  fulfillments: Type.Array(object({ conditionId: hash, scope: ScopeSchema,
+    state: enumeration(['satisfied', 'unsatisfied', 'unknown']),
+    proof: Type.Union([object({ path, sha256: hash }), Type.Null()]),
+  })),
+});
+export const InventorySchema = Type.Omit(MetadataSchema, ['sources']);
+export type AuthorizationContext = Static<typeof AuthorizationContextSchema>;
+export type Restriction = Static<typeof RestrictionSchema>;
 export const SourcesSchema = Type.Array(SourceSchema, { minItems: 1 });
 export type Upstream = Static<typeof UpstreamSchema>;
 export type Source = Static<typeof SourceSchema>;

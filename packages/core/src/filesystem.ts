@@ -62,3 +62,23 @@ export async function verifySnapshotFiles(input: unknown, component: string, sna
   }
   if (manifestDigest(snap.files) !== snap.archive.sha256) throw new Error('Manifest digest mismatch');
 }
+
+export async function readVaultFile(root: string, path: string): Promise<Buffer> {
+  const base = await checkedRoot(root);
+  const full = await checkedPath(base, path);
+  if (!(await lstat(full)).isFile()) throw new Error('Evidence is not a regular file');
+  return readFile(full);
+}
+
+export async function verifyEvidenceRecords(data: import('./schema.js').Metadata, root: string, ids: readonly string[]): Promise<void> {
+  for (const id of ids) {
+    const evidence = data.licenseEvidence.find(e => e.evidenceId === id);
+    if (!evidence) throw new Error('Missing evidence record');
+    if (sha256(await readVaultFile(root, evidence.textPath)) !== evidence.sha256) throw new Error(`License evidence hash mismatch: ${id}`);
+  }
+}
+
+export async function verifyLicenseEvidence(input: unknown, root: string): Promise<void> {
+  const data = validateMetadata(input);
+  await verifyEvidenceRecords(data, root, data.licenseEvidence.map(e => e.evidenceId));
+}

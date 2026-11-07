@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "fixture": true,
   "sources": [
     {
@@ -18,26 +18,46 @@
       "rights": {
         "can_archive_source": {
           "state": "unknown",
-          "evidenceRefs": []
+          "evidenceRefs": [],
+          "scope": {
+            "kind": "source",
+            "sourceId": "fixture"
+          },
+          "conditionRefs": []
         },
         "can_modify_and_use": {
           "state": "unknown",
-          "evidenceRefs": []
+          "evidenceRefs": [],
+          "scope": {
+            "kind": "source",
+            "sourceId": "fixture"
+          },
+          "conditionRefs": []
         },
         "can_use_commercially": {
           "state": "unknown",
-          "evidenceRefs": []
+          "evidenceRefs": [],
+          "scope": {
+            "kind": "source",
+            "sourceId": "fixture"
+          },
+          "conditionRefs": []
         },
         "can_redistribute_component_collection": {
           "state": "unknown",
-          "evidenceRefs": []
+          "evidenceRefs": [],
+          "scope": {
+            "kind": "source",
+            "sourceId": "fixture"
+          },
+          "conditionRefs": []
         }
       }
     }
   ],
   "entries": [
     {
-      "schemaVersion": 1,
+      "schemaVersion": 2,
       "componentId": "fixture:button",
       "sourceId": "fixture",
       "upstreamName": "Fictional Button",
@@ -60,27 +80,48 @@
           "state": "allowed",
           "evidenceRefs": [
             "fixture-permission"
-          ]
+          ],
+          "scope": {
+            "kind": "entry",
+            "componentId": "fixture:button"
+          },
+          "conditionRefs": []
         },
         "can_modify_and_use": {
           "state": "allowed",
           "evidenceRefs": [
             "fixture-permission"
-          ]
+          ],
+          "scope": {
+            "kind": "entry",
+            "componentId": "fixture:button"
+          },
+          "conditionRefs": []
         },
         "can_use_commercially": {
           "state": "allowed",
           "evidenceRefs": [
             "fixture-permission"
-          ]
+          ],
+          "scope": {
+            "kind": "entry",
+            "componentId": "fixture:button"
+          },
+          "conditionRefs": []
         },
         "can_redistribute_component_collection": {
           "state": "allowed",
           "evidenceRefs": [
             "fixture-permission"
-          ]
+          ],
+          "scope": {
+            "kind": "entry",
+            "componentId": "fixture:button"
+          },
+          "conditionRefs": []
         }
-      }
+      },
+      "restrictions": []
     }
   ],
   "snapshots": [
@@ -98,25 +139,49 @@
           "state": "allowed",
           "evidenceRefs": [
             "fixture-permission"
-          ]
+          ],
+          "scope": {
+            "kind": "snapshot",
+            "componentId": "fixture:button",
+            "snapshotId": "git:1111111111111111111111111111111111111111"
+          },
+          "conditionRefs": []
         },
         "can_modify_and_use": {
           "state": "allowed",
           "evidenceRefs": [
             "fixture-permission"
-          ]
+          ],
+          "scope": {
+            "kind": "snapshot",
+            "componentId": "fixture:button",
+            "snapshotId": "git:1111111111111111111111111111111111111111"
+          },
+          "conditionRefs": []
         },
         "can_use_commercially": {
           "state": "allowed",
           "evidenceRefs": [
             "fixture-permission"
-          ]
+          ],
+          "scope": {
+            "kind": "snapshot",
+            "componentId": "fixture:button",
+            "snapshotId": "git:1111111111111111111111111111111111111111"
+          },
+          "conditionRefs": []
         },
         "can_redistribute_component_collection": {
           "state": "allowed",
           "evidenceRefs": [
             "fixture-permission"
-          ]
+          ],
+          "scope": {
+            "kind": "snapshot",
+            "componentId": "fixture:button",
+            "snapshotId": "git:1111111111111111111111111111111111111111"
+          },
+          "conditionRefs": []
         }
       },
       "archive": {
@@ -139,25 +204,53 @@
               "state": "allowed",
               "evidenceRefs": [
                 "fixture-permission"
-              ]
+              ],
+              "scope": {
+                "kind": "file",
+                "componentId": "fixture:button",
+                "snapshotId": "git:1111111111111111111111111111111111111111",
+                "path": "button.ts"
+              },
+              "conditionRefs": []
             },
             "can_modify_and_use": {
               "state": "allowed",
               "evidenceRefs": [
                 "fixture-permission"
-              ]
+              ],
+              "scope": {
+                "kind": "file",
+                "componentId": "fixture:button",
+                "snapshotId": "git:1111111111111111111111111111111111111111",
+                "path": "button.ts"
+              },
+              "conditionRefs": []
             },
             "can_use_commercially": {
               "state": "allowed",
               "evidenceRefs": [
                 "fixture-permission"
-              ]
+              ],
+              "scope": {
+                "kind": "file",
+                "componentId": "fixture:button",
+                "snapshotId": "git:1111111111111111111111111111111111111111",
+                "path": "button.ts"
+              },
+              "conditionRefs": []
             },
             "can_redistribute_component_collection": {
               "state": "allowed",
               "evidenceRefs": [
                 "fixture-permission"
-              ]
+              ],
+              "scope": {
+                "kind": "file",
+                "componentId": "fixture:button",
+                "snapshotId": "git:1111111111111111111111111111111111111111",
+                "path": "button.ts"
+              },
+              "conditionRefs": []
             }
           }
         },
@@ -173,25 +266,53 @@
               "state": "allowed",
               "evidenceRefs": [
                 "fixture-permission"
-              ]
+              ],
+              "scope": {
+                "kind": "file",
+                "componentId": "fixture:button",
+                "snapshotId": "git:1111111111111111111111111111111111111111",
+                "path": "LICENSE.txt"
+              },
+              "conditionRefs": []
             },
             "can_modify_and_use": {
               "state": "allowed",
               "evidenceRefs": [
                 "fixture-permission"
-              ]
+              ],
+              "scope": {
+                "kind": "file",
+                "componentId": "fixture:button",
+                "snapshotId": "git:1111111111111111111111111111111111111111",
+                "path": "LICENSE.txt"
+              },
+              "conditionRefs": []
             },
             "can_use_commercially": {
               "state": "allowed",
               "evidenceRefs": [
                 "fixture-permission"
-              ]
+              ],
+              "scope": {
+                "kind": "file",
+                "componentId": "fixture:button",
+                "snapshotId": "git:1111111111111111111111111111111111111111",
+                "path": "LICENSE.txt"
+              },
+              "conditionRefs": []
             },
             "can_redistribute_component_collection": {
               "state": "allowed",
               "evidenceRefs": [
                 "fixture-permission"
-              ]
+              ],
+              "scope": {
+                "kind": "file",
+                "componentId": "fixture:button",
+                "snapshotId": "git:1111111111111111111111111111111111111111",
+                "path": "LICENSE.txt"
+              },
+              "conditionRefs": []
             }
           }
         }
@@ -201,7 +322,14 @@
           "kind": "internal",
           "path": "button.ts"
         }
-      ]
+      ],
+      "preview": {
+        "status": "not_built",
+        "localPath": null,
+        "upstreamUrl": null,
+        "lastCheckedAt": null,
+        "reason": null
+      }
     }
   ],
   "licenseEvidence": [
@@ -222,10 +350,14 @@
         "notes": "Fixture only; no upstream or legal assertion."
       },
       "spdx": null,
-      "obligations": [
-        "Retain fictional notice in tests"
-      ],
-      "notices": []
+      "obligations": [],
+      "notices": [],
+      "applicableRights": [
+        "can_archive_source",
+        "can_modify_and_use",
+        "can_use_commercially",
+        "can_redistribute_component_collection"
+      ]
     }
   ]
 }

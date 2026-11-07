@@ -1,10 +1,13 @@
 import { Ajv } from 'ajv';
-import { MetadataSchema, SourcesSchema, rightNames, type Metadata, type Source, type Rights,
-  type Scope, type LicenseEvidence, type RightName } from './schema.js';
+import { MetadataSchema, SourcesSchema, InventorySchema, rightNames, type Metadata, type Source,
+  type LicenseEvidence } from './schema.js';
+import { validateRights, validateEvidenceRefs } from './rights-policy.js';
+import { validateFileMapping } from './file-mapping.js';
 import { componentId, snapshotId, archiveDirectory, manifestDigest, assertRelativePath } from './identity.js';
 
 const ajv = new Ajv({ allErrors: true, strict: true });
 const metadataValidator = ajv.compile<Metadata>(MetadataSchema);
+const inventoryValidator = ajv.compile(InventorySchema);
 const sourcesValidator = ajv.compile<Source[]>(SourcesSchema);
 
 function unique<T>(items: readonly T[], key: (v: T) => string): Map<string, T> {
@@ -15,26 +18,6 @@ function unique<T>(items: readonly T[], key: (v: T) => string): Map<string, T> {
     result.set(id, item);
   }
   return result;
-}
-
-function covers(evidence: Scope, target: Scope, sourceId: string): boolean {
-  if (evidence.kind === 'source') return evidence.sourceId === sourceId;
-  if (target.kind === 'source' || evidence.componentId !== target.componentId) return false;
-  if (evidence.kind === 'entry') return true;
-  if (target.kind === 'entry' || evidence.snapshotId !== target.snapshotId) return false;
-  return evidence.kind === 'snapshot' || (target.kind === 'file' && evidence.path === target.path);
-}
-
-function validateRights(rights: Rights, scope: Scope, sourceId: string, evidence: Map<string, LicenseEvidence>): void {
-  for (const name of rightNames) {
-    const decision = rights[name];
-    if (decision.state !== 'unknown' && !decision.evidenceRefs.length) throw new Error(`Missing evidence: ${name}`);
-    for (const id of decision.evidenceRefs) {
-      const record = evidence.get(id);
-      if (!record || !covers(record.scope, scope, sourceId)) throw new Error(`Missing or out-of-scope evidence: ${id}`);
-      if ((scope.kind === 'snapshot' || scope.kind === 'file') && record.upstreamVersion !== scope.snapshotId) throw new Error('Evidence version mismatch');
-    }
-  }
 }
 
 function validateInstant(value: string): void {
@@ -89,14 +72,31 @@ export function validateMetadata(input: unknown): Metadata {
   for (const entry of data.entries) {
     if (!sources.has(entry.sourceId) || entry.componentId !== componentId(entry.sourceId, entry.upstreamSlug)) throw new Error('Entry identity mismatch');
     validateRights(entry.rights, { kind: 'entry', componentId: entry.componentId }, entry.sourceId, evidence);
+    if (['pro_only', 'restricted', 'license_unknown'].includes(entry.status) && !entry.restrictions.length) throw new Error('Status requires explicit scoped restrictions');
+    if (entry.status === 'license_unknown' && !entry.restrictions.some(r => r.state === 'unknown')) throw new Error('Unknown license status requires an unknown restriction');
+    for (const restriction of entry.restrictions) {
+      const scope = restriction.scope;
+      if (scope.kind === 'source' || scope.componentId !== entry.componentId) throw new Error('Restriction scope mismatch');
+      if (scope.kind === 'snapshot' || scope.kind === 'file') {
+        const snap = data.snapshots.find(s => s.componentId === scope.componentId && s.snapshotId === scope.snapshotId);
+        if (!snap || (scope.kind === 'file' && !snap.files.some(f => f.path === scope.path))) throw new Error('Orphan restriction scope');
+      }
+      if (restriction.state === 'denied' && !restriction.evidenceRefs.length) throw new Error('Denied restriction requires evidence');
+      validateEvidenceRefs(restriction.evidenceRefs, scope, entry.sourceId, evidence, restriction.rights);
+    }
   }
   for (const snap of data.snapshots) {
     const entry = entries.get(snap.componentId);
     if (!entry || snap.snapshotId !== snapshotId(snap.upstream)) throw new Error('Snapshot identity mismatch');
     validateInstant(snap.fetchedAt);
+    if (snap.preview.localPath !== null) assertRelativePath(snap.preview.localPath);
+    if (snap.preview.lastCheckedAt !== null) validateInstant(snap.preview.lastCheckedAt);
+    if (snap.preview.status === 'preview_ready' && (snap.preview.lastCheckedAt === null || (snap.preview.localPath === null && snap.preview.upstreamUrl === null))) throw new Error('Ready preview requires checked demo location');
+    if (['preview_unavailable', 'needs_adapter', 'unsafe_to_run'].includes(snap.preview.status) && snap.preview.reason === null) throw new Error('Preview limitation requires reason');
     if (snap.archive.path !== archiveDirectory(entry.sourceId, entry.componentId, snap.snapshotId)) throw new Error('Unsafe archive directory');
     const scope = { kind: 'snapshot', componentId: snap.componentId, snapshotId: snap.snapshotId } as const;
     validateRights(snap.rights, scope, entry.sourceId, evidence);
+    validateFileMapping(snap.files);
     const paths = unique(snap.files, file => file.path);
     for (const file of snap.files) {
       assertRelativePath(file.path);
@@ -135,12 +135,8 @@ export function validateMetadata(input: unknown): Metadata {
   return data;
 }
 
-// Validate the full graph before any use decision; a detached decision is never an authorization token.
-export function authorize(input: unknown, component: string, snapshot: string, right: RightName): boolean {
-  const data = validateMetadata(input);
-  if (data.fixture) return false;
-  const entry = data.entries.find(e => e.componentId === component);
-  const snap = data.snapshots.find(s => s.componentId === component && s.snapshotId === snapshot);
-  if (!entry || !snap || snap.archive.status !== 'archived_complete') return false;
-  return [entry.rights, snap.rights, ...snap.files.map(f => f.rights)].every(r => r[right].state === 'allowed');
+
+export function assembleMetadata(sources: unknown, inventory: unknown): Metadata {
+  if (!inventoryValidator(inventory)) throw new Error(ajv.errorsText(inventoryValidator.errors));
+  return validateMetadata({ ...(inventory as object), sources });
 }

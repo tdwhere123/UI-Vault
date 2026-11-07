@@ -13,5 +13,5 @@ async function control(file, before, after, name) {
     console.log('EXPECTED_FAILURE_CONFIRMED exit=1');
   } finally { await writeFile(file, original); }
 }
-await control('dist/packages/core/src/validation.js', "r[right].state === 'allowed'", 'Boolean(r[right].state)', 'unknown never grants permission');
+await control('dist/packages/core/src/rights-policy.js', "const legal = states.includes('denied') ? 'denied' : states.includes('unknown') ? 'unknown' : 'allowed';", "const legal = 'allowed';", 'unknown never grants permission');
 await control('dist/packages/core/src/filesystem.js', 'JSON.stringify(actual) !== JSON.stringify(expected)', 'false', 'real filesystem rejects missing and orphan files');
