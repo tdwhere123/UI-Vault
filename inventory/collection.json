@@ -11,6 +11,18 @@
       "name": "bencho",
       "upstreamUrl": "https://github.com/cabralorenzo/bencho",
       "upstreamCommit": "c65992417427bb09e661674ffa800bef29adef49"
+    },
+    {
+      "id": "arc-library-reference",
+      "name": "Arc official README visual references",
+      "upstreamUrl": "https://github.com/kuratlielia/arc-library",
+      "upstreamCommit": "8302b52ed9dc79ae7ca699b158a98dfdf09656f7"
+    },
+    {
+      "id": "beui-reference",
+      "name": "beUI public demo visual references",
+      "upstreamUrl": "https://pro.beui.dev/",
+      "upstreamCommit": null
     }
   ],
   "components": [
@@ -1436,6 +1448,306 @@
         "No Bencho Pro, name/mark assets, website photographs or sounds included; see LICENSE exclusions and THIRD_PARTY.md."
       ],
       "assetKind": "source"
+    },
+    {
+      "assetKind": "reference",
+      "id": "reference:arc-cover-flow",
+      "sourceId": "arc-library-reference",
+      "name": "Arc Pro — Cover flow",
+      "category": "gallery",
+      "tags": [
+        "aesthetic-reference",
+        "interaction-inference",
+        "static-observation"
+      ],
+      "upstreamUrl": "https://raw.githubusercontent.com/kuratlielia/arc-library/8302b52ed9dc79ae7ca699b158a98dfdf09656f7/.github/assets/showcase/cover-flow-light.webp",
+      "upstreamCommit": null,
+      "license": {
+        "status": "unknown",
+        "evidencePath": null,
+        "noticePaths": []
+      },
+      "snapshotPath": null,
+      "files": [],
+      "dependencies": {},
+      "limitations": [
+        "官方README动画WebP的第0帧静态派生；非浏览页截屏",
+        "静帧无法验证运动曲线、速度、手势响应；https://uiarc.dev/pro只是已访问总入口，不是单条页；照片仅参考非素材授权",
+        "父任务已Read实际图片；本文件忠实整理其提供的视觉观察摘要，非执行子任务自称浏览",
+        "字体家族 Unknown；动画未验证；内部实现未知/推测；不提供源码或素材授权。",
+        "未复制研究本地图片：localAssetPaths为空。"
+      ],
+      "publicUrl": "https://github.com/kuratlielia/arc-library/blob/8302b52ed9dc79ae7ca699b158a98dfdf09656f7/README.md",
+      "screenshotUrls": [
+        "https://raw.githubusercontent.com/kuratlielia/arc-library/8302b52ed9dc79ae7ca699b158a98dfdf09656f7/.github/assets/showcase/cover-flow-light.webp"
+      ],
+      "demoUrls": [],
+      "localAssetPaths": [],
+      "interactionFlow": [
+        "throw/depth rail等动作仅来自官方文案；未验证拖掷或切换",
+        "官方文案交互推断，未执行"
+      ],
+      "visualNotes": {
+        "layout": "白底大圆角；5张左右透视叠放照片，中央正面山湖照片最大，两侧倾斜；底部淡倒影；中下地点标题、分页点，下栏三项路线指标及Save hike按钮",
+        "colors": "自然绿蓝图像与黑灰文本",
+        "typography": "无衬线外观；字体家族 Unknown",
+        "motion": "未验证动画；仅官方README动画WebP第0帧静态观察，不是浏览页截图"
+      },
+      "useCases": [
+        "旅行目的地/照片作品浏览（适用场景推断，非已验证业务能力）"
+      ],
+      "implementationNotes": "Unknown/推测未验证；不声称已知内部源码或已执行交互。",
+      "isInference": true
+    },
+    {
+      "assetKind": "reference",
+      "id": "reference:arc-orbit-logos",
+      "sourceId": "arc-library-reference",
+      "name": "Arc Pro — Orbit logos",
+      "category": "integrations",
+      "tags": [
+        "aesthetic-reference",
+        "interaction-inference",
+        "static-observation"
+      ],
+      "upstreamUrl": "https://raw.githubusercontent.com/kuratlielia/arc-library/8302b52ed9dc79ae7ca699b158a98dfdf09656f7/.github/assets/showcase/orbit-logos-light.webp",
+      "upstreamCommit": null,
+      "license": {
+        "status": "unknown",
+        "evidencePath": null,
+        "noticePaths": []
+      },
+      "snapshotPath": null,
+      "files": [],
+      "dependencies": {},
+      "limitations": [
+        "官方README动画WebP的第0帧静态派生；非浏览页截屏",
+        "品牌图形仅参考，非授权；未验证轨道运动/连接能力/键盘交互",
+        "父任务已Read实际图片；本文件忠实整理其提供的视觉观察摘要，非执行子任务自称浏览",
+        "字体家族 Unknown；动画未验证；内部实现未知/推测；不提供源码或素材授权。",
+        "未复制研究本地图片：localAssetPaths为空。"
+      ],
+      "publicUrl": "https://github.com/kuratlielia/arc-library/blob/8302b52ed9dc79ae7ca699b158a98dfdf09656f7/README.md",
+      "screenshotUrls": [
+        "https://raw.githubusercontent.com/kuratlielia/arc-library/8302b52ed9dc79ae7ca699b158a98dfdf09656f7/.github/assets/showcase/orbit-logos-light.webp"
+      ],
+      "demoUrls": [],
+      "localAssetPaths": [],
+      "interactionFlow": [
+        "选类别→选logo→查看/连接；图中文字含Pick a logo及Arrow keys说明",
+        "官方图内文字流程，未执行选择、键盘操作或连接"
+      ],
+      "visualNotes": {
+        "layout": "上行All/Payments/Dev/Comms/Design/Storage标签；左两圈细灰轨道、圆形logo按钮和中心标志；右Integrations标题及14 integrations,4 connected说明",
+        "colors": "白底，品牌logo彩色，黑灰文字，已连接点为绿点",
+        "typography": "无衬线外观；字体家族 Unknown",
+        "motion": "未验证动画；仅官方README动画WebP第0帧静态观察，不是浏览页截图"
+      },
+      "useCases": [
+        "SaaS集成目录（适用场景推断，非已验证业务能力）"
+      ],
+      "implementationNotes": "Unknown/推测未验证；不声称已知内部源码或已执行交互。",
+      "isInference": true
+    },
+    {
+      "assetKind": "reference",
+      "id": "reference:arc-wallet-stack",
+      "sourceId": "arc-library-reference",
+      "name": "Arc Pro — Wallet stack",
+      "category": "card-stack",
+      "tags": [
+        "aesthetic-reference",
+        "interaction-inference",
+        "static-observation"
+      ],
+      "upstreamUrl": "https://raw.githubusercontent.com/kuratlielia/arc-library/8302b52ed9dc79ae7ca699b158a98dfdf09656f7/.github/assets/showcase/wallet-stack-light.webp",
+      "upstreamCommit": null,
+      "license": {
+        "status": "unknown",
+        "evidencePath": null,
+        "noticePaths": []
+      },
+      "snapshotPath": null,
+      "files": [],
+      "dependencies": {},
+      "limitations": [
+        "官方README动画WebP的第0帧静态派生；非浏览页截屏",
+        "不复制示例卡数据；未验证活动详情或卡片交互；静帧不说明动态",
+        "父任务已Read实际图片；本文件忠实整理其提供的视觉观察摘要，非执行子任务自称浏览",
+        "字体家族 Unknown；动画未验证；内部实现未知/推测；不提供源码或素材授权。",
+        "未复制研究本地图片：localAssetPaths为空。"
+      ],
+      "publicUrl": "https://github.com/kuratlielia/arc-library/blob/8302b52ed9dc79ae7ca699b158a98dfdf09656f7/README.md",
+      "screenshotUrls": [
+        "https://raw.githubusercontent.com/kuratlielia/arc-library/8302b52ed9dc79ae7ca699b158a98dfdf09656f7/.github/assets/showcase/wallet-stack-light.webp"
+      ],
+      "demoUrls": [],
+      "localAssetPaths": [],
+      "interactionFlow": [
+        "fan/lift/activity动作仅为官方文字推断，未展开或提起卡片",
+        "官方文案交互推断，未执行"
+      ],
+      "visualNotes": {
+        "layout": "左上卡片标题，右上1 of 4；中央纵向叠放卡片，最前银灰金属拉丝外观，上方露深灰/浅蓝/绿卡边，圆角阴影",
+        "colors": "白底，银灰主卡及深灰/浅蓝/绿色卡边",
+        "typography": "无衬线外观；字体家族 Unknown",
+        "motion": "未验证动画；仅官方README动画WebP第0帧静态观察，不是浏览页截图"
+      },
+      "useCases": [
+        "多卡/会员卡选择（适用场景推断，非已验证业务能力）"
+      ],
+      "implementationNotes": "Unknown/推测未验证；不声称已知内部源码或已执行交互。",
+      "isInference": true
+    },
+    {
+      "assetKind": "reference",
+      "id": "reference:beui-pair",
+      "sourceId": "beui-reference",
+      "name": "beUI Pro — Pair AI Workspace",
+      "category": "workspace",
+      "tags": [
+        "aesthetic-reference",
+        "interaction-inference",
+        "static-observation"
+      ],
+      "upstreamUrl": "https://pair.demo.beui.dev/",
+      "upstreamCommit": null,
+      "license": {
+        "status": "unknown",
+        "evidencePath": null,
+        "noticePaths": []
+      },
+      "snapshotPath": null,
+      "files": [],
+      "dependencies": {},
+      "limitations": [
+        "父任务真实desktop访问公开demo并截图；只读可见工作区",
+        "仅可见画面，不证明发送、模型、credits或Agent真实工作；对应官方营销资产GET403，没有该资产图",
+        "父任务已Read实际图片；本文件忠实整理其提供的视觉观察摘要，非执行子任务自称浏览",
+        "字体家族 Unknown；动画未验证；内部实现未知/推测；不提供源码或素材授权。",
+        "未复制研究本地图片：localAssetPaths为空。"
+      ],
+      "publicUrl": "https://pair.demo.beui.dev/",
+      "screenshotUrls": [],
+      "demoUrls": [
+        "https://pair.demo.beui.dev/"
+      ],
+      "localAssetPaths": [],
+      "interactionFlow": [
+        "模式→选项目/输入→发送",
+        "可见控件推断，未输入、未发送、未调用AI"
+      ],
+      "visualNotes": {
+        "layout": "两栏：窄左导航及大主画布；左Chat/Agent/Design tabs、项目与会话列表；中央What should we move forward?标题、带credits行圆角输入框、下建议chips、圆发送按钮",
+        "colors": "深灰近黑，灰白文字，蓝色发送按钮",
+        "typography": "无衬线外观；字体家族 Unknown",
+        "motion": "动画未观察/未验证；仅公开入口可见画面"
+      },
+      "useCases": [
+        "AI工作区/项目会话入口（适用场景推断，非已验证业务能力）"
+      ],
+      "implementationNotes": "Unknown/推测未验证；不声称已知内部源码或已执行交互。",
+      "isInference": true
+    },
+    {
+      "assetKind": "reference",
+      "id": "reference:beui-weave",
+      "sourceId": "beui-reference",
+      "name": "beUI Pro — Weave Workflow Builder（仅认证入口）",
+      "category": "authentication",
+      "tags": [
+        "aesthetic-reference",
+        "interaction-inference",
+        "static-observation"
+      ],
+      "upstreamUrl": "https://weave.demo.beui.dev/",
+      "upstreamCommit": null,
+      "license": {
+        "status": "unknown",
+        "evidencePath": null,
+        "noticePaths": []
+      },
+      "snapshotPath": null,
+      "files": [],
+      "dependencies": {},
+      "limitations": [
+        "父任务真实desktop访问demo，观察仅登录门页，未见Builder",
+        "不是Builder画面；没有观察工作流节点/画布/执行过程；未登录注册；对应官方营销资产GET403",
+        "父任务已Read实际图片；本文件忠实整理其提供的视觉观察摘要，非执行子任务自称浏览",
+        "字体家族 Unknown；动画未验证；内部实现未知/推测；不提供源码或素材授权。",
+        "未复制研究本地图片：localAssetPaths为空。"
+      ],
+      "publicUrl": "https://weave.demo.beui.dev/",
+      "screenshotUrls": [],
+      "demoUrls": [
+        "https://weave.demo.beui.dev/"
+      ],
+      "localAssetPaths": [],
+      "interactionFlow": [
+        "Google/GitHub/邮箱登录选项只作控件识别；未点击；Builder布局与流程Unknown",
+        "仅认证控件存在，未执行登录；Builder交互Unknown"
+      ],
+      "visualNotes": {
+        "layout": "左白区居中登录表单，Google/GitHub/邮箱选项及主按钮；右半浅灰点阵区，底部workflow说明",
+        "colors": "左白、右浅灰，蓝色主按钮",
+        "typography": "字体家族及确切字形未确认；字体家族 Unknown",
+        "motion": "动画未观察/未验证；仅公开入口可见画面"
+      },
+      "useCases": [
+        "工作流模板认证入口（适用场景推断，非已验证业务能力）"
+      ],
+      "implementationNotes": "Unknown/推测未验证；不声称已知内部源码或已执行交互。",
+      "isInference": true
+    },
+    {
+      "assetKind": "reference",
+      "id": "reference:beui-folio",
+      "sourceId": "beui-reference",
+      "name": "beUI Pro — Folio Crypto Portfolio（仅欢迎与预览）",
+      "category": "onboarding",
+      "tags": [
+        "aesthetic-reference",
+        "interaction-inference",
+        "static-observation"
+      ],
+      "upstreamUrl": "https://folio.demo.beui.dev/",
+      "upstreamCommit": null,
+      "license": {
+        "status": "unknown",
+        "evidencePath": null,
+        "noticePaths": []
+      },
+      "snapshotPath": null,
+      "files": [],
+      "dependencies": {},
+      "limitations": [
+        "父任务真实desktop访问demo，仅欢迎页及样例portfolio预览，非完整dashboard",
+        "仅欢迎及样例预览，不宣称完整dashboard；余额线图是画面样例非真实账户；对应官方营销资产GET403",
+        "父任务已Read实际图片；本文件忠实整理其提供的视觉观察摘要，非执行子任务自称浏览",
+        "字体家族 Unknown；动画未验证；内部实现未知/推测；不提供源码或素材授权。",
+        "未复制研究本地图片：localAssetPaths为空。"
+      ],
+      "publicUrl": "https://folio.demo.beui.dev/",
+      "screenshotUrls": [],
+      "demoUrls": [
+        "https://folio.demo.beui.dev/"
+      ],
+      "localAssetPaths": [],
+      "interactionFlow": [
+        "图内Demo access/sign-in options说明可不认证打开sample；未点击；未连接钱包",
+        "界面说明文字与控件推断，未验证进入工作区或钱包连接"
+      ],
+      "visualNotes": {
+        "layout": "左大圆角宣传面板及标题、半透明余额折线卡；右欢迎与登录区、connect wallet按钮",
+        "colors": "白底；左面板浅蓝到奶油渐变，黄绿connect wallet按钮",
+        "typography": "无衬线外观；字体家族 Unknown",
+        "motion": "动画未观察/未验证；仅公开入口可见画面"
+      },
+      "useCases": [
+        "投资组合引导（适用场景推断，非已验证业务能力）"
+      ],
+      "implementationNotes": "Unknown/推测未验证；不声称已知内部源码或已执行交互。",
+      "isInference": true
     }
   ]
 }

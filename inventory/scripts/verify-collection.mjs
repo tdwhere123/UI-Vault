@@ -9,10 +9,20 @@ import { validateCatalog } from '../../dist/packages/core/src/catalog.js';
 const root = resolve(import.meta.dirname, '../..');
 const catalog = JSON.parse(readFileSync(resolve(root, process.argv[2] ?? 'inventory/collection.json'), 'utf8'));
 validateCatalog(catalog);
-assert.equal(catalog.sources.length, 2);
-assert.equal(catalog.components.length, 20);
-for (const source of catalog.sources) {
-  assert.equal(catalog.components.filter(c => c.sourceId === source.id).length, 10);
+const sourceComponents = catalog.components.filter(c => c.assetKind === 'source');
+const references = catalog.components.filter(c => c.assetKind === 'reference');
+const sourceIds = new Set(sourceComponents.map(c => c.sourceId));
+assert.equal(sourceIds.size, 2, 'Expected two source-code origins');
+assert.equal(sourceComponents.length, 20, 'Expected 20 source components');
+for (const sourceId of sourceIds) {
+  assert.equal(sourceComponents.filter(c => c.sourceId === sourceId).length, 10);
+}
+assert.equal(references.length, 6, 'Expected six aesthetic/interaction references');
+for (const reference of references) {
+  // Field shape and forbidden source material are owned by validateCatalog above.
+  assert.deepEqual(reference.localAssetPaths, [], 'No licensed local reference assets acquired');
+  assert.equal(reference.isInference, true, 'Internal implementation remains inference');
+  console.log(`PASS reference ${reference.id}: metadata only; no snapshot/files/dependencies/local assets`);
 }
 let fileCount = 0;
 let edgeCount = 0;
@@ -56,7 +66,7 @@ function checkModule(file, component, manifest) {
   visit(source);
 }
 
-for (const component of catalog.components) {
+for (const component of sourceComponents) {
   assert.equal(component.license.status, 'allowed');
   const base = resolve(root, component.snapshotPath);
   const manifest = new Set(component.files.map(file => resolve(base, file.path)));
@@ -92,4 +102,4 @@ for (const component of catalog.components) {
   assert.deepEqual(actualFiles.sort(), [...manifest].sort(), 'Manifest omits physical file');
   console.log(`PASS ${component.id}: ${component.files.length} bytes-verified files; styles + notices + import closure`);
 }
-console.log(`PASS total: 2 sources, 20 real components, ${fileCount} files, ${edgeCount} import edges, ${mutationRejected} tamper negative controls`);
+console.log(`PASS total: 2 sources, 20 real components, 6 references, ${fileCount} files, ${edgeCount} import edges, ${mutationRejected} tamper negative controls`);
