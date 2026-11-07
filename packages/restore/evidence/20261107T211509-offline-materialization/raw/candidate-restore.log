@@ -1,0 +1,143 @@
+TAP version 13
+# Subtest: offline restoration preserves source and style bytes, repeats without replacing files, and never executes source
+ok 1 - offline restoration preserves source and style bytes, repeats without replacing files, and never executes source
+  ---
+  duration_ms: 34.389947
+  type: 'test'
+  ...
+# Subtest: a same-size source corruption fails hashing before creating destination
+ok 2 - a same-size source corruption fails hashing before creating destination
+  ---
+  duration_ms: 2.715361
+  type: 'test'
+  ...
+# Subtest: missing and wrong-size snapshot files fail without writing destination
+ok 3 - missing and wrong-size snapshot files fail without writing destination
+  ---
+  duration_ms: 3.971734
+  type: 'test'
+  ...
+# Subtest: catalog path traversal, absolute paths, duplicate files, and file-directory collisions are rejected
+ok 4 - catalog path traversal, absolute paths, duplicate files, and file-directory collisions are rejected
+  ---
+  duration_ms: 11.309866
+  type: 'test'
+  ...
+# Subtest: unknown and restricted records cannot materialize even if files are supplied
+ok 5 - unknown and restricted records cannot materialize even if files are supplied
+  ---
+  duration_ms: 2.388845
+  type: 'test'
+  ...
+# Subtest: license and notices must be included in the hashed snapshot
+ok 6 - license and notices must be included in the hashed snapshot
+  ---
+  duration_ms: 2.086415
+  type: 'test'
+  ...
+# Subtest: source symlink files, symlink directories, and hardlinks are rejected
+ok 7 - source symlink files, symlink directories, and hardlinks are rejected
+  ---
+  duration_ms: 11.523658
+  type: 'test'
+  ...
+# Subtest: destination symlink roots and parent directories never write to an outside target
+ok 8 - destination symlink roots and parent directories never write to an outside target
+  ---
+  duration_ms: 7.080963
+  type: 'test'
+  ...
+# Subtest: existing destination conflicts are not overwritten and prevent new payload writes
+ok 9 - existing destination conflicts are not overwritten and prevent new payload writes
+  ---
+  duration_ms: 8.904586
+  type: 'test'
+  ...
+# Subtest: an existing matching subset resumes without replacing already restored files
+ok 10 - an existing matching subset resumes without replacing already restored files
+  ---
+  duration_ms: 6.889608
+  type: 'test'
+  ...
+# Subtest: archive overlap and byte limits reject before output writes
+ok 11 - archive overlap and byte limits reject before output writes
+  ---
+  duration_ms: 1.684462
+  type: 'test'
+  ...
+# Subtest: directory descriptors stay pinned when their visible path is replaced by a symlink
+ok 12 - directory descriptors stay pinned when their visible path is replaced by a symlink
+  ---
+  duration_ms: 2.65439
+  type: 'test'
+  ...
+# Subtest: destination file symlinks and hardlinks reject without modifying their targets
+ok 13 - destination file symlinks and hardlinks reject without modifying their targets
+  ---
+  duration_ms: 5.240307
+  type: 'test'
+  ...
+# Subtest: write failure reports partial output and a repeat resumes after filesystem repair
+ok 14 - write failure reports partial output and a repeat resumes after filesystem repair
+  ---
+  duration_ms: 14.641419
+  type: 'test'
+  ...
+# Subtest: reference records remain view-only even when their license status is allowed
+ok 15 - reference records remain view-only even when their license status is allowed
+  ---
+  duration_ms: 1.13868
+  type: 'test'
+  ...
+# Subtest: unlisted source files and directories fail the exact manifest set check
+ok 16 - unlisted source files and directories fail the exact manifest set check
+  ---
+  duration_ms: 4.38145
+  type: 'test'
+  ...
+# Subtest: read-only verification and Explorer reads share integrity checks and never materialize output
+ok 17 - read-only verification and Explorer reads share integrity checks and never materialize output
+  ---
+  duration_ms: 8.358217
+  type: 'test'
+  ...
+# Denied origin connection: github.com:443
+# Origin inaccessible: agent-elements https://github.com/21st-dev/agent-elements; curl=56; curl: (56) CONNECT tunnel failed, response 503
+# Denied origin connection: github.com:443
+# Origin inaccessible: bencho https://github.com/cabralorenzo/bencho; curl=56; curl: (56) CONNECT tunnel failed, response 503
+# Restored twice: agent-elements:attachment-button; commit=b04b36cb6381a1dd1a0e86cc7c90564ddcd56d37; files=5; bytes=331964; unchanged=5
+# Restored twice: agent-elements:bash-tool; commit=b04b36cb6381a1dd1a0e86cc7c90564ddcd56d37; files=11; bytes=345944; unchanged=11
+# Restored twice: agent-elements:error-message; commit=b04b36cb6381a1dd1a0e86cc7c90564ddcd56d37; files=6; bytes=331219; unchanged=6
+# Restored twice: agent-elements:generic-tool; commit=b04b36cb6381a1dd1a0e86cc7c90564ddcd56d37; files=10; bytes=337475; unchanged=10
+# Restored twice: agent-elements:input-typing; commit=b04b36cb6381a1dd1a0e86cc7c90564ddcd56d37; files=5; bytes=331692; unchanged=5
+# Restored twice: agent-elements:question-prompt; commit=b04b36cb6381a1dd1a0e86cc7c90564ddcd56d37; files=6; bytes=341888; unchanged=6
+# Restored twice: agent-elements:send-button; commit=b04b36cb6381a1dd1a0e86cc7c90564ddcd56d37; files=6; bytes=331564; unchanged=6
+# Restored twice: agent-elements:suggestions; commit=b04b36cb6381a1dd1a0e86cc7c90564ddcd56d37; files=6; bytes=331915; unchanged=6
+# Restored twice: agent-elements:text-shimmer; commit=b04b36cb6381a1dd1a0e86cc7c90564ddcd56d37; files=6; bytes=331482; unchanged=6
+# Restored twice: agent-elements:thinking-tool; commit=b04b36cb6381a1dd1a0e86cc7c90564ddcd56d37; files=11; bytes=344788; unchanged=11
+# Restored twice: bencho:ascii-wake; commit=c65992417427bb09e661674ffa800bef29adef49; files=7; bytes=23992; unchanged=7
+# Restored twice: bencho:escape; commit=c65992417427bb09e661674ffa800bef29adef49; files=7; bytes=29834; unchanged=7
+# Restored twice: bencho:eye-tracker; commit=c65992417427bb09e661674ffa800bef29adef49; files=7; bytes=31427; unchanged=7
+# Restored twice: bencho:folding-bill; commit=c65992417427bb09e661674ffa800bef29adef49; files=7; bytes=33710; unchanged=7
+# Restored twice: bencho:generate; commit=c65992417427bb09e661674ffa800bef29adef49; files=7; bytes=26649; unchanged=7
+# Restored twice: bencho:heat-word; commit=c65992417427bb09e661674ffa800bef29adef49; files=7; bytes=24595; unchanged=7
+# Restored twice: bencho:particles; commit=c65992417427bb09e661674ffa800bef29adef49; files=7; bytes=19090; unchanged=7
+# Restored twice: bencho:slosh; commit=c65992417427bb09e661674ffa800bef29adef49; files=7; bytes=28330; unchanged=7
+# Restored twice: bencho:step-player; commit=c65992417427bb09e661674ffa800bef29adef49; files=7; bytes=31520; unchanged=7
+# Restored twice: bencho:wake-slider; commit=c65992417427bb09e661674ffa800bef29adef49; files=7; bytes=15249; unchanged=7
+# Real offline collection: sources=2; components=20; files=142; bytes=3624327; fetchAttempts=0; output=/tmp/vault-real-offline-auedH7
+# Subtest: all real collected components restore twice with origin access deliberately unavailable
+ok 18 - all real collected components restore twice with origin access deliberately unavailable
+  ---
+  duration_ms: 514.230089
+  type: 'test'
+  ...
+1..18
+# tests 18
+# suites 0
+# pass 18
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 670.778207
