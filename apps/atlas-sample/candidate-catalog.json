@@ -8504,5 +8504,165 @@
       "原版完整动效保留，未用测试替身替换生产运行。",
       "来源与适配说明在同目录ADAPTATION.md；源码ZIP未上传。"
     ]
+  },
+  {
+    "id": "winbox:task-room",
+    "title": "多窗任务室 · 自由重叠工作区",
+    "source": "WinBox",
+    "license": "Apache-2.0",
+    "upstream": "https://github.com/nextapps-de/winbox/tree/bbb453aca2c3c5122c06ae0c6446eea1730d9142",
+    "revision": "bbb453aca2c3c5122c06ae0c6446eea1730d9142",
+    "batch": "winbox-01",
+    "preview": "batches/winbox-01/index.html",
+    "category": "导航与组织",
+    "kind": "完整页面",
+    "format": "空间工作区",
+    "styleTags": [
+      "圆润",
+      "空间感"
+    ],
+    "purposeTags": [
+      "Agent工作流",
+      "多任务"
+    ],
+    "description": "原版浮窗引擎：任务、资料与草稿可聚焦、重叠、最小化、恢复、移动缩放。",
+    "behavior": "本地任务与筛选、草稿状态保留；不加载远程iframe、不接后台。三个窗口合计一个工作区族。",
+    "buildStatus": "Production bundle and real DOM/window state checks passed; visual pending",
+    "gaps": [
+      "真实浏览器视觉、触屏、窗口几何体验未验收。",
+      "任务及草稿只存在本页内存；原始源码ZIP未上传。"
+    ]
+  },
+  {
+    "id": "mind-elixir:thought-map",
+    "title": "思考树 · 可编辑分支导图",
+    "source": "Mind Elixir",
+    "license": "MIT",
+    "upstream": "https://github.com/SSShooter/mind-elixir-core/tree/73de5c6a617a95fe649cd8e0df7d8ca44b446f61",
+    "revision": "73de5c6a617a95fe649cd8e0df7d8ca44b446f61",
+    "batch": "mind-elixir-01",
+    "preview": "batches/mind-elixir-01/index.html",
+    "category": "导航与组织",
+    "kind": "完整区块",
+    "format": "思维导图",
+    "styleTags": [
+      "圆润",
+      "纸张",
+      "空间感"
+    ],
+    "purposeTags": [
+      "Agent工作流",
+      "思考组织"
+    ],
+    "description": "原版Mind Elixir分支引擎，支持节点编辑、增添、折叠、撤销重做及本地数据查看。",
+    "behavior": "原引擎与原创研究样例壳结合；节点文字按纯文本处理，无Markdown/HTML导入、模型调用或远程存储。",
+    "buildStatus": "Original source bundled;10 node/add/undo/redo/collapse/rename/destroy checks passed; visual pending",
+    "gaps": [
+      "真实拖动几何、视觉、触屏和完整无障碍待验。",
+      "全局快捷键、剪贴板、原菜单及远程内容入口不启用。",
+      "公开preview.ts为实际适配宿主；不提供源码ZIP下载。"
+    ]
+  },
+  {
+    "id": "beautiful-ui:prompt-bar",
+    "batch": "beautiful-ui-01",
+    "title": "胶囊提示输入与数据源菜单",
+    "source": "Beautiful UI",
+    "category": "Agent与对话",
+    "kind": "交互组件",
+    "styleTags": [
+      "圆润",
+      "胶囊",
+      "上下文交互"
+    ],
+    "preview": "batches/beautiful-ui-01/prompt-bar.html",
+    "revision": "44a274e598395ab61e7c96c26fda2758780253b7",
+    "license": "MIT",
+    "upstream": "https://github.com/slev12397/beautiful-ui/blob/44a274e598395ab61e7c96c26fda2758780253b7/components/primitives/PromptBar.tsx",
+    "sourceFile": "components/primitives/PromptBar.tsx",
+    "description": "官方 Pill 输入器：@来源、/命令、模型菜单、示例附件、模拟听写、提交到本地回执。",
+    "previewStatus": "visual-review-pending",
+    "buildStatus": "Build, JS parse, DOM state and unmount cleanup verified; layout mocked; GPU pixels not verified.",
+    "knownGaps": [
+      "无模型、文件上传或真实服务连接，所有回复/附件/听写均为本地固定fixture。",
+      "视觉布局、触摸与真实GPU shader效果未验收。",
+      "WebGL不可用时明确提示无sweep，输入与菜单仍可用。"
+    ],
+    "gaps": [
+      "无模型、文件上传或真实服务连接，所有回复/附件/听写均为本地固定fixture。",
+      "视觉布局、触摸与真实GPU shader效果未验收。",
+      "WebGL不可用时明确提示无sweep，输入与菜单仍可用。"
+    ],
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "format": "复合交互组件"
+  },
+  {
+    "id": "beautiful-ui:selection-actions",
+    "batch": "beautiful-ui-01",
+    "title": "选文上下文编辑浮条",
+    "source": "Beautiful UI",
+    "category": "Agent与对话",
+    "kind": "交互组件",
+    "styleTags": [
+      "圆润",
+      "胶囊",
+      "上下文交互"
+    ],
+    "preview": "batches/beautiful-ui-01/selection-actions.html",
+    "revision": "44a274e598395ab61e7c96c26fda2758780253b7",
+    "license": "MIT",
+    "upstream": "https://github.com/slev12397/beautiful-ui/blob/44a274e598395ab61e7c96c26fda2758780253b7/components/primitives/SelectionActions.tsx",
+    "sourceFile": "components/primitives/SelectionActions.tsx",
+    "description": "选文浮条展开动作与固定文字流式改写，Keep本地接受、Discard回到先前文本；Explain禁用。",
+    "previewStatus": "visual-review-pending",
+    "buildStatus": "Build, JS parse, DOM state and unmount cleanup verified; layout mocked; GPU pixels not verified.",
+    "knownGaps": [
+      "无模型、文件上传或真实服务连接，所有回复/附件/听写均为本地固定fixture。",
+      "视觉布局、触摸与真实GPU shader效果未验收。",
+      "SelectionActions不是任意文本选区编辑器，演示预设选文与固定rewrite。"
+    ],
+    "gaps": [
+      "无模型、文件上传或真实服务连接，所有回复/附件/听写均为本地固定fixture。",
+      "视觉布局、触摸与真实GPU shader效果未验收。",
+      "SelectionActions不是任意文本选区编辑器，演示预设选文与固定rewrite。"
+    ],
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "format": "复合交互组件"
+  },
+  {
+    "id": "emoji-mart:local-message-studio",
+    "title": "Emoji Mart · 本地表情检索与消息草稿",
+    "source": "Emoji Mart (Missive)",
+    "license": "MIT",
+    "upstream": "https://github.com/missive/emoji-mart/tree/8af68308851a0585c5224fb16f574ca92f4f578c",
+    "revision": "8af68308851a0585c5224fb16f574ca92f4f578c",
+    "batch": "emoji-mart-01",
+    "preview": "batches/emoji-mart-01/index.html",
+    "category": "输入与选择",
+    "kind": "复合交互组件",
+    "format": "消息辅助工具",
+    "styleTags": [
+      "圆润"
+    ],
+    "purposeTags": [
+      "Agent工作流",
+      "消息编辑"
+    ],
+    "description": "原生表情分类与关键词搜索、肤色选择、光标处插入、本地草稿撤销和预览；整个选择器只计一个族。",
+    "behavior": "原生选择器与分类；关键词检索与空状态；肤色选择；光标位置插入；撤销/恢复；本地消息预览",
+    "buildStatus": "Production build;11 semantic and injection-safety checks passed; visual pending",
+    "gaps": [
+      "Unicode 字体显示因设备而异，无图片回退",
+      "英文关键词为主，界面中文",
+      "不发送、不上传、不调用剪贴板、不持久保存",
+      "视觉待验；JSDOM IntersectionObserver桩",
+      "Unicode元数据不是新增图标；不分发第三方表情艺术图片。",
+      "运行源码8af683...与数据16978d...分别固定，详见ADAPTATION.md。",
+      "源码ZIP只在本地，未上传。"
+    ]
   }
 ]
