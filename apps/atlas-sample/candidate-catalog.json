@@ -10909,5 +10909,49 @@
       "流程审阅"
     ],
     "behavior": "原建模语义与命令历史，重复重置互斥、导入期间退出等结算后唯一销毁；原水印/回链/归属弹层原样可见。"
+  },
+  {
+    "id": "timelinejs:research-story",
+    "title": "TimelineJS · 研究故事时间线",
+    "source": "TimelineJS3",
+    "upstream": "https://github.com/NUKnightLab/TimelineJS3/tree/bdc928fe8cbf621575c8e335b197aadb0cfe1526",
+    "website": "https://timeline.knightlab.com/",
+    "revision": "bdc928fe8cbf621575c8e335b197aadb0cfe1526",
+    "version": "3.9.13",
+    "sourceFile": "src/js/timeline/Timeline.js",
+    "preview": "batches/timelinejs-01/index.html",
+    "category": "展示与媒体",
+    "description": "原TimelineJS正文阅读、年代标记/尺度导航与缩放；固定虚构研究故事，保留结构化日期引擎，不是任务规划或真实项目历史。",
+    "license": "MPL-2.0; embedded notices and icon CC-BY-4.0/Apache-2.0 separately retained",
+    "buildStatus": "Seven original UI checks, pending initialization teardown, input rejection and independent byte-identical source rebuild passed; browser layout/inert/native gestures NOT visually verified",
+    "previewStatus": "DOM interaction verified; visual review pending",
+    "gaps": [
+      "Visual/time-axis layout and native pointer/touch behavior unverified; tests mock layout/observers/native inert.",
+      "Restricted local text-only story; no remote media/date-string parsing/CSV/automatic IDs.",
+      "Requires native inert in a modern browser; no global polyfill.",
+      "Material glyph historical import release unknown; geometric derivative correspondence documented, not byte-identical release claim.",
+      "完整MPL对应77份首选源码及构建/lock已与许可一并公开，不以本地ZIP代替；被删未核slug/ISO及远程配置不在公开版。",
+      "只有5个已核图标路径，保留CC BY4/Apache与混合Morpheus/Penner/Leaflet等许可，不宣称全部MPL。",
+      "源码页提供本公开版本Timeline.js；完整77源文件及构建清单见公开public-source与PUBLIC-SOURCE.json。"
+    ],
+    "knownGaps": [
+      "Visual/time-axis layout and native pointer/touch behavior unverified; tests mock layout/observers/native inert.",
+      "Restricted local text-only story; no remote media/date-string parsing/CSV/automatic IDs.",
+      "Requires native inert in a modern browser; no global polyfill.",
+      "Material glyph historical import release unknown; geometric derivative correspondence documented, not byte-identical release claim."
+    ],
+    "batch": "timelinejs-01",
+    "kind": "叙事时间线组件",
+    "format": "研究故事阅读设计族",
+    "styleTags": [
+      "年代导航",
+      "正文阅读"
+    ],
+    "purposeTags": [
+      "研究简报",
+      "叙事呈现"
+    ],
+    "behavior": "原幻灯片/next-previous/起止/键盘/时间尺度缩放，重复导航与退出清理；仅显式固定ID、结构化本地日期和文本。",
+    "code": "batches/timelinejs-01/public-source/src/js/timeline/Timeline.js"
   }
 ]
