@@ -1,0 +1,51 @@
+{
+  "runtime": [
+    {
+      "name": "d3-color",
+      "version": "1.4.1",
+      "license": "BSD-3-Clause"
+    },
+    {
+      "name": "d3-dispatch",
+      "version": "1.0.6",
+      "license": "BSD-3-Clause"
+    },
+    {
+      "name": "d3-ease",
+      "version": "1.0.7",
+      "license": "BSD-3-Clause"
+    },
+    {
+      "name": "d3-interpolate",
+      "version": "1.4.0",
+      "license": "BSD-3-Clause"
+    },
+    {
+      "name": "d3-selection",
+      "version": "1.4.2",
+      "license": "BSD-3-Clause"
+    },
+    {
+      "name": "d3-timer",
+      "version": "1.0.10",
+      "license": "BSD-3-Clause"
+    },
+    {
+      "name": "d3-transition",
+      "version": "1.3.2",
+      "license": "BSD-3-Clause"
+    },
+    {
+      "name": "fmin",
+      "version": "0.0.2",
+      "license": "BSD-3-Clause"
+    },
+    {
+      "name": "venn.js",
+      "version": "0.2.20",
+      "license": "MIT"
+    }
+  ],
+  "excluded": "Legacy fmin package metadata installs build/test tooling; no contour_plot, rollup, uglify, tape, jshint etc are in runtime per esbuild metafile. Only actual runtime licenses are included.",
+  "buildAdaptation": "Exact ../node_modules/fmin/index.js resolver redirected to installed fmin0.0.2/index.js; legacy source assumes nested node_modules. No numerical/layout code changed."
+}
