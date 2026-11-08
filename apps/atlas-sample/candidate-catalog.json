@@ -10304,5 +10304,113 @@
       "原MIT与66依赖图条款保留；react-remove-scroll-bar2.3.8用同官方2.3.7线完整MIT补充，24个dist文件字节相同，版本缺口明确披露。",
       "原二进制棋盘改纯CSS，原SVG字体导出模板移除，无CSP扩展/网络/持久化；源码ZIP仅本地。"
     ]
+  },
+  {
+    "id": "pannellum:synthetic-space-viewer",
+    "title": "Pannellum · 合成空间全景检视",
+    "source": "Pannellum",
+    "repository": "https://github.com/mpetroff/pannellum",
+    "revision": "a5e2f25d960270b6cdd6136d2c18c21f745bba0e",
+    "version": "2.5.7",
+    "license": "MIT",
+    "publicationReady": true,
+    "entry": "index.html",
+    "runtime": {
+      "js": "runtime.js",
+      "css": "runtime.css",
+      "format": "iife",
+      "detailOnly": true,
+      "allowLocalMedia": false
+    },
+    "needsLocalMedia": false,
+    "browserVisualQA": "not-run",
+    "counts": {
+      "independentFamily": 1
+    },
+    "size": {
+      "js": 59887,
+      "gzip": 19207,
+      "css": 12438
+    },
+    "capabilities": [
+      "原360度cubemap视角和FOV控制",
+      "原拖拽/缩放/指南针/热点",
+      "原创六面SVG方向标尺",
+      "真实unsupported错误状态",
+      "销毁原renderer和定时器"
+    ],
+    "limitations": [
+      "六面为合成参考非实拍非模型生成",
+      "未执行真实WebGL/纹理解码；CSSfallback+Image/canvas桩仅验状态",
+      "全屏/传感器/外链/外部全景入口禁用",
+      "原浏览器像素/实际手势待验"
+    ],
+    "upstream": "https://github.com/mpetroff/pannellum/tree/a5e2f25d960270b6cdd6136d2c18c21f745bba0e",
+    "preview": "batches/pannellum-01/index.html",
+    "batch": "pannellum-01",
+    "category": "展示与媒体",
+    "kind": "全景检视组件",
+    "format": "空间素材检视设计族",
+    "styleTags": [
+      "沉浸空间",
+      "柔和色彩"
+    ],
+    "purposeTags": [
+      "空间素材检视",
+      "富媒体结果"
+    ],
+    "description": "原Pannellum全景查看器、视角/FOV/指南针与本地热点；六面原创SVG方向标尺明确为合成空间，不是实拍或模型输出。",
+    "behavior": "原yaw/pitch/FOV与拖拽/缩放逻辑，方向/复位按钮调用原API，热点仅本地说明；不支持时显示原错误而非假全景。",
+    "buildStatus": "Original CSS3D fallback state/drag/hotspot and unsupported cleanup tested using Image/canvas substitutes; real WebGL/pixels NOT verified",
+    "gaps": [
+      "六面为合成参考非实拍非模型生成",
+      "未执行真实WebGL/纹理解码；CSSfallback+Image/canvas桩仅验状态",
+      "全屏/传感器/外链/外部全景入口禁用",
+      "原浏览器像素/实际手势待验",
+      "六面只计一个空间查看器族；完整MIT保留，源码ZIP仅本地。",
+      "原CSS3D fallback经过状态验证，但Image解码/Canvas为替身，不代表实际纹理或GPU验收。"
+    ]
+  },
+  {
+    "id": "toast-ui:local-image-studio",
+    "title": "TOAST UI · 本地图片编辑工作台",
+    "source": "TOAST UI Image Editor",
+    "category": "展示与媒体",
+    "license": "MIT; Fabric path portions MPL-2.0; embedded ImageTracer Unlicense",
+    "revision": "270f31e45f789699c680d496076c3267218240f2",
+    "upstream": "https://github.com/nhn/tui.image-editor/tree/270f31e45f789699c680d496076c3267218240f2",
+    "sourceFile": "apps/image-editor/src/index.js; original ImageEditor/UI/Cropper/filter/text implementations",
+    "preview": "batches/toast-image-01/index.html",
+    "description": "原TOAST UI裁剪、旋转、翻转、滤镜、文本与历史工具；原创本地SVG，仅浏览器内编辑，禁上传下载与统计。",
+    "previewStatus": "visual-review-pending",
+    "buildStatus": "8 UI/state/filter-array tests plus unsupported Canvas fallback; all global listeners/timers cleaned; no forbidden network/eval/Worker calls",
+    "knownGaps": [
+      "Canvas2D与Image解码在测试中为桩；像素、真实布局和指针几何未验。",
+      "原版历史/对象/滤镜状态及原算法RGBA数值已验，但不等于浏览器图片视觉验收。",
+      "Load/Download禁用，仅原创SVG素材；不上传、不保存或导出图片。",
+      "仅现代浏览器；移除IE/svgxuse兼容polyfill，部分辅助PNG改为CSS符号/透明格。",
+      "Canvas缺失回退、初始加载中断与裁剪重载中断已测；任意构造异常不宣称全面覆盖。"
+    ],
+    "gaps": [
+      "Canvas2D与Image解码在测试中为桩；像素、真实布局和指针几何未验。",
+      "原版历史/对象/滤镜状态及原算法RGBA数值已验，但不等于浏览器图片视觉验收。",
+      "Load/Download禁用，仅原创SVG素材；不上传、不保存或导出图片。",
+      "仅现代浏览器；移除IE/svgxuse兼容polyfill，部分辅助PNG改为CSS符号/透明格。",
+      "Canvas缺失回退、初始加载中断与裁剪重载中断已测；任意构造异常不宣称全面覆盖。",
+      "MPL覆盖的Fabric原首选源码path.js和完整fabric.js及许可证均实际公开；README提供相对链接，不只是本地ZIP。",
+      "两种延迟Image.onload中提前离开用例已修复并通过：AbortError取消、迟到图像dispose，不再访问已销毁画布。"
+    ],
+    "batch": "toast-image-01",
+    "kind": "图片编辑组件",
+    "format": "限定本地图片编辑器",
+    "styleTags": [
+      "暗色画布",
+      "原版工具栏"
+    ],
+    "purposeTags": [
+      "媒体编辑",
+      "素材校对"
+    ],
+    "behavior": "原旋转/翻转/滤镜/文本/裁剪/历史交互，合成本地SVG素材；无Load/Download、无统计，仅浏览器内处理。"
   }
 ]
