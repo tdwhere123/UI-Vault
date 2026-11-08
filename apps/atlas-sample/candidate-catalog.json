@@ -163,20 +163,39 @@
   },
   {
     "id": "animata:transaction-list",
-    "title": "交易列表变形收据",
+    "title": "Animata · 交易行形变收据",
     "source": "Animata",
     "license": "MIT",
     "upstream": "https://github.com/codse/animata/blob/25c27e5a874c60a56dcc1609df3b2c4f5f8456f8/animata/list/transaction-list.tsx",
     "website": "https://animata.design",
-    "buildStatus": "production bundle previously built",
-    "batch": "batch-001",
+    "buildStatus": "Original component;normal/reduced-motion state and cleanup tests passed; shared-layout pixels pending",
+    "batch": "animata-receipt-01",
     "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/animata-accepted-awaiting-posters/archives/animata-next-03/source.zip",
     "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/animata-accepted-awaiting-posters/manifest.json",
-    "description": "Netflix row morphed into detailed receipt card",
+    "description": "原Animata共享layoutId将交易行展开为圆润收据，保留弹簧、明细与返回状态；全部为虚构交易，无账户连接。",
     "gaps": [
-      "真实封面及最终浏览器验收未完成",
-      "本地演示暂未发布；可先查看上游演示和原始源码。"
-    ]
+      "完全虚构交易/商户/金额，尾数0000非真实卡号",
+      "无付款/账户连接/上传保存",
+      "Visa/Mastercard图形替换为DEMO徽章，其他原设计布局保留",
+      "正常与reduced-motion状态测试不代表像素形变验收",
+      "原版细节仅列表与收据，不提供完整账务系统",
+      "完整许可保留；本次适配源码ZIP仅本地，不冒称已发布。"
+    ],
+    "preview": "batches/animata-receipt-01/index.html",
+    "revision": "25c27e5a874c60a56dcc1609df3b2c4f5f8456f8",
+    "category": "数据与状态",
+    "kind": "复合交互组件",
+    "format": "形变收据设计族",
+    "styleTags": [
+      "圆润",
+      "共享布局",
+      "柔和"
+    ],
+    "purposeTags": [
+      "结果详情",
+      "富消息"
+    ],
+    "behavior": "选择交易、返回列表、更换收据，本地3/5条展开切换；尊重减少动态，离开卸载动画。"
   },
   {
     "id": "animata:trailing-image",
@@ -3901,22 +3920,33 @@
   },
   {
     "id": "aicanvas:stack-tower",
-    "title": "stack-tower",
+    "title": "Stack Tower · 错相字层动态雕塑",
     "source": "AI Canvas free library",
     "license": "MIT (free components-workspace explicitly designated by README)",
     "upstream": "https://github.com/aicanvas-me/aicanvas/tree/8164f1e423e4e654dd0828a941ba5cdda69f08fe/components-workspace/stack-tower",
     "website": "",
-    "buildStatus": "not installed or built",
-    "batch": "batch-002",
-    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "buildStatus": "Original React/Motion transforms verified in normal/reduced-motion DOM tests; visual pending",
+    "batch": "aicanvas-tower-01",
+    "description": "原AI Canvas免费组件的12层STACK/TOWER，保留错相扭转、缩放与局部展开公式和配色；不是任务或AI状态工具。",
     "gaps": [
-      "Remote ImageKit/Unsplash artwork and fonts not archived or presumed MIT.",
-      "Tailwind v4/React19 and peer dependencies require integration. No site/premium CSS imported.",
-      "Original root scripts inject premium code and change Git hooks. They are retained only as evidence; do not run them. Prepare a separate minimal harness.",
-      "Crypto swap/music/charging are demo UI states, not verified transactions, playback or a real battery monitor. No wallet/API connected.",
-      "No install/build/browser/interaction/mobile validation.",
-      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
-    ]
+      "真实像素、触摸、帧平滑与完整无障碍尚未验收。",
+      "同一个完整动态排版族，不把12层或两种主题单独计数。",
+      "未使用远程媒体、字体或付费部分，无素材冒充。",
+      "原库完整MIT和6项实际依赖许可保留；此适配不提供源码ZIP下载。"
+    ],
+    "preview": "batches/aicanvas-tower-01/index.html",
+    "revision": "8164f1e423e4e654dd0828a941ba5cdda69f08fe",
+    "category": "视觉与动效",
+    "kind": "空间动效组件",
+    "format": "动态排版设计族",
+    "styleTags": [
+      "空间感",
+      "动态排版"
+    ],
+    "purposeTags": [
+      "视觉参考"
+    ],
+    "behavior": "默认暂停，主动播放；hover与键盘focus强调局部层。系统减少动态保持静态相位，隐藏停帧，清空/重启/离开卸载。"
   },
   {
     "id": "aicanvas:task-cards",
@@ -9252,6 +9282,41 @@
       "仅原创本地PDF fixture，不支持上传任意文件。无OCR、原版式、图像或canvas展示。",
       "文本顺序为原解析器提取结果，不保证复杂PDF的阅读顺序。",
       "JSDOM UI状态通过，实际视觉未验。"
+    ],
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "format": "复合交互组件"
+  },
+  {
+    "id": "rrule:recurrence-workbench",
+    "batch": "rrule-01",
+    "title": "UTC 重复排程规则工作台",
+    "source": "RRule.js",
+    "category": "Agent与对话",
+    "kind": "交互规则构造",
+    "styleTags": [
+      "圆润",
+      "规则输入",
+      "日期预览"
+    ],
+    "preview": "batches/rrule-01/recurrence-workbench.html",
+    "revision": "9f2061febeeb363d03352efe33d30c33073a0242",
+    "upstream": "https://github.com/jkbrzt/rrule/tree/9f2061febeeb363d03352efe33d30c33073a0242",
+    "sourceFile": "src/rrule.ts + src/rruleset.ts",
+    "license": "BSD-3-Clause",
+    "description": "原RRule/RRuleSet计算引擎＋原创本地交互壳；每N周指定周几，或每月第N个星期X，COUNT/截止条件及日期排除恢复。固定UTC，不创建提醒。",
+    "previewStatus": "visual-review-pending",
+    "buildStatus": "Exact-date tests passed for weekly intervals/monthly ordinal weekdays, exclusion, UNTIL, invalid constraints and teardown.",
+    "knownGaps": [
+      "界面为原创适配壳，非上游官方UI；源仅此本地交付，不声称公共源码下载。",
+      "固定09:00 UTC，不代表用户时区或夏令时排程。",
+      "COUNT在排除前计数；展示最多50次，截止最长5年。实际视觉尚未验收。"
+    ],
+    "gaps": [
+      "界面为原创适配壳，非上游官方UI；源仅此本地交付，不声称公共源码下载。",
+      "固定09:00 UTC，不代表用户时区或夏令时排程。",
+      "COUNT在排除前计数；展示最多50次，截止最长5年。实际视觉尚未验收。"
     ],
     "purposeTags": [
       "Agent工作流"
