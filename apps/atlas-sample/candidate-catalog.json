@@ -2622,20 +2622,61 @@
   },
   {
     "id": "smoothui:job-listing-component",
-    "title": "展开式职位详情",
+    "restoreExistingCandidate": true,
+    "title": "SmoothUI · 虚构职位目录与详情",
     "source": "SmoothUI",
-    "license": "MIT (root code notice; external artwork not included)",
+    "repository": "https://github.com/educlopez/smoothui",
+    "revision": "c45420a8523ec60a92f7724a2418ab83edaa1425",
+    "license": "MIT",
+    "publicationReady": true,
+    "directory": "job-listing",
+    "entry": "job-listing/index.html",
+    "runtime": {
+      "js": "runtime.js",
+      "css": "runtime.css",
+      "format": "iife",
+      "detailOnly": true,
+      "allowLocalMedia": false
+    },
+    "needsLocalMedia": false,
+    "browserVisualQA": "not-run",
+    "counts": {
+      "independentFamily": 1
+    },
+    "size": {
+      "js": 392676,
+      "gzip": 125709,
+      "css": 24808
+    },
+    "limitations": [
+      "虚构公司/薪资/地点与原创字形，无真实招聘/投递/交易",
+      "保留原共享布局转场，补键盘与焦点；不是完整可访问性验收",
+      "真实组件状态已测，JSDOM非原生共享布局像素验收"
+    ],
     "upstream": "https://github.com/educlopez/smoothui/tree/c45420a8523ec60a92f7724a2418ab83edaa1425/packages/smoothui/components/job-listing-component",
-    "website": "",
-    "buildStatus": "not installed or built",
-    "batch": "batch-002",
-    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "preview": "batches/smooth-jobs-01/index.html",
+    "batch": "smooth-jobs-01",
+    "category": "展示与媒体",
+    "kind": "职位目录与详情展开",
+    "format": "共享布局详情设计族",
+    "styleTags": [
+      "共享布局",
+      "模糊背景"
+    ],
+    "purposeTags": [
+      "信息浏览",
+      "展开详情"
+    ],
+    "description": "恢复原职位列表→共享布局详情、logo联动与字段/描述；三组虚构岗位与原创字形，无真实招聘或投递。",
+    "behavior": "原Motion layoutId与Escape/点外关闭，补Enter/Space入口、关闭按钮与焦点恢复；hidden/退出卸载，未宣称完整焦点陷阱。",
+    "buildStatus": "Three real component state/interruption tests passed with explicit geometry substitutes; native shared-layout animation/mobile pixels NOT verified",
     "gaps": [
-      "Workspace aliases and shared package dependencies require integration; source closure checked, build not attempted.",
-      "Official shared data includes remote generated portraits, scenes, app icons and sample product artwork. Asset URLs preserved for reference; binaries not downloaded and image redistribution rights not assumed.",
-      "Root documentation CSS imports external fumadocs package styles; original lock retained.",
-      "Visual fidelity, animation, mobile behavior, accessibility and interaction correctness not yet tested.",
-      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+      "虚构公司/薪资/地点与原创字形，无真实招聘/投递/交易",
+      "保留原共享布局转场，补键盘与焦点；不是完整可访问性验收",
+      "真实组件状态已测，JSDOM非原生共享布局像素验收",
+      "10运行依赖及Tailwind完整MIT全文；仅移除usehooks-ts未使用的debounce导入，原用到hook逐字保留，未增加eval权限。",
+      "无招聘提交/联系/交易或原公司商标；3岗位只计1族。",
+      "正常Motion退出测试需明确测量stub，不是修改原动画，也不代表真实像素；源码ZIP仅本地。"
     ]
   },
   {
@@ -11133,5 +11174,122 @@
       "分支推演"
     ],
     "behavior": "原SGF分支/提子/回退模型与BasicPlayer导航，原纯Canvas棋子，坐标菜单与触控取消清理；只读固定本地摆局。"
+  },
+  {
+    "id": "ionicons:complete-series",
+    "title": "Ionicons · 完整图标系列",
+    "source": "Ionicons",
+    "upstream": "https://www.npmjs.com/package/ionicons/v/8.1.0",
+    "revision": "npm:ionicons@8.1.0#sha512-XSM2gYWTXxSYTwjmKWAoy4yR7AbAFDjpc5ZIivAiGXskM0fe5CdMPfs6InQRUcrYtVb2WZ/0HQ1/jeh3JW78SA==",
+    "upstreamTagCommit": "d1e2c48641fd5f4910ee42a144dc1c84b1a9a4ee",
+    "versionDiscrepancy": "Official tag package version is 8.0.13; exact delivered assets are verified npm 8.1.0 published SVGs, not falsely identified as byte-identical tag source.",
+    "website": "https://ionic.io/ionicons",
+    "preview": "batches/ionicons-01/index.html",
+    "category": "图标系列",
+    "description": "1357 枚原发布 SVG，421 组 filled/outline/sharp 加 94 品牌图标，名称搜索、样式切换、分页和原文查看；计为 1 个完整系列。",
+    "buildStatus": "DOM interaction and original SVG byte verification passed; browser visual QA not run",
+    "previewStatus": "DOM-tested; visual-pending",
+    "gaps": [
+      "Visual/browser rendering not independently verified.",
+      "Official tag package version is 8.0.13; exact delivered assets are verified npm 8.1.0 published SVGs, not falsely identified as byte-identical tag source.",
+      "Original browsing shell, not an upstream application; brand marks carry no trademark license or endorsement.",
+      "1357为421基形×3原样式+94品牌，只计1系列，不视为1357独立UI/语义。",
+      "同样常用语义可能跨其它系列重合；品牌标识的MIT不授予商标权或背书。",
+      "浏览宿主为本次原创，本系列图形为官方原件；没有生成封面或宣称像素验收。"
+    ],
+    "knownGaps": [
+      "Visual/browser rendering not independently verified.",
+      "Official tag package version is 8.0.13; exact delivered assets are verified npm 8.1.0 published SVGs, not falsely identified as byte-identical tag source.",
+      "Original browsing shell, not an upstream application; brand marks carry no trademark license or endorsement."
+    ],
+    "license": "MIT",
+    "kind": "图标系列",
+    "format": "图标系列",
+    "browserVisualQA": "not-run",
+    "glyphCount": 1357,
+    "nonBrandBaseCount": 421,
+    "brandCount": 94,
+    "styleCounts": {
+      "filled": 421,
+      "outline": 421,
+      "sharp": 421
+    },
+    "countingNote": "One icon series: 421 non-brand families in three styles plus 94 brand marks; not 1357 independent semantic concepts or UI components.",
+    "batch": "ionicons-01",
+    "styleTags": [
+      "原生三样式"
+    ],
+    "purposeTags": [
+      "Agent工作流",
+      "图标浏览"
+    ],
+    "behavior": "官方发布1357 SVG严格白名单与原文保留，本地24项分页、名称搜索、同基形原样式切换、品牌单独分类与readonly源码；不增加剪贴板/网络权限。"
+  },
+  {
+    "id": "puck:official-visual-page-builder",
+    "title": "Puck · 原版可视化页面编排器",
+    "source": "puck",
+    "repository": "https://github.com/puckeditor/puck",
+    "revision": "d05542f4ddc3ade0275860cb91756dadd7ea791a",
+    "declaredVersion": "0.24.0",
+    "upstream": "https://github.com/puckeditor/puck/blob/d05542f4ddc3ade0275860cb91756dadd7ea791a/packages/core/components/Puck/index.tsx",
+    "license": "MIT (original project code; runtime dependency audit pending)",
+    "description": "原版组件面板、画布拖放、字段编辑、层级大纲和历史；官方Bento等内容块可组合为说明页。仅源码收集，尚无离线预览。",
+    "previewStatus": "source-only",
+    "buildStatus": "not installed or built; selected original source files collected",
+    "sourceScope": "Selected exact source + full root license + package metadata + commit/tree evidence; NOT full repository/archive or closed runtime",
+    "batch": "source-review-514",
+    "gaps": [
+      "默认AutoFrame访问contentDocument；官方iframe.enabled=false普通div/EditPage分支源码已确认，但尚未运行验证现有opaque sandbox/CSP。",
+      "官方初始fixture有Unsplash图片、GitHub/Cloud CTA；媒体许可不由MIT推定，预览应移除外链/换明确本地fixture",
+      "demo Next工作区别名、Tiptap/DnD依赖较大，尚未安装或构建；所有运行依赖license/NOTICE尚待闭合",
+      "发布按钮/保存必须仅本地内存，不接Puck Cloud；字体/remote CSS/CSP资源路径未完成审计",
+      "仅精确选定源码与根许可已核；未安装/构建/完成全依赖审核，不计入可查看图鉴。",
+      "本地来源证据不冒称完整仓库ZIP已公开；封面交Grok处理，暂无真实本地预览。"
+    ],
+    "website": "https://github.com/puckeditor/puck",
+    "completedPreviewCount": 0,
+    "licenseEvidence": {
+      "url": "https://github.com/puckeditor/puck/blob/d05542f4ddc3ade0275860cb91756dadd7ea791a/LICENSE",
+      "sha256": "74e836dc790cba90f8c818b0d2bdf4625910708e45419d4cf613af7df87736e9",
+      "scope": "Original project source only; full runtime dependency/media review pending"
+    },
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false
+  },
+  {
+    "id": "minipaint:original-layered-paint-workspace",
+    "title": "miniPaint · 原版多图层绘画工作区",
+    "source": "minipaint",
+    "repository": "https://github.com/viliusle/miniPaint",
+    "revision": "a79733eb803fc97084ef0ee4faa96b031e69e1c0",
+    "declaredVersion": "4.14.3",
+    "upstream": "https://github.com/viliusle/miniPaint/blob/a79733eb803fc97084ef0ee4faa96b031e69e1c0/src/js/main.js",
+    "license": "MIT (original project code; runtime dependency audit pending)",
+    "description": "原工具栏、画笔、图层堆叠/透明度/合并与撤销体系；可用于消息中的分层视觉草案。仅源码收集，尚无离线预览。",
+    "previewStatus": "source-only",
+    "buildStatus": "not installed or built; selected original source files collected",
+    "sourceScope": "Selected exact source + full root license + package metadata + commit/tree evidence; NOT full repository/archive or closed runtime",
+    "batch": "source-review-514",
+    "gaps": [
+      "完整应用原有URL打开、剪贴板、导入导出、打印与字体加载；必须选择明确闭合本地子集并逐入口门控",
+      "gif.js/pica/resizer可能涉及worker/WASM/资源；当前CSP不能增加worker或eval，需核实现，不应宣称已兼容",
+      "package.json含git来源hermite-resize和多项范围依赖，必须锁定实际版本；dist bundled许可证摘录不是全部依赖全文",
+      "SVG图标可文本收集，但字体/照片/其他二进制不可包装；未下载预览GIF或封面",
+      "尚未安装/运行/像素验收；原层合成/历史需真实canvas验证，不以静态截图替代",
+      "仅精确选定源码与根许可已核；未安装/构建/完成全依赖审核，不计入可查看图鉴。",
+      "本地来源证据不冒称完整仓库ZIP已公开；封面交Grok处理，暂无真实本地预览。"
+    ],
+    "website": "https://github.com/viliusle/miniPaint",
+    "completedPreviewCount": 0,
+    "licenseEvidence": {
+      "url": "https://github.com/viliusle/miniPaint/blob/a79733eb803fc97084ef0ee4faa96b031e69e1c0/MIT-LICENSE.txt",
+      "sha256": "92a21f763974d0a691f7738ed8aae674b74ef077ff6341844ad7fadf36999be8",
+      "scope": "Original project source only; full runtime dependency/media review pending"
+    },
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false
   }
 ]
