@@ -2,7 +2,7 @@
 
 网站：<https://tdwhere123.github.io/UI-Vault/>
 
-当前主图鉴有 **505条可打开预览（241条原始素材＋264条后续接入预览）**。后续预览仍标注视觉待验；350条候选中的86条仅来源记录不计入主图鉴。原始241件包括215件精选界面、20件保留基础素材、6套完整图标系列。正在向1000+件优质素材扩充；图标按完整系列单列统计，不按单枚凑数。源码候选、不同配色与框架版本不充数。
+当前主图鉴有 **506条可打开预览（241条原始素材＋265条后续接入预览）**。后续预览仍标注视觉待验；351条候选中的86条仅来源记录不计入主图鉴。原始241件包括215件精选界面、20件保留基础素材、6套完整图标系列。正在向1000+件优质素材扩充；图标按完整系列单列统计，不按单枚凑数。源码候选、不同配色与框架版本不充数。
 
 ## 当前内容
 
@@ -194,3 +194,14 @@ The main gallery now has **505 preview entries** (241 original + 264 added previ
 - **Motion Core Rubiks Cube** restores the original rounded geometry, 27-piece/9-piece-layer transform and commit mechanics, Fresnel shader and OGL Orbit control. It is one decorative spatial material, not a solvable puzzle or real task progress. Only the selected Svelte scene/helper is built; no GSAP or MediaPipe. Complete MIT and OGL Unlicense notices are present. Independent review found that WebGL context loss did not throw and left an animation loop running. The corrected path now stops, releases resources, removes listeners and displays an honest error; repeated loss produces no further drawing. Eight branches and a separate context-loss injection passed.
 
 Original math, model and rendering commands are exercised, but Canvas/WebGL status and layout are test substitutes. Actual shaders, GPU output, pixels and native gestures remain unverified. Source/build/test archives remain local; no hosted ZIP claim. List covers, detail-only loading, sandbox and CSP remain unchanged. BPMN modeling is still under separate evaluation and is not counted or published here.
+
+
+## Original BPMN Modeler · 506 previews
+
+The main gallery now has **506 preview entries** (241 original + 265 added previews), with 351 candidate records and 86 source-only records excluded. This adds one semantic BPMN modeler family, not 109 icon entries. Icon counts remain unchanged.
+
+**bpmn-js 18.31.1** retains the original palette, context-pad, task/sequence-flow append, direct labels and command history on an authored local non-executable process. It models diagrams only; no workflow execution, external XML, upload/export or persistence. Nine original interaction tests, initial/reset import interruption tests and 109 original glyph-path mapping checks passed. Pending local import settles before the single original destroy call; the host hides immediately and late results cannot update UI. Snapping debounce is cancelled on disposal.
+
+The main license is the **custom bpmn.io license, not MIT**. Mandatory watermark, original backlink handlers/hrefs and powered-by lightbox code remain byte-for-byte unchanged and visible. The existing iframe sandbox can block new windows; permissions are not widened, and successful in-frame external navigation is not claimed. The gallery now displays an explicit project-website link outside the preview for records with an HTTP(S) website, including https://bpmn.io/ . Both upstream source and website remain available.
+
+Original bpmn-font 0.13.0 SVG-font text is published with full SIL OFL 1.1 and attribution. The unchanged 109 glyph paths use a disclosed coordinate-format adapter for SVG masks; these are not invented independent upstream SVG files or encoded binary fonts. Nineteen actual runtime-package licenses/notices are included, including the Adobe Snap.svg Apache-2.0 derivation notice in path-intersection. Actual pointer geometry, icon appearance, focus and browser pixels remain unverified. All broader source/build/test archives remain local, not advertised as hosted ZIPs. Lazy previews and sandbox/CSP are unchanged.
