@@ -701,20 +701,41 @@
   },
   {
     "id": "cult:side-panel",
-    "title": "side-panel",
+    "title": "页内上下文摘要侧栏",
     "source": "Cult UI",
     "license": "MIT",
     "upstream": "https://github.com/nolly-studio/cult-ui/tree/d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
     "website": "",
-    "buildStatus": "not built; upstream archive only",
-    "batch": "batch-001",
+    "buildStatus": "Original inline component;repeated open/close/focus/remount/cleanup tests passed; responsive pixels pending",
+    "batch": "cult-sidepanel-01",
     "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/cult-archive-01/source-archive.zip",
     "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/cult-archive-01/manifest.json",
-    "description": "Sliding side panel component with customizable positioning and animations",
+    "description": "原Cult SidePanel页内展开，保留44px非对称圆角、97%展开宽与测量高度动画；本地原创文档摘要通过children API替代官方远程视频示例。",
     "gaps": [
-      "Remote media and logos not downloaded or licensed by assumption",
-      "Source registry metadata may omit imports; original project package+lock retained"
-    ]
+      "非模态drawer或后台执行界面，不导入播放器，不连接远程文档。",
+      "CSS响应式宽度和高度动画真实几何未视觉验收。"
+    ],
+    "category": "导航与组织",
+    "kind": "交互展示组件",
+    "styleTags": [
+      "非对称圆角",
+      "页内展开",
+      "上下文"
+    ],
+    "preview": "batches/cult-sidepanel-01/side-panel.html",
+    "revision": "d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+    "sourceFile": "archive-internal source/registry/default/ui/side-panel.tsx",
+    "demoSource": "archive-internal source/registry/default/example/side-panel-demo.tsx",
+    "previewStatus": "visual-review-pending",
+    "knownGaps": [
+      "非模态drawer或后台执行界面，不导入播放器，不连接远程文档。",
+      "CSS响应式宽度和高度动画真实几何未视觉验收。"
+    ],
+    "purposeTags": [
+      "上下文摘要",
+      "阅读导航"
+    ],
+    "format": "复合交互组件"
   },
   {
     "id": "cult:three-d-carousel",
@@ -3159,22 +3180,35 @@
   },
   {
     "id": "blode:lighting",
-    "title": "lighting",
+    "title": "Blode · 窗景透视与光影材质",
     "source": "Matthew Blode Experiments",
     "license": "MIT (original code; third-party dependencies/assets separate)",
     "upstream": "https://github.com/mblode/experiments/tree/d4baef572c4e692dcfe5f3a1e424e641d6013b18/app/lighting",
     "website": "",
-    "buildStatus": "not installed or built",
-    "batch": "batch-002",
-    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "buildStatus": "Original numeric light/perspective/resize and normal/reduced motion lifecycle tests passed; composite pixels pending",
+    "batch": "blode-lighting-01",
+    "description": "原CSS窗框、光线、阴影与指针透视公式；未获授权的视频改为明确本地原创渐变天空和反光，不冒充原片。",
     "gaps": [
-      "No images/video/font binaries archived. Asset paths reference upstream files whose redistribution permissions need review or original replacements.",
-      "Next routing/basePath /experiments and aliases need integration; source dependencies statically traced, no build/install.",
-      "Moon requests device geolocation on mount and reverse-geocodes through Nominatim. Before any test replace with fixed sample coordinates and disable external lookup; no location permission was requested during collection.",
-      "WebGL moon/sticky-note/dither scenes need real GPU and interaction validation. Dither is a graphical arcade demo rather than a production UI widget.",
-      "Original package contains prepare hook and telemetry dependency; no lifecycle scripts or telemetry were executed. Use minimal adapted dependencies before installing.",
-      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
-    ]
+      "真实SVG栅格、遮罩合成、触摸和外观仍待视觉验收。",
+      "原视频未包含；同MIT仓库SVG路径保留为可读内联，编码噪点改内联滤镜。",
+      "只作材质视觉参考，不是天气、灯具或真实设备状态。",
+      "完整MIT和7项运行依赖条款保留，源码ZIP未宣称在线提供。"
+    ],
+    "preview": "batches/blode-lighting-01/index.html",
+    "revision": "d4baef572c4e692dcfe5f3a1e424e641d6013b18",
+    "category": "视觉与动效",
+    "kind": "空间材质组件",
+    "format": "交互光影设计族",
+    "styleTags": [
+      "空间感",
+      "拟物",
+      "光影"
+    ],
+    "purposeTags": [
+      "视觉参考",
+      "氛围材质"
+    ],
+    "behavior": "移动指针或左右光照按钮实际改变CSS数值；默认暂停，主动漂移、隐藏停计时与CSS动效，减少动态禁漂移，离开卸载。"
   },
   {
     "id": "blode:markers",
@@ -9376,5 +9410,37 @@
       "Agent工作流"
     ],
     "format": "复合交互组件"
+  },
+  {
+    "id": "xterm:readonly-log-replay",
+    "title": "只读 ANSI 日志回放与缓冲区检索",
+    "source": "xterm.js",
+    "license": "MIT",
+    "upstream": "https://github.com/xtermjs/xterm.js/tree/9ba6c00a195c95fcf8292a2b9084d91450e5daae",
+    "revision": "9ba6c00a195c95fcf8292a2b9084d91450e5daae",
+    "batch": "xterm-01",
+    "preview": "batches/xterm-01/index.html",
+    "category": "Agent与对话",
+    "kind": "交互日志组件",
+    "format": "ANSI回放与检索工具",
+    "styleTags": [
+      "终端",
+      "深色"
+    ],
+    "purposeTags": [
+      "工具结果",
+      "日志审阅"
+    ],
+    "description": "原xterm ANSI解析器真实覆写和擦行，SearchAddon检索实际滚动缓冲区；本地虚构日志回放而非仅逐行文字展示。",
+    "behavior": "播放/暂停/单步、查询与前后匹配、重置实际缓冲区。无终端输入、命令执行或剪贴板读取，离开销毁renderer与计时器。",
+    "buildStatus": "Original renderer/buffer/search and read-only/lifecycle tests passed; glyph pixels pending",
+    "gaps": [
+      "原创界面壳与虚构受控日志，非上游成品界面",
+      "无Shell/网络/系统命令/文件上传/外部日志输入",
+      "没有web-links或clipboard addon，默认OSC链接handler也是no-op",
+      "JSDOM仅验证真实缓冲区/状态；canvas绘制与字体度量是stub，像素未验",
+      "固定72列18行；窄屏可横向浏览，不伪称已测自适应终端",
+      "完整MIT及固定版本证据保留；源码ZIP仅本地。"
+    ]
   }
 ]
