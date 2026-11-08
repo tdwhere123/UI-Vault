@@ -1,0 +1,46 @@
+{
+  "results": [
+    {
+      "slug": "matrix",
+      "passed": true,
+      "checks": [
+        "mount",
+        "parse",
+        "no microphone/backend code bundled",
+        "49 cells/default pause/play/pause/pattern/static digit/hidden pause"
+      ]
+    },
+    {
+      "slug": "waveform",
+      "passed": true,
+      "checks": [
+        "mount",
+        "parse",
+        "no microphone/backend code bundled",
+        "drag coordinate seek/keyboard increment/reset/variant; canvas paint stub only"
+      ]
+    },
+    {
+      "slug": "audio-player",
+      "passed": true,
+      "checks": [
+        "mount",
+        "parse",
+        "no microphone/backend code bundled",
+        "3 locally generated PCM blobs; track/play/pause/seek/speed/switch/hidden pause with media stubs"
+      ]
+    },
+    {
+      "slug": "transcript",
+      "passed": true,
+      "checks": [
+        "mount",
+        "parse",
+        "no microphone/backend code bundled",
+        "preset alignment/highlight state/word seek/play/pause/track switch with media stubs; not speech recognition"
+      ]
+    }
+  ],
+  "mediaValidation": "HTMLMediaElement and Canvas APIs stubbed for state tests. No real audio decoding/output, browser CSP, waveform pixels or animation appearance verified.",
+  "browserVisualQA": "not-run"
+}
