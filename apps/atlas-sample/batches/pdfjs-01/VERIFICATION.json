@@ -1,0 +1,19 @@
+{
+  "pass": true,
+  "engine": "real PDF.js 5.4.530 parser and official WorkerMessageHandler with LoopbackPort",
+  "checks": [
+    "3 pages extracted from source-generated ASCII PDF",
+    "previous/next",
+    "2 search matches and exact highlights jump pages",
+    "no-result search and text-only output",
+    "invalid PDF error then reload",
+    "load/close race",
+    "pagehide destroys document"
+  ],
+  "pendingTimeouts": 0,
+  "pendingIntervals": 0,
+  "blockedApiCalls": [],
+  "errors": [],
+  "visualVerified": false,
+  "limitations": "Text-only reader, not PDF layout renderer; DOMMatrix stub only satisfies unused canvas module initialization in JSDOM. No canvas mock claimed as rendering."
+}
