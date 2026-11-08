@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "checks": [
+    "parse and original formatter mount",
+    "original array move delta and visible marker",
+    "patch equals right and reverse restores left",
+    "stale edited input disables patch operations",
+    "equal JSON requires no patch",
+    "primitive values roundtrip",
+    "nested add/delete/array changes roundtrip",
+    "malicious keys/values escaped by original formatter, no script/onerror/javascript link elements",
+    "prototype keys rejected, no prototype pollution",
+    "malformed JSON rejection",
+    "duplicate id rejection",
+    "array/depth/nonfinite limits",
+    "identity toggle removes move detection and roundtrip remains correct",
+    "unchanged toggle without formatter timers",
+    "pagehide clears DOM and private session",
+    "no Function/eval/network/Worker/storage/dynamic scripts or timers"
+  ],
+  "browserVisualQA": "not-run; JSDOM state/security tests only; no visual or real assistive technology acceptance"
+}
