@@ -1,0 +1,12 @@
+{
+  "runtime": {
+    "minisearch": "7.2.0 MIT"
+  },
+  "engineRuntimeDependencies": [],
+  "metafileInputs": [
+    "node_modules/minisearch/dist/es/index.js",
+    "src/main.js"
+  ],
+  "tokenizer": "Browser Intl.Segmenter zh word tokenizer when available; Unicode word fallback without Chinese segmentation otherwise",
+  "buildOnly": "esbuild 0.28.2 not distributed in runtime"
+}
