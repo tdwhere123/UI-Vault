@@ -1,0 +1,12 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readFile,stat} from 'node:fs/promises';
+import {fileURLToPath} from 'node:url';
+import path from 'node:path';
+const root=path.dirname(fileURLToPath(import.meta.url));
+const read=p=>readFile(path.join(root,p),'utf8');
+const items=JSON.parse(await read('items.json'));
+test('exactly 20 distinct material identities, not screenshot or framework duplication',()=>{assert.equal(items.length,20);assert.equal(new Set(items.map(x=>x.id)).size,20);assert.equal(new Set(items.map(x=>x.code)).size,20);assert.ok(new Set(items.map(x=>x.category)).size>=5)});
+test('every item has real original and preview, local dependencies and upstream license',async()=>{for(const x of items){for(const k of ['title','category','keywords','description','preview','code','upstream','license','dependencies','adaptation','behavior'])assert.ok(x[k],`${x.id}: ${k}`);assert.equal(x.license,'MIT');assert.match(x.upstream,/^https:\/\/github.com\//);assert.ok((await stat(path.join(root,x.code))).size>100);const html=await read(x.preview);assert.match(html,/<body/);assert.match(html,/sandbox|Content-Security-Policy/);assert.doesNotMatch(html,/(?:src|href)=["']https?:/);assert.match(html,/<style>/);assert.match(html,/<script>/);assert.match(html,/\.size-5\{width:/)}});
+test('preview dependencies are inline for opaque sandbox origins, original HTML is unchanged',async()=>{for(const x of items){const original=await read(x.code),preview=await read(x.preview);assert.match(original,/href="\/component.css"/);assert.doesNotMatch(preview,/<link|<script src=/);assert.ok(preview.includes(await read('assets/component.css')));assert.ok(preview.includes(await read('assets/component.js')));assert.match(preview,/style-src 'unsafe-inline'/)}});
+test('runtime assets contain no remote font/network import',async()=>{assert.doesNotMatch(await read('assets/component.css'),/@import/);assert.match(await read('originals/HYPERUI-LICENSE.txt'),/MIT License/);assert.ok((await read('originals/shell-side-menu.html')).includes('<ul'))});

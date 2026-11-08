@@ -1,5 +1,5 @@
 {
-  "name": "Publish audited UI catalog",
+  "name": "Publish UI Vault atlas and preserved legacy gallery",
   "on": {
     "push": {
       "branches": [
@@ -44,9 +44,9 @@
           "run": "set -euo pipefail\ncorepack enable\ncorepack prepare \"$(node -p \"require('./package.json').packageManager\")\" --activate\npnpm --version\npnpm install --frozen-lockfile --ignore-scripts"
         },
         {
-          "name": "Build and export only the audited static catalog",
+          "name": "Test and export atlas with preserved legacy assets",
           "shell": "bash",
-          "run": "set -euo pipefail\npnpm build\nnode apps/explorer/static-export.mjs \"$RUNNER_TEMP/ui-vault-pages\" /UI-Vault/\ngit diff --exit-code\n# exportStatic runs the existing auditStatic authority before returning success."
+          "run": "set -euo pipefail\npnpm build\nnode --test apps/atlas-sample/sample.test.mjs\nnode scripts/export-pages.mjs \"$RUNNER_TEMP/ui-vault-pages\" /UI-Vault/\ngit diff --exit-code"
         },
         {
           "uses": "actions/configure-pages@v5"
