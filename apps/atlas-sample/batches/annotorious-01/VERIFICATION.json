@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "checks": [
+    "parse/mount original annotator",
+    "seed rectangle and polygon",
+    "selection/list synchronization",
+    "save note and plain-text XSS safety",
+    "delete and reset",
+    "native pointer rectangle create with measured geometry",
+    "native-created region note",
+    "native rectangle drag updates actual geometry",
+    "native polygon click-close creates polygon",
+    "tool modes",
+    "invalid image type rejected without data loss",
+    "local file accepted and annotations reset (image decode stub)",
+    "restore original sample",
+    "JSON reflects actual store",
+    "zero Function/eval/network/Worker/dynamic scripts"
+  ],
+  "browserVisualQA": "not-run; JSDOM image decode, ResizeObserver, SVG layout/pointer capture stubbed; actual image output and pointer usability unverified"
+}
