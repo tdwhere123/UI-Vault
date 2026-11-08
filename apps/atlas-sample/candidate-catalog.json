@@ -232,20 +232,41 @@
   },
   {
     "id": "cult:ai-instructions",
-    "title": "ai-instructions",
+    "title": "可组合AI指令管理",
     "source": "Cult UI",
     "license": "MIT",
-    "upstream": "https://github.com/nolly-studio/cult-ui/tree/d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+    "upstream": "https://github.com/nolly-studio/cult-ui/blob/d71b1428b811c2779d46ea41b7ef8c9f9c9991c2/registry/default/ui/ai-instructions.tsx",
     "website": "",
-    "buildStatus": "not built; upstream archive only",
+    "buildStatus": "IIFE build, JS parse, DOM mount and toggle active instruction and create custom local instruction",
     "batch": "batch-001",
     "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/cult-archive-01/source-archive.zip",
     "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/cult-archive-01/manifest.json",
-    "description": "Manage and toggle AI instructions with a popover, search, and create-dialog",
+    "description": "原版指令菜单、开关、搜索和自定义指令创建，只修改本地状态，不设置模型或账号。",
     "gaps": [
-      "Remote media and logos not downloaded or licensed by assumption",
-      "Source registry metadata may omit imports; original project package+lock retained"
-    ]
+      "未进行浏览器视觉、真实触控拖拽或完整键盘验收。",
+      "所有输入为本地fixture，不持久化或连接账号。"
+    ],
+    "kind": "复合交互组件",
+    "category": "输入与选择",
+    "styleTags": [
+      "圆润",
+      "浮层",
+      "多步交互"
+    ],
+    "preview": "batches/cult-forms-01/ai-instructions.html",
+    "revision": "d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+    "demoSource": "https://github.com/nolly-studio/cult-ui/blob/d71b1428b811c2779d46ea41b7ef8c9f9c9991c2/registry/default/example/ai-instructions-demo.tsx",
+    "behavior": "原版指令菜单、开关、搜索和自定义指令创建，只修改本地状态，不设置模型或账号。",
+    "previewStatus": "visual-review-pending",
+    "knownGaps": [
+      "未进行浏览器视觉、真实触控拖拽或完整键盘验收。",
+      "所有输入为本地fixture，不持久化或连接账号。"
+    ],
+    "adaptation": "Original component logic/demo files retained; three Hugeicons replaced by Lucide Settings/SquareCheck/Plus to remove icon-license ambiguity. Host selects original CustomViewsExample rather than rendering all five family drawer examples; intercepts external navigation and native form submission.",
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "format": "复合交互组件"
   },
   {
     "id": "cult:analytics-chart",
@@ -322,20 +343,41 @@
   },
   {
     "id": "cult:family-drawer",
-    "title": "family-drawer",
+    "title": "多视图圆润抽屉",
     "source": "Cult UI",
     "license": "MIT",
-    "upstream": "https://github.com/nolly-studio/cult-ui/tree/d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+    "upstream": "https://github.com/nolly-studio/cult-ui/blob/d71b1428b811c2779d46ea41b7ef8c9f9c9991c2/registry/default/ui/family-drawer.tsx",
     "website": "",
-    "buildStatus": "not built; upstream archive only",
+    "buildStatus": "IIFE build, JS parse, DOM mount and 2 open/settings/back/close cycles; no remaining dialog, overlay or body pointer/scroll lock",
     "batch": "batch-001",
     "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/cult-archive-01/source-archive.zip",
     "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/cult-archive-01/manifest.json",
-    "description": "A multi-view drawer component with smooth animations, view navigation, and customizable content views",
+    "description": "官方CustomViewsExample：设置、资料、关于视图和返回/关闭；Save/Update只返回菜单，字段不持久化。",
     "gaps": [
-      "Remote media and logos not downloaded or licensed by assumption",
-      "Source registry metadata may omit imports; original project package+lock retained"
-    ]
+      "未进行浏览器视觉、真实触控拖拽或完整键盘验收。",
+      "所有输入为本地fixture，不持久化或连接账号。"
+    ],
+    "kind": "复合交互组件",
+    "category": "输入与选择",
+    "styleTags": [
+      "圆润",
+      "浮层",
+      "多步交互"
+    ],
+    "preview": "batches/cult-forms-01/family-drawer.html",
+    "revision": "d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+    "demoSource": "https://github.com/nolly-studio/cult-ui/blob/d71b1428b811c2779d46ea41b7ef8c9f9c9991c2/registry/default/example/family-drawer-demo.tsx",
+    "behavior": "官方CustomViewsExample：设置、资料、关于视图和返回/关闭；Save/Update只返回菜单，字段不持久化。",
+    "previewStatus": "visual-review-pending",
+    "knownGaps": [
+      "未进行浏览器视觉、真实触控拖拽或完整键盘验收。",
+      "所有输入为本地fixture，不持久化或连接账号。"
+    ],
+    "adaptation": "Original component logic/demo files retained; three Hugeicons replaced by Lucide Settings/SquareCheck/Plus to remove icon-license ambiguity. Host selects original CustomViewsExample rather than rendering all five family drawer examples; intercepts external navigation and native form submission.",
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "format": "复合交互组件"
   },
   {
     "id": "cult:feature-sticky-section",
@@ -2122,39 +2164,77 @@
   },
   {
     "id": "smoothui:image-metadata-preview",
-    "title": "图像元数据预览",
+    "title": "图片元数据展开卡",
     "source": "SmoothUI",
-    "license": "MIT (root code notice; external artwork not included)",
-    "upstream": "https://github.com/educlopez/smoothui/tree/c45420a8523ec60a92f7724a2418ab83edaa1425/packages/smoothui/components/image-metadata-preview",
-    "website": "",
-    "buildStatus": "not installed or built",
+    "license": "MIT",
+    "upstream": "https://github.com/educlopez/smoothui/blob/c45420a8523ec60a92f7724a2418ab83edaa1425/packages/smoothui/components/image-metadata-preview/index.tsx",
+    "website": "https://smoothui.dev",
+    "buildStatus": "IIFE build and DOM mount passed; metadata open and close; share disabled",
     "batch": "batch-002",
-    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "description": "原版图片信息展开/关闭；元数据随原创SVG如实改写，分享和连接禁用。",
     "gaps": [
-      "Workspace aliases and shared package dependencies require integration; source closure checked, build not attempted.",
-      "Official shared data includes remote generated portraits, scenes, app icons and sample product artwork. Asset URLs preserved for reference; binaries not downloaded and image redistribution rights not assumed.",
-      "Root documentation CSS imports external fumadocs package styles; original lock retained.",
-      "Visual fidelity, animation, mobile behavior, accessibility and interaction correctness not yet tested.",
-      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
-    ]
+      "未进行浏览器视觉及完整键盘/触屏验收。",
+      "仅本地fixture，无账号/后端/持久化。"
+    ],
+    "kind": "复合交互组件",
+    "category": "输入与选择",
+    "styleTags": [
+      "圆角",
+      "复合交互",
+      "工作流"
+    ],
+    "preview": "batches/smooth-direct-01/image-metadata-preview.html",
+    "revision": "c45420a8523ec60a92f7724a2418ab83edaa1425",
+    "demoSource": "https://github.com/educlopez/smoothui/blob/c45420a8523ec60a92f7724a2418ab83edaa1425/apps/docs/examples/image-metadata-preview.tsx",
+    "behavior": "原版图片信息展开/关闭；元数据随原创SVG如实改写，分享和连接禁用。",
+    "previewStatus": "visual-review-pending",
+    "knownGaps": [
+      "未进行浏览器视觉及完整键盘/触屏验收。",
+      "仅本地fixture，无账号/后端/持久化。"
+    ],
+    "adaptation": "Original component source and official demos; standalone aliases/theme, local artwork, honest metadata, and callback-driven local state counters. See README.",
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "format": "复合交互组件"
   },
   {
     "id": "smoothui:interactive-image-selector",
-    "title": "交互图像选择器",
+    "title": "多选图片操作条",
     "source": "SmoothUI",
-    "license": "MIT (root code notice; external artwork not included)",
-    "upstream": "https://github.com/educlopez/smoothui/tree/c45420a8523ec60a92f7724a2418ab83edaa1425/packages/smoothui/components/interactive-image-selector",
-    "website": "",
-    "buildStatus": "not installed or built",
+    "license": "MIT",
+    "upstream": "https://github.com/educlopez/smoothui/blob/c45420a8523ec60a92f7724a2418ab83edaa1425/packages/smoothui/components/interactive-image-selector/index.tsx",
+    "website": "https://smoothui.dev",
+    "buildStatus": "IIFE build and DOM mount passed; select and remove local image",
     "batch": "batch-002",
-    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "description": "原版选择、移除和重置；分享仅显示本地选中项回执，不发送。图片为原创本地SVG。",
     "gaps": [
-      "Workspace aliases and shared package dependencies require integration; source closure checked, build not attempted.",
-      "Official shared data includes remote generated portraits, scenes, app icons and sample product artwork. Asset URLs preserved for reference; binaries not downloaded and image redistribution rights not assumed.",
-      "Root documentation CSS imports external fumadocs package styles; original lock retained.",
-      "Visual fidelity, animation, mobile behavior, accessibility and interaction correctness not yet tested.",
-      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
-    ]
+      "未进行浏览器视觉及完整键盘/触屏验收。",
+      "仅本地fixture，无账号/后端/持久化。",
+      "移除后数据状态验证通过；Motion退出动画的最终DOM清理未被JSDOM验证。"
+    ],
+    "kind": "复合交互组件",
+    "category": "输入与选择",
+    "styleTags": [
+      "圆角",
+      "复合交互",
+      "工作流"
+    ],
+    "preview": "batches/smooth-direct-01/interactive-image-selector.html",
+    "revision": "c45420a8523ec60a92f7724a2418ab83edaa1425",
+    "demoSource": "https://github.com/educlopez/smoothui/blob/c45420a8523ec60a92f7724a2418ab83edaa1425/apps/docs/examples/interactive-image-selector.tsx",
+    "behavior": "原版选择、移除和重置；分享仅显示本地选中项回执，不发送。图片为原创本地SVG。",
+    "previewStatus": "visual-review-pending",
+    "knownGaps": [
+      "未进行浏览器视觉及完整键盘/触屏验收。",
+      "仅本地fixture，无账号/后端/持久化。",
+      "移除后数据状态验证通过；Motion退出动画的最终DOM清理未被JSDOM验证。"
+    ],
+    "adaptation": "Original component source and official demos; standalone aliases/theme, local artwork, honest metadata, and callback-driven local state counters. See README.",
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "format": "复合交互组件"
   },
   {
     "id": "smoothui:job-listing-component",
@@ -2194,21 +2274,41 @@
   },
   {
     "id": "smoothui:pixel-brush-canvas",
-    "title": "像素画刷画布",
+    "title": "像素画板与撤销",
     "source": "SmoothUI",
-    "license": "MIT (root code notice; external artwork not included)",
-    "upstream": "https://github.com/educlopez/smoothui/tree/c45420a8523ec60a92f7724a2418ab83edaa1425/packages/smoothui/components/pixel-brush-canvas",
-    "website": "",
-    "buildStatus": "not installed or built",
+    "license": "MIT",
+    "upstream": "https://github.com/educlopez/smoothui/blob/c45420a8523ec60a92f7724a2418ab83edaa1425/packages/smoothui/components/pixel-brush-canvas/index.tsx",
+    "website": "https://smoothui.dev",
+    "buildStatus": "IIFE build and DOM mount passed; keyboard draw, undo and clear issue real canvas draw calls; pixels not rendered",
     "batch": "batch-002",
-    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "description": "原版像素画布、画笔/填充/图形、键盘绘制、撤销和清空；增加实际已绘像素数量回执。",
     "gaps": [
-      "Workspace aliases and shared package dependencies require integration; source closure checked, build not attempted.",
-      "Official shared data includes remote generated portraits, scenes, app icons and sample product artwork. Asset URLs preserved for reference; binaries not downloaded and image redistribution rights not assumed.",
-      "Root documentation CSS imports external fumadocs package styles; original lock retained.",
-      "Visual fidelity, animation, mobile behavior, accessibility and interaction correctness not yet tested.",
-      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
-    ]
+      "未进行浏览器视觉及完整键盘/触屏验收。",
+      "仅本地fixture，无账号/后端/持久化。",
+      "验证真实像素数组与绘制调用，canvas实际呈现像素未视觉验收。"
+    ],
+    "kind": "复合交互组件",
+    "category": "输入与选择",
+    "styleTags": [
+      "圆角",
+      "复合交互",
+      "工作流"
+    ],
+    "preview": "batches/smooth-direct-01/pixel-brush-canvas.html",
+    "revision": "c45420a8523ec60a92f7724a2418ab83edaa1425",
+    "demoSource": "https://github.com/educlopez/smoothui/blob/c45420a8523ec60a92f7724a2418ab83edaa1425/apps/docs/examples/pixel-brush-canvas.tsx",
+    "behavior": "原版像素画布、画笔/填充/图形、键盘绘制、撤销和清空；增加实际已绘像素数量回执。",
+    "previewStatus": "visual-review-pending",
+    "knownGaps": [
+      "未进行浏览器视觉及完整键盘/触屏验收。",
+      "仅本地fixture，无账号/后端/持久化。",
+      "验证真实像素数组与绘制调用，canvas实际呈现像素未视觉验收。"
+    ],
+    "adaptation": "Original component source and official demos; standalone aliases/theme, local artwork, honest metadata, and callback-driven local state counters. See README.",
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "format": "复合交互组件"
   },
   {
     "id": "smoothui:phototab",
@@ -2230,21 +2330,39 @@
   },
   {
     "id": "smoothui:pinned-list",
-    "title": "固定项目列表",
+    "title": "可固定任务与对话列表",
     "source": "SmoothUI",
-    "license": "MIT (root code notice; external artwork not included)",
-    "upstream": "https://github.com/educlopez/smoothui/tree/c45420a8523ec60a92f7724a2418ab83edaa1425/packages/smoothui/components/pinned-list",
-    "website": "",
-    "buildStatus": "not installed or built",
+    "license": "MIT",
+    "upstream": "https://github.com/educlopez/smoothui/blob/c45420a8523ec60a92f7724a2418ab83edaa1425/packages/smoothui/components/pinned-list/index.tsx",
+    "website": "https://smoothui.dev",
+    "buildStatus": "IIFE build and DOM mount passed; pin/unpin and unpin all",
     "batch": "batch-002",
-    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "description": "原版固定/取消、数量限额及清空固定，本地合成对话/任务。",
     "gaps": [
-      "Workspace aliases and shared package dependencies require integration; source closure checked, build not attempted.",
-      "Official shared data includes remote generated portraits, scenes, app icons and sample product artwork. Asset URLs preserved for reference; binaries not downloaded and image redistribution rights not assumed.",
-      "Root documentation CSS imports external fumadocs package styles; original lock retained.",
-      "Visual fidelity, animation, mobile behavior, accessibility and interaction correctness not yet tested.",
-      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
-    ]
+      "未进行浏览器视觉及完整键盘/触屏验收。",
+      "仅本地fixture，无账号/后端/持久化。"
+    ],
+    "kind": "复合交互组件",
+    "category": "导航与组织",
+    "styleTags": [
+      "圆角",
+      "复合交互",
+      "工作流"
+    ],
+    "preview": "batches/smooth-direct-01/pinned-list.html",
+    "revision": "c45420a8523ec60a92f7724a2418ab83edaa1425",
+    "demoSource": "https://github.com/educlopez/smoothui/blob/c45420a8523ec60a92f7724a2418ab83edaa1425/apps/docs/examples/pinned-list.tsx",
+    "behavior": "原版固定/取消、数量限额及清空固定，本地合成对话/任务。",
+    "previewStatus": "visual-review-pending",
+    "knownGaps": [
+      "未进行浏览器视觉及完整键盘/触屏验收。",
+      "仅本地fixture，无账号/后端/持久化。"
+    ],
+    "adaptation": "Original component source and official demos; standalone aliases/theme, local artwork, honest metadata, and callback-driven local state counters. See README.",
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "format": "复合交互组件"
   },
   {
     "id": "smoothui:rich-popover",
@@ -2266,21 +2384,41 @@
   },
   {
     "id": "smoothui:scrubber",
-    "title": "时间刻度拖动条",
+    "title": "数值刻度拖动控制",
     "source": "SmoothUI",
-    "license": "MIT (root code notice; external artwork not included)",
-    "upstream": "https://github.com/educlopez/smoothui/tree/c45420a8523ec60a92f7724a2418ab83edaa1425/packages/smoothui/components/scrubber",
-    "website": "",
-    "buildStatus": "not installed or built",
+    "license": "MIT",
+    "upstream": "https://github.com/educlopez/smoothui/blob/c45420a8523ec60a92f7724a2418ab83edaa1425/packages/smoothui/components/scrubber/index.tsx",
+    "website": "https://smoothui.dev",
+    "buildStatus": "IIFE build and DOM mount passed; keyboard slider changes controlled value",
     "batch": "batch-002",
-    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "description": "原版键盘/指针数值调节，实时改变示例对象透明度、缩放与旋转。",
     "gaps": [
-      "Workspace aliases and shared package dependencies require integration; source closure checked, build not attempted.",
-      "Official shared data includes remote generated portraits, scenes, app icons and sample product artwork. Asset URLs preserved for reference; binaries not downloaded and image redistribution rights not assumed.",
-      "Root documentation CSS imports external fumadocs package styles; original lock retained.",
-      "Visual fidelity, animation, mobile behavior, accessibility and interaction correctness not yet tested.",
-      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
-    ]
+      "未进行浏览器视觉及完整键盘/触屏验收。",
+      "仅本地fixture，无账号/后端/持久化。",
+      "真实指针拖动几何与动画尚未浏览器验收。"
+    ],
+    "kind": "复合交互组件",
+    "category": "输入与选择",
+    "styleTags": [
+      "圆角",
+      "复合交互",
+      "工作流"
+    ],
+    "preview": "batches/smooth-direct-01/scrubber.html",
+    "revision": "c45420a8523ec60a92f7724a2418ab83edaa1425",
+    "demoSource": "https://github.com/educlopez/smoothui/blob/c45420a8523ec60a92f7724a2418ab83edaa1425/apps/docs/examples/scrubber.tsx",
+    "behavior": "原版键盘/指针数值调节，实时改变示例对象透明度、缩放与旋转。",
+    "previewStatus": "visual-review-pending",
+    "knownGaps": [
+      "未进行浏览器视觉及完整键盘/触屏验收。",
+      "仅本地fixture，无账号/后端/持久化。",
+      "真实指针拖动几何与动画尚未浏览器验收。"
+    ],
+    "adaptation": "Original component source and official demos; standalone aliases/theme, local artwork, honest metadata, and callback-driven local state counters. See README.",
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "format": "复合交互组件"
   },
   {
     "id": "smoothui:switchboard-card",
@@ -2320,21 +2458,41 @@
   },
   {
     "id": "smoothui:vector-editor-toolbar",
-    "title": "矢量编辑工具栏",
+    "title": "矢量画布与工具栏",
     "source": "SmoothUI",
-    "license": "MIT (root code notice; external artwork not included)",
-    "upstream": "https://github.com/educlopez/smoothui/tree/c45420a8523ec60a92f7724a2418ab83edaa1425/packages/smoothui/components/vector-editor-toolbar",
-    "website": "",
-    "buildStatus": "not installed or built",
+    "license": "MIT",
+    "upstream": "https://github.com/educlopez/smoothui/blob/c45420a8523ec60a92f7724a2418ab83edaa1425/packages/smoothui/components/vector-editor-toolbar/index.tsx",
+    "website": "https://smoothui.dev",
+    "buildStatus": "IIFE build and DOM mount passed; tool activation and clear original SVG shapes",
     "batch": "batch-002",
-    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "description": "原版SVG绘图场景与工具栏，选择/绘制/清空本地矢量，不保存或上传。",
     "gaps": [
-      "Workspace aliases and shared package dependencies require integration; source closure checked, build not attempted.",
-      "Official shared data includes remote generated portraits, scenes, app icons and sample product artwork. Asset URLs preserved for reference; binaries not downloaded and image redistribution rights not assumed.",
-      "Root documentation CSS imports external fumadocs package styles; original lock retained.",
-      "Visual fidelity, animation, mobile behavior, accessibility and interaction correctness not yet tested.",
-      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
-    ]
+      "未进行浏览器视觉及完整键盘/触屏验收。",
+      "仅本地fixture，无账号/后端/持久化。",
+      "真实指针拖动几何与动画尚未浏览器验收。"
+    ],
+    "kind": "复合交互组件",
+    "category": "输入与选择",
+    "styleTags": [
+      "圆角",
+      "复合交互",
+      "工作流"
+    ],
+    "preview": "batches/smooth-direct-01/vector-editor-toolbar.html",
+    "revision": "c45420a8523ec60a92f7724a2418ab83edaa1425",
+    "demoSource": "https://github.com/educlopez/smoothui/blob/c45420a8523ec60a92f7724a2418ab83edaa1425/apps/docs/examples/vector-editor-toolbar.tsx",
+    "behavior": "原版SVG绘图场景与工具栏，选择/绘制/清空本地矢量，不保存或上传。",
+    "previewStatus": "visual-review-pending",
+    "knownGaps": [
+      "未进行浏览器视觉及完整键盘/触屏验收。",
+      "仅本地fixture，无账号/后端/持久化。",
+      "真实指针拖动几何与动画尚未浏览器验收。"
+    ],
+    "adaptation": "Original component source and official demos; standalone aliases/theme, local artwork, honest metadata, and callback-driven local state counters. See README.",
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "format": "复合交互组件"
   },
   {
     "id": "smoothui:video-ambient",
@@ -3206,22 +3364,32 @@
   },
   {
     "id": "aicanvas:flip-calendar",
-    "title": "flip-calendar",
+    "title": "AI Canvas · 拟物翻页日历",
     "source": "AI Canvas free library",
     "license": "MIT (free components-workspace explicitly designated by README)",
     "upstream": "https://github.com/aicanvas-me/aicanvas/tree/8164f1e423e4e654dd0828a941ba5cdda69f08fe/components-workspace/flip-calendar",
     "website": "",
-    "buildStatus": "not installed or built",
+    "buildStatus": "Build, parse and local DOM interaction/state checks passed; zero network/errors.",
     "batch": "batch-002",
-    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "description": "拖动翻页切换本地日期，不连接日历服务。",
     "gaps": [
-      "Remote ImageKit/Unsplash artwork and fonts not archived or presumed MIT.",
-      "Tailwind v4/React19 and peer dependencies require integration. No site/premium CSS imported.",
-      "Original root scripts inject premium code and change Git hooks. They are retained only as evidence; do not run them. Prepare a separate minimal harness.",
-      "Crypto swap/music/charging are demo UI states, not verified transactions, playback or a real battery monitor. No wallet/API connected.",
-      "No install/build/browser/interaction/mobile validation.",
-      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
-    ]
+      "真实浏览器视觉、触屏和指针几何未验收。",
+      "仅免费MIT components-workspace来源，不包含Premium组件。",
+      "本地fixture，不连接真实项目/任务/日历服务。"
+    ],
+    "preview": "batches/aicanvas-direct-01/flip-calendar/index.html",
+    "revision": "8164f1e423e4e654dd0828a941ba5cdda69f08fe",
+    "category": "展示与媒体",
+    "kind": "复合交互组件",
+    "format": "交互组件",
+    "styleTags": [
+      "圆润",
+      "卡片交互"
+    ],
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "behavior": "拖动翻页切换本地日期，不连接日历服务。"
   },
   {
     "id": "aicanvas:glass-music-player",
@@ -3263,22 +3431,32 @@
   },
   {
     "id": "aicanvas:new-project-modal",
-    "title": "new-project-modal",
+    "title": "AI Canvas · 本地项目表单",
     "source": "AI Canvas free library",
     "license": "MIT (free components-workspace explicitly designated by README)",
     "upstream": "https://github.com/aicanvas-me/aicanvas/tree/8164f1e423e4e654dd0828a941ba5cdda69f08fe/components-workspace/new-project-modal",
     "website": "",
-    "buildStatus": "not installed or built",
+    "buildStatus": "Build, parse and local DOM interaction/state checks passed; zero network/errors.",
     "batch": "batch-002",
-    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "description": "标题必填校验、描述/颜色/私密选项、本地JSON回执；关闭重开重置。不保存或创建实际项目。",
     "gaps": [
-      "Remote ImageKit/Unsplash artwork and fonts not archived or presumed MIT.",
-      "Tailwind v4/React19 and peer dependencies require integration. No site/premium CSS imported.",
-      "Original root scripts inject premium code and change Git hooks. They are retained only as evidence; do not run them. Prepare a separate minimal harness.",
-      "Crypto swap/music/charging are demo UI states, not verified transactions, playback or a real battery monitor. No wallet/API connected.",
-      "No install/build/browser/interaction/mobile validation.",
-      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
-    ]
+      "真实浏览器视觉、触屏和指针几何未验收。",
+      "仅免费MIT components-workspace来源，不包含Premium组件。",
+      "本地fixture，不连接真实项目/任务/日历服务。"
+    ],
+    "preview": "batches/aicanvas-direct-01/new-project-modal/index.html",
+    "revision": "8164f1e423e4e654dd0828a941ba5cdda69f08fe",
+    "category": "输入与选择",
+    "kind": "复合交互组件",
+    "format": "交互组件",
+    "styleTags": [
+      "圆润",
+      "卡片交互"
+    ],
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "behavior": "标题必填校验、描述/颜色/私密选项、本地JSON回执；关闭重开重置。不保存或创建实际项目。"
   },
   {
     "id": "aicanvas:peel-corner-reveal",
@@ -3339,22 +3517,32 @@
   },
   {
     "id": "aicanvas:radial-toolbar",
-    "title": "radial-toolbar",
+    "title": "AI Canvas · 圆弧工具栏",
     "source": "AI Canvas free library",
     "license": "MIT (free components-workspace explicitly designated by README)",
     "upstream": "https://github.com/aicanvas-me/aicanvas/tree/8164f1e423e4e654dd0828a941ba5cdda69f08fe/components-workspace/radial-toolbar",
     "website": "",
-    "buildStatus": "not installed or built",
+    "buildStatus": "Build, parse and local DOM interaction/state checks passed; zero network/errors.",
     "batch": "batch-002",
-    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "description": "打开、选择6种工具及关闭圆弧工具栏。",
     "gaps": [
-      "Remote ImageKit/Unsplash artwork and fonts not archived or presumed MIT.",
-      "Tailwind v4/React19 and peer dependencies require integration. No site/premium CSS imported.",
-      "Original root scripts inject premium code and change Git hooks. They are retained only as evidence; do not run them. Prepare a separate minimal harness.",
-      "Crypto swap/music/charging are demo UI states, not verified transactions, playback or a real battery monitor. No wallet/API connected.",
-      "No install/build/browser/interaction/mobile validation.",
-      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
-    ]
+      "真实浏览器视觉、触屏和指针几何未验收。",
+      "仅免费MIT components-workspace来源，不包含Premium组件。",
+      "本地fixture，不连接真实项目/任务/日历服务。"
+    ],
+    "preview": "batches/aicanvas-direct-01/radial-toolbar/index.html",
+    "revision": "8164f1e423e4e654dd0828a941ba5cdda69f08fe",
+    "category": "展示与媒体",
+    "kind": "复合交互组件",
+    "format": "交互组件",
+    "styleTags": [
+      "圆润",
+      "卡片交互"
+    ],
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "behavior": "打开、选择6种工具及关闭圆弧工具栏。"
   },
   {
     "id": "aicanvas:scroll-wipe-gallery",
@@ -3377,22 +3565,32 @@
   },
   {
     "id": "aicanvas:slide-deck",
-    "title": "slide-deck",
+    "title": "AI Canvas · 幻灯片卡组",
     "source": "AI Canvas free library",
     "license": "MIT (free components-workspace explicitly designated by README)",
     "upstream": "https://github.com/aicanvas-me/aicanvas/tree/8164f1e423e4e654dd0828a941ba5cdda69f08fe/components-workspace/slide-deck",
     "website": "",
-    "buildStatus": "not installed or built",
+    "buildStatus": "Build, parse and local DOM interaction/state checks passed; zero network/errors.",
     "batch": "batch-002",
-    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "description": "三张卡片切换当前前景项。",
     "gaps": [
-      "Remote ImageKit/Unsplash artwork and fonts not archived or presumed MIT.",
-      "Tailwind v4/React19 and peer dependencies require integration. No site/premium CSS imported.",
-      "Original root scripts inject premium code and change Git hooks. They are retained only as evidence; do not run them. Prepare a separate minimal harness.",
-      "Crypto swap/music/charging are demo UI states, not verified transactions, playback or a real battery monitor. No wallet/API connected.",
-      "No install/build/browser/interaction/mobile validation.",
-      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
-    ]
+      "真实浏览器视觉、触屏和指针几何未验收。",
+      "仅免费MIT components-workspace来源，不包含Premium组件。",
+      "本地fixture，不连接真实项目/任务/日历服务。"
+    ],
+    "preview": "batches/aicanvas-direct-01/slide-deck/index.html",
+    "revision": "8164f1e423e4e654dd0828a941ba5cdda69f08fe",
+    "category": "展示与媒体",
+    "kind": "复合交互组件",
+    "format": "交互组件",
+    "styleTags": [
+      "圆润",
+      "卡片交互"
+    ],
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "behavior": "三张卡片切换当前前景项。"
   },
   {
     "id": "aicanvas:stack-tower",
@@ -3415,22 +3613,32 @@
   },
   {
     "id": "aicanvas:task-cards",
-    "title": "task-cards",
+    "title": "AI Canvas · 任务卡组",
     "source": "AI Canvas free library",
     "license": "MIT (free components-workspace explicitly designated by README)",
     "upstream": "https://github.com/aicanvas-me/aicanvas/tree/8164f1e423e4e654dd0828a941ba5cdda69f08fe/components-workspace/task-cards",
     "website": "",
-    "buildStatus": "not installed or built",
+    "buildStatus": "Build, parse and local DOM interaction/state checks passed; zero network/errors.",
     "batch": "batch-002",
-    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "description": "任务卡片前后切换。",
     "gaps": [
-      "Remote ImageKit/Unsplash artwork and fonts not archived or presumed MIT.",
-      "Tailwind v4/React19 and peer dependencies require integration. No site/premium CSS imported.",
-      "Original root scripts inject premium code and change Git hooks. They are retained only as evidence; do not run them. Prepare a separate minimal harness.",
-      "Crypto swap/music/charging are demo UI states, not verified transactions, playback or a real battery monitor. No wallet/API connected.",
-      "No install/build/browser/interaction/mobile validation.",
-      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
-    ]
+      "真实浏览器视觉、触屏和指针几何未验收。",
+      "仅免费MIT components-workspace来源，不包含Premium组件。",
+      "本地fixture，不连接真实项目/任务/日历服务。"
+    ],
+    "preview": "batches/aicanvas-direct-01/task-cards/index.html",
+    "revision": "8164f1e423e4e654dd0828a941ba5cdda69f08fe",
+    "category": "展示与媒体",
+    "kind": "复合交互组件",
+    "format": "交互组件",
+    "styleTags": [
+      "圆润",
+      "卡片交互"
+    ],
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "behavior": "任务卡片前后切换。"
   },
   {
     "id": "aicanvas:spatial-carousel",
@@ -7217,5 +7425,499 @@
       "源代码ZIP仅本地保存，未挂在线下载。"
     ],
     "keywords": "robot 机器人 智能与运行 automaton artificial intelligence ai brain 大脑 智能与运行 mind mental cpu 处理器 智能与运行 processor microchip computer circuit circuitry 电路 智能与运行 processor microchip computer circuit electronics motherboard memory 内存 智能与运行 *new* ram microchip computer circuit electronics database 数据库 智能与运行 saved saving archived archiving archival hard disk storage hdd servers databases tree-structure 树形结构 智能与运行 data structures family tree genealogy hierarchy taxonomy charts flowchart flow-arrow 流程箭头 智能与运行 *updated* flowchart arrowhead graph 关系图 智能与运行 nodes tree strategy 策略 智能与运行 sports strategem plan tic-tac-toe target 目标 智能与运行 bullseye radar archery accuracy precision magic-wand 魔杖 智能与运行 selection wizard games sparkle 灵光 智能与运行 star rate ratings favorites favorited lightbulb 灯泡 智能与运行 flashlight bulbs lighting led energy idea compass 指南针 智能与运行 navigation directions maps safari apple rocket-launch 火箭 智能与运行 *updated* spaceship flying blastoff deployment rocketship puzzle-piece 拼图 智能与运行 board game element component extension plugin gear 设置齿轮 智能与运行 8 settings setup preferences cogs gears machinery mechanical sliders-horizontal 调节参数 智能与运行 music audio faders filters equalizer volume settings preferences terminal-window 终端窗口 智能与运行 command line cli bash shell caret console code 代码 代码与工具 angle brackets angle braces snippets code-block 代码块 代码与工具 angle brackets angle braces snippets brackets-curly 花括号 代码与工具 code curly brackets curly braces bug 缺陷 代码与工具 debug errors insect ladybug git-branch 版本分支 代码与工具 *updated* github vcs source control version control versioning branches git-commit 提交 代码与工具 github vcs source control version control versioning commits git-merge 合并 代码与工具 *updated* github vcs source control version control versioning split git-pull-request 拉取请求 代码与工具 *updated* github vcs source control version control versioning merge request package 软件包 代码与工具 packages boxes delivery mail postal service bundles library libraries shipping cube 立方体 代码与工具 square box 3d volume blocks wrench 扳手 代码与工具 settings setup preferences tools machinery mechanical repairs hammer 锤子 代码与工具 tools carpentry construction toolbox 工具箱 代码与工具 tools carpentry construction nut 螺母 代码与工具 bolts screws machinery tools hexagon plugs-connected 连接插头 代码与工具 *updated* outlet socket plugin integration power 电源 代码与工具 charged charger charging on off on/off switch power switch command 命令键 代码与工具 apple keyboard shortcut modifier looped square bowen knot saint john's arms keyboard 键盘 代码与工具 typing type keys input mouse 鼠标 代码与工具 *updated* clicks input binary 二进制 代码与工具 *new* digital 0 1 programming coding executable chat-circle 对话气泡 消息与协作 send sent messages messaging sms texting comment round bubble chats 多方会话 消息与协作 send sent messages messaging sms texting comment square bubble user-sound 发言者 消息与协作 *new* person users profile speech speaking voice envelope 邮件 消息与协作 mail email send sent message post letter paper-plane-tilt 发送 消息与协作 mail email send sent messages messaging toys games microphone 麦克风 消息与协作 audio recording music sound podcast studio headphones 耳机 消息与协作 music audio listening speaker-high 扬声器 消息与协作 *updated* music audio volume sound video-camera 视频会议 消息与协作 videography films movies recording phone 电话 消息与协作 calls telephone landline talk broadcast 广播 消息与协作 radio hotspot wifi emit rss 订阅 消息与协作 radio broadcast web feed news aggregator bell 通知铃铛 消息与协作 alarm notifications times timer clock schedule events ringer calls handshake 协作握手 消息与协作 emoji deal agreement users-three 团队 消息与协作 user group team community people profiles accounts contacts user-circle 用户头像 消息与协作 person users profile account contact login identification-card 身份卡 消息与协作 license badge credentials nametag user verification address-book 通讯录 消息与协作 contacts directory roledex megaphone 公告 消息与协作 bullhorn announcements loudspeaker broadcast translate 翻译 消息与协作 translation languages internationalization i18n speech file-text 文本文档 文档与知识 documents files save write receipt 收据 文档与知识 purchase money clipping expense folder 文件夹 文档与知识 directory directories files folders archive 归档 文档与知识 saved saving archived archiving archival downloaded downloading notebook 笔记本 文档与知识 notes note-taking memorandum journal diary logs logbook book-open 阅读 文档与知识 *updated* reading reader novel story library graduation-cap 学习 文档与知识 classroom teacher education school college university degree graduate hat bookmark-simple 书签 文档与知识 reading reader novel story placeholder favorites favorited library article 文章 文档与知识 reading writing journals periodicals text newspaper newspaper 新闻 文档与知识 reading writing journals periodicals scroll 卷轴 文档与知识 *updated* parchment paper script spell fantasy clipboard-text 剪贴板 文档与知识 copy copied checklist paperclip 附件 文档与知识 attachments mail email office link 链接 文档与知识 *updated* anchor hyperlink hypertext chains chained quotes 引用 文档与知识 quoations quotation marks double-quotes writing books list-bullets 项目列表 文档与知识 *updated* ul unordered list bulleted list checklist list-numbers 编号列表 文档与知识 *updated* ol ordered list numbered list checklist text-aa 文字 文档与知识 typography typeface print font text-align-left 左对齐 文档与知识 *updated* typography print font alignment flush left highlighter 高亮笔 文档与知识 *new* marker write writing editing kanban 看板 工作流与组织 scheduling tasks project management process lean agile calendar 日历 工作流与组织 dates times events schedule 12 clock 时钟 工作流与组织 times timer alarm schedule events watch timer 计时器 工作流与组织 clock alarm schedule events stopwatch sports hourglass 沙漏 工作流与组织 times timer alarms clock schedule events waiting progress check-circle 完成 工作流与组织 todo to-do task list checkbox round ok done x-circle 取消 工作流与组织 closed cancelled dismissed round warning 警告 工作流与组织 alert danger dangerous caution errors info 信息 工作流与组织 information help support question 帮助 工作流与组织 information help support questions pause 暂停 工作流与组织 music audio resume start stop play 播放 工作流与组织 music audio resume start stop 停止 工作流与组织 music audio arrow-counter-clockwise 撤销 工作流与组织 *updated* directional pointer pointing arrowhead undo refreshing rotate spin flip arrows-clockwise 同步 工作流与组织 *updated* directional pointer pointing arrowhead redo refreshing sync synchronize rotate spin flip queue 队列 工作流与组织 *updated* music audio playlist stack 层叠 工作流与组织 cards layers rows 行布局 工作流与组织 2 shapes polygons box stack list table cards columns 列布局 工作流与组织 2 shapes polygons box stack list table cards table 表格 工作流与组织 tables tabular spreadsheets excel grid form magnifying-glass 搜索 搜索与分析 search find locate query inspect funnel 筛选 搜索与分析 filters refine sorting sort-ascending 排序 搜索与分析 *updated* sorted sorting increasing a to z arrows list chart-line-up 趋势图 搜索与分析 *updated* graphs graphing charts statistics analyze analysis stocks chart-bar 柱状图 搜索与分析 graphs graphing charts statistics histogram analyze analysis chart-pie 饼图 搜索与分析 graphs graphing charts statistics circle analyze analysis chart-scatter 散点图 搜索与分析 graphs graphing charts statistics analyze analysis chart-polar 极坐标图 搜索与分析 graphs graphing charts statistics analyze analysis circle trend-up 增长 搜索与分析 graphs graphing charts statistics analyze analysis increase arrows calculator 计算器 搜索与分析 addition sum subtraction difference multiply multiplication product divide division divisor dividend quotient equals equality mathematics arithmetic + - ± × ÷ = function 函数 搜索与分析 mathematics arithmetic f-stop sigma 求和 搜索与分析 σ symbol mathematics sum percent 百分比 搜索与分析 % percentage percentile ratio delta mathematics arithmetic calculator hash 标签井号 搜索与分析 hashtag octothorpe pound sign number sign tic-tac-toe symbol infinity 无限 搜索与分析 infinite lemniscate figure-eight mathematics arithmetic calculator ∞ ruler 标尺 搜索与分析 measure scale distance flask 烧瓶 搜索与分析 beaker science chemistry experiment erlenmeyer test-tube 试管 搜索与分析 science chemistry experiment vial gauge 仪表 搜索与分析 dashboard meter speed speedometer odometer performance pulse 脉冲 搜索与分析 activity heartbeat medical ecg ekg vitals monitor medicine cursor 指针 空间与设计 pointer arrowhead mouse click hand 手掌 空间与设计 pointers cursors emoji backhand selection 选择 空间与设计 marquis select square dashed bounding-box 边界框 空间与设计 polygon shapes outline corners rectangle crop 裁切 空间与设计 photography clip screenshots resize 调整尺寸 空间与设计 *new* maximize expand grow arrows-out 扩展 空间与设计 *updated* directional pointer pointing arrowhead expand fullscreen resize grow intersect 相交 空间与设计 round join union merge combine intersecting intersection subtract 相减 空间与设计 boolean intersection combine split merge union union 联合 空间与设计 *new* ∪ union set member mathematics arithmetic calculator polygon 多边形 空间与设计 shapes drawing bezier-curve 贝塞尔曲线 空间与设计 shapes drawing path pen vector pen-nib 钢笔 空间与设计 ink write writing editing sign signature fountain pen illustrator paint-brush 画笔 空间与设计 colors color picker arts palette 调色盘 空间与设计 paint colors color picker arts eyedropper 吸色器 空间与设计 colors color picker sample arts image 图片 空间与设计 *updated* pictures photographs photography wallpapers gallery landscape camera 相机 空间与设计 photography pictures lens film-strip 胶片 空间与设计 camera photography darkroom movie analog perspective 透视 空间与设计 3d skew warp trapezoid shield-check 安全验证 安全与系统 badge security defense authentication authenticated guarded locked encrypted encryption lock-key 门锁 安全与系统 padlock security secured authentication authenticated login locked encrypted encryption privacy private key 密钥 安全与系统 padlock security secured authentication authenticated login locked encrypted encryption fingerprint 指纹 安全与系统 security secured authentication authenticated login locked biometrics encrypted encryption password 密码 安全与系统 security secured authentication authenticated login locked encrypted encryption eye 查看 安全与系统 visible hidden show hide visibility view scan 扫描 安全与系统 upc barcode products shopping scanner siren 警报 安全与系统 alarm police lights warning vault 保险库 安全与系统 safe bank security secured authentication authenticated locked encrypted encryption lifebuoy 救生圈 安全与系统 lifebelt lifesaver safety help support nautical boats ships first-aid-kit 急救箱 安全与系统 bandages medical medicine injury safety emergency doctor fire-extinguisher 灭火器 安全与系统 safety prevention emergency hazard danger caution cloud 云端 安全与系统 serverless backup storage meteorology cloudy overcast wifi-high 无线网络 安全与系统 wireless internet network connection connectivity network 网络节点 安全与系统 *new* internet ethernet lan hard-drives 硬盘 安全与系统 saved saving archived archiving archival hard disk storage hdd servers databases desktop 桌面电脑 安全与系统 computer pc imac tower device-mobile 移动设备 安全与系统 cellphone cellular battery-charging 电池充电 安全与系统 charged charger charging power download-simple 下载 安全与系统 *updated* saved saving archived archiving archival downloaded downloading hard drive disk import upload-simple 上传 连接与行动 *updated* saved saving archived archiving archival uploaded uploading hard drive disk export 导出 连接与行动 share send to arrows share-network 分享网络 连接与行动 send to export globe 地球 连接与行动 world earth global planet circle round internationalization i18n languages country countries geography internet map-trifold 地图 连接与行动 maps places locations cartography geography map-pin 位置 连接与行动 maps places markers pins locations poi point of interest navigation-arrow 导航 连接与行动 location directions compass gps path 路径 连接与行动 transit travel trail gps navigation route destination vector signpost 路标 连接与行动 direction traffic road sign transit transportation flag 旗帜 连接与行动 country countries finished completed flags crosshair 准星 连接与行动 geolocation gps aiming targeting anchor 锚点 连接与行动 nautical boats ships hope safety insurance bridge 桥梁 连接与行动 travel transportation infrastucture airplane 飞机 连接与行动 vehicles airports flights flying planes transit transportation traveling train 列车 连接与行动 vehicles subway light rail public transit transportation commuter traveling places locations car 汽车 连接与行动 *updated* cars vehicles automobile transit transportation traveling bicycle 自行车 连接与行动 bikers bicycling cyclists transit transportation commuter exercises fitness footprints 足迹 连接与行动 path trail walk route hike hiking door-open 入口 连接与行动 entrance exit house 主页 连接与行动 homes buildings places locations heart 喜爱 灵感与记忆 wellness love healthy like favorites favorited suits cards gambling casino gaming emoji star 星标 灵感与记忆 rate ratings favorites favorited leaf 叶片 灵感与记忆 plants trees branches leaves nodes green environmental tree 树木 灵感与记忆 plants branches leaves green environmental flower 花朵 灵感与记忆 plants green environmental sun 太阳 灵感与记忆 day daytime daylight clear sunny sunshine light mode brightness lighten brighten moon 月亮 灵感与记忆 night evening clear sleep snooze night mode dark mode astronomy stargazing mountains 山脉 灵感与记忆 *updated* hills outdoors terrain geology adventure waves 波浪 灵感与记忆 ocean tides surf drop 水滴 灵感与记忆 droplet teardrop raindrop raining meteorology water blur fire 火焰 灵感与记忆 flame burning match lighter lightning 闪电 灵感与记忆 meteorology stormy thunderstorm thunderbolt charged charger charging power electricity flash snowflake 雪花 灵感与记忆 meteorology snowy snowing snowstorm coffee 咖啡 灵感与记忆 tea java beverages drinks cafe cup mug espresso cappuccino latte places locations bars restaurants food dining plant 盆栽 灵感与记忆 sprout vegan farm farming garden gardening acorn 橡果 灵感与记忆 *new* savings nut vegetable veggies food groceries market shooting-star 流星 灵感与记忆 wish comet meteor medal 奖章 灵感与记忆 ribbons winning victory awards rosette gift 礼物 灵感与记忆 presents holiday birthday confetti 庆祝 灵感与记忆 tada party emoji"
+  },
+  {
+    "id": "astryx:file-explorer",
+    "title": "AstryX · 分栏文件浏览器",
+    "source": "AstryX",
+    "license": "MIT",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/cli/assets/templates/pages/file-explorer/page.tsx",
+    "preview": "batches/astryx-next-01/file-explorer/index.html",
+    "code": "batches/astryx-next-01/file-explorer/page.tsx",
+    "category": "导航与组织",
+    "kind": "完整页面",
+    "format": "完整页面",
+    "batch": "astryx-next-01",
+    "styleTags": [
+      "圆角",
+      "中性"
+    ],
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "description": "点击文件夹逐级浏览，后退返回；文件内容是官方固定示例，不读取用户磁盘。",
+    "behavior": "点击文件夹逐级浏览，后退返回；文件内容是官方固定示例，不读取用户磁盘。",
+    "buildStatus": "Isolated build, parse, DOM mount and meaningful local-state check passed; visual QA pending.",
+    "gaps": [
+      "原模板0.7.12快照，使用官方0.7.11组件/主题兼容构建，不假称同版本原站。",
+      "真实浏览器视觉、完整键盘/触控尚未验收。",
+      "官方固定示例与本地状态，不连接真实文件、账号、消息或业务后台。"
+    ]
+  },
+  {
+    "id": "astryx:library",
+    "title": "AstryX · 素材库浏览与筛选",
+    "source": "AstryX",
+    "license": "MIT",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/cli/assets/templates/pages/library/page.tsx",
+    "preview": "batches/astryx-next-01/library/index.html",
+    "code": "batches/astryx-next-01/library/page.tsx",
+    "category": "导航与组织",
+    "kind": "完整页面",
+    "format": "完整页面",
+    "batch": "astryx-next-01",
+    "styleTags": [
+      "圆角",
+      "中性"
+    ],
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "description": "分类、搜索与排序本地素材库。",
+    "behavior": "分类、搜索与排序本地素材库。",
+    "buildStatus": "Isolated build, parse, DOM mount and meaningful local-state check passed; visual QA pending.",
+    "gaps": [
+      "原模板0.7.12快照，使用官方0.7.11组件/主题兼容构建，不假称同版本原站。",
+      "真实浏览器视觉、完整键盘/触控尚未验收。",
+      "官方固定示例与本地状态，不连接真实文件、账号、消息或业务后台。"
+    ]
+  },
+  {
+    "id": "astryx:messaging-shell",
+    "title": "AstryX · 团队消息与线程外壳",
+    "source": "AstryX",
+    "license": "MIT",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/cli/assets/templates/pages/messaging-shell/page.tsx",
+    "preview": "batches/astryx-next-01/messaging-shell/index.html",
+    "code": "batches/astryx-next-01/messaging-shell/page.tsx",
+    "category": "Agent与对话",
+    "kind": "完整页面",
+    "format": "完整页面",
+    "batch": "astryx-next-01",
+    "styleTags": [
+      "圆角",
+      "中性"
+    ],
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "description": "切换频道和私聊、关闭线程；发送消息原版未绑定后端，不实际发送。",
+    "behavior": "切换频道和私聊、关闭线程；发送消息原版未绑定后端，不实际发送。",
+    "buildStatus": "Isolated build, parse, DOM mount and meaningful local-state check passed; visual QA pending.",
+    "gaps": [
+      "原模板0.7.12快照，使用官方0.7.11组件/主题兼容构建，不假称同版本原站。",
+      "真实浏览器视觉、完整键盘/触控尚未验收。",
+      "官方固定示例与本地状态，不连接真实文件、账号、消息或业务后台。"
+    ]
+  },
+  {
+    "id": "astryx:settings-dialog",
+    "title": "AstryX · 分区设置面板",
+    "source": "AstryX",
+    "license": "MIT",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/cli/assets/templates/pages/settings-dialog/page.tsx",
+    "preview": "batches/astryx-next-01/settings-dialog/index.html",
+    "code": "batches/astryx-next-01/settings-dialog/page.tsx",
+    "category": "输入与选择",
+    "kind": "完整页面",
+    "format": "完整页面",
+    "batch": "astryx-next-01",
+    "styleTags": [
+      "圆角",
+      "中性"
+    ],
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "description": "切换设置分区和本地选项；不更改账号或系统设置。",
+    "behavior": "切换设置分区和本地选项；不更改账号或系统设置。",
+    "buildStatus": "Isolated build, parse, DOM mount and meaningful local-state check passed; visual QA pending.",
+    "gaps": [
+      "原模板0.7.12快照，使用官方0.7.11组件/主题兼容构建，不假称同版本原站。",
+      "真实浏览器视觉、完整键盘/触控尚未验收。",
+      "官方固定示例与本地状态，不连接真实文件、账号、消息或业务后台。"
+    ]
+  },
+  {
+    "id": "astryx:table-filter",
+    "title": "AstryX · 多条件任务表格",
+    "source": "AstryX",
+    "license": "MIT",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/cli/assets/templates/pages/table-filter/page.tsx",
+    "preview": "batches/astryx-next-01/table-filter/index.html",
+    "code": "batches/astryx-next-01/table-filter/page.tsx",
+    "category": "数据与状态",
+    "kind": "完整页面",
+    "format": "完整页面",
+    "batch": "astryx-next-01",
+    "styleTags": [
+      "圆角",
+      "中性"
+    ],
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "description": "清除/组合状态等过滤条件；加载进度为本地模拟。",
+    "behavior": "清除/组合状态等过滤条件；加载进度为本地模拟。",
+    "buildStatus": "Isolated build, parse, DOM mount and meaningful local-state check passed; visual QA pending.",
+    "gaps": [
+      "原模板0.7.12快照，使用官方0.7.11组件/主题兼容构建，不假称同版本原站。",
+      "真实浏览器视觉、完整键盘/触控尚未验收。",
+      "官方固定示例与本地状态，不连接真实文件、账号、消息或业务后台。"
+    ]
+  },
+  {
+    "id": "astryx:table-inbox",
+    "title": "AstryX · 工单式收件箱",
+    "source": "AstryX",
+    "license": "MIT",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/cli/assets/templates/pages/table-inbox/page.tsx",
+    "preview": "batches/astryx-next-01/table-inbox/index.html",
+    "code": "batches/astryx-next-01/table-inbox/page.tsx",
+    "category": "Agent与对话",
+    "kind": "完整页面",
+    "format": "完整页面",
+    "batch": "astryx-next-01",
+    "styleTags": [
+      "圆角",
+      "中性"
+    ],
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "description": "切换收件箱文件夹和本地工单；不读取或发送真实邮件。",
+    "behavior": "切换收件箱文件夹和本地工单；不读取或发送真实邮件。",
+    "buildStatus": "Isolated build, parse, DOM mount and meaningful local-state check passed; visual QA pending.",
+    "gaps": [
+      "原模板0.7.12快照，使用官方0.7.11组件/主题兼容构建，不假称同版本原站。",
+      "真实浏览器视觉、完整键盘/触控尚未验收。",
+      "官方固定示例与本地状态，不连接真实文件、账号、消息或业务后台。"
+    ]
+  },
+  {
+    "id": "astryx:table-tree",
+    "title": "AstryX · 树形资源表格",
+    "source": "AstryX",
+    "license": "MIT",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/cli/assets/templates/pages/table-tree/page.tsx",
+    "preview": "batches/astryx-next-01/table-tree/index.html",
+    "code": "batches/astryx-next-01/table-tree/page.tsx",
+    "category": "导航与组织",
+    "kind": "完整页面",
+    "format": "完整页面",
+    "batch": "astryx-next-01",
+    "styleTags": [
+      "圆角",
+      "中性"
+    ],
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "description": "展开全部、折叠和查看层级资源；固定模拟代码仓库。",
+    "behavior": "展开全部、折叠和查看层级资源；固定模拟代码仓库。",
+    "buildStatus": "Isolated build, parse, DOM mount and meaningful local-state check passed; visual QA pending.",
+    "gaps": [
+      "原模板0.7.12快照，使用官方0.7.11组件/主题兼容构建，不假称同版本原站。",
+      "真实浏览器视觉、完整键盘/触控尚未验收。",
+      "官方固定示例与本地状态，不连接真实文件、账号、消息或业务后台。"
+    ]
+  },
+  {
+    "id": "astryx:work-item-detail",
+    "title": "AstryX · 任务详情与关联信息",
+    "source": "AstryX",
+    "license": "MIT",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/cli/assets/templates/pages/work-item-detail/page.tsx",
+    "preview": "batches/astryx-next-01/work-item-detail/index.html",
+    "code": "batches/astryx-next-01/work-item-detail/page.tsx",
+    "category": "导航与组织",
+    "kind": "完整页面",
+    "format": "完整页面",
+    "batch": "astryx-next-01",
+    "styleTags": [
+      "圆角",
+      "中性"
+    ],
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "description": "展开/收起详情、查看关联子任务和附件；不是外部任务系统。",
+    "behavior": "展开/收起详情、查看关联子任务和附件；不是外部任务系统。",
+    "buildStatus": "Isolated build, parse, DOM mount and meaningful local-state check passed; visual QA pending.",
+    "gaps": [
+      "原模板0.7.12快照，使用官方0.7.11组件/主题兼容构建，不假称同版本原站。",
+      "真实浏览器视觉、完整键盘/触控尚未验收。",
+      "官方固定示例与本地状态，不连接真实文件、账号、消息或业务后台。"
+    ]
+  },
+  {
+    "id": "astryx:editor",
+    "title": "AstryX · 区块式页面编辑器",
+    "source": "AstryX",
+    "license": "MIT",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/cli/assets/templates/pages/editor/page.tsx",
+    "preview": "batches/astryx-next-01/editor/index.html",
+    "code": "batches/astryx-next-01/editor/page.tsx",
+    "category": "输入与选择",
+    "kind": "完整页面",
+    "format": "完整页面",
+    "batch": "astryx-next-01",
+    "styleTags": [
+      "圆角",
+      "中性"
+    ],
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "description": "新增区块并切换属性/图层；发布按钮原版无后端，不发布网站。",
+    "behavior": "新增区块并切换属性/图层；发布按钮原版无后端，不发布网站。",
+    "buildStatus": "Isolated build, parse, DOM mount and meaningful local-state check passed; visual QA pending.",
+    "gaps": [
+      "原模板0.7.12快照，使用官方0.7.11组件/主题兼容构建，不假称同版本原站。",
+      "真实浏览器视觉、完整键盘/触控尚未验收。",
+      "官方固定示例与本地状态，不连接真实文件、账号、消息或业务后台。"
+    ]
+  },
+  {
+    "id": "astryx:incident-console",
+    "title": "AstryX · 事件排障控制台",
+    "source": "AstryX",
+    "license": "MIT",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/cli/assets/templates/pages/incident-console/page.tsx",
+    "preview": "batches/astryx-next-01/incident-console/index.html",
+    "code": "batches/astryx-next-01/incident-console/page.tsx",
+    "category": "数据与状态",
+    "kind": "完整页面",
+    "format": "完整页面",
+    "batch": "astryx-next-01",
+    "styleTags": [
+      "圆角",
+      "中性"
+    ],
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "description": "按状态筛选并选择本地合成事件；缓解/升级按钮不执行真实运维操作。",
+    "behavior": "按状态筛选并选择本地合成事件；缓解/升级按钮不执行真实运维操作。",
+    "buildStatus": "Isolated build, parse, DOM mount and meaningful local-state check passed; visual QA pending.",
+    "gaps": [
+      "原模板0.7.12快照，使用官方0.7.11组件/主题兼容构建，不假称同版本原站。",
+      "真实浏览器视觉、完整键盘/触控尚未验收。",
+      "官方固定示例与本地状态，不连接真实文件、账号、消息或业务后台。"
+    ]
+  },
+  {
+    "id": "elevenlabs:matrix",
+    "title": "点阵状态台",
+    "description": "原始 Matrix 帧图案与数字显示；仅本地可控动画。",
+    "source": "ElevenLabs UI",
+    "license": "MIT",
+    "repository": "https://github.com/elevenlabs/ui",
+    "revision": "3a28ebab197f8cfa599934f52db12ad1396e54f4",
+    "kind": "交互组件家族",
+    "preview": "batches/elevenlabs-01/matrix/index.html",
+    "code": "batches/elevenlabs-01/matrix/preview.tsx",
+    "needsLocalMedia": false,
+    "files": {
+      "runtime.js": {
+        "bytes": 224265,
+        "sha256": "f1eef402fb35f5bc11d9c3b181c9550ebd9f9021bff9d7a9ae6ca8c6c61a2402"
+      },
+      "runtime.css": {
+        "bytes": 54562,
+        "sha256": "3b1228fa7dcddc9c4dd19062b948a715cce0b2467bcfe93250f29925046d857a"
+      },
+      "index.html": {
+        "bytes": 288,
+        "sha256": "8f1d50f6c822aba0528b1445037049fd2c7788e18d8235a8706e2da746b8b548"
+      }
+    },
+    "gzipJSBytes": 70583,
+    "browserVisualQA": false,
+    "limitations": "Canvas或SVG效果未做浏览器视觉验收。",
+    "permissionRequirements": "原默认CSP，allow-scripts，不需media-src。",
+    "upstream": "https://github.com/elevenlabs/ui/tree/3a28ebab197f8cfa599934f52db12ad1396e54f4",
+    "batch": "elevenlabs-01",
+    "category": "展示与媒体",
+    "format": "本地媒体组件",
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "styleTags": [
+      "圆润",
+      "声音与可视化"
+    ],
+    "behavior": "原始 Matrix 帧图案与数字显示；仅本地可控动画。",
+    "buildStatus": "Build, parse and DOM state checks passed; HTMLMediaElement/Canvas were test doubles, not actual playback/visual verification.",
+    "gaps": [
+      "Canvas或SVG效果未做浏览器视觉验收。",
+      "真实浏览器音频解码、可听输出、Canvas像素及CSP加载未验收。",
+      "合成测试音不是语音；预置逐词文本不是对该声音的真实识别。",
+      "只用本地生成或用户选择的文件；不申请麦克风、不联网调用语音服务。",
+      "源码ZIP仅本地保存，未挂假下载。"
+    ]
+  },
+  {
+    "id": "elevenlabs:waveform",
+    "title": "波形定位台",
+    "description": "原始 AudioScrubber 交互；固定数学信号，无录音。",
+    "source": "ElevenLabs UI",
+    "license": "MIT",
+    "repository": "https://github.com/elevenlabs/ui",
+    "revision": "3a28ebab197f8cfa599934f52db12ad1396e54f4",
+    "kind": "交互组件家族",
+    "preview": "batches/elevenlabs-01/waveform/index.html",
+    "code": "batches/elevenlabs-01/waveform/preview.tsx",
+    "needsLocalMedia": false,
+    "files": {
+      "runtime.js": {
+        "bytes": 221869,
+        "sha256": "8e6cb8dd25097a6909524117668bd4be933d2f85f0e16ca50ae5f518cc0b1873"
+      },
+      "runtime.css": {
+        "bytes": 54562,
+        "sha256": "3b1228fa7dcddc9c4dd19062b948a715cce0b2467bcfe93250f29925046d857a"
+      },
+      "index.html": {
+        "bytes": 288,
+        "sha256": "8f1d50f6c822aba0528b1445037049fd2c7788e18d8235a8706e2da746b8b548"
+      }
+    },
+    "gzipJSBytes": 69814,
+    "browserVisualQA": false,
+    "limitations": "Canvas或SVG效果未做浏览器视觉验收。",
+    "permissionRequirements": "原默认CSP，allow-scripts，不需media-src。",
+    "upstream": "https://github.com/elevenlabs/ui/tree/3a28ebab197f8cfa599934f52db12ad1396e54f4",
+    "batch": "elevenlabs-01",
+    "category": "展示与媒体",
+    "format": "本地媒体组件",
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "styleTags": [
+      "圆润",
+      "声音与可视化"
+    ],
+    "behavior": "原始 AudioScrubber 交互；固定数学信号，无录音。",
+    "buildStatus": "Build, parse and DOM state checks passed; HTMLMediaElement/Canvas were test doubles, not actual playback/visual verification.",
+    "gaps": [
+      "Canvas或SVG效果未做浏览器视觉验收。",
+      "真实浏览器音频解码、可听输出、Canvas像素及CSP加载未验收。",
+      "合成测试音不是语音；预置逐词文本不是对该声音的真实识别。",
+      "只用本地生成或用户选择的文件；不申请麦克风、不联网调用语音服务。",
+      "源码ZIP仅本地保存，未挂假下载。"
+    ]
+  },
+  {
+    "id": "elevenlabs:audio-player",
+    "title": "声音素材播放器",
+    "description": "原始播放列表/进度/倍速；浏览器本地生成测试提示音，非语音。",
+    "source": "ElevenLabs UI",
+    "license": "MIT",
+    "repository": "https://github.com/elevenlabs/ui",
+    "revision": "3a28ebab197f8cfa599934f52db12ad1396e54f4",
+    "kind": "交互组件家族",
+    "preview": "batches/elevenlabs-01/audio-player/index.html",
+    "code": "batches/elevenlabs-01/audio-player/preview.tsx",
+    "needsLocalMedia": true,
+    "files": {
+      "runtime.js": {
+        "bytes": 320205,
+        "sha256": "7642352f55d2a4d4b840710abe21218f5f9b52382e0c92c7c8f8d8a040a62157"
+      },
+      "runtime.css": {
+        "bytes": 54562,
+        "sha256": "3b1228fa7dcddc9c4dd19062b948a715cce0b2467bcfe93250f29925046d857a"
+      },
+      "index.html": {
+        "bytes": 288,
+        "sha256": "8f1d50f6c822aba0528b1445037049fd2c7788e18d8235a8706e2da746b8b548"
+      }
+    },
+    "gzipJSBytes": 103026,
+    "browserVisualQA": false,
+    "limitations": "音频/Canvas API 使用状态测试替身；尚未实际浏览器音频输出、解码、CSP与画面验收。",
+    "permissionRequirements": "仅此项需 media-src blob:；保持 allow-scripts iframe，无麦克风/网络/远程媒体。",
+    "upstream": "https://github.com/elevenlabs/ui/tree/3a28ebab197f8cfa599934f52db12ad1396e54f4",
+    "batch": "elevenlabs-01",
+    "category": "展示与媒体",
+    "format": "本地媒体组件",
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "styleTags": [
+      "圆润",
+      "声音与可视化"
+    ],
+    "behavior": "原始播放列表/进度/倍速；浏览器本地生成测试提示音，非语音。",
+    "buildStatus": "Build, parse and DOM state checks passed; HTMLMediaElement/Canvas were test doubles, not actual playback/visual verification.",
+    "gaps": [
+      "音频/Canvas API 使用状态测试替身；尚未实际浏览器音频输出、解码、CSP与画面验收。",
+      "真实浏览器音频解码、可听输出、Canvas像素及CSP加载未验收。",
+      "合成测试音不是语音；预置逐词文本不是对该声音的真实识别。",
+      "只用本地生成或用户选择的文件；不申请麦克风、不联网调用语音服务。",
+      "源码ZIP仅本地保存，未挂假下载。"
+    ]
+  },
+  {
+    "id": "elevenlabs:transcript",
+    "title": "逐词时间轴阅读器",
+    "description": "预置文本与预置时间戳；播放合成提示音，绝非识别该声音。",
+    "source": "ElevenLabs UI",
+    "license": "MIT",
+    "repository": "https://github.com/elevenlabs/ui",
+    "revision": "3a28ebab197f8cfa599934f52db12ad1396e54f4",
+    "kind": "交互组件家族",
+    "preview": "batches/elevenlabs-01/transcript/index.html",
+    "code": "batches/elevenlabs-01/transcript/preview.tsx",
+    "needsLocalMedia": true,
+    "files": {
+      "runtime.js": {
+        "bytes": 240271,
+        "sha256": "6b6050622026db05a897896d03f2cbe9d35a46156492bad4e49025afcd99e19b"
+      },
+      "runtime.css": {
+        "bytes": 54562,
+        "sha256": "3b1228fa7dcddc9c4dd19062b948a715cce0b2467bcfe93250f29925046d857a"
+      },
+      "index.html": {
+        "bytes": 288,
+        "sha256": "8f1d50f6c822aba0528b1445037049fd2c7788e18d8235a8706e2da746b8b548"
+      }
+    },
+    "gzipJSBytes": 75811,
+    "browserVisualQA": false,
+    "limitations": "音频/Canvas API 使用状态测试替身；尚未实际浏览器音频输出、解码、CSP与画面验收。",
+    "permissionRequirements": "仅此项需 media-src blob:；保持 allow-scripts iframe，无麦克风/网络/远程媒体。",
+    "upstream": "https://github.com/elevenlabs/ui/tree/3a28ebab197f8cfa599934f52db12ad1396e54f4",
+    "batch": "elevenlabs-01",
+    "category": "Agent与对话",
+    "format": "本地媒体组件",
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "styleTags": [
+      "圆润",
+      "声音与可视化"
+    ],
+    "behavior": "预置文本与预置时间戳；播放合成提示音，绝非识别该声音。",
+    "buildStatus": "Build, parse and DOM state checks passed; HTMLMediaElement/Canvas were test doubles, not actual playback/visual verification.",
+    "gaps": [
+      "音频/Canvas API 使用状态测试替身；尚未实际浏览器音频输出、解码、CSP与画面验收。",
+      "真实浏览器音频解码、可听输出、Canvas像素及CSP加载未验收。",
+      "合成测试音不是语音；预置逐词文本不是对该声音的真实识别。",
+      "只用本地生成或用户选择的文件；不申请麦克风、不联网调用语音服务。",
+      "源码ZIP仅本地保存，未挂假下载。"
+    ]
   }
 ]
