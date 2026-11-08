@@ -1,0 +1,73 @@
+{
+  "repository": "https://github.com/educlopez/smoothui",
+  "revision": "c45420a8523ec60a92f7724a2418ab83edaa1425",
+  "originalPath": "packages/smoothui/components/job-listing-component/index.tsx",
+  "runtimePackages": [
+    {
+      "name": "clsx",
+      "version": "2.1.1",
+      "license": "MIT"
+    },
+    {
+      "name": "framer-motion",
+      "version": "12.43.0",
+      "license": "MIT"
+    },
+    {
+      "name": "motion",
+      "version": "12.23.24",
+      "license": "MIT"
+    },
+    {
+      "name": "motion-dom",
+      "version": "12.43.0",
+      "license": "MIT"
+    },
+    {
+      "name": "motion-utils",
+      "version": "12.39.0",
+      "license": "MIT"
+    },
+    {
+      "name": "react",
+      "version": "19.3.1",
+      "license": "MIT"
+    },
+    {
+      "name": "react-dom",
+      "version": "19.3.1",
+      "license": "MIT"
+    },
+    {
+      "name": "scheduler",
+      "version": "0.28.0",
+      "license": "MIT"
+    },
+    {
+      "name": "tailwind-merge",
+      "version": "3.3.1",
+      "license": "MIT"
+    },
+    {
+      "name": "usehooks-ts",
+      "version": "3.1.1",
+      "license": "MIT"
+    }
+  ],
+  "cssGenerator": {
+    "name": "tailwindcss",
+    "version": "4.3.0",
+    "license": "MIT"
+  },
+  "sourceHashes": {
+    "index.tsx": "efb72905b0bbedfeab5302b306fd831d35d9fc6dbba509b619740af9949a7398",
+    "LICENSE": "9877f4310c0549e5ce26affe52ba97c4e60325472bdcdd308a92fccd90f119cc"
+  },
+  "notes": [
+    "Official raw source matches archive ignoring trailing newline. Original shared layout and motion parameters retained.",
+    "Three embedded brand-logo exports omitted; local fictional jobs and authored letter marks are host fixtures.",
+    "Keyboard role/button, focus restoration and explicit close button added. Hidden clears component via unmount.",
+    "Unused lodash.debounce import removed from usehooks-ts barrel during build, selected hooks unchanged; no Function fallback bundled.",
+    "Pinned dependencies in package-lock; actual transitive motion versions listed individually, not assumed identical. Original framework CSS tokens reused; Tailwind compiled selected source."
+  ]
+}
