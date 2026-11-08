@@ -1,0 +1,8 @@
+# D3 Sankey · authored local workload flow study
+Original d3-sankey 0.12.3 engine, fixed source bb7233ea0004669878d922e55fe83084ef3cb555 at https://github.com/d3/d3-sankey, BSD-3-Clause Mike Bostock. Source layout/sankeyLinkHorizontal/update engine unchanged. Actual bundled d3-array/d3-shape/d3-path/internmap notices collected separately. No upstream scripts executed. No external images/fonts/data.
+
+This UI shell, pastel SVG gradients, fictional research/writing fixture, controls, drag/keyboard interaction, highlight and data table are authored for this atlas, NOT an upstream product screenshot/demo. Node placement and ribbon bandwidth/path geometry are calculated by the original Sankey algorithm. Six nodes/eight ribbons and all values count as ONE complete diagram tool, not independent material variants. Source preview.js/preview.css published here are the actual authored host.
+
+Range redistributes a fictional100 units between two agent stages; all totals conserve100. No actual model/agent/service/cost/duration telemetry. Drag/arrow keys use original engine.update for flow attachment geometry, but may allow nodes to overlap (no collision avoidance promised). Pagehide clears scene. No animation loop or background timers. All data is fixed local memory, no upload/import/storage/clipboard.
+
+Tests: six nodes/eight flows, changing range recalculates band width, focus dims unrelated flows, native key event and synthesized pointer updates change link paths, numeric totals100, reset, pagehide cleanup. JSDOM SVG geometry is stubbed for pointer coordinate conversion. Real layout/drag hit areas, touch, full screenreader and browser pixel QA remain UNVERIFIED. No eval/Function/network/Worker in tests. No source ZIP download supplied.
