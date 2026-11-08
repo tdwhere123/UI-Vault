@@ -1,0 +1,32 @@
+{
+  "results": [
+    {
+      "slug": "undo",
+      "passed": true,
+      "checks": [
+        "bundle parses",
+        "mount",
+        "eval/Function/network/Worker/dynamic script calls zero",
+        "start countdown",
+        "seconds advance",
+        "cancel returns initial",
+        "expiry exits and resets local demo; no real account deletion"
+      ]
+    },
+    {
+      "slug": "omni",
+      "passed": true,
+      "checks": [
+        "bundle parses",
+        "mount",
+        "eval/Function/network/Worker/dynamic script calls zero",
+        "native ArrowRight hue step",
+        "native ArrowDown shade step",
+        "nudge button changes value",
+        "settled HEX output updates",
+        "no external assets or links"
+      ]
+    }
+  ],
+  "browserVisualQA": "not-run; JSDOM geometry and ResizeObserver stubs; reduced motion enabled; no real drag/inertia or visual acceptance"
+}
