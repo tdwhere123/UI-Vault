@@ -8915,5 +8915,153 @@
       "Agent工作流"
     ],
     "format": "复合交互组件"
+  },
+  {
+    "id": "uiverse:book-material",
+    "title": "翻页书 · 阅读等待动效",
+    "source": "Uiverse Galaxy",
+    "license": "MIT",
+    "upstream": "https://github.com/uiverse-io/galaxy/blob/adbd2adde0a299a3956ea288fb444ec01891ca41/loaders/vinodjangid07_good-cow-5.html",
+    "revision": "adbd2adde0a299a3956ea288fb444ec01891ca41",
+    "batch": "uiverse-materials-01",
+    "preview": "batches/uiverse-materials-01/book.html",
+    "category": "视觉与动效",
+    "kind": "材质动效组件",
+    "format": "材质设计族",
+    "styleTags": [
+      "圆润",
+      "拟物",
+      "有机"
+    ],
+    "purposeTags": [
+      "等待反馈",
+      "视觉参考"
+    ],
+    "description": "vinodjangid07 原版纯CSS翻页，仅等待动效，不代表实际阅读处理进度。",
+    "behavior": "原版HTML/CSS保留；点击开始、暂停与复位，页面隐藏停止，离开释放。气泡是原生checkbox；其余是视觉动效。",
+    "buildStatus": "Original source hashes;CSS parse/keyframes and host state/lifecycle pass; animation pixels pending",
+    "gaps": [
+      "真实材质外观、CSS伪元素与动效像素没有浏览器验收。",
+      "不冒称任务引擎、实际进度或真实时间；水滴与气泡不拆成两个计数。",
+      "按官方MIT来源与作者分别署名；实际original-*.html已发布，无源码ZIP声明。"
+    ]
+  },
+  {
+    "id": "uiverse:water-material",
+    "title": "气泡与水滴 · 材质交互",
+    "source": "Uiverse Galaxy",
+    "license": "MIT",
+    "upstream": "https://github.com/uiverse-io/galaxy/blob/adbd2adde0a299a3956ea288fb444ec01891ca41/Toggle-switches/Nawsome_short-dolphin-98.html",
+    "revision": "adbd2adde0a299a3956ea288fb444ec01891ca41",
+    "batch": "uiverse-materials-01",
+    "preview": "batches/uiverse-materials-01/water.html",
+    "category": "视觉与动效",
+    "kind": "材质动效组件",
+    "format": "材质设计族",
+    "styleTags": [
+      "圆润",
+      "拟物",
+      "有机"
+    ],
+    "purposeTags": [
+      "等待反馈",
+      "视觉参考"
+    ],
+    "description": "Nawsome 气泡checkbox与vikas7754水滴变形合计一个材质族；有本地开关状态，不控制真实设置。",
+    "behavior": "原版HTML/CSS保留；点击开始、暂停与复位，页面隐藏停止，离开释放。气泡是原生checkbox；其余是视觉动效。",
+    "buildStatus": "Original source hashes;CSS parse/keyframes and host state/lifecycle pass; animation pixels pending",
+    "gaps": [
+      "真实材质外观、CSS伪元素与动效像素没有浏览器验收。",
+      "不冒称任务引擎、实际进度或真实时间；水滴与气泡不拆成两个计数。",
+      "按官方MIT来源与作者分别署名；实际original-*.html已发布，无源码ZIP声明。"
+    ]
+  },
+  {
+    "id": "uiverse:clock-material",
+    "title": "双针表盘 · 等待节奏",
+    "source": "Uiverse Galaxy",
+    "license": "MIT",
+    "upstream": "https://github.com/uiverse-io/galaxy/blob/adbd2adde0a299a3956ea288fb444ec01891ca41/loaders/aadium_wonderful-otter-43.html",
+    "revision": "adbd2adde0a299a3956ea288fb444ec01891ca41",
+    "batch": "uiverse-materials-01",
+    "preview": "batches/uiverse-materials-01/clock.html",
+    "category": "视觉与动效",
+    "kind": "材质动效组件",
+    "format": "材质设计族",
+    "styleTags": [
+      "圆润",
+      "拟物",
+      "有机"
+    ],
+    "purposeTags": [
+      "等待反馈",
+      "视觉参考"
+    ],
+    "description": "aadium 原版CSS双针旋转；是等待节奏参考，不是时钟或倒计时。",
+    "behavior": "原版HTML/CSS保留；点击开始、暂停与复位，页面隐藏停止，离开释放。气泡是原生checkbox；其余是视觉动效。",
+    "buildStatus": "Original source hashes;CSS parse/keyframes and host state/lifecycle pass; animation pixels pending",
+    "gaps": [
+      "真实材质外观、CSS伪元素与动效像素没有浏览器验收。",
+      "不冒称任务引擎、实际进度或真实时间；水滴与气泡不拆成两个计数。",
+      "按官方MIT来源与作者分别署名；实际original-*.html已发布，无源码ZIP声明。"
+    ]
+  },
+  {
+    "id": "verlet:translucent-cloth",
+    "title": "半透明布料 · 约束物理材质",
+    "source": "Verlet.js",
+    "license": "MIT",
+    "upstream": "https://github.com/subprotocol/verlet-js/tree/3293d409aafe3adfd56811849b9168cb84599c28/examples/cloth.html",
+    "revision": "3293d409aafe3adfd56811849b9168cb84599c28",
+    "batch": "verlet-01",
+    "preview": "batches/verlet-01/index.html",
+    "category": "视觉与动效",
+    "kind": "物理交互组件",
+    "format": "材质设计族",
+    "styleTags": [
+      "有机",
+      "半透明",
+      "空间感"
+    ],
+    "purposeTags": [
+      "视觉参考",
+      "物理交互"
+    ],
+    "description": "原Verlet约束物理引擎与布料示例，400粒子、随局部拉伸变化的半透明面片；拖动固定点或布面。",
+    "behavior": "实际物理数值随拖动与重力变化；可暂停、复位、键盘操作，页面隐藏停帧。纯材质参考，不冒充任务工具。",
+    "buildStatus": "Original physical engine;numeric/drag/drawing calls/pause/reset/lifecycle tests passed; pixels pending",
+    "gaps": [
+      "Canvas绘图用测试桩；真实像素、指针命中、触屏与性能未验收。",
+      "原始完整MIT及来源保留；源码ZIP未宣称线上提供。"
+    ]
+  },
+  {
+    "id": "jsondiffpatch:reversible-structure-review",
+    "title": "结构化变更审阅 · 可逆补丁",
+    "source": "jsondiffpatch",
+    "license": "MIT",
+    "upstream": "https://github.com/benjamine/jsondiffpatch/tree/ce76b39942891bbbeb60bf6a2ab3b7cbdb758923",
+    "revision": "ce76b39942891bbbeb60bf6a2ab3b7cbdb758923",
+    "batch": "jsondiffpatch-01",
+    "preview": "batches/jsondiffpatch-01/index.html",
+    "category": "数据与状态",
+    "kind": "复合交互组件",
+    "format": "结构化审阅工具",
+    "styleTags": [
+      "圆润"
+    ],
+    "purposeTags": [
+      "Agent工作流",
+      "变更审阅"
+    ],
+    "description": "原引擎比较JSON字段与数组身份/移动，生成真实delta、应用副本并反向还原；不是文本diff排版变体。",
+    "behavior": "本地两份JSON与可逆补丁，输入变化会废弃旧结果。原formatter取消内联脚本/移动箭头，保留移动索引标记。",
+    "buildStatus": "Original engine;16 delta/move/patch/reverse/injection/limits/cleanup tests passed; visual pending",
+    "gaps": [
+      "真实视觉与完整无障碍待验。",
+      "长字符串整体替换，不导入可选text-diff；无网络或后台操作。",
+      "原型键拒绝，HTML键值转义；只修改本地副本，不改用户文件。",
+      "源码ZIP仅本地；完整许可保留。"
+    ]
   }
 ]
