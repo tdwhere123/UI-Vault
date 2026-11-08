@@ -133,3 +133,53 @@ test('export admission refuses missing archive, corrupt bytes, unexpected files 
  for(const item of registry.items.filter(x=>x.status==='available'))await symlink(join(directory,'downloads',item.file),join(linked,'downloads',item.file));
  await assert.rejects(()=>sourceDownloadAssets(linked),/Non-file/);
 });
+
+
+// Expected UI identities are independently stated here, never imported from admission policy.
+const expectedHeldCanonicalIds=[
+ 'agent-elements:agent-chat','agent-elements:message-list','agent-elements:input-bar',
+ 'agent-elements:user-message','agent-elements:file-attachment','agent-elements:spiral-loader'
+];
+const expectedExcludedPaths=[
+ 'lib/agent-ui/components/agent-chat.tsx','lib/agent-ui/components/image-lightbox.tsx',
+ 'lib/agent-ui/components/input-bar.tsx','lib/agent-ui/components/input/file-attachment.tsx',
+ 'lib/agent-ui/components/message-list.tsx','lib/agent-ui/components/spiral-loader-data.ts',
+ 'lib/agent-ui/components/spiral-loader.tsx','lib/agent-ui/components/user-message.tsx','lib/agent-ui/index.ts'
+];
+test('admission preserves distinct held UI and excluded source sets without freezing display metadata',()=>{
+ assert.deepEqual(registry.items.filter(x=>x.status==='held').map(x=>x.canonicalId).sort(),[...expectedHeldCanonicalIds].sort());
+ assert.deepEqual([...registry.excludedSourcePaths].sort(),[...expectedExcludedPaths].sort());
+ const copy=structuredClone(registry);copy.items.reverse();copy.excludedSourcePaths.reverse();
+ copy.items.find(x=>x.canonicalId==='agent-elements:agent-chat').title='Agent chat source';
+ assert.doesNotThrow(()=>validateSourceDownloads(copy));
+});
+for(const canonicalId of expectedHeldCanonicalIds) {
+ test(`admission rejects replacing held ${canonicalId} with an excluded supporting file`,()=>{
+  const copy=structuredClone(registry),held=copy.items.find(x=>x.canonicalId===canonicalId);
+  Object.assign(held,{canonicalId:'agent-elements:image-lightbox',slug:'image-lightbox',title:'ImageLightbox',sourceUrl:'https://agent-elements.21st.dev/docs/image-lightbox'});
+  assert.deepEqual(copy.excludedSourcePaths,registry.excludedSourcePaths);
+  assert.deepEqual(copy.items.filter(x=>x.status==='available'),registry.items.filter(x=>x.status==='available'));
+  assert.equal(copy.items.length,26);
+  assert.throws(()=>validateSourceDownloads(copy),/held|identity/i);
+ });
+}
+test('admission rejects omission, alias, and available promotion of each fixed held canonical identity',()=>{
+ for(const canonicalId of expectedHeldCanonicalIds) {
+  const missing=structuredClone(registry);missing.items=missing.items.filter(x=>x.canonicalId!==canonicalId);
+  assert.throws(()=>validateSourceDownloads(missing));
+  const alias=structuredClone(registry),item=alias.items.find(x=>x.canonicalId===canonicalId);
+  const slug=item.slug+'-alias';Object.assign(item,{canonicalId:'agent-elements:'+slug,slug,sourceUrl:'https://agent-elements.21st.dev/docs/'+slug,title:'Alias'});
+  assert.throws(()=>validateSourceDownloads(alias),/held.*identity/i);
+  const promoted=structuredClone(registry),index=promoted.items.findIndex(x=>x.canonicalId===canonicalId),held=promoted.items[index];
+  promoted.items[index]={...sample,canonicalId:held.canonicalId,slug:held.slug,title:held.title,sourceUrl:held.sourceUrl,
+   entry:expectedExcludedPaths.find(p=>p.endsWith('/'+held.slug+'.tsx')),file:'source-agent-elements-'+held.slug+'.tar.gz'};
+  assert.throws(()=>validateSourceDownloads(promoted),/held.*identity/i);
+ }
+});
+test('admission rejects replacing each exact excluded source path while held UI identities stay fixed',()=>{
+ for(const path of expectedExcludedPaths) {
+  const copy=structuredClone(registry);copy.excludedSourcePaths=copy.excludedSourcePaths.map(p=>p===path?'lib/agent-ui/components/placeholder.tsx':p);
+  assert.deepEqual(copy.items.filter(x=>x.status==='held').map(x=>x.canonicalId).sort(),[...expectedHeldCanonicalIds].sort());
+  assert.throws(()=>validateSourceDownloads(copy));
+ }
+});
