@@ -1,0 +1,30 @@
+{
+  "pass": true,
+  "checks": [
+    "Original full UI loaded using local SVG; Load/Download/file inputs disabled; real Fabric draw pipeline called with mocked 2D context",
+    "Three original rotate +30 buttons reach 90; actual Undo/Redo restore 60/90",
+    "Original grayscale checkbox applies filter and Undo/Redo toggles original filter state",
+    "Original crop mode enters/cancels repeatedly without retaining active crop controls",
+    "Original Crop square/apply uses real upstream canvas.toDataURL -> Image load control flow; test pixels and resulting dimensions are mocked",
+    "Original Flip X creates history entry; original Undo/Redo round-trip available",
+    "Original Text tab + canvas mouse events create an actual text object, observed through upstream getObjectProperties; pixels not validated",
+    "Original unmodified Fabric applyTo2d numerical filters: [30,60,90,255] -> grayscale [60,60,60,255] -> invert [195,195,195,255]; not canvas pixel validation"
+  ],
+  "forbiddenCalls": [],
+  "imageRequestAttempts": [
+    "local-original-svg",
+    "runtime-canvas-result"
+  ],
+  "forbiddenImageRequests": [],
+  "drawCalls": 37,
+  "canvasRasterizationCalls": 1,
+  "remainingTimers": {
+    "timeout": 0,
+    "interval": 0,
+    "raf": 0
+  },
+  "remainingGlobalListenerTypes": [],
+  "errors": [],
+  "visualVerified": false,
+  "limitations": "Canvas2D/Image decode mocked; original Fabric/UI logic and DOM only. No actual pixels, real crop rendering, responsive layout or pointer geometry verified."
+}
