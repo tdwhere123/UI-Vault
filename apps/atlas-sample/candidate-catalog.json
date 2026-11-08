@@ -3295,22 +3295,37 @@
   },
   {
     "id": "blode:sticky-notes",
-    "title": "sticky-notes",
+    "title": "Blode · 手绘卷边便签",
     "source": "Matthew Blode Experiments",
     "license": "MIT (original code; third-party dependencies/assets separate)",
     "upstream": "https://github.com/mblode/experiments/tree/d4baef572c4e692dcfe5f3a1e424e641d6013b18/app/sticky-notes",
     "website": "",
-    "buildStatus": "not installed or built",
-    "batch": "batch-002",
-    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "buildStatus": "Original SVG drawing/state and async texture lifecycle tests passed; real GPU shader compilation/curl rendering NOT tested",
+    "batch": "blode-sticky-01",
+    "description": "原25张纸栈、压力感知手绘、五种纸色与原WebGL卷边shader；保持SVG→本地纹理路径，不用CSS伪效果替代。",
     "gaps": [
-      "No images/video/font binaries archived. Asset paths reference upstream files whose redistribution permissions need review or original replacements.",
-      "Next routing/basePath /experiments and aliases need integration; source dependencies statically traced, no build/install.",
-      "Moon requests device geolocation on mount and reverse-geocodes through Nominatim. Before any test replace with fixed sample coordinates and disable external lookup; no location permission was requested during collection.",
-      "WebGL moon/sticky-note/dither scenes need real GPU and interaction validation. Dither is a graphical arcade demo rather than a production UI widget.",
-      "Original package contains prepare hook and telemetry dependency; no lifecycle scripts or telemetry were executed. Use minimal adapted dependencies before installing.",
-      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
-    ]
+      "GPU/GLSL编译、纹理栅格与卷边像素完全未验；支持WebGL2的实际浏览器才能验收完整效果。",
+      "逻辑测试使用模拟Image解码/Canvas2D，不能视为真实GPU成功；无WebGL时不会伪装卷边。",
+      "修复Blob撤销、异步代次、取消/隐藏与卸载清理；原shader字节不变。",
+      "只计一个设计族，不把25张纸或5种色拆数；无持久化、上传、网络或CSP扩展。",
+      "完整MIT及16项依赖notices保留，源码ZIP仅本地。"
+    ],
+    "preview": "batches/blode-sticky-01/index.html",
+    "revision": "d4baef572c4e692dcfe5f3a1e424e641d6013b18",
+    "category": "视觉与动效",
+    "kind": "手绘纸张组件",
+    "format": "纸张绘画交互设计族",
+    "styleTags": [
+      "纸张手绘",
+      "拟物",
+      "空间感"
+    ],
+    "purposeTags": [
+      "手绘便签",
+      "材质参考"
+    ],
+    "behavior": "中心真实绘画、换色、边缘剥纸与原历史状态；停止/重开，临时仅内存。WebGL2不可用明确提示，绘画仍可用。",
+    "previewStatus": "visual-review-pending"
   },
   {
     "id": "codrops:imagetilesmenu",
@@ -9980,6 +9995,108 @@
       "写字",
       "编辑",
       "修改"
+    ]
+  },
+  {
+    "id": "react-awesome-query-builder:nested-document-conditions",
+    "title": "React Awesome Query Builder · 嵌套条件构造",
+    "source": "React Awesome Query Builder",
+    "category": "输入与选择",
+    "license": "MIT (upstream), runtime dependencies include MIT/BSD/Apache-2.0",
+    "revision": "446689d523d699dbf8f536dfcfcb076ea58725dc",
+    "upstream": "https://github.com/ukrbublik/react-awesome-query-builder/tree/446689d523d699dbf8f536dfcfcb076ea58725dc",
+    "sourceFile": "packages/ui/modules/components/QueryContainer.jsx; packages/ui/modules/components/Builder.jsx; packages/ui/modules/config/index.jsx; README.md basic example",
+    "preview": "batches/raqb-01/index.html",
+    "description": "原 Query/Builder/BasicConfig 完整条件构造UI：AND/OR/NOT、嵌套组、类型约束、移除与重置、只读JSON。仅本地规则，不执行查询。",
+    "previewStatus": "visual-review-pending",
+    "buildStatus": "Original UI state + field normalization + real mousedown listener registration and mid-drag pagehide cleanup tested",
+    "knownGaps": [
+      "原默认轻量皮肤较朴素，并非重绘的精致营销UI。",
+      "实际浏览器像素与拖拽几何重排尚未验收。",
+      "结构化规则不是数据库执行结果。"
+    ],
+    "gaps": [
+      "原默认轻量皮肤较朴素，并非重绘的精致营销UI。",
+      "实际浏览器像素与拖拽几何重排尚未验收。",
+      "结构化规则不是数据库执行结果。",
+      "原版默认皮肤与完整依赖许可保留，源码构建包仅本地。",
+      "DOM测试通过，未验真实拖拽重排、原生键盘或视觉。"
+    ],
+    "batch": "raqb-01",
+    "kind": "规则编辑组件",
+    "format": "嵌套条件设计族",
+    "styleTags": [
+      "嵌套层次",
+      "原生轻量"
+    ],
+    "purposeTags": [
+      "条件构造",
+      "执行前规则审阅"
+    ],
+    "behavior": "原AND/OR/NOT、嵌套组、类型切换、增删、锁定与重置；只导出JSON结构，不执行查询。"
+  },
+  {
+    "id": "codehike:official-scrollycoding",
+    "title": "Code Hike · 章节与代码滚动讲解",
+    "source": "Code Hike",
+    "repository": "https://github.com/code-hike/codehike",
+    "revision": "cd81d8af1c503b699cbf0458d504e4578bcb9c74",
+    "upstreamPath": "apps/web/demos/scrollycoding/page.tsx",
+    "license": "MIT",
+    "publicationReady": true,
+    "entry": "index.html",
+    "runtime": {
+      "js": "runtime.js",
+      "css": "runtime.css",
+      "format": "iife",
+      "detailOnly": true,
+      "allowLocalMedia": false
+    },
+    "needsLocalMedia": false,
+    "browserVisualQA": "not-run",
+    "counts": {
+      "independentFamily": 1
+    },
+    "size": {
+      "js": 227284,
+      "gzip": 69575,
+      "css": 1287
+    },
+    "capabilities": [
+      "原官方章节点击与滚动关联代码",
+      "原Selection/Scroller和Pre高亮渲染",
+      "右侧sticky代码与选中章边框",
+      "原token变形加reduced-motion及销毁清理"
+    ],
+    "limitations": [
+      "固定7章构建预处理，不是任意实时编辑器或代码执行器",
+      "原示例书籍主题，非用户项目",
+      "模拟Observer/动画几何不代表真实滚动视觉验收",
+      "仅实际运行依赖完整全文；build-only lighter无独立license文件缺口已记录，不打包该引擎"
+    ],
+    "upstream": "https://github.com/code-hike/codehike/blob/cd81d8af1c503b699cbf0458d504e4578bcb9c74/apps/web/demos/scrollycoding/page.tsx",
+    "preview": "batches/codehike-01/index.html",
+    "category": "展示与媒体",
+    "batch": "codehike-01",
+    "kind": "代码讲解组件",
+    "format": "章节联动代码设计族",
+    "styleTags": [
+      "双栏排版",
+      "滚动叙事"
+    ],
+    "purposeTags": [
+      "代码讲解",
+      "方案阅读"
+    ],
+    "description": "原Code Hike官方七章书籍示例：左侧章节点击或滚动联动右侧sticky高亮代码，保留原Selection/Scroller/Pre。",
+    "behavior": "章节点击、Enter/Space与滚动选择，原代码token转场；构建期预高亮，不执行代码或任意实时编辑。",
+    "buildStatus": "Original selection, chapter key/click/observer state and normal/reduced cleanup tests passed; visual/scroll geometry pending",
+    "gaps": [
+      "固定7章构建预处理，不是任意实时编辑器或代码执行器",
+      "原示例书籍主题，非用户项目",
+      "模拟Observer/动画几何不代表真实滚动视觉验收",
+      "仅实际运行依赖完整全文；build-only lighter无独立license文件缺口已记录，不打包该引擎",
+      "运行依赖完整MIT保留，源码ZIP仅本地；示例不是用户项目。"
     ]
   }
 ]
