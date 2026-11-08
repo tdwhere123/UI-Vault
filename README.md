@@ -2,7 +2,7 @@
 
 网站：<https://tdwhere123.github.io/UI-Vault/>
 
-当前主图鉴有 **512条可打开预览（241条原始素材＋271条后续接入预览）**。后续预览仍标注视觉待验；353条候选中的82条仅来源记录不计入主图鉴。原始241件包括215件精选界面、20件保留基础素材、6套完整图标系列。正在向1000+件优质素材扩充；图标按完整系列单列统计，不按单枚凑数。源码候选、不同配色与框架版本不充数。
+当前主图鉴有 **514条可打开预览（241条原始素材＋273条后续接入预览）**。后续预览仍标注视觉待验；356条候选中的83条仅来源记录不计入主图鉴。原始241件包括215件精选界面、20件保留基础素材、6套完整图标系列。正在向1000+件优质素材扩充；图标按完整系列单列统计，不按单枚凑数。源码候选、不同配色与框架版本不充数。
 
 ## 当前内容
 
@@ -259,3 +259,13 @@ The official React Spring demo retains its original styled layout, individual he
 Three normal/reduced/production branches exercise actual Spring controllers, lifetime interpolation, repeated additions/cancellation, expiry and interrupted cleanup. Measured heights are mocked; real layout, animation pixels and mobile presentation remain unverified. Initial reduced-motion preference is read; dynamic preference changes are not implemented. Static covers, detail-only loading, iframe sandbox and CSP remain unchanged.
 
 Three source-only records were also corrected without increasing counts: Cuicui dynamic-settings has an unfinished dimensions panel and no real apply operation; its advanced bottom-action default demo is placeholder tabs with the menu composition commented out; SmoothUI rich-popover is a citation card, not an image/video player, and overlaps existing source popovers. They are not labeled as completed previews.
+
+## Job details, one new icon series and source-only research · 514 previews
+
+The gallery now has **514 preview entries** (241 original + 273 added), with 356 candidate records and 83 source-only records excluded from the preview count. SmoothUI job-listing-component is restored in place; Ionicons adds exactly one series, not one entry per glyph. Per the user's latest direction, existing icon entries remain unchanged until the separate cover batch is complete. The current 11 icon entry points include two previously identified overlapping implementations (Phosphor duotone selection and Lucide animations); their consolidation is audited but deferred, not silently counted as new design families. No covers or screenshots are created or attached in this batch.
+
+- **SmoothUI job details** preserve the original list-to-detail shared layout, logo transition, fields, description, Escape/outside closing and Motion parameters. Three explicitly fictional roles and authored glyphs replace company branding; there is no real recruiting, submission or payment. Keyboard entry/close/focus restoration and hidden/exit teardown are added. Three state/lifecycle tests and independent production/early-exit checks passed with explicit geometry substitutes, not native animation or accessibility certification. Complete MIT notices cover ten runtime packages and Tailwind. An unused debounce import was removed while the original hooks used by this component remain unchanged; no eval permission is added.
+- **Ionicons 8.1.0** contains all 1,357 original published SVGs: 421 base shapes in filled/outline/sharp plus 94 brand marks. Local search, 24-item pagination, native variant switching and readonly SVG source are presented in an authored browsing shell. All original text and hashes are public, with complete Ionic MIT. The npm tarball integrity is the exact asset provenance; the official v8.1.0 tag reports package version 8.0.13 and has differently optimized SVG text, so it is not misrepresented as byte-identical source. Brand rights/endorsement are not granted by MIT. Tests compare all 1,357 rendered SVG trees/attributes and all 57 pages, plus state/cleanup; pixels remain unverified.
+- **Puck and miniPaint** are newly researched source-only candidates, not functioning previews. Fixed official source paths and complete root MIT were checked; iframe/CSP integration, runtime dependency licenses, remote assets and application capabilities remain unresolved. Selected source files are collected locally, not a promised complete hosted archive. They do not increase the 514 preview count.
+
+Static covers, lazy detail loading and the current opaque sandbox/CSP remain unchanged. Existing cover mappings and the deferred icon-consolidation work are untouched.
