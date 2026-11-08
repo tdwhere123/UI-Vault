@@ -1,0 +1,21 @@
+{
+  "pass": true,
+  "checks": [
+    "default paused beyond3s",
+    "two consecutive next clicks",
+    "all-step native button selection/focus",
+    "resume cycles and manual selection resets timer",
+    "pause/hidden page stops cycling",
+    "data URI original SVG only",
+    "mid-autoplay unmount/pagehide clears resources"
+  ],
+  "observed": 5,
+  "disconnected": 5,
+  "pendingTimeouts": 0,
+  "pendingIntervals": 0,
+  "pendingRAF": 0,
+  "blocked": [],
+  "errors": [],
+  "visualVerified": false,
+  "limitations": "JSDOM rectangle/ResizeObserver mocked; button focus/click tested, actual keyboard activation/browser geometry and animation pixels await visual review."
+}
