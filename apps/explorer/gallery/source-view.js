@@ -26,8 +26,8 @@ async function start() {
   if(bytes.length!==file.bytes||hash!==file.sha256)throw new Error('原文本字节不符');
  }
  document.getElementById('source-title').textContent=item.canonicalId;
- document.getElementById('source-state').textContent='未配预览 · partial · runtime/restore=not_tested · 仅展示文本，不运行组件；npm/素材未附带、未全审。响应SHA256 '+item.responseSha256;
- document.getElementById('source-requirements').textContent=payload.notice+'\n未打包/未验证依赖：\n'+payload.unbundledRequirements.join('\n')+'\n\nnpm/host：\n'+payload.externalRequirements.join('\n');
+ document.getElementById('source-state').textContent='依赖解析 '+payload.dependencyAnalysis.state+'（仅引用可静态识别，不代表闭包完整；类型与运行时均列入，动态未知不视为空） · 未配预览 · partial · runtime/restore=not_tested · 仅展示文本，不运行组件；npm/素材未附带、未全审。响应SHA256 '+item.responseSha256;
+ document.getElementById('source-requirements').textContent=payload.notice+'\n依赖解析：'+payload.dependencyAnalysis.state+'\n类型引用：'+payload.dependencyAnalysis.references.filter(x=>x.typeOnly).length+'\n显式未知：'+JSON.stringify(payload.dependencyAnalysis.unknown,null,2)+'\n未打包/未验证依赖：\n'+payload.unbundledRequirements.join('\n')+'\n\nnpm/host：\n'+payload.externalRequirements.join('\n');
  const download=document.getElementById('source-download');download.href='./'+item.file;download.download=item.file;download.textContent='下载 '+item.canonicalId+' 原源码包';
  renderSourceFiles(document.getElementById('source-files'),payload);
 }

@@ -1,6 +1,7 @@
 import {readFile,lstat,readdir} from 'node:fs/promises';
 import {join} from 'node:path';
 import {verifySourcePackage} from './source-package.mjs';
+import {analyzeSourceModules} from './source-dependencies.mjs';
 
 const keys=(value,allowed)=>value&&Object.keys(value).sort().join()===allowed.sort().join();
 const safeText=value=>typeof value==='string'&&!/(?:<|>|file:|\/workspace\/|\/home\/|\/cursor\/|private_candidate|material_baseline)/i.test(value);
@@ -54,12 +55,13 @@ function validateArcDownloads(registry) {
  if(!keys(license,['spdx','copyright','bytes','sha256'])||license.spdx!=='MIT'||license.copyright!=='Copyright (c) 2026 Elia Kuratli'||license.bytes!==1069||license.sha256!=='1b73a3fbab233cb995e6e9b6a63d302f91975c74c1629919c8e9820902820dde')throw new Error('Invalid Arc license');
  if(!Array.isArray(registry.items)||registry.items.length!==50)throw new Error('Invalid Arc family selection');
  const seen=new Set();
- const fields=['sourceId','canonicalId','slug','title','sourceUrl','status','runtime','restore','entry','file','bytes','sha256','sourceManifestSha256','closure','license','thirdParty','responseSha256','originalFiles','browseFile'];
+ const fields=['sourceId','canonicalId','slug','title','sourceUrl','status','runtime','restore','entry','file','bytes','sha256','sourceManifestSha256','closure','license','thirdParty','responseSha256','originalFiles','browseFile','declaredDependencies'];
  for(const item of registry.items) {
   if(!keys(item,fields)||!arcSlugs.has(item.slug)||item.sourceId!=='arcui'||item.canonicalId!==`arcui:${item.slug}`||seen.has(item.canonicalId))throw new Error('Invalid Arc canonical identity');
   seen.add(item.canonicalId);
   const slug=item.slug,base=`registry/components/${slug}/${slug}`;
   if(item.sourceUrl!==`https://uiarc.dev/${slug==='command-palette'?'blocks':'components'}/${slug}`||item.entry!==base+'.tsx'||item.file!==`source-arcui-${slug}.tar.gz`||item.browseFile!==`source-arcui-${slug}.json`)throw new Error('Arc source identity/path mismatch');
+  if(!Array.isArray(item.declaredDependencies)||!item.declaredDependencies.every(x=>safeText(x)&&x.length>0)||new Set(item.declaredDependencies).size!==item.declaredDependencies.length)throw new Error('Invalid response-declared dependencies');
   if(!safeText(item.title)||!item.title||item.status!=='available'||item.closure!=='partial'||item.runtime!=='not_tested'||item.restore!=='not_tested'||item.license!=='MIT'||item.thirdParty!=='not_audited_not_bundled')throw new Error('Invalid Arc source boundaries');
   if(!Number.isSafeInteger(item.bytes)||item.bytes<=0||item.bytes>1024*1024||![item.sha256,item.sourceManifestSha256,item.responseSha256].every(hex))throw new Error('Invalid Arc hash/bytes');
   const paths=new Set(['LICENSE',base+'.tsx',base+'.module.css',...(slug==='calendar'?['lib/use-today.ts']:[])]);
@@ -95,9 +97,10 @@ export async function sourceDownloadAssets(directory) {
   assets.set(item.file,bytes);
   if(item.sourceId==='arcui') {
    const meta=JSON.parse(files.get('SOURCE.json'));
+   const dependencyAnalysis=analyzeSourceModules(new Map(meta.files.map(row=>[row.path,files.get(row.path)])));
    const view={formatVersion:1,sourceId:item.sourceId,canonicalId:item.canonicalId,provenance:meta.provenance,
     closure:meta.closure,runtime:meta.runtime,restore:meta.restore,notice:files.get('README.md').toString('utf8'),moduleEdges:meta.moduleEdges,
-    unbundledRequirements:meta.unbundledRequirements,externalRequirements:meta.externalRequirements,
+    unbundledRequirements:meta.unbundledRequirements,externalRequirements:meta.externalRequirements,dependencyAnalysis,
     files:meta.files.map(row=>({...row,content:files.get(row.path).toString('utf8')}))};
    assets.set(item.browseFile,JSON.stringify(view,null,2).replace(/</g,'\\u003c').replace(/>/g,'\\u003e')+'\n');
   }

@@ -1,7 +1,7 @@
-import {gunzipSync} from 'node:zlib';
+import {gunzipSync,gzipSync} from 'node:zlib';
 import {createHash} from 'node:crypto';
-import {posix} from 'node:path';
 import {isDeepStrictEqual} from 'node:util';
+import {analyzeSourceModules,moduleEdgesFor,externalRequirementsFor,unbundledRequirementsFor,sameModuleEdges} from './source-dependencies.mjs';
 
 const sha = bytes => createHash('sha256').update(bytes).digest('hex');
 const safePath = name => typeof name==='string' && /^[a-zA-Z0-9_.-]+(?:\/[a-zA-Z0-9_.-]+)*$/.test(name) && !name.split('/').some(x=>x==='.'||x==='..');
@@ -112,29 +112,35 @@ function verifyArcPackage(bytes,item,registry) {
  if(!isDeepStrictEqual(meta.files,item.originalFiles))fail('Original source manifest mismatch');
  const expected=new Set(['SOURCE.json','README.md','SHA256SUMS',...item.originalFiles.map(x=>x.path)]);
  if(files.size!==expected.size||[...files.keys()].some(p=>!expected.has(p)))fail('Unexpected package file set');
- const actualEdges=[];
+ const originals=new Map();
  for(const row of item.originalFiles) {
   const data=files.get(row.path);
   if(!data||data.length!==row.bytes||sha(data)!==row.sha256)fail('Original source byte mismatch');
   const content=data.toString('utf8');
   if(/\/workspace\/|\/home\/|\/cursor\/|private_candidate|material_baseline|README-CANDIDATE|source-collection|download-candidates/i.test(content))fail('Private data in source');
-  if(/\.tsx?$/.test(row.path))for(const match of content.matchAll(/(?:from\s*|import\s*)['"]([^'"]+)['"]/g))actualEdges.push(row.path+'\0'+match[1]);
+  originals.set(row.path,data);
  }
  const license=files.get('LICENSE');
  if(!license||license.length!==1069||sha(license)!=='1b73a3fbab233cb995e6e9b6a63d302f91975c74c1629919c8e9820902820dde')fail('Original MIT license mismatch');
- if(!Array.isArray(meta.moduleEdges)||meta.moduleEdges.some(e=>typeof e.file!=='string'||typeof e.specifier!=='string'))fail('Invalid module edges');
- if(!isDeepStrictEqual(actualEdges.sort(),meta.moduleEdges.map(e=>e.file+'\0'+e.specifier).sort()))fail('Incomplete literal module edges');
- for(const edge of meta.moduleEdges) {
-  const relative=edge.specifier.startsWith('.');
-  if(!relative){if(edge.status!=='external_npm_or_host_alias_not_bundled')fail('Unreported external dependency');continue;}
-  const base=posix.normalize(posix.join(posix.dirname(edge.file),edge.specifier));
-  const candidates=[base,base+'.ts',base+'.tsx',base+'/index.ts',base+'/index.tsx'];
-  const resolved=candidates.find(p=>files.has(p));
-  if(edge.expectedPath!==base||resolved&&(edge.status!=='included'||edge.savedPath!==resolved)||!resolved&&!['unmaterialized','saved_other_item_not_in_this_response'].includes(edge.status))fail('Invalid partial dependency claim');
- }
- for(const key of ['externalRequirements','registryRequirements','unbundledRequirements'])if(!Array.isArray(meta[key])||!meta[key].every(x=>typeof x==='string'))fail('Invalid requirements');
+ const analysis=analyzeSourceModules(originals),expectedEdges=moduleEdgesFor(analysis,originals,meta.moduleEdges);
+ if(!sameModuleEdges(meta.moduleEdges,expectedEdges))fail('Incomplete/incorrect syntax module dependencies');
+ if(!isDeepStrictEqual(meta.externalRequirements,externalRequirementsFor(analysis,item.declaredDependencies)))fail('Incorrect external dependency requirements');
+ if(!isDeepStrictEqual(meta.unbundledRequirements,unbundledRequirementsFor(expectedEdges,['registry/foundation.css','registry/motion-tokens.ts','lib/motion-tokens.ts'])))fail('Incorrect unbundled dependency requirements');
+ if(!Array.isArray(meta.registryRequirements)||!meta.registryRequirements.every(x=>typeof x==='string'))fail('Invalid requirements');
  for(const key of ['SOURCE.json','README.md','SHA256SUMS'])if(/\/workspace\/|\/home\/|\/cursor\/|material_baseline|private_candidate|README-CANDIDATE|source-collection|download-candidates/i.test(files.get(key).toString()))fail('Private wrapper');
  const sums=[...files].filter(([p])=>p!=='SHA256SUMS').sort(([a],[b])=>a<b?-1:a>b?1:0).map(([p,b])=>`${sha(b)}  ${p}\n`).join('');
  if(files.get('SHA256SUMS').toString()!==sums)fail('Invalid package sums');
  return files;
+}
+
+export function writeSourceTar(files) {
+ const blocks=[];
+ for(const [name,data] of [...files].sort(([a],[b])=>a<b?-1:a>b?1:0)) {
+  if(!safePath(name)||Buffer.byteLength(name)>100||!Buffer.isBuffer(data)||data.length>1024*1024)fail('Unsafe tar input');
+  const h=Buffer.alloc(512);h.write(name);h.write('0000644\0',100);h.write('0000000\0',108);h.write('0000000\0',116);
+  h.write(data.length.toString(8).padStart(11,'0')+'\0',124);h.write('00000000000\0',136);h.fill(32,148,156);h[156]=48;h.write('ustar\0',257);h.write('00',263);
+  h.write(h.reduce((sum,b)=>sum+b,0).toString(8).padStart(6,'0')+'\0 ',148);
+  blocks.push(h,data,Buffer.alloc((512-data.length%512)%512));
+ }
+ blocks.push(Buffer.alloc(1024));return gzipSync(Buffer.concat(blocks));
 }

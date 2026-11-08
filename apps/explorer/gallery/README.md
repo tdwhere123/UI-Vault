@@ -15,3 +15,9 @@ Every family remains partial; runtime/restore=not_tested and preview=not_collect
 Novelty is only relative to the verifiable local baseline projection/archive, not a claim about all historical site publications. Existing catalog, restore state, six held Agent identities/nine excluded paths and nine excluded Unknown screenshots remain unchanged.
 
 48/50 selected response sets have missing literal relative modules (ScrollArea and ExpandableText are the exceptions, still not runnable-verified). Fixed metadata lists additional support files for code-block/color-picker/cookie-consent/tree-table; it is not an equal source closure or code ref. Only the saved response's exact files are packaged. icon-morph's directly embedded glyph geometry and external npm imports are distinct; full third-party glyph-origin/rights tracing is not established.
+
+## Dependency syntax authority
+
+`source-dependencies.mjs` uses the already pinned TypeScript parser, not a lexical import regex. The same parser and edge/requirement projection are used by package admission, `scripts/rebuild-source-dependencies.mjs`, and the derived text view. Static/type/side-effect imports, re-exports, import-equals, import types, and literal dynamic imports are recorded. Expression-based imports and calls named require whose runtime binding is not established have explicit unknown records; parse errors throw and cannot be admitted as empty dependencies. Type references and runtime references are conservatively listed together in SOURCE; the derived text view separately exposes syntax/typeOnly and analysis state. No UI name or JSX label is special-cased.
+
+`declaredDependencies` retains the saved response's npm declarations, bound to that response hash, separately from syntactic imports. A parser repair rebuilds SOURCE/README/SUMS and the envelope only when derived semantics differ; unrelated packages retain their exact bytes.
