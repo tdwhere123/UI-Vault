@@ -3616,5 +3616,653 @@
     "styleTags": [
       "工作台"
     ]
+  },
+  {
+    "id": "assistant-elements:elicitation-form",
+    "title": "工具追问表单",
+    "source": "assistant-ui Elements",
+    "kind": "对话富组件",
+    "category": "Agent与对话",
+    "styleTags": [
+      "圆角",
+      "纸感",
+      "对话内组件"
+    ],
+    "preview": "batches/assistant-elements-01/elicitation-form.html",
+    "license": "MIT",
+    "revision": "eb65bd4558b769550093003c95e5867ad0ec8eba",
+    "upstream": "https://github.com/assistant-ui/assistant-ui/blob/eb65bd4558b769550093003c95e5867ad0ec8eba/apps/docs/components/demo/elements/elicitation-form.tsx",
+    "componentSource": "https://github.com/assistant-ui/assistant-ui/blob/eb65bd4558b769550093003c95e5867ad0ec8eba/packages/ui/src/components/react/assistant-ui/elements/elicitation-form.tsx",
+    "website": "https://www.assistant-ui.com",
+    "description": "必填文本、选择和开关，提交/拒绝仅本地回执。",
+    "behavior": "必填文本、选择和开关，提交/拒绝仅本地回执。",
+    "buildStatus": "IIFE build and DOM mount passed; decline receipt",
+    "previewStatus": "visual-review-pending",
+    "knownGaps": [
+      "未做浏览器视觉、完整键盘/触控验收。",
+      "仅本地合成fixture，无模型、工具、麦克风或外部提交。"
+    ],
+    "adaptation": "Actual upstream Elements and demos; Base UI primitives retained; standalone host and local gallery artwork; local forget state added to memory demo.",
+    "batch": "assistant-elements-01",
+    "gaps": [
+      "未做浏览器视觉、完整键盘/触控验收。",
+      "仅本地合成fixture，无模型、工具、麦克风或外部提交。"
+    ],
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "format": "对话富组件"
+  },
+  {
+    "id": "assistant-elements:question-flow",
+    "title": "多步骤问答流",
+    "source": "assistant-ui Elements",
+    "kind": "对话富组件",
+    "category": "Agent与对话",
+    "styleTags": [
+      "圆角",
+      "纸感",
+      "对话内组件"
+    ],
+    "preview": "batches/assistant-elements-01/question-flow.html",
+    "license": "MIT",
+    "revision": "eb65bd4558b769550093003c95e5867ad0ec8eba",
+    "upstream": "https://github.com/assistant-ui/assistant-ui/blob/eb65bd4558b769550093003c95e5867ad0ec8eba/apps/docs/components/demo/elements/question-flow.tsx",
+    "componentSource": "https://github.com/assistant-ui/assistant-ui/blob/eb65bd4558b769550093003c95e5867ad0ec8eba/packages/ui/src/components/react/assistant-ui/elements/question-flow.tsx",
+    "website": "https://www.assistant-ui.com",
+    "description": "原版分步选择和完成回执。",
+    "behavior": "原版分步选择和完成回执。",
+    "buildStatus": "IIFE build and DOM mount passed; question advances",
+    "previewStatus": "visual-review-pending",
+    "knownGaps": [
+      "未做浏览器视觉、完整键盘/触控验收。",
+      "仅本地合成fixture，无模型、工具、麦克风或外部提交。"
+    ],
+    "adaptation": "Actual upstream Elements and demos; Base UI primitives retained; standalone host and local gallery artwork; local forget state added to memory demo.",
+    "batch": "assistant-elements-01",
+    "gaps": [
+      "未做浏览器视觉、完整键盘/触控验收。",
+      "仅本地合成fixture，无模型、工具、麦克风或外部提交。"
+    ],
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "format": "对话富组件"
+  },
+  {
+    "id": "assistant-elements:option-list",
+    "title": "对话选项确认",
+    "source": "assistant-ui Elements",
+    "kind": "对话富组件",
+    "category": "Agent与对话",
+    "styleTags": [
+      "圆角",
+      "纸感",
+      "对话内组件"
+    ],
+    "preview": "batches/assistant-elements-01/option-list.html",
+    "license": "MIT",
+    "revision": "eb65bd4558b769550093003c95e5867ad0ec8eba",
+    "upstream": "https://github.com/assistant-ui/assistant-ui/blob/eb65bd4558b769550093003c95e5867ad0ec8eba/apps/docs/components/demo/elements/option-list.tsx",
+    "componentSource": "https://github.com/assistant-ui/assistant-ui/blob/eb65bd4558b769550093003c95e5867ad0ec8eba/packages/ui/src/components/react/assistant-ui/elements/option-list.tsx",
+    "website": "https://www.assistant-ui.com",
+    "description": "单选处理方案及异步本地确认。",
+    "behavior": "单选处理方案及异步本地确认。",
+    "buildStatus": "IIFE build and DOM mount passed; selection receipt",
+    "previewStatus": "visual-review-pending",
+    "knownGaps": [
+      "未做浏览器视觉、完整键盘/触控验收。",
+      "仅本地合成fixture，无模型、工具、麦克风或外部提交。"
+    ],
+    "adaptation": "Actual upstream Elements and demos; Base UI primitives retained; standalone host and local gallery artwork; local forget state added to memory demo.",
+    "batch": "assistant-elements-01",
+    "gaps": [
+      "未做浏览器视觉、完整键盘/触控验收。",
+      "仅本地合成fixture，无模型、工具、麦克风或外部提交。"
+    ],
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "format": "对话富组件"
+  },
+  {
+    "id": "assistant-elements:reviewable-diff",
+    "title": "逐块代码差异审阅",
+    "source": "assistant-ui Elements",
+    "kind": "对话富组件",
+    "category": "Agent与对话",
+    "styleTags": [
+      "圆角",
+      "纸感",
+      "对话内组件"
+    ],
+    "preview": "batches/assistant-elements-01/reviewable-diff.html",
+    "license": "MIT",
+    "revision": "eb65bd4558b769550093003c95e5867ad0ec8eba",
+    "upstream": "https://github.com/assistant-ui/assistant-ui/blob/eb65bd4558b769550093003c95e5867ad0ec8eba/apps/docs/components/demo/elements/reviewable-diff.tsx",
+    "componentSource": "https://github.com/assistant-ui/assistant-ui/blob/eb65bd4558b769550093003c95e5867ad0ec8eba/packages/ui/src/components/react/assistant-ui/elements/reviewable-diff.tsx",
+    "website": "https://www.assistant-ui.com",
+    "description": "保留/丢弃代码块，全部决定后本地应用并重置。",
+    "behavior": "保留/丢弃代码块，全部决定后本地应用并重置。",
+    "buildStatus": "IIFE build and DOM mount passed; keep and apply reset",
+    "previewStatus": "visual-review-pending",
+    "knownGaps": [
+      "未做浏览器视觉、完整键盘/触控验收。",
+      "仅本地合成fixture，无模型、工具、麦克风或外部提交。"
+    ],
+    "adaptation": "Actual upstream Elements and demos; Base UI primitives retained; standalone host and local gallery artwork; local forget state added to memory demo.",
+    "batch": "assistant-elements-01",
+    "gaps": [
+      "未做浏览器视觉、完整键盘/触控验收。",
+      "仅本地合成fixture，无模型、工具、麦克风或外部提交。"
+    ],
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "format": "对话富组件"
+  },
+  {
+    "id": "assistant-elements:image-gallery",
+    "title": "图片画廊与灯箱",
+    "source": "assistant-ui Elements",
+    "kind": "对话富组件",
+    "category": "Agent与对话",
+    "styleTags": [
+      "圆角",
+      "纸感",
+      "对话内组件"
+    ],
+    "preview": "batches/assistant-elements-01/image-gallery.html",
+    "license": "MIT",
+    "revision": "eb65bd4558b769550093003c95e5867ad0ec8eba",
+    "upstream": "https://github.com/assistant-ui/assistant-ui/blob/eb65bd4558b769550093003c95e5867ad0ec8eba/apps/docs/components/demo/elements/image-gallery.tsx",
+    "componentSource": "https://github.com/assistant-ui/assistant-ui/blob/eb65bd4558b769550093003c95e5867ad0ec8eba/packages/ui/src/components/react/assistant-ui/elements/image-gallery.tsx",
+    "website": "https://www.assistant-ui.com",
+    "description": "原画廊组件和灯箱；图片为明确标注的原创几何SVG替代素材。",
+    "behavior": "原画廊组件和灯箱；图片为明确标注的原创几何SVG替代素材。",
+    "buildStatus": "IIFE build and DOM mount passed; gallery opens and next",
+    "previewStatus": "visual-review-pending",
+    "knownGaps": [
+      "未做浏览器视觉、完整键盘/触控验收。",
+      "仅本地合成fixture，无模型、工具、麦克风或外部提交。"
+    ],
+    "adaptation": "Actual upstream Elements and demos; Base UI primitives retained; standalone host and local gallery artwork; local forget state added to memory demo.",
+    "batch": "assistant-elements-01",
+    "gaps": [
+      "未做浏览器视觉、完整键盘/触控验收。",
+      "仅本地合成fixture，无模型、工具、麦克风或外部提交。"
+    ],
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "format": "对话富组件"
+  },
+  {
+    "id": "assistant-elements:artifact-card",
+    "title": "流式产物卡片",
+    "source": "assistant-ui Elements",
+    "kind": "对话富组件",
+    "category": "Agent与对话",
+    "styleTags": [
+      "圆角",
+      "纸感",
+      "对话内组件"
+    ],
+    "preview": "batches/assistant-elements-01/artifact-card.html",
+    "license": "MIT",
+    "revision": "eb65bd4558b769550093003c95e5867ad0ec8eba",
+    "upstream": "https://github.com/assistant-ui/assistant-ui/blob/eb65bd4558b769550093003c95e5867ad0ec8eba/apps/docs/components/demo/elements/artifact-card.tsx",
+    "componentSource": "https://github.com/assistant-ui/assistant-ui/blob/eb65bd4558b769550093003c95e5867ad0ec8eba/packages/ui/src/components/react/assistant-ui/elements/artifact-card.tsx",
+    "website": "https://www.assistant-ui.com",
+    "description": "原版脚本展示写入状态到产物元数据；不打开实际文档。",
+    "behavior": "原版脚本展示写入状态到产物元数据；不打开实际文档。",
+    "buildStatus": "IIFE build and DOM mount passed; mount",
+    "previewStatus": "visual-review-pending",
+    "knownGaps": [
+      "未做浏览器视觉、完整键盘/触控验收。",
+      "仅本地合成fixture，无模型、工具、麦克风或外部提交。"
+    ],
+    "adaptation": "Actual upstream Elements and demos; Base UI primitives retained; standalone host and local gallery artwork; local forget state added to memory demo.",
+    "batch": "assistant-elements-01",
+    "gaps": [
+      "未做浏览器视觉、完整键盘/触控验收。",
+      "仅本地合成fixture，无模型、工具、麦克风或外部提交。"
+    ],
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "format": "对话富组件"
+  },
+  {
+    "id": "assistant-elements:approval-card",
+    "title": "工具操作审批",
+    "source": "assistant-ui Elements",
+    "kind": "对话富组件",
+    "category": "Agent与对话",
+    "styleTags": [
+      "圆角",
+      "纸感",
+      "对话内组件"
+    ],
+    "preview": "batches/assistant-elements-01/approval-card.html",
+    "license": "MIT",
+    "revision": "eb65bd4558b769550093003c95e5867ad0ec8eba",
+    "upstream": "https://github.com/assistant-ui/assistant-ui/blob/eb65bd4558b769550093003c95e5867ad0ec8eba/apps/docs/components/demo/elements/approval-card.tsx",
+    "componentSource": "https://github.com/assistant-ui/assistant-ui/blob/eb65bd4558b769550093003c95e5867ad0ec8eba/packages/ui/src/components/react/assistant-ui/elements/approval-card.tsx",
+    "website": "https://www.assistant-ui.com",
+    "description": "允许/拒绝仅演示状态，绝不运行命令或保存授权。",
+    "behavior": "允许/拒绝仅演示状态，绝不运行命令或保存授权。",
+    "buildStatus": "IIFE build and DOM mount passed; deny receipt",
+    "previewStatus": "visual-review-pending",
+    "knownGaps": [
+      "未做浏览器视觉、完整键盘/触控验收。",
+      "仅本地合成fixture，无模型、工具、麦克风或外部提交。"
+    ],
+    "adaptation": "Actual upstream Elements and demos; Base UI primitives retained; standalone host and local gallery artwork; local forget state added to memory demo.",
+    "batch": "assistant-elements-01",
+    "gaps": [
+      "未做浏览器视觉、完整键盘/触控验收。",
+      "仅本地合成fixture，无模型、工具、麦克风或外部提交。"
+    ],
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "format": "对话富组件"
+  },
+  {
+    "id": "assistant-elements:comparison-card",
+    "title": "方案对比卡片",
+    "source": "assistant-ui Elements",
+    "kind": "对话富组件",
+    "category": "Agent与对话",
+    "styleTags": [
+      "圆角",
+      "纸感",
+      "对话内组件"
+    ],
+    "preview": "batches/assistant-elements-01/comparison-card.html",
+    "license": "MIT",
+    "revision": "eb65bd4558b769550093003c95e5867ad0ec8eba",
+    "upstream": "https://github.com/assistant-ui/assistant-ui/blob/eb65bd4558b769550093003c95e5867ad0ec8eba/apps/docs/components/demo/elements/comparison-card.tsx",
+    "componentSource": "https://github.com/assistant-ui/assistant-ui/blob/eb65bd4558b769550093003c95e5867ad0ec8eba/packages/ui/src/components/react/assistant-ui/elements/comparison-card.tsx",
+    "website": "https://www.assistant-ui.com",
+    "description": "原版静态方案对照富显示，不虚构交互。",
+    "behavior": "原版静态方案对照富显示，不虚构交互。",
+    "buildStatus": "IIFE build and DOM mount passed; mount",
+    "previewStatus": "visual-review-pending",
+    "knownGaps": [
+      "未做浏览器视觉、完整键盘/触控验收。",
+      "仅本地合成fixture，无模型、工具、麦克风或外部提交。"
+    ],
+    "adaptation": "Actual upstream Elements and demos; Base UI primitives retained; standalone host and local gallery artwork; local forget state added to memory demo.",
+    "batch": "assistant-elements-01",
+    "gaps": [
+      "未做浏览器视觉、完整键盘/触控验收。",
+      "仅本地合成fixture，无模型、工具、麦克风或外部提交。"
+    ],
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "format": "对话富组件"
+  },
+  {
+    "id": "assistant-elements:memory-chips",
+    "title": "可遗忘记忆标签",
+    "source": "assistant-ui Elements",
+    "kind": "对话富组件",
+    "category": "Agent与对话",
+    "styleTags": [
+      "圆角",
+      "纸感",
+      "对话内组件"
+    ],
+    "preview": "batches/assistant-elements-01/memory-chips.html",
+    "license": "MIT",
+    "revision": "eb65bd4558b769550093003c95e5867ad0ec8eba",
+    "upstream": "https://github.com/assistant-ui/assistant-ui/blob/eb65bd4558b769550093003c95e5867ad0ec8eba/apps/docs/components/demo/elements/memory-chips.tsx",
+    "componentSource": "https://github.com/assistant-ui/assistant-ui/blob/eb65bd4558b769550093003c95e5867ad0ec8eba/packages/ui/src/components/react/assistant-ui/elements/memory-chips.tsx",
+    "website": "https://www.assistant-ui.com",
+    "description": "原版动态记忆标签，添加本地遗忘状态。",
+    "behavior": "原版动态记忆标签，添加本地遗忘状态。",
+    "buildStatus": "IIFE build and DOM mount passed; local forget removes chip",
+    "previewStatus": "visual-review-pending",
+    "knownGaps": [
+      "未做浏览器视觉、完整键盘/触控验收。",
+      "仅本地合成fixture，无模型、工具、麦克风或外部提交。"
+    ],
+    "adaptation": "Actual upstream Elements and demos; Base UI primitives retained; standalone host and local gallery artwork; local forget state added to memory demo.",
+    "batch": "assistant-elements-01",
+    "gaps": [
+      "未做浏览器视觉、完整键盘/触控验收。",
+      "仅本地合成fixture，无模型、工具、麦克风或外部提交。"
+    ],
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "format": "对话富组件"
+  },
+  {
+    "id": "assistant-elements:agent-plan",
+    "title": "Agent执行计划",
+    "source": "assistant-ui Elements",
+    "kind": "对话富组件",
+    "category": "Agent与对话",
+    "styleTags": [
+      "圆角",
+      "纸感",
+      "对话内组件"
+    ],
+    "preview": "batches/assistant-elements-01/agent-plan.html",
+    "license": "MIT",
+    "revision": "eb65bd4558b769550093003c95e5867ad0ec8eba",
+    "upstream": "https://github.com/assistant-ui/assistant-ui/blob/eb65bd4558b769550093003c95e5867ad0ec8eba/apps/docs/components/demo/elements/agent-plan.tsx",
+    "componentSource": "https://github.com/assistant-ui/assistant-ui/blob/eb65bd4558b769550093003c95e5867ad0ec8eba/packages/ui/src/components/react/assistant-ui/elements/agent-plan.tsx",
+    "website": "https://www.assistant-ui.com",
+    "description": "原版脚本驱动执行进度，不运行Agent。",
+    "behavior": "原版脚本驱动执行进度，不运行Agent。",
+    "buildStatus": "IIFE build and DOM mount passed; mount",
+    "previewStatus": "visual-review-pending",
+    "knownGaps": [
+      "未做浏览器视觉、完整键盘/触控验收。",
+      "仅本地合成fixture，无模型、工具、麦克风或外部提交。"
+    ],
+    "adaptation": "Actual upstream Elements and demos; Base UI primitives retained; standalone host and local gallery artwork; local forget state added to memory demo.",
+    "batch": "assistant-elements-01",
+    "gaps": [
+      "未做浏览器视觉、完整键盘/触控验收。",
+      "仅本地合成fixture，无模型、工具、麦克风或外部提交。"
+    ],
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "format": "对话富组件"
+  },
+  {
+    "id": "assistant-elements:todo-list",
+    "title": "动态待办清单",
+    "source": "assistant-ui Elements",
+    "kind": "对话富组件",
+    "category": "Agent与对话",
+    "styleTags": [
+      "圆角",
+      "纸感",
+      "对话内组件"
+    ],
+    "preview": "batches/assistant-elements-01/todo-list.html",
+    "license": "MIT",
+    "revision": "eb65bd4558b769550093003c95e5867ad0ec8eba",
+    "upstream": "https://github.com/assistant-ui/assistant-ui/blob/eb65bd4558b769550093003c95e5867ad0ec8eba/apps/docs/components/demo/elements/todo-list.tsx",
+    "componentSource": "https://github.com/assistant-ui/assistant-ui/blob/eb65bd4558b769550093003c95e5867ad0ec8eba/packages/ui/src/components/react/assistant-ui/elements/todo-list.tsx",
+    "website": "https://www.assistant-ui.com",
+    "description": "原版脚本驱动待办状态，不执行任务。",
+    "behavior": "原版脚本驱动待办状态，不执行任务。",
+    "buildStatus": "IIFE build and DOM mount passed; mount",
+    "previewStatus": "visual-review-pending",
+    "knownGaps": [
+      "未做浏览器视觉、完整键盘/触控验收。",
+      "仅本地合成fixture，无模型、工具、麦克风或外部提交。"
+    ],
+    "adaptation": "Actual upstream Elements and demos; Base UI primitives retained; standalone host and local gallery artwork; local forget state added to memory demo.",
+    "batch": "assistant-elements-01",
+    "gaps": [
+      "未做浏览器视觉、完整键盘/触控验收。",
+      "仅本地合成fixture，无模型、工具、麦克风或外部提交。"
+    ],
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "format": "对话富组件"
+  },
+  {
+    "id": "assistant-elements:file-tree",
+    "title": "变更文件树",
+    "source": "assistant-ui Elements",
+    "kind": "对话富组件",
+    "category": "Agent与对话",
+    "styleTags": [
+      "圆角",
+      "纸感",
+      "对话内组件"
+    ],
+    "preview": "batches/assistant-elements-01/file-tree.html",
+    "license": "MIT",
+    "revision": "eb65bd4558b769550093003c95e5867ad0ec8eba",
+    "upstream": "https://github.com/assistant-ui/assistant-ui/blob/eb65bd4558b769550093003c95e5867ad0ec8eba/apps/docs/components/demo/elements/file-tree.tsx",
+    "componentSource": "https://github.com/assistant-ui/assistant-ui/blob/eb65bd4558b769550093003c95e5867ad0ec8eba/packages/ui/src/components/react/assistant-ui/elements/file-tree.tsx",
+    "website": "https://www.assistant-ui.com",
+    "description": "原版脚本驱动变更文件展示，不访问文件系统。",
+    "behavior": "原版脚本驱动变更文件展示，不访问文件系统。",
+    "buildStatus": "IIFE build and DOM mount passed; mount",
+    "previewStatus": "visual-review-pending",
+    "knownGaps": [
+      "未做浏览器视觉、完整键盘/触控验收。",
+      "仅本地合成fixture，无模型、工具、麦克风或外部提交。"
+    ],
+    "adaptation": "Actual upstream Elements and demos; Base UI primitives retained; standalone host and local gallery artwork; local forget state added to memory demo.",
+    "batch": "assistant-elements-01",
+    "gaps": [
+      "未做浏览器视觉、完整键盘/触控验收。",
+      "仅本地合成fixture，无模型、工具、麦克风或外部提交。"
+    ],
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "format": "对话富组件"
+  },
+  {
+    "id": "assistant-elements:checkpoint-history",
+    "title": "检查点恢复",
+    "source": "assistant-ui Elements",
+    "kind": "对话富组件",
+    "category": "Agent与对话",
+    "styleTags": [
+      "圆角",
+      "纸感",
+      "对话内组件"
+    ],
+    "preview": "batches/assistant-elements-01/checkpoint-history.html",
+    "license": "MIT",
+    "revision": "eb65bd4558b769550093003c95e5867ad0ec8eba",
+    "upstream": "https://github.com/assistant-ui/assistant-ui/blob/eb65bd4558b769550093003c95e5867ad0ec8eba/apps/docs/components/demo/elements/checkpoint-history.tsx",
+    "componentSource": "https://github.com/assistant-ui/assistant-ui/blob/eb65bd4558b769550093003c95e5867ad0ec8eba/packages/ui/src/components/react/assistant-ui/elements/checkpoint-history.tsx",
+    "website": "https://www.assistant-ui.com",
+    "description": "恢复仅切换本地检查点选中态。",
+    "behavior": "恢复仅切换本地检查点选中态。",
+    "buildStatus": "IIFE build and DOM mount passed; checkpoint restore selection",
+    "previewStatus": "visual-review-pending",
+    "knownGaps": [
+      "未做浏览器视觉、完整键盘/触控验收。",
+      "仅本地合成fixture，无模型、工具、麦克风或外部提交。"
+    ],
+    "adaptation": "Actual upstream Elements and demos; Base UI primitives retained; standalone host and local gallery artwork; local forget state added to memory demo.",
+    "batch": "assistant-elements-01",
+    "gaps": [
+      "未做浏览器视觉、完整键盘/触控验收。",
+      "仅本地合成fixture，无模型、工具、麦克风或外部提交。"
+    ],
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "format": "对话富组件"
+  },
+  {
+    "id": "assistant-elements:message-queue",
+    "title": "待发送消息队列",
+    "source": "assistant-ui Elements",
+    "kind": "对话富组件",
+    "category": "Agent与对话",
+    "styleTags": [
+      "圆角",
+      "纸感",
+      "对话内组件"
+    ],
+    "preview": "batches/assistant-elements-01/message-queue.html",
+    "license": "MIT",
+    "revision": "eb65bd4558b769550093003c95e5867ad0ec8eba",
+    "upstream": "https://github.com/assistant-ui/assistant-ui/blob/eb65bd4558b769550093003c95e5867ad0ec8eba/apps/docs/components/demo/elements/message-queue.tsx",
+    "componentSource": "https://github.com/assistant-ui/assistant-ui/blob/eb65bd4558b769550093003c95e5867ad0ec8eba/packages/ui/src/components/react/assistant-ui/elements/message-queue.tsx",
+    "website": "https://www.assistant-ui.com",
+    "description": "移除排队消息；最后一项移除后原例自动重置。",
+    "behavior": "移除排队消息；最后一项移除后原例自动重置。",
+    "buildStatus": "IIFE build and DOM mount passed; queue removes item",
+    "previewStatus": "visual-review-pending",
+    "knownGaps": [
+      "未做浏览器视觉、完整键盘/触控验收。",
+      "仅本地合成fixture，无模型、工具、麦克风或外部提交。"
+    ],
+    "adaptation": "Actual upstream Elements and demos; Base UI primitives retained; standalone host and local gallery artwork; local forget state added to memory demo.",
+    "batch": "assistant-elements-01",
+    "gaps": [
+      "未做浏览器视觉、完整键盘/触控验收。",
+      "仅本地合成fixture，无模型、工具、麦克风或外部提交。"
+    ],
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "format": "对话富组件"
+  },
+  {
+    "id": "assistant-elements:conversation-search",
+    "title": "会话内搜索定位",
+    "source": "assistant-ui Elements",
+    "kind": "对话富组件",
+    "category": "Agent与对话",
+    "styleTags": [
+      "圆角",
+      "纸感",
+      "对话内组件"
+    ],
+    "preview": "batches/assistant-elements-01/conversation-search.html",
+    "license": "MIT",
+    "revision": "eb65bd4558b769550093003c95e5867ad0ec8eba",
+    "upstream": "https://github.com/assistant-ui/assistant-ui/blob/eb65bd4558b769550093003c95e5867ad0ec8eba/apps/docs/components/demo/elements/conversation-search.tsx",
+    "componentSource": "https://github.com/assistant-ui/assistant-ui/blob/eb65bd4558b769550093003c95e5867ad0ec8eba/packages/ui/src/components/react/assistant-ui/elements/conversation-search.tsx",
+    "website": "https://www.assistant-ui.com",
+    "description": "原例固定搜索命中与上下条定位，不是真正全文检索。",
+    "behavior": "原例固定搜索命中与上下条定位，不是真正全文检索。",
+    "buildStatus": "IIFE build and DOM mount passed; next match",
+    "previewStatus": "visual-review-pending",
+    "knownGaps": [
+      "未做浏览器视觉、完整键盘/触控验收。",
+      "仅本地合成fixture，无模型、工具、麦克风或外部提交。"
+    ],
+    "adaptation": "Actual upstream Elements and demos; Base UI primitives retained; standalone host and local gallery artwork; local forget state added to memory demo.",
+    "batch": "assistant-elements-01",
+    "gaps": [
+      "未做浏览器视觉、完整键盘/触控验收。",
+      "仅本地合成fixture，无模型、工具、麦克风或外部提交。"
+    ],
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "format": "对话富组件"
+  },
+  {
+    "id": "assistant-elements:data-table",
+    "title": "可排序数据表",
+    "source": "assistant-ui Elements",
+    "kind": "对话富组件",
+    "category": "Agent与对话",
+    "styleTags": [
+      "圆角",
+      "纸感",
+      "对话内组件"
+    ],
+    "preview": "batches/assistant-elements-01/data-table.html",
+    "license": "MIT",
+    "revision": "eb65bd4558b769550093003c95e5867ad0ec8eba",
+    "upstream": "https://github.com/assistant-ui/assistant-ui/blob/eb65bd4558b769550093003c95e5867ad0ec8eba/apps/docs/components/demo/elements/data-table.tsx",
+    "componentSource": "https://github.com/assistant-ui/assistant-ui/blob/eb65bd4558b769550093003c95e5867ad0ec8eba/packages/ui/src/components/react/assistant-ui/elements/data-table.tsx",
+    "website": "https://www.assistant-ui.com",
+    "description": "列排序和趋势展示，模型与价格是原例静态示例，不保证现实准确。",
+    "behavior": "列排序和趋势展示，模型与价格是原例静态示例，不保证现实准确。",
+    "buildStatus": "IIFE build and DOM mount passed; sort changes row order",
+    "previewStatus": "visual-review-pending",
+    "knownGaps": [
+      "未做浏览器视觉、完整键盘/触控验收。",
+      "仅本地合成fixture，无模型、工具、麦克风或外部提交。"
+    ],
+    "adaptation": "Actual upstream Elements and demos; Base UI primitives retained; standalone host and local gallery artwork; local forget state added to memory demo.",
+    "batch": "assistant-elements-01",
+    "gaps": [
+      "未做浏览器视觉、完整键盘/触控验收。",
+      "仅本地合成fixture，无模型、工具、麦克风或外部提交。"
+    ],
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "format": "对话富组件"
+  },
+  {
+    "id": "assistant-elements:document-reference",
+    "title": "文档页码引用",
+    "source": "assistant-ui Elements",
+    "kind": "对话富组件",
+    "category": "Agent与对话",
+    "styleTags": [
+      "圆角",
+      "纸感",
+      "对话内组件"
+    ],
+    "preview": "batches/assistant-elements-01/document-reference.html",
+    "license": "MIT",
+    "revision": "eb65bd4558b769550093003c95e5867ad0ec8eba",
+    "upstream": "https://github.com/assistant-ui/assistant-ui/blob/eb65bd4558b769550093003c95e5867ad0ec8eba/apps/docs/components/demo/elements/document-reference.tsx",
+    "componentSource": "https://github.com/assistant-ui/assistant-ui/blob/eb65bd4558b769550093003c95e5867ad0ec8eba/packages/ui/src/components/react/assistant-ui/elements/document-reference.tsx",
+    "website": "https://www.assistant-ui.com",
+    "description": "本地页码引用选择，无实际PDF读取。",
+    "behavior": "本地页码引用选择，无实际PDF读取。",
+    "buildStatus": "IIFE build and DOM mount passed; citation selection",
+    "previewStatus": "visual-review-pending",
+    "knownGaps": [
+      "未做浏览器视觉、完整键盘/触控验收。",
+      "仅本地合成fixture，无模型、工具、麦克风或外部提交。"
+    ],
+    "adaptation": "Actual upstream Elements and demos; Base UI primitives retained; standalone host and local gallery artwork; local forget state added to memory demo.",
+    "batch": "assistant-elements-01",
+    "gaps": [
+      "未做浏览器视觉、完整键盘/触控验收。",
+      "仅本地合成fixture，无模型、工具、麦克风或外部提交。"
+    ],
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "format": "对话富组件"
+  },
+  {
+    "id": "assistant-elements:edit-message",
+    "title": "消息编辑与取消",
+    "source": "assistant-ui Elements",
+    "kind": "对话富组件",
+    "category": "Agent与对话",
+    "styleTags": [
+      "圆角",
+      "纸感",
+      "对话内组件"
+    ],
+    "preview": "batches/assistant-elements-01/edit-message.html",
+    "license": "MIT",
+    "revision": "eb65bd4558b769550093003c95e5867ad0ec8eba",
+    "upstream": "https://github.com/assistant-ui/assistant-ui/blob/eb65bd4558b769550093003c95e5867ad0ec8eba/apps/docs/components/demo/elements/edit-message.tsx",
+    "componentSource": "https://github.com/assistant-ui/assistant-ui/blob/eb65bd4558b769550093003c95e5867ad0ec8eba/packages/ui/src/components/react/assistant-ui/elements/edit-message.tsx",
+    "website": "https://www.assistant-ui.com",
+    "description": "原版消息编辑保存/取消，本地状态，不发出消息。",
+    "behavior": "原版消息编辑保存/取消，本地状态，不发出消息。",
+    "buildStatus": "IIFE build and DOM mount passed; cancel exits editor",
+    "previewStatus": "visual-review-pending",
+    "knownGaps": [
+      "未做浏览器视觉、完整键盘/触控验收。",
+      "仅本地合成fixture，无模型、工具、麦克风或外部提交。"
+    ],
+    "adaptation": "Actual upstream Elements and demos; Base UI primitives retained; standalone host and local gallery artwork; local forget state added to memory demo.",
+    "batch": "assistant-elements-01",
+    "gaps": [
+      "未做浏览器视觉、完整键盘/触控验收。",
+      "仅本地合成fixture，无模型、工具、麦克风或外部提交。"
+    ],
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "format": "对话富组件"
   }
 ]
