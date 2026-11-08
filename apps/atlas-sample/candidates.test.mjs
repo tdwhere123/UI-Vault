@@ -18,3 +18,5 @@ test('every local preview has parseable self-contained runtime assets',async()=>
 });
 
 test('family search preserves supplied glyph names and multilingual labels',()=>{const x=adaptCandidate({id:'test:icons',title:'Icons',keywords:['robot','机器人']});assert(x.keywords.includes('robot'));assert(x.keywords.includes('机器人'));});
+
+test('local audio previews opt in only to blob media while all network stays blocked',()=>{const h='<head><link rel="stylesheet" href="runtime.css"></head><script src="runtime.js"></script>';const r={cssHref:'runtime.css',scriptSrc:'runtime.js'};const normal=composePreview(h,'body{}','',r),audio=composePreview(h,'body{}','',{...r,allowLocalMedia:true});assert(!normal.includes('media-src'));assert(audio.includes('media-src blob:;'));assert(audio.includes("connect-src 'none'"));assert(audio.includes("default-src 'none'"));assert(!audio.includes('media-src https:'));});
