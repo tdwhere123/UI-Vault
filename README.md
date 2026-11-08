@@ -2,7 +2,7 @@
 
 网站：<https://tdwhere123.github.io/UI-Vault/>
 
-当前主图鉴有 **503条可打开预览（241条原始素材＋262条后续接入预览）**。后续预览仍标注视觉待验；349条候选中的87条仅来源记录不计入主图鉴。原始241件包括215件精选界面、20件保留基础素材、6套完整图标系列。正在向1000+件优质素材扩充；图标按完整系列单列统计，不按单枚凑数。源码候选、不同配色与框架版本不充数。
+当前主图鉴有 **505条可打开预览（241条原始素材＋264条后续接入预览）**。后续预览仍标注视觉待验；350条候选中的86条仅来源记录不计入主图鉴。原始241件包括215件精选界面、20件保留基础素材、6套完整图标系列。正在向1000+件优质素材扩充；图标按完整系列单列统计，不按单枚凑数。源码候选、不同配色与框架版本不充数。
 
 ## 当前内容
 
@@ -184,3 +184,13 @@ Added host controls pause the effect on pointer cancellation/leaving, blur or hi
 Normal, reduced, narrow and exact-production tests passed. A separate audit verified root MIT plus all eleven runtime-package licenses and zero forbidden eval/Function/storage/network calls. Animation, measurement observers, media-query listeners, timers and host listeners clean up; persistent React/JSDOM baseline listeners are not misreported as zero. Actual SVG pixel compositing and native touch remain unverified. The fixed source has been compared with the archived original; extra archive trailing newlines are disclosed, not claimed byte-identical. Source/test archives remain local only. Static list covers, detail-only loading, sandbox and CSP are unchanged.
 
 Screening does not count as collection: Spin Wheel was not added because its design benefit and two third-party source-license attributions remain insufficiently established. The original speedscope adaptation remains in testing and is not counted or published in this batch.
+
+
+## Original flamegraph and restored spatial material · 505 previews
+
+The main gallery now has **505 preview entries** (241 original + 264 added previews). There are 350 candidate records and 86 source-only records excluded. This batch adds speedscope and restores the existing `motioncore:rubiks-cube` record, not a duplicate candidate. Icon counts remain unchanged.
+
+- **speedscope 1.25.0** preserves the original Time Order, Left Heavy and Sandwich views, model, GLSL/Canvas renderer, search, profiles and zoom. Two authored local Agent traces are explicitly synthetic, not measured performance. File/URL/paste import, export, external navigation, persistence, embedded fonts and demangling/WASM paths are removed. Original GL resource tracking and shader/initialization failure handling were repaired. Four state/production/unsupported/shader-failure branches passed; failed rendering shows an unavailable message, not a substitute graph. Seven actual package notices plus the GPU-port notice are included. Aphrodite's explicit MIT declaration/copyright is supplemented with standard MIT text because its package has no full license file; string-hash retains its CC0 declaration and full terms. This provenance gap is disclosed rather than inventing an upstream license file.
+- **Motion Core Rubiks Cube** restores the original rounded geometry, 27-piece/9-piece-layer transform and commit mechanics, Fresnel shader and OGL Orbit control. It is one decorative spatial material, not a solvable puzzle or real task progress. Only the selected Svelte scene/helper is built; no GSAP or MediaPipe. Complete MIT and OGL Unlicense notices are present. Independent review found that WebGL context loss did not throw and left an animation loop running. The corrected path now stops, releases resources, removes listeners and displays an honest error; repeated loss produces no further drawing. Eight branches and a separate context-loss injection passed.
+
+Original math, model and rendering commands are exercised, but Canvas/WebGL status and layout are test substitutes. Actual shaders, GPU output, pixels and native gestures remain unverified. Source/build/test archives remain local; no hosted ZIP claim. List covers, detail-only loading, sandbox and CSP remain unchanged. BPMN modeling is still under separate evaluation and is not counted or published here.
