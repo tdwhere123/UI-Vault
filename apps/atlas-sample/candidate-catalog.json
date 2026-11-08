@@ -1337,19 +1337,34 @@
   },
   {
     "id": "uilayout:liquid-glass-system",
-    "title": "可展开液态玻璃通知与信息面板",
+    "title": "UI Layouts · 液态玻璃通知层",
     "source": "UI Layouts",
     "license": "MIT",
     "upstream": "https://github.com/ui-layouts/uilayouts/blob/88d827d7ec342917ca06f6894e5add65fabbe5d8/apps/ui-layout/registry/components/liquid-glass/notification.tsx",
     "website": "",
-    "buildStatus": "not built; source archive only",
+    "buildStatus": "Build, parse and actual state/token checks passed; zero fetch/errors.",
     "batch": "batch-001",
     "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/uilayout-archive-02/source-archive.zip",
     "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/uilayout-archive-02/manifest.json",
-    "description": "None: upstream original source archived unchanged. Remote photos/video not downloaded and not implied licensed by repository MIT.",
+    "description": "点击展开/收起玻璃通知层；使用原创本地背景和图示，无商标或远程照片。",
     "gaps": [
-      "尚未完成本轮视觉与交互验收"
-    ]
+      "真实浏览器视觉、模糊材质及响应式未验收。",
+      "原远程图片/商标已替换原创本地素材，未声称原站像素复刻。",
+      "仅本地示例，无外部服务。"
+    ],
+    "preview": "batches/uilayout-direct-01/liquid-glass-system/index.html",
+    "revision": "88d827d7ec342917ca06f6894e5add65fabbe5d8",
+    "category": "展示与媒体",
+    "kind": "复合交互组件",
+    "format": "交互组件",
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "styleTags": [
+      "玻璃拟态",
+      "圆润"
+    ],
+    "behavior": "点击展开/收起玻璃通知层；使用原创本地背景和图示，无商标或远程照片。"
   },
   {
     "id": "uilayout:gallery-modal-slider",
@@ -1481,19 +1496,34 @@
   },
   {
     "id": "uilayout:tree-code-viewer",
-    "title": "目录树与代码查看器",
+    "title": "UI Layouts · 文件树与代码联动",
     "source": "UI Layouts",
     "license": "MIT",
     "upstream": "https://github.com/ui-layouts/uilayouts/blob/88d827d7ec342917ca06f6894e5add65fabbe5d8/apps/ui-layout/registry/components/code/tree-code-viewer.tsx",
     "website": "",
-    "buildStatus": "not built; source archive only",
+    "buildStatus": "Build, parse and actual state/token checks passed; zero fetch/errors.",
     "batch": "batch-001",
     "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/uilayout-archive-02/source-archive.zip",
     "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/uilayout-archive-02/manifest.json",
-    "description": "None: upstream original source archived unchanged. Remote photos/video not downloaded and not implied licensed by repository MIT.",
+    "description": "文件树选择联动真实Shiki高亮；目录收起展开，复制失败可选择文本。",
     "gaps": [
-      "尚未完成本轮视觉与交互验收"
-    ]
+      "真实浏览器视觉、模糊材质及响应式未验收。",
+      "Shiki静态8语言/3主题+JS regex，无WASM或动态下载。",
+      "仅本地示例，无外部服务。"
+    ],
+    "preview": "batches/uilayout-direct-01/tree-code-viewer/index.html",
+    "revision": "88d827d7ec342917ca06f6894e5add65fabbe5d8",
+    "category": "导航与组织",
+    "kind": "复合交互组件",
+    "format": "代码查看器",
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "styleTags": [
+      "圆角",
+      "代码工具"
+    ],
+    "behavior": "文件树选择联动真实Shiki高亮；目录收起展开，复制失败可选择文本。"
   },
   {
     "id": "uilayout:drag-drag-items",
@@ -8207,6 +8237,101 @@
       "仅当前页内存，无上传、持久化、AI或代码执行。",
       "JSONEditor仅树/文本/预览及JSON语法检查，不提供JSON Schema/Ace代码模式；官方npm10.4.3与源码快照分别记录，不伪称逐字节重建。",
       "源码ZIP仅本地保留，未挂在线下载。"
+    ]
+  },
+  {
+    "id": "uiw:markdown-workbench",
+    "title": "UIW · Markdown源码与预览编辑",
+    "source": "UIW Markdown Editor",
+    "license": "MIT",
+    "revision": "fcbdb0444a0e2ad77f37ea5d1d319c94a5181674",
+    "upstream": "https://github.com/uiwjs/react-md-editor/tree/fcbdb0444a0e2ad77f37ea5d1d319c94a5181674",
+    "preview": "batches/uiw-markdown-01/index.html",
+    "code": "batches/uiw-markdown-01/preview.tsx",
+    "batch": "uiw-markdown-01",
+    "category": "输入与选择",
+    "kind": "完整交互工作台",
+    "format": "文档编辑器",
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "styleTags": [
+      "圆角",
+      "编辑工具"
+    ],
+    "description": "原版UIW Markdown编辑器：工具栏格式化、源码/分栏/预览及重置；仅本地内存。",
+    "behavior": "实际粗体工具栏命令更新源码与渲染；显示模式切换、文档重置。HTML最终sanitize，图片与链接导航禁用。",
+    "buildStatus": "Build/parse and real textarea/toolbar/live-preview/reset/injection tests passed with eval/Function/Worker/fetch disabled; zero calls/errors.",
+    "gaps": [
+      "真实浏览器视觉、IME、完整键盘与触屏尚未验收。",
+      "本预览不渲染外部图片、不启用链接导航；HTML被安全过滤，不假称支持任意HTML/资源。",
+      "无上传、后台或持久化；源码ZIP仅本地保留。"
+    ]
+  },
+  {
+    "id": "reactgrid:task-workbench",
+    "title": "ReactGrid 可编辑任务数据工作台",
+    "source": "ReactGrid",
+    "license": "MIT",
+    "revision": "19a29a67eec3b8f9de55f76b90019ce35854d88b",
+    "upstream": "https://github.com/silevis/reactgrid/tree/19a29a67eec3b8f9de55f76b90019ce35854d88b",
+    "preview": "batches/exodus-tools-02/grid/index.html",
+    "code": "batches/exodus-tools-02/grid/preview.tsx",
+    "batch": "exodus-tools-02",
+    "category": "输入与选择",
+    "kind": "完整交互工作台",
+    "format": "可编辑数据表",
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "styleTags": [
+      "圆角",
+      "编辑工具"
+    ],
+    "description": "原生单元格编辑；范围选择；选区批量赋值；列宽调整；添加行；撤销重做；本地 JSON 数据输出",
+    "behavior": "原生单元格编辑；范围选择；选区批量赋值；列宽调整；添加行；撤销重做；本地 JSON 数据输出。仅本地内存，不连接外部服务。",
+    "buildStatus": "Build, parse and real original component editing/range/form/sanitization checks passed; eval/Function/XHR and dynamic-script injection monitored/blocked.",
+    "gaps": [
+      "不含公式引擎，合计为普通 JavaScript 加总",
+      "非多人协作或真实审批系统",
+      "真实浏览器视觉、拖放几何和IME未验收。",
+      "源码元数据：4.1.15 package metadata；运行版本：4.1.17 npm (gitHead equals pinned revision)",
+      "源码ZIP仅本地保留，未挂在线下载。"
+    ]
+  },
+  {
+    "id": "formbuilder:local-designer",
+    "title": "formBuilder 本地表单设计与填写",
+    "source": "formBuilder",
+    "license": "MIT",
+    "revision": "13ff8fb6fdd9bdcef59b0adcc245fc533c5e3328",
+    "upstream": "https://github.com/kevinchappell/formBuilder/tree/13ff8fb6fdd9bdcef59b0adcc245fc533c5e3328",
+    "preview": "batches/exodus-tools-02/form/index.html",
+    "code": "batches/exodus-tools-02/form/preview.ts",
+    "batch": "exodus-tools-02",
+    "category": "输入与选择",
+    "kind": "完整交互工作台",
+    "format": "表单设计器",
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "styleTags": [
+      "圆角",
+      "编辑工具"
+    ],
+    "description": "原生字段设计/属性编辑；原生拖放与排序；JSON schema 导入导出；实际可填写预览；必填校验；本地答案结果",
+    "behavior": "原生字段设计/属性编辑；原生拖放与排序；JSON schema 导入导出；实际可填写预览；必填校验；本地答案结果。仅本地内存，不连接外部服务。",
+    "buildStatus": "Build, parse and real original component editing/range/form/sanitization checks passed; eval/Function/XHR and dynamic-script injection monitored/blocked.",
+    "gaps": [
+      "无上传/提交/远程插件/富文本 HTML",
+      "属性尖括号转为全角可见字符；schema HTML 拒绝",
+      "无麦克风、云 API 或后端",
+      "原二进制图标字体替换文本符号；语言字典固定本地英文",
+      "真实浏览器视觉、拖放几何和IME未验收。",
+      "源码元数据：3.23.2；运行版本：3.23.2",
+      "源码ZIP仅本地保留，未挂在线下载。",
+      "mi18n实际发布包声明MIT且integrity与固定lock一致，原作者头保留；缺上游LICENSE全文，附显式标注的补充标准MIT条款，不伪称原件。",
+      "依赖及dist版本头差异详见ADAPTATION，不假称所有预捆绑依赖exact版本已证实。"
     ]
   }
 ]
