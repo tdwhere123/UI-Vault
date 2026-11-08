@@ -1417,21 +1417,64 @@
   },
   {
     "id": "leko:jodie-complete-site",
-    "title": "Jodie · 非对称图片网格与大幅图像项目页面",
+    "restoreExistingCandidate": true,
+    "title": "Jodie · 非对称设计图集与项目阅读",
     "source": "LekoArts",
-    "license": "MIT",
+    "repository": "https://github.com/LekoArts/gatsby-themes",
+    "revision": "0ee600732beb88a49135760df9ed6f4d419fde2e",
+    "version": "5.1.9 (standalone adapter)",
+    "license": "MIT AND BSD-3-Clause",
+    "publicationReady": true,
+    "directory": "jodie",
+    "entry": "jodie/index.html",
+    "runtime": {
+      "js": "runtime.js",
+      "css": "runtime.css",
+      "format": "iife",
+      "detailOnly": true,
+      "allowLocalMedia": false
+    },
+    "needsLocalMedia": false,
+    "browserVisualQA": "not-run",
+    "counts": {
+      "independentFamily": 1
+    },
+    "size": {
+      "js": 233850,
+      "gzip": 75578,
+      "css": 574
+    },
+    "limitations": [
+      "原视觉模板+本地路由/数据/img适配，不是完整Gatsby",
+      "原创SVG替代未核照片，不是作者摄影/AI输出",
+      "JSDOM滚动尺寸模拟，实际响应式/图像像素未验"
+    ],
     "upstream": "https://github.com/LekoArts/gatsby-themes/tree/0ee600732beb88a49135760df9ed6f4d419fde2e/themes/gatsby-theme-jodie",
-    "website": "",
-    "buildStatus": "not installed or built; source archive only",
-    "batch": "batch-001",
-    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/leko-pages-01/source-archive.zip",
-    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/leko-pages-01/manifest.json",
-    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "preview": "batches/jodie-01/index.html",
+    "batch": "jodie-01",
+    "category": "展示与媒体",
+    "kind": "完整非对称作品图集",
+    "format": "完整页面设计族",
+    "styleTags": [
+      "非对称网格",
+      "编辑式排版"
+    ],
+    "purposeTags": [
+      "作品图集",
+      "项目阅读"
+    ],
+    "description": "恢复原Jodie非对称索引、侧栏导航与完整项目阅读模板；七幅原创SVG替代未核摄影，本地内存路由，非完整Gatsby。",
+    "behavior": "原divisor/modifyGrid与响应式grid CSS保留；六项目索引、详情、About、返回滚动/卡片焦点，快速路由与退出清理，无外站或持久化。",
+    "buildStatus": "Five original-template and local-routing tests passed with mocked scroll/layout; actual image decoding, mobile pixels and native focus NOT verified",
     "gaps": [
-      "Gatsby/React/theme-ui compatibility must be tested",
-      "Example photos/icons/fonts are not included or assumed separately licensed",
-      "Original monorepo lock is not a standalone app lock"
-    ]
+      "原视觉模板+本地路由/数据/img适配，不是完整Gatsby",
+      "原创SVG替代未核照片，不是作者摄影/AI输出",
+      "JSDOM滚动尺寸模拟，实际响应式/图像像素未验",
+      "26个实际运行包完整MIT/BSD-3-Clause通知；图集、7幅图及路由只计一个完整页面族。",
+      "原GraphQL/SEO/Gatsby图片管线改本地数据与普通img；版权归属保留为文字，非作者摄影或认可。",
+      "源码构建与测试仅本地，不声明本轮源码ZIP已托管。"
+    ],
+    "originalSourceArchive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/leko-pages-01/source-archive.zip"
   },
   {
     "id": "uilayout:movable-thumbnail-gallery",
@@ -1456,13 +1499,15 @@
     "license": "MIT",
     "upstream": "https://github.com/ui-layouts/uilayouts/blob/88d827d7ec342917ca06f6894e5add65fabbe5d8/apps/ui-layout/registry/components/carousel/horizontal-progressive.tsx",
     "website": "",
-    "buildStatus": "not built; source archive only",
+    "buildStatus": "Fixed-commit source and root license inspected; NOT built or interaction-tested; not a gallery preview",
     "batch": "batch-001",
     "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/uilayout-archive-02/source-archive.zip",
     "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/uilayout-archive-02/manifest.json",
-    "description": "None: upstream original source archived unchanged. Remote photos/video not downloaded and not implied licensed by repository MIT.",
+    "description": "原四图5秒自动轮播、标题与进度按钮，不是独立叙事时间线。",
     "gaps": [
-      "尚未完成本轮视觉与交互验收"
+      "固定源码与根MIT已核，未构建；远程照片和依赖许可尚待核验。",
+      "原卸载有cancelAnimationFrame，但缺主动暂停/hidden/reduced-motion路径，需适配后测试。",
+      "与已有轮播及叙事阅读条目重合，本轮不优先恢复。"
     ]
   },
   {
@@ -1538,13 +1583,16 @@
     "license": "MIT",
     "upstream": "https://github.com/ui-layouts/uilayouts/blob/88d827d7ec342917ca06f6894e5add65fabbe5d8/apps/ui-layout/registry/components/modal/media-modal-default.tsx",
     "website": "",
-    "buildStatus": "not built; source archive only",
+    "buildStatus": "Fixed-commit source and root license inspected; NOT built or interaction-tested; not a gallery preview",
     "batch": "batch-001",
     "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/uilayout-archive-02/source-archive.zip",
     "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/uilayout-archive-02/manifest.json",
-    "description": "None: upstream original source archived unchanged. Remote photos/video not downloaded and not implied licensed by repository MIT.",
+    "description": "原图像/视频layoutId展开弹窗，非独立内容工作流。",
     "gaps": [
-      "尚未完成本轮视觉与交互验收"
+      "固定源码与根MIT已核，未构建；Unsplash照片与Pexels视频授权未核。",
+      "不可新增远程媒体权限或用空video假称可用；若只保留图片须明确缩减。",
+      "原打开状态卸载会遗留body滚动锁；焦点管理、dialog语义与重复实例须验证。",
+      "与已收图片灯箱和gallery-modal-slider重合，本轮不优先恢复。"
     ]
   },
   {
@@ -1570,13 +1618,15 @@
     "license": "MIT",
     "upstream": "https://github.com/ui-layouts/uilayouts/blob/88d827d7ec342917ca06f6894e5add65fabbe5d8/apps/ui-layout/registry/components/form/file-upload/chat-form.tsx",
     "website": "",
-    "buildStatus": "not built; source archive only",
+    "buildStatus": "Fixed-commit source and root license inspected; NOT built or interaction-tested; not a gallery preview",
     "batch": "batch-001",
     "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/uilayout-archive-02/source-archive.zip",
     "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/uilayout-archive-02/manifest.json",
-    "description": "None: upstream original source archived unchanged. Remote photos/video not downloaded and not implied licensed by repository MIT.",
+    "description": "原紧凑纸夹与最多4张本地图像预览、文本输入；原例无发送处理或上传服务。",
     "gaps": [
-      "尚未完成本轮视觉与交互验收"
+      "固定源码与根MIT已核，未构建；依赖及样式许可尚待完整核验。",
+      "原入口每次render创建BlobURL但未revoke；键盘capture拦截Tab等未处理键，需修正并测试。",
+      "本项没有远程照片缺口；需保留独立布局和键盘交互价值，避免与已收附件族重复。"
     ]
   },
   {
@@ -1586,13 +1636,15 @@
     "license": "MIT",
     "upstream": "https://github.com/ui-layouts/uilayouts/blob/88d827d7ec342917ca06f6894e5add65fabbe5d8/apps/ui-layout/registry/components/tabs/magnified-tabs.tsx",
     "website": "",
-    "buildStatus": "not built; source archive only",
+    "buildStatus": "Fixed-commit source and root license inspected; NOT built or interaction-tested; not a gallery preview",
     "batch": "batch-001",
     "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/uilayout-archive-02/source-archive.zip",
     "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/uilayout-archive-02/manifest.json",
-    "description": "None: upstream original source archived unchanged. Remote photos/video not downloaded and not implied licensed by repository MIT.",
+    "description": "原距离放大dock与对应预览联动切换；8项为同一设计族。",
     "gaps": [
-      "尚未完成本轮视觉与交互验收"
+      "固定源码与根MIT已核，未构建；图标/预览资产链与依赖许可尚未核齐。",
+      "数据含两项外站window.open；须移除外站跳转并披露，不能放宽现有沙箱。",
+      "原pageX与viewport坐标混用，需修正并验证键盘/移动端交互；与已收dock去重。"
     ]
   },
   {
@@ -1602,13 +1654,15 @@
     "license": "MIT",
     "upstream": "https://github.com/ui-layouts/uilayouts/blob/88d827d7ec342917ca06f6894e5add65fabbe5d8/apps/ui-layout/registry/components/tabs/tools-tab.tsx",
     "website": "",
-    "buildStatus": "not built; source archive only",
+    "buildStatus": "Fixed-commit source and root license inspected; NOT built or interaction-tested; not a gallery preview",
     "batch": "batch-001",
     "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/uilayout-archive-02/source-archive.zip",
     "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/uilayout-archive-02/manifest.json",
-    "description": "None: upstream original source archived unchanged. Remote photos/video not downloaded and not implied licensed by repository MIT.",
+    "description": "原四标签联动照片切换与多层滑块过渡，不是可操作的设计/协作/分享/发布工具。",
     "gaps": [
-      "尚未完成本轮视觉与交互验收"
+      "固定源码与根MIT已核，未构建；四幅远程照片授权及依赖尚未核齐。",
+      "原标签motion.div缺键盘激活及tab语义；需适配后验证。",
+      "与已有tabs族重合，本轮不优先恢复，不计入主图鉴。"
     ]
   },
   {
