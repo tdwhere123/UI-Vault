@@ -91,10 +91,10 @@ test('shared resolution distinguishes bundled files, missing paths, type depende
  assert.equal(edges[3].status,'unknown_dynamic_dependency');
  assert.deepEqual(externalRequirementsFor(analysis,['react']),['react']);
 });
-function reboundSource(text,edges=[]) {
+function reboundSource(text,edges=[],claims={}) {
  const copy=new Map(members),meta=structuredClone(metadata),bytes=Buffer.from(text),originals=item.originalFiles.map(x=>({...x}));
  const changed=originals.find(x=>x.path===item.entry);changed.bytes=bytes.length;changed.sha256=hash(bytes);
- copy.set(prefix+item.entry,bytes);meta.files=originals;meta.moduleEdges=edges;
+ copy.set(prefix+item.entry,bytes);meta.files=originals;meta.moduleEdges=edges;Object.assign(meta,claims);
  const source=Buffer.from(JSON.stringify(meta));copy.set(prefix+'SOURCE.json',source);
  copy.set(prefix+'SHA256SUMS',Buffer.from([...copy].filter(([p])=>!p.endsWith('/SHA256SUMS')).sort(([a],[b])=>a<b?-1:a>b?1:0).map(([p,b])=>hash(b)+'  '+p.slice(prefix.length)+'\n').join('')));
  const output=pack(copy);return {output,descriptor:{...item,originalFiles:originals,bytes:output.length,sha256:hash(output),sourceManifestSha256:hash(source)}};
@@ -110,4 +110,27 @@ test('host-specific module resolution operations are unknown rather than an empt
  const parsed=parseSourceDependencies('host.ts',`const a=import.meta.resolve('./module'); const b=import.meta.glob('./*.ts'); const c=require.resolve('./other');`);
  assert.equal(parsed.state,'unknown');assert.deepEqual(parsed.references,[]);assert.equal(parsed.unknown.length,3);
  assert(parsed.unknown.every(x=>x.syntax==='module-resolution-call'&&x.reason==='host_or_binding_resolution_not_established'));
+});
+
+// Expectations describe operations, not values imported from the production policy.
+test('equivalent bracket host resolution calls remain explicit unknown',()=>{
+ for(const source of ["import.meta['resolve']('./module');",'import.meta[`glob`]("./*.ts");',"(import.meta)['resolve']('./module');","require['resolve']('./module');",'(require)[`resolve`]("./module");']) {
+  const parsed=parseSourceDependencies('host.ts',source);assert.equal(parsed.state,'unknown',source);assert.equal(parsed.unknown.length,1,source);assert.deepEqual(parsed.references,[]);
+ }
+});
+test('computed members on known host objects retain uncertainty without classifying arbitrary objects',()=>{
+ for(const source of ['import.meta[member]("./module");','require[member]("./module");']) {
+  const parsed=parseSourceDependencies('host.ts',source);assert.equal(parsed.state,'unknown',source);assert.equal(parsed.unknown.length,1,source);assert.equal(parsed.unknown[0].specifier,null);
+ }
+});
+test('known unrelated host members and unrelated objects remain dependency-free',()=>{
+ for(const source of ['import.meta.url;', 'import.meta["url"];','import.meta.custom("text");','import.meta["custom"]("text");','require.cache("text");','require["cache"]("text");','require[0]("text");','import.meta[false]("text");','other.resolve("text");','other["resolve"]("text");','other[member]("text");']) {
+  assert.deepEqual(parseSourceDependencies('unrelated.ts',source),{state:'static',references:[],unknown:[]},source);
+ }
+});
+test('package admission cannot accept a bracket host operation as an empty dependency graph',()=>{
+ const fixture=reboundSource("const resolve=import.meta['resolve']('./module'); export const component=<div/>;",[],{
+  externalRequirements:['motion'],unbundledRequirements:['lib/motion-tokens.ts','registry/foundation.css','registry/motion-tokens.ts']
+ });
+ assert.throws(()=>verifySourcePackage(fixture.output,fixture.descriptor,registry),/syntax module dependencies/);
 });

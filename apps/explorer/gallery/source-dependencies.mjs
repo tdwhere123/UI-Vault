@@ -2,6 +2,27 @@ import ts from 'typescript';
 import {posix} from 'node:path';
 import {isDeepStrictEqual} from 'node:util';
 
+// Classify direct host member calls only; do not evaluate computed expressions or follow aliases.
+const hostModuleMembers=new Set(['resolve','glob','globEager']);
+const unparenthesized=node=>{while(ts.isParenthesizedExpression(node))node=node.expression;return node;};
+function hostMemberOperation(expression) {
+ const member=unparenthesized(expression);
+ if(!ts.isPropertyAccessExpression(member)&&!ts.isElementAccessExpression(member))return null;
+ const receiver=unparenthesized(member.expression);
+ const meta=ts.isMetaProperty(receiver)&&receiver.keywordToken===ts.SyntaxKind.ImportKeyword;
+ const requireObject=ts.isIdentifier(receiver)&&receiver.text==='require';
+ if(!meta&&!requireObject)return null;
+ let name;
+ if(ts.isPropertyAccessExpression(member))name=member.name.text;
+ else {
+  const key=member.argumentExpression&&unparenthesized(member.argumentExpression);
+  if(key&&(ts.isStringLiteralLike(key)||ts.isNumericLiteral(key)))name=key.text;
+  else if(key&&(ts.isBigIntLiteral(key)||[ts.SyntaxKind.TrueKeyword,ts.SyntaxKind.FalseKeyword,ts.SyntaxKind.NullKeyword].includes(key.kind)))return null;
+  else return 'computed_module_member_not_statically_established';
+ }
+ return (meta?hostModuleMembers.has(name):name==='resolve')?'host_or_binding_resolution_not_established':null;
+}
+
 /** Syntax, not text matching. Type references are retained alongside runtime references. */
 export function parseSourceDependencies(file,source) {
  if(typeof file!=='string'||typeof source!=='string')throw new TypeError('Source dependency input must be text');
@@ -36,10 +57,8 @@ export function parseSourceDependencies(file,source) {
    let expression=node.arguments[0];while(expression&&ts.isParenthesizedExpression(expression))expression=expression.expression;
    if(literal(expression))known(node,expression.text,'dynamic-import',false);
    else uncertain(node,'dynamic-import',expression?.getText(tree)??'','non_literal_module_expression');
-  } else if(ts.isCallExpression(node)&&ts.isPropertyAccessExpression(node.expression)&&(
-   ts.isMetaProperty(node.expression.expression)&&node.expression.expression.keywordToken===ts.SyntaxKind.ImportKeyword||
-   ts.isIdentifier(node.expression.expression)&&node.expression.expression.text==='require'&&node.expression.name.text==='resolve')) {
-   uncertain(node,'module-resolution-call',node.getText(tree),'host_or_binding_resolution_not_established');
+  } else if(ts.isCallExpression(node)&&hostMemberOperation(node.expression)) {
+   uncertain(node,'module-resolution-call',node.getText(tree),hostMemberOperation(node.expression));
   } else if(ts.isCallExpression(node)&&ts.isIdentifier(node.expression)&&node.expression.text==='require') {
    // A call named require may be locally bound. Unlike TS import=, its binding is not established by syntax.
    uncertain(node,'require-call',node.getText(tree),'runtime_binding_not_statically_established');
