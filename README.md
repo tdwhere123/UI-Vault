@@ -2,7 +2,7 @@
 
 网站：<https://tdwhere123.github.io/UI-Vault/>
 
-当前主图鉴有 **511条可打开预览（241条原始素材＋270条后续接入预览）**。后续预览仍标注视觉待验；353条候选中的83条仅来源记录不计入主图鉴。原始241件包括215件精选界面、20件保留基础素材、6套完整图标系列。正在向1000+件优质素材扩充；图标按完整系列单列统计，不按单枚凑数。源码候选、不同配色与框架版本不充数。
+当前主图鉴有 **512条可打开预览（241条原始素材＋271条后续接入预览）**。后续预览仍标注视觉待验；353条候选中的82条仅来源记录不计入主图鉴。原始241件包括215件精选界面、20件保留基础素材、6套完整图标系列。正在向1000+件优质素材扩充；图标按完整系列单列统计，不按单枚凑数。源码候选、不同配色与框架版本不充数。
 
 ## 当前内容
 
@@ -249,3 +249,13 @@ Jodie 5.1.9 retains its original asymmetric divisor/modifyGrid homepage, respons
 Normal, narrow, reduced-motion, failed-image and production tests cover navigation, rapid route changes, return scroll/card focus, invalid route rejection, error feedback and interrupted/repeated teardown. These use simulated layout/scroll and do not establish native image decoding, responsive pixels or physical focus behavior. Visual acceptance remains pending. Static covers, lazy details, iframe sandbox and CSP remain unchanged. No Gatsby backend, contact submission, file upload, network requests or hosted adapted-source ZIP is claimed.
 
 Five remaining UI Layouts source-only records also received fixed-source factual reviews, without increasing the gallery count: attachment input has no sender/upload service, tools tabs are image switches rather than a tool workspace, magnified tabs need asset/external-navigation review, the progressive carousel needs pause boundaries, and media-modal needs asset and scroll-lock review. Root MIT is not treated as permission for unrelated remote media.
+
+## Original notification lifecycle · 512 previews
+
+The main gallery now contains **512 preview entries** (241 original + 271 added previews), with 353 candidates and 82 source-only records excluded. Existing `spring:notification-hub` is restored in place as one design family, not one item per message or animation state. Icon counts are unchanged.
+
+The official React Spring demo retains its original styled layout, individual height-spring entry, gradient lifetime bar, fade-out and collapse sequence. The host adds only manually triggered local messages, a six-active-message cap (original leaving animations can briefly overlap with new entries), cancellation and background/exit cleanup. Lifetime is not task progress; no browser notification permission, backend event or network is involved. Reduced-motion mode is static and manually dismissed. Spring 9.7.5 and styled-components 6.1.19 are disclosed compatibility choices, not a reconstruction of the old environment. Complete licenses cover 18 runtime packages (MIT/0BSD), the separate tslib copyright notice and the Feather glyph origin.
+
+Three normal/reduced/production branches exercise actual Spring controllers, lifetime interpolation, repeated additions/cancellation, expiry and interrupted cleanup. Measured heights are mocked; real layout, animation pixels and mobile presentation remain unverified. Initial reduced-motion preference is read; dynamic preference changes are not implemented. Static covers, detail-only loading, iframe sandbox and CSP remain unchanged.
+
+Three source-only records were also corrected without increasing counts: Cuicui dynamic-settings has an unfinished dimensions panel and no real apply operation; its advanced bottom-action default demo is placeholder tabs with the menu composition commented out; SmoothUI rich-popover is a citation card, not an image/video player, and overlaps existing source popovers. They are not labeled as completed previews.
