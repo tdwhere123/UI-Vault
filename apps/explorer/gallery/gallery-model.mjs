@@ -10,9 +10,11 @@ export function galleryCounts(items) {
 // Caption belongs to its item, not to a second global selected-item state.
 export function referenceCaption(item) {return `${item.title} — ${item.description} ｜ ${item.sourceName} · 仅参考 · ${item.sourceUrl}`;}
 
+export function sourceItems(registry) {return registry.collections?registry.collections.flatMap(x=>x.items):registry.items;}
+
 // A title/slug match is insufficient: bind only exact source + canonical id + provenance URL.
 export function sourceForPreview(item,registry) {
- return registry.items.find(x=>x.canonicalId===item.id&&x.sourceId===item.id.split(':')[0]&&x.sourceUrl===item.sourceUrl);
+ return sourceItems(registry).find(x=>x.canonicalId===item.id&&x.sourceId===item.id.split(':')[0]&&x.sourceUrl===item.sourceUrl);
 }
 export function projectGalleryDownloads(items,registry) {
  return items.map(item=>{
@@ -21,7 +23,7 @@ export function projectGalleryDownloads(items,registry) {
  });
 }
 export function sourceDownloadRows(registry,items) {
- return registry.items.map(item=>({...item,previewStatus:items.some(x=>sourceForPreview(x,registry)===item)?'reference_only':'not_collected'}));
+ return sourceItems(registry).map(item=>({...item,previewStatus:items.some(x=>sourceForPreview(x,registry)===item)?'reference_only':'not_collected'}));
 }
 export function sourceDownloadCounts(registry,items) {
  const rows=sourceDownloadRows(registry,items);

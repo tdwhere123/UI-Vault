@@ -28,10 +28,10 @@ export async function galleryAssets(root){
   if(bytes.readUInt32BE(16)!==item.width||bytes.readUInt32BE(20)!==item.height)throw new Error('Image dimension mismatch');
   assets.set(item.image,bytes);
  }
- for(const [output,input] of [['index.html','index.html'],['app.js','app.js'],['style.css','style.css'],['gallery-model.js','gallery-model.mjs'],['gallery-neiki.js','vendor/neiki-gallery.js'],['gallery-neiki.css','vendor/neiki-gallery.css'],['gallery-LICENSE.txt','vendor/LICENSE'],['gallery-THIRD-PARTY.txt','THIRD-PARTY.txt']])assets.set(output,await readFile(join(directory,input)));
+ for(const [output,input] of [['index.html','index.html'],['app.js','app.js'],['style.css','style.css'],['gallery-model.js','gallery-model.mjs'],['gallery-neiki.js','vendor/neiki-gallery.js'],['gallery-neiki.css','vendor/neiki-gallery.css'],['gallery-LICENSE.txt','vendor/LICENSE'],['gallery-THIRD-PARTY.txt','THIRD-PARTY.txt'],['source-view.html','source-view.html'],['source-view.js','source-view.js']])assets.set(output,input==='source-view.js'?(await readFile(join(directory,input),'utf8')).replace('./gallery-model.mjs','./gallery-model.js'):await readFile(join(directory,input)));
  const html=assets.get('index.html').toString(),counts=sourceDownloadCounts(downloads.registry,items);
  for(const marker of ['<!-- source-download-list -->','<!-- source-download-summary -->'])if(html.split(marker).length!==2)throw new Error('Missing/duplicate source download slot');
- const summary=`<p>${counts.available} 个 Agent Elements 源码入口：${counts.withPreview} 个有同身份参考截图，其余 ${counts.withoutPreview} 个未配预览；不是新增 ${counts.available} 个可视 UI。${counts.held} 项挂起。下载不受图片筛选影响。</p>`;
+ const summary=`<p>${counts.available} 个多来源源码入口：${counts.withPreview} 个有同身份参考截图，其余 ${counts.withoutPreview} 个未配预览；截图与源码家族分账；Arc新增50主体均无预览。${counts.held} 项挂起。下载不受图片筛选影响。</p>`;
  assets.set('index.html',html.replace('<!-- source-download-list -->',downloadList(downloads.registry,items)).replace('<!-- source-download-summary -->',summary));
  assets.set('gallery-data.json',JSON.stringify(projectGalleryDownloads(items,downloads.registry),null,2)+'\n');
  for(const [name,bytes] of downloads.assets)assets.set(name,bytes);
@@ -46,6 +46,6 @@ function downloadList(registry,items) {
   const label=escape(item.title),identity=escape(item.canonicalId);
   if(item.status==='held')return `<li><strong>${label}</strong> · ${identity} · 许可依赖挂起，不提供下载</li>`;
   const preview=item.previewStatus==='reference_only'?'已配同身份参考截图（非固定 ref 运行）':'未配预览';
-  return `<li id="download-${escape(item.slug)}"><a href="./${escape(item.file)}" download="${escape(item.file)}">下载 ${label} 源码</a> · ${identity} · ${preview}<br><small>${item.bytes} bytes · SHA256 <code>${item.sha256}</code> · MIT · partial · 运行/恢复 not_tested</small></li>`;
+  return `<li id="download-${escape(item.sourceId)}-${escape(item.slug)}"><a href="./${escape(item.file)}" download="${escape(item.file)}">下载 ${label} 源码</a>${item.browseFile?` · <a href="./source-view.html?source=${escape(item.sourceId)}&amp;canonical=${encodeURIComponent(item.canonicalId)}">浏览原源码文本</a>`:''} · ${identity} · ${preview}<br><small>${item.bytes} bytes · SHA256 <code>${item.sha256}</code> · MIT · partial · 运行/恢复 not_tested</small></li>`;
  }).join('')+'</ul>';
 }

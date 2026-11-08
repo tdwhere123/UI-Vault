@@ -1,5 +1,7 @@
 import {gunzipSync} from 'node:zlib';
 import {createHash} from 'node:crypto';
+import {posix} from 'node:path';
+import {isDeepStrictEqual} from 'node:util';
 
 const sha = bytes => createHash('sha256').update(bytes).digest('hex');
 const safePath = name => typeof name==='string' && /^[a-zA-Z0-9_.-]+(?:\/[a-zA-Z0-9_.-]+)*$/.test(name) && !name.split('/').some(x=>x==='.'||x==='..');
@@ -39,6 +41,7 @@ export function readSourceTar(gzip) {
 
 /** Package hash is locked by the reviewed registry; the manifest binds source identity and raw bytes. */
 export function verifySourcePackage(bytes,item,registry) {
+ if(registry.sourceId==='arcui')return verifyArcPackage(bytes,item,registry);
  if(bytes.length!==item.bytes||sha(bytes)!==item.sha256)fail('Source archive byte mismatch');
  const members=readSourceTar(bytes),prefix=`agent-elements-${item.slug}/`,files=new Map();
  for(const [name,data] of members) {
@@ -85,6 +88,52 @@ export function verifySourcePackage(bytes,item,registry) {
  for(const key of ['SOURCE.json','README.md','SHA256SUMS']) {
   if(/\/workspace\/|\/home\/|\/cursor\/|material_baseline|private_candidate|README-CANDIDATE|source-collection|download-candidates/i.test(files.get(key).toString()))fail('Private wrapper');
  }
+ const sums=[...files].filter(([p])=>p!=='SHA256SUMS').sort(([a],[b])=>a<b?-1:a>b?1:0).map(([p,b])=>`${sha(b)}  ${p}\n`).join('');
+ if(files.get('SHA256SUMS').toString()!==sums)fail('Invalid package sums');
+ return files;
+}
+
+/** Registry-response snapshots are not Git snapshots. Preserve their original paths and bytes. */
+function verifyArcPackage(bytes,item,registry) {
+ if(bytes.length!==item.bytes||sha(bytes)!==item.sha256)fail('Source archive byte mismatch');
+ const files=new Map(),prefix=`arcui-${item.slug}/`;
+ for(const [name,data] of readSourceTar(bytes)) {
+  if(!name.startsWith(prefix))fail('Wrong package identity');
+  const path=name.slice(prefix.length);if(!safePath(path))fail('Unsafe source path');files.set(path,data);
+ }
+ const source=files.get('SOURCE.json');
+ if(!source||sha(source)!==item.sourceManifestSha256)fail('Source manifest mismatch');
+ const meta=JSON.parse(source);
+ const fields=['formatVersion','sourceId','canonicalId','upstreamRepository','provenance','entry','files','moduleEdges','externalRequirements','registryRequirements','unbundledRequirements','closure','runtime','restore','thirdParty'];
+ if(Object.keys(meta).sort().join()!==fields.sort().join()||meta.formatVersion!==2)fail('Unexpected source metadata');
+ for(const key of ['sourceId','canonicalId','entry','closure','runtime','restore','thirdParty'])if(meta[key]!==item[key])fail('Source identity/state mismatch');
+ const expectedProvenance={kind:'registry_response_sha256',url:`https://uiarc.dev/r/${item.slug}.json`,sha256:item.responseSha256};
+ if(meta.upstreamRepository!==registry.upstreamRepository||!isDeepStrictEqual(meta.provenance,expectedProvenance))fail('Registry response provenance mismatch');
+ if(!isDeepStrictEqual(meta.files,item.originalFiles))fail('Original source manifest mismatch');
+ const expected=new Set(['SOURCE.json','README.md','SHA256SUMS',...item.originalFiles.map(x=>x.path)]);
+ if(files.size!==expected.size||[...files.keys()].some(p=>!expected.has(p)))fail('Unexpected package file set');
+ const actualEdges=[];
+ for(const row of item.originalFiles) {
+  const data=files.get(row.path);
+  if(!data||data.length!==row.bytes||sha(data)!==row.sha256)fail('Original source byte mismatch');
+  const content=data.toString('utf8');
+  if(/\/workspace\/|\/home\/|\/cursor\/|private_candidate|material_baseline|README-CANDIDATE|source-collection|download-candidates/i.test(content))fail('Private data in source');
+  if(/\.tsx?$/.test(row.path))for(const match of content.matchAll(/(?:from\s*|import\s*)['"]([^'"]+)['"]/g))actualEdges.push(row.path+'\0'+match[1]);
+ }
+ const license=files.get('LICENSE');
+ if(!license||license.length!==1069||sha(license)!=='1b73a3fbab233cb995e6e9b6a63d302f91975c74c1629919c8e9820902820dde')fail('Original MIT license mismatch');
+ if(!Array.isArray(meta.moduleEdges)||meta.moduleEdges.some(e=>typeof e.file!=='string'||typeof e.specifier!=='string'))fail('Invalid module edges');
+ if(!isDeepStrictEqual(actualEdges.sort(),meta.moduleEdges.map(e=>e.file+'\0'+e.specifier).sort()))fail('Incomplete literal module edges');
+ for(const edge of meta.moduleEdges) {
+  const relative=edge.specifier.startsWith('.');
+  if(!relative){if(edge.status!=='external_npm_or_host_alias_not_bundled')fail('Unreported external dependency');continue;}
+  const base=posix.normalize(posix.join(posix.dirname(edge.file),edge.specifier));
+  const candidates=[base,base+'.ts',base+'.tsx',base+'/index.ts',base+'/index.tsx'];
+  const resolved=candidates.find(p=>files.has(p));
+  if(edge.expectedPath!==base||resolved&&(edge.status!=='included'||edge.savedPath!==resolved)||!resolved&&!['unmaterialized','saved_other_item_not_in_this_response'].includes(edge.status))fail('Invalid partial dependency claim');
+ }
+ for(const key of ['externalRequirements','registryRequirements','unbundledRequirements'])if(!Array.isArray(meta[key])||!meta[key].every(x=>typeof x==='string'))fail('Invalid requirements');
+ for(const key of ['SOURCE.json','README.md','SHA256SUMS'])if(/\/workspace\/|\/home\/|\/cursor\/|material_baseline|private_candidate|README-CANDIDATE|source-collection|download-candidates/i.test(files.get(key).toString()))fail('Private wrapper');
  const sums=[...files].filter(([p])=>p!=='SHA256SUMS').sort(([a],[b])=>a<b?-1:a>b?1:0).map(([p,b])=>`${sha(b)}  ${p}\n`).join('');
  if(files.get('SHA256SUMS').toString()!==sums)fail('Invalid package sums');
  return files;

@@ -10,7 +10,9 @@ test('static gallery supplies source downloads only for identical source and can
  assert.equal(items.find(x=>x.id==='agent-elements:attachment-button').downloadAvailable,true);
  assert.equal(items.filter(x=>x.downloadAvailable).length,2);
  assert.equal(items.filter(x=>x.id.startsWith('shadcn-')&&x.downloadAvailable).length,0);
- const downloads=JSON.parse(assets.get('source-downloads.json'));
+ const collections=JSON.parse(assets.get('source-downloads.json')).collections;
+ const downloads=collections.find(x=>x.sourceId==='agent-elements');
+ assert.equal(collections.find(x=>x.sourceId==='arcui').items.length,50);
  assert.equal(downloads.items.filter(x=>x.status==='available').length,20);
  assert.equal(downloads.items.filter(x=>x.status==='held').length,6);
 });
@@ -76,7 +78,7 @@ test('twenty source entries stay reachable without inflating seven previews or c
  const links=[...html.matchAll(/href="\.\/(source-agent-elements-[a-z-]+\.tar\.gz)" download=/g)].map(x=>x[1]);
  assert.equal(new Set(links).size,20);
  assert.deepEqual(links.sort(),registry.items.filter(x=>x.status==='available').map(x=>x.file).sort());
- assert.equal([...html.matchAll(/ · 未配预览</g)].length,18);
+ assert.equal([...html.matchAll(/ · 未配预览</g)].length,68);
  assert.equal([...html.matchAll(/ · 已配同身份参考截图/g)].length,2);
  for(const item of registry.items.filter(x=>x.status==='held'))assert(!html.includes(`download="source-agent-elements-${item.slug}.tar.gz"`));
 });
@@ -119,7 +121,7 @@ test('safe package reader rejects path escape, links, duplicate, missing, exclud
 
 test('export admission refuses missing archive, corrupt bytes, unexpected files and symbolic links',async()=>{
  const temp=await mkdtemp(join(tmpdir(),'vault-source-admission-'));
- await mkdir(join(temp,'downloads'));
+ await mkdir(join(temp,'downloads'));await seedArc(temp);
  await writeFile(join(temp,'source-downloads.json'),JSON.stringify(registry));
  for(const item of registry.items.filter(x=>x.status==='available'&&x.file!==sample.file))await copyFile(join(directory,'downloads',item.file),join(temp,'downloads',item.file));
  await assert.rejects(()=>sourceDownloadAssets(temp),/directory files/);
@@ -129,7 +131,7 @@ test('export admission refuses missing archive, corrupt bytes, unexpected files 
  await writeFile(join(temp,'downloads','unexpected.tar.gz'),'bad');
  await assert.rejects(()=>sourceDownloadAssets(temp),/directory files/);
  const linked=await mkdtemp(join(tmpdir(),'vault-source-link-'));
- await mkdir(join(linked,'downloads'));await writeFile(join(linked,'source-downloads.json'),JSON.stringify(registry));
+ await mkdir(join(linked,'downloads'));await seedArc(linked);await writeFile(join(linked,'source-downloads.json'),JSON.stringify(registry));
  for(const item of registry.items.filter(x=>x.status==='available'))await symlink(join(directory,'downloads',item.file),join(linked,'downloads',item.file));
  await assert.rejects(()=>sourceDownloadAssets(linked),/Non-file/);
 });
@@ -183,3 +185,9 @@ test('admission rejects replacing each exact excluded source path while held UI 
   assert.throws(()=>validateSourceDownloads(copy));
  }
 });
+
+async function seedArc(temp) {
+ const arc=JSON.parse(await readFile(join(directory,'arc-source-downloads.json')));
+ await copyFile(join(directory,'arc-source-downloads.json'),join(temp,'arc-source-downloads.json'));
+ for(const item of arc.items)await copyFile(join(directory,'downloads',item.file),join(temp,'downloads',item.file));
+}

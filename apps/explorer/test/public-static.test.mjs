@@ -92,7 +92,7 @@ test('root and subdirectory static HTTP expose only audited files, same core fil
     const deliveredData=JSON.parse(await readFile(join(out,'catalog.json'),'utf8'));
     assert.equal(delivered.searchPublicCatalog(deliveredData,{assetKind:'source'}).length,20);
     assert.equal(delivered.searchPublicCatalog(deliveredData,{assetKind:'reference'}).length,6);
-    for(const module of ['app.js','public-catalog.js','query-view.js','query-validator.js']) {
+    for(const module of ['app.js','public-catalog.js','query-view.js','query-validator.js','source-view.js','gallery-model.js']) {
       const code=await readFile(join(out,module),'utf8');
       assert(!code.includes('sourceMappingURL')); assert(!code.includes('require('));
       for(const match of code.matchAll(/from ['"]([^'"]+)['"]/g)) {
@@ -100,9 +100,9 @@ test('root and subdirectory static HTTP expose only audited files, same core fil
         assert((await readdir(out)).includes(match[1].slice(2)));
       }
     }
-    assert.equal(audit.files.length,43);
+    assert.equal(audit.files.length,145);
     const files=await readdir(out);
-    assert.deepEqual(files.sort(),["app.js", "catalog.json", "gallery-04-button.png", "gallery-06-badge.png", "gallery-10-tabs.png", "gallery-11-progress.png", "gallery-12-skeleton.png", "gallery-LICENSE.txt", "gallery-THIRD-PARTY.txt", "gallery-agent-01-attachment-button.png", "gallery-agent-02-send-button.png", "gallery-data.json", "gallery-model.js", "gallery-neiki.css", "gallery-neiki.js", "index.html", "manifest.json", "public-catalog.js", "query-validator.js", "query-view.js", "style.css", "version.json", "source-downloads.json", ...["attachment-button","bash-tool","edit-tool","error-message","generic-tool","markdown","mcp-tool","mode-selector","model-picker","plan-tool","question-prompt","question-tool","search-tool","send-button","subagent-tool","suggestions","text-shimmer","thinking-tool","todo-tool","tool-group"].map(id=>`source-agent-elements-${id}.tar.gz`)].sort());
+    assert.deepEqual(files.sort(),["app.js", "catalog.json", "gallery-04-button.png", "gallery-06-badge.png", "gallery-10-tabs.png", "gallery-11-progress.png", "gallery-12-skeleton.png", "gallery-LICENSE.txt", "gallery-THIRD-PARTY.txt", "gallery-agent-01-attachment-button.png", "gallery-agent-02-send-button.png", "gallery-data.json", "gallery-model.js", "gallery-neiki.css", "gallery-neiki.js", "index.html", "manifest.json", "public-catalog.js", "query-validator.js", "query-view.js", "style.css", "version.json", "source-downloads.json", "source-view.html", "source-view.js", ...`accordion tree-table calendar cookie-consent checkbox code-block combobox command-palette dialog drawer dropdown-menu empty-state expandable-card expandable-text input shortcut-recorder inline-edit json-viewer line-chart pagination image-compare radio-group rating reorderable-list resizable-panels scroll-area select signature-pad rich-text-editor sortable-data-table color-picker swipe-actions switch tag-input time-picker timeline toast tree-view bar-chart activity-heatmap donut-chart streamgraph ridgeline treemap waffle-chart slope-chart countdown icon-morph onboarding-checklist filter-toolbar`.split(' ').flatMap(slug=>[`source-arcui-${slug}.tar.gz`,`source-arcui-${slug}.json`]), ...["attachment-button","bash-tool","edit-tool","error-message","generic-tool","markdown","mcp-tool","mode-selector","model-picker","plan-tool","question-prompt","question-tool","search-tool","send-button","subagent-tool","suggestions","text-shimmer","thinking-tool","todo-tool","tool-group"].map(id=>`source-agent-elements-${id}.tar.gz`)].sort());
     const server=createServer(async(req,res)=>{
       try {
         const pathname=new URL(req.url,'http://localhost').pathname;
@@ -152,6 +152,15 @@ test('root and subdirectory static HTTP expose only audited files, same core fil
     row.bytes=Buffer.byteLength(content);row.sha256=createHash('sha256').update(content).digest('hex');
     await writeFile(join(altered,'manifest.json'),JSON.stringify(forged));
     await assert.rejects(()=>auditStatic(altered),/Unapproved bytes: catalog.json/);
+    const changedText=await mkdtemp(join(tmpdir(),'vault-source-text-altered-'));
+    await exportStatic({root,output:changedText,basePath,sha});
+    const viewName='source-arcui-accordion.json',view=JSON.parse(await readFile(join(changedText,viewName)));
+    view.files[0].content='forged source';const viewBytes=JSON.stringify(view);
+    await writeFile(join(changedText,viewName),viewBytes);
+    const viewManifest=JSON.parse(await readFile(join(changedText,'manifest.json'))),viewRow=viewManifest.files.find(x=>x.path===viewName);
+    viewRow.bytes=Buffer.byteLength(viewBytes);viewRow.sha256=createHash('sha256').update(viewBytes).digest('hex');
+    await writeFile(join(changedText,'manifest.json'),JSON.stringify(viewManifest));
+    await assert.rejects(()=>auditStatic(changedText),/Unapproved bytes: source-arcui-accordion.json/);
     const broken=await mkdtemp(join(tmpdir(),'vault-package-altered-'));
     await exportStatic({root,output:broken,basePath,sha});
     const archive='source-agent-elements-send-button.tar.gz',badArchive=Buffer.from('broken package');
