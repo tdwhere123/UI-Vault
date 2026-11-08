@@ -1,0 +1,1 @@
+import React,{useState} from "react";import {ResponseStreamTypewriter} from './response-stream';export default function Demo(){const [run,setRun]=useState(0);return <><button className="control" onClick={()=>setRun(x=>x+1)}>Replay stream</button><div key={run}><ResponseStreamTypewriter/></div></>}
