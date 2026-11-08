@@ -2391,20 +2391,61 @@
   },
   {
     "id": "smoothui:image-generation-panel",
-    "title": "图像生成工作面板",
+    "restoreExistingCandidate": true,
+    "title": "SmoothUI · 本地图片批次状态演示",
     "source": "SmoothUI",
-    "license": "MIT (root code notice; external artwork not included)",
+    "repository": "https://github.com/educlopez/smoothui",
+    "revision": "c45420a8523ec60a92f7724a2418ab83edaa1425",
+    "license": "MIT AND ISC AND Apache-2.0",
+    "publicationReady": true,
+    "directory": "image-panel",
+    "entry": "image-panel/index.html",
+    "runtime": {
+      "js": "runtime.js",
+      "css": "runtime.css",
+      "format": "iife",
+      "detailOnly": true,
+      "allowLocalMedia": false
+    },
+    "needsLocalMedia": false,
+    "browserVisualQA": "not-run",
+    "counts": {
+      "independentFamily": 1
+    },
+    "size": {
+      "js": 412124,
+      "gzip": 130680,
+      "css": 55730
+    },
+    "limitations": [
+      "本地模拟队列，不调用模型",
+      "四幅原创SVG非模型生成，不提供下载或变体生成",
+      "真实DOM状态/原tileProgress逻辑已测，SVG解码/模糊合成/像素未验"
+    ],
     "upstream": "https://github.com/educlopez/smoothui/tree/c45420a8523ec60a92f7724a2418ab83edaa1425/packages/smoothui/components/image-generation-panel",
-    "website": "",
-    "buildStatus": "not installed or built",
-    "batch": "batch-002",
-    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "preview": "batches/smooth-image-01/index.html",
+    "batch": "smooth-image-01",
+    "category": "Agent与对话",
+    "kind": "图片任务状态面板",
+    "format": "图片批次输入设计族",
+    "styleTags": [
+      "错峰显影",
+      "富内容"
+    ],
+    "purposeTags": [
+      "图片任务呈现",
+      "输入与重试"
+    ],
+    "description": "恢复原SmoothUI图片批次面板、prompt/预设/比例/逐张进度与选择；状态为明确本地模拟，四幅预置原创SVG不是模型输出。",
+    "behavior": "原tileProgress错峰/锐化/选择状态，单队列queued-generating-done与失败Retry；Stop/hidden/退出取消计时，旧任务不回写，无假下载。",
+    "buildStatus": "Three original React/Motion state, per-tile styles and interruption branches passed; real SVG/blur/mobile pixels NOT verified",
     "gaps": [
-      "Workspace aliases and shared package dependencies require integration; source closure checked, build not attempted.",
-      "Official shared data includes remote generated portraits, scenes, app icons and sample product artwork. Asset URLs preserved for reference; binaries not downloaded and image redistribution rights not assumed.",
-      "Root documentation CSS imports external fumadocs package styles; original lock retained.",
-      "Visual fidelity, animation, mobile behavior, accessibility and interaction correctness not yet tested.",
-      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+      "本地模拟队列，不调用模型",
+      "四幅原创SVG非模型生成，不提供下载或变体生成",
+      "真实DOM状态/原tileProgress逻辑已测，SVG解码/模糊合成/像素未验",
+      "保留原UI与内部prompt/loader/button；删除下载/variations，选中仍是实际本地状态。",
+      "修改prompt不会生成新艺术品，同SVG预览不冒称低分辨率图；不调用后台或模型。",
+      "11实际JS包及Tailwind完整许可含Lucide ISC/Feather MIT及cva Apache-2.0，源码ZIP仅本地。"
     ]
   },
   {
@@ -10953,5 +10994,45 @@
     ],
     "behavior": "原幻灯片/next-previous/起止/键盘/时间尺度缩放，重复导航与退出清理；仅显式固定ID、结构化本地日期和文本。",
     "code": "batches/timelinejs-01/public-source/src/js/timeline/Timeline.js"
+  },
+  {
+    "id": "wgo:branching-go-study",
+    "title": "WGo · 分支棋谱阅读",
+    "source": "WGo.js",
+    "upstream": "https://github.com/waltheri/wgo.js/tree/34773562647e4e8c9c33f1a29cc3183fd1de90d8/wgo",
+    "revision": "34773562647e4e8c9c33f1a29cc3183fd1de90d8",
+    "version": "2.3.1",
+    "website": "https://wgo.waltheri.net/",
+    "preview": "batches/wgo-01/index.html",
+    "category": "展示与媒体",
+    "description": "原版 BasicPlayer 的 9×9 教学摆局阅读：真实提子与回退、两条变化、评论、键盘和菜单；仅本地原创棋谱。",
+    "buildStatus": "Seven original rules/branch/control and repeated-touch/menu/teardown checks passed with Canvas/layout substitutes; native pixels/pointer geometry NOT verified",
+    "previewStatus": "DOM-state-tested; visual-pending",
+    "gaps": [
+      "Canvas pixels and real browser layout/physical pointer targeting are not visually verified; JSDOM uses Canvas/layout mocks.",
+      "Only fixed original teaching SGF is available; no user file/URL import, editing, online opponent or export.",
+      "Fontello control glyphs replaced transparently with Lucide SVG; optional About control omitted.",
+      "7个Lucide控制图标替换原Fontello，完整ISC/Feather MIT保留，不计为新增图标系列。",
+      "原教学摆局非完整实战棋谱或AI答案；无模型分析、对弈、导入、导出或编辑。",
+      "原项目MIT适用范围有固定源码/build证据，本轮源码ZIP仅本地。"
+    ],
+    "knownGaps": [
+      "Canvas pixels and real browser layout/physical pointer targeting are not visually verified; JSDOM uses Canvas/layout mocks.",
+      "Only fixed original teaching SGF is available; no user file/URL import, editing, online opponent or export.",
+      "Fontello control glyphs replaced transparently with Lucide SVG; optional About control omitted."
+    ],
+    "license": "MIT AND ISC",
+    "batch": "wgo-01",
+    "kind": "棋谱教学阅读组件",
+    "format": "分支棋谱富内容设计族",
+    "styleTags": [
+      "原版棋盘",
+      "教学推演"
+    ],
+    "purposeTags": [
+      "教学富内容",
+      "分支推演"
+    ],
+    "behavior": "原SGF分支/提子/回退模型与BasicPlayer导航，原纯Canvas棋子，坐标菜单与触控取消清理；只读固定本地摆局。"
   }
 ]
