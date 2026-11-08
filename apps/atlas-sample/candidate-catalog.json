@@ -1994,19 +1994,63 @@
   },
   {
     "id": "spring:notification-hub",
-    "title": "多条堆叠通知与生命周期动画",
+    "restoreExistingCandidate": true,
+    "title": "React Spring · 消息各有寿命",
     "source": "react-spring official demos",
-    "license": "MIT",
-    "upstream": "https://github.com/pmndrs/react-spring/tree/eb09c7914721c2e5957c4bc817d7abddf317576c",
-    "website": "",
-    "buildStatus": "not built",
-    "batch": "batch-002",
-    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "repository": "https://github.com/pmndrs/react-spring",
+    "revision": "eb09c7914721c2e5957c4bc817d7abddf317576c",
+    "license": "MIT AND 0BSD",
+    "publicationReady": true,
+    "directory": "notification-hub",
+    "entry": "notification-hub/index.html",
+    "runtime": {
+      "js": "runtime.js",
+      "css": "runtime.css",
+      "format": "iife",
+      "detailOnly": true,
+      "allowLocalMedia": false
+    },
+    "needsLocalMedia": false,
+    "browserVisualQA": "not-run",
+    "counts": {
+      "independentFamily": 1
+    },
+    "size": {
+      "js": 223267,
+      "gzip": 76944,
+      "css": 470
+    },
+    "limitations": [
+      "最多6条活动消息，离场动画可能短暂叠加",
+      "本地手动消息演示，不是系统通知或任务进度",
+      "原高度弹簧→寿命→淡出→塌缩序列；隐藏/失焦主动销毁队列；reduced静态且手动关闭",
+      "JSDOM测量高度mock；真实布局动画与像素未验"
+    ],
+    "upstream": "https://github.com/pmndrs/react-spring/tree/eb09c7914721c2e5957c4bc817d7abddf317576c/demo/src/sandboxes/notification-hub",
+    "preview": "batches/spring-notification-01/index.html",
+    "batch": "spring-notification-01",
+    "category": "数据与状态",
+    "kind": "多消息寿命动效",
+    "format": "通知生命周期设计族",
+    "styleTags": [
+      "渐变寿命条",
+      "弹簧塌缩"
+    ],
+    "purposeTags": [
+      "本地消息呈现",
+      "状态反馈"
+    ],
+    "description": "恢复官方通知示例的独立高度进入、寿命条、淡出与塌缩；宿主手动添加本地消息，非系统通知或真实任务进度。",
+    "behavior": "原useTransition异步序列，最多6条活动消息（离场可短暂叠加）；中途取消/新增、自然到期，hidden/blur销毁旧队列，减少动态时静态手动关闭。",
+    "buildStatus": "Three real React Spring sequence and interruption tests passed with mocked measured heights; native layout/animation pixels NOT verified",
     "gaps": [
-      "Old sandbox dependencies may need transparent compatibility adaptation",
-      "Remote photos and rocket image not included",
-      "springy-boxes requires actual WebGL testing and interval cleanup review",
-      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+      "最多6条活动消息，离场动画可能短暂叠加",
+      "本地手动消息演示，不是系统通知或任务进度",
+      "原高度弹簧→寿命→淡出→塌缩序列；隐藏/失焦主动销毁队列；reduced静态且手动关闭",
+      "JSDOM测量高度mock；真实布局动画与像素未验",
+      "Spring固定9.7.5、styled-components6.1.19为明确兼容适配，原styles.ts保留；18个运行包MIT/0BSD及Feather MIT全文。",
+      "初始减少动态偏好已处理，动态系统偏好切换未实现；无通知权限、后台任务或网络。",
+      "只计一族，不按消息/状态计数；本轮源码构建ZIP仅本地。"
     ]
   },
   {
@@ -2729,15 +2773,14 @@
     "license": "MIT (root code notice; external artwork not included)",
     "upstream": "https://github.com/educlopez/smoothui/tree/c45420a8523ec60a92f7724a2418ab83edaa1425/packages/smoothui/components/rich-popover",
     "website": "",
-    "buildStatus": "not installed or built",
+    "buildStatus": "Fixed source and root MIT reviewed; NOT built or runtime-tested; incomplete or overlapping candidate, excluded from gallery",
     "batch": "batch-002",
-    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "description": "原圆角引用卡浮层，展示标题、说明、时间及操作；不含图片/视频播放器。",
     "gaps": [
-      "Workspace aliases and shared package dependencies require integration; source closure checked, build not attempted.",
-      "Official shared data includes remote generated portraits, scenes, app icons and sample product artwork. Asset URLs preserved for reference; binaries not downloaded and image redistribution rights not assumed.",
-      "Root documentation CSS imports external fumadocs package styles; original lock retained.",
-      "Visual fidelity, animation, mobile behavior, accessibility and interaction correctness not yet tested.",
-      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+      "固定入口与根MIT已核，未构建；Radix/Motion/SmoothButton等实际依赖许可尚待核齐。",
+      "内部无img/video，不缺远程照片；官方demo的推广正文不是本轮已核实时事实，未来须替换为明确本地引用。",
+      "原span触发器缺键盘可达性，外站跳转和默认品牌图标需处理；不可放宽CSP。",
+      "已有减少运动分支，但关闭exit属性不代表退出动画实际运行；与已有引用浮层去重后才考虑恢复。"
     ]
   },
   {
@@ -2931,13 +2974,14 @@
     "license": "MIT",
     "upstream": "https://github.com/damien-schneider/cuicui/tree/c7db00f2e98753c277f1aec6e316520038f4e0a0/packages/ui/cuicui/application-ui/action-menu/advanced-bottom-action-menu",
     "website": "",
-    "buildStatus": "not installed or built",
+    "buildStatus": "Fixed source and root MIT reviewed; NOT built or runtime-tested; incomplete or overlapping candidate, excluded from gallery",
     "batch": "batch-002",
-    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "description": "原默认页仅Account/Password占位Tabs；展开菜单组合被注释，未成为可操作底部工具栏。",
     "gaps": [
-      "Original workspace aliases and Next/documentation integration need adaptation; no clean install or browser QA.",
-      "Remote artwork is reference-only; no binaries downloaded. Signature export/download and clipboard require real interaction testing.",
-      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+      "固定入口与根MIT已核，未构建；完整依赖与样式未验证。",
+      "独立MenuRoot有尺寸展开逻辑，但默认demo未连接，实际工具列表未使用，不能按名称宣称功能齐备。",
+      "无远程媒体或导出/剪贴板缺口；真实缺口是未连接组件、占位内容与焦点/窄屏适配。",
+      "与已有工具栏重合，不通过自创任务动作把未完成示例充数。"
     ]
   },
   {
@@ -2999,13 +3043,14 @@
     "license": "MIT",
     "upstream": "https://github.com/damien-schneider/cuicui/tree/c7db00f2e98753c277f1aec6e316520038f4e0a0/packages/ui/cuicui/application-ui/settings/dynamic-settings",
     "website": "",
-    "buildStatus": "not installed or built",
+    "buildStatus": "Fixed source and root MIT reviewed; NOT built or runtime-tested; incomplete or overlapping candidate, excluded from gallery",
     "batch": "batch-002",
-    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "description": "原胶囊展开设置面板的未完成示例，不是可应用的完整设置器。",
     "gaps": [
-      "Original workspace aliases and Next/documentation integration need adaptation; no clean install or browser QA.",
-      "Remote artwork is reference-only; no binaries downloaded. Signature export/download and clipboard require real interaction testing.",
-      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+      "固定入口与根MIT已核，未构建，依赖许可尚未全链核验。",
+      "Dimensions明确TODO；比例状态未上提，Prompt未受控；Apply仅关闭和toast，没有实际验证或应用。",
+      "本项无远程媒体/导出/剪贴板缺口；不得补写功能后冒称原版已完成。",
+      "焦点/Escape/可访问名称与减少运动待验证；与现有设置和变形浮层重合，暂不恢复。"
     ]
   },
   {
