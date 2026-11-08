@@ -13,12 +13,13 @@ export async function exportPages(output,basePath='/UI-Vault/') {
   const sha=execFileSync('git',['rev-parse','HEAD'],{cwd:root,encoding:'utf8'}).trim();
   const legacy=await exportStatic({root,output:join(output,'legacy'),basePath:basePath+'legacy/',sha});
   const source=join(root,'apps/atlas-sample');
-  const files=['index.html','app.js','atlas-model.mjs','style.css','items.json','README.md','LICENSES.md'];
+  const files=['index.html','app.js','atlas-model.mjs','preview-runtime.mjs','style.css','items.json','README.md','LICENSES.md'];
   async function copy(relative){const s=join(source,relative),d=join(output,relative),info=await lstat(s);if(info.isSymbolicLink())throw Error('Symlinks not permitted');if(info.isDirectory()){await mkdir(d);for(const child of await readdir(s))await copy(relative+'/'+child)}else if(info.isFile())await copyFile(s,d);else throw Error('Unsupported input');}
   for(const name of [...files,'assets','previews','originals','bundles','featured'])await copy(name);
+  if((await readdir(source)).includes('batches'))await copy('batches');
   const items=JSON.parse(await readFile(join(output,'items.json'),'utf8'));
-  if(items.length!==24||new Set(items.map(x=>x.id)).size!==24)throw Error('Expected 24 unique atlas materials');
-  for(const x of items)for(const key of ['preview','code','bundle']){if(typeof x[key]!=='string'||x[key].includes('..')||x[key].startsWith('/'))throw Error('Invalid material path');await lstat(join(output,x[key]));}
+  if(!items.length||new Set(items.map(x=>x.id)).size!==items.length)throw Error('Expected nonempty, unique atlas materials');
+  for(const x of items)for(const value of [x.preview,x.code,x.bundle,...(x.runtime?[x.runtime.css,x.runtime.js]:[])]){if(typeof value!=='string'||value.includes('..')||value.startsWith('/')||value.includes(':'))throw Error('Invalid material path');await lstat(join(output,value));}
   const version={codeSha:sha,basePath,materials:items.length,legacy:'legacy/',worktreeDirty:legacy.worktreeDirty};
   await writeFile(join(output,'version.json'),JSON.stringify(version,null,2)+'\n');
   await writeFile(join(output,'.nojekyll'),'');
