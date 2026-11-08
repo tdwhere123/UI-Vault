@@ -1,0 +1,23 @@
+{
+  "pass": true,
+  "checks": [
+    "Conditional partner input appears; hiding clears stale value; required page validation blocks Next",
+    "Empty required matrix blocks Next; sumInArray cross-field budget validator rejects 120 > 100",
+    "Max 5/min 1 rows; rapid triple click on identical old row button removes only that row; detached old button no-op; sequential removal waits for actual DOM count and detachment",
+    "Decision branch requires revision and clears it immediately when hidden",
+    "Previous preserves visible answers; audience change clears downstream partner/handoff; Complete only renders local JSON",
+    "Complete reset returns first page/defaults; repeated navigation/reset stable",
+    "pagehide React unmount + Model.dispose clear observers/timers; no eval/network/storage/Worker calls"
+  ],
+  "forbiddenCalls": [],
+  "errors": [],
+  "observersCreated": 1,
+  "observersDisconnected": 1,
+  "remainingTimers": {
+    "timeout": 0,
+    "interval": 0,
+    "raf": 0
+  },
+  "visualVerified": false,
+  "limitations": "JSDOM actual DOM control state. CSS.escape supplied by standard polyfill; ResizeObserver and matchMedia/scrollIntoView mocked; no pixel, real layout, keyboard or mobile validation."
+}
