@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "checks": [
+    "original renderer mounts xterm-screen",
+    "actual ANSI buffer progress carriage-return/erase overwrite",
+    "actual buffer erase removes obsolete draft",
+    "SearchAddon selects citation forward/backward; no match status; scrollback search returns viewport to first row",
+    "play pause cancels next scheduled frame",
+    "single step advances exactly one frame",
+    "copy/paste/cut captured before clipboardData reads",
+    "textarea readOnly and keyboard does not change buffer",
+    "reset clears actual buffer and cursor stream state",
+    "reset during pending write uses ordered callback then clears",
+    "pagehide while playing disposes renderer/DOM/RAF and playback",
+    "zero eval/Function/network/Worker/clipboard/window.open calls"
+  ],
+  "visualQA": "NOT RUN: JSDOM canvas drawing/text metrics, element dimensions, ResizeObserver stubbed. Original renderer instantiated and buffer state verified, not raster glyph pixels/real search scrolling/browser visual acceptance."
+}
