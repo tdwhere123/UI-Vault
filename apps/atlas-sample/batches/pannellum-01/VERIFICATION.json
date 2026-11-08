@@ -1,0 +1,25 @@
+{
+  "cases": [
+    {
+      "mode": "original CSS3D fallback with synthetic Image/canvas mocks",
+      "passed": true,
+      "checks": [
+        "six original renderer face canvases mount",
+        "original yaw/pitch/FOV updates and FOV lower bound",
+        "local hotspot click changes local note",
+        "original lookAt resets view; synthetic original mousedown/move/up changes yaw",
+        "no external anchor/sensor control",
+        "destroy DOM/RAF/timers zero"
+      ]
+    },
+    {
+      "mode": "unsupported WebGL/no fallback",
+      "passed": true,
+      "checks": [
+        "native unsupported error visible, loaded remains falsy / uninitialized",
+        "destroy unsupported instance cleans DOM/timers"
+      ]
+    }
+  ],
+  "visualQA": "NOT RUN. No real WebGL context or image decoder; synthetic Image/onload and 2D canvas stubs exercise original CSS3D fallback and real view-state methods. Actual texture pixels, pointer drag gestures, WebGL shader path and browser rasterization NOT validated."
+}
