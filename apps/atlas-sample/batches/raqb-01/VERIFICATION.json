@@ -1,0 +1,18 @@
+{
+  "pass": true,
+  "checks": [
+    "Original Query/Builder renders two typed seed rules",
+    "Original OR and NOT change exported tree",
+    "Nested group and nested rule are created by original buttons",
+    "Field switching boolean/select/number changes upstream controls and structured values",
+    "Delete and reset clear previous nested/negated state",
+    "Repeated negate/reset stays stable",
+    "Pagehide during initiated drag removes UI/body class/listeners/timers"
+  ],
+  "forbiddenCalls": [],
+  "errors": [],
+  "remainingTimers": 0,
+  "remainingGlobalDragListeners": 0,
+  "visualVerified": false,
+  "limitations": "JSDOM state and original control events only. Real drag geometry, browser pointer ordering and pixels not verified."
+}
