@@ -1,0 +1,377 @@
+
+/* From Uiverse.io by vinodjangid07  - Tags: animation, loading, loader, book, flip, loading animation */
+.loader {
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  --book-color: #f1775b;
+  --book-cover-color: #506c86;
+}
+.book {
+  width: 150px;
+  height: 13px;
+  background-color: var(--book-color);
+  border-bottom: 2px solid var(--book-cover-color);
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  position: relative;
+}
+.page {
+  width: 50%;
+  height: 2px;
+  background-color: var(--book-color);
+  animation: paging 0.7s ease-out infinite;
+  transform-origin: left;
+}
+.page2 {
+  width: 50%;
+  height: 2px;
+  background-color: var(--book-color);
+  animation: paging 0.8s ease-out infinite;
+  transform-origin: left;
+  position: absolute;
+}
+@keyframes paging {
+  10% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(-180deg);
+  }
+}
+
+
+
+/* From Uiverse.io by Nawsome - Tags: skeuomorphism, checkbox, squishy, bubble */
+label, .bubble {
+  display: block;
+  -webkit-tap-highlight-color: transparent;
+}
+
+label {
+  animation: float74 4s ease-in-out infinite;
+}
+
+.bubble, .bubble:before, .bubble:after {
+  transition-duration: 0.2s;
+}
+
+.bubble, .bubble:after {
+  border-radius: 50%;
+}
+
+.bubble {
+  background-image: radial-gradient(8% 8% at 22% 28%,hsl(0,0%,100%) 45%,hsla(0,0%,100%,0) 50%),
+		radial-gradient(8% 8% at 23% 27%,hsl(0,0%,100%) 45%,hsla(0,0%,100%,0) 50%),
+		radial-gradient(8% 8% at 24% 26%,hsl(0,0%,100%) 45%,hsla(0,0%,100%,0) 50%),
+		radial-gradient(8% 8% at 25% 25%,hsl(0,0%,100%) 45%,hsla(0,0%,100%,0) 50%),
+		radial-gradient(8% 8% at 26% 24%,hsl(0,0%,100%) 45%,hsla(0,0%,100%,0) 50%),
+		radial-gradient(8% 8% at 27% 23%,hsl(0,0%,100%) 45%,hsla(0,0%,100%,0) 50%),
+		radial-gradient(8% 8% at 28% 22%,hsl(0,0%,100%) 45%,hsla(0,0%,100%,0) 50%);
+  box-shadow: 0 -0.06em 0.1em hsl(0,90%,100%) inset,
+		0 -0.15em 0.4em hsl(0,90%,45%) inset,
+		0 0.05em 0.05em hsl(0,90%,45%) inset,
+		0.05em 0 0.1em hsl(0,90%,100%) inset,
+		-0.05em 0 0.1em hsl(0,90%,100%) inset,
+		0 0.1em 0.4em hsl(0,90%,60%) inset;
+  cursor: pointer;
+  position: relative;
+  width: 3em;
+  height: 3em;
+  transform-style: preserve-3d;
+  transition-property: box-shadow, transform, width, height;
+  transition-timing-function: ease-in-out, ease-in-out, var(--bubbleTiming), var(--bubbleTiming);
+  will-change: transform;
+  -webkit-appearance: none;
+  appearance: none;
+  z-index: 0;
+}
+
+.bubble:before, .bubble:after {
+  content: "";
+  display: block;
+  position: absolute;
+  transition-timing-function: var(--bubbleTiming);
+}
+
+.bubble:before {
+  border-radius: 0.75em;
+  box-shadow: 0 0 0 0.5em hsl(0,0%,100%) inset;
+  filter: drop-shadow(0.6em 0.6em 4px hsla(0,0%,0%,0.2));
+  top: 50%;
+  left: 50%;
+  width: 1.5em;
+  height: 1.5em;
+  transform: translate3d(-50%,-50%,-1px);
+  z-index: -1;
+}
+
+.bubble:after {
+  background: radial-gradient(100% 100% at center,hsla(0,0%,0%,0) 35%,hsla(0,0%,0%,0.2) 48%,hsla(0,0%,0%,0) 50%);
+  filter: blur(4px);
+  top: 0.6em;
+  left: 0.6em;
+  width: 100%;
+  height: 100%;
+  transform: translate3d(0,0,-1px);
+  z-index: -2;
+}
+
+.bubble:focus, .bubble:hover {
+  transform: scale(1.1);
+  outline: none;
+}
+
+.bubble:focus:active, .bubble:hover:active {
+  width: 3.6em;
+  height: 2.4em;
+}
+
+.bubble:focus:before, .bubble:hover:before {
+  filter: drop-shadow(0.75em 0.75em 4px hsla(0,0%,0%,0.2));
+}
+
+.bubble:focus:after, .bubble:hover:after {
+  transform: translate3d(0.15em,0.15em,-1px);
+}
+
+.bubble:checked {
+  box-shadow: 0 -0.06em 0.1em hsl(120,90%,100%) inset,
+		0 -0.15em 0.4em hsl(120,90%,45%) inset,
+		0 0.05em 0.05em hsl(120,90%,45%) inset,
+		0.05em 0 0.1em hsl(120,90%,100%) inset,
+		-0.05em 0 0.1em hsl(120,90%,100%) inset,
+		0 0.1em 0.4em hsl(120,90%,60%) inset;
+}
+
+.bubble:checked:before {
+  border-radius: 0.25em;
+  width: 0.5em;
+}
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  label {
+    animation: none;
+  }
+
+  .bubble, .bubble:before, .bubble:after {
+    transition-duration: 0s;
+  }
+
+  .bubble:focus, .bubble:hover {
+    transform: scale(1);
+  }
+
+  .bubble:focus:active, .bubble:hover:active {
+    width: 3em;
+    height: 3em;
+  }
+
+  .bubble:focus:before, .bubble:hover:before {
+    filter: drop-shadow(0.6em 0.6em 4px hsla(0,0%,0%,0.2));
+  }
+
+  .bubble:focus:after, .bubble:hover:after {
+    transform: translate3d(0,0,-1px);
+  }
+}
+/* Animations */
+@keyframes float74 {
+  from, to {
+    transform: translate(0,3%);
+  }
+
+  25% {
+    transform: translate(-3%,0);
+  }
+
+  50% {
+    transform: translate(0,-3%);
+  }
+
+  75% {
+    transform: translate(3%,0);
+  }
+}
+
+
+/* From Uiverse.io by aadium - Tags: loader, clock, timer */
+.cloader {
+  width: 10em;
+  height: 10em;
+  border: 4px solid white;
+  border-radius: 50%;
+  margin: 50px auto;
+  position: relative;
+  padding: 2rem;
+}
+
+.clface {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-3px);
+}
+
+.top {
+  height: 10px;
+  width: 4px;
+  content: '';
+  background-color: white;
+  border-radius: 5em;
+  margin-top: -30px;
+  margin-left: 42px;
+}
+
+.bottom {
+  height: 10px;
+  width: 4px;
+  content: '';
+  background-color: white;
+  border-radius: 5em;
+  margin-top: 135px;
+  margin-left: 42px;
+}
+
+.left {
+  height: 4px;
+  width: 10px;
+  content: '';
+  background-color: white;
+  border-radius: 5em;
+  margin-top: -82px;
+  margin-left: 112px;
+}
+
+.right {
+  height: 4px;
+  width: 10px;
+  content: '';
+  background-color: white;
+  border-radius: 5em;
+  margin-top: -4px;
+  margin-left: -35px;
+}
+
+.clsface {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  margin-left: 24px;
+  margin-top: 15px;
+  border-radius: 6em;
+  border: 2px solid #636363;
+}
+
+.hand {
+  width: 65%;
+  height: 4px;
+  background-color: white;
+  border-radius: 3em;
+  border: none;
+  position: absolute;
+  top: 85%;
+  left: -15%;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+}
+
+.pin {
+  width: 25%;
+  height: 25%;
+  border-radius: 50%;
+  background: white;
+  position: absolute;
+  top: 86%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#sub {
+  width: 10%;
+  height: 10%;
+  border-radius: 50%;
+  background: #636363;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#h1 {
+  animation: rotate 4s linear infinite;
+}
+
+#h2 {
+  width: 45%;
+  left: 5%;
+  top: 45%;
+  background-color: #636363;
+  animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(90deg);
+  }
+
+  to {
+    transform: rotate(450deg);
+  }
+}
+
+
+/* From Uiverse.io by vikas7754 - Tags: bubble, drop, water drop */
+.one-div {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  background: transparent;
+  border-radius: 57% 43% 37% 63% / 45% 52% 48% 52%;
+  box-shadow: inset 10px 10px 10px rgba(0, 0, 0, 0.05), 
+                      15px 25px 10px rgba(0, 0, 0, 0.1), 
+                      15px 20px 20px rgba(0, 0, 0, 0.05), 
+                inset -10px -10px 15px rgba(237, 237, 237, 0.9);
+  animation: anim 1s infinite alternate;
+}
+
+.one-div:before {
+  content: '';
+  position: absolute;
+  left: 25px;
+  top: 35px;
+  width: 20px;
+  height: 20px;
+  border-radius: 42% 58% 37% 63% / 40% 43% 57% 60%;
+  background: #FFF
+}
+
+.one-div:after {
+  content: '';
+  position: absolute;
+  left: 60px;
+  top: 25px;
+  width: 10px;
+  height: 10px;
+  border-radius: 42% 58% 37% 63% / 40% 43% 57% 60%;
+  background: #ffffff
+}
+
+@keyframes anim {
+  0% {
+    transform: translateY(0);
+    height: 150px;
+    width: 150px;
+  }
+
+  100% {
+    transform: translateY(40px);
+    height: 135px;
+    width: 160px;
+  }
+}
+
+html,body{min-height:100%;margin:0;background:#ecece6;font-family:system-ui,sans-serif;color:#40504a}header{padding:25px 30px 10px}header small{font-size:10px;letter-spacing:.15em;color:#778078}h1{font:500 27px Georgia,serif;margin:12px 0}header p{font-size:12px;line-height:1.7;max-width:700px;color:#778078}nav{display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding:10px 30px}nav button{border:1px solid #b6c2b9;background:#fafaf6;color:#4f6155;border-radius:20px;padding:8px 15px;cursor:pointer}nav output,footer{font-size:11px;color:#778078}footer{padding:20px 30px;text-align:center}.workstage{min-height:370px;display:flex;align-items:center;justify-content:center;gap:80px;padding:25px;overflow:hidden}.material-cell{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:55px;min-width:160px;font-size:24px}.material-cell p{font-size:11px;color:#8b978d}.workstage[data-running=false] *,.workstage[data-running=false] *:before,.workstage[data-running=false] *:after{animation-play-state:paused!important}.workstage input{cursor:pointer}body[data-kind=clock]{background:#202529;color:#f1f2ed}body[data-kind=clock] header p,body[data-kind=clock] header small,body[data-kind=clock] footer{color:#a3aaa7}body[data-kind=clock] .workstage{font-size:10px}body[data-kind=clock] nav button{background:#353d3c;color:#dfe8df;border-color:#56635d}@media(max-width:500px){.workstage{gap:35px;flex-wrap:wrap}.material-cell{min-height:220px}header{padding:20px}}
