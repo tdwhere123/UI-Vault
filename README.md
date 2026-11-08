@@ -2,7 +2,7 @@
 
 网站：<https://tdwhere123.github.io/UI-Vault/>
 
-当前主图鉴有 **507条可打开预览（241条原始素材＋266条后续接入预览）**。后续预览仍标注视觉待验；351条候选中的85条仅来源记录不计入主图鉴。原始241件包括215件精选界面、20件保留基础素材、6套完整图标系列。正在向1000+件优质素材扩充；图标按完整系列单列统计，不按单枚凑数。源码候选、不同配色与框架版本不充数。
+当前主图鉴有 **508条可打开预览（241条原始素材＋267条后续接入预览）**。后续预览仍标注视觉待验；352条候选中的85条仅来源记录不计入主图鉴。原始241件包括215件精选界面、20件保留基础素材、6套完整图标系列。正在向1000+件优质素材扩充；图标按完整系列单列统计，不按单枚凑数。源码候选、不同配色与框架版本不充数。
 
 ## 当前内容
 
@@ -216,3 +216,16 @@ The original LekoArts Cara Hero/Projects/About/Contact composition, five-page Pa
 Four normal/reduced/narrow/production tests passed on actual Parallax controllers, layers, scrollTo/current, local card navigation and color-mode state. Original resize timer/RAF and layer-controller teardown gaps were repaired. Blur/hidden stops animation; reduced motion uses stationary layers and immediate navigation. JSDOM viewport geometry is simulated: real scroll feel, wave path compatibility, wrapping and mobile pixels still await visual acceptance. The earlier source archive remains recorded as `originalSourceArchive`; it is not advertised as the current adapter's complete download. Current adaptation/build/test archives remain local. Static covers, lazy previews and sandbox/CSP remain unchanged.
 
 TimelineJS is still under separate licensing/source-form and lifecycle verification; it is not counted or published in this batch.
+
+
+## Original narrative TimelineJS with public source · 508 previews
+
+The main gallery now has **508 preview entries** (241 original + 267 added previews), with 352 candidate records and 85 source-only records excluded. One narrative-reading family is added; dates/slides/icons are not separately counted. Icon counts remain unchanged.
+
+**TimelineJS 3.9.13** retains original story slides, dated markers, chronological scale, zoom, next/previous, first/last and keyboard controls on one fictional local research notebook. This is a restricted text-story edition, not the arbitrary-input TimelineJS distribution. Structured date objects and predefined unique ASCII IDs are required; remote/CSV configuration, generic ISO-string parsing, automatic slug generation and media dispatch are removed. The original date/scale engine is retained. Questionable inherited slug/parser sections and historical configuration keys are not included in this public edition or a reverse patch.
+
+The real **MPL-2.0 corresponding source is published**, not promised as a local ZIP: [77 preferred-source files and hashes](apps/atlas-sample/batches/timelinejs-01/PUBLIC-SOURCE.json), [source/build/lock directory](apps/atlas-sample/batches/timelinejs-01/public-source/), [changes](apps/atlas-sample/batches/timelinejs-01/CHANGES.md), and [complete mixed notices](apps/atlas-sample/batches/timelinejs-01/notices/INDEX.md). Source and notices were uploaded and byte-verified before executable assets. Independent review copied only the public source, rebuilt using the locked dependency installation, and obtained byte-identical JS/CSS. The gallery source tab exposes the actual published adapted Timeline.js; it does not imply a hosted full-source ZIP.
+
+Original keydown instance lookup and cleanup for listeners, observer, preload/tick timers and Morpheus animations were corrected. Seven original interaction checks, pending-initialization teardown and missing/duplicate-ID/media-URL rejection tests passed. Native inert is required; no global polyfill is claimed. Five selected original icon paths have their own CC BY 4.0/Apache terms and attribution. Full embedded Morpheus, Penner/KeySpline, Leaflet, LazyLoad, Zepto and DOMPurify notices are included, with historical-version/supplement limitations disclosed rather than assuming root MPL covers everything.
+
+Actual time-axis layout, browser inert/focus, native touch and SVG/icon pixels remain unverified. Tests use layout/observer substitutes, not visual acceptance. Static covers, lazy previews and sandbox/CSP remain unchanged.
