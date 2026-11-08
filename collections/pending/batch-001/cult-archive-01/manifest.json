@@ -1,0 +1,1038 @@
+{
+  "candidateGroups": 22,
+  "verifiedCount": 0,
+  "source": "Cult UI",
+  "revision": "d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+  "items": [
+    {
+      "id": "cult:agent-suggest-card-stack",
+      "title": "agent-suggest-card-stack",
+      "description": "Stack of suggestion cards for AI agent responses",
+      "source": "Cult UI",
+      "revision": "d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+      "license": "MIT",
+      "licenseFile": "LICENSE.md",
+      "upstream": "https://github.com/nolly-studio/cult-ui/tree/d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+      "registryFiles": [
+        "registry/agent-suggest-card-stack.json",
+        "registry/agent-suggest-card-stack-demo.json"
+      ],
+      "sourceFiles": [
+        "source/registry/default/ui/agent-suggest-card-stack.tsx",
+        "source/registry/default/example/agent-suggest-card-stack-demo.tsx"
+      ],
+      "npmDependencies": [],
+      "registryDependencies": [
+        "agent-suggest-card-stack"
+      ],
+      "imports": [
+        "@/lib/utils",
+        "@/registry/default/ui/agent-suggest-card-stack",
+        "react"
+      ],
+      "externalReferences": [
+        "http://www.w3.org/2000/svg"
+      ],
+      "status": "待视觉验证",
+      "buildStatus": "not built; upstream archive only",
+      "accepted": false,
+      "deduplication": "One component family; onboarding and expandable wizard grouped. Cross-source visual/interaction duplication remains to be checked.",
+      "risk": [
+        "Remote media and logos not downloaded or licensed by assumption",
+        "Source registry metadata may omit imports; original project package+lock retained"
+      ]
+    },
+    {
+      "id": "cult:ai-instructions",
+      "title": "ai-instructions",
+      "description": "Manage and toggle AI instructions with a popover, search, and create-dialog",
+      "source": "Cult UI",
+      "revision": "d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+      "license": "MIT",
+      "licenseFile": "LICENSE.md",
+      "upstream": "https://github.com/nolly-studio/cult-ui/tree/d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+      "registryFiles": [
+        "registry/ai-instructions.json",
+        "registry/ai-instructions-demo.json"
+      ],
+      "sourceFiles": [
+        "source/registry/default/ui/ai-instructions.tsx",
+        "source/registry/default/example/ai-instructions-demo.tsx"
+      ],
+      "npmDependencies": [
+        "@hugeicons/core-free-icons",
+        "@hugeicons/react"
+      ],
+      "registryDependencies": [
+        "ai-instructions",
+        "button",
+        "command",
+        "dialog",
+        "hover-card",
+        "input",
+        "popover",
+        "textarea"
+      ],
+      "imports": [
+        "../ui/ai-instructions",
+        "@/components/ui/button",
+        "@/components/ui/command",
+        "@/components/ui/dialog",
+        "@/components/ui/hover-card",
+        "@/components/ui/input",
+        "@/components/ui/popover",
+        "@/components/ui/textarea",
+        "@/lib/utils",
+        "@hugeicons/core-free-icons",
+        "@hugeicons/react",
+        "react"
+      ],
+      "externalReferences": [],
+      "status": "待视觉验证",
+      "buildStatus": "not built; upstream archive only",
+      "accepted": false,
+      "deduplication": "One component family; onboarding and expandable wizard grouped. Cross-source visual/interaction duplication remains to be checked.",
+      "risk": [
+        "Remote media and logos not downloaded or licensed by assumption",
+        "Source registry metadata may omit imports; original project package+lock retained"
+      ]
+    },
+    {
+      "id": "cult:analytics-chart",
+      "title": "analytics-chart",
+      "description": "Vercel-style gradient line chart with floating tooltip cards",
+      "source": "Cult UI",
+      "revision": "d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+      "license": "MIT",
+      "licenseFile": "LICENSE.md",
+      "upstream": "https://github.com/nolly-studio/cult-ui/tree/d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+      "registryFiles": [
+        "registry/analytics-chart.json",
+        "registry/analytics-chart-demo.json"
+      ],
+      "sourceFiles": [
+        "source/registry/default/ui/analytics-chart.tsx",
+        "source/registry/default/example/analytics-chart-demo.tsx"
+      ],
+      "npmDependencies": [],
+      "registryDependencies": [
+        "analytics-chart"
+      ],
+      "imports": [
+        "@/lib/utils",
+        "@/registry/default/ui/analytics-chart",
+        "react"
+      ],
+      "externalReferences": [],
+      "status": "待视觉验证",
+      "buildStatus": "not built; upstream archive only",
+      "accepted": false,
+      "deduplication": "One component family; onboarding and expandable wizard grouped. Cross-source visual/interaction duplication remains to be checked.",
+      "risk": [
+        "Remote media and logos not downloaded or licensed by assumption",
+        "Source registry metadata may omit imports; original project package+lock retained"
+      ]
+    },
+    {
+      "id": "cult:collab-toolbar",
+      "title": "collab-toolbar",
+      "description": "Toolbar component for collaborative editing UI",
+      "source": "Cult UI",
+      "revision": "d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+      "license": "MIT",
+      "licenseFile": "LICENSE.md",
+      "upstream": "https://github.com/nolly-studio/cult-ui/tree/d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+      "registryFiles": [
+        "registry/collab-toolbar.json",
+        "registry/collab-toolbar-demo.json"
+      ],
+      "sourceFiles": [
+        "source/registry/default/ui/collab-toolbar.tsx",
+        "source/registry/default/example/collab-toolbar-demo.tsx"
+      ],
+      "npmDependencies": [],
+      "registryDependencies": [
+        "collab-toolbar"
+      ],
+      "imports": [
+        "@/registry/default/ui/collab-toolbar",
+        "react"
+      ],
+      "externalReferences": [
+        "https://i.pravatar.cc/100?img=12",
+        "https://i.pravatar.cc/100?img=32",
+        "https://i.pravatar.cc/100?img=68",
+        "https://i.pravatar.cc/80?u=${encodeURIComponent(name"
+      ],
+      "status": "待视觉验证",
+      "buildStatus": "not built; upstream archive only",
+      "accepted": false,
+      "deduplication": "One component family; onboarding and expandable wizard grouped. Cross-source visual/interaction duplication remains to be checked.",
+      "risk": [
+        "Remote media and logos not downloaded or licensed by assumption",
+        "Source registry metadata may omit imports; original project package+lock retained"
+      ]
+    },
+    {
+      "id": "cult:dynamic-island",
+      "title": "dynamic-island",
+      "description": "iOS-style dynamic island component with expandable content and smooth animations",
+      "source": "Cult UI",
+      "revision": "d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+      "license": "MIT",
+      "licenseFile": "LICENSE.md",
+      "upstream": "https://github.com/nolly-studio/cult-ui/tree/d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+      "registryFiles": [
+        "registry/dynamic-island.json",
+        "registry/dynamic-island-demo.json"
+      ],
+      "sourceFiles": [
+        "source/registry/default/ui/dynamic-island.tsx",
+        "source/registry/default/example/dynamic-island-demo.tsx"
+      ],
+      "npmDependencies": [
+        "motion"
+      ],
+      "registryDependencies": [
+        "dynamic-island"
+      ],
+      "imports": [
+        "@/components/ui/badge",
+        "@/components/ui/button",
+        "@/registry/default/ui/dynamic-island",
+        "lucide-react",
+        "motion/react",
+        "react"
+      ],
+      "externalReferences": [],
+      "status": "待视觉验证",
+      "buildStatus": "not built; upstream archive only",
+      "accepted": false,
+      "deduplication": "One component family; onboarding and expandable wizard grouped. Cross-source visual/interaction duplication remains to be checked.",
+      "risk": [
+        "Remote media and logos not downloaded or licensed by assumption",
+        "Source registry metadata may omit imports; original project package+lock retained"
+      ]
+    },
+    {
+      "id": "cult:expandable-screen",
+      "title": "expandable-screen",
+      "description": "A full-screen expandable component with morphing animations using shared layout IDs for smooth transitions",
+      "source": "Cult UI",
+      "revision": "d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+      "license": "MIT",
+      "licenseFile": "LICENSE.md",
+      "upstream": "https://github.com/nolly-studio/cult-ui/tree/d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+      "registryFiles": [
+        "registry/expandable-screen.json",
+        "registry/expandable-screen-demo.json"
+      ],
+      "sourceFiles": [
+        "source/registry/default/ui/expandable-screen.tsx",
+        "source/registry/default/example/expandable-screen-demo.tsx"
+      ],
+      "npmDependencies": [
+        "lucide-react",
+        "motion"
+      ],
+      "registryDependencies": [
+        "button",
+        "expandable-screen",
+        "input",
+        "label",
+        "select",
+        "textarea"
+      ],
+      "imports": [
+        "@/components/ui/button",
+        "@/components/ui/input",
+        "@/components/ui/label",
+        "@/components/ui/select",
+        "@/components/ui/textarea",
+        "@/lib/utils",
+        "@/registry/default/ui/expandable-screen",
+        "lucide-react",
+        "motion/react",
+        "next/image",
+        "react"
+      ],
+      "externalReferences": [],
+      "status": "待视觉验证",
+      "buildStatus": "not built; upstream archive only",
+      "accepted": false,
+      "deduplication": "One component family; onboarding and expandable wizard grouped. Cross-source visual/interaction duplication remains to be checked.",
+      "risk": [
+        "Remote media and logos not downloaded or licensed by assumption",
+        "Source registry metadata may omit imports; original project package+lock retained"
+      ]
+    },
+    {
+      "id": "cult:family-drawer",
+      "title": "family-drawer",
+      "description": "A multi-view drawer component with smooth animations, view navigation, and customizable content views",
+      "source": "Cult UI",
+      "revision": "d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+      "license": "MIT",
+      "licenseFile": "LICENSE.md",
+      "upstream": "https://github.com/nolly-studio/cult-ui/tree/d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+      "registryFiles": [
+        "registry/family-drawer.json",
+        "registry/family-drawer-demo.json"
+      ],
+      "sourceFiles": [
+        "source/registry/default/ui/family-drawer.tsx",
+        "source/registry/default/example/family-drawer-demo.tsx"
+      ],
+      "npmDependencies": [
+        "@radix-ui/react-slot",
+        "motion",
+        "react-use-measure",
+        "vaul"
+      ],
+      "registryDependencies": [
+        "family-drawer"
+      ],
+      "imports": [
+        "@/lib/utils",
+        "@/registry/default/ui/family-drawer",
+        "@radix-ui/react-slot",
+        "lucide-react",
+        "motion/react",
+        "react",
+        "react-use-measure",
+        "vaul"
+      ],
+      "externalReferences": [
+        "http://www.w3.org/2000/svg"
+      ],
+      "status": "待视觉验证",
+      "buildStatus": "not built; upstream archive only",
+      "accepted": false,
+      "deduplication": "One component family; onboarding and expandable wizard grouped. Cross-source visual/interaction duplication remains to be checked.",
+      "risk": [
+        "Remote media and logos not downloaded or licensed by assumption",
+        "Source registry metadata may omit imports; original project package+lock retained"
+      ]
+    },
+    {
+      "id": "cult:feature-sticky-section",
+      "title": "feature-sticky-section",
+      "description": "Sticky section with controllable panels and scroll behavior",
+      "source": "Cult UI",
+      "revision": "d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+      "license": "MIT",
+      "licenseFile": "LICENSE.md",
+      "upstream": "https://github.com/nolly-studio/cult-ui/tree/d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+      "registryFiles": [
+        "registry/feature-sticky-section.json",
+        "registry/feature-sticky-section-demo.json"
+      ],
+      "sourceFiles": [
+        "source/registry/default/ui/feature-sticky-section.tsx",
+        "source/registry/default/example/feature-sticky-section-demo.tsx"
+      ],
+      "npmDependencies": [
+        "@radix-ui/react-slot",
+        "@radix-ui/react-use-controllable-state"
+      ],
+      "registryDependencies": [
+        "feature-sticky-section"
+      ],
+      "imports": [
+        "@/lib/utils",
+        "@/registry/default/ui/feature-sticky-section",
+        "@radix-ui/react-slot",
+        "@radix-ui/react-use-controllable-state",
+        "next/image",
+        "react"
+      ],
+      "externalReferences": [
+        "https://oxc.rs",
+        "https://rolldown.rs",
+        "https://vite.dev",
+        "https://vitest.dev"
+      ],
+      "status": "待视觉验证",
+      "buildStatus": "not built; upstream archive only",
+      "accepted": false,
+      "deduplication": "One component family; onboarding and expandable wizard grouped. Cross-source visual/interaction duplication remains to be checked.",
+      "risk": [
+        "Remote media and logos not downloaded or licensed by assumption",
+        "Source registry metadata may omit imports; original project package+lock retained"
+      ]
+    },
+    {
+      "id": "cult:floating-panel",
+      "title": "floating-panel",
+      "description": "Floating panel component with backdrop blur and position-aware animations",
+      "source": "Cult UI",
+      "revision": "d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+      "license": "MIT",
+      "licenseFile": "LICENSE.md",
+      "upstream": "https://github.com/nolly-studio/cult-ui/tree/d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+      "registryFiles": [
+        "registry/floating-panel.json",
+        "registry/floating-panel-demo.json"
+      ],
+      "sourceFiles": [
+        "source/registry/default/ui/floating-panel.tsx",
+        "source/registry/default/example/floating-panel-demo.tsx"
+      ],
+      "npmDependencies": [
+        "lucide-react",
+        "motion"
+      ],
+      "registryDependencies": [
+        "floating-panel"
+      ],
+      "imports": [
+        "../ui/floating-panel",
+        "@/lib/utils",
+        "lucide-react",
+        "motion/react",
+        "react"
+      ],
+      "externalReferences": [],
+      "status": "待视觉验证",
+      "buildStatus": "not built; upstream archive only",
+      "accepted": false,
+      "deduplication": "One component family; onboarding and expandable wizard grouped. Cross-source visual/interaction duplication remains to be checked.",
+      "risk": [
+        "Remote media and logos not downloaded or licensed by assumption",
+        "Source registry metadata may omit imports; original project package+lock retained"
+      ]
+    },
+    {
+      "id": "cult:fluted-glass",
+      "title": "fluted-glass",
+      "description": "Paper Design fluted-glass image shader with sensible defaults — ribbed, streaked distortions over a source image",
+      "source": "Cult UI",
+      "revision": "d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+      "license": "MIT",
+      "licenseFile": "LICENSE.md",
+      "upstream": "https://github.com/nolly-studio/cult-ui/tree/d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+      "registryFiles": [
+        "registry/fluted-glass.json",
+        "registry/fluted-glass-demo.json"
+      ],
+      "sourceFiles": [
+        "source/registry/default/ui/fluted-glass.tsx",
+        "source/registry/default/example/fluted-glass-demo.tsx"
+      ],
+      "npmDependencies": [
+        "@paper-design/shaders-react"
+      ],
+      "registryDependencies": [
+        "button",
+        "fluted-glass",
+        "input",
+        "label",
+        "select",
+        "slider"
+      ],
+      "imports": [
+        "@/components/ui/button",
+        "@/components/ui/input",
+        "@/components/ui/label",
+        "@/components/ui/select",
+        "@/components/ui/slider",
+        "@/lib/utils",
+        "@/registry/default/ui/fluted-glass",
+        "@paper-design/shaders-react",
+        "react"
+      ],
+      "externalReferences": [
+        "https://images.unsplash.com/photo-1448375240586-882707db888b?w=1280&q=80&fm=webp",
+        "https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=1280&q=80&fm=webp",
+        "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1280&q=80&fm=webp",
+        "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=1280&q=80&fm=webp",
+        "https://paper.design/flowers.webp",
+        "https://…"
+      ],
+      "status": "待视觉验证",
+      "buildStatus": "not built; upstream archive only",
+      "accepted": false,
+      "deduplication": "One component family; onboarding and expandable wizard grouped. Cross-source visual/interaction duplication remains to be checked.",
+      "risk": [
+        "Remote media and logos not downloaded or licensed by assumption",
+        "Source registry metadata may omit imports; original project package+lock retained",
+        "WebGL/shader support must be verified"
+      ]
+    },
+    {
+      "id": "cult:hero-color-panel",
+      "title": "hero-color-panel",
+      "description": "Split-layout hero section with responsive ColorPanels shader visuals, CTA, and tech stack badges",
+      "source": "Cult UI",
+      "revision": "d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+      "license": "MIT",
+      "licenseFile": "LICENSE.md",
+      "upstream": "https://github.com/nolly-studio/cult-ui/tree/d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+      "registryFiles": [
+        "registry/hero-color-panel.json",
+        "registry/hero-color-panels-demo.json"
+      ],
+      "sourceFiles": [
+        "source/registry/default/ui/hero-color-panel.tsx",
+        "source/registry/default/example/hero-color-panels-demo.tsx"
+      ],
+      "npmDependencies": [
+        "@paper-design/shaders-react"
+      ],
+      "registryDependencies": [
+        "badge",
+        "button",
+        "hero-color-panel"
+      ],
+      "imports": [
+        "../ui/hero-color-panel",
+        "@/components/ui/badge",
+        "@/components/ui/button",
+        "@/lib/utils",
+        "@paper-design/shaders-react",
+        "react"
+      ],
+      "externalReferences": [
+        "http://www.w3.org/2000/svg",
+        "https://aisdkagents.com"
+      ],
+      "status": "待视觉验证",
+      "buildStatus": "not built; upstream archive only",
+      "accepted": false,
+      "deduplication": "One component family; onboarding and expandable wizard grouped. Cross-source visual/interaction duplication remains to be checked.",
+      "risk": [
+        "Remote media and logos not downloaded or licensed by assumption",
+        "Source registry metadata may omit imports; original project package+lock retained",
+        "WebGL/shader support must be verified"
+      ]
+    },
+    {
+      "id": "cult:hero-heatmap",
+      "title": "hero-heatmap",
+      "description": "Split-layout hero section with responsive Heatmap shader visuals, CTA, and tech stack badges",
+      "source": "Cult UI",
+      "revision": "d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+      "license": "MIT",
+      "licenseFile": "LICENSE.md",
+      "upstream": "https://github.com/nolly-studio/cult-ui/tree/d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+      "registryFiles": [
+        "registry/hero-heatmap.json",
+        "registry/hero-heatmap-demo.json"
+      ],
+      "sourceFiles": [
+        "source/registry/default/ui/hero-heatmap.tsx",
+        "source/registry/default/example/hero-heatmap-demo.tsx"
+      ],
+      "npmDependencies": [
+        "@paper-design/shaders-react"
+      ],
+      "registryDependencies": [
+        "badge",
+        "button",
+        "hero-heatmap"
+      ],
+      "imports": [
+        "../ui/hero-heatmap",
+        "@/components/ui/badge",
+        "@/components/ui/button",
+        "@/lib/utils",
+        "@paper-design/shaders-react",
+        "react"
+      ],
+      "externalReferences": [
+        "http://www.w3.org/2000/svg",
+        "https://aisdkagents.com",
+        "https://shaders.paper.design/images/logos/diamond.svg"
+      ],
+      "status": "待视觉验证",
+      "buildStatus": "not built; upstream archive only",
+      "accepted": false,
+      "deduplication": "One component family; onboarding and expandable wizard grouped. Cross-source visual/interaction duplication remains to be checked.",
+      "risk": [
+        "Remote media and logos not downloaded or licensed by assumption",
+        "Source registry metadata may omit imports; original project package+lock retained",
+        "WebGL/shader support must be verified"
+      ]
+    },
+    {
+      "id": "cult:intro-disclosure",
+      "title": "intro-disclosure",
+      "description": "Intro disclosure component with expandable content and smooth animations",
+      "source": "Cult UI",
+      "revision": "d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+      "license": "MIT",
+      "licenseFile": "LICENSE.md",
+      "upstream": "https://github.com/nolly-studio/cult-ui/tree/d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+      "registryFiles": [
+        "registry/intro-disclosure.json",
+        "registry/intro-disclosure-demo.json"
+      ],
+      "sourceFiles": [
+        "source/registry/default/ui/intro-disclosure.tsx",
+        "source/registry/default/example/intro-disclosure-demo.tsx"
+      ],
+      "npmDependencies": [
+        "lucide-react",
+        "motion",
+        "react-use-measure"
+      ],
+      "registryDependencies": [
+        "aspect-ratio",
+        "button",
+        "checkbox",
+        "dialog",
+        "drawer",
+        "intro-disclosure",
+        "progress"
+      ],
+      "imports": [
+        "../ui/intro-disclosure",
+        "@/components/ui/aspect-ratio",
+        "@/components/ui/button",
+        "@/components/ui/checkbox",
+        "@/components/ui/collapsible",
+        "@/components/ui/dialog",
+        "@/components/ui/drawer",
+        "@/components/ui/progress",
+        "@/lib/utils",
+        "@radix-ui/react-icons",
+        "lucide-react",
+        "motion/react",
+        "next/image",
+        "next/navigation",
+        "react",
+        "sonner"
+      ],
+      "externalReferences": [],
+      "status": "待视觉验证",
+      "buildStatus": "not built; upstream archive only",
+      "accepted": false,
+      "deduplication": "One component family; onboarding and expandable wizard grouped. Cross-source visual/interaction duplication remains to be checked.",
+      "risk": [
+        "Remote media and logos not downloaded or licensed by assumption",
+        "Source registry metadata may omit imports; original project package+lock retained"
+      ]
+    },
+    {
+      "id": "cult:marketing-feature-code",
+      "title": "marketing-feature-code",
+      "description": "Marketing section for code or network policy features",
+      "source": "Cult UI",
+      "revision": "d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+      "license": "MIT",
+      "licenseFile": "LICENSE.md",
+      "upstream": "https://github.com/nolly-studio/cult-ui/tree/d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+      "registryFiles": [
+        "registry/marketing-feature-code.json",
+        "registry/marketing-feature-code-demo.json"
+      ],
+      "sourceFiles": [
+        "source/registry/default/ui/marketing-feature-code.tsx",
+        "source/registry/default/example/marketing-feature-code-demo.tsx"
+      ],
+      "npmDependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "marketing-feature-code"
+      ],
+      "imports": [
+        "@/lib/utils",
+        "@/registry/default/ui/marketing-feature-code",
+        "lucide-react",
+        "react"
+      ],
+      "externalReferences": [],
+      "status": "待视觉验证",
+      "buildStatus": "not built; upstream archive only",
+      "accepted": false,
+      "deduplication": "One component family; onboarding and expandable wizard grouped. Cross-source visual/interaction duplication remains to be checked.",
+      "risk": [
+        "Remote media and logos not downloaded or licensed by assumption",
+        "Source registry metadata may omit imports; original project package+lock retained"
+      ]
+    },
+    {
+      "id": "cult:marketing-hero-analytics",
+      "title": "marketing-hero-analytics",
+      "description": "Analytics hero section for marketing pages",
+      "source": "Cult UI",
+      "revision": "d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+      "license": "MIT",
+      "licenseFile": "LICENSE.md",
+      "upstream": "https://github.com/nolly-studio/cult-ui/tree/d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+      "registryFiles": [
+        "registry/marketing-hero-analytics.json",
+        "registry/marketing-hero-analytics-demo.json"
+      ],
+      "sourceFiles": [
+        "source/registry/default/ui/marketing-hero-analytics.tsx",
+        "source/registry/default/example/marketing-hero-analytics-demo.tsx"
+      ],
+      "npmDependencies": [],
+      "registryDependencies": [
+        "marketing-hero-analytics"
+      ],
+      "imports": [
+        "@/lib/utils",
+        "@/registry/default/ui/marketing-hero-analytics",
+        "react"
+      ],
+      "externalReferences": [],
+      "status": "待视觉验证",
+      "buildStatus": "not built; upstream archive only",
+      "accepted": false,
+      "deduplication": "One component family; onboarding and expandable wizard grouped. Cross-source visual/interaction duplication remains to be checked.",
+      "risk": [
+        "Remote media and logos not downloaded or licensed by assumption",
+        "Source registry metadata may omit imports; original project package+lock retained"
+      ]
+    },
+    {
+      "id": "cult:morph-surface",
+      "title": "morph-surface",
+      "description": "A morphing surface component with smooth animations, customizable dimensions, and configurable content",
+      "source": "Cult UI",
+      "revision": "d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+      "license": "MIT",
+      "licenseFile": "LICENSE.md",
+      "upstream": "https://github.com/nolly-studio/cult-ui/tree/d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+      "registryFiles": [
+        "registry/morph-surface.json",
+        "registry/morph-surface-demo.json"
+      ],
+      "sourceFiles": [
+        "source/registry/default/ui/morph-surface.tsx",
+        "source/registry/default/example/morph-surface-demo.tsx"
+      ],
+      "npmDependencies": [
+        "motion"
+      ],
+      "registryDependencies": [
+        "morph-surface"
+      ],
+      "imports": [
+        "@/lib/utils",
+        "@/registry/default/ui/morph-surface",
+        "lucide-react",
+        "motion/react",
+        "react"
+      ],
+      "externalReferences": [
+        "http://www.w3.org/2000/svg"
+      ],
+      "status": "待视觉验证",
+      "buildStatus": "not built; upstream archive only",
+      "accepted": false,
+      "deduplication": "One component family; onboarding and expandable wizard grouped. Cross-source visual/interaction duplication remains to be checked.",
+      "risk": [
+        "Remote media and logos not downloaded or licensed by assumption",
+        "Source registry metadata may omit imports; original project package+lock retained"
+      ]
+    },
+    {
+      "id": "cult:onboarding",
+      "title": "onboarding",
+      "description": "Composable multi-step onboarding primitives: Onboarding root with step navigation, FeatureCarousel, ChoiceGroup radio selector, TipsList, and StepIndicator with dots and pills variants",
+      "source": "Cult UI",
+      "revision": "d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+      "license": "MIT",
+      "licenseFile": "LICENSE.md",
+      "upstream": "https://github.com/nolly-studio/cult-ui/tree/d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+      "registryFiles": [
+        "registry/onboarding.json",
+        "registry/onboarding-demo.json",
+        "registry/wizard-expandable.json",
+        "registry/wizard-expandable-demo.json"
+      ],
+      "sourceFiles": [
+        "source/registry/default/ui/onboarding.tsx",
+        "source/registry/default/example/onboarding-demo.tsx",
+        "source/registry/default/ui/wizard-expandable.tsx",
+        "source/registry/default/example/wizard-expandable-demo.tsx"
+      ],
+      "npmDependencies": [
+        "@base-ui/react",
+        "@radix-ui/react-use-controllable-state",
+        "class-variance-authority",
+        "lucide-react",
+        "motion"
+      ],
+      "registryDependencies": [
+        "badge",
+        "button",
+        "input",
+        "label",
+        "onboarding",
+        "textarea",
+        "wizard-expandable"
+      ],
+      "imports": [
+        "../ui/onboarding",
+        "@/components/ui/badge",
+        "@/components/ui/button",
+        "@/components/ui/dialog",
+        "@/components/ui/input",
+        "@/components/ui/label",
+        "@/components/ui/textarea",
+        "@/lib/utils",
+        "@/registry/default/ui/wizard-expandable",
+        "@base-ui/react/scroll-area",
+        "@radix-ui/react-use-controllable-state",
+        "class-variance-authority",
+        "lucide-react",
+        "motion/react",
+        "next/image",
+        "react"
+      ],
+      "externalReferences": [
+        "https://lina.sameer.sh/"
+      ],
+      "status": "待视觉验证",
+      "buildStatus": "not built; upstream archive only",
+      "accepted": false,
+      "deduplication": "One component family; onboarding and expandable wizard grouped. Cross-source visual/interaction duplication remains to be checked.",
+      "risk": [
+        "Remote media and logos not downloaded or licensed by assumption",
+        "Source registry metadata may omit imports; original project package+lock retained"
+      ]
+    },
+    {
+      "id": "cult:prompt-library",
+      "title": "prompt-library",
+      "description": "Browse, insert, and manage prompt templates with categories and custom prompts",
+      "source": "Cult UI",
+      "revision": "d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+      "license": "MIT",
+      "licenseFile": "LICENSE.md",
+      "upstream": "https://github.com/nolly-studio/cult-ui/tree/d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+      "registryFiles": [
+        "registry/prompt-library.json",
+        "registry/prompt-library-demo.json"
+      ],
+      "sourceFiles": [
+        "source/registry/default/ui/prompt-library.tsx",
+        "source/registry/default/example/prompt-library-demo.tsx"
+      ],
+      "npmDependencies": [
+        "@hugeicons/core-free-icons",
+        "@hugeicons/react"
+      ],
+      "registryDependencies": [
+        "button",
+        "command",
+        "dialog",
+        "hover-card",
+        "input",
+        "popover",
+        "prompt-library",
+        "textarea"
+      ],
+      "imports": [
+        "../ui/prompt-library",
+        "@/components/ui/button",
+        "@/components/ui/command",
+        "@/components/ui/dialog",
+        "@/components/ui/hover-card",
+        "@/components/ui/input",
+        "@/components/ui/popover",
+        "@/components/ui/textarea",
+        "@/lib/utils",
+        "@hugeicons/core-free-icons",
+        "@hugeicons/react",
+        "react"
+      ],
+      "externalReferences": [],
+      "status": "待视觉验证",
+      "buildStatus": "not built; upstream archive only",
+      "accepted": false,
+      "deduplication": "One component family; onboarding and expandable wizard grouped. Cross-source visual/interaction duplication remains to be checked.",
+      "risk": [
+        "Remote media and logos not downloaded or licensed by assumption",
+        "Source registry metadata may omit imports; original project package+lock retained"
+      ]
+    },
+    {
+      "id": "cult:security-checkpoint",
+      "title": "security-checkpoint",
+      "description": "Security checkpoint illustration or component",
+      "source": "Cult UI",
+      "revision": "d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+      "license": "MIT",
+      "licenseFile": "LICENSE.md",
+      "upstream": "https://github.com/nolly-studio/cult-ui/tree/d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+      "registryFiles": [
+        "registry/security-checkpoint.json",
+        "registry/security-checkpoint-demo.json"
+      ],
+      "sourceFiles": [
+        "source/registry/default/ui/security-checkpoint.tsx",
+        "source/registry/default/example/security-checkpoint-demo.tsx"
+      ],
+      "npmDependencies": [],
+      "registryDependencies": [
+        "security-checkpoint"
+      ],
+      "imports": [
+        "@/lib/utils",
+        "@/registry/default/ui/security-checkpoint",
+        "react"
+      ],
+      "externalReferences": [],
+      "status": "待视觉验证",
+      "buildStatus": "not built; upstream archive only",
+      "accepted": false,
+      "deduplication": "One component family; onboarding and expandable wizard grouped. Cross-source visual/interaction duplication remains to be checked.",
+      "risk": [
+        "Remote media and logos not downloaded or licensed by assumption",
+        "Source registry metadata may omit imports; original project package+lock retained"
+      ]
+    },
+    {
+      "id": "cult:side-panel",
+      "title": "side-panel",
+      "description": "Sliding side panel component with customizable positioning and animations",
+      "source": "Cult UI",
+      "revision": "d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+      "license": "MIT",
+      "licenseFile": "LICENSE.md",
+      "upstream": "https://github.com/nolly-studio/cult-ui/tree/d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+      "registryFiles": [
+        "registry/side-panel.json",
+        "registry/side-panel-demo.json"
+      ],
+      "sourceFiles": [
+        "source/registry/default/ui/side-panel.tsx",
+        "source/registry/default/example/side-panel-demo.tsx"
+      ],
+      "npmDependencies": [
+        "motion",
+        "react-use-measure"
+      ],
+      "registryDependencies": [
+        "side-panel"
+      ],
+      "imports": [
+        "../ui/side-panel",
+        "@/components/ui/button",
+        "@/lib/utils",
+        "motion/react",
+        "react",
+        "react-player/lazy",
+        "react-use-measure"
+      ],
+      "externalReferences": [
+        "http://www.w3.org/2000/svg",
+        "https://youtu.be/ta6m_l3lZvQ?si=1CPubGeqxLVG0i2L"
+      ],
+      "status": "待视觉验证",
+      "buildStatus": "not built; upstream archive only",
+      "accepted": false,
+      "deduplication": "One component family; onboarding and expandable wizard grouped. Cross-source visual/interaction duplication remains to be checked.",
+      "risk": [
+        "Remote media and logos not downloaded or licensed by assumption",
+        "Source registry metadata may omit imports; original project package+lock retained"
+      ]
+    },
+    {
+      "id": "cult:three-d-carousel",
+      "title": "three-d-carousel",
+      "description": "3D carousel component with perspective effects and smooth item transitions",
+      "source": "Cult UI",
+      "revision": "d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+      "license": "MIT",
+      "licenseFile": "LICENSE.md",
+      "upstream": "https://github.com/nolly-studio/cult-ui/tree/d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+      "registryFiles": [
+        "registry/three-d-carousel.json",
+        "registry/three-d-carousel-demo.json"
+      ],
+      "sourceFiles": [
+        "source/registry/default/ui/three-d-carousel.tsx",
+        "source/registry/default/example/three-d-carousel-demo.tsx"
+      ],
+      "npmDependencies": [
+        "motion"
+      ],
+      "registryDependencies": [
+        "three-d-carousel"
+      ],
+      "imports": [
+        "../ui/three-d-carousel",
+        "motion/react",
+        "react"
+      ],
+      "externalReferences": [
+        "https://picsum.photos/200/300?${keyword}"
+      ],
+      "status": "待视觉验证",
+      "buildStatus": "not built; upstream archive only",
+      "accepted": false,
+      "deduplication": "One component family; onboarding and expandable wizard grouped. Cross-source visual/interaction duplication remains to be checked.",
+      "risk": [
+        "Remote media and logos not downloaded or licensed by assumption",
+        "Source registry metadata may omit imports; original project package+lock retained"
+      ]
+    },
+    {
+      "id": "cult:toolbar-expandable",
+      "title": "toolbar-expandable",
+      "description": "Expandable toolbar component with step-based navigation, smooth animations, and enhanced scrolling",
+      "source": "Cult UI",
+      "revision": "d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+      "license": "MIT",
+      "licenseFile": "LICENSE.md",
+      "upstream": "https://github.com/nolly-studio/cult-ui/tree/d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+      "registryFiles": [
+        "registry/toolbar-expandable.json",
+        "registry/toolbar-expandable-demo.json"
+      ],
+      "sourceFiles": [
+        "source/registry/default/ui/toolbar-expandable.tsx",
+        "source/registry/default/example/toolbar-expandable-demo.tsx"
+      ],
+      "npmDependencies": [
+        "@radix-ui/react-scroll-area",
+        "motion"
+      ],
+      "registryDependencies": [
+        "badge",
+        "button",
+        "input",
+        "label",
+        "textarea",
+        "toolbar-expandable"
+      ],
+      "imports": [
+        "@/components/ui/badge",
+        "@/components/ui/button",
+        "@/components/ui/input",
+        "@/components/ui/label",
+        "@/components/ui/textarea",
+        "@/lib/utils",
+        "@/registry/default/ui/toolbar-expandable",
+        "@radix-ui/react-scroll-area",
+        "lucide-react",
+        "motion/react",
+        "react"
+      ],
+      "externalReferences": [
+        "https://lina.sameer.sh/"
+      ],
+      "status": "待视觉验证",
+      "buildStatus": "not built; upstream archive only",
+      "accepted": false,
+      "deduplication": "One component family; onboarding and expandable wizard grouped. Cross-source visual/interaction duplication remains to be checked.",
+      "risk": [
+        "Remote media and logos not downloaded or licensed by assumption",
+        "Source registry metadata may omit imports; original project package+lock retained"
+      ]
+    }
+  ],
+  "excluded": [
+    {
+      "id": "folded-card",
+      "reason": "simple decorative clip-path card, not counted as refined distinct UI"
+    }
+  ]
+}

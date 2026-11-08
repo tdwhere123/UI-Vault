@@ -1,0 +1,309 @@
+{
+  "candidateGroups": 7,
+  "verifiedCount": 0,
+  "items": [
+    {
+      "id": "fancy:physics-attractor-system",
+      "source": "Fancy Components",
+      "revision": "f9f62c61207b2dd3210476dd98af3c9a5be24094",
+      "license": "MIT",
+      "licenseFile": "LICENSE",
+      "sourceFiles": [
+        "upstream/src/fancy/components/physics/gravity.tsx",
+        "upstream/src/fancy/examples/physics/gravity-svg-bodies-demo.tsx",
+        "upstream/src/fancy/examples/physics/gravity-demo.tsx",
+        "upstream/src/fancy/examples/physics/gravity-body-types-demo.tsx",
+        "upstream/src/fancy/components/physics/cursor-attractor-and-gravity.tsx",
+        "upstream/src/fancy/examples/physics/cursor-attractor-and-gravity-image-demo.tsx",
+        "upstream/src/fancy/examples/physics/cursor-attractor-and-gravity-demo.tsx"
+      ],
+      "documentation": [
+        "upstream/src/content/docs/components/physics/gravity.mdx",
+        "upstream/src/content/docs/components/physics/cursor-attractor-and-gravity.mdx"
+      ],
+      "upstreamCredits": [
+        "## Credits\n\nPorted to Framer by [Framer University](https://framer.university/)\n"
+      ],
+      "imports": [
+        "@/fancy/components/physics/cursor-attractor-and-gravity",
+        "@/fancy/components/physics/gravity",
+        "@/hooks/use-mouse-position-ref",
+        "@/hooks/use-screen-size",
+        "@/lib/utils",
+        "@/utils/calculate-position",
+        "@/utils/svg-path-to-vertices",
+        "lodash",
+        "lucide-react",
+        "matter-js",
+        "motion/react",
+        "react"
+      ],
+      "externalReferences": [
+        "http://www.w3.org/2000/svg",
+        "https://randomuser.me/api/portraits/${i"
+      ],
+      "status": "待视觉验证",
+      "buildStatus": "not built",
+      "accepted": false,
+      "deduplication": "Gravity/attractor variants grouped; CSS box/carousel grouped; SVG path variants grouped. Cross-source visual distinctness pending.",
+      "risk": [
+        "Demo artworks and externally hosted media need separate permission or disclosed neutral replacements",
+        "Some browser-dependent SVG/physics behavior requires actual interaction testing"
+      ]
+    },
+    {
+      "id": "fancy:elastic-line",
+      "source": "Fancy Components",
+      "revision": "f9f62c61207b2dd3210476dd98af3c9a5be24094",
+      "license": "MIT",
+      "licenseFile": "LICENSE",
+      "sourceFiles": [
+        "upstream/src/fancy/components/physics/elastic-line.tsx",
+        "upstream/src/fancy/examples/physics/elastic-line-demo.tsx"
+      ],
+      "documentation": [
+        "upstream/src/content/docs/components/physics/elastic-line.mdx"
+      ],
+      "upstreamCredits": [
+        "## Credits\n\nPorted to Framer by [Framer University](https://framer.university/)\n"
+      ],
+      "imports": [
+        "@/fancy/components/physics/elastic-line",
+        "@/hooks/use-dimensions",
+        "@/hooks/use-elastic-line-events",
+        "motion/react",
+        "react"
+      ],
+      "externalReferences": [],
+      "status": "待视觉验证",
+      "buildStatus": "not built",
+      "accepted": false,
+      "deduplication": "Gravity/attractor variants grouped; CSS box/carousel grouped; SVG path variants grouped. Cross-source visual distinctness pending.",
+      "risk": [
+        "Demo artworks and externally hosted media need separate permission or disclosed neutral replacements",
+        "Some browser-dependent SVG/physics behavior requires actual interaction testing"
+      ]
+    },
+    {
+      "id": "fancy:css-box-carousel",
+      "source": "Fancy Components",
+      "revision": "f9f62c61207b2dd3210476dd98af3c9a5be24094",
+      "license": "MIT",
+      "licenseFile": "LICENSE",
+      "sourceFiles": [
+        "upstream/src/fancy/components/blocks/css-box.tsx",
+        "upstream/src/fancy/examples/blocks/css-box-demo.tsx",
+        "upstream/src/fancy/examples/blocks/css-box-scroll-demo.tsx",
+        "upstream/src/fancy/components/carousel/box-carousel.tsx",
+        "upstream/src/fancy/examples/carousel/box-carousel-demo.tsx"
+      ],
+      "documentation": [
+        "upstream/src/content/docs/components/blocks/css-box.mdx",
+        "upstream/src/content/docs/components/carousel/box-carousel.mdx"
+      ],
+      "upstreamCredits": [
+        "## Credits\n\nThe component is derived from the Box chapter of David De Sandro's [extremely awesome Intro to CSS 3D transforms tutorial](https://3dtransforms.desandro.com/box). \n\nPorted to Framer by [Framer University](https://framer.university/)\n",
+        "## Credits\n\nYou can find the links for each artwork used in the demo [here](https://www.cosmos.so/danielpetho/box-carousel-demo).\n\nPorted to Framer by [Framer University](https://framer.university/)\n"
+      ],
+      "imports": [
+        "@/fancy/components/blocks/css-box",
+        "@/fancy/components/carousel/box-carousel",
+        "@/hooks/use-screen-size",
+        "@/lib/utils",
+        "lucide-react",
+        "motion/react",
+        "react"
+      ],
+      "externalReferences": [
+        "https://cdn.cosmos.so/276cdd4e-8a7a-4c32-955f-83c5900a0926?format=jpeg",
+        "https://cdn.cosmos.so/27ac2696-1f2b-498e-8d3d-11f2dd358ab9?format=jpeg",
+        "https://cdn.cosmos.so/33b43e2a-da66-42d9-a0b1-08165d80b0aa?format=jpeg",
+        "https://cdn.cosmos.so/40342df7-2ea2-4297-add2-fe17cdc62551?format=jpeg",
+        "https://cdn.cosmos.so/5332f9ac-7823-4635-871d-d4b3032e1c62?format=jpeg",
+        "https://cdn.cosmos.so/778d0640-d4b8-45b4-8bbe-862e759c231d?format=jpeg",
+        "https://cdn.cosmos.so/c48b739d-202d-4340-ab6b-afa34f0d7142?format=jpeg",
+        "https://cdn.cosmos.so/d9ed937e-7c3b-4f64-a4f3-708d639f13a1?format=jpeg"
+      ],
+      "status": "待视觉验证",
+      "buildStatus": "not built",
+      "accepted": false,
+      "deduplication": "Gravity/attractor variants grouped; CSS box/carousel grouped; SVG path variants grouped. Cross-source visual distinctness pending.",
+      "risk": [
+        "Demo artworks and externally hosted media need separate permission or disclosed neutral replacements",
+        "Some browser-dependent SVG/physics behavior requires actual interaction testing"
+      ]
+    },
+    {
+      "id": "fancy:svg-path-motion",
+      "source": "Fancy Components",
+      "revision": "f9f62c61207b2dd3210476dd98af3c9a5be24094",
+      "license": "MIT",
+      "licenseFile": "LICENSE",
+      "sourceFiles": [
+        "upstream/src/fancy/components/blocks/element-along-svg-path.tsx",
+        "upstream/src/fancy/examples/blocks/element-along-svg-path-demo.tsx",
+        "upstream/src/fancy/components/blocks/marquee-along-svg-path.tsx",
+        "upstream/src/fancy/examples/blocks/marquee-along-svg-path-scroll-demo.tsx"
+      ],
+      "documentation": [
+        "upstream/src/content/docs/components/blocks/marquee-along-svg-path.mdx"
+      ],
+      "upstreamCredits": [
+        "## Credits\n\nClick on the individual images in the 2nd demo to see the original artworks & authors.\n"
+      ],
+      "imports": [
+        "@/fancy/components/blocks/element-along-svg-path",
+        "@/fancy/components/blocks/marquee-along-svg-path",
+        "@/lib/utils",
+        "@/utils/demo-images",
+        "motion/react",
+        "react"
+      ],
+      "externalReferences": [
+        "http://www.w3.org/2000/svg",
+        "https://cdn.cosmos.so/14f05ab6-b4d0-4605-9007-8a2190a249d0?format=jpeg",
+        "https://cdn.cosmos.so/1a18b312-21cd-4484-bce5-9fb7ed1c5e01?format=jpeg",
+        "https://cdn.cosmos.so/24e83c11-c607-45cd-88fb-5059960b56a0?format=jpeg",
+        "https://cdn.cosmos.so/40a09525-4b00-4666-86f0-3c45f5d77605?format=jpeg",
+        "https://cdn.cosmos.so/6b9f08ea-f0c5-471f-a620-71221ff1fb65?format=jpeg",
+        "https://cdn.cosmos.so/79de41ec-baa4-4ac0-a9a4-c090005ca640?format=jpeg",
+        "https://cdn.cosmos.so/b9909337-7a53-48bc-9672-33fbd0f040a1?format=jpeg",
+        "https://cdn.cosmos.so/ba646e35-efc2-494a-961b-b40f597e6fc9?format=jpeg",
+        "https://cdn.cosmos.so/cd346bce-f415-4ea7-8060-99c5f7c1741a?format=jpeg",
+        "https://cdn.cosmos.so/d05009a2-a2f8-4a4c-a0de-e1b0379dddb8?format=jpeg",
+        "https://cdn.cosmos.so/d765f64f-7a66-462f-8b2d-3d7bc8d7db55?format=jpeg",
+        "https://cdn.cosmos.so/e899f9c3-ed48-4899-8c16-fbd5a60705da?format=jpeg",
+        "https://cdn.cosmos.so/ecdc9dd7-2862-4c28-abb1-dcc0947390f3?format=jpeg"
+      ],
+      "status": "待视觉验证",
+      "buildStatus": "not built",
+      "accepted": false,
+      "deduplication": "Gravity/attractor variants grouped; CSS box/carousel grouped; SVG path variants grouped. Cross-source visual distinctness pending.",
+      "risk": [
+        "Demo artworks and externally hosted media need separate permission or disclosed neutral replacements",
+        "Some browser-dependent SVG/physics behavior requires actual interaction testing"
+      ]
+    },
+    {
+      "id": "fancy:screensaver",
+      "source": "Fancy Components",
+      "revision": "f9f62c61207b2dd3210476dd98af3c9a5be24094",
+      "license": "MIT",
+      "licenseFile": "LICENSE",
+      "sourceFiles": [
+        "upstream/src/fancy/components/blocks/screensaver.tsx",
+        "upstream/src/fancy/examples/blocks/screensaver-demo.tsx"
+      ],
+      "documentation": [
+        "upstream/src/content/docs/components/blocks/screensaver.mdx"
+      ],
+      "upstreamCredits": [
+        "## Credits\n\nPorted to Framer by [Achille Ernoult](https://x.com/achilleernlt)\n"
+      ],
+      "imports": [
+        "@/fancy/components/blocks/screensaver",
+        "@/hooks/use-dimensions",
+        "@/lib/utils",
+        "@/utils/demo-images",
+        "motion/react",
+        "react"
+      ],
+      "externalReferences": [],
+      "status": "待视觉验证",
+      "buildStatus": "not built",
+      "accepted": false,
+      "deduplication": "Gravity/attractor variants grouped; CSS box/carousel grouped; SVG path variants grouped. Cross-source visual distinctness pending.",
+      "risk": [
+        "Demo artworks and externally hosted media need separate permission or disclosed neutral replacements",
+        "Some browser-dependent SVG/physics behavior requires actual interaction testing"
+      ]
+    },
+    {
+      "id": "fancy:media-between-text",
+      "source": "Fancy Components",
+      "revision": "f9f62c61207b2dd3210476dd98af3c9a5be24094",
+      "license": "MIT",
+      "licenseFile": "LICENSE",
+      "sourceFiles": [
+        "upstream/src/fancy/components/blocks/media-between-text.tsx",
+        "upstream/src/fancy/examples/blocks/media-between-text-demo.tsx",
+        "upstream/src/fancy/examples/blocks/media-between-text-scroll-demo.tsx"
+      ],
+      "documentation": [
+        "upstream/src/content/docs/components/blocks/media-between-text.mdx"
+      ],
+      "upstreamCredits": [],
+      "imports": [
+        "@/fancy/components/blocks/media-between-text",
+        "@/hooks/use-screen-size",
+        "@/lib/utils",
+        "motion/react",
+        "react"
+      ],
+      "externalReferences": [
+        "https://cdn.cosmos.so/444e4a2a-45a6-477f-b342-6b6bc9a7c53b.mp4",
+        "https://cdn.cosmos.so/499ddb3b-57cf-4c07-996c-f797fadf64ab.mp4",
+        "https://cdn.cosmos.so/53454cbe-a4ec-4782-923f-a82d70e12645.mp4",
+        "https://cdn.cosmos.so/90e2192e-7bd4-44af-96ae-05cd955c0cfb?format=jpeg",
+        "https://cdn.cosmos.so/f533f1a8-9f67-4360-b395-7abc8594cac9.mp4",
+        "https://www.instagram.com/andreiongd/",
+        "https://www.instagram.com/lorrr.l/",
+        "https://www.instagram.com/p/C3oL4euoc2l/?img_index=1",
+        "https://www.instagram.com/polyhop/",
+        "https://www.instagram.com/tim_rodenbroeker/"
+      ],
+      "status": "待视觉验证",
+      "buildStatus": "not built",
+      "accepted": false,
+      "deduplication": "Gravity/attractor variants grouped; CSS box/carousel grouped; SVG path variants grouped. Cross-source visual distinctness pending.",
+      "risk": [
+        "Demo artworks and externally hosted media need separate permission or disclosed neutral replacements",
+        "Some browser-dependent SVG/physics behavior requires actual interaction testing"
+      ]
+    },
+    {
+      "id": "fancy:parallax-floating",
+      "source": "Fancy Components",
+      "revision": "f9f62c61207b2dd3210476dd98af3c9a5be24094",
+      "license": "MIT",
+      "licenseFile": "LICENSE",
+      "sourceFiles": [
+        "upstream/src/fancy/components/image/parallax-floating.tsx",
+        "upstream/src/fancy/examples/image/parallax-floating-demo.tsx"
+      ],
+      "documentation": [
+        "upstream/src/content/docs/components/image/parallax-floating.mdx"
+      ],
+      "upstreamCredits": [
+        "## Credits\n\nPorted to Framer by [Framer University](https://framer.university/)\n"
+      ],
+      "imports": [
+        "@/fancy/components/image/parallax-floating",
+        "@/hooks/use-mouse-position-ref",
+        "@/lib/utils",
+        "@/utils/demo-images",
+        "motion/react",
+        "react"
+      ],
+      "externalReferences": [],
+      "status": "待视觉验证",
+      "buildStatus": "not built",
+      "accepted": false,
+      "deduplication": "Gravity/attractor variants grouped; CSS box/carousel grouped; SVG path variants grouped. Cross-source visual distinctness pending.",
+      "risk": [
+        "Demo artworks and externally hosted media need separate permission or disclosed neutral replacements",
+        "Some browser-dependent SVG/physics behavior requires actual interaction testing"
+      ]
+    }
+  ],
+  "heldForSecondaryLicense": [
+    {
+      "path": "filter/gooey-svg-filter",
+      "reason": "Explicitly derived from Lucas Bebber CSS Tricks article; source notice/terms to check before public distribution"
+    },
+    {
+      "path": "filter/pixelate-svg-filter",
+      "reason": "Explicitly derived from StackOverflow thread; contributor attribution/CC-BY-SA obligations need checking"
+    }
+  ]
+}
