@@ -1,9 +1,8 @@
-/** Publish the atlas at / and preserve the previous audited gallery at /legacy/. */
+/** Publish the current atlas only. Historical assets remain recoverable in Git. */
 import { mkdir, readdir, copyFile, lstat, readFile, writeFile } from 'node:fs/promises';
 import { resolve, join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { execFileSync } from 'node:child_process';
-import { exportStatic } from '../apps/explorer/static-export.mjs';
 const root=resolve(dirname(fileURLToPath(import.meta.url)),'..');
 export async function exportPages(output,basePath='/UI-Vault/') {
   output=resolve(output);
@@ -11,7 +10,7 @@ export async function exportPages(output,basePath='/UI-Vault/') {
   await mkdir(output,{recursive:true});
   if((await readdir(output)).length)throw Error('Output must be empty');
   const sha=execFileSync('git',['rev-parse','HEAD'],{cwd:root,encoding:'utf8'}).trim();
-  const legacy=await exportStatic({root,output:join(output,'legacy'),basePath:basePath+'legacy/',sha});
+  const worktreeDirty=!!execFileSync('git',['status','--porcelain','--untracked-files=no'],{cwd:root,encoding:'utf8'}).trim();
   const source=join(root,'apps/atlas-sample');
   const files=['index.html','app.js','atlas-model.mjs','preview-runtime.mjs','style.css','items.json','README.md','LICENSES.md'];
   async function copy(relative){const s=join(source,relative),d=join(output,relative),info=await lstat(s);if(info.isSymbolicLink())throw Error('Symlinks not permitted');if(info.isDirectory()){await mkdir(d);for(const child of await readdir(s))await copy(relative+'/'+child)}else if(info.isFile())await copyFile(s,d);else throw Error('Unsupported input');}
@@ -20,7 +19,7 @@ export async function exportPages(output,basePath='/UI-Vault/') {
   const items=JSON.parse(await readFile(join(output,'items.json'),'utf8'));
   if(!items.length||new Set(items.map(x=>x.id)).size!==items.length)throw Error('Expected nonempty, unique atlas materials');
   for(const x of items)for(const value of [x.preview,x.code,x.bundle,...(x.runtime?[x.runtime.css,x.runtime.js]:[])]){if(typeof value!=='string'||value.includes('..')||value.startsWith('/')||value.includes(':'))throw Error('Invalid material path');await lstat(join(output,value));}
-  const version={codeSha:sha,basePath,materials:items.length,legacy:'legacy/',worktreeDirty:legacy.worktreeDirty};
+  const version={codeSha:sha,basePath,materials:items.length,worktreeDirty};
   await writeFile(join(output,'version.json'),JSON.stringify(version,null,2)+'\n');
   await writeFile(join(output,'.nojekyll'),'');
   return version;

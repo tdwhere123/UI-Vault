@@ -2,7 +2,7 @@
 
 网站：<https://tdwhere123.github.io/UI-Vault/>
 
-当前已收录 **224件独立素材：204件精选＋20件保留基础素材**。已达到至少200件精选独立素材的目标。源码候选、不同配色与框架版本不充数。
+当前已收录 **224件独立素材：204件精选＋20件保留基础素材**。正在向500件优质素材扩充；图标按完整系列单列统计，不按单枚凑数。源码候选、不同配色与框架版本不充数。
 
 ## 当前内容
 
@@ -14,19 +14,18 @@ Looseleaf 39件、Magic UI 36件、HyperUI 20件、Kokonut UI 49件、Bencho 24�
 
 前端按紧凑图鉴结构独立实现，没有复制LeiBox受限制代码。桌面三列、手机单列与抽屉分类；分类搜索、来源筛选、可直达详情。每页12条，最多6个可见卡片运行，离屏或切源码后释放预览，避免大量动画同时拖慢页面。返回保留页码与筛选。
 
-[旧图库与70份源码](https://tdwhere123.github.io/UI-Vault/legacy/)仍保留；旧包多项依赖不完整、运行状态未验证，不与本图鉴相加声称完成迁移。仓库archive、原始目录和许可证据未删除。
+旧版图库、70份旧包与其专用归档工具链已按用户要求退出当前工作树；可从 Git 历史 `3a2e440` 恢复。新版224项运行资源、原件下载和许可证均保留，不将旧包冒充已迁移素材。
 
 ## 本地运行
 
-Node.js 22或24，pnpm 10.34.6：
+Node.js 22或24；图库和测试不需要安装第三方依赖：
 
 ```sh
-pnpm install --ignore-scripts --frozen-lockfile
-pnpm build
+npm run build
 python3 -m http.server 8080 --bind 127.0.0.1 --directory apps/atlas-sample
 ```
 
-完整发布预览包括旧库：
+导出当前图库预览：
 
 ```sh
 node scripts/export-pages.mjs /tmp/ui-vault-pages /
@@ -38,11 +37,7 @@ python3 -m http.server 8080 --bind 127.0.0.1 --directory /tmp/ui-vault-pages
 ## 验证与发布
 
 ```sh
-pnpm build
-pnpm typecheck
-pnpm unit
-pnpm test:gallery
-node --test apps/atlas-sample/*.test.mjs
+npm run build
 ```
 
 `.github/workflows/pages.yml`在main更新时构建GitHub Pages。线上`version.json`给出实际提交和条目数。构建测试不等于视觉验收，具体边界见`apps/atlas-sample/VERIFICATION.md`。

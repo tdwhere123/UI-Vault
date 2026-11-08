@@ -1,5 +1,5 @@
 {
-  "name": "Publish UI Vault atlas and preserved legacy gallery",
+  "name": "Publish UI Vault atlas",
   "on": {
     "push": {
       "branches": [
@@ -39,14 +39,9 @@
           }
         },
         {
-          "name": "Install pinned package manager and dependencies",
+          "name": "Test and export current atlas",
           "shell": "bash",
-          "run": "set -euo pipefail\ncorepack enable\ncorepack prepare \"$(node -p \"require('./package.json').packageManager\")\" --activate\npnpm --version\npnpm install --frozen-lockfile --ignore-scripts"
-        },
-        {
-          "name": "Test and export atlas with preserved legacy assets",
-          "shell": "bash",
-          "run": "set -euo pipefail\npnpm build\nnode --test apps/atlas-sample/sample.test.mjs\nnode scripts/export-pages.mjs \"$RUNNER_TEMP/ui-vault-pages\" /UI-Vault/\ngit diff --exit-code"
+          "run": "set -euo pipefail\nnpm run build\nnode scripts/export-pages.mjs \"$RUNNER_TEMP/ui-vault-pages\" /UI-Vault/\ngit diff --exit-code"
         },
         {
           "uses": "actions/configure-pages@v5"

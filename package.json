@@ -1,36 +1,15 @@
 {
   "name": "ui-vault",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
   "type": "module",
-  "packageManager": "pnpm@10.34.6",
   "engines": {
     "node": ">=22 <25"
   },
   "scripts": {
-    "build": "tsc -p packages/core/tsconfig.build.json && tsc -p packages/restore/tsconfig.build.json && tsc -p tsconfig.collection.json && pnpm check:explorer",
-    "typecheck": "tsc -p packages/core/tsconfig.build.json --noEmit && tsc -p packages/restore/tsconfig.build.json --noEmit && tsc -p tsconfig.collection.json --noEmit && pnpm check:explorer",
-    "unit": "pnpm unit:core && pnpm unit:restore && pnpm unit:explorer && pnpm unit:evidence",
-    "schema": "node dist/packages/cli/src/main.js schema",
-    "vault": "node dist/packages/cli/src/main.js",
-    "evidence:verify": "node evidence/collection-platform/verify.mjs verify",
-    "check:explorer": "node --check apps/explorer/server.mjs && node --check apps/explorer/local-explorer.mjs && node --check apps/explorer/start.mjs && node --check apps/explorer/public/app.js",
-    "unit:core": "node --test packages/core/tests/*.test.mjs",
-    "unit:restore": "pnpm --dir packages/restore test",
-    "unit:explorer": "pnpm --dir apps/explorer test",
-    "unit:evidence": "node --test evidence/collection-platform/verify.test.mjs",
-    "smoke:collection": "node apps/explorer/test/catalog-smoke.mjs",
-    "test:offline": "pnpm --dir packages/restore test:real",
-    "evidence:write": "node evidence/collection-platform/verify.mjs write",
-    "evidence:historical": "node scripts/evidence.mjs historical",
-    "test:gallery": "node --test apps/explorer/gallery/*.test.mjs"
-  },
-  "dependencies": {
-    "@sinclair/typebox": "0.34.41",
-    "ajv": "8.17.1"
-  },
-  "devDependencies": {
-    "@types/node": "22.19.0",
-    "typescript": "5.9.3"
+    "test": "node --test apps/atlas-sample/*.test.mjs",
+    "check": "node --check apps/atlas-sample/app.js && node --check scripts/export-pages.mjs",
+    "build": "npm run check && npm test",
+    "export": "node scripts/export-pages.mjs"
   }
 }
