@@ -2,7 +2,7 @@
 
 网站：<https://tdwhere123.github.io/UI-Vault/>
 
-当前主图鉴有 **499条可打开预览（241条原始素材＋258条后续接入预览）**。后续预览仍标注视觉待验；345条候选中的87条仅来源记录不计入主图鉴。原始241件包括215件精选界面、20件保留基础素材、6套完整图标系列。正在向1000+件优质素材扩充；图标按完整系列单列统计，不按单枚凑数。源码候选、不同配色与框架版本不充数。
+当前主图鉴有 **502条可打开预览（241条原始素材＋261条后续接入预览）**。后续预览仍标注视觉待验；348条候选中的87条仅来源记录不计入主图鉴。原始241件包括215件精选界面、20件保留基础素材、6套完整图标系列。正在向1000+件优质素材扩充；图标按完整系列单列统计，不按单枚凑数。源码候选、不同配色与框架版本不充数。
 
 ## 当前内容
 
@@ -160,3 +160,14 @@ The main gallery now contains **499 preview entries** (241 original + 258 added 
 - **RapiDoc 12.1.1** keeps the original parser and full OpenAPI reader for five authored local endpoints, search, models, response codes and examples. Eight state/UI tests and initial/reload interruption tests passed. Try, authentication, external specifications/references, import/export, clipboard and outbound links are disabled. It is not a live API. Complete upstream MIT/BSD-3-Clause/ISC dependency notices are published with the original root license.
 
 These are actual original components with disclosed host fixtures, not static stand-ins. Browser pixels, native gestures and audio still await acceptance. All source/build/test archives for this batch remain local, not advertised as hosted ZIPs. Static list covers, detail-only loading, sandbox and CSP are unchanged.
+
+
+## Original spatial reading and evidence annotation · 502 previews
+
+The main gallery now contains **502 preview entries** (241 original + 261 added previews). The candidate catalog has 348 records, with 87 source-only records excluded. This batch adds three distinct families, not a count of map markers, comments or PDF pages. Icon counts are unchanged.
+
+- **OpenSeadragon 6.1.1** retains its original HTML drawer, Navigator, Viewport and control logic on an authored single SVG research map. Four original state/error/pending/production tests passed. Original PNG button artwork is replaced through supported configuration by disclosed text SVG; no binary wrapping or multilevel-tile claim. Button fading timers/RAF were fixed to stop on destruction. Full BSD-3-Clause and embedded MIT notices are present. Image decoding and geometry were mocked; actual pixels and pointer gestures await acceptance.
+- **RecogitoJS 1.8.4** retains original text selection, quote/position anchoring, highlights and client-core comment/tag editor. Eight original interaction tests plus two selection/touch interruption branches passed. Tests cover editing, cancellation, hostile literal comment text, exact-range reselection preserving identity and deletion. Original observer, touch and relation-layer lifecycle leaks were repaired. The report is an authored fixture, memory-only, not a shared persistent annotation service. Root/core BSD notices, all runtime notices and full icon CC BY 4.0 terms/attribution are included; upstream did not specify an exact historical IcoFont version, and no exact version is invented.
+- **React PDF Highlighter 8.0.0-rc.0 / PDF.js 4.4.168** retains original paginated Canvas rendering, text layers, text/area annotation UI and location logic. Three local pages are generated from authored ASCII source, not uploaded binary PDF wrapping. A real missing-glyph path was fixed: original system-font rendering now issues Canvas text commands, and forced named-font rejection retains generic sans-serif fallback. Main interactions and eight interruption/error branches passed, including document-destroy failure with explicit partial status and guaranteed host cleanup. PDF.js runs its statically supplied original handler on the main thread, with eval disabled and zero attempted Worker/network/eval calls in tested paths. Full MIT/Apache notices are included.
+
+Canvas raster, screenshot content, Image decoding and layout are substituted in tests. The 584 PDF text drawing calls prove the original rendering-command path, not readable pixel acceptance. Native selection, drag/resize, mobile layouts and visual output remain unverified and labeled accordingly. Source/build/test archives remain local, not claimed as hosted ZIPs. Static list covers, lazy detail loading, sandbox and CSP stay unchanged.
