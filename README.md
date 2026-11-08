@@ -77,3 +77,5 @@ Exodus相关扩充包括assistant-ui表单/消息内富组件、Orb本地流程�
 新增媒体家族只允许播放器/转录两个明确标记条目的本地blob媒体；默认预览仍无media-src，connect-src始终none，不增iframe权限、不允许远程媒体。合成测试音不含语音，预置转录不是识别结果。HTMLMediaElement/Canvas测试替身和PCM结构检查不等于实际声音、解码或视觉验收。
 
 新增完整本地工作台包括CodeMirror双侧差异合并、JSONEditor树/文本/预览编辑；不执行或上传编辑内容，不需unsafe-eval/worker。JSON语法校验不等同Schema验证，Jspreadsheet动态公式引擎未接入。部分旧候选经复核发现固定来源目录缺失，保留记录并明确待恢复，不计主图鉴完成数。
+
+后续本地工具：原UIW Markdown工具栏与安全源码预览、ReactGrid单元格/范围编辑（无公式）、formBuilder字段设计与本地填写。Markdown外部图片和链接导航禁用；表单属性采用纯文本安全路径。formBuilder预捆绑mi18n实际MIT发布声明及lock完整性已核实，但原LICENSE全文缺失，附有明确标注的补充标准MIT条款及作者证据，不伪称找到原件。详细版本头差异与许可来源见对应ADAPTATION。
