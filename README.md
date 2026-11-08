@@ -2,7 +2,7 @@
 
 网站：<https://tdwhere123.github.io/UI-Vault/>
 
-当前主图鉴有 **502条可打开预览（241条原始素材＋261条后续接入预览）**。后续预览仍标注视觉待验；348条候选中的87条仅来源记录不计入主图鉴。原始241件包括215件精选界面、20件保留基础素材、6套完整图标系列。正在向1000+件优质素材扩充；图标按完整系列单列统计，不按单枚凑数。源码候选、不同配色与框架版本不充数。
+当前主图鉴有 **503条可打开预览（241条原始素材＋262条后续接入预览）**。后续预览仍标注视觉待验；349条候选中的87条仅来源记录不计入主图鉴。原始241件包括215件精选界面、20件保留基础素材、6套完整图标系列。正在向1000+件优质素材扩充；图标按完整系列单列统计，不按单枚凑数。源码候选、不同配色与框架版本不充数。
 
 ## 当前内容
 
@@ -171,3 +171,16 @@ The main gallery now contains **502 preview entries** (241 original + 261 added 
 - **React PDF Highlighter 8.0.0-rc.0 / PDF.js 4.4.168** retains original paginated Canvas rendering, text layers, text/area annotation UI and location logic. Three local pages are generated from authored ASCII source, not uploaded binary PDF wrapping. A real missing-glyph path was fixed: original system-font rendering now issues Canvas text commands, and forced named-font rejection retains generic sans-serif fallback. Main interactions and eight interruption/error branches passed, including document-destroy failure with explicit partial status and guaranteed host cleanup. PDF.js runs its statically supplied original handler on the main thread, with eval disabled and zero attempted Worker/network/eval calls in tested paths. Full MIT/Apache notices are included.
 
 Canvas raster, screenshot content, Image decoding and layout are substituted in tests. The 584 PDF text drawing calls prove the original rendering-command path, not readable pixel acceptance. Native selection, drag/resize, mobile layouts and visual output remain unverified and labeled accordingly. Source/build/test archives remain local, not claimed as hosted ZIPs. Static list covers, lazy detail loading, sandbox and CSP stay unchanged.
+
+
+## Original organic spring material · 503 previews
+
+The main gallery now contains **503 preview entries** (241 original + 262 added previews). There are 349 candidate records, with 87 source-only records excluded. Icon counts are unchanged.
+
+**React Spring official goo-blobs** preserves the original three-stage useTrail mass/tension relationship, circles, lightcoral material and SVG blur/alpha matrix. This is one decorative pointer-following material family, not three items, a physical fluid solver or an Agent task-progress UI. It shares goo/spring techniques with existing tabs, particle repulsion and liquid-slider examples, but its original chained lag/fusion behavior is distinct.
+
+Added host controls pause the effect on pointer cancellation/leaving, blur or hiding; reduced motion is static with no continuing RAF. Independent review found that a fixed initial center clipped the static shape on narrow screens. This was corrected using actual measured dimensions, tested at 320px then 280px, with normal-flow layout to avoid title overlap. The original spring/filter relationships remain unchanged.
+
+Normal, reduced, narrow and exact-production tests passed. A separate audit verified root MIT plus all eleven runtime-package licenses and zero forbidden eval/Function/storage/network calls. Animation, measurement observers, media-query listeners, timers and host listeners clean up; persistent React/JSDOM baseline listeners are not misreported as zero. Actual SVG pixel compositing and native touch remain unverified. The fixed source has been compared with the archived original; extra archive trailing newlines are disclosed, not claimed byte-identical. Source/test archives remain local only. Static list covers, detail-only loading, sandbox and CSP are unchanged.
+
+Screening does not count as collection: Spin Wheel was not added because its design benefit and two third-party source-license attributions remain insufficiently established. The original speedscope adaptation remains in testing and is not counted or published in this batch.
