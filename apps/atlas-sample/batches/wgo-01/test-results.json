@@ -1,0 +1,24 @@
+{
+  "pass": true,
+  "checks": [
+    "Original BasicPlayer renders original SGF setup via SHELL Canvas drawing calls; pixels not verified",
+    "Original Next executes capture of white bb and updates actual engine/visible comment",
+    "Original previous restores captured stone and capture count",
+    "Original board click coordinate handler selects each SGF branch; actual positions/comments differ",
+    "Last/first and original keyboard navigation update actual reader path",
+    "Repeated navigation and original resize change backing Canvas dimensions",
+    "Menu closes/reopens; touchcancel clears repeat; repeated touchstart has one interval; exit with menu open and touch-repeat active clears handlers/key property/intervals; no network/eval/Worker/Image calls"
+  ],
+  "errors": [],
+  "blocked": [],
+  "resources": [],
+  "canvasCalls": 2462,
+  "remainingGlobalListeners": 0,
+  "remainingTimers": {
+    "timeout": 0,
+    "interval": 0,
+    "raf": 0
+  },
+  "visualVerified": false,
+  "limitations": "Canvas context and layout mocked. Original Go rules, KifuReader, original controls and board-coordinate event dispatch tested; no Canvas pixels/actual touch placement verified."
+}
