@@ -100,9 +100,9 @@ test('root and subdirectory static HTTP expose only audited files, same core fil
         assert((await readdir(out)).includes(match[1].slice(2)));
       }
     }
-    assert.equal(audit.files.length,22);
+    assert.equal(audit.files.length,43);
     const files=await readdir(out);
-    assert.deepEqual(files.sort(),["app.js", "catalog.json", "gallery-04-button.png", "gallery-06-badge.png", "gallery-10-tabs.png", "gallery-11-progress.png", "gallery-12-skeleton.png", "gallery-LICENSE.txt", "gallery-THIRD-PARTY.txt", "gallery-agent-01-attachment-button.png", "gallery-agent-02-send-button.png", "gallery-data.json", "gallery-model.js", "gallery-neiki.css", "gallery-neiki.js", "index.html", "manifest.json", "public-catalog.js", "query-validator.js", "query-view.js", "style.css", "version.json"]);
+    assert.deepEqual(files.sort(),["app.js", "catalog.json", "gallery-04-button.png", "gallery-06-badge.png", "gallery-10-tabs.png", "gallery-11-progress.png", "gallery-12-skeleton.png", "gallery-LICENSE.txt", "gallery-THIRD-PARTY.txt", "gallery-agent-01-attachment-button.png", "gallery-agent-02-send-button.png", "gallery-data.json", "gallery-model.js", "gallery-neiki.css", "gallery-neiki.js", "index.html", "manifest.json", "public-catalog.js", "query-validator.js", "query-view.js", "style.css", "version.json", "source-downloads.json", ...["attachment-button","bash-tool","edit-tool","error-message","generic-tool","markdown","mcp-tool","mode-selector","model-picker","plan-tool","question-prompt","question-tool","search-tool","send-button","subagent-tool","suggestions","text-shimmer","thinking-tool","todo-tool","tool-group"].map(id=>`source-agent-elements-${id}.tar.gz`)].sort());
     const server=createServer(async(req,res)=>{
       try {
         const pathname=new URL(req.url,'http://localhost').pathname;
@@ -119,7 +119,8 @@ test('root and subdirectory static HTTP expose only audited files, same core fil
       assert.equal(page.headers.get('content-type'),'text/html');
       const html=await page.text();
       assert.match(html,/仅参考截图/);
-      assert.match(html,/未接组件源码下载/);
+      assert.match(html,/源码下载 · 与截图分账/);
+      assert.equal([...html.matchAll(/download="source-agent-elements-/g)].length,20);
       assert.match(html,/Content-Security-Policy/);
       for(const match of html.matchAll(/(?:src|href)="([^"#]+)"/g)) {
         const url=new URL(match[1],origin+basePath);
@@ -151,6 +152,15 @@ test('root and subdirectory static HTTP expose only audited files, same core fil
     row.bytes=Buffer.byteLength(content);row.sha256=createHash('sha256').update(content).digest('hex');
     await writeFile(join(altered,'manifest.json'),JSON.stringify(forged));
     await assert.rejects(()=>auditStatic(altered),/Unapproved bytes: catalog.json/);
+    const broken=await mkdtemp(join(tmpdir(),'vault-package-altered-'));
+    await exportStatic({root,output:broken,basePath,sha});
+    const archive='source-agent-elements-send-button.tar.gz',badArchive=Buffer.from('broken package');
+    await writeFile(join(broken,archive),badArchive);
+    const forgedArchive=JSON.parse(await readFile(join(broken,'manifest.json'),'utf8'));
+    const descriptor=forgedArchive.files.find(x=>x.path===archive);
+    descriptor.bytes=badArchive.length;descriptor.sha256=createHash('sha256').update(badArchive).digest('hex');
+    await writeFile(join(broken,'manifest.json'),JSON.stringify(forgedArchive));
+    await assert.rejects(()=>auditStatic(broken),/Unapproved bytes: source-agent-elements-send-button/);
   }
 });
 

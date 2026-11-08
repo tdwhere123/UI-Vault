@@ -1,13 +1,13 @@
-import {filterGallery,galleryCounts,referenceCaption} from './gallery-model.js';
+import {filterGallery,galleryCounts,referenceCaption,sourceDownloadCounts} from './gallery-model.js';
 const $=id=>document.getElementById(id);
 const controls=['query','purpose','style','technology'];
 const node=(tag,text,className)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;if(className)n.className=className;return n;};
 let instance;
 try {
- const [dataResponse,versionResponse]=await Promise.all([fetch('./gallery-data.json'),fetch('./version.json')]);
- if(!dataResponse.ok||!versionResponse.ok)throw new Error('图库输入获取失败');
- const items=await dataResponse.json(),version=await versionResponse.json(),counts=galleryCounts(items);
- $('totals').textContent=`${counts.ui} 独立 UI · ${counts.images} 真实截图 · ${counts.sourceSites} 源站 · ${counts.sourceDownloads} 已接线源码下载`;
+ const [dataResponse,versionResponse,sourceResponse]=await Promise.all([fetch('./gallery-data.json'),fetch('./version.json'),fetch('./source-downloads.json')]);
+ if(!dataResponse.ok||!versionResponse.ok||!sourceResponse.ok)throw new Error('图库输入获取失败');
+ const items=await dataResponse.json(),version=await versionResponse.json(),counts=galleryCounts(items),sources=await sourceResponse.json(),downloads=sourceDownloadCounts(sources,items);
+ $('totals').textContent=`${counts.ui} 独立 UI · ${counts.images} 真实截图 · ${counts.sourceSites} 源站 · ${downloads.available} 源码下载入口（${downloads.withPreview} 同身份配图 / ${downloads.withoutPreview} 未配预览） · ${downloads.held} 挂起`;
  $('version').textContent=` · ${version.codeSha.slice(0,12)} · ${version.worktreeDirty?'含未提交改动':'干净构建'}`;
  for(const field of ['purpose','style','technology']){const values=[...new Set(items.flatMap(x=>x[field]))].sort();for(const value of values){const option=node('option',value);option.value=value;$(field).append(option);}}
  function render(){
@@ -18,7 +18,7 @@ try {
    const card=node('a',undefined,'gallery-card');card.href='./'+item.image;card.dataset.tags=[item.purpose,item.style,...item.technology].join(',');card.dataset.caption=referenceCaption(item);card.dataset.width=item.width;card.dataset.height=item.height;
    const image=node('img');image.src='./'+item.image;image.alt=item.title+'：'+item.description;image.width=item.width;image.height=item.height;image.loading='lazy';card.append(image);
    const body=node('div',undefined,'card-body');body.append(node('span','仅参考 · 点击放大','status'),node('h3',item.title),node('p',item.description));
-   const tags=node('div',undefined,'tags');for(const t of [item.purpose,item.style,...item.technology])tags.append(node('span',t));body.append(tags,node('small',item.sourceName+' · '+item.sourceUrl));card.append(body);grid.append(card);
+   const tags=node('div',undefined,'tags');for(const t of [item.purpose,item.style,...item.technology])tags.append(node('span',t));body.append(tags,node('small',item.sourceName+' · '+item.sourceUrl),node('p',item.downloadAvailable?'同身份源码下载：见下方源码下载区（运行/恢复未验）':'此图未配源码下载','download-state'));card.append(body);grid.append(card);
   }
   // One filter authority above; reuse upstream grid/lightbox/zoom/navigation, not a second hidden filter state.
   if(selected.length)instance=new window.NeikiGallery(grid,{layout:'grid',theme:'dark',zoom:true,thumbnails:true,captions:true,hashNavigation:false,share:false,video:false,filter:false,stagger:false,fullscreen:true,print:false,editor:false,annotate:false,contextMenu:false});

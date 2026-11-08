@@ -5,8 +5,8 @@ import {filterGallery, galleryCounts} from './gallery-model.mjs';
 const items=JSON.parse(await readFile(new URL('./items.json',import.meta.url)));
 test('seven unique real reference UIs, not catalog/file/overview count',()=>{
  assert.equal(items.length,7); assert.equal(new Set(items.map(x=>x.id)).size,7);
- assert.deepEqual(galleryCounts(items),{ui:7,images:7,sourceSites:2,sourceDownloads:0});
- for(const x of items){assert.equal(x.status,'reference-only');assert.equal(x.downloadAvailable,false);assert(['ui.shadcn.com','bencho.dev','agent-elements.21st.dev'].includes(new URL(x.sourceUrl).hostname));assert(!('downloadUrl' in x));}
+ assert.deepEqual(galleryCounts(items),{ui:7,images:7,sourceSites:2});
+ for(const x of items){assert.equal(x.status,'reference-only');assert(!('downloadAvailable' in x));assert(['ui.shadcn.com','bencho.dev','agent-elements.21st.dev'].includes(new URL(x.sourceUrl).hostname));assert(!('downloadUrl' in x));}
 });
 test('keyword + purpose/style/technology intersect, case-insensitive, empty state',()=>{
  assert.equal(filterGallery(items,{query:'BUTTON'}).length,3);
