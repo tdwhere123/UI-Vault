@@ -1,0 +1,16 @@
+# Synthetic Agent flamegraph · visual review pending
+
+Original speedscope 1.25.0 at 810efdf0a4868bb28f1300f4daacd0db6b8a95bd (MIT), one UI family. Upstream https://github.com/jlfwong/speedscope . Full original app views, profile model, original flamegraph geometry, GLSL and Canvas text renderers retained. This is not a custom approximation. Time Order, Left Heavy, Sandwich, profile selection, search, zoom and caller/callee remain original.
+
+## Scope / adaptation
+Two authored local evented Agent traces, 120 and 60 synthetic milliseconds, are imported through the original importer. They are NOT actual performance measurements. Original light theme; system monospace replaces the omitted Source Code Pro font. Dependency aphrodite declares MIT in its package and README with copyright 2016 Khan Academy but ships no full LICENSE; notices transparently supplement standard MIT terms, not an invented original file. string-hash original CC0 waiver is retained with complete standard CC0 legal text. No upstream media assets or binary data are embedded.
+Import/export, remote example/URL/hash loading, file picker/drop/paste, save/open shortcuts, help/external links, source maps and symbol demangling are disabled. The toolbar identifies synthetic/offline scope. Theme persistence is removed. No network, filesystem, clipboard, workers, WASM, dynamic eval or embedded font is required; no host CSP expansion.
+
+Original graphics context receives per-instance native resource tracking and idempotent disposal, cancels queued frames and removes context listeners. Initialization/shader failure produces a readable unavailable message rather than a substitute graph. Render-frame exceptions dispose the renderer and switch to the error state. Unmount disposes the original renderer; iframe-scoped timer/RAF/global-listener tracking also cancels queued original zoom work on pagehide. No continuous animation is added.
+
+## Verified (not pixel acceptance)
+JSDOM, fixed element geometry, Canvas2D/WebGL method doubles. Original shader source submission, buffer uploads, drawArrays and text drawing commands execute. Actual original keyboard mode switches repeated, both profile totals, zoom/reset, search input/Escape cancellation, Sandwich row caller selection, forbidden open/save and paste paths checked. Exit during queued zoom cancels remaining work. Production bundle has no test API. Unsupported GL and shader compilation rejection show honest failure text without uncaught exceptions or loop retries. All branches assert zero attempted fetch/XHR/Worker/eval/Function/window.open/clipboard/storage/FileReader operations, zero live tracked native-resource handles, timers, RAF and added global listeners after pagehide.
+
+No actual GPU compilation, raster output, visual appearance, native pointer pan/hover or touch acceptance was performed. Fake GL success validates the original command path, NOT browser/GPU correctness. Browser visual/native gesture review remains required; unsupported rendering stays explicitly unavailable.
+
+Local reproducibility evidence: build.cjs, test.cjs (normal/production/unsupported/shader-fail), production metafile and research/SOURCE-CHANGES.patch. Only six distribution files belong in the public preview; local test fixtures and build metadata are not shipped.
