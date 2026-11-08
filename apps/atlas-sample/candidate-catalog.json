@@ -8664,5 +8664,128 @@
       "运行源码8af683...与数据16978d...分别固定，详见ADAPTATION.md。",
       "源码ZIP只在本地，未上传。"
     ]
+  },
+  {
+    "id": "d3-sankey:workload-flow",
+    "title": "带状工作流 · 分配与流向",
+    "source": "D3 Sankey",
+    "license": "BSD-3-Clause",
+    "upstream": "https://github.com/d3/d3-sankey/tree/bb7233ea0004669878d922e55fe83084ef3cb555",
+    "revision": "bb7233ea0004669878d922e55fe83084ef3cb555",
+    "batch": "d3-sankey-01",
+    "preview": "batches/d3-sankey-01/index.html",
+    "category": "数据与状态",
+    "kind": "复合交互组件",
+    "format": "流量可视化",
+    "styleTags": [
+      "圆润",
+      "柔和",
+      "有机"
+    ],
+    "purposeTags": [
+      "Agent工作流",
+      "信息流"
+    ],
+    "description": "原版D3桑基图引擎加原创柔和界面壳；调配虚构工作量、聚焦路径、拖动节点及查看数值表。",
+    "behavior": "真实原引擎计算带宽与曲线；滑块重新分配100单位，节点移动调用原生update重算连带，不接真实模型或遥测。",
+    "buildStatus": "Production bundle;layout/state/geometry update/numeric conservation tests passed; visual pending",
+    "gaps": [
+      "界面壳和虚构样例为原创适配，不是上游成品截图。",
+      "真实视觉、拖拽命中、触屏与完整无障碍待验；节点可重叠，无防碰撞承诺。",
+      "一个完整图表族，不按节点/颜色/数值拆数；无源码ZIP下载。"
+    ]
+  },
+  {
+    "id": "vis-timeline:local-task-planner",
+    "title": "可编辑任务时间轴 · 分组时序计划",
+    "source": "vis-timeline",
+    "license": "MIT (chosen dual-license alternative)",
+    "upstream": "https://github.com/visjs/vis-timeline/tree/353464dd6438ea31f4a6e416ab7e07d8cc0f519d",
+    "revision": "353464dd6438ea31f4a6e416ab7e07d8cc0f519d",
+    "batch": "vis-timeline-01",
+    "preview": "batches/vis-timeline-01/index.html",
+    "category": "导航与组织",
+    "kind": "完整区块",
+    "format": "时间轴工作区",
+    "styleTags": [
+      "圆润"
+    ],
+    "purposeTags": [
+      "Agent工作流",
+      "任务规划"
+    ],
+    "description": "原版Timeline引擎，真实本地任务增删编辑、日期范围、跨组移动、组隐藏与恢复。",
+    "behavior": "日期为虚构样例，不接用户日历；保留原生拖动调时/跨组与分组排序，表单修改直接写入真实DataSet。",
+    "buildStatus": "Original-source bundle;DataSet state/range guard/group/destroy tests passed; visual pending",
+    "gaps": [
+      "原生拖动几何、视觉、触屏与完整无障碍待验。",
+      "当前时间ticker与自动resize轮询关闭；本地ResizeObserver销毁时释放。",
+      "完整依赖许可已保留；源码ZIP不提供线上下载。"
+    ]
+  },
+  {
+    "id": "shiki-magic-move:code-evolution",
+    "batch": "shiki-move-01",
+    "title": "多步骤代码演进讲解",
+    "source": "Shiki Magic Move",
+    "category": "Agent与对话",
+    "kind": "交互代码演示",
+    "styleTags": [
+      "代码形变",
+      "流动",
+      "讲解"
+    ],
+    "preview": "batches/shiki-move-01/code-evolution.html",
+    "revision": "1df35024cb01f02cdec6f8cb69f69fc8b6c66519",
+    "upstream": "https://github.com/shikijs/shiki-magic-move/tree/1df35024cb01f02cdec6f8cb69f69fc8b6c66519",
+    "sourceFile": "src/react/ShikiMagicMovePrecompiled.tsx",
+    "license": "MIT",
+    "description": "原版ShikiMagicMovePrecompiled将预编译token在4个代码步骤间匹配形变，前后步进、自动播放/停止与重置。显示本地示例代码，不执行。",
+    "previewStatus": "visual-review-pending",
+    "knownGaps": [
+      "JSDOM仅验证token节点和状态，CSS真实位移/插值与视觉布局未验。",
+      "固定本地TypeScript示例，不是代码执行器或模型生成。"
+    ],
+    "buildStatus": "Build/JS parse passed. DOM steps, autoplay stop, fast navigation, unmount/pagehide cleanup passed.",
+    "gaps": [
+      "JSDOM仅验证token节点和状态，CSS真实位移/插值与视觉布局未验。",
+      "固定本地TypeScript示例，不是代码执行器或模型生成。"
+    ],
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "format": "复合交互组件"
+  },
+  {
+    "id": "annotorious:visual-notes",
+    "title": "Annotorious · 图像区域批注工作台",
+    "source": "Annotorious",
+    "license": "BSD-3-Clause",
+    "upstream": "https://github.com/annotorious/annotorious/tree/f780879410ff4f2d4fd0b2cb1ae1bd596a40fe65",
+    "revision": "f780879410ff4f2d4fd0b2cb1ae1bd596a40fe65",
+    "batch": "annotorious-01",
+    "preview": "batches/annotorious-01/index.html",
+    "category": "展示与媒体",
+    "kind": "复合交互组件",
+    "format": "图像批注工具",
+    "styleTags": [
+      "圆润"
+    ],
+    "purposeTags": [
+      "Agent工作流",
+      "视觉审阅"
+    ],
+    "description": "真实原版矩形/多边形区域绘制、移动、备注与标注JSON；本地原创示意图与本地图片选择。",
+    "behavior": "原生矩形绘制；原生多边形闭合绘制；原生区域移动与控制点编辑；区域选择与备注；删除/恢复示例；实际标注JSON查看；本地PNG/JPEG/WebP文件选择",
+    "buildStatus": "Production bundle;15 geometry/state/safety checks passed; visual/image decode pending",
+    "gaps": [
+      "图像与数据仅内存，不上传或持久保存",
+      "本地文件10MB/1600万像素上限；切换图片清空标注",
+      "不提供自动识别或AI生成",
+      "底图为明确标注的原创SVG示意图",
+      "浏览器实际图像解码/几何视觉/触控手感待验",
+      "单个完整工具，不把矩形和多边形拆成素材数。",
+      "完整许可和固定来源保留；源码ZIP仅本地未上传。"
+    ]
   }
 ]
