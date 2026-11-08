@@ -1,0 +1,5 @@
+# Runtime dependencies
+- WGo.js 2.3.1, Jan Prokop, fixed commit 34773562647e4e8c9c33f1a29cc3183fd1de90d8. Full original MIT header: [WGo-MIT](notices/WGo-MIT.txt). Includes original rules, KifuReader, SGF parser, Player and BasicPlayer components. Official build.sh enumerates the player modules and official player bundle carries MIT declaration; individual modules do not all repeat the full license.
+- Lucide 0.468.0 original vector icons. [Complete ISC and Feather MIT terms](notices/Lucide-ISC-Feather-MIT.txt). Actual icons: skip-back, skip-forward, chevron-left, chevron-right, chevrons-left, chevrons-right, menu, from dist/esm/icons/*.js of the installed official package. Original geometry is used by lucide createElement. Respectively replaces first, last, previous, next, multiprev, multinext, menu control font symbols.
+- No other runtime dependency. esbuild and JSDOM are build/test only.
+The original mixed Fontello embedded font is not distributed here; neither its binary nor encoded SVG font is in the runtime CSS.
