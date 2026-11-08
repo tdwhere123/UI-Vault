@@ -1,0 +1,25 @@
+{
+  "pass": true,
+  "checks": [
+    "Actual DOM Range/mouseup opens original popup; Cancel removes temporary highlighting",
+    "Original comment/tag save yields anchored Web Annotation data; hostile input remains text",
+    "Editing then Cancel preserves prior annotation",
+    "Original edit menu saves comment revision and tag replacement as literal text",
+    "Re-selecting exact existing highlight via DOM Range reuses original annotation id, no duplicate",
+    "Repeated highlight opening/cancel preserves one anchored record",
+    "Delete removes actual highlight; new selection creates fresh quote and position anchors",
+    "Pagehide with unsaved selection/popup and pending resize clears observers, global listeners and timers"
+  ],
+  "blocked": [],
+  "resources": [],
+  "errors": [],
+  "remainingObservers": 0,
+  "remainingGlobalListeners": 0,
+  "remainingTimers": {
+    "timeout": 0,
+    "interval": 0,
+    "raf": 0
+  },
+  "visualVerified": false,
+  "limitations": "Actual DOM Range and library mouseup, widget input and click handlers. Range rectangles/ResizeObserver mocked; real drag-selection, popup placement and pixels not verified."
+}
