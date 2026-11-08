@@ -1,0 +1,33 @@
+{
+  "results": [
+    {
+      "mode": "normal-motion",
+      "passed": true,
+      "checks": [
+        "original list mounts 3 fixture rows",
+        "All Transactions adapter expands to 5 and collapses to 3",
+        "actual selectedId opens correct receipt values",
+        "return button restores full list state",
+        "switch row shows new receipt rather than stale details",
+        "no remote assets/account links/form input",
+        "pagehide unmount clears DOM and RAF",
+        "zero Function/eval/network/Worker/storage/dynamic script calls"
+      ]
+    },
+    {
+      "mode": "reduced-motion",
+      "passed": true,
+      "checks": [
+        "original list mounts 3 fixture rows",
+        "All Transactions adapter expands to 5 and collapses to 3",
+        "actual selectedId opens correct receipt values",
+        "return button restores full list state",
+        "switch row shows new receipt rather than stale details",
+        "no remote assets/account links/form input",
+        "pagehide unmount clears DOM and RAF",
+        "zero Function/eval/network/Worker/storage/dynamic script calls"
+      ]
+    }
+  ],
+  "browserVisualQA": "not-run; JSDOM geometry and ResizeObserver stubs; both normal/reduced state tests do not verify shared-layout pixels, spring trajectories or accessibility"
+}
