@@ -2,7 +2,7 @@
 
 网站：<https://tdwhere123.github.io/UI-Vault/>
 
-当前主图鉴有 **510条可打开预览（241条原始素材＋269条后续接入预览）**。后续预览仍标注视觉待验；353条候选中的84条仅来源记录不计入主图鉴。原始241件包括215件精选界面、20件保留基础素材、6套完整图标系列。正在向1000+件优质素材扩充；图标按完整系列单列统计，不按单枚凑数。源码候选、不同配色与框架版本不充数。
+当前主图鉴有 **511条可打开预览（241条原始素材＋270条后续接入预览）**。后续预览仍标注视觉待验；353条候选中的83条仅来源记录不计入主图鉴。原始241件包括215件精选界面、20件保留基础素材、6套完整图标系列。正在向1000+件优质素材扩充；图标按完整系列单列统计，不按单枚凑数。源码候选、不同配色与框架版本不充数。
 
 ## 当前内容
 
@@ -239,3 +239,13 @@ The main gallery now contains **510 preview entries** (241 original + 269 added 
 - **WGo.js 2.3.1** retains the original BasicPlayer, SGF rules/variation model, comment panel and navigation on a local fictional 9×9 teaching setup. Capture/reversal, A/B continuations, first/last/keyboard, resize, coordinates menu and touch-repeat cancellation were exercised. Original SHELL Canvas stones and official solid background require no external images. Seven Lucide SVG controls transparently replace the old mixed Fontello font, with complete ISC/Feather MIT alongside the project MIT. Repeated touch-start and cancel/exit lifecycle gaps were repaired. It is not an online opponent, AI analysis, editor or arbitrary-file import/export service.
 
 Actual SVG decoding, blur/scan compositing, Canvas pixels, touch targeting and mobile layout remain visually unverified. Tests run original state/model paths with geometry/raster substitutes. Source/build/test archives for this batch remain local, not promised as hosted ZIPs. Static covers, lazy detail previews and sandbox/CSP remain unchanged.
+
+## Original Jodie portfolio restored · 511 previews
+
+The main gallery now contains **511 preview entries** (241 original + 270 added previews). There are 353 candidates, with 83 source-only records excluded. The existing Jodie candidate is restored in place; its six projects, seven original SVG fixtures and internal routes count as one complete-page design family, not separate items. Icon counts are unchanged.
+
+Jodie 5.1.9 retains its original asymmetric divisor/modifyGrid homepage, responsive grid CSS, sidebar navigation and project/index/about templates. The Gatsby query/image pipeline is explicitly replaced by local data, ordinary images and an in-memory route adapter. Seven locally authored SVG design studies replace unverified photography; they are not upstream photographs or model output. Actual SVG source and hashes are included. Original attribution and complete MIT/BSD-3-Clause notices for 26 runtime packages are retained.
+
+Normal, narrow, reduced-motion, failed-image and production tests cover navigation, rapid route changes, return scroll/card focus, invalid route rejection, error feedback and interrupted/repeated teardown. These use simulated layout/scroll and do not establish native image decoding, responsive pixels or physical focus behavior. Visual acceptance remains pending. Static covers, lazy details, iframe sandbox and CSP remain unchanged. No Gatsby backend, contact submission, file upload, network requests or hosted adapted-source ZIP is claimed.
+
+Five remaining UI Layouts source-only records also received fixed-source factual reviews, without increasing the gallery count: attachment input has no sender/upload service, tools tabs are image switches rather than a tool workspace, magnified tabs need asset/external-navigation review, the progressive carousel needs pause boundaries, and media-modal needs asset and scroll-lock review. Root MIT is not treated as permission for unrelated remote media.
