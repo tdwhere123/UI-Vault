@@ -4,6 +4,8 @@
 
 - **Looseleaf**：[MIT 原文](featured/Looseleaf-MIT.txt)。纸张、手绘界面和 Kevin Sans 字体保留上游许可。原件与演示适配分别存放。
 - **Magic UI**：[MIT 原文](featured/MagicUI-MIT.txt)。注册表中的原组件与动画规则一起保存；演示中的文案、轨道符号等适配不冒充上游品牌资产。
+- **Motion Primitives**：[MIT 原文](batches/motion-source/LICENSE.md)。原组件、官方示例与依赖闭包见对应源码包。
+- **Solid Glass**：[MIT 原文](batches/solidglass-01/LICENSE)。Agent run 由推理、工具步骤和差异展示组成，只计一个素材，不把内部依赖拆开充数。
 - **Kokonut UI**：官方 MIT 原文与构建依赖通知保存在各批次的源码 ZIP 内，条目提供准确下载链接。
 - **Bencho**：官方 MIT、第三方通知与构建依赖信息保存在各批次源码 ZIP 内。原件与本地演示包装分开。
 - **HyperUI**：20 件保留基础素材遵循 [MIT](originals/HYPERUI-LICENSE.txt)。

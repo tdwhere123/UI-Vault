@@ -50,3 +50,21 @@ Looseleaf十二项均实际查看：笔记本清单勾选、软木板移动、�
 ### 同批补充：Kokonut UI / Bencho 20件，总库存65件
 
 20项逐页实际截图非空并保留原效果。核心交互实测：旋钮21→21.5、灯On→Off、液位72→73、翻牌切换、地形选项、选座A2价格变化、AI轨道步骤、文稿跳转、圆环分类、状态岛启动、字符立方冲击、任务移除、热力字符切换、表情数量变化、上下文压缩、语音模拟状态和字符尾迹数量。弹弓实际拖放后球弹射反弹；翻书第一页→双页→回封面；打印完整出纸、撕落后恢复Print another。均为本地模拟，不连接真实订票、AI或语音服务。
+
+## 后续纸张与动效扩展批次
+
+新增25件Looseleaf经过桌面视觉检查和适用交互验证；3件轻量设计（typewriter、mascot、tally）留候选而未纳入精选。03/04应用页面实测筛选、新页/新事件对话框、切换标签、引导勾选、结账本地数量金额及定价年付状态，未支付或发邮件。05..07实测FAQ展开、图表周期、外观网格、贴纸剥离、收据总价和完成纸屑效果。390px日历、价格、贴纸实际截图及翻月/年付/剥离操作通过；仅测5个手机代表，不声称所有素材逐项手机全测。原件标题、行为说明已按实际纠正。
+
+新增11件Magic UI实际验收：Kinetic悬停字重300→824；Aurora背景/transform变化；Meteors拖尾位移；LineShadow伪元素移动；InteractiveGrid悬停填充；FlickeringGrid连续像素变化；RetroGrid为原CSS透视动画且translate变化；AnimatedList从1条增加至7条；Particles像素位置与指针输入；HyperText随机字到稳定文字再悬停扰动；SpinningText圆形旋转矩阵变化。Marquee的反向/悬停暂停暂未通过，未计入此批库存。
+
+Magic UI 05另6件实际验证：Light Rays光束透明度与transform变化；Scroll Velocity持续运动并响应滚动；Text Reveal滚动显影；Smooth Cursor跟随指针；Lens悬停圆形放大；Pixel Image从碎片过渡为完整本地海报。Globe因当前WebGL context为空而不通过，未计入发布库存。
+
+Marquee修复后两排方向分别normal/reverse，悬停首排仅该排暂停，已通过。Magic06除Globe外7项通过：IconCloud双帧位置变化及暂停；Dock悬停放大；Highlighter手绘线实际显出；DottedMap静态地图/标记完整（不称动画）；Backlight开关光晕；Glare悬停高光位置变化；CodeComparison本地Shiki语法色、diff与模糊聚焦正确，另在主图库sandbox srcdoc/CSP内实际截图确认可用。
+
+Kokonut新增首10项实测：diff逐项保留、行内改写、记忆更新、分支回复、来源展开、消息队列处理、脱敏占位、工具拒绝、模拟录音波形/回放/Discard、活动环增长。不连接真实模型、麦克风或通讯账户。
+
+Motion Primitives工具条两种展开/返回交互通过；SolidGlass状态图符、Agent步骤输出、决策卡、输入发送清空与本地模型菜单、上下文环明细通过。与Magic已有机制近似的旋转字、解码字、边缘光束，以及普通Submit光晕卡未重复计入精选。
+
+Kokonut另一8件实测通过：token候选、登机牌展开、卡片翻转、卡片轮播/叠栈、文字摇篮、模拟转账、半色调背景。普通支付输入未计精选；caustics/ink/drape只有静态降级的WebGL项继续暂存。Motion morphing-popover按钮变为输入框、填入内容并Submit收回实际通过。
+
+已将聊天/推理/工具调用等素材合并到Agent界面分类，并优先展示，不再藏在泛用“精致交互”分类下。
