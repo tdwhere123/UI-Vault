@@ -1337,21 +1337,65 @@
   },
   {
     "id": "leko:cara-complete-site",
-    "title": "Cara · 插画几何图形与滚动视差单页作品集",
+    "restoreExistingCandidate": true,
+    "title": "Cara · 几何视差项目简报",
     "source": "LekoArts",
-    "license": "MIT",
+    "repository": "https://github.com/LekoArts/gatsby-themes",
+    "revision": "0ee600732beb88a49135760df9ed6f4d419fde2e",
+    "version": "5.1.7 (standalone adapter)",
+    "license": "MIT AND 0BSD AND BSD-3-Clause",
+    "publicationReady": true,
+    "directory": "cara",
+    "entry": "cara/index.html",
+    "runtime": {
+      "js": "runtime.js",
+      "css": "runtime.css",
+      "format": "iife",
+      "detailOnly": true,
+      "allowLocalMedia": false
+    },
+    "needsLocalMedia": false,
+    "browserVisualQA": "not-run",
+    "counts": {
+      "independentFamily": 1
+    },
+    "size": {
+      "js": 267230,
+      "gzip": 87920,
+      "css": 750
+    },
+    "limitations": [
+      "保留原四段五屏视觉编排，非完整Gatsby运行",
+      "虚构本地简报内容，不是作者项目/发送联系/Agent真实成果",
+      "JSDOM尺寸模拟，实际视差滚动/窄屏像素未验"
+    ],
     "upstream": "https://github.com/LekoArts/gatsby-themes/tree/0ee600732beb88a49135760df9ed6f4d419fde2e/themes/gatsby-theme-cara",
-    "website": "",
-    "buildStatus": "not installed or built; source archive only",
-    "batch": "batch-001",
-    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/leko-pages-01/source-archive.zip",
-    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/leko-pages-01/manifest.json",
-    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "preview": "batches/leko-cara-01/index.html",
+    "batch": "leko-cara-01",
+    "category": "产品与营销",
+    "kind": "完整视差项目页面",
+    "format": "四段几何简报页面族",
+    "styleTags": [
+      "几何插画",
+      "视差",
+      "渐变"
+    ],
+    "purposeTags": [
+      "项目简报",
+      "成果呈现"
+    ],
+    "description": "恢复原Cara四段五屏视差布局、几何SVG与渐变项目卡；独立React适配和虚构本地Exodus内容，不是完整Gatsby站点或作者真实项目。",
+    "behavior": "原Parallax分层/滚动定位、Light/Dark切换，卡片本地跳转；联系章节不发送，reduced静态即时定位，退出清理动画。",
+    "buildStatus": "Four original Parallax/theme/navigation/lifecycle branches passed with mocked viewport geometry; real scrolling/layout pixels NOT verified",
     "gaps": [
-      "Gatsby/React/theme-ui compatibility must be tested",
-      "Example photos/icons/fonts are not included or assumed separately licensed",
-      "Original monorepo lock is not a standalone app lock"
-    ]
+      "保留原四段五屏视觉编排，非完整Gatsby运行",
+      "虚构本地简报内容，不是作者项目/发送联系/Agent真实成果",
+      "JSDOM尺寸模拟，实际视差滚动/窄屏像素未验",
+      "原主题MIT、原示例SVG 0BSD、34实际运行包含BSD-3-Clause完整许可。",
+      "移除Gatsby/GraphQL/SEO构建路径，原MDX内容换本地JSX；系统字体，无外部图片/媒体或存储。",
+      "修复原resize定时/raf与layer controller卸载；旧来源归档仍保留，但本轮适配源码ZIP仅本地，不冒充当前完整下载。"
+    ],
+    "originalSourceArchive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/leko-pages-01/source-archive.zip"
   },
   {
     "id": "leko:emilia-complete-site",
