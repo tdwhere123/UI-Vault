@@ -22,7 +22,8 @@
     "smoke:collection": "node apps/explorer/test/catalog-smoke.mjs",
     "test:offline": "pnpm --dir packages/restore test:real",
     "evidence:write": "node evidence/collection-platform/verify.mjs write",
-    "evidence:historical": "node scripts/evidence.mjs historical"
+    "evidence:historical": "node scripts/evidence.mjs historical",
+    "test:gallery": "node --test apps/explorer/gallery/gallery.test.mjs"
   },
   "dependencies": {
     "@sinclair/typebox": "0.34.41",

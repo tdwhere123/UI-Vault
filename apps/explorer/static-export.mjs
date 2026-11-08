@@ -5,12 +5,12 @@ import { execFileSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
 import { isDeepStrictEqual } from 'node:util';
 import ts from 'typescript';
+import { galleryAssets } from './gallery/export-gallery.mjs';
 import { validateCatalog, getComponentAvailability } from '../../dist/packages/core/src/catalog.js';
 import { validatePublicCatalog, upstreamLinks } from './public-catalog.mjs';
 import { compileQueryValidator } from './compile-query-validator.mjs';
 
 const hash = bytes => createHash('sha256').update(bytes).digest('hex');
-const files = ['app.js','catalog.json','index.html','manifest.json','public-catalog.js','query-validator.js','query-view.js','style.css','version.json'];
 const json = value => JSON.stringify(value,null,2)+'\n';
 const here = fileURLToPath(new URL('.',import.meta.url));
 
@@ -52,12 +52,14 @@ export async function staticFiles(root, {basePath,sha}) {
   if (queryModule !== await readFile(join(root,'dist/packages/core/src/query-view.js'),'utf8')) throw new Error('Stale query build');
   const version={formatVersion:1,codeSha:sha,basePath,catalogInputSha256:hash(input),reviewSha256:hash(review),
     worktreeDirty:execFileSync('git',['status','--porcelain'],{cwd:root,encoding:'utf8'}).trim().length>0};
-  return new Map([
+  const assets = new Map([
     ['index.html',html],['style.css',await readFile(join(root,'apps/explorer/public/style.css'))],
     ['app.js',await readFile(join(root,'apps/explorer/static-app.js'))],['public-catalog.js',adapter],
     ['query-view.js',queryModule],
     ['query-validator.js',compileQueryValidator()],['catalog.json',json(catalog)],['version.json',json(version)]
   ]);
+  for (const [name,content] of await galleryAssets(root)) assets.set(name,content);
+  return assets;
 }
 
 export async function exportStatic({root,output,basePath='/',sha}) {
@@ -75,15 +77,16 @@ export async function exportStatic({root,output,basePath='/',sha}) {
 /** Enumerates every file, verifies fields/hashes AND compares all bytes to approved build inputs. */
 export async function auditStatic(output,{root=resolve(here,'../..'),version}={}) {
   const names=(await readdir(output)).sort();
-  if (!isDeepStrictEqual(names,files)) throw new Error('Unexpected output files');
   const bytes=new Map();
   for (const file of names) {
     const stat=await lstat(join(output,file));
     if (!stat.isFile() || stat.isSymbolicLink()) throw new Error('Unexpected file type');
     bytes.set(file,await readFile(join(output,file)));
   }
+  if (!bytes.has('version.json')) throw new Error('Missing version');
   const actualVersion=JSON.parse(bytes.get('version.json'));
   const expected=await staticFiles(root,{basePath:actualVersion.basePath,sha:actualVersion.codeSha});
+  if (!isDeepStrictEqual(names,[...expected.keys(),'manifest.json'].sort())) throw new Error('Unexpected output files');
   if (version && !isDeepStrictEqual(version,actualVersion)) throw new Error('Version mismatch');
   for (const [file,content] of expected) if (!bytes.get(file).equals(Buffer.from(content))) throw new Error(`Unapproved bytes: ${file}`);
   validatePublicCatalog(JSON.parse(bytes.get('catalog.json')));

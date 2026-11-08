@@ -100,15 +100,15 @@ test('root and subdirectory static HTTP expose only audited files, same core fil
         assert((await readdir(out)).includes(match[1].slice(2)));
       }
     }
-    assert.equal(audit.files.length,9);
+    assert.equal(audit.files.length,22);
     const files=await readdir(out);
-    assert.deepEqual(files.sort(),['app.js','catalog.json','index.html','manifest.json','public-catalog.js','query-validator.js','query-view.js','style.css','version.json']);
+    assert.deepEqual(files.sort(),["app.js", "catalog.json", "gallery-04-button.png", "gallery-06-badge.png", "gallery-10-tabs.png", "gallery-11-progress.png", "gallery-12-skeleton.png", "gallery-LICENSE.txt", "gallery-THIRD-PARTY.txt", "gallery-agent-01-attachment-button.png", "gallery-agent-02-send-button.png", "gallery-data.json", "gallery-model.js", "gallery-neiki.css", "gallery-neiki.js", "index.html", "manifest.json", "public-catalog.js", "query-validator.js", "query-view.js", "style.css", "version.json"]);
     const server=createServer(async(req,res)=>{
       try {
         const pathname=new URL(req.url,'http://localhost').pathname;
         const file=pathname===basePath?'index.html':pathname.startsWith(basePath)?pathname.slice(basePath.length):'';
         if (!files.includes(file)) {res.writeHead(404);res.end();return;}
-        res.setHeader('Content-Type',file.endsWith('.js')?'text/javascript':file.endsWith('.css')?'text/css':file.endsWith('.html')?'text/html':'application/json');
+        res.setHeader('Content-Type',file.endsWith('.js')?'text/javascript':file.endsWith('.css')?'text/css':file.endsWith('.html')?'text/html':file.endsWith('.png')?'image/png':'application/json');
         res.end(await readFile(join(out,file)));
       } catch {res.writeHead(404);res.end();}
     }).listen(0,'127.0.0.1');
@@ -118,10 +118,12 @@ test('root and subdirectory static HTTP expose only audited files, same core fil
       const page=await fetch(origin+basePath);
       assert.equal(page.headers.get('content-type'),'text/html');
       const html=await page.text();
-      assert.match(html,/源码.*不公开/);
+      assert.match(html,/仅参考截图/);
+      assert.match(html,/未接组件源码下载/);
       assert.match(html,/Content-Security-Policy/);
       for(const match of html.matchAll(/(?:src|href)="([^"#]+)"/g)) {
         const url=new URL(match[1],origin+basePath);
+        if(url.origin!==origin){assert.equal(url.href,'https://github.com/neikiri/neiki-gallery');continue;}
         assert(url.pathname.startsWith(basePath));
         assert.equal((await fetch(url)).status,200);
       }
