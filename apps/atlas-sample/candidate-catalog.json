@@ -10548,5 +10548,151 @@
       "工具说明"
     ],
     "behavior": "原解析器、检索、状态码/示例切换及schema展开；只读固定本地规范，无Try执行/鉴权/规范外部引用。"
+  },
+  {
+    "id": "openseadragon:local-space-reader",
+    "title": "OpenSeadragon · 单图空间深阅",
+    "source": "OpenSeadragon",
+    "repository": "https://github.com/openseadragon/openseadragon",
+    "revision": "201d47833e3f10e9fa55159cd4203630521926b8",
+    "version": "6.1.1",
+    "license": "BSD-3-Clause AND MIT",
+    "publicationReady": true,
+    "directory": "space-reader",
+    "entry": "space-reader/index.html",
+    "runtime": {
+      "js": "runtime.js",
+      "css": "runtime.css",
+      "format": "iife",
+      "detailOnly": true,
+      "allowLocalMedia": false
+    },
+    "needsLocalMedia": false,
+    "browserVisualQA": "not-run",
+    "counts": {
+      "independentFamily": 1
+    },
+    "size": {
+      "js": 357031,
+      "gzip": 90825,
+      "css": 536
+    },
+    "limitations": [
+      "原创宿主及纯文本 SVG，非原上游成品设计",
+      "单图非多级瓦片/实拍",
+      "Image/geometry mock，实际像素和指针拖动待验"
+    ],
+    "capabilities": [
+      "原 HTML drawer 与 Navigator",
+      "缩放/平移/全图适配",
+      "原按钮和缩放边界",
+      "中断/失败/销毁清理"
+    ],
+    "upstream": "https://github.com/openseadragon/openseadragon/tree/201d47833e3f10e9fa55159cd4203630521926b8",
+    "preview": "batches/openseadragon-01/index.html",
+    "batch": "openseadragon-01",
+    "category": "展示与媒体",
+    "kind": "深缩放阅读组件",
+    "format": "单图空间阅读设计族",
+    "styleTags": [
+      "空间定位",
+      "研究图谱"
+    ],
+    "purposeTags": [
+      "研究素材检视",
+      "富媒体结果"
+    ],
+    "description": "原OpenSeadragon单图深缩放与Navigator定位小地图；原创SVG研究空间仅为宿主样例，不是实拍照片、多级瓦片或上游成品页面。",
+    "behavior": "原Viewport平移/缩放/全图适配与按钮控制，原HTMLDrawer主图和Navigator；退出取消动画与加载。",
+    "buildStatus": "Four original renderer/state/lifecycle branches passed using mocked Image and geometry; native pixels/gestures NOT verified",
+    "gaps": [
+      "原创宿主及纯文本 SVG，非原上游成品设计",
+      "单图非多级瓦片/实拍",
+      "Image/geometry mock，实际像素和指针拖动待验",
+      "替换原PNG控制图为原创纯文本SVG；未编码二进制。",
+      "修复原Button销毁后fading计时器/RAF；完整BSD与MIT通知已保留，源码ZIP仅本地。"
+    ]
+  },
+  {
+    "id": "recogito:text-report-annotations",
+    "name": "RecogitoJS · 文本批注阅读室",
+    "category": "输入与选择",
+    "source": "RecogitoJS",
+    "commit": "de87f14d0d4bf6c4be5939d5c843cb722080b22a",
+    "version": "1.8.4",
+    "sourceFile": "src/index.jsx",
+    "license": "BSD-3-Clause; embedded IcoFont/Font Awesome SVG CC-BY-4.0; runtime dependency licenses in notices",
+    "preview": "batches/recogito-01/index.html",
+    "previewPath": "batches/recogito-01/index.html",
+    "files": [
+      "runtime.js",
+      "runtime.css",
+      "index.html"
+    ],
+    "gaps": [
+      "Visual/pointer selection and popup geometry not verified; DOM Range/layout mocks only.",
+      "Memory-only synthetic document; no remote loading/login/sharing or relationship UI.",
+      "IcoFont historical release not identified by upstream; exact glyph identity and CC BY4 attribution retained."
+    ],
+    "knownGaps": [
+      "Visual/pointer selection and popup geometry not verified; DOM Range/layout mocks only.",
+      "Memory-only synthetic document; no remote loading/login/sharing or relationship UI.",
+      "IcoFont historical release not identified by upstream; exact glyph identity and CC BY4 attribution retained."
+    ],
+    "visualVerified": false,
+    "tests": [
+      "test-results.json",
+      "test-interrupt-selection.json",
+      "test-interrupt-touch.json"
+    ],
+    "title": "RecogitoJS · 文本批注阅读室",
+    "upstream": "https://github.com/recogito/recogito-js/tree/de87f14d0d4bf6c4be5939d5c843cb722080b22a",
+    "revision": "de87f14d0d4bf6c4be5939d5c843cb722080b22a",
+    "description": "原RecogitoJS文字选区锚定、高亮与评论/标签弹层；固定本地报告，内存编辑/删除，真实quote与position数据，不冒称持久同步。",
+    "buildStatus": "Eight original selection/comment/tag tests and two interruption branches passed using DOM Range/layout substitutes; native selection/pixels NOT verified",
+    "previewStatus": "DOM interaction verified; visual review pending",
+    "batch": "recogito-01",
+    "kind": "文本锚定批注组件",
+    "format": "文本批注阅读设计族",
+    "styleTags": [
+      "阅读室",
+      "原版弹层"
+    ],
+    "purposeTags": [
+      "证据审阅",
+      "协作批注"
+    ],
+    "behavior": "实际Range经过原选区处理打开原popup，评论标签保存/再编辑/取消/删除；重复精确选区保留原ID。"
+  },
+  {
+    "id": "react-pdf-highlighter:local-evidence-notes",
+    "title": "PDF · 原版式证据批注",
+    "source": "React PDF Highlighter",
+    "license": "MIT; PDF.js dependency Apache-2.0, full notices included",
+    "upstream": "https://github.com/agentcooper/react-pdf-highlighter/tree/d02d9a33fcf9f55cda4eed89f96b12cb6db7623c",
+    "version": "8.0.0-rc.0",
+    "preview": "batches/pdf-evidence-01/index.html",
+    "batch": "pdf-evidence-01",
+    "category": "展示与媒体",
+    "kind": "PDF页面批注组件",
+    "format": "PDF证据审阅设计族",
+    "styleTags": [
+      "页边批注",
+      "文档阅读"
+    ],
+    "purposeTags": [
+      "证据审阅",
+      "富媒体结果"
+    ],
+    "description": "原PDF.js页面、React PDF Highlighter文本与区域批注层；三页原创本地ASCII PDF，不是上传文件或仅提取文本的阅读壳。",
+    "behavior": "原选区/Tip批注保存、页内定位、删除、Alt区域框选与AreaHighlight；仅内存，主线程原PDF解析渲染，无Worker/外部字体。",
+    "buildStatus": "Original three-page parse, 584 Canvas text commands, text/area annotation tests and eight interruption/error branches passed; raster/native gestures NOT visually verified",
+    "gaps": [
+      "Canvas/FontFace/DOM几何为替身，真实页面像素、截图、拖选及区域拖移伸缩待验。",
+      "修复disableFontFace导致缺字路径；使用原系统字体，强制命名字体失败仍有generic sans-serif绘制回退，但未声称真实字体像素验收。",
+      "固定原创ASCII PDF在运行时从源码生成，不编码现有PDF/图像二进制；区域截图是原本地运行行为，测试假截图未进入运行包。",
+      "修复原初始化、selection/scroll/Tip计时器、内部React roots与mouseup清理；文档destroy失败明确partial，finally仅保证宿主清理，不冒称引擎完整销毁。",
+      "完整MIT与PDF.js Apache-2.0通知保留；源码与测试ZIP仅本地。"
+    ]
   }
 ]
