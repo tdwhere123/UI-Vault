@@ -1,0 +1,3258 @@
+[
+  {
+    "id": "affectui:decision-inbox",
+    "title": "待决策收件箱",
+    "source": "Affect UI",
+    "license": "MIT",
+    "upstream": "https://github.com/flohoeller/affectui/blob/7ac87beb0ffaef2dd0305e508b4e3d471f269d84/components/decision-inbox.tsx",
+    "website": "https://affectui.com/components/decision-inbox",
+    "buildStatus": "production bundle previously built",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/agent-scenes-awaiting-final-qa/archives/affectui-01/source.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/agent-scenes-awaiting-final-qa/manifest.json",
+    "description": "逐项选择后确认、折叠移除，并自动展开下一条；全部决定后显示清空态。",
+    "gaps": [
+      "真实封面及最终浏览器验收未完成"
+    ]
+  },
+  {
+    "id": "affectui:email-draft",
+    "title": "Agent邮件草稿审阅",
+    "source": "Affect UI",
+    "license": "MIT",
+    "upstream": "https://github.com/flohoeller/affectui/blob/7ac87beb0ffaef2dd0305e508b4e3d471f269d84/components/email-draft.tsx",
+    "website": "https://affectui.com/components/email-draft",
+    "buildStatus": "production bundle previously built",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/agent-scenes-awaiting-final-qa/archives/affectui-01/source.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/agent-scenes-awaiting-final-qa/manifest.json",
+    "description": "切换收件人和语气、修改正文、移除附件，模拟Send或Discard后可Undo；不发送邮件。",
+    "gaps": [
+      "真实封面及最终浏览器验收未完成"
+    ]
+  },
+  {
+    "id": "affectui:smart-recommendation",
+    "title": "方案推荐与取舍",
+    "source": "Affect UI",
+    "license": "MIT",
+    "upstream": "https://github.com/flohoeller/affectui/blob/7ac87beb0ffaef2dd0305e508b4e3d471f269d84/components/smart-recommendation.tsx",
+    "website": "https://affectui.com/components/smart-recommendation",
+    "buildStatus": "production bundle previously built",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/agent-scenes-awaiting-final-qa/archives/affectui-01/source.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/agent-scenes-awaiting-final-qa/manifest.json",
+    "description": "展开替代方案，比较置信信号，接受推荐后可撤销。",
+    "gaps": [
+      "真实封面及最终浏览器验收未完成"
+    ]
+  },
+  {
+    "id": "affectui:comment-thread",
+    "title": "人机协作批注线程",
+    "source": "Affect UI",
+    "license": "MIT",
+    "upstream": "https://github.com/flohoeller/affectui/blob/7ac87beb0ffaef2dd0305e508b4e3d471f269d84/components/comment-thread.tsx",
+    "website": "https://affectui.com/components/comment-thread",
+    "buildStatus": "production bundle previously built",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/agent-scenes-awaiting-final-qa/archives/affectui-01/source.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/agent-scenes-awaiting-final-qa/manifest.json",
+    "description": "展开Assistant处理细节，输入批注后展示本地固定回复；发送和思考状态仅在此演示内。",
+    "gaps": [
+      "真实封面及最终浏览器验收未完成"
+    ]
+  },
+  {
+    "id": "affectui:notification-stack",
+    "title": "Agent结果通知卡叠层",
+    "source": "Affect UI",
+    "license": "MIT",
+    "upstream": "https://github.com/flohoeller/affectui/blob/7ac87beb0ffaef2dd0305e508b4e3d471f269d84/components/notification-stack.tsx",
+    "website": "https://affectui.com/components/notification-stack",
+    "buildStatus": "production bundle previously built",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/agent-scenes-awaiting-final-qa/archives/affectui-01/source.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/agent-scenes-awaiting-final-qa/manifest.json",
+    "description": "逐张查看并关闭通知，卡片位移过渡，空态后可重置。",
+    "gaps": [
+      "真实封面及最终浏览器验收未完成"
+    ]
+  },
+  {
+    "id": "affectui:tool-call-card",
+    "title": "工具调用分组与失败重试",
+    "source": "Affect UI",
+    "license": "MIT",
+    "upstream": "https://github.com/flohoeller/affectui/blob/7ac87beb0ffaef2dd0305e508b4e3d471f269d84/components/tool-call-card.tsx",
+    "website": "https://affectui.com/components/tool-call-card",
+    "buildStatus": "production bundle previously built",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/agent-scenes-awaiting-final-qa/archives/affectui-01/source.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/agent-scenes-awaiting-final-qa/manifest.json",
+    "description": "折叠工具组、查看参数和结果、模拟失败重试，完成后更新组状态。",
+    "gaps": [
+      "真实封面及最终浏览器验收未完成"
+    ]
+  },
+  {
+    "id": "agent-elements:research-workflow",
+    "title": "研究代理证据与子任务工作流",
+    "source": "Agent Elements",
+    "license": "MIT",
+    "upstream": "https://github.com/21st-dev/agent-elements/tree/b04b36cb6381a1dd1a0e86cc7c90564ddcd56d37/lib/agent-ui",
+    "website": "https://github.com/21st-dev/agent-elements",
+    "buildStatus": "production bundle previously built",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/agent-scenes-awaiting-final-qa/archives/agent-elements-scene-01/source.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/agent-scenes-awaiting-final-qa/manifest.json",
+    "description": "展开检索结果与子代理步骤；Replay run按阶段回放，Pause暂停本地阶段计时。",
+    "gaps": [
+      "真实封面及最终浏览器验收未完成"
+    ]
+  },
+  {
+    "id": "animata:aperture-reveal",
+    "title": "光圈揭幕滚动首屏",
+    "source": "Animata",
+    "license": "MIT",
+    "upstream": "https://github.com/codse/animata/blob/25c27e5a874c60a56dcc1609df3b2c4f5f8456f8/animata/scroll/aperture-reveal.tsx",
+    "website": "https://animata.design",
+    "buildStatus": "production bundle previously built",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/animata-accepted-awaiting-posters/archives/animata-next-04/source.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/animata-accepted-awaiting-posters/manifest.json",
+    "description": "PageDown opened small headline aperture into full illustrated hero and caption",
+    "gaps": [
+      "真实封面及最终浏览器验收未完成"
+    ]
+  },
+  {
+    "id": "animata:stacked-sections",
+    "title": "层叠吸顶叙事区块",
+    "source": "Animata",
+    "license": "MIT",
+    "upstream": "https://github.com/codse/animata/blob/25c27e5a874c60a56dcc1609df3b2c4f5f8456f8/animata/scroll/stacked-sections.tsx",
+    "website": "https://animata.design",
+    "buildStatus": "production bundle previously built",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/animata-accepted-awaiting-posters/archives/animata-next-04/source.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/animata-accepted-awaiting-posters/manifest.json",
+    "description": "Scroll stacked four sticky sections with depth scaling",
+    "gaps": [
+      "真实封面及最终浏览器验收未完成"
+    ]
+  },
+  {
+    "id": "animata:transaction-list",
+    "title": "交易列表变形收据",
+    "source": "Animata",
+    "license": "MIT",
+    "upstream": "https://github.com/codse/animata/blob/25c27e5a874c60a56dcc1609df3b2c4f5f8456f8/animata/list/transaction-list.tsx",
+    "website": "https://animata.design",
+    "buildStatus": "production bundle previously built",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/animata-accepted-awaiting-posters/archives/animata-next-03/source.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/animata-accepted-awaiting-posters/manifest.json",
+    "description": "Netflix row morphed into detailed receipt card",
+    "gaps": [
+      "真实封面及最终浏览器验收未完成",
+      "本地演示暂未发布；可先查看上游演示和原始源码。"
+    ]
+  },
+  {
+    "id": "animata:trailing-image",
+    "title": "指针图像拖尾画布",
+    "source": "Animata",
+    "license": "MIT",
+    "upstream": "https://github.com/codse/animata/blob/25c27e5a874c60a56dcc1609df3b2c4f5f8456f8/animata/image/trailing-image.tsx",
+    "website": "https://animata.design",
+    "buildStatus": "production bundle previously built",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/animata-accepted-awaiting-posters/archives/animata-next-03/source.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/animata-accepted-awaiting-posters/manifest.json",
+    "description": "Pointer drag emitted image trail",
+    "gaps": [
+      "真实封面及最终浏览器验收未完成",
+      "本地演示暂未发布；可先查看上游演示和原始源码。"
+    ]
+  },
+  {
+    "id": "animata:product-features",
+    "title": "立体商品展示首屏",
+    "source": "Animata",
+    "license": "MIT",
+    "upstream": "https://github.com/codse/animata/blob/25c27e5a874c60a56dcc1609df3b2c4f5f8456f8/animata/hero/product-features.tsx",
+    "website": "https://animata.design",
+    "buildStatus": "production bundle previously built",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/animata-accepted-awaiting-posters/archives/animata-next-01/source.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/animata-accepted-awaiting-posters/manifest.json",
+    "description": "Hero entered then three product cards emerged with staggered motion",
+    "gaps": [
+      "真实封面及最终浏览器验收未完成"
+    ]
+  },
+  {
+    "id": "cult:agent-suggest-card-stack",
+    "title": "agent-suggest-card-stack",
+    "source": "Cult UI",
+    "license": "MIT",
+    "upstream": "https://github.com/nolly-studio/cult-ui/tree/d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+    "website": "",
+    "buildStatus": "not built; upstream archive only",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/cult-archive-01/source-archive.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/cult-archive-01/manifest.json",
+    "description": "Stack of suggestion cards for AI agent responses",
+    "gaps": [
+      "Remote media and logos not downloaded or licensed by assumption",
+      "Source registry metadata may omit imports; original project package+lock retained"
+    ]
+  },
+  {
+    "id": "cult:ai-instructions",
+    "title": "ai-instructions",
+    "source": "Cult UI",
+    "license": "MIT",
+    "upstream": "https://github.com/nolly-studio/cult-ui/tree/d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+    "website": "",
+    "buildStatus": "not built; upstream archive only",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/cult-archive-01/source-archive.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/cult-archive-01/manifest.json",
+    "description": "Manage and toggle AI instructions with a popover, search, and create-dialog",
+    "gaps": [
+      "Remote media and logos not downloaded or licensed by assumption",
+      "Source registry metadata may omit imports; original project package+lock retained"
+    ]
+  },
+  {
+    "id": "cult:analytics-chart",
+    "title": "analytics-chart",
+    "source": "Cult UI",
+    "license": "MIT",
+    "upstream": "https://github.com/nolly-studio/cult-ui/tree/d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+    "website": "",
+    "buildStatus": "not built; upstream archive only",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/cult-archive-01/source-archive.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/cult-archive-01/manifest.json",
+    "description": "Vercel-style gradient line chart with floating tooltip cards",
+    "gaps": [
+      "Remote media and logos not downloaded or licensed by assumption",
+      "Source registry metadata may omit imports; original project package+lock retained"
+    ]
+  },
+  {
+    "id": "cult:collab-toolbar",
+    "title": "collab-toolbar",
+    "source": "Cult UI",
+    "license": "MIT",
+    "upstream": "https://github.com/nolly-studio/cult-ui/tree/d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+    "website": "",
+    "buildStatus": "not built; upstream archive only",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/cult-archive-01/source-archive.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/cult-archive-01/manifest.json",
+    "description": "Toolbar component for collaborative editing UI",
+    "gaps": [
+      "Remote media and logos not downloaded or licensed by assumption",
+      "Source registry metadata may omit imports; original project package+lock retained"
+    ]
+  },
+  {
+    "id": "cult:dynamic-island",
+    "title": "dynamic-island",
+    "source": "Cult UI",
+    "license": "MIT",
+    "upstream": "https://github.com/nolly-studio/cult-ui/tree/d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+    "website": "",
+    "buildStatus": "not built; upstream archive only",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/cult-archive-01/source-archive.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/cult-archive-01/manifest.json",
+    "description": "iOS-style dynamic island component with expandable content and smooth animations",
+    "gaps": [
+      "Remote media and logos not downloaded or licensed by assumption",
+      "Source registry metadata may omit imports; original project package+lock retained"
+    ]
+  },
+  {
+    "id": "cult:expandable-screen",
+    "title": "expandable-screen",
+    "source": "Cult UI",
+    "license": "MIT",
+    "upstream": "https://github.com/nolly-studio/cult-ui/tree/d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+    "website": "",
+    "buildStatus": "not built; upstream archive only",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/cult-archive-01/source-archive.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/cult-archive-01/manifest.json",
+    "description": "A full-screen expandable component with morphing animations using shared layout IDs for smooth transitions",
+    "gaps": [
+      "Remote media and logos not downloaded or licensed by assumption",
+      "Source registry metadata may omit imports; original project package+lock retained"
+    ]
+  },
+  {
+    "id": "cult:family-drawer",
+    "title": "family-drawer",
+    "source": "Cult UI",
+    "license": "MIT",
+    "upstream": "https://github.com/nolly-studio/cult-ui/tree/d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+    "website": "",
+    "buildStatus": "not built; upstream archive only",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/cult-archive-01/source-archive.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/cult-archive-01/manifest.json",
+    "description": "A multi-view drawer component with smooth animations, view navigation, and customizable content views",
+    "gaps": [
+      "Remote media and logos not downloaded or licensed by assumption",
+      "Source registry metadata may omit imports; original project package+lock retained"
+    ]
+  },
+  {
+    "id": "cult:feature-sticky-section",
+    "title": "feature-sticky-section",
+    "source": "Cult UI",
+    "license": "MIT",
+    "upstream": "https://github.com/nolly-studio/cult-ui/tree/d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+    "website": "",
+    "buildStatus": "not built; upstream archive only",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/cult-archive-01/source-archive.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/cult-archive-01/manifest.json",
+    "description": "Sticky section with controllable panels and scroll behavior",
+    "gaps": [
+      "Remote media and logos not downloaded or licensed by assumption",
+      "Source registry metadata may omit imports; original project package+lock retained"
+    ]
+  },
+  {
+    "id": "cult:floating-panel",
+    "title": "floating-panel",
+    "source": "Cult UI",
+    "license": "MIT",
+    "upstream": "https://github.com/nolly-studio/cult-ui/tree/d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+    "website": "",
+    "buildStatus": "not built; upstream archive only",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/cult-archive-01/source-archive.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/cult-archive-01/manifest.json",
+    "description": "Floating panel component with backdrop blur and position-aware animations",
+    "gaps": [
+      "Remote media and logos not downloaded or licensed by assumption",
+      "Source registry metadata may omit imports; original project package+lock retained"
+    ]
+  },
+  {
+    "id": "cult:fluted-glass",
+    "title": "fluted-glass",
+    "source": "Cult UI",
+    "license": "MIT",
+    "upstream": "https://github.com/nolly-studio/cult-ui/tree/d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+    "website": "",
+    "buildStatus": "not built; upstream archive only",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/cult-archive-01/source-archive.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/cult-archive-01/manifest.json",
+    "description": "Paper Design fluted-glass image shader with sensible defaults — ribbed, streaked distortions over a source image",
+    "gaps": [
+      "Remote media and logos not downloaded or licensed by assumption",
+      "Source registry metadata may omit imports; original project package+lock retained",
+      "WebGL/shader support must be verified"
+    ]
+  },
+  {
+    "id": "cult:hero-color-panel",
+    "title": "hero-color-panel",
+    "source": "Cult UI",
+    "license": "MIT",
+    "upstream": "https://github.com/nolly-studio/cult-ui/tree/d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+    "website": "",
+    "buildStatus": "not built; upstream archive only",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/cult-archive-01/source-archive.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/cult-archive-01/manifest.json",
+    "description": "Split-layout hero section with responsive ColorPanels shader visuals, CTA, and tech stack badges",
+    "gaps": [
+      "Remote media and logos not downloaded or licensed by assumption",
+      "Source registry metadata may omit imports; original project package+lock retained",
+      "WebGL/shader support must be verified"
+    ]
+  },
+  {
+    "id": "cult:hero-heatmap",
+    "title": "hero-heatmap",
+    "source": "Cult UI",
+    "license": "MIT",
+    "upstream": "https://github.com/nolly-studio/cult-ui/tree/d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+    "website": "",
+    "buildStatus": "not built; upstream archive only",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/cult-archive-01/source-archive.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/cult-archive-01/manifest.json",
+    "description": "Split-layout hero section with responsive Heatmap shader visuals, CTA, and tech stack badges",
+    "gaps": [
+      "Remote media and logos not downloaded or licensed by assumption",
+      "Source registry metadata may omit imports; original project package+lock retained",
+      "WebGL/shader support must be verified"
+    ]
+  },
+  {
+    "id": "cult:intro-disclosure",
+    "title": "intro-disclosure",
+    "source": "Cult UI",
+    "license": "MIT",
+    "upstream": "https://github.com/nolly-studio/cult-ui/tree/d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+    "website": "",
+    "buildStatus": "not built; upstream archive only",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/cult-archive-01/source-archive.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/cult-archive-01/manifest.json",
+    "description": "Intro disclosure component with expandable content and smooth animations",
+    "gaps": [
+      "Remote media and logos not downloaded or licensed by assumption",
+      "Source registry metadata may omit imports; original project package+lock retained"
+    ]
+  },
+  {
+    "id": "cult:marketing-feature-code",
+    "title": "marketing-feature-code",
+    "source": "Cult UI",
+    "license": "MIT",
+    "upstream": "https://github.com/nolly-studio/cult-ui/tree/d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+    "website": "",
+    "buildStatus": "not built; upstream archive only",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/cult-archive-01/source-archive.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/cult-archive-01/manifest.json",
+    "description": "Marketing section for code or network policy features",
+    "gaps": [
+      "Remote media and logos not downloaded or licensed by assumption",
+      "Source registry metadata may omit imports; original project package+lock retained"
+    ]
+  },
+  {
+    "id": "cult:marketing-hero-analytics",
+    "title": "marketing-hero-analytics",
+    "source": "Cult UI",
+    "license": "MIT",
+    "upstream": "https://github.com/nolly-studio/cult-ui/tree/d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+    "website": "",
+    "buildStatus": "not built; upstream archive only",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/cult-archive-01/source-archive.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/cult-archive-01/manifest.json",
+    "description": "Analytics hero section for marketing pages",
+    "gaps": [
+      "Remote media and logos not downloaded or licensed by assumption",
+      "Source registry metadata may omit imports; original project package+lock retained"
+    ]
+  },
+  {
+    "id": "cult:morph-surface",
+    "title": "morph-surface",
+    "source": "Cult UI",
+    "license": "MIT",
+    "upstream": "https://github.com/nolly-studio/cult-ui/tree/d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+    "website": "",
+    "buildStatus": "not built; upstream archive only",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/cult-archive-01/source-archive.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/cult-archive-01/manifest.json",
+    "description": "A morphing surface component with smooth animations, customizable dimensions, and configurable content",
+    "gaps": [
+      "Remote media and logos not downloaded or licensed by assumption",
+      "Source registry metadata may omit imports; original project package+lock retained"
+    ]
+  },
+  {
+    "id": "cult:onboarding",
+    "title": "onboarding",
+    "source": "Cult UI",
+    "license": "MIT",
+    "upstream": "https://github.com/nolly-studio/cult-ui/tree/d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+    "website": "",
+    "buildStatus": "not built; upstream archive only",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/cult-archive-01/source-archive.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/cult-archive-01/manifest.json",
+    "description": "Composable multi-step onboarding primitives: Onboarding root with step navigation, FeatureCarousel, ChoiceGroup radio selector, TipsList, and StepIndicator with dots and pills variants",
+    "gaps": [
+      "Remote media and logos not downloaded or licensed by assumption",
+      "Source registry metadata may omit imports; original project package+lock retained"
+    ]
+  },
+  {
+    "id": "cult:prompt-library",
+    "title": "prompt-library",
+    "source": "Cult UI",
+    "license": "MIT",
+    "upstream": "https://github.com/nolly-studio/cult-ui/tree/d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+    "website": "",
+    "buildStatus": "not built; upstream archive only",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/cult-archive-01/source-archive.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/cult-archive-01/manifest.json",
+    "description": "Browse, insert, and manage prompt templates with categories and custom prompts",
+    "gaps": [
+      "Remote media and logos not downloaded or licensed by assumption",
+      "Source registry metadata may omit imports; original project package+lock retained"
+    ]
+  },
+  {
+    "id": "cult:security-checkpoint",
+    "title": "security-checkpoint",
+    "source": "Cult UI",
+    "license": "MIT",
+    "upstream": "https://github.com/nolly-studio/cult-ui/tree/d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+    "website": "",
+    "buildStatus": "not built; upstream archive only",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/cult-archive-01/source-archive.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/cult-archive-01/manifest.json",
+    "description": "Security checkpoint illustration or component",
+    "gaps": [
+      "Remote media and logos not downloaded or licensed by assumption",
+      "Source registry metadata may omit imports; original project package+lock retained"
+    ]
+  },
+  {
+    "id": "cult:side-panel",
+    "title": "side-panel",
+    "source": "Cult UI",
+    "license": "MIT",
+    "upstream": "https://github.com/nolly-studio/cult-ui/tree/d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+    "website": "",
+    "buildStatus": "not built; upstream archive only",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/cult-archive-01/source-archive.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/cult-archive-01/manifest.json",
+    "description": "Sliding side panel component with customizable positioning and animations",
+    "gaps": [
+      "Remote media and logos not downloaded or licensed by assumption",
+      "Source registry metadata may omit imports; original project package+lock retained"
+    ]
+  },
+  {
+    "id": "cult:three-d-carousel",
+    "title": "three-d-carousel",
+    "source": "Cult UI",
+    "license": "MIT",
+    "upstream": "https://github.com/nolly-studio/cult-ui/tree/d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+    "website": "",
+    "buildStatus": "not built; upstream archive only",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/cult-archive-01/source-archive.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/cult-archive-01/manifest.json",
+    "description": "3D carousel component with perspective effects and smooth item transitions",
+    "gaps": [
+      "Remote media and logos not downloaded or licensed by assumption",
+      "Source registry metadata may omit imports; original project package+lock retained"
+    ]
+  },
+  {
+    "id": "cult:toolbar-expandable",
+    "title": "toolbar-expandable",
+    "source": "Cult UI",
+    "license": "MIT",
+    "upstream": "https://github.com/nolly-studio/cult-ui/tree/d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+    "website": "",
+    "buildStatus": "not built; upstream archive only",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/cult-archive-01/source-archive.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/cult-archive-01/manifest.json",
+    "description": "Expandable toolbar component with step-based navigation, smooth animations, and enhanced scrolling",
+    "gaps": [
+      "Remote media and logos not downloaded or licensed by assumption",
+      "Source registry metadata may omit imports; original project package+lock retained"
+    ]
+  },
+  {
+    "id": "cult:hover-video-player",
+    "title": "cult:hover-video-player",
+    "source": "Cult UI",
+    "license": "MIT",
+    "upstream": "",
+    "website": "",
+    "buildStatus": "not built",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/cult-archive-02/source-archive.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/cult-archive-02/manifest.json",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "WebGL if shader library used; unsupported rendering must not be counted as working",
+      "Remote media, commercial brand logos and device trademarks need separate asset review"
+    ]
+  },
+  {
+    "id": "cult:feature-carousel",
+    "title": "cult:feature-carousel",
+    "source": "Cult UI",
+    "license": "MIT",
+    "upstream": "",
+    "website": "",
+    "buildStatus": "not built",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/cult-archive-02/source-archive.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/cult-archive-02/manifest.json",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "WebGL if shader library used; unsupported rendering must not be counted as working",
+      "Remote media, commercial brand logos and device trademarks need separate asset review"
+    ]
+  },
+  {
+    "id": "cult:tabs-illustration-vercel",
+    "title": "cult:tabs-illustration-vercel",
+    "source": "Cult UI",
+    "license": "MIT",
+    "upstream": "",
+    "website": "",
+    "buildStatus": "not built",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/cult-archive-02/source-archive.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/cult-archive-02/manifest.json",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "WebGL if shader library used; unsupported rendering must not be counted as working",
+      "Remote media, commercial brand logos and device trademarks need separate asset review"
+    ]
+  },
+  {
+    "id": "cult:fluid-ai-workloads",
+    "title": "cult:fluid-ai-workloads",
+    "source": "Cult UI",
+    "license": "MIT",
+    "upstream": "",
+    "website": "",
+    "buildStatus": "not built",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/cult-archive-02/source-archive.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/cult-archive-02/manifest.json",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "WebGL if shader library used; unsupported rendering must not be counted as working",
+      "Remote media, commercial brand logos and device trademarks need separate asset review"
+    ]
+  },
+  {
+    "id": "cult:illustration-fluid-rendering",
+    "title": "cult:illustration-fluid-rendering",
+    "source": "Cult UI",
+    "license": "MIT",
+    "upstream": "",
+    "website": "",
+    "buildStatus": "not built",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/cult-archive-02/source-archive.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/cult-archive-02/manifest.json",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "WebGL if shader library used; unsupported rendering must not be counted as working",
+      "Remote media, commercial brand logos and device trademarks need separate asset review"
+    ]
+  },
+  {
+    "id": "cult:mac-screen",
+    "title": "cult:mac-screen",
+    "source": "Cult UI",
+    "license": "MIT",
+    "upstream": "",
+    "website": "",
+    "buildStatus": "not built",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/cult-archive-02/source-archive.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/cult-archive-02/manifest.json",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "WebGL if shader library used; unsupported rendering must not be counted as working",
+      "Remote media, commercial brand logos and device trademarks need separate asset review"
+    ]
+  },
+  {
+    "id": "cult:hero-liquid-metal",
+    "title": "cult:hero-liquid-metal",
+    "source": "Cult UI",
+    "license": "MIT",
+    "upstream": "",
+    "website": "",
+    "buildStatus": "not built",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/cult-archive-02/source-archive.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/cult-archive-02/manifest.json",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "WebGL if shader library used; unsupported rendering must not be counted as working",
+      "Remote media, commercial brand logos and device trademarks need separate asset review"
+    ]
+  },
+  {
+    "id": "cult:cutout-card",
+    "title": "cult:cutout-card",
+    "source": "Cult UI",
+    "license": "MIT",
+    "upstream": "",
+    "website": "",
+    "buildStatus": "not built",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/cult-archive-02/source-archive.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/cult-archive-02/manifest.json",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "WebGL if shader library used; unsupported rendering must not be counted as working",
+      "Remote media, commercial brand logos and device trademarks need separate asset review"
+    ]
+  },
+  {
+    "id": "cult:illustration-card-grid",
+    "title": "cult:illustration-card-grid",
+    "source": "Cult UI",
+    "license": "MIT",
+    "upstream": "",
+    "website": "",
+    "buildStatus": "not built",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/cult-archive-02/source-archive.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/cult-archive-02/manifest.json",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "WebGL if shader library used; unsupported rendering must not be counted as working",
+      "Remote media, commercial brand logos and device trademarks need separate asset review"
+    ]
+  },
+  {
+    "id": "cult:apple-keyboard",
+    "title": "cult:apple-keyboard",
+    "source": "Cult UI",
+    "license": "MIT",
+    "upstream": "",
+    "website": "",
+    "buildStatus": "not built",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/cult-archive-02/source-archive.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/cult-archive-02/manifest.json",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "WebGL if shader library used; unsupported rendering must not be counted as working",
+      "Remote media, commercial brand logos and device trademarks need separate asset review"
+    ]
+  },
+  {
+    "id": "cult:illustration-graph",
+    "title": "cult:illustration-graph",
+    "source": "Cult UI",
+    "license": "MIT",
+    "upstream": "",
+    "website": "",
+    "buildStatus": "not built",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/cult-archive-02/source-archive.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/cult-archive-02/manifest.json",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "WebGL if shader library used; unsupported rendering must not be counted as working",
+      "Remote media, commercial brand logos and device trademarks need separate asset review"
+    ]
+  },
+  {
+    "id": "cult:circuit-board",
+    "title": "cult:circuit-board",
+    "source": "Cult UI",
+    "license": "MIT",
+    "upstream": "",
+    "website": "",
+    "buildStatus": "not built",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/cult-archive-02/source-archive.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/cult-archive-02/manifest.json",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "WebGL if shader library used; unsupported rendering must not be counted as working",
+      "Remote media, commercial brand logos and device trademarks need separate asset review"
+    ]
+  },
+  {
+    "id": "eldora:header-01",
+    "title": "eldora:header-01",
+    "source": "Eldora UI",
+    "license": "MIT",
+    "upstream": "",
+    "website": "",
+    "buildStatus": "not built",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/eldora-archive-01/source-archive.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/eldora-archive-01/manifest.json",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Remote images and logos not downloaded or assumed MIT",
+      "WebGL required for novatrix-background; actual motion unverified"
+    ]
+  },
+  {
+    "id": "eldora:github-inline-comments",
+    "title": "eldora:github-inline-comments",
+    "source": "Eldora UI",
+    "license": "MIT",
+    "upstream": "",
+    "website": "",
+    "buildStatus": "not built",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/eldora-archive-01/source-archive.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/eldora-archive-01/manifest.json",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Remote images and logos not downloaded or assumed MIT",
+      "WebGL required for novatrix-background; actual motion unverified"
+    ]
+  },
+  {
+    "id": "eldora:features-01",
+    "title": "eldora:features-01",
+    "source": "Eldora UI",
+    "license": "MIT",
+    "upstream": "",
+    "website": "",
+    "buildStatus": "not built",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/eldora-archive-01/source-archive.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/eldora-archive-01/manifest.json",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Remote images and logos not downloaded or assumed MIT",
+      "WebGL required for novatrix-background; actual motion unverified"
+    ]
+  },
+  {
+    "id": "eldora:logo-cloud-04",
+    "title": "eldora:logo-cloud-04",
+    "source": "Eldora UI",
+    "license": "MIT",
+    "upstream": "",
+    "website": "",
+    "buildStatus": "not built",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/eldora-archive-01/source-archive.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/eldora-archive-01/manifest.json",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Remote images and logos not downloaded or assumed MIT",
+      "WebGL required for novatrix-background; actual motion unverified"
+    ]
+  },
+  {
+    "id": "eldora:logo-timeline",
+    "title": "eldora:logo-timeline",
+    "source": "Eldora UI",
+    "license": "MIT",
+    "upstream": "",
+    "website": "",
+    "buildStatus": "not built",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/eldora-archive-01/source-archive.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/eldora-archive-01/manifest.json",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Remote images and logos not downloaded or assumed MIT",
+      "WebGL required for novatrix-background; actual motion unverified"
+    ]
+  },
+  {
+    "id": "eldora:pricing-02",
+    "title": "eldora:pricing-02",
+    "source": "Eldora UI",
+    "license": "MIT",
+    "upstream": "",
+    "website": "",
+    "buildStatus": "not built",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/eldora-archive-01/source-archive.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/eldora-archive-01/manifest.json",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Remote images and logos not downloaded or assumed MIT",
+      "WebGL required for novatrix-background; actual motion unverified"
+    ]
+  },
+  {
+    "id": "eldora:novatrix-background",
+    "title": "eldora:novatrix-background",
+    "source": "Eldora UI",
+    "license": "MIT",
+    "upstream": "",
+    "website": "",
+    "buildStatus": "not built",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/eldora-archive-01/source-archive.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/eldora-archive-01/manifest.json",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Remote images and logos not downloaded or assumed MIT",
+      "WebGL required for novatrix-background; actual motion unverified"
+    ]
+  },
+  {
+    "id": "eldora:integrations",
+    "title": "eldora:integrations",
+    "source": "Eldora UI",
+    "license": "MIT",
+    "upstream": "",
+    "website": "",
+    "buildStatus": "not built",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/eldora-archive-01/source-archive.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/eldora-archive-01/manifest.json",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Remote images and logos not downloaded or assumed MIT",
+      "WebGL required for novatrix-background; actual motion unverified"
+    ]
+  },
+  {
+    "id": "eldora:map",
+    "title": "eldora:map",
+    "source": "Eldora UI",
+    "license": "MIT",
+    "upstream": "",
+    "website": "",
+    "buildStatus": "not built",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/eldora-archive-01/source-archive.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/eldora-archive-01/manifest.json",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Remote images and logos not downloaded or assumed MIT",
+      "WebGL required for novatrix-background; actual motion unverified"
+    ]
+  },
+  {
+    "id": "eldora:architecture-animation",
+    "title": "eldora:architecture-animation",
+    "source": "Eldora UI",
+    "license": "MIT",
+    "upstream": "",
+    "website": "",
+    "buildStatus": "not built",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/eldora-archive-01/source-archive.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/eldora-archive-01/manifest.json",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Remote images and logos not downloaded or assumed MIT",
+      "WebGL required for novatrix-background; actual motion unverified"
+    ]
+  },
+  {
+    "id": "eldora:holographic-card",
+    "title": "eldora:holographic-card",
+    "source": "Eldora UI",
+    "license": "MIT",
+    "upstream": "",
+    "website": "",
+    "buildStatus": "not built",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/eldora-archive-01/source-archive.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/eldora-archive-01/manifest.json",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Remote images and logos not downloaded or assumed MIT",
+      "WebGL required for novatrix-background; actual motion unverified"
+    ]
+  },
+  {
+    "id": "eldora:testimonal-01",
+    "title": "eldora:testimonal-01",
+    "source": "Eldora UI",
+    "license": "MIT",
+    "upstream": "",
+    "website": "",
+    "buildStatus": "not built",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/eldora-archive-01/source-archive.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/eldora-archive-01/manifest.json",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Remote images and logos not downloaded or assumed MIT",
+      "WebGL required for novatrix-background; actual motion unverified"
+    ]
+  },
+  {
+    "id": "fancy:physics-attractor-system",
+    "title": "fancy:physics-attractor-system",
+    "source": "Fancy Components",
+    "license": "MIT",
+    "upstream": "",
+    "website": "",
+    "buildStatus": "not built",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/fancy-archive-01/source-archive.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/fancy-archive-01/manifest.json",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Demo artworks and externally hosted media need separate permission or disclosed neutral replacements",
+      "Some browser-dependent SVG/physics behavior requires actual interaction testing"
+    ]
+  },
+  {
+    "id": "fancy:elastic-line",
+    "title": "fancy:elastic-line",
+    "source": "Fancy Components",
+    "license": "MIT",
+    "upstream": "",
+    "website": "",
+    "buildStatus": "not built",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/fancy-archive-01/source-archive.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/fancy-archive-01/manifest.json",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Demo artworks and externally hosted media need separate permission or disclosed neutral replacements",
+      "Some browser-dependent SVG/physics behavior requires actual interaction testing"
+    ]
+  },
+  {
+    "id": "fancy:css-box-carousel",
+    "title": "fancy:css-box-carousel",
+    "source": "Fancy Components",
+    "license": "MIT",
+    "upstream": "",
+    "website": "",
+    "buildStatus": "not built",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/fancy-archive-01/source-archive.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/fancy-archive-01/manifest.json",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Demo artworks and externally hosted media need separate permission or disclosed neutral replacements",
+      "Some browser-dependent SVG/physics behavior requires actual interaction testing"
+    ]
+  },
+  {
+    "id": "fancy:svg-path-motion",
+    "title": "fancy:svg-path-motion",
+    "source": "Fancy Components",
+    "license": "MIT",
+    "upstream": "",
+    "website": "",
+    "buildStatus": "not built",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/fancy-archive-01/source-archive.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/fancy-archive-01/manifest.json",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Demo artworks and externally hosted media need separate permission or disclosed neutral replacements",
+      "Some browser-dependent SVG/physics behavior requires actual interaction testing"
+    ]
+  },
+  {
+    "id": "fancy:screensaver",
+    "title": "fancy:screensaver",
+    "source": "Fancy Components",
+    "license": "MIT",
+    "upstream": "",
+    "website": "",
+    "buildStatus": "not built",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/fancy-archive-01/source-archive.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/fancy-archive-01/manifest.json",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Demo artworks and externally hosted media need separate permission or disclosed neutral replacements",
+      "Some browser-dependent SVG/physics behavior requires actual interaction testing"
+    ]
+  },
+  {
+    "id": "fancy:media-between-text",
+    "title": "fancy:media-between-text",
+    "source": "Fancy Components",
+    "license": "MIT",
+    "upstream": "",
+    "website": "",
+    "buildStatus": "not built",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/fancy-archive-01/source-archive.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/fancy-archive-01/manifest.json",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Demo artworks and externally hosted media need separate permission or disclosed neutral replacements",
+      "Some browser-dependent SVG/physics behavior requires actual interaction testing"
+    ]
+  },
+  {
+    "id": "fancy:parallax-floating",
+    "title": "fancy:parallax-floating",
+    "source": "Fancy Components",
+    "license": "MIT",
+    "upstream": "",
+    "website": "",
+    "buildStatus": "not built",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/fancy-archive-01/source-archive.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/fancy-archive-01/manifest.json",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Demo artworks and externally hosted media need separate permission or disclosed neutral replacements",
+      "Some browser-dependent SVG/physics behavior requires actual interaction testing"
+    ]
+  },
+  {
+    "id": "leko:cara-complete-site",
+    "title": "Cara · 插画几何图形与滚动视差单页作品集",
+    "source": "LekoArts",
+    "license": "MIT",
+    "upstream": "https://github.com/LekoArts/gatsby-themes/tree/0ee600732beb88a49135760df9ed6f4d419fde2e/themes/gatsby-theme-cara",
+    "website": "",
+    "buildStatus": "not installed or built; source archive only",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/leko-pages-01/source-archive.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/leko-pages-01/manifest.json",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Gatsby/React/theme-ui compatibility must be tested",
+      "Example photos/icons/fonts are not included or assumed separately licensed",
+      "Original monorepo lock is not a standalone app lock"
+    ]
+  },
+  {
+    "id": "leko:emilia-complete-site",
+    "title": "Emilia · 作品索引与项目详情组成的视觉作品集",
+    "source": "LekoArts",
+    "license": "MIT",
+    "upstream": "https://github.com/LekoArts/gatsby-themes/tree/0ee600732beb88a49135760df9ed6f4d419fde2e/themes/gatsby-theme-emilia",
+    "website": "",
+    "buildStatus": "not installed or built; source archive only",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/leko-pages-01/source-archive.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/leko-pages-01/manifest.json",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Gatsby/React/theme-ui compatibility must be tested",
+      "Example photos/icons/fonts are not included or assumed separately licensed",
+      "Original monorepo lock is not a standalone app lock"
+    ]
+  },
+  {
+    "id": "leko:jodie-complete-site",
+    "title": "Jodie · 非对称图片网格与大幅图像项目页面",
+    "source": "LekoArts",
+    "license": "MIT",
+    "upstream": "https://github.com/LekoArts/gatsby-themes/tree/0ee600732beb88a49135760df9ed6f4d419fde2e/themes/gatsby-theme-jodie",
+    "website": "",
+    "buildStatus": "not installed or built; source archive only",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/leko-pages-01/source-archive.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/leko-pages-01/manifest.json",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Gatsby/React/theme-ui compatibility must be tested",
+      "Example photos/icons/fonts are not included or assumed separately licensed",
+      "Original monorepo lock is not a standalone app lock"
+    ]
+  },
+  {
+    "id": "uilayout:movable-thumbnail-gallery",
+    "title": "可拖动缩略图画廊",
+    "source": "UI Layouts",
+    "license": "MIT",
+    "upstream": "",
+    "website": "",
+    "buildStatus": "not built; source archive only",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/uilayout-archive-02/source-archive.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/uilayout-archive-02/manifest.json",
+    "description": "None: upstream original source archived unchanged. Remote photos/video not downloaded and not implied licensed by repository MIT.",
+    "gaps": [
+      "尚未完成本轮视觉与交互验收"
+    ]
+  },
+  {
+    "id": "uilayout:progressive-image-story",
+    "title": "渐进式图片叙事轮播",
+    "source": "UI Layouts",
+    "license": "MIT",
+    "upstream": "",
+    "website": "",
+    "buildStatus": "not built; source archive only",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/uilayout-archive-02/source-archive.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/uilayout-archive-02/manifest.json",
+    "description": "None: upstream original source archived unchanged. Remote photos/video not downloaded and not implied licensed by repository MIT.",
+    "gaps": [
+      "尚未完成本轮视觉与交互验收"
+    ]
+  },
+  {
+    "id": "uilayout:liquid-glass-system",
+    "title": "可展开液态玻璃通知与信息面板",
+    "source": "UI Layouts",
+    "license": "MIT",
+    "upstream": "",
+    "website": "",
+    "buildStatus": "not built; source archive only",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/uilayout-archive-02/source-archive.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/uilayout-archive-02/manifest.json",
+    "description": "None: upstream original source archived unchanged. Remote photos/video not downloaded and not implied licensed by repository MIT.",
+    "gaps": [
+      "尚未完成本轮视觉与交互验收"
+    ]
+  },
+  {
+    "id": "uilayout:gallery-modal-slider",
+    "title": "画廊弹窗与大图滑动",
+    "source": "UI Layouts",
+    "license": "MIT",
+    "upstream": "",
+    "website": "",
+    "buildStatus": "not built; source archive only",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/uilayout-archive-02/source-archive.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/uilayout-archive-02/manifest.json",
+    "description": "None: upstream original source archived unchanged. Remote photos/video not downloaded and not implied licensed by repository MIT.",
+    "gaps": [
+      "尚未完成本轮视觉与交互验收"
+    ]
+  },
+  {
+    "id": "uilayout:media-modal",
+    "title": "媒体展开弹窗",
+    "source": "UI Layouts",
+    "license": "MIT",
+    "upstream": "",
+    "website": "",
+    "buildStatus": "not built; source archive only",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/uilayout-archive-02/source-archive.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/uilayout-archive-02/manifest.json",
+    "description": "None: upstream original source archived unchanged. Remote photos/video not downloaded and not implied licensed by repository MIT.",
+    "gaps": [
+      "尚未完成本轮视觉与交互验收"
+    ]
+  },
+  {
+    "id": "uilayout:trading-price-flow",
+    "title": "价格与涨跌联动数字过渡",
+    "source": "UI Layouts",
+    "license": "MIT",
+    "upstream": "",
+    "website": "",
+    "buildStatus": "not built; source archive only",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/uilayout-archive-02/source-archive.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/uilayout-archive-02/manifest.json",
+    "description": "None: upstream original source archived unchanged. Remote photos/video not downloaded and not implied licensed by repository MIT.",
+    "gaps": [
+      "尚未完成本轮视觉与交互验收"
+    ]
+  },
+  {
+    "id": "uilayout:attachment-composer",
+    "title": "附件输入与图片预览",
+    "source": "UI Layouts",
+    "license": "MIT",
+    "upstream": "",
+    "website": "",
+    "buildStatus": "not built; source archive only",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/uilayout-archive-02/source-archive.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/uilayout-archive-02/manifest.json",
+    "description": "None: upstream original source archived unchanged. Remote photos/video not downloaded and not implied licensed by repository MIT.",
+    "gaps": [
+      "尚未完成本轮视觉与交互验收"
+    ]
+  },
+  {
+    "id": "uilayout:magnified-tabs",
+    "title": "放大式项目导航标签",
+    "source": "UI Layouts",
+    "license": "MIT",
+    "upstream": "",
+    "website": "",
+    "buildStatus": "not built; source archive only",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/uilayout-archive-02/source-archive.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/uilayout-archive-02/manifest.json",
+    "description": "None: upstream original source archived unchanged. Remote photos/video not downloaded and not implied licensed by repository MIT.",
+    "gaps": [
+      "尚未完成本轮视觉与交互验收"
+    ]
+  },
+  {
+    "id": "uilayout:tools-workspace-tabs",
+    "title": "工具工作区标签区块",
+    "source": "UI Layouts",
+    "license": "MIT",
+    "upstream": "",
+    "website": "",
+    "buildStatus": "not built; source archive only",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/uilayout-archive-02/source-archive.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/uilayout-archive-02/manifest.json",
+    "description": "None: upstream original source archived unchanged. Remote photos/video not downloaded and not implied licensed by repository MIT.",
+    "gaps": [
+      "尚未完成本轮视觉与交互验收"
+    ]
+  },
+  {
+    "id": "uilayout:corporate-image-masks",
+    "title": "企业介绍组合裁切图片区块",
+    "source": "UI Layouts",
+    "license": "MIT",
+    "upstream": "",
+    "website": "",
+    "buildStatus": "not built; source archive only",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/uilayout-archive-02/source-archive.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/uilayout-archive-02/manifest.json",
+    "description": "None: upstream original source archived unchanged. Remote photos/video not downloaded and not implied licensed by repository MIT.",
+    "gaps": [
+      "尚未完成本轮视觉与交互验收"
+    ]
+  },
+  {
+    "id": "uilayout:terminal-intro-sequence",
+    "title": "分阶段终端任务演示",
+    "source": "UI Layouts",
+    "license": "MIT",
+    "upstream": "",
+    "website": "",
+    "buildStatus": "not built; source archive only",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/uilayout-archive-02/source-archive.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/uilayout-archive-02/manifest.json",
+    "description": "None: upstream original source archived unchanged. Remote photos/video not downloaded and not implied licensed by repository MIT.",
+    "gaps": [
+      "尚未完成本轮视觉与交互验收"
+    ]
+  },
+  {
+    "id": "uilayout:tree-code-viewer",
+    "title": "目录树与代码查看器",
+    "source": "UI Layouts",
+    "license": "MIT",
+    "upstream": "",
+    "website": "",
+    "buildStatus": "not built; source archive only",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/uilayout-archive-02/source-archive.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/uilayout-archive-02/manifest.json",
+    "description": "None: upstream original source archived unchanged. Remote photos/video not downloaded and not implied licensed by repository MIT.",
+    "gaps": [
+      "尚未完成本轮视觉与交互验收"
+    ]
+  },
+  {
+    "id": "uilayout:drag-drag-items",
+    "title": "drag-drag-items",
+    "source": "UI Layouts",
+    "license": "MIT",
+    "upstream": "https://github.com/ui-layouts/uilayouts/blob/88d827d7ec342917ca06f6894e5add65fabbe5d8/apps/ui-layout/registry/components/drag/drag-items.tsx",
+    "website": "",
+    "buildStatus": "production IIFE build passed; browser core interaction not verified",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/uilayout-built-awaiting-qa/archives/uilayout-next-01/source.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/uilayout-built-awaiting-qa/manifest.json",
+    "description": "Official demo logic; Next Image/Link shims; remote photos replaced by locally authored neutral SVG; timeline remote GIF replaced with decorative text star, not original artwork.",
+    "gaps": [
+      "No completed browser interaction QA",
+      "mac-genie snapshot/canvas window opening not verified",
+      "Source ZIP uses portable exact npm lock; clean fresh install not repeated in latest audit"
+    ]
+  },
+  {
+    "id": "uilayout:swapy-swapy-handle",
+    "title": "swapy-swapy-handle",
+    "source": "UI Layouts",
+    "license": "MIT",
+    "upstream": "https://github.com/ui-layouts/uilayouts/blob/88d827d7ec342917ca06f6894e5add65fabbe5d8/apps/ui-layout/registry/components/swapy/swapy-handle.tsx",
+    "website": "",
+    "buildStatus": "production IIFE build passed; browser core interaction not verified",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/uilayout-built-awaiting-qa/archives/uilayout-next-01/source.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/uilayout-built-awaiting-qa/manifest.json",
+    "description": "Official demo logic; Next Image/Link shims; remote photos replaced by locally authored neutral SVG; timeline remote GIF replaced with decorative text star, not original artwork.",
+    "gaps": [
+      "No completed browser interaction QA",
+      "mac-genie snapshot/canvas window opening not verified",
+      "Source ZIP uses portable exact npm lock; clean fresh install not repeated in latest audit"
+    ]
+  },
+  {
+    "id": "uilayout:scroll-animation-sticky-hero-scroll",
+    "title": "scroll-animation-sticky-hero-scroll",
+    "source": "UI Layouts",
+    "license": "MIT",
+    "upstream": "https://github.com/ui-layouts/uilayouts/blob/88d827d7ec342917ca06f6894e5add65fabbe5d8/apps/ui-layout/registry/components/scroll-animation/sticky-hero-scroll.tsx",
+    "website": "",
+    "buildStatus": "production IIFE build passed; browser core interaction not verified",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/uilayout-built-awaiting-qa/archives/uilayout-next-01/source.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/uilayout-built-awaiting-qa/manifest.json",
+    "description": "Official demo logic; Next Image/Link shims; remote photos replaced by locally authored neutral SVG; timeline remote GIF replaced with decorative text star, not original artwork.",
+    "gaps": [
+      "No completed browser interaction QA",
+      "mac-genie snapshot/canvas window opening not verified",
+      "Source ZIP uses portable exact npm lock; clean fresh install not repeated in latest audit"
+    ]
+  },
+  {
+    "id": "uilayout:scroll-animation-repeat-scroll",
+    "title": "scroll-animation-repeat-scroll",
+    "source": "UI Layouts",
+    "license": "MIT",
+    "upstream": "https://github.com/ui-layouts/uilayouts/blob/88d827d7ec342917ca06f6894e5add65fabbe5d8/apps/ui-layout/registry/components/scroll-animation/repeat-scroll.tsx",
+    "website": "",
+    "buildStatus": "production IIFE build passed; browser core interaction not verified",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/uilayout-built-awaiting-qa/archives/uilayout-next-01/source.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/uilayout-built-awaiting-qa/manifest.json",
+    "description": "Official demo logic; Next Image/Link shims; remote photos replaced by locally authored neutral SVG; timeline remote GIF replaced with decorative text star, not original artwork.",
+    "gaps": [
+      "No completed browser interaction QA",
+      "mac-genie snapshot/canvas window opening not verified",
+      "Source ZIP uses portable exact npm lock; clean fresh install not repeated in latest audit"
+    ]
+  },
+  {
+    "id": "uilayout:timeline-animation-index",
+    "title": "timeline-animation-index",
+    "source": "UI Layouts",
+    "license": "MIT",
+    "upstream": "https://github.com/ui-layouts/uilayouts/blob/88d827d7ec342917ca06f6894e5add65fabbe5d8/apps/ui-layout/registry/components/timeline-animation/index.tsx",
+    "website": "",
+    "buildStatus": "production IIFE build passed; browser core interaction not verified",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/uilayout-built-awaiting-qa/archives/uilayout-next-02/source.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/uilayout-built-awaiting-qa/manifest.json",
+    "description": "Official demo logic; Next Image/Link shims; remote photos replaced by locally authored neutral SVG; timeline remote GIF replaced with decorative text star, not original artwork.",
+    "gaps": [
+      "No completed browser interaction QA",
+      "mac-genie snapshot/canvas window opening not verified",
+      "Source ZIP uses portable exact npm lock; clean fresh install not repeated in latest audit"
+    ]
+  },
+  {
+    "id": "uilayout:mac-genie-effect",
+    "title": "mac-genie-effect",
+    "source": "UI Layouts",
+    "license": "MIT",
+    "upstream": "https://github.com/ui-layouts/uilayouts/blob/88d827d7ec342917ca06f6894e5add65fabbe5d8/apps/ui-layout/registry/components/mac/genie-effect.tsx",
+    "website": "",
+    "buildStatus": "production IIFE build passed; browser core interaction not verified",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/uilayout-built-awaiting-qa/archives/uilayout-next-02/source.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/uilayout-built-awaiting-qa/manifest.json",
+    "description": "Official demo logic; Next Image/Link shims; remote photos replaced by locally authored neutral SVG; timeline remote GIF replaced with decorative text star, not original artwork.",
+    "gaps": [
+      "No completed browser interaction QA",
+      "mac-genie snapshot/canvas window opening not verified",
+      "Source ZIP uses portable exact npm lock; clean fresh install not repeated in latest audit"
+    ]
+  },
+  {
+    "id": "uilayout:linear-modal-standalone-version",
+    "title": "linear-modal-standalone-version",
+    "source": "UI Layouts",
+    "license": "MIT",
+    "upstream": "https://github.com/ui-layouts/uilayouts/blob/88d827d7ec342917ca06f6894e5add65fabbe5d8/apps/ui-layout/registry/components/linear-modal/standalone-version.tsx",
+    "website": "",
+    "buildStatus": "production IIFE build passed; browser core interaction not verified",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/uilayout-built-awaiting-qa/archives/uilayout-next-02/source.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/uilayout-built-awaiting-qa/manifest.json",
+    "description": "Official demo logic; Next Image/Link shims; remote photos replaced by locally authored neutral SVG; timeline remote GIF replaced with decorative text star, not original artwork.",
+    "gaps": [
+      "No completed browser interaction QA",
+      "mac-genie snapshot/canvas window opening not verified",
+      "Source ZIP uses portable exact npm lock; clean fresh install not repeated in latest audit"
+    ]
+  },
+  {
+    "id": "uilayout:image-reveal-image-reveal",
+    "title": "image-reveal-image-reveal",
+    "source": "UI Layouts",
+    "license": "MIT",
+    "upstream": "https://github.com/ui-layouts/uilayouts/blob/88d827d7ec342917ca06f6894e5add65fabbe5d8/apps/ui-layout/registry/components/image-reveal/image-reveal.tsx",
+    "website": "",
+    "buildStatus": "production IIFE build passed; browser core interaction not verified",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/uilayout-built-awaiting-qa/archives/uilayout-next-02/source.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/uilayout-built-awaiting-qa/manifest.json",
+    "description": "Official demo logic; Next Image/Link shims; remote photos replaced by locally authored neutral SVG; timeline remote GIF replaced with decorative text star, not original artwork.",
+    "gaps": [
+      "No completed browser interaction QA",
+      "mac-genie snapshot/canvas window opening not verified",
+      "Source ZIP uses portable exact npm lock; clean fresh install not repeated in latest audit"
+    ]
+  },
+  {
+    "id": "uilayout:drawer-nested-vaul-drawer",
+    "title": "drawer-nested-vaul-drawer",
+    "source": "UI Layouts",
+    "license": "MIT",
+    "upstream": "https://github.com/ui-layouts/uilayouts/blob/88d827d7ec342917ca06f6894e5add65fabbe5d8/apps/ui-layout/registry/components/drawer/nested-vaul-drawer.tsx",
+    "website": "",
+    "buildStatus": "production IIFE build passed; browser core interaction not verified",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/uilayout-built-awaiting-qa/archives/uilayout-next-02/source.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/uilayout-built-awaiting-qa/manifest.json",
+    "description": "Official demo logic; Next Image/Link shims; remote photos replaced by locally authored neutral SVG; timeline remote GIF replaced with decorative text star, not original artwork.",
+    "gaps": [
+      "No completed browser interaction QA",
+      "mac-genie snapshot/canvas window opening not verified",
+      "Source ZIP uses portable exact npm lock; clean fresh install not repeated in latest audit"
+    ]
+  },
+  {
+    "id": "uilayout:drawer-responsive-header",
+    "title": "drawer-responsive-header",
+    "source": "UI Layouts",
+    "license": "MIT",
+    "upstream": "https://github.com/ui-layouts/uilayouts/blob/88d827d7ec342917ca06f6894e5add65fabbe5d8/apps/ui-layout/registry/components/drawer/responsive-header.tsx",
+    "website": "",
+    "buildStatus": "production IIFE build passed; browser core interaction not verified",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/uilayout-built-awaiting-qa/archives/uilayout-next-03/source.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/uilayout-built-awaiting-qa/manifest.json",
+    "description": "Official demo logic; Next Image/Link shims; remote photos replaced by locally authored neutral SVG; timeline remote GIF replaced with decorative text star, not original artwork.",
+    "gaps": [
+      "No completed browser interaction QA",
+      "mac-genie snapshot/canvas window opening not verified",
+      "Source ZIP uses portable exact npm lock; clean fresh install not repeated in latest audit"
+    ]
+  },
+  {
+    "id": "uilayout:footers-animated-logo-footer",
+    "title": "footers-animated-logo-footer",
+    "source": "UI Layouts",
+    "license": "MIT",
+    "upstream": "https://github.com/ui-layouts/uilayouts/blob/88d827d7ec342917ca06f6894e5add65fabbe5d8/apps/ui-layout/registry/components/footers/animated-logo-footer.tsx",
+    "website": "",
+    "buildStatus": "production IIFE build passed; browser core interaction not verified",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/uilayout-built-awaiting-qa/archives/uilayout-next-03/source.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/uilayout-built-awaiting-qa/manifest.json",
+    "description": "Official demo logic; Next Image/Link shims; remote photos replaced by locally authored neutral SVG; timeline remote GIF replaced with decorative text star, not original artwork.",
+    "gaps": [
+      "No completed browser interaction QA",
+      "mac-genie snapshot/canvas window opening not verified",
+      "Source ZIP uses portable exact npm lock; clean fresh install not repeated in latest audit"
+    ]
+  },
+  {
+    "id": "uilayout:card-product-card4",
+    "title": "card-product-card4",
+    "source": "UI Layouts",
+    "license": "MIT",
+    "upstream": "https://github.com/ui-layouts/uilayouts/blob/88d827d7ec342917ca06f6894e5add65fabbe5d8/apps/ui-layout/registry/components/card/product-card4.tsx",
+    "website": "",
+    "buildStatus": "production IIFE build passed; browser core interaction not verified",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/uilayout-built-awaiting-qa/archives/uilayout-next-03/source.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/uilayout-built-awaiting-qa/manifest.json",
+    "description": "Official demo logic; Next Image/Link shims; remote photos replaced by locally authored neutral SVG; timeline remote GIF replaced with decorative text star, not original artwork.",
+    "gaps": [
+      "No completed browser interaction QA",
+      "mac-genie snapshot/canvas window opening not verified",
+      "Source ZIP uses portable exact npm lock; clean fresh install not repeated in latest audit"
+    ]
+  },
+  {
+    "id": "uilayout:color-picker-raws-color-picker",
+    "title": "color-picker-raws-color-picker",
+    "source": "UI Layouts",
+    "license": "MIT",
+    "upstream": "https://github.com/ui-layouts/uilayouts/blob/88d827d7ec342917ca06f6894e5add65fabbe5d8/apps/ui-layout/registry/components/color-picker/raws-color-picker.tsx",
+    "website": "",
+    "buildStatus": "production IIFE build passed; browser core interaction not verified",
+    "batch": "batch-001",
+    "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/uilayout-built-awaiting-qa/archives/uilayout-next-03/source.zip",
+    "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/uilayout-built-awaiting-qa/manifest.json",
+    "description": "Official demo logic; Next Image/Link shims; remote photos replaced by locally authored neutral SVG; timeline remote GIF replaced with decorative text star, not original artwork.",
+    "gaps": [
+      "No completed browser interaction QA",
+      "mac-genie snapshot/canvas window opening not verified",
+      "Source ZIP uses portable exact npm lock; clean fresh install not repeated in latest audit"
+    ]
+  },
+  {
+    "id": "spring:masonry",
+    "title": "自适应瀑布流布局插值",
+    "source": "react-spring official demos",
+    "license": "MIT",
+    "upstream": "",
+    "website": "",
+    "buildStatus": "not built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Old sandbox dependencies may need transparent compatibility adaptation",
+      "Remote photos and rocket image not included",
+      "springy-boxes requires actual WebGL testing and interval cleanup review",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "spring:notification-hub",
+    "title": "多条堆叠通知与生命周期动画",
+    "source": "react-spring official demos",
+    "license": "MIT",
+    "upstream": "",
+    "website": "",
+    "buildStatus": "not built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Old sandbox dependencies may need transparent compatibility adaptation",
+      "Remote photos and rocket image not included",
+      "springy-boxes requires actual WebGL testing and interval cleanup review",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "spring:rocket-decay",
+    "title": "方向感知拖抛与惯性衰减",
+    "source": "react-spring official demos",
+    "license": "MIT",
+    "upstream": "",
+    "website": "",
+    "buildStatus": "not built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Old sandbox dependencies may need transparent compatibility adaptation",
+      "Remote photos and rocket image not included",
+      "springy-boxes requires actual WebGL testing and interval cleanup review",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "spring:springy-boxes",
+    "title": "35个立体方块的弹簧空间编排",
+    "source": "react-spring official demos",
+    "license": "MIT",
+    "upstream": "",
+    "website": "",
+    "buildStatus": "not built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Old sandbox dependencies may need transparent compatibility adaptation",
+      "Remote photos and rocket image not included",
+      "springy-boxes requires actual WebGL testing and interval cleanup review",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "kibo:calendar",
+    "title": "多事件日历视图",
+    "source": "Kibo",
+    "license": "MIT (root license; no per-module override found)",
+    "upstream": "https://github.com/shadcnblocks/kibo/tree/3d63cdb15b79d972e3dc38a10997987672f9b263/packages/calendar",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Workspace packages and @ aliases need actual standalone integration",
+      "Official demo media not downloaded; asset licensing remains separate",
+      "Gantt/editor rich dependencies need performance and accessibility testing",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "kibo:deck",
+    "title": "可操控卡组导航",
+    "source": "Kibo",
+    "license": "MIT (root license; no per-module override found)",
+    "upstream": "https://github.com/shadcnblocks/kibo/tree/3d63cdb15b79d972e3dc38a10997987672f9b263/packages/deck",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Workspace packages and @ aliases need actual standalone integration",
+      "Official demo media not downloaded; asset licensing remains separate",
+      "Gantt/editor rich dependencies need performance and accessibility testing",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "kibo:dialog-stack",
+    "title": "多层对话框流程",
+    "source": "Kibo",
+    "license": "MIT (root license; no per-module override found)",
+    "upstream": "https://github.com/shadcnblocks/kibo/tree/3d63cdb15b79d972e3dc38a10997987672f9b263/packages/dialog-stack",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Workspace packages and @ aliases need actual standalone integration",
+      "Official demo media not downloaded; asset licensing remains separate",
+      "Gantt/editor rich dependencies need performance and accessibility testing",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "kibo:editor",
+    "title": "富文本编辑与工具栏",
+    "source": "Kibo",
+    "license": "MIT (root license; no per-module override found)",
+    "upstream": "https://github.com/shadcnblocks/kibo/tree/3d63cdb15b79d972e3dc38a10997987672f9b263/packages/editor",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Workspace packages and @ aliases need actual standalone integration",
+      "Official demo media not downloaded; asset licensing remains separate",
+      "Gantt/editor rich dependencies need performance and accessibility testing",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "kibo:gantt",
+    "title": "可拖动甘特图与时间规划",
+    "source": "Kibo",
+    "license": "MIT (root license; no per-module override found)",
+    "upstream": "https://github.com/shadcnblocks/kibo/tree/3d63cdb15b79d972e3dc38a10997987672f9b263/packages/gantt",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Workspace packages and @ aliases need actual standalone integration",
+      "Official demo media not downloaded; asset licensing remains separate",
+      "Gantt/editor rich dependencies need performance and accessibility testing",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "kibo:image-crop",
+    "title": "交互图片裁剪",
+    "source": "Kibo",
+    "license": "MIT (root license; no per-module override found)",
+    "upstream": "https://github.com/shadcnblocks/kibo/tree/3d63cdb15b79d972e3dc38a10997987672f9b263/packages/image-crop",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Workspace packages and @ aliases need actual standalone integration",
+      "Official demo media not downloaded; asset licensing remains separate",
+      "Gantt/editor rich dependencies need performance and accessibility testing",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "kibo:table",
+    "title": "可组合复杂数据表",
+    "source": "Kibo",
+    "license": "MIT (root license; no per-module override found)",
+    "upstream": "https://github.com/shadcnblocks/kibo/tree/3d63cdb15b79d972e3dc38a10997987672f9b263/packages/table",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Workspace packages and @ aliases need actual standalone integration",
+      "Official demo media not downloaded; asset licensing remains separate",
+      "Gantt/editor rich dependencies need performance and accessibility testing",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "kibo:tree",
+    "title": "可展开层级资源树",
+    "source": "Kibo",
+    "license": "MIT (root license; no per-module override found)",
+    "upstream": "https://github.com/shadcnblocks/kibo/tree/3d63cdb15b79d972e3dc38a10997987672f9b263/packages/tree",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Workspace packages and @ aliases need actual standalone integration",
+      "Official demo media not downloaded; asset licensing remains separate",
+      "Gantt/editor rich dependencies need performance and accessibility testing",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "kibo:video-player",
+    "title": "完整媒体播放控制",
+    "source": "Kibo",
+    "license": "MIT (root license; no per-module override found)",
+    "upstream": "https://github.com/shadcnblocks/kibo/tree/3d63cdb15b79d972e3dc38a10997987672f9b263/packages/video-player",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Workspace packages and @ aliases need actual standalone integration",
+      "Official demo media not downloaded; asset licensing remains separate",
+      "Gantt/editor rich dependencies need performance and accessibility testing",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "kibo:stories",
+    "title": "故事与短视频浏览系统",
+    "source": "Kibo",
+    "license": "MIT (root license; no per-module override found)",
+    "upstream": "https://github.com/shadcnblocks/kibo/tree/3d63cdb15b79d972e3dc38a10997987672f9b263/packages/stories",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Workspace packages and @ aliases need actual standalone integration",
+      "Official demo media not downloaded; asset licensing remains separate",
+      "Gantt/editor rich dependencies need performance and accessibility testing",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "smoothui:apple-invites",
+    "title": "活动邀请卡轮播",
+    "source": "SmoothUI",
+    "license": "MIT (root code notice; external artwork not included)",
+    "upstream": "https://github.com/educlopez/smoothui/tree/c45420a8523ec60a92f7724a2418ab83edaa1425/packages/smoothui/components/apple-invites",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Workspace aliases and shared package dependencies require integration; source closure checked, build not attempted.",
+      "Official shared data includes remote generated portraits, scenes, app icons and sample product artwork. Asset URLs preserved for reference; binaries not downloaded and image redistribution rights not assumed.",
+      "Root documentation CSS imports external fumadocs package styles; original lock retained.",
+      "Visual fidelity, animation, mobile behavior, accessibility and interaction correctness not yet tested.",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "smoothui:book",
+    "title": "立体书封交互",
+    "source": "SmoothUI",
+    "license": "MIT (root code notice; external artwork not included)",
+    "upstream": "https://github.com/educlopez/smoothui/tree/c45420a8523ec60a92f7724a2418ab83edaa1425/packages/smoothui/components/book",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Workspace aliases and shared package dependencies require integration; source closure checked, build not attempted.",
+      "Official shared data includes remote generated portraits, scenes, app icons and sample product artwork. Asset URLs preserved for reference; binaries not downloaded and image redistribution rights not assumed.",
+      "Root documentation CSS imports external fumadocs package styles; original lock retained.",
+      "Visual fidelity, animation, mobile behavior, accessibility and interaction correctness not yet tested.",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "smoothui:dither-chart",
+    "title": "抖色风格图表",
+    "source": "SmoothUI",
+    "license": "MIT (root code notice; external artwork not included)",
+    "upstream": "https://github.com/educlopez/smoothui/tree/c45420a8523ec60a92f7724a2418ab83edaa1425/packages/smoothui/components/dither-chart",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Workspace aliases and shared package dependencies require integration; source closure checked, build not attempted.",
+      "Official shared data includes remote generated portraits, scenes, app icons and sample product artwork. Asset URLs preserved for reference; binaries not downloaded and image redistribution rights not assumed.",
+      "Root documentation CSS imports external fumadocs package styles; original lock retained.",
+      "Visual fidelity, animation, mobile behavior, accessibility and interaction correctness not yet tested.",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "smoothui:drawing-cursor",
+    "title": "绘画光标",
+    "source": "SmoothUI",
+    "license": "MIT (root code notice; external artwork not included)",
+    "upstream": "https://github.com/educlopez/smoothui/tree/c45420a8523ec60a92f7724a2418ab83edaa1425/packages/smoothui/components/drawing-cursor",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Workspace aliases and shared package dependencies require integration; source closure checked, build not attempted.",
+      "Official shared data includes remote generated portraits, scenes, app icons and sample product artwork. Asset URLs preserved for reference; binaries not downloaded and image redistribution rights not assumed.",
+      "Root documentation CSS imports external fumadocs package styles; original lock retained.",
+      "Visual fidelity, animation, mobile behavior, accessibility and interaction correctness not yet tested.",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "smoothui:image-generation-panel",
+    "title": "图像生成工作面板",
+    "source": "SmoothUI",
+    "license": "MIT (root code notice; external artwork not included)",
+    "upstream": "https://github.com/educlopez/smoothui/tree/c45420a8523ec60a92f7724a2418ab83edaa1425/packages/smoothui/components/image-generation-panel",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Workspace aliases and shared package dependencies require integration; source closure checked, build not attempted.",
+      "Official shared data includes remote generated portraits, scenes, app icons and sample product artwork. Asset URLs preserved for reference; binaries not downloaded and image redistribution rights not assumed.",
+      "Root documentation CSS imports external fumadocs package styles; original lock retained.",
+      "Visual fidelity, animation, mobile behavior, accessibility and interaction correctness not yet tested.",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "smoothui:image-metadata-preview",
+    "title": "图像元数据预览",
+    "source": "SmoothUI",
+    "license": "MIT (root code notice; external artwork not included)",
+    "upstream": "https://github.com/educlopez/smoothui/tree/c45420a8523ec60a92f7724a2418ab83edaa1425/packages/smoothui/components/image-metadata-preview",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Workspace aliases and shared package dependencies require integration; source closure checked, build not attempted.",
+      "Official shared data includes remote generated portraits, scenes, app icons and sample product artwork. Asset URLs preserved for reference; binaries not downloaded and image redistribution rights not assumed.",
+      "Root documentation CSS imports external fumadocs package styles; original lock retained.",
+      "Visual fidelity, animation, mobile behavior, accessibility and interaction correctness not yet tested.",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "smoothui:interactive-image-selector",
+    "title": "交互图像选择器",
+    "source": "SmoothUI",
+    "license": "MIT (root code notice; external artwork not included)",
+    "upstream": "https://github.com/educlopez/smoothui/tree/c45420a8523ec60a92f7724a2418ab83edaa1425/packages/smoothui/components/interactive-image-selector",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Workspace aliases and shared package dependencies require integration; source closure checked, build not attempted.",
+      "Official shared data includes remote generated portraits, scenes, app icons and sample product artwork. Asset URLs preserved for reference; binaries not downloaded and image redistribution rights not assumed.",
+      "Root documentation CSS imports external fumadocs package styles; original lock retained.",
+      "Visual fidelity, animation, mobile behavior, accessibility and interaction correctness not yet tested.",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "smoothui:job-listing-component",
+    "title": "展开式职位详情",
+    "source": "SmoothUI",
+    "license": "MIT (root code notice; external artwork not included)",
+    "upstream": "https://github.com/educlopez/smoothui/tree/c45420a8523ec60a92f7724a2418ab83edaa1425/packages/smoothui/components/job-listing-component",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Workspace aliases and shared package dependencies require integration; source closure checked, build not attempted.",
+      "Official shared data includes remote generated portraits, scenes, app icons and sample product artwork. Asset URLs preserved for reference; binaries not downloaded and image redistribution rights not assumed.",
+      "Root documentation CSS imports external fumadocs package styles; original lock retained.",
+      "Visual fidelity, animation, mobile behavior, accessibility and interaction correctness not yet tested.",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "smoothui:orbital-image-wheel",
+    "title": "轨道图像轮盘",
+    "source": "SmoothUI",
+    "license": "MIT (root code notice; external artwork not included)",
+    "upstream": "https://github.com/educlopez/smoothui/tree/c45420a8523ec60a92f7724a2418ab83edaa1425/packages/smoothui/components/orbital-image-wheel",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Workspace aliases and shared package dependencies require integration; source closure checked, build not attempted.",
+      "Official shared data includes remote generated portraits, scenes, app icons and sample product artwork. Asset URLs preserved for reference; binaries not downloaded and image redistribution rights not assumed.",
+      "Root documentation CSS imports external fumadocs package styles; original lock retained.",
+      "Visual fidelity, animation, mobile behavior, accessibility and interaction correctness not yet tested.",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "smoothui:pixel-brush-canvas",
+    "title": "像素画刷画布",
+    "source": "SmoothUI",
+    "license": "MIT (root code notice; external artwork not included)",
+    "upstream": "https://github.com/educlopez/smoothui/tree/c45420a8523ec60a92f7724a2418ab83edaa1425/packages/smoothui/components/pixel-brush-canvas",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Workspace aliases and shared package dependencies require integration; source closure checked, build not attempted.",
+      "Official shared data includes remote generated portraits, scenes, app icons and sample product artwork. Asset URLs preserved for reference; binaries not downloaded and image redistribution rights not assumed.",
+      "Root documentation CSS imports external fumadocs package styles; original lock retained.",
+      "Visual fidelity, animation, mobile behavior, accessibility and interaction correctness not yet tested.",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "smoothui:phototab",
+    "title": "照片标签切换",
+    "source": "SmoothUI",
+    "license": "MIT (root code notice; external artwork not included)",
+    "upstream": "https://github.com/educlopez/smoothui/tree/c45420a8523ec60a92f7724a2418ab83edaa1425/packages/smoothui/components/phototab",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Workspace aliases and shared package dependencies require integration; source closure checked, build not attempted.",
+      "Official shared data includes remote generated portraits, scenes, app icons and sample product artwork. Asset URLs preserved for reference; binaries not downloaded and image redistribution rights not assumed.",
+      "Root documentation CSS imports external fumadocs package styles; original lock retained.",
+      "Visual fidelity, animation, mobile behavior, accessibility and interaction correctness not yet tested.",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "smoothui:pinned-list",
+    "title": "固定项目列表",
+    "source": "SmoothUI",
+    "license": "MIT (root code notice; external artwork not included)",
+    "upstream": "https://github.com/educlopez/smoothui/tree/c45420a8523ec60a92f7724a2418ab83edaa1425/packages/smoothui/components/pinned-list",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Workspace aliases and shared package dependencies require integration; source closure checked, build not attempted.",
+      "Official shared data includes remote generated portraits, scenes, app icons and sample product artwork. Asset URLs preserved for reference; binaries not downloaded and image redistribution rights not assumed.",
+      "Root documentation CSS imports external fumadocs package styles; original lock retained.",
+      "Visual fidelity, animation, mobile behavior, accessibility and interaction correctness not yet tested.",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "smoothui:rich-popover",
+    "title": "媒体富内容浮层",
+    "source": "SmoothUI",
+    "license": "MIT (root code notice; external artwork not included)",
+    "upstream": "https://github.com/educlopez/smoothui/tree/c45420a8523ec60a92f7724a2418ab83edaa1425/packages/smoothui/components/rich-popover",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Workspace aliases and shared package dependencies require integration; source closure checked, build not attempted.",
+      "Official shared data includes remote generated portraits, scenes, app icons and sample product artwork. Asset URLs preserved for reference; binaries not downloaded and image redistribution rights not assumed.",
+      "Root documentation CSS imports external fumadocs package styles; original lock retained.",
+      "Visual fidelity, animation, mobile behavior, accessibility and interaction correctness not yet tested.",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "smoothui:scrubber",
+    "title": "时间刻度拖动条",
+    "source": "SmoothUI",
+    "license": "MIT (root code notice; external artwork not included)",
+    "upstream": "https://github.com/educlopez/smoothui/tree/c45420a8523ec60a92f7724a2418ab83edaa1425/packages/smoothui/components/scrubber",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Workspace aliases and shared package dependencies require integration; source closure checked, build not attempted.",
+      "Official shared data includes remote generated portraits, scenes, app icons and sample product artwork. Asset URLs preserved for reference; binaries not downloaded and image redistribution rights not assumed.",
+      "Root documentation CSS imports external fumadocs package styles; original lock retained.",
+      "Visual fidelity, animation, mobile behavior, accessibility and interaction correctness not yet tested.",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "smoothui:switchboard-card",
+    "title": "灯光开关矩阵",
+    "source": "SmoothUI",
+    "license": "MIT (root code notice; external artwork not included)",
+    "upstream": "https://github.com/educlopez/smoothui/tree/c45420a8523ec60a92f7724a2418ab83edaa1425/packages/smoothui/components/switchboard-card",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Workspace aliases and shared package dependencies require integration; source closure checked, build not attempted.",
+      "Official shared data includes remote generated portraits, scenes, app icons and sample product artwork. Asset URLs preserved for reference; binaries not downloaded and image redistribution rights not assumed.",
+      "Root documentation CSS imports external fumadocs package styles; original lock retained.",
+      "Visual fidelity, animation, mobile behavior, accessibility and interaction correctness not yet tested.",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "smoothui:time-machine-stack",
+    "title": "时光叠卡",
+    "source": "SmoothUI",
+    "license": "MIT (root code notice; external artwork not included)",
+    "upstream": "https://github.com/educlopez/smoothui/tree/c45420a8523ec60a92f7724a2418ab83edaa1425/packages/smoothui/components/time-machine-stack",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Workspace aliases and shared package dependencies require integration; source closure checked, build not attempted.",
+      "Official shared data includes remote generated portraits, scenes, app icons and sample product artwork. Asset URLs preserved for reference; binaries not downloaded and image redistribution rights not assumed.",
+      "Root documentation CSS imports external fumadocs package styles; original lock retained.",
+      "Visual fidelity, animation, mobile behavior, accessibility and interaction correctness not yet tested.",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "smoothui:vector-editor-toolbar",
+    "title": "矢量编辑工具栏",
+    "source": "SmoothUI",
+    "license": "MIT (root code notice; external artwork not included)",
+    "upstream": "https://github.com/educlopez/smoothui/tree/c45420a8523ec60a92f7724a2418ab83edaa1425/packages/smoothui/components/vector-editor-toolbar",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Workspace aliases and shared package dependencies require integration; source closure checked, build not attempted.",
+      "Official shared data includes remote generated portraits, scenes, app icons and sample product artwork. Asset URLs preserved for reference; binaries not downloaded and image redistribution rights not assumed.",
+      "Root documentation CSS imports external fumadocs package styles; original lock retained.",
+      "Visual fidelity, animation, mobile behavior, accessibility and interaction correctness not yet tested.",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "smoothui:video-ambient",
+    "title": "视频环境光",
+    "source": "SmoothUI",
+    "license": "MIT (root code notice; external artwork not included)",
+    "upstream": "https://github.com/educlopez/smoothui/tree/c45420a8523ec60a92f7724a2418ab83edaa1425/packages/smoothui/components/video-ambient",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Workspace aliases and shared package dependencies require integration; source closure checked, build not attempted.",
+      "Official shared data includes remote generated portraits, scenes, app icons and sample product artwork. Asset URLs preserved for reference; binaries not downloaded and image redistribution rights not assumed.",
+      "Root documentation CSS imports external fumadocs package styles; original lock retained.",
+      "Visual fidelity, animation, mobile behavior, accessibility and interaction correctness not yet tested.",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "smoothui:wallet-card",
+    "title": "交互钱包叠卡",
+    "source": "SmoothUI",
+    "license": "MIT (root code notice; external artwork not included)",
+    "upstream": "https://github.com/educlopez/smoothui/tree/c45420a8523ec60a92f7724a2418ab83edaa1425/packages/smoothui/components/wallet-card",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Workspace aliases and shared package dependencies require integration; source closure checked, build not attempted.",
+      "Official shared data includes remote generated portraits, scenes, app icons and sample product artwork. Asset URLs preserved for reference; binaries not downloaded and image redistribution rights not assumed.",
+      "Root documentation CSS imports external fumadocs package styles; original lock retained.",
+      "Visual fidelity, animation, mobile behavior, accessibility and interaction correctness not yet tested.",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "smoothui:app-download-stack",
+    "title": "应用下载叠层",
+    "source": "SmoothUI",
+    "license": "MIT (root code notice; external artwork not included)",
+    "upstream": "https://github.com/educlopez/smoothui/tree/c45420a8523ec60a92f7724a2418ab83edaa1425/packages/smoothui/components/app-download-stack",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Workspace aliases and shared package dependencies require integration; source closure checked, build not attempted.",
+      "Official shared data includes remote generated portraits, scenes, app icons and sample product artwork. Asset URLs preserved for reference; binaries not downloaded and image redistribution rights not assumed.",
+      "Root documentation CSS imports external fumadocs package styles; original lock retained.",
+      "Visual fidelity, animation, mobile behavior, accessibility and interaction correctness not yet tested.",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "cuicui:advanced-bottom-action-menu",
+    "title": "advanced-bottom-action-menu",
+    "source": "Cuicui",
+    "license": "MIT",
+    "upstream": "https://github.com/damien-schneider/cuicui/tree/c7db00f2e98753c277f1aec6e316520038f4e0a0/packages/ui/cuicui/application-ui/action-menu/advanced-bottom-action-menu",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Original workspace aliases and Next/documentation integration need adaptation; no clean install or browser QA.",
+      "Remote artwork is reference-only; no binaries downloaded. Signature export/download and clipboard require real interaction testing.",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "cuicui:half-sided-glassmorphism",
+    "title": "half-sided-glassmorphism",
+    "source": "Cuicui",
+    "license": "MIT",
+    "upstream": "https://github.com/damien-schneider/cuicui/tree/c7db00f2e98753c277f1aec6e316520038f4e0a0/packages/ui/cuicui/application-ui/authentication/half-sided-glassmorphism",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Original workspace aliases and Next/documentation integration need adaptation; no clean install or browser QA.",
+      "Remote artwork is reference-only; no binaries downloaded. Signature export/download and clipboard require real interaction testing.",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "cuicui:arc-color-picker",
+    "title": "arc-color-picker",
+    "source": "Cuicui",
+    "license": "MIT",
+    "upstream": "https://github.com/damien-schneider/cuicui/tree/c7db00f2e98753c277f1aec6e316520038f4e0a0/packages/ui/cuicui/application-ui/color-picker/arc-color-picker",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Original workspace aliases and Next/documentation integration need adaptation; no clean install or browser QA.",
+      "Remote artwork is reference-only; no binaries downloaded. Signature export/download and clipboard require real interaction testing.",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "cuicui:dynamic-settings",
+    "title": "dynamic-settings",
+    "source": "Cuicui",
+    "license": "MIT",
+    "upstream": "https://github.com/damien-schneider/cuicui/tree/c7db00f2e98753c277f1aec6e316520038f4e0a0/packages/ui/cuicui/application-ui/settings/dynamic-settings",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Original workspace aliases and Next/documentation integration need adaptation; no clean install or browser QA.",
+      "Remote artwork is reference-only; no binaries downloaded. Signature export/download and clipboard require real interaction testing.",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "cuicui:react-signature",
+    "title": "react-signature",
+    "source": "Cuicui",
+    "license": "MIT",
+    "upstream": "https://github.com/damien-schneider/cuicui/tree/c7db00f2e98753c277f1aec6e316520038f4e0a0/packages/ui/cuicui/application-ui/signature/react-signature",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Original workspace aliases and Next/documentation integration need adaptation; no clean install or browser QA.",
+      "Remote artwork is reference-only; no binaries downloaded. Signature export/download and clipboard require real interaction testing.",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "cuicui:messaging-like-qna",
+    "title": "messaging-like-qna",
+    "source": "Cuicui",
+    "license": "MIT",
+    "upstream": "https://github.com/damien-schneider/cuicui/tree/c7db00f2e98753c277f1aec6e316520038f4e0a0/packages/ui/cuicui/marketing-ui/questions-and-answers/messaging-like-qna",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Original workspace aliases and Next/documentation integration need adaptation; no clean install or browser QA.",
+      "Remote artwork is reference-only; no binaries downloaded. Signature export/download and clipboard require real interaction testing.",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "codrops:interlude",
+    "title": "Astro 整站导航转场系统",
+    "source": "Codrops",
+    "license": "MIT (original demo code; dependencies and media separate)",
+    "upstream": "https://github.com/codrops/interlude/tree/9754ce545a1528fdb73f7e10fdcceb29527d094f",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Local image/poster/favicon binaries omitted. Not a complete ready-to-run package until replaced with authorized assets.",
+      "Dependencies retain their separate licenses. Vendored GSAP/Three libraries omitted from ElasticGridScroll pending dependency version/license review.",
+      "Original demo HTML may load Codrops analytics/sponsor scripts and Adobe Typekit. Remove/replace these in a disclosed adaptation before any browser test or deployment; never automatically execute remote original demo scripts.",
+      "Interlude needs Node >=22.12, Astro 7.3 and WebGL support for some transitions. OnScrollViewSwitch has no upstream lock and older Parcel/Lenis dependencies.",
+      "No installation/build/runtime/accessibility/mobile verification.",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "codrops:onscrollviewswitch",
+    "title": "滚动图文视图与网格切换整页",
+    "source": "Codrops",
+    "license": "MIT (original demo code; dependencies and media separate)",
+    "upstream": "https://github.com/codrops/OnScrollViewSwitch/tree/dd8941a1ea08d5892010fcf9bc7470607b024fc6",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Local image/poster/favicon binaries omitted. Not a complete ready-to-run package until replaced with authorized assets.",
+      "Dependencies retain their separate licenses. Vendored GSAP/Three libraries omitted from ElasticGridScroll pending dependency version/license review.",
+      "Original demo HTML may load Codrops analytics/sponsor scripts and Adobe Typekit. Remove/replace these in a disclosed adaptation before any browser test or deployment; never automatically execute remote original demo scripts.",
+      "Interlude needs Node >=22.12, Astro 7.3 and WebGL support for some transitions. OnScrollViewSwitch has no upstream lock and older Parcel/Lenis dependencies.",
+      "No installation/build/runtime/accessibility/mobile verification.",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "codrops:elasticgridscroll",
+    "title": "弹性分栏与折叠滚动图集",
+    "source": "Codrops",
+    "license": "MIT (original demo code; dependencies and media separate)",
+    "upstream": "https://github.com/codrops/ElasticGridScroll/tree/40e474582ae72df26cd9d90b05d5b15fed423abd",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Local image/poster/favicon binaries omitted. Not a complete ready-to-run package until replaced with authorized assets.",
+      "Dependencies retain their separate licenses. Vendored GSAP/Three libraries omitted from ElasticGridScroll pending dependency version/license review.",
+      "Original demo HTML may load Codrops analytics/sponsor scripts and Adobe Typekit. Remove/replace these in a disclosed adaptation before any browser test or deployment; never automatically execute remote original demo scripts.",
+      "Interlude needs Node >=22.12, Astro 7.3 and WebGL support for some transitions. OnScrollViewSwitch has no upstream lock and older Parcel/Lenis dependencies.",
+      "No installation/build/runtime/accessibility/mobile verification.",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "glitch:portfolio",
+    "title": "Glitch 创意作品集整站",
+    "source": "iamovi/Glitch",
+    "license": "MIT",
+    "upstream": "https://github.com/iamovi/glitch/tree/862b5a5273116b0f8e3fb58b11a65cd578dd4add",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "public/avatar.jpg omitted; author portrait not assumed licensed for redistribution.",
+      "Remote Google Fonts stylesheet remains in original CSS; self-host permitted fonts or use local fallback before isolated runtime.",
+      "shadcn-derived helper source retains upstream attribution context; dependency licenses are separate.",
+      "Original author name, biography, project links and contacts must be replaced for a public adaptation.",
+      "No install/build/browser verification; README performance claims not independently tested.",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "smoothui:chat-template",
+    "title": "整屏 AI 对话应用与工具调用流程",
+    "source": "SmoothUI",
+    "license": "MIT (code only; external assets separate)",
+    "upstream": "https://github.com/educlopez/smoothui/tree/c45420a8523ec60a92f7724a2418ab83edaa1425/packages/smoothui/templates/chat-template",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "Official local simulation: conversation selection, composer, phased reasoning/tool/streaming state, sources/artifacts/diff, approval panels and sidebar. No actual AI provider or backend configured.",
+    "gaps": [
+      "Workspace alias adaptation and npm install/build not performed.",
+      "Shared fictional-person portraits and external assets are URL references only, not archived or assumed MIT.",
+      "Mobile drawer/focus, keyboard, send/stop/reset, approvals and interaction states untested.",
+      "Existing atlas AI components may overlap in primitives; only the distinct complete application is a candidate.",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "blode:album",
+    "title": "album",
+    "source": "Matthew Blode Experiments",
+    "license": "MIT (original code; third-party dependencies/assets separate)",
+    "upstream": "https://github.com/mblode/experiments/tree/d4baef572c4e692dcfe5f3a1e424e641d6013b18/app/album",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "No images/video/font binaries archived. Asset paths reference upstream files whose redistribution permissions need review or original replacements.",
+      "Next routing/basePath /experiments and aliases need integration; source dependencies statically traced, no build/install.",
+      "Moon requests device geolocation on mount and reverse-geocodes through Nominatim. Before any test replace with fixed sample coordinates and disable external lookup; no location permission was requested during collection.",
+      "WebGL moon/sticky-note/dither scenes need real GPU and interaction validation. Dither is a graphical arcade demo rather than a production UI widget.",
+      "Original package contains prepare hook and telemetry dependency; no lifecycle scripts or telemetry were executed. Use minimal adapted dependencies before installing.",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "blode:controls",
+    "title": "controls",
+    "source": "Matthew Blode Experiments",
+    "license": "MIT (original code; third-party dependencies/assets separate)",
+    "upstream": "https://github.com/mblode/experiments/tree/d4baef572c4e692dcfe5f3a1e424e641d6013b18/app/controls",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "No images/video/font binaries archived. Asset paths reference upstream files whose redistribution permissions need review or original replacements.",
+      "Next routing/basePath /experiments and aliases need integration; source dependencies statically traced, no build/install.",
+      "Moon requests device geolocation on mount and reverse-geocodes through Nominatim. Before any test replace with fixed sample coordinates and disable external lookup; no location permission was requested during collection.",
+      "WebGL moon/sticky-note/dither scenes need real GPU and interaction validation. Dither is a graphical arcade demo rather than a production UI widget.",
+      "Original package contains prepare hook and telemetry dependency; no lifecycle scripts or telemetry were executed. Use minimal adapted dependencies before installing.",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "blode:dither",
+    "title": "dither",
+    "source": "Matthew Blode Experiments",
+    "license": "MIT (original code; third-party dependencies/assets separate)",
+    "upstream": "https://github.com/mblode/experiments/tree/d4baef572c4e692dcfe5f3a1e424e641d6013b18/app/dither",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "No images/video/font binaries archived. Asset paths reference upstream files whose redistribution permissions need review or original replacements.",
+      "Next routing/basePath /experiments and aliases need integration; source dependencies statically traced, no build/install.",
+      "Moon requests device geolocation on mount and reverse-geocodes through Nominatim. Before any test replace with fixed sample coordinates and disable external lookup; no location permission was requested during collection.",
+      "WebGL moon/sticky-note/dither scenes need real GPU and interaction validation. Dither is a graphical arcade demo rather than a production UI widget.",
+      "Original package contains prepare hook and telemetry dependency; no lifecycle scripts or telemetry were executed. Use minimal adapted dependencies before installing.",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "blode:drag-layout-system",
+    "title": "drag-layout-system",
+    "source": "Matthew Blode Experiments",
+    "license": "MIT (original code; third-party dependencies/assets separate)",
+    "upstream": "https://github.com/mblode/experiments/tree/d4baef572c4e692dcfe5f3a1e424e641d6013b18/app/dnd-grid",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "No images/video/font binaries archived. Asset paths reference upstream files whose redistribution permissions need review or original replacements.",
+      "Next routing/basePath /experiments and aliases need integration; source dependencies statically traced, no build/install.",
+      "Moon requests device geolocation on mount and reverse-geocodes through Nominatim. Before any test replace with fixed sample coordinates and disable external lookup; no location permission was requested during collection.",
+      "WebGL moon/sticky-note/dither scenes need real GPU and interaction validation. Dither is a graphical arcade demo rather than a production UI widget.",
+      "Original package contains prepare hook and telemetry dependency; no lifecycle scripts or telemetry were executed. Use minimal adapted dependencies before installing.",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "blode:ios-cards",
+    "title": "ios-cards",
+    "source": "Matthew Blode Experiments",
+    "license": "MIT (original code; third-party dependencies/assets separate)",
+    "upstream": "https://github.com/mblode/experiments/tree/d4baef572c4e692dcfe5f3a1e424e641d6013b18/app/ios-cards",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "No images/video/font binaries archived. Asset paths reference upstream files whose redistribution permissions need review or original replacements.",
+      "Next routing/basePath /experiments and aliases need integration; source dependencies statically traced, no build/install.",
+      "Moon requests device geolocation on mount and reverse-geocodes through Nominatim. Before any test replace with fixed sample coordinates and disable external lookup; no location permission was requested during collection.",
+      "WebGL moon/sticky-note/dither scenes need real GPU and interaction validation. Dither is a graphical arcade demo rather than a production UI widget.",
+      "Original package contains prepare hook and telemetry dependency; no lifecycle scripts or telemetry were executed. Use minimal adapted dependencies before installing.",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "blode:lighting",
+    "title": "lighting",
+    "source": "Matthew Blode Experiments",
+    "license": "MIT (original code; third-party dependencies/assets separate)",
+    "upstream": "https://github.com/mblode/experiments/tree/d4baef572c4e692dcfe5f3a1e424e641d6013b18/app/lighting",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "No images/video/font binaries archived. Asset paths reference upstream files whose redistribution permissions need review or original replacements.",
+      "Next routing/basePath /experiments and aliases need integration; source dependencies statically traced, no build/install.",
+      "Moon requests device geolocation on mount and reverse-geocodes through Nominatim. Before any test replace with fixed sample coordinates and disable external lookup; no location permission was requested during collection.",
+      "WebGL moon/sticky-note/dither scenes need real GPU and interaction validation. Dither is a graphical arcade demo rather than a production UI widget.",
+      "Original package contains prepare hook and telemetry dependency; no lifecycle scripts or telemetry were executed. Use minimal adapted dependencies before installing.",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "blode:markers",
+    "title": "markers",
+    "source": "Matthew Blode Experiments",
+    "license": "MIT (original code; third-party dependencies/assets separate)",
+    "upstream": "https://github.com/mblode/experiments/tree/d4baef572c4e692dcfe5f3a1e424e641d6013b18/app/markers",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "No images/video/font binaries archived. Asset paths reference upstream files whose redistribution permissions need review or original replacements.",
+      "Next routing/basePath /experiments and aliases need integration; source dependencies statically traced, no build/install.",
+      "Moon requests device geolocation on mount and reverse-geocodes through Nominatim. Before any test replace with fixed sample coordinates and disable external lookup; no location permission was requested during collection.",
+      "WebGL moon/sticky-note/dither scenes need real GPU and interaction validation. Dither is a graphical arcade demo rather than a production UI widget.",
+      "Original package contains prepare hook and telemetry dependency; no lifecycle scripts or telemetry were executed. Use minimal adapted dependencies before installing.",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "blode:moon",
+    "title": "moon",
+    "source": "Matthew Blode Experiments",
+    "license": "MIT (original code; third-party dependencies/assets separate)",
+    "upstream": "https://github.com/mblode/experiments/tree/d4baef572c4e692dcfe5f3a1e424e641d6013b18/app/moon",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "No images/video/font binaries archived. Asset paths reference upstream files whose redistribution permissions need review or original replacements.",
+      "Next routing/basePath /experiments and aliases need integration; source dependencies statically traced, no build/install.",
+      "Moon requests device geolocation on mount and reverse-geocodes through Nominatim. Before any test replace with fixed sample coordinates and disable external lookup; no location permission was requested during collection.",
+      "WebGL moon/sticky-note/dither scenes need real GPU and interaction validation. Dither is a graphical arcade demo rather than a production UI widget.",
+      "Original package contains prepare hook and telemetry dependency; no lifecycle scripts or telemetry were executed. Use minimal adapted dependencies before installing.",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "blode:omni-color-picker",
+    "title": "omni-color-picker",
+    "source": "Matthew Blode Experiments",
+    "license": "MIT (original code; third-party dependencies/assets separate)",
+    "upstream": "https://github.com/mblode/experiments/tree/d4baef572c4e692dcfe5f3a1e424e641d6013b18/app/omni-color-picker",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "No images/video/font binaries archived. Asset paths reference upstream files whose redistribution permissions need review or original replacements.",
+      "Next routing/basePath /experiments and aliases need integration; source dependencies statically traced, no build/install.",
+      "Moon requests device geolocation on mount and reverse-geocodes through Nominatim. Before any test replace with fixed sample coordinates and disable external lookup; no location permission was requested during collection.",
+      "WebGL moon/sticky-note/dither scenes need real GPU and interaction validation. Dither is a graphical arcade demo rather than a production UI widget.",
+      "Original package contains prepare hook and telemetry dependency; no lifecycle scripts or telemetry were executed. Use minimal adapted dependencies before installing.",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "blode:sticky-notes",
+    "title": "sticky-notes",
+    "source": "Matthew Blode Experiments",
+    "license": "MIT (original code; third-party dependencies/assets separate)",
+    "upstream": "https://github.com/mblode/experiments/tree/d4baef572c4e692dcfe5f3a1e424e641d6013b18/app/sticky-notes",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "No images/video/font binaries archived. Asset paths reference upstream files whose redistribution permissions need review or original replacements.",
+      "Next routing/basePath /experiments and aliases need integration; source dependencies statically traced, no build/install.",
+      "Moon requests device geolocation on mount and reverse-geocodes through Nominatim. Before any test replace with fixed sample coordinates and disable external lookup; no location permission was requested during collection.",
+      "WebGL moon/sticky-note/dither scenes need real GPU and interaction validation. Dither is a graphical arcade demo rather than a production UI widget.",
+      "Original package contains prepare hook and telemetry dependency; no lifecycle scripts or telemetry were executed. Use minimal adapted dependencies before installing.",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "codrops:imagetilesmenu",
+    "title": "ImageTilesMenu",
+    "source": "Codrops",
+    "license": "MIT (code; assets/dependencies separate)",
+    "upstream": "https://github.com/codrops/ImageTilesMenu/tree/ed861a855e5efa6ba68eb3153b2692ce8a6ec9e8",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Image/font binaries not archived. README media credits preserved but do not establish source-code MIT coverage for photos.",
+      "Upstream HTML may contain analytics/sponsor/Typekit requests. Remove these in a disclosed adaptation before testing.",
+      "No upstream lock available; legacy Parcel/GSAP integration and vendor license review pending.",
+      "No build/browser/mobile/interaction validation; geometry/transition quality inferred from source only.",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "codrops:superfluidlayout",
+    "title": "SuperfluidLayout",
+    "source": "Codrops",
+    "license": "MIT (code; assets/dependencies separate)",
+    "upstream": "https://github.com/codrops/SuperfluidLayout/tree/92dcc855e21bc8b843a55f37ef82e1b6e9dc227e",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Image/font binaries not archived. README media credits preserved but do not establish source-code MIT coverage for photos.",
+      "Upstream HTML may contain analytics/sponsor/Typekit requests. Remove these in a disclosed adaptation before testing.",
+      "No upstream lock available; legacy Parcel/GSAP integration and vendor license review pending.",
+      "No build/browser/mobile/interaction validation; geometry/transition quality inferred from source only.",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "codrops:shapesslideshow",
+    "title": "ShapesSlideshow",
+    "source": "Codrops",
+    "license": "MIT (code; assets/dependencies separate)",
+    "upstream": "https://github.com/codrops/ShapesSlideshow/tree/793c6d005a897e4545a33bbd9de4cb4b013117ef",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Image/font binaries not archived. README media credits preserved but do not establish source-code MIT coverage for photos.",
+      "Upstream HTML may contain analytics/sponsor/Typekit requests. Remove these in a disclosed adaptation before testing.",
+      "No upstream lock available; legacy Parcel/GSAP integration and vendor license review pending.",
+      "No build/browser/mobile/interaction validation; geometry/transition quality inferred from source only.",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "touch:experimental-surface",
+    "title": "TOUCH 触感物理实验整站",
+    "source": "kv-creates/TOUCH",
+    "license": "MIT",
+    "upstream": "https://github.com/kv-creates/touch/tree/dde23f0d80649d0e813e2843762374e9687093e7",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "README performance/accessibility claims not independently verified.",
+      "Device orientation listener exists; disable for deterministic preview unless separately desired. No permission prompt handled.",
+      "Audio is opt-in and disabled by default; no browser/audio runtime testing.",
+      "Unused hero.png was not archived; local source import audit found no dependency on it.",
+      "Vite base /touch/ needs adaptation for atlas isolation; fonts and source links need review.",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "motioncore:image-rendering",
+    "title": "image-rendering",
+    "source": "Motion Core",
+    "license": "MIT",
+    "upstream": "https://github.com/kaltwrk/motion-core/tree/74ad6e66d50cc9b1849a505fcd1b352704920745/packages/motion-core/src/lib/components/ascii-renderer",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Official demos import workspace motion-core barrel; recreate selected exports or adapt imports before building. Full-library barrel intentionally not claimed closed.",
+      "Root package/lock and Svelte styles/helpers preserved; monorepo installation not tested.",
+      "WebGL/OGL shaders require real GPU/interaction checks; static source collection does not establish animation or performance.",
+      "Demo remote image/media references not downloaded. water-ripple brush PNG missing and must be supplied under verified rights or replaced with an original brush.",
+      "Package lists MediaPipe among peers, but selected source scan found no getUserMedia/requestPermission calls. No camera or device permissions used.",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "motioncore:fake-3d-image",
+    "title": "fake-3d-image",
+    "source": "Motion Core",
+    "license": "MIT",
+    "upstream": "https://github.com/kaltwrk/motion-core/tree/74ad6e66d50cc9b1849a505fcd1b352704920745/packages/motion-core/src/lib/components/fake-3d-image",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Official demos import workspace motion-core barrel; recreate selected exports or adapt imports before building. Full-library barrel intentionally not claimed closed.",
+      "Root package/lock and Svelte styles/helpers preserved; monorepo installation not tested.",
+      "WebGL/OGL shaders require real GPU/interaction checks; static source collection does not establish animation or performance.",
+      "Demo remote image/media references not downloaded. water-ripple brush PNG missing and must be supplied under verified rights or replaced with an original brush.",
+      "Package lists MediaPipe among peers, but selected source scan found no getUserMedia/requestPermission calls. No camera or device permissions used.",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "motioncore:fluid-image-reveal",
+    "title": "fluid-image-reveal",
+    "source": "Motion Core",
+    "license": "MIT",
+    "upstream": "https://github.com/kaltwrk/motion-core/tree/74ad6e66d50cc9b1849a505fcd1b352704920745/packages/motion-core/src/lib/components/fluid-image-reveal",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Official demos import workspace motion-core barrel; recreate selected exports or adapt imports before building. Full-library barrel intentionally not claimed closed.",
+      "Root package/lock and Svelte styles/helpers preserved; monorepo installation not tested.",
+      "WebGL/OGL shaders require real GPU/interaction checks; static source collection does not establish animation or performance.",
+      "Demo remote image/media references not downloaded. water-ripple brush PNG missing and must be supplied under verified rights or replaced with an original brush.",
+      "Package lists MediaPipe among peers, but selected source scan found no getUserMedia/requestPermission calls. No camera or device permissions used.",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "motioncore:fluid-simulation",
+    "title": "fluid-simulation",
+    "source": "Motion Core",
+    "license": "MIT",
+    "upstream": "https://github.com/kaltwrk/motion-core/tree/74ad6e66d50cc9b1849a505fcd1b352704920745/packages/motion-core/src/lib/components/fluid-simulation",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Official demos import workspace motion-core barrel; recreate selected exports or adapt imports before building. Full-library barrel intentionally not claimed closed.",
+      "Root package/lock and Svelte styles/helpers preserved; monorepo installation not tested.",
+      "WebGL/OGL shaders require real GPU/interaction checks; static source collection does not establish animation or performance.",
+      "Demo remote image/media references not downloaded. water-ripple brush PNG missing and must be supplied under verified rights or replaced with an original brush.",
+      "Package lists MediaPipe among peers, but selected source scan found no getUserMedia/requestPermission calls. No camera or device permissions used.",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "motioncore:glass-refraction",
+    "title": "glass-refraction",
+    "source": "Motion Core",
+    "license": "MIT",
+    "upstream": "https://github.com/kaltwrk/motion-core/tree/74ad6e66d50cc9b1849a505fcd1b352704920745/packages/motion-core/src/lib/components/glass-logo",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Official demos import workspace motion-core barrel; recreate selected exports or adapt imports before building. Full-library barrel intentionally not claimed closed.",
+      "Root package/lock and Svelte styles/helpers preserved; monorepo installation not tested.",
+      "WebGL/OGL shaders require real GPU/interaction checks; static source collection does not establish animation or performance.",
+      "Demo remote image/media references not downloaded. water-ripple brush PNG missing and must be supplied under verified rights or replaced with an original brush.",
+      "Package lists MediaPipe among peers, but selected source scan found no getUserMedia/requestPermission calls. No camera or device permissions used.",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "motioncore:glitter-cloth",
+    "title": "glitter-cloth",
+    "source": "Motion Core",
+    "license": "MIT",
+    "upstream": "https://github.com/kaltwrk/motion-core/tree/74ad6e66d50cc9b1849a505fcd1b352704920745/packages/motion-core/src/lib/components/glitter-cloth",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Official demos import workspace motion-core barrel; recreate selected exports or adapt imports before building. Full-library barrel intentionally not claimed closed.",
+      "Root package/lock and Svelte styles/helpers preserved; monorepo installation not tested.",
+      "WebGL/OGL shaders require real GPU/interaction checks; static source collection does not establish animation or performance.",
+      "Demo remote image/media references not downloaded. water-ripple brush PNG missing and must be supplied under verified rights or replaced with an original brush.",
+      "Package lists MediaPipe among peers, but selected source scan found no getUserMedia/requestPermission calls. No camera or device permissions used.",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "motioncore:god-rays",
+    "title": "god-rays",
+    "source": "Motion Core",
+    "license": "MIT",
+    "upstream": "https://github.com/kaltwrk/motion-core/tree/74ad6e66d50cc9b1849a505fcd1b352704920745/packages/motion-core/src/lib/components/god-rays",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Official demos import workspace motion-core barrel; recreate selected exports or adapt imports before building. Full-library barrel intentionally not claimed closed.",
+      "Root package/lock and Svelte styles/helpers preserved; monorepo installation not tested.",
+      "WebGL/OGL shaders require real GPU/interaction checks; static source collection does not establish animation or performance.",
+      "Demo remote image/media references not downloaded. water-ripple brush PNG missing and must be supplied under verified rights or replaced with an original brush.",
+      "Package lists MediaPipe among peers, but selected source scan found no getUserMedia/requestPermission calls. No camera or device permissions used.",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "motioncore:infinite-gallery",
+    "title": "infinite-gallery",
+    "source": "Motion Core",
+    "license": "MIT",
+    "upstream": "https://github.com/kaltwrk/motion-core/tree/74ad6e66d50cc9b1849a505fcd1b352704920745/packages/motion-core/src/lib/components/infinite-gallery",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Official demos import workspace motion-core barrel; recreate selected exports or adapt imports before building. Full-library barrel intentionally not claimed closed.",
+      "Root package/lock and Svelte styles/helpers preserved; monorepo installation not tested.",
+      "WebGL/OGL shaders require real GPU/interaction checks; static source collection does not establish animation or performance.",
+      "Demo remote image/media references not downloaded. water-ripple brush PNG missing and must be supplied under verified rights or replaced with an original brush.",
+      "Package lists MediaPipe among peers, but selected source scan found no getUserMedia/requestPermission calls. No camera or device permissions used.",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "motioncore:lava-lamp",
+    "title": "lava-lamp",
+    "source": "Motion Core",
+    "license": "MIT",
+    "upstream": "https://github.com/kaltwrk/motion-core/tree/74ad6e66d50cc9b1849a505fcd1b352704920745/packages/motion-core/src/lib/components/lava-lamp",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Official demos import workspace motion-core barrel; recreate selected exports or adapt imports before building. Full-library barrel intentionally not claimed closed.",
+      "Root package/lock and Svelte styles/helpers preserved; monorepo installation not tested.",
+      "WebGL/OGL shaders require real GPU/interaction checks; static source collection does not establish animation or performance.",
+      "Demo remote image/media references not downloaded. water-ripple brush PNG missing and must be supplied under verified rights or replaced with an original brush.",
+      "Package lists MediaPipe among peers, but selected source scan found no getUserMedia/requestPermission calls. No camera or device permissions used.",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "motioncore:liquid-metal",
+    "title": "liquid-metal",
+    "source": "Motion Core",
+    "license": "MIT",
+    "upstream": "https://github.com/kaltwrk/motion-core/tree/74ad6e66d50cc9b1849a505fcd1b352704920745/packages/motion-core/src/lib/components/liquid-metal",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Official demos import workspace motion-core barrel; recreate selected exports or adapt imports before building. Full-library barrel intentionally not claimed closed.",
+      "Root package/lock and Svelte styles/helpers preserved; monorepo installation not tested.",
+      "WebGL/OGL shaders require real GPU/interaction checks; static source collection does not establish animation or performance.",
+      "Demo remote image/media references not downloaded. water-ripple brush PNG missing and must be supplied under verified rights or replaced with an original brush.",
+      "Package lists MediaPipe among peers, but selected source scan found no getUserMedia/requestPermission calls. No camera or device permissions used.",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "motioncore:plasma-grid",
+    "title": "plasma-grid",
+    "source": "Motion Core",
+    "license": "MIT",
+    "upstream": "https://github.com/kaltwrk/motion-core/tree/74ad6e66d50cc9b1849a505fcd1b352704920745/packages/motion-core/src/lib/components/plasma-grid",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Official demos import workspace motion-core barrel; recreate selected exports or adapt imports before building. Full-library barrel intentionally not claimed closed.",
+      "Root package/lock and Svelte styles/helpers preserved; monorepo installation not tested.",
+      "WebGL/OGL shaders require real GPU/interaction checks; static source collection does not establish animation or performance.",
+      "Demo remote image/media references not downloaded. water-ripple brush PNG missing and must be supplied under verified rights or replaced with an original brush.",
+      "Package lists MediaPipe among peers, but selected source scan found no getUserMedia/requestPermission calls. No camera or device permissions used.",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "motioncore:radial-gallery",
+    "title": "radial-gallery",
+    "source": "Motion Core",
+    "license": "MIT",
+    "upstream": "https://github.com/kaltwrk/motion-core/tree/74ad6e66d50cc9b1849a505fcd1b352704920745/packages/motion-core/src/lib/components/radial-gallery",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Official demos import workspace motion-core barrel; recreate selected exports or adapt imports before building. Full-library barrel intentionally not claimed closed.",
+      "Root package/lock and Svelte styles/helpers preserved; monorepo installation not tested.",
+      "WebGL/OGL shaders require real GPU/interaction checks; static source collection does not establish animation or performance.",
+      "Demo remote image/media references not downloaded. water-ripple brush PNG missing and must be supplied under verified rights or replaced with an original brush.",
+      "Package lists MediaPipe among peers, but selected source scan found no getUserMedia/requestPermission calls. No camera or device permissions used.",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "motioncore:rubiks-cube",
+    "title": "rubiks-cube",
+    "source": "Motion Core",
+    "license": "MIT",
+    "upstream": "https://github.com/kaltwrk/motion-core/tree/74ad6e66d50cc9b1849a505fcd1b352704920745/packages/motion-core/src/lib/components/rubiks-cube",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Official demos import workspace motion-core barrel; recreate selected exports or adapt imports before building. Full-library barrel intentionally not claimed closed.",
+      "Root package/lock and Svelte styles/helpers preserved; monorepo installation not tested.",
+      "WebGL/OGL shaders require real GPU/interaction checks; static source collection does not establish animation or performance.",
+      "Demo remote image/media references not downloaded. water-ripple brush PNG missing and must be supplied under verified rights or replaced with an original brush.",
+      "Package lists MediaPipe among peers, but selected source scan found no getUserMedia/requestPermission calls. No camera or device permissions used.",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "motioncore:underlay-navigation",
+    "title": "underlay-navigation",
+    "source": "Motion Core",
+    "license": "MIT",
+    "upstream": "https://github.com/kaltwrk/motion-core/tree/74ad6e66d50cc9b1849a505fcd1b352704920745/packages/motion-core/src/lib/components/underlay-navigation",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Official demos import workspace motion-core barrel; recreate selected exports or adapt imports before building. Full-library barrel intentionally not claimed closed.",
+      "Root package/lock and Svelte styles/helpers preserved; monorepo installation not tested.",
+      "WebGL/OGL shaders require real GPU/interaction checks; static source collection does not establish animation or performance.",
+      "Demo remote image/media references not downloaded. water-ripple brush PNG missing and must be supplied under verified rights or replaced with an original brush.",
+      "Package lists MediaPipe among peers, but selected source scan found no getUserMedia/requestPermission calls. No camera or device permissions used.",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "motioncore:water-media",
+    "title": "water-media",
+    "source": "Motion Core",
+    "license": "MIT",
+    "upstream": "https://github.com/kaltwrk/motion-core/tree/74ad6e66d50cc9b1849a505fcd1b352704920745/packages/motion-core/src/lib/components/watercolor-image",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Official demos import workspace motion-core barrel; recreate selected exports or adapt imports before building. Full-library barrel intentionally not claimed closed.",
+      "Root package/lock and Svelte styles/helpers preserved; monorepo installation not tested.",
+      "WebGL/OGL shaders require real GPU/interaction checks; static source collection does not establish animation or performance.",
+      "Demo remote image/media references not downloaded. water-ripple brush PNG missing and must be supplied under verified rights or replaced with an original brush.",
+      "Package lists MediaPipe among peers, but selected source scan found no getUserMedia/requestPermission calls. No camera or device permissions used.",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "aicanvas:ai-job-cards",
+    "title": "ai-job-cards",
+    "source": "AI Canvas free library",
+    "license": "MIT (free components-workspace explicitly designated by README)",
+    "upstream": "https://github.com/aicanvas-me/aicanvas/tree/8164f1e423e4e654dd0828a941ba5cdda69f08fe/components-workspace/ai-job-cards",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Remote ImageKit/Unsplash artwork and fonts not archived or presumed MIT.",
+      "Tailwind v4/React19 and peer dependencies require integration. No site/premium CSS imported.",
+      "Original root scripts inject premium code and change Git hooks. They are retained only as evidence; do not run them. Prepare a separate minimal harness.",
+      "Crypto swap/music/charging are demo UI states, not verified transactions, playback or a real battery monitor. No wallet/API connected.",
+      "No install/build/browser/interaction/mobile validation.",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "aicanvas:charging-widget",
+    "title": "charging-widget",
+    "source": "AI Canvas free library",
+    "license": "MIT (free components-workspace explicitly designated by README)",
+    "upstream": "https://github.com/aicanvas-me/aicanvas/tree/8164f1e423e4e654dd0828a941ba5cdda69f08fe/components-workspace/charging-widget",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Remote ImageKit/Unsplash artwork and fonts not archived or presumed MIT.",
+      "Tailwind v4/React19 and peer dependencies require integration. No site/premium CSS imported.",
+      "Original root scripts inject premium code and change Git hooks. They are retained only as evidence; do not run them. Prepare a separate minimal harness.",
+      "Crypto swap/music/charging are demo UI states, not verified transactions, playback or a real battery monitor. No wallet/API connected.",
+      "No install/build/browser/interaction/mobile validation.",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "aicanvas:crypto-swap",
+    "title": "crypto-swap",
+    "source": "AI Canvas free library",
+    "license": "MIT (free components-workspace explicitly designated by README)",
+    "upstream": "https://github.com/aicanvas-me/aicanvas/tree/8164f1e423e4e654dd0828a941ba5cdda69f08fe/components-workspace/crypto-swap",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Remote ImageKit/Unsplash artwork and fonts not archived or presumed MIT.",
+      "Tailwind v4/React19 and peer dependencies require integration. No site/premium CSS imported.",
+      "Original root scripts inject premium code and change Git hooks. They are retained only as evidence; do not run them. Prepare a separate minimal harness.",
+      "Crypto swap/music/charging are demo UI states, not verified transactions, playback or a real battery monitor. No wallet/API connected.",
+      "No install/build/browser/interaction/mobile validation.",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "aicanvas:curious-ai",
+    "title": "curious-ai",
+    "source": "AI Canvas free library",
+    "license": "MIT (free components-workspace explicitly designated by README)",
+    "upstream": "https://github.com/aicanvas-me/aicanvas/tree/8164f1e423e4e654dd0828a941ba5cdda69f08fe/components-workspace/curious-ai",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Remote ImageKit/Unsplash artwork and fonts not archived or presumed MIT.",
+      "Tailwind v4/React19 and peer dependencies require integration. No site/premium CSS imported.",
+      "Original root scripts inject premium code and change Git hooks. They are retained only as evidence; do not run them. Prepare a separate minimal harness.",
+      "Crypto swap/music/charging are demo UI states, not verified transactions, playback or a real battery monitor. No wallet/API connected.",
+      "No install/build/browser/interaction/mobile validation.",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "aicanvas:flip-calendar",
+    "title": "flip-calendar",
+    "source": "AI Canvas free library",
+    "license": "MIT (free components-workspace explicitly designated by README)",
+    "upstream": "https://github.com/aicanvas-me/aicanvas/tree/8164f1e423e4e654dd0828a941ba5cdda69f08fe/components-workspace/flip-calendar",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Remote ImageKit/Unsplash artwork and fonts not archived or presumed MIT.",
+      "Tailwind v4/React19 and peer dependencies require integration. No site/premium CSS imported.",
+      "Original root scripts inject premium code and change Git hooks. They are retained only as evidence; do not run them. Prepare a separate minimal harness.",
+      "Crypto swap/music/charging are demo UI states, not verified transactions, playback or a real battery monitor. No wallet/API connected.",
+      "No install/build/browser/interaction/mobile validation.",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "aicanvas:glass-music-player",
+    "title": "glass-music-player",
+    "source": "AI Canvas free library",
+    "license": "MIT (free components-workspace explicitly designated by README)",
+    "upstream": "https://github.com/aicanvas-me/aicanvas/tree/8164f1e423e4e654dd0828a941ba5cdda69f08fe/components-workspace/glass-music-player",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Remote ImageKit/Unsplash artwork and fonts not archived or presumed MIT.",
+      "Tailwind v4/React19 and peer dependencies require integration. No site/premium CSS imported.",
+      "Original root scripts inject premium code and change Git hooks. They are retained only as evidence; do not run them. Prepare a separate minimal harness.",
+      "Crypto swap/music/charging are demo UI states, not verified transactions, playback or a real battery monitor. No wallet/API connected.",
+      "No install/build/browser/interaction/mobile validation.",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "aicanvas:emotion-visualization",
+    "title": "emotion-visualization",
+    "source": "AI Canvas free library",
+    "license": "MIT (free components-workspace explicitly designated by README)",
+    "upstream": "https://github.com/aicanvas-me/aicanvas/tree/8164f1e423e4e654dd0828a941ba5cdda69f08fe/components-workspace/jar-of-emotions",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Remote ImageKit/Unsplash artwork and fonts not archived or presumed MIT.",
+      "Tailwind v4/React19 and peer dependencies require integration. No site/premium CSS imported.",
+      "Original root scripts inject premium code and change Git hooks. They are retained only as evidence; do not run them. Prepare a separate minimal harness.",
+      "Crypto swap/music/charging are demo UI states, not verified transactions, playback or a real battery monitor. No wallet/API connected.",
+      "No install/build/browser/interaction/mobile validation.",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "aicanvas:new-project-modal",
+    "title": "new-project-modal",
+    "source": "AI Canvas free library",
+    "license": "MIT (free components-workspace explicitly designated by README)",
+    "upstream": "https://github.com/aicanvas-me/aicanvas/tree/8164f1e423e4e654dd0828a941ba5cdda69f08fe/components-workspace/new-project-modal",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Remote ImageKit/Unsplash artwork and fonts not archived or presumed MIT.",
+      "Tailwind v4/React19 and peer dependencies require integration. No site/premium CSS imported.",
+      "Original root scripts inject premium code and change Git hooks. They are retained only as evidence; do not run them. Prepare a separate minimal harness.",
+      "Crypto swap/music/charging are demo UI states, not verified transactions, playback or a real battery monitor. No wallet/API connected.",
+      "No install/build/browser/interaction/mobile validation.",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "aicanvas:peel-corner-reveal",
+    "title": "peel-corner-reveal",
+    "source": "AI Canvas free library",
+    "license": "MIT (free components-workspace explicitly designated by README)",
+    "upstream": "https://github.com/aicanvas-me/aicanvas/tree/8164f1e423e4e654dd0828a941ba5cdda69f08fe/components-workspace/peel-corner-reveal",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Remote ImageKit/Unsplash artwork and fonts not archived or presumed MIT.",
+      "Tailwind v4/React19 and peer dependencies require integration. No site/premium CSS imported.",
+      "Original root scripts inject premium code and change Git hooks. They are retained only as evidence; do not run them. Prepare a separate minimal harness.",
+      "Crypto swap/music/charging are demo UI states, not verified transactions, playback or a real battery monitor. No wallet/API connected.",
+      "No install/build/browser/interaction/mobile validation.",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "aicanvas:paper-wall",
+    "title": "paper-wall",
+    "source": "AI Canvas free library",
+    "license": "MIT (free components-workspace explicitly designated by README)",
+    "upstream": "https://github.com/aicanvas-me/aicanvas/tree/8164f1e423e4e654dd0828a941ba5cdda69f08fe/components-workspace/polaroid-stack",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Remote ImageKit/Unsplash artwork and fonts not archived or presumed MIT.",
+      "Tailwind v4/React19 and peer dependencies require integration. No site/premium CSS imported.",
+      "Original root scripts inject premium code and change Git hooks. They are retained only as evidence; do not run them. Prepare a separate minimal harness.",
+      "Crypto swap/music/charging are demo UI states, not verified transactions, playback or a real battery monitor. No wallet/API connected.",
+      "No install/build/browser/interaction/mobile validation.",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "aicanvas:card-deck",
+    "title": "card-deck",
+    "source": "AI Canvas free library",
+    "license": "MIT (free components-workspace explicitly designated by README)",
+    "upstream": "https://github.com/aicanvas-me/aicanvas/tree/8164f1e423e4e654dd0828a941ba5cdda69f08fe/components-workspace/product-card-deck",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Remote ImageKit/Unsplash artwork and fonts not archived or presumed MIT.",
+      "Tailwind v4/React19 and peer dependencies require integration. No site/premium CSS imported.",
+      "Original root scripts inject premium code and change Git hooks. They are retained only as evidence; do not run them. Prepare a separate minimal harness.",
+      "Crypto swap/music/charging are demo UI states, not verified transactions, playback or a real battery monitor. No wallet/API connected.",
+      "No install/build/browser/interaction/mobile validation.",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "aicanvas:radial-toolbar",
+    "title": "radial-toolbar",
+    "source": "AI Canvas free library",
+    "license": "MIT (free components-workspace explicitly designated by README)",
+    "upstream": "https://github.com/aicanvas-me/aicanvas/tree/8164f1e423e4e654dd0828a941ba5cdda69f08fe/components-workspace/radial-toolbar",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Remote ImageKit/Unsplash artwork and fonts not archived or presumed MIT.",
+      "Tailwind v4/React19 and peer dependencies require integration. No site/premium CSS imported.",
+      "Original root scripts inject premium code and change Git hooks. They are retained only as evidence; do not run them. Prepare a separate minimal harness.",
+      "Crypto swap/music/charging are demo UI states, not verified transactions, playback or a real battery monitor. No wallet/API connected.",
+      "No install/build/browser/interaction/mobile validation.",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "aicanvas:scroll-wipe-gallery",
+    "title": "scroll-wipe-gallery",
+    "source": "AI Canvas free library",
+    "license": "MIT (free components-workspace explicitly designated by README)",
+    "upstream": "https://github.com/aicanvas-me/aicanvas/tree/8164f1e423e4e654dd0828a941ba5cdda69f08fe/components-workspace/scroll-wipe-gallery",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Remote ImageKit/Unsplash artwork and fonts not archived or presumed MIT.",
+      "Tailwind v4/React19 and peer dependencies require integration. No site/premium CSS imported.",
+      "Original root scripts inject premium code and change Git hooks. They are retained only as evidence; do not run them. Prepare a separate minimal harness.",
+      "Crypto swap/music/charging are demo UI states, not verified transactions, playback or a real battery monitor. No wallet/API connected.",
+      "No install/build/browser/interaction/mobile validation.",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "aicanvas:slide-deck",
+    "title": "slide-deck",
+    "source": "AI Canvas free library",
+    "license": "MIT (free components-workspace explicitly designated by README)",
+    "upstream": "https://github.com/aicanvas-me/aicanvas/tree/8164f1e423e4e654dd0828a941ba5cdda69f08fe/components-workspace/slide-deck",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Remote ImageKit/Unsplash artwork and fonts not archived or presumed MIT.",
+      "Tailwind v4/React19 and peer dependencies require integration. No site/premium CSS imported.",
+      "Original root scripts inject premium code and change Git hooks. They are retained only as evidence; do not run them. Prepare a separate minimal harness.",
+      "Crypto swap/music/charging are demo UI states, not verified transactions, playback or a real battery monitor. No wallet/API connected.",
+      "No install/build/browser/interaction/mobile validation.",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "aicanvas:stack-tower",
+    "title": "stack-tower",
+    "source": "AI Canvas free library",
+    "license": "MIT (free components-workspace explicitly designated by README)",
+    "upstream": "https://github.com/aicanvas-me/aicanvas/tree/8164f1e423e4e654dd0828a941ba5cdda69f08fe/components-workspace/stack-tower",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Remote ImageKit/Unsplash artwork and fonts not archived or presumed MIT.",
+      "Tailwind v4/React19 and peer dependencies require integration. No site/premium CSS imported.",
+      "Original root scripts inject premium code and change Git hooks. They are retained only as evidence; do not run them. Prepare a separate minimal harness.",
+      "Crypto swap/music/charging are demo UI states, not verified transactions, playback or a real battery monitor. No wallet/API connected.",
+      "No install/build/browser/interaction/mobile validation.",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "aicanvas:task-cards",
+    "title": "task-cards",
+    "source": "AI Canvas free library",
+    "license": "MIT (free components-workspace explicitly designated by README)",
+    "upstream": "https://github.com/aicanvas-me/aicanvas/tree/8164f1e423e4e654dd0828a941ba5cdda69f08fe/components-workspace/task-cards",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Remote ImageKit/Unsplash artwork and fonts not archived or presumed MIT.",
+      "Tailwind v4/React19 and peer dependencies require integration. No site/premium CSS imported.",
+      "Original root scripts inject premium code and change Git hooks. They are retained only as evidence; do not run them. Prepare a separate minimal harness.",
+      "Crypto swap/music/charging are demo UI states, not verified transactions, playback or a real battery monitor. No wallet/API connected.",
+      "No install/build/browser/interaction/mobile validation.",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "aicanvas:spatial-carousel",
+    "title": "spatial-carousel",
+    "source": "AI Canvas free library",
+    "license": "MIT (free components-workspace explicitly designated by README)",
+    "upstream": "https://github.com/aicanvas-me/aicanvas/tree/8164f1e423e4e654dd0828a941ba5cdda69f08fe/components-workspace/tilted-coverflow",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Remote ImageKit/Unsplash artwork and fonts not archived or presumed MIT.",
+      "Tailwind v4/React19 and peer dependencies require integration. No site/premium CSS imported.",
+      "Original root scripts inject premium code and change Git hooks. They are retained only as evidence; do not run them. Prepare a separate minimal harness.",
+      "Crypto swap/music/charging are demo UI states, not verified transactions, playback or a real battery monitor. No wallet/API connected.",
+      "No install/build/browser/interaction/mobile validation.",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  },
+  {
+    "id": "aicanvas:runway-loader",
+    "title": "runway-loader",
+    "source": "AI Canvas free library",
+    "license": "MIT (free components-workspace explicitly designated by README)",
+    "upstream": "https://github.com/aicanvas-me/aicanvas/tree/8164f1e423e4e654dd0828a941ba5cdda69f08fe/components-workspace/runway-loader",
+    "website": "",
+    "buildStatus": "not installed or built",
+    "batch": "batch-002",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "gaps": [
+      "Remote ImageKit/Unsplash artwork and fonts not archived or presumed MIT.",
+      "Tailwind v4/React19 and peer dependencies require integration. No site/premium CSS imported.",
+      "Original root scripts inject premium code and change Git hooks. They are retained only as evidence; do not run them. Prepare a separate minimal harness.",
+      "Crypto swap/music/charging are demo UI states, not verified transactions, playback or a real battery monitor. No wallet/API connected.",
+      "No install/build/browser/interaction/mobile validation.",
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+    ]
+  }
+]
