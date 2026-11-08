@@ -75,3 +75,5 @@ Exodus相关扩充包括assistant-ui表单/消息内富组件、Orb本地流程�
 后续本地适配含Kibo日历/甘特/表格/树/编辑器/裁剪等8个复合工具，以及React Flow5种不同空间关系编辑原语。拖动几何、canvas像素和原生剪贴板体验不因DOM测试通过而视为视觉验收。
 
 新增媒体家族只允许播放器/转录两个明确标记条目的本地blob媒体；默认预览仍无media-src，connect-src始终none，不增iframe权限、不允许远程媒体。合成测试音不含语音，预置转录不是识别结果。HTMLMediaElement/Canvas测试替身和PCM结构检查不等于实际声音、解码或视觉验收。
+
+新增完整本地工作台包括CodeMirror双侧差异合并、JSONEditor树/文本/预览编辑；不执行或上传编辑内容，不需unsafe-eval/worker。JSON语法校验不等同Schema验证，Jspreadsheet动态公式引擎未接入。部分旧候选经复核发现固定来源目录缺失，保留记录并明确待恢复，不计主图鉴完成数。
