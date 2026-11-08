@@ -1,0 +1,17 @@
+{
+  "pass": true,
+  "checks": [
+    "4 steps, previous, next boundary, reset",
+    "play advances; stop freezes",
+    "unmount stops autoplay; remount resets",
+    "pagehide removes root",
+    "original transitions executed with mocked animation.finished; cleanup cancels animations"
+  ],
+  "cancelled": 124,
+  "pendingIntervals": 0,
+  "pendingTimeouts": 0,
+  "network": [],
+  "errors": [],
+  "visualVerified": false,
+  "limitations": "JSDOM has no layout/CSS transition pixels. getAnimations mocked. Animation interpolation not visually verified."
+}
