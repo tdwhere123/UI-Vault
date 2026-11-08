@@ -14,7 +14,7 @@ const priority=['solidglass:agent-workspace','looseleaf:chat-app','magicui:warp'
 const rank=x=>{const n=priority.indexOf(x.id);return n<0?priority.length:n};
 const ordered=[...items].sort((a,b)=>rank(a)-rank(b)||Number(!!b.featured)-Number(!!a.featured));
 const purposes=[['Agent与对话','bot'],['输入与选择','sliders-horizontal'],['导航与组织','folder'],['数据与状态','chart-no-axes-combined'],['展示与媒体','image'],['产品与营销','panels-top-left'],['视觉与动效','wand-sparkles']];
-const captions={'精选':'真实预览 · 原始源码 · 许可可查','':'按用途、风格与来源，探索完整收藏。','基础组件':'那些简单、清楚、可以直接使用的基础构件。','图标系列':'完整图标家族，本地搜索、原生变体与 SVG 原件。','Agent与对话':'对话、推理、工具调用与人机协作。','输入与选择':'让每一次输入与选择，都有清楚的反馈。','导航与组织':'为复杂内容建立秩序与方向。','数据与状态':'把数据、过程与系统状态，变得直观。','展示与媒体':'卡片、图片与值得停留的内容呈现。','产品与营销':'有完整构图与信息层级的产品页面。','Agent工作流':'46 件覆盖对话、工具、资料、状态与协作的界面。','视觉与动效':'用运动、材质与空间，为界面留下记忆。'};
+const captions={'精选':'真实预览 · 原始源码 · 许可可查','':'按用途、风格与来源，探索完整收藏。','基础组件':'那些简单、清楚、可以直接使用的基础构件。','图标系列':'完整图标家族，本地搜索、原生变体与 SVG 原件。','Agent与对话':'对话、推理、工具调用与人机协作。','输入与选择':'让每一次输入与选择，都有清楚的反馈。','导航与组织':'为复杂内容建立秩序与方向。','数据与状态':'把数据、过程与系统状态，变得直观。','展示与媒体':'卡片、图片与值得停留的内容呈现。','产品与营销':'有完整构图与信息层级的产品页面。','Agent工作流':'对话、工具、资料、状态与协作，也有光晕和空间画布。','视觉与动效':'用运动、材质与空间，为界面留下记忆。'};
 let category='精选',tag='',page=1,active=null,request=0,savedScroll=0,returnFocus=null,detailShowingPreview=true,detailsPromise,codeController,searchTimer;
 const loader=createPreviewLoader();
 function el(t,text,cls){const e=document.createElement(t);if(text!==undefined)e.textContent=text;if(cls)e.className=cls;return e}
@@ -24,7 +24,7 @@ function navButton(c,icon,target){const b=el('button');b.dataset.category=c;b.ap
 for(const [c,i] of [['精选','sparkles'],['','layout-grid'],['Agent工作流','bot'],['图标系列','shapes'],['基础组件','panels-top-left']])navButton(c,i,'collections');for(const [c,i]of purposes)navButton(c,i,'categories');
 for(const s of [...new Set(items.map(x=>x.source))].sort())$('source').append(el('option',s));
 for(const s of [...new Set(items.map(x=>x.format))].filter(Boolean))$('kind').append(el('option',s));
-const tags=['','纸张手绘','光效','几何空间','玻璃质感','物理交互'];
+const tags=['','有机光晕','圆润','空间感','纸张手绘','光效','几何空间','玻璃质感','物理交互'];
 for(const t of tags.filter(t=>!t||items.some(x=>x.styleTags?.includes(t)))){const b=el('button',t||'所有风格');b.dataset.tag=t;b.onclick=()=>{tag=t;render()};$('style-tags').append(b)}
 function render({resetPage=true}={}){if(resetPage)page=1;const selected=filterItems(ordered,{query:$('search').value,category,format:$('kind').value,source:$('source').value,tag});const data=paginateItems(selected,page);page=data.page;
 $('heading').textContent=category==='精选'?'精选界面':category||'全部素材';$('heading-description').textContent=captions[category]||captions[''];$('collection-number').textContent=String(selected.length).padStart(2,'0');$('count').textContent=`${selected.length} 份素材`;
