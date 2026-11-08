@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "checks": [
+    "bundle parse/mount 8 indexed docs",
+    "exact search ranked title boost and finite scores",
+    "prefix search and real autoSuggest",
+    "fuzzy typo recovery toggle",
+    "category filtering",
+    "AND/OR combination",
+    "Chinese word segmentation search",
+    "insert updates index",
+    "replace removes stale terms",
+    "delete removes matches",
+    "text-only rendering and highlights prevent script/onerror injection",
+    "empty document rejection",
+    "JSON reflects actual corpus",
+    "restore initial corpus",
+    "debounced search",
+    "pagehide cleanup cancels pending timer and removes rendered state",
+    "no eval/Function/network/Worker/storage/dynamic script calls"
+  ],
+  "browserVisualQA": "not-run; JSDOM functional/state tests only; no visual/accessibility acceptance"
+}
