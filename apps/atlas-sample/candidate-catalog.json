@@ -10271,5 +10271,38 @@
       "任务需求确认"
     ],
     "behavior": "原三页条件问卷、1至5行动态矩阵与跨字段预算验证；隐藏清理旧值、返回保留可见答案，本地完成JSON与重置。"
+  },
+  {
+    "id": "excalidraw:local-board",
+    "title": "Excalidraw · 本地草图编辑（限定功能）",
+    "source": "Excalidraw",
+    "license": "MIT; dependencies MIT/Apache-2.0/0BSD/Zlib, full notices included",
+    "revision": "0dbd2a39319d41fda37b2945dea0dcbd58d6a564",
+    "sourceVersion": "0.17.6",
+    "upstream": "https://github.com/excalidraw/excalidraw/tree/0dbd2a39319d41fda37b2945dea0dcbd58d6a564",
+    "preview": "batches/excalidraw-01/index.html",
+    "batch": "excalidraw-01",
+    "category": "展示与媒体",
+    "kind": "草图编辑组件",
+    "format": "限定离线编辑器",
+    "styleTags": [
+      "纸张手绘",
+      "空间绘图"
+    ],
+    "purposeTags": [
+      "草图编辑",
+      "关系表达"
+    ],
+    "description": "原版Excalidraw形状、自由线、文字、箭头绑定、编组和历史；限定Helvetica本地字体，保留原编辑器而非自制画板壳。",
+    "behavior": "原场景模型与属性编辑，撤销重做、编组解组、箭头绑定；仅当前iframe临时状态，关闭即丢失。",
+    "buildStatus": "Original API/model/history/action and production mount/cleanup tests passed; native drawing/hit geometry/pixels NOT tested",
+    "previewStatus": "visual-review-pending",
+    "gaps": [
+      "仅限定离线预览：导入、导出、系统剪贴板、链接、图片、远程库、Mermaid和非系统字体均禁用，不是完整安装。",
+      "Helvetica替代原手写字体，外观不完全一致；原生绘画、触摸/IME、真实Canvas像素及几何命中完全未验。",
+      "测试用固定矩形与Canvas/Path2D替身，API插入场景不冒充手势绘画成功；动作门控及清理实际通过。",
+      "原MIT与66依赖图条款保留；react-remove-scroll-bar2.3.8用同官方2.3.7线完整MIT补充，24个dist文件字节相同，版本缺口明确披露。",
+      "原二进制棋盘改纯CSS，原SVG字体导出模板移除，无CSP扩展/网络/持久化；源码ZIP仅本地。"
+    ]
   }
 ]
