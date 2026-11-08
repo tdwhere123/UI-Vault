@@ -5128,5 +5128,1275 @@
       "外链字体改系统字体；不启用localStorage或跨标签广播。",
       "协作仅为同页模拟，不是线上协作服务。"
     ]
+  },
+  {
+    "id": "assistant-elements:agent-card",
+    "title": "Agent身份与能力名片",
+    "source": "assistant-ui Elements",
+    "kind": "对话富组件",
+    "category": "Agent与对话",
+    "styleTags": [
+      "圆角",
+      "纸感",
+      "对话内组件"
+    ],
+    "preview": "batches/assistant-elements-03/agent-card.html",
+    "license": "MIT",
+    "revision": "eb65bd4558b769550093003c95e5867ad0ec8eba",
+    "upstream": "https://github.com/assistant-ui/assistant-ui/blob/eb65bd4558b769550093003c95e5867ad0ec8eba/apps/docs/components/demo/elements/agent-card.tsx",
+    "componentSource": "https://github.com/assistant-ui/assistant-ui/blob/eb65bd4558b769550093003c95e5867ad0ec8eba/packages/ui/src/components/react/assistant-ui/elements/agent-card.tsx",
+    "website": "https://www.assistant-ui.com",
+    "description": "本地连接回执及能力说明，不实际连接Agent。",
+    "behavior": "本地连接回执及能力说明，不实际连接Agent。",
+    "buildStatus": "IIFE build and DOM mount passed; local connection receipt",
+    "previewStatus": "visual-review-pending",
+    "knownGaps": [
+      "未做浏览器视觉、完整键盘/触控验收。",
+      "仅本地合成fixture，无模型、工具、麦克风或外部提交。"
+    ],
+    "adaptation": "Actual upstream Elements and demos preserved; Base UI primitives retained; standalone host with external navigation/form prevention. No model or network runtime.",
+    "previewMode": "local-interaction",
+    "batch": "assistant-elements-03",
+    "gaps": [
+      "未做浏览器视觉、完整键盘/触控验收。",
+      "仅本地合成fixture，无模型、工具、麦克风或外部提交。"
+    ],
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "format": "对话富组件"
+  },
+  {
+    "id": "assistant-elements:agent-handoff",
+    "title": "Agent交接说明",
+    "source": "assistant-ui Elements",
+    "kind": "对话富组件",
+    "category": "Agent与对话",
+    "styleTags": [
+      "圆角",
+      "纸感",
+      "对话内组件"
+    ],
+    "preview": "batches/assistant-elements-03/agent-handoff.html",
+    "license": "MIT",
+    "revision": "eb65bd4558b769550093003c95e5867ad0ec8eba",
+    "upstream": "https://github.com/assistant-ui/assistant-ui/blob/eb65bd4558b769550093003c95e5867ad0ec8eba/apps/docs/components/demo/elements/agent-handoff.tsx",
+    "componentSource": "https://github.com/assistant-ui/assistant-ui/blob/eb65bd4558b769550093003c95e5867ad0ec8eba/packages/ui/src/components/react/assistant-ui/elements/agent-handoff.tsx",
+    "website": "https://www.assistant-ui.com",
+    "description": "脚本驱动交接状态与携带资料说明，不执行委派。",
+    "behavior": "脚本驱动交接状态与携带资料说明，不执行委派。",
+    "buildStatus": "IIFE build and DOM mount passed; scripted content progression",
+    "previewStatus": "visual-review-pending",
+    "knownGaps": [
+      "未做浏览器视觉、完整键盘/触控验收。",
+      "仅本地合成fixture，无模型、工具、麦克风或外部提交。"
+    ],
+    "adaptation": "Actual upstream Elements and demos preserved; Base UI primitives retained; standalone host with external navigation/form prevention. No model or network runtime.",
+    "previewMode": "scripted-rich-display",
+    "batch": "assistant-elements-03",
+    "gaps": [
+      "未做浏览器视觉、完整键盘/触控验收。",
+      "仅本地合成fixture，无模型、工具、麦克风或外部提交。"
+    ],
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "format": "对话富组件"
+  },
+  {
+    "id": "assistant-elements:background-inbox",
+    "title": "后台任务收件箱",
+    "source": "assistant-ui Elements",
+    "kind": "对话富组件",
+    "category": "Agent与对话",
+    "styleTags": [
+      "圆角",
+      "纸感",
+      "对话内组件"
+    ],
+    "preview": "batches/assistant-elements-03/background-inbox.html",
+    "license": "MIT",
+    "revision": "eb65bd4558b769550093003c95e5867ad0ec8eba",
+    "upstream": "https://github.com/assistant-ui/assistant-ui/blob/eb65bd4558b769550093003c95e5867ad0ec8eba/apps/docs/components/demo/elements/background-inbox.tsx",
+    "componentSource": "https://github.com/assistant-ui/assistant-ui/blob/eb65bd4558b769550093003c95e5867ad0ec8eba/packages/ui/src/components/react/assistant-ui/elements/background-inbox.tsx",
+    "website": "https://www.assistant-ui.com",
+    "description": "脚本驱动后台任务状态，收取回调是原版no-op。",
+    "behavior": "脚本驱动后台任务状态，收取回调是原版no-op。",
+    "buildStatus": "IIFE build and DOM mount passed; scripted content progression",
+    "previewStatus": "visual-review-pending",
+    "knownGaps": [
+      "未做浏览器视觉、完整键盘/触控验收。",
+      "仅本地合成fixture，无模型、工具、麦克风或外部提交。"
+    ],
+    "adaptation": "Actual upstream Elements and demos preserved; Base UI primitives retained; standalone host with external navigation/form prevention. No model or network runtime.",
+    "previewMode": "scripted-rich-display",
+    "batch": "assistant-elements-03",
+    "gaps": [
+      "未做浏览器视觉、完整键盘/触控验收。",
+      "仅本地合成fixture，无模型、工具、麦克风或外部提交。"
+    ],
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "format": "对话富组件"
+  },
+  {
+    "id": "assistant-elements:job-progress",
+    "title": "分阶段任务进度",
+    "source": "assistant-ui Elements",
+    "kind": "对话富组件",
+    "category": "Agent与对话",
+    "styleTags": [
+      "圆角",
+      "纸感",
+      "对话内组件"
+    ],
+    "preview": "batches/assistant-elements-03/job-progress.html",
+    "license": "MIT",
+    "revision": "eb65bd4558b769550093003c95e5867ad0ec8eba",
+    "upstream": "https://github.com/assistant-ui/assistant-ui/blob/eb65bd4558b769550093003c95e5867ad0ec8eba/apps/docs/components/demo/elements/job-progress.tsx",
+    "componentSource": "https://github.com/assistant-ui/assistant-ui/blob/eb65bd4558b769550093003c95e5867ad0ec8eba/packages/ui/src/components/react/assistant-ui/elements/job-progress.tsx",
+    "website": "https://www.assistant-ui.com",
+    "description": "脚本驱动分阶段进度，取消冻结本地状态，不执行CI。",
+    "behavior": "脚本驱动分阶段进度，取消冻结本地状态，不执行CI。",
+    "buildStatus": "IIFE build and DOM mount passed; cancel freezes local job",
+    "previewStatus": "visual-review-pending",
+    "knownGaps": [
+      "未做浏览器视觉、完整键盘/触控验收。",
+      "仅本地合成fixture，无模型、工具、麦克风或外部提交。"
+    ],
+    "adaptation": "Actual upstream Elements and demos preserved; Base UI primitives retained; standalone host with external navigation/form prevention. No model or network runtime.",
+    "previewMode": "local-interaction",
+    "batch": "assistant-elements-03",
+    "gaps": [
+      "未做浏览器视觉、完整键盘/触控验收。",
+      "仅本地合成fixture，无模型、工具、麦克风或外部提交。"
+    ],
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "format": "对话富组件"
+  },
+  {
+    "id": "assistant-elements:onboarding",
+    "title": "产品引导步骤",
+    "source": "assistant-ui Elements",
+    "kind": "对话富组件",
+    "category": "Agent与对话",
+    "styleTags": [
+      "圆角",
+      "纸感",
+      "对话内组件"
+    ],
+    "preview": "batches/assistant-elements-03/onboarding.html",
+    "license": "MIT",
+    "revision": "eb65bd4558b769550093003c95e5867ad0ec8eba",
+    "upstream": "https://github.com/assistant-ui/assistant-ui/blob/eb65bd4558b769550093003c95e5867ad0ec8eba/apps/docs/components/demo/elements/onboarding.tsx",
+    "componentSource": "https://github.com/assistant-ui/assistant-ui/blob/eb65bd4558b769550093003c95e5867ad0ec8eba/packages/ui/src/components/react/assistant-ui/elements/onboarding.tsx",
+    "website": "https://www.assistant-ui.com",
+    "description": "下一步与跳过本地引导，不配置真实项目。",
+    "behavior": "下一步与跳过本地引导，不配置真实项目。",
+    "buildStatus": "IIFE build and DOM mount passed; next and skip",
+    "previewStatus": "visual-review-pending",
+    "knownGaps": [
+      "未做浏览器视觉、完整键盘/触控验收。",
+      "仅本地合成fixture，无模型、工具、麦克风或外部提交。"
+    ],
+    "adaptation": "Actual upstream Elements and demos preserved; Base UI primitives retained; standalone host with external navigation/form prevention. No model or network runtime.",
+    "previewMode": "local-interaction",
+    "batch": "assistant-elements-03",
+    "gaps": [
+      "未做浏览器视觉、完整键盘/触控验收。",
+      "仅本地合成fixture，无模型、工具、麦克风或外部提交。"
+    ],
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "format": "对话富组件"
+  },
+  {
+    "id": "assistant-elements:regenerate-menu",
+    "title": "消息重生成菜单",
+    "source": "assistant-ui Elements",
+    "kind": "对话富组件",
+    "category": "Agent与对话",
+    "styleTags": [
+      "圆角",
+      "纸感",
+      "对话内组件"
+    ],
+    "preview": "batches/assistant-elements-03/regenerate-menu.html",
+    "license": "MIT",
+    "revision": "eb65bd4558b769550093003c95e5867ad0ec8eba",
+    "upstream": "https://github.com/assistant-ui/assistant-ui/blob/eb65bd4558b769550093003c95e5867ad0ec8eba/apps/docs/components/demo/elements/regenerate-menu.tsx",
+    "componentSource": "https://github.com/assistant-ui/assistant-ui/blob/eb65bd4558b769550093003c95e5867ad0ec8eba/packages/ui/src/components/react/assistant-ui/elements/regenerate-menu.tsx",
+    "website": "https://www.assistant-ui.com",
+    "description": "选择后仅关闭菜单，不重新生成；模型名称为未经核实的演示fixture。",
+    "behavior": "选择后仅关闭菜单，不重新生成；模型名称为未经核实的演示fixture。",
+    "buildStatus": "IIFE build and DOM mount passed; pick closes menu only",
+    "previewStatus": "visual-review-pending",
+    "knownGaps": [
+      "未做浏览器视觉、完整键盘/触控验收。",
+      "仅本地合成fixture，无模型、工具、麦克风或外部提交。"
+    ],
+    "adaptation": "Actual upstream Elements and demos preserved; Base UI primitives retained; standalone host with external navigation/form prevention. No model or network runtime.",
+    "previewMode": "local-interaction",
+    "batch": "assistant-elements-03",
+    "gaps": [
+      "未做浏览器视觉、完整键盘/触控验收。",
+      "仅本地合成fixture，无模型、工具、麦克风或外部提交。"
+    ],
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "format": "对话富组件"
+  },
+  {
+    "id": "assistant-elements:recommendation-card",
+    "title": "建议采纳卡片",
+    "source": "assistant-ui Elements",
+    "kind": "对话富组件",
+    "category": "Agent与对话",
+    "styleTags": [
+      "圆角",
+      "纸感",
+      "对话内组件"
+    ],
+    "preview": "batches/assistant-elements-03/recommendation-card.html",
+    "license": "MIT",
+    "revision": "eb65bd4558b769550093003c95e5867ad0ec8eba",
+    "upstream": "https://github.com/assistant-ui/assistant-ui/blob/eb65bd4558b769550093003c95e5867ad0ec8eba/apps/docs/components/demo/elements/recommendation-card.tsx",
+    "componentSource": "https://github.com/assistant-ui/assistant-ui/blob/eb65bd4558b769550093003c95e5867ad0ec8eba/packages/ui/src/components/react/assistant-ui/elements/recommendation-card.tsx",
+    "website": "https://www.assistant-ui.com",
+    "description": "本地采纳回执，不修改代码或真实设置。",
+    "behavior": "本地采纳回执，不修改代码或真实设置。",
+    "buildStatus": "IIFE build and DOM mount passed; local accept receipt",
+    "previewStatus": "visual-review-pending",
+    "knownGaps": [
+      "未做浏览器视觉、完整键盘/触控验收。",
+      "仅本地合成fixture，无模型、工具、麦克风或外部提交。"
+    ],
+    "adaptation": "Actual upstream Elements and demos preserved; Base UI primitives retained; standalone host with external navigation/form prevention. No model or network runtime.",
+    "previewMode": "local-interaction",
+    "batch": "assistant-elements-03",
+    "gaps": [
+      "未做浏览器视觉、完整键盘/触控验收。",
+      "仅本地合成fixture，无模型、工具、麦克风或外部提交。"
+    ],
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "format": "对话富组件"
+  },
+  {
+    "id": "assistant-elements:thread-list",
+    "title": "会话列表管理",
+    "source": "assistant-ui Elements",
+    "kind": "对话富组件",
+    "category": "Agent与对话",
+    "styleTags": [
+      "圆角",
+      "纸感",
+      "对话内组件"
+    ],
+    "preview": "batches/assistant-elements-03/thread-list.html",
+    "license": "MIT",
+    "revision": "eb65bd4558b769550093003c95e5867ad0ec8eba",
+    "upstream": "https://github.com/assistant-ui/assistant-ui/blob/eb65bd4558b769550093003c95e5867ad0ec8eba/apps/docs/components/demo/elements/thread-list.tsx",
+    "componentSource": "https://github.com/assistant-ui/assistant-ui/blob/eb65bd4558b769550093003c95e5867ad0ec8eba/packages/ui/src/components/react/assistant-ui/elements/thread-list.tsx",
+    "website": "https://www.assistant-ui.com",
+    "description": "本地会话选中/删除；重命名按钮已明确禁用并提示沙箱不支持原生prompt，不读改真实会话。",
+    "behavior": "本地会话选中/删除；重命名按钮已明确禁用并提示沙箱不支持原生prompt，不读改真实会话。",
+    "buildStatus": "IIFE build and DOM mount passed; rename disabled/no prompt; delete local row",
+    "previewStatus": "visual-review-pending",
+    "knownGaps": [
+      "未做浏览器视觉、完整键盘/触控验收。",
+      "仅本地合成fixture，无模型、工具、麦克风或外部提交。"
+    ],
+    "adaptation": "Actual upstream Elements and demos preserved; Base UI primitives retained; standalone host with external navigation/form prevention. No model or network runtime. Rename disabled (no click handler) with title and visible sandbox notice; local selection/deletion retained.",
+    "previewMode": "local-interaction",
+    "batch": "assistant-elements-03",
+    "gaps": [
+      "未做浏览器视觉、完整键盘/触控验收。",
+      "仅本地合成fixture，无模型、工具、麦克风或外部提交。"
+    ],
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "format": "对话富组件"
+  },
+  {
+    "id": "assistant-elements:thread-search",
+    "title": "跨会话搜索",
+    "source": "assistant-ui Elements",
+    "kind": "对话富组件",
+    "category": "Agent与对话",
+    "styleTags": [
+      "圆角",
+      "纸感",
+      "对话内组件"
+    ],
+    "preview": "batches/assistant-elements-03/thread-search.html",
+    "license": "MIT",
+    "revision": "eb65bd4558b769550093003c95e5867ad0ec8eba",
+    "upstream": "https://github.com/assistant-ui/assistant-ui/blob/eb65bd4558b769550093003c95e5867ad0ec8eba/apps/docs/components/demo/elements/thread-search.tsx",
+    "componentSource": "https://github.com/assistant-ui/assistant-ui/blob/eb65bd4558b769550093003c95e5867ad0ec8eba/packages/ui/src/components/react/assistant-ui/elements/thread-search.tsx",
+    "website": "https://www.assistant-ui.com",
+    "description": "本地固定会话数组搜索与选择，不搜索账户历史。",
+    "behavior": "本地固定会话数组搜索与选择，不搜索账户历史。",
+    "buildStatus": "IIFE build and DOM mount passed; select local thread",
+    "previewStatus": "visual-review-pending",
+    "knownGaps": [
+      "未做浏览器视觉、完整键盘/触控验收。",
+      "仅本地合成fixture，无模型、工具、麦克风或外部提交。"
+    ],
+    "adaptation": "Actual upstream Elements and demos preserved; Base UI primitives retained; standalone host with external navigation/form prevention. No model or network runtime.",
+    "previewMode": "local-interaction",
+    "batch": "assistant-elements-03",
+    "gaps": [
+      "未做浏览器视觉、完整键盘/触控验收。",
+      "仅本地合成fixture，无模型、工具、麦克风或外部提交。"
+    ],
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "format": "对话富组件"
+  },
+  {
+    "id": "assistant-elements:shared-conversation",
+    "title": "共享对话阅读",
+    "source": "assistant-ui Elements",
+    "kind": "对话富组件",
+    "category": "Agent与对话",
+    "styleTags": [
+      "圆角",
+      "纸感",
+      "对话内组件"
+    ],
+    "preview": "batches/assistant-elements-03/shared-conversation.html",
+    "license": "MIT",
+    "revision": "eb65bd4558b769550093003c95e5867ad0ec8eba",
+    "upstream": "https://github.com/assistant-ui/assistant-ui/blob/eb65bd4558b769550093003c95e5867ad0ec8eba/apps/docs/components/demo/elements/shared-conversation.tsx",
+    "componentSource": "https://github.com/assistant-ui/assistant-ui/blob/eb65bd4558b769550093003c95e5867ad0ec8eba/packages/ui/src/components/react/assistant-ui/elements/shared-conversation.tsx",
+    "website": "https://www.assistant-ui.com",
+    "description": "原版共享会话只读展示，继续聊天按钮未接入真实会话。",
+    "behavior": "原版共享会话只读展示，继续聊天按钮未接入真实会话。",
+    "buildStatus": "IIFE build and DOM mount passed; mount",
+    "previewStatus": "visual-review-pending",
+    "knownGaps": [
+      "未做浏览器视觉、完整键盘/触控验收。",
+      "仅本地合成fixture，无模型、工具、麦克风或外部提交。"
+    ],
+    "adaptation": "Actual upstream Elements and demos preserved; Base UI primitives retained; standalone host with external navigation/form prevention. No model or network runtime.",
+    "previewMode": "static-rich-display",
+    "batch": "assistant-elements-03",
+    "gaps": [
+      "未做浏览器视觉、完整键盘/触控验收。",
+      "仅本地合成fixture，无模型、工具、麦克风或外部提交。"
+    ],
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "format": "对话富组件"
+  },
+  {
+    "id": "assistant-elements:subagent-list",
+    "title": "并行子Agent状态",
+    "source": "assistant-ui Elements",
+    "kind": "对话富组件",
+    "category": "Agent与对话",
+    "styleTags": [
+      "圆角",
+      "纸感",
+      "对话内组件"
+    ],
+    "preview": "batches/assistant-elements-03/subagent-list.html",
+    "license": "MIT",
+    "revision": "eb65bd4558b769550093003c95e5867ad0ec8eba",
+    "upstream": "https://github.com/assistant-ui/assistant-ui/blob/eb65bd4558b769550093003c95e5867ad0ec8eba/apps/docs/components/demo/elements/subagent-list.tsx",
+    "componentSource": "https://github.com/assistant-ui/assistant-ui/blob/eb65bd4558b769550093003c95e5867ad0ec8eba/packages/ui/src/components/react/assistant-ui/elements/subagent-list.tsx",
+    "website": "https://www.assistant-ui.com",
+    "description": "脚本驱动多Agent工作进度，不启动Agent。",
+    "behavior": "脚本驱动多Agent工作进度，不启动Agent。",
+    "buildStatus": "IIFE build and DOM mount passed; scripted content progression",
+    "previewStatus": "visual-review-pending",
+    "knownGaps": [
+      "未做浏览器视觉、完整键盘/触控验收。",
+      "仅本地合成fixture，无模型、工具、麦克风或外部提交。"
+    ],
+    "adaptation": "Actual upstream Elements and demos preserved; Base UI primitives retained; standalone host with external navigation/form prevention. No model or network runtime.",
+    "previewMode": "scripted-rich-display",
+    "batch": "assistant-elements-03",
+    "gaps": [
+      "未做浏览器视觉、完整键盘/触控验收。",
+      "仅本地合成fixture，无模型、工具、麦克风或外部提交。"
+    ],
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "format": "对话富组件"
+  },
+  {
+    "id": "assistant-elements:task-card",
+    "title": "任务详情卡片",
+    "source": "assistant-ui Elements",
+    "kind": "对话富组件",
+    "category": "Agent与对话",
+    "styleTags": [
+      "圆角",
+      "纸感",
+      "对话内组件"
+    ],
+    "preview": "batches/assistant-elements-03/task-card.html",
+    "license": "MIT",
+    "revision": "eb65bd4558b769550093003c95e5867ad0ec8eba",
+    "upstream": "https://github.com/assistant-ui/assistant-ui/blob/eb65bd4558b769550093003c95e5867ad0ec8eba/apps/docs/components/demo/elements/task-card.tsx",
+    "componentSource": "https://github.com/assistant-ui/assistant-ui/blob/eb65bd4558b769550093003c95e5867ad0ec8eba/packages/ui/src/components/react/assistant-ui/elements/task-card.tsx",
+    "website": "https://www.assistant-ui.com",
+    "description": "任务详情展开与脚本状态，不启动真实任务。",
+    "behavior": "任务详情展开与脚本状态，不启动真实任务。",
+    "buildStatus": "IIFE build and DOM mount passed; expand task details",
+    "previewStatus": "visual-review-pending",
+    "knownGaps": [
+      "未做浏览器视觉、完整键盘/触控验收。",
+      "仅本地合成fixture，无模型、工具、麦克风或外部提交。"
+    ],
+    "adaptation": "Actual upstream Elements and demos preserved; Base UI primitives retained; standalone host with external navigation/form prevention. No model or network runtime.",
+    "previewMode": "local-interaction",
+    "batch": "assistant-elements-03",
+    "gaps": [
+      "未做浏览器视觉、完整键盘/触控验收。",
+      "仅本地合成fixture，无模型、工具、麦克风或外部提交。"
+    ],
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "format": "对话富组件"
+  },
+  {
+    "id": "assistant-elements:stopped-run",
+    "title": "中断输出富显示",
+    "source": "assistant-ui Elements",
+    "kind": "对话富组件",
+    "category": "Agent与对话",
+    "styleTags": [
+      "圆角",
+      "纸感",
+      "对话内组件"
+    ],
+    "preview": "batches/assistant-elements-03/stopped-run.html",
+    "license": "MIT",
+    "revision": "eb65bd4558b769550093003c95e5867ad0ec8eba",
+    "upstream": "https://github.com/assistant-ui/assistant-ui/blob/eb65bd4558b769550093003c95e5867ad0ec8eba/apps/docs/components/demo/elements/stopped-run.tsx",
+    "componentSource": "https://github.com/assistant-ui/assistant-ui/blob/eb65bd4558b769550093003c95e5867ad0ec8eba/packages/ui/src/components/react/assistant-ui/elements/stopped-run.tsx",
+    "website": "https://www.assistant-ui.com",
+    "description": "原版中断文本脚本展示，继续/丢弃未接入处理器。",
+    "behavior": "原版中断文本脚本展示，继续/丢弃未接入处理器。",
+    "buildStatus": "IIFE build and DOM mount passed; scripted content progression",
+    "previewStatus": "visual-review-pending",
+    "knownGaps": [
+      "未做浏览器视觉、完整键盘/触控验收。",
+      "仅本地合成fixture，无模型、工具、麦克风或外部提交。"
+    ],
+    "adaptation": "Actual upstream Elements and demos preserved; Base UI primitives retained; standalone host with external navigation/form prevention. No model or network runtime.",
+    "previewMode": "scripted-rich-display",
+    "batch": "assistant-elements-03",
+    "gaps": [
+      "未做浏览器视觉、完整键盘/触控验收。",
+      "仅本地合成fixture，无模型、工具、麦克风或外部提交。"
+    ],
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "format": "对话富组件"
+  },
+  {
+    "id": "assistant-elements:context-breakdown",
+    "title": "上下文占用分解",
+    "source": "assistant-ui Elements",
+    "kind": "对话富组件",
+    "category": "Agent与对话",
+    "styleTags": [
+      "圆角",
+      "纸感",
+      "对话内组件"
+    ],
+    "preview": "batches/assistant-elements-03/context-breakdown.html",
+    "license": "MIT",
+    "revision": "eb65bd4558b769550093003c95e5867ad0ec8eba",
+    "upstream": "https://github.com/assistant-ui/assistant-ui/blob/eb65bd4558b769550093003c95e5867ad0ec8eba/apps/docs/components/demo/elements/context-breakdown.tsx",
+    "componentSource": "https://github.com/assistant-ui/assistant-ui/blob/eb65bd4558b769550093003c95e5867ad0ec8eba/packages/ui/src/components/react/assistant-ui/elements/context-breakdown.tsx",
+    "website": "https://www.assistant-ui.com",
+    "description": "脚本驱动上下文分项及余量，不读取真实token使用量。",
+    "behavior": "脚本驱动上下文分项及余量，不读取真实token使用量。",
+    "buildStatus": "IIFE build and DOM mount passed; scripted content progression",
+    "previewStatus": "visual-review-pending",
+    "knownGaps": [
+      "未做浏览器视觉、完整键盘/触控验收。",
+      "仅本地合成fixture，无模型、工具、麦克风或外部提交。"
+    ],
+    "adaptation": "Actual upstream Elements and demos preserved; Base UI primitives retained; standalone host with external navigation/form prevention. No model or network runtime.",
+    "previewMode": "scripted-rich-display",
+    "batch": "assistant-elements-03",
+    "gaps": [
+      "未做浏览器视觉、完整键盘/触控验收。",
+      "仅本地合成fixture，无模型、工具、麦克风或外部提交。"
+    ],
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "format": "对话富组件"
+  },
+  {
+    "id": "assistant-elements:confidence-marker",
+    "title": "结论置信标记",
+    "source": "assistant-ui Elements",
+    "kind": "对话富组件",
+    "category": "Agent与对话",
+    "styleTags": [
+      "圆角",
+      "纸感",
+      "对话内组件"
+    ],
+    "preview": "batches/assistant-elements-03/confidence-marker.html",
+    "license": "MIT",
+    "revision": "eb65bd4558b769550093003c95e5867ad0ec8eba",
+    "upstream": "https://github.com/assistant-ui/assistant-ui/blob/eb65bd4558b769550093003c95e5867ad0ec8eba/apps/docs/components/demo/elements/confidence-marker.tsx",
+    "componentSource": "https://github.com/assistant-ui/assistant-ui/blob/eb65bd4558b769550093003c95e5867ad0ec8eba/packages/ui/src/components/react/assistant-ui/elements/confidence-marker.tsx",
+    "website": "https://www.assistant-ui.com",
+    "description": "焦点/悬停显示结论依据，置信度是fixture而非自动判断。",
+    "behavior": "焦点/悬停显示结论依据，置信度是fixture而非自动判断。",
+    "buildStatus": "IIFE build and DOM mount passed; focus reveals evidence basis",
+    "previewStatus": "visual-review-pending",
+    "knownGaps": [
+      "未做浏览器视觉、完整键盘/触控验收。",
+      "仅本地合成fixture，无模型、工具、麦克风或外部提交。"
+    ],
+    "adaptation": "Actual upstream Elements and demos preserved; Base UI primitives retained; standalone host with external navigation/form prevention. No model or network runtime.",
+    "previewMode": "local-interaction",
+    "batch": "assistant-elements-03",
+    "gaps": [
+      "未做浏览器视觉、完整键盘/触控验收。",
+      "仅本地合成fixture，无模型、工具、麦克风或外部提交。"
+    ],
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "format": "对话富组件"
+  },
+  {
+    "id": "assistant-elements:research-report",
+    "title": "研究报告生成态",
+    "source": "assistant-ui Elements",
+    "kind": "对话富组件",
+    "category": "Agent与对话",
+    "styleTags": [
+      "圆角",
+      "纸感",
+      "对话内组件"
+    ],
+    "preview": "batches/assistant-elements-03/research-report.html",
+    "license": "MIT",
+    "revision": "eb65bd4558b769550093003c95e5867ad0ec8eba",
+    "upstream": "https://github.com/assistant-ui/assistant-ui/blob/eb65bd4558b769550093003c95e5867ad0ec8eba/apps/docs/components/demo/elements/research-report.tsx",
+    "componentSource": "https://github.com/assistant-ui/assistant-ui/blob/eb65bd4558b769550093003c95e5867ad0ec8eba/packages/ui/src/components/react/assistant-ui/elements/research-report.tsx",
+    "website": "https://www.assistant-ui.com",
+    "description": "脚本驱动研究章节及来源数量，不进行真实研究。",
+    "behavior": "脚本驱动研究章节及来源数量，不进行真实研究。",
+    "buildStatus": "IIFE build and DOM mount passed; scripted content progression",
+    "previewStatus": "visual-review-pending",
+    "knownGaps": [
+      "未做浏览器视觉、完整键盘/触控验收。",
+      "仅本地合成fixture，无模型、工具、麦克风或外部提交。"
+    ],
+    "adaptation": "Actual upstream Elements and demos preserved; Base UI primitives retained; standalone host with external navigation/form prevention. No model or network runtime.",
+    "previewMode": "scripted-rich-display",
+    "batch": "assistant-elements-03",
+    "gaps": [
+      "未做浏览器视觉、完整键盘/触控验收。",
+      "仅本地合成fixture，无模型、工具、麦克风或外部提交。"
+    ],
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "format": "对话富组件"
+  },
+  {
+    "id": "assistant-elements:spec-sheet",
+    "title": "参数规格单",
+    "source": "assistant-ui Elements",
+    "kind": "对话富组件",
+    "category": "Agent与对话",
+    "styleTags": [
+      "圆角",
+      "纸感",
+      "对话内组件"
+    ],
+    "preview": "batches/assistant-elements-03/spec-sheet.html",
+    "license": "MIT",
+    "revision": "eb65bd4558b769550093003c95e5867ad0ec8eba",
+    "upstream": "https://github.com/assistant-ui/assistant-ui/blob/eb65bd4558b769550093003c95e5867ad0ec8eba/apps/docs/components/demo/elements/spec-sheet.tsx",
+    "componentSource": "https://github.com/assistant-ui/assistant-ui/blob/eb65bd4558b769550093003c95e5867ad0ec8eba/packages/ui/src/components/react/assistant-ui/elements/spec-sheet.tsx",
+    "website": "https://www.assistant-ui.com",
+    "description": "逐行显示原版规格fixture，模型名称、参数、日期和价格不保证存在或准确。",
+    "behavior": "逐行显示原版规格fixture，模型名称、参数、日期和价格不保证存在或准确。",
+    "buildStatus": "IIFE build and DOM mount passed; scripted content progression",
+    "previewStatus": "visual-review-pending",
+    "knownGaps": [
+      "未做浏览器视觉、完整键盘/触控验收。",
+      "仅本地合成fixture，无模型、工具、麦克风或外部提交。"
+    ],
+    "adaptation": "Actual upstream Elements and demos preserved; Base UI primitives retained; standalone host with external navigation/form prevention. No model or network runtime.",
+    "previewMode": "scripted-rich-display",
+    "batch": "assistant-elements-03",
+    "gaps": [
+      "未做浏览器视觉、完整键盘/触控验收。",
+      "仅本地合成fixture，无模型、工具、麦克风或外部提交。"
+    ],
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "format": "对话富组件"
+  },
+  {
+    "id": "assistant-elements:timeline",
+    "title": "事件时间线",
+    "source": "assistant-ui Elements",
+    "kind": "对话富组件",
+    "category": "Agent与对话",
+    "styleTags": [
+      "圆角",
+      "纸感",
+      "对话内组件"
+    ],
+    "preview": "batches/assistant-elements-03/timeline.html",
+    "license": "MIT",
+    "revision": "eb65bd4558b769550093003c95e5867ad0ec8eba",
+    "upstream": "https://github.com/assistant-ui/assistant-ui/blob/eb65bd4558b769550093003c95e5867ad0ec8eba/apps/docs/components/demo/elements/timeline.tsx",
+    "componentSource": "https://github.com/assistant-ui/assistant-ui/blob/eb65bd4558b769550093003c95e5867ad0ec8eba/packages/ui/src/components/react/assistant-ui/elements/timeline.tsx",
+    "website": "https://www.assistant-ui.com",
+    "description": "脚本驱动过去/现在/未来事件，不查询真实工作记录。",
+    "behavior": "脚本驱动过去/现在/未来事件，不查询真实工作记录。",
+    "buildStatus": "IIFE build and DOM mount passed; scripted content progression",
+    "previewStatus": "visual-review-pending",
+    "knownGaps": [
+      "未做浏览器视觉、完整键盘/触控验收。",
+      "仅本地合成fixture，无模型、工具、麦克风或外部提交。"
+    ],
+    "adaptation": "Actual upstream Elements and demos preserved; Base UI primitives retained; standalone host with external navigation/form prevention. No model or network runtime.",
+    "previewMode": "scripted-rich-display",
+    "batch": "assistant-elements-03",
+    "gaps": [
+      "未做浏览器视觉、完整键盘/触控验收。",
+      "仅本地合成fixture，无模型、工具、麦克风或外部提交。"
+    ],
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "format": "对话富组件"
+  },
+  {
+    "id": "tambo:form",
+    "title": "Tambo · 动态任务表单",
+    "source": "Tambo",
+    "license": "MIT",
+    "revision": "6e2c1bff3b68a00c094b6d876788cc8f33f7bb02",
+    "upstream": "https://github.com/tambo-ai/tambo/tree/6e2c1bff3b68a00c094b6d876788cc8f33f7bb02/packages/ui-registry/src/components/form",
+    "preview": "batches/tambo-01/form/index.html",
+    "batch": "tambo-01",
+    "category": "Agent与对话",
+    "kind": "本地交互组件",
+    "format": "对话富组件",
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "styleTags": [
+      "圆角",
+      "轻量"
+    ],
+    "description": "编辑任务字段、选项及本地提交回执；SDK存储由明确的本地React状态替代，不执行任务。",
+    "behavior": "编辑任务字段、选项及本地提交回执；SDK存储由明确的本地React状态替代，不执行任务。",
+    "buildStatus": "Build, JS parse, opaque-origin DOM and state checks passed; zero network calls.",
+    "gaps": [
+      "真实浏览器视觉、响应式及图表悬浮尚未验收。",
+      "仅本地fixture，不连接云Agent或真实工具。"
+    ]
+  },
+  {
+    "id": "tambo:elicitation",
+    "title": "Tambo · MCP澄清与批准",
+    "source": "Tambo",
+    "license": "MIT",
+    "revision": "6e2c1bff3b68a00c094b6d876788cc8f33f7bb02",
+    "upstream": "https://github.com/tambo-ai/tambo/tree/6e2c1bff3b68a00c094b6d876788cc8f33f7bb02/packages/ui-registry/src/components/elicitation-ui",
+    "preview": "batches/tambo-01/elicitation/index.html",
+    "batch": "tambo-01",
+    "category": "Agent与对话",
+    "kind": "本地交互组件",
+    "format": "对话富组件",
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "styleTags": [
+      "圆角",
+      "轻量"
+    ],
+    "description": "本地单问/多问澄清、必填校验、接受或拒绝；不会向外部服务器授权。",
+    "behavior": "本地单问/多问澄清、必填校验、接受或拒绝；不会向外部服务器授权。",
+    "buildStatus": "Build, JS parse, opaque-origin DOM and state checks passed; zero network calls.",
+    "gaps": [
+      "真实浏览器视觉、响应式及图表悬浮尚未验收。",
+      "仅本地fixture，不连接云Agent或真实工具。"
+    ]
+  },
+  {
+    "id": "tambo:graph",
+    "title": "Tambo · 交互图表",
+    "source": "Tambo",
+    "license": "MIT",
+    "revision": "6e2c1bff3b68a00c094b6d876788cc8f33f7bb02",
+    "upstream": "https://github.com/tambo-ai/tambo/tree/6e2c1bff3b68a00c094b6d876788cc8f33f7bb02/packages/ui-registry/src/components/graph",
+    "preview": "batches/tambo-01/graph/index.html",
+    "batch": "tambo-01",
+    "category": "数据与状态",
+    "kind": "本地交互组件",
+    "format": "对话富组件",
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "styleTags": [
+      "圆角",
+      "轻量"
+    ],
+    "description": "同一图表族内切换柱形/折线/饼图与数据集；不按图形变体重复计数。",
+    "behavior": "同一图表族内切换柱形/折线/饼图与数据集；不按图形变体重复计数。",
+    "buildStatus": "Build, JS parse, opaque-origin DOM and state checks passed; zero network calls.",
+    "gaps": [
+      "真实浏览器视觉、响应式及图表悬浮尚未验收。",
+      "仅本地fixture，不连接云Agent或真实工具。"
+    ]
+  },
+  {
+    "id": "promptkit:chain-of-thought",
+    "title": "分段推理折叠",
+    "source": "Prompt Kit",
+    "upstreamRepository": "https://github.com/ibelick/prompt-kit",
+    "revision": "5a9496635cc0e1bf7679fe2a9e35d9b36b99c08a",
+    "license": "MIT",
+    "preview": "batches/promptkit-01/chain-of-thought/index.html",
+    "code": "batches/promptkit-01/chain-of-thought/preview.tsx",
+    "description": "上游固定示例内容；非模型真实推理。",
+    "kind": "组件家族",
+    "status": "构建/DOM交互通过；待浏览器视觉验收",
+    "files": {
+      "index.html": {
+        "bytes": 262,
+        "sha256": "030f43a9ecc368ae0d23b23b5e67f161f3701a60956b469ae49f358e4d1e663a"
+      },
+      "runtime.js": {
+        "bytes": 230314,
+        "sha256": "7536159bfaa919bd28f5eff22eac74d31097d217bda37b0541ad6a6e9e5f7080"
+      },
+      "runtime.css": {
+        "bytes": 89695,
+        "sha256": "9195be49b18491198b22994d2c13002437e9c3729ecc54c50a8b51c6451b3dd7"
+      }
+    },
+    "gzipJSBytes": 72468,
+    "relatedExistingFunctionality": [
+      "ai-elements:chain-of-thought"
+    ],
+    "deduplication": "独立上游实现，不声称全新功能类别；同族变体合并一项。",
+    "upstream": "https://github.com/ibelick/prompt-kit/tree/5a9496635cc0e1bf7679fe2a9e35d9b36b99c08a",
+    "batch": "promptkit-01",
+    "category": "Agent与对话",
+    "format": "对话富组件",
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "styleTags": [
+      "圆角",
+      "轻量"
+    ],
+    "behavior": "上游固定示例内容；非模型真实推理。",
+    "buildStatus": "Build, JS parse and 10 DOM/state tests passed; no network; visual review pending.",
+    "gaps": [
+      "真实浏览器视觉、触控及原生文件选择器尚未验收。",
+      "独立上游实现，不声称全新功能类别；同族变体合并一项。",
+      "与现有功能重叠：ai-elements:chain-of-thought",
+      "仅本地fixture，不连接模型或上传文件。",
+      "源码ZIP仅本地保存，未发布。"
+    ]
+  },
+  {
+    "id": "promptkit:steps",
+    "title": "工具步骤轨迹",
+    "source": "Prompt Kit",
+    "upstreamRepository": "https://github.com/ibelick/prompt-kit",
+    "revision": "5a9496635cc0e1bf7679fe2a9e35d9b36b99c08a",
+    "license": "MIT",
+    "preview": "batches/promptkit-01/steps/index.html",
+    "code": "batches/promptkit-01/steps/preview.tsx",
+    "description": "上游固定步骤；折叠可用，不执行仓库扫描。",
+    "kind": "组件家族",
+    "status": "构建/DOM交互通过；待浏览器视觉验收",
+    "files": {
+      "index.html": {
+        "bytes": 262,
+        "sha256": "030f43a9ecc368ae0d23b23b5e67f161f3701a60956b469ae49f358e4d1e663a"
+      },
+      "runtime.js": {
+        "bytes": 229189,
+        "sha256": "b281da5ab3e5fe4024f69a8ac5da65c02043ae90e40b64daaa55fa84e72c2aa4"
+      },
+      "runtime.css": {
+        "bytes": 89695,
+        "sha256": "9195be49b18491198b22994d2c13002437e9c3729ecc54c50a8b51c6451b3dd7"
+      }
+    },
+    "gzipJSBytes": 72139,
+    "relatedExistingFunctionality": [
+      "assistant-ui:tool-group",
+      "assistant-ui:agent-plan"
+    ],
+    "deduplication": "独立上游实现，不声称全新功能类别；同族变体合并一项。",
+    "upstream": "https://github.com/ibelick/prompt-kit/tree/5a9496635cc0e1bf7679fe2a9e35d9b36b99c08a",
+    "batch": "promptkit-01",
+    "category": "Agent与对话",
+    "format": "对话富组件",
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "styleTags": [
+      "圆角",
+      "轻量"
+    ],
+    "behavior": "上游固定步骤；折叠可用，不执行仓库扫描。",
+    "buildStatus": "Build, JS parse and 10 DOM/state tests passed; no network; visual review pending.",
+    "gaps": [
+      "真实浏览器视觉、触控及原生文件选择器尚未验收。",
+      "独立上游实现，不声称全新功能类别；同族变体合并一项。",
+      "与现有功能重叠：assistant-ui:tool-group, assistant-ui:agent-plan",
+      "仅本地fixture，不连接模型或上传文件。",
+      "源码ZIP仅本地保存，未发布。"
+    ]
+  },
+  {
+    "id": "promptkit:response-stream",
+    "title": "流式文本播放器",
+    "source": "Prompt Kit",
+    "upstreamRepository": "https://github.com/ibelick/prompt-kit",
+    "revision": "5a9496635cc0e1bf7679fe2a9e35d9b36b99c08a",
+    "license": "MIT",
+    "preview": "batches/promptkit-01/response-stream/index.html",
+    "code": "batches/promptkit-01/response-stream/preview.tsx",
+    "description": "本地文字播放；不是远程模型响应。",
+    "kind": "组件家族",
+    "status": "构建/DOM交互通过；待浏览器视觉验收",
+    "files": {
+      "index.html": {
+        "bytes": 262,
+        "sha256": "030f43a9ecc368ae0d23b23b5e67f161f3701a60956b469ae49f358e4d1e663a"
+      },
+      "runtime.js": {
+        "bytes": 221655,
+        "sha256": "63bf1c91ab286afa20ace95edee0bcfa67fb07ab2afe9a448beaa32dad0aabfd"
+      },
+      "runtime.css": {
+        "bytes": 89695,
+        "sha256": "9195be49b18491198b22994d2c13002437e9c3729ecc54c50a8b51c6451b3dd7"
+      }
+    },
+    "gzipJSBytes": 69412,
+    "relatedExistingFunctionality": [],
+    "deduplication": "独立上游实现，不声称全新功能类别；同族变体合并一项。",
+    "upstream": "https://github.com/ibelick/prompt-kit/tree/5a9496635cc0e1bf7679fe2a9e35d9b36b99c08a",
+    "batch": "promptkit-01",
+    "category": "Agent与对话",
+    "format": "对话富组件",
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "styleTags": [
+      "圆角",
+      "轻量"
+    ],
+    "behavior": "本地文字播放；不是远程模型响应。",
+    "buildStatus": "Build, JS parse and 10 DOM/state tests passed; no network; visual review pending.",
+    "gaps": [
+      "真实浏览器视觉、触控及原生文件选择器尚未验收。",
+      "独立上游实现，不声称全新功能类别；同族变体合并一项。",
+      "与现有功能重叠：",
+      "仅本地fixture，不连接模型或上传文件。",
+      "源码ZIP仅本地保存，未发布。"
+    ]
+  },
+  {
+    "id": "promptkit:jsx-preview",
+    "title": "JSX 实时预览",
+    "source": "Prompt Kit",
+    "upstreamRepository": "https://github.com/ibelick/prompt-kit",
+    "revision": "5a9496635cc0e1bf7679fe2a9e35d9b36b99c08a",
+    "license": "MIT",
+    "preview": "batches/promptkit-01/jsx-preview/index.html",
+    "code": "batches/promptkit-01/jsx-preview/preview.tsx",
+    "description": "本地解析编辑文本；示例产品文案是原始静态样例，无真实视频服务。",
+    "kind": "组件家族",
+    "status": "构建/DOM交互通过；待浏览器视觉验收",
+    "files": {
+      "index.html": {
+        "bytes": 262,
+        "sha256": "030f43a9ecc368ae0d23b23b5e67f161f3701a60956b469ae49f358e4d1e663a"
+      },
+      "runtime.js": {
+        "bytes": 449637,
+        "sha256": "cedd092eaab9f551e2d7e2f9f20de31422bac30724b70c383e08c4b27cce039c"
+      },
+      "runtime.css": {
+        "bytes": 89695,
+        "sha256": "9195be49b18491198b22994d2c13002437e9c3729ecc54c50a8b51c6451b3dd7"
+      }
+    },
+    "gzipJSBytes": 133742,
+    "relatedExistingFunctionality": [
+      "ai-elements:web-preview",
+      "ai-elements:artifact"
+    ],
+    "deduplication": "独立上游实现，不声称全新功能类别；同族变体合并一项。",
+    "upstream": "https://github.com/ibelick/prompt-kit/tree/5a9496635cc0e1bf7679fe2a9e35d9b36b99c08a",
+    "batch": "promptkit-01",
+    "category": "Agent与对话",
+    "format": "对话富组件",
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "styleTags": [
+      "圆角",
+      "轻量"
+    ],
+    "behavior": "本地解析编辑文本；示例产品文案是原始静态样例，无真实视频服务。",
+    "buildStatus": "Build, JS parse and 10 DOM/state tests passed; no network; visual review pending.",
+    "gaps": [
+      "真实浏览器视觉、触控及原生文件选择器尚未验收。",
+      "独立上游实现，不声称全新功能类别；同族变体合并一项。",
+      "与现有功能重叠：ai-elements:web-preview, ai-elements:artifact",
+      "仅本地fixture，不连接模型或上传文件。",
+      "源码ZIP仅本地保存，未发布。"
+    ]
+  },
+  {
+    "id": "promptkit:composer",
+    "title": "拖放附件编辑器",
+    "source": "Prompt Kit",
+    "upstreamRepository": "https://github.com/ibelick/prompt-kit",
+    "revision": "5a9496635cc0e1bf7679fe2a9e35d9b36b99c08a",
+    "license": "MIT",
+    "preview": "batches/promptkit-01/composer/index.html",
+    "code": "batches/promptkit-01/composer/preview.tsx",
+    "description": "文件仅保留当前页内存；发送为原示例的 2 秒本地模拟，不上传。",
+    "kind": "组件家族",
+    "status": "构建/DOM交互通过；待浏览器视觉验收",
+    "files": {
+      "index.html": {
+        "bytes": 262,
+        "sha256": "030f43a9ecc368ae0d23b23b5e67f161f3701a60956b469ae49f358e4d1e663a"
+      },
+      "runtime.js": {
+        "bytes": 274671,
+        "sha256": "8da9ee7417c59ad65ce72f322c4c3e724cd9316c810f2fa33dc4ee3c96a06c30"
+      },
+      "runtime.css": {
+        "bytes": 89695,
+        "sha256": "9195be49b18491198b22994d2c13002437e9c3729ecc54c50a8b51c6451b3dd7"
+      }
+    },
+    "gzipJSBytes": 88393,
+    "relatedExistingFunctionality": [
+      "ai-elements:prompt-input",
+      "assistant-ui:composer-attachments"
+    ],
+    "deduplication": "独立上游实现，不声称全新功能类别；同族变体合并一项。",
+    "upstream": "https://github.com/ibelick/prompt-kit/tree/5a9496635cc0e1bf7679fe2a9e35d9b36b99c08a",
+    "batch": "promptkit-01",
+    "category": "Agent与对话",
+    "format": "对话富组件",
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "styleTags": [
+      "圆角",
+      "轻量"
+    ],
+    "behavior": "文件仅保留当前页内存；发送为原示例的 2 秒本地模拟，不上传。",
+    "buildStatus": "Build, JS parse and 10 DOM/state tests passed; no network; visual review pending.",
+    "gaps": [
+      "真实浏览器视觉、触控及原生文件选择器尚未验收。",
+      "独立上游实现，不声称全新功能类别；同族变体合并一项。",
+      "与现有功能重叠：ai-elements:prompt-input, assistant-ui:composer-attachments",
+      "仅本地fixture，不连接模型或上传文件。",
+      "源码ZIP仅本地保存，未发布。"
+    ]
+  },
+  {
+    "id": "promptkit:loader",
+    "title": "轻量运行状态",
+    "source": "Prompt Kit",
+    "upstreamRepository": "https://github.com/ibelick/prompt-kit",
+    "revision": "5a9496635cc0e1bf7679fe2a9e35d9b36b99c08a",
+    "license": "MIT",
+    "preview": "batches/promptkit-01/loader/index.html",
+    "code": "batches/promptkit-01/loader/preview.tsx",
+    "description": "12 种动画归为一个族，非 12 个组件。",
+    "kind": "组件家族",
+    "status": "构建/DOM交互通过；待浏览器视觉验收",
+    "files": {
+      "index.html": {
+        "bytes": 262,
+        "sha256": "030f43a9ecc368ae0d23b23b5e67f161f3701a60956b469ae49f358e4d1e663a"
+      },
+      "runtime.js": {
+        "bytes": 223523,
+        "sha256": "75edc380b64b589f931e67a1bfd4b7b56fec25ab1d06239a0b9654e6f6734a7d"
+      },
+      "runtime.css": {
+        "bytes": 89695,
+        "sha256": "9195be49b18491198b22994d2c13002437e9c3729ecc54c50a8b51c6451b3dd7"
+      }
+    },
+    "gzipJSBytes": 69250,
+    "relatedExistingFunctionality": [
+      "other loading indicator families"
+    ],
+    "deduplication": "独立上游实现，不声称全新功能类别；同族变体合并一项。",
+    "upstream": "https://github.com/ibelick/prompt-kit/tree/5a9496635cc0e1bf7679fe2a9e35d9b36b99c08a",
+    "batch": "promptkit-01",
+    "category": "Agent与对话",
+    "format": "对话富组件",
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "styleTags": [
+      "圆角",
+      "轻量"
+    ],
+    "behavior": "12 种动画归为一个族，非 12 个组件。",
+    "buildStatus": "Build, JS parse and 10 DOM/state tests passed; no network; visual review pending.",
+    "gaps": [
+      "真实浏览器视觉、触控及原生文件选择器尚未验收。",
+      "独立上游实现，不声称全新功能类别；同族变体合并一项。",
+      "与现有功能重叠：other loading indicator families",
+      "仅本地fixture，不连接模型或上传文件。",
+      "源码ZIP仅本地保存，未发布。"
+    ]
+  },
+  {
+    "id": "promptkit:thinking-bar",
+    "title": "思考状态控制条",
+    "source": "Prompt Kit",
+    "upstreamRepository": "https://github.com/ibelick/prompt-kit",
+    "revision": "5a9496635cc0e1bf7679fe2a9e35d9b36b99c08a",
+    "license": "MIT",
+    "preview": "batches/promptkit-01/thinking-bar/index.html",
+    "code": "batches/promptkit-01/thinking-bar/preview.tsx",
+    "description": "原组件，本地启动/停止和展开回调，不调用模型。",
+    "kind": "组件家族",
+    "status": "构建/DOM交互通过；待浏览器视觉验收",
+    "files": {
+      "index.html": {
+        "bytes": 262,
+        "sha256": "030f43a9ecc368ae0d23b23b5e67f161f3701a60956b469ae49f358e4d1e663a"
+      },
+      "runtime.js": {
+        "bytes": 219943,
+        "sha256": "668e85089125b77320f81c2838464afb17845c0e980031dd2a7d7e1e067cca9a"
+      },
+      "runtime.css": {
+        "bytes": 89695,
+        "sha256": "9195be49b18491198b22994d2c13002437e9c3729ecc54c50a8b51c6451b3dd7"
+      }
+    },
+    "gzipJSBytes": 69102,
+    "relatedExistingFunctionality": [
+      "reasoning/status UI"
+    ],
+    "deduplication": "独立上游实现，不声称全新功能类别；同族变体合并一项。",
+    "upstream": "https://github.com/ibelick/prompt-kit/tree/5a9496635cc0e1bf7679fe2a9e35d9b36b99c08a",
+    "batch": "promptkit-01",
+    "category": "Agent与对话",
+    "format": "对话富组件",
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "styleTags": [
+      "圆角",
+      "轻量"
+    ],
+    "behavior": "原组件，本地启动/停止和展开回调，不调用模型。",
+    "buildStatus": "Build, JS parse and 10 DOM/state tests passed; no network; visual review pending.",
+    "gaps": [
+      "真实浏览器视觉、触控及原生文件选择器尚未验收。",
+      "独立上游实现，不声称全新功能类别；同族变体合并一项。",
+      "与现有功能重叠：reasoning/status UI",
+      "仅本地fixture，不连接模型或上传文件。",
+      "源码ZIP仅本地保存，未发布。"
+    ]
+  },
+  {
+    "id": "promptkit:system-message",
+    "title": "系统状态提示",
+    "source": "Prompt Kit",
+    "upstreamRepository": "https://github.com/ibelick/prompt-kit",
+    "revision": "5a9496635cc0e1bf7679fe2a9e35d9b36b99c08a",
+    "license": "MIT",
+    "preview": "batches/promptkit-01/system-message/index.html",
+    "code": "batches/promptkit-01/system-message/preview.tsx",
+    "description": "原组件，本地展开政策/隐藏警告，无外部动作。",
+    "kind": "组件家族",
+    "status": "构建/DOM交互通过；待浏览器视觉验收",
+    "files": {
+      "index.html": {
+        "bytes": 262,
+        "sha256": "030f43a9ecc368ae0d23b23b5e67f161f3701a60956b469ae49f358e4d1e663a"
+      },
+      "runtime.js": {
+        "bytes": 224872,
+        "sha256": "f111f0e3382ea0a19b00cc88ba47f4bc2db5a397dd0a58aa6f3eda15bf2564b5"
+      },
+      "runtime.css": {
+        "bytes": 89695,
+        "sha256": "9195be49b18491198b22994d2c13002437e9c3729ecc54c50a8b51c6451b3dd7"
+      }
+    },
+    "gzipJSBytes": 70776,
+    "relatedExistingFunctionality": [
+      "tool-error",
+      "stopped-run"
+    ],
+    "deduplication": "独立上游实现，不声称全新功能类别；同族变体合并一项。",
+    "upstream": "https://github.com/ibelick/prompt-kit/tree/5a9496635cc0e1bf7679fe2a9e35d9b36b99c08a",
+    "batch": "promptkit-01",
+    "category": "Agent与对话",
+    "format": "对话富组件",
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "styleTags": [
+      "圆角",
+      "轻量"
+    ],
+    "behavior": "原组件，本地展开政策/隐藏警告，无外部动作。",
+    "buildStatus": "Build, JS parse and 10 DOM/state tests passed; no network; visual review pending.",
+    "gaps": [
+      "真实浏览器视觉、触控及原生文件选择器尚未验收。",
+      "独立上游实现，不声称全新功能类别；同族变体合并一项。",
+      "与现有功能重叠：tool-error, stopped-run",
+      "仅本地fixture，不连接模型或上传文件。",
+      "源码ZIP仅本地保存，未发布。"
+    ]
+  },
+  {
+    "id": "promptkit:feedback-bar",
+    "title": "即时反馈栏",
+    "source": "Prompt Kit",
+    "upstreamRepository": "https://github.com/ibelick/prompt-kit",
+    "revision": "5a9496635cc0e1bf7679fe2a9e35d9b36b99c08a",
+    "license": "MIT",
+    "preview": "batches/promptkit-01/feedback-bar/index.html",
+    "code": "batches/promptkit-01/feedback-bar/preview.tsx",
+    "description": "原组件，本地投票/关闭/重置，不提交反馈。",
+    "kind": "组件家族",
+    "status": "构建/DOM交互通过；待浏览器视觉验收",
+    "files": {
+      "index.html": {
+        "bytes": 262,
+        "sha256": "030f43a9ecc368ae0d23b23b5e67f161f3701a60956b469ae49f358e4d1e663a"
+      },
+      "runtime.js": {
+        "bytes": 220534,
+        "sha256": "4926c395040cecfe7ba215f4c0d2f0341aae1cb83744e970960fda8a2f62a5d3"
+      },
+      "runtime.css": {
+        "bytes": 89695,
+        "sha256": "9195be49b18491198b22994d2c13002437e9c3729ecc54c50a8b51c6451b3dd7"
+      }
+    },
+    "gzipJSBytes": 69112,
+    "relatedExistingFunctionality": [
+      "assistant-ui:feedback-dialog"
+    ],
+    "deduplication": "独立上游实现，不声称全新功能类别；同族变体合并一项。",
+    "upstream": "https://github.com/ibelick/prompt-kit/tree/5a9496635cc0e1bf7679fe2a9e35d9b36b99c08a",
+    "batch": "promptkit-01",
+    "category": "Agent与对话",
+    "format": "对话富组件",
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "styleTags": [
+      "圆角",
+      "轻量"
+    ],
+    "behavior": "原组件，本地投票/关闭/重置，不提交反馈。",
+    "buildStatus": "Build, JS parse and 10 DOM/state tests passed; no network; visual review pending.",
+    "gaps": [
+      "真实浏览器视觉、触控及原生文件选择器尚未验收。",
+      "独立上游实现，不声称全新功能类别；同族变体合并一项。",
+      "与现有功能重叠：assistant-ui:feedback-dialog",
+      "仅本地fixture，不连接模型或上传文件。",
+      "源码ZIP仅本地保存，未发布。"
+    ]
+  },
+  {
+    "id": "promptkit:source",
+    "title": "悬浮来源胶囊",
+    "source": "Prompt Kit",
+    "upstreamRepository": "https://github.com/ibelick/prompt-kit",
+    "revision": "5a9496635cc0e1bf7679fe2a9e35d9b36b99c08a",
+    "license": "MIT",
+    "preview": "batches/promptkit-01/source/index.html",
+    "code": "batches/promptkit-01/source/preview.tsx",
+    "description": "原组件；远程 favicon 替换为原创内联文档 SVG；悬浮内容是本地 fixture。",
+    "kind": "组件家族",
+    "status": "构建/DOM交互通过；待浏览器视觉验收",
+    "files": {
+      "index.html": {
+        "bytes": 262,
+        "sha256": "030f43a9ecc368ae0d23b23b5e67f161f3701a60956b469ae49f358e4d1e663a"
+      },
+      "runtime.js": {
+        "bytes": 269238,
+        "sha256": "bb2f3713bdc2fb299c87fa75f130e797bb71d06c5b0433f4e34781a6789ecb75"
+      },
+      "runtime.css": {
+        "bytes": 89695,
+        "sha256": "9195be49b18491198b22994d2c13002437e9c3729ecc54c50a8b51c6451b3dd7"
+      }
+    },
+    "gzipJSBytes": 84546,
+    "relatedExistingFunctionality": [
+      "ai-elements:inline-citation",
+      "assistant-ui:sources"
+    ],
+    "deduplication": "独立上游实现，不声称全新功能类别；同族变体合并一项。",
+    "upstream": "https://github.com/ibelick/prompt-kit/tree/5a9496635cc0e1bf7679fe2a9e35d9b36b99c08a",
+    "batch": "promptkit-01",
+    "category": "Agent与对话",
+    "format": "对话富组件",
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "styleTags": [
+      "圆角",
+      "轻量"
+    ],
+    "behavior": "原组件；远程 favicon 替换为原创内联文档 SVG；悬浮内容是本地 fixture。",
+    "buildStatus": "Build, JS parse and 10 DOM/state tests passed; no network; visual review pending.",
+    "gaps": [
+      "真实浏览器视觉、触控及原生文件选择器尚未验收。",
+      "独立上游实现，不声称全新功能类别；同族变体合并一项。",
+      "与现有功能重叠：ai-elements:inline-citation, assistant-ui:sources",
+      "仅本地fixture，不连接模型或上传文件。",
+      "源码ZIP仅本地保存，未发布。"
+    ]
   }
 ]
