@@ -9158,5 +9158,104 @@
       "数据仅内存，不联网/保存",
       "完整Apache LICENSE/NOTICE及实际运行依赖条款保留；源码ZIP仅本地，不挂下载。"
     ]
+  },
+  {
+    "id": "paperjs:boolean-material",
+    "title": "布尔材质 · 交叠与负空间",
+    "source": "Paper.js",
+    "license": "MIT",
+    "upstream": "https://github.com/paperjs/paper.js/tree/c1d88390d2c86901db152827fe778c3e39cfb073",
+    "revision": "c1d88390d2c86901db152827fe778c3e39cfb073",
+    "batch": "paperjs-01",
+    "preview": "batches/paperjs-01/index.html",
+    "category": "视觉与动效",
+    "kind": "几何交互组件",
+    "format": "矢量布尔材质设计族",
+    "styleTags": [
+      "有机",
+      "负空间",
+      "柔和"
+    ],
+    "purposeTags": [
+      "视觉参考",
+      "几何构造"
+    ],
+    "description": "原Paper.js布尔路径算法与官方方框/圆环模型，拖动位置、并集/交集/差集与交换操作数实际改变轮廓。",
+    "behavior": "环形由原路径差集得到；实际矢量面积读数及键盘移动/复位。无自动轨道播放；隐藏停拖，离开清理scope与画布。",
+    "buildStatus": "Original boolean geometry identities/drag/keyboard/reset/swap/lifecycle tests passed; pixels pending",
+    "gaps": [
+      "Canvas仅测试桩，真实像素、命中及触摸未验。",
+      "面积是近似矢量轮廓面积，不是制造计量；exclude/divide未纳入完成范围。",
+      "原paper-core不含PaperScript编译器，无eval或外部资产。",
+      "运行库惰性document分发器由iframe销毁清除，项目/view在pagehide移除。"
+    ]
+  },
+  {
+    "id": "venn:evidence-overlap",
+    "title": "venn.js · 证据集合交汇与精确交集",
+    "source": "venn.js",
+    "license": "MIT",
+    "upstream": "https://github.com/benfred/venn.js/tree/891060b941971752d033069146a69e0724c56313",
+    "revision": "891060b941971752d033069146a69e0724c56313",
+    "batch": "venn-01",
+    "preview": "batches/venn-01/index.html",
+    "category": "数据与状态",
+    "kind": "复合交互组件",
+    "format": "集合关系探索工具",
+    "styleTags": [
+      "有机",
+      "圆润",
+      "半透明"
+    ],
+    "purposeTags": [
+      "Agent工作流",
+      "证据探索"
+    ],
+    "description": "原venn.js优化布局与真实SVG交集路径；查看包含/精确交集，修改本地资料归属后重新计算图形和结果。",
+    "behavior": "路径点击与键盘选择、交集模式切换、资料分组及空集合/未归组状态；页面离开清除D3过渡和数据。",
+    "buildStatus": "Original geometry;14 SVG/selection/membership/empty/reset/lifecycle tests passed; visual pending",
+    "gaps": [
+      "几何面积是优化近似，计数以精确资料集合为准",
+      "界面壳与12条示例资料原创，非上游整页成品",
+      "不把重叠数量当作可信度",
+      "仅当前内存，不联网上传保存",
+      "无真实浏览器视觉/移动触摸验收",
+      "源码ZIP仅本地；完整MIT和实际D3/fmin条款保留。"
+    ]
+  },
+  {
+    "id": "pdfjs:local-text-reader",
+    "batch": "pdfjs-01",
+    "title": "PDF 本地文本深阅与检索",
+    "source": "Mozilla PDF.js",
+    "category": "Agent与对话",
+    "kind": "交互文档阅读",
+    "styleTags": [
+      "文档深阅",
+      "搜索定位",
+      "圆润"
+    ],
+    "preview": "batches/pdfjs-01/text-reader.html",
+    "revision": "50cc4adac01b8f35cf7d311b9eced150502936fe",
+    "upstream": "https://github.com/mozilla/pdf.js/tree/50cc4adac01b8f35cf7d311b9eced150502936fe",
+    "sourceFile": "src/display/api.js + src/core/worker.js",
+    "license": "Apache-2.0",
+    "description": "PDF.js原解析引擎＋原创文本阅读壳。真实解析本地源码生成的3页PDF，提取分页文本，全文搜索、高亮与跨页定位。不是保留原版式的PDF预览。",
+    "previewStatus": "visual-review-pending",
+    "buildStatus": "Original parser/fake-worker extraction and search verified with Worker/Function/network APIs forbidden; lifecycle tests passed.",
+    "knownGaps": [
+      "仅原创本地PDF fixture，不支持上传任意文件。无OCR、原版式、图像或canvas展示。",
+      "文本顺序为原解析器提取结果，不保证复杂PDF的阅读顺序。",
+      "JSDOM UI状态通过，实际视觉未验。"
+    ],
+    "gaps": [
+      "仅原创本地PDF fixture，不支持上传任意文件。无OCR、原版式、图像或canvas展示。",
+      "文本顺序为原解析器提取结果，不保证复杂PDF的阅读顺序。",
+      "JSDOM UI状态通过，实际视觉未验。"
+    ],
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "format": "复合交互组件"
   }
 ]
