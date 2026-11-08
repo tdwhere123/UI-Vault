@@ -1,0 +1,35 @@
+{
+  "results": [
+    {
+      "mode": "normal-motion",
+      "passed": true,
+      "checks": [
+        "8 original-layout triggers mount",
+        "open locks body and focuses close",
+        "original newItem switches to eighth SVG via thumbnail",
+        "selected aria state follows actual original selection",
+        "Escape closes and restores trigger focus",
+        "repeat open resets source item and close button restores focus",
+        "backdrop closes and restores focus",
+        "pagehide while open unlocks body, unmounts and clears RAF",
+        "all images original text SVG; zero network/eval/storage/Worker/dynamic script calls"
+      ]
+    },
+    {
+      "mode": "reduced-motion",
+      "passed": true,
+      "checks": [
+        "8 original-layout triggers mount",
+        "open locks body and focuses close",
+        "original newItem switches to eighth SVG via thumbnail",
+        "selected aria state follows actual original selection",
+        "Escape closes and restores trigger focus",
+        "repeat open resets source item and close button restores focus",
+        "backdrop closes and restores focus",
+        "pagehide while open unlocks body, unmounts and clears RAF",
+        "all images original text SVG; zero network/eval/storage/Worker/dynamic script calls"
+      ]
+    }
+  ],
+  "browserVisualQA": "not-run; JSDOM geometry and ResizeObserver stubs. Original vertical drag implementation retained but pointer drag geometry/constraints, shared-layout pixels and spring trajectories NOT validated. Not complete accessibility certification."
+}
