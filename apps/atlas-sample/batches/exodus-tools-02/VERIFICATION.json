@@ -1,0 +1,27 @@
+{
+  "results": [
+    {
+      "slug": "grid",
+      "passed": true,
+      "checks": [
+        "mount",
+        "JS parse",
+        "Function/eval/network/Worker/dynamic script blocked",
+        "native cell edit/F2/change commit/pointer range selection/bulk edit",
+        "add row/undo/redo/JSON output"
+      ]
+    },
+    {
+      "slug": "form",
+      "passed": true,
+      "checks": [
+        "mount",
+        "JS parse",
+        "Function/eval/network/Worker/dynamic script blocked",
+        "malicious label/description/script/onerror/javascript URI removed; schema HTML rejected",
+        "add field/schema sync/fillable preview/native required validation/results local/disallowed plugin & malformed import rejected/reset"
+      ]
+    }
+  ],
+  "browserVisualQA": "not-run; JSDOM geometry APIs stubbed; native pointer drag quality not verified"
+}
