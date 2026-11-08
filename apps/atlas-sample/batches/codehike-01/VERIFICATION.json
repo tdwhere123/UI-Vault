@@ -1,0 +1,35 @@
+{
+  "results": [
+    {
+      "mode": "normal",
+      "passed": true,
+      "animationCalls": 71,
+      "checks": [
+        "7 original chapters mount",
+        "chapter click selects matching original highlighted code",
+        "Enter chooses last chapter",
+        "original IntersectionObserver state selects entering chapter",
+        "no intersecting chapter preserves current selection",
+        "highlighted token spans present, no code execution/editor",
+        "pagehide clears React DOM/disconnects observers/cancels animations",
+        "network/eval/Worker hooks zero calls"
+      ]
+    },
+    {
+      "mode": "reduced",
+      "passed": true,
+      "animationCalls": 0,
+      "checks": [
+        "7 original chapters mount",
+        "chapter click selects matching original highlighted code",
+        "Enter chooses last chapter",
+        "original IntersectionObserver state selects entering chapter",
+        "no intersecting chapter preserves current selection",
+        "highlighted token spans present, no code execution/editor",
+        "pagehide clears React DOM/disconnects observers/cancels animations",
+        "network/eval/Worker hooks zero calls"
+      ]
+    }
+  ],
+  "visualQA": "not-run; JSDOM geometry/IntersectionObserver triggers/WebAnimation objects simulated. Real scroll visibility, sticky layout and token trajectories are not browser-verified."
+}
