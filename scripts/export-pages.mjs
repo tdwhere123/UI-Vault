@@ -13,11 +13,11 @@ export async function exportPages(output,basePath='/UI-Vault/') {
   const sha=execFileSync('git',['rev-parse','HEAD'],{cwd:root,encoding:'utf8'}).trim();
   const legacy=await exportStatic({root,output:join(output,'legacy'),basePath:basePath+'legacy/',sha});
   const source=join(root,'apps/atlas-sample');
-  const files=['index.html','app.js','style.css','items.json','README.md'];
+  const files=['index.html','app.js','atlas-model.mjs','style.css','items.json','README.md','LICENSES.md'];
   async function copy(relative){const s=join(source,relative),d=join(output,relative),info=await lstat(s);if(info.isSymbolicLink())throw Error('Symlinks not permitted');if(info.isDirectory()){await mkdir(d);for(const child of await readdir(s))await copy(relative+'/'+child)}else if(info.isFile())await copyFile(s,d);else throw Error('Unsupported input');}
-  for(const name of [...files,'assets','previews','originals','bundles'])await copy(name);
+  for(const name of [...files,'assets','previews','originals','bundles','featured'])await copy(name);
   const items=JSON.parse(await readFile(join(output,'items.json'),'utf8'));
-  if(items.length!==20||new Set(items.map(x=>x.id)).size!==20)throw Error('Expected 20 unique atlas materials');
+  if(items.length!==24||new Set(items.map(x=>x.id)).size!==24)throw Error('Expected 24 unique atlas materials');
   for(const x of items)for(const key of ['preview','code','bundle']){if(typeof x[key]!=='string'||x[key].includes('..')||x[key].startsWith('/'))throw Error('Invalid material path');await lstat(join(output,x[key]));}
   const version={codeSha:sha,basePath,materials:items.length,legacy:'legacy/',worktreeDirty:legacy.worktreeDirty};
   await writeFile(join(output,'version.json'),JSON.stringify(version,null,2)+'\n');

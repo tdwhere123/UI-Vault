@@ -1,0 +1,3 @@
+export function filterItems(items,{query='',category='',kind='',source=''}={}){const q=query.trim().toLocaleLowerCase();return items.filter(x=>(!category||(category==='精选'?x.featured:category==='基础组件'?!x.featured:x.category===category))&&(!kind||x.kind===kind)&&(!source||x.source===source)&&(!q||[x.title,x.keywords,x.category,x.description,x.source,...x.technology].join(' ').toLocaleLowerCase().includes(q)))}
+export function detailHash(id){return '#/item/'+encodeURIComponent(id)}
+export function resolveRoute(hash,items){if(!hash.startsWith('#/item/'))return null;try{return items.find(x=>x.id===decodeURIComponent(hash.slice(7)))??null}catch{return null}}
