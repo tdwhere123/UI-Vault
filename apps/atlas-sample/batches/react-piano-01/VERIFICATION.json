@@ -1,0 +1,61 @@
+{
+  "reports": [
+    {
+      "mode": "normal",
+      "passed": true,
+      "contexts": 4,
+      "oscillators": 7
+    },
+    {
+      "mode": "unavailable",
+      "passed": true,
+      "contexts": 0,
+      "oscillators": 0
+    },
+    {
+      "mode": "rejected",
+      "passed": true,
+      "contexts": 1,
+      "oscillators": 0
+    },
+    {
+      "mode": "pending",
+      "passed": true,
+      "contexts": 1,
+      "oscillators": 0
+    },
+    {
+      "mode": "late-reject",
+      "passed": true,
+      "contexts": 2,
+      "oscillators": 1
+    },
+    {
+      "mode": "gain-failure",
+      "passed": true,
+      "contexts": 1,
+      "oscillators": 1
+    },
+    {
+      "mode": "connect-failure",
+      "passed": true,
+      "contexts": 1,
+      "oscillators": 1
+    }
+  ],
+  "checks": [
+    "original 13 keys and original HOME_ROW input note state",
+    "no AudioContext before explicit enable click",
+    "duplicate keydown creates one oscillator; original polyphony and note-off",
+    "C4 frequency calculation261.625Hz correct",
+    "blur clears lost keyup and closes context",
+    "original synthetic mouse and touch play callbacks; touchcancel stops all and closes context",
+    "document hidden stops all and closes context",
+    "pagehide during notes or pending resume closes and unmounts",
+    "unavailable/rejected audio keeps real piano state and reports silence",
+    "late old resume rejection cannot close or overwrite new context/status",
+    "createGain/connect failure releases partial oscillator and closes context",
+    "no microphone/network/eval/Worker calls"
+  ],
+  "visualAudioQA": "Not run: AudioContext/Oscillator/Gain are mocks; actual audible output, device autoplay policy, touch gestures and browser pixels not verified. Original React keyboard and callbacks/state exercised."
+}
