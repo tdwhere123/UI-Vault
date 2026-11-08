@@ -108,13 +108,23 @@
     "license": "MIT",
     "upstream": "https://github.com/21st-dev/agent-elements/tree/b04b36cb6381a1dd1a0e86cc7c90564ddcd56d37/lib/agent-ui",
     "website": "https://github.com/21st-dev/agent-elements",
-    "buildStatus": "production bundle previously built",
+    "buildStatus": "Rebuilt from archived original source, exact runtime hash reproduced; replay/pause/completion DOM tests passed, zero network/errors.",
     "batch": "batch-001",
     "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/agent-scenes-awaiting-final-qa/archives/agent-elements-scene-01/source.zip",
     "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/agent-scenes-awaiting-final-qa/manifest.json",
     "description": "展开检索结果与子代理步骤；Replay run按阶段回放，Pause暂停本地阶段计时。",
     "gaps": [
-      "真实封面及最终浏览器验收未完成"
+      "真实浏览器视觉与触控未验收。",
+      "研究工作流为固定本地示例，不是实际调查或真实工具执行。"
+    ],
+    "preview": "batches/agent-elements-scene-01/research-workflow.html",
+    "code": "batches/agent-elements-scene-01/research-workflow.tsx",
+    "revision": "b04b36cb6381a1dd1a0e86cc7c90564ddcd56d37",
+    "behavior": "展开证据和子任务；Replay/Pause控制本地阶段回放，不执行真实搜索、shell或模型。",
+    "category": "Agent与对话",
+    "format": "完整交互场景",
+    "purposeTags": [
+      "Agent工作流"
     ]
   },
   {
@@ -1694,139 +1704,297 @@
   },
   {
     "id": "kibo:calendar",
-    "title": "多事件日历视图",
+    "title": "事件月历与月份导航",
     "source": "Kibo",
-    "license": "MIT (root license; no per-module override found)",
-    "upstream": "https://github.com/shadcnblocks/kibo/tree/3d63cdb15b79d972e3dc38a10997987672f9b263/packages/calendar",
-    "website": "",
-    "buildStatus": "not installed or built",
+    "license": "MIT",
+    "upstream": "https://github.com/shadcnblocks/kibo/blob/3d63cdb15b79d972e3dc38a10997987672f9b263/packages/calendar/index.tsx",
+    "website": "https://www.kibo-ui.com",
+    "buildStatus": "IIFE build and DOM mount passed; month next and previous",
     "batch": "batch-002",
-    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "description": "原版月历、事件布局、月份/年份选择；数据是固定随机种子的本地fixture。",
     "gaps": [
-      "Workspace packages and @ aliases need actual standalone integration",
-      "Official demo media not downloaded; asset licensing remains separate",
-      "Gantt/editor rich dependencies need performance and accessibility testing",
-      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
-    ]
+      "未进行浏览器视觉及完整键盘/触屏验收。",
+      "仅本地fixture，无账号/后端/持久化。"
+    ],
+    "kind": "复合交互组件",
+    "category": "数据与状态",
+    "styleTags": [
+      "圆角",
+      "复合交互",
+      "工作流"
+    ],
+    "preview": "batches/kibo-direct-01/calendar.html",
+    "revision": "3d63cdb15b79d972e3dc38a10997987672f9b263",
+    "demoSource": "https://github.com/shadcnblocks/kibo/blob/3d63cdb15b79d972e3dc38a10997987672f9b263/apps/docs/examples/calendar.tsx",
+    "behavior": "原版月历、事件布局、月份/年份选择；数据是固定随机种子的本地fixture。",
+    "previewStatus": "visual-review-pending",
+    "knownGaps": [
+      "未进行浏览器视觉及完整键盘/触屏验收。",
+      "仅本地fixture，无账号/后端/持久化。"
+    ],
+    "adaptation": "Original compound component source and official demos; standalone aliases/theme, fixed-seed local fixtures, local artwork, sandbox-safe controls. See README for precise edits.",
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "format": "复合交互组件"
   },
   {
     "id": "kibo:deck",
-    "title": "可操控卡组导航",
+    "title": "可拖拽卡组导航",
     "source": "Kibo",
-    "license": "MIT (root license; no per-module override found)",
-    "upstream": "https://github.com/shadcnblocks/kibo/tree/3d63cdb15b79d972e3dc38a10997987672f9b263/packages/deck",
-    "website": "",
-    "buildStatus": "not installed or built",
+    "license": "MIT",
+    "upstream": "https://github.com/shadcnblocks/kibo/blob/3d63cdb15b79d972e3dc38a10997987672f9b263/packages/deck/index.tsx",
+    "website": "https://www.kibo-ui.com",
+    "buildStatus": "IIFE build and DOM mount passed; controlled original deck next and previous; drag pending",
     "batch": "batch-002",
-    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "description": "原版Motion拖动卡组，增加可访问的上一张/下一张控件；原创本地SVG素材。",
     "gaps": [
-      "Workspace packages and @ aliases need actual standalone integration",
-      "Official demo media not downloaded; asset licensing remains separate",
-      "Gantt/editor rich dependencies need performance and accessibility testing",
-      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
-    ]
+      "未进行浏览器视觉及完整键盘/触屏验收。",
+      "仅本地fixture，无账号/后端/持久化。",
+      "真实指针拖动几何与动画尚未浏览器验收。"
+    ],
+    "kind": "复合交互组件",
+    "category": "展示与媒体",
+    "styleTags": [
+      "圆角",
+      "复合交互",
+      "工作流"
+    ],
+    "preview": "batches/kibo-direct-01/deck.html",
+    "revision": "3d63cdb15b79d972e3dc38a10997987672f9b263",
+    "demoSource": "https://github.com/shadcnblocks/kibo/blob/3d63cdb15b79d972e3dc38a10997987672f9b263/apps/docs/examples/deck.tsx",
+    "behavior": "原版Motion拖动卡组，增加可访问的上一张/下一张控件；原创本地SVG素材。",
+    "previewStatus": "visual-review-pending",
+    "knownGaps": [
+      "未进行浏览器视觉及完整键盘/触屏验收。",
+      "仅本地fixture，无账号/后端/持久化。",
+      "真实指针拖动几何与动画尚未浏览器验收。"
+    ],
+    "adaptation": "Original compound component source and official demos; standalone aliases/theme, fixed-seed local fixtures, local artwork, sandbox-safe controls. See README for precise edits.",
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "format": "复合交互组件"
   },
   {
     "id": "kibo:dialog-stack",
     "title": "多层对话框流程",
     "source": "Kibo",
-    "license": "MIT (root license; no per-module override found)",
-    "upstream": "https://github.com/shadcnblocks/kibo/tree/3d63cdb15b79d972e3dc38a10997987672f9b263/packages/dialog-stack",
-    "website": "",
-    "buildStatus": "not installed or built",
+    "license": "MIT",
+    "upstream": "https://github.com/shadcnblocks/kibo/blob/3d63cdb15b79d972e3dc38a10997987672f9b263/packages/dialog-stack/index.tsx",
+    "website": "https://www.kibo-ui.com",
+    "buildStatus": "IIFE build and DOM mount passed; open and next stacked dialog",
     "batch": "batch-002",
-    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "description": "原版多层堆叠对话框的打开、推进及返回，不提交外部表单。",
     "gaps": [
-      "Workspace packages and @ aliases need actual standalone integration",
-      "Official demo media not downloaded; asset licensing remains separate",
-      "Gantt/editor rich dependencies need performance and accessibility testing",
-      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
-    ]
+      "未进行浏览器视觉及完整键盘/触屏验收。",
+      "仅本地fixture，无账号/后端/持久化。"
+    ],
+    "kind": "复合交互组件",
+    "category": "导航与组织",
+    "styleTags": [
+      "圆角",
+      "复合交互",
+      "工作流"
+    ],
+    "preview": "batches/kibo-direct-01/dialog-stack.html",
+    "revision": "3d63cdb15b79d972e3dc38a10997987672f9b263",
+    "demoSource": "https://github.com/shadcnblocks/kibo/blob/3d63cdb15b79d972e3dc38a10997987672f9b263/apps/docs/examples/dialog-stack.tsx",
+    "behavior": "原版多层堆叠对话框的打开、推进及返回，不提交外部表单。",
+    "previewStatus": "visual-review-pending",
+    "knownGaps": [
+      "未进行浏览器视觉及完整键盘/触屏验收。",
+      "仅本地fixture，无账号/后端/持久化。"
+    ],
+    "adaptation": "Original compound component source and official demos; standalone aliases/theme, fixed-seed local fixtures, local artwork, sandbox-safe controls. See README for precise edits.",
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "format": "复合交互组件"
   },
   {
     "id": "kibo:editor",
-    "title": "富文本编辑与工具栏",
+    "title": "完整富文本编辑器",
     "source": "Kibo",
-    "license": "MIT (root license; no per-module override found)",
-    "upstream": "https://github.com/shadcnblocks/kibo/tree/3d63cdb15b79d972e3dc38a10997987672f9b263/packages/editor",
-    "website": "",
-    "buildStatus": "not installed or built",
+    "license": "MIT",
+    "upstream": "https://github.com/shadcnblocks/kibo/blob/3d63cdb15b79d972e3dc38a10997987672f9b263/packages/editor/index.tsx",
+    "website": "https://www.kibo-ui.com",
+    "buildStatus": "IIFE build and DOM mount passed; real ProseMirror document transaction reflected in editor",
     "batch": "batch-002",
-    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "description": "原版Tiptap编辑器：文档、列表、表格、格式和浮动工具栏；只本地内存，外链导航拦截。",
     "gaps": [
-      "Workspace packages and @ aliases need actual standalone integration",
-      "Official demo media not downloaded; asset licensing remains separate",
-      "Gantt/editor rich dependencies need performance and accessibility testing",
-      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
-    ]
+      "未进行浏览器视觉及完整键盘/触屏验收。",
+      "仅本地fixture，无账号/后端/持久化。"
+    ],
+    "kind": "复合交互组件",
+    "category": "输入与选择",
+    "styleTags": [
+      "圆角",
+      "复合交互",
+      "工作流"
+    ],
+    "preview": "batches/kibo-direct-01/editor.html",
+    "revision": "3d63cdb15b79d972e3dc38a10997987672f9b263",
+    "demoSource": "https://github.com/shadcnblocks/kibo/blob/3d63cdb15b79d972e3dc38a10997987672f9b263/apps/docs/examples/editor.tsx",
+    "behavior": "原版Tiptap编辑器：文档、列表、表格、格式和浮动工具栏；只本地内存，外链导航拦截。",
+    "previewStatus": "visual-review-pending",
+    "knownGaps": [
+      "未进行浏览器视觉及完整键盘/触屏验收。",
+      "仅本地fixture，无账号/后端/持久化。"
+    ],
+    "adaptation": "Original compound component source and official demos; standalone aliases/theme, fixed-seed local fixtures, local artwork, sandbox-safe controls. See README for precise edits.",
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "format": "复合交互组件"
   },
   {
     "id": "kibo:gantt",
-    "title": "可拖动甘特图与时间规划",
+    "title": "可拖动甘特规划",
     "source": "Kibo",
-    "license": "MIT (root license; no per-module override found)",
-    "upstream": "https://github.com/shadcnblocks/kibo/tree/3d63cdb15b79d972e3dc38a10997987672f9b263/packages/gantt",
-    "website": "",
-    "buildStatus": "not installed or built",
+    "license": "MIT",
+    "upstream": "https://github.com/shadcnblocks/kibo/blob/3d63cdb15b79d972e3dc38a10997987672f9b263/packages/gantt/index.tsx",
+    "website": "https://www.kibo-ui.com",
+    "buildStatus": "IIFE build and DOM mount passed; context menu local task removal; drag geometry pending",
     "batch": "batch-002",
-    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "description": "原版时间线拖动更新本地任务区间、上下文删除；未绑定新增/链接/标记操作已停用或移除。",
     "gaps": [
-      "Workspace packages and @ aliases need actual standalone integration",
-      "Official demo media not downloaded; asset licensing remains separate",
-      "Gantt/editor rich dependencies need performance and accessibility testing",
-      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
-    ]
+      "未进行浏览器视觉及完整键盘/触屏验收。",
+      "仅本地fixture，无账号/后端/持久化。",
+      "真实指针拖动几何与动画尚未浏览器验收。"
+    ],
+    "kind": "复合交互组件",
+    "category": "数据与状态",
+    "styleTags": [
+      "圆角",
+      "复合交互",
+      "工作流"
+    ],
+    "preview": "batches/kibo-direct-01/gantt.html",
+    "revision": "3d63cdb15b79d972e3dc38a10997987672f9b263",
+    "demoSource": "https://github.com/shadcnblocks/kibo/blob/3d63cdb15b79d972e3dc38a10997987672f9b263/apps/docs/examples/gantt.tsx",
+    "behavior": "原版时间线拖动更新本地任务区间、上下文删除；未绑定新增/链接/标记操作已停用或移除。",
+    "previewStatus": "visual-review-pending",
+    "knownGaps": [
+      "未进行浏览器视觉及完整键盘/触屏验收。",
+      "仅本地fixture，无账号/后端/持久化。",
+      "真实指针拖动几何与动画尚未浏览器验收。"
+    ],
+    "adaptation": "Original compound component source and official demos; standalone aliases/theme, fixed-seed local fixtures, local artwork, sandbox-safe controls. See README for precise edits.",
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "format": "复合交互组件"
   },
   {
     "id": "kibo:image-crop",
-    "title": "交互图片裁剪",
+    "title": "本地图片裁剪",
     "source": "Kibo",
-    "license": "MIT (root license; no per-module override found)",
-    "upstream": "https://github.com/shadcnblocks/kibo/tree/3d63cdb15b79d972e3dc38a10997987672f9b263/packages/image-crop",
-    "website": "",
-    "buildStatus": "not installed or built",
+    "license": "MIT",
+    "upstream": "https://github.com/shadcnblocks/kibo/blob/3d63cdb15b79d972e3dc38a10997987672f9b263/packages/image-crop/index.tsx",
+    "website": "https://www.kibo-ui.com",
+    "buildStatus": "IIFE build and DOM mount passed; local image load initializes crop region; pixel rendering pending",
     "batch": "batch-002",
-    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "description": "原版ReactCrop选区和canvas裁剪，默认原创本地SVG，也可手动选择本地文件；不上传、不自动下载。",
     "gaps": [
-      "Workspace packages and @ aliases need actual standalone integration",
-      "Official demo media not downloaded; asset licensing remains separate",
-      "Gantt/editor rich dependencies need performance and accessibility testing",
-      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
-    ]
+      "未进行浏览器视觉及完整键盘/触屏验收。",
+      "仅本地fixture，无账号/后端/持久化。",
+      "DOM仅验证加载后选区初始化，canvas实际像素及用户文件流程未视觉验收。"
+    ],
+    "kind": "复合交互组件",
+    "category": "输入与选择",
+    "styleTags": [
+      "圆角",
+      "复合交互",
+      "工作流"
+    ],
+    "preview": "batches/kibo-direct-01/image-crop.html",
+    "revision": "3d63cdb15b79d972e3dc38a10997987672f9b263",
+    "demoSource": "https://github.com/shadcnblocks/kibo/blob/3d63cdb15b79d972e3dc38a10997987672f9b263/apps/docs/examples/image-crop.tsx",
+    "behavior": "原版ReactCrop选区和canvas裁剪，默认原创本地SVG，也可手动选择本地文件；不上传、不自动下载。",
+    "previewStatus": "visual-review-pending",
+    "knownGaps": [
+      "未进行浏览器视觉及完整键盘/触屏验收。",
+      "仅本地fixture，无账号/后端/持久化。",
+      "DOM仅验证加载后选区初始化，canvas实际像素及用户文件流程未视觉验收。"
+    ],
+    "adaptation": "Original compound component source and official demos; standalone aliases/theme, fixed-seed local fixtures, local artwork, sandbox-safe controls. See README for precise edits.",
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "format": "复合交互组件"
   },
   {
     "id": "kibo:table",
-    "title": "可组合复杂数据表",
+    "title": "复合排序项目表",
     "source": "Kibo",
-    "license": "MIT (root license; no per-module override found)",
-    "upstream": "https://github.com/shadcnblocks/kibo/tree/3d63cdb15b79d972e3dc38a10997987672f9b263/packages/table",
-    "website": "",
-    "buildStatus": "not installed or built",
+    "license": "MIT",
+    "upstream": "https://github.com/shadcnblocks/kibo/blob/3d63cdb15b79d972e3dc38a10997987672f9b263/packages/table/index.tsx",
+    "website": "https://www.kibo-ui.com",
+    "buildStatus": "IIFE build and DOM mount passed; column ascending sort",
     "batch": "batch-002",
-    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "description": "原版TanStack表格、列头排序及元数据，用户头像为原创本地SVG。",
     "gaps": [
-      "Workspace packages and @ aliases need actual standalone integration",
-      "Official demo media not downloaded; asset licensing remains separate",
-      "Gantt/editor rich dependencies need performance and accessibility testing",
-      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
-    ]
+      "未进行浏览器视觉及完整键盘/触屏验收。",
+      "仅本地fixture，无账号/后端/持久化。"
+    ],
+    "kind": "复合交互组件",
+    "category": "数据与状态",
+    "styleTags": [
+      "圆角",
+      "复合交互",
+      "工作流"
+    ],
+    "preview": "batches/kibo-direct-01/table.html",
+    "revision": "3d63cdb15b79d972e3dc38a10997987672f9b263",
+    "demoSource": "https://github.com/shadcnblocks/kibo/blob/3d63cdb15b79d972e3dc38a10997987672f9b263/apps/docs/examples/table.tsx",
+    "behavior": "原版TanStack表格、列头排序及元数据，用户头像为原创本地SVG。",
+    "previewStatus": "visual-review-pending",
+    "knownGaps": [
+      "未进行浏览器视觉及完整键盘/触屏验收。",
+      "仅本地fixture，无账号/后端/持久化。"
+    ],
+    "adaptation": "Original compound component source and official demos; standalone aliases/theme, fixed-seed local fixtures, local artwork, sandbox-safe controls. See README for precise edits.",
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "format": "复合交互组件"
   },
   {
     "id": "kibo:tree",
-    "title": "可展开层级资源树",
+    "title": "可展开选择的资源树",
     "source": "Kibo",
-    "license": "MIT (root license; no per-module override found)",
-    "upstream": "https://github.com/shadcnblocks/kibo/tree/3d63cdb15b79d972e3dc38a10997987672f9b263/packages/tree",
-    "website": "",
-    "buildStatus": "not installed or built",
+    "license": "MIT",
+    "upstream": "https://github.com/shadcnblocks/kibo/blob/3d63cdb15b79d972e3dc38a10997987672f9b263/packages/tree/index.tsx",
+    "website": "https://www.kibo-ui.com",
+    "buildStatus": "IIFE build and DOM mount passed; collapse expanded hierarchy",
     "batch": "batch-002",
-    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "description": "原版层级展开/收起、选择及多选，不读写真实文件。",
     "gaps": [
-      "Workspace packages and @ aliases need actual standalone integration",
-      "Official demo media not downloaded; asset licensing remains separate",
-      "Gantt/editor rich dependencies need performance and accessibility testing",
-      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
-    ]
+      "未进行浏览器视觉及完整键盘/触屏验收。",
+      "仅本地fixture，无账号/后端/持久化。"
+    ],
+    "kind": "复合交互组件",
+    "category": "导航与组织",
+    "styleTags": [
+      "圆角",
+      "复合交互",
+      "工作流"
+    ],
+    "preview": "batches/kibo-direct-01/tree.html",
+    "revision": "3d63cdb15b79d972e3dc38a10997987672f9b263",
+    "demoSource": "https://github.com/shadcnblocks/kibo/blob/3d63cdb15b79d972e3dc38a10997987672f9b263/apps/docs/examples/tree.tsx",
+    "behavior": "原版层级展开/收起、选择及多选，不读写真实文件。",
+    "previewStatus": "visual-review-pending",
+    "knownGaps": [
+      "未进行浏览器视觉及完整键盘/触屏验收。",
+      "仅本地fixture，无账号/后端/持久化。"
+    ],
+    "adaptation": "Original compound component source and official demos; standalone aliases/theme, fixed-seed local fixtures, local artwork, sandbox-safe controls. See README for precise edits.",
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "format": "复合交互组件"
   },
   {
     "id": "kibo:video-player",
@@ -5043,7 +5211,8 @@
     ],
     "styleTags": [
       "动效图标"
-    ]
+    ],
+    "keywords": "bot 机器人 Agent 智能体 助手 bot-message-square 机器人 Agent 智能体 助手 brain 大脑 思考 推理 记忆 workflow 工作流 编排 协作 network 网络 git-branch 分支 合并 版本 协作 git-merge 分支 合并 版本 协作 router 网络 路由 network route 路径 网络 network webhook 事件 网络 network message-circle 消息 对话 聊天 message-square 消息 对话 聊天 mic 麦克风 语音 输入 search 搜索 检索 查找 file-text 文件 文档 资料 folder-open 文件夹 目录 资料 terminal 终端 命令 工具 check 完成 确认 检查 shield-check 权限 安全 保护 loader-circle 加载 进度 运行 cpu 计算 模型 资源 database-backup 数据库 记忆 存储 sparkles  check-check 完成 确认 检查 clock 时间 等待 定时 file-chart-line 文件 文档 资料 file-check 文件 文档 资料 file-check-2 文件 文档 资料 file-cog 文件 文档 资料 file-pen-line 文件 文档 资料 file-stack 文件 文档 资料 folder-archive 文件夹 目录 资料 folder-check 文件夹 目录 资料 folder-clock 文件夹 目录 资料 folder-code 文件夹 目录 资料 folder-cog 文件夹 目录 资料 folder-dot 文件夹 目录 资料 folder-down 文件夹 目录 资料 folder-git 文件夹 目录 资料 folder-git-2 文件夹 目录 资料 folder-heart 文件夹 目录 资料 folder-input 文件夹 目录 资料 folder-kanban 文件夹 目录 资料 folder-key 文件夹 目录 资料 folder-lock 文件夹 目录 资料 folder-minus 文件夹 目录 资料 folder-output 文件夹 目录 资料 folder-plus 文件夹 目录 资料 folder-root 文件夹 目录 资料 folder-sync 文件夹 目录 资料 folder-tree 文件夹 目录 资料 folder-up 文件夹 目录 资料 folder-x 文件夹 目录 资料 git-commit-horizontal 分支 合并 版本 协作 git-commit-vertical 分支 合并 版本 协作 git-compare 分支 合并 版本 协作 git-compare-arrows 分支 合并 版本 协作 git-fork 分支 合并 版本 协作 git-graph 分支 合并 版本 协作 git-pull-request 分支 合并 版本 协作 git-pull-request-closed 分支 合并 版本 协作 git-pull-request-create 分支 合并 版本 协作 history 历史 记忆 loader 加载 进度 运行 loader-pinwheel 加载 进度 运行 lock 权限 加锁 安全 lock-keyhole 权限 加锁 安全 lock-keyhole-open 权限 加锁 安全 lock-open 权限 加锁 安全 message-circle-check 消息 对话 聊天 message-circle-dashed 消息 对话 聊天 message-circle-more 消息 对话 聊天 message-circle-plus 消息 对话 聊天 message-circle-x 消息 对话 聊天 message-square-check 消息 对话 聊天 message-square-dashed 消息 对话 聊天 message-square-more 消息 对话 聊天 message-square-plus 消息 对话 聊天 message-square-x 消息 对话 聊天 mic-off 麦克风 语音 输入 a-arrow-down  a-arrow-up  accessibility  activity  air-vent  airplane  airplay  alarm-clock  alarm-clock-check  alarm-clock-minus  alarm-clock-plus  alarm-smoke  align-center  align-horizontal  align-left  align-right  align-vertical  ambulance  angry  annoyed  archive  arrow-big-down  arrow-big-down-dash  arrow-big-left  arrow-big-left-dash  arrow-big-right  arrow-big-right-dash  arrow-big-up  arrow-big-up-dash  arrow-down  arrow-down-0-1  arrow-down-1-0  arrow-down-a-z  arrow-down-left  arrow-down-right  arrow-down-z-a  arrow-left  arrow-right  arrow-up  arrow-up-left  arrow-up-right  at-sign  atom  attach-file  audio-lines  axe  badge-alert  badge-percent  ban  banana  battery  battery-charging  battery-full  battery-low  battery-medium  battery-plus  battery-warning  bell  bell-electric  biceps-flexed  binary  blocks  bluetooth  bluetooth-connected  bluetooth-off  bluetooth-searching  bold  bone  book-text  bookmark  bookmark-check  bookmark-minus  bookmark-plus  bookmark-x  box  boxes  briefcase-business  calendar-check  calendar-check-2  calendar-cog  calendar-days  car  cart  cast  cctv  chart-bar-decreasing  chart-bar-increasing  chart-column-decreasing  chart-column-increasing  chart-line  chart-no-axes-column-decreasing  chart-no-axes-column-increasing  chart-pie  chart-scatter  chart-spline  chess-bishop  chess-king  chess-knight  chess-pawn  chevron-down  chevron-first  chevron-left  chevron-right  chevron-up  chevrons-down-up  chevrons-left-right  chevrons-right-left  chevrons-up-down  chrome  cigarette  cigarette-off  circle-check  circle-chevron-down  circle-chevron-left  circle-chevron-right  circle-chevron-up  circle-dashed  circle-dollar-sign  circle-gauge  circle-help  clap  clipboard-check  cloud-backup  cloud-cog  cloud-download  cloud-lightning  cloud-rain  cloud-rain-wind  cloud-snow  cloud-sun  cloud-sync  cloud-upload  coffee  cog  compass  concierge-bell  connect  construction  contrast  cooking-pot  copy  corner-down-left  corner-down-right  corner-left-down  corner-left-up  corner-right-down  corner-right-up  corner-up-left  corner-up-right  credit-card  cup-soda  cursor-click  delete  disc-3  discord  dollar-sign  download  downvote  dribbble  droplet  drum  earth  euro  ev-charger  expand  external-link  eye  eye-off  facebook  fan  feather  figma  fingerprint  fish-symbol  flame  flask  folders  frame  frown  gallery-horizontal-end  gallery-thumbnails  gallery-vertical-end  gauge  gavel  georgian-lari  github  gitlab  graduation-cap  grip  grip-horizontal  grip-vertical  hammer  hand  hand-coins  hand-fist  hand-grab  hand-heart  hand-helping  hand-metal  hard-drive-download  hard-drive-upload  hat-glasses  heart  heart-handshake  heart-pulse  home  hourglass  id-card  indian-rupee  instagram  italic  japanese-yen  key  key-circle  key-square  keyboard  languages  laptop-minimal-check  laugh  layers  layout-grid  layout-panel-top  leaf  leafy-green  link  link-2  linkedin  login  logout  mail-check  mailbox  map-pin  map-pin-check  map-pin-check-inside  map-pin-house  map-pin-minus  map-pin-minus-inside  map-pin-off  map-pin-plus  map-pin-plus-inside  map-pin-x-inside  maximize  maximize-2  meh  menu  minimize  monitor-check  monitor-cog  moon  nfc  palette  panel-left-close  panel-left-open  panel-right-open  party-popper  pause  pen-tool  philippine-peso  phone  phone-call  phone-forwarded  phone-incoming  phone-missed  phone-off  pickaxe  plane-landing  plane-takeoff  play  plug-zap  plus  pound-sterling  projector  rabbit  radio  radio-tower  receipt  receipt-cent  receipt-euro  receipt-indian-rupee  receipt-japanese-yen  receipt-pound-sterling  receipt-russian-ruble  receipt-swiss-franc  receipt-text  receipt-turkish-lira  redo  redo-dot  refresh-ccw  refresh-ccw-dot  refresh-cw  refresh-cw-off  rocket  rocking-chair  roller-coaster  rotate-ccw  rotate-cw  russian-ruble  satellite-dish  saudi-riyal  scan-face  scan-text  send  server  server-cog  server-crash  settings  ship  ship-wheel  shower-head  shredder  shrink  sliders-horizontal  smartphone-charging  smartphone-nfc  smile  smile-plus  snowflake  soup  spray-can  square-activity  square-arrow-down  square-arrow-left  square-arrow-right  square-arrow-up  square-chevron-down  square-chevron-left  square-chevron-right  square-chevron-up  square-pen  square-stack  stamp  stethoscope  sun  sun-dim  sun-medium  sun-moon  sunset  swiss-franc  switch-camera  syringe  telescope  thermometer  ticket  timer  tornado  train-track  tree-deciduous  tree-pine  trending-down  trending-up  trending-up-down  truck  turkish-lira  twitch  twitter  underline  undo  undo-dot  upload  upvote  user  user-check  user-plus  user-round-check  user-round-cog  user-round-plus  users  users-round  vibrate  volume  wallet  washing-machine  waves  waves-arrow-down  waves-arrow-up  waves-ladder  waypoints  wifi  wifi-cog  wifi-low  wifi-pen  wifi-sync  wind  wind-arrow-down  wrench  x  youtube  zap  zap-off "
   },
   {
     "id": "spatialboard:custom-nodes",
@@ -6842,5 +7011,211 @@
       "Agent工作流"
     ],
     "format": "对话富组件"
+  },
+  {
+    "id": "reactflow:auto-layout",
+    "title": "React Flow · 关系图自动布局",
+    "source": "React Flow",
+    "license": "MIT",
+    "revision": "1bc405cd113618c17fd181b931a9fe573bec9fee",
+    "upstream": "https://github.com/xyflow/xyflow/tree/1bc405cd113618c17fd181b931a9fe573bec9fee/examples/react/src/examples/Layouting",
+    "preview": "batches/reactflow-01/auto-layout/index.html",
+    "batch": "reactflow-01",
+    "category": "导航与组织",
+    "kind": "交互原语示例",
+    "format": "空间编辑器",
+    "styleTags": [
+      "空间感",
+      "圆角"
+    ],
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "description": "横向/纵向自动布局改变节点位置。",
+    "behavior": "横向/纵向自动布局改变节点位置。",
+    "buildStatus": "Build, parse and DOM state/input tests passed; zero errors and network calls.",
+    "gaps": [
+      "真实浏览器视觉与实际指针几何未验收。",
+      "与SpatialBoard部分功能重叠，是不同实现而非全新产品概念。",
+      "本地交互原语示例，不是已完成的Exodus应用。"
+    ]
+  },
+  {
+    "id": "reactflow:grow-nodes",
+    "title": "React Flow · 拖线生长节点",
+    "source": "React Flow",
+    "license": "MIT",
+    "revision": "1bc405cd113618c17fd181b931a9fe573bec9fee",
+    "upstream": "https://github.com/xyflow/xyflow/tree/1bc405cd113618c17fd181b931a9fe573bec9fee/examples/react/src/examples/AddNodeOnEdgeDrop",
+    "preview": "batches/reactflow-01/grow-nodes/index.html",
+    "batch": "reactflow-01",
+    "category": "导航与组织",
+    "kind": "交互原语示例",
+    "format": "空间编辑器",
+    "styleTags": [
+      "空间感",
+      "圆角"
+    ],
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "description": "从连接端口拖到空白处新增节点及连接。",
+    "behavior": "从连接端口拖到空白处新增节点及连接。",
+    "buildStatus": "Build, parse and DOM state/input tests passed; zero errors and network calls.",
+    "gaps": [
+      "真实浏览器视觉与实际指针几何未验收。",
+      "与SpatialBoard部分功能重叠，是不同实现而非全新产品概念。",
+      "本地交互原语示例，不是已完成的Exodus应用。"
+    ]
+  },
+  {
+    "id": "reactflow:nested-groups",
+    "title": "React Flow · 嵌套子任务组",
+    "source": "React Flow",
+    "license": "MIT",
+    "revision": "1bc405cd113618c17fd181b931a9fe573bec9fee",
+    "upstream": "https://github.com/xyflow/xyflow/tree/1bc405cd113618c17fd181b931a9fe573bec9fee/examples/react/src/examples/Subflow",
+    "preview": "batches/reactflow-01/nested-groups/index.html",
+    "batch": "reactflow-01",
+    "category": "导航与组织",
+    "kind": "交互原语示例",
+    "format": "空间编辑器",
+    "styleTags": [
+      "空间感",
+      "圆角"
+    ],
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "description": "隐藏和恢复子任务，保留组内层级。",
+    "behavior": "隐藏和恢复子任务，保留组内层级。",
+    "buildStatus": "Build, parse and DOM state/input tests passed; zero errors and network calls.",
+    "gaps": [
+      "真实浏览器视觉与实际指针几何未验收。",
+      "与SpatialBoard部分功能重叠，是不同实现而非全新产品概念。",
+      "本地交互原语示例，不是已完成的Exodus应用。"
+    ]
+  },
+  {
+    "id": "reactflow:floating-network",
+    "title": "React Flow · 浮动关系网络",
+    "source": "React Flow",
+    "license": "MIT",
+    "revision": "1bc405cd113618c17fd181b931a9fe573bec9fee",
+    "upstream": "https://github.com/xyflow/xyflow/tree/1bc405cd113618c17fd181b931a9fe573bec9fee/examples/react/src/examples/FloatingEdges",
+    "preview": "batches/reactflow-01/floating-network/index.html",
+    "batch": "reactflow-01",
+    "category": "导航与组织",
+    "kind": "交互原语示例",
+    "format": "空间编辑器",
+    "styleTags": [
+      "空间感",
+      "圆角"
+    ],
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "description": "移动节点时连线锚点和路径跟随更新。",
+    "behavior": "移动节点时连线锚点和路径跟随更新。",
+    "buildStatus": "Build, parse and DOM state/input tests passed; zero errors and network calls.",
+    "gaps": [
+      "真实浏览器视觉与实际指针几何未验收。",
+      "与SpatialBoard部分功能重叠，是不同实现而非全新产品概念。",
+      "本地交互原语示例，不是已完成的Exodus应用。"
+    ]
+  },
+  {
+    "id": "reactflow:text-pipeline",
+    "title": "React Flow · 文本转换管线",
+    "source": "React Flow",
+    "license": "MIT",
+    "revision": "1bc405cd113618c17fd181b931a9fe573bec9fee",
+    "upstream": "https://github.com/xyflow/xyflow/tree/1bc405cd113618c17fd181b931a9fe573bec9fee/examples/react/src/examples/UseNodesData",
+    "preview": "batches/reactflow-01/text-pipeline/index.html",
+    "batch": "reactflow-01",
+    "category": "导航与组织",
+    "kind": "交互原语示例",
+    "format": "空间编辑器",
+    "styleTags": [
+      "空间感",
+      "圆角"
+    ],
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "description": "编辑输入文本，uppercase节点实时转换输出。",
+    "behavior": "编辑输入文本，uppercase节点实时转换输出。",
+    "buildStatus": "Build, parse and DOM state/input tests passed; zero errors and network calls.",
+    "gaps": [
+      "真实浏览器视觉与实际指针几何未验收。",
+      "与SpatialBoard部分功能重叠，是不同实现而非全新产品概念。",
+      "本地交互原语示例，不是已完成的Exodus应用。"
+    ]
+  },
+  {
+    "id": "phosphor:duotone-exodus",
+    "title": "Exodus · Phosphor 双色图标精选",
+    "source": "Phosphor Icons",
+    "repository": "https://github.com/phosphor-icons/core",
+    "revision": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+    "license": "MIT",
+    "copyright": "Copyright (c) 2023 Phosphor Icons",
+    "kind": "图标系列",
+    "iconFamilyCount": 1,
+    "baseGlyphCount": 200,
+    "sourceImplementationCount": 200,
+    "weightsIncluded": [
+      "duotone"
+    ],
+    "maxRenderedSVG": 36,
+    "animations": 0,
+    "knownLucideSemanticMatches": 73,
+    "semanticDisclaimer": "200 个独立原图是本系列精选数量，不是新增 UI 页面，也不等于比 Lucide 新增 200 个独有语义。未匹配不代表独有。",
+    "runtime": {
+      "key": "phosphor-duotone-200",
+      "script": "runtime.js",
+      "style": "runtime.css",
+      "scriptSrc": "runtime.js",
+      "cssHref": "runtime.css"
+    },
+    "preview": "batches/phosphor-duotone-01/index.html",
+    "files": {
+      "runtime.js": {
+        "bytes": 237914,
+        "sha256": "b27b4ef00403bdaf22dcb5bb064f3d947708d0f0571c04e46e18ae5e8739510b"
+      },
+      "runtime.css": {
+        "bytes": 5266,
+        "sha256": "7f993f4b4ea4cb5d3e6070fc4ba05251b6945136f8964c8b62dd492d7bc324f6"
+      },
+      "index.html": {
+        "bytes": 297,
+        "sha256": "8702ad8e6dbe496b13e92ed44234e460564d8a00ae8d8aa57e4c408240a7f6fe"
+      }
+    },
+    "gzipJSBytes": 61675,
+    "browserVisualQA": "not-run",
+    "sourceIndex": "batches/phosphor-duotone-01/source-index.json",
+    "sourceArchivePublication": "local artifact only unless explicitly uploaded; never attach a missing download",
+    "upstream": "https://github.com/phosphor-icons/core/tree/2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+    "batch": "phosphor-duotone-01",
+    "category": "图标系列",
+    "format": "图标家族",
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "styleTags": [
+      "双色",
+      "圆润"
+    ],
+    "description": "一个Phosphor双色系列，精选200原始glyph；10分类、36SVG/页、搜索选择及复制，无网络。",
+    "behavior": "中英文搜索、分类、分页、选择及复制SVG；更换配色不增加计数。",
+    "buildStatus": "200 original hashes and unique geometry, all6pages/search/filter/select/copy/offline-rebuild checks passed; visual QA pending.",
+    "gaps": [
+      "真实浏览器视觉与原生剪贴板体验未验收。",
+      "200仅本系列原图数量，不是200个UI页面；73已知与Lucide语义重合，余127不宣称语义独有。",
+      "源代码ZIP仅本地保存，未挂在线下载。"
+    ],
+    "keywords": "robot 机器人 智能与运行 automaton artificial intelligence ai brain 大脑 智能与运行 mind mental cpu 处理器 智能与运行 processor microchip computer circuit circuitry 电路 智能与运行 processor microchip computer circuit electronics motherboard memory 内存 智能与运行 *new* ram microchip computer circuit electronics database 数据库 智能与运行 saved saving archived archiving archival hard disk storage hdd servers databases tree-structure 树形结构 智能与运行 data structures family tree genealogy hierarchy taxonomy charts flowchart flow-arrow 流程箭头 智能与运行 *updated* flowchart arrowhead graph 关系图 智能与运行 nodes tree strategy 策略 智能与运行 sports strategem plan tic-tac-toe target 目标 智能与运行 bullseye radar archery accuracy precision magic-wand 魔杖 智能与运行 selection wizard games sparkle 灵光 智能与运行 star rate ratings favorites favorited lightbulb 灯泡 智能与运行 flashlight bulbs lighting led energy idea compass 指南针 智能与运行 navigation directions maps safari apple rocket-launch 火箭 智能与运行 *updated* spaceship flying blastoff deployment rocketship puzzle-piece 拼图 智能与运行 board game element component extension plugin gear 设置齿轮 智能与运行 8 settings setup preferences cogs gears machinery mechanical sliders-horizontal 调节参数 智能与运行 music audio faders filters equalizer volume settings preferences terminal-window 终端窗口 智能与运行 command line cli bash shell caret console code 代码 代码与工具 angle brackets angle braces snippets code-block 代码块 代码与工具 angle brackets angle braces snippets brackets-curly 花括号 代码与工具 code curly brackets curly braces bug 缺陷 代码与工具 debug errors insect ladybug git-branch 版本分支 代码与工具 *updated* github vcs source control version control versioning branches git-commit 提交 代码与工具 github vcs source control version control versioning commits git-merge 合并 代码与工具 *updated* github vcs source control version control versioning split git-pull-request 拉取请求 代码与工具 *updated* github vcs source control version control versioning merge request package 软件包 代码与工具 packages boxes delivery mail postal service bundles library libraries shipping cube 立方体 代码与工具 square box 3d volume blocks wrench 扳手 代码与工具 settings setup preferences tools machinery mechanical repairs hammer 锤子 代码与工具 tools carpentry construction toolbox 工具箱 代码与工具 tools carpentry construction nut 螺母 代码与工具 bolts screws machinery tools hexagon plugs-connected 连接插头 代码与工具 *updated* outlet socket plugin integration power 电源 代码与工具 charged charger charging on off on/off switch power switch command 命令键 代码与工具 apple keyboard shortcut modifier looped square bowen knot saint john's arms keyboard 键盘 代码与工具 typing type keys input mouse 鼠标 代码与工具 *updated* clicks input binary 二进制 代码与工具 *new* digital 0 1 programming coding executable chat-circle 对话气泡 消息与协作 send sent messages messaging sms texting comment round bubble chats 多方会话 消息与协作 send sent messages messaging sms texting comment square bubble user-sound 发言者 消息与协作 *new* person users profile speech speaking voice envelope 邮件 消息与协作 mail email send sent message post letter paper-plane-tilt 发送 消息与协作 mail email send sent messages messaging toys games microphone 麦克风 消息与协作 audio recording music sound podcast studio headphones 耳机 消息与协作 music audio listening speaker-high 扬声器 消息与协作 *updated* music audio volume sound video-camera 视频会议 消息与协作 videography films movies recording phone 电话 消息与协作 calls telephone landline talk broadcast 广播 消息与协作 radio hotspot wifi emit rss 订阅 消息与协作 radio broadcast web feed news aggregator bell 通知铃铛 消息与协作 alarm notifications times timer clock schedule events ringer calls handshake 协作握手 消息与协作 emoji deal agreement users-three 团队 消息与协作 user group team community people profiles accounts contacts user-circle 用户头像 消息与协作 person users profile account contact login identification-card 身份卡 消息与协作 license badge credentials nametag user verification address-book 通讯录 消息与协作 contacts directory roledex megaphone 公告 消息与协作 bullhorn announcements loudspeaker broadcast translate 翻译 消息与协作 translation languages internationalization i18n speech file-text 文本文档 文档与知识 documents files save write receipt 收据 文档与知识 purchase money clipping expense folder 文件夹 文档与知识 directory directories files folders archive 归档 文档与知识 saved saving archived archiving archival downloaded downloading notebook 笔记本 文档与知识 notes note-taking memorandum journal diary logs logbook book-open 阅读 文档与知识 *updated* reading reader novel story library graduation-cap 学习 文档与知识 classroom teacher education school college university degree graduate hat bookmark-simple 书签 文档与知识 reading reader novel story placeholder favorites favorited library article 文章 文档与知识 reading writing journals periodicals text newspaper newspaper 新闻 文档与知识 reading writing journals periodicals scroll 卷轴 文档与知识 *updated* parchment paper script spell fantasy clipboard-text 剪贴板 文档与知识 copy copied checklist paperclip 附件 文档与知识 attachments mail email office link 链接 文档与知识 *updated* anchor hyperlink hypertext chains chained quotes 引用 文档与知识 quoations quotation marks double-quotes writing books list-bullets 项目列表 文档与知识 *updated* ul unordered list bulleted list checklist list-numbers 编号列表 文档与知识 *updated* ol ordered list numbered list checklist text-aa 文字 文档与知识 typography typeface print font text-align-left 左对齐 文档与知识 *updated* typography print font alignment flush left highlighter 高亮笔 文档与知识 *new* marker write writing editing kanban 看板 工作流与组织 scheduling tasks project management process lean agile calendar 日历 工作流与组织 dates times events schedule 12 clock 时钟 工作流与组织 times timer alarm schedule events watch timer 计时器 工作流与组织 clock alarm schedule events stopwatch sports hourglass 沙漏 工作流与组织 times timer alarms clock schedule events waiting progress check-circle 完成 工作流与组织 todo to-do task list checkbox round ok done x-circle 取消 工作流与组织 closed cancelled dismissed round warning 警告 工作流与组织 alert danger dangerous caution errors info 信息 工作流与组织 information help support question 帮助 工作流与组织 information help support questions pause 暂停 工作流与组织 music audio resume start stop play 播放 工作流与组织 music audio resume start stop 停止 工作流与组织 music audio arrow-counter-clockwise 撤销 工作流与组织 *updated* directional pointer pointing arrowhead undo refreshing rotate spin flip arrows-clockwise 同步 工作流与组织 *updated* directional pointer pointing arrowhead redo refreshing sync synchronize rotate spin flip queue 队列 工作流与组织 *updated* music audio playlist stack 层叠 工作流与组织 cards layers rows 行布局 工作流与组织 2 shapes polygons box stack list table cards columns 列布局 工作流与组织 2 shapes polygons box stack list table cards table 表格 工作流与组织 tables tabular spreadsheets excel grid form magnifying-glass 搜索 搜索与分析 search find locate query inspect funnel 筛选 搜索与分析 filters refine sorting sort-ascending 排序 搜索与分析 *updated* sorted sorting increasing a to z arrows list chart-line-up 趋势图 搜索与分析 *updated* graphs graphing charts statistics analyze analysis stocks chart-bar 柱状图 搜索与分析 graphs graphing charts statistics histogram analyze analysis chart-pie 饼图 搜索与分析 graphs graphing charts statistics circle analyze analysis chart-scatter 散点图 搜索与分析 graphs graphing charts statistics analyze analysis chart-polar 极坐标图 搜索与分析 graphs graphing charts statistics analyze analysis circle trend-up 增长 搜索与分析 graphs graphing charts statistics analyze analysis increase arrows calculator 计算器 搜索与分析 addition sum subtraction difference multiply multiplication product divide division divisor dividend quotient equals equality mathematics arithmetic + - ± × ÷ = function 函数 搜索与分析 mathematics arithmetic f-stop sigma 求和 搜索与分析 σ symbol mathematics sum percent 百分比 搜索与分析 % percentage percentile ratio delta mathematics arithmetic calculator hash 标签井号 搜索与分析 hashtag octothorpe pound sign number sign tic-tac-toe symbol infinity 无限 搜索与分析 infinite lemniscate figure-eight mathematics arithmetic calculator ∞ ruler 标尺 搜索与分析 measure scale distance flask 烧瓶 搜索与分析 beaker science chemistry experiment erlenmeyer test-tube 试管 搜索与分析 science chemistry experiment vial gauge 仪表 搜索与分析 dashboard meter speed speedometer odometer performance pulse 脉冲 搜索与分析 activity heartbeat medical ecg ekg vitals monitor medicine cursor 指针 空间与设计 pointer arrowhead mouse click hand 手掌 空间与设计 pointers cursors emoji backhand selection 选择 空间与设计 marquis select square dashed bounding-box 边界框 空间与设计 polygon shapes outline corners rectangle crop 裁切 空间与设计 photography clip screenshots resize 调整尺寸 空间与设计 *new* maximize expand grow arrows-out 扩展 空间与设计 *updated* directional pointer pointing arrowhead expand fullscreen resize grow intersect 相交 空间与设计 round join union merge combine intersecting intersection subtract 相减 空间与设计 boolean intersection combine split merge union union 联合 空间与设计 *new* ∪ union set member mathematics arithmetic calculator polygon 多边形 空间与设计 shapes drawing bezier-curve 贝塞尔曲线 空间与设计 shapes drawing path pen vector pen-nib 钢笔 空间与设计 ink write writing editing sign signature fountain pen illustrator paint-brush 画笔 空间与设计 colors color picker arts palette 调色盘 空间与设计 paint colors color picker arts eyedropper 吸色器 空间与设计 colors color picker sample arts image 图片 空间与设计 *updated* pictures photographs photography wallpapers gallery landscape camera 相机 空间与设计 photography pictures lens film-strip 胶片 空间与设计 camera photography darkroom movie analog perspective 透视 空间与设计 3d skew warp trapezoid shield-check 安全验证 安全与系统 badge security defense authentication authenticated guarded locked encrypted encryption lock-key 门锁 安全与系统 padlock security secured authentication authenticated login locked encrypted encryption privacy private key 密钥 安全与系统 padlock security secured authentication authenticated login locked encrypted encryption fingerprint 指纹 安全与系统 security secured authentication authenticated login locked biometrics encrypted encryption password 密码 安全与系统 security secured authentication authenticated login locked encrypted encryption eye 查看 安全与系统 visible hidden show hide visibility view scan 扫描 安全与系统 upc barcode products shopping scanner siren 警报 安全与系统 alarm police lights warning vault 保险库 安全与系统 safe bank security secured authentication authenticated locked encrypted encryption lifebuoy 救生圈 安全与系统 lifebelt lifesaver safety help support nautical boats ships first-aid-kit 急救箱 安全与系统 bandages medical medicine injury safety emergency doctor fire-extinguisher 灭火器 安全与系统 safety prevention emergency hazard danger caution cloud 云端 安全与系统 serverless backup storage meteorology cloudy overcast wifi-high 无线网络 安全与系统 wireless internet network connection connectivity network 网络节点 安全与系统 *new* internet ethernet lan hard-drives 硬盘 安全与系统 saved saving archived archiving archival hard disk storage hdd servers databases desktop 桌面电脑 安全与系统 computer pc imac tower device-mobile 移动设备 安全与系统 cellphone cellular battery-charging 电池充电 安全与系统 charged charger charging power download-simple 下载 安全与系统 *updated* saved saving archived archiving archival downloaded downloading hard drive disk import upload-simple 上传 连接与行动 *updated* saved saving archived archiving archival uploaded uploading hard drive disk export 导出 连接与行动 share send to arrows share-network 分享网络 连接与行动 send to export globe 地球 连接与行动 world earth global planet circle round internationalization i18n languages country countries geography internet map-trifold 地图 连接与行动 maps places locations cartography geography map-pin 位置 连接与行动 maps places markers pins locations poi point of interest navigation-arrow 导航 连接与行动 location directions compass gps path 路径 连接与行动 transit travel trail gps navigation route destination vector signpost 路标 连接与行动 direction traffic road sign transit transportation flag 旗帜 连接与行动 country countries finished completed flags crosshair 准星 连接与行动 geolocation gps aiming targeting anchor 锚点 连接与行动 nautical boats ships hope safety insurance bridge 桥梁 连接与行动 travel transportation infrastucture airplane 飞机 连接与行动 vehicles airports flights flying planes transit transportation traveling train 列车 连接与行动 vehicles subway light rail public transit transportation commuter traveling places locations car 汽车 连接与行动 *updated* cars vehicles automobile transit transportation traveling bicycle 自行车 连接与行动 bikers bicycling cyclists transit transportation commuter exercises fitness footprints 足迹 连接与行动 path trail walk route hike hiking door-open 入口 连接与行动 entrance exit house 主页 连接与行动 homes buildings places locations heart 喜爱 灵感与记忆 wellness love healthy like favorites favorited suits cards gambling casino gaming emoji star 星标 灵感与记忆 rate ratings favorites favorited leaf 叶片 灵感与记忆 plants trees branches leaves nodes green environmental tree 树木 灵感与记忆 plants branches leaves green environmental flower 花朵 灵感与记忆 plants green environmental sun 太阳 灵感与记忆 day daytime daylight clear sunny sunshine light mode brightness lighten brighten moon 月亮 灵感与记忆 night evening clear sleep snooze night mode dark mode astronomy stargazing mountains 山脉 灵感与记忆 *updated* hills outdoors terrain geology adventure waves 波浪 灵感与记忆 ocean tides surf drop 水滴 灵感与记忆 droplet teardrop raindrop raining meteorology water blur fire 火焰 灵感与记忆 flame burning match lighter lightning 闪电 灵感与记忆 meteorology stormy thunderstorm thunderbolt charged charger charging power electricity flash snowflake 雪花 灵感与记忆 meteorology snowy snowing snowstorm coffee 咖啡 灵感与记忆 tea java beverages drinks cafe cup mug espresso cappuccino latte places locations bars restaurants food dining plant 盆栽 灵感与记忆 sprout vegan farm farming garden gardening acorn 橡果 灵感与记忆 *new* savings nut vegetable veggies food groceries market shooting-star 流星 灵感与记忆 wish comet meteor medal 奖章 灵感与记忆 ribbons winning victory awards rosette gift 礼物 灵感与记忆 presents holiday birthday confetti 庆祝 灵感与记忆 tada party emoji"
   }
 ]
