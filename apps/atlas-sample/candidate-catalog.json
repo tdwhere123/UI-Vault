@@ -10412,5 +10412,141 @@
       "素材校对"
     ],
     "behavior": "原旋转/翻转/滤镜/文本/裁剪/历史交互，合成本地SVG素材；无Load/Download、无统计，仅浏览器内处理。"
+  },
+  {
+    "id": "react-piano:local-note-keyboard",
+    "title": "React Piano · 本地音高键盘",
+    "source": "React Piano",
+    "repository": "https://github.com/kevinsqi/react-piano",
+    "revision": "d1949ff46795d688fed865888f2c8dac0097596d",
+    "version": "3.1.3",
+    "license": "MIT",
+    "publicationReady": true,
+    "entry": "index.html",
+    "runtime": {
+      "js": "runtime.js",
+      "css": "runtime.css",
+      "format": "iife",
+      "detailOnly": true,
+      "allowLocalMedia": false
+    },
+    "needsLocalMedia": false,
+    "browserVisualQA": "not-run",
+    "counts": {
+      "independentFamily": 1
+    },
+    "size": {
+      "js": 170515,
+      "gzip": 54718,
+      "css": 3661
+    },
+    "capabilities": [
+      "原版13个琴键和键盘/鼠标/触摸输入",
+      "原activeNotes差分回调与多音状态",
+      "用户显式启用本地正弦合成音",
+      "重复按键去重/松开/失焦/隐藏停止",
+      "音频失败保留静音键盘及清晰状态"
+    ],
+    "limitations": [
+      "原组件+原创声音壳，非原钢琴采样或模型音乐",
+      "AudioContext在测试中为mock，实际可听/设备权限和像素未验",
+      "固定760px宽，窄屏水平滚动",
+      "页面离开/失焦关闭音频，返回需手动再启用"
+    ],
+    "upstream": "https://github.com/kevinsqi/react-piano/tree/d1949ff46795d688fed865888f2c8dac0097596d",
+    "preview": "batches/react-piano-01/index.html",
+    "batch": "react-piano-01",
+    "category": "展示与媒体",
+    "kind": "音高输入组件",
+    "format": "音乐输入设计族",
+    "styleTags": [
+      "深色",
+      "乐器"
+    ],
+    "purposeTags": [
+      "富媒体结果",
+      "音乐构思"
+    ],
+    "description": "原React Piano的13个白黑琴键、键盘/鼠标/触摸与多音输入；用户明确启用后才使用本地正弦合成音，不是钢琴采样或AI音乐。",
+    "behavior": "原activeNotes差分与音高映射；按键释放停音，失焦/隐藏/取消/离开关闭音频；失败清晰保持静音。",
+    "buildStatus": "Seven original-component state and audio-lifecycle branches passed using mocked AudioContext; actual audio and pixels NOT verified",
+    "gaps": [
+      "原组件+原创声音壳，非原钢琴采样或模型音乐",
+      "AudioContext在测试中为mock，实际可听/设备权限和像素未验",
+      "固定760px宽，窄屏水平滚动",
+      "页面离开/失焦关闭音频，返回需手动再启用",
+      "本地源码ZIP未上传；完整原MIT及8个实际运行包许可已保留。",
+      "修复旧resume拒绝误关闭新context与部分音频节点异常泄漏；不是实际可听音质验收。"
+    ]
+  },
+  {
+    "id": "fullcalendar:local-week-planner",
+    "title": "FullCalendar · UTC周时段规划",
+    "source": "FullCalendar",
+    "license": "MIT",
+    "upstream": "https://github.com/fullcalendar/fullcalendar/tree/ca76fbf6c3e27f8e5671432dbbadec19ce768d3f",
+    "version": "6.1.19",
+    "preview": "batches/fullcalendar-01/index.html",
+    "batch": "fullcalendar-01",
+    "category": "数据与状态",
+    "kind": "时间规划组件",
+    "format": "周时段规划设计族",
+    "styleTags": [
+      "柔和色彩",
+      "时间栅格"
+    ],
+    "purposeTags": [
+      "任务规划",
+      "日程审阅"
+    ],
+    "description": "原FullCalendar周/日小时栅格与议程呈现，同一本地事件模型；薄壳提供明确UTC起止的新增、编辑、删除，无真实日历或后台连接。",
+    "behavior": "原视图导航、时段选择、事件模型与拖放/伸缩实现保留；本地表单验证结束晚于开始，取消不改事件。",
+    "buildStatus": "Four original state/form, synthetic drag cancellation/active-exit and production suites passed; UTC verified in LA and Shanghai; native gestures/pixels NOT verified",
+    "gaps": [
+      "原生拖动/伸缩、视觉和移动端未验；合成固定几何触发原dragStart/镜像并测取消/退出，不等同真实指针验收。",
+      "立即二次合成拖动受固定几何限制未可靠进入，未声称重入已验。",
+      "原MIT standard插件与Preact，未用付费premium；移除未用fcicons字体，以官方文本按钮替代。",
+      "本地示例事件、编辑对话框与柔和主题为适配壳，不冒称原内置表单。",
+      "完整源码与测试在本地，未声称源码ZIP公开。"
+    ]
+  },
+  {
+    "id": "rapidoc:offline-api-reader",
+    "title": "RapiDoc · 离线接口文档阅读器",
+    "source": "RapiDoc",
+    "category": "导航与组织",
+    "license": "MIT (RapiDoc); bundled BSD-3-Clause/MIT/ISC dependencies",
+    "revision": "1cea8311b25670dc78e4a0fb5cbc8016d43a6392",
+    "upstream": "https://github.com/rapi-doc/RapiDoc/tree/1cea8311b25670dc78e4a0fb5cbc8016d43a6392",
+    "sourceFile": "packages/rapidoc/src/rapidoc.ts; original webcomponents/templates/parser; npm rapidoc12.1.1 distribution",
+    "preview": "batches/rapidoc-01/index.html",
+    "description": "原RapiDoc完整OpenAPI阅读UI：5项合成接口、检索、请求/响应示例切换、状态码与嵌套schema展开。只读离线不执行API。",
+    "previewStatus": "visual-review-pending",
+    "buildStatus": "8 parser/DOM/search/tab/state/safety tests; initial and reload parsing interruption tests; zero forbidden network/eval/storage/Worker calls",
+    "knownGaps": [
+      "真实像素、响应式/移动端布局、实际滚动和原生键盘交互仍待视觉验收。",
+      "JSDOM测试替代Intersection/Resize observer、scroll与dialog原生布局能力；原解析器与原UI状态未替换。",
+      "仅固定原创OpenAPI规范；Try、授权、服务器选择、加载/下载及剪贴板禁用，不是可调用服务。",
+      "宿主使用本版本原内部世代/搜索计时字段及观察器方法进行卸载守卫，升级版本需复验。"
+    ],
+    "gaps": [
+      "真实像素、响应式/移动端布局、实际滚动和原生键盘交互仍待视觉验收。",
+      "JSDOM测试替代Intersection/Resize observer、scroll与dialog原生布局能力；原解析器与原UI状态未替换。",
+      "仅固定原创OpenAPI规范；Try、授权、服务器选择、加载/下载及剪贴板禁用，不是可调用服务。",
+      "宿主使用本版本原内部世代/搜索计时字段及观察器方法进行卸载守卫，升级版本需复验。",
+      "完整MIT/BSD-3-Clause/ISC通知公开；源码及测试ZIP仅本地，未声称公开下载。"
+    ],
+    "batch": "rapidoc-01",
+    "kind": "接口文档组件",
+    "format": "接口文档阅读设计族",
+    "styleTags": [
+      "明亮",
+      "技术文档"
+    ],
+    "purposeTags": [
+      "接口审阅",
+      "工具说明"
+    ],
+    "behavior": "原解析器、检索、状态码/示例切换及schema展开；只读固定本地规范，无Try执行/鉴权/规范外部引用。"
   }
 ]
