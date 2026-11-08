@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "checks": [
+    "original Dashboard mounts 2 explicit original fixtures",
+    "real metadata editor saves renamed file and malicious-looking description as text",
+    "native file input event admits TXT",
+    "original MIME/size reject HTML and over1MiB; six-file cap removes add action",
+    "original remove button removes one",
+    "reset restores fixture names and count",
+    "original responsive rows switch to 1 via measured380px; adapter toggles width",
+    "paste captured before clipboardData reads",
+    "no Upload buttons and zero network/eval/Worker/storage/clipboard calls",
+    "clear empties original store",
+    "destroy unmounts DOM/disconnects original ResizeObserver"
+  ],
+  "visualQA": "not run; JSDOM dimensions/ResizeObserver simulated. Browser file picker, pointer drag/drop and raster/image decoding NOT verified. No thumbnails or image reading configured."
+}
