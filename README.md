@@ -2,7 +2,7 @@
 
 网站：<https://tdwhere123.github.io/UI-Vault/>
 
-当前主图鉴有 **506条可打开预览（241条原始素材＋265条后续接入预览）**。后续预览仍标注视觉待验；351条候选中的86条仅来源记录不计入主图鉴。原始241件包括215件精选界面、20件保留基础素材、6套完整图标系列。正在向1000+件优质素材扩充；图标按完整系列单列统计，不按单枚凑数。源码候选、不同配色与框架版本不充数。
+当前主图鉴有 **507条可打开预览（241条原始素材＋266条后续接入预览）**。后续预览仍标注视觉待验；351条候选中的85条仅来源记录不计入主图鉴。原始241件包括215件精选界面、20件保留基础素材、6套完整图标系列。正在向1000+件优质素材扩充；图标按完整系列单列统计，不按单枚凑数。源码候选、不同配色与框架版本不充数。
 
 ## 当前内容
 
@@ -205,3 +205,14 @@ The main gallery now has **506 preview entries** (241 original + 265 added previ
 The main license is the **custom bpmn.io license, not MIT**. Mandatory watermark, original backlink handlers/hrefs and powered-by lightbox code remain byte-for-byte unchanged and visible. The existing iframe sandbox can block new windows; permissions are not widened, and successful in-frame external navigation is not claimed. The gallery now displays an explicit project-website link outside the preview for records with an HTTP(S) website, including https://bpmn.io/ . Both upstream source and website remain available.
 
 Original bpmn-font 0.13.0 SVG-font text is published with full SIL OFL 1.1 and attribution. The unchanged 109 glyph paths use a disclosed coordinate-format adapter for SVG masks; these are not invented independent upstream SVG files or encoded binary fonts. Nineteen actual runtime-package licenses/notices are included, including the Adobe Snap.svg Apache-2.0 derivation notice in path-intersection. Actual pointer geometry, icon appearance, focus and browser pixels remain unverified. All broader source/build/test archives remain local, not advertised as hosted ZIPs. Lazy previews and sandbox/CSP are unchanged.
+
+
+## Restored original Cara parallax page · 507 previews
+
+The main gallery now has **507 preview entries** (241 original + 266 added previews). Candidate records remain 351; 85 source-only records are excluded. Existing `leko:cara-complete-site` is restored, not duplicated. Its four sections, five screens and seven SVG symbols count as one page family. Icon counts are unchanged.
+
+The original LekoArts Cara Hero/Projects/About/Contact composition, five-page Parallax offsets, slanted color fields, wave paths, geometric SVG placement, gradient project cards, Theme UI palette and light/dark switch remain. This is a standalone React adapter, not a complete Gatsby build: GraphQL/SEO/build-time MDX are removed, with clearly fictional local Exodus briefing content. Cards navigate locally to About; Contact does not send messages. System fonts and text attribution replace external font/media dependencies. The original fixed-revision SVG sprite is publicly included under the example's 0BSD license, with theme MIT and all 34 actual runtime-package notices, including BSD-3-Clause where applicable.
+
+Four normal/reduced/narrow/production tests passed on actual Parallax controllers, layers, scrollTo/current, local card navigation and color-mode state. Original resize timer/RAF and layer-controller teardown gaps were repaired. Blur/hidden stops animation; reduced motion uses stationary layers and immediate navigation. JSDOM viewport geometry is simulated: real scroll feel, wave path compatibility, wrapping and mobile pixels still await visual acceptance. The earlier source archive remains recorded as `originalSourceArchive`; it is not advertised as the current adapter's complete download. Current adaptation/build/test archives remain local. Static covers, lazy previews and sandbox/CSP remain unchanged.
+
+TimelineJS is still under separate licensing/source-form and lifecycle verification; it is not counted or published in this batch.
