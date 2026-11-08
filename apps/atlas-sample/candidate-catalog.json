@@ -416,21 +416,44 @@
   },
   {
     "id": "cult:fluted-glass",
-    "title": "fluted-glass",
+    "title": "可调长虹玻璃材质工作台",
     "source": "Cult UI",
     "license": "MIT",
     "upstream": "https://github.com/nolly-studio/cult-ui/tree/d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
     "website": "",
-    "buildStatus": "not built; upstream archive only",
+    "buildStatus": "Build/JS parse passed; unsupported fallback and actual Paper engine with WebGL mocks tested; uniform, reset, preset, image replacement and disposal checks passed.",
     "batch": "batch-001",
     "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/cult-archive-01/source-archive.zip",
     "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/cult-archive-01/manifest.json",
-    "description": "Paper Design fluted-glass image shader with sensible defaults — ribbed, streaked distortions over a source image",
+    "description": "真实Paper Design WebGL2长虹玻璃shader，原版参数台、预设、颜色/形状/尺寸/模糊等调节；默认五张原创本地SVG，URL输入禁用。",
     "gaps": [
-      "Remote media and logos not downloaded or licensed by assumption",
-      "Source registry metadata may omit imports; original project package+lock retained",
-      "WebGL/shader support must be verified"
-    ]
+      "WebGL调用由DOM测试mock，不代表真实GPU编译、像素、性能或视觉验收通过。",
+      "实际WebGL2不可用时显示明确unsupported提示，参数台仍可操作。",
+      "指针拖动、所有颜色/形状选择及无障碍全量浏览器验收待完成。"
+    ],
+    "kind": "交互材质组件",
+    "category": "视觉与动效",
+    "styleTags": [
+      "玻璃",
+      "圆润",
+      "氛围材质"
+    ],
+    "preview": "batches/cult-glass-01/fluted-glass.html",
+    "revision": "d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+    "sourceFile": "source/registry/default/ui/fluted-glass.tsx",
+    "demoSource": "source/registry/default/example/fluted-glass-demo.tsx",
+    "behavior": "滑块和预设修改原shader uniforms；切换本地样图重建shader；Reset defaults复位，Unmount释放资源。无WebGL2时明确提示不支持，不展示伪造的shader输出。",
+    "previewStatus": "visual-review-pending",
+    "knownGaps": [
+      "WebGL调用由DOM测试mock，不代表真实GPU编译、像素、性能或视觉验收通过。",
+      "实际WebGL2不可用时显示明确unsupported提示，参数台仍可操作。",
+      "指针拖动、所有颜色/形状选择及无障碍全量浏览器验收待完成。"
+    ],
+    "adaptation": "Original component and full official parameter demo retained. Local original SVGs replace external images. Remote URL input/button disabled and loader no-op. Adds WebGL2 capability notice and explicit mount/unmount host. Paper shaders-react/shaders pinned 0.0.72, both package MIT notices retained.",
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "format": "复合交互组件"
   },
   {
     "id": "cult:hero-color-panel",
@@ -2352,21 +2375,39 @@
   },
   {
     "id": "smoothui:orbital-image-wheel",
-    "title": "轨道图像轮盘",
+    "title": "惯性吸附轨道图像轮盘",
     "source": "SmoothUI",
-    "license": "MIT (root code notice; external artwork not included)",
-    "upstream": "https://github.com/educlopez/smoothui/tree/c45420a8523ec60a92f7724a2418ab83edaa1425/packages/smoothui/components/orbital-image-wheel",
-    "website": "",
-    "buildStatus": "not installed or built",
+    "license": "MIT",
+    "upstream": "https://github.com/educlopez/smoothui/blob/c45420a8523ec60a92f7724a2418ab83edaa1425/packages/smoothui/components/orbital-image-wheel/index.tsx",
+    "website": "https://smoothui.dev",
+    "buildStatus": "IIFE build and DOM mount passed; keyboard rotation and selected item snapping; pointer inertia visually pending; stop/start then pagehide unmount clears interval and RAF",
     "batch": "batch-002",
-    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "description": "原版轨道布局、旋转惯性、吸附、键盘与图片选择；使用8张原创本地SVG，不连接图库。",
     "gaps": [
-      "Workspace aliases and shared package dependencies require integration; source closure checked, build not attempted.",
-      "Official shared data includes remote generated portraits, scenes, app icons and sample product artwork. Asset URLs preserved for reference; binaries not downloaded and image redistribution rights not assumed.",
-      "Root documentation CSS imports external fumadocs package styles; original lock retained.",
-      "Visual fidelity, animation, mobile behavior, accessibility and interaction correctness not yet tested.",
-      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
-    ]
+      "未进行浏览器视觉及完整键盘/触屏验收。",
+      "仅本地fixture，无账号/后端/持久化。"
+    ],
+    "kind": "复合交互组件",
+    "category": "视觉与动效",
+    "styleTags": [
+      "空间运动",
+      "氛围",
+      "圆润"
+    ],
+    "preview": "batches/smooth-atmosphere-01/orbital-image-wheel.html",
+    "revision": "c45420a8523ec60a92f7724a2418ab83edaa1425",
+    "demoSource": "https://github.com/educlopez/smoothui/blob/c45420a8523ec60a92f7724a2418ab83edaa1425/apps/docs/examples/orbital-image-wheel.tsx",
+    "behavior": "原版轨道布局、旋转惯性、吸附、键盘与图片选择；使用8张原创本地SVG，不连接图库。",
+    "previewStatus": "visual-review-pending",
+    "knownGaps": [
+      "未进行浏览器视觉及完整键盘/触屏验收。",
+      "仅本地fixture，无账号/后端/持久化。"
+    ],
+    "adaptation": "Original components retained; original orbital demo receives local SVG artwork; switchboard responsive layout keeps random lights visible on narrow screens. Host stop/start and pagehide unmount for cleanup. See README.",
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "format": "复合交互组件"
   },
   {
     "id": "smoothui:pixel-brush-canvas",
@@ -2518,21 +2559,39 @@
   },
   {
     "id": "smoothui:switchboard-card",
-    "title": "灯光开关矩阵",
+    "title": "动态灯阵氛围卡",
     "source": "SmoothUI",
-    "license": "MIT (root code notice; external artwork not included)",
-    "upstream": "https://github.com/educlopez/smoothui/tree/c45420a8523ec60a92f7724a2418ab83edaa1425/packages/smoothui/components/switchboard-card",
-    "website": "",
-    "buildStatus": "not installed or built",
+    "license": "MIT",
+    "upstream": "https://github.com/educlopez/smoothui/blob/c45420a8523ec60a92f7724a2418ab83edaa1425/packages/smoothui/components/switchboard-card/index.tsx",
+    "website": "https://smoothui.dev",
+    "buildStatus": "IIFE build and DOM mount passed; original 200ms light-state progression; stop/start then pagehide unmount clears interval and RAF",
     "batch": "batch-002",
-    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "description": "原版灯阵off/medium/high状态每200ms推进；同一族同时示范随机灯阵及固定文字图案，不控制真实设备。",
     "gaps": [
-      "Workspace aliases and shared package dependencies require integration; source closure checked, build not attempted.",
-      "Official shared data includes remote generated portraits, scenes, app icons and sample product artwork. Asset URLs preserved for reference; binaries not downloaded and image redistribution rights not assumed.",
-      "Root documentation CSS imports external fumadocs package styles; original lock retained.",
-      "Visual fidelity, animation, mobile behavior, accessibility and interaction correctness not yet tested.",
-      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
-    ]
+      "未进行浏览器视觉及完整键盘/触屏验收。",
+      "仅本地fixture，无账号/后端/持久化。"
+    ],
+    "kind": "复合交互组件",
+    "category": "视觉与动效",
+    "styleTags": [
+      "空间运动",
+      "氛围",
+      "圆润"
+    ],
+    "preview": "batches/smooth-atmosphere-01/switchboard-card.html",
+    "revision": "c45420a8523ec60a92f7724a2418ab83edaa1425",
+    "demoSource": "https://github.com/educlopez/smoothui/blob/c45420a8523ec60a92f7724a2418ab83edaa1425/apps/docs/examples/switchboard-card.tsx",
+    "behavior": "原版灯阵off/medium/high状态每200ms推进；同一族同时示范随机灯阵及固定文字图案，不控制真实设备。",
+    "previewStatus": "visual-review-pending",
+    "knownGaps": [
+      "未进行浏览器视觉及完整键盘/触屏验收。",
+      "仅本地fixture，无账号/后端/持久化。"
+    ],
+    "adaptation": "Original components retained; original orbital demo receives local SVG artwork; switchboard responsive layout keeps random lights visible on narrow screens. Host stop/start and pagehide unmount for cleanup. See README.",
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "format": "复合交互组件"
   },
   {
     "id": "smoothui:time-machine-stack",
@@ -3007,22 +3066,35 @@
   },
   {
     "id": "blode:ios-cards",
-    "title": "ios-cards",
+    "title": "iOS 编辑卡片 · 展开式阅读",
     "source": "Matthew Blode Experiments",
-    "license": "MIT (original code; third-party dependencies/assets separate)",
+    "license": "MIT",
     "upstream": "https://github.com/mblode/experiments/tree/d4baef572c4e692dcfe5f3a1e424e641d6013b18/app/ios-cards",
     "website": "",
-    "buildStatus": "not installed or built",
+    "buildStatus": "Production IIFE; reduced-motion DOM state checks passed; normal-motion shared-layout exit unverified",
     "batch": "batch-002",
-    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "description": "原版共享布局卡片展开、关闭和焦点恢复；使用明确标注的本地原创插图。",
     "gaps": [
-      "No images/video/font binaries archived. Asset paths reference upstream files whose redistribution permissions need review or original replacements.",
-      "Next routing/basePath /experiments and aliases need integration; source dependencies statically traced, no build/install.",
-      "Moon requests device geolocation on mount and reverse-geocodes through Nominatim. Before any test replace with fixed sample coordinates and disable external lookup; no location permission was requested during collection.",
-      "WebGL moon/sticky-note/dither scenes need real GPU and interaction validation. Dither is a graphical arcade demo rather than a production UI widget.",
-      "Original package contains prepare hook and telemetry dependency; no lifecycle scripts or telemetry were executed. Use minimal adapted dependencies before installing.",
-      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
-    ]
+      "测试使用 reduced-motion 与布局/WAAPI桩，不是正常动效或像素验收。",
+      "正常共享布局关闭动画、真实拖拽几何、触屏与移动布局未验收。",
+      "原版完整动效保留，未用测试替身替换生产运行。",
+      "来源与适配说明在同目录ADAPTATION.md；源码ZIP未上传。"
+    ],
+    "revision": "d4baef572c4e692dcfe5f3a1e424e641d6013b18",
+    "preview": "batches/blode-spatial-01/ios-cards/index.html",
+    "category": "展示与媒体",
+    "kind": "复合交互组件",
+    "format": "空间交互组件",
+    "styleTags": [
+      "圆润",
+      "空间感",
+      "拟物"
+    ],
+    "purposeTags": [
+      "Agent工作流",
+      "内容阅读"
+    ],
+    "behavior": "本地卡片与布局交互，无后端或远程素材。"
   },
   {
     "id": "blode:lighting",
@@ -3083,22 +3155,36 @@
   },
   {
     "id": "blode:omni-color-picker",
-    "title": "omni-color-picker",
+    "title": "Omni 二维惯性主题颜色选择器",
     "source": "Matthew Blode Experiments",
-    "license": "MIT (original code; third-party dependencies/assets separate)",
+    "license": "MIT",
     "upstream": "https://github.com/mblode/experiments/tree/d4baef572c4e692dcfe5f3a1e424e641d6013b18/app/omni-color-picker",
     "website": "",
-    "buildStatus": "not installed or built",
+    "buildStatus": "Production IIFE; DOM interaction and cleanup passed; visual pending",
     "batch": "batch-002",
-    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "description": "二维拖动及惯性吸附；方向键步进；八方向按钮；Oklch 色相/明度周期；实时主题联动与 HEX 输出",
     "gaps": [
-      "No images/video/font binaries archived. Asset paths reference upstream files whose redistribution permissions need review or original replacements.",
-      "Next routing/basePath /experiments and aliases need integration; source dependencies statically traced, no build/install.",
-      "Moon requests device geolocation on mount and reverse-geocodes through Nominatim. Before any test replace with fixed sample coordinates and disable external lookup; no location permission was requested during collection.",
-      "WebGL moon/sticky-note/dither scenes need real GPU and interaction validation. Dither is a graphical arcade demo rather than a production UI widget.",
-      "Original package contains prepare hook and telemetry dependency; no lifecycle scripts or telemetry were executed. Use minimal adapted dependencies before installing.",
-      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
-    ]
+      "无上传/远程色库/剪贴板",
+      "个人头像改本地原创抽象 SVG；个人链接移除",
+      "JSDOM 未验真实拖动惯性手感",
+      "真实浏览器视觉、移动与完整无障碍尚未验收。",
+      "源码ZIP仅本地，未宣称上传。"
+    ],
+    "revision": "d4baef572c4e692dcfe5f3a1e424e641d6013b18",
+    "preview": "batches/blode-practical-01/omni/index.html",
+    "category": "输入与选择",
+    "kind": "复合交互组件",
+    "format": "交互组件",
+    "styleTags": [
+      "圆润",
+      "拟物",
+      "空间感"
+    ],
+    "purposeTags": [
+      "Agent工作流",
+      "主题设计"
+    ],
+    "behavior": "二维拖动及惯性吸附；方向键步进；八方向按钮；Oklch 色相/明度周期；实时主题联动与 HEX 输出；无上传/远程色库/剪贴板；个人头像改本地原创抽象 SVG；个人链接移除；JSDOM 未验真实拖动惯性手感"
   },
   {
     "id": "blode:sticky-notes",
@@ -3882,22 +3968,45 @@
   },
   {
     "id": "aicanvas:runway-loader",
-    "title": "runway-loader",
+    "title": "跑道起飞 · 材质加载动画",
     "source": "AI Canvas free library",
     "license": "MIT (free components-workspace explicitly designated by README)",
     "upstream": "https://github.com/aicanvas-me/aicanvas/tree/8164f1e423e4e654dd0828a941ba5cdda69f08fe/components-workspace/runway-loader",
     "website": "",
-    "buildStatus": "not installed or built",
+    "buildStatus": "production bundle; semantic phases and cleanup passed; visual pending",
     "batch": "batch-002",
-    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "description": "飞机沿凹陷跑道滑行、起飞并重置的本地计时动画；支持停止与明暗材质切换，不代表真实任务进度。",
     "gaps": [
-      "Remote ImageKit/Unsplash artwork and fonts not archived or presumed MIT.",
-      "Tailwind v4/React19 and peer dependencies require integration. No site/premium CSS imported.",
-      "Original root scripts inject premium code and change Git hooks. They are retained only as evidence; do not run them. Prepare a separate minimal harness.",
-      "Crypto swap/music/charging are demo UI states, not verified transactions, playback or a real battery monitor. No wallet/API connected.",
-      "No install/build/browser/interaction/mobile validation.",
-      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
-    ]
+      "真实浏览器视觉、触屏与移动布局未验收。",
+      "仅本地计时演示，不连接真实任务进度。",
+      "源码ZIP未上传；提供实际适配源文件与固定上游出处。"
+    ],
+    "preview": "batches/aicanvas-runway-01/index.html",
+    "category": "视觉与动效",
+    "kind": "组件",
+    "format": "动态状态组件",
+    "styleTags": [
+      "拟物",
+      "圆润",
+      "空间感"
+    ],
+    "purposeTags": [
+      "等待反馈",
+      "Agent工作流"
+    ],
+    "keywords": [
+      "飞机",
+      "跑道",
+      "加载",
+      "loading",
+      "runway",
+      "进度"
+    ],
+    "interactionTags": [
+      "循环动画",
+      "按需播放"
+    ],
+    "behavior": "点击播放后由本地时钟推进滑行、起飞与重置；停止和页面隐藏会卸载动画并清理计时器。不是后台任务的真实进度。"
   },
   {
     "id": "orb:push-to-talk",
@@ -8332,6 +8441,68 @@
       "源码ZIP仅本地保留，未挂在线下载。",
       "mi18n实际发布包声明MIT且integrity与固定lock一致，原作者头保留；缺上游LICENSE全文，附显式标注的补充标准MIT条款，不伪称原件。",
       "依赖及dist版本头差异详见ADAPTATION，不假称所有预捆绑依赖exact版本已证实。"
+    ]
+  },
+  {
+    "id": "blode:timed-undo",
+    "batch": "blode-practical-01",
+    "title": "Timed Undo 延迟撤销胶囊",
+    "source": "Matthew Blode Experiments",
+    "license": "MIT",
+    "upstream": "https://github.com/mblode/experiments/tree/d4baef572c4e692dcfe5f3a1e424e641d6013b18/app/timed-undo",
+    "revision": "d4baef572c4e692dcfe5f3a1e424e641d6013b18",
+    "preview": "batches/blode-practical-01/undo/index.html",
+    "category": "数据与状态",
+    "kind": "复合交互组件",
+    "format": "交互组件",
+    "styleTags": [
+      "圆润",
+      "拟物",
+      "空间感"
+    ],
+    "purposeTags": [
+      "Agent工作流",
+      "操作反馈"
+    ],
+    "description": "开始倒计时；倒计时逐秒更新；限时撤销；超时退出并重置演示",
+    "behavior": "开始倒计时；倒计时逐秒更新；限时撤销；超时退出并重置演示；不删除真实账户或数据；原样保留上游 10 秒显示逻辑；0 秒后下一 tick 完成，实际约 11 秒",
+    "buildStatus": "Production IIFE; DOM interaction and cleanup passed; visual pending",
+    "gaps": [
+      "不删除真实账户或数据",
+      "原样保留上游 10 秒显示逻辑；0 秒后下一 tick 完成，实际约 11 秒",
+      "真实浏览器视觉、移动与完整无障碍尚未验收。",
+      "源码ZIP仅本地，未宣称上传。"
+    ]
+  },
+  {
+    "id": "blode:dnd-grid",
+    "batch": "blode-spatial-01",
+    "title": "实体面板 · 拖动缩放网格",
+    "source": "Matthew Blode Experiments",
+    "license": "MIT",
+    "upstream": "https://github.com/mblode/experiments/tree/d4baef572c4e692dcfe5f3a1e424e641d6013b18/app/dnd-grid",
+    "revision": "d4baef572c4e692dcfe5f3a1e424e641d6013b18",
+    "preview": "batches/blode-spatial-01/dnd-grid/index.html",
+    "category": "导航与组织",
+    "kind": "复合交互组件",
+    "format": "空间交互组件",
+    "styleTags": [
+      "圆润",
+      "空间感",
+      "拟物"
+    ],
+    "purposeTags": [
+      "Agent工作流",
+      "工作区布局"
+    ],
+    "description": "原版八格可拖动缩放工作区，保留网格挤压、键盘移动与调整大小。",
+    "behavior": "本地卡片与布局交互，无后端或远程素材。",
+    "buildStatus": "Production IIFE; reduced-motion DOM state checks passed; normal-motion shared-layout exit unverified",
+    "gaps": [
+      "测试使用 reduced-motion 与布局/WAAPI桩，不是正常动效或像素验收。",
+      "正常共享布局关闭动画、真实拖拽几何、触屏与移动布局未验收。",
+      "原版完整动效保留，未用测试替身替换生产运行。",
+      "来源与适配说明在同目录ADAPTATION.md；源码ZIP未上传。"
     ]
   }
 ]
