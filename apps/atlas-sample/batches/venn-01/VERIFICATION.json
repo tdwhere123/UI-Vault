@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "checks": [
+    "original VennDiagram mounts 3 circles and 7 original intersection paths",
+    "all geometry paths finite",
+    "actual SVG pair click selects 4 inclusive records",
+    "exact intersection excludes other set and returns 2",
+    "keyboard Enter selects triple intersection",
+    "show all returns 12",
+    "membership edit changes original-engine geometry and precise counts",
+    "current selection recomputed after edit",
+    "all memberships removed produces honest empty graphic",
+    "unassigned records preserved",
+    "reset rebuilds original layout",
+    "no external assets",
+    "pagehide interrupts D3 transitions, removes handlers, clears data/DOM; RAF and interval handles zero",
+    "no Function/eval/network/Worker/storage/dynamic script calls"
+  ],
+  "browserVisualQA": "not-run; JSDOM SVG text measurement stub; no real visual/touch/area legibility acceptance"
+}
