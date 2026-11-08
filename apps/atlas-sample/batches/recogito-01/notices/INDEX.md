@@ -1,0 +1,57 @@
+# Complete runtime notices
+
+See ../DEPENDENCIES.json for 53 actual bundled npm packages and their precise license file paths. Vendored main/core BSD licenses are additionally in recogito-js and recogito-client-core. Icon exceptions and full CC BY4.0 are in icons; original icon provenance and unchanged status are detailed in ../README.md. react-select full license is from its official 4.3.1 release tag, not falsely described as present in the npm package.
+
+- @babel/runtime 7.29.13 — MIT: notices/@babel__runtime/LICENSE
+- @emotion/cache 11.14.0 — MIT: notices/@emotion__cache/LICENSE
+- @emotion/hash 0.9.2 — MIT: notices/@emotion__hash/LICENSE
+- @emotion/memoize 0.9.0 — MIT: notices/@emotion__memoize/LICENSE
+- @emotion/react 11.14.0 — MIT: notices/@emotion__react/LICENSE
+- @emotion/serialize 1.3.3 — MIT: notices/@emotion__serialize/LICENSE
+- @emotion/sheet 1.4.0 — MIT: notices/@emotion__sheet/LICENSE
+- @emotion/unitless 0.10.0 — MIT: notices/@emotion__unitless/LICENSE
+- @emotion/use-insertion-effect-with-fallbacks 1.2.0 — MIT: notices/@emotion__use-insertion-effect-with-fallbacks/LICENSE
+- @emotion/utils 1.4.2 — MIT: notices/@emotion__utils/LICENSE
+- autosize 4.0.4 — MIT: notices/autosize/LICENSE.md
+- call-bind 1.0.9 — MIT: notices/call-bind/LICENSE
+- call-bind-apply-helpers 1.0.2 — MIT: notices/call-bind-apply-helpers/LICENSE
+- call-bound 1.0.4 — MIT: notices/call-bound/LICENSE
+- clsx 2.1.1 — MIT: notices/clsx/license
+- computed-style 0.1.4 — MIT (package LICENSE-MIT): notices/computed-style/LICENSE-MIT
+- define-data-property 1.1.4 — MIT: notices/define-data-property/LICENSE
+- define-properties 1.2.1 — MIT: notices/define-properties/LICENSE
+- dom-helpers 5.2.1 — MIT: notices/dom-helpers/LICENSE
+- dunder-proto 1.0.1 — MIT: notices/dunder-proto/LICENSE
+- es-define-property 1.0.1 — MIT: notices/es-define-property/LICENSE
+- es-errors 1.3.0 — MIT: notices/es-errors/LICENSE
+- es-object-atoms 1.1.2 — MIT: notices/es-object-atoms/LICENSE
+- fast-deep-equal 3.1.3 — MIT: notices/fast-deep-equal/LICENSE
+- function-bind 1.1.2 — MIT: notices/function-bind/LICENSE
+- get-intrinsic 1.3.0 — MIT: notices/get-intrinsic/LICENSE
+- get-proto 1.0.1 — MIT: notices/get-proto/LICENSE
+- gopd 1.2.0 — MIT: notices/gopd/LICENSE
+- has-property-descriptors 1.0.2 — MIT: notices/has-property-descriptors/LICENSE
+- has-symbols 1.1.0 — MIT: notices/has-symbols/LICENSE
+- hasown 2.0.4 — MIT: notices/hasown/LICENSE
+- hoist-non-react-statics 3.3.2 — BSD-3-Clause: notices/hoist-non-react-statics/LICENSE.md
+- line-height 0.3.1 — MIT: notices/line-height/LICENSE-MIT
+- math-intrinsics 1.1.0 — MIT: notices/math-intrinsics/LICENSE
+- memoize-one 5.2.1 — MIT: notices/memoize-one/LICENSE
+- node-polyglot 2.6.0 — BSD-2-Clause: notices/node-polyglot/LICENSE
+- object-keys 1.1.1 — MIT: notices/object-keys/LICENSE
+- object.entries 1.1.9 — MIT: notices/object.entries/LICENSE
+- preact 10.5.13 — MIT: notices/preact/LICENSE
+- prop-types 15.8.1 — MIT: notices/prop-types/LICENSE
+- react-autosize-textarea 7.1.0 — MIT: notices/react-autosize-textarea/LICENSE.txt
+- react-draggable 4.7.2 — MIT: notices/react-draggable/LICENSE
+- react-input-autosize 3.0.0 — MIT: notices/react-input-autosize/LICENSE
+- react-is 16.13.1 — MIT: notices/react-is/LICENSE
+- react-select 4.3.1 — MIT: notices/react-select/LICENSE
+- react-transition-group 4.4.5 — BSD-3-Clause: notices/react-transition-group/LICENSE
+- set-function-length 1.2.2 — MIT: notices/set-function-length/LICENSE
+- stylis 4.2.0 — MIT: notices/stylis/LICENSE
+- timeago-react 3.0.7 — MIT: notices/timeago-react/LICENSE
+- timeago.js 4.3.0 — MIT: notices/timeago.js/LICENSE
+- tiny-emitter 2.1.0 — MIT: notices/tiny-emitter/LICENSE
+- uuid 8.3.2 — MIT: notices/uuid/LICENSE.md
+- warning 4.0.3 — MIT: notices/warning/LICENSE.md
