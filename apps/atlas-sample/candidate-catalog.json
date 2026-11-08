@@ -3630,21 +3630,62 @@
   },
   {
     "id": "motioncore:rubiks-cube",
-    "title": "rubiks-cube",
+    "restoreExistingCandidate": true,
+    "title": "Motion Core · 层转动微光材质",
     "source": "Motion Core",
-    "license": "MIT",
+    "revision": "74ad6e66d50cc9b1849a505fcd1b352704920745",
+    "repository": "https://github.com/kaltwrk/motion-core",
+    "license": "MIT AND Unlicense",
+    "publicationReady": true,
+    "directory": "rubiks-cube",
+    "entry": "rubiks-cube/index.html",
+    "runtime": {
+      "js": "runtime.js",
+      "css": "runtime.css",
+      "format": "iife",
+      "detailOnly": true,
+      "allowLocalMedia": false
+    },
+    "needsLocalMedia": false,
+    "browserVisualQA": "not-run",
+    "counts": {
+      "independentFamily": 1
+    },
+    "size": {
+      "js": 117253,
+      "gzip": 39285,
+      "css": 74
+    },
+    "limitations": [
+      "原空间材质，不是可解魔方或任务进度",
+      "WebGL命令/状态在测试中为stub，真实GPU像素未验",
+      "原Scene机制，宿主标题/暂停为适配新增"
+    ],
     "upstream": "https://github.com/kaltwrk/motion-core/tree/74ad6e66d50cc9b1849a505fcd1b352704920745/packages/motion-core/src/lib/components/rubiks-cube",
-    "website": "",
-    "buildStatus": "not installed or built",
-    "batch": "batch-002",
-    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "preview": "batches/motion-cube-01/index.html",
+    "batch": "motion-cube-01",
+    "category": "视觉与动效",
+    "kind": "层转动空间材质",
+    "format": "Fresnel空间动效设计族",
+    "styleTags": [
+      "微光",
+      "空间感",
+      "深色"
+    ],
+    "purposeTags": [
+      "等待反馈",
+      "装饰动效"
+    ],
+    "description": "恢复原Motion Core圆角27块、自动按层转动与橙色Fresnel边缘；一族空间等待材质，不是可解魔方或真实任务进度。",
+    "behavior": "原9块层选取、轴旋转、commit位置/四元数/重挂载与OGL Orbit视角；暂停/隐藏/reduced静态，GL失败明确不可用。",
+    "buildStatus": "Eight original geometry/layer/Orbit and lifecycle/error branches passed with WebGL status/command substitutes; real GPU pixels NOT verified",
     "gaps": [
-      "Official demos import workspace motion-core barrel; recreate selected exports or adapt imports before building. Full-library barrel intentionally not claimed closed.",
-      "Root package/lock and Svelte styles/helpers preserved; monorepo installation not tested.",
-      "WebGL/OGL shaders require real GPU/interaction checks; static source collection does not establish animation or performance.",
-      "Demo remote image/media references not downloaded. water-ripple brush PNG missing and must be supplied under verified rights or replaced with an original brush.",
-      "Package lists MediaPipe among peers, but selected source scan found no getUserMedia/requestPermission calls. No camera or device permissions used.",
-      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+      "原空间材质，不是可解魔方或任务进度",
+      "WebGL命令/状态在测试中为stub，真实GPU像素未验",
+      "原Scene机制，宿主标题/暂停为适配新增",
+      "只选Svelte Scene及helper，未安装/打包GSAP或MediaPipe；实际Svelte/clsx/esm-env MIT与OGL Unlicense完整保留。",
+      "补Orbit取消中断拖动与shader释放；contextlost立即释放/停帧并明确失败，禁止假恢复；正常8资源创建/8删除。",
+      "固定来源已核，旧ZIP多末尾换行披露；源码ZIP仅本地。"
     ]
   },
   {
@@ -10751,6 +10792,37 @@
       "JSDOM 几何/ResizeObserver mock，真实 SVG 合成及原生触摸像素未验",
       "共享SVG goo/弹簧技术，但不同于已有标签切换、排斥粒子或液体滑条，不按三个圆计数。",
       "固定来源原件对照，旧归档额外换行已披露；11个实际运行包完整许可保留，源码ZIP仅本地。"
+    ]
+  },
+  {
+    "id": "speedscope:synthetic-agent-flamegraph",
+    "title": "speedscope · Agent调用栈剖面",
+    "source": "speedscope",
+    "license": "MIT; string-hash CC0 included",
+    "upstream": "https://github.com/jlfwong/speedscope/tree/810efdf0a4868bb28f1300f4daacd0db6b8a95bd",
+    "version": "1.25.0",
+    "preview": "batches/speedscope-01/index.html",
+    "batch": "speedscope-01",
+    "category": "数据与状态",
+    "kind": "调用栈剖面组件",
+    "format": "交互火焰图设计族",
+    "styleTags": [
+      "原版浅色",
+      "性能剖面"
+    ],
+    "purposeTags": [
+      "Agent执行审阅",
+      "调用栈检视"
+    ],
+    "description": "原speedscope Time Order/Left Heavy/Sandwich界面与火焰图；两组原创本地Agent调用栈只是合成示例，不是真实性能测量。",
+    "behavior": "原模式切换、调用栈检索、profile选择、zoom/reset与caller/callee；禁止外部导入导出/持久化，GL不可用明确失败。",
+    "buildStatus": "Four original renderer/model/keyboard/search/zoom/error branches passed with Canvas/WebGL doubles; GPU/native pixel acceptance NOT performed",
+    "gaps": [
+      "原GLSL/Canvas绘制命令经过替身测试，实际GPU编译、像素、原生平移/触摸待验。",
+      "源级禁导入/导出/URL/文件/粘贴/保存/外链与demangle/WASM；系统等宽替代原字体，CSP不变。",
+      "修复初始化着色器失败反复抛错与原GL资源/待处理zoom清理；失败不展示替代图。",
+      "aphrodite原包README明确MIT和Khan Academy版权但缺完整许可文件，透明补标准MIT；string-hash原CC0声明及完整条款保留。",
+      "源码/构建/测试仅本地，未声称源码ZIP已托管。"
     ]
   }
 ]
