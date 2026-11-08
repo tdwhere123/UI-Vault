@@ -23,3 +23,5 @@ test('featured IIFE remains valid when safely embedded in an opaque srcdoc',asyn
 import './preview-runtime.test.mjs';
 
 test('every added runtime batch has real source, download, preview and matching local assets',async()=>{for(const x of items.filter(x=>x.runtime)){for(const key of ['title','category','source','license','preview','code','bundle'])assert.ok(x[key]);for(const file of [x.preview,x.code,x.bundle,x.runtime.css,x.runtime.js]){assert.ok(!file.includes('..')&&!file.includes(':')&&!file.startsWith('/'));assert.ok((await stat(path.join(root,file))).size>0)}const html=await read(x.preview);assert.ok(html.includes(`<link rel="stylesheet" href="${x.runtime.cssHref}">`));assert.ok(html.includes(`<script src="${x.runtime.scriptSrc}"></script>`));}});
+
+test('every published thumbnail uses a supported sized canvas',()=>{for(const x of items)assert.ok(['wide','compact','featured-kanban','featured-vocabulary','featured-warp','featured-orbit'].includes(x.thumbnailSize),x.id)});
