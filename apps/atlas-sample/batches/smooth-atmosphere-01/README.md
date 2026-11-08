@@ -5,4 +5,4 @@ The original orbital physics, snapping, keyboard controls and light-state transi
 
 Host adds stop/start/reset and pagehide unmount. Tests verify keyboard rotation, item snapping, real random light-state DOM progression, stop/start, and zero remaining interval/RAF after pagehide. Pointer inertia, rendered SVG artwork, lighting quality and browser responsive geometry remain visually unverified. No network, remote assets, eval, Worker, clipboard or account state.
 
-Original sources, adapted source, dependency licenses and lockfile included. Rebuild from source/: npm ci --ignore-scripts; node build.cjs; npx @tailwindcss/cli -i styles.css -o runtime.css --minify. Put assets beside HTMLs. Tests reference this workspace and an existing JSDOM package; adjust local paths elsewhere.
+This published directory contains actual runtime assets, original/source hash evidence, test summaries and license notices. The complete original/adapted build tree and lockfile are retained in the local delivery only, not uploaded here as a source ZIP. Upstream source links in the catalog are pinned to the revision above.
