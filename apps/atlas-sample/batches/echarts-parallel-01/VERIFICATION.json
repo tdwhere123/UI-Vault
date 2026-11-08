@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "checks": [
+    "original SVG engine mounts 12 real parallel series lines",
+    "low latency native axisAreaSelect returns expected 4 indices",
+    "two-axis budget/coverage intersection returns H only",
+    "stability native selection returns expected 3 indices",
+    "empty intersection and message",
+    "range controls dispatch native action with expected E/H active set",
+    "parameter edits retain previous selection with explicit pending notice until apply",
+    "active axis intervals read from original model",
+    "selection changes clear old manual highlight",
+    "result focus dispatches original highlight",
+    "clear all selections returns 12",
+    "no external asset elements",
+    "pagehide disconnects ResizeObserver, disposes original chart/SVG, cancels renderer RAF",
+    "zero Function/eval/network/Worker/storage/dynamic script calls"
+  ],
+  "browserVisualQA": "not-run; JSDOM canvas text measurement and element geometry stubs; no visual, native brush pointer gesture or touch acceptance"
+}
