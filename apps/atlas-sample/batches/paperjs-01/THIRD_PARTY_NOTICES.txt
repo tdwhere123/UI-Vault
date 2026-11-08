@@ -1,0 +1,35 @@
+Paper.js 0.12.18
+Copyright (c) 2011 - 2020, Jürg Lehni & Jonathan Puckey
+MIT: full upstream license in LICENSE.
+Source: https://github.com/paperjs/paper.js/tree/c1d88390d2c86901db152827fe778c3e39cfb073 (v0.12.18 release commit).
+Official runtime artifact: https://registry.npmjs.org/paper/-/paper-0.12.18.tgz -> package/dist/paper-core.js, unchanged.
+Example basis: examples/Paperjs.org/BooleanOperattions.html (filename spelling as upstream). Primitive square and ring obtained by subtracting two circles; same path operation calls. No third-party example artwork included.
+
+Embedded Straps.js 3.0.1 class library
+Bundle copyright: Copyright (c) 2006 - 2020 Jürg Lehni.
+Full license below is the exact upstream locked package LICENSE.txt from .yarn/cache/straps-npm-3.0.1-4bc74778f4-893e7636f0.zip, retaining its earlier copyright as well.
+Copyright (c) 2008 - 2016, Juerg Lehni
+http://scratchdisk.com/
+All rights reserved.
+
+The MIT License (MIT)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+The core bundle's generic header also mentions Acorn, but Acorn and PaperScript are excluded from paper-core (official README lines 41–44). No PaperScript compiler, eval, Node canvas or jsdom is included in delivery. All adapters and DOM tests are local; test-only jsdom is not a runtime dependency. No remote assets, fonts, or services.
