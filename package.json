@@ -9,7 +9,7 @@
   "scripts": {
     "test": "node --test apps/atlas-sample/*.test.mjs",
     "check": "node --check apps/atlas-sample/app.js && node --check scripts/export-pages.mjs",
-    "build": "npm run check && npm test",
+    "build": "node scripts/prepare-catalog.mjs && npm run check && npm test",
     "export": "node scripts/export-pages.mjs"
   }
 }

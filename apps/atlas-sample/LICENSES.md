@@ -15,3 +15,17 @@
 - **React、Motion 及其他打包依赖**：版本、锁文件、许可通知在对应源码包中。源码下载不包含 node_modules，也不等于无需安装构建工具。
 
 前端为独立实现，没有复制 LeiBox 受限制代码。React Bits 等限制组件再分发的来源未作为可公开下载素材纳入。候选网站、不同配色和框架版本不直接增加已收录数量。
+
+## 新增来源
+
+- **Tailark**：MIT，原文与内部组件闭包见 `batches/tailark-curated-01/LICENSE.txt` 和源码包。只采用免费开源区块；远程照片以本地自制SVG适配，未复制付费模板。
+- **Lucide**：[ISC＋Feather派生部分MIT原文](batches/icon-series/lucide-LICENSE.txt)，完整原包及许可在该系列源码ZIP。商标图形的商标权不因开源许可转让。
+- **Tabler Icons**：[MIT原文](batches/icon-series/tabler-LICENSE.txt)，完整原包及许可在该系列源码ZIP。商标图形的商标权不因开源许可转让。
+- **Phosphor Icons**：[MIT原文](batches/icon-series/ph-LICENSE.txt)，完整原包及许可在该系列源码ZIP。商标图形的商标权不因开源许可转让。
+- **Heroicons**：[MIT原文](batches/icon-series/heroicons-LICENSE.txt)，完整原包及许可在该系列源码ZIP。商标图形的商标权不因开源许可转让。
+- **Octicons**：[MIT原文](batches/icon-series/octicon-LICENSE.txt)，完整原包及许可在该系列源码ZIP。商标图形的商标权不因开源许可转让。
+- **Bootstrap Icons**：[MIT原文](batches/icon-series/bi-LICENSE.txt)，完整原包及许可在该系列源码ZIP。商标图形的商标权不因开源许可转让。
+
+Remix Icon当前官方许可限制独立图标集合的再分发，未纳入本库；未依据旧元数据替它声明Apache许可。
+
+站壳 `shell-icons.mjs` 使用Lucide原生SVG子集，适用上方ISC及派生MIT许可；不是凭外观描摹第三方图标。导航与Tab语义参考本库已保存的HyperUI MIT原件，界面排版与性能逻辑独立实现。

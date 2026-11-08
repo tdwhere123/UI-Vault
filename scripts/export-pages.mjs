@@ -12,14 +12,17 @@ export async function exportPages(output,basePath='/UI-Vault/') {
   const sha=execFileSync('git',['rev-parse','HEAD'],{cwd:root,encoding:'utf8'}).trim();
   const worktreeDirty=!!execFileSync('git',['status','--porcelain','--untracked-files=no'],{cwd:root,encoding:'utf8'}).trim();
   const source=join(root,'apps/atlas-sample');
-  const files=['index.html','app.js','atlas-model.mjs','preview-runtime.mjs','style.css','items.json','README.md','LICENSES.md'];
+  const files=['index.html','app.js','atlas-model.mjs','preview-runtime.mjs','style.css','items.json','catalog.json','shell-icons.mjs','README.md','LICENSES.md'];
   async function copy(relative){const s=join(source,relative),d=join(output,relative),info=await lstat(s);if(info.isSymbolicLink())throw Error('Symlinks not permitted');if(info.isDirectory()){await mkdir(d);for(const child of await readdir(s))await copy(relative+'/'+child)}else if(info.isFile())await copyFile(s,d);else throw Error('Unsupported input');}
-  for(const name of [...files,'assets','previews','originals','bundles','featured'])await copy(name);
+  for(const name of [...files,'assets','previews','originals','bundles','featured','thumbnails'])await copy(name);
   if((await readdir(source)).includes('batches'))await copy('batches');
   const items=JSON.parse(await readFile(join(output,'items.json'),'utf8'));
   if(!items.length||new Set(items.map(x=>x.id)).size!==items.length)throw Error('Expected nonempty, unique atlas materials');
   for(const x of items)for(const value of [x.preview,x.code,x.bundle,...(x.runtime?[x.runtime.css,x.runtime.js]:[])]){if(typeof value!=='string'||value.includes('..')||value.startsWith('/')||value.includes(':'))throw Error('Invalid material path');await lstat(join(output,value));}
-  const version={codeSha:sha,basePath,materials:items.length,worktreeDirty};
+  const posters=items.filter(x=>x.thumbnail).length;
+  if(posters!==items.length)throw Error('Every published material needs a reviewed real poster');
+  for(const x of items){if(!/^thumbnails\/[a-zA-Z0-9_-]+\.webp$/.test(x.thumbnail))throw Error('Invalid poster path');await lstat(join(output,x.thumbnail));}
+  const version={codeSha:sha,basePath,materials:items.length,posters,listPreviewMode:'static-poster',worktreeDirty};
   await writeFile(join(output,'version.json'),JSON.stringify(version,null,2)+'\n');
   await writeFile(join(output,'.nojekyll'),'');
   return version;

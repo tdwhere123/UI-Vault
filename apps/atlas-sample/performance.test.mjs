@@ -1,0 +1,8 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readFile,stat} from 'node:fs/promises';
+const base=new URL('./',import.meta.url),read=f=>readFile(new URL(f,base),'utf8');
+const items=JSON.parse(await read('items.json')),catalog=JSON.parse(await read('catalog.json'));
+test('list catalog preserves identities without download or runtime payload',()=>{assert.deepEqual(catalog.map(x=>x.id),items.map(x=>x.id));for(const x of catalog){assert.equal(x.runtime,undefined);assert.equal(x.bundle,undefined);assert.equal(x.code,undefined);assert.equal(x.dependencies,undefined)}assert.ok(Buffer.byteLength(JSON.stringify(catalog))<180000)});
+test('list rendering uses image posters, never live component frames',async()=>{const app=await read('app.js');const listing=app.slice(app.indexOf('function render('),app.indexOf('function renderPagination'));assert.match(listing,/el\('img'\)/);assert.doesNotMatch(listing,/iframe|loader\.mount|previewPool|createPreviewPool/);assert.match(app,/setTimeout\(\(\)=>render\(\),150\)/);assert.match(app,/onReady:/);assert.match(app,/onError:/)});
+test('available posters are local real-image files with bounded dimensions',async()=>{assert.equal(catalog.filter(x=>x.thumbnail).length,catalog.length);for(const x of catalog){assert.match(x.thumbnail,/^thumbnails\/[a-zA-Z0-9_-]+\.webp$/);const f=await stat(new URL(x.thumbnail,base));assert.ok(f.size>100&&f.size<250000,x.id)}});
