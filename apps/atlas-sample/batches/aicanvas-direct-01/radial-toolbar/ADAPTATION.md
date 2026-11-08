@@ -1,0 +1,7 @@
+# AI Canvas free-library adaptation
+Pinned source: https://github.com/aicanvas-me/aicanvas/tree/8164f1e423e4e654dd0828a941ba5cdda69f08fe/components-workspace
+MIT Copyright (c) 2026 AI Canvas. Root README repository-layout explicitly identifies components-workspace/<slug> as each free component, and License section explicitly licenses the free library MIT. Premium components/design systems/templates are proprietary and are excluded. LICENSE and dependency notices retained. No root scripts, premium injection or Git hook scripts were executed.
+
+Original free component source retained. Thin local host provides size and a demonstration notice; Tailwind v4 compiled locally. No remote imagery, fonts or API are used. New-project-modal only: official Create originally validated then closed; an added onCreated callback now emits the actual local title/description/color/private values as visible JSON before original close/reset. This is a local preview, not a persisted project or an external creation action. Radial toolbar is local selection state, not connected to an editor; calendar is a day-number interaction, not calendar account data.
+
+Verification report in VERIFICATION.log. Production IIFE build, node --check, opaque-origin JSDOM with geometry/RAF/browser API stubs. Real browser visual quality, pointer hit geometry, all animation frames, touch/mobile and full accessibility remain unverified. Do not treat DOM evidence as pixel acceptance.
