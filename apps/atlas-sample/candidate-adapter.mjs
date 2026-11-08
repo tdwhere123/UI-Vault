@@ -8,5 +8,5 @@ export function adaptCandidate(x) {
  bundle:x.archive||'',code:x.code||'',dependencies:x.buildStatus||'依赖及构建状态见来源。',
  behavior:x.behavior||(x.preview?'本地预览已接入，尚未完成视觉复验。':'暂无本地预览；可查看原始来源。'),
  adaptation:(Array.isArray(x.gaps)?x.gaps:[]).join('；'),revision:x.revision||'详见固定来源链接',
- runtime:dir?{key:dir,css:dir+'/runtime.css',js:dir+'/runtime.js',cssHref:'runtime.css',scriptSrc:'runtime.js'}:null};
+ runtime:dir?{allowLocalMedia:x.needsLocalMedia===true,key:dir,css:dir+'/runtime.css',js:dir+'/runtime.js',cssHref:'runtime.css',scriptSrc:'runtime.js'}:null};
 }
