@@ -771,20 +771,43 @@
   },
   {
     "id": "cult:feature-carousel",
-    "title": "cult:feature-carousel",
+    "title": "多层空间编排功能轮播",
     "source": "Cult UI",
     "license": "MIT",
     "upstream": "https://github.com/nolly-studio/cult-ui/tree/d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
     "website": "",
-    "buildStatus": "not built",
-    "batch": "batch-001",
+    "buildStatus": "Original multi-layer composition;step/play/pause/hidden/rapid-input/cleanup DOM tests passed; visual pending",
+    "batch": "cult-carousel-01",
     "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/cult-archive-02/source-archive.zip",
     "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/cult-archive-02/manifest.json",
-    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "description": "原Cult四步多层空间编排、滑入缩放与步骤说明；使用原创本地SVG信息图，默认暂停，支持步骤选择、下一步与自主播放。",
     "gaps": [
-      "WebGL if shader library used; unsupported rendering must not be counted as working",
-      "Remote media, commercial brand logos and device trademarks need separate asset review"
-    ]
+      "全部图片为原创本地矢量示意，不是实际产品截图或后台输出。",
+      "仅1族介绍性轮播，不把4步或5张图片拆为多项；不是执行流程。",
+      "DOM状态/资源测试通过，真实视觉编排和键盘浏览器验收仍待完成。"
+    ],
+    "category": "展示与媒体",
+    "kind": "交互展示组件",
+    "styleTags": [
+      "空间层次",
+      "圆润",
+      "步骤展示"
+    ],
+    "preview": "batches/cult-carousel-01/feature-carousel.html",
+    "revision": "d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+    "sourceFile": "archive-internal source/registry/default/ui/feature-carousel.tsx",
+    "demoSource": "archive-internal source/registry/default/example/feature-carousel-demo.tsx",
+    "previewStatus": "visual-review-pending",
+    "knownGaps": [
+      "全部图片为原创本地矢量示意，不是实际产品截图或后台输出。",
+      "仅1族介绍性轮播，不把4步或5张图片拆为多项；不是执行流程。",
+      "DOM状态/资源测试通过，真实视觉编排和键盘浏览器验收仍待完成。"
+    ],
+    "purposeTags": [
+      "步骤说明",
+      "产物介绍"
+    ],
+    "format": "复合交互组件"
   },
   {
     "id": "cult:tabs-illustration-vercel",
@@ -1410,19 +1433,38 @@
   },
   {
     "id": "uilayout:gallery-modal-slider",
-    "title": "画廊弹窗与大图滑动",
+    "title": "UI Layouts · 素材墙与纵向胶片预览",
     "source": "UI Layouts",
     "license": "MIT",
     "upstream": "https://github.com/ui-layouts/uilayouts/blob/88d827d7ec342917ca06f6894e5add65fabbe5d8/apps/ui-layout/registry/components/modal/gallery-modal/modal-slider.tsx",
     "website": "",
-    "buildStatus": "not built; source archive only",
-    "batch": "batch-001",
+    "buildStatus": "Original component;normal/reduced-motion selection/close/focus/cleanup tests passed; drag geometry and pixels pending",
+    "batch": "uilayout-gallery-01",
     "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/uilayout-archive-02/source-archive.zip",
     "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/uilayout-archive-02/manifest.json",
-    "description": "None: upstream original source archived unchanged. Remote photos/video not downloaded and not implied licensed by repository MIT.",
+    "description": "原三列素材墙共享布局展开为模糊背景大图，纵向缩略条切换选看；示例为原创SVG设计稿，不是真实模型产物。",
     "gaps": [
-      "尚未完成本轮视觉与交互验收"
-    ]
+      "原远程照片未授权，未包含，改为原创文本SVG设计稿",
+      "拖动逻辑保留；JSDOM只验选择状态，不验原指针拖动几何/边界",
+      "共享布局、弹簧视觉未验，不称完整无障碍",
+      "无上传、模型调用、下载或真实生成结果",
+      "原MIT及实际依赖许可保留，源码ZIP仅本地。"
+    ],
+    "preview": "batches/uilayout-gallery-01/index.html",
+    "revision": "88d827d7ec342917ca06f6894e5add65fabbe5d8",
+    "category": "展示与媒体",
+    "kind": "复合交互组件",
+    "format": "空间素材浏览设计族",
+    "styleTags": [
+      "圆润",
+      "共享布局",
+      "空间感"
+    ],
+    "purposeTags": [
+      "结果浏览",
+      "素材对照"
+    ],
+    "behavior": "选看不同素材、原纵向drag逻辑、Escape/按钮/背景关闭和焦点恢复；重复打开/卸载清理body滚动锁。"
   },
   {
     "id": "uilayout:media-modal",
@@ -3136,22 +3178,34 @@
   },
   {
     "id": "blode:markers",
-    "title": "markers",
+    "title": "Blode · 长文阅读刻度与章节轨道",
     "source": "Matthew Blode Experiments",
     "license": "MIT (original code; third-party dependencies/assets separate)",
     "upstream": "https://github.com/mblode/experiments/tree/d4baef572c4e692dcfe5f3a1e424e641d6013b18/app/markers",
     "website": "",
-    "buildStatus": "not installed or built",
-    "batch": "batch-002",
-    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "buildStatus": "Original scroll math/targets/focus/resize/no-scroll/cleanup tested in normal/reduced modes; visual pending",
+    "batch": "blode-markers-01",
+    "description": "原Blode页面进度轨与按章节真实相对位置分布的刻度，hover/focus显标题并点击滚至章节。",
     "gaps": [
-      "No images/video/font binaries archived. Asset paths reference upstream files whose redistribution permissions need review or original replacements.",
-      "Next routing/basePath /experiments and aliases need integration; source dependencies statically traced, no build/install.",
-      "Moon requests device geolocation on mount and reverse-geocodes through Nominatim. Before any test replace with fixed sample coordinates and disable external lookup; no location permission was requested during collection.",
-      "WebGL moon/sticky-note/dither scenes need real GPU and interaction validation. Dither is a graphical arcade demo rather than a production UI widget.",
-      "Original package contains prepare hook and telemetry dependency; no lifecycle scripts or telemetry were executed. Use minimal adapted dependencies before installing.",
-      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
-    ]
+      "几何与scrollIntoView为测试桩，不等于真实浏览器滚动、字体或hover验收。",
+      "原版<=820px隐藏章节刻度，但进度轨仍在；不声称手机仍显示刻度。",
+      "只跟踪预览iframe内正文，不跟踪主图鉴页面。",
+      "原MIT和完整运行依赖许可保留，无远程媒体；新源码ZIP仅本地。"
+    ],
+    "preview": "batches/blode-markers-01/index.html",
+    "revision": "d4baef572c4e692dcfe5f3a1e424e641d6013b18",
+    "category": "导航与组织",
+    "kind": "阅读导航组件",
+    "format": "文档导航设计族",
+    "styleTags": [
+      "极简",
+      "阅读辅助"
+    ],
+    "purposeTags": [
+      "长文阅读",
+      "报告导航"
+    ],
+    "behavior": "保留120px阈值、滚动进度、比例定位及减少动态行为；原创五段示例正文，隐藏/焦点/resize与卸载清理。"
   },
   {
     "id": "blode:moon",
