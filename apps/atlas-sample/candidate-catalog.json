@@ -8787,5 +8787,133 @@
       "单个完整工具，不把矩形和多边形拆成素材数。",
       "完整许可和固定来源保留；源码ZIP仅本地未上传。"
     ]
+  },
+  {
+    "id": "d3-geo:context-globe",
+    "title": "上下文地球仪 · 跨地域协作示意",
+    "source": "D3 Geo",
+    "license": "ISC; Natural Earth public-domain geography",
+    "upstream": "https://github.com/d3/d3-geo/tree/8c53a90ae70c94bace73ecb02f2c792c649c86ba",
+    "revision": "8c53a90ae70c94bace73ecb02f2c792c649c86ba",
+    "batch": "d3-geo-01",
+    "preview": "batches/d3-geo-01/index.html",
+    "category": "展示与媒体",
+    "kind": "复合交互组件",
+    "format": "空间可视化",
+    "styleTags": [
+      "有机",
+      "空间感",
+      "深色",
+      "圆润"
+    ],
+    "purposeTags": [
+      "Agent工作流",
+      "地域上下文"
+    ],
+    "description": "原D3正射投影与本地真实陆地数据，拖动/键盘旋转、城市聚焦、缩放和按需慢转；原创深色界面壳。",
+    "behavior": "四座城市仅示例坐标与虚构任务；不是用户位置、实时协作或导航服务。SVG路径真实重算，不依赖GPU和远程纹理。",
+    "buildStatus": "Original projection;finite geometry/focus/rotation/zoom/culling/spin lifecycle tests passed; visual pending",
+    "gaps": [
+      "界面壳为原创适配，不是上游成品页面。",
+      "真实视觉、触屏和完整无障碍未验；地图仅小比例尺示意，不含国界。",
+      "仅一个完整地球仪族，不按城市/动画帧拆分；无源码ZIP下载。"
+    ]
+  },
+  {
+    "id": "minisearch:local-document-retrieval",
+    "title": "MiniSearch · 本地全文资料检索工作台",
+    "source": "MiniSearch",
+    "license": "MIT",
+    "upstream": "https://github.com/lucaong/minisearch/tree/3d239d1c3ae7aef1bf5d8945dd7b5f0709f646f5",
+    "revision": "3d239d1c3ae7aef1bf5d8945dd7b5f0709f646f5",
+    "batch": "minisearch-01",
+    "preview": "batches/minisearch-01/index.html",
+    "category": "导航与组织",
+    "kind": "复合交互组件",
+    "format": "本地检索工作区",
+    "styleTags": [
+      "圆润"
+    ],
+    "purposeTags": [
+      "Agent工作流",
+      "资料检索"
+    ],
+    "description": "原MiniSearch倒排索引真实评分、前缀与拼写容错；新增、编辑、删除资料立即更新本地索引。",
+    "behavior": "真实倒排全文索引与相关性评分；前缀匹配与自动补全；拼写容错；AND/OR和分类过滤；资料新增/替换/删除即时更新索引；中文词切分（Intl.Segmenter）；本地JSON查看；离开页面清理索引与待执行计时器",
+    "buildStatus": "Production original-engine bundle;17 search/index/safety/lifecycle checks passed; visual pending",
+    "gaps": [
+      "非生成式问答/向量语义检索",
+      "相关性分数不是可信度或概率",
+      "数据仅内存，不上传或持久保存",
+      "最多100篇，每篇20000字",
+      "浏览器无Intl.Segmenter时中文分词回退较弱",
+      "视觉与真实辅助技术验收未运行",
+      "界面壳和示例语料为明确标注的原创适配。",
+      "完整许可保留；源码ZIP仅本地，未上传。"
+    ]
+  },
+  {
+    "id": "driver:anchor-explainer",
+    "title": "空间锚点解释 · 原位聚光",
+    "source": "Driver.js",
+    "license": "MIT",
+    "upstream": "https://github.com/nilbuild/driver.js/tree/a75736ab1c375b4a14276105da9ad2aab04ff67e/packages/driver/src",
+    "revision": "a75736ab1c375b4a14276105da9ad2aab04ff67e",
+    "batch": "driver-01",
+    "preview": "batches/driver-01/index.html",
+    "category": "导航与组织",
+    "kind": "复合交互组件",
+    "format": "原位说明组件",
+    "styleTags": [
+      "圆润",
+      "空间感"
+    ],
+    "purposeTags": [
+      "Agent工作流",
+      "证据解释"
+    ],
+    "description": "原Driver引擎基于实际页面控件几何开洞聚光；切换输入、证据、决策锚点时跟随定位，目标保持可操作。",
+    "behavior": "无Next/Back向导表单；解释层直接切换实际锚点，真实输入与勾选保留。Esc、关闭及离开清理遮罩。",
+    "buildStatus": "Original engine;anchor geometry/resize/input/actions/cleanup state checks passed; visual pending",
+    "gaps": [
+      "界面壳与虚构任务为原创适配，不是上游完整页面。",
+      "实际像素开洞、滚动位置与触屏未验收；测试仅使用几何桩。",
+      "完整许可保留；源码ZIP无线上下载。"
+    ]
+  },
+  {
+    "id": "markmap:markdown-workbench",
+    "batch": "markmap-01",
+    "title": "本地 Markdown 文档导图",
+    "source": "Markmap",
+    "category": "Agent与对话",
+    "kind": "交互文档组件",
+    "styleTags": [
+      "有机分枝",
+      "文档表达",
+      "圆润"
+    ],
+    "preview": "batches/markmap-01/markdown-map.html",
+    "revision": "4247555f57017ffc9297e5e5e031c4119de3ebaf",
+    "upstream": "https://github.com/markmap/markmap/tree/4247555f57017ffc9297e5e5e031c4119de3ebaf",
+    "sourceFile": "packages/markmap-lib/src/transform.ts + packages/markmap-view/src/view.ts",
+    "license": "MIT",
+    "description": "真正本地Markdown输入，经原Transformer生成树并由原Markmap布局。支持更新、分枝折叠展开、拖动缩放、适配视图和示例切换。",
+    "previewStatus": "visual-review-pending",
+    "knownGaps": [
+      "图片、链接、raw HTML、数学/代码插件及格式属性禁用，节点仅保留安全纯文本。",
+      "JSDOM几何mock，真实布局、触摸和动效视觉未验；测试覆盖状态而非像素。",
+      "仅本地内存，不保存或上传文档。"
+    ],
+    "buildStatus": "Build/JS parse, Markdown parsing, branch state, zoom, hostile input, length cap and cleanup passed.",
+    "gaps": [
+      "图片、链接、raw HTML、数学/代码插件及格式属性禁用，节点仅保留安全纯文本。",
+      "JSDOM几何mock，真实布局、触摸和动效视觉未验；测试覆盖状态而非像素。",
+      "仅本地内存，不保存或上传文档。"
+    ],
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "format": "复合交互组件"
   }
 ]
