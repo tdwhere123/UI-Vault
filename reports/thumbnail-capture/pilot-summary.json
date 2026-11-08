@@ -1,0 +1,56 @@
+{
+  "baseline": "77ada4cd095d383cf1e9c774f7cc1518da9b1b55",
+  "branch": "thumbnails/real-preview-20261109-aheng",
+  "baseline_missing_covers": 271,
+  "render_capture_processing_success": 5,
+  "component_failures": 0,
+  "unprocessed": 266,
+  "integration_status": "not integrated by design; candidate/catalog/items/app/README untouched; existing list still has 241 covers until separate mapping integration",
+  "visual_review": "Parent Read confirmed all five processed covers; subject complete and clear. cover_visual_review=passed for static covers only; interaction_acceptance remains not_tested.",
+  "interaction_acceptance": "not_tested; local observations are not full dynamic/WebGL/audio/keyboard acceptance",
+  "css_viewport": "unknown for all; screenshot pixel dimensions recorded separately",
+  "resource_verification": "15/15 public HTML/CSS/JS byte-identical to baseline",
+  "tests": {
+    "tool": "10/10 passed; synthetic temporary artifacts only",
+    "build": "npm run build: 37/37 passed",
+    "export": "node scripts/export-pages.mjs <new-empty-output> /UI-Vault/: exit 0; raw output in pilot-test-outputs/export.txt"
+  },
+  "environment": "Local shell HTTP 200 but operator browser local addresses inaccessible; public capture used with resource hashes; this is environment blocker, not component failure.",
+  "items": [
+    {
+      "id": "assistant-elements:agent-plan",
+      "path": "apps/atlas-sample/thumbnails/assistant-elements--agent-plan.webp",
+      "bytes": 6356,
+      "sha256": "75fb229be73f4306117df4916a26715b3a8a473b7487a788e394b1cf7be5a559",
+      "mapping": "reports/thumbnail-capture/records/assistant-elements--agent-plan.json"
+    },
+    {
+      "id": "assistant-elements:elicitation-form",
+      "path": "apps/atlas-sample/thumbnails/assistant-elements--elicitation-form.webp",
+      "bytes": 7208,
+      "sha256": "deadfe0be3c066df619d87dcd3362cad34f6b102a92365fe41cf3cd6b0d59da6",
+      "mapping": "reports/thumbnail-capture/records/assistant-elements--elicitation-form.json"
+    },
+    {
+      "id": "astryx:ai-chat",
+      "path": "apps/atlas-sample/thumbnails/astryx--ai-chat.webp",
+      "bytes": 19698,
+      "sha256": "694b82ae6d4de41dab9cf9d3f1167bd9e59cadcf7ff1ee18f0bbbce5f3416849",
+      "mapping": "reports/thumbnail-capture/records/astryx--ai-chat.json"
+    },
+    {
+      "id": "pqoqubbw:animated-icons",
+      "path": "apps/atlas-sample/thumbnails/pqoqubbw--animated-icons.webp",
+      "bytes": 10690,
+      "sha256": "a7f9cc8b58cdbb55b54f2c1db06995dc73a61e0391a8e8bbd883216c068ec461",
+      "mapping": "reports/thumbnail-capture/records/pqoqubbw--animated-icons.json"
+    },
+    {
+      "id": "reactflow:text-pipeline",
+      "path": "apps/atlas-sample/thumbnails/reactflow--text-pipeline.webp",
+      "bytes": 15604,
+      "sha256": "e061f198faf0af37f41648c523923e1a39612cddb4c6486aa46a922d6d9d2978",
+      "mapping": "reports/thumbnail-capture/records/reactflow--text-pipeline.json"
+    }
+  ]
+}
