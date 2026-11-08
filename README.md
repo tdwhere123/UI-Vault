@@ -2,7 +2,7 @@
 
 网站：<https://tdwhere123.github.io/UI-Vault/>
 
-当前已收录 **241件独立素材：215件精选界面＋20件保留基础素材＋6套完整图标系列**。正在向1000+件优质素材扩充；图标按完整系列单列统计，不按单枚凑数。源码候选、不同配色与框架版本不充数。
+当前主图鉴有 **499条可打开预览（241条原始素材＋258条后续接入预览）**。后续预览仍标注视觉待验；345条候选中的87条仅来源记录不计入主图鉴。原始241件包括215件精选界面、20件保留基础素材、6套完整图标系列。正在向1000+件优质素材扩充；图标按完整系列单列统计，不按单枚凑数。源码候选、不同配色与框架版本不充数。
 
 ## 当前内容
 
@@ -149,3 +149,14 @@ TOAST is **not MIT-only**: its Fabric dependency contains Mozilla/Andrea Bogazzi
 - [Fabric MIT notice](apps/atlas-sample/batches/toast-image-01/public-source/fabric/LICENSE-MIT.txt)
 
 The covered source was published before the TOAST executable preview assets and verified byte-for-byte against the installed original package. Other adaptation/build/source archives remain local only. Static gallery covers, detail-only loading and default sandbox/CSP remain unchanged. These are pending-visual-review previews, not claims of completed browser pixel acceptance.
+
+
+## Original note input, weekly planning and API reading · 499 previews
+
+The main gallery now contains **499 preview entries** (241 original + 258 added previews). The candidate catalog has 345 records; 87 source-only records remain excluded. Three independent families are added, not a count of notes, calendar views or endpoints. Icon-family and glyph counts are unchanged.
+
+- **React Piano 3.1.3** keeps the original thirteen-key C4–C5 keyboard, input mapping and polyphony callbacks. The host supplies explicitly opt-in, local sine-wave synthesis, not sampled piano or generated music. Seven original-component/audio-lifecycle branches passed, including delayed old rejection after a newer context and partial-node creation failures. Review found and fixed both lifecycle problems. AudioContext is mocked in tests: actual sound, device behavior and pixels remain unverified. Blur, hiding, cancellation and exit stop and close audio. Eight actual runtime packages have full MIT notices.
+- **FullCalendar 6.1.19** keeps the original UTC weekly/day time grid, agenda, selection and event model, with a small disclosed local editing dialog. Four state/form, invalid-drop, active-drag-exit and production tests passed, including Los Angeles and Shanghai process timezones. Drag tests use substituted hit geometry; real pointer/resize gestures and immediate second-drag reentry are not claimed verified. Standard MIT plugins and Preact only, no premium package. The unused binary icon font is removed through text-button configuration, not re-encoded.
+- **RapiDoc 12.1.1** keeps the original parser and full OpenAPI reader for five authored local endpoints, search, models, response codes and examples. Eight state/UI tests and initial/reload interruption tests passed. Try, authentication, external specifications/references, import/export, clipboard and outbound links are disabled. It is not a live API. Complete upstream MIT/BSD-3-Clause/ISC dependency notices are published with the original root license.
+
+These are actual original components with disclosed host fixtures, not static stand-ins. Browser pixels, native gestures and audio still await acceptance. All source/build/test archives for this batch remain local, not advertised as hosted ZIPs. Static list covers, detail-only loading, sandbox and CSP are unchanged.
