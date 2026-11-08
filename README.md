@@ -2,7 +2,7 @@
 
 网站：<https://tdwhere123.github.io/UI-Vault/>
 
-当前主图鉴有 **508条可打开预览（241条原始素材＋267条后续接入预览）**。后续预览仍标注视觉待验；352条候选中的85条仅来源记录不计入主图鉴。原始241件包括215件精选界面、20件保留基础素材、6套完整图标系列。正在向1000+件优质素材扩充；图标按完整系列单列统计，不按单枚凑数。源码候选、不同配色与框架版本不充数。
+当前主图鉴有 **510条可打开预览（241条原始素材＋269条后续接入预览）**。后续预览仍标注视觉待验；353条候选中的84条仅来源记录不计入主图鉴。原始241件包括215件精选界面、20件保留基础素材、6套完整图标系列。正在向1000+件优质素材扩充；图标按完整系列单列统计，不按单枚凑数。源码候选、不同配色与框架版本不充数。
 
 ## 当前内容
 
@@ -229,3 +229,13 @@ The real **MPL-2.0 corresponding source is published**, not promised as a local 
 Original keydown instance lookup and cleanup for listeners, observer, preload/tick timers and Morpheus animations were corrected. Seven original interaction checks, pending-initialization teardown and missing/duplicate-ID/media-URL rejection tests passed. Native inert is required; no global polyfill is claimed. Five selected original icon paths have their own CC BY 4.0/Apache terms and attribution. Full embedded Morpheus, Penner/KeySpline, Leaflet, LazyLoad, Zepto and DOMPurify notices are included, with historical-version/supplement limitations disclosed rather than assuming root MPL covers everything.
 
 Actual time-axis layout, browser inert/focus, native touch and SVG/icon pixels remain unverified. Tests use layout/observer substitutes, not visual acceptance. Static covers, lazy previews and sandbox/CSP remain unchanged.
+
+
+## Image-task states and branching teaching content · 510 previews
+
+The main gallery now contains **510 preview entries** (241 original + 269 added previews). Candidate records total 353, with 84 source-only records excluded. Existing SmoothUI image-generation-panel is restored rather than duplicated; WGo adds one independent teaching-content reader. Four sample images, seven control icons and board variations do not inflate the item count. Icon-series counts are unchanged.
+
+- **SmoothUI image batch panel** retains the original prompt, presets, ratio controls, loader, per-tile staggered progress/sharpening and selection interface. The host drives an explicitly simulated local queue, failure and retry. Four prewritten original SVGs are not model output; changing the prompt does not generate new art. No fake download or variations action remains. Repeated submit, Stop→immediate restart, late callbacks, blur/hidden and exit were tested; timers/RAF clean up. Error scanning was corrected to stop rather than visually continue a failed job. Complete actual package/CSS licenses are included; review corrected the metadata to include class-variance-authority Apache-2.0 in addition to MIT/ISC. Three normal/reduced/production tests and independent stress checks passed.
+- **WGo.js 2.3.1** retains the original BasicPlayer, SGF rules/variation model, comment panel and navigation on a local fictional 9×9 teaching setup. Capture/reversal, A/B continuations, first/last/keyboard, resize, coordinates menu and touch-repeat cancellation were exercised. Original SHELL Canvas stones and official solid background require no external images. Seven Lucide SVG controls transparently replace the old mixed Fontello font, with complete ISC/Feather MIT alongside the project MIT. Repeated touch-start and cancel/exit lifecycle gaps were repaired. It is not an online opponent, AI analysis, editor or arbitrary-file import/export service.
+
+Actual SVG decoding, blur/scan compositing, Canvas pixels, touch targeting and mobile layout remain visually unverified. Tests run original state/model paths with geometry/raster substitutes. Source/build/test archives for this batch remain local, not promised as hosted ZIPs. Static covers, lazy detail previews and sandbox/CSP remain unchanged.
