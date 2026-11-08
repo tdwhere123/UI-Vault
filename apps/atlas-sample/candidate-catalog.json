@@ -10098,5 +10098,178 @@
       "仅实际运行依赖完整全文；build-only lighter无独立license文件缺口已记录，不打包该引擎",
       "运行依赖完整MIT保留，源码ZIP仅本地；示例不是用户项目。"
     ]
+  },
+  {
+    "id": "pixelarticons:exodus-pixel-family",
+    "title": "Pixelarticons · 原版像素图标精选",
+    "source": "Pixelarticons",
+    "repository": "https://github.com/halfmage/pixelarticons",
+    "revision": "c9ecc2da61afde85dbe539025e3d931c6152ad75",
+    "license": "MIT",
+    "publicationReady": true,
+    "entry": "index.html",
+    "runtime": {
+      "js": "runtime.js",
+      "css": "runtime.css",
+      "format": "iife",
+      "detailOnly": true,
+      "allowLocalMedia": false
+    },
+    "needsLocalMedia": false,
+    "browserVisualQA": "not-run",
+    "counts": {
+      "independentFamily": 1,
+      "distinctOriginalGlyphs": 64,
+      "newSemanticActionsClaimed": false
+    },
+    "size": {
+      "js": 43439,
+      "gzip": 11435,
+      "css": 2819
+    },
+    "originals": "ORIGINALS.json",
+    "capabilities": [
+      "原版24×24网格SVG逐字节保留",
+      "中文/英文/标签检索与四类过滤",
+      "24/24/16分页与只读原SVG",
+      "24/48/96整数倍率",
+      "无定时器/网络/副作用销毁"
+    ],
+    "limitations": [
+      "原创浏览壳与中文策展，非上游原版成品页面",
+      "语义与既有多个图标系列重复，不计64个新UI",
+      "只量化近期三系英文名交集，不是全图库语义去重",
+      "实际像素和响应式视觉待验"
+    ],
+    "upstream": "https://github.com/halfmage/pixelarticons/tree/c9ecc2da61afde85dbe539025e3d931c6152ad75/svg",
+    "preview": "batches/pixelart-01/index.html",
+    "batch": "pixelart-01",
+    "category": "图标系列",
+    "kind": "图标系列",
+    "format": "图标家族",
+    "styleTags": [
+      "像素",
+      "复古"
+    ],
+    "purposeTags": [
+      "Agent与协作",
+      "富消息",
+      "图标选型"
+    ],
+    "description": "64枚原版24×24像素图标，保留原路径和currentColor；四类策展检索、分页、原SVG查看及整数尺寸切换。",
+    "behavior": "中文/英文/策展标签检索，四类过滤，24/24/16分页，选择原SVG与24/48/96显示尺寸；不修改原几何。",
+    "buildStatus": "All64 original git blob bytes, SVG DOM fidelity,8 state/security/teardown groups verified; pixel visuals pending",
+    "gaps": [
+      "原创浏览壳与中文策展，非上游原版成品页面",
+      "语义与既有多个图标系列重复，不计64个新UI",
+      "只量化近期三系英文名交集，不是全图库语义去重",
+      "实际像素和响应式视觉待验",
+      "ORIGINALS.json实际包含64原SVG全文；独立SVG文件及构建源码仅本地。",
+      "原SVG作者Gerrit Halfmann；中文标签与浏览壳为本地原创适配。"
+    ],
+    "keywords": [
+      "robot 机器人",
+      "ai-file AI 文档",
+      "ai-scan AI 扫描",
+      "ai-voice AI 语音",
+      "ai-view AI 视图",
+      "algorithm 算法",
+      "git-branch 分支",
+      "git-merge 合并",
+      "cpu 处理器",
+      "memory-stick 记忆存储",
+      "circuit-board 电路",
+      "sparkles 灵感",
+      "lightbulb 想法",
+      "target 目标",
+      "tools 工具",
+      "shield 防护",
+      "message 消息",
+      "message-reply 回复",
+      "quote-text-inline 引用",
+      "mic 麦克风",
+      "audio-waveform 音频波形",
+      "send 发送",
+      "mail 邮件",
+      "inbox 收件箱",
+      "attachment 附件",
+      "users 协作成员",
+      "user-plus 添加成员",
+      "bell 通知",
+      "calendar-range 日期范围",
+      "clock 时钟",
+      "languages 语言",
+      "globe 全球",
+      "file-text 文本文档",
+      "folder 文件夹",
+      "archive 归档",
+      "clipboard-note 剪贴板笔记",
+      "book-open 阅读",
+      "library 资料库",
+      "bookmark 书签",
+      "search 搜索",
+      "filter 筛选",
+      "label 标签",
+      "link 链接",
+      "code 代码",
+      "terminal 终端",
+      "binary 二进制",
+      "notebook 笔记本",
+      "database 数据库",
+      "image 图像",
+      "brush 画笔",
+      "pen-square 编辑",
+      "colors-swatch 色板",
+      "eraser 橡皮",
+      "scissors 剪切",
+      "crop 裁切",
+      "layout 布局",
+      "drag-and-drop 拖放",
+      "lasso 套索",
+      "grid-3x3 网格",
+      "presentation 演示",
+      "chart-line 折线图",
+      "calculator 计算器",
+      "save 保存",
+      "undo 撤销"
+    ]
+  },
+  {
+    "id": "surveyjs:project-decision-survey",
+    "title": "SurveyJS · 动态项目决策问卷",
+    "source": "SurveyJS Form Library",
+    "category": "输入与选择",
+    "license": "MIT (SurveyJS/React); embedded tslib 0BSD",
+    "revision": "2536d8aabb7d9e11c42c0682f8496a7ecc11c5a9",
+    "upstream": "https://github.com/surveyjs/survey-library/tree/2536d8aabb7d9e11c42c0682f8496a7ecc11c5a9",
+    "sourceFile": "packages/survey-core/src/question_matrixdynamic.ts; packages/survey-core/src/conditions/conditionsParser.ts; original survey-react-ui renderer",
+    "preview": "batches/surveyjs-01/index.html",
+    "description": "原SurveyJS三页问卷运行器：可增删动态矩阵、预算跨字段验证、条件分支清除隐藏旧答案、返回保留和本地JSON完成。",
+    "previewStatus": "visual-review-pending",
+    "buildStatus": "7 original DOM workflow checks passed; no eval/network/storage/Worker calls; dispose clears timers and observers",
+    "knownGaps": [
+      "实际像素布局、移动端及原生键盘交互尚未视觉验收。",
+      "三页项目题为原创合成fixture，UI及问卷逻辑为未改写SurveyJS原运行器。",
+      "仅本地完成并展示JSON，不提交、不保存、不连接后台。"
+    ],
+    "gaps": [
+      "实际像素布局、移动端及原生键盘交互尚未视觉验收。",
+      "三页项目题为原创合成fixture，UI及问卷逻辑为未改写SurveyJS原运行器。",
+      "仅本地完成并展示JSON，不提交、不保存、不连接后台。",
+      "移除行数据同步生效但DOM会延迟退场，旧按钮重复点击为no-op；复测按行身份和实际退场完成判断。",
+      "原版免费Form Library运行器，非收费Creator；源码/构建包仅本地。"
+    ],
+    "batch": "surveyjs-01",
+    "kind": "动态问卷组件",
+    "format": "条件问卷设计族",
+    "styleTags": [
+      "分步表单",
+      "原版轻量"
+    ],
+    "purposeTags": [
+      "条件问卷",
+      "任务需求确认"
+    ],
+    "behavior": "原三页条件问卷、1至5行动态矩阵与跨字段预算验证；隐藏清理旧值、返回保留可见答案，本地完成JSON与重置。"
   }
 ]
