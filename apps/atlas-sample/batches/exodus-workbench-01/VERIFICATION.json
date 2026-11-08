@@ -1,0 +1,26 @@
+{
+  "results": [
+    {
+      "slug": "merge",
+      "passed": true,
+      "checks": [
+        "mount",
+        "JS parse",
+        "Function/eval/Worker/network forbidden",
+        "2 editors/real chunk controls/merge all/undo/redo/input replace/reverse direction/reset"
+      ]
+    },
+    {
+      "slug": "json",
+      "passed": true,
+      "checks": [
+        "mount",
+        "JS parse",
+        "Function/eval/Worker/network forbidden",
+        "tree field mutation and undo/tree/text/preview modes/invalid JSON rejected/format/search/result sync/copy selection"
+      ]
+    }
+  ],
+  "browserVisualQA": "not-run; CodeMirror Range layout measurements stubbed; JSDOM does not verify pixels or native IME",
+  "CSPApproximation": "JS eval and Function constructors, Worker and fetch throw during tested runtime; real browser CSP not tested"
+}
