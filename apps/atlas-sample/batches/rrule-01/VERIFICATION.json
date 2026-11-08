@@ -1,0 +1,18 @@
+{
+  "pass": true,
+  "checks": [
+    "exact weekly interval1 and interval2 UTC dates",
+    "COUNT remains pre-exclusion; EXDATE restore",
+    "exact monthly second Tuesday",
+    "inclusive UNTIL",
+    "invalid date range and empty weekdays clear old results",
+    "interval bounds",
+    "repeated exclusion restore",
+    "family switch clears exclusions",
+    "UNTIL beyond 50 candidates: exclude yields exact 49 of first50, restore exact50; no tail refill",
+    "pagehide clears result nodes and detaches host handlers"
+  ],
+  "forbiddenCalls": [],
+  "timers": "No timers/RAF/observers created by host or imported engine",
+  "visualVerified": false
+}
