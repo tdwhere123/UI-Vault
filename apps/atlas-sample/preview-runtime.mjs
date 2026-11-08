@@ -9,7 +9,7 @@ export function composePreview(html,css,js,runtime){
  const cssTag=`<link rel="stylesheet" href="${runtime.cssHref}">`,jsTag=`<script src="${runtime.scriptSrc}"></script>`;
  if(!html.includes(cssTag)||!html.includes(jsTag))throw Error('预览入口与运行资源定义不匹配');
  const safeCss=css.replace(/<\/style/gi,'<\\/style'),safeJs=js.replace(/<\/script/gi,'<\\/script');
- return html.replace(cssTag,()=>'<style>'+safeCss+'</style>').replace(jsTag,()=>'<script>'+safeJs+'</script>').replace('<head>',`<head><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; font-src data:; img-src data: blob:; connect-src 'none'; form-action 'none'">`);
+ return html.replace(cssTag,()=>'<style>'+safeCss+'</style>').replace(jsTag,()=>'<script>'+safeJs+'</script>').replace('<head>',`<head><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; font-src data:; img-src data: blob:; ${runtime.allowLocalMedia===true?'media-src blob:; ':''}connect-src 'none'; form-action 'none'">`);
 }
 /** Generation tokens prevent stale async completions from reviving released frames. */
 export function createPreviewLoader({cache=createTextCache(),connected=frame=>frame.isConnected}={}){
