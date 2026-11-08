@@ -1,0 +1,20 @@
+{
+  "pass": true,
+  "checks": [
+    "64 original SVG DOMs exactly match original parsed SVG, pagination 24/24/16",
+    "selection shows true original large SVG, author, path and readonly raw source",
+    "English name, curated Chinese title and curated tag search",
+    "category + query combine and reset pagination",
+    "malicious query remains inert text and empty results clear detail",
+    "repeated paging/filter reset restores first selection",
+    "24/48/96 integer display sizes change CSS only; original SVG and readonly bytes unchanged",
+    "pagehide removes UI and aborts fixed handlers; detached search does not redraw"
+  ],
+  "glyphsVerified": 64,
+  "maximumPageGlyphs": 24,
+  "timerCalls": 0,
+  "forbiddenCalls": [],
+  "errors": [],
+  "visualVerified": false,
+  "limitations": "DOM fidelity/state verified. No browser screenshots, responsive pixel layout or native keyboard activation verified."
+}
