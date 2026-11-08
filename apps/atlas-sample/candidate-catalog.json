@@ -9063,5 +9063,100 @@
       "原型键拒绝，HTML键值转义；只修改本地副本，不改用户文件。",
       "源码ZIP仅本地；完整许可保留。"
     ]
+  },
+  {
+    "id": "mafs:bezier-construction",
+    "batch": "mafs-01",
+    "title": "可拖动贝塞尔曲线构造",
+    "source": "Mafs",
+    "category": "Agent与对话",
+    "kind": "交互数学组件",
+    "styleTags": [
+      "圆润曲线",
+      "几何",
+      "动态图解"
+    ],
+    "preview": "batches/mafs-01/bezier-construction.html",
+    "revision": "e74a3ef465f4ddc98704814d2ae18b73a6cd9dae",
+    "upstream": "https://github.com/stevenpetryk/mafs/blob/e74a3ef465f4ddc98704814d2ae18b73a6cd9dae/docs/components/guide-examples/examples/BezierCurves.tsx",
+    "sourceFile": "docs/components/guide-examples/examples/BezierCurves.tsx",
+    "license": "MIT",
+    "description": "官方4控制点贝塞尔构造：原useMovablePoint、分层线性插值、Bernstein曲线与t滑块，支持键盘调整及显式播放/停止。",
+    "previewStatus": "visual-review-pending",
+    "buildStatus": "Build, JS parse, original path/circle state updates, stopwatch interruption and cleanup passed.",
+    "knownGaps": [
+      "DOM测试几何尺寸mock，真实触摸/指针拖动与像素布局待视觉验收。",
+      "无LaTeX/字体/模型/网络，仅本地SVG数学演示。"
+    ],
+    "gaps": [
+      "DOM测试几何尺寸mock，真实触摸/指针拖动与像素布局待视觉验收。",
+      "无LaTeX/字体/模型/网络，仅本地SVG数学演示。"
+    ],
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "format": "复合交互组件"
+  },
+  {
+    "id": "zdog:spatial-houses",
+    "title": "小屋空间插画 · 伪三维转视",
+    "source": "Zdog",
+    "license": "MIT（上游声明；标准全文透明补充）",
+    "upstream": "https://github.com/metafizzy/zdog/tree/dde8684be686bc6d3cbedb6be49875c0a03a14c0/demos/houses",
+    "revision": "dde8684be686bc6d3cbedb6be49875c0a03a14c0",
+    "batch": "zdog-01",
+    "preview": "batches/zdog-01/index.html",
+    "category": "视觉与动效",
+    "kind": "空间交互组件",
+    "format": "空间插画设计族",
+    "styleTags": [
+      "圆润",
+      "空间感",
+      "插画"
+    ],
+    "purposeTags": [
+      "视觉参考"
+    ],
+    "description": "原Zdog SVG伪三维引擎和官方双屋几何插画；拖转、仰角、预设视角与键盘操作实际更新投影。",
+    "behavior": "纯几何空间视觉参考，不是建筑规划器。事件驱动重绘，无后台RAF；隐藏终止拖动，离开移除事件。",
+    "buildStatus": "Original SVG projection/drag/presets/keyboard/lifecycle state verified; visual pending",
+    "gaps": [
+      "SVG固定几何测试，不等于真实像素、命中测试或触摸验收。",
+      "官方源码/npm/文档均声明MIT但无完整LICENSE原件；透明附标准MIT全文及版权声明证据，不冒称原件。",
+      "无外部图片、角色、模型服务或源码ZIP下载声明。"
+    ]
+  },
+  {
+    "id": "echarts:parallel-strategy-lens",
+    "title": "Apache ECharts · 多维策略区间刷选",
+    "source": "Apache ECharts",
+    "license": "Apache-2.0",
+    "upstream": "https://github.com/apache/echarts/tree/c5a48f5f97d23e5379720870b8444cd05b50ffb4",
+    "revision": "c5a48f5f97d23e5379720870b8444cd05b50ffb4",
+    "batch": "echarts-parallel-01",
+    "preview": "batches/echarts-parallel-01/index.html",
+    "category": "数据与状态",
+    "kind": "复合交互组件",
+    "format": "多维区间刷选工具",
+    "styleTags": [
+      "圆润",
+      "柔和",
+      "数据可视化"
+    ],
+    "purposeTags": [
+      "Agent工作流",
+      "方案对比"
+    ],
+    "description": "真实ECharts SVG平行坐标布局和多轴范围刷选；本地策略样本交集直接来自原引擎active集合，联动详情与高亮。",
+    "behavior": "轴区间/预设/数值控制、交集筛选与清除；参数待应用时保留旧选择并提示，应用后清除旧高亮；离开销毁图和观察器。",
+    "buildStatus": "Original engine;14 active-selection/highlight/interval/lifecycle tests passed; visual and native pointer brushing pending",
+    "gaps": [
+      "12条原创虚构策略，不是真实模型评测",
+      "外壳和数据是本适配原创，不是上游整页成品",
+      "只导入所需模块，JS约491KB",
+      "视觉/真实鼠标刷选与触控手感未验",
+      "数据仅内存，不联网/保存",
+      "完整Apache LICENSE/NOTICE及实际运行依赖条款保留；源码ZIP仅本地，不挂下载。"
+    ]
   }
 ]
