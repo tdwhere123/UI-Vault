@@ -10824,5 +10824,46 @@
       "aphrodite原包README明确MIT和Khan Academy版权但缺完整许可文件，透明补标准MIT；string-hash原CC0声明及完整条款保留。",
       "源码/构建/测试仅本地，未声称源码ZIP已托管。"
     ]
+  },
+  {
+    "id": "bpmn-js:local-review-modeler",
+    "title": "BPMN · 原版流程建模器",
+    "source": "bpmn-js",
+    "upstream": "https://github.com/bpmn-io/bpmn-js/tree/e7b7435ed60f662b3d80caaefe5dccba5d3a4c75",
+    "website": "https://bpmn.io/",
+    "revision": "e7b7435ed60f662b3d80caaefe5dccba5d3a4c75",
+    "version": "18.31.1",
+    "sourceFile": "lib/Modeler.js",
+    "preview": "batches/bpmn-01/index.html",
+    "category": "导航与组织",
+    "description": "原bpmn-js Modeler调色板、context-pad任务/连线追加、标签编辑与撤销重做；原创非执行本地XML，只建模不运行流程。",
+    "license": "bpmn.io custom license; bpmn-font OFL-1.1; MIT/ISC/Apache-2.0 runtime dependencies",
+    "buildStatus": "Nine original modeling tests, initial/reset import interruptions and 109 source-glyph path checks passed; browser geometry/pixels NOT verified",
+    "previewStatus": "DOM behavior verified; visual review pending",
+    "gaps": [
+      "Visual/browser pointer geometry and SVG icon appearance unverified; test SVG/text geometry mocked.",
+      "Modeling only: no workflow execution, external XML, upload/export or persistence.",
+      "Original mandatory bpmn.io watermark/link/lightbox retained; iframe sandbox may block new windows.",
+      "原水印源代码逐字未变，无禁链捕获；图鉴website提供正常归属链接，现有sandbox不扩弹窗权限。",
+      "109图标从已核OFL文本SVG-font原d+坐标变换而来，不是独立上游SVG文件，不编码二进制字体。",
+      "19实际运行包完整许可/NOTICE保留，含Snap.svg Apache-2.0衍生通知；源码ZIP仅本地。"
+    ],
+    "knownGaps": [
+      "Visual/browser pointer geometry and SVG icon appearance unverified; test SVG/text geometry mocked.",
+      "Modeling only: no workflow execution, external XML, upload/export or persistence.",
+      "Original mandatory bpmn.io watermark/link/lightbox retained; iframe sandbox may block new windows."
+    ],
+    "batch": "bpmn-01",
+    "kind": "BPMN流程建模组件",
+    "format": "语义流程建模设计族",
+    "styleTags": [
+      "原版调色板",
+      "流程语义"
+    ],
+    "purposeTags": [
+      "工作流设计",
+      "流程审阅"
+    ],
+    "behavior": "原建模语义与命令历史，重复重置互斥、导入期间退出等结算后唯一销毁；原水印/回链/归属弹层原样可见。"
   }
 ]
