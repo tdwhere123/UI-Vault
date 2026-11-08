@@ -3301,5 +3301,320 @@
       "No install/build/browser/interaction/mobile validation.",
       "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
     ]
+  },
+  {
+    "id": "orb:push-to-talk",
+    "title": "光晕听写草稿：按住、取消与本地发送",
+    "source": "Orb UI",
+    "kind": "Agent交互场景",
+    "category": "Agent与对话",
+    "styleTags": [
+      "有机光晕",
+      "圆润",
+      "语音状态"
+    ],
+    "preview": "batches/orb-recipes-01/push-to-talk.html",
+    "license": "MIT",
+    "revision": "f3b96072c14b6f814f0edd20f5fd73063963d773",
+    "upstream": "https://github.com/exprmntl/orb-ui/blob/f3b96072c14b6f814f0edd20f5fd73063963d773/demo/src/recipes/push-to-talk.tsx",
+    "website": "https://orb-ui.com",
+    "description": "通过固定听写样例演示按住/释放、取消、草稿编辑、本地消息和错误恢复；不录音。",
+    "behavior": "通过固定听写样例演示按住/释放、取消、草稿编辑、本地消息和错误恢复；不录音。",
+    "buildStatus": "IIFE build and actual React state-transition tests passed; browser visual review pending",
+    "adaptation": "Original recipe and Orb library source preserved. Host adds heading/background and removes docs-only CSS import. No provider adapters, API routes, microphone, credentials or paid calls bundled. Canvas drawing mocked only during nonvisual tests.",
+    "previewStatus": "visual-review-pending",
+    "knownGaps": [
+      "未进行浏览器视觉、canvas绘制或完整触控/键盘验收。",
+      "所有对话、语音与工具结果均是明确标注的本地fixture。",
+      "没有真实麦克风或音频输出能力。"
+    ],
+    "batch": "organic-agent-01",
+    "gaps": [
+      "未进行浏览器视觉、canvas绘制或完整触控/键盘验收。",
+      "所有对话、语音与工具结果均是明确标注的本地fixture。",
+      "没有真实麦克风或音频输出能力。"
+    ],
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "format": "页面区块"
+  },
+  {
+    "id": "orb:guided-onboarding",
+    "title": "径向光环引导：逐步应用与撤销",
+    "source": "Orb UI",
+    "kind": "Agent交互场景",
+    "category": "Agent与对话",
+    "styleTags": [
+      "有机光晕",
+      "圆润",
+      "语音状态"
+    ],
+    "preview": "batches/orb-recipes-01/guided-onboarding.html",
+    "license": "MIT",
+    "revision": "f3b96072c14b6f814f0edd20f5fd73063963d773",
+    "upstream": "https://github.com/exprmntl/orb-ui/blob/f3b96072c14b6f814f0edd20f5fd73063963d773/demo/src/recipes/guided-onboarding.tsx",
+    "website": "https://orb-ui.com",
+    "description": "通过固定引导样例演示listening/speaking/thinking状态、步骤应用和撤销；不创建账号或修改权限。",
+    "behavior": "通过固定引导样例演示listening/speaking/thinking状态、步骤应用和撤销；不创建账号或修改权限。",
+    "buildStatus": "IIFE build and actual React state-transition tests passed; browser visual review pending",
+    "adaptation": "Original recipe and Orb library source preserved. Host adds heading/background and removes docs-only CSS import. No provider adapters, API routes, microphone, credentials or paid calls bundled. Canvas drawing mocked only during nonvisual tests.",
+    "previewStatus": "visual-review-pending",
+    "knownGaps": [
+      "未进行浏览器视觉、canvas绘制或完整触控/键盘验收。",
+      "所有对话、语音与工具结果均是明确标注的本地fixture。",
+      "没有真实麦克风或音频输出能力。"
+    ],
+    "batch": "organic-agent-01",
+    "gaps": [
+      "未进行浏览器视觉、canvas绘制或完整触控/键盘验收。",
+      "所有对话、语音与工具结果均是明确标注的本地fixture。",
+      "没有真实麦克风或音频输出能力。"
+    ],
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "format": "页面区块"
+  },
+  {
+    "id": "orb:document-qa",
+    "title": "光晕文档问答：本地引用与取消",
+    "source": "Orb UI",
+    "kind": "Agent交互场景",
+    "category": "Agent与对话",
+    "styleTags": [
+      "有机光晕",
+      "圆润",
+      "语音状态"
+    ],
+    "preview": "batches/orb-recipes-01/document-qa.html",
+    "license": "MIT",
+    "revision": "f3b96072c14b6f814f0edd20f5fd73063963d773",
+    "upstream": "https://github.com/exprmntl/orb-ui/blob/f3b96072c14b6f814f0edd20f5fd73063963d773/demo/src/recipes/document-qa.tsx",
+    "website": "https://orb-ui.com",
+    "description": "通过固定文档片段演示问答、引用、停止与检索错误；不是联网AI推理，不播放音频。",
+    "behavior": "通过固定文档片段演示问答、引用、停止与检索错误；不是联网AI推理，不播放音频。",
+    "buildStatus": "IIFE build and actual React state-transition tests passed; browser visual review pending",
+    "adaptation": "Original recipe and Orb library source preserved. Host adds heading/background and removes docs-only CSS import. No provider adapters, API routes, microphone, credentials or paid calls bundled. Canvas drawing mocked only during nonvisual tests.",
+    "previewStatus": "visual-review-pending",
+    "knownGaps": [
+      "未进行浏览器视觉、canvas绘制或完整触控/键盘验收。",
+      "所有对话、语音与工具结果均是明确标注的本地fixture。",
+      "没有真实麦克风或音频输出能力。"
+    ],
+    "batch": "organic-agent-01",
+    "gaps": [
+      "未进行浏览器视觉、canvas绘制或完整触控/键盘验收。",
+      "所有对话、语音与工具结果均是明确标注的本地fixture。",
+      "没有真实麦克风或音频输出能力。"
+    ],
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "format": "页面区块"
+  },
+  {
+    "id": "thinking-orbs:state-explorer",
+    "title": "Thinking Orbs · 九状态粒子球",
+    "source": "Thinking Orbs",
+    "license": "MIT",
+    "revision": "de85557ca220332586d070d8788c0e1d6e877a0d",
+    "upstream": "https://github.com/Jakubantalik/thinking-orbs/tree/de85557ca220332586d070d8788c0e1d6e877a0d",
+    "website": "https://orbs.jakubantalik.com",
+    "preview": "batches/thinking-orbs-01/states.html",
+    "category": "Agent与对话",
+    "kind": "动态组件",
+    "format": "动态组件",
+    "styleTags": [
+      "有机光晕",
+      "圆润"
+    ],
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "description": "一个原生2D Canvas多状态家族：切换9种Agent状态、暂停和明暗主题，不连接麦克风或模型。",
+    "batch": "organic-agent-01",
+    "buildStatus": "Build, parse and nine state transitions passed in JSDOM; Canvas pixels not visually verified.",
+    "gaps": [
+      "未做真实Canvas像素/浏览器视觉验收。",
+      "测试使用Canvas桩；交付运行时保留原始真实Canvas引擎。"
+    ]
+  },
+  {
+    "id": "astryx:ai-chat",
+    "title": "AstryX 对话与文档双栏",
+    "source": "Meta AstryX",
+    "license": "MIT",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/cli/assets/templates/pages/ai-chat/page.tsx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "batch": "astryx-recovery",
+    "kind": "完整应用模板",
+    "format": "完整页面",
+    "buildStatus": "Built against published core/theme/build 0.7.11; page templates from repository 0.7.12 snapshot. Visual review pending.",
+    "gaps": [
+      "兼容适配：0.7.12固定页面源码＋官方0.7.11运行组件/主题，不是精确版本复现。",
+      "未完成浏览器视觉复验。",
+      "原模板部分按钮没有真实后端行为；不是可联网的Agent产品。",
+      "原模板提交回调为空，不生成AI回复。"
+    ],
+    "description": "AstryX 对话与文档双栏；保留原页面交互，独立按需加载。",
+    "preview": "batches/astryx-01/ai-chat/index.html",
+    "code": "batches/astryx-01/ai-chat/page.tsx",
+    "runtime": {
+      "key": "astryx-ai-chat",
+      "css": "batches/astryx-01/ai-chat/runtime.css",
+      "js": "batches/astryx-01/ai-chat/runtime.js",
+      "cssHref": "runtime.css",
+      "scriptSrc": "runtime.js"
+    },
+    "status": "built-resource-checked-visual-review-pending",
+    "category": "Agent与对话",
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "styleTags": [
+      "工作台"
+    ]
+  },
+  {
+    "id": "astryx:ai-chat-landing",
+    "title": "AstryX 灵感输入工作台",
+    "source": "Meta AstryX",
+    "license": "MIT",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/cli/assets/templates/pages/ai-chat-landing/page.tsx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "batch": "astryx-recovery",
+    "kind": "完整应用模板",
+    "format": "完整页面",
+    "buildStatus": "Built against published core/theme/build 0.7.11; page templates from repository 0.7.12 snapshot. Visual review pending.",
+    "gaps": [
+      "兼容适配：0.7.12固定页面源码＋官方0.7.11运行组件/主题，不是精确版本复现。",
+      "未完成浏览器视觉复验。",
+      "原模板部分按钮没有真实后端行为；不是可联网的Agent产品。"
+    ],
+    "description": "AstryX 灵感输入工作台；保留原页面交互，独立按需加载。",
+    "preview": "batches/astryx-01/ai-chat-landing/index.html",
+    "code": "batches/astryx-01/ai-chat-landing/page.tsx",
+    "runtime": {
+      "key": "astryx-ai-chat-landing",
+      "css": "batches/astryx-01/ai-chat-landing/runtime.css",
+      "js": "batches/astryx-01/ai-chat-landing/runtime.js",
+      "cssHref": "runtime.css",
+      "scriptSrc": "runtime.js"
+    },
+    "status": "built-resource-checked-visual-review-pending",
+    "category": "Agent与对话",
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "styleTags": [
+      "工作台"
+    ]
+  },
+  {
+    "id": "astryx:canvas-editor",
+    "title": "AstryX 空间画布编辑器",
+    "source": "Meta AstryX",
+    "license": "MIT",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/cli/assets/templates/pages/canvas-editor/page.tsx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "batch": "astryx-recovery",
+    "kind": "完整应用模板",
+    "format": "完整页面",
+    "buildStatus": "Built against published core/theme/build 0.7.11; page templates from repository 0.7.12 snapshot. Visual review pending.",
+    "gaps": [
+      "兼容适配：0.7.12固定页面源码＋官方0.7.11运行组件/主题，不是精确版本复现。",
+      "未完成浏览器视觉复验。",
+      "原模板部分按钮没有真实后端行为；不是可联网的Agent产品。",
+      "一张原外部模板图片替换为本地原创SVG。"
+    ],
+    "description": "AstryX 空间画布编辑器；保留原页面交互，独立按需加载。",
+    "preview": "batches/astryx-01/canvas-editor/index.html",
+    "code": "batches/astryx-01/canvas-editor/page.tsx",
+    "runtime": {
+      "key": "astryx-canvas-editor",
+      "css": "batches/astryx-01/canvas-editor/runtime.css",
+      "js": "batches/astryx-01/canvas-editor/runtime.js",
+      "cssHref": "runtime.css",
+      "scriptSrc": "runtime.js"
+    },
+    "status": "built-resource-checked-visual-review-pending",
+    "category": "导航与组织",
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "styleTags": [
+      "空间感"
+    ]
+  },
+  {
+    "id": "astryx:ide",
+    "title": "AstryX 可伸缩开发工作区",
+    "source": "Meta AstryX",
+    "license": "MIT",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/cli/assets/templates/pages/ide/page.tsx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "batch": "astryx-recovery",
+    "kind": "完整应用模板",
+    "format": "完整页面",
+    "buildStatus": "Built against published core/theme/build 0.7.11; page templates from repository 0.7.12 snapshot. Visual review pending.",
+    "gaps": [
+      "兼容适配：0.7.12固定页面源码＋官方0.7.11运行组件/主题，不是精确版本复现。",
+      "未完成浏览器视觉复验。",
+      "原模板部分按钮没有真实后端行为；不是可联网的Agent产品。"
+    ],
+    "description": "AstryX 可伸缩开发工作区；保留原页面交互，独立按需加载。",
+    "preview": "batches/astryx-01/ide/index.html",
+    "code": "batches/astryx-01/ide/page.tsx",
+    "runtime": {
+      "key": "astryx-ide",
+      "css": "batches/astryx-01/ide/runtime.css",
+      "js": "batches/astryx-01/ide/runtime.js",
+      "cssHref": "runtime.css",
+      "scriptSrc": "runtime.js"
+    },
+    "status": "built-resource-checked-visual-review-pending",
+    "category": "导航与组织",
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "styleTags": [
+      "工作台"
+    ]
+  },
+  {
+    "id": "astryx:kanban-board",
+    "title": "AstryX 拖拽任务看板",
+    "source": "Meta AstryX",
+    "license": "MIT",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/cli/assets/templates/pages/kanban-board/page.tsx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "batch": "astryx-recovery",
+    "kind": "完整应用模板",
+    "format": "完整页面",
+    "buildStatus": "Built against published core/theme/build 0.7.11; page templates from repository 0.7.12 snapshot. Visual review pending.",
+    "gaps": [
+      "兼容适配：0.7.12固定页面源码＋官方0.7.11运行组件/主题，不是精确版本复现。",
+      "未完成浏览器视觉复验。",
+      "原模板部分按钮没有真实后端行为；不是可联网的Agent产品。"
+    ],
+    "description": "AstryX 拖拽任务看板；保留原页面交互，独立按需加载。",
+    "preview": "batches/astryx-01/kanban-board/index.html",
+    "code": "batches/astryx-01/kanban-board/page.tsx",
+    "runtime": {
+      "key": "astryx-kanban-board",
+      "css": "batches/astryx-01/kanban-board/runtime.css",
+      "js": "batches/astryx-01/kanban-board/runtime.js",
+      "cssHref": "runtime.css",
+      "scriptSrc": "runtime.js"
+    },
+    "status": "built-resource-checked-visual-review-pending",
+    "category": "导航与组织",
+    "purposeTags": [
+      "Agent工作流"
+    ],
+    "styleTags": [
+      "工作台"
+    ]
   }
 ]
