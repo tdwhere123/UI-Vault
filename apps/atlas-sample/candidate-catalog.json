@@ -10694,5 +10694,63 @@
       "修复原初始化、selection/scroll/Tip计时器、内部React roots与mouseup清理；文档destroy失败明确partial，finally仅保证宿主清理，不冒称引擎完整销毁。",
       "完整MIT与PDF.js Apache-2.0通知保留；源码与测试ZIP仅本地。"
     ]
+  },
+  {
+    "id": "spring:goo-blobs",
+    "title": "React Spring · 弹簧融合液团",
+    "source": "react-spring official demos",
+    "repository": "https://github.com/pmndrs/react-spring",
+    "revision": "eb09c7914721c2e5957c4bc817d7abddf317576c",
+    "license": "MIT",
+    "publicationReady": true,
+    "directory": "goo-blobs",
+    "entry": "goo-blobs/index.html",
+    "runtime": {
+      "js": "runtime.js",
+      "css": "runtime.css",
+      "format": "iife",
+      "detailOnly": true,
+      "allowLocalMedia": false
+    },
+    "needsLocalMedia": false,
+    "browserVisualQA": "not-run",
+    "counts": {
+      "independentFamily": 1
+    },
+    "size": {
+      "js": 191491,
+      "gzip": 65346,
+      "css": 1370
+    },
+    "limitations": [
+      "视觉装饰反馈，不是真实流体或任务执行 UI",
+      "原版颜色矩阵/三弹簧关系，宿主标题与控制为适配新增",
+      "JSDOM 几何/ResizeObserver mock，真实 SVG 合成及原生触摸像素未验"
+    ],
+    "upstream": "https://github.com/pmndrs/react-spring/tree/eb09c7914721c2e5957c4bc817d7abddf317576c/demo/src/sandboxes/goo-blobs",
+    "preview": "batches/spring-goo-01/index.html",
+    "batch": "spring-goo-01",
+    "category": "视觉与动效",
+    "kind": "有机跟随动效",
+    "format": "弹簧融合材质设计族",
+    "styleTags": [
+      "有机",
+      "圆润",
+      "柔和色彩"
+    ],
+    "purposeTags": [
+      "指针反馈",
+      "装饰动效"
+    ],
+    "description": "原React Spring官方goo-blobs三级弹簧追随、圆形材质与SVG融合矩阵；一个视觉反馈机制，不是真实流体或任务进度。",
+    "behavior": "保留首段快速、后段重质量的原useTrail关系；暂停/离开/隐藏停止，reduced-motion静态，需主动恢复。",
+    "buildStatus": "Original spring controller/transform/filter state and normal/reduced/production lifecycle tests passed; SVG compositing/native pixels NOT verified",
+    "gaps": [
+      "视觉装饰反馈，不是真实流体或任务执行 UI",
+      "原版颜色矩阵/三弹簧关系，宿主标题与控制为适配新增",
+      "JSDOM 几何/ResizeObserver mock，真实 SVG 合成及原生触摸像素未验",
+      "共享SVG goo/弹簧技术，但不同于已有标签切换、排斥粒子或液体滑条，不按三个圆计数。",
+      "固定来源原件对照，旧归档额外换行已披露；11个实际运行包完整许可保留，源码ZIP仅本地。"
+    ]
   }
 ]
