@@ -1,0 +1,11 @@
+# Cult Feature Carousel
+
+Cult fixed revision d71b1428b811c2779d46ea41b7ef8c9f9c9991c2, MIT. Exact paths in manifest are archive-internal, not unverified Git repository paths. Original component/demo retained. Existing cult:feature-carousel ID upgrade, one family only.
+
+Original visual layout, image proportions, rounded multi-layer frames, spring slide/scale/fade, animated progression indicators and descriptions retained. Five original local SVG notebook/constellation/outline/proposal studies replace missing PNGs; hardcoded /cults.png corrected to supplied step4light. These are explicitly artwork, not real screenshots, backend output, video or audio. Original generic placeholder wording replaced with descriptive local art captions, not invented product functions.
+
+Minimal control repairs: original Steps onChange was no-op, future steps pointer-disabled and full-cover click overlay intercepted indicators. Steps now native accessible buttons wired to actual selected index, elevated above overlay. Original isAnimating lock depended on completion callback that could fail to release; redundant lock removed while AnimatePresence preserves transitions. Added Next and pause/resume controls. Default autoplay paused per user direction; manual user resume only, hidden document pauses and refuses timer scheduling. Hook retains3000ms cycle with one effect-owned timeout, clear on change/pause/unmount, revision reset on selection. No background/autoplay surprise. No media/step counted as extra component.
+
+next/image adapter renders actual local image retaining width/height/style/ref. Original CSS classes compiled with Tailwind4 and local page frame. DOM tests verify consecutive next, step selection/focus, timing beyond3seconds, pause/hidden state, local image URIs and teardown. Geometry and ResizeObserver mocked; actual browser keyboard activation, responsive composition and visual motion not accepted yet.
+
+Source only in this local delivery. Build npm ci --ignore-scripts; node build.mjs; node node_modules/@tailwindcss/cli/dist/index.mjs -i styles.css -o delivery/runtime.css --minify. Test external JSDOM path in test.mjs. No network/API/backend/storage. This public preview hosts runtime and full notices. Source, originals, tests and checksums are retained in the local delivery only; no hosted source ZIP is claimed.
