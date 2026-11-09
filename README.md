@@ -2,7 +2,7 @@
 
 网站：<https://tdwhere123.github.io/UI-Vault/>
 
-当前主图鉴有 **514条可打开预览（241条原始素材＋273条后续接入预览）**。后续预览仍标注视觉待验；356条候选中的83条仅来源记录不计入主图鉴。原始241件包括215件精选界面、20件保留基础素材、6套完整图标系列。正在向1000+件优质素材扩充；图标按完整系列单列统计，不按单枚凑数。源码候选、不同配色与框架版本不充数。
+当前主图鉴有 **515条可打开预览（241条原始素材＋274条后续接入预览）**。后续预览仍标注视觉待验；358条候选中的84条仅来源记录不计入主图鉴。原始241件包括215件精选界面、20件保留基础素材、6套完整图标系列。正在向1000+件优质素材扩充；图标按完整系列单列统计，不按单枚凑数。源码候选、不同配色与框架版本不充数。
 
 ## 当前内容
 
@@ -269,3 +269,13 @@ The gallery now has **514 preview entries** (241 original + 273 added), with 356
 - **Puck and miniPaint** are newly researched source-only candidates, not functioning previews. Fixed official source paths and complete root MIT were checked; iframe/CSP integration, runtime dependency licenses, remote assets and application capabilities remain unresolved. Selected source files are collected locally, not a promised complete hosted archive. They do not increase the 514 preview count.
 
 Static covers, lazy detail loading and the current opaque sandbox/CSP remain unchanged. Existing cover mappings and the deferred icon-consolidation work are untouched.
+
+## OpenMoji selection and focused source research · 515 previews
+
+The gallery now has **515 preview entries** (241 original + 274 added), with 358 candidate records and 84 source-only records excluded. OpenMoji adds one expressly curated icon series: **120 base designs, 240 original color/black SVGs**, not the complete 4,495-design collection and not 240 UI entries. Current icon entry points total 12; two existing overlapping implementations remain untouched under the user's instruction to defer consolidation until the independent cover batch is done. No screenshots, cover files or cover mappings are changed.
+
+Original OpenMoji graphics and metadata remain CC BY-SA 4.0, with the complete legal text, per-image authors/dates/source links and unchanged original SVG text/hashes published. The independently authored browser shell has its own MIT license; that grant does not cover the embedded graphics/data. No upstream LGPL helper/test code is incorporated. All 240 SVG blobs match the fixed official 17.0.0 source tree. Paging, groups/tags/hexcode search, original style switching and source inspection were tested with all SVG trees/attributes; no browser pixel acceptance is claimed. Attribution links have correct URIs, but popup opening inside the unchanged sandbox is not claimed.
+
+Coss UI's official group-chat scenario is newly collected as one source-only family, not individual message/composer subitems. Fixed source and complete root MIT are verified; full Base UI/React/Motion/Lucide dependency licensing, native contenteditable/focus behavior, asset paths and interrupted message-state flows remain untested. Origin UI's move into the same repository is not counted as a second source.
+
+Puck remains source-only, but its status is more precise: the official no-iframe configuration actually mounted the original minimal editor in a geometry-substituted DOM pilot with no internal iframe/network/worker calls. That does not validate the full Bento configuration, drag-and-drop, history or native browser behavior. Side-panel storage attempts and 81 runtime-package license records still need closure; its npm runtime integrity is recorded separately from the fixed source commit rather than falsely equated. Source collection continues without calling this unfinished preview complete.
