@@ -1,0 +1,1596 @@
+{
+  "repository": "https://github.com/pcottle/learnGitBranching",
+  "revision": "a0fac58a4a98d2b6ca5cccb8fe1da76c48249a8e",
+  "sourcePath": "index.html + src/js/app/index.js + src/levels",
+  "dependencies": [
+    {
+      "name": "dompurify",
+      "version": "3.3.0",
+      "license": "(MPL-2.0 OR Apache-2.0)",
+      "author": "Dr.-Ing. Mario Heiderich, Cure53 <mario@cure53.de> (https://cure53.de/)",
+      "actualLicense": "Apache-2.0 selected from dual license",
+      "packagePath": "node_modules/dompurify",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "dc702ee9ace467f3a2f3ece344052f38365eeddfee65e84db24c080a81cba0ca",
+      "licenses": [
+        {
+          "path": "node_modules/dompurify/LICENSE",
+          "sha256": "1b02e03c3fb4f87d476c128f0eb9def1f5a1709d28b180465228bd41574623b7"
+        }
+      ]
+    },
+    {
+      "name": "eve-raphael",
+      "version": "0.5.0",
+      "license": null,
+      "author": {
+        "name": "Dmitry Baranovskiy",
+        "email": "dmitry@baranovskiy.com",
+        "url": "http://dmitry.baranovskiy.com"
+      },
+      "actualLicense": "Apache-2.0",
+      "packagePath": "node_modules/eve-raphael",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "353299103bc95d65c5b9b70047b4bfc143fe6635f1e3117f7797c503e2dc12a4",
+      "licenses": [
+        {
+          "path": "node_modules/eve-raphael/LICENSE",
+          "sha256": "277b9ae7fa1d2acd7f708b859f9f771cf71e785091b6f82caa473cac241853c4"
+        }
+      ]
+    },
+    {
+      "name": "events",
+      "version": "3.3.0",
+      "license": "MIT",
+      "author": "Irakli Gozalishvili <rfobic@gmail.com> (http://jeditoolkit.com)",
+      "actualLicense": "MIT",
+      "packagePath": "node_modules/events",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "878ad3687fef7efe3757c1872a3af998c95197129a7445d632486a9591ee542e",
+      "licenses": [
+        {
+          "path": "node_modules/events/LICENSE",
+          "sha256": "631987b7616a325a5b97566c232418481ddf7dbb5ecadefb991e791876cc2599"
+        }
+      ]
+    },
+    {
+      "name": "fbjs",
+      "version": "3.0.5",
+      "license": "MIT",
+      "author": null,
+      "actualLicense": "MIT",
+      "packagePath": "node_modules/fbjs",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "256c03bbd706edf2d9479b7c65020d119511f3ec09344d1bcb2205f87c18f32c",
+      "licenses": [
+        {
+          "path": "node_modules/fbjs/LICENSE",
+          "sha256": "f657f99d3fb9647db92628e96007aabb46e5f04f33e49999075aab8e250ca7ce"
+        }
+      ]
+    },
+    {
+      "name": "flux",
+      "version": "4.0.4",
+      "license": "BSD-3-Clause",
+      "author": "Facebook",
+      "actualLicense": "BSD-3-Clause",
+      "packagePath": "node_modules/flux",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "897c19c8b8b34f96c6f2a2535d3e274a70e253c9ba174ba7a2978968db0b4613",
+      "licenses": [
+        {
+          "path": "node_modules/flux/LICENSE",
+          "sha256": "ba6bd25246f4f12c846d136e2654acec98fcf27e37cb101fc893bb805dd5a8df"
+        }
+      ]
+    },
+    {
+      "name": "jquery",
+      "version": "3.7.1",
+      "license": "MIT",
+      "author": {
+        "name": "OpenJS Foundation and other contributors",
+        "url": "https://github.com/jquery/jquery/blob/3.7.1/AUTHORS.txt"
+      },
+      "actualLicense": "MIT",
+      "packagePath": "node_modules/jquery",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "e0a7941d62e473baba3d7e470bbf232d56736a189369674d6353e001a562f33c",
+      "licenses": [
+        {
+          "path": "node_modules/jquery/LICENSE.txt",
+          "sha256": "d4db9ebe6f29f5168eac45ad713f055623ac5d0dcd5ba92da23d650ae012020d"
+        }
+      ]
+    },
+    {
+      "name": "jquery-ui",
+      "version": "1.13.2",
+      "license": "MIT",
+      "author": {
+        "name": "jQuery Foundation and other contributors",
+        "url": "https://github.com/jquery/jquery-ui/blob/1.13.2/AUTHORS.txt"
+      },
+      "actualLicense": "MIT",
+      "packagePath": "node_modules/jquery-ui",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "438c7f1455a7dd61e030d921d84ebca77358ba4771efcb9a013637f379aacf55",
+      "licenses": [
+        {
+          "path": "node_modules/jquery-ui/LICENSE.txt",
+          "sha256": "de33fb695880d0b07615d4b86f78cd43796906959ade5fdfef70968827a0db78"
+        }
+      ]
+    },
+    {
+      "name": "marked",
+      "version": "18.1.3",
+      "license": "MIT",
+      "author": "Christopher Jeffrey",
+      "actualLicense": "MIT",
+      "packagePath": "node_modules/marked",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "e7c712102d49fc813ddf5c655506ebb1522e03279301b754bb7264c6f5c7a364",
+      "licenses": [
+        {
+          "path": "node_modules/marked/LICENSE",
+          "sha256": "8e3a3f82f59a60958f56ca08f445647c32a4733dc7ca6c2c46f6eb898471ab9c"
+        }
+      ]
+    },
+    {
+      "name": "object-assign",
+      "version": "4.1.1",
+      "license": "MIT",
+      "author": {
+        "name": "Sindre Sorhus",
+        "email": "sindresorhus@gmail.com",
+        "url": "sindresorhus.com"
+      },
+      "actualLicense": "MIT",
+      "packagePath": "node_modules/object-assign",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "5990bbffa235fc675debd925d50f6c3f48a2b4526d8c9f7555cadec9029d0d7f",
+      "licenses": [
+        {
+          "path": "node_modules/object-assign/license",
+          "sha256": "6fb9754611c20f6649f68805e8c990e83261f29316e29de9e6cedae607b8634c"
+        }
+      ]
+    },
+    {
+      "name": "process",
+      "version": "0.11.10",
+      "license": "MIT",
+      "author": "Roman Shtylman <shtylman@gmail.com>",
+      "actualLicense": "MIT",
+      "packagePath": "node_modules/process",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "8501b4909630e60c9e9f68c4ca8ccb1964688500e61c60408a26d5480a9dd3d4",
+      "licenses": [
+        {
+          "path": "node_modules/process/LICENSE",
+          "sha256": "59a400d04c5078579acc27ddd6452c1bdf763f9506e01364700935fbb1a7c91b"
+        }
+      ]
+    },
+    {
+      "name": "prop-types",
+      "version": "15.8.1",
+      "license": "MIT",
+      "author": null,
+      "actualLicense": "MIT",
+      "packagePath": "node_modules/prop-types",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "96aa387585c686397a80616d6a563759576e9b9fac1f80d57874aa4ee4730a2c",
+      "licenses": [
+        {
+          "path": "node_modules/prop-types/LICENSE",
+          "sha256": "f657f99d3fb9647db92628e96007aabb46e5f04f33e49999075aab8e250ca7ce"
+        }
+      ]
+    },
+    {
+      "name": "raphael",
+      "version": "2.3.0",
+      "license": "MIT",
+      "author": {
+        "name": "Dmitry Baranovskiy"
+      },
+      "actualLicense": "MIT",
+      "packagePath": "node_modules/raphael",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "e0713722e124a0f6f35a295a295c1a67284d98423592beff972bdf41fe2673ae",
+      "licenses": [
+        {
+          "path": "node_modules/raphael/license.txt",
+          "sha256": "4cafcc8112392ea76caa7e4362c7aa557bcc613b9730a897828b2c858e857f1f"
+        }
+      ]
+    },
+    {
+      "name": "react",
+      "version": "17.0.2",
+      "license": "MIT",
+      "author": null,
+      "actualLicense": "MIT",
+      "packagePath": "node_modules/react",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "2f3d2eb3ffed2de9e76c7f4b3918978ee584a975fd389e4c1b163335cf6f92e2",
+      "licenses": [
+        {
+          "path": "node_modules/react/LICENSE",
+          "sha256": "52412d7bc7ce4157ea628bbaacb8829e0a9cb3c58f57f99176126bc8cf2bfc85"
+        }
+      ]
+    },
+    {
+      "name": "react-dom",
+      "version": "17.0.2",
+      "license": "MIT",
+      "author": null,
+      "actualLicense": "MIT",
+      "packagePath": "node_modules/react-dom",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "e22867605818a365a004ec3afc454b0e200245cb965a16c4128a4d8ad6dd8fda",
+      "licenses": [
+        {
+          "path": "node_modules/react-dom/LICENSE",
+          "sha256": "52412d7bc7ce4157ea628bbaacb8829e0a9cb3c58f57f99176126bc8cf2bfc85"
+        }
+      ]
+    },
+    {
+      "name": "scheduler",
+      "version": "0.20.2",
+      "license": "MIT",
+      "author": null,
+      "actualLicense": "MIT",
+      "packagePath": "node_modules/scheduler",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "7ddf5126ab2c33755d0a3337d36488350a1493258c6f7c5893e343fcb28a636d",
+      "licenses": [
+        {
+          "path": "node_modules/scheduler/LICENSE",
+          "sha256": "52412d7bc7ce4157ea628bbaacb8829e0a9cb3c58f57f99176126bc8cf2bfc85"
+        }
+      ]
+    },
+    {
+      "name": "underscore",
+      "version": "1.13.8",
+      "license": "MIT",
+      "author": "Jeremy Ashkenas <jeremy@documentcloud.org>",
+      "actualLicense": "MIT",
+      "packagePath": "node_modules/underscore",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "081688728dc50bbdeca2c3929500194892fd7caaf62679e252da3687064f4522",
+      "licenses": [
+        {
+          "path": "node_modules/underscore/LICENSE",
+          "sha256": "92905fb54f5d168a27e6d5dc7c2197020add11842be4c70689d084bae3bfe37a"
+        }
+      ]
+    }
+  ],
+  "originalFiles": [
+    {
+      "path": "src/js/actions/CommandLineActions.js",
+      "sha256": "a07339de0c82816a19249371d6f7bebf52fd206b0993cbabe4321947aa185285"
+    },
+    {
+      "path": "src/js/actions/GlobalStateActions.js",
+      "sha256": "d0d5691a0f5f82ed28826a7181af5f3fbc8be593c0d6be0dbca3b6e5efa18756"
+    },
+    {
+      "path": "src/js/actions/LevelActions.js",
+      "sha256": "49576bcf02714007594d6c49ddcb03ae5149e5b1282da9ff77f8b22e94283b2f"
+    },
+    {
+      "path": "src/js/actions/LocaleActions.js",
+      "sha256": "311924165c9dfc7152f7fa62a351e945c7acb0a7790bf27dd0c3b0aa86cc9cdf"
+    },
+    {
+      "path": "src/js/app/index.js",
+      "sha256": "a4898203a46f6ce7c5513a577d5288635e8cb8f121ae8ae85aee566bdfe91a17"
+    },
+    {
+      "path": "src/js/commands/index.js",
+      "sha256": "c092109f8361f9d43b408905d40179d99c4d9f1e733774fa0aa4ff83d17a415e"
+    },
+    {
+      "path": "src/js/commands/optionParser.js",
+      "sha256": "369d90b4e880758a0e746f609f04893373ac7574e391919f6e9df9ea58052f36"
+    },
+    {
+      "path": "src/js/constants/AppConstants.js",
+      "sha256": "75161e58837b3ea5e5a592b59f726143ee80579cc41b04f19bc8cb61cb72ce21"
+    },
+    {
+      "path": "src/js/dialogs/confirmShowSolution.js",
+      "sha256": "540e31fd8bf132a281b220eebe6e9511f178434355aece8c6b43847f39f0cf75"
+    },
+    {
+      "path": "src/js/dialogs/levelBuilder.js",
+      "sha256": "86d5e6d86144f906154d26deab15450a79495efc881800d13f7ed4989a26cce7"
+    },
+    {
+      "path": "src/js/dialogs/nextLevel.js",
+      "sha256": "7413584ab6a935ecb29a549fe8eb7da233e6c85826a1c7854327818081b4677d"
+    },
+    {
+      "path": "src/js/dialogs/sandbox.js",
+      "sha256": "19ea76f02a20e701f16ec450ea12df69ff050736b78473190d41605b3eddd982"
+    },
+    {
+      "path": "src/js/dispatcher/AppDispatcher.js",
+      "sha256": "bb3f96991f2176ae8c9029e2c217e249c3738982a7d0c3ae801ddb1ce02bbf8e"
+    },
+    {
+      "path": "src/js/git/commands.js",
+      "sha256": "f4c9ae7cd47c1c0ee469c74b4dc5032063a7a2862b5382fed92572b2d270f7b2"
+    },
+    {
+      "path": "src/js/git/gitShim.js",
+      "sha256": "503916c07a58d213960fac161bf937c9e83fe539da97d091962e4daf1c92be91"
+    },
+    {
+      "path": "src/js/git/headless.js",
+      "sha256": "7cfaf9389e6120188c9cb09a1b3bc3acb4b4d80aeec3acc1468ac66a273146fd"
+    },
+    {
+      "path": "src/js/git/index.js",
+      "sha256": "73e928004d45bcce3b6984f2ac8297e27d5c93526d3bc9cb6e7315a87d05828a"
+    },
+    {
+      "path": "src/js/graph/index.js",
+      "sha256": "954ad3c1703661bf751cdfb1f582daf2f3670affe067a5126d07af9026fb212f"
+    },
+    {
+      "path": "src/js/graph/treeCompare.js",
+      "sha256": "3f5fbcf65a11319f80150ecfcceeeff0462fc4ebd5d6853a69d3136a14ca1a22"
+    },
+    {
+      "path": "src/js/intl/index.js",
+      "sha256": "96dbf96e15c92435c73c45e91211f9bc6dc60e66454446d725d7877a8589e70e"
+    },
+    {
+      "path": "src/js/intl/localeLoader.js",
+      "sha256": "7268bf5cff9cf2d156af4c5444d87a35a0c06638738f186464c78fef537deb7e"
+    },
+    {
+      "path": "src/js/level/builder.js",
+      "sha256": "e5fa17c7a80ec3f2f7832618c8d681e36d1193719805f8c4aebdb6f17a1c486b"
+    },
+    {
+      "path": "src/js/level/disabledMap.js",
+      "sha256": "4108c52b4bfe9577ff93153dedae427d9d80e264097d8c9673e4879de408a44a"
+    },
+    {
+      "path": "src/js/level/index.js",
+      "sha256": "0dd05fd1ac449cb42cf9bea4e627b726d6a82337a741fc93f46bb02678e857dd"
+    },
+    {
+      "path": "src/js/level/levelModule.js",
+      "sha256": "38d8baddc371904f8f325bd7a02e11d803b48780f381f99e46206a5e9073b43f"
+    },
+    {
+      "path": "src/js/level/levelRegexMap.js",
+      "sha256": "a79ac5cf6ccaa0154283a39ef336e2ba59f9eccab660ced881828c820147cff5"
+    },
+    {
+      "path": "src/js/level/parseWaterfall.js",
+      "sha256": "6a964de8397c388ca0e2ee6c242ee5d68094ba316c9f3a45e13f05f38b00404a"
+    },
+    {
+      "path": "src/js/level/undoBookkeeping.js",
+      "sha256": "c6d2f266099aae120130e3310a428a8991c14ad0aef63a0dc04a96f655c6e7d4"
+    },
+    {
+      "path": "src/js/log/index.js",
+      "sha256": "ff05249a95d05b69c1dcefa0455b1439c38e9c538c20a95edf8b7d5e91f841cb"
+    },
+    {
+      "path": "src/js/mercurial/commands.js",
+      "sha256": "190501dd666627867ed831620e563f21e74ebb2a802fce3a31a3e7ecadc56706"
+    },
+    {
+      "path": "src/js/models/collections.js",
+      "sha256": "69384cf0aadfcc5a500b9050d413f7f032211153538c46ea2f1e1b7d2ac92cac"
+    },
+    {
+      "path": "src/js/models/commandModel.js",
+      "sha256": "e8c32ce7acdb73524a2bc90a415659a6141bbee6b88ff6f16891b6114795712c"
+    },
+    {
+      "path": "src/js/react_views/CommandHistoryView.jsx",
+      "sha256": "331c1fa4ee1d0d93e1265822e4412d00d4cb24a4a1a9580ed5af84cffa80e493"
+    },
+    {
+      "path": "src/js/react_views/CommandView.jsx",
+      "sha256": "23154c08a54461a3b61fcf2694cdd200181823bd209d5b3a4ff2db7f7ee98459"
+    },
+    {
+      "path": "src/js/react_views/CommandsHelperBarView.jsx",
+      "sha256": "41dfbd83bef3a0e2f7f748410bd4615e6a1eebe49326492a3f9774508163088a"
+    },
+    {
+      "path": "src/js/react_views/HelperBarView.jsx",
+      "sha256": "d40aece40abdf75f86e00727b6bf8f2f479789b25046f036127b98113cbb80fe"
+    },
+    {
+      "path": "src/js/react_views/IntlHelperBarView.jsx",
+      "sha256": "57410531e4b2c0f06546ae3a4ab4137200b9f52b1361fad4bc695152c77e0aab"
+    },
+    {
+      "path": "src/js/react_views/LevelToolbarView.jsx",
+      "sha256": "d1e8f6370c5ce607e0b39cdc529085ba3d35ff1b127ce6d9722a0f497877dfad"
+    },
+    {
+      "path": "src/js/react_views/MainHelperBarView.jsx",
+      "sha256": "be1be760d4c16220a674075a7aa16f281c943bb059504ca5e9023896d74f5dd4"
+    },
+    {
+      "path": "src/js/sandbox/commands.js",
+      "sha256": "83f2888cc77eebc1dbd9a3c89ef19c7c613d15dcfed10697d8176f6201e21fe5"
+    },
+    {
+      "path": "src/js/sandbox/index.js",
+      "sha256": "860a4956c1c4c6da987f7fb57d6cf039780671065496a36db7389eacc630c118"
+    },
+    {
+      "path": "src/js/stores/CommandLineStore.js",
+      "sha256": "82b4772c96599eff6cd70cb92479a33f2c3bb98869d98ce776c5a9eed711c2c0"
+    },
+    {
+      "path": "src/js/stores/GlobalStateStore.js",
+      "sha256": "b271874a64f2dfddde790fe49efca4fc6f258ca84aadb08a0f02297531079b94"
+    },
+    {
+      "path": "src/js/stores/LevelStore.js",
+      "sha256": "e6fa36ef4a1392ce5b91068fa84f6ff79e218d16ba25b169c9972f2e57678b14"
+    },
+    {
+      "path": "src/js/stores/LocaleStore.js",
+      "sha256": "e7a6312b784f1621373c139312d473045827d0c75279facbdf28b2fb4eef320a"
+    },
+    {
+      "path": "src/js/util/appLoading.js",
+      "sha256": "e522f021e47cb0ddc4135955adc6697c9462a940e4e81e689be62c893b9c4e55"
+    },
+    {
+      "path": "src/js/util/certificate.js",
+      "sha256": "38c81d2de438b89807930d84fa9592ae0910a3ee5297b9f4bf0b134733a12db9"
+    },
+    {
+      "path": "src/js/util/commandLine.js",
+      "sha256": "3a4f8925c1adb22aac265d50f065e501e74a64d94abdf53127b48b1871875030"
+    },
+    {
+      "path": "src/js/util/constants.js",
+      "sha256": "50c47482d64f82b8f2092a41c551c6bbbe786a1527e7c138070ddd243d5c8fb2"
+    },
+    {
+      "path": "src/js/util/debounce.js",
+      "sha256": "197898e0b3627e793ed155c544225135109999d471b2c996402ef40f9915947c"
+    },
+    {
+      "path": "src/js/util/errors.js",
+      "sha256": "9b8c2fe72b366f1f589d89a29efce440206ce1716fe3e256bfaca0a331986484"
+    },
+    {
+      "path": "src/js/util/escapeString.js",
+      "sha256": "472dd4fbcdfa53ebd1f29612fedd8bad5462a05a3ec3d7feb8fc0aa0b8fed27d"
+    },
+    {
+      "path": "src/js/util/eventBaton.js",
+      "sha256": "160ee2667f92b673037384d106224e6ccbdc44ee763db6ffbe93757a4d7d3135"
+    },
+    {
+      "path": "src/js/util/eventEmitter.js",
+      "sha256": "87c8e5eedb08838cb144237a31acf9229b1ce1331032ac1d1d188e2535d83f1a"
+    },
+    {
+      "path": "src/js/util/index.js",
+      "sha256": "18feb494f569ffc53b60fecc654c0aa767d4a4497b565dc9d438658cc86089c6"
+    },
+    {
+      "path": "src/js/util/keyMirror.js",
+      "sha256": "a9e441360e2dbb03d14a4412e13218f8aa2e92be9009b84814952ba5f238a2ce"
+    },
+    {
+      "path": "src/js/util/keyboard.js",
+      "sha256": "9acf01ad657264fcf9ba8b4d9f74634a6db9e826ec14283377533e71ad87261b"
+    },
+    {
+      "path": "src/js/util/mock.js",
+      "sha256": "f59db09c78ee8112f29647c04ecb86a4bcdb0b4af51e6526577c7da00679c13c"
+    },
+    {
+      "path": "src/js/util/promise.js",
+      "sha256": "e38fa384aeefd635090c19c0bebe86090706eed5222b8c804b515379537472a2"
+    },
+    {
+      "path": "src/js/util/reactUtil.js",
+      "sha256": "33ea50efeb4a78cf7aa386e2982f86ea61b9dc40976ae00241a517316d97d6bc"
+    },
+    {
+      "path": "src/js/util/setupJQueryGlobals.js",
+      "sha256": "dd102d0c60cb174b934251731ddf5a0835a6544c71d4d67d62fb87faffed449f"
+    },
+    {
+      "path": "src/js/util/sharing.js",
+      "sha256": "afe8a33a2949e5b7c0f9f51a681a743c6afad75e5518f5e79379a17639d228de"
+    },
+    {
+      "path": "src/js/util/throttle.js",
+      "sha256": "68a4dab862cc444934e367b64b0f7c0b59c04fc432e0b69fd767e1e8665e5814"
+    },
+    {
+      "path": "src/js/views/builderViews.js",
+      "sha256": "6b7c82cec2b1c18512d117e4e11ccb11e6190edab8422cff02ff1644f0f62977"
+    },
+    {
+      "path": "src/js/views/certificateView.js",
+      "sha256": "e52b8ddc770e423ea4e4f8b1f081b35cf0eb55988e878a1ba3e84912ecceb28d"
+    },
+    {
+      "path": "src/js/views/commandViews.js",
+      "sha256": "29e55c6f9208626ec2ecc1ec16baa682b9aded089cf6e181f985e1614844f383"
+    },
+    {
+      "path": "src/js/views/gitDemonstrationView.js",
+      "sha256": "7e48d66582aa71c3880f5c249484172db096886d0fbcde3b848159325059e217"
+    },
+    {
+      "path": "src/js/views/index.js",
+      "sha256": "2290b20b05f7c2be35d6c1abeee81354974044b8d759c683c04c831ddd530b28"
+    },
+    {
+      "path": "src/js/views/levelDropdownView.js",
+      "sha256": "83ebabd93b3e407cb5b6e21a8961579024a804f63991fa05ae94a656c7f20a95"
+    },
+    {
+      "path": "src/js/views/multiView.js",
+      "sha256": "151301417cf224aafe14c35126b1259b8e6300cb3138d74f49a253aa932f3d69"
+    },
+    {
+      "path": "src/js/views/rebaseView.js",
+      "sha256": "78a65632a90ae913a4c8736e568d7fc087b0854f299810ab399eca4478fa60c6"
+    },
+    {
+      "path": "src/js/visuals/animation/animationFactory.js",
+      "sha256": "a44d2b08850b974e394aecae6c5686946ddeb21006e4004e9f24cbd291be90d7"
+    },
+    {
+      "path": "src/js/visuals/animation/index.js",
+      "sha256": "ec3cb250e4fd5151633c83715c0e9501bf41d90b462062cedcdc09834dfdbc7f"
+    },
+    {
+      "path": "src/js/visuals/index.js",
+      "sha256": "b6e3ac0b95be23b9c222c05cc55f7f765a1e395117cd16fce5a486768ed428ec"
+    },
+    {
+      "path": "src/js/visuals/visBase.js",
+      "sha256": "f96017e5d63823eecc2b767456c8c5c246bb3dac53c84257ce3b8226f9137cc2"
+    },
+    {
+      "path": "src/js/visuals/visBranch.js",
+      "sha256": "ea2e44c65b867a91d5425a22809c1d0537c59af1cfea2f61bb4451bbfab6f520"
+    },
+    {
+      "path": "src/js/visuals/visEdge.js",
+      "sha256": "d2c58b6929e814bfff69cffb16608f60fe77ed607717ffb0350dfed368e94173"
+    },
+    {
+      "path": "src/js/visuals/visNode.js",
+      "sha256": "ea01de9ac37843d6841300ca028a75f050880b3e1537a72b9f889018e560996a"
+    },
+    {
+      "path": "src/js/visuals/visStagingArea.js",
+      "sha256": "b3702c0be5f3d06fcadd7386bb579bdea7f3d2831fc0a59dc2cc6ef5fdff9b6c"
+    },
+    {
+      "path": "src/js/visuals/visTag.js",
+      "sha256": "850b669eb1c719b65d66203616150096b5a3d1825b1a2a392470fa88be04fc57"
+    },
+    {
+      "path": "src/js/visuals/visualization.js",
+      "sha256": "850ba21039eb5b1443ba7e3b3045d0bfe3bfaad1f55b75ff379e9e5c031e6489"
+    },
+    {
+      "path": "src/levels/advanced/multipleParents.js",
+      "sha256": "592f0a7e6a06838669c6d1254e2cec2122e53cae545ed33425cc630fb4f68364"
+    },
+    {
+      "path": "src/levels/intro/branching.js",
+      "sha256": "cd3f8342a0da5916c038e1d2ab436e9e913af467830a3e7b4b2928f5c1b95786"
+    },
+    {
+      "path": "src/levels/intro/commits.js",
+      "sha256": "02a6c65d8f2722b39a3d01a22e6553fc7e140eb46388f84ed493200c56825f9b"
+    },
+    {
+      "path": "src/levels/intro/merging.js",
+      "sha256": "3910af670ff0440a173d7e9146872049c766ade7874277ac87b529c8584a2b02"
+    },
+    {
+      "path": "src/levels/intro/rebasing.js",
+      "sha256": "1523ffd8a229f2e53673348944f00c2a98a3a8b96975ce5b345b5e7780eb0d3f"
+    },
+    {
+      "path": "src/levels/mixed/describe.js",
+      "sha256": "16eb68f24a8beb208a8495a4e3f45a02c86f59154c162d2d58f473b38337858f"
+    },
+    {
+      "path": "src/levels/mixed/grabbingOneCommit.js",
+      "sha256": "5c4309d81200b5f71503a0bd8bb15be95ee0244fedc0e5fd4245932790bbdaac"
+    },
+    {
+      "path": "src/levels/mixed/jugglingCommits.js",
+      "sha256": "b80c98bbe6a3a0dfe90fd2fb94fd7dbbf196d2cef97446c812bcadc1c2d80659"
+    },
+    {
+      "path": "src/levels/mixed/jugglingCommits2.js",
+      "sha256": "e16d58a67b3169fda8919a20a1301d120c809afe965f88f14675173ee80b94e0"
+    },
+    {
+      "path": "src/levels/mixed/tags.js",
+      "sha256": "86545abbd4bd9a7a75efbfafd701a8f9723cd105744d9b3340857f97d46f3cc5"
+    },
+    {
+      "path": "src/levels/rampup/cherryPick.js",
+      "sha256": "e9678666cb1b52b6a421adccd6e85d2467402a27212dc0ac97d84f5cb065a71b"
+    },
+    {
+      "path": "src/levels/rampup/detachedHead.js",
+      "sha256": "e1c404c5bd10362033a06ac6dcd57fd75e6e4471e25c5f9bac84146246a31412"
+    },
+    {
+      "path": "src/levels/rampup/interactiveRebase.js",
+      "sha256": "54c26f1481f8592075d8a9f2351bcfb2cb8ecd45002b3f2aacc3b0cd13e9460b"
+    },
+    {
+      "path": "src/levels/rampup/relativeRefs.js",
+      "sha256": "4966bdbcaa61369551626f0fcdafedb4dcf4e407c5fe70a70ef66fdb82b45858"
+    },
+    {
+      "path": "src/levels/rampup/relativeRefs2.js",
+      "sha256": "8001ef1dc08514b6c0879c70d8fc86efc84da62f7b316dcf91f7cd81be71dcf2"
+    },
+    {
+      "path": "src/levels/rampup/reversingChanges.js",
+      "sha256": "2756774f33df4064318348fa345203a67fbb1d234c58a463d4d0dd1fa3fd43fc"
+    },
+    {
+      "path": "src/levels/rebase/manyRebases.js",
+      "sha256": "007f20fc2a905efcfc58aefaf411779b85a7f418e782cc28bb729baa6257a73f"
+    },
+    {
+      "path": "src/levels/rebase/selectiveRebase.js",
+      "sha256": "fbdd159016168201b6c2bcfd48ebc11e99ac3ce779808925cd36abb7bff0895f"
+    },
+    {
+      "path": "src/levels/remote/clone.js",
+      "sha256": "51bba8a346ef086a4e7f887706129ae70ac0548b8a6e47c66152e9bf41107364"
+    },
+    {
+      "path": "src/levels/remote/fakeTeamwork.js",
+      "sha256": "37e2b7aa60dfb3b87b4204dc209fdbe3cc24268346a7721a87187a67b1266733"
+    },
+    {
+      "path": "src/levels/remote/fetch.js",
+      "sha256": "a4344765ba20017a88010fdff5843f8d163c0bac4966d6986053014d788a2d9f"
+    },
+    {
+      "path": "src/levels/remote/fetchArgs.js",
+      "sha256": "8d518faae218f3bc147ef5447ccea34f077fdb165e94b8132c8a9f512a8385ed"
+    },
+    {
+      "path": "src/levels/remote/fetchRebase.js",
+      "sha256": "eff89f3f36d2719a63b3dbc4de37d5e005e9e80fe4a5a4e7e5f8f9fa7051a8cd"
+    },
+    {
+      "path": "src/levels/remote/lockedMain.js",
+      "sha256": "b7f0f11e41a2c6f70d91bdaa007bce955cd922011917880e53d5a814637fab90"
+    },
+    {
+      "path": "src/levels/remote/mergeManyFeatures.js",
+      "sha256": "abf5911d5b00da2a824d600fad36758f0d4e1d4563258b86c6b7dfa41b11a727"
+    },
+    {
+      "path": "src/levels/remote/pull.js",
+      "sha256": "b661626dd1ce229cf66f2067bbb63d494ab28c8d07bd0a25dfcf9d7669061b74"
+    },
+    {
+      "path": "src/levels/remote/pullArgs.js",
+      "sha256": "8ae0215dc5baaa272dc12bf6c816b129cd6fc404687841b2095c27c26037ef26"
+    },
+    {
+      "path": "src/levels/remote/push.js",
+      "sha256": "d4cf732394e7bd43ce86d612759a11060ae78225d0af8cb475711322b592f8a3"
+    },
+    {
+      "path": "src/levels/remote/pushArgs.js",
+      "sha256": "014cb858733d1daf68e82c74bc1fcdb161f163986da25036964565ac141632aa"
+    },
+    {
+      "path": "src/levels/remote/pushArgs2.js",
+      "sha256": "291de2a41c53cd22ddf53d16a398229fe6a42a6ec5df8d8567a8cb7506203faa"
+    },
+    {
+      "path": "src/levels/remote/pushManyFeatures.js",
+      "sha256": "8d43eda8a317dcb2431e8c781cd4adbc92ba749980fc5ba26f3f579c4d4aa31e"
+    },
+    {
+      "path": "src/levels/remote/remoteBranches.js",
+      "sha256": "f9e35fe66722ddf9fa4913c2b6aa1a56d06bad652e47fcfe6c7109ae702071b0"
+    },
+    {
+      "path": "src/levels/remote/sourceNothing.js",
+      "sha256": "5b250fe5558d1c5137423eeb492771bce24aa2eed04a6ec0c13ebe40c0bc467b"
+    },
+    {
+      "path": "src/levels/remote/tracking.js",
+      "sha256": "6c1090e4e53e0538f9f54ac0fc1a20721b1ab35995c7e54a4c0d270f868f0eff"
+    },
+    {
+      "path": "src/levels/sequenceInfo.js",
+      "sha256": "084b5201a9a03d4b68362f08669d8d5664ee5bbee09765ef2428ad7743ddd3b9"
+    },
+    {
+      "path": "src/levels/workingDir/restore.js",
+      "sha256": "57c0775bbe4a27c04d3735f98a8b713726f5d4e5daf4f36c9b27d2780edbbb4c"
+    },
+    {
+      "path": "src/levels/workingDir/staging.js",
+      "sha256": "39f689c2c50f67e45390059042f6d8a6aefe43aff7ae2cd69245ff80a62cb115"
+    },
+    {
+      "path": "index.html",
+      "sha256": "3ee513e664154231aaf72538aab98bee2ab597497b67f85ad5eea997da8adac8"
+    },
+    {
+      "path": "src/style/main.css",
+      "sha256": "20eb51e4afae46c9835d882ad1a9dbaf6c48622b8cc095a88523f39a7942019a"
+    },
+    {
+      "path": "src/style/rainbows.css",
+      "sha256": "f968361fd37d44275eaa8a403a696a1e0a43de9fa18c8c1796580278c5462665"
+    },
+    {
+      "path": "src/style/font-awesome.css",
+      "sha256": "7573dce85587e0f07289d5117f14d10a8524116dcc3e076d709b5b13effdc4ae"
+    },
+    {
+      "path": "assets/font/fontawesome-webfont.svg",
+      "sha256": "c49e830da6dd1917d752afc4947bcf0bae316b14f81a27395993d6e66b1d2853"
+    },
+    {
+      "path": "LICENSE.md",
+      "sha256": "2b4a732e77065fa8df773b230e9ef905026c20dead9fcaf5d1b4a13ff5832f3e"
+    }
+  ],
+  "patches": {
+    "src/js/app/index.js": {
+      "originalSHA256": "a4898203a46f6ce7c5513a577d5288635e8cb8f121ae8ae85aee566bdfe91a17",
+      "adaptedSHA256": "38ae1b3d5eec4fdc850c45b80fe863eb54b3f6568c8f051d7720e6b3e8af8a14",
+      "diff": "--- \n+++ \n@@ -30,17 +30,7 @@\n   // exactly that case; reload once to pick up the freshly deployed chunks.\n   // Guarded to a single attempt per tab so a genuinely broken deploy 404s\n   // instead of reload-looping.\n-  window.addEventListener('vite:preloadError', function(event) {\n-    event.preventDefault();\n-    var key = 'lgb-preload-reload';\n-    try {\n-      if (window.sessionStorage.getItem(key)) { return; }\n-      window.sessionStorage.setItem(key, '1');\n-    } catch (e) {\n-      // sessionStorage unavailable (private mode, etc.); reload anyway.\n-    }\n-    window.location.reload();\n-  });\n+\n }\n \n var events = Object.assign(\n@@ -337,7 +327,7 @@\n   var safety = setTimeout(appLoading.hideAppLoading, 15000);\n   return intl.loadLocale(LocaleStore.getLocale()).then(function() {\n     try {\n-      initFn();\n+      if (!window.__lgbDisposed) initFn();\n     } finally {\n       clearTimeout(safety);\n       appLoading.hideAppLoading();\n"
+    },
+    "src/js/dialogs/confirmShowSolution.js": {
+      "originalSHA256": "540e31fd8bf132a281b220eebe6e9511f178434355aece8c6b43847f39f0cf75",
+      "adaptedSHA256": "fc61ffb0781e5bdc580e83214d255f40be155f1dac454094dc25a9e101c63510",
+      "diff": "--- \n+++ \n@@ -9,36 +9,9 @@\n       ]\n     }\n   }],\n-  'hi_IN': [{\n-    type: 'ModalAlert',\n-    options: {\n-      markdowns: [\n-        '## क्या आप सचमुच solution देखना चाहेंगे?',\n-        '',\n-        'मुझे आप पर भरोसा है! आप यह कर सकते हैं!'\n-      ]\n-    }\n-  }],\n-  'bn_BD': [{\n-    type: 'ModalAlert',\n-    options: {\n-      markdowns: [\n-        '## তুমি কি নিশ্চিত যে সমাধানটি দেখতে চাও?',\n-        '',\n-        'আমি তোমার ওপর বিশ্বাস রাখি! তুমি পারবে'\n-      ]\n-    }\n-  }],\n-  'de_DE': [{\n-    type: 'ModalAlert',\n-    options: {\n-      markdowns: [\n-        '## Bist du sicher, dass du die Lösung sehen willst?',\n-        '',\n-        'Ich glaube an dich! Du schaffst das schon!'\n-      ]\n-    }\n-  }],\n+  \n+  \n+  \n   'zh_CN': [{\n     type: 'ModalAlert',\n     options: {\n@@ -49,210 +22,26 @@\n       ]\n     }\n   }],\n-  'zh_TW': [{\n-    type: 'ModalAlert',\n-    options: {\n-      markdowns: [\n-        '## 確定偷看解答嗎？',\n-        '',\n-        '我相信你！你可以的'\n-      ]\n-    }\n-  }],\n-  'es_AR': [{\n-    type: 'ModalAlert',\n-    options: {\n-      markdowns: [\n-        '## ¿Realmente querés ver la solución?',\n-        '',\n-        '¡Creo en vos! ¡Dale que podés!'\n-      ]\n-    }\n-  }],\n-  'es_MX': [{\n-    type: 'ModalAlert',\n-    options: {\n-      markdowns: [\n-        '## ¿Estás seguro de que quieres ver la solución?',\n-        '',\n-        '¡Creo en ti! ¡Yo sé que puedes!'\n-      ]\n-    }\n-  }],\n-  'es_ES': [{\n-    type: 'ModalAlert',\n-    options: {\n-      markdowns: [\n-        '## ¿Estás seguro de que quieres ver la solución?',\n-        '',\n-        '¡Creo en ti! ¡Ánimo!'\n-      ]\n-    }\n-  }],\n-  'pt_BR': [{\n-    type: 'ModalAlert',\n-    options: {\n-      markdowns: [\n-        '## Tem certeza que quer ver a solução?',\n-        '',\n-        'Vamos lá, acredito que você consegue!'\n-      ]\n-    }\n-  }],\n-  'pt_PT': [{\n-    type: 'ModalAlert',\n-    options: {\n-      markdowns: [\n-        '## Tens a certeza de que queres ver a solução?',\n-        '',\n-        'Eu acredito em ti! Tu consegues'\n-      ]\n-    }\n-  }],\n-  'gl': [{\n-    type: 'ModalAlert',\n-    options: {\n-      markdowns: [\n-        '## ¿Queres ver a solución?',\n-        '',\n-        'Seguro que podes, ¡inténtao unha vez máis!'\n-      ]\n-    }\n-  }],\n-  'fr_FR': [{\n-    type: 'ModalAlert',\n-    options: {\n-      markdowns: [\n-        '## Êtes-vous sûr de vouloir voir la solution ?',\n-        '',\n-        'Je crois en vous ! Vous pouvez le faire !'\n-      ]\n-    }\n-  }],\n-  'ja': [{\n-    type: 'ModalAlert',\n-    options: {\n-      markdowns: [\n-        '## どうしても正解がみたいですか?',\n-        '',\n-        'あなたならきっとできるって信じてます!'\n-      ]\n-    }\n-  }],\n-  'ro': [\n-    {\n-      type: \"ModalAlert\",\n-      options: {\n-        markdowns: [\n-          \"## Ești sigur că vrei să vezi soluția?\",\n-          \"\",\n-          \"Am încredere în tine! Poți să o faci!\",\n-        ],\n-      },\n-    },\n-  ],\n-  'bg': [{\n-    type: 'ModalAlert',\n-    options: {\n-      markdowns: [\n-        '## Сигурен ли си, че искаш да видиш решението?',\n-        '',\n-        'Вярвам в теб! Ти можеш!'\n-      ]\n-    }\n-  }],\n-  'ru_RU': [{\n-    type: 'ModalAlert',\n-    options: {\n-      markdowns: [\n-        '## Уверен, что хочешь посмотреть решение?',\n-        '',\n-        'Мы верим в тебя! Не прыгай! Ты сможешь!'\n-      ]\n-    }\n-  }],\n-  'uk': [{\n-    type: 'ModalAlert',\n-    options: {\n-      markdowns: [\n-        '## Впевнений, що хочеш побачити розв’язок?',\n-        '',\n-        'Я вірю в тебе! Ти впораєшся!'\n-      ]\n-    }\n-  }],\n-  'vi': [{\n-    type: 'ModalAlert',\n-    options: {\n-      markdowns: [\n-        '## Bạn chắc là muốn xem đáp án chứ?',\n-        '',\n-        'Tôi tin ở bạn! Bạn có thể làm được!'\n-      ]\n-    }\n-  }],\n-  'sl_SI': [{\n-    type: 'ModalAlert',\n-    options: {\n-      markdowns: [\n-        '## Si prepričan, da hočeš videti rešitev?',\n-        '',\n-        'Verjamem vate! Maš ti to! Ali pač ne?'\n-      ]\n-    }\n-  }],\n-  'pl': [{\n-    type: 'ModalAlert',\n-    options: {\n-      markdowns: [\n-        '## Czy na pewno chcesz zobaczyć rozwiązanie?',\n-        '',\n-        'Wierzę w Ciebie! Możesz to zrobić'\n-      ]\n-    }\n-  }],\n-  'te_IN': [{\n-    type: 'ModalAlert',\n-    options: {\n-      markdowns: [\n-        '## నిజంగా పరిష్కారం చూడాలనుకుంటున్నారా?',\n-        '',\n-        'మీ మీద నాకు నమ్మకం ఉంది! మీరు చేయగలరు!'\n-      ]\n-    }\n-  }],\n-    'ta_IN': [{\n-    type: 'ModalAlert',\n-    options: {\n-      markdowns: [\n-        '## நீங்கள் நிச்சயமாக தீர்வை காண விரும்புகிறீர்களா?',\n-        '',\n-        'நான் உங்களால் அதை செய்ய முடியும் என நினைக்கிறேன்!'\n-      ]\n-    }\n-  }],\n-    \"it_IT\": [\n-    {\n-      type: \"ModalAlert\",\n-      options: {\n-        markdowns: [\n-          \"## Sicuro di voler sbirciare la soluzione?\",\n-          \"\",\n-          \"Io credo in te, dai che ce la fai!\",\n-        ],\n-      },\n-    },\n-  ],\n-  'tr_TR': [{\n-    type: 'ModalAlert',\n-    options: {\n-      markdowns: [\n-        '## Çözümü görmek istediğine emin misin?',\n-        '',\n-        'Sana inanıyorum bunu yapabilirsin!'\n-      ]\n-    }\n-  }],\n+  \n+  \n+  \n+  \n+  \n+  \n+  \n+  \n+  \n+  \n+  \n+  \n+  \n+  \n+  \n+  \n+  \n+    \n+    \n+  \n };\n \n \n"
+    },
+    "src/js/dialogs/levelBuilder.js": {
+      "originalSHA256": "86d5e6d86144f906154d26deab15450a79495efc881800d13f7ed4989a26cce7",
+      "adaptedSHA256": "610bd6af7840fc117b2ae2a34aab0ec7aeb2fbc3f0846e959973309ea8cc34c8",
+      "diff": "Large fixed source: locale-only pruning via the included trim-locales.cjs recipe; complete original and adapted hashes retained."
+    },
+    "src/js/dialogs/nextLevel.js": {
+      "originalSHA256": "7413584ab6a935ecb29a549fe8eb7da233e6c85826a1c7854327818081b4677d",
+      "adaptedSHA256": "0d70decb8c9767e0777af189ba5f46fdfb364505eed41cc12e76e1bbfd003834",
+      "diff": "--- \n+++ \n@@ -10,52 +10,10 @@\n       ]\n     }\n   }],\n-  'hi_IN': [{\n-    type: 'ModalAlert',\n-    options: {\n-      markdowns: [\n-        '## शाबाश!!!',\n-        '',\n-        'आपने यह level *{numCommands}* कमांड में solve किया; ',\n-        'हमारा solution {best} इस्तेमाल करता है।'\n-      ]\n-    }\n-  }],\n-  'bn_BD': [{\n-    type: 'ModalAlert',\n-    options: {\n-      markdowns: [\n-        '## দারুণ কাজ!!!',\n-        '',\n-        'তুমি লেভেলটি *{numCommands}* কমান্ডে সমাধান করেছ; ',\n-        'আমাদের সমাধান {best} কমান্ড ব্যবহার করে।'\n-      ]\n-    }\n-  }],\n-  'de_DE': [{\n-    type: 'ModalAlert',\n-    options: {\n-      markdowns: [\n-        '## Super gemacht!!!',\n-        '',\n-        'Du hast das Level mit *{numCommands}* Befehl(en) gelöst;',\n-        'unsere Lösung nutzt {best}.'\n-      ]\n-    }\n-  }],\n-  'ja': [{\n-    type: 'ModalAlert',\n-    options: {\n-      markdowns: [\n-        '## 完成!!!',\n-        '',\n-        'あなたは*{numCommands}*回のコマンドでこの課題をクリアしました; ',\n-        '模範解答では{best}回です。',\n-        '',\n-        '模範解答は、右下の`?`メニューの`Solution`から見ることができます。'\n-      ]\n-    }\n-  }],\n+  \n+  \n+  \n+  \n   'zh_CN': [{\n     type: 'ModalAlert',\n     options: {\n@@ -67,229 +25,25 @@\n       ]\n     }\n   }],\n-  'zh_TW': [{\n-    type: 'ModalAlert',\n-    options: {\n-      markdowns: [\n-        '## 太棒了!!!',\n-        '',\n-        '您用了 *{numCommands}* 個指令完成這一關，',\n-        '我們的解答用了 {best} 個。'\n-      ]\n-    }\n-  }],\n-  'es_AR': [{\n-    type: 'ModalAlert',\n-    options: {\n-      markdowns: [\n-        '## ¡Buen trabajo!!!',\n-        '',\n-        'Resolviste el nivel en *{numCommands}* comandos; ',\n-        'nuestra mejor solución usa {best}.'\n-      ]\n-    }\n-  }],\n-  'es_MX': [{\n-    type: 'ModalAlert',\n-    options: {\n-      markdowns: [\n-        '## ¡Buen trabajo!!!',\n-        '',\n-        'Resolviste el nivel en *{numCommands}* comandos; ',\n-        'nuestra mejor solución usa: {best}.'\n-      ]\n-    }\n-  }],\n-  'es_ES': [{\n-    type: 'ModalAlert',\n-    options: {\n-      markdowns: [\n-        '## ¡Buen trabajo!!!',\n-        '',\n-        'Resolviste el nivel en *{numCommands}* comandos; ',\n-        'nuestra mejor solución usa {best}.'\n-      ]\n-    }\n-  }],\n-  'pt_BR': [{\n-    type: 'ModalAlert',\n-    options: {\n-      markdowns: [\n-        '## Bom trabalho!!!',\n-        '',\n-        'Você resolveu o nível usando *{numCommands}* comandos; ',\n-        'nossa melhor solução usa {best}.'\n-      ]\n-    }\n-  }],\n-  'pt_PT': [{\n-    type: 'ModalAlert',\n-    options: {\n-      markdowns: [\n-        '## Excelente trabalho!!!',\n-        '',\n-        'Resolveste o nível em *{numCommands}* comando(s); ',\n-        'a nossa solução usa {best}.'\n-      ]\n-    }\n-  }],\n-  'gl': [{\n-    type: 'ModalAlert',\n-    options: {\n-      markdowns: [\n-        '## Bo traballo!!!',\n-        '',\n-        'Resolviches o nivel empregando *{numCommands}* comandos; ',\n-        'a nosa mellor solución é en {best}.'\n-      ]\n-    }\n-  }],\n-  'fr_FR': [{\n-    type: 'ModalAlert',\n-    options: {\n-      markdowns: [\n-        '## Beau Travail!!!',\n-        '',\n-        'Vous avez résolu le niveau en *{numCommands}* commande(s); ',\n-        'notre solution le fait en {best}.'\n-      ]\n-    }\n-  }],\n-  'ro': [\n-    {\n-      type: \"ModalAlert\",\n-      options: {\n-        markdowns: [\n-          \"## Bravo!!!\",\n-          \"\",\n-          \"Ai rezolvat nivelul în *{numCommands}* comenzi; \",\n-          \"soluția noastră utilizează {best}.\",\n-        ],\n-      },\n-    },\n-  ],\n-  'bg': [{\n-    type: 'ModalAlert',\n-    options: {\n-      markdowns: [\n-        '## Страхотна работа!!!',\n-        '',\n-        'Ти реши нивото с *{numCommands}* команди; ',\n-        'нашето решение използва {best}.'\n-      ]\n-    }\n-  }],\n-  'ru_RU': [{\n-    type: 'ModalAlert',\n-    options: {\n-      markdowns: [\n-        '## Супер!!!',\n-        '',\n-        'Ты прошёл уровень. Количество использованных команд - *{numCommands}* ; ',\n-        'а наше решение состоит из {best}.'\n-      ]\n-    }\n-  }],\n-  'uk': [{\n-    type: 'ModalAlert',\n-    options: {\n-      markdowns: [\n-        '## Молодець!!!',\n-        '',\n-        'Ти пройшов рівень. Кількість використаних команд \\u2014 *{numCommands}*; ',\n-        'наш розв’язок складається з {best}.'\n-      ]\n-    }\n-  }],\n-  'ko': [{\n-    type: 'ModalAlert',\n-    options: {\n-      markdowns: [\n-        '## 훌륭합니다!!!',\n-        '',\n-        '*{numCommands}*개의 명령으로 레벨을 통과했습니다; ',\n-        '모범 답안은 {best}개를 사용합니다.'\n-      ]\n-    }\n-  }],\n-  'vi': [{\n-    type: 'ModalAlert',\n-    options: {\n-      markdowns: [\n-        '## Làm tốt lắm!!!',\n-        '',\n-        'Bạn hoàn thành cấp độ này với *{numCommands}* câu lệnh; ',\n-        'Đáp án của chúng tôi sử dụng {best}.'\n-      ]\n-    }\n-  }],\n-  'sl_SI': [{\n-    type: 'ModalAlert',\n-    options: {\n-      markdowns: [\n-        '## Dobro opravljeno!!!',\n-        '',\n-        'Rešil si stopnjo z *{numCommands}* ukazi; ',\n-        'naša rešitev uporabi {best}.'\n-      ]\n-    }\n-  }],\n-  'pl': [{\n-    type: 'ModalAlert',\n-    options: {\n-      markdowns: [\n-        '## Dobra robota!!!',\n-        '',\n-        'Rozwiązałeś poziom używając *{numCommands}* poleceń/ia; ',\n-        'nasze rozwiązanie składa się z {best}.'\n-      ]\n-    }\n-  }],\n-  'te_IN': [{\n-    type: 'ModalAlert',\n-    options: {\n-      markdowns: [\n-        '## బాగుంది!!!',\n-        '',\n-        'మీరు ఈ స్థాయిని *{numCommands}* కమాండ్(ల)తో పరిష్కరించారు; ',\n-        'మా పరిష్కారానికి {best} కావాలి.'\n-      ]\n-    }\n-  }],\n-  'ta_IN': [{\n-    type: 'ModalAlert',\n-    options: {\n-      markdowns: [\n-        '## ஆக சிரந்த செயல்!!!',\n-        '',\n-        'நீங்கள் *{numCommands}* நிலைக்கான கட்டளை(கள்) கொண்டு தீர்வை அடிந்து விட்டீர்கள்; ',\n-        'நமது தீர்வு {best}-ஐ பயன்படுத்து கின்றது.'\n-      ]\n-    }\n-  }],\n-   \"it_IT\": [\n-    {\n-      type: \"ModalAlert\",\n-      options: {\n-        markdowns: [\n-          \"## Ben fatto!!!\",\n-          \"\",\n-          \"Hai risolto il livello con *{numCommands}* comando(i); \",\n-          \"noi l'abbiamo risolto con {best}.\",\n-        ],\n-      },\n-    },\n-  ],\n-  'tr_TR': [{\n-    type: 'ModalAlert',\n-    options: {\n-      markdowns: [\n-        '## Muhteşem!!!',\n-        '',\n-        'Bu seviyeyi *{numCommands}* komut ile çözdünüz.',\n-        'İdeal çözüm {best} komuttan oluşuyor.'\n-      ]\n-    }\n-  }],\n+  \n+  \n+  \n+  \n+  \n+  \n+  \n+  \n+  \n+  \n+  \n+  \n+  \n+  \n+  \n+  \n+  \n+  \n+   \n+  \n };\n  \n"
+    },
+    "src/js/dialogs/sandbox.js": {
+      "originalSHA256": "19ea76f02a20e701f16ec450ea12df69ff050736b78473190d41605b3eddd982",
+      "adaptedSHA256": "f7bfbe437ae17c56076e13afeee8e05147f781de53f7c5801b91da1c94e733fc",
+      "diff": "Large fixed source: locale-only pruning via the included trim-locales.cjs recipe; complete original and adapted hashes retained."
+    },
+    "src/js/intl/index.js": {
+      "originalSHA256": "96dbf96e15c92435c73c45e91211f9bc6dc60e66454446d725d7877a8589e70e",
+      "adaptedSHA256": "4a2101a9454ef9c90e55805839d924c5e46da77fcc8112de1aaaf8231eaea563",
+      "diff": "--- \n+++ \n@@ -74,7 +74,7 @@\n var templateSettings = Object.assign({}, _.templateSettings);\n templateSettings.interpolate = /\\{(.+?)\\}/g;\n var template = exports.template = function(str, params) {\n-  return _.template(str, templateSettings)(params);\n+  return str.replace(/\\{([a-zA-Z_$][\\w$]*)\\}/g, function(_, key) { return params[key] == null ? '' : String(params[key]); });\n };\n \n var str = exports.str = function(key, params) {\n"
+    },
+    "src/js/react_views/IntlHelperBarView.jsx": {
+      "originalSHA256": "57410531e4b2c0f06546ae3a4ab4137200b9f52b1361fad4bc695152c77e0aab",
+      "adaptedSHA256": "53cec362c3062b9d7c49efa535ccdbd164321ce3ff61139d59464916242b3640",
+      "diff": "--- \n+++ \n@@ -212,7 +212,7 @@\n         this.props.onExit();\n       }.bind(this)\n     }\n-    ];\n+    ].filter(item => !item.testID || [\"english\", \"simplifiedChinese\"].includes(item.testID));\n   }\n \n };\n"
+    },
+    "src/js/sandbox/index.js": {
+      "originalSHA256": "860a4956c1c4c6da987f7fb57d6cf039780671065496a36db7389eacc630c118",
+      "adaptedSHA256": "2695a1553d6d943e033f7e1637bb6d02bf991d5d5e449b5f631c09ec6eef6f06",
+      "diff": "--- \n+++ \n@@ -339,7 +339,8 @@\n     command.finishWith(deferred);\n   }\n \n-  copyTextToClipboard(text) {\n+  copyTextToClipboard(text) {return Promise.reject(new Error(\"Clipboard export is unavailable in this local preview. Progress remains in memory.\"));\n+\n     if (!util.isBrowser()) {\n       return Promise.resolve();\n     }\n"
+    },
+    "src/js/stores/CommandLineStore.js": {
+      "originalSHA256": "82b4772c96599eff6cd70cb92479a33f2c3bb98869d98ce776c5a9eed711c2c0",
+      "adaptedSHA256": "ebe433ce5f02219d34daea6157c7efe37a5bc5071ad59d2f6b7c81804f6363bf",
+      "diff": "--- \n+++ \n@@ -12,7 +12,7 @@\n var _commandHistory = [];\n try {\n   _commandHistory = JSON.parse(\n-    localStorage.getItem(COMMAND_HISTORY_KEY) || '[]'\n+    window.__localMemory.getItem(COMMAND_HISTORY_KEY) || '[]'\n   ) || [];\n } catch (e) {\n }\n@@ -28,7 +28,7 @@\n \n function _saveToLocalStorage() {\n   try {\n-    localStorage.setItem(\n+    window.__localMemory.setItem(\n       COMMAND_HISTORY_KEY,\n       JSON.stringify(_commandHistory)\n     );\n"
+    },
+    "src/js/stores/LevelStore.js": {
+      "originalSHA256": "e6fa36ef4a1392ce5b91068fa84f6ff79e218d16ba25b169c9972f2e57678b14",
+      "adaptedSHA256": "32ec0420ea4de557dd5cfa5075b805c49854fd50d1442b9fb9b36eec9aa97cd3",
+      "diff": "--- \n+++ \n@@ -42,7 +42,7 @@\n     }\n   };\n } else {\n-  var localStorage = window.localStorage;\n+  var localStorage = window.__localMemory;\n }\n \n try {\n"
+    },
+    "src/js/stores/LocaleStore.js": {
+      "originalSHA256": "e7a6312b784f1621373c139312d473045827d0c75279facbdf28b2fb4eef320a",
+      "adaptedSHA256": "fee2e04be49af16bd6f79d704429dd4111d70150ee026ac6aff1f3793eaf5e73",
+      "diff": "--- \n+++ \n@@ -14,50 +14,9 @@\n \n // resolve the messy mapping between browser language\n // and our supported locales\n-var langLocaleMap = {\n-  en: 'en_US',\n-  zh: 'zh_CN',\n-  ja: 'ja',\n-  ko: 'ko',\n-  es: 'es_AR',\n-  fr: 'fr_FR',\n-  de: 'de_DE',\n-  pt: 'pt_BR',\n-  ro: 'ro',\n-  bg: 'bg',\n-  ru: 'ru_RU',\n-  uk: 'uk',\n-  vi: 'vi',\n-  sl: 'sl_SI',\n-  pl: 'pl',\n-  it: 'it_IT',\n-  ta: 'ta_IN',\n-  te: 'te_IN',\n-  hi: 'hi_IN',\n-  tr: 'tr_TR',\n-  fa: 'fa',\n-  hu: 'hu_HU',\n-  ar: 'ar',\n-  az: 'az',\n-  bn: 'bn_BD',\n-};\n+var langLocaleMap = {en:'en_US',zh:'zh_CN'};\n \n-var headerLocaleMap = {\n-  'zh-CN': 'zh_CN',\n-  'zh-TW': 'zh_TW',\n-  'pt-BR': 'pt_BR',\n-  'pt-PT': 'pt_PT',\n-  'es-MX': 'es_MX',\n-  'es-ES': 'es_ES',\n-  'it-IT': 'it_IT',\n-  'sl-SI': 'sl_SI',\n-  'tr-TR': 'tr_TR',\n-  'hu-HU': 'hu_HU',\n-  'hu': 'hu_HU',\n-  'te-IN': 'te_IN',\n-  'hi-IN': 'hi_IN',\n-  'bn-BD': 'bn_BD',\n-};\n+var headerLocaleMap = {'en-US':'en_US','zh-CN':'zh_CN'};\n \n var supportedLocalesList = Object.values(langLocaleMap)\n                                  .concat(Object.values(headerLocaleMap))\n@@ -91,7 +50,7 @@\n  */\n function getStoredLocale() {\n   try {\n-    var raw = window.localStorage.getItem(LOCALE_STORAGE_KEY);\n+    var raw = window.__localMemory.getItem(LOCALE_STORAGE_KEY);\n     if (!raw) { return null; }\n \n     var locale = raw;\n@@ -154,7 +113,7 @@\n \n     switch (action.type) {\n       case ActionTypes.CHANGE_LOCALE:\n-        _locale = action.locale;\n+        _locale = ['en_US','zh_CN'].includes(action.locale) ? action.locale : 'en_US';\n         shouldInform = true;\n         break;\n       case ActionTypes.CHANGE_LOCALE_FROM_HEADER:\n@@ -170,7 +129,7 @@\n       // ponytail: persisted locale wins over navigator.language on later\n       // visits until the user switches again. Acceptable for a preference.\n       try {\n-        window.localStorage.setItem(LOCALE_STORAGE_KEY, JSON.stringify({\n+        window.__localMemory.setItem(LOCALE_STORAGE_KEY, JSON.stringify({\n           loc: _locale,\n           at: Date.now()\n         }));\n@@ -179,7 +138,7 @@\n       }\n       var url = new URL(document.location.href);\n       url.searchParams.set('locale', _locale);\n-      window.history.replaceState({}, '', url.href);\n+      // Opaque local preview retains locale in memory, never rewrites host URL.\n     }\n \n     if (shouldInform) {\n"
+    },
+    "src/js/util/certificate.js": {
+      "originalSHA256": "38c81d2de438b89807930d84fa9592ae0910a3ee5297b9f4bf0b134733a12db9",
+      "adaptedSHA256": "afe2156dbf1658faed61df106f644116afedfdf9e60fb8f0c52fda46d0c2a6a7",
+      "diff": "--- \n+++ \n@@ -521,7 +521,8 @@\n  * @param {Object} [options]  scale (default 2 for retina-ish output)\n  * @returns {Promise<Blob>}\n  */\n-function svgToPngBlob(svgString, options) {\n+function svgToPngBlob(svgString, options) { return Promise.reject(new Error(\"Certificate image export is unavailable in this local preview.\"));\n+\n   options = options || {};\n   var scale = options.scale || 2;\n \n@@ -561,7 +562,8 @@\n  * Whether this browser can put an image on the clipboard.\n  * @returns {boolean}\n  */\n-function canCopyImage() {\n+function canCopyImage() {return false;\n+\n   return !!(\n     window.ClipboardItem &&\n     window.navigator &&\n@@ -613,7 +615,8 @@\n  * @param {Blob} blob\n  * @param {string} filename\n  */\n-function downloadBlob(blob, filename) {\n+function downloadBlob(blob, filename) {throw new Error(\"Downloads are unavailable in this local preview.\");\n+\n   var url = window.URL.createObjectURL(blob);\n   var anchor = document.createElement('a');\n   anchor.href = url;\n"
+    },
+    "src/js/util/sharing.js": {
+      "originalSHA256": "afe8a33a2949e5b7c0f9f51a681a743c6afad75e5518f5e79379a17639d228de",
+      "adaptedSHA256": "21f982830653b4734f1acedf880a928839dc8b30748b7ead4225f5e1c7323174",
+      "diff": "--- \n+++ \n@@ -1,224 +1,12 @@\n-/**\n- * Utility for generating social media sharing URLs.\n- * Uses each platform's standard deeplink URL scheme to open the composer.\n- */\n-\n-var intl = require('../intl');\n-\n-var SITE_URL = 'https://learngitbranching.js.org';\n-\n-/**\n- * Build the share text for a completed level.\n- * @param {string} levelName  Human-readable level name\n- * @returns {string}\n- */\n-function buildShareText(levelName) {\n-  if (levelName) {\n-    return 'I just completed the \"' + levelName + '\" level on Learn Git Branching! ' +\n-      'Learn git interactively at ' + SITE_URL;\n-  }\n-  return 'I just completed a level on Learn Git Branching! ' +\n-    'Learn git interactively at ' + SITE_URL;\n-}\n-\n-/**\n- * Build the share text for finishing every level in the game.\n- * @param {number} levelsTotal  How many levels there are\n- * @returns {string}\n- */\n-function buildAllLevelsShareText(levelsTotal) {\n-  return 'I just completed all ' + levelsTotal +\n-    ' levels of Learn Git Branching and earned my certificate! ' +\n-    'Learn git interactively at ' + SITE_URL;\n-}\n-\n-/**\n- * Returns the Twitter/X share URL for a given text.\n- * @param {string} text\n- * @returns {string}\n- */\n-function getTwitterUrlForText(text) {\n-  return 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(text);\n-}\n-\n-/**\n- * Returns the LinkedIn share URL for a given text.\n- * The share-offsite endpoint only reads the url param and ignores any\n- * text, so we deeplink into the feed composer which supports prefilled text.\n- * @param {string} text\n- * @returns {string}\n- */\n-function getLinkedInUrlForText(text) {\n-  return 'https://www.linkedin.com/feed/?shareActive=true&text=' +\n-    encodeURIComponent(text);\n-}\n-\n-/**\n- * Returns the Facebook share URL for a given text.\n- * Facebook policy prohibits prefilling the composer text itself; the quote\n- * param is the only sanctioned way to attach a message (shown as a quote\n- * block on the post) and even that is honored inconsistently.\n- * @param {string} text\n- * @returns {string}\n- */\n-function getFacebookUrlForText(text) {\n-  return 'https://www.facebook.com/sharer/sharer.php?u=' +\n-    encodeURIComponent(SITE_URL) +\n-    '&quote=' + encodeURIComponent(text);\n-}\n-\n-/**\n- * Returns the Twitter/X share URL for a given level.\n- * @param {string} levelName\n- * @returns {string}\n- */\n-function getTwitterUrl(levelName) {\n-  return getTwitterUrlForText(buildShareText(levelName));\n-}\n-\n-/**\n- * Returns the LinkedIn share URL for a given level.\n- * @param {string} levelName\n- * @returns {string}\n- */\n-function getLinkedInUrl(levelName) {\n-  return getLinkedInUrlForText(buildShareText(levelName));\n-}\n-\n-/**\n- * Returns the Facebook share URL for a given level.\n- * @param {string} levelName\n- * @returns {string}\n- */\n-function getFacebookUrl(levelName) {\n-  return getFacebookUrlForText(buildShareText(levelName));\n-}\n-\n-/**\n- * Open a share URL in a small popup window.\n- * @param {string} url\n- */\n-function openShareWindow(url) {\n-  var width = 600;\n-  var height = 400;\n-  var left = Math.round((window.screen.width / 2) - (width / 2));\n-  var top = Math.round((window.screen.height / 2) - (height / 2));\n-  window.open(\n-    url,\n-    'share',\n-    'width=' + width + ',height=' + height + ',left=' + left + ',top=' + top +\n-      ',toolbar=no,menubar=no,scrollbars=yes,resizable=yes'\n-  );\n-}\n-\n-var SHARE_ICONS = {\n-  twitter: '<svg class=\"share-btn-icon\" viewBox=\"0 0 24 24\" aria-hidden=\"true\">' +\n-    '<path d=\"M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817' +\n-    'L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833' +\n-    'L7.084 4.126H5.117z\"/></svg>',\n-  linkedin: '<svg class=\"share-btn-icon\" viewBox=\"0 0 24 24\" aria-hidden=\"true\">' +\n-    '<path d=\"M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0' +\n-    '-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 ' +\n-    '3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063' +\n-    '-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 ' +\n-    '0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0' +\n-    'H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 ' +\n-    '24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z\"/></svg>',\n-  facebook: '<svg class=\"share-btn-icon\" viewBox=\"0 0 24 24\" aria-hidden=\"true\">' +\n-    '<path d=\"M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 ' +\n-    '10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 ' +\n-    '4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925' +\n-    '-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 ' +\n-    '24 12.073z\"/></svg>'\n-};\n-\n-/**\n- * Escape a string for use inside a double-quoted HTML attribute.\n- * @param {string} value\n- * @returns {string}\n- */\n-function escapeAttr(value) {\n-  return String(value)\n-    .replace(/&/g, '&amp;')\n-    .replace(/\"/g, '&quot;')\n-    .replace(/</g, '&lt;')\n-    .replace(/>/g, '&gt;');\n-}\n-\n-/**\n- * Markup for one share button. Clicks are handled by delegation on whatever\n- * container the markup ends up in -- see bindShareButtons.\n- * @param {string} key  twitter | linkedin | facebook\n- * @param {string} url\n- * @param {string} label\n- * @returns {string}\n- */\n-function shareButtonHTML(key, url, label) {\n-  return '<button class=\"share-btn share-btn-' + key + '\"' +\n-    ' data-share-url=\"' + escapeAttr(url) + '\"' +\n-    ' aria-label=\"' + escapeAttr(label) + '\">' +\n-    SHARE_ICONS[key] +\n-    '<span>' + escapeAttr(label) + '</span>' +\n-  '</button>';\n-}\n-\n-/**\n- * The whole \"share your progress\" block: a label plus the three network\n- * buttons, all pointing at the same share text.\n- *\n- * @param {string} shareText  The message to prefill each composer with\n- * @param {Object} [options]  label: heading text above the buttons\n- * @returns {string}\n- */\n-function buildShareSectionHTML(shareText, options) {\n-  options = options || {};\n-  var label = options.label || intl.str('share-progress');\n-\n-  return '<div class=\"share-progress-section\">' +\n-    '<p class=\"share-progress-label\">' + escapeAttr(label) + '</p>' +\n-    '<div class=\"share-progress-buttons\">' +\n-    shareButtonHTML(\n-      'twitter',\n-      getTwitterUrlForText(shareText),\n-      intl.str('share-progress-twitter')\n-    ) +\n-    shareButtonHTML(\n-      'linkedin',\n-      getLinkedInUrlForText(shareText),\n-      intl.str('share-progress-linkedin')\n-    ) +\n-    shareButtonHTML(\n-      'facebook',\n-      getFacebookUrlForText(shareText),\n-      intl.str('share-progress-facebook')\n-    ) +\n-    '</div>' +\n-    '</div>';\n-}\n-\n-/**\n- * Wire up share button clicks inside a container via event delegation.\n- * @param {Object} $container  jQuery-wrapped element\n- */\n-function bindShareButtons($container) {\n-  if (!$container) { return; }\n-  $container.on('click', '[data-share-url]', function(e) {\n-    e.preventDefault();\n-    var url = $(e.currentTarget).attr('data-share-url');\n-    if (url) {\n-      openShareWindow(url);\n-    }\n-  });\n-}\n-\n-exports.buildShareText = buildShareText;\n-exports.buildAllLevelsShareText = buildAllLevelsShareText;\n-exports.getTwitterUrl = getTwitterUrl;\n-exports.getLinkedInUrl = getLinkedInUrl;\n-exports.getFacebookUrl = getFacebookUrl;\n-exports.getTwitterUrlForText = getTwitterUrlForText;\n-exports.getLinkedInUrlForText = getLinkedInUrlForText;\n-exports.getFacebookUrlForText = getFacebookUrlForText;\n-exports.openShareWindow = openShareWindow;\n-exports.buildShareSectionHTML = buildShareSectionHTML;\n-exports.bindShareButtons = bindShareButtons;\n+// Local isolation: no social transmission, original git tutorial is unchanged.\n+exports.buildShareText=function(){return ''};\n+exports.buildAllLevelsShareText=function(){return ''};\n+exports.getTwitterUrl=function(){return ''};\n+exports.getLinkedInUrl=function(){return ''};\n+exports.getFacebookUrl=function(){return ''};\n+exports.getTwitterUrlForText=function(){return ''};\n+exports.getLinkedInUrlForText=function(){return ''};\n+exports.getFacebookUrlForText=function(){return ''};\n+exports.openShareWindow=function(){return ''};\n+exports.buildShareSectionHTML=function(){return '<p>Social sharing is unavailable in this local preview.</p>'};\n+exports.bindShareButtons=function(){return ''};\n"
+    },
+    "src/js/views/builderViews.js": {
+      "originalSHA256": "6b7c82cec2b1c18512d117e4e11ccb11e6190edab8422cff02ff1644f0f62977",
+      "adaptedSHA256": "3ae920267cd2aa527ccabdb026405af8c6abcedda8115701c8f7dd1b8523592d",
+      "diff": "--- \n+++ \n@@ -1,6 +1,6 @@\n var _ = require('underscore');\n var createDeferred = require('../util/promise').createDeferred;\n-var { marked } = require('marked');\n+var { marked } = require('../../../safe-marked.js');\n \n var Views = require('../views');\n var throttle = require('../util/throttle');\n@@ -15,7 +15,7 @@\n     options.className = 'textGrabber box vertical';\n     super(options);\n \n-    this.template = _.template($('#text-grabber').html());\n+    this.template = require(\"../precompiled\").templates[\"text-grabber\"];\n     this.JSON = {\n       helperText: options.helperText || 'Enter some text'\n     };\n@@ -49,7 +49,7 @@\n     options.className = 'markdownGrabber box horizontal';\n     super(options);\n \n-    this.template = _.template($('#markdown-grabber-view').html());\n+    this.template = require(\"../precompiled\").templates[\"markdown-grabber-view\"];\n     this.deferred = options.deferred || createDeferred();\n \n     if (options.fromObj) {\n@@ -137,7 +137,7 @@\n     options.className = 'markdownPresenter box vertical';\n     super(options);\n \n-    this.template = _.template($('#markdown-presenter').html());\n+    this.template = require(\"../precompiled\").templates[\"markdown-presenter\"];\n     this.deferred = options.deferred || createDeferred();\n     this.JSON = {\n       previewText: options.previewText || 'Here is something for you',\n@@ -178,7 +178,7 @@\n     options.className = 'demonstrationBuilder box vertical';\n     super(options);\n \n-    this.template = _.template($('#demonstration-builder').html());\n+    this.template = require(\"../precompiled\").templates[\"demonstration-builder\"];\n     this.deferred = options.deferred || createDeferred();\n     if (options.fromObj) {\n       var toEdit = options.fromObj.options;\n@@ -281,7 +281,7 @@\n     options.className = 'multiViewBuilder box vertical';\n     super(options);\n \n-    this.template = _.template($('#multi-view-builder').html());\n+    this.template = require(\"../precompiled\").templates[\"multi-view-builder\"];\n     this.typeToConstructor = {\n       ModalAlert: MarkdownGrabber,\n       GitDemonstrationView: DemonstrationBuilder\n"
+    },
+    "src/js/views/gitDemonstrationView.js": {
+      "originalSHA256": "7e48d66582aa71c3880f5c249484172db096886d0fbcde3b848159325059e217",
+      "adaptedSHA256": "20d1952c803c2b7870dcaab49121f7f582d233b984c94266ef31700eb2296ab5",
+      "diff": "--- \n+++ \n@@ -1,7 +1,7 @@\n var _ = require('underscore');\n var createDeferred = require('../util/promise').createDeferred;\n var delay = require('../util/promise').delay;\n-var { marked } = require('marked');\n+var { marked } = require('../../../safe-marked.js');\n \n var util = require('../util');\n var intl = require('../intl');\n@@ -22,7 +22,7 @@\n     options.className = 'gitDemonstrationView box horizontal';\n     super(options);\n \n-    this.template = _.template($('#git-demonstration-view').html());\n+    this.template = require(\"../precompiled\").templates[\"git-demonstration-view\"];\n     this.events = {\n       'click div.command > p.uiButton:not([target=\"reset\"])': 'positive',\n       'click div.command > p[target=\"reset\"]': 'onResetButtonClick',\n"
+    },
+    "src/js/views/index.js": {
+      "originalSHA256": "2290b20b05f7c2be35d6c1abeee81354974044b8d759c683c04c831ddd530b28",
+      "adaptedSHA256": "6c58ac2543c84d0d0f5246cb82aa8cf6b06a00840bf22513c70d9c50e38ab59d",
+      "diff": "--- \n+++ \n@@ -1,6 +1,6 @@\n var _ = require('underscore');\n var createDeferred = require('../util/promise').createDeferred;\n-var { marked } = require('marked');\n+var { marked } = require('../../../safe-marked.js');\n \n var Main = require('../app');\n var intl = require('../intl');\n@@ -116,7 +116,7 @@\n     options.className = 'generalButton uiButton';\n     super(options);\n \n-    this.template = _.template($('#general-button').html());\n+    this.template = require(\"../precompiled\").templates[\"general-button\"];\n     this.navEvents = options.navEvents || createEvents();\n     this.destination = options.destination;\n     if (!this.destination) {\n@@ -162,7 +162,7 @@\n       throw new Error('needmore');\n     }\n \n-    this.template = _.template($('#confirm-cancel-template').html());\n+    this.template = require(\"../precompiled\").templates[\"confirm-cancel-template\"];\n     this.destination = options.destination;\n     this.deferred = options.deferred || createDeferred();\n     this.JSON = {\n@@ -188,7 +188,7 @@\n       throw new Error('needmore');\n     }\n \n-    this.template = _.template($('#left-right-template').html());\n+    this.template = require(\"../precompiled\").templates[\"left-right-template\"];\n     this.destination = options.destination;\n     this.pipeEvents = options.events;\n     this.navEvents = createEvents();\n@@ -228,7 +228,7 @@\n     this.el = document.createElement(this.tagName);\n     this.el.className = this.className;\n     this.$el = $(this.el);\n-    this.template = _.template($('#modal-view-template').html());\n+    this.template = require(\"../precompiled\").templates[\"modal-view-template\"];\n \n     this.shown = false;\n     this.render();\n@@ -324,7 +324,7 @@\n     options.className = 'modalTerminal box flex1';\n     super(options);\n \n-    this.template = _.template($('#terminal-window-template').html());\n+    this.template = require(\"../precompiled\").templates[\"terminal-window-template\"];\n     this.navEvents = options.events || createEvents();\n     this.container = new ModalView();\n     this.JSON = {\n@@ -360,7 +360,7 @@\n     options.tagName = 'div';\n     super(options);\n \n-    this.template = _.template($('#modal-alert-template').html());\n+    this.template = require(\"../precompiled\").templates[\"modal-alert-template\"];\n     this.options = options;\n     this.JSON = {\n       title: options.title || 'Something to say',\n@@ -623,7 +623,7 @@\n     options.className = 'canvasTerminalHolder box flex1';\n     super(options);\n \n-    this.template = _.template($('#terminal-window-bare-template').html());\n+    this.template = require(\"../precompiled\").templates[\"terminal-window-bare-template\"];\n     this.parent = options.parent;\n     this.minHeight = options.minHeight || 200;\n     this.destination = $('body');\n"
+    },
+    "src/js/views/levelDropdownView.js": {
+      "originalSHA256": "83ebabd93b3e407cb5b6e21a8961579024a804f63991fa05ae94a656c7f20a95",
+      "adaptedSHA256": "634fcccf895e06ea27b378f4363c20c22ddcdeaea77379c85c7363e166d2ab31",
+      "diff": "--- \n+++ \n@@ -23,7 +23,7 @@\n     options.className = 'levelDropdownView box vertical';\n     super(options);\n \n-    this.template = _.template($('#level-dropdown-view').html());\n+    this.template = require(\"../precompiled\").templates[\"level-dropdown-view\"];\n     this.events = {\n       'click div.levelDropdownTab': 'onTabClick'\n     };\n@@ -398,7 +398,7 @@\n     options.className = 'seriesView box flex1 vertical';\n     super(options);\n \n-    this.template = _.template($('#series-view').html());\n+    this.template = require(\"../precompiled\").templates[\"series-view\"];\n     this.events = {\n       'click a.levelIcon': 'click',\n       'mouseenter a.levelIcon': 'enterIcon'\n"
+    },
+    "src/js/views/rebaseView.js": {
+      "originalSHA256": "78a65632a90ae913a4c8736e568d7fc087b0854f299810ab399eca4478fa60c6",
+      "adaptedSHA256": "69f0ce6d7090533069be3376f2c659f9b1f387c86220a2f044cd221dbc609e4f",
+      "diff": "--- \n+++ \n@@ -25,7 +25,7 @@\n     options.tagName = 'div';\n     super(options);\n \n-    this.template = _.template($('#interactive-rebase-template').html());\n+    this.template = require(\"../precompiled\").templates[\"interactive-rebase-template\"];\n     this.deferred = options.deferred;\n     this.rebaseMap = {};\n     this.entryObjMap = {};\n@@ -221,7 +221,7 @@\n     this.$el = $(this.el);\n     this.model = options.model;\n     this.tagName = 'li';\n-    this.template = _.template($('#interactive-rebase-entry-template').html());\n+    this.template = require(\"../precompiled\").templates[\"interactive-rebase-entry-template\"];\n \n     this.render();\n   }\n"
+    },
+    "src/levels/advanced/multipleParents.js": {
+      "originalSHA256": "592f0a7e6a06838669c6d1254e2cec2122e53cae545ed33425cc630fb4f68364",
+      "adaptedSHA256": "e2976cabc4168b02eacbf0438e986591130849357ce46c15c333661a4ff0bf97",
+      "diff": "Large fixed source: locale-only pruning via the included trim-locales.cjs recipe; complete original and adapted hashes retained."
+    },
+    "src/levels/intro/branching.js": {
+      "originalSHA256": "cd3f8342a0da5916c038e1d2ab436e9e913af467830a3e7b4b2928f5c1b95786",
+      "adaptedSHA256": "9ecb76488d5ea533032930a66546c71b7c94f120f15c2f23ee3bc12f1e0f60f4",
+      "diff": "Large fixed source: locale-only pruning via the included trim-locales.cjs recipe; complete original and adapted hashes retained."
+    },
+    "src/levels/intro/commits.js": {
+      "originalSHA256": "02a6c65d8f2722b39a3d01a22e6553fc7e140eb46388f84ed493200c56825f9b",
+      "adaptedSHA256": "d3159c64d81de2d0bf4db2a38cdede2ef4a0e8368cfe71511fc62638aee05d03",
+      "diff": "Large fixed source: locale-only pruning via the included trim-locales.cjs recipe; complete original and adapted hashes retained."
+    },
+    "src/levels/intro/merging.js": {
+      "originalSHA256": "3910af670ff0440a173d7e9146872049c766ade7874277ac87b529c8584a2b02",
+      "adaptedSHA256": "a1526aed55cd172a065c567ad8f8c131b5cccb4b543c38368e0ff2641955f5b9",
+      "diff": "Large fixed source: locale-only pruning via the included trim-locales.cjs recipe; complete original and adapted hashes retained."
+    },
+    "src/levels/intro/rebasing.js": {
+      "originalSHA256": "1523ffd8a229f2e53673348944f00c2a98a3a8b96975ce5b345b5e7780eb0d3f",
+      "adaptedSHA256": "23f4bf03bb3b3393ec7efc354285d6a3cce4b9c67b58c9daa45ba49cf2ab4a07",
+      "diff": "Large fixed source: locale-only pruning via the included trim-locales.cjs recipe; complete original and adapted hashes retained."
+    },
+    "src/levels/mixed/describe.js": {
+      "originalSHA256": "16eb68f24a8beb208a8495a4e3f45a02c86f59154c162d2d58f473b38337858f",
+      "adaptedSHA256": "9ac259330a385fd385309c9cfbeb2d487add187f9e4fd801bca4a2647d1fc723",
+      "diff": "Large fixed source: locale-only pruning via the included trim-locales.cjs recipe; complete original and adapted hashes retained."
+    },
+    "src/levels/mixed/grabbingOneCommit.js": {
+      "originalSHA256": "5c4309d81200b5f71503a0bd8bb15be95ee0244fedc0e5fd4245932790bbdaac",
+      "adaptedSHA256": "2329cee236dac4ee61071ca32c9dd70e28da1026402f4666ec85aad734a7bb62",
+      "diff": "Large fixed source: locale-only pruning via the included trim-locales.cjs recipe; complete original and adapted hashes retained."
+    },
+    "src/levels/mixed/jugglingCommits.js": {
+      "originalSHA256": "b80c98bbe6a3a0dfe90fd2fb94fd7dbbf196d2cef97446c812bcadc1c2d80659",
+      "adaptedSHA256": "e9bdd9dc9a57762c5c08b8ea50508907c609f6e250219dea05f597f37ae841b0",
+      "diff": "Large fixed source: locale-only pruning via the included trim-locales.cjs recipe; complete original and adapted hashes retained."
+    },
+    "src/levels/mixed/jugglingCommits2.js": {
+      "originalSHA256": "e16d58a67b3169fda8919a20a1301d120c809afe965f88f14675173ee80b94e0",
+      "adaptedSHA256": "5ab370c279a08e33b7d0aed759cfe4dff29aca4234d674c1e63f5fc182f3b524",
+      "diff": "Large fixed source: locale-only pruning via the included trim-locales.cjs recipe; complete original and adapted hashes retained."
+    },
+    "src/levels/mixed/tags.js": {
+      "originalSHA256": "86545abbd4bd9a7a75efbfafd701a8f9723cd105744d9b3340857f97d46f3cc5",
+      "adaptedSHA256": "7e78957c5f6f9c6b210f898221a05fea0eb25de6951e642df8b26413d96f2a4e",
+      "diff": "Large fixed source: locale-only pruning via the included trim-locales.cjs recipe; complete original and adapted hashes retained."
+    },
+    "src/levels/rampup/cherryPick.js": {
+      "originalSHA256": "e9678666cb1b52b6a421adccd6e85d2467402a27212dc0ac97d84f5cb065a71b",
+      "adaptedSHA256": "e16c0c4167c17eda442e66220d9216d7163120b8425862672c4c09cd71544ff2",
+      "diff": "Large fixed source: locale-only pruning via the included trim-locales.cjs recipe; complete original and adapted hashes retained."
+    },
+    "src/levels/rampup/detachedHead.js": {
+      "originalSHA256": "e1c404c5bd10362033a06ac6dcd57fd75e6e4471e25c5f9bac84146246a31412",
+      "adaptedSHA256": "df6eea0a2f2cda4aa4a762564ff4cf391926e342de7d1d9233d53c2f6148c370",
+      "diff": "Large fixed source: locale-only pruning via the included trim-locales.cjs recipe; complete original and adapted hashes retained."
+    },
+    "src/levels/rampup/interactiveRebase.js": {
+      "originalSHA256": "54c26f1481f8592075d8a9f2351bcfb2cb8ecd45002b3f2aacc3b0cd13e9460b",
+      "adaptedSHA256": "21d029c429e50e6ed17826da2fdcec4830cd5305009ab8a7e5b93cfc2462332c",
+      "diff": "Large fixed source: locale-only pruning via the included trim-locales.cjs recipe; complete original and adapted hashes retained."
+    },
+    "src/levels/rampup/relativeRefs.js": {
+      "originalSHA256": "4966bdbcaa61369551626f0fcdafedb4dcf4e407c5fe70a70ef66fdb82b45858",
+      "adaptedSHA256": "053be8b9d2e971f7c2472123dc1379a6797783fce49e3e1c8c3b2206bf6f020b",
+      "diff": "Large fixed source: locale-only pruning via the included trim-locales.cjs recipe; complete original and adapted hashes retained."
+    },
+    "src/levels/rampup/relativeRefs2.js": {
+      "originalSHA256": "8001ef1dc08514b6c0879c70d8fc86efc84da62f7b316dcf91f7cd81be71dcf2",
+      "adaptedSHA256": "4f8e63a1bbc1eeb535ebd2033405ef13dc4e5216385237a8d29198f37a4e92ee",
+      "diff": "Large fixed source: locale-only pruning via the included trim-locales.cjs recipe; complete original and adapted hashes retained."
+    },
+    "src/levels/rampup/reversingChanges.js": {
+      "originalSHA256": "2756774f33df4064318348fa345203a67fbb1d234c58a463d4d0dd1fa3fd43fc",
+      "adaptedSHA256": "b1dcdae276e7ed861d909e84880094c63863f4225d64c8505f7003693c1effa7",
+      "diff": "Large fixed source: locale-only pruning via the included trim-locales.cjs recipe; complete original and adapted hashes retained."
+    },
+    "src/levels/rebase/manyRebases.js": {
+      "originalSHA256": "007f20fc2a905efcfc58aefaf411779b85a7f418e782cc28bb729baa6257a73f",
+      "adaptedSHA256": "9b939093ba96beb27a26b898e9b97136547e1fc68918ac732f46e7996fffb486",
+      "diff": "Large fixed source: locale-only pruning via the included trim-locales.cjs recipe; complete original and adapted hashes retained."
+    },
+    "src/levels/rebase/selectiveRebase.js": {
+      "originalSHA256": "fbdd159016168201b6c2bcfd48ebc11e99ac3ce779808925cd36abb7bff0895f",
+      "adaptedSHA256": "4a7897a190e1e5abf87c7990a4c4e4e865528b51449be180c03ebede22b2e3cf",
+      "diff": "Large fixed source: locale-only pruning via the included trim-locales.cjs recipe; complete original and adapted hashes retained."
+    },
+    "src/levels/remote/clone.js": {
+      "originalSHA256": "51bba8a346ef086a4e7f887706129ae70ac0548b8a6e47c66152e9bf41107364",
+      "adaptedSHA256": "39977b153c90313f3d12de273d27ccb23799669cb8a445d3e8dae59331c2d815",
+      "diff": "Large fixed source: locale-only pruning via the included trim-locales.cjs recipe; complete original and adapted hashes retained."
+    },
+    "src/levels/remote/fakeTeamwork.js": {
+      "originalSHA256": "37e2b7aa60dfb3b87b4204dc209fdbe3cc24268346a7721a87187a67b1266733",
+      "adaptedSHA256": "7da954b300307d05d0b8339c2e82cbf067bbabee75cbe97c4a7a55a176a7aa09",
+      "diff": "Large fixed source: locale-only pruning via the included trim-locales.cjs recipe; complete original and adapted hashes retained."
+    },
+    "src/levels/remote/fetch.js": {
+      "originalSHA256": "a4344765ba20017a88010fdff5843f8d163c0bac4966d6986053014d788a2d9f",
+      "adaptedSHA256": "1ce7cfec148cbca7abd062a1e335cb9fb211f12e72c55bec19d3042080b60fb2",
+      "diff": "Large fixed source: locale-only pruning via the included trim-locales.cjs recipe; complete original and adapted hashes retained."
+    },
+    "src/levels/remote/fetchArgs.js": {
+      "originalSHA256": "8d518faae218f3bc147ef5447ccea34f077fdb165e94b8132c8a9f512a8385ed",
+      "adaptedSHA256": "ad6f92b67eca013933633e1b6324a84832d3c6763cca1acc96fe84f0c600e096",
+      "diff": "Large fixed source: locale-only pruning via the included trim-locales.cjs recipe; complete original and adapted hashes retained."
+    },
+    "src/levels/remote/fetchRebase.js": {
+      "originalSHA256": "eff89f3f36d2719a63b3dbc4de37d5e005e9e80fe4a5a4e7e5f8f9fa7051a8cd",
+      "adaptedSHA256": "123dd2ae26cb7d4b47a7e8837067e80cf1eb4824845948f6f8e68d72b4a02e75",
+      "diff": "Large fixed source: locale-only pruning via the included trim-locales.cjs recipe; complete original and adapted hashes retained."
+    },
+    "src/levels/remote/lockedMain.js": {
+      "originalSHA256": "b7f0f11e41a2c6f70d91bdaa007bce955cd922011917880e53d5a814637fab90",
+      "adaptedSHA256": "f1fda45d8d2b4f32bdefeb49abc984ede33e5df9eeeb2b49569638228b5a47d6",
+      "diff": "Large fixed source: locale-only pruning via the included trim-locales.cjs recipe; complete original and adapted hashes retained."
+    },
+    "src/levels/remote/mergeManyFeatures.js": {
+      "originalSHA256": "abf5911d5b00da2a824d600fad36758f0d4e1d4563258b86c6b7dfa41b11a727",
+      "adaptedSHA256": "846407f374fd7d6cff0b43c6e09e229b5580ccaebc75a7d943a32b45b7266a4d",
+      "diff": "Large fixed source: locale-only pruning via the included trim-locales.cjs recipe; complete original and adapted hashes retained."
+    },
+    "src/levels/remote/pull.js": {
+      "originalSHA256": "b661626dd1ce229cf66f2067bbb63d494ab28c8d07bd0a25dfcf9d7669061b74",
+      "adaptedSHA256": "c0e9aa41f2d38e5b473d81e6c53510d6fec632badd8f151570f9bac97627a4b2",
+      "diff": "Large fixed source: locale-only pruning via the included trim-locales.cjs recipe; complete original and adapted hashes retained."
+    },
+    "src/levels/remote/pullArgs.js": {
+      "originalSHA256": "8ae0215dc5baaa272dc12bf6c816b129cd6fc404687841b2095c27c26037ef26",
+      "adaptedSHA256": "0a07df2fa5848c5ad75302ffbfc5d7219987a964a3de722688e66f70bc3e6ddd",
+      "diff": "Large fixed source: locale-only pruning via the included trim-locales.cjs recipe; complete original and adapted hashes retained."
+    },
+    "src/levels/remote/push.js": {
+      "originalSHA256": "d4cf732394e7bd43ce86d612759a11060ae78225d0af8cb475711322b592f8a3",
+      "adaptedSHA256": "d384e9b7a2f11ccba241fceb0554f94b14c455fea8404c6c6ac98736a49e00bf",
+      "diff": "Large fixed source: locale-only pruning via the included trim-locales.cjs recipe; complete original and adapted hashes retained."
+    },
+    "src/levels/remote/pushArgs.js": {
+      "originalSHA256": "014cb858733d1daf68e82c74bc1fcdb161f163986da25036964565ac141632aa",
+      "adaptedSHA256": "008a1f0d13d7f30c8514ab6546dd0074135297043e42f3c9aba726925d476d4a",
+      "diff": "Large fixed source: locale-only pruning via the included trim-locales.cjs recipe; complete original and adapted hashes retained."
+    },
+    "src/levels/remote/pushArgs2.js": {
+      "originalSHA256": "291de2a41c53cd22ddf53d16a398229fe6a42a6ec5df8d8567a8cb7506203faa",
+      "adaptedSHA256": "1d1e6f6ab5b2b597571e1bd9f47bb3935ec4f0fdde45ed34687f21d0db564002",
+      "diff": "Large fixed source: locale-only pruning via the included trim-locales.cjs recipe; complete original and adapted hashes retained."
+    },
+    "src/levels/remote/pushManyFeatures.js": {
+      "originalSHA256": "8d43eda8a317dcb2431e8c781cd4adbc92ba749980fc5ba26f3f579c4d4aa31e",
+      "adaptedSHA256": "ae7c1afe5f409fdbbd83e612d15378a5cbb0a42ed432eb29e28e07f6686302a3",
+      "diff": "Large fixed source: locale-only pruning via the included trim-locales.cjs recipe; complete original and adapted hashes retained."
+    },
+    "src/levels/remote/remoteBranches.js": {
+      "originalSHA256": "f9e35fe66722ddf9fa4913c2b6aa1a56d06bad652e47fcfe6c7109ae702071b0",
+      "adaptedSHA256": "4763a24ab6181684cf91044e20fe2432b6cde245a88d5425a851c48e1b4a3e6f",
+      "diff": "Large fixed source: locale-only pruning via the included trim-locales.cjs recipe; complete original and adapted hashes retained."
+    },
+    "src/levels/remote/sourceNothing.js": {
+      "originalSHA256": "5b250fe5558d1c5137423eeb492771bce24aa2eed04a6ec0c13ebe40c0bc467b",
+      "adaptedSHA256": "4eef46646cdeee3258bcde9294f431f76363dfcc3977c3070f4a17e7271680fe",
+      "diff": "Large fixed source: locale-only pruning via the included trim-locales.cjs recipe; complete original and adapted hashes retained."
+    },
+    "src/levels/remote/tracking.js": {
+      "originalSHA256": "6c1090e4e53e0538f9f54ac0fc1a20721b1ab35995c7e54a4c0d270f868f0eff",
+      "adaptedSHA256": "ff91cd23648e0b9b85e6d2de2a8a453035559da4a5739b4889b262082d1226d4",
+      "diff": "Large fixed source: locale-only pruning via the included trim-locales.cjs recipe; complete original and adapted hashes retained."
+    },
+    "src/levels/sequenceInfo.js": {
+      "originalSHA256": "084b5201a9a03d4b68362f08669d8d5664ee5bbee09765ef2428ad7743ddd3b9",
+      "adaptedSHA256": "a634e78b2a52b4efaa265e69bae99b82c6706eb4ade14882b7ec85f0cf5381f8",
+      "diff": "Large fixed source: locale-only pruning via the included trim-locales.cjs recipe; complete original and adapted hashes retained."
+    },
+    "src/levels/workingDir/restore.js": {
+      "originalSHA256": "57c0775bbe4a27c04d3735f98a8b713726f5d4e5daf4f36c9b27d2780edbbb4c",
+      "adaptedSHA256": "072871fc9d521a43c661e4190b57f26b1585c17745e453bf65fe33dc0f78f46e",
+      "diff": "Large fixed source: locale-only pruning via the included trim-locales.cjs recipe; complete original and adapted hashes retained."
+    },
+    "src/levels/workingDir/staging.js": {
+      "originalSHA256": "39f689c2c50f67e45390059042f6d8a6aefe43aff7ae2cd69245ff80a62cb115",
+      "adaptedSHA256": "1ab6d47cdeb1d6302ecfdd67f82c8fe57f256b6f405a597ef57e813dff8b878c",
+      "diff": "Large fixed source: locale-only pruning via the included trim-locales.cjs recipe; complete original and adapted hashes retained."
+    }
+  },
+  "limitations": [
+    "Complete original local Git tutorial/sandbox, original 36 levels with English and Simplified Chinese original texts bundled; other language data/selection entries removed to meet unchanged host cache budget. Simulates Git only: no actual repository, shell, credential, git hosting or remote network connection. Original Mercurial support included but not exhaustively tested.",
+    "Fixed CommonJS/React17 source bundled with normal npm dependencies; Vite dynamic imports converted by esbuild into local bundled module initialization, not fetched. Dependency versions and installed-lock hash disclosed; 16 nearest positive-emitted package roots, no unreported embedded Eve: Raphael no-deps distribution aliases explicit eve-raphael with its actual Apache-2.0 LICENSE.",
+    "Fixed HTML templates precompiled at build time using original Underscore compiler; runtime templates no longer invoke Function. Translation interpolation limited to named {parameter} substitution without evaluating arbitrary expressions. Static original lesson data is retained.",
+    "Local progress, command history and locale preference only in memory, lost on reopen. Analytics/promotion and external navigation/social sharing removed. Clipboard transmission and certificate image download unavailable; certificates/lesson text are not proof of any real qualification.",
+    "English/Simplified Chinese only: all other locale menu entries and translation data omitted. Actual567 loader and default cache measured below 8 MiB UTF16 budget with cache reuse and retry checks; no host limit changes.",
+    "Original fontawesome font is legacy CC BY 3.0. Fourteen original text SVG glyph outlines converted to SVG CSS masks; four modern icon-only markers use explicit text fallback. No binary font, image, screenshot or media payloads. Original main/rainbow CSS preserved; typography uses available system fallbacks.",
+    "Markdown rendering sanitized with DOMPurify Apache-2.0 option; active HTML/media/form tags removed, unsafe URL attributes rejected. This does not execute arbitrary code. No external uploads, arbitrary script, eval, Function or CSP expansion.",
+    "Hidden page blurs command input and retains original document/model; in-flight finite animations may settle, not claimed to freeze every animation. Final disposal removes runtime listeners/timers/intervals/RAF and original React mounts and SVG paper. Reduced-motion CSS suppresses CSS transition/animation; no claim all original Raphael timeline animations are disabled.",
+    "JSDOM SVG bounding-box/matrix controlled fixtures are only functional tests, not native pixel/layout/IME/drag or visual fidelity QA. Tested original welcome, level map, commit/undo changing original engine and SVG path output, unsafe input, hidden retention, final resource cleanup, early exit and missing root."
+  ],
+  "host": "if(!document.getElementById('interfaceWrapper')){var alert=document.createElement('p');alert.setAttribute('role','alert');alert.textContent='Git tutorial unavailable: missing root.';document.body.append(alert);window.__jsonLifetime.release()}else{\nvar mem=new Map(); window.__localMemory={getItem:k=>mem.get(k)||null,setItem:(k,v)=>mem.set(k,String(v)),removeItem:k=>mem.delete(k)};\nwindow.addEventListener('click',e=>{const a=e.target.closest&&e.target.closest('a');if(a)e.preventDefault()},true);\nwindow.__learngit=require('./src/js/app');\nvar lifetime=window.__jsonLifetime,app=window.__learngit,dead=false;\nlifetime.setShutdown(function(){if(dead)return;dead=true;window.__lgbDisposed=true;try{app.getEvents().removeAllListeners();const sandbox=app.getSandbox();if(sandbox?.mainVis){sandbox.mainVis.paper?.remove();sandbox.mainVis.origin?.paper?.remove();}const ReactDOM=require('react-dom');for(const id of ['reactMount','helperBarMount','commandDisplay','levelToolbarMount']){const root=document.getElementById(id);if(root)ReactDOM.unmountComponentAtNode(root)}document.body.replaceChildren()}finally{lifetime.release();delete window.__learngit;mem.clear()}});\nwindow.addEventListener('visibilitychange',function(){if(document.hidden){app.getCommandUI()?.commandPromptView?.blur();document.activeElement?.blur();} });\n\n}",
+  "safeMarkdown": "var original=require('marked'),purify=require('dompurify'); exports.marked=function(raw){return purify.sanitize(original.marked(raw),{FORBID_TAGS:['img','iframe','script','style','form','input','object','embed','video','audio'],FORBID_ATTR:['style','srcset']})};\n",
+  "localeReduction": "const fs=require('fs'),path=require('path'),acorn=require('acorn');const keep=new Set(['en_US','zh_CN']);let removed=0;\nfunction walk(d){return fs.readdirSync(d,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(path.join(d,e.name)):[path.join(d,e.name)])}\nfor(const f of walk('src')){if(!f.endsWith('.js')||f.includes('/react_views/')||f.includes('/generated/')&&f.includes('/intl/'))continue;let s=fs.readFileSync(f,'utf8'),ast;try{ast=acorn.parse(s,{ecmaVersion:'latest'})}catch{continue}let cuts=[];function visit(n){if(!n||typeof n!=='object')return;if(n.type==='ObjectExpression'&&n.properties.some(p=>(p.key?.value||p.key?.name)==='en_US')){for(const p of n.properties){let key=p.key?.value||p.key?.name;if(!keep.has(key)){let end=p.end;while(/\\s/.test(s[end]||'')&&end<s.length)end++;if(s[end]===',')end++;cuts.push([p.start,end]);removed++}}}for(const [k,v]of Object.entries(n))if(k!=='start'&&k!=='end'){if(Array.isArray(v))v.forEach(visit);else if(v&&typeof v==='object')visit(v)}}visit(ast);const mask=new Uint8Array(s.length);for(const[a,b]of cuts)mask.fill(1,a,b);let out='';for(let i=0;i<s.length;i++)if(!mask[i])out+=s[i];acorn.parse(out,{ecmaVersion:'latest'});if(out!==s)fs.writeFileSync(f,out)}\nlet p='src/js/stores/LocaleStore.js',s=fs.readFileSync(p,'utf8');s=s.replace(/var langLocaleMap = \\{[\\s\\S]*?\\n\\};/,\"var langLocaleMap = {en:'en_US',zh:'zh_CN'};\").replace(/var headerLocaleMap = \\{[\\s\\S]*?\\n\\};/,\"var headerLocaleMap = {'en-US':'en_US','zh-CN':'zh_CN'};\");fs.writeFileSync(p,s);fs.writeFileSync('src/js/intl/generated/loaders.js',`exports.loaders={zh_CN:function(){return import('./zh_CN.js')}};`);console.log('Removed translation properties',removed)\n",
+  "templatePreparation": "const fs=require('fs'),path=require('path'),_=require('underscore'),{JSDOM}=require('jsdom');\nconst doc=new JSDOM(fs.readFileSync('original/index.html','utf8')).window.document;\nlet out=\"var _=require('underscore');\\nexports.templates={\\n\";\nfor(const n of doc.querySelectorAll('script[type=\"text/html\"]'))out+=JSON.stringify(n.id)+':'+_.template(n.innerHTML).source+',\\n';out+='};\\n';fs.writeFileSync('src/js/precompiled.js',out);\nfunction walk(d){return fs.readdirSync(d,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(path.join(d,e.name)):[path.join(d,e.name)])}\nfor(const p of walk('src/js')){if(!/\\.jsx?$/.test(p))continue;let s=fs.readFileSync(p,'utf8');s=s.replace(/_\\.template\\(\\$\\('#([^']+)'\\)\\.html\\(\\)\\)/g,(_,id)=>`require(${JSON.stringify(path.relative(path.dirname(p),'src/js/precompiled').replace(/^(?!\\.)/,'./'))}).templates[${JSON.stringify(id)}]`);s=s.replace(/window\\.localStorage/g,'window.__localMemory').replace(/window\\.sessionStorage/g,'window.__localMemory');fs.writeFileSync(p,s)}\n// Preserve fixed translation grammar for data substitutions, no JS evaluation.\nlet p='src/js/intl/index.js',s=fs.readFileSync(p,'utf8');s=s.replace('return _.template(str, templateSettings)(params);',`return str.replace(/\\\\{([a-zA-Z_$][\\\\w$]*)\\\\}/g, function(_, key) { return params[key] == null ? '' : String(params[key]); });`);fs.writeFileSync(p,s);\n// Remove reload-on-deploy listener, irrelevant to bundled local complete source.\np='src/js/app/index.js';s=fs.readFileSync(p,'utf8');s=s.replace(/  window.addEventListener\\('vite:preloadError',[\\s\\S]*?\\n  \\}\\);/,'');fs.writeFileSync(p,s);\nfor(const el of [...doc.querySelectorAll('script')])if(el.type!=='text/html')el.remove();\nfor(const el of [...doc.querySelectorAll('link,meta[property],#upsell,#upsellImageLink,.github-corner')])el.remove();\nfs.mkdirSync('delivery',{recursive:true});doc.head.insertAdjacentHTML('beforeend','<link rel=\"stylesheet\" href=\"runtime.css\">');doc.body.insertAdjacentHTML('beforeend','<script src=\"runtime.js\"></script>');fs.writeFileSync('delivery/index.html','<!doctype html>'+doc.documentElement.outerHTML);\n",
+  "stylePreparation": "from pathlib import Path\nimport re,xml.etree.ElementTree as ET,urllib.parse\np=Path('original/src/style');s=(p/'main.css').read_text()+'\\n'+(p/'rainbows.css').read_text(); css=(p/'font-awesome.css').read_text();glyphs={g.get('unicode'):g for g in ET.parse('original/assets/font/fontawesome-webfont.svg').iter() if g.tag.endswith('glyph')}; icons=set(re.findall(r'icon-[a-z-]+',''.join(f.read_text() for f in Path('src/js').rglob('*') if f.suffix in ['.js','.jsx'])+Path('original/index.html').read_text()));proof=[]\nfor icon in sorted(icons):\n m=re.search(r'\\.'+re.escape(icon)+r':before\\s*\\{\\s*content:\\s*\"\\\\([a-f0-9]+)\"',css)\n if not m: print('MISSING',icon);continue\n g=glyphs.get(chr(int(m[1],16)))\n if g is None: print('NOGLYPH',icon);continue\n svg='<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 '+g.get('horiz-adv-x','1843')+' 2048\"><path transform=\"translate(0 1536) scale(1 -1)\" d=\"'+g.get('d','')+'\"/></svg>'\n url='data:image/svg+xml,'+urllib.parse.quote(svg,safe='');s+='\\n.'+icon+'::before{content:\"\";display:inline-block;width:1em;height:1em;background:currentColor;mask:url(\"'+url+'\") center/contain no-repeat;-webkit-mask:url(\"'+url+'\") center/contain no-repeat}';proof.append(icon)\ns+='\\n.fa-language::before{content:\"文/A\"}.fa-question::before{content:\"?\"}.fa-right-from-bracket::before{content:\"↩\"}.fa-threads::before{content:\"Threads\"}\\n@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0s!important;transition-duration:0s!important}}'\nPath('delivery/runtime.css').write_text(s);print(proof)\n",
+  "lockSHA256": "fcf96e866c82057b16f715b32bbf45dc76ea4c6033be3b64d3505591e3e623ce",
+  "originalYarnLockSHA256": "96b4724c60bed7cd170388fd7bf9d687f0e195583352d621b67d2e8f3b45aa3f",
+  "ccBy30SourceURL": "https://creativecommons.org/licenses/by/3.0/legalcode.txt",
+  "fixedSourceInventory": [
+    {
+      "path": "src/js/actions/CommandLineActions.js",
+      "sha256": "a07339de0c82816a19249371d6f7bebf52fd206b0993cbabe4321947aa185285"
+    },
+    {
+      "path": "src/js/actions/GlobalStateActions.js",
+      "sha256": "d0d5691a0f5f82ed28826a7181af5f3fbc8be593c0d6be0dbca3b6e5efa18756"
+    },
+    {
+      "path": "src/js/actions/LevelActions.js",
+      "sha256": "49576bcf02714007594d6c49ddcb03ae5149e5b1282da9ff77f8b22e94283b2f"
+    },
+    {
+      "path": "src/js/actions/LocaleActions.js",
+      "sha256": "311924165c9dfc7152f7fa62a351e945c7acb0a7790bf27dd0c3b0aa86cc9cdf"
+    },
+    {
+      "path": "src/js/app/index.js",
+      "sha256": "a4898203a46f6ce7c5513a577d5288635e8cb8f121ae8ae85aee566bdfe91a17"
+    },
+    {
+      "path": "src/js/commands/index.js",
+      "sha256": "c092109f8361f9d43b408905d40179d99c4d9f1e733774fa0aa4ff83d17a415e"
+    },
+    {
+      "path": "src/js/commands/optionParser.js",
+      "sha256": "369d90b4e880758a0e746f609f04893373ac7574e391919f6e9df9ea58052f36"
+    },
+    {
+      "path": "src/js/constants/AppConstants.js",
+      "sha256": "75161e58837b3ea5e5a592b59f726143ee80579cc41b04f19bc8cb61cb72ce21"
+    },
+    {
+      "path": "src/js/dialogs/confirmShowSolution.js",
+      "sha256": "540e31fd8bf132a281b220eebe6e9511f178434355aece8c6b43847f39f0cf75"
+    },
+    {
+      "path": "src/js/dialogs/levelBuilder.js",
+      "sha256": "86d5e6d86144f906154d26deab15450a79495efc881800d13f7ed4989a26cce7"
+    },
+    {
+      "path": "src/js/dialogs/nextLevel.js",
+      "sha256": "7413584ab6a935ecb29a549fe8eb7da233e6c85826a1c7854327818081b4677d"
+    },
+    {
+      "path": "src/js/dialogs/sandbox.js",
+      "sha256": "19ea76f02a20e701f16ec450ea12df69ff050736b78473190d41605b3eddd982"
+    },
+    {
+      "path": "src/js/dispatcher/AppDispatcher.js",
+      "sha256": "bb3f96991f2176ae8c9029e2c217e249c3738982a7d0c3ae801ddb1ce02bbf8e"
+    },
+    {
+      "path": "src/js/git/commands.js",
+      "sha256": "f4c9ae7cd47c1c0ee469c74b4dc5032063a7a2862b5382fed92572b2d270f7b2"
+    },
+    {
+      "path": "src/js/git/gitShim.js",
+      "sha256": "503916c07a58d213960fac161bf937c9e83fe539da97d091962e4daf1c92be91"
+    },
+    {
+      "path": "src/js/git/headless.js",
+      "sha256": "7cfaf9389e6120188c9cb09a1b3bc3acb4b4d80aeec3acc1468ac66a273146fd"
+    },
+    {
+      "path": "src/js/git/index.js",
+      "sha256": "73e928004d45bcce3b6984f2ac8297e27d5c93526d3bc9cb6e7315a87d05828a"
+    },
+    {
+      "path": "src/js/graph/index.js",
+      "sha256": "954ad3c1703661bf751cdfb1f582daf2f3670affe067a5126d07af9026fb212f"
+    },
+    {
+      "path": "src/js/graph/treeCompare.js",
+      "sha256": "3f5fbcf65a11319f80150ecfcceeeff0462fc4ebd5d6853a69d3136a14ca1a22"
+    },
+    {
+      "path": "src/js/intl/checkStrings.js",
+      "sha256": "9c7edf5bff0fc1ff838f0d4484f325b150885f7a86e15a07394154a3e5434411"
+    },
+    {
+      "path": "src/js/intl/index.js",
+      "sha256": "96dbf96e15c92435c73c45e91211f9bc6dc60e66454446d725d7877a8589e70e"
+    },
+    {
+      "path": "src/js/intl/localeLoader.js",
+      "sha256": "7268bf5cff9cf2d156af4c5444d87a35a0c06638738f186464c78fef537deb7e"
+    },
+    {
+      "path": "src/js/intl/strings.js",
+      "sha256": "7c8c07c420edd7f4cfa21b442aec8dc4e3982c659bb01e67f46600184e1d7fcd"
+    },
+    {
+      "path": "src/js/level/builder.js",
+      "sha256": "e5fa17c7a80ec3f2f7832618c8d681e36d1193719805f8c4aebdb6f17a1c486b"
+    },
+    {
+      "path": "src/js/level/disabledMap.js",
+      "sha256": "4108c52b4bfe9577ff93153dedae427d9d80e264097d8c9673e4879de408a44a"
+    },
+    {
+      "path": "src/js/level/index.js",
+      "sha256": "0dd05fd1ac449cb42cf9bea4e627b726d6a82337a741fc93f46bb02678e857dd"
+    },
+    {
+      "path": "src/js/level/levelModule.js",
+      "sha256": "38d8baddc371904f8f325bd7a02e11d803b48780f381f99e46206a5e9073b43f"
+    },
+    {
+      "path": "src/js/level/levelRegexMap.js",
+      "sha256": "a79ac5cf6ccaa0154283a39ef336e2ba59f9eccab660ced881828c820147cff5"
+    },
+    {
+      "path": "src/js/level/parseWaterfall.js",
+      "sha256": "6a964de8397c388ca0e2ee6c242ee5d68094ba316c9f3a45e13f05f38b00404a"
+    },
+    {
+      "path": "src/js/level/undoBookkeeping.js",
+      "sha256": "c6d2f266099aae120130e3310a428a8991c14ad0aef63a0dc04a96f655c6e7d4"
+    },
+    {
+      "path": "src/js/log/index.js",
+      "sha256": "ff05249a95d05b69c1dcefa0455b1439c38e9c538c20a95edf8b7d5e91f841cb"
+    },
+    {
+      "path": "src/js/mercurial/commands.js",
+      "sha256": "190501dd666627867ed831620e563f21e74ebb2a802fce3a31a3e7ecadc56706"
+    },
+    {
+      "path": "src/js/models/collections.js",
+      "sha256": "69384cf0aadfcc5a500b9050d413f7f032211153538c46ea2f1e1b7d2ac92cac"
+    },
+    {
+      "path": "src/js/models/commandModel.js",
+      "sha256": "e8c32ce7acdb73524a2bc90a415659a6141bbee6b88ff6f16891b6114795712c"
+    },
+    {
+      "path": "src/js/react_views/CommandHistoryView.jsx",
+      "sha256": "331c1fa4ee1d0d93e1265822e4412d00d4cb24a4a1a9580ed5af84cffa80e493"
+    },
+    {
+      "path": "src/js/react_views/CommandView.jsx",
+      "sha256": "23154c08a54461a3b61fcf2694cdd200181823bd209d5b3a4ff2db7f7ee98459"
+    },
+    {
+      "path": "src/js/react_views/CommandsHelperBarView.jsx",
+      "sha256": "41dfbd83bef3a0e2f7f748410bd4615e6a1eebe49326492a3f9774508163088a"
+    },
+    {
+      "path": "src/js/react_views/HelperBarView.jsx",
+      "sha256": "d40aece40abdf75f86e00727b6bf8f2f479789b25046f036127b98113cbb80fe"
+    },
+    {
+      "path": "src/js/react_views/IntlHelperBarView.jsx",
+      "sha256": "57410531e4b2c0f06546ae3a4ab4137200b9f52b1361fad4bc695152c77e0aab"
+    },
+    {
+      "path": "src/js/react_views/LevelToolbarView.jsx",
+      "sha256": "d1e8f6370c5ce607e0b39cdc529085ba3d35ff1b127ce6d9722a0f497877dfad"
+    },
+    {
+      "path": "src/js/react_views/MainHelperBarView.jsx",
+      "sha256": "be1be760d4c16220a674075a7aa16f281c943bb059504ca5e9023896d74f5dd4"
+    },
+    {
+      "path": "src/js/sandbox/commands.js",
+      "sha256": "83f2888cc77eebc1dbd9a3c89ef19c7c613d15dcfed10697d8176f6201e21fe5"
+    },
+    {
+      "path": "src/js/sandbox/index.js",
+      "sha256": "860a4956c1c4c6da987f7fb57d6cf039780671065496a36db7389eacc630c118"
+    },
+    {
+      "path": "src/js/stores/CommandLineStore.js",
+      "sha256": "82b4772c96599eff6cd70cb92479a33f2c3bb98869d98ce776c5a9eed711c2c0"
+    },
+    {
+      "path": "src/js/stores/GlobalStateStore.js",
+      "sha256": "b271874a64f2dfddde790fe49efca4fc6f258ca84aadb08a0f02297531079b94"
+    },
+    {
+      "path": "src/js/stores/LevelStore.js",
+      "sha256": "e6fa36ef4a1392ce5b91068fa84f6ff79e218d16ba25b169c9972f2e57678b14"
+    },
+    {
+      "path": "src/js/stores/LocaleStore.js",
+      "sha256": "e7a6312b784f1621373c139312d473045827d0c75279facbdf28b2fb4eef320a"
+    },
+    {
+      "path": "src/js/util/appLoading.js",
+      "sha256": "e522f021e47cb0ddc4135955adc6697c9462a940e4e81e689be62c893b9c4e55"
+    },
+    {
+      "path": "src/js/util/certificate.js",
+      "sha256": "38c81d2de438b89807930d84fa9592ae0910a3ee5297b9f4bf0b134733a12db9"
+    },
+    {
+      "path": "src/js/util/commandLine.js",
+      "sha256": "3a4f8925c1adb22aac265d50f065e501e74a64d94abdf53127b48b1871875030"
+    },
+    {
+      "path": "src/js/util/constants.js",
+      "sha256": "50c47482d64f82b8f2092a41c551c6bbbe786a1527e7c138070ddd243d5c8fb2"
+    },
+    {
+      "path": "src/js/util/debounce.js",
+      "sha256": "197898e0b3627e793ed155c544225135109999d471b2c996402ef40f9915947c"
+    },
+    {
+      "path": "src/js/util/debug.js",
+      "sha256": "5c301edee1667a72b889a9323b35ef3d969866b7efc860798d5207b24b7332d4"
+    },
+    {
+      "path": "src/js/util/errors.js",
+      "sha256": "9b8c2fe72b366f1f589d89a29efce440206ce1716fe3e256bfaca0a331986484"
+    },
+    {
+      "path": "src/js/util/escapeString.js",
+      "sha256": "472dd4fbcdfa53ebd1f29612fedd8bad5462a05a3ec3d7feb8fc0aa0b8fed27d"
+    },
+    {
+      "path": "src/js/util/eventBaton.js",
+      "sha256": "160ee2667f92b673037384d106224e6ccbdc44ee763db6ffbe93757a4d7d3135"
+    },
+    {
+      "path": "src/js/util/eventEmitter.js",
+      "sha256": "87c8e5eedb08838cb144237a31acf9229b1ce1331032ac1d1d188e2535d83f1a"
+    },
+    {
+      "path": "src/js/util/index.js",
+      "sha256": "18feb494f569ffc53b60fecc654c0aa767d4a4497b565dc9d438658cc86089c6"
+    },
+    {
+      "path": "src/js/util/keyMirror.js",
+      "sha256": "a9e441360e2dbb03d14a4412e13218f8aa2e92be9009b84814952ba5f238a2ce"
+    },
+    {
+      "path": "src/js/util/keyboard.js",
+      "sha256": "9acf01ad657264fcf9ba8b4d9f74634a6db9e826ec14283377533e71ad87261b"
+    },
+    {
+      "path": "src/js/util/mock.js",
+      "sha256": "f59db09c78ee8112f29647c04ecb86a4bcdb0b4af51e6526577c7da00679c13c"
+    },
+    {
+      "path": "src/js/util/promise.js",
+      "sha256": "e38fa384aeefd635090c19c0bebe86090706eed5222b8c804b515379537472a2"
+    },
+    {
+      "path": "src/js/util/reactUtil.js",
+      "sha256": "33ea50efeb4a78cf7aa386e2982f86ea61b9dc40976ae00241a517316d97d6bc"
+    },
+    {
+      "path": "src/js/util/readDirDeep.js",
+      "sha256": "489db145c342f60cdd0a4626b45bdef3c3b8aa829ef4223d718f313f0da15b5d"
+    },
+    {
+      "path": "src/js/util/setupJQueryGlobals.js",
+      "sha256": "dd102d0c60cb174b934251731ddf5a0835a6544c71d4d67d62fb87faffed449f"
+    },
+    {
+      "path": "src/js/util/sharing.js",
+      "sha256": "afe8a33a2949e5b7c0f9f51a681a743c6afad75e5518f5e79379a17639d228de"
+    },
+    {
+      "path": "src/js/util/throttle.js",
+      "sha256": "68a4dab862cc444934e367b64b0f7c0b59c04fc432e0b69fd767e1e8665e5814"
+    },
+    {
+      "path": "src/js/util/zoomLevel.js",
+      "sha256": "45ca5d437ba7375cf4a0f39cb6ff01202c9025644f172a4e591944d02b4593ca"
+    },
+    {
+      "path": "src/js/views/builderViews.js",
+      "sha256": "6b7c82cec2b1c18512d117e4e11ccb11e6190edab8422cff02ff1644f0f62977"
+    },
+    {
+      "path": "src/js/views/certificateView.js",
+      "sha256": "e52b8ddc770e423ea4e4f8b1f081b35cf0eb55988e878a1ba3e84912ecceb28d"
+    },
+    {
+      "path": "src/js/views/commandViews.js",
+      "sha256": "29e55c6f9208626ec2ecc1ec16baa682b9aded089cf6e181f985e1614844f383"
+    },
+    {
+      "path": "src/js/views/gitDemonstrationView.js",
+      "sha256": "7e48d66582aa71c3880f5c249484172db096886d0fbcde3b848159325059e217"
+    },
+    {
+      "path": "src/js/views/index.js",
+      "sha256": "2290b20b05f7c2be35d6c1abeee81354974044b8d759c683c04c831ddd530b28"
+    },
+    {
+      "path": "src/js/views/levelDropdownView.js",
+      "sha256": "83ebabd93b3e407cb5b6e21a8961579024a804f63991fa05ae94a656c7f20a95"
+    },
+    {
+      "path": "src/js/views/multiView.js",
+      "sha256": "151301417cf224aafe14c35126b1259b8e6300cb3138d74f49a253aa932f3d69"
+    },
+    {
+      "path": "src/js/views/rebaseView.js",
+      "sha256": "78a65632a90ae913a4c8736e568d7fc087b0854f299810ab399eca4478fa60c6"
+    },
+    {
+      "path": "src/js/visuals/animation/animationFactory.js",
+      "sha256": "a44d2b08850b974e394aecae6c5686946ddeb21006e4004e9f24cbd291be90d7"
+    },
+    {
+      "path": "src/js/visuals/animation/index.js",
+      "sha256": "ec3cb250e4fd5151633c83715c0e9501bf41d90b462062cedcdc09834dfdbc7f"
+    },
+    {
+      "path": "src/js/visuals/index.js",
+      "sha256": "b6e3ac0b95be23b9c222c05cc55f7f765a1e395117cd16fce5a486768ed428ec"
+    },
+    {
+      "path": "src/js/visuals/tree.js",
+      "sha256": "cb72d37e7a132af01d6cc2adcc02d771f1fb666aac1cdf07d0d30295c141780e"
+    },
+    {
+      "path": "src/js/visuals/visBase.js",
+      "sha256": "f96017e5d63823eecc2b767456c8c5c246bb3dac53c84257ce3b8226f9137cc2"
+    },
+    {
+      "path": "src/js/visuals/visBranch.js",
+      "sha256": "ea2e44c65b867a91d5425a22809c1d0537c59af1cfea2f61bb4451bbfab6f520"
+    },
+    {
+      "path": "src/js/visuals/visEdge.js",
+      "sha256": "d2c58b6929e814bfff69cffb16608f60fe77ed607717ffb0350dfed368e94173"
+    },
+    {
+      "path": "src/js/visuals/visNode.js",
+      "sha256": "ea01de9ac37843d6841300ca028a75f050880b3e1537a72b9f889018e560996a"
+    },
+    {
+      "path": "src/js/visuals/visStagingArea.js",
+      "sha256": "b3702c0be5f3d06fcadd7386bb579bdea7f3d2831fc0a59dc2cc6ef5fdff9b6c"
+    },
+    {
+      "path": "src/js/visuals/visTag.js",
+      "sha256": "850b669eb1c719b65d66203616150096b5a3d1825b1a2a392470fa88be04fc57"
+    },
+    {
+      "path": "src/js/visuals/visualization.js",
+      "sha256": "850ba21039eb5b1443ba7e3b3045d0bfe3bfaad1f55b75ff379e9e5c031e6489"
+    },
+    {
+      "path": "src/levels/advanced/multipleParents.js",
+      "sha256": "592f0a7e6a06838669c6d1254e2cec2122e53cae545ed33425cc630fb4f68364"
+    },
+    {
+      "path": "src/levels/index.js",
+      "sha256": "061b8677db85ad52da4fd9ab7a6d92b8e776fc65c9281bc1f783df7eb3a97821"
+    },
+    {
+      "path": "src/levels/intro/branching.js",
+      "sha256": "cd3f8342a0da5916c038e1d2ab436e9e913af467830a3e7b4b2928f5c1b95786"
+    },
+    {
+      "path": "src/levels/intro/commits.js",
+      "sha256": "02a6c65d8f2722b39a3d01a22e6553fc7e140eb46388f84ed493200c56825f9b"
+    },
+    {
+      "path": "src/levels/intro/merging.js",
+      "sha256": "3910af670ff0440a173d7e9146872049c766ade7874277ac87b529c8584a2b02"
+    },
+    {
+      "path": "src/levels/intro/rebasing.js",
+      "sha256": "1523ffd8a229f2e53673348944f00c2a98a3a8b96975ce5b345b5e7780eb0d3f"
+    },
+    {
+      "path": "src/levels/mixed/describe.js",
+      "sha256": "16eb68f24a8beb208a8495a4e3f45a02c86f59154c162d2d58f473b38337858f"
+    },
+    {
+      "path": "src/levels/mixed/grabbingOneCommit.js",
+      "sha256": "5c4309d81200b5f71503a0bd8bb15be95ee0244fedc0e5fd4245932790bbdaac"
+    },
+    {
+      "path": "src/levels/mixed/jugglingCommits.js",
+      "sha256": "b80c98bbe6a3a0dfe90fd2fb94fd7dbbf196d2cef97446c812bcadc1c2d80659"
+    },
+    {
+      "path": "src/levels/mixed/jugglingCommits2.js",
+      "sha256": "e16d58a67b3169fda8919a20a1301d120c809afe965f88f14675173ee80b94e0"
+    },
+    {
+      "path": "src/levels/mixed/tags.js",
+      "sha256": "86545abbd4bd9a7a75efbfafd701a8f9723cd105744d9b3340857f97d46f3cc5"
+    },
+    {
+      "path": "src/levels/rampup/cherryPick.js",
+      "sha256": "e9678666cb1b52b6a421adccd6e85d2467402a27212dc0ac97d84f5cb065a71b"
+    },
+    {
+      "path": "src/levels/rampup/detachedHead.js",
+      "sha256": "e1c404c5bd10362033a06ac6dcd57fd75e6e4471e25c5f9bac84146246a31412"
+    },
+    {
+      "path": "src/levels/rampup/interactiveRebase.js",
+      "sha256": "54c26f1481f8592075d8a9f2351bcfb2cb8ecd45002b3f2aacc3b0cd13e9460b"
+    },
+    {
+      "path": "src/levels/rampup/relativeRefs.js",
+      "sha256": "4966bdbcaa61369551626f0fcdafedb4dcf4e407c5fe70a70ef66fdb82b45858"
+    },
+    {
+      "path": "src/levels/rampup/relativeRefs2.js",
+      "sha256": "8001ef1dc08514b6c0879c70d8fc86efc84da62f7b316dcf91f7cd81be71dcf2"
+    },
+    {
+      "path": "src/levels/rampup/reversingChanges.js",
+      "sha256": "2756774f33df4064318348fa345203a67fbb1d234c58a463d4d0dd1fa3fd43fc"
+    },
+    {
+      "path": "src/levels/rebase/manyRebases.js",
+      "sha256": "007f20fc2a905efcfc58aefaf411779b85a7f418e782cc28bb729baa6257a73f"
+    },
+    {
+      "path": "src/levels/rebase/selectiveRebase.js",
+      "sha256": "fbdd159016168201b6c2bcfd48ebc11e99ac3ce779808925cd36abb7bff0895f"
+    },
+    {
+      "path": "src/levels/remote/clone.js",
+      "sha256": "51bba8a346ef086a4e7f887706129ae70ac0548b8a6e47c66152e9bf41107364"
+    },
+    {
+      "path": "src/levels/remote/fakeTeamwork.js",
+      "sha256": "37e2b7aa60dfb3b87b4204dc209fdbe3cc24268346a7721a87187a67b1266733"
+    },
+    {
+      "path": "src/levels/remote/fetch.js",
+      "sha256": "a4344765ba20017a88010fdff5843f8d163c0bac4966d6986053014d788a2d9f"
+    },
+    {
+      "path": "src/levels/remote/fetchArgs.js",
+      "sha256": "8d518faae218f3bc147ef5447ccea34f077fdb165e94b8132c8a9f512a8385ed"
+    },
+    {
+      "path": "src/levels/remote/fetchRebase.js",
+      "sha256": "eff89f3f36d2719a63b3dbc4de37d5e005e9e80fe4a5a4e7e5f8f9fa7051a8cd"
+    },
+    {
+      "path": "src/levels/remote/lockedMain.js",
+      "sha256": "b7f0f11e41a2c6f70d91bdaa007bce955cd922011917880e53d5a814637fab90"
+    },
+    {
+      "path": "src/levels/remote/mergeManyFeatures.js",
+      "sha256": "abf5911d5b00da2a824d600fad36758f0d4e1d4563258b86c6b7dfa41b11a727"
+    },
+    {
+      "path": "src/levels/remote/pull.js",
+      "sha256": "b661626dd1ce229cf66f2067bbb63d494ab28c8d07bd0a25dfcf9d7669061b74"
+    },
+    {
+      "path": "src/levels/remote/pullArgs.js",
+      "sha256": "8ae0215dc5baaa272dc12bf6c816b129cd6fc404687841b2095c27c26037ef26"
+    },
+    {
+      "path": "src/levels/remote/push.js",
+      "sha256": "d4cf732394e7bd43ce86d612759a11060ae78225d0af8cb475711322b592f8a3"
+    },
+    {
+      "path": "src/levels/remote/pushArgs.js",
+      "sha256": "014cb858733d1daf68e82c74bc1fcdb161f163986da25036964565ac141632aa"
+    },
+    {
+      "path": "src/levels/remote/pushArgs2.js",
+      "sha256": "291de2a41c53cd22ddf53d16a398229fe6a42a6ec5df8d8567a8cb7506203faa"
+    },
+    {
+      "path": "src/levels/remote/pushManyFeatures.js",
+      "sha256": "8d43eda8a317dcb2431e8c781cd4adbc92ba749980fc5ba26f3f579c4d4aa31e"
+    },
+    {
+      "path": "src/levels/remote/remoteBranches.js",
+      "sha256": "f9e35fe66722ddf9fa4913c2b6aa1a56d06bad652e47fcfe6c7109ae702071b0"
+    },
+    {
+      "path": "src/levels/remote/sourceNothing.js",
+      "sha256": "5b250fe5558d1c5137423eeb492771bce24aa2eed04a6ec0c13ebe40c0bc467b"
+    },
+    {
+      "path": "src/levels/remote/tracking.js",
+      "sha256": "6c1090e4e53e0538f9f54ac0fc1a20721b1ab35995c7e54a4c0d270f868f0eff"
+    },
+    {
+      "path": "src/levels/sequenceInfo.js",
+      "sha256": "084b5201a9a03d4b68362f08669d8d5664ee5bbee09765ef2428ad7743ddd3b9"
+    },
+    {
+      "path": "src/levels/workingDir/restore.js",
+      "sha256": "57c0775bbe4a27c04d3735f98a8b713726f5d4e5daf4f36c9b27d2780edbbb4c"
+    },
+    {
+      "path": "src/levels/workingDir/staging.js",
+      "sha256": "39f689c2c50f67e45390059042f6d8a6aefe43aff7ae2cd69245ff80a62cb115"
+    },
+    {
+      "path": "src/style/all.min.css",
+      "sha256": "ee18385d57b39e60793463b47db579fdb8007c813f4a6350ce3518cfee591e24"
+    },
+    {
+      "path": "src/style/font-awesome.css",
+      "sha256": "7573dce85587e0f07289d5117f14d10a8524116dcc3e076d709b5b13effdc4ae"
+    },
+    {
+      "path": "src/style/index.css",
+      "sha256": "bafc00e62dcd7cbc8af3a9e48d48067a805c259cef153887176c2284dff6c52c"
+    },
+    {
+      "path": "src/style/main.css",
+      "sha256": "20eb51e4afae46c9835d882ad1a9dbaf6c48622b8cc095a88523f39a7942019a"
+    },
+    {
+      "path": "src/style/rainbows.css",
+      "sha256": "f968361fd37d44275eaa8a403a696a1e0a43de9fa18c8c1796580278c5462665"
+    }
+  ],
+  "codeloadArchiveSHA256": "782a82aea16696960eb7064dd249223780ff7d7179dc6b2afde2063f1354013a"
+}
