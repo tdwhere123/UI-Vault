@@ -1319,27 +1319,19 @@
   },
   {
     "id": "eldora:testimonal-01",
+    "title": "eldora:testimonal-01",
     "source": "Eldora UI",
+    "license": "MIT",
     "upstream": "https://github.com/karthikmudunuri/eldoraui/tree/6bb8fd211ecbdfa983f5780bead27d9f3890f20a",
+    "website": "",
+    "buildStatus": "not built",
+    "batch": "batch-001",
     "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/eldora-archive-01/source-archive.zip",
     "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/eldora-archive-01/manifest.json",
-    "website": "",
-    "repository": "https://github.com/karthikmudunuri/eldoraui",
-    "revision": "6bb8fd211ecbdfa983f5780bead27d9f3890f20a",
-    "title": "长评语与姓名轮播",
-    "description": "原七条演示评语、姓名和职务，以及前后按钮和键盘轮播；辅助公司图标明确替为姓名缩写，不表示真实客户或品牌背书。",
-    "behavior": "原七条演示评语、姓名和职务，以及前后按钮和键盘轮播；辅助公司图标明确替为姓名缩写，不表示真实客户或品牌背书。",
-    "kind": "原版交互场景",
-    "format": "完整交互场景",
-    "category": "产品与营销",
-    "license": "MIT AND ISC AND Apache-2.0",
-    "batch": "eldora-testimonial-01",
-    "preview": "batches/eldora-testimonial-01/index.html",
-    "previewStatus": "DOM-tested; visual-pending",
-    "browserVisualQA": "not-run",
-    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
     "gaps": [
-      "辅助公司标识已透明替换姓名缩写，全部原评价仅本地虚构示例；未核原生触屏拖动。"
+      "Remote images and logos not downloaded or assumed MIT",
+      "WebGL required for novatrix-background; actual motion unverified"
     ]
   },
   {
@@ -1789,27 +1781,20 @@
   },
   {
     "id": "uilayout:magnified-tabs",
+    "title": "放大式项目导航标签",
     "source": "UI Layouts",
+    "license": "MIT",
     "upstream": "https://github.com/ui-layouts/uilayouts/blob/88d827d7ec342917ca06f6894e5add65fabbe5d8/apps/ui-layout/registry/components/tabs/magnified-tabs.tsx",
+    "website": "",
+    "buildStatus": "Fixed-commit source and root license inspected; NOT built or interaction-tested; not a gallery preview",
+    "batch": "batch-001",
     "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/uilayout-archive-02/source-archive.zip",
     "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/uilayout-archive-02/manifest.json",
-    "website": "",
-    "repository": "https://github.com/ui-layouts/uilayouts",
-    "revision": "88d827d7ec342917ca06f6894e5add65fabbe5d8",
-    "title": "放大标签与矢量预览",
-    "description": "原八份矢量主预览、标签选择与距离弹簧放大，功能图标明确替换为已署名的矢量图形；不外跳第三方网站。",
-    "behavior": "原八份矢量主预览、标签选择与距离弹簧放大，功能图标明确替换为已署名的矢量图形；不外跳第三方网站。",
-    "kind": "原版交互场景",
-    "format": "完整交互场景",
-    "category": "导航与组织",
-    "license": "MIT",
-    "batch": "magnified-tabs-01",
-    "preview": "batches/magnified-tabs-01/index.html",
-    "previewStatus": "DOM-tested; visual-pending",
-    "browserVisualQA": "not-run",
-    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "description": "原距离放大dock与对应预览联动切换；8项为同一设计族。",
     "gaps": [
-      "主预览为原矢量示意，功能图标替换已披露，外站跳转停用。"
+      "固定源码与根MIT已核，未构建；图标/预览资产链与依赖许可尚未核齐。",
+      "数据含两项外站window.open；须移除外站跳转并披露，不能放宽现有沙箱。",
+      "原pageX与viewport坐标混用，需修正并验证键盘/移动端交互；与已收dock去重。"
     ]
   },
   {
@@ -13829,33 +13814,37 @@
   },
   {
     "id": "wavesurfer:audio-region-review",
+    "title": "WaveSurfer音频片段审阅",
     "source": "WaveSurfer",
     "repository": "https://github.com/katspaugh/wavesurfer.js",
     "revision": "9fbcf154461031e070bcc11817e7047aea5c7f58",
-    "upstream": "https://github.com/katspaugh/wavesurfer.js/blob/9fbcf154461031e070bcc11817e7047aea5c7f58/examples/regions.js",
     "sourcePath": "examples/regions.js",
+    "upstream": "https://github.com/katspaugh/wavesurfer.js/blob/9fbcf154461031e070bcc11817e7047aea5c7f58/examples/regions.js",
+    "license": "BSD-3-Clause (root source text verified; runtime/assets not closed)",
+    "behavior": "原波形标记与时间段，拖动/缩放区域、拖选新增、循环片段播放和波形放大。",
+    "difference": "不同于已有简单播放器/转录：选取时间范围和标记的审阅交互，所有region/marker状态只计一项。",
+    "description": "原波形标记与时间段，拖动/缩放区域、拖选新增、循环片段播放和波形放大。 不同于已有简单播放器/转录：选取时间范围和标记的审阅交互，所有region/marker状态只计一项。",
+    "gaps": [
+      "原audio.wav权利与解码未核，不收音频；未来需明确合成或许可材料，不开启麦克风。",
+      "原例全局DOM事件与媒体play/loop，未添加host退出销毁；当前默认CSP无media，须遵循既有精确本地媒体机制而非扩大网络/权限。",
+      "另读envelope作为邻近实现，但不单列凑数；它访问top.matchMedia不适合现opaque隔离，未采为可运行预览。",
+      "仅固定原入口和相关源码审查；完整依赖、媒体/字体权利、默认隔离运行、生命周期、浏览器视觉均未验。"
+    ],
+    "category": "展示与媒体",
     "licenseEvidence": {
       "url": "https://github.com/katspaugh/wavesurfer.js/blob/9fbcf154461031e070bcc11817e7047aea5c7f58/LICENSE",
       "sha256": "0fc992dc27cc34dde78bfeb024b4cadff6320f0dcbee2f1228efaeb533ca1364",
       "scope": "Complete original root text read; not complete runtime/media/license closure"
     },
-    "difference": "不同于已有简单播放器/转录：选取时间范围和标记的审阅交互，所有region/marker状态只计一项。",
-    "title": "波形区间审阅",
-    "description": "原波形与五个区间示例，支持区间拖动、循环、缩放和停止；用户点击后生成明确的本地测试声，不是原录音或远程音频。",
-    "behavior": "原波形与五个区间示例，支持区间拖动、循环、缩放和停止；用户点击后生成明确的本地测试声，不是原录音或远程音频。",
-    "kind": "原版交互场景",
-    "format": "完整交互场景",
-    "category": "展示与媒体",
-    "license": "BSD-3-Clause",
-    "batch": "wavesurfer-regions-01",
-    "preview": "batches/wavesurfer-regions-01/index.html",
-    "previewStatus": "DOM-tested; visual-pending",
-    "browserVisualQA": "not-run",
-    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
-    "gaps": [
-      "原录音未接入，使用明确本地生成24秒合成测试声；不是原音乐。",
-      "真实音频听感/Canvas像素/原生触屏未验；隐藏重置编辑。"
-    ]
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-bulk-524",
+    "sourceScope": "Selected fixed original source and root license; no full runnable archive",
+    "kind": "原版完整场景（仅来源）",
+    "buildStatus": "Fixed original source read; not built, run or visually accepted"
   },
   {
     "id": "keplergl:geospatial-analysis-workspace",
