@@ -1,0 +1,18 @@
+# Mantine · Local authentication-form demonstration
+
+Original complete AuthenticationForm from mantinedev/ui.mantine.dev, fixed963b955c5cef4bcc6008d40a0431e46ef771c254. Actual @mantine/core/form/hooks9.7.3, React19.3.1 and @mantinex/dev-icons2.0.0. One original login/register example, not an authentication service. Chinese scope asks for fictional values only; do not enter real credentials. No sign-in, account creation, agreement acceptance, storage, network, external fonts or social authorization.
+
+## Preserved and changed
+Original Paper/Stack/Group composition and official full Mantine CSS; original name/email/password/terms state, login/register switching and validation. Original password predicate rejects length<=6; corrected both messages to at least7 rather than claiming6 passes. Email uses original permissive /^\S+@\S+$/ regex, not a full email or identity verifier. Terms defaults true, has no validator and is only sample state; no real legal agreement. Name is optional. Original successful submit was a no-op; now it only displays local validation feedback. No data is sent. Original Google/Twitter SVGs stay visible but their buttons are disabled. No trademark/endorsement authorization is implied by MIT. Autocomplete off is a browser hint, not a password-manager security guarantee.
+
+Provider uses documented fixed light color manager with no storage, rather than default localStorage color manager. System font only. Added visible focus outlines and reduced-motion CSS. A small use-media-query lifecycle patch guards stale callbacks and removes partially added callbacks if subscription throws; original false fallback remains. Original UI styling and state logic are not replaced with a new form design.
+
+Hidden temporarily unmounts and resets all values on return. Captured input DOM values/defaultValues are blanked on unmount, including old detached inputs. Final pagehide/atlas:dispose clears exact root delegates/selectionchange/global listeners. This is not a claim of cryptographic erasure of JavaScript heap, browser autofill or test-retained objects. Failures stop further mounting and show a local fallback.
+
+## Verification
+Run from workspace: `node ui-mantine-forms-local/authentication/build.mjs`; `node ui-mantine-forms-local/authentication/test.mjs`; `python ui-mantine-forms-local/authentication/pack.py`.
+Actual ui-vault-547 composePreview/currentCSP. DOM validation includes invalid email,6-character rejection,7+-character success; login/register/terms persistence100cycles; hidden reset, early/module/late-render failures, missing root, initial hidden, media constructor/partial-subscription failures, old input callbacks and final disposal. Connected/global registrations, timers and RAF must reach zero. Detached React input invalid handlers are separately recorded, not falsely counted as global leaks or claimed to have been GC'd. Function constructor trap is a Proxy preserving instanceof semantics while throwing on apply/construct. No library eval/Function/network/storage/Worker attempts.
+
+Original password visibility toggle responds to Enter/Space handlers when programmatically focused (tested), but defaults tabIndex=-1, so this is not a claim that sequential Tab reaches it.
+
+JSDOM does not verify native physical Tab/Enter/Space defaults, browser password-manager behavior, CSS pixels or actual sandbox enforcement. Browser visual QA not run; no screenshots/covers. Exact positive-output dependency licenses are in LICENSE.txt; parsed but eliminated dependencies are not counted as emitted. All seven public files are text. Local originals/build/lock/test/patch files remain available in the working directory only.
