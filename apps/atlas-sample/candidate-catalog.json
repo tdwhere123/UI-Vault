@@ -13816,5 +13816,1036 @@
     "kind": "原版完整场景（仅来源）",
     "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted",
     "sourceSha256": "507e9a80c69330184f8ec1407f6e367df71c32891f2f18b108a199d807b74cea"
+  },
+  {
+    "id": "langflow:flow-and-playground-workspace",
+    "title": "Langflow节点编排与测试工作台",
+    "source": "Langflow",
+    "repository": "https://github.com/langflow-ai/langflow",
+    "revision": "60999cc9a7350e44dde3ef641baae864e10861f0",
+    "sourcePath": "src/frontend/src/pages/FlowPage/index.tsx",
+    "upstream": "https://github.com/langflow-ai/langflow/blob/60999cc9a7350e44dde3ef641baae864e10861f0/src/frontend/src/pages/FlowPage/index.tsx",
+    "license": "MIT (root source text verified; runtime/assets not closed)",
+    "behavior": "原流程编辑器整合节点检查、侧栏组件、可伸缩Playground、未保存离开确认和Agent修改状态。",
+    "difference": "不同于ReactFlow基础节点例子：完整编排/检查/测试工作流，只计一族，不拆侧栏、菜单或节点类型。",
+    "description": "原流程编辑器整合节点检查、侧栏组件、可伸缩Playground、未保存离开确认和Agent修改状态。 不同于ReactFlow基础节点例子：完整编排/检查/测试工作流，只计一族，不拆侧栏、菜单或节点类型。",
+    "gaps": [
+      "FlowPage/PageComponent直接依赖flow store、后端查询、自动保存、上传、Agent事件与analytics，不能原样称离线可运行；不执行任何流程或模型。",
+      "检查面板虽然motion包裹但原transition duration=0，不能宣传已实现平滑弹入；节点连线/拖动/键盘/恢复冲突与清理未实测。",
+      "仅固定原入口和相关源码审查；完整依赖、媒体/字体权利、默认隔离运行、生命周期、浏览器视觉均未验。"
+    ],
+    "category": "Agent与对话",
+    "licenseEvidence": {
+      "url": "https://github.com/langflow-ai/langflow/blob/60999cc9a7350e44dde3ef641baae864e10861f0/LICENSE",
+      "sha256": "48d4a7496209a9e1f2f549384251b69319360c3a38127cf513473590be383359",
+      "scope": "Complete original root text read; not complete runtime/media/license closure"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-bulk-524",
+    "sourceScope": "Selected fixed original source and root license; no full runnable archive",
+    "kind": "原版完整场景（仅来源）",
+    "buildStatus": "Fixed original source read; not built, run or visually accepted"
+  },
+  {
+    "id": "vanta:spatial-network-field",
+    "title": "Vanta空间线网氛围",
+    "source": "Vanta",
+    "repository": "https://github.com/tengbao/vanta",
+    "revision": "f8b351906688b56f0fc744e53bde81fc3c56f150",
+    "sourcePath": "src/vanta.net.js",
+    "upstream": "https://github.com/tengbao/vanta/blob/f8b351906688b56f0fc744e53bde81fc3c56f150/src/vanta.net.js",
+    "license": "MIT (root source text verified; runtime/assets not closed)",
+    "behavior": "原Three空间点阵按距离连线，视点响应指针，点缓慢绕转与明暗混合形成深色几何氛围。",
+    "difference": "纯装饰空间场而非真实Agent拓扑；整个参数/配色体系只计一族，不把各背景效果拆数。",
+    "description": "原Three空间点阵按距离连线，视点响应指针，点缓慢绕转与明暗混合形成深色几何氛围。 纯装饰空间场而非真实Agent拓扑；整个参数/配色体系只计一族，不把各背景效果拆数。",
+    "gaps": [
+      "仅NET源适用此记录；Fog另引用Patricio与Morgan McGuire外部噪声，未闭权利而排除，根MIT不覆盖它的全部派生链。",
+      "依赖Three版本/API兼容、GPU、资源销毁、异步resize帧、隐藏/退出未测；原init失败会只留底色，适配必须明确失败不能冒充运行成功。",
+      "原Raycaster创建被注释，不宣称已启用指针近点放大；设备方向虽支持但默认关闭，未申请权限。",
+      "仅固定原入口和相关源码审查；完整依赖、媒体/字体权利、默认隔离运行、生命周期、浏览器视觉均未验。"
+    ],
+    "category": "视觉与动效",
+    "licenseEvidence": {
+      "url": "https://github.com/tengbao/vanta/blob/f8b351906688b56f0fc744e53bde81fc3c56f150/LICENSE.md",
+      "sha256": "65df69dccc2a06fcf307e81da62c0f64b4abc03fe64a23944427a69642edadcb",
+      "scope": "Complete original root text read; not complete runtime/media/license closure"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-bulk-524",
+    "sourceScope": "Selected fixed original source and root license; no full runnable archive",
+    "kind": "原版完整场景（仅来源）",
+    "buildStatus": "Fixed original source read; not built, run or visually accepted"
+  },
+  {
+    "id": "wavesurfer:audio-region-review",
+    "title": "WaveSurfer音频片段审阅",
+    "source": "WaveSurfer",
+    "repository": "https://github.com/katspaugh/wavesurfer.js",
+    "revision": "9fbcf154461031e070bcc11817e7047aea5c7f58",
+    "sourcePath": "examples/regions.js",
+    "upstream": "https://github.com/katspaugh/wavesurfer.js/blob/9fbcf154461031e070bcc11817e7047aea5c7f58/examples/regions.js",
+    "license": "BSD-3-Clause (root source text verified; runtime/assets not closed)",
+    "behavior": "原波形标记与时间段，拖动/缩放区域、拖选新增、循环片段播放和波形放大。",
+    "difference": "不同于已有简单播放器/转录：选取时间范围和标记的审阅交互，所有region/marker状态只计一项。",
+    "description": "原波形标记与时间段，拖动/缩放区域、拖选新增、循环片段播放和波形放大。 不同于已有简单播放器/转录：选取时间范围和标记的审阅交互，所有region/marker状态只计一项。",
+    "gaps": [
+      "原audio.wav权利与解码未核，不收音频；未来需明确合成或许可材料，不开启麦克风。",
+      "原例全局DOM事件与媒体play/loop，未添加host退出销毁；当前默认CSP无media，须遵循既有精确本地媒体机制而非扩大网络/权限。",
+      "另读envelope作为邻近实现，但不单列凑数；它访问top.matchMedia不适合现opaque隔离，未采为可运行预览。",
+      "仅固定原入口和相关源码审查；完整依赖、媒体/字体权利、默认隔离运行、生命周期、浏览器视觉均未验。"
+    ],
+    "category": "展示与媒体",
+    "licenseEvidence": {
+      "url": "https://github.com/katspaugh/wavesurfer.js/blob/9fbcf154461031e070bcc11817e7047aea5c7f58/LICENSE",
+      "sha256": "0fc992dc27cc34dde78bfeb024b4cadff6320f0dcbee2f1228efaeb533ca1364",
+      "scope": "Complete original root text read; not complete runtime/media/license closure"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-bulk-524",
+    "sourceScope": "Selected fixed original source and root license; no full runnable archive",
+    "kind": "原版完整场景（仅来源）",
+    "buildStatus": "Fixed original source read; not built, run or visually accepted"
+  },
+  {
+    "id": "keplergl:geospatial-analysis-workspace",
+    "title": "Kepler地理图层与分析工作区",
+    "source": "Kepler.gl",
+    "repository": "https://github.com/keplergl/kepler.gl",
+    "revision": "e74e5dea0a5e4562815fb53c71a99c0e558f6779",
+    "sourcePath": "examples/demo-app/src/app.tsx",
+    "upstream": "https://github.com/keplergl/kepler.gl/blob/e74e5dea0a5e4562815fb53c71a99c0e558f6779/examples/demo-app/src/app.tsx",
+    "license": "MIT (root source text verified; runtime/assets not closed)",
+    "behavior": "原地图主视图整合图层/过滤/交互/底图侧栏，可伸缩SQL与AI面板，并提供数据与导出入口。",
+    "difference": "与D3地球仪不同的完整地理分析工作区；只收整套，不按图层类型、底图配色或面板拆条。",
+    "description": "原地图主视图整合图层/过滤/交互/底图侧栏，可伸缩SQL与AI面板，并提供数据与导出入口。 与D3地球仪不同的完整地理分析工作区；只收整套，不按图层类型、底图配色或面板拆条。",
+    "gaps": [
+      "实际样例含远程瓦片、数据、云OAuth与保存分享、MCP/AI、DuckDB与导出链；任何离线接入必须断开服务，不读取token或执行请求。",
+      "地图/照片/样本数据/字体/图标等附加授权及deck/map依赖未闭；根MIT不保证地图服务或数据可再分发。",
+      "本轮只读原入口/侧栏，未收全应用，未构建或验证GPU、WASM/worker、透明隔离CSP及键盘/退出。",
+      "仅固定原入口和相关源码审查；完整依赖、媒体/字体权利、默认隔离运行、生命周期、浏览器视觉均未验。"
+    ],
+    "category": "数据与状态",
+    "licenseEvidence": {
+      "url": "https://github.com/keplergl/kepler.gl/blob/e74e5dea0a5e4562815fb53c71a99c0e558f6779/LICENSE",
+      "sha256": "30fcc0a8a5714eb91a93f4d58a50679a6fe2687f86732d22b485cc5acd1ac310",
+      "scope": "Complete original root text read; not complete runtime/media/license closure"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-bulk-524",
+    "sourceScope": "Selected fixed original source and root license; no full runnable archive",
+    "kind": "原版完整场景（仅来源）",
+    "buildStatus": "Fixed original source read; not built, run or visually accepted"
+  },
+  {
+    "id": "chainlit:execution-message-tree",
+    "title": "嵌套工具执行过程与富消息",
+    "source": "Chainlit",
+    "repository": "https://github.com/Chainlit/chainlit",
+    "revision": "190ea74239d9e84b26e7c91bc2882dd038942564",
+    "sourcePath": "frontend/src/components/chat/Messages/Message/index.tsx",
+    "upstream": "https://github.com/Chainlit/chainlit/blob/190ea74239d9e84b26e7c91bc2882dd038942564/frontend/src/components/chat/Messages/Message/index.tsx",
+    "license": "Apache-2.0 (complete root text verified; dependencies/media not closed)",
+    "behavior": "原Message/Step递归子步骤、输入输出、运行渐变/错误色、可折叠树与结束自动收起；尊重原隐藏/仅工具展示配置。",
+    "difference": "与已有单工具卡不同：多层执行消息组合及内容策略，不拆每个Step算新族。",
+    "gaps": [
+      "仅开发者提供的可公开步骤/工具结果，不冒称读取模型私密推理；react-client状态/Markdown/附件/反馈链路及动态HTML开关需离线约束；Apache NOTICE和依赖/媒体未全审。",
+      "未安装、构建、运行；传递依赖/媒体许可、默认CSP、交互和退出清理及浏览器像素均未验。"
+    ],
+    "description": "原Message/Step递归子步骤、输入输出、运行渐变/错误色、可折叠树与结束自动收起；尊重原隐藏/仅工具展示配置。 与已有单工具卡不同：多层执行消息组合及内容策略，不拆每个Step算新族。",
+    "category": "Agent与对话",
+    "licenseEvidence": {
+      "url": "https://github.com/Chainlit/chainlit/blob/190ea74239d9e84b26e7c91bc2882dd038942564/LICENSE",
+      "sha256": "7b757190ac55f65952db722558afdcd2ae42ed943625c1b79d15b657de7a8c05",
+      "scope": "Complete actual root license read; not a full dependency/media distribution audit"
+    },
+    "sourceEvidence": {
+      "localFile": "evidence/Chainlit--chainlit--frontend__src__components__chat__Messages__Message__index.tsx",
+      "sha256": "8f46cbaeaaaa225925f97211fd4cb8f9336baf1618a59515b3eaa9e2ffb0a456"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-bulk-524",
+    "sourceScope": "Selected fixed original code and complete actual root license; no runnable/archive or runtime audit",
+    "kind": "原版完整场景（仅来源）",
+    "buildStatus": "fixed original code and complete root license read; not built, run or visually accepted"
+  },
+  {
+    "id": "librechat:versioned-artifact-workspace",
+    "title": "带版本的代码与产物工作区",
+    "source": "LibreChat",
+    "repository": "https://github.com/LibreChat-AI/LibreChat",
+    "revision": "f4154b649efa37e1345ccc517a4d8d1ed2178c82",
+    "sourcePath": "client/src/components/Artifacts/Artifacts.tsx",
+    "upstream": "https://github.com/LibreChat-AI/LibreChat/blob/f4154b649efa37e1345ccc517a4d8d1ed2178c82/client/src/components/Artifacts/Artifacts.tsx",
+    "license": "MIT (complete root text verified; dependencies/media not closed)",
+    "behavior": "原产物代码/预览tab、版本切换、刷新、全屏/独立窗口、复制/下载入口及独立ArtifactVersion控件。",
+    "difference": "不同Sandpack独立代码沙盒：绑定对话中多版本产物与窗口会话；不是再收一个编辑器参数变体。",
+    "gaps": [
+      "真实预览可能iframe/sandbox执行代码，undock/复制/下载/持久状态未封闭；不得放宽默认CSP或假称能离线跑生成程序。Canonical repo ID600596928与旧danny-avila转址吻合，有独立证据。",
+      "未安装、构建、运行；传递依赖/媒体许可、默认CSP、交互和退出清理及浏览器像素均未验。"
+    ],
+    "description": "原产物代码/预览tab、版本切换、刷新、全屏/独立窗口、复制/下载入口及独立ArtifactVersion控件。 不同Sandpack独立代码沙盒：绑定对话中多版本产物与窗口会话；不是再收一个编辑器参数变体。",
+    "category": "Agent与对话",
+    "licenseEvidence": {
+      "url": "https://github.com/LibreChat-AI/LibreChat/blob/f4154b649efa37e1345ccc517a4d8d1ed2178c82/LICENSE",
+      "sha256": "dc6706c93a0c77386d034bc89f1538f85456681e2c6845ddc35358a76f7ae3f2",
+      "scope": "Complete actual root license read; not a full dependency/media distribution audit"
+    },
+    "sourceEvidence": {
+      "localFile": "evidence/LibreChat-AI--LibreChat--client__src__components__Artifacts__Artifacts.tsx",
+      "sha256": "c3c4e0c29a5d29d24c026064f43a77b4820bdddc0ce713fb7ae766a4adb3e9e9"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-bulk-524",
+    "sourceScope": "Selected fixed original code and complete actual root license; no runnable/archive or runtime audit",
+    "kind": "原版完整场景（仅来源）",
+    "buildStatus": "fixed original code and complete root license read; not built, run or visually accepted"
+  },
+  {
+    "id": "jupyterlab:notebook-document-scene",
+    "title": "代码与富输出混排笔记本",
+    "source": "JupyterLab",
+    "repository": "https://github.com/jupyterlab/jupyterlab",
+    "revision": "1c917ab158ef862c86630291ecd0771f0b6de8ba",
+    "sourcePath": "examples/notebook/src/index.ts",
+    "upstream": "https://github.com/jupyterlab/jupyterlab/blob/1c917ab158ef862c86630291ecd0771f0b6de8ba/examples/notebook/src/index.ts",
+    "license": "BSD-3-Clause (complete root text verified; dependencies/media not closed)",
+    "behavior": "原NotebookPanel完整示例，工具栏、cell类型选择、命令系统、内核名称/状态与文档打开；commands提供运行/插入/删除等notebook动作。",
+    "difference": "区别富文本/代码沙盒：有序代码单元、Markdown和执行输出的文档工作流，一套完整场景。",
+    "gaps": [
+      "依赖Jupyter服务/内核/文档管理，不是纯前端可执行；图鉴只允许明确本地fixture且不能假运行代码。输出HTML信任边界、扩展/图形/依赖许可证、键盘和dispose未审。",
+      "未安装、构建、运行；传递依赖/媒体许可、默认CSP、交互和退出清理及浏览器像素均未验。"
+    ],
+    "description": "原NotebookPanel完整示例，工具栏、cell类型选择、命令系统、内核名称/状态与文档打开；commands提供运行/插入/删除等notebook动作。 区别富文本/代码沙盒：有序代码单元、Markdown和执行输出的文档工作流，一套完整场景。",
+    "category": "导航与组织",
+    "licenseEvidence": {
+      "url": "https://github.com/jupyterlab/jupyterlab/blob/1c917ab158ef862c86630291ecd0771f0b6de8ba/LICENSE",
+      "sha256": "8202286e1296fc999db2253da5244a65c28072287d4b580c2b11caff3014de76",
+      "scope": "Complete actual root license read; not a full dependency/media distribution audit"
+    },
+    "sourceEvidence": {
+      "localFile": "evidence/jupyterlab--jupyterlab--examples__notebook__src__index.ts",
+      "sha256": "034a8d592cc1dfec9ed9dd7a70704cd0ea2f988bb89a7dede667039fef22de08"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-bulk-524",
+    "sourceScope": "Selected fixed original code and complete actual root license; no runnable/archive or runtime audit",
+    "kind": "原版完整场景（仅来源）",
+    "buildStatus": "fixed original code and complete root license read; not built, run or visually accepted"
+  },
+  {
+    "id": "drawio:multi-page-diagram-document",
+    "title": "多页图示文档与可撤销页组织",
+    "source": "draw.io",
+    "repository": "https://github.com/jgraph/drawio",
+    "revision": "c72c9a98b7a6ce392556ed04c05e0ff19f43f5c3",
+    "sourcePath": "src/main/webapp/js/diagramly/Pages.js",
+    "upstream": "https://github.com/jgraph/drawio/blob/c72c9a98b7a6ce392556ed04c05e0ff19f43f5c3/src/main/webapp/js/diagramly/Pages.js",
+    "license": "Apache-2.0 (complete root text verified; dependencies/media not closed)",
+    "behavior": "原DiagramPage与页签文档，重命名/移动/选页等undoable命令，页面分组/视区和页面根数据维护。",
+    "difference": "与Excalidraw白板/ReactFlow节点不同：工程图多页文档生命周期和页级组织，不拆各页或图形模板计数。",
+    "gaps": [
+      "Pages依赖原EditorUi/mxGraph完整宿主，不能单文件直接预览；品牌stencil/图标/字体及嵌入库许可并非根Apache全覆盖。文件/云存储/脚本、导出/URL和二进制资源路径尚未收敛，完整通知与源码构建未核。",
+      "未安装、构建、运行；传递依赖/媒体许可、默认CSP、交互和退出清理及浏览器像素均未验。"
+    ],
+    "description": "原DiagramPage与页签文档，重命名/移动/选页等undoable命令，页面分组/视区和页面根数据维护。 与Excalidraw白板/ReactFlow节点不同：工程图多页文档生命周期和页级组织，不拆各页或图形模板计数。",
+    "category": "导航与组织",
+    "licenseEvidence": {
+      "url": "https://github.com/jgraph/drawio/blob/c72c9a98b7a6ce392556ed04c05e0ff19f43f5c3/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "scope": "Complete actual root license read; not a full dependency/media distribution audit"
+    },
+    "sourceEvidence": {
+      "localFile": "evidence/jgraph--drawio--src__main__webapp__js__diagramly__Pages.js",
+      "sha256": "028006e5e6fb9a71d91ad79ad9e5a930b67044d1b57272e805db51a73440068d"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-bulk-524",
+    "sourceScope": "Selected fixed original code and complete actual root license; no runnable/archive or runtime audit",
+    "kind": "原版完整场景（仅来源）",
+    "buildStatus": "fixed original code and complete root license read; not built, run or visually accepted"
+  },
+  {
+    "id": "penpot:prototype-interactions",
+    "title": "原型跳转、浮层与触发交互配置",
+    "source": "Penpot",
+    "repository": "https://github.com/penpot/penpot",
+    "revision": "904cdd97163dc77c0d875f509ccab9ff234d7bae",
+    "sourcePath": "frontend/src/app/main/ui/workspace/sidebar/options/menus/interactions.cljs",
+    "upstream": "https://github.com/penpot/penpot/blob/904cdd97163dc77c0d875f509ccab9ff234d7bae/frontend/src/app/main/ui/workspace/sidebar/options/menus/interactions.cljs",
+    "license": "MPL-2.0 (complete root text verified; dependencies/media not closed)",
+    "behavior": "原侧栏事件/动作配置：click/鼠标进入离开/延迟；navigate/open-toggle-close overlay/返回等，配套viewport交互连线与目标选取源码。",
+    "difference": "区别Puck/ReactPage页面布局：设计稿的交互原型触发与目标关系，不是普通表单或再做节点编辑壳。",
+    "gaps": [
+      "ClojureScript/Rumext状态仓和设计画布依赖重；MPL修改文件/对应源码公开义务必须以后真实满足，不把本地源码当可公开成品。媒体、字体、SVG和后端/权限、预览生命周期未审。",
+      "未安装、构建、运行；传递依赖/媒体许可、默认CSP、交互和退出清理及浏览器像素均未验。"
+    ],
+    "description": "原侧栏事件/动作配置：click/鼠标进入离开/延迟；navigate/open-toggle-close overlay/返回等，配套viewport交互连线与目标选取源码。 区别Puck/ReactPage页面布局：设计稿的交互原型触发与目标关系，不是普通表单或再做节点编辑壳。",
+    "category": "导航与组织",
+    "licenseEvidence": {
+      "url": "https://github.com/penpot/penpot/blob/904cdd97163dc77c0d875f509ccab9ff234d7bae/LICENSE",
+      "sha256": "393eaf2b92b3d49bea139e39b6fd205b6e99c499999986aec5554586a830dfdd",
+      "scope": "Complete actual root license read; not a full dependency/media distribution audit"
+    },
+    "sourceEvidence": {
+      "localFile": "evidence/penpot--penpot--frontend__src__app__main__ui__workspace__sidebar__options__menus__interactions.cljs",
+      "sha256": "856e381411dd1acb563bd150673309c332724221bdfeaf3e9b6f2cccba8d35ed"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-bulk-524",
+    "sourceScope": "Selected fixed original code and complete actual root license; no runnable/archive or runtime audit",
+    "kind": "原版完整场景（仅来源）",
+    "buildStatus": "fixed original code and complete root license read; not built, run or visually accepted"
+  },
+  {
+    "id": "gradio:layered-image-input",
+    "title": "分层图像输入与合成预览",
+    "source": "Gradio",
+    "repository": "https://github.com/gradio-app/gradio",
+    "revision": "ebccfcf3194dd3cd132491a6bc35968f1321611a",
+    "sourcePath": "demo/image_editor_layers/run.py",
+    "upstream": "https://github.com/gradio-app/gradio/blob/ebccfcf3194dd3cd132491a6bc35968f1321611a/demo/image_editor_layers/run.py",
+    "license": "Apache-2.0 (complete root text verified; dependencies/media not closed)",
+    "behavior": "原ImageEditor图层/crop输入、background/layers/composite分别设置，变更时更新层数，Get Layers返回图像与计数，双栏编辑/预览。",
+    "difference": "区别MiniPaint一般绘画：面向Agent多模态图像输入的结构化层数据回传；不是将每种画笔单收。",
+    "gaps": [
+      "示例Python Gradio服务必须隔离；cheetah.jpg/layer1.png和HuggingFace远程图未获独立媒体许可，不搬二进制。原predict只是回传不是AI修图。前端ImageEditor/队列/上传/依赖、默认CSP及清理未验。",
+      "未安装、构建、运行；传递依赖/媒体许可、默认CSP、交互和退出清理及浏览器像素均未验。"
+    ],
+    "description": "原ImageEditor图层/crop输入、background/layers/composite分别设置，变更时更新层数，Get Layers返回图像与计数，双栏编辑/预览。 区别MiniPaint一般绘画：面向Agent多模态图像输入的结构化层数据回传；不是将每种画笔单收。",
+    "category": "Agent与对话",
+    "licenseEvidence": {
+      "url": "https://github.com/gradio-app/gradio/blob/ebccfcf3194dd3cd132491a6bc35968f1321611a/LICENSE",
+      "sha256": "c95bae1d1ce0235ecccd3560b772ec1efb97f348a79f0fbe0a634f0c2ccefe2c",
+      "scope": "Complete actual root license read; not a full dependency/media distribution audit"
+    },
+    "sourceEvidence": {
+      "localFile": "evidence/gradio-app--gradio--demo__image_editor_layers__run.py",
+      "sha256": "7f1b91152af1c2738c9df1a04a0575f91eb55a130d25410bc9cf3ee662bf1eb5"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-bulk-524",
+    "sourceScope": "Selected fixed original code and complete actual root license; no runnable/archive or runtime audit",
+    "kind": "原版完整场景（仅来源）",
+    "buildStatus": "fixed original code and complete root license read; not built, run or visually accepted"
+  },
+  {
+    "id": "immich:album-library-organizer",
+    "title": "个人与共享相册分组图文库",
+    "source": "Immich",
+    "repository": "https://github.com/immich-app/immich",
+    "revision": "87ef895041e160aef4f61f2d7af1ad3f8e38827d",
+    "sourcePath": "web/src/lib/components/album-page/AlbumsList.svelte",
+    "upstream": "https://github.com/immich-app/immich/blob/87ef895041e160aef4f61f2d7af1ad3f8e38827d/web/src/lib/components/album-page/AlbumsList.svelte",
+    "license": "AGPL-3.0 (complete root text verified; dependencies/media not closed)",
+    "behavior": "原相册搜索名称/描述、Owned/Shared过滤、按年份/归属分组、排序与卡片/表格视图；路由页接入搜索和分组控制。",
+    "difference": "区别Leko展示图集：多相册归属/年份组织与共享状态信息，不只滚动照片墙，也不将两种视图拆条。",
+    "gaps": [
+      "AGPL全文已读，后续分发/网络服务修改对应源码义务需专项闭合，不称MIT。SDK查询、authManager/偏好持久化/删除相册行为未隔离；真实照片人物及个人数据不能搬，须授权或透明原创fixture。",
+      "未安装、构建、运行；传递依赖/媒体许可、默认CSP、交互和退出清理及浏览器像素均未验。"
+    ],
+    "description": "原相册搜索名称/描述、Owned/Shared过滤、按年份/归属分组、排序与卡片/表格视图；路由页接入搜索和分组控制。 区别Leko展示图集：多相册归属/年份组织与共享状态信息，不只滚动照片墙，也不将两种视图拆条。",
+    "category": "导航与组织",
+    "licenseEvidence": {
+      "url": "https://github.com/immich-app/immich/blob/87ef895041e160aef4f61f2d7af1ad3f8e38827d/LICENSE",
+      "sha256": "aff0be0b56fcec7e1fcc60d1811e6159d9ee9c20d8176605cfe5a8864e0dfccb",
+      "scope": "Complete actual root license read; not a full dependency/media distribution audit"
+    },
+    "sourceEvidence": {
+      "localFile": "evidence/immich-app--immich--web__src__lib__components__album-page__AlbumsList.svelte",
+      "sha256": "9af10cbd105099ed7d0307add3341d2006db9e23903cc82abdc5c710ae79091f"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-bulk-524",
+    "sourceScope": "Selected fixed original code and complete actual root license; no runnable/archive or runtime audit",
+    "kind": "原版完整场景（仅来源）",
+    "buildStatus": "fixed original code and complete root license read; not built, run or visually accepted"
+  },
+  {
+    "id": "bookstack:shelf-book-organization",
+    "title": "书架、书籍与章节知识组织",
+    "source": "BookStack",
+    "repository": "https://github.com/BookStackApp/BookStack",
+    "revision": "0b6b667e0d84ebb3406de6de9fadbf4230c29c0b",
+    "sourcePath": "resources/views/shelves/parts/form.blade.php",
+    "upstream": "https://github.com/BookStackApp/BookStack/blob/0b6b667e0d84ebb3406de6de9fadbf4230c29c0b/resources/views/shelves/parts/form.blade.php",
+    "license": "MIT (complete root text verified; dependencies/media not closed)",
+    "behavior": "原书架双列表管理：搜索候选书、Sortable拖动加入/移除、按属性排序与反序、hidden输入回传书籍顺序；配套书架网格/列表与书籍章节阅读目录。",
+    "difference": "区别通用文档块编辑：书架→书→章节的知识组织和两列表编排，不算基础sortable控件。",
+    "gaps": [
+      "Laravel Blade权限/服务端渲染/保存不可直接离线；原shelf-sort新建Sortable但未见在该类dispose销毁，监听和排序实例需审。description HTML、封面/图标、Sortable及其他依赖未核。",
+      "未安装、构建、运行；传递依赖/媒体许可、默认CSP、交互和退出清理及浏览器像素均未验。"
+    ],
+    "description": "原书架双列表管理：搜索候选书、Sortable拖动加入/移除、按属性排序与反序、hidden输入回传书籍顺序；配套书架网格/列表与书籍章节阅读目录。 区别通用文档块编辑：书架→书→章节的知识组织和两列表编排，不算基础sortable控件。",
+    "category": "导航与组织",
+    "licenseEvidence": {
+      "url": "https://github.com/BookStackApp/BookStack/blob/0b6b667e0d84ebb3406de6de9fadbf4230c29c0b/LICENSE",
+      "sha256": "ec449a65836765a16f2562fa3ae511d0dc6f2a6eafcad21e7be2b4a30e220465",
+      "scope": "Complete actual root license read; not a full dependency/media distribution audit"
+    },
+    "sourceEvidence": {
+      "localFile": "evidence/BookStackApp--BookStack--resources__views__shelves__parts__form.blade.php",
+      "sha256": "66dc704f2bca1fefbd8cb91dd2e6469c4d7ad851b7d199d072294b1a2fedb4cd"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-bulk-524",
+    "sourceScope": "Selected fixed original code and complete actual root license; no runnable/archive or runtime audit",
+    "kind": "原版完整场景（仅来源）",
+    "buildStatus": "fixed original code and complete root license read; not built, run or visually accepted"
+  },
+  {
+    "id": "drawdb:relational-schema-workspace",
+    "title": "drawDB · 关系结构画布与字段编辑",
+    "source": "drawDB",
+    "repository": "https://github.com/drawdb-io/drawdb",
+    "revision": "041dc2bc5f85edcaf3ccc2362905bb80f9e7bff1",
+    "sourcePath": "src/components/Workspace.jsx",
+    "upstream": "https://github.com/drawdb-io/drawdb/blob/041dc2bc5f85edcaf3ccc2362905bb80f9e7bff1/src/components/Workspace.jsx",
+    "license": "AGPL-3.0 (root verified; runtime/media not closed)",
+    "behavior": "原数据库表/字段侧栏、表关系连线画布、区域及注释，选择/缩放/拖动和撤销重做上下文组成完整结构设计工作区。",
+    "difference": "区别BPMN流程/普通节点图：字段、主外键及关系模型是完整专业语义；不把每种数据库或表卡计为新条目。",
+    "gaps": [
+      "根为AGPL-3.0非MIT；未来运行或公开衍生版必须满足对应源码/许可义务，当前只是未改公共代码来源。",
+      "Workspace导入本地数据库/自动保存与GitHub gist共享API；原SQL/DBML导入导出、AI导入及存储链未审，不能直接离线打包。",
+      "仅来源：完整传递依赖/媒体字体许可、无网络CSP、状态/重复/中断清理与像素尚未运行审计；没有离线运行包或完整源码ZIP。"
+    ],
+    "description": "原数据库表/字段侧栏、表关系连线画布、区域及注释，选择/缩放/拖动和撤销重做上下文组成完整结构设计工作区。 区别BPMN流程/普通节点图：字段、主外键及关系模型是完整专业语义；不把每种数据库或表卡计为新条目。",
+    "category": "导航与组织",
+    "licenseEvidence": {
+      "url": "https://github.com/drawdb-io/drawdb/blob/041dc2bc5f85edcaf3ccc2362905bb80f9e7bff1/LICENSE",
+      "sha256": "8486a10c4393cee1c25392769ddd3b2d6c242d6ec7928e1414efff7dfb2f07ef",
+      "scope": "Complete actual root license read; selected original source only, runtime/assets not cleared."
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-bulk-524",
+    "sourceScope": "Selected fixed original public source and complete root license evidence; not a complete runnable/archive or runtime audit",
+    "kind": "原版完整场景（仅来源）",
+    "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted",
+    "collectionPriority": "原版场景来源参考"
+  },
+  {
+    "id": "documenso:document-preparation-flow",
+    "title": "Documenso · 文档参与人与字段布置流程",
+    "source": "Documenso",
+    "repository": "https://github.com/documenso/documenso",
+    "revision": "fdd0337bdd8f6afac64faf97113c65ed2dd0e2a2",
+    "sourcePath": "packages/ui/primitives/document-flow/add-fields.tsx",
+    "upstream": "https://github.com/documenso/documenso/blob/fdd0337bdd8f6afac64faf97113c65ed2dd0e2a2/packages/ui/primitives/document-flow/add-fields.tsx",
+    "license": "AGPL-3.0 public source; EE transitive scope unresolved",
+    "behavior": "原分步文档准备界面、参与人增删与表单校验、PDF页内字段放置/移动/缩放、复制与返回继续控件。",
+    "difference": "不同于本地签名笔迹或PDF证据批注：围绕参与人与文档字段准备，所有步骤合一族；只研究UI，不签署或发文。",
+    "gaps": [
+      "所收packages/ui公共入口不在packages/ee；add-signers首行导入@documenso/ee/server-only/limits/provider/client，传递许可边界未闭合。",
+      "packages/ee商业条款含client-side AGPL例外，需逐段识别，不能一概按根AGPL或商业许可覆盖；仅存条款证据，未收EE实现。",
+      "原onAutoSave/onSubmit、PDF渲染/Prisma/全局鼠标热键、clipboard链依赖宿主；未执行签署、发邮件、上传或法定提交。",
+      "仅来源：完整传递依赖/媒体字体许可、无网络CSP、状态/重复/中断清理与像素尚未运行审计；没有离线运行包或完整源码ZIP。"
+    ],
+    "description": "原分步文档准备界面、参与人增删与表单校验、PDF页内字段放置/移动/缩放、复制与返回继续控件。 不同于本地签名笔迹或PDF证据批注：围绕参与人与文档字段准备，所有步骤合一族；只研究UI，不签署或发文。",
+    "category": "输入与选择",
+    "licenseEvidence": {
+      "url": "https://github.com/documenso/documenso/blob/fdd0337bdd8f6afac64faf97113c65ed2dd0e2a2/LICENSE",
+      "sha256": "8486a10c4393cee1c25392769ddd3b2d6c242d6ec7928e1414efff7dfb2f07ef",
+      "scope": "Complete actual root license read; selected public paths outside EE directory. Transitive code/assets not cleared."
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-bulk-524",
+    "sourceScope": "Selected fixed original public source and complete root license evidence; not a complete runnable/archive or runtime audit",
+    "kind": "原版完整场景（仅来源）",
+    "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted",
+    "collectionPriority": "条件来源参考/仅公共入口"
+  },
+  {
+    "id": "bruno:request-response-workspace",
+    "title": "Bruno · 请求参数与响应检视工作区",
+    "source": "Bruno",
+    "repository": "https://github.com/usebruno/bruno",
+    "revision": "1982a7b1bfa865194292bd08d0fa9e090ae89b4a",
+    "sourcePath": "packages/bruno-app/src/components/RequestTabPanel/index.js",
+    "upstream": "https://github.com/usebruno/bruno/blob/1982a7b1bfa865194292bd08d0fa9e090ae89b4a/packages/bruno-app/src/components/RequestTabPanel/index.js",
+    "license": "MIT (root verified only; dependencies/assets not closed)",
+    "behavior": "原可调整请求/响应双面板，参数/头部/正文/鉴权/断言等页签、启用项数量、响应结果和请求取消状态组成完整接口工作区。",
+    "difference": "不同于RapiDoc文档阅读和单纯代码框，真实请求构造/返回检视产品UI；HTTP/GraphQL等不拆成协议换皮条目。",
+    "gaps": [
+      "原sendRequest/cancelRequest通过Redux及桌面宿主执行真实网络；本轮只读原件，没有运行请求、凭据或脚本。",
+      "鉴权配置/脚本tests/文件body/环境变量/IPC依赖未隔离，未来浏览器适配不能直接运行桌面源码或放宽eval网络。",
+      "仅来源：完整传递依赖/媒体字体许可、无网络CSP、状态/重复/中断清理与像素尚未运行审计；没有离线运行包或完整源码ZIP。"
+    ],
+    "description": "原可调整请求/响应双面板，参数/头部/正文/鉴权/断言等页签、启用项数量、响应结果和请求取消状态组成完整接口工作区。 不同于RapiDoc文档阅读和单纯代码框，真实请求构造/返回检视产品UI；HTTP/GraphQL等不拆成协议换皮条目。",
+    "category": "数据与状态",
+    "licenseEvidence": {
+      "url": "https://github.com/usebruno/bruno/blob/1982a7b1bfa865194292bd08d0fa9e090ae89b4a/license.md",
+      "sha256": "8891070a847e5047bf77d38d88d7dfbab1beab41e37c802b9f5b23f2bbb9c7be",
+      "scope": "Complete actual root license read; selected original source only, runtime/assets not cleared."
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-bulk-524",
+    "sourceScope": "Selected fixed original public source and complete root license evidence; not a complete runnable/archive or runtime audit",
+    "kind": "原版完整场景（仅来源）",
+    "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted",
+    "collectionPriority": "原版场景来源参考"
+  },
+  {
+    "id": "formbricks:survey-composition-workspace",
+    "title": "Formbricks · 问卷内容与流程编排工作区",
+    "source": "Formbricks",
+    "repository": "https://github.com/formbricks/formbricks",
+    "revision": "94ae9705fc8e6e355d90c743460110ae829c0378",
+    "sourcePath": "apps/web/modules/survey/editor/components/survey-editor.tsx",
+    "upstream": "https://github.com/formbricks/formbricks/blob/94ae9705fc8e6e355d90c743460110ae829c0378/apps/web/modules/survey/editor/components/survey-editor.tsx",
+    "license": "AGPL-3.0 public editor; root mixed-license exceptions and EE imports",
+    "behavior": "原问题块/欢迎结束页编辑、问题流程/样式/语言/设置分栏，块移动及属性修改、发布前限制与校验提示组成完整作者工作区。",
+    "difference": "与SurveyJS填写表单和Formity分支问答不同，这是问卷作者编辑环境；问题类型和颜色主题不拆条。",
+    "gaps": [
+      "根LICENSE明确apps/web/modules/ee为独立EE，指定packages/*为MIT，其他公共代码AGPL；本入口在apps/web/modules/survey，不能全项目标MIT。",
+      "入口直接导入modules/ee/creatives hooks及EE data-retention/teams types；EE条款另有客户端例外，传递边界需逐段核，未收EE实现/未获运行授权。",
+      "原保存/发布/路由刷新/主题媒体等实际服务逻辑未隔离；没有创建或发布问卷，未来需要原创fixture并遵守AGPL源码义务。",
+      "仅来源：完整传递依赖/媒体字体许可、无网络CSP、状态/重复/中断清理与像素尚未运行审计；没有离线运行包或完整源码ZIP。"
+    ],
+    "description": "原问题块/欢迎结束页编辑、问题流程/样式/语言/设置分栏，块移动及属性修改、发布前限制与校验提示组成完整作者工作区。 与SurveyJS填写表单和Formity分支问答不同，这是问卷作者编辑环境；问题类型和颜色主题不拆条。",
+    "category": "输入与选择",
+    "licenseEvidence": {
+      "url": "https://github.com/formbricks/formbricks/blob/94ae9705fc8e6e355d90c743460110ae829c0378/LICENSE",
+      "sha256": "b32292faef234d706f112f7ad45f6a13a21abe1a6e5aaafa033ef2ed51889f01",
+      "scope": "Complete actual root license read; selected public paths outside EE directory. Transitive code/assets not cleared."
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-bulk-524",
+    "sourceScope": "Selected fixed original public source and complete root license evidence; not a complete runnable/archive or runtime audit",
+    "kind": "原版完整场景（仅来源）",
+    "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted",
+    "collectionPriority": "条件来源参考/仅公共入口"
+  },
+  {
+    "id": "mantine-ui:authentication-flow",
+    "title": "注册与登录双模式复合表单",
+    "source": "Mantine UI",
+    "repository": "https://github.com/mantinedev/ui.mantine.dev",
+    "revision": "963b955c5cef4bcc6008d40a0431e46ef771c254",
+    "sourcePath": "lib/AuthenticationForm/AuthenticationForm.tsx",
+    "upstream": "https://github.com/mantinedev/ui.mantine.dev/blob/963b955c5cef4bcc6008d40a0431e46ef771c254/lib/AuthenticationForm/AuthenticationForm.tsx",
+    "license": "MIT (root verified only; dependencies/assets not closed)",
+    "behavior": "原useToggle登录/注册切换，注册时姓名及条款行条件出现，保留值与Mantine表单邮箱/密码校验；社交入口与邮件入口分区。",
+    "difference": "区别单一登录卡：同一原组件含双模式及条件字段；不把模式和社交按钮拆条。",
+    "gaps": [
+      "Google/Twitter按钮无认证处理，成功submit为空函数；terms默认true且无同意校验，密码代码拒绝长度<=6但文案称至少6。没有真实账户创建。品牌图标、Mantine core/form/hooks及传递许可未闭合。",
+      "仅固定原源码收录；未构建/运行/截图，默认CSP、外部资源、完整依赖及素材许可、交互清理和视觉均未验。"
+    ],
+    "description": "原useToggle登录/注册切换，注册时姓名及条款行条件出现，保留值与Mantine表单邮箱/密码校验；社交入口与邮件入口分区。 区别单一登录卡：同一原组件含双模式及条件字段；不把模式和社交按钮拆条。",
+    "category": "输入与选择",
+    "licenseEvidence": {
+      "url": "https://github.com/mantinedev/ui.mantine.dev/blob/963b955c5cef4bcc6008d40a0431e46ef771c254/LICENCE",
+      "sha256": "e184e978b1c031612c5486d2b9aee7d127f2f741f141bd9a957e90dc0fa90620",
+      "scope": "Complete root MIT read; dependencies and assets not audited"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-bulk-524",
+    "sourceScope": "Selected fixed original code and complete root license evidence; no complete runnable/archive or runtime audit",
+    "kind": "原版完整场景（仅来源）",
+    "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted",
+    "sourceSha256": "e68fda24713c8ca048583c53ba7670fc4c34441497a1ed482785a8e7b24f9433"
+  },
+  {
+    "id": "mantine-ui:contact-information-form",
+    "title": "分栏联系信息与消息表单",
+    "source": "Mantine UI",
+    "repository": "https://github.com/mantinedev/ui.mantine.dev",
+    "revision": "963b955c5cef4bcc6008d40a0431e46ef771c254",
+    "sourcePath": "lib/GetInTouch/GetInTouch.tsx",
+    "upstream": "https://github.com/mantinedev/ui.mantine.dev/blob/963b955c5cef4bcc6008d40a0431e46ef771c254/lib/GetInTouch/GetInTouch.tsx",
+    "license": "MIT (root verified only; dependencies/assets not closed)",
+    "behavior": "原圆角Paper组合彩色联系信息侧栏、SVG背景、姓名/邮箱/主题/多行留言及发送区，响应式分栏。",
+    "difference": "完整联系场景不是输入框变体；有地址/工作时间等资料区，与认证表单任务及结构不同。",
+    "gaps": [
+      "原onSubmit仅preventDefault，无发送或回执；邮箱字段没有type=email。联系信息为原MOCKDATA而非用户信息。bg.svg归属无独立素材说明，根MIT不代替素材及Tabler传递许可审计。",
+      "仅固定原源码收录；未构建/运行/截图，默认CSP、外部资源、完整依赖及素材许可、交互清理和视觉均未验。"
+    ],
+    "description": "原圆角Paper组合彩色联系信息侧栏、SVG背景、姓名/邮箱/主题/多行留言及发送区，响应式分栏。 完整联系场景不是输入框变体；有地址/工作时间等资料区，与认证表单任务及结构不同。",
+    "category": "输入与选择",
+    "licenseEvidence": {
+      "url": "https://github.com/mantinedev/ui.mantine.dev/blob/963b955c5cef4bcc6008d40a0431e46ef771c254/LICENCE",
+      "sha256": "e184e978b1c031612c5486d2b9aee7d127f2f741f141bd9a957e90dc0fa90620",
+      "scope": "Complete root MIT read; dependencies and assets not audited"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-bulk-524",
+    "sourceScope": "Selected fixed original code and complete root license evidence; no complete runnable/archive or runtime audit",
+    "kind": "原版完整场景（仅来源）",
+    "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted",
+    "sourceSha256": "a58fde046bd093daaf92b6f2f2921ef0861ecb7338673dc3034939762f155098"
+  },
+  {
+    "id": "mantine-ui:responsive-mega-navigation",
+    "title": "桌面巨型菜单与移动全屏导航",
+    "source": "Mantine UI",
+    "repository": "https://github.com/mantinedev/ui.mantine.dev",
+    "revision": "963b955c5cef4bcc6008d40a0431e46ef771c254",
+    "sourcePath": "lib/HeaderMegaMenu/HeaderMegaMenu.tsx",
+    "upstream": "https://github.com/mantinedev/ui.mantine.dev/blob/963b955c5cef4bcc6008d40a0431e46ef771c254/lib/HeaderMegaMenu/HeaderMegaMenu.tsx",
+    "license": "MIT (root verified only; dependencies/assets not closed)",
+    "behavior": "原桌面HoverCard双列功能菜单与底部CTA；移动Burger控制全屏Drawer、Features嵌套Collapse，原关闭与开关状态。",
+    "difference": "一族跨断点完整导航结构，不以桌面/移动或菜单项拆条；不同于普通孤立下拉或侧边栏。",
+    "gaps": [
+      "链接均#且CTA无业务回调；原mock含Pokémon描述，需替本地原创文本。ScrollArea高度calc字符串少闭括号；MantineLogo品牌、Tabler、portal焦点/关闭及资源许可未验。",
+      "仅固定原源码收录；未构建/运行/截图，默认CSP、外部资源、完整依赖及素材许可、交互清理和视觉均未验。"
+    ],
+    "description": "原桌面HoverCard双列功能菜单与底部CTA；移动Burger控制全屏Drawer、Features嵌套Collapse，原关闭与开关状态。 一族跨断点完整导航结构，不以桌面/移动或菜单项拆条；不同于普通孤立下拉或侧边栏。",
+    "category": "导航与组织",
+    "licenseEvidence": {
+      "url": "https://github.com/mantinedev/ui.mantine.dev/blob/963b955c5cef4bcc6008d40a0431e46ef771c254/LICENCE",
+      "sha256": "e184e978b1c031612c5486d2b9aee7d127f2f741f141bd9a957e90dc0fa90620",
+      "scope": "Complete root MIT read; dependencies and assets not audited"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-bulk-524",
+    "sourceScope": "Selected fixed original code and complete root license evidence; no complete runnable/archive or runtime audit",
+    "kind": "原版完整场景（仅来源）",
+    "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted",
+    "sourceSha256": "532e5a637f847d47c1cbef020330558b6f82f9c9ed45e956ed6677cda0aed00f"
+  },
+  {
+    "id": "flowbite-admin:pricing-comparison-faq-page",
+    "title": "套餐定价、功能对照与购买FAQ整页",
+    "source": "Flowbite Admin Dashboard",
+    "repository": "https://github.com/themesberg/flowbite-admin-dashboard",
+    "revision": "229df7ff25808ab2bbda65f03f2397a05f7b4288",
+    "sourcePath": "content/pages/pricing.html",
+    "upstream": "https://github.com/themesberg/flowbite-admin-dashboard/blob/229df7ff25808ab2bbda65f03f2397a05f7b4288/content/pages/pricing.html",
+    "license": "MIT (root verified only; dependencies/assets not closed)",
+    "behavior": "原完整定价页包含月/年开关外观、三档套餐权益、详细功能比较表及多主题购买FAQ；保持原整页信息层次。",
+    "difference": "不是单个价格卡：完整套餐比较与售前说明阅读页；与Tremor套餐申请的输入/状态场景不同。",
+    "gaps": [
+      "月年checkbox仅CSS切换外观，没有价格联动；CTA/联系/下载均#，不提供购买或下载。FAQ中商品授权文案是演示内容不是本库适用许可；原inline图标来源、Hugo布局/Tailwind/Flowbite传递资源未审。",
+      "仅固定原源码收录；未构建/运行/截图，默认CSP、外部资源、完整依赖及素材许可、交互清理和视觉均未验。"
+    ],
+    "description": "原完整定价页包含月/年开关外观、三档套餐权益、详细功能比较表及多主题购买FAQ；保持原整页信息层次。 不是单个价格卡：完整套餐比较与售前说明阅读页；与Tremor套餐申请的输入/状态场景不同。",
+    "category": "展示与媒体",
+    "licenseEvidence": {
+      "url": "https://github.com/themesberg/flowbite-admin-dashboard/blob/229df7ff25808ab2bbda65f03f2397a05f7b4288/LICENSE",
+      "sha256": "2ef12ba4b6b1172b8139d382e8b285e1ae034350151a71cb43fe55ca63199e6e",
+      "scope": "Complete root MIT read; dependencies and assets not audited"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-bulk-524",
+    "sourceScope": "Selected fixed original code and complete root license evidence; no complete runnable/archive or runtime audit",
+    "kind": "原版完整场景（仅来源）",
+    "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted",
+    "sourceSha256": "d9efe24b51074cb59b7d84d8d31050bd749b41aaa5197364544010aad0f410b2"
+  },
+  {
+    "id": "react-three-rapier:joint-chain-scene",
+    "title": "关节链与滑动约束空间场景",
+    "source": "React Three Rapier",
+    "repository": "https://github.com/pmndrs/react-three-rapier",
+    "revision": "ae5c3fede5ca489fd7eaa8271e9d9c5eabc88e98",
+    "sourcePath": "demo/src/examples/joints/JointsExample.tsx",
+    "upstream": "https://github.com/pmndrs/react-three-rapier/blob/ae5c3fede5ca489fd7eaa8271e9d9c5eabc88e98/demo/src/examples/joints/JointsExample.tsx",
+    "license": "MIT (selected fixed source verified; complete runtime/asset audit pending)",
+    "behavior": "40节球体链由球面关节连接，首节运动学驱动；另有原滑动关节限位示例，配轨道视角。",
+    "difference": "不同于魔方分层旋转/弹簧光团，这是刚体约束传播；属于空间示教素材，不称Agent任务UI。",
+    "description": "40节球体链由球面关节连接，首节运动学驱动；另有原滑动关节限位示例，配轨道视角。 不同于魔方分层旋转/弹簧光团，这是刚体约束传播；属于空间示教素材，不称Agent任务UI。",
+    "gaps": [
+      "Rapier底层WASM及Three/drei/fiber等运行许可/二进制发布路线未闭合；不使用base64包装或扩大CSP。",
+      "原代码持续useFrame及物理步进，隐藏/减动/失败/退出释放须实际验证；40节性能、关节行为及GPU像素未验。",
+      "本轮仅固定源及许可文本检查；未安装构建/运行/测试交互或清理，也未验浏览器像素。无封面/截图；所有封面由Grok处理。"
+    ],
+    "category": "视觉与动效",
+    "format": "空间交互组件",
+    "kind": "原版视觉场景（仅来源）",
+    "licenseEvidence": {
+      "url": "https://github.com/pmndrs/react-three-rapier/blob/ae5c3fede5ca489fd7eaa8271e9d9c5eabc88e98/LICENSE",
+      "sha256": "cd14add33d47bcecae9fed5559224ae135c5ec41e1d3a126601f5fbd82291834",
+      "scope": "Complete fixed root license and selected source files read; runtime dependencies not closed"
+    },
+    "sourceEvidence": [
+      {
+        "path": "demo/src/examples/joints/JointsExample.tsx",
+        "sha256": "28bbe9762c242da2978d63f03ef4ba2f16b3733482881676b38f00ef0c4af5a1"
+      },
+      {
+        "path": "packages/react-three-rapier/src/hooks/joints.ts",
+        "sha256": "455b356a29da6d98eae2bb59b41944b2aa2ae7280348782055c6ac7e306d1c9a"
+      },
+      {
+        "path": "demo/src/hooks/use-reset-orbit-controls.tsx",
+        "sha256": "246c6cc7ab7b59f6944397f5d0e2eed8ef35d5a4f6033d23d9fa7c9b2e7345ca"
+      }
+    ],
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-bulk-524",
+    "sourceScope": "3 selected original source files plus README and complete license; no full runnable archive",
+    "buildStatus": "fixed selected source/license read; no runtime or visual verification",
+    "counts": {
+      "independentFamily": 1,
+      "completedPreviews": 0
+    }
+  },
+  {
+    "id": "react-three-csg:live-solid-boolean",
+    "title": "实时三维布尔切割材质",
+    "source": "React Three CSG",
+    "repository": "https://github.com/pmndrs/react-three-csg",
+    "revision": "b668971b2c65fdb2d0b615965634c2d73785355a",
+    "sourcePath": ".storybook/stories/advanced/Updating.stories.tsx",
+    "upstream": "https://github.com/pmndrs/react-three-csg/blob/b668971b2c65fdb2d0b615965634c2d73785355a/.storybook/stories/advanced/Updating.stories.tsx",
+    "license": "MIT (selected fixed source verified; complete runtime/asset audit pending)",
+    "behavior": "原Updating场景旋转基础立方体并每帧重算球体差集；保留多材质切面示例为同族，原Setup含OrbitControls。",
+    "difference": "与已收Paper二维矢量布尔不同，为实体三维表面交集/差集与切面材质；自动变化不是已实现拖拽建模器。",
+    "description": "原Updating场景旋转基础立方体并每帧重算球体差集；保留多材质切面示例为同族，原Setup含OrbitControls。 与已收Paper二维矢量布尔不同，为实体三维表面交集/差集与切面材质；自动变化不是已实现拖拽建模器。",
+    "gaps": [
+      "three-bvh-csg/bvh、Three/fiber/drei完整运行许可和性能尚未闭合。",
+      "每帧64细分球体运算可能昂贵；需停帧/可用性/几何dispose及正常CSP验证，不称原完整编辑器已接入。",
+      "本轮仅固定源及许可文本检查；未安装构建/运行/测试交互或清理，也未验浏览器像素。无封面/截图；所有封面由Grok处理。"
+    ],
+    "category": "视觉与动效",
+    "format": "空间交互组件",
+    "kind": "原版视觉场景（仅来源）",
+    "licenseEvidence": {
+      "url": "https://github.com/pmndrs/react-three-csg/blob/b668971b2c65fdb2d0b615965634c2d73785355a/LICENSE",
+      "sha256": "cd14add33d47bcecae9fed5559224ae135c5ec41e1d3a126601f5fbd82291834",
+      "scope": "Complete fixed root license and selected source files read; runtime dependencies not closed"
+    },
+    "sourceEvidence": [
+      {
+        "path": ".storybook/stories/advanced/Updating.stories.tsx",
+        "sha256": "67d4ce3933092f2d8fff76d266e88b8b4be38cde9460925ca68e876c6dec2865"
+      },
+      {
+        "path": ".storybook/stories/advanced/MultipleMaterials.stories.tsx",
+        "sha256": "850aa24a941e757c6b8f9d86f997eb2888c858c1120a2c8822ac743a137846f1"
+      },
+      {
+        "path": ".storybook/common/Setup.tsx",
+        "sha256": "dd993630aee5cfa4362baa18c33d23963d2153dc6d091ae7767f51b2d1e13655"
+      },
+      {
+        "path": "src/index.tsx",
+        "sha256": "a7cd60393c98cad91d41f38a840ead6d8e0c2b82a655e3b64c42f96efb804c96"
+      }
+    ],
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-bulk-524",
+    "sourceScope": "4 selected original source files plus README and complete license; no full runnable archive",
+    "buildStatus": "fixed selected source/license read; no runtime or visual verification",
+    "counts": {
+      "independentFamily": 1,
+      "completedPreviews": 0
+    }
+  },
+  {
+    "id": "proton:gravity-well-trails",
+    "title": "十六引力井彩色轨迹场",
+    "source": "Proton",
+    "repository": "https://github.com/drawcall/Proton",
+    "revision": "b4fdef5e5416d70a788978bec0fb4a1be26514b4",
+    "sourcePath": "example/behaviour/gravitywell/linebug.html",
+    "upstream": "https://github.com/drawcall/Proton/blob/b4fdef5e5416d70a788978bec0fb4a1be26514b4/example/behaviour/gravitywell/linebug.html",
+    "license": "MIT (selected fixed source verified; complete runtime/asset audit pending)",
+    "behavior": "原Canvas2D例一次发射300粒子，16环形引力井+中央斥力形成细线轨迹；按下拖动改变吸引点。",
+    "difference": "有力场与跨帧轨迹积累，区别普通confetti或指针图片拖尾；是视觉实验非Agent分析数据。",
+    "description": "原Canvas2D例一次发射300粒子，16环形引力井+中央斥力形成细线轨迹；按下拖动改变吸引点。 有力场与跨帧轨迹积累，区别普通confetti或指针图片拖尾；是视觉实验非Agent分析数据。",
+    "gaps": [
+      "原HTML加载localhost:3001的Proton build及stats/rAF辅助库，不能直接作为离线预览。",
+      "需真正引擎闭包与第三方许可、指针取消/失焦恢复、resize、300粒子和退出RAF释放测试，不能把原长期tick算清理通过。",
+      "本轮仅固定源及许可文本检查；未安装构建/运行/测试交互或清理，也未验浏览器像素。无封面/截图；所有封面由Grok处理。"
+    ],
+    "category": "视觉与动效",
+    "format": "材质设计族",
+    "kind": "原版视觉场景（仅来源）",
+    "licenseEvidence": {
+      "url": "https://github.com/drawcall/Proton/blob/b4fdef5e5416d70a788978bec0fb4a1be26514b4/LICENSE",
+      "sha256": "8c84c176332fce44c4267bbd48fe9311bfb4a4d3dd9050df0216622d114ca49a",
+      "scope": "Complete fixed root license and selected source files read; runtime dependencies not closed"
+    },
+    "sourceEvidence": [
+      {
+        "path": "example/behaviour/gravitywell/linebug.html",
+        "sha256": "1e4552f9f4ba45875d1e082cd0bcd7526947813b29baa9d16db452cdc9005c63"
+      },
+      {
+        "path": "src/behaviour/GravityWell.js",
+        "sha256": "556f48ae6fc34b3a27b0ca5d4bf30a0eff2db7fd18f53ec2ea07fb8b1545fecd"
+      },
+      {
+        "path": "src/behaviour/Attraction.js",
+        "sha256": "c037566b498eda9940f9c84069c46bb9b2ba90b3a1eb09fa63a70fb2f45469e6"
+      }
+    ],
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-bulk-524",
+    "sourceScope": "3 selected original source files plus README and complete license; no full runnable archive",
+    "buildStatus": "fixed selected source/license read; no runtime or visual verification",
+    "counts": {
+      "independentFamily": 1,
+      "completedPreviews": 0
+    }
+  },
+  {
+    "id": "looper:radial-phase-field",
+    "title": "径向相位光学点阵",
+    "source": "Looper",
+    "repository": "https://github.com/spite/looper",
+    "revision": "9fc2130c4e087113623c508fefd9d154876bb937",
+    "sourcePath": "loops/18.js",
+    "upstream": "https://github.com/spite/looper/blob/9fc2130c4e087113623c508fefd9d154876bb937/loops/18.js",
+    "license": "MIT (selected fixed source verified; complete runtime/asset audit pending)",
+    "behavior": "原Loop18用Canvas2D在同心环计算点位，按径向相位同步偏移与缩放，构成2秒循环光学材质。",
+    "difference": "不靠图像纹理；是相位驱动几何点阵而非现有图像抖色/3D光团。不冒称物理流体或任务状态。",
+    "description": "原Loop18用Canvas2D在同心环计算点位，按径向相位同步偏移与缩放，构成2秒循环光学材质。 不靠图像纹理；是相位驱动几何点阵而非现有图像抖色/3D光团。不冒称物理流体或任务状态。",
+    "gaps": [
+      "选定draw函数和context2d/easings原件，未收整套Looper或构建宿主。",
+      "源固定800px画布/400px样式；未来需真实draw调度、暂停/减动/resize和卸载测试。此项可能低成本Canvas2D适配，但本轮未运行。",
+      "本轮仅固定源及许可文本检查；未安装构建/运行/测试交互或清理，也未验浏览器像素。无封面/截图；所有封面由Grok处理。"
+    ],
+    "category": "视觉与动效",
+    "format": "材质设计族",
+    "kind": "原版视觉场景（仅来源）",
+    "licenseEvidence": {
+      "url": "https://github.com/spite/looper/blob/9fc2130c4e087113623c508fefd9d154876bb937/LICENSE",
+      "sha256": "4ce72b070828119e210322fd2805c55ec71a83a10119e64fa41e2e1d97cac48f",
+      "scope": "Complete fixed root license and selected source files read; runtime dependencies not closed"
+    },
+    "sourceEvidence": [
+      {
+        "path": "loops/18.js",
+        "sha256": "2e2d73893ea6d83fe1533569af7664c9f1dd3f10d814151c4ef56545cf274124"
+      },
+      {
+        "path": "modules/context2d.js",
+        "sha256": "7743eb88462e8c434f1c0251ac065acbfa61f7401d3f286bff933a42021e15f7"
+      },
+      {
+        "path": "modules/easings.js",
+        "sha256": "d29a83a0f1507c6a75510eb64688bcedd0c35f42893b4958c254134167e3fc29"
+      }
+    ],
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-bulk-524",
+    "sourceScope": "3 selected original source files plus README and complete license; no full runnable archive",
+    "buildStatus": "fixed selected source/license read; no runtime or visual verification",
+    "counts": {
+      "independentFamily": 1,
+      "completedPreviews": 0
+    }
+  },
+  {
+    "id": "game-icons:attributed-symbol-family",
+    "title": "Game Icons 叙事剪影图标系列",
+    "source": "Game Icons",
+    "repository": "https://github.com/game-icons/icons",
+    "revision": "82d948812bfe3f269ef8f731dcdb07b08160edc4",
+    "sourcePath": "delapouite/archive-research.svg",
+    "upstream": "https://github.com/game-icons/icons/blob/82d948812bfe3f269ef8f731dcdb07b08160edc4/delapouite/archive-research.svg",
+    "license": "CC-BY-3.0 (selected fixed source verified; complete runtime/asset audit pending)",
+    "behavior": "原512px高对比叙事图形，样本为档案研究、脑暴和齿轮，适合知识卡片/研究工具具象图形。",
+    "difference": "不是又一套微型线条工具栏：强调复杂剪影和叙事符号；仍有同义语义且一系列只一条。",
+    "description": "原512px高对比叙事图形，样本为档案研究、脑暴和齿轮，适合知识卡片/研究工具具象图形。 不是又一套微型线条工具栏：强调复杂剪影和叙事符号；仍有同义语义且一系列只一条。",
+    "gaps": [
+      "逐作者署名必须随最终作品展示；本轮仅Delapouite/Lorc三图，不能将全仓混合CC0与CC-BY统称MIT。",
+      "原图保留黑白底和原路径，不以反色/大小做新增；未来逐图归属与全部安全/筛选/分页验证仍需完成。",
+      "本轮仅固定源及许可文本检查；未安装构建/运行/测试交互或清理，也未验浏览器像素。无封面/截图；所有封面由Grok处理。"
+    ],
+    "category": "图标系列",
+    "format": "图标家族",
+    "kind": "图标系列",
+    "licenseEvidence": {
+      "url": "https://github.com/game-icons/icons/blob/82d948812bfe3f269ef8f731dcdb07b08160edc4/license.txt",
+      "sha256": "fac95252798668fab5ea2cb08338f2ebc6bf894a72b19a15af1ca62f0a6d2e79",
+      "scope": "Complete fixed root license and selected source files read; runtime dependencies not closed",
+      "legalcode": {
+        "url": "https://creativecommons.org/licenses/by/3.0/legalcode.txt",
+        "sha256": "e6bc9e9c474700b708f568bac9e5a8a9bcb2b1dad53442f5ba449fcb848b8e76",
+        "scope": "Complete CC BY 3.0 Unported legal text obtained from Creative Commons, alongside original contributor/permission notice"
+      }
+    },
+    "sourceEvidence": [
+      {
+        "path": "delapouite/archive-research.svg",
+        "sha256": "6b0e383b93e91ee8f67355dafaf3d747b332102a185ecb7a6e16c415fad3ff03"
+      },
+      {
+        "path": "lorc/brainstorm.svg",
+        "sha256": "8e3acbb0847da3a527b9aed733bf4648ad0a4d9cb986d76c64e02bd4d6ac964e"
+      },
+      {
+        "path": "lorc/gears.svg",
+        "sha256": "260ff96e39b1804e74072658cfa6cd382062826f6e8d40cb106fc530a6d38548"
+      }
+    ],
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-bulk-524",
+    "sourceScope": "3 selected original source files plus README and complete license; no full runnable archive",
+    "buildStatus": "fixed selected source/license read; no runtime or visual verification",
+    "counts": {
+      "independentFamily": 1,
+      "completedPreviews": 0
+    },
+    "attribution": [
+      {
+        "author": "Delapouite",
+        "authorURL": "https://delapouite.com",
+        "paths": [
+          "delapouite/archive-research.svg"
+        ]
+      },
+      {
+        "author": "Lorc",
+        "authorURL": "http://lorcblog.blogspot.com",
+        "paths": [
+          "lorc/brainstorm.svg",
+          "lorc/gears.svg"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bytesize-icons:official-series",
+    "title": "Bytesize 32px极简几何图标系列",
+    "source": "Bytesize Icons",
+    "repository": "https://github.com/danklammer/bytesize-icons",
+    "revision": "210d2f81c340c838053eed4c5a0385fbf2a033e9",
+    "sourcePath": "dist/icons/activity.svg",
+    "upstream": "https://github.com/danklammer/bytesize-icons/blob/210d2f81c340c838053eed4c5a0385fbf2a033e9/dist/icons/activity.svg",
+    "license": "MIT (selected fixed source verified; complete runtime/asset audit pending)",
+    "behavior": "原32px网格、少量简洁笔画与可控stroke风格，样本活动/代码/消息，适合轻量内容工具。",
+    "difference": "与已有线性图标语义重叠；区别为原32px极简几何体系，不把stroke宽度/大小计新glyph或新系列。",
+    "description": "原32px网格、少量简洁笔画与可控stroke风格，样本活动/代码/消息，适合轻量内容工具。 与已有线性图标语义重叠；区别为原32px极简几何体系，不把stroke宽度/大小计新glyph或新系列。",
+    "gaps": [
+      "只收三个SVG原件，未完成完整系列检索/分页/许可附带与浏览器展示。",
+      "原README有SVG继承描边样式限制；未来需保留原比例、透明填充和描边策略，不宣称任意尺寸像素已验。",
+      "本轮仅固定源及许可文本检查；未安装构建/运行/测试交互或清理，也未验浏览器像素。无封面/截图；所有封面由Grok处理。"
+    ],
+    "category": "图标系列",
+    "format": "图标家族",
+    "kind": "图标系列",
+    "licenseEvidence": {
+      "url": "https://github.com/danklammer/bytesize-icons/blob/210d2f81c340c838053eed4c5a0385fbf2a033e9/LICENSE.md",
+      "sha256": "29b7125ec7139a4b56d454eeddbeed7afc312a8fb97f8eaa2edfbb7f823fb481",
+      "scope": "Complete fixed root license and selected source files read; runtime dependencies not closed"
+    },
+    "sourceEvidence": [
+      {
+        "path": "dist/icons/activity.svg",
+        "sha256": "ff046e55d3bc8dbd613e234212c1d3c71f52235eef8501d2cce640b28c3d37bd"
+      },
+      {
+        "path": "dist/icons/code.svg",
+        "sha256": "553cfd89081d07c4bf3b2241f5b8b3f14f8891a615a271d9ea382d53da70985b"
+      },
+      {
+        "path": "dist/icons/message.svg",
+        "sha256": "eac01b948395d9900f3ed8def03c07e83616f22fab4620324a2ecaa172f7cb79"
+      }
+    ],
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-bulk-524",
+    "sourceScope": "3 selected original source files plus README and complete license; no full runnable archive",
+    "buildStatus": "fixed selected source/license read; no runtime or visual verification",
+    "counts": {
+      "independentFamily": 1,
+      "completedPreviews": 0
+    }
   }
 ]
