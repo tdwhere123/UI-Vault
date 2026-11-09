@@ -1,0 +1,38 @@
+{
+  "repository": "https://github.com/spite/looper",
+  "revision": "9fc2130c4e087113623c508fefd9d154876bb937",
+  "sourcePath": "loops/18.js",
+  "sourceFiles": [
+    {
+      "path": "loops/18.js",
+      "sha256": "2e2d73893ea6d83fe1533569af7664c9f1dd3f10d814151c4ef56545cf274124"
+    },
+    {
+      "path": "modules/context2d.js",
+      "sha256": "7743eb88462e8c434f1c0251ac065acbfa61f7401d3f286bff933a42021e15f7"
+    },
+    {
+      "path": "modules/easings.js",
+      "sha256": "d29a83a0f1507c6a75510eb64688bcedd0c35f42893b4958c254134167e3fc29"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "4ce72b070828119e210322fd2805c55ec71a83a10119e64fa41e2e1d97cac48f"
+    },
+    {
+      "path": "README.md",
+      "sha256": "e223788448ed196edfec121382d621c9da9b880778a51c73cb957e2039a3bbbf"
+    }
+  ],
+  "originalDrawBodyUnchanged": true,
+  "context2dUnchanged": true,
+  "sourceModification": "Remove only unused easings import; original draw algorithm and native canvas 800x800 preserved.",
+  "runtimeDependencies": [],
+  "buildTool": "esbuild 0.25.12",
+  "adapters": [
+    "Original bundled lazy module initialization caught for null/throwing Canvas2D; no network import/chunk.",
+    "Host owns play/pause/reset/manual phase and RAF. Hidden stops; visible resumes prior playing mode. Reduced initial or dynamic stops; no automatic re-enable.",
+    "pagehide removes canvas/listeners/RAF; late draw throw/contextlost stops and shows unavailable, no fake successful frame.",
+    "CSS scales same original canvas responsively; no image, screenshot or external resource."
+  ]
+}
