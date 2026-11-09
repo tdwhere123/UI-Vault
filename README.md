@@ -2,7 +2,7 @@
 
 网站：<https://tdwhere123.github.io/UI-Vault/>
 
-当前共收录 **725 条**：其中 **524 条可打开预览（241 条原始素材＋283 条后续接入预览）**，另有 **201 条仅来源记录**，不计入主图鉴预览数。原始 241 件包括 215 件精选界面、20 件保留基础素材、6 套图标系列。正在向 1000 件优质素材扩充；图标按系列单列，字重、尺寸和单枚 glyph 不凑数。已有图标重叠暂留待统一整理。
+当前共收录 **743 条**：其中 **525 条可打开预览（241 条原始素材＋284 条后续接入预览）**，另有 **218 条仅来源记录**，不计入主图鉴预览数。原始 241 件包括 215 件精选界面、20 件保留基础素材、6 套图标系列。正在向 1000 件优质素材扩充；图标按系列单列，字重、尺寸和单枚 glyph 不凑数。已有图标重叠暂留待统一整理。
 
 ## 当前内容
 
@@ -370,3 +370,11 @@ Restored existing Meniscus liquid navigation as a genuine local preview, preserv
 Added **19 source-only families**: folded DOM and physical paper, cut-corner surfaces, pixel messages, DOS typography and a carved toggle; terminal recordings, annotated EPUB reading, captioned galleries, structured-data graphs, timing diagrams and vector illustration; cinema detail, pixel-frame art, retro split-window audio, a knowledge garden and two differentiated reading layouts; one Maki cartographic icon series. Glyphs, palettes, tabs and states are not separate entries.
 
 Current totals: **725 collected = 524 previews + 201 source-only records**. Mapped covers remain 470; 54 preview entries use bounded live cards. Existing icon entries, Grok covers/reports and frontend behavior are unchanged. Root licenses are recorded at fixed revisions; model/HDR assets, photos, books, fonts, skins, trademark material, third-party dependencies and full application runtime are not automatically covered. Simple Icons was excluded pending per-brand rights, and source-only records do not imply completed downloads, previews or visual acceptance.
+
+## Ink timeline and diverse sources · 525 previews / 743 collected
+
+Restored the existing Plop ink status timeline using fixed original StatusTimeline, seeded Lettering, Sticker Button, SVG filters, CSS modules and original token generator. Four-step advance/clamp/reset and orientation are local interaction, not a live Agent/backend. Hidden views stop display work while retaining progress and orientation. Sound and vibration are disabled. Original font files are omitted in favor of the original local fallback; paper texture is original generated SVG text, not a screenshot or encoded binary. Complete workspace MIT and actual React/react-dom/scheduler licenses accompany the runtime. DOM tests do not establish native keyboard click activation, CSS/filter/container-query pixels or device performance.
+
+Added **18 source-only families**: generative patterns, luminous wave and ambient bubbles, monochrome retro controls and opt-in expressive typography; animation/sketch/diagram creation, image/vector optimization and musical patterns; chaptered listening/video, geographic-feature editing and three focused reading/knowledge workspaces; one country/region flag icon series. This is not 18 completed previews, and glyphs, themes, layouts or countries are not separate entries. Obnoxious strobe is explicitly excluded from any future demo; other motion requires static defaults, deliberate activation, stopping and reduced-motion handling.
+
+Current totals: **743 collected = 525 previews + 218 source-only records**. 470 mapped covers remain; 55 posterless previews use the existing bounded live-card path. All previous candidates except the restored Plop record, all Grok covers/reports and frontend behavior are preserved. Source records explicitly retain third-party dependency, media/font, service, worker/WASM and permission gaps; root licenses do not authorize those implicitly. Flag symbols are not locale or nationality inference and do not imply official endorsement.
