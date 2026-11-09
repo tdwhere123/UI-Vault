@@ -1,0 +1,26 @@
+--- archived/raws-color-picker.tsx
++++ adapted/raws-color-picker.tsx
+@@ -261,12 +261,17 @@
+   }
+ 
+   // Copy color to clipboard
+-  function copyToClipboard() {
+-    navigator.clipboard.writeText(hexValue);
+-    toast('Copied!', {
+-      description: `${hexValue} copied to clipboard`,
+-      duration: 2000,
+-    });
++  async function copyToClipboard() {
++    if (!navigator.clipboard || typeof navigator.clipboard.writeText !== 'function') {
++      toast.error('Copy unavailable', { description: 'Select the HEX field and copy manually.', duration: 3000 });
++      return;
++    }
++    try {
++      await navigator.clipboard.writeText(hexValue);
++      toast('Copied!', { description: `${hexValue} copied to clipboard`, duration: 2000 });
++    } catch {
++      toast.error('Copy unavailable', { description: 'Select the HEX field and copy manually.', duration: 3000 });
++    }
+   }
+ 
+   // Use eyedropper if available
