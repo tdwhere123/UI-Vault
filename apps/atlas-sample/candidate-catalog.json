@@ -14542,24 +14542,11 @@
   },
   {
     "id": "game-icons:attributed-symbol-family",
-    "title": "Game Icons 叙事剪影图标系列",
     "source": "Game Icons",
     "repository": "https://github.com/game-icons/icons",
     "revision": "82d948812bfe3f269ef8f731dcdb07b08160edc4",
-    "sourcePath": "delapouite/archive-research.svg",
-    "upstream": "https://github.com/game-icons/icons/blob/82d948812bfe3f269ef8f731dcdb07b08160edc4/delapouite/archive-research.svg",
-    "license": "CC-BY-3.0 (selected fixed source verified; complete runtime/asset audit pending)",
-    "behavior": "原512px高对比叙事图形，样本为档案研究、脑暴和齿轮，适合知识卡片/研究工具具象图形。",
-    "difference": "不是又一套微型线条工具栏：强调复杂剪影和叙事符号；仍有同义语义且一系列只一条。",
-    "description": "原512px高对比叙事图形，样本为档案研究、脑暴和齿轮，适合知识卡片/研究工具具象图形。 不是又一套微型线条工具栏：强调复杂剪影和叙事符号；仍有同义语义且一系列只一条。",
-    "gaps": [
-      "逐作者署名必须随最终作品展示；本轮仅Delapouite/Lorc三图，不能将全仓混合CC0与CC-BY统称MIT。",
-      "原图保留黑白底和原路径，不以反色/大小做新增；未来逐图归属与全部安全/筛选/分页验证仍需完成。",
-      "本轮仅固定源及许可文本检查；未安装构建/运行/测试交互或清理，也未验浏览器像素。无封面/截图；所有封面由Grok处理。"
-    ],
-    "category": "图标系列",
-    "format": "图标家族",
-    "kind": "图标系列",
+    "upstream": "https://github.com/game-icons/icons/tree/82d948812bfe3f269ef8f731dcdb07b08160edc4/delapouite",
+    "sourcePath": "delapouite/*.svg",
     "licenseEvidence": {
       "url": "https://github.com/game-icons/icons/blob/82d948812bfe3f269ef8f731dcdb07b08160edc4/license.txt",
       "sha256": "fac95252798668fab5ea2cb08338f2ebc6bf894a72b19a15af1ca62f0a6d2e79",
@@ -14570,49 +14557,30 @@
         "scope": "Complete CC BY 3.0 Unported legal text obtained from Creative Commons, alongside original contributor/permission notice"
       }
     },
-    "sourceEvidence": [
-      {
-        "path": "delapouite/archive-research.svg",
-        "sha256": "6b0e383b93e91ee8f67355dafaf3d747b332102a185ecb7a6e16c415fad3ff03"
-      },
-      {
-        "path": "lorc/brainstorm.svg",
-        "sha256": "8e3acbb0847da3a527b9aed733bf4648ad0a4d9cb986d76c64e02bd4d6ac964e"
-      },
-      {
-        "path": "lorc/gears.svg",
-        "sha256": "260ff96e39b1804e74072658cfa6cd382062826f6e8d40cb106fc530a6d38548"
-      }
+    "difference": "不是又一套微型线条工具栏：强调复杂剪影和叙事符号；仍有同义语义且一系列只一条。",
+    "title": "游戏符号作者图标系列",
+    "description": "固定版本一位作者目录的2022枚原黑白图标，可搜索、分页和放大；不是全仓4239枚，整个图标系列只计一条。",
+    "behavior": "固定版本一位作者目录的2022枚原黑白图标，可搜索、分页和放大；不是全仓4239枚，整个图标系列只计一条。",
+    "kind": "图标系列",
+    "format": "图标家族",
+    "category": "图标系列",
+    "license": "CC-BY-3.0 (original SVG); MIT (viewer)",
+    "batch": "game-icons-01",
+    "preview": "batches/game-icons-01/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "固定 Delapouite 作者目录2022枚，非全仓库4239枚，其他作者未在此子集中展示。",
+      "原黑白SVG完整保留；原创图鉴浏览器，不是官方应用或品牌背书。",
+      "DOM、源码保真和实际loader通过，未作原生视觉截图验收。"
     ],
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-bulk-524",
-    "sourceScope": "3 selected original source files plus README and complete license; no full runnable archive",
-    "buildStatus": "fixed selected source/license read; no runtime or visual verification",
-    "counts": {
-      "independentFamily": 1,
-      "completedPreviews": 0
-    },
-    "attribution": [
-      {
-        "author": "Delapouite",
-        "authorURL": "https://delapouite.com",
-        "paths": [
-          "delapouite/archive-research.svg"
-        ]
-      },
-      {
-        "author": "Lorc",
-        "authorURL": "http://lorcblog.blogspot.com",
-        "paths": [
-          "lorc/brainstorm.svg",
-          "lorc/gears.svg"
-        ]
-      }
-    ]
+    "originalCandidateSource": {
+      "source": "Game Icons",
+      "sourcePath": "delapouite/archive-research.svg",
+      "upstream": "https://github.com/game-icons/icons/blob/82d948812bfe3f269ef8f731dcdb07b08160edc4/delapouite/archive-research.svg",
+      "revision": "82d948812bfe3f269ef8f731dcdb07b08160edc4"
+    }
   },
   {
     "id": "bytesize-icons:official-series",
@@ -15572,40 +15540,44 @@
   },
   {
     "id": "paperlab:physical-paper-presets",
-    "title": "体积纸张展开与卷曲",
     "source": "Paperlab",
     "repository": "https://github.com/NourMtir0722/Paperlab",
     "revision": "41914833cb9ae12b32a8cbbdee4723f5b12158af",
-    "sourcePath": "apps/docs/src/sections/Presets.tsx",
     "upstream": "https://github.com/NourMtir0722/Paperlab/blob/41914833cb9ae12b32a8cbbdee4723f5b12158af/apps/docs/src/sections/Presets.tsx",
-    "website": "https://paperlab.nawwara.studio/",
-    "license": "Apache-2.0 (root text verified; runtime/assets not closed)",
-    "behavior": "以真实网格变形承载纸面纹理，原预设包含卷轴、揭角、折信等。",
-    "difference": "3D几何弯曲而非平面贴图动画；多个参数预设不各算独立来源。",
-    "description": "以真实网格变形承载纸面纹理，原预设包含卷轴、揭角、折信等。 3D几何弯曲而非平面贴图动画；多个参数预设不各算独立来源。",
-    "gaps": [
-      "需闭合paperlab包、Three、React Three Fiber、GSAP及其各自许可证；根Apache-2.0不替代依赖许可。",
-      "原README明确React19.3与fiber9.7.0 peer范围可能冲突，构建须锁兼容版本；WebGL上下文释放、GPU负载/移动降级未验。",
-      "仅研究Presets入口；纹理、字体和示例图片权利未闭合，不纳入hands webcam、编辑器文件导入或FX火焰模块。",
-      "Apache分发须保留LICENSE/适用NOTICE并标注修改；需再比包内LICENSE与根LICENSE，未完成完整归档。",
-      "固定源码/根许可仅为来源证据；未构建、未运行、未截图验收，completedPreviewCount=0。"
-    ],
-    "category": "视觉与动效",
+    "sourcePath": "apps/docs/src/sections/Presets.tsx",
     "licenseEvidence": {
       "url": "https://github.com/NourMtir0722/Paperlab/blob/41914833cb9ae12b32a8cbbdee4723f5b12158af/LICENSE",
       "sha256": "017dbd7a0c125f04e091ee347e399401371f62c648876c70d5acdee53c05dbfe",
       "scope": "Complete original root license retained; runtime/media separate"
     },
-    "sourceSha256": "3b15366ac10f70a442ab4b0f74cbae3fc45e5e1ac26c50914efbdf13263d3c6d",
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-style-527",
-    "sourceScope": "Selected fixed original source and root license; no full runnable archive",
-    "kind": "原版风格组件族（仅来源）",
-    "buildStatus": "Fixed source inspected; not built or visually accepted"
+    "difference": "3D几何弯曲而非平面贴图动画；多个参数预设不各算独立来源。",
+    "website": "https://paperlab.nawwara.studio/",
+    "title": "纸张折叠与材质变形",
+    "description": "原六个纯纸预设的固定子集，展示折叠、弯曲与纸张变形；需要可用WebGL，不是完整纸张编辑器或导出工具。",
+    "behavior": "原六个纯纸预设的固定子集，展示折叠、弯曲与纸张变形；需要可用WebGL，不是完整纸张编辑器或导出工具。",
+    "kind": "原版视觉场景",
+    "format": "完整交互场景",
+    "category": "视觉与动效",
+    "license": "Apache-2.0 AND MIT AND LicenseRef-GSAP-Standard",
+    "batch": "paperlab-presets-01",
+    "preview": "batches/paperlab-presets-01/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "原六个纯纸预设的固定展示子集，非全部19预设或纸张编辑/导出工具。",
+      "依赖WebGL，渲染不可用时显示错误；CPU几何与受控渲染接口测试不等同原生GPU像素验收。",
+      "GSAP Standard许可随包提供，不属于MIT；不得将此预览描述为不受限制的可视动画作者工具。"
+    ],
+    "runtime": {
+      "scripts": [
+        "runtime-start.js",
+        "runtime-code-1.js",
+        "runtime-code-2.js",
+        "runtime-code-3.js",
+        "runtime.js"
+      ]
+    }
   },
   {
     "id": "augmented-ui:cut-corner-surfaces",
