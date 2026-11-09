@@ -1,0 +1,1471 @@
+{
+  "repository": "https://github.com/klembot/twinejs",
+  "revision": "2c3b80144ba6f1fe9d8a4e5e11a2349ba55fc310",
+  "sourcePath": "src/routes/story-edit/story-edit-route.tsx",
+  "rootPackageVersion": "2.12.1",
+  "upstreamLockRootVersion": "2.12.0",
+  "versionCaveat": "Fixed SHA authoritative; original package and lock root version differ. Runtime pinned to original lock.",
+  "runtimePackages": [
+    {
+      "name": "@babel/runtime",
+      "version": "7.29.13",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76"
+        }
+      ],
+      "artifact": {
+        "version": "7.29.13",
+        "resolved": "https://registry.npmjs.org/@babel/runtime/-/runtime-7.29.13.tgz",
+        "integrity": "sha512-v+oN26xP4YIlQsbQ/CbTH1WG5m/l/DjKKZNy/Kp3f/AFvbgt7Em/D0FeMM3O2hX0YzeN2M16W8lOpyhIkfCBcQ==",
+        "license": "MIT",
+        "engines": {
+          "node": ">=6.9.0"
+        }
+      }
+    },
+    {
+      "name": "@lukeed/uuid",
+      "version": "2.0.1",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "license",
+          "sha256": "9a9edad7baae52622bddf3c15b2ef8a33d2c89f2d25408ad13e8a7481c6b0c97"
+        }
+      ],
+      "artifact": {
+        "version": "2.0.1",
+        "resolved": "https://registry.npmjs.org/@lukeed/uuid/-/uuid-2.0.1.tgz",
+        "integrity": "sha512-qC72D4+CDdjGqJvkFMMEAtancHUQ7/d/tAiHf64z8MopFDmcrtbcJuerDtFceuAfQJ2pDSfCKCtbqoGBNnwg0w==",
+        "license": "MIT",
+        "dependencies": {
+          "@lukeed/csprng": "^1.1.0"
+        },
+        "engines": {
+          "node": ">=8"
+        }
+      }
+    },
+    {
+      "name": "@popperjs/core",
+      "version": "2.11.8",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "LICENSE.md",
+          "sha256": "bf67e2c9b7974543bb18ced3a0b37f53729aaff953b442dd89a3adaf90fd93e8"
+        }
+      ],
+      "artifact": {
+        "version": "2.11.8",
+        "resolved": "https://registry.npmjs.org/@popperjs/core/-/core-2.11.8.tgz",
+        "integrity": "sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==",
+        "license": "MIT",
+        "funding": {
+          "type": "opencollective",
+          "url": "https://opencollective.com/popperjs"
+        }
+      }
+    },
+    {
+      "name": "@tabler/icons",
+      "version": "1.119.0",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "25f6ad076fb683ebcdd7c3426a4c9e1d58f9b3a9d6e0153090145be6d5e8a516"
+        }
+      ],
+      "artifact": {
+        "version": "1.119.0",
+        "resolved": "https://registry.npmjs.org/@tabler/icons/-/icons-1.119.0.tgz",
+        "integrity": "sha512-Fk3Qq4w2SXcTjc/n1cuL5bccPkylrOMo7cYpQIf/yw6zP76LQV9dtLcHQUjFiUnaYuswR645CnURIhlafyAh9g==",
+        "license": "MIT",
+        "funding": {
+          "type": "github",
+          "url": "https://github.com/sponsors/codecalm"
+        },
+        "peerDependencies": {
+          "react": "^16.x || 17.x || 18.x",
+          "react-dom": "^16.x || 17.x || 18.x"
+        },
+        "peerDependenciesMeta": {
+          "react": {
+            "optional": true
+          },
+          "react-dom": {
+            "optional": true
+          }
+        }
+      }
+    },
+    {
+      "name": "classnames",
+      "version": "2.5.1",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "0c1c24dcc129cb0c02ee9803cfa7a50061c236a3b59b36a714c27f3ade66d7be"
+        }
+      ],
+      "artifact": {
+        "version": "2.5.1",
+        "resolved": "https://registry.npmjs.org/classnames/-/classnames-2.5.1.tgz",
+        "integrity": "sha512-saHYOzhIQs6wy2sVxTM6bUDsQO4F50V9RQ22qBpEdCW+I+/Wmke2HOl6lS6dTpdxVhb88/I6+Hs+438c3lfUow==",
+        "license": "MIT"
+      }
+    },
+    {
+      "name": "clsx",
+      "version": "1.2.1",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "license",
+          "sha256": "9a9edad7baae52622bddf3c15b2ef8a33d2c89f2d25408ad13e8a7481c6b0c97"
+        }
+      ],
+      "artifact": {
+        "version": "1.2.1",
+        "resolved": "https://registry.npmjs.org/clsx/-/clsx-1.2.1.tgz",
+        "integrity": "sha512-EcR6r5a8bj6pu3ycsa/E/cKVGuTgZJZdsyUYHOksG/UHIiKfjxzRxYJpyVBwYaQeOvghal9fcc4PidlgzugAQg==",
+        "license": "MIT",
+        "engines": {
+          "node": ">=6"
+        }
+      }
+    },
+    {
+      "name": "codemirror",
+      "version": "5.65.16",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "168a4becc968f5001e2ee2e0291b6e4daabafc1894a11ade1e11d56e96096e07"
+        }
+      ],
+      "artifact": {
+        "version": "5.65.16",
+        "resolved": "https://registry.npmjs.org/codemirror/-/codemirror-5.65.16.tgz",
+        "integrity": "sha512-br21LjYmSlVL0vFCPWPfhzUCT34FM/pAdK7rRIZwa0rrtrIdotvP4Oh4GUHsu2E3IrQMCfRkL/fN3ytMNxVQvg==",
+        "license": "MIT"
+      }
+    },
+    {
+      "name": "detect-it",
+      "version": "4.0.1",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "7d8d98c6627a0c85876cb048dfb903865e07d6e2ce30621f77c6179adc19da11"
+        }
+      ],
+      "artifact": {
+        "version": "4.0.1",
+        "resolved": "https://registry.npmjs.org/detect-it/-/detect-it-4.0.1.tgz",
+        "integrity": "sha512-dg5YBTJYvogK1+dA2mBUDKzOWfYZtHVba89SyZUhc4+e3i2tzgjANFg5lDRCd3UOtRcw00vUTMK8LELcMdicug==",
+        "license": "MIT"
+      }
+    },
+    {
+      "name": "dom-helpers",
+      "version": "5.2.1",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "1b0a9ba95a67bc484e028b13c61b83fc5aa1ca7957d1e2d43c2b0f70d9e9dd45"
+        }
+      ],
+      "artifact": {
+        "version": "5.2.1",
+        "resolved": "https://registry.npmjs.org/dom-helpers/-/dom-helpers-5.2.1.tgz",
+        "integrity": "sha512-nRCa7CK3VTrM2NmGkIy4cbK7IZlgBE/PYMn55rrXefr5xXDP0LdtfPnblFDoVdcAfslJ7or6iqAUnx0CCGIWQA==",
+        "license": "MIT",
+        "dependencies": {
+          "@babel/runtime": "^7.8.7",
+          "csstype": "^3.0.2"
+        }
+      }
+    },
+    {
+      "name": "eases",
+      "version": "1.0.8",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "LICENSE.md",
+          "sha256": "91515553fda3d86e82454bab0eb876a2cb9a31c0dcb8be640870fed624e53697"
+        }
+      ],
+      "artifact": {
+        "version": "1.0.8",
+        "resolved": "https://registry.npmjs.org/eases/-/eases-1.0.8.tgz",
+        "integrity": "sha512-U8TwgFYPktV07tV9yxoIu9TIWsXHGOuDJNXlyihWEMnGMXaoh2kkfWf0N1itbCjHWrgs+/leubuG7m+OgkfA0Q==",
+        "license": "MIT"
+      }
+    },
+    {
+      "name": "focus-trap",
+      "version": "6.9.4",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "b8d0347312c547c22802b39e495bc8f75d1a27bd69a51950fe5dcf8529b05070"
+        }
+      ],
+      "artifact": {
+        "version": "6.9.4",
+        "resolved": "https://registry.npmjs.org/focus-trap/-/focus-trap-6.9.4.tgz",
+        "integrity": "sha512-v2NTsZe2FF59Y+sDykKY+XjqZ0cPfhq/hikWVL88BqLivnNiEffAsac6rP6H45ff9wG9LL5ToiDqrLEP9GX9mw==",
+        "license": "MIT",
+        "dependencies": {
+          "tabbable": "^5.3.3"
+        }
+      }
+    },
+    {
+      "name": "focus-trap-react",
+      "version": "8.11.3",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "8e714750725e75c8b31172ef84c0805f94873f86e3b5cfca8a948553f0778fa1"
+        }
+      ],
+      "artifact": {
+        "version": "8.11.3",
+        "resolved": "https://registry.npmjs.org/focus-trap-react/-/focus-trap-react-8.11.3.tgz",
+        "integrity": "sha512-y126gMYuB1aVYiEZSP6/v9bAfVmAIUVixanhcoMelkz7bOh+l0c3h05CEHC8S63ztxdRI2AAPS9AsTat6jlDeQ==",
+        "license": "MIT",
+        "dependencies": {
+          "focus-trap": "^6.9.4"
+        },
+        "peerDependencies": {
+          "prop-types": "^15.8.1",
+          "react": ">=16.0.0",
+          "react-dom": ">=16.0.0"
+        }
+      }
+    },
+    {
+      "name": "fuse.js",
+      "version": "6.6.2",
+      "license": "Apache-2.0",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "cc807e3caa26cdee316bab2ff6fdb508a2f619b74959fe59e513ef6e61635ebe"
+        }
+      ],
+      "artifact": {
+        "version": "6.6.2",
+        "resolved": "https://registry.npmjs.org/fuse.js/-/fuse.js-6.6.2.tgz",
+        "integrity": "sha512-cJaJkxCCxC8qIIcPBF9yGxY0W/tVZS3uEISDxhYIdtk8OL93pe+6Zj7LjCqVV4dzbqcriOZ+kQ/NE4RXZHsIGA==",
+        "license": "Apache-2.0",
+        "engines": {
+          "node": ">=10"
+        }
+      }
+    },
+    {
+      "name": "history",
+      "version": "4.10.1",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "079b9fe13858745a8faeaf305231a339b63ba13f36b65e6e9eca94d89196c456"
+        }
+      ],
+      "artifact": {
+        "version": "4.10.1",
+        "resolved": "https://registry.npmjs.org/history/-/history-4.10.1.tgz",
+        "integrity": "sha512-36nwAD620w12kuzPAsyINPWJqlNbij+hpK1k9XRloDtym8mxzGYl2c17LnV6IAGB2Dmg4tEa7G7DlawS0+qjew==",
+        "license": "MIT",
+        "dependencies": {
+          "@babel/runtime": "^7.1.2",
+          "loose-envify": "^1.2.0",
+          "resolve-pathname": "^3.0.0",
+          "tiny-invariant": "^1.0.2",
+          "tiny-warning": "^1.0.0",
+          "value-equal": "^1.0.1"
+        }
+      }
+    },
+    {
+      "name": "hoist-non-react-statics",
+      "version": "3.3.2",
+      "license": "BSD-3-Clause",
+      "files": [
+        {
+          "path": "LICENSE.md",
+          "sha256": "eb32ff0ec52b6ea86e3d3e06c6ad1b68ee03798b6729af13919f6d5c14b368f3"
+        }
+      ],
+      "artifact": {
+        "version": "3.3.2",
+        "resolved": "https://registry.npmjs.org/hoist-non-react-statics/-/hoist-non-react-statics-3.3.2.tgz",
+        "integrity": "sha512-/gGivxi8JPKWNm/W0jSmzcMPpfpPLc3dY/6GxhX2hQ9iGj3aDfklV4ET7NjKpSinLpJ5vafa9iiGIEZg10SfBw==",
+        "license": "BSD-3-Clause",
+        "dependencies": {
+          "react-is": "^16.7.0"
+        }
+      }
+    },
+    {
+      "name": "hotkeys-js",
+      "version": "3.9.4",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "efc6759044c0b3c95f5ccc9b09a6aa325cded29355eb65b45243e881f0c9d36b"
+        }
+      ],
+      "artifact": {
+        "version": "3.9.4",
+        "resolved": "https://registry.npmjs.org/hotkeys-js/-/hotkeys-js-3.9.4.tgz",
+        "integrity": "sha512-2zuLt85Ta+gIyvs4N88pCYskNrxf1TFv3LR9t5mdAZIX8BcgQQ48F2opUptvHa6m8zsy5v/a0i9mWzTrlNWU0Q==",
+        "license": "MIT"
+      }
+    },
+    {
+      "name": "i18next",
+      "version": "19.9.2",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "615f91ffa3b8ca4adc1656b4cf5dc3dc47763b3f59740b674f77450b8204e343"
+        }
+      ],
+      "artifact": {
+        "version": "19.9.2",
+        "resolved": "https://registry.npmjs.org/i18next/-/i18next-19.9.2.tgz",
+        "integrity": "sha512-0i6cuo6ER6usEOtKajUUDj92zlG+KArFia0857xxiEHAQcUwh/RtOQocui1LPJwunSYT574Pk64aNva1kwtxZg==",
+        "license": "MIT",
+        "dependencies": {
+          "@babel/runtime": "^7.12.0"
+        }
+      }
+    },
+    {
+      "name": "is-absolute-url",
+      "version": "3.0.3",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "license",
+          "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0"
+        }
+      ],
+      "artifact": {
+        "version": "3.0.3",
+        "resolved": "https://registry.npmjs.org/is-absolute-url/-/is-absolute-url-3.0.3.tgz",
+        "integrity": "sha512-opmNIX7uFnS96NtPmhWQgQx6/NYFgsUXYMllcfzwWKUMwfo8kku1TvE6hkNcH+Q1ts5cMVrsY7j0bxXQDciu9Q==",
+        "license": "MIT",
+        "engines": {
+          "node": ">=8"
+        }
+      }
+    },
+    {
+      "name": "isarray",
+      "version": "0.0.1",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "5601c343c9aa96449e18aca7a4562038b1d4062f4742a2c9c7f9039f1a303f72"
+        }
+      ],
+      "artifact": {
+        "version": "0.0.1",
+        "resolved": "https://registry.npmjs.org/isarray/-/isarray-0.0.1.tgz",
+        "integrity": "sha512-D2S+3GLxWH+uhrNEcoh/fnmYeP8E8/zHl644d/jdA0g2uyXvy3sb0qxotE+ne0LtccHknQzWwZEzhak7oJ0COQ==",
+        "license": "MIT"
+      }
+    },
+    {
+      "name": "lodash",
+      "version": "4.17.21",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "f71e8ed126b46346494aad5486874cd8f0aafe95092ed67d2e3cb6110f939abc"
+        }
+      ],
+      "artifact": {
+        "version": "4.17.21",
+        "resolved": "https://registry.npmjs.org/lodash/-/lodash-4.17.21.tgz",
+        "integrity": "sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==",
+        "license": "MIT"
+      }
+    },
+    {
+      "name": "object-assign",
+      "version": "4.1.1",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "license",
+          "sha256": "6fb9754611c20f6649f68805e8c990e83261f29316e29de9e6cedae607b8634c"
+        }
+      ],
+      "artifact": {
+        "version": "4.1.1",
+        "resolved": "https://registry.npmjs.org/object-assign/-/object-assign-4.1.1.tgz",
+        "integrity": "sha512-rJgTQnkUnH1sFw8yT6VSU3zD3sWmu6sZhIseY8VX+GRu3P6F7Fu+JNDoXfklElbLJSnc3FUQHVe4cU5hj+BcUg==",
+        "license": "MIT",
+        "engines": {
+          "node": ">=0.10.0"
+        }
+      }
+    },
+    {
+      "name": "path-to-regexp",
+      "version": "1.9.0",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "4eeb3271453a891df609e5a9f4ee79a68307f730c13417a3bfeffa604ac8cf25"
+        }
+      ],
+      "artifact": {
+        "version": "1.9.0",
+        "resolved": "https://registry.npmjs.org/path-to-regexp/-/path-to-regexp-1.9.0.tgz",
+        "integrity": "sha512-xIp7/apCFJuUHdDLWe8O1HIkb0kQrOMb/0u6FXQjemHn/ii5LrIzU6bdECnsiTF/GjZkMEKg1xdiZwNqDYlZ6g==",
+        "license": "MIT",
+        "dependencies": {
+          "isarray": "0.0.1"
+        }
+      }
+    },
+    {
+      "name": "prop-types",
+      "version": "15.8.1",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "f657f99d3fb9647db92628e96007aabb46e5f04f33e49999075aab8e250ca7ce"
+        }
+      ],
+      "artifact": {
+        "version": "15.8.1",
+        "resolved": "https://registry.npmjs.org/prop-types/-/prop-types-15.8.1.tgz",
+        "integrity": "sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==",
+        "license": "MIT",
+        "dependencies": {
+          "loose-envify": "^1.4.0",
+          "object-assign": "^4.1.1",
+          "react-is": "^16.13.1"
+        }
+      }
+    },
+    {
+      "name": "react",
+      "version": "16.14.0",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "52412d7bc7ce4157ea628bbaacb8829e0a9cb3c58f57f99176126bc8cf2bfc85"
+        }
+      ],
+      "artifact": {
+        "version": "16.14.0",
+        "resolved": "https://registry.npmjs.org/react/-/react-16.14.0.tgz",
+        "integrity": "sha512-0X2CImDkJGApiAlcf0ODKIneSwBPhqJawOa5wCtKbu7ZECrmS26NvtSILynQ66cgkT/RJ4LidJOc3bUESwmU8g==",
+        "license": "MIT",
+        "dependencies": {
+          "loose-envify": "^1.1.0",
+          "object-assign": "^4.1.1",
+          "prop-types": "^15.6.2"
+        },
+        "engines": {
+          "node": ">=0.10.0"
+        }
+      }
+    },
+    {
+      "name": "react-codemirror2",
+      "version": "7.3.0",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "9211f45c636fb0c0587326d9d68cb190ce93e4ed959760dc2940c50029fbf871"
+        }
+      ],
+      "artifact": {
+        "version": "7.3.0",
+        "resolved": "https://registry.npmjs.org/react-codemirror2/-/react-codemirror2-7.3.0.tgz",
+        "integrity": "sha512-gCgJPXDX+5iaPolkHAu1YbJ92a2yL7Je4TuyO3QEqOtI/d6mbEk08l0oIm18R4ctuT/Sl87X63xIMBnRQBXYXA==",
+        "license": "MIT",
+        "peerDependencies": {
+          "codemirror": "5.x",
+          "react": ">=15.5 <=17.x"
+        }
+      }
+    },
+    {
+      "name": "react-dom",
+      "version": "16.14.0",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "52412d7bc7ce4157ea628bbaacb8829e0a9cb3c58f57f99176126bc8cf2bfc85"
+        }
+      ],
+      "artifact": {
+        "version": "16.14.0",
+        "resolved": "https://registry.npmjs.org/react-dom/-/react-dom-16.14.0.tgz",
+        "integrity": "sha512-1gCeQXDLoIqMgqD3IO2Ah9bnf0w9kzhwN5q4FGnHZ67hBm9yePzB5JJAIQCc8x3pFnNlwFq4RidZggNAAkzWWw==",
+        "license": "MIT",
+        "dependencies": {
+          "loose-envify": "^1.1.0",
+          "object-assign": "^4.1.1",
+          "prop-types": "^15.6.2",
+          "scheduler": "^0.19.1"
+        },
+        "peerDependencies": {
+          "react": "^16.14.0"
+        }
+      }
+    },
+    {
+      "name": "react-draggable",
+      "version": "4.4.6",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "6de5c13fa4cb2cef3d111d6f43ef4958aa1b9ea3f6f623200dfe1300a8e1d3d4"
+        }
+      ],
+      "artifact": {
+        "version": "4.4.6",
+        "resolved": "https://registry.npmjs.org/react-draggable/-/react-draggable-4.4.6.tgz",
+        "integrity": "sha512-LtY5Xw1zTPqHkVmtM3X8MUOxNDOUhv/khTgBgrUvwaS064bwVvxT+q5El0uUFNx5IEPKXuRejr7UqLwBIg5pdw==",
+        "license": "MIT",
+        "dependencies": {
+          "clsx": "^1.1.1",
+          "prop-types": "^15.8.1"
+        },
+        "peerDependencies": {
+          "react": ">= 16.3.0",
+          "react-dom": ">= 16.3.0"
+        }
+      }
+    },
+    {
+      "name": "react-fast-compare",
+      "version": "3.2.2",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "1e187eec147d04bcbb3b7aef9f3b0ea82228961fa7d390d3efb9e57751dbe0cb"
+        }
+      ],
+      "artifact": {
+        "version": "3.2.2",
+        "resolved": "https://registry.npmjs.org/react-fast-compare/-/react-fast-compare-3.2.2.tgz",
+        "integrity": "sha512-nsO+KSNgo1SbJqJEYRE9ERzo7YtYbou/OqjSQKxV7jcKox7+usiUVZOAC+XnDOABXggQTno0Y1CpVnuWEc1boQ==",
+        "license": "MIT"
+      }
+    },
+    {
+      "name": "react-helmet",
+      "version": "6.1.0",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "ed71a63927f17eb590d9494d3618c8067b709d6fa88d1e03e1631f837f939119"
+        }
+      ],
+      "artifact": {
+        "version": "6.1.0",
+        "resolved": "https://registry.npmjs.org/react-helmet/-/react-helmet-6.1.0.tgz",
+        "integrity": "sha512-4uMzEY9nlDlgxr61NL3XbKRy1hEkXmKNXhjbAIOVw5vcFrsdYbH2FEwcNyWvWinl103nXgzYNlns9ca+8kFiWw==",
+        "license": "MIT",
+        "dependencies": {
+          "object-assign": "^4.1.1",
+          "prop-types": "^15.7.2",
+          "react-fast-compare": "^3.1.1",
+          "react-side-effect": "^2.1.0"
+        },
+        "peerDependencies": {
+          "react": ">=16.3.0"
+        }
+      }
+    },
+    {
+      "name": "react-hook-thunk-reducer",
+      "version": "0.2.4",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "1973a8907d0a17772c41b96aad61d4b6ad03b5ba246141e3bc2d38912b76ac94"
+        }
+      ],
+      "artifact": {
+        "version": "0.2.4",
+        "resolved": "https://registry.npmjs.org/react-hook-thunk-reducer/-/react-hook-thunk-reducer-0.2.4.tgz",
+        "integrity": "sha512-cuK5GkdhDjSaBrDZMP17bp8YVClrxHf8U39j1OOjCQksi6LgN+M5cRuNfGsEqqn1lvkhl48p2O5X35+BIrf47Q==",
+        "license": "MIT",
+        "peerDependencies": {
+          "react": "^16.8.0",
+          "react-dom": "^16.8.0"
+        }
+      }
+    },
+    {
+      "name": "react-hotkeys-hook",
+      "version": "3.4.7",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "1def416e8042d3442057400f3345c3bd089476898d94b5d5ae9669b0c0d340a8"
+        }
+      ],
+      "artifact": {
+        "version": "3.4.7",
+        "resolved": "https://registry.npmjs.org/react-hotkeys-hook/-/react-hotkeys-hook-3.4.7.tgz",
+        "integrity": "sha512-+bbPmhPAl6ns9VkXkNNyxlmCAIyDAcWbB76O4I0ntr3uWCRuIQf/aRLartUahe9chVMPj+OEzzfk3CQSjclUEQ==",
+        "license": "MIT",
+        "dependencies": {
+          "hotkeys-js": "3.9.4"
+        },
+        "peerDependencies": {
+          "react": ">=16.8.1",
+          "react-dom": ">=16.8.1"
+        }
+      }
+    },
+    {
+      "name": "react-i18next",
+      "version": "11.18.6",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "ca6c983c991d4d3efc1597f0b779baccec309e04252762907b0efd2449466f09"
+        }
+      ],
+      "artifact": {
+        "version": "11.18.6",
+        "resolved": "https://registry.npmjs.org/react-i18next/-/react-i18next-11.18.6.tgz",
+        "integrity": "sha512-yHb2F9BiT0lqoQDt8loZ5gWP331GwctHz9tYQ8A2EIEUu+CcEdjBLQWli1USG3RdWQt3W+jqQLg/d4rrQR96LA==",
+        "license": "MIT",
+        "dependencies": {
+          "@babel/runtime": "^7.14.5",
+          "html-parse-stringify": "^3.0.1"
+        },
+        "peerDependencies": {
+          "i18next": ">= 19.0.0",
+          "react": ">= 16.8.0"
+        },
+        "peerDependenciesMeta": {
+          "react-dom": {
+            "optional": true
+          },
+          "react-native": {
+            "optional": true
+          }
+        }
+      }
+    },
+    {
+      "name": "react-is",
+      "version": "16.13.1",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "52412d7bc7ce4157ea628bbaacb8829e0a9cb3c58f57f99176126bc8cf2bfc85"
+        }
+      ],
+      "artifact": {
+        "version": "16.13.1",
+        "resolved": "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz",
+        "integrity": "sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==",
+        "license": "MIT"
+      }
+    },
+    {
+      "name": "react-popper",
+      "version": "2.3.0",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "7d8e07a60e4aa02d24648ce987b644c2e0978234d209fe454a4fe91701867355"
+        }
+      ],
+      "artifact": {
+        "version": "2.3.0",
+        "resolved": "https://registry.npmjs.org/react-popper/-/react-popper-2.3.0.tgz",
+        "integrity": "sha512-e1hj8lL3uM+sgSR4Lxzn5h1GxBlpa4CQz0XLF8kx4MDrDRWY0Ena4c97PUeSX9i5W3UAfDP0z0FXCTQkoXUl3Q==",
+        "license": "MIT",
+        "dependencies": {
+          "react-fast-compare": "^3.0.1",
+          "warning": "^4.0.2"
+        },
+        "peerDependencies": {
+          "@popperjs/core": "^2.0.0",
+          "react": "^16.8.0 || ^17 || ^18",
+          "react-dom": "^16.8.0 || ^17 || ^18"
+        }
+      }
+    },
+    {
+      "name": "react-router",
+      "version": "5.3.4",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "f8028d6599b4b781d151ba12c534ff23a9fce4f3bb3f417778302ed8970306e2"
+        }
+      ],
+      "artifact": {
+        "version": "5.3.4",
+        "resolved": "https://registry.npmjs.org/react-router/-/react-router-5.3.4.tgz",
+        "integrity": "sha512-Ys9K+ppnJah3QuaRiLxk+jDWOR1MekYQrlytiXxC1RyfbdsZkS5pvKAzCCr031xHixZwpnsYNT5xysdFHQaYsA==",
+        "license": "MIT",
+        "dependencies": {
+          "@babel/runtime": "^7.12.13",
+          "history": "^4.9.0",
+          "hoist-non-react-statics": "^3.1.0",
+          "loose-envify": "^1.3.1",
+          "path-to-regexp": "^1.7.0",
+          "prop-types": "^15.6.2",
+          "react-is": "^16.6.0",
+          "tiny-invariant": "^1.0.2",
+          "tiny-warning": "^1.0.0"
+        },
+        "peerDependencies": {
+          "react": ">=15"
+        }
+      }
+    },
+    {
+      "name": "react-router-dom",
+      "version": "5.3.4",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "f8028d6599b4b781d151ba12c534ff23a9fce4f3bb3f417778302ed8970306e2"
+        }
+      ],
+      "artifact": {
+        "version": "5.3.4",
+        "resolved": "https://registry.npmjs.org/react-router-dom/-/react-router-dom-5.3.4.tgz",
+        "integrity": "sha512-m4EqFMHv/Ih4kpcBCONHbkT68KoAeHN4p3lAGoNryfHi0dMy0kCzEZakiKRsvg5wHZ/JLrLW8o8KomWiz/qbYQ==",
+        "license": "MIT",
+        "dependencies": {
+          "@babel/runtime": "^7.12.13",
+          "history": "^4.9.0",
+          "loose-envify": "^1.3.1",
+          "prop-types": "^15.6.2",
+          "react-router": "5.3.4",
+          "tiny-invariant": "^1.0.2",
+          "tiny-warning": "^1.0.0"
+        },
+        "peerDependencies": {
+          "react": ">=15"
+        }
+      }
+    },
+    {
+      "name": "react-scrollbar-size",
+      "version": "3.2.0",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "311ef3529ad6cd9179c80494ce87dae31d8a518a067180d82440ec7a54a25cc2"
+        }
+      ],
+      "artifact": {
+        "version": "3.2.0",
+        "resolved": "https://registry.npmjs.org/react-scrollbar-size/-/react-scrollbar-size-3.2.0.tgz",
+        "integrity": "sha512-3CiK6Wf+kkZukwQGoVeYA87QsfNunMADK9wZ388VMzbuN7Y67F9b6b/KNf8lSYDNbqRNHzapDaVbC9AaO1vENw==",
+        "license": "MIT",
+        "peerDependencies": {
+          "react": "^16.8.0 || ^17.0.1"
+        }
+      }
+    },
+    {
+      "name": "react-side-effect",
+      "version": "2.1.2",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "65a1f00f35ea469048896fbfec3c5faed7d3fe7c7e0be2a0478470b59d9e1439"
+        }
+      ],
+      "artifact": {
+        "version": "2.1.2",
+        "resolved": "https://registry.npmjs.org/react-side-effect/-/react-side-effect-2.1.2.tgz",
+        "integrity": "sha512-PVjOcvVOyIILrYoyGEpDN3vmYNLdy1CajSFNt4TDsVQC5KpTijDvWVoR+/7Rz2xT978D8/ZtFceXxzsPwZEDvw==",
+        "license": "MIT",
+        "peerDependencies": {
+          "react": "^16.3.0 || ^17.0.0 || ^18.0.0"
+        }
+      }
+    },
+    {
+      "name": "react-tabs",
+      "version": "4.3.0",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "6ec568895e3e3c7bed6bb0bf7067ede6c743a40035db7a8bb1020edcfac34177"
+        }
+      ],
+      "artifact": {
+        "version": "4.3.0",
+        "resolved": "https://registry.npmjs.org/react-tabs/-/react-tabs-4.3.0.tgz",
+        "integrity": "sha512-2GfoG+f41kiBIIyd3gF+/GRCCYtamC8/2zlAcD8cqQmqI9Q+YVz7fJLHMmU9pXDVYYHpJeCgUSBJju85vu5q8Q==",
+        "license": "MIT",
+        "dependencies": {
+          "clsx": "^1.1.0",
+          "prop-types": "^15.5.0"
+        },
+        "peerDependencies": {
+          "react": "^16.8.0 || ^17.0.0-0 || ^18.0.0"
+        }
+      }
+    },
+    {
+      "name": "react-transition-group",
+      "version": "4.4.5",
+      "license": "BSD-3-Clause",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "b9adc17ad75a847d8743be2843935f0842a0ea4f45e7b0c7e17ed0be98614b9b"
+        }
+      ],
+      "artifact": {
+        "version": "4.4.5",
+        "resolved": "https://registry.npmjs.org/react-transition-group/-/react-transition-group-4.4.5.tgz",
+        "integrity": "sha512-pZcd1MCJoiKiBR2NRxeCRg13uCXbydPnmB4EOeRrY7480qNWO8IIgQG6zlDkm6uRMsURXPuKq0GWtiM59a5Q6g==",
+        "license": "BSD-3-Clause",
+        "dependencies": {
+          "@babel/runtime": "^7.5.5",
+          "dom-helpers": "^5.0.1",
+          "loose-envify": "^1.4.0",
+          "prop-types": "^15.6.2"
+        },
+        "peerDependencies": {
+          "react": ">=16.6.0",
+          "react-dom": ">=16.6.0"
+        }
+      }
+    },
+    {
+      "name": "resolve-pathname",
+      "version": "3.0.0",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "e0dca6c79586466b5df4c3b31766391152dc4074978fd3c68fe10da744d0f114"
+        }
+      ],
+      "artifact": {
+        "version": "3.0.0",
+        "resolved": "https://registry.npmjs.org/resolve-pathname/-/resolve-pathname-3.0.0.tgz",
+        "integrity": "sha512-C7rARubxI8bXFNB/hqcp/4iUeIXJhJZvFPFPiSPRnhU5UPxzMFIl+2E6yY6c4k9giDJAhtV+enfA+G89N6Csng==",
+        "license": "MIT"
+      }
+    },
+    {
+      "name": "scheduler",
+      "version": "0.19.1",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "52412d7bc7ce4157ea628bbaacb8829e0a9cb3c58f57f99176126bc8cf2bfc85"
+        }
+      ],
+      "artifact": {
+        "version": "0.19.1",
+        "resolved": "https://registry.npmjs.org/scheduler/-/scheduler-0.19.1.tgz",
+        "integrity": "sha512-n/zwRWRYSUj0/3g/otKDRPMh6qv2SYMWNq85IEa8iZyAv8od9zDYpGSnpBEjNgcMNq6Scbu5KfIPxNF72R/2EA==",
+        "license": "MIT",
+        "dependencies": {
+          "loose-envify": "^1.1.0",
+          "object-assign": "^4.1.1"
+        }
+      }
+    },
+    {
+      "name": "semver",
+      "version": "7.8.5",
+      "license": "ISC",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b"
+        }
+      ],
+      "artifact": {
+        "version": "7.8.5",
+        "resolved": "https://registry.npmjs.org/semver/-/semver-7.8.5.tgz",
+        "integrity": "sha512-Y7/KDsb8LjooZpwaqGyulO6DQlksgCncchHGk+sZIY4SBvUocMBEFH5Ur1fI4dV+Jvl0w6cjvucaIi40puRioA==",
+        "license": "ISC",
+        "bin": {
+          "semver": "bin/semver.js"
+        },
+        "engines": {
+          "node": ">=10"
+        }
+      }
+    },
+    {
+      "name": "tabbable",
+      "version": "5.3.3",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "8e714750725e75c8b31172ef84c0805f94873f86e3b5cfca8a948553f0778fa1"
+        }
+      ],
+      "artifact": {
+        "version": "5.3.3",
+        "resolved": "https://registry.npmjs.org/tabbable/-/tabbable-5.3.3.tgz",
+        "integrity": "sha512-QD9qKY3StfbZqWOPLp0++pOrAVb/HbUi5xCc8cUo4XjP19808oaMiDzn0leBY5mCespIBM0CIZePzZjgzR83kA==",
+        "license": "MIT"
+      }
+    },
+    {
+      "name": "tiny-invariant",
+      "version": "1.3.3",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "b1c501095de70182748cb8e8d97ac5577701a4ef3b755ba30d59fd87b24bdb0f"
+        }
+      ],
+      "artifact": {
+        "version": "1.3.3",
+        "resolved": "https://registry.npmjs.org/tiny-invariant/-/tiny-invariant-1.3.3.tgz",
+        "integrity": "sha512-+FbBPE1o9QAYvviau/qC5SE3caw21q3xkvWKBtja5vgqOWIHHJ3ioaq1VPfn/Szqctz2bU/oYeKd9/z5BL+PVg==",
+        "license": "MIT"
+      }
+    },
+    {
+      "name": "ua-parser-js",
+      "version": "0.7.38",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "license.md",
+          "sha256": "67710938bc648712180d19818a1469ec41af27aff248efe882778d261e63a361"
+        }
+      ],
+      "artifact": {
+        "version": "0.7.38",
+        "resolved": "https://registry.npmjs.org/ua-parser-js/-/ua-parser-js-0.7.38.tgz",
+        "integrity": "sha512-fYmIy7fKTSFAhG3fuPlubeGaMoAd6r0rSnfEsO5nEY55i26KSLt9EH7PLQiiqPUhNqYIJvSkTy1oArIcXAbPbA==",
+        "funding": [
+          {
+            "type": "opencollective",
+            "url": "https://opencollective.com/ua-parser-js"
+          },
+          {
+            "type": "paypal",
+            "url": "https://paypal.me/faisalman"
+          },
+          {
+            "type": "github",
+            "url": "https://github.com/sponsors/faisalman"
+          }
+        ],
+        "license": "MIT",
+        "engines": {
+          "node": "*"
+        }
+      }
+    },
+    {
+      "name": "use-error-boundary",
+      "version": "2.0.6",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "7a27ed4b09aee323f83604d6018e1fb0244711d4f787d1bbde8a2ac4908a0dfd"
+        }
+      ],
+      "artifact": {
+        "version": "2.0.6",
+        "resolved": "https://registry.npmjs.org/use-error-boundary/-/use-error-boundary-2.0.6.tgz",
+        "integrity": "sha512-AWCVKSAanLe6R/on/ZkHYtGKfXs8BQX6z/TUGYqtvkajLqQyrGKJJscbahtq8OyN8L3LqTRjJWx4gCOLmfIObw==",
+        "license": "MIT",
+        "peerDependencies": {
+          "react": ">=16.9.0",
+          "react-dom": ">=16.9.0"
+        },
+        "peerDependenciesMeta": {
+          "react-dom": {
+            "optional": true
+          }
+        }
+      }
+    }
+  ],
+  "sourceFileHashes": {
+    "src/app.tsx": "3fcc038712ec030eafaccf9ccf6d9c3a87233c174d24775b803b0be1659d49bd",
+    "src/vite-env.d.ts": "65996936fbb042915f7b74a200fcdde7e410f32a669b1ab9597cfaa4b0faddb5",
+    "src/segment-intersection.mjs": "206076447b1d84991ff31ad8e10931215d88e328ac77e73f1bd0c638cd1b9df2",
+    "src/fixture.ts": "fb0b3d740bd070f964146cda523385bef5f721263cc15d49da66a63e0a693ac7",
+    "src/index.tsx": "369233e332ab94cbd3ee512bb49b885b043ccc6d3d4b54a6593109f0a21366c3",
+    "src/externals.d.ts": "e54f748bded62bb3a0e10f0522c260c45fe4e15787a32c853c0c949cb738c264",
+    "src/main.tsx": "657ee0da923b8246aaa732649adfd470b35ae663dd5363b13b13bc66fc2dbf4d",
+    "src/setupTests.ts": "acfac766874a4f453e509443167e1c9805ffc184f854c639f74271f8a40d4539",
+    "src/codemirror/prefix-trigger.ts": "de610f955ea7dded9311d6acf58bb7ec16f8d1a0c41ffedef7ec8d961bf41c3d",
+    "src/route-actions/app-actions.tsx": "a9bb8d4c90625031c04b5b8390b2f3bf72c5c32a8d5c93faab60542eb2ff1af3",
+    "src/route-actions/build-actions.tsx": "f8d7922516be88f3fa31f21f3a84d23604cc44e56578e8cab1b18846c3cfe101",
+    "src/route-actions/index.ts": "6abbf1aa11bd1fb6e02e089bedf9e69715e26c4a17b324b93328ccc593d91c52",
+    "src/routes/index.tsx": "f1c5453c38e4de0774a434af4e31e76670b6d5b700e4156ed296404b15e66669",
+    "src/util/passage-is-empty.ts": "4bca2adba30104fc8c607d56e593da94e065be26b3d717f8ce80d4f9328dcd25",
+    "src/util/codemirror-options.ts": "603961ce6c4ae2266cf1c902403a5522568bc1ade6273bc4c27a459f79d2c586",
+    "src/util/publish.ts": "5697ddb86b11b3bf4bc60026ded60a5190ccfb3e221342bffff926f08ba94062",
+    "src/util/locales.ts": "903b4f13040bd1bde91c5633ffc7de227fe8d417bda89c274f2454f6d244d992",
+    "src/util/import.ts": "c95a49de0f602a1fafc514567b3f5d3c1c1b8a82e2ce2bc35b9f29a67e2588fa",
+    "src/util/i18n.ts": "8e6f1973151ce73a7d6f50413ec511c0d7817786d51069250bcdfa227fa34bdc",
+    "src/util/color.ts": "6e7c894a62b292c9bb102cd177f1a2acf99e8fa288825eca3bfbcd18499df83b",
+    "src/util/geometry.ts": "1b9e50ecdc8c956d7c8439fc4e481889eb5b198c9a32e96595b529b7b3ac64e2",
+    "src/util/twee.ts": "e253cc39d016b6dbd7fed4c4bb73a51c3f22ff754aed603d86350badf22dd7c9",
+    "src/util/svg.ts": "be6ddb7fee87e4a7c7cde03ba1cc76083281c4946b9f61c68eca9b06cafcf8cc",
+    "src/util/replace-dom.ts": "336771d7a0c5249b094dcfaaa72e15fecb198e4544a26003c46b96901d04a41e",
+    "src/util/app-info.ts": "34650c7c91754750a87ff1a64c0c98ac7cb8ce061d9b774b40f8d41a12513862",
+    "src/util/parse-links.ts": "d00a5ca51d4923e56f4c64edb0d4e75431373e4c46829fec5d624d617121688b",
+    "src/util/unused-name.ts": "c1b14207f55a5069afbf124222ebea8d580bc8827fbec8fba5d17c2763ad10b1",
+    "src/util/save-file.ts": "38077a7770d78f88c18699eb6b8f076f026bd57f9d04efbf4f02e1d611147ff9",
+    "src/util/tag.ts": "4ba8478b7332c22ea6575459dd4035bf35f122df0bfebe41e95d888dfd9ea6e8",
+    "src/util/is-electron.ts": "727547d42ed62414d6a945a153106c297129dc1717add675257bdd3a1d3ed396",
+    "src/util/regexp.ts": "860d4b69f1ff6c36a8c7ebf2ff86b519bae20c957941324ac4dc3ed944ed5b19",
+    "src/store/state-loader.tsx": "e856b28818514db03a0ff079ba36f22dbf6646f5bf0e333ea08d880f8fde4599",
+    "src/store/use-publishing.ts": "8e9d3be89555f7b843d68d096f9ef20f126f426a76636c14e4c07976a0386434",
+    "src/store/format-loader.tsx": "d311fd47de43004780b9f7c9cffd24c5d85e223e8c20430c5a5733a35ee7d871",
+    "src/store/use-codemirror-passage-hints.ts": "d73a6fb53e8a3e1824fb51eaccab0caab2d38659a783220ac43da652c41c6be4",
+    "src/store/theme-setter.tsx": "4ae0554525b13d993209c5ff63c3c5f0a5600410e694e71f2900958ea2cd53d7",
+    "src/store/use-format-codemirror-toolbar.ts": "766e73f8e20e74159362f756ee4de89f0c6c0d4d0cc943f777802a20304c9d9e",
+    "src/store/use-format-codemirror-mode.ts": "899cfae75e2f82635df66865a19d04db37a36c362cd5e4defca6d36b7cc9308a",
+    "src/store/use-format-reference-parser.ts": "ac0465cda4cbc983fddeccc066f30cd69814c7a598119f29cd282e4c198ac964",
+    "src/store/use-store-error-reporter.ts": "7e622c640c706d56ee0aa04a3bcbdb18fac5656effe6ded2a9b24073e4798c7c",
+    "src/store/use-stories-repair.tsx": "34bc469194ee0dc439bd5f806073f3665620edb469c0a0a32fec6d9492a79310",
+    "src/store/use-story-launch.ts": "e976979ef1646101fcb59f8c529b0b9b817c12efc669029455ce3accf5e13790",
+    "src/store/locale-switcher.tsx": "a51ad8f8c17c6ccc7f15a2ebb4962f902df2ade0e53fccdcdc59fe9d247ae30d",
+    "src/test-util/pref-inspector.tsx": "6390bce5290beeeb5a4b0fd0c2e3f9c86535065dd6a0204361191627b35bc36a",
+    "src/test-util/undo-controls.tsx": "e1be0aa9e8238fa4c3305ae25cc90149d7a8b901ff99ac1bda6f281a9ab703fd",
+    "src/test-util/story-format-inspector.tsx": "eac201b71732b13b699ae9dbd5c36a1224a48a2cf5c31be8b5de6b3d53285a79",
+    "src/test-util/story-inspector.tsx": "da6ea0f3b4fab4c3a1af7700b43c32d95c85d62b46557a39ff4d3d223a0e32b9",
+    "src/test-util/fake-state-provider.tsx": "3df3cc97d4c554d734b967ed9b0dbff9523e343acc13c291c39bb1a373f43311",
+    "src/test-util/index.ts": "5b38f52ccf2995a98724fd2fa3423873b63c236354b9dfc3e2d20d14ad7d666d",
+    "src/test-util/fakes.ts": "31aef4b750a4e4f70c77f1e6b6483794526be5fc5e344348a64ffafb9f4ff677",
+    "src/styles/depth.css": "615226c05bb9b7ea6e919c59869a3dab51c961b407a2452430507586b23d19c3",
+    "src/styles/colors.css": "55846cb11cd71c50c66785a296a1f45ca1d0bda32e211fd7a353c32a32b74ef8",
+    "src/styles/metrics.css": "52f9b20ad21d06c90d7f4106eea8ae3b51accf292033e64493d3f7af78f28b7c",
+    "src/styles/typography.css": "c475f720526d1000a588e33a826a348ef25df2bb0d209f57da1b30ea9ec0b362",
+    "src/styles/animations.css": "af7db9e99319a207b0069b7dd2b43adf1ab03d91e7d7dff43b7dcd59be434bef",
+    "src/styles/accessibility.css": "10357875a9b5f89b7128fc41e09760c6689207d06154ac61ddae85206bfba800",
+    "src/dialogs/story-javascript.css": "c499fb16c64169353c5c74f6bbba2835362ae5593da54825789d0b8221df0e31",
+    "src/dialogs/story-javascript.tsx": "8f7ce474e17779dfc9464d5dca49555c140e541e0a9e159788f73705c5a556f9",
+    "src/dialogs/story-search.tsx": "437469a9969cd56d63edb261363ad2abe30831a66c13e8fa9679767365e0d3b4",
+    "src/dialogs/story-stylesheet.tsx": "b803b6f72d1a7ef8e4a3e57985d7b4cad482dbcc557313b733ca90cf66678215",
+    "src/dialogs/app-prefs.tsx": "b96ce014cdfda526ffb7ab5d6209619ee9cbbf92c6e68730816d1ba44ce87874",
+    "src/dialogs/story-stylesheet.css": "a6be279a16907d7ea4e79a1c5d375911f6297782bdd03b860474b58b4c71d143",
+    "src/dialogs/dialogs.types.ts": "f430e04b08b406b7910fb3740bc2fc47c7c12d561468672b75cbe56e1e0f7bf0",
+    "src/dialogs/passage-tags.tsx": "f26c94be3b7db19957f01473f5f3ff5befbc48cf42e28aee52372f828cfe3ed5",
+    "src/dialogs/story-tags.tsx": "cd2297e727c596d3424eed5c4c68a90f876a83df755595bc6a939bd232d07fd7",
+    "src/dialogs/story-search.css": "8e717b7c803a6bf93c1118733ce171d1e0677af726fe33229959684a190ac9f5",
+    "src/dialogs/app-prefs.css": "d3488dea6b0a084cfa6152aa0ac014a33ec82bf40b1fdaa8eb01661af6cc23d2",
+    "src/dialogs/app-donation.tsx": "1f04f6a0146be309782c33e86d4a32dc33bbebf0f04fd1d4f8556a41a552da6c",
+    "src/dialogs/index.ts": "cc38a1e833a7c5a9ad634bbe65a93a18ded4df0d5624a0f01057142d9c638a53",
+    "src/components/container/image-card.tsx": "57b69ed31e0b3ce0af9d96d0860cd7e0ff67a0380a30ffbf7982d72516f463ac",
+    "src/components/container/main-content.tsx": "b79d6d6d0d8ffb0e963c1d8168fcf0f23f86ad1b1389cbb392405593fd9c4ba4",
+    "src/components/container/image-card.css": "129148b4dc25b3e556a8738a2d456d4d08ea7aa231da23c8a103007a2fcb25fb",
+    "src/components/container/card-group.css": "4d846cc0e355750eff12fecce9b7d112cf47ca9e0c59c857bad9796e4af137d4",
+    "src/components/container/button-card.tsx": "a094abbba21d949e52e07d62010b6ff1f8cab9b57b2507e30e80599d733ebad6",
+    "src/components/container/card-group.tsx": "d93f94f7ac978c4b138a4010b4ab9e7d22c4887d78ddcb7a1eeb4e63bed6fdd6",
+    "src/components/container/main-content.css": "bf78dcc35462ea9493f17a44070f40687c6fc01c4a0efc3a2604fd93ab74e1c3",
+    "src/components/container/button-card.css": "67b59c28de1ed75a814d44834ad3407218e6029c9a48ed5de529fb1423d00833",
+    "src/components/story/rename-story-button.tsx": "255346f97d9e4513dedc8e5dba44272d2ddff7ec8603e07455b5ba14b8b2c33f",
+    "src/components/story/story-preview.css": "5100171c4879a683b257de506447bcaae009e87823c7ee94f0a7a187a1ffca8b",
+    "src/components/story/story-card.tsx": "5a171e1d40f10798e795cc5fba3d77792a74d8c901af6d7d12f97929de4826ff",
+    "src/components/story/story-card.css": "61bd2aafaa3eec10c3143449275199209ece39385aaa707a1115358a7a75bf6f",
+    "src/components/story/story-preview.tsx": "d5f47c0f877c4abb013249fa5c561da8dee9bb0f32b9681dac06c82f07d49388",
+    "src/components/visible-whitespace/visible-whitespace.tsx": "8b17deea7bdbaab7ce5b7f643d40a5d8fc200cb3169473bd061ade5125fbbed5",
+    "src/components/visible-whitespace/index.ts": "84edd98f38eecd39293bb24f2ac94ecc01bd399598862436f42fa2b03b984420",
+    "src/components/marquee-selection/marquee-selection.css": "e6f6682cc33d80b7af998f37311f4dd738573e74dacf8f0d968e4eab3e3d3c99",
+    "src/components/marquee-selection/marquee-selection.tsx": "9e85aa9306ecaf87986e8bc2450601fdaddc0a3adb09d85c5a861f1a78deffc6",
+    "src/components/marquee-selection/index.ts": "38db0ef14a767b554b884872ffafcbdf27d3433bd5499f6b3b9977e114210dd3",
+    "src/components/codemirror/indent-buttons.tsx": "886ba40d22726765ba71efe8bf9e37d7406d524af77c11d1465e14255a3f858b",
+    "src/components/codemirror/undo-redo-buttons.tsx": "1c6ffa8ee24ef7a2045192581116677b3f4b65907e0aa25aecf7dac187d94b3d",
+    "src/components/codemirror/index.ts": "6a2014ceaffdd54c1cc756c5ebaea4f3b0a4a13316f678e9427ade410af7edaa",
+    "src/components/tooltip/tooltip.tsx": "f7c015dd237d55f5b7f0ddd046af3eabc75d7ab894e0b8447b2b769aebe2e88b",
+    "src/components/tooltip/tooltip.css": "37df76cf656495be9b9f334c031e4315b3461827c21ef12835a2b9556d87cdd4",
+    "src/components/tooltip/index.ts": "6b82f2b93bbe19c0558e6ecca161412e92d222a151fe0de86757921d8d2a81ce",
+    "src/components/fuzzy-finder/fuzzy-finder-result.css": "70efa9d389e5be801e5efb2d53652bf3938877f6a5f6639493b565dd6bee7205",
+    "src/components/fuzzy-finder/fuzzy-finder-result.tsx": "c1905beca50658b67c5207a22f85edcecb40c2cc1521cc876a0d19b75af8fffb",
+    "src/components/fuzzy-finder/fuzzy-finder.tsx": "bc458ec3a6a32529aa7a21ef9c2ffe606717f43b0297a1de5eafa79e61d4b11e",
+    "src/components/fuzzy-finder/fuzzy-finder.css": "ba49d072de8b73d5757a4db8ffaec0985413ca6180c1ac7b9c4aaaf91626a516",
+    "src/components/fuzzy-finder/index.ts": "f48bd715f4f96045a8109b0c3c059678d1e555aab171d6f2a48b41dcdbadb315",
+    "src/components/error/global-error-boundary.css": "a746981b915717bb2b7774da6988cb1e1a7dab9de38b1404afedb0da41e7a2d1",
+    "src/components/error/error-message.css": "acf8044a551b6f4f36c95e0e37279b180ab6c185c28937694108dd9b9877cd81",
+    "src/components/error/global-error-boundary.tsx": "c037a28a8c4166c491ca2fc4e5022b0326c65994452f5455526702df35bb3e3c",
+    "src/components/error/safari-warning-card.css": "afd7837d9cf6ad24231e1007c024574637b5cf61f7e270334fd42f23ab5af1dc",
+    "src/components/error/safari-warning-card.tsx": "735b8b8c2e5bd60fc80102a1699aff42386415acfd126a6b8004084a5d0c3a3b",
+    "src/components/error/error-message.tsx": "4b944a7ad91b9de161fc9d057345105d0bc0d6e0d7df6a633c8614252ab03792",
+    "src/components/error/index.ts": "9ac27a17abb223bb8bfa5223c0091bdfbf8f9fed4bd821d2b0d9f37e160f69f0",
+    "src/components/story-format/story-format-select.tsx": "42a01cb157688ee5d6ed47da0a49e4880b56ffb6abb50d5240e3e61c14f662c4",
+    "src/components/story-format/add-story-format-button.css": "3b8641d9736902a8f6dc8799cb96df07648e975663266a42cddb046ce3ddd3bb",
+    "src/components/badge/badge.tsx": "ecc736815e194d15bc2a527cd90162c603094b122b8208ab6e41d04d9a47f307",
+    "src/components/badge/badge.css": "c2f09d4094c7c96f88e4cbdd84adf86898648b87a1d62607aa993e4a9618a374",
+    "src/components/route-toolbar/route-toolbar.css": "fa5b4b0f8e117c1160212bc4c0cba6ac821599a33ec4c94a9d54b0752184f114",
+    "src/components/route-toolbar/route-toolbar.tsx": "53f0b02bbf1abdb100c2502a6689d138442413cb18eb58f67aa419c52441593c",
+    "src/components/route-toolbar/back-button.tsx": "aa00580988386e15cb89c39d4b01a1b0a022b52f1650f56a35843ef6f2fbfca2",
+    "src/components/route-toolbar/index.ts": "b53cf6e2c2a57f8fcb0585c6dfbbebf55fa535e8c30a48d220c149c7e10d798d",
+    "src/components/document-title/document-title.tsx": "2ca101e2987d82375f64d4ffbc2ebf8b420257e1633ffb6dc2dc641724eb6ebb",
+    "src/components/welcome/welcome-card.css": "329f252a57613460ad6b5348c0a94529cb8d43090193ad755d7f371b3486ff89",
+    "src/components/welcome/welcome-card.tsx": "c9cf49ebc011091c0df3b5d05fbea9103f5469e373134a6ff1c5b8428329b308",
+    "src/components/click-away-listener/click-away-listener.tsx": "dd257cd123179f2529b635f9f26815734c6e44e7d94f424273009b720a49bbb3",
+    "src/components/click-away-listener/index.ts": "774eb97f10dad95d190e8d97820195fec0b186fbbabea56569a4f7ebead1cb51",
+    "src/components/tag/tag-button.css": "a452d5ee8b1769996e701d6bac6f6892c2106e577933ce81b108d81579e02ff3",
+    "src/components/tag/tag-editor.tsx": "f3e6e08a795058490428b8b1fef45ff80f0e8ccf598abb04aff2adc408ee6d78",
+    "src/components/tag/tag-button.tsx": "af708d1221ebf4e18691b4d60a780f09da29584be4658c10ec2720c80f59f745",
+    "src/components/tag/tag-card-button.css": "a08992aa8b7b35bcce77d7cddbc42e7eecc629f6f080926f5092dc040c399b0b",
+    "src/components/tag/tag-badges.tsx": "d7f0adea680fdd5d64e06f74d21e9bc183fe5909bebeaec9db505a4574d65463",
+    "src/components/tag/tag-grid.tsx": "f52dab1d314f6d7c54e02ca00cf2563f40990c905037a9b00d10e40cb2ef24b7",
+    "src/components/tag/tag-stripe.tsx": "08a542810e5fa0734a8fddf4f312b6c36f0aed1e76e7ff8c1892ef5cb528f57f",
+    "src/components/tag/tag-grid.css": "c8bbe6e3b5eb71984f957a3573122087a70ba6bff720387b1baf076b6393f28d",
+    "src/components/tag/tag-card-button.tsx": "7eb5999a57e5e6fd4f72e1fea5b0b72c2be4e98bf417cb74d033cc1e1e63a595",
+    "src/components/tag/tag-stripe.css": "54ed58c0f09ff0f693fabf0854c25b878a45c5ccadcec075befc300debaa26e4",
+    "src/components/tag/tag-editor.css": "e2e3bfe199c06adfb2dc06fc6f494f92986c58c1e8848f3ae142864017a5f73a",
+    "src/components/tag/index.ts": "15cff02122d53e52e9c53d4dc93bcff0eb9faa76263ed064de02d1b160d95cdb",
+    "src/components/tag/tag-badges.css": "ecf4b009a46cf549527782df39f317bf778aa997b1628f614eeff52deb78d147",
+    "src/components/passage/rename-passage-button.tsx": "b5d098be4e967eb78890f3e197a3872588281267794ed90625daf7daa94c6158",
+    "src/components/passage/passage-card.tsx": "61a1689d27208f6d8d8515b93965e1b6ce3b3b4c6a12c061cde33655d91f7b75",
+    "src/components/passage/passage-card.css": "f4da14d8efabb54b44f0114a199c6252b935f9c910deaf85edc62785a352d804",
+    "src/components/passage/passage-card-group.tsx": "d26d1941df896c8fd6f3a02e0830e3215c39b6393d84f3402b0b6f218f9a08c4",
+    "src/components/storage-quota/storage-quota.tsx": "e151ed862c4522b4fe4a160b16b195bcd3347c9425e771055af3f0d531f06ce2",
+    "src/components/storage-quota/storage-quota.css": "eaa8b5512ac55ef354fcc9c06806f13dd3a77aac2b943625b5252fe126cee8c6",
+    "src/components/loading-curtain/loading-curtain.css": "ec8f7c7ef26134f1c1b2c0f352c1a788d816ad5215d3f04d9337a3a49e7a7bff",
+    "src/components/loading-curtain/loading-curtain.tsx": "6c0d3ae31cb4a3a204e528ee77f65db574b486007cb155c1b87f4616cfb966e9",
+    "src/components/loading-curtain/index.ts": "412bb216663e6dbb7f64ba877bb59bdc1542629411350a4b4b4563b81c9499e1",
+    "src/components/control/menu-button.tsx": "5e9b158d52e848727c98c86db49776edadc0387dc66c0c55ef0bdbd4569c19e1",
+    "src/components/control/confirm-button.css": "c3e737d19beb15bedcc5fd2cf2106dc757d231bc0778203865e50d8ddda076cb",
+    "src/components/control/text-input.tsx": "e7fb3198eb323cce4b4ccf0e8f47323b530ed21f22b76879d0b357fe379af31f",
+    "src/components/control/checkbox-button.tsx": "464073e85204b90a7f8d867d43fe6bb5452f9222d486fc583fa1bb807a8b44f4",
+    "src/components/control/menu-button.css": "3372bfb7f92a3c7215200e0f7e28cb1765f601bb2403679ac30227bfa239d352",
+    "src/components/control/font-select.tsx": "97cdbfbadb1839de2eca9dae52194f705040f1dd04dd622388b164f92aea18bc",
+    "src/components/control/text-select.css": "9c5efd92984faf1f6dd9235a0ca4d608ea14fcfd2726b245dd85786da4fd9bc8",
+    "src/components/control/prompt-button.tsx": "aa19bf85256e1c8e802ce842e28f723b9a0f7a4db8b9714e5de72b8fddcdaf83",
+    "src/components/control/text-select.tsx": "f44041753b341cbba985d08680b121359fba596833e1008c5b42760a77037002",
+    "src/components/control/card-button.tsx": "75ce6d448ea69b4171325e8ee2a95a2cf3d2fe104c0ec73da994948817bf7a35",
+    "src/components/control/icon-button.tsx": "420a4df47188e3da5206d94e4b03e1fb11b74207aa9f156c9ab449d0bfcc1c7d",
+    "src/components/control/font-select.css": "ee7a46a6acec6e554aa047f9b0522de644f73014da82120596689073e322057d",
+    "src/components/control/icon-button-link.css": "ca7cc08f7aec362f077de84be12543855a6bc52c3c076b1f486935b5b9c16108",
+    "src/components/control/file-input.css": "150e08c6151fb5c771fb9154870c8173b5928e9294450b95c74cb2cf4bb4831d",
+    "src/components/control/card-button.css": "c8094a2b0ce506f12b67a78a03c6762197650f1009f1934d3cc63f050b57072c",
+    "src/components/control/color-select.css": "221d77113b1bea403d87698ec9bb661fc1c895a2ccad64ea1d1bb1e16e742f50",
+    "src/components/control/confirm-button.tsx": "1b39dde440b67b87027dbe42045aed3f8515b184b408b5cc36f401b5a4b2d006",
+    "src/components/control/prompt-button.css": "fa6d083720efebef0b008333da8e33c0b0356e35a509dfbfd0e1dcb4df899bb7",
+    "src/components/control/color-select.tsx": "d1286c27781b6b48f4091ce64fcfbf0f7518cf7f9eba8e74c0da0642e069c333",
+    "src/components/control/file-input.tsx": "1dbdedd1c966d9edf0bbb4c1051e0678820b1d2decb4bd8083a61670851af209",
+    "src/components/control/icon-link.tsx": "44e3f913ac7a8698c8230f1bc84e6172e78be5f082c799611e6fd6c3821f16af",
+    "src/components/control/text-input.css": "beacafa5c284683d234da046a2e2460b98b9b8b15624827eb31b22ad438e104d",
+    "src/components/control/autocomplete-text-input.tsx": "8fefdd96f9f5c2f32247506a0bb71a870fefb79e2bf745b1811196a3556a87a3",
+    "src/components/meter/meter.tsx": "590236a243dfb4ef2a5025d9d25aab12494ca56465e6d2a56df9f29d39ad6e6e",
+    "src/components/meter/meter.css": "84437de97f7de04ddeebaa5285d1fd552b22a73d95cbd13017521b06c51c81e9",
+    "src/components/meter/index.ts": "82a8df5ffdaca5817039e873f081d2ea7fb10da4dee4410ef45efe8caf9aaad6",
+    "src/components/container/button-bar/button-bar.css": "a4bb320b518441ff893f803de1c1fac8be0fc1aa003a0e452cb1da8e33775015",
+    "src/components/container/button-bar/button-bar-separator.tsx": "5fdc01dc966d795ca3d1af66eae9c6916a7eba2ae03fb915286fc0182b575481",
+    "src/components/container/button-bar/button-bar-separator.css": "92578479d9e5039b9e84b8ac4a9be996d4ef611fc5cd31d08b60f4415ec47b88",
+    "src/components/container/button-bar/button-bar.tsx": "ca2507e05ae370c7df0e5cb40c29947f68a756503f722c3dbb8df89d48d07449",
+    "src/components/container/button-bar/index.ts": "936fa5948ebfc73915bbe8b12556d88d2ee248e68eb831e7123134821ee7af91",
+    "src/components/container/dialog-card/dialog-stack-expander.css": "576136d93d493c67a28df0532404ae741aa2c6462eb846cc5f55a0fa08bd3fc6",
+    "src/components/container/dialog-card/dialog-editor.css": "c3a695006700832dfae0f2a9e7b0117a2a8583c5fab08af17624276ae43a3cb4",
+    "src/components/container/dialog-card/dialog-stack.tsx": "bb3c2ac6491ee04837ac3fef8b2eb63747662eb5913b756b2f46296192a60a55",
+    "src/components/container/dialog-card/background-dialog-card.tsx": "d2f37cf0df2acde2a526997ab74aa3126ea1929afe2ec537a8eca6fc645c81cd",
+    "src/components/container/dialog-card/dialog-stack.css": "8306daca5f2b02527b548a0b5b8b74d12406b6e81e724886dfb76439ddadb63a",
+    "src/components/container/dialog-card/dialog-editor.tsx": "7ec3a151c1e7fe152579da38deea904f75c6878816839d04cb204d2eb19472e5",
+    "src/components/container/dialog-card/dialog-card.css": "f27af20dd6edd9ed84900bd9c5cfa543125ea0c2b03198044535c1239afe8388",
+    "src/components/container/dialog-card/dialog-stack-expander.tsx": "88a639d7b44eb25bf1eac5f4292ca72cd869eb9653b7b08180140f120a600d9b",
+    "src/components/container/dialog-card/dialog-card.tsx": "eedbda921225a7bcf0754ad38924b90b4d0a92b6f17b5d82b2d69900361d64d4",
+    "src/components/container/dialog-card/index.ts": "21285832e938c3819cab7d67d2c1e550c6d646617e78202aaaa996896ce923e3",
+    "src/components/container/card/selectable-card.tsx": "dad00454e226d5fb7207358c78ed23bb626d52b7e687d3dd1ba0f6fed70fd7fe",
+    "src/components/container/card/selectable-card.css": "6ee87542d7ad39a59a7add1242c74968903f92b698dd7ba38bc8654b986fc6cd",
+    "src/components/container/card/card-content.tsx": "0a36f9e3e2602d4630a93456f1fefd8059921783cbd6bf23a279911820e8ff0b",
+    "src/components/container/card/card-content.css": "9044bd8c127c5f0286e8db5370d64c5fe7b3dab3c8f0198a9790a2d1a3791856",
+    "src/components/container/card/card.css": "a38afc932582ce3cb0983da99e730db3bab93552d40519b8cc2a61db3497ac55",
+    "src/components/container/card/card-header.css": "1bbfe05528f31c1e71f15e2174d762e023ccaef0ebf9f14a068db2da5bc58c9a",
+    "src/components/container/card/card.tsx": "2dc208b3e3ea1a486f4691b7e07be2e11de23de1d428a1d88ad993e83a18e0bf",
+    "src/components/container/card/card-header.tsx": "39fbad1ccd62e3bb4651fad74c1d4566a7dcf7075ab11a89999904ec39d7c425",
+    "src/components/container/card/index.ts": "639854ed37e4746ed6e9f68eb7cf4e73fcd80908daf297e474d61b329681e76c",
+    "src/components/image/icon/zoom-out.tsx": "5003e7d3dfa3a887fbe96382aa0663681c0bd5e3728a8f53083d87078e81d627",
+    "src/components/image/icon/type-size.tsx": "4c3f5d41cd701aae29cd069382c0f2d8cc95b24b7e9cf07a7f5f18770d6a85c5",
+    "src/components/image/icon/empty.tsx": "6506ebe06fa4c2850d6861f9d47a6136f0a622b51132ba728415e8cfd7bcdf41",
+    "src/components/image/icon/tag-nub.tsx": "df5da5545342f74182cfc6efb73d34d7d4f3753c21c6bbd587fd7b1642030969",
+    "src/components/image/icon/file-twee.tsx": "ce230385481486b75bc708a080d496961cd72c21ef699711b614dd5afc692ff4",
+    "src/components/image/icon/loading.css": "8ae3b93067e1b5fb91b2b0890cab0348caafba1b711583f28766b6fb3576fce9",
+    "src/components/image/icon/loading.tsx": "32ca3bc4c99cbb1999aefef4de63f06b9eba097d13d6bc448aa0e516a3fbb961",
+    "src/components/image/icon/twine.tsx": "5e2a4d43c8eeca9c41c0fb659b5642897b9809d69d7e798b9cbce533bb3ee77b",
+    "src/components/image/icon/index.ts": "add5e11ab52fa1cb1ddad4487eee33fd73302b00ec239ce622864b6f4e0dc751",
+    "src/components/story-format/story-format-item/story-format-item.tsx": "4d9dcf66a40268c375816cf15fd784b09e9bb872018edd3e8448742e978dc269",
+    "src/components/story-format/story-format-item/story-format-item-details.tsx": "50434b3ab83ae645d0f541011427468712fa2fab4228885e2261012f15aa0c43",
+    "src/components/story-format/story-format-item/index.ts": "5c15c3ba47c563d090527486d08d7423d782b2d1c9a14f1202ca2350b3281332",
+    "src/components/story-format/story-format-item/story-format-item.css": "7d5a0c4112b4601234cbd5f1144856778c0337957245a5ef6f42d7a156e00a7c",
+    "src/components/passage/passage-connections/start-connection.tsx": "5f80ce189afede4680d2f7b0daff38fd3cc63043ce858931b8a35535e4a7d5ad",
+    "src/components/passage/passage-connections/start-connection.css": "0f9a55e0a3183184e0ebfe3b46c35005fd81bb6478669a25380b8b7f4fe01b1b",
+    "src/components/passage/passage-connections/self-connection.css": "cb174fa28b8efb9f4cb09166b66887fb75163fc1d0b72a7f7bc7b1464b6f4aa7",
+    "src/components/passage/passage-connections/passage-connection.tsx": "3393cad45ddaabc875720a03468455bbbd96e4de4c220074a5ebe9ff7ef7cfe9",
+    "src/components/passage/passage-connections/passage-connection-group.tsx": "f22cc5e54d84d1fb45d9e9b74cfafb7e1c0573f4c7a7443886e1192590079eac",
+    "src/components/passage/passage-connections/link-markers.tsx": "872fd71ce4babe5e22a60333f3cb1d3333635857c78ea9cee964071fb66abaf3",
+    "src/components/passage/passage-connections/passage-connections.tsx": "73fe70725a15e32df244b76683d6c155ed14634190fb389ba7bf93d164e86a3e",
+    "src/components/passage/passage-connections/link-markers.css": "298237f2a4b3705aa2dc4b88f734533e953cb192c806e70fa2ad1a02512b48a2",
+    "src/components/passage/passage-connections/self-connection.tsx": "f1ae7121dc1d7ae977048b30304c219de9dd5057870012b91f54250def539ed2",
+    "src/components/passage/passage-connections/broken-connection.css": "c299168fefce8a11d686633a4e0e12f3ab5ca8bdac2900aab4159dde934fc031",
+    "src/components/passage/passage-connections/passage-connection.css": "7325ab19567fdc9b2af1f2ead1c9e3fc393b6e94f2a7d9c0690b38ce4410d0de",
+    "src/components/passage/passage-connections/index.ts": "82d9ff47a62210f26d17084a8c262121ec53e80cec4e0a18dd124f08dfdf4fa3",
+    "src/components/passage/passage-connections/broken-connection.tsx": "c138488641c7d9da65878e6592b765c94c80e1602a88c0fb520c701464b9f746",
+    "src/components/passage/passage-map/graph-paper-dark.svg": "ea04c9529526120300624e653a30ae943a4891a0372064ad925a3bc7398184bc",
+    "src/components/passage/passage-map/graph-paper-light.svg": "1c81f778f9850a1807b3ed79be25c1c61181c033ab8c875041235fc83f1e46e1",
+    "src/components/passage/passage-map/passage-map.css": "38af913f99ed9f21eb224db8d6487d34fe8beb99e0af7e9df6bd627c0e0756c5",
+    "src/components/passage/passage-map/passage-map.tsx": "043fab55f9f81ca0fbfb6594e0642a9cc5e65c9e8c36a60a84b6a716a244c9b9",
+    "src/components/passage/passage-map/index.ts": "d05e017269a969030826b8e49f33df99c178d5d1514e8a2dfe7895de4b008067",
+    "src/components/control/code-area/codemirror-theme.css": "1a58d54680d740b897cbf958372427ff99115ccc5bfc36bc69df85b0f9df6e2b",
+    "src/components/control/code-area/code-area.tsx": "f0873bb8585ec6667183fb0fde436faecfca4789596251dc2e24d195f7236097",
+    "src/components/control/code-area/code-area.css": "2211448f9db51eae1bc5aafe3e8d2603349f76479212c97742ad4380a0d9fe50",
+    "src/components/control/code-area/index.ts": "cb38d464a505cb5d93aa6d6786cd399bdf0b12087ca5ff260275be9cd43b2f3c",
+    "src/routes/story-test/story-test-route.tsx": "cd89c50cbed68a703a10a975aca44917ecc0edcb7865999cea8e11a15856606b",
+    "src/routes/story-test/index.ts": "4748dc287164b52d2123210edf07def4f1ad838a0a33a2b9b79f9ab0cadf37a7",
+    "src/routes/story-play/story-play-route.tsx": "a8146321074b5a98de3416723d3e2982630239dfd4bff869e5c595fee938a7c9",
+    "src/routes/story-play/index.ts": "9f8c741aa6cbaa02164f4bdb951547eb5c5083b0c98804bcbb9c2cfb6e181dea",
+    "src/routes/story-edit/marqueeable-passage-map.tsx": "856d6c82058e0114a0e958c4d5c87509f79fcd7a586ab52b96bf5aea38bc3199",
+    "src/routes/story-edit/use-zoom-transition.ts": "7c3271e4975803911fb978dc257ff3d13cda09793026077d7869cce36e2328fd",
+    "src/routes/story-edit/use-initial-passage-creation.ts": "1ab5e78e862fcdcf33cca66a2efa7991c08c136c7f135eedeb10e92cd0280bc1",
+    "src/routes/story-edit/use-passage-change-handlers.ts": "90f583ed92102d923a54822b4c08984b8a74e41b797f9e1d03eee438795648dd",
+    "src/routes/story-edit/passage-fuzzy-finder.tsx": "0e344a9ee21407a8b45b92e5d6d7407c89fe47f49d725448f1486a0bea77c991",
+    "src/routes/story-edit/story-edit-route.css": "f24daecfbce1a4fe8b8f719d2d8cb4bdb72179c11ff5c34009220e6a8f419a9a",
+    "src/routes/story-edit/use-view-center.ts": "e6a56a4158f034c3eacc6859cb25716c434aa1ec34d33c90e9997bf2d5df04d1",
+    "src/routes/story-edit/use-zoom-shortcuts.ts": "b8bde3035d77c27d70a49d085b4a1a88a75086c657151cf9de69adf0e3c50526",
+    "src/routes/story-edit/story-edit-route.tsx": "7936b26dc4630de61c0479724dad4770da78aeeb4f3c3150547a737b01091540",
+    "src/routes/story-edit/index.ts": "3a8488186d7dfe44f6c50f53ec234828924a5d1cdd6fac85ea79d117629d7db2",
+    "src/routes/welcome/welcome-route.tsx": "b487de20539f08d21c57a945241d759e22d1d1e401af908562c4b853dd7c0516",
+    "src/routes/welcome/welcome-route.css": "0304f0c83856963fc506e2c20deb0d71b0d44ce4f8dd1a4724307242071941cf",
+    "src/routes/welcome/index.ts": "3d9f7dfa22c0c27462ff985ffd1ab3ddc1884d934917039a718f51953a1d5e54",
+    "src/routes/welcome/content.tsx": "0f5f9dd467de3d3d7b35e06a27b1105d8d1776713185f14f1935fa056a90c47f",
+    "src/routes/story-list/story-cards.tsx": "5f9eea9e5b041a6a647da5ce3878c0e79ba2de2149dc59237c42faedcb3646b5",
+    "src/routes/story-list/index.ts": "0033ea953c1240818da67734f6db64aef67b0e3e8b7482a2f0739ca37c64a7d5",
+    "src/routes/story-list/story-list-route.tsx": "30ad7d6d670feb5d9ea6ff74b145192e6342d7d22f5dc0049dcdcac20946253a",
+    "src/routes/story-proof/story-proof-route.tsx": "9c9588a5400bd5c9194e834217436821a6ab4dab75038e5d35d56e6c89b8a3c2",
+    "src/routes/story-proof/index.ts": "358bcaa31de05265de9880777911e1e7edfaac44fe3fbe0092a32d8819d41676",
+    "src/routes/story-edit/toolbar/story-edit-toolbar.tsx": "d86e462e94d7a04717ddcdba4b63ac27f884e23a59e490f858f114ae6299a431",
+    "src/routes/story-edit/toolbar/undo-redo-buttons.tsx": "c3c57ce46c5fd000526c262d6ab16b9734289f75b331fa2ebc6e63d2b324954b",
+    "src/routes/story-edit/toolbar/zoom-buttons.css": "93a76dd9827da74f084985c69e50d33f44acfeeb253fd3a7c2e53d7167976c61",
+    "src/routes/story-edit/toolbar/zoom-buttons.tsx": "a35980fe52ae880271f2caf3cfd3dfa55e8bb0df656cde390aa756362ce26b07",
+    "src/routes/story-edit/toolbar/index.ts": "c07db1de4ebf106bf03297caf2a1af391010d550ee80e6cfe86a0f7f495ec6cf",
+    "src/routes/story-edit/toolbar/story/story-actions.tsx": "49b5c1fb26a39fb7f5a25bd07a3ef0b64a456456578ebfa52e1fa5b8129b7b89",
+    "src/routes/story-edit/toolbar/story/javascript-button.tsx": "346b11445fdd42d6de0f658991a5bc9f6369628fd7d609438ab8d1aab577c65a",
+    "src/routes/story-edit/toolbar/story/stylesheet-button.tsx": "909325fed0333d263a142dd787457e27dbcd2a20df20b20b8c48941f8d2cdc5f",
+    "src/routes/story-edit/toolbar/story/find-replace-button.tsx": "7f723310e4f08de66bd538c9388b05a35e832675161290b88944931c88bdf061",
+    "src/routes/story-edit/toolbar/story/passage-tags-button.tsx": "5dc3f6c6f0521063171c3834864bfc0aa698278fad7b6e6e2fb03398031f2199",
+    "src/routes/story-edit/toolbar/story/details-button.tsx": "12ae1b553195148b4bc03b35096830263f9288ff09fdbefda6ddfc11fcded403",
+    "src/routes/story-edit/toolbar/passage/passage-actions.tsx": "84743bb09ec97a6c55d53bf9e7362b20e5c4a2bbc2e2a28edd28447b7f8812b4",
+    "src/routes/story-edit/toolbar/passage/delete-passages-button.tsx": "e7d5ce2aa3a130745d133a2e57ec99457e409fcfb5b3822d412f4fde79a221cb",
+    "src/routes/story-edit/toolbar/passage/start-at-passage-button.tsx": "21f15bcbcfd54bc524ca48ce3855703a677eca0eef551f7e3ee29940154b870f",
+    "src/routes/story-edit/toolbar/passage/create-passage-button.tsx": "42e5c299a4f7651b982170df390b08e3550fb80760b9e81b59eba1ac21c4b7d2",
+    "src/routes/story-edit/toolbar/passage/go-to-passage-button.tsx": "aa2dfff3629e04158df990d206b7d38a57459c9842f174b9b6853fcefc6cbedf",
+    "src/routes/story-edit/toolbar/passage/test-passage-button.tsx": "b66af4d6d9f0dfbe7dfe975a07bb9830a7203af8de56a00f6d3e3d5919f1abed",
+    "src/routes/story-edit/toolbar/passage/deselect-all-passages-button.tsx": "c9e1325209713b43bec3e4ebe96313482e80219266b1646d4a0cddb4c3f76394",
+    "src/routes/story-edit/toolbar/passage/select-all-passages-button.tsx": "d7573dd9fd2d01a7e6828028e60da5664248db2f562c49922b2ddc55f50f2eac",
+    "src/routes/story-edit/toolbar/passage/edit-passages-buttons.tsx": "7fe4bc5e39df7999520230e0044b1dc2a8f93fa90aa74752f5c90b2d4deb27dd",
+    "src/routes/story-list/toolbar/story-list-toolbar.tsx": "99faf24f83e74bc97495a64b3be2b9db96c18b060061a86059cba2e902dde3b4",
+    "src/routes/story-list/toolbar/index.ts": "0e6cc033a8abed48c6b914e68adbd93ea83b3ddab9c4ab1502860cfb9b0b6aa5",
+    "src/routes/story-list/toolbar/story/story-actions.tsx": "c6a8f83ce69239e7d9bc2ece1e6fc083f706cda2ebb62f700567512525574512",
+    "src/routes/story-list/toolbar/story/delete-story-button.tsx": "4118b769ce5d4ae293ecaa9435453c752c7d99319fdce8031276401fe2a164ea",
+    "src/routes/story-list/toolbar/story/edit-story-button.tsx": "4c7e3e1244ed50c1e9210205e5fdd1c65e87e85d81ff19b521f243706b448a02",
+    "src/routes/story-list/toolbar/story/duplicate-story-button.tsx": "a2a2ff9f7bcad7e350eedb9bbfdc2f2f6c00b753cffac724d1f5d1d47b6d8ae3",
+    "src/routes/story-list/toolbar/story/tag-story-button.tsx": "d399f5b2e195be2bf17e9cb8063c32b679f59cab3c8ab6e6311ff98714867e34",
+    "src/routes/story-list/toolbar/story/create-story-button.tsx": "1c86928136a96a233842ef966b1d738bff370b177d9a7d82985b86a4617bb20d",
+    "src/routes/story-list/toolbar/view/tag-filter-button.tsx": "d1295c334f4358528aba7ae9c19f53bb1a10a2476a7d140002f798b869018d9b",
+    "src/routes/story-list/toolbar/view/sort-by-button.tsx": "ed4addd3ffeb685ef3045cece501307e5ef9b04b270efbbbeaefdf91833dcd90",
+    "src/routes/story-list/toolbar/view/view-actions.tsx": "2354d1400f0d98e7d5e9b7e88ba9089cdf612610f135f5d38ed1a0c48315b2cf",
+    "src/routes/story-list/toolbar/library/archive-button.tsx": "4f3b5fce5fd9c8d9d8b461c06474a8e7df6b1fbb531fa685e74386dbb9bb3742",
+    "src/routes/story-list/toolbar/library/story-tags-button.tsx": "e69e6e3594f8a477cbc5ae54a89f7cfbb7ad3a679280cc24e6fa4a5893190fd7",
+    "src/routes/story-list/toolbar/library/import-story-button.tsx": "8716b64ebecf4dee745169d1d57f3f17e95113c202ef8b495dc7a0ba535f2d9d",
+    "src/routes/story-list/toolbar/library/library-actions.tsx": "26441788f20b6ace8da8db9159e2fe56015103e3c1297e02bae84706fb347fd3",
+    "src/util/story-format/fetch-properties.ts": "a5801679a32dcb92b5b2a5d31dc9fec1390869f22d9c2c0d581133d33e3a5c8e",
+    "src/util/story-format/namespace.ts": "b06719b2c8496b57061d1fa223e48d42089827c62c789379762d66c96e38c599",
+    "src/util/story-format/editor-extensions.ts": "4bebcb4abc168fccc177fa4eb65787ba63a928ed302b9eec3c5306c36b15af4c",
+    "src/util/story-format/index.ts": "55c9c71f6323382cf15d78ea52c3cb3901fe84bc94b60abcda75d61c7c19de14",
+    "src/store/stories/getters.ts": "7b2d877c2f20337fc9757069031612a64c222bc4e55eeb5e43877f6cf53dba23",
+    "src/store/stories/zoom.ts": "2a31913859d853544d3dd274336c2cfaf6924872cc018dc656d540ade500ec3e",
+    "src/store/stories/stories.types.ts": "c6d0d00f27ca222d60b859866dabf89ceb620f51f4123c7bda4f065b6c82bf53",
+    "src/store/stories/stories-context.tsx": "75c242a3f89bad60578622372efb74db21603cc3578f094c6c7409d75702c8d9",
+    "src/store/stories/defaults.ts": "9d254be60b6e53bd7b81937f99fc04d93a654b1a5f756ddd12c837b004ce0502",
+    "src/store/stories/index.ts": "12492bf0e3dfd85bf4786bef9969da737cfb5d9236c9671d4bd38f2660a54f9f",
+    "src/store/prefs/use-donation-check.ts": "3b4dc0da41d4f5801032d33304cf05f23431a02f3c4fceba54a0deaaf1aeed0f",
+    "src/store/prefs/getters.ts": "d765f592b28b3ca106ded3e03f6fa2cb6d60c5d75a1d105b5ec2e6a40bf503cd",
+    "src/store/prefs/prefs-context.tsx": "a12dfd232b516bc765939dbac09e5c84e172233ae483955979e84121e8ea48f6",
+    "src/store/prefs/prefs.types.ts": "9b92a20f9b7fd07198c0d7991c7afb65e4df268a92354b86f373b3b50014826e",
+    "src/store/prefs/reducer.ts": "66a9df688193e3cf1f0bb5e381f43542fb0cc79b6c4b96d90ff0f68e6e4eb34d",
+    "src/store/prefs/action-creators.ts": "89d42eb24b59b9e9bb53ac6d26a5d0846a131e7feb6214be774d914c0c82cf99",
+    "src/store/prefs/defaults.ts": "df9e8dacf6f37b573bbcd4f5de58cc7ec46a8ec3c421dce6922db2c429cc532a",
+    "src/store/prefs/use-computed-theme.ts": "b6f60061cec12fd9fa4ce11357059d69a763d2d17671924409e54fa812cd9d44",
+    "src/store/prefs/index.ts": "136d15ccedba3af026f4d65eb85a50ea8e3a54128a222820296ba02b7129cd7f",
+    "src/store/persistence/use-persistence.ts": "329c1b5eb47ceb40f621e606b47eae307c72b75ca887195ee2623e4c27c24519",
+    "src/store/persistence/persistable-changes.ts": "498e22b89f9e7f7fa2dd54ce6daacacf61be19359135567dfb4a0e0c55e4827e",
+    "src/store/story-formats/getters.ts": "f7839e6ae46cd139f2539525fa2a4dfa5d3eac5b30a3acb40c9cddd5239db975",
+    "src/store/story-formats/story-formats-context.tsx": "98b8c3f73b31220cf36d84c1216203677e1bd79280418cad59fd3e94c140e578",
+    "src/store/story-formats/reducer.ts": "013547ccc7c067284c2d5df1f8fe3b738c4f1319a2758ff30f46ba3125cb2f87",
+    "src/store/story-formats/action-creators.ts": "b028d7a0103237639df9e5bdd0752309de06dd473c1849c440b3bbd010f496fe",
+    "src/store/story-formats/story-formats.types.ts": "d229ca4f8b28fae1363ca4076b3a5b6625655cee71c3f9eef09e865801414567",
+    "src/store/story-formats/defaults.ts": "34c05f279e63bc7ba49318004a9901b6e8f891aae0d7666e8fdbd183e222461f",
+    "src/store/story-formats/index.ts": "9b6fb4914d91e49a85d85dd73b82b61ed8da2b0db250e8661933ae1df2059f6f",
+    "src/store/undoable-stories/reverse-action.ts": "cf9d51b316f777e3400f837a015677f6ed36d6e8951c99f01b26fd6234fdc0f3",
+    "src/store/undoable-stories/undoable-stories-context.tsx": "8a0de49cf1e76541a8465ec8df4e34078cdde6461f91cd9ae0211b58924b5052",
+    "src/store/undoable-stories/reverse-thunk.ts": "de95d1a99a3288c3266ae8706f27f376c88e1a31a376387acfba0e5bbb7b8f6a",
+    "src/store/undoable-stories/reducer.ts": "8aaa13e8f7fdfe817bc4c6c566d2756350b18e811bcfe1b28c8f5be4dd89508b",
+    "src/store/undoable-stories/undoable-stories.types.ts": "5468dc6602199dcf1e9a0c84c2c95adc516efb2ccabee71c23eca839c499c63f",
+    "src/store/undoable-stories/index.ts": "ea53cc67387fc935d3e0c0acc1ddb5b7b15432b7f603f74e961aca800c582bac",
+    "src/store/stories/action-creators/rename-passage-tag.ts": "0dc248c20c3e22b8025de1bb90528e776d6e62e5fb98f13dd0e9c4921b28576b",
+    "src/store/stories/action-creators/delete-story.ts": "ba92810b61b0e5db2438aa35eeb6c37ef57af9458451ed55e1a396b7a6900be1",
+    "src/store/stories/action-creators/tag-color.ts": "3712141bb08c3ececffa44bc18dd53db3645caca12a533cbe7cdbdb384f6e7c2",
+    "src/store/stories/action-creators/highlight-passages.ts": "77595a55dc9828d78c28103a160854696415f87f8a2407795092f1bb6a41b702",
+    "src/store/stories/action-creators/create-story.ts": "02f7b1cb2558e69d149a3050e76ee6855360f28774e090a5a753f06e7edb36e2",
+    "src/store/stories/action-creators/tag-passage.ts": "abe3d0eee1635f5bd1d556b70351f8298e8893229c8efdd586aa414ff34e70a5",
+    "src/store/stories/action-creators/select-story.ts": "6985fcb3a7e1108d78061f639aba674a97ccb69b3aee2b8545c6a26f06da846b",
+    "src/store/stories/action-creators/create-untitled-passage.ts": "7fae6670f8c6dda18d8fa11d120d82d439035b211e9431845016fd7362d139b5",
+    "src/store/stories/action-creators/update-passage.ts": "b418460411739901aa30addc601f554742b2ea6d1442d6a582cdedde7940cffe",
+    "src/store/stories/action-creators/update-story.ts": "cf117e81e0b081e8dc57ad87021c88878afc3cb0078de4e2a7369dec24486eb3",
+    "src/store/stories/action-creators/move-passages.ts": "ef65edf4602a3196f8a7e0fc757eb4562323c92c5548c292c4ac003f3851ce7b",
+    "src/store/stories/action-creators/delete-orphaned-passages.ts": "0bbc56b498894bee664eb71a5aae723571d06c8419c036d5e7a8cf3c0190526b",
+    "src/store/stories/action-creators/select-passage.ts": "bae3d32b2e7985729e55d9d19db4ec2ec963a4984fe02f92dd32a709465fc86d",
+    "src/store/stories/action-creators/delete-passage.ts": "8b8397905092525fb7dbc7bb3e4df2960652b8d31792d76715c35b335064e5cc",
+    "src/store/stories/action-creators/find-replace.ts": "551ab7186b86ae9a5a64194c51de4dc6a9c79bc041323719a97d5d0d5104732d",
+    "src/store/stories/action-creators/duplicate-story.ts": "1134718b7487cd1976fe24af7e0a7cb2a368a4e019f13285cbb2a755f0b626bc",
+    "src/store/stories/action-creators/index.ts": "d15541eb9a289a883e1cddfc923bcba910ec87d5e3654523ac9423a8434b2218",
+    "src/store/stories/action-creators/import-stories.ts": "dd80db716af269ba1280c5cff8ef24f0123d5c2929d5df7b8ae98b4e525b0174",
+    "src/store/stories/action-creators/rename-story-tag.ts": "18f43e81f474d366575792f7a788346c6e4f24ac711778cffa976da6d361554a",
+    "src/store/stories/action-creators/create-newly-linked-passages.ts": "580d0cc6ed9c434baaf21ab12359f3ff77e7ef5c6fab28b0ae26bb684a70f6aa",
+    "src/store/stories/reducer/delete-story.ts": "774cc49b996d236ab74b35d962726cde6b8efb477a4d4cee768bf4a84b3ddf68",
+    "src/store/stories/reducer/create-passages.ts": "0186a3450ee45a54ba3d8143d580716189a2ed7c56b3c2b97cd96444066181b8",
+    "src/store/stories/reducer/init.ts": "9fe2ec7b690708c8c7f233beed1c62e88a1839ea66c78e9fa7555319b56ecbd2",
+    "src/store/stories/reducer/create-story.ts": "dca24350d81231136aa7e50819783b95941a8ae21358314737ae41ecb955fdd1",
+    "src/store/stories/reducer/update-passage.ts": "676ea05b6fd29a78fc73c88cc38268b35696cd4cc0a610ee2893851f191fbd32",
+    "src/store/stories/reducer/update-passages.ts": "eec2924ae312a060ff54bbf4fcc4dea9666c6078c2aec769887bd3b47f007c96",
+    "src/store/stories/reducer/update-story.ts": "8dc078a4a77cf2ffc050a9f811312c90a78c02ab46022fb4c643a8fce0805e35",
+    "src/store/stories/reducer/delete-passage.ts": "e30ecddd28f5ed327bfe2a329f649add3fea5b46b6f40fb6d52aa1c7c9c660b0",
+    "src/store/stories/reducer/delete-passages.ts": "58bbb172bfbc967354814995557818ba5e008b6da3bc02bbb1acaf86908fa07f",
+    "src/store/stories/reducer/create-passage.ts": "31381fbf0f29bc81bb85690b5f1dc6415e68c80ec80ad6a16f79a9bf689ae24e",
+    "src/store/stories/reducer/index.ts": "513d7bbf7839018d6190cb73a2ea0e545544cdccba8a68f695a8ec4dd067ceac",
+    "src/store/stories/reducer/repair/repair-story.ts": "241e43e8c4e2235f5145c832fd3807adb8a9a39aeb09c4300b2ab5505c64b4e2",
+    "src/store/stories/reducer/repair/repair-state.ts": "13d5baa004cb1bf6e0e818379a6485cd9149c9d980c6fa5514d98370269be3d4",
+    "src/store/stories/reducer/repair/repair-passage.ts": "b21db03500a540cd8534f1b3faf9ffaecd7f0bea64e55e19ad7a442e6d6832bb",
+    "src/store/stories/reducer/repair/index.ts": "f9c7e880dc7bd44d3d674d6b4260f55e6f5cf604453797ac96bb05b2dc51dc3f",
+    "src/store/persistence/electron-ipc/save-json.ts": "095017b653df50202f18fc06dcfdc43db355a96b16d5480f6bd56f3348c9ed70",
+    "src/store/persistence/electron-ipc/use-electron-ipc-persistence.ts": "6fde238f7d717e09c6795f37075ef3b1ae946d29555a0ef8914b7340a168eb67",
+    "src/store/persistence/local-storage/use-local-storage-persistence.ts": "81b2746cbba475d16ed9a1756e4e56b10e38ee8d1661652b60a5f240d70c25b2",
+    "src/store/persistence/local-storage/comma-list.ts": "02808c2a8e02cbcf9389a366a886851b4941c7bc7e33fef63e739005354e3040",
+    "src/store/persistence/electron-ipc/stories/save-middleware.ts": "6bcae7884831e32c5f50ea637ebd774b0ac2336a43254a17052fbd8c5749a0e2",
+    "src/store/persistence/electron-ipc/stories/save-story.ts": "da46423adc0959fc45272e9e680a8b144ef6df2cf277f533dbbaa3bcc4127153",
+    "src/store/persistence/electron-ipc/stories/index.ts": "19b0839832be97aca52f6368fd105ba3f9fb4635ad051cefe949053bd12aa577",
+    "src/store/persistence/electron-ipc/stories/load.ts": "4c162b0542380b1afb0f5c6c012159bb58ce6e0b275ad09049539cf3dbccbd8d",
+    "src/store/persistence/electron-ipc/prefs/save-middleware.ts": "5dbe1c37edaf3dd6876cec5e75055814d3b4bfa4c7e3eb6499ae314f94ff7a9d",
+    "src/store/persistence/electron-ipc/prefs/index.ts": "4e6eb4ea9d021c3b1f16e0afb4ca577c1ef1f992996fbe5ddb8babd21bd28d4d",
+    "src/store/persistence/electron-ipc/prefs/load.ts": "333e9cb4230696fe9ced01bfc7d6a54d0d8644bdb706cccc406d7200a686aaa5",
+    "src/store/persistence/electron-ipc/story-formats/save-middleware.ts": "3b7e0e321d16d62c98e91f3b1a39be3e5c91eba3ad3c6dae5ca65f41a4da2832",
+    "src/store/persistence/electron-ipc/story-formats/index.ts": "4e6eb4ea9d021c3b1f16e0afb4ca577c1ef1f992996fbe5ddb8babd21bd28d4d",
+    "src/store/persistence/electron-ipc/story-formats/load.ts": "9821b62fe666382ed972ebf2d4b20d462876bee314b37292cf6fb90f955c84fd",
+    "src/store/persistence/local-storage/stories/save-middleware.ts": "8e51fe85ff691d3b4f639be9bb9b895302467405d18d5ede0794905fbb44d2fa",
+    "src/store/persistence/local-storage/stories/index.ts": "436d8503eb40294027e09f674fbeb109f4e71de1352f4895f9931e7c6b1b7322",
+    "src/store/persistence/local-storage/stories/load.ts": "3fbe8a3740cf9b802527991eff173bb50d2e7b22931681f58368dc3ad721644b",
+    "src/store/persistence/local-storage/stories/save.ts": "ad826c820134f34f0b0fc774d68d8cc3a0ae683150cdfd5d0ea586c209718300",
+    "src/store/persistence/local-storage/prefs/save-middleware.ts": "0408fabe41792f3b6539cb697480f6f69b636c6a98bab4d31fa8e65e3200c293",
+    "src/store/persistence/local-storage/prefs/index.ts": "436d8503eb40294027e09f674fbeb109f4e71de1352f4895f9931e7c6b1b7322",
+    "src/store/persistence/local-storage/prefs/load.ts": "8b2fe79800801935fe6acc4952dff01f83aea6e7722a534eec0661a7b92c91ee",
+    "src/store/persistence/local-storage/prefs/save.ts": "08507e14fdf56e539330ba7ccc9cc04a639af890bad619d5d687705629ff1edb",
+    "src/store/persistence/local-storage/story-formats/save-middleware.ts": "e18b4d3f7be4d458ede606e5235a4c7bf2f283c5a49f9f59c20b6e281ebd8b69",
+    "src/store/persistence/local-storage/story-formats/index.ts": "436d8503eb40294027e09f674fbeb109f4e71de1352f4895f9931e7c6b1b7322",
+    "src/store/persistence/local-storage/story-formats/load.ts": "064c93244791fb43a26691e0bf736b91a3e75963473480691980ab958bfb6162",
+    "src/store/persistence/local-storage/story-formats/save.ts": "f2190b1d154d8300a5c1aee5cc71728af5453d08b5e4ff6d0dbaf2cb59b44271",
+    "src/dialogs/about-twine/about-twine.css": "2db920b8ec4c40701cf690b3ac919c187709e14dbde909c0c063bfe8475d0518",
+    "src/dialogs/about-twine/about-twine.tsx": "18a38de6fcc4b37e9bd5e76df5277f62a8d08268bc77ed8a2ec77f46501ffd69",
+    "src/dialogs/about-twine/index.ts": "220bce5b0ebab2ebe1d150c1076d7d96fba292b994f6e5eb1b7850ef6ac0336c",
+    "src/dialogs/story-details/story-details.tsx": "9a890c1ee4da0efcaa5d9c3d607e08ecef2dd730f59ece957fb9f6ad46b9d1c8",
+    "src/dialogs/story-details/story-stats.css": "e7bbc4815c0ac54f213a49da95852b0e6ffa49a32c7101477c5db5286aa1c9da",
+    "src/dialogs/story-details/story-stats.tsx": "1332bde51a2299685bf70c6d7e7bb84d022854399bdd5a2334542cb6b859683e",
+    "src/dialogs/story-details/index.ts": "fb9c93f8a23233f32102319c705405a45659da87c71f5f56cc010ea5478fddfd",
+    "src/dialogs/story-import/file-chooser.tsx": "6e559257ded39f987596e6c295fdd8555d64a35e64615fb15856cea4c9d72d25",
+    "src/dialogs/story-import/story-import.tsx": "f9acdffc813eab899ca65e67e39996ce23cff40e00f04e7747af284481d9dad8",
+    "src/dialogs/story-import/story-chooser.tsx": "d7acb75bd592abcd3e94a1e9057daac231dd82e711f4d179acd7f7faeab6e79a",
+    "src/dialogs/story-import/story-import.css": "fcb4d0787b7f95a7f05401c9f8d494e7ac8b2105b86e939dc1bc89bc5b98677b",
+    "src/dialogs/story-import/story-chooser.css": "3fb3cb3402d149efb52086f4c6916054648fdb6939ce6a0f664223acb0fc53ac",
+    "src/dialogs/story-import/index.ts": "51e58c9f6063a701f993e3137a68d5506f94a9683e93412e1ac16fca5da97133",
+    "src/dialogs/story-formats/story-formats-filter-button.tsx": "2a6fa2fa480875b8c3686cc3ada085a19c4c86d8447a43f1068c285b90dd3bfc",
+    "src/dialogs/story-formats/add-story-format-button.css": "3b8641d9736902a8f6dc8799cb96df07648e975663266a42cddb046ce3ddd3bb",
+    "src/dialogs/story-formats/add-story-format-button.tsx": "b547af000ce4d5886f33f9db0e38e98c168bdf6ef17badb044b2b9677e3106ad",
+    "src/dialogs/story-formats/story-formats.css": "563ed861c104ff655439115319802dc49359e5174e6561435f690781b7ceff4c",
+    "src/dialogs/story-formats/story-formats.tsx": "7e021317b802815132fd9b6cbf8e7a5dd09d9dabceee40a3bead0ddbab18dfdb",
+    "src/dialogs/passage-edit/passage-toolbar.tsx": "9481a2d001e88078bad0c833ee1bb66667c67846a50615bd5c4231488a12240c",
+    "src/dialogs/passage-edit/passage-text.tsx": "ab3911c767f1e68bbd12821745355d9691ac6967bc7b55e139c0d74ab00239fa",
+    "src/dialogs/passage-edit/passage-edit-contents.tsx": "4575e03e363d102759a9fabbacd33379253c56fd1d4e302651b4406a682b27dc",
+    "src/dialogs/passage-edit/passage-edit-stack.tsx": "84f8b86b64f69a4b4cfd6f721b630fd77f37ebcbc5dfc9790768c6d488fa7e84",
+    "src/dialogs/passage-edit/passage-edit-stack.css": "6b686860530d9e823e7a09b0cd33042077e4855b5982cc94c0f3da306526c45b",
+    "src/dialogs/passage-edit/story-format-toolbar.tsx": "b18699852c25f33eb67f14b61d801c44f8ee154bd978a4c83adbdf218c11a8d4",
+    "src/dialogs/passage-edit/story-format-toolbar.css": "fb4215a5a3908e76796f948e5fd46cab30c2f81a97d8d9c1b9f3957d12315218",
+    "src/dialogs/passage-edit/index.ts": "b50cb7958f37a47d4add8c71842604af1d0674b9c26006789059dff63849350e",
+    "src/dialogs/passage-edit/passage-edit-contents.css": "e08d6e727dcebbb11ad3e3e2aeebcb496ef2db99b65431acbd7c5a76f69b9e97",
+    "src/dialogs/context/dialogs-context.tsx": "60c55e0c5cb3c287c0b44f884e9b864e7bbf98de20cd7c8a990a0a752613929d",
+    "src/dialogs/context/reducer.ts": "73b105e9b0cf922bc3a8e6027e71a08e25fba24e7549bf0b1371ccffdf321e4a",
+    "src/dialogs/context/dialogs.css": "2fc302ecf289f72388beee54ef4e34248d9d11f42d49fefdf8b12836c7e728cb",
+    "src/dialogs/context/action-creators.ts": "353ec861c00c9888b96a034cd9d91069c7ea6b89df5ceb6e870e897e76fa6747",
+    "src/dialogs/context/dialogs.tsx": "c30faecdcce636ca4079dea4ca588d8224687949a822e5ee7bdd5b4e65c23816",
+    "src/dialogs/context/index.ts": "3badaf9d7db1d50650a6385f381b5b295263b777f07e2750139ea8b3f80ff459",
+    "src/electron/shared/electron-shared.types.ts": "0b8b2a1664b6d1b04b781769324f52dbc626383abfa322763fd2051af05afc07",
+    "src/electron/shared/story-filename.ts": "8247b0203e96962d220d9f79dc52b7fe05540f2c9a2aa4cb0f08f3ae37cb24b8",
+    "src/electron/shared/index.ts": "a4dba22703b88f7093fd24e3ebc836df8afbb440a077999d1dbe93899ed56b0f",
+    "evidence/en-US.json": "b193e6f89e9046178be1302d42e0efc5d5857df5b8cd61337d36e081011d6cc8",
+    "bootstrap.js": "3ee0c4951af259334eac440e43ea3f8a6d3ea1bde8347acb80b45a8fbe349355",
+    "build.cjs": "fac7b6d41593012af539cb07343679e90bb946bc7487e9d35803798751ec3dc2",
+    "package.json": "ee164111caa7f7307744d2d48f7bcb86a2240eaff361b1f1ee1ba68f043e0d70",
+    "package-lock.json": "24f68a9839b406d2ae661481826b4fcb7101c9f9f48fcf37e689721de3ae1413",
+    "LICENSE.txt": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+    "NOTICES.txt": "393ee1d762edc7d5014235f5063e55f946d975c54ba25faa52faa5fbb0a15e62"
+  },
+  "geometryReplacement": "Only segseg dependency replaced with independently written standard cross-product/projection helper. Original Twine map, connector geometry callers, story reducers, links, textarea UI retained. Original segseg omitted from runtime/public source.",
+  "fontAndAssets": "Nunito binaries omitted; system fallback. Original small SVG graph grid / Tabler chevron as percent-escaped UTF8 SVG, not raster/binary."
+}
