@@ -12569,89 +12569,61 @@
   },
   {
     "id": "tailwind-blog:tagged-editorial-archive",
-    "title": "Tailwind Blog · 标签归档浏览页",
-    "priority": 1,
-    "decision": "source-only / recommended-for-later-adaptation",
-    "visual": "编辑式大标题、左侧标签统计栏与纵向文章摘要，较现有工作台形成阅读型视觉差异。",
-    "actual": [
-      "按原tag counts排序显示标签",
-      "pathname识别当前标签",
-      "有边界条件的上一页/下一页路由",
-      "日期、文章摘要与tag链接组合"
-    ],
-    "gaps": [
-      "分页和标签通过Next路由/生成内容工作，不是单组件内存过滤",
-      "依赖Contentlayer生成blog/tag-data及Pliny、github-slugger",
-      "仅取本地原创文章数据；上游文章/封面不能默认全许可复用",
-      "没有在这个layout实现全文搜索，不可宣传全文检索",
-      "需核字体、主题、搜索provider与analytics外围，不复制全站远程配置"
-    ],
-    "near": [],
-    "distinction": "全目录未检出blog/文章归档同源条目；不是阅读详情布局变色，核心是资料归档和分面导航。",
     "source": "Tailwind Nextjs Starter Blog",
     "repository": "https://github.com/timlrx/tailwind-nextjs-starter-blog",
     "revision": "b45bef66b40c63b6f57c15ee8cd090682238df4c",
-    "license": "MIT",
     "upstream": "https://github.com/timlrx/tailwind-nextjs-starter-blog/blob/b45bef66b40c63b6f57c15ee8cd090682238df4c/layouts/ListLayoutWithTags.tsx",
-    "previewStatus": "source-only",
-    "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted",
-    "category": "展示与媒体",
     "licenseEvidence": {
       "url": "https://github.com/timlrx/tailwind-nextjs-starter-blog/blob/b45bef66b40c63b6f57c15ee8cd090682238df4c/LICENSE",
       "sha256": "9220b4f12d6f312cf4bbb856a9346071991d8091684dda1bc5540b56f63570b8",
       "scope": "Complete root MIT only; runtime dependencies/media not audited"
     },
-    "description": "编辑式大标题、左侧标签统计栏与纵向文章摘要，较现有工作台形成阅读型视觉差异。",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-bulk-522",
-    "sourceScope": "Selected fixed original code and complete root license evidence; no complete runnable/archive or runtime audit",
-    "kind": "原版完整场景（仅来源）"
+    "title": "标签文章归档与分页",
+    "description": "原完整React布局与两篇原MDX文章，本地标签/分页/上下篇和阅读，不造评论或存储服务。",
+    "behavior": "原完整React布局与两篇原MDX文章，本地标签/分页/上下篇和阅读，不造评论或存储服务。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "展示与媒体",
+    "license": "MIT (upstream, runtime, compiled CSS and Prism notices retained)",
+    "batch": "tailwind-reader-01",
+    "preview": "batches/tailwind-reader-01/archive.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "actual554 original layout/article/navigation and exit passed; pixels unverified",
+    "gaps": [
+      "仅两篇完整原文的本地路径/标签/分页演示，不是整个Next站点；每页1篇为适配数据。",
+      "原可选头像未加载，SpaceGrotesk系统字体回退；评论/外链禁用，不提供后端。",
+      "原样例作者为虚构fixture；原视觉/原生滚动像素未验。"
+    ]
   },
   {
     "id": "tailwind-blog:editorial-reader",
-    "title": "Tailwind Blog · 长文阅读与上下篇导航",
-    "priority": 2,
-    "decision": "source-only / recommended-for-later-adaptation",
-    "visual": "长文排版、作者/发布时间分区、正文与底部上下篇，区别编辑器/聊天富消息。",
-    "actual": [
-      "原长文children排版槽",
-      "作者信息/标签/前后文章链接",
-      "回到顶部与评论跳转控件",
-      "评论加载由显式按钮启用"
-    ],
-    "gaps": [
-      "评论按钮实际接Pliny第三方provider，离线版应禁用/省略而非假评论",
-      "作者twitter、Discuss on GitHub、View on GitHub外链需保留归属或明确处理",
-      "Next Image/作者头像及任意MDX插件可能引资源，需本地原创fixture与白名单",
-      "文章源码与示例媒体的许可需另核；仅保存布局不把示例文章当可再分发资产",
-      "没有阅读进度/标注/收藏状态，不能加上不存在的功能描述"
-    ],
-    "near": [],
-    "distinction": "与同源归档是阅读详情和索引两种完整页面结构，非尺寸/配色变体；也不等于PDF阅读器。",
     "source": "Tailwind Nextjs Starter Blog",
     "repository": "https://github.com/timlrx/tailwind-nextjs-starter-blog",
     "revision": "b45bef66b40c63b6f57c15ee8cd090682238df4c",
-    "license": "MIT",
     "upstream": "https://github.com/timlrx/tailwind-nextjs-starter-blog/blob/b45bef66b40c63b6f57c15ee8cd090682238df4c/layouts/PostLayout.tsx",
-    "previewStatus": "source-only",
-    "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted",
-    "category": "展示与媒体",
     "licenseEvidence": {
       "url": "https://github.com/timlrx/tailwind-nextjs-starter-blog/blob/b45bef66b40c63b6f57c15ee8cd090682238df4c/LICENSE",
       "sha256": "9220b4f12d6f312cf4bbb856a9346071991d8091684dda1bc5540b56f63570b8",
       "scope": "Complete root MIT only; runtime dependencies/media not audited"
     },
-    "description": "长文排版、作者/发布时间分区、正文与底部上下篇，区别编辑器/聊天富消息。",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-bulk-522",
-    "sourceScope": "Selected fixed original code and complete root license evidence; no complete runnable/archive or runtime audit",
-    "kind": "原版完整场景（仅来源）"
+    "title": "代码高亮文章阅读",
+    "description": "原完整React布局与两篇原MDX文章，本地标签/分页/上下篇和阅读，不造评论或存储服务。",
+    "behavior": "原完整React布局与两篇原MDX文章，本地标签/分页/上下篇和阅读，不造评论或存储服务。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "展示与媒体",
+    "license": "MIT (upstream, runtime, compiled CSS and Prism notices retained)",
+    "batch": "tailwind-reader-01",
+    "preview": "batches/tailwind-reader-01/reader.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "actual554 original layout/article/navigation and exit passed; pixels unverified",
+    "gaps": [
+      "仅两篇完整原文的本地路径/标签/分页演示，不是整个Next站点；每页1篇为适配数据。",
+      "原可选头像未加载，SpaceGrotesk系统字体回退；评论/外链禁用，不提供后端。",
+      "原样例作者为虚构fixture；原视觉/原生滚动像素未验。"
+    ]
   },
   {
     "id": "milkdown:crepe-document-workspace",
@@ -15903,42 +15875,52 @@
   },
   {
     "id": "jsoncrack:structured-data-atlas",
-    "title": "结构数据树与空间关系图",
-    "source": "JSON Crack",
+    "source": "JSON Crack · official extension scene",
     "repository": "https://github.com/AykutSarac/jsoncrack.com",
     "revision": "a46d0d0adb098e12e577a083e87ead7f61f90098",
-    "sourcePath": "apps/www/src/features/editor/views/GraphView/index.tsx",
-    "upstream": "https://github.com/AykutSarac/jsoncrack.com/blob/a46d0d0adb098e12e577a083e87ead7f61f90098/apps/www/src/features/editor/views/GraphView/index.tsx",
-    "license": "Apache-2.0 (complete actual root text; runtime/media not closed)",
-    "behavior": "原 JSON 编辑器与图/树视图联动，方向/网格/手势配置重建图实例，节点点击打开详情模态框，折叠统计与节点数量上限错误态。",
-    "difference": "区别 ReactFlow 空白节点编辑器及 MindElixir：原结构化数据自动图解、路径折叠和源码编辑一体，不另造引擎外壳。",
-    "styleTags": [
-      "结构信息/空间导航"
-    ],
-    "gaps": [
-      "原 Monaco 0.55.1 从 unpkg 加载并可能需要 worker，sessionStorage 与 Zustand 生命周期需关闭/隔离；默认 CSP 不可直接照搬。packages/jsoncrack-react 和 apps/www 完整 Apache 条款同存，但全部依赖/字体/图标尚未审，外链 ToDiagram 及导入/导出必须核边界。",
-      "仅只读源码筛选；未安装/构建/运行、交互生命周期或浏览器视觉验收。"
-    ],
-    "description": "原 JSON 编辑器与图/树视图联动，方向/网格/手势配置重建图实例，节点点击打开详情模态框，折叠统计与节点数量上限错误态。 区别 ReactFlow 空白节点编辑器及 MindElixir：原结构化数据自动图解、路径折叠和源码编辑一体，不另造引擎外壳。",
-    "category": "数据与状态",
+    "upstream": "https://github.com/AykutSarac/jsoncrack.com/blob/a46d0d0adb098e12e577a083e87ead7f61f90098/apps/chrome-extension/src/content-script.tsx",
+    "sourcePath": "apps/chrome-extension/src/content-script.tsx + content-script.css; packages/jsoncrack-react/src",
     "licenseEvidence": {
       "url": "https://github.com/AykutSarac/jsoncrack.com/blob/a46d0d0adb098e12e577a083e87ead7f61f90098/LICENSE.md",
       "sha256": "371dd1076c8a30dd126ecccb0c6a90497851a725575beab1b5759eba29fc71c8",
       "scope": "Complete actual root license; transitive code and media permissions not closed"
     },
-    "sourceEvidence": {
-      "localFile": "evidence/AykutSarac--jsoncrack.com--apps__www__src__features__editor__views__GraphView__index.tsx",
-      "sha256": "5807f12b18069f3cfbf11219a347b53916e382b7c35f30ca4bb365067635ea63"
+    "difference": "区别 ReactFlow 空白节点编辑器及 MindElixir：原结构化数据自动图解、路径折叠和源码编辑一体，不另造引擎外壳。",
+    "title": "结构化数据原文与图谱查看器",
+    "description": "官方扩展原 Raw/Graph、真实 ELK 布局与节点内容/JSONPath；配明确标注的本地 JSON 输入宿主，并非官网 Monaco 全编辑器。",
+    "behavior": "官方扩展原 Raw/Graph、真实 ELK 布局与节点内容/JSONPath；配明确标注的本地 JSON 输入宿主，并非官网 Monaco 全编辑器。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "数据与状态",
+    "license": "Apache-2.0; MIT; ISC; BSD-3-Clause; 0BSD; EPL-2.0 (ELK); conservative original Java/GWT EPL-1.0 and Apache notices",
+    "batch": "jsoncrack-extension-01",
+    "preview": "batches/jsoncrack-extension-01/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "pass",
+    "gaps": [
+      "Original Chrome Raw/Graph and node-detail scene, not the full website Monaco/tree/AI/cloud/export suite. Textarea and Apply are explicitly new local host UI.",
+      "JSDOM controlled element/ResizeObserver geometry and SVG path length/point stubs, not native SVG raster/typography/pointer or performance verification. Actual ELK algorithm runs and creates graph nodes; path-measurement fixture is not claimed native geometric proof.",
+      "Synchronous original ELK is limited to 30k input chars/600 values/depth20/200 rendered nodes; large graphs unsupported. No arbitrary large-input performance claim.",
+      "Hidden returns to Raw and unmounts graph. Copy and external navigation unavailable. Default iframe/CSP unchanged.",
+      "Official React19.3.0 is from fixed repo catalog; upstream older peer warnings are retained, not claimed package-manager peer closure. Actual tested graph paths pass."
+    ],
+    "originalCandidateSource": {
+      "source": "JSON Crack",
+      "sourcePath": "apps/www/src/features/editor/views/GraphView/index.tsx",
+      "upstream": "https://github.com/AykutSarac/jsoncrack.com/blob/a46d0d0adb098e12e577a083e87ead7f61f90098/apps/www/src/features/editor/views/GraphView/index.tsx",
+      "revision": "a46d0d0adb098e12e577a083e87ead7f61f90098"
     },
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-style-527",
-    "sourceScope": "Fixed original complete UI/demo source and full root license; not a runnable adaptation or full asset archive",
-    "kind": "原版交互场景（仅来源）",
-    "buildStatus": "fixed source and full root license read; not built/run/visually accepted"
+    "runtime": {
+      "scripts": [
+        "elk-source-1.js",
+        "elk-source-2.js",
+        "elk-source-3.js",
+        "runtime-part-1.js",
+        "runtime-part-2.js",
+        "runtime.js"
+      ]
+    }
   },
   {
     "id": "wavedrom:timing-diagram-editor",
@@ -22002,6 +21984,90 @@
     "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
     "gaps": [
       "Original Meta AstryX visual/API components with explicitlyhost-authoredlocalfixtures, not anupstreamcompletebusinessapplication. AppShell+Navigation groupedintooneentry: actualAppShell withSideNav/SideNavItem andTopNav/TopNavItem localcontentselection, no claimallmega/mobilevariantsdemonstrated. Carousel originalhorizontaltext-itemscroll/navigation imperativehandle, noimages; OverflowList originalmeasuredcollapse withDropdownMenu ofhiddenitems andhostvisiblecap; Resizable actualResizeHandle+useResizable withbounded120–400pxpanel/keyboardresize/reset, notahook-onlyentry; Chat actualmessageList/messageBubble/composer withlocalusertextappend, fixedinitialassistanttextexplicitlysample, noAI/replyservice/mic/attachmentupload. Alloriginalcoreimplementationsretained. Fixedsource0.7.12 docs versus actualcore/theme/build0.7.11 compatibility disclosed. PerentryIIFE/sharedneutraltheme/StyleX; hiddenunmount resetslocalstate, visiblefreshmount; exit/error ownedresourcecleanup. Testsactual550compose/load/cache/release andrealDOMhandlers; Carousel scrollBy/scrollTo andclient/scrollwidth usecontrolledtestgeometry, notnativepixel/snapvalidation; OverflowList usesJSDOMfloor/cap/hiddenmenu state notbrowsermeasuredfitacceptance; ResizeHandle keyboard geometry tested notnativepointerdrag; Chat syntheticcontenteditableinput notIMEacceptance. No externalmedia, clipboardservice, persistence/network. Fullroot/emitteddependencylicenses, reviewedcore/StyleXmissing-fileofficialsupplements disclosed. Lightbox isnotincludedorsubstitutedbyemptyframe; pendingassetfixtureseparatelyrecorded."
+    ]
+  },
+  {
+    "id": "astryx-core:lightbox",
+    "source": "Meta AstryX",
+    "repository": "https://github.com/meta/astryx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/core/src/Lightbox/Lightbox.doc.mjs",
+    "sourcePath": "packages/core/src/Lightbox/Lightbox.doc.mjs",
+    "licenseEvidence": {
+      "url": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/LICENSE",
+      "sha256": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473",
+      "scope": "Complete fixed original MIT; actual runtime dependency notices supplied in preview assets."
+    },
+    "title": "图像放大与浏览",
+    "description": "原图像浏览组件，使用同固定仓的两份原标志矢量图；保留原导航、关闭与缩放机制，不代表品牌关联。",
+    "behavior": "原图像浏览组件，使用同固定仓的两份原标志矢量图；保留原导航、关闭与缩放机制，不代表品牌关联。",
+    "kind": "组件",
+    "format": "独立组件",
+    "category": "展示与媒体",
+    "license": "MIT AND ISC AND BSD-3-Clause",
+    "batch": "astryx-lightbox-01",
+    "preview": "batches/astryx-lightbox-01/lightbox/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Original Lightbox component with host local gallery fixture using two byte-preserved SVG marks from the same fixed MIT repository. SVG is UTF8 percent-encoded data URL, not binary/base64 or screenshot. Marks remain trademarks; no affiliation or trademark rights implied. Original navigation/close/zoom API retained, no video, upload, external URL or service. Fixed source0.7.12 and actual core/theme0.7.11 compatibility disclosed. Hidden unmount resets local state; exit/error resource cleanup. Actual compose/loader, open/close, Next/Previous index and original img src/alt, hidden/remount and early/late cleanup tested. Keyboard +/- dispatched to original handler under JSDOM zero image geometry; no successful decoded-image zoom transform claimed; image decode, native geometry, pinch and pixel output not browser-verified. Full emitted licenses and documented official supplements retained."
+    ]
+  },
+  {
+    "id": "astryx:settings",
+    "source": "Meta AstryX",
+    "repository": "https://github.com/meta/astryx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/cli/assets/templates/pages/settings/page.tsx",
+    "sourcePath": "packages/cli/assets/templates/pages/settings/page.tsx",
+    "licenseEvidence": {
+      "url": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/LICENSE",
+      "sha256": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473",
+      "scope": "Complete fixed original MIT; actual runtime dependency notices supplied in preview assets."
+    },
+    "title": "双栏账户设置示例",
+    "description": "原完整页面与本地示例，保留原校验和界面反馈；不执行真实登录或安全设置更改。",
+    "behavior": "原完整页面与本地示例，保留原校验和界面反馈；不执行真实登录或安全设置更改。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "产品与营销",
+    "license": "MIT AND ISC AND BSD-3-Clause",
+    "batch": "astryx-expansion-04",
+    "preview": "batches/astryx-expansion-04/settings/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Complete original fixed Meta AstryX page source retained byte-for-byte, not a functioning account service. Source workspace0.7.12 with compatible installed core/theme0.7.11 disclosed. Settings original two-column account fields, local navigation selection, settings-search and local checkbox states; Save buttons have no original handler, navigation changes selection only not panel contents. No password/security/account changes are applied. Login-card original empty-input validation and timer-driven simulated incorrect-password result; no authentication or credential storage/transmission. Use fictional sample values only; never enter real credentials. Original login plain variant is grouped here, not another entry. Host supplies Theme/LayerProvider/system font, blocks external navigation and submits, owns timers/listeners; hidden unmount resets local state. Original byte-identical source, full emitted dependency licenses and reviewed missing-file core/StyleX official supplements. Actual compose/loader and state/error/exit tests; native visual/layout not verified."
+    ]
+  },
+  {
+    "id": "astryx:login-card",
+    "source": "Meta AstryX",
+    "repository": "https://github.com/meta/astryx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/cli/assets/templates/pages/login-card/page.tsx",
+    "sourcePath": "packages/cli/assets/templates/pages/login-card/page.tsx",
+    "licenseEvidence": {
+      "url": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/LICENSE",
+      "sha256": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473",
+      "scope": "Complete fixed original MIT; actual runtime dependency notices supplied in preview assets."
+    },
+    "title": "登录校验与失败反馈",
+    "description": "原完整页面与本地示例，保留原校验和界面反馈；不执行真实登录或安全设置更改。",
+    "behavior": "原完整页面与本地示例，保留原校验和界面反馈；不执行真实登录或安全设置更改。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "产品与营销",
+    "license": "MIT AND ISC AND BSD-3-Clause",
+    "batch": "astryx-expansion-04",
+    "preview": "batches/astryx-expansion-04/login-card/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Complete original fixed Meta AstryX page source retained byte-for-byte, not a functioning account service. Source workspace0.7.12 with compatible installed core/theme0.7.11 disclosed. Settings original two-column account fields, local navigation selection, settings-search and local checkbox states; Save buttons have no original handler, navigation changes selection only not panel contents. No password/security/account changes are applied. Login-card original empty-input validation and timer-driven simulated incorrect-password result; no authentication or credential storage/transmission. Use fictional sample values only; never enter real credentials. Original login plain variant is grouped here, not another entry. Host supplies Theme/LayerProvider/system font, blocks external navigation and submits, owns timers/listeners; hidden unmount resets local state. Original byte-identical source, full emitted dependency licenses and reviewed missing-file core/StyleX official supplements. Actual compose/loader and state/error/exit tests; native visual/layout not verified."
     ]
   }
 ]
