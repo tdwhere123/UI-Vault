@@ -2,7 +2,7 @@
 
 网站：<https://tdwhere123.github.io/UI-Vault/>
 
-当前有 **659 条可直接打开预览（241 条原始素材＋418 条后续接入预览）**，目标为 **1000 条可查看素材**，还差 **341 条**。另有 **205 条待适配来源记录**，不计入完成数。图标按系列计数，不按单枚、字重或尺寸凑数。
+当前有 **669 条可直接打开预览（241 条原始素材＋428 条后续接入预览）**，目标为 **1000 条可查看素材**，还差 **331 条**。另有 **201 条待适配来源记录**，不计入完成数。图标按系列计数，不按单枚、字重或尺寸凑数。
 
 ## 当前内容
 
@@ -567,3 +567,11 @@ Restored 3 existing pending entries and added 6 explicitly authorized original M
 Single-library dependency/notice review and shared isolation framework are reused; each original scene has critical interaction/cleanup tests and actual preview composition. Ordinary single-IIFE AstryX format remains supported as before; the 700KiB check applies specifically to declared multi-script chunks. No CSP, sandbox, cache or live-card limit changed. Original fonts and unsupported backend capabilities remain explicitly documented. Fixed source and complete license records are included; supplemental standard MIT terms are identified when an official package declares MIT but lacks a separate notice file, without fabricated copyright notices.
 
 Inventory 864, viewable 659, pending 205. Mapped covers remain470;189 posterless entries use bounded live cards. Three icon-series classification labels were corrected to the canonical icon-family kind; no entries or glyphs were added by that metadata correction. All other existing records and Grok assets are preserved. Browser-native visual/pointer/GPU acceptance has not been claimed.
+
+## Original-scope recovery and authorized AstryX expansion · 669 viewable
+
+Restored 4 existing pending entries and added 6 explicitly authorized original Meta AstryX templates and independent component families. No new source-only records. Original 251-entry scope: **50 integrated, 201 remaining**. AstryX expansion is separate, not counted toward that original scope; 33/58 raw template directories now have entries; 37/75 suggested independent core-component families are separately demonstrated. The 75-family grouping is an audit plan, not an official component count, and neither range is fully collected.
+
+Single-library dependency/notice review and shared isolation framework are reused; each original scene has critical interaction/cleanup tests and actual preview composition. Ordinary single-IIFE AstryX format remains supported as before; the 700KiB check applies specifically to declared multi-script chunks. No CSP, sandbox, cache or live-card limit changed. Original fonts and unsupported backend capabilities remain explicitly documented. Fixed source and complete license records are included; supplemental standard MIT terms are identified when an official package declares MIT but lacks a separate notice file, without fabricated copyright notices.
+
+Inventory 870, viewable 669, pending 201. Mapped covers remain470;199 posterless entries use bounded live cards. Three icon-series classification labels were corrected to the canonical icon-family kind; no entries or glyphs were added by that metadata correction. All other existing records and Grok assets are preserved. Browser-native visual/pointer/GPU acceptance has not been claimed.
