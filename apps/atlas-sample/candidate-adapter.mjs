@@ -11,5 +11,5 @@ export function adaptCandidate(x) {
  bundle:x.archive||'',code:x.code||'',dependencies:x.preview?'本地预览资源；原始依赖见源码。':'依赖信息见原始来源。',
  behavior:displayCandidateCopy(x.behavior,x.preview?'在本地预览中探索组件交互。':'暂无本地预览；可查看原始来源。'),
  adaptation:(Array.isArray(x.gaps)?x.gaps:[]).map(v=>displayCandidateCopy(v)).filter(Boolean).join('；'),revision:x.revision||'详见固定来源链接',
- runtime:dir?{allowLocalMedia:x.needsLocalMedia===true,key:dir,css:dir+'/runtime.css',js:dir+'/runtime.js',cssHref:'runtime.css',scriptSrc:'runtime.js',...(x.runtime?.scripts!==undefined?{scripts:x.runtime.scripts}: {})}:null};
+ runtime:dir?{allowLocalMedia:x.needsLocalMedia===true,key:dir,css:dir+'/runtime.css',js:dir+'/runtime.js',cssHref:'runtime.css',scriptSrc:'runtime.js',...(x.runtime?.scripts!==undefined?{scripts:x.runtime.scripts}: {}),...(x.runtime?.assets!==undefined?{assets:x.runtime.assets}: {})}:null};
 }
