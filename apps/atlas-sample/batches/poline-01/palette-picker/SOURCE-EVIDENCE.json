@@ -1,0 +1,51 @@
+{
+  "repository": "https://github.com/meodai/poline",
+  "revision": "c0bf44b06d549eb7bd5ecc1ac84cd3c58eb296cc",
+  "version": "0.13.1",
+  "sourcePath": "src/webcomponent.ts",
+  "originalScene": "dist/picker.html",
+  "originalFiles": [
+    {
+      "path": "LICENSE",
+      "sha256": "a7ad25d24bf0987585fdd42e392b395d81151e5ca4d0bf87c44e345105d8da2c"
+    },
+    {
+      "path": "dist/picker.html",
+      "sha256": "e5941c4885f2348ee40a79e6b5255a4a3e9d19708d4a23dbc529bfc38ea5f79d"
+    },
+    {
+      "path": "package.json",
+      "sha256": "d4fb3fe527d733142d68905b20aef3347bae929b6ab8771b7bd9f1cab777c7a4"
+    },
+    {
+      "path": "src/index.ts",
+      "sha256": "3463c7d11cedc4b81628cb32f7d162d95b162c11a45369a0c42363b46f05b9f2"
+    },
+    {
+      "path": "src/webcomponent.ts",
+      "sha256": "19361c3c195c512e77a9827b26a4a764d66118f57faa802bbca70e3d3320c036"
+    }
+  ],
+  "runtimeDependencies": [],
+  "engineUnmodified": {
+    "path": "src/index.ts",
+    "sha256": "3463c7d11cedc4b81628cb32f7d162d95b162c11a45369a0c42363b46f05b9f2"
+  },
+  "sourceAdaptations": [
+    "Official picker.html full controls/layout/styles and inline handlers adapted to IIFE; original Poline engine unchanged, original webcomponent SVG generation and saturation-ring rotary math retained.",
+    "Google Fonts links removed, original Work Sans/Aboreto sans-serif fallback retained; no fonts/assets downloaded or encoded.",
+    "Original engine labels oklchCSS/lchCSS as approximate linear HSL rescaling; host adds explicit approximate headings instead of falsely claiming accurate color-space conversion.",
+    "Pointer capture added for all original drag paths; pointercancel/lostcapture/blur/hidden/disconnect clear pointer and rotary state. Existing original listeners removed on disconnect.",
+    "Zero bounds ignored in source pointer handlers/addPoint and host pointer position/selection handlers.",
+    "Official global keyboard handler now skips form/editable elements, key repeat, hidden state; prevents navigation only for handled keys. Host pointerdown selection listens in capture phase because original shadow handler stops propagation.",
+    "Hidden keeps original model/DOM and all control selections, only cancels pending drag. No RAF/timer loop exists; reduced preference has no continuous animation to stop.",
+    "Custom element constructor/connected initialization failures are caught and stored in initializationError; host explicitly checks after upgrade before continuing, startup try cleans and renders unavailable rather than relying on swallowed platform upgrade errors.",
+    "Adapter event ownership catches runtime SVG failures, removes root and listeners, reports unavailable; pagehide is terminal and old retained nodes cannot mutate model."
+  ],
+  "dedup": {
+    "compared": "omni-color-picker and ordinary single-color controls",
+    "difference": "Original multi-anchor connected palette interpolation, rotary per-anchor saturation, X/Y/Z interpolation functions and loop control; not same single-color/inertia interaction.",
+    "browserVisualComparison": "not-run"
+  },
+  "browserVisualQA": "not-run"
+}
