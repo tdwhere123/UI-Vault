@@ -1,0 +1,41 @@
+--- batches/looseleaf-02/sketchpad.tsx (historical)
++++ batches/looseleaf-02/sketchpad.tsx (current)
+@@ -37,7 +37,7 @@
+ export default function Example() {
+   const api = React.useRef<SketchpadHandle>(null)
+   const [strokes, setStrokes] = React.useState<SketchStroke[]>(START)
+-  const [copied, setCopied] = React.useState(false)
++  const [copied, setCopied] = React.useState<boolean | string>(false)
+ 
+   const download = () => {
+     const svg = api.current?.toSVG({ title: "Postcard" })
+@@ -64,19 +64,24 @@
+         <p className="font-script text-2xl leading-none">Preview</p>
+         <Sketchpad readOnly value={strokes} width={480} height={320} />
+         <p className="text-sm text-muted-foreground">{strokes.length} strokes</p>
+-        <Button size="sm" onClick={download} disabled={!strokes.length}>
+-          Save as SVG
++        <Button size="sm" disabled title="Downloads are unavailable in this isolated preview">
++          SVG download unavailable
+         </Button>
+         <Button
+           size="sm"
+           variant="outline"
+           disabled={!strokes.length}
+           onClick={async () => {
+-            await navigator.clipboard?.writeText(JSON.stringify(strokes))
+-            setCopied(true)
++            try {
++              if (!navigator.clipboard?.writeText) throw new Error("Clipboard unavailable")
++              await navigator.clipboard.writeText(JSON.stringify(strokes))
++              setCopied(true)
++            } catch {
++              setCopied("Copy unavailable")
++            }
+           }}
+         >
+-          {copied ? "Copied" : "Copy JSON"}
++          {copied === true ? "Copied" : copied || "Copy JSON"}
+         </Button>
+       </div>
+     </div>
