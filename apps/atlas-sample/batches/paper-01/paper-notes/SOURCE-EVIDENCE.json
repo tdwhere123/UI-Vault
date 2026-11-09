@@ -1,0 +1,54 @@
+{
+  "repository": "https://github.com/papercss/papercss",
+  "revision": "b341c1606fca5b3880307d779414f43a5ccbc9b6",
+  "sourcePath": "docs/content/docs/components/collapsible.md",
+  "cssPath": "dist/paper.css",
+  "version": "1.9.2",
+  "license": "ISC",
+  "originalFiles": [
+    {
+      "path": "LICENSE.md",
+      "sha256": "6288cfdee11dd2c455749c3e6603fcf8a6da2ecf92e01ff92ac575a77074208c"
+    },
+    {
+      "path": "collapsible.md",
+      "sha256": "dad2a364d99adacd2fc2219cf9c1cce779fdf1f55601573f72bb6e1cb621fda6"
+    },
+    {
+      "path": "normalize-7.0.0-LICENSE.md",
+      "sha256": "89a9a9ace8be9e79bdc962823479bf980e4a14777ebe51b37e669f658e6f25ef"
+    },
+    {
+      "path": "package.json",
+      "sha256": "3c6e887c64ec5b4b240adc18401b7c9d4cfbbdcc70ffb79a306031e5fbf70abc"
+    },
+    {
+      "path": "paper.css",
+      "sha256": "ad822dbadf89a251187b82ad59d50da94509145cf06d3400b35c0a09ad21ad1f"
+    }
+  ],
+  "runtimeDependencies": [],
+  "embeddedCSS": [
+    {
+      "name": "normalize.css",
+      "version": "7.0.0",
+      "license": "MIT",
+      "licenseURL": "https://raw.githubusercontent.com/necolas/normalize.css/7.0.0/LICENSE.md",
+      "licenseSha256": "89a9a9ace8be9e79bdc962823479bf980e4a14777ebe51b37e669f658e6f25ef",
+      "evidence": "Original dist and src/core/_reset.scss header identifies v7.0.0 MIT"
+    }
+  ],
+  "adaptations": [
+    "Extract only the original displayed four-collapsible HTML block, not the duplicated documentation code example. Preserve original labels, filler body text, checkbox/label order and CSS mechanism.",
+    "Retain entire original dist CSS except one Google Fonts import; append narrow host layout/focus/reduced/hidden rules. No original collapse geometry/selectors/transitions replaced.",
+    "Original Google fonts omitted, original sans-serif fallback retained; font files not embedded. Original dist textual SVG data URLs are text source, not binary packaging.",
+    "ID and name prefixed per instance while maintaining required collapsible prefix; labels become keyboard focusable button role with Enter/Space -> actual checkbox.click(), expanded and body hidden ARIA synchronized.",
+    "Host title, optional second independent example, reset and lifecycle are authored adapter, not official demo features. Hidden keeps exact DOM/state but pauses transitions; exit removes root and all adapter listeners."
+  ],
+  "dedup": {
+    "compared": "plop:ink-status-timeline",
+    "difference": "Plop is controlled sequential status/current step with Lettering/Sticker/filter noise. PaperCSS is four independent checkbox disclosures and original CSS handdrawn framework, no step progression, spring or generated letter noise. Both handdrawn style, not a new handdrawn category.",
+    "visualComparison": "not-run"
+  },
+  "browserVisualQA": "not-run"
+}
