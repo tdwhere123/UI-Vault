@@ -1,0 +1,2042 @@
+{
+  "purpose": "Actual preferred p5 source/build scripts and full modified host source; ordinary UTF-8 source records, not encoded binary",
+  "p5GitHead": "f503b0b81aa86671e8ea900133985b3d26556dac",
+  "files": {
+    "bootstrap.js": {
+      "bytes": 6036,
+      "sha256": "7454a60f61b54144c60f83668d1adad5f48ae714d17c7a37059628e8d35a89ba"
+    },
+    "build.mjs": {
+      "bytes": 2744,
+      "sha256": "c7009d7c07776567bae6d34f1a2280f182bfd1fc24b084eee30c3d6a0b2547ab"
+    },
+    "main.ts": {
+      "bytes": 7067,
+      "sha256": "326695234255231109e66af9a2279fbbc4c539037436539d47b77a1ba9c7e4f8"
+    },
+    "p5-local.min.js": {
+      "bytes": 621916,
+      "sha256": "68e622f9a2a5e8c85539fa81212e0c38b9bd2169e529e0da03b848334c1efd3d"
+    },
+    "p5-source/Gruntfile.js": {
+      "bytes": 14281,
+      "sha256": "0d80a278ac1724981ecf9ced89dfe3b533320cfc2919b50c63d0938c51f60383"
+    },
+    "p5-source/README.md": {
+      "bytes": 60606,
+      "sha256": "c533710048ca80bb215fe13d13af9f28c1d204ff4eff04655e36082827515c15"
+    },
+    "p5-source/license.txt": {
+      "bytes": 24480,
+      "sha256": "eb2f25f8f165d5f20682c1ce7e99ce69144ecfd80fbed8c17dfd327ecd8b6cb6"
+    },
+    "p5-source/package-lock.json": {
+      "bytes": 530117,
+      "sha256": "b6dd0b2cbbea6a4d6ec76b37b71c59b1e09fcd7e31e5753299cdf724f8236c30"
+    },
+    "p5-source/package.json": {
+      "bytes": 3748,
+      "sha256": "a909c4fb73a09e2ad39c9fd30dff0aabda75237453b7cf4420fba961e7fe7702"
+    },
+    "p5-source/src/.jshintrc": {
+      "bytes": 387,
+      "sha256": "9e9a587e9733c3af3bbbac512ca7c4b3053f8bb8898857072b39beec0d7dde39"
+    },
+    "p5-source/src/README.md": {
+      "bytes": 3273,
+      "sha256": "993501c38a23c1a26f5c1f30046b8c28a06d87b02a5462a3cd527cbfad30238b"
+    },
+    "p5-source/src/app.js": {
+      "bytes": 2106,
+      "sha256": "6494cd09e0c7c20962e5bb6442b26afc3e75b606deedea92f8bfa10036b6f89d"
+    },
+    "p5-source/src/color/color_conversion.js": {
+      "bytes": 6137,
+      "sha256": "9b7e9aa365ef1fc3b8dfae97afd4fd9be5d88020d3b5badd8486dd1f1842ef5c"
+    },
+    "p5-source/src/color/creating_reading.js": {
+      "bytes": 18384,
+      "sha256": "f2a2168c50e9ac4972bcdd64d0d5ed2aa95ffd15e1d6763f8604b79e803af2c5"
+    },
+    "p5-source/src/color/p5.Color.js": {
+      "bytes": 27090,
+      "sha256": "b05dc78eda35c94a8c3d6e6e73c37358086ab68c32f6b90e5e3f0bb066dd0030"
+    },
+    "p5-source/src/color/setting.js": {
+      "bytes": 22024,
+      "sha256": "1a8f1b3721b85b8ba06a193f1c7c7f3f497dc146c6f9be581d0dcc253a3b7b9e"
+    },
+    "p5-source/src/core/README.md": {
+      "bytes": 8488,
+      "sha256": "03394a71ffb50d0367a3e6b27f9d2eee8bda5fea275d2ba425f5cab8eb76cf40"
+    },
+    "p5-source/src/core/constants.js": {
+      "bytes": 12770,
+      "sha256": "746749e7f3ac99a0f1d8491e197024d06d3d7fa21fe7ebb53975f26f6ccbf0ac"
+    },
+    "p5-source/src/core/environment.js": {
+      "bytes": 20547,
+      "sha256": "b0b772fa9041e77983102a6ea727344c5493bb4cbd920c4b3fde89359ce27eb0"
+    },
+    "p5-source/src/core/error_helpers.js": {
+      "bytes": 25162,
+      "sha256": "fa81f907f82af3c275dceaf0b57bdb7350464626617bc8508211b5c46a3db4f9"
+    },
+    "p5-source/src/core/helpers.js": {
+      "bytes": 515,
+      "sha256": "a28f367a308579e2044b8e0911f9a437f13d306483c0cdef5c5859b337d4abc7"
+    },
+    "p5-source/src/core/init.js": {
+      "bytes": 1355,
+      "sha256": "5b4cd7e2944b1d9c5558ed603003acb46b43aac4eca37972a4101e9eefc6a3a6"
+    },
+    "p5-source/src/core/internationalization.js": {
+      "bytes": 1450,
+      "sha256": "d4cd2ad23a9376d0f7c52cadef3c5fd37285ddebb38e1fb88ab5df706dcaa7ca"
+    },
+    "p5-source/src/core/legacy.js": {
+      "bytes": 789,
+      "sha256": "004538073cb9c68a822ec084e798b82ed84074c4244acc6bb337779318f9eda4"
+    },
+    "p5-source/src/core/main.js": {
+      "bytes": 24942,
+      "sha256": "18f13dffff9c2bc63e43a2af6147228b90039c39714c5f61fc7bc448105a8e37"
+    },
+    "p5-source/src/core/p5.Element.js": {
+      "bytes": 22920,
+      "sha256": "8593c920a00897ba27712f75fdb36040e159ae5fc43de4d79ca80bff0f1c9b45"
+    },
+    "p5-source/src/core/p5.Graphics.js": {
+      "bytes": 4855,
+      "sha256": "d7a258d6c323afc040dbca8fb171abce3853b5bf34695155b53e0c77cded9601"
+    },
+    "p5-source/src/core/p5.Renderer.js": {
+      "bytes": 10524,
+      "sha256": "eccf33a04f5b1354eb36475b58b6a0b47cf3f644f457f48f633c8d7437b8e0fb"
+    },
+    "p5-source/src/core/p5.Renderer2D.js": {
+      "bytes": 33881,
+      "sha256": "f872b5b11022d9e6d1625f2996677c30d71460e30848f4d4833c71ac3eba53c1"
+    },
+    "p5-source/src/core/preload.js": {
+      "bytes": 4636,
+      "sha256": "47928c182e0ff196869ec07f02c9a717214e57287b226ce52bd7ed0aba089fa6"
+    },
+    "p5-source/src/core/reference.js": {
+      "bytes": 16547,
+      "sha256": "36a03c2e1a72e9bcf2eff54dd0f306d6e3d15ff8984b845933e6214fc36a7026"
+    },
+    "p5-source/src/core/rendering.js": {
+      "bytes": 10616,
+      "sha256": "c7500eb66b2a8cb25c14f25fb34f6c1247ec828cdd557c80d5e5b9c09f0afd75"
+    },
+    "p5-source/src/core/shape/2d_primitives.js": {
+      "bytes": 22318,
+      "sha256": "1d33da72e460d70a05f0aa282f8bbb61004ed7a30505c9892a947e83173410bb"
+    },
+    "p5-source/src/core/shape/attributes.js": {
+      "bytes": 10246,
+      "sha256": "d5b3a351c5686dce1a50b1cd1c26977c411f4f7efe6b06253394a0a2a3cc633d"
+    },
+    "p5-source/src/core/shape/curves.js": {
+      "bytes": 16321,
+      "sha256": "e3391b5f79d2568d231ed99d2d9c525c5ad968821b0679533830fa6ed5dd2619"
+    },
+    "p5-source/src/core/shape/vertex.js": {
+      "bytes": 25552,
+      "sha256": "4ec838cf294e98ce43bcee2b7e035804c992d76434b2a48465e2329584b289e6"
+    },
+    "p5-source/src/core/shim.js": {
+      "bytes": 2930,
+      "sha256": "f4c44dbd547fdc27e66e9f246fdb2685fdbb2b56731137bf7932e40a93401d69"
+    },
+    "p5-source/src/core/structure.js": {
+      "bytes": 15284,
+      "sha256": "74008efde33e40bc73f89ddc7575343f982cea32ffe0481e51d96a303c6182c0"
+    },
+    "p5-source/src/core/transform.js": {
+      "bytes": 15127,
+      "sha256": "619d1f3ab7dd0bb57d7758cb485ac858ba1646b9f5789d90212db3c37021559e"
+    },
+    "p5-source/src/data/local_storage.js": {
+      "bytes": 5452,
+      "sha256": "db8e5698108e8ec0ac243a0eb0aba5a5f8dc72c02b49cf26c45be6f27ab880ce"
+    },
+    "p5-source/src/data/p5.TypedDict.js": {
+      "bytes": 15947,
+      "sha256": "3e6b0b598e2f4919d465ffc71be7bf98e2cb9ed282f47d587231ac3992960bf7"
+    },
+    "p5-source/src/dom/dom.js": {
+      "bytes": 100449,
+      "sha256": "2d29c473a1fddb544e03b37e6f921bef20979214bbe031ada88b77ebce43b43e"
+    },
+    "p5-source/src/events/acceleration.js": {
+      "bytes": 21900,
+      "sha256": "808961ce3924826ae7973a0103452c6e7bddce5fa0002529ace098c0a18bdf0b"
+    },
+    "p5-source/src/events/keyboard.js": {
+      "bytes": 11169,
+      "sha256": "054ff4901720ce4436257d43ebb439ebf26e829b2b0aa8a96cfaee65a18682d7"
+    },
+    "p5-source/src/events/mouse.js": {
+      "bytes": 27381,
+      "sha256": "0a4b8e6d75a1a0082766f4aa21e3d1905ccb2e858b8902b0fd03925e67ba48df"
+    },
+    "p5-source/src/events/touch.js": {
+      "bytes": 7565,
+      "sha256": "54194d69380f4a11877ffe4191fdb633f344ed49d82cb5ac768436d25b3995ee"
+    },
+    "p5-source/src/image/filters.js": {
+      "bytes": 16540,
+      "sha256": "a2c922f071e9ccaf6f00784e08d0a23a86699761ffc2168068023ecfb311932a"
+    },
+    "p5-source/src/image/image.js": {
+      "bytes": 10926,
+      "sha256": "7a019a8737e8f6cbed6cc67bc3bf2f363b86028d90f1fd01ec03bfa05b62004b"
+    },
+    "p5-source/src/image/loading_displaying.js": {
+      "bytes": 19275,
+      "sha256": "51bfafa97d8c1c263cb976439717ac1084856c81fbfbb64183303539a190609f"
+    },
+    "p5-source/src/image/p5.Image.js": {
+      "bytes": 31762,
+      "sha256": "2e7a85dd7df72828f9b70b3e802a33fda08dd3a5be489432bd3b1f7c0362f6ec"
+    },
+    "p5-source/src/image/pixels.js": {
+      "bytes": 20955,
+      "sha256": "811f7dc7edf1c76be8ad381d384fead733c0b23e150086e7d606e371ff32b330"
+    },
+    "p5-source/src/io/files.js": {
+      "bytes": 57167,
+      "sha256": "cd56f2fe2cf2305da3a0b08cd1fc3ee73a0b764c790668fae4fef8301891802a"
+    },
+    "p5-source/src/io/p5.Table.js": {
+      "bytes": 35627,
+      "sha256": "dd7f26870fbc406da5938a643c0b416d102d9c619fd23e70473d5d589fdac242"
+    },
+    "p5-source/src/io/p5.TableRow.js": {
+      "bytes": 8940,
+      "sha256": "143d8f0a6bbdb530928f1cfebb4fbb493eb22c68bd0830034f6e7c891cf7ab6f"
+    },
+    "p5-source/src/io/p5.XML.js": {
+      "bytes": 22966,
+      "sha256": "62e09154b79d6a1b5a1d28665a7d3dee7b7d45bf961b6dea80bc9d4c437f230d"
+    },
+    "p5-source/src/math/calculation.js": {
+      "bytes": 23903,
+      "sha256": "e408232c25f3bf96275674f0545b168192ef5485c093defe248598bca146d299"
+    },
+    "p5-source/src/math/math.js": {
+      "bytes": 1179,
+      "sha256": "8d6a74a9f5184471b1d885429b7e60bd2aa90c56b5518dcec3556a1d25a4dbd9"
+    },
+    "p5-source/src/math/noise.js": {
+      "bytes": 9331,
+      "sha256": "51bc3a37ddd05d7070a7c5b788b852e3948a0bdc07c4c241c0e61c3d657c2010"
+    },
+    "p5-source/src/math/p5.Vector.js": {
+      "bytes": 48787,
+      "sha256": "0dd4a57cb73186017c4df03e6ad9802561cf1f590dffd43409210902a1e1256a"
+    },
+    "p5-source/src/math/random.js": {
+      "bytes": 6199,
+      "sha256": "d99747eadd859d7d2efbffb75f2c7cdb3ccdc7a1f1c60e06937b6600c8b8ccdf"
+    },
+    "p5-source/src/math/trigonometry.js": {
+      "bytes": 9554,
+      "sha256": "427a10f4ff81deda0b3c5e3b656cbded37f89d59b300dc3eecfed4bffd6b19de"
+    },
+    "p5-source/src/typography/attributes.js": {
+      "bytes": 7581,
+      "sha256": "6bb46f5ec5180e6d4b77d1daf7dd329a52950b9d7dd6819e5c68e003a9e383f7"
+    },
+    "p5-source/src/typography/loading_displaying.js": {
+      "bytes": 9041,
+      "sha256": "9203d9102bf00d67dc07292ee331834c3bf12b34eecdef98c7d6d2a440721df0"
+    },
+    "p5-source/src/typography/p5.Font.js": {
+      "bytes": 30444,
+      "sha256": "3b8cd9b44b33b0d46ff2afad427ee9e23141c9d690f3444641e89bafab58c1a0"
+    },
+    "p5-source/src/utilities/array_functions.js": {
+      "bytes": 11129,
+      "sha256": "a5991709d83f9799bc5138a6925bdd5d8e78f7afa09b20a8ccca9374c7f302ca"
+    },
+    "p5-source/src/utilities/conversion.js": {
+      "bytes": 9915,
+      "sha256": "3d423e17554a52911df99648b916af26970952ae251449de01227b02dc3880c3"
+    },
+    "p5-source/src/utilities/string_functions.js": {
+      "bytes": 17863,
+      "sha256": "b4f775f29ced6db61412b7a8d015e1be6b128ba8271d7b849752705618f877ce"
+    },
+    "p5-source/src/utilities/time_date.js": {
+      "bytes": 3548,
+      "sha256": "95cd7a1d687a356fe18824f81ee859173bfb32e21ff4e2885e78cf378237f6a6"
+    },
+    "p5-source/src/webgl/3d_primitives.js": {
+      "bytes": 48958,
+      "sha256": "8435d10028704153c5ab019b2141225a8078a4244046d0a716d9f203688c4167"
+    },
+    "p5-source/src/webgl/interaction.js": {
+      "bytes": 16264,
+      "sha256": "1e0347857c470e01564156a1fec42703cf40edf07b0243e35f480d4afa93b0ad"
+    },
+    "p5-source/src/webgl/light.js": {
+      "bytes": 24822,
+      "sha256": "4e00f52a84fbb226dc7d6f8b50698b17dae43b8d6cb801dbc816c022dca191a3"
+    },
+    "p5-source/src/webgl/loading.js": {
+      "bytes": 18179,
+      "sha256": "5f5603a70ce671bd0a5296406b700c51ea208b05becd7a17b30673299d3e9d50"
+    },
+    "p5-source/src/webgl/material.js": {
+      "bytes": 24952,
+      "sha256": "88860458a5fef097278dee84235aff6e7b94050b6a4a5e674770a618cba164b3"
+    },
+    "p5-source/src/webgl/p5.Camera.js": {
+      "bytes": 36510,
+      "sha256": "07f801b7e73940bc9c78439d27ddab5b183707d8ae24abcd963bb0219498515a"
+    },
+    "p5-source/src/webgl/p5.Geometry.js": {
+      "bytes": 8499,
+      "sha256": "63d5fa64f8389e59aa168a1888a444c1c93f637cda3da1a26ab83cc10f8a71b0"
+    },
+    "p5-source/src/webgl/p5.Matrix.js": {
+      "bytes": 22528,
+      "sha256": "36db13c6d35e17f0592bc1b41ed957277c625747ed31ef9c04096e2080c332f1"
+    },
+    "p5-source/src/webgl/p5.RenderBuffer.js": {
+      "bytes": 2068,
+      "sha256": "30394e5cb4fdc94c8b8b612ba8714686a5c5a49a2c695c79930e4166291670e2"
+    },
+    "p5-source/src/webgl/p5.RendererGL.Immediate.js": {
+      "bytes": 9501,
+      "sha256": "770b0e8b76f05743d2a5caf6b857fda77c63b9a0117263d2ad1c685d7410af09"
+    },
+    "p5-source/src/webgl/p5.RendererGL.Retained.js": {
+      "bytes": 5858,
+      "sha256": "cccdb4edbfe03a15afdf2e4cfa3984e6bfc2c84a8ebe9d2760581f63bc241440"
+    },
+    "p5-source/src/webgl/p5.RendererGL.js": {
+      "bytes": 44139,
+      "sha256": "c66dc548251d0ee1d2de598770efe35fb74d809efa563f71eac53160af770104"
+    },
+    "p5-source/src/webgl/p5.Shader.js": {
+      "bytes": 15651,
+      "sha256": "2a426c7b64b58eeeec76759dbfa510e221013f603efe0979a90c722215a0a5cc"
+    },
+    "p5-source/src/webgl/p5.Texture.js": {
+      "bytes": 11021,
+      "sha256": "43db749ffd2a04dfe543ff5a0b83ba30f9281804d234286e430488d4fa8db76b"
+    },
+    "p5-source/src/webgl/shaders/basic.frag": {
+      "bytes": 106,
+      "sha256": "b772f93186bcdfb86b5548da45b47cd710ef844e4398f4dfadfb16e46436be83"
+    },
+    "p5-source/src/webgl/shaders/font.frag": {
+      "bytes": 6194,
+      "sha256": "49005276e322d7362de828df0f5bed445862b91ad9bee7cc841ef3fca4d546ec"
+    },
+    "p5-source/src/webgl/shaders/font.vert": {
+      "bytes": 664,
+      "sha256": "bb0a04ddcb6167a790d54cecfb07bc8ddf8a816b861d92820f8f38c18266d26a"
+    },
+    "p5-source/src/webgl/shaders/immediate.vert": {
+      "bytes": 381,
+      "sha256": "958ba0a9fdf379a060b6b6b71a798a890762a95a9d44b536af2b3eb42fa7d37e"
+    },
+    "p5-source/src/webgl/shaders/light.vert": {
+      "bytes": 720,
+      "sha256": "a0b8433b5848b11bfb504e8f96a3cf46eed0b5d395908eca4b419e33d32023b4"
+    },
+    "p5-source/src/webgl/shaders/light_texture.frag": {
+      "bytes": 540,
+      "sha256": "3c3bd099d7b15286175836e70e0b02eec068e2c315db824db634a60efbe5b134"
+    },
+    "p5-source/src/webgl/shaders/lighting.glsl": {
+      "bytes": 4367,
+      "sha256": "107c6b254453bb44fad9c0682b0b1870ca596e23d5a157aebac29ee09fe5e879"
+    },
+    "p5-source/src/webgl/shaders/line.frag": {
+      "bytes": 127,
+      "sha256": "7a93020500d0dcde82697a562a08e28dcf8bd2fe2f016f9e76239d4102a2cbed"
+    },
+    "p5-source/src/webgl/shaders/line.vert": {
+      "bytes": 3879,
+      "sha256": "d0a40873230666a1d5aa53330f0adc85240c3f63399bc42797908b99ed6f9d6b"
+    },
+    "p5-source/src/webgl/shaders/normal.frag": {
+      "bytes": 115,
+      "sha256": "564d67fb9b6a9882d78cba60640d2eb4c6d68bb06fd2744b86be9ec0064907e0"
+    },
+    "p5-source/src/webgl/shaders/normal.vert": {
+      "bytes": 456,
+      "sha256": "e6f03987a5e306bcbc538fdae3c3a05022a73a61cd513a89a8f73a5ac271d494"
+    },
+    "p5-source/src/webgl/shaders/phong.frag": {
+      "bytes": 645,
+      "sha256": "ad85fc46651e43b24ac9da4ee9ba4fec249848e91dde5c02ee4698b3ebf11fbe"
+    },
+    "p5-source/src/webgl/shaders/phong.vert": {
+      "bytes": 853,
+      "sha256": "e758b2ee6bfec3c780bb6abf462642b5d2f70453f01142067a2bd8c70c8e889e"
+    },
+    "p5-source/src/webgl/shaders/point.frag": {
+      "bytes": 867,
+      "sha256": "6f868e5c909cd0751ad02d69cda312dc7bff0d6a730ae7d647b67258535a0ae6"
+    },
+    "p5-source/src/webgl/shaders/point.vert": {
+      "bytes": 328,
+      "sha256": "854707f9559db48f3a52fc0fcce90a8f78c6ccbdbe7e14afc16a4d43fe3fbca5"
+    },
+    "p5-source/src/webgl/shaders/vertexColor.frag": {
+      "bytes": 90,
+      "sha256": "a9546f935b2827ab4c71cb3bda85490a13bfa1be29013e9d2f6cf75a519b52b1"
+    },
+    "p5-source/src/webgl/shaders/vertexColor.vert": {
+      "bytes": 300,
+      "sha256": "fc849dfc57d4551b84da27a67b19dfaa4f8965e054012c2dd5bc7acdb98ceee9"
+    },
+    "p5-source/src/webgl/text.js": {
+      "bytes": 23288,
+      "sha256": "8d2482846b0915f01075e26faf1b32f1fe8f84960a75bb825fcdbee0c51cb23a"
+    },
+    "p5-source/tasks/build/browserify.js": {
+      "bytes": 2624,
+      "sha256": "5651c293e971f3920fa8ea1eb29508412af1a56dc8dafd31f0c542b3c4bf72b9"
+    },
+    "p5-source/tasks/build/combineModules.js": {
+      "bytes": 3498,
+      "sha256": "36efed2a71d420dbc6212d30deadfa83c76050133b9310dc9d1913468b83cf8a"
+    },
+    "p5-source/tasks/build/eslint-samples.js": {
+      "bytes": 1354,
+      "sha256": "7ad63a240936a456fbc3e7ddccc76622a1536c35f27ac6274ce7322319766375"
+    },
+    "p5-source/tasks/release/release-bower.js": {
+      "bytes": 2719,
+      "sha256": "cd0d63b84ff5160341e8345aa46dc277de6063830720f38756cca95a0bef64f3"
+    },
+    "p5-source/tasks/release/release-docs.js": {
+      "bytes": 2594,
+      "sha256": "b1ba00f0834aa8d0b2fd3c4838988d5963b481500374e7c9f510375e10d6cfa1"
+    },
+    "p5-source/tasks/release/release-github.js": {
+      "bytes": 3156,
+      "sha256": "043a8efe3ea049daa3428b4c07fe36accff1fb7d1ec3c0e5269d0c5854721fd8"
+    },
+    "p5-source/tasks/release/release-p5.js": {
+      "bytes": 3124,
+      "sha256": "4f3ed221f8cee0151ad80f546b8610a28ad99d710406c4b325628fe793ab55e2"
+    },
+    "p5-source/tasks/test/mocha-chrome.js": {
+      "bytes": 3274,
+      "sha256": "d36db7e956d57296da05c069c5ee98e835da973eec4e1c66c75a375cc861d22b"
+    },
+    "p5-source/translations/en/translation.json": {
+      "bytes": 1612,
+      "sha256": "e64a23e951c426f51764ed9fba01d16c6242ddbf1cc15b6b17c919312f86e977"
+    },
+    "p5-source/translations/es/translation.json": {
+      "bytes": 478,
+      "sha256": "35088762a2a779eff515f9b474fc00933b7926f4c4633d913c5313cf0bb2be38"
+    },
+    "p5-source/translations/index.js": {
+      "bytes": 346,
+      "sha256": "22ba83cc8ac0e47ba48c258018a0e05cd1d108bb44eadaffdd317afbae266169"
+    },
+    "package-lock.json": {
+      "bytes": 44251,
+      "sha256": "e655281af3ab91d101d4563ee775e3ef924e12a6b2afa34bc8311a0e4fcf01d9"
+    },
+    "package.json": {
+      "bytes": 253,
+      "sha256": "898a792506af3ed68d03034a5650696a82794b926f7f75bc1843b19bbbfe4515"
+    },
+    "src/Tone/classes.ts": {
+      "bytes": 249,
+      "sha256": "ef1687b6ef0ded9081118c2400b031b32b4606227b7caa32c487ef8e7dea95da"
+    },
+    "src/Tone/component/analysis/Analyser.test.ts": {
+      "bytes": 1769,
+      "sha256": "02e1402d9e14e3d977c289f17b7ab1cdb1dd23e1730227dc9252ebd298e3610c"
+    },
+    "src/Tone/component/analysis/Analyser.ts": {
+      "bytes": 4803,
+      "sha256": "ad8d1f4a2be0e6ab916694b685dc4e8d1318a3a13fceb923f83882722b4a9881"
+    },
+    "src/Tone/component/analysis/DCMeter.test.ts": {
+      "bytes": 785,
+      "sha256": "ab1f4df55d324067e5e16af3753e1f96e364cc8a5ad083a95d8353a15a9d6d64"
+    },
+    "src/Tone/component/analysis/DCMeter.ts": {
+      "bytes": 993,
+      "sha256": "fb42500a020a89d6d790520f458d9614b36d0d7ae688a4d4ec11d29609542c47"
+    },
+    "src/Tone/component/analysis/FFT.test.ts": {
+      "bytes": 1828,
+      "sha256": "76e8e695842fb31f228b326fccd08498e69e98fb6ce3819ff2b69c4feee9176d"
+    },
+    "src/Tone/component/analysis/FFT.ts": {
+      "bytes": 2993,
+      "sha256": "a39124b602fd63bbcd3e79c210c5f9ffb2b77e70e7bd20ef33b773314e48ee4d"
+    },
+    "src/Tone/component/analysis/Follower.test.ts": {
+      "bytes": 3864,
+      "sha256": "4ba090f8fb3f3b5e1b246c4af9741182ca7a6778bfbb81dbed3b38a2a71c91e9"
+    },
+    "src/Tone/component/analysis/Follower.ts": {
+      "bytes": 2200,
+      "sha256": "55cf061ee251e34a1e626a0922961c40857487a1a18d997876736d4f007c1e02"
+    },
+    "src/Tone/component/analysis/Meter.test.ts": {
+      "bytes": 3127,
+      "sha256": "ce1fd5b14a1e481f5edefb26244a68401e470686d80a7111c6877b91cf59ff4b"
+    },
+    "src/Tone/component/analysis/Meter.ts": {
+      "bytes": 4403,
+      "sha256": "75d6bd6c3a166503401193e73424e12649ce660fb8c10707209bb819a5dbd716"
+    },
+    "src/Tone/component/analysis/MeterBase.ts": {
+      "bytes": 1127,
+      "sha256": "96637a8d40b09e09729188c4393f1d0265c735a92ea274ff7d4796ae5d6884cc"
+    },
+    "src/Tone/component/analysis/Waveform.test.ts": {
+      "bytes": 1004,
+      "sha256": "cf10ead9a611676927c9a7cb4c665d38b946792fd711b5ee5c228febb4da973a"
+    },
+    "src/Tone/component/analysis/Waveform.ts": {
+      "bytes": 1547,
+      "sha256": "7b47883c5a08a59eaa4bf88c4d35f019527eafa74ff6a675c6f2b9e34dcb9e70"
+    },
+    "src/Tone/component/channel/Channel.test.ts": {
+      "bytes": 2182,
+      "sha256": "0afd79c207e886ad88233c4241e4533623fba40706da1d43e942b42852cebb9e"
+    },
+    "src/Tone/component/channel/Channel.ts": {
+      "bytes": 4494,
+      "sha256": "e0a3f5e6a24f30fc9b636b3f446b31b7fec06380cd5a055a5c62ce238305e3fe"
+    },
+    "src/Tone/component/channel/CrossFade.test.ts": {
+      "bytes": 2372,
+      "sha256": "ec5cdf5e9a2e9f2f6486b20ba8f4076642d4da67076943b4025b9df11492ddff"
+    },
+    "src/Tone/component/channel/CrossFade.ts": {
+      "bytes": 4845,
+      "sha256": "75152d30037d819f8931ce7c9cd28206bdf108db4dafbbebbf792c07fa7ed28a"
+    },
+    "src/Tone/component/channel/Merge.test.ts": {
+      "bytes": 1700,
+      "sha256": "72eac36f2e32296cf905085af5201ebe7fb0bc9be400bd0ca0b54b1ce5e788a5"
+    },
+    "src/Tone/component/channel/Merge.ts": {
+      "bytes": 1700,
+      "sha256": "619b6dda50034fd14552e929b7367e8a318659dff0401f80df47658166097fdb"
+    },
+    "src/Tone/component/channel/MidSideMerge.test.ts": {
+      "bytes": 735,
+      "sha256": "f07603d663e11c82fd5d06b69e495575e3514d5cab115477d273a8beadc7b9e6"
+    },
+    "src/Tone/component/channel/MidSideMerge.ts": {
+      "bytes": 2693,
+      "sha256": "98028103023137c1e6fe5097fb04c4b9fa21c7bc7ff07c6f96ecae1690272c95"
+    },
+    "src/Tone/component/channel/MidSideSplit.test.ts": {
+      "bytes": 2581,
+      "sha256": "0bc99e0224ca371e006f1ab0d1fc98214fbfbbe1a9738280c1de120650564792"
+    },
+    "src/Tone/component/channel/MidSideSplit.ts": {
+      "bytes": 2427,
+      "sha256": "f22f99558dc6fbf070adab6cfe286e0ab37a741b367b21bf7f2ed4c692449d98"
+    },
+    "src/Tone/component/channel/Mono.test.ts": {
+      "bytes": 1442,
+      "sha256": "f49b45f6cc94660f70a48a408cc8262d23ee26d79e338d407a667da616ba0525"
+    },
+    "src/Tone/component/channel/Mono.ts": {
+      "bytes": 1327,
+      "sha256": "9d449cbb94cf32a092929e78d9db9ae849e4d8aed7306970f7c9f8c1c22d3248"
+    },
+    "src/Tone/component/channel/MultibandSplit.test.ts": {
+      "bytes": 1815,
+      "sha256": "b4c90239e6a3d7e47ea2bb2f222a90e051ee50b14f6680f72f729b7a4bb677cb"
+    },
+    "src/Tone/component/channel/MultibandSplit.ts": {
+      "bytes": 4130,
+      "sha256": "8eb48186cbc3e6495ec569d1eda29d1001dfde7fb0d71c380d2e061f0862021b"
+    },
+    "src/Tone/component/channel/PanVol.test.ts": {
+      "bytes": 1496,
+      "sha256": "db21f8151f2061f279dc739776686d3fe754a54bdda8df9ac7e7342aa706f159"
+    },
+    "src/Tone/component/channel/PanVol.ts": {
+      "bytes": 2548,
+      "sha256": "9e6a5e90a596f7eee6b4174660053ff7e96e8afd21793e809b6921105ef8d89b"
+    },
+    "src/Tone/component/channel/Panner.test.ts": {
+      "bytes": 2551,
+      "sha256": "59b5848dcb4c2528a9544fc0a023c5cdf2c83533ccac7305636c03471cddca16"
+    },
+    "src/Tone/component/channel/Panner.ts": {
+      "bytes": 2536,
+      "sha256": "218cec229cdbc06454507239e49b1e2e8303ed0178a8e960a0dceaa8d6f962bd"
+    },
+    "src/Tone/component/channel/Panner3D.test.ts": {
+      "bytes": 2198,
+      "sha256": "f07274848384299dac5090c4a38df7e6ed8ab5d7c35cd80ce2f51affd73ebeb9"
+    },
+    "src/Tone/component/channel/Panner3D.ts": {
+      "bytes": 5968,
+      "sha256": "02ec32cadf5dc085270adfe3a35fcc1482c4e22096d419aa58510dd0fc4dd6da"
+    },
+    "src/Tone/component/channel/Recorder.test.ts": {
+      "bytes": 3163,
+      "sha256": "87ac630897ab26b2dede5d74b940721319f3da95f4fc1e3e83dd8070ffc29787"
+    },
+    "src/Tone/component/channel/Recorder.ts": {
+      "bytes": 4739,
+      "sha256": "0181053887f337debf19c8e27c39657096ff1340685622c55ba820617567e81d"
+    },
+    "src/Tone/component/channel/Solo.test.ts": {
+      "bytes": 3821,
+      "sha256": "bcfd8e16db904efd1f85c8f0f27a50575bda975971667df684c13fcd62ee8550"
+    },
+    "src/Tone/component/channel/Solo.ts": {
+      "bytes": 3884,
+      "sha256": "17dd2e9103cf3b9a458a7e6ed9407e05aaeb51d401b30ad4b7c550348950d15c"
+    },
+    "src/Tone/component/channel/Split.test.ts": {
+      "bytes": 2007,
+      "sha256": "4c680731e6a061d248a05f011e0321499fa80501d963e099e46bddb8adbc4486"
+    },
+    "src/Tone/component/channel/Split.ts": {
+      "bytes": 1309,
+      "sha256": "94755f97db75b8e04f52400e9cf66f4c298a88ee8e6d49463326473be9289994"
+    },
+    "src/Tone/component/channel/Volume.test.ts": {
+      "bytes": 3452,
+      "sha256": "edd27131c21296704b9ffb5a98de198d155e2e2ba7d99bbb53588040b368d440"
+    },
+    "src/Tone/component/channel/Volume.ts": {
+      "bytes": 2556,
+      "sha256": "a8ee2bc759d3b246c4dec39291bef37090eabdd1f939a4cbdaf60de1c9c80610"
+    },
+    "src/Tone/component/dynamics/Compressor.test.ts": {
+      "bytes": 2420,
+      "sha256": "b48d31ac8bd294346c05e4602158984192fb5e2b5d5e7d520789e3592d5080a6"
+    },
+    "src/Tone/component/dynamics/Compressor.ts": {
+      "bytes": 4457,
+      "sha256": "6354967ee5bc7404b0f51160aaab2584c6bddad825368ef9d19b17cd7ccb7d4d"
+    },
+    "src/Tone/component/dynamics/Gate.test.ts": {
+      "bytes": 1911,
+      "sha256": "029584eb8bc9387181ae54e2d38e673220f75c353e3f19fc23b4515997a0a9ef"
+    },
+    "src/Tone/component/dynamics/Gate.ts": {
+      "bytes": 3001,
+      "sha256": "e452cd7e25bb01598288779291020e403cb1a24619dd4c2efa895d8e8cafa5a6"
+    },
+    "src/Tone/component/dynamics/Limiter.test.ts": {
+      "bytes": 1065,
+      "sha256": "14103884184eef127f6cf3410ee7b8d80412a47d25d959d8c05660061bc14d2f"
+    },
+    "src/Tone/component/dynamics/Limiter.ts": {
+      "bytes": 2198,
+      "sha256": "a2c48b3ac75140d63d9a20f440a89120dc4bbee172f7e595182e98dabb7290a6"
+    },
+    "src/Tone/component/dynamics/MidSideCompressor.test.ts": {
+      "bytes": 1451,
+      "sha256": "e60ee63d57d8bea60867a9940571e91b3dfc92ef5e2aa74c65cbaa0144f07153"
+    },
+    "src/Tone/component/dynamics/MidSideCompressor.ts": {
+      "bytes": 2626,
+      "sha256": "bdca16fe7ddbb1acd52ca7d9124251e1655688df078c680f1dcde043e3598976"
+    },
+    "src/Tone/component/dynamics/MultibandCompressor.test.ts": {
+      "bytes": 1424,
+      "sha256": "2a2aa5b0a3e81c770fe027500d7d4862f51edb768f0268796a739e38c932cbfc"
+    },
+    "src/Tone/component/dynamics/MultibandCompressor.ts": {
+      "bytes": 3596,
+      "sha256": "e1829a4d6df42937011fd87ae0c51f5082588ded2547c0e86483c6fbce824f6e"
+    },
+    "src/Tone/component/envelope/AmplitudeEnvelope.test.ts": {
+      "bytes": 2603,
+      "sha256": "a31532ca7b00f4a0205496848da178c70b4f16862863a857792d14bf8c9fac2d"
+    },
+    "src/Tone/component/envelope/AmplitudeEnvelope.ts": {
+      "bytes": 2373,
+      "sha256": "646937fcaf534c6740445413457fbd6683846e7aaf550f7e61b75c703b890f6c"
+    },
+    "src/Tone/component/envelope/Envelope.test.ts": {
+      "bytes": 25245,
+      "sha256": "860a253fd6e48b46faa9d2bdd7ec0ec06754d33e5c2df0b352ba34aac1e74565"
+    },
+    "src/Tone/component/envelope/Envelope.ts": {
+      "bytes": 18011,
+      "sha256": "1b4724447fafe2234a620c13cdf892fb8d392ca9999d6497a13caed4c01cf11a"
+    },
+    "src/Tone/component/envelope/FrequencyEnvelope.test.ts": {
+      "bytes": 2561,
+      "sha256": "d8da39952a6b490cff24fed8a57d0bac399bdef42b27fb2fbd0117cd782e6b4f"
+    },
+    "src/Tone/component/envelope/FrequencyEnvelope.ts": {
+      "bytes": 3497,
+      "sha256": "646a907b853e031bbfff7827d22747037131dfbaf9621ea9251c7d29cb3efc9a"
+    },
+    "src/Tone/component/filter/BiquadFilter.test.ts": {
+      "bytes": 2925,
+      "sha256": "86d1c2bfb797aaf2a8bb126385af9ec8c39fd5ea3533970fc1531a0e9492a030"
+    },
+    "src/Tone/component/filter/BiquadFilter.ts": {
+      "bytes": 5015,
+      "sha256": "ea292ba5854c854a97fa66991c6a99256681192ac311a9413de8e5262bb50fbe"
+    },
+    "src/Tone/component/filter/Convolver.test.ts": {
+      "bytes": 2337,
+      "sha256": "2c47959dc0c688352e07a3f20b67894062135648ac84dc17ff122076428867a0"
+    },
+    "src/Tone/component/filter/Convolver.ts": {
+      "bytes": 3880,
+      "sha256": "04972403be7d130a26094d000c8ef06d46c067e948df946a55a1dbd7ec1d1238"
+    },
+    "src/Tone/component/filter/EQ3.test.ts": {
+      "bytes": 1448,
+      "sha256": "323daabb9ed97a2243a31751a1735903a2bb4be835e614f57d749f48afe9c38a"
+    },
+    "src/Tone/component/filter/EQ3.ts": {
+      "bytes": 3855,
+      "sha256": "08f293f3052c1b8fcee7cd37d826fb7fee6b90e77f1afdcd9294ec09b011b6cb"
+    },
+    "src/Tone/component/filter/FeedbackCombFilter.test.ts": {
+      "bytes": 2665,
+      "sha256": "b9b156ee0bef0beea506fd5db17d410e61a9049ad7f3abc8efede459e25f5dc0"
+    },
+    "src/Tone/component/filter/FeedbackCombFilter.ts": {
+      "bytes": 3252,
+      "sha256": "513e7a6d8cc6bd2a49fd377b27b32226332b782f10d8550cb118abf38d7b0686"
+    },
+    "src/Tone/component/filter/FeedbackCombFilter.worklet.ts": {
+      "bytes": 1070,
+      "sha256": "2d748fcbe0c91abf63844697f9a9764327d9535476faa0ed42ac56239a2219f0"
+    },
+    "src/Tone/component/filter/Filter.test.ts": {
+      "bytes": 3474,
+      "sha256": "e0cecd31d45fe312efff795aa864f85eb0c7fe94c9e12ddede2f9bfaa04d5d57"
+    },
+    "src/Tone/component/filter/Filter.ts": {
+      "bytes": 6057,
+      "sha256": "dee187d1cf32ab734e35438e3444fe124119f26527856e4a663b25910e399375"
+    },
+    "src/Tone/component/filter/LowpassCombFilter.test.ts": {
+      "bytes": 2519,
+      "sha256": "29ab1a2b7184182aad7859c76c98f3fd832fa36db692a451648a37e1e769fa06"
+    },
+    "src/Tone/component/filter/LowpassCombFilter.ts": {
+      "bytes": 2751,
+      "sha256": "9589ea96f2181fdb70e9b3c840d0d91b77f47712a847c36a31f5ec19ae5e65b0"
+    },
+    "src/Tone/component/filter/OnePoleFilter.test.ts": {
+      "bytes": 2668,
+      "sha256": "2cc0137eb68e7e657b1a64a8a9101963c3693016cd4f58388a40fa86668a1c0f"
+    },
+    "src/Tone/component/filter/OnePoleFilter.ts": {
+      "bytes": 3963,
+      "sha256": "1d5f61717d633812b647cbf078a783037dbc2d97abb047650307448f01aa5f26"
+    },
+    "src/Tone/component/filter/PhaseShiftAllpass.test.ts": {
+      "bytes": 2690,
+      "sha256": "e343c4872a91b4cbecd5ba75d60a5805be20d9576cc17fa26c930667bba05dc7"
+    },
+    "src/Tone/component/filter/PhaseShiftAllpass.ts": {
+      "bytes": 2632,
+      "sha256": "9094efec662b0fd5f0708d7878b1fd383591db5af80fd5065e3cd2da21b1165f"
+    },
+    "src/Tone/component/index.ts": {
+      "bytes": 1414,
+      "sha256": "6a54f825cb7ee12670d470e97b4e6f53dea08e10ff248e8a1a82746c17f5590f"
+    },
+    "src/Tone/core/Global.test.ts": {
+      "bytes": 495,
+      "sha256": "89c23a72c140a335f59a030ee1382d7a7aa0645ea1328bfe3f4a5cbe6d4cb31c"
+    },
+    "src/Tone/core/Global.ts": {
+      "bytes": 1885,
+      "sha256": "304544406c8f98a6edb24c41a4e49c4742a4eb6c7c96c1af00f7bc44e8a67b9c"
+    },
+    "src/Tone/core/Tone.ts": {
+      "bytes": 2454,
+      "sha256": "b04b17d5d1312715f8b692aa09b2e1e6fbc381c49e655a8c2b99966e4cec117b"
+    },
+    "src/Tone/core/clock/Clock.test.ts": {
+      "bytes": 21806,
+      "sha256": "486e4fce4c2700284869eb7bbfc3a92b48a599984007d2028221783ce4f0dbae"
+    },
+    "src/Tone/core/clock/Clock.ts": {
+      "bytes": 11206,
+      "sha256": "a06e469b94d2210960d71f3aa8d136cb550cab101dfbeec21d85791e6881e8c1"
+    },
+    "src/Tone/core/clock/TickParam.test.ts": {
+      "bytes": 357,
+      "sha256": "b0d08c9f99a72957f1385797ed28d5cadd105498c3944c014676299ad5196532"
+    },
+    "src/Tone/core/clock/TickParam.ts": {
+      "bytes": 9529,
+      "sha256": "cd55ad9714c798800b764a44615ef2e20e2b8cf50b9d43f246359b606717fae9"
+    },
+    "src/Tone/core/clock/TickSignal.test.ts": {
+      "bytes": 19294,
+      "sha256": "97a788c2a18c5247c4787299350f6f5db7e0b33d4da9d74d88193c9764879297"
+    },
+    "src/Tone/core/clock/TickSignal.ts": {
+      "bytes": 2615,
+      "sha256": "de6e7410d702cb5d0239bce8ca4c84cae81278eb9a95d75bba57108617c4dc97"
+    },
+    "src/Tone/core/clock/TickSource.test.ts": {
+      "bytes": 29184,
+      "sha256": "dabf44a26065717d68cfec569ff6c504422094bfa3f38b1ec0a82f8759b9d75c"
+    },
+    "src/Tone/core/clock/TickSource.ts": {
+      "bytes": 12635,
+      "sha256": "a55a863362c82a49694ace8a0ae1763dbe81b6bb5ec570ad1310ec8390d4bfd9"
+    },
+    "src/Tone/core/clock/Ticker.test.ts": {
+      "bytes": 2002,
+      "sha256": "5a4a02c2c341a71f1b5ac65cd0d5129fbde981a24e23ecd5c874b8984677b8a6"
+    },
+    "src/Tone/core/clock/Ticker.ts": {
+      "bytes": 3437,
+      "sha256": "2c1c8125bdaf885a0dcb6d8c224236ef9a01942109c7e106d24ce551ba5ba292"
+    },
+    "src/Tone/core/clock/Transport.test.ts": {
+      "bytes": 31983,
+      "sha256": "f2e01931db611f9964c9e7aca3d74fa35016826f83f768d4868ebc614b77c01d"
+    },
+    "src/Tone/core/clock/Transport.ts": {
+      "bytes": 23107,
+      "sha256": "89e118fc1331f33b5acbd8863f79b853610596d997f2f418addb3da172107d53"
+    },
+    "src/Tone/core/clock/TransportEvent.test.ts": {
+      "bytes": 1118,
+      "sha256": "f334810655b77a0e9f5507e3aebf12026e57de841d124401f71ba014504331f3"
+    },
+    "src/Tone/core/clock/TransportEvent.ts": {
+      "bytes": 2293,
+      "sha256": "eeb7f5e3c20f67e0db861630fe6eb0e914760a4dc4c8b40b0c89743449879a05"
+    },
+    "src/Tone/core/clock/TransportRepeatEvent.test.ts": {
+      "bytes": 1145,
+      "sha256": "144bbac7e0f03145413909d70d7c64da227f7c6e297daf1d707fd16e44565740"
+    },
+    "src/Tone/core/clock/TransportRepeatEvent.ts": {
+      "bytes": 4150,
+      "sha256": "755e3a730ed7358c8fd8797b8ef41ffb68d3945dcaea74dc2ee87cdd1311a65a"
+    },
+    "src/Tone/core/context/AbstractParam.ts": {
+      "bytes": 9746,
+      "sha256": "57d0c886ee23bc9c60f98b71144a8138363591d4a765f5e84f9642558831c1fe"
+    },
+    "src/Tone/core/context/AudioContext.ts": {
+      "bytes": 2178,
+      "sha256": "c0223105b1b0d3de8ee4a0ac5d163d2eb3e7ff6f4a22c897f994b3bbd1b8ee55"
+    },
+    "src/Tone/core/context/BaseContext.ts": {
+      "bytes": 4176,
+      "sha256": "487d14cb124c5cfc81a388190a0df8d79fb5b5e185bb624a1479832c9f9894c8"
+    },
+    "src/Tone/core/context/Context.test.ts": {
+      "bytes": 9719,
+      "sha256": "3d3fc30d3aea1b2b6fa4a8bdb4e998467743fb931124b930beeca0f257412c0e"
+    },
+    "src/Tone/core/context/Context.ts": {
+      "bytes": 17722,
+      "sha256": "f37341f73eaf5ec23d344d580fe266dfbda79b79150e931a17e4cd95a883eea3"
+    },
+    "src/Tone/core/context/ContextInitialization.ts": {
+      "bytes": 1076,
+      "sha256": "ccf49f266ddfeb0cd619f2c2b6e98384215516cc96bdf1c7dcbd16129eb9373d"
+    },
+    "src/Tone/core/context/Delay.test.ts": {
+      "bytes": 2763,
+      "sha256": "d435c622235d1e4a772de61da52dc6bf7ad884b3eb2b848f329c8a461e2173ab"
+    },
+    "src/Tone/core/context/Delay.ts": {
+      "bytes": 2888,
+      "sha256": "00648f35b96b7f045e280932d293772df9b2a8dcf1bdc3aa096b5dc39739a256"
+    },
+    "src/Tone/core/context/Destination.test.ts": {
+      "bytes": 2309,
+      "sha256": "c0a1c3783360adabb0bb8b62db6b3c5750d8c1fd864f84e3aa6fca701dca51af"
+    },
+    "src/Tone/core/context/Destination.ts": {
+      "bytes": 3816,
+      "sha256": "43707c3df53fba96fedac08558b42f50d04b5992c8f1eb7762babf840316936b"
+    },
+    "src/Tone/core/context/DummyContext.test.ts": {
+      "bytes": 1331,
+      "sha256": "7976229ca3742327f978b03c019b1439099ef6478c733eef901cfaad0958231f"
+    },
+    "src/Tone/core/context/DummyContext.ts": {
+      "bytes": 4116,
+      "sha256": "5401435a8857c6bfe2ca0e9369ced0f33a8076290cd8b3208894cdd70c545dbd"
+    },
+    "src/Tone/core/context/Gain.test.ts": {
+      "bytes": 1977,
+      "sha256": "98e2572125b614091af8ce958a7a6eca6cd5f72d8595f4e860de84171d3bfc59"
+    },
+    "src/Tone/core/context/Gain.ts": {
+      "bytes": 2495,
+      "sha256": "608802a6f1d6343efa9d9197315783a51bcac482fe5473af0cb7e240a4f4d943"
+    },
+    "src/Tone/core/context/GlobalContext.ts": {
+      "bytes": 1070,
+      "sha256": "7535f761dff808524259c746d663edc5f751da7628c026d6c02cc6c041b387b4"
+    },
+    "src/Tone/core/context/Listener.test.ts": {
+      "bytes": 734,
+      "sha256": "3006e57acb0c273c0778af4dddb7cca0b29ab2042676d18d85bccbf0761385f6"
+    },
+    "src/Tone/core/context/Listener.ts": {
+      "bytes": 2844,
+      "sha256": "83c2f7697c93867d6fec82d10cb7b4f96b5874fe0f057e323d923ff10b53d061"
+    },
+    "src/Tone/core/context/Offline.test.ts": {
+      "bytes": 2608,
+      "sha256": "7fd898637ab9c9255f9327b822a344343b19d0133939a53b3a6fa03142e57b85"
+    },
+    "src/Tone/core/context/Offline.ts": {
+      "bytes": 2386,
+      "sha256": "6eb642f326ba417c5246f679aeb2edb1110029c06ce44c10ed109a191921ed8e"
+    },
+    "src/Tone/core/context/OfflineContext.test.ts": {
+      "bytes": 1778,
+      "sha256": "b2a975579edab68bc30c15c751e95bdb24d90017c0df0b5c3e56955b011ed2bc"
+    },
+    "src/Tone/core/context/OfflineContext.ts": {
+      "bytes": 3393,
+      "sha256": "98fd8911a4bb1a0142cb0adc2e6de96e7c95b52c99717e87604a2164744227dc"
+    },
+    "src/Tone/core/context/OnRunning.test.ts": {
+      "bytes": 1399,
+      "sha256": "05084ecdf787839f233e5b77afb13f97fc7abc974126d9f6cd52c7df6e4d849e"
+    },
+    "src/Tone/core/context/OnRunning.ts": {
+      "bytes": 781,
+      "sha256": "5177f42da9d7ac19a3b0a9b1bceef4cf4af7a7f73ece6ac3f6fa4e4fa6249397"
+    },
+    "src/Tone/core/context/Param.test.ts": {
+      "bytes": 20144,
+      "sha256": "2957df39824e4d3970667962c3a3376d36182d7cf35dd077f9414cae6b25b825"
+    },
+    "src/Tone/core/context/Param.ts": {
+      "bytes": 18804,
+      "sha256": "d7308becb6a6d80face57d2cb0a5164e0b7c98d87f86a0e45ea5dca640bce043"
+    },
+    "src/Tone/core/context/ToneAudioBuffer.test.ts": {
+      "bytes": 13250,
+      "sha256": "036b9011ebba2648c003ed1b0723b50bba06e7701d69d8851e4eac9e990c3d3b"
+    },
+    "src/Tone/core/context/ToneAudioBuffer.ts": {
+      "bytes": 11141,
+      "sha256": "206001023ce92dc5f6ddf735a88271cac8b9fd93e49969643bb5a400e2cbaeae"
+    },
+    "src/Tone/core/context/ToneAudioBuffers.test.ts": {
+      "bytes": 3874,
+      "sha256": "535ba7d6fc545e24dc33da4f4463c5fb0df59aff42fc47c71a878568169bbacd"
+    },
+    "src/Tone/core/context/ToneAudioBuffers.ts": {
+      "bytes": 4617,
+      "sha256": "4274a941a6048b2dac0cbbd04f456e3022c2be10973da5bd8bbb5bc1dbd43bee"
+    },
+    "src/Tone/core/context/ToneAudioNode.test.ts": {
+      "bytes": 9117,
+      "sha256": "2ee53b1079da2d32684940869f1ccff478449600365fd497a1181c9ef4d45c0e"
+    },
+    "src/Tone/core/context/ToneAudioNode.ts": {
+      "bytes": 11983,
+      "sha256": "b8d875eb415a8cd77a0453c2951167ac9cb74615ac04f06794e5891ba62e7dc1"
+    },
+    "src/Tone/core/context/ToneWithContext.test.ts": {
+      "bytes": 2423,
+      "sha256": "4614a4be0661a48916eba5b66714f4d2c2c06025d819ad986ef9c0570c956285"
+    },
+    "src/Tone/core/context/ToneWithContext.ts": {
+      "bytes": 6600,
+      "sha256": "59d795d0183c2dcee767f404d1baaa4199f63a6c9d6500dac4dad864df96910b"
+    },
+    "src/Tone/core/index.ts": {
+      "bytes": 1242,
+      "sha256": "9342f6383be372c7fade131737730b82d8876dea1cfacbf9087ecd74b96eef29"
+    },
+    "src/Tone/core/type/Conversions.test.ts": {
+      "bytes": 1182,
+      "sha256": "e56095bb8252e6c7bb69af6f32152d945c549e4ffb9c124554b45f6b690ff8f3"
+    },
+    "src/Tone/core/type/Conversions.ts": {
+      "bytes": 1968,
+      "sha256": "eb63ba2ed236c909df747f484e93482f095c6f0140f836594d8eaa2002f11f73"
+    },
+    "src/Tone/core/type/Frequency.test.ts": {
+      "bytes": 9263,
+      "sha256": "26a75c785ae166db48b5536a282b9e7d614d1f869e8ee80636f3a4eb0c925746"
+    },
+    "src/Tone/core/type/Frequency.ts": {
+      "bytes": 7404,
+      "sha256": "7b069753847a73243a8d271947d3e370bd5221ffe48921a9c751dc0acf78e1c6"
+    },
+    "src/Tone/core/type/Midi.test.ts": {
+      "bytes": 4637,
+      "sha256": "68950db512d5a6c6fb968d00b71443892930eabadc1f475a25f1ed2d4963a75e"
+    },
+    "src/Tone/core/type/Midi.ts": {
+      "bytes": 2140,
+      "sha256": "637a7b55b42d4ed455a3043752140df0abbba90e227bed2284495034e874bce2"
+    },
+    "src/Tone/core/type/NoteUnits.ts": {
+      "bytes": 743,
+      "sha256": "dd053193f0e65ae8bc8a2656d62e82c0e84d94f4f5627afc28ca80cb90b7818e"
+    },
+    "src/Tone/core/type/Ticks.test.ts": {
+      "bytes": 6142,
+      "sha256": "54a8d7263972fb096a3558bdf7149fad2155b838a6c9a4872c67933d0e7ffd03"
+    },
+    "src/Tone/core/type/Ticks.ts": {
+      "bytes": 1688,
+      "sha256": "8d47770e068ff9af4497dbb065e6f9ffac0251d1fec351a315eb7f8e389fd103"
+    },
+    "src/Tone/core/type/Time.test.ts": {
+      "bytes": 5974,
+      "sha256": "928b8d6502a4baa9430f93595268ba0c875d2121dc9463004d5ea7ed78589d27"
+    },
+    "src/Tone/core/type/Time.ts": {
+      "bytes": 5316,
+      "sha256": "ffabdf3423f58fd7e3a8b01055f4d125826eef0da232707a8d740ca41c303140"
+    },
+    "src/Tone/core/type/TimeBase.ts": {
+      "bytes": 7860,
+      "sha256": "59d8844da3d058ca654d284f0ef62555b92173f6cd2079622de5533dd21a13bc"
+    },
+    "src/Tone/core/type/TransportTime.test.ts": {
+      "bytes": 6223,
+      "sha256": "d496e343eb985026247bea738db1060bcba59c6a2b8845f25d0daec1c982fe63"
+    },
+    "src/Tone/core/type/TransportTime.ts": {
+      "bytes": 2454,
+      "sha256": "20abc404344ea5161f39663a6d4043ebde92bf7d6cbc634129aa2ad8326da1fe"
+    },
+    "src/Tone/core/type/Units.ts": {
+      "bytes": 5197,
+      "sha256": "effde41d8f4e590106ba7e88c6dab02254be08947fb886962c767014a8532bbb"
+    },
+    "src/Tone/core/util/AdvancedTypeCheck.ts": {
+      "bytes": 947,
+      "sha256": "826d38fbcccf1544b0e57ff2c3eca42c9e05db54a1c8f679b83c3e2f6310adec"
+    },
+    "src/Tone/core/util/Debug.test.ts": {
+      "bytes": 1927,
+      "sha256": "8b4a47c54e1e737fe015f0d5ee9e4e66b870e8f64c8901fce5e5016e186eb97f"
+    },
+    "src/Tone/core/util/Debug.ts": {
+      "bytes": 2315,
+      "sha256": "89fe99e8415d556d580c0a6097a9f1d1fc5ccaf1998882b4e06739211fbc7cad"
+    },
+    "src/Tone/core/util/Decorator.ts": {
+      "bytes": 1159,
+      "sha256": "0a927c1c8ce8a710fcf0808637c21c46bef0121278334f8df980be7e5640842f"
+    },
+    "src/Tone/core/util/Defaults.ts": {
+      "bytes": 3560,
+      "sha256": "ff722ecbbc4d6abd08b73b174fa55d495de4a9b0f0c844bc4ccbbbc426f96778"
+    },
+    "src/Tone/core/util/Draw.test.ts": {
+      "bytes": 1961,
+      "sha256": "fea0ceec7903319247b1f4362e2a935820b5bc37a46188c50bac33fa2817f072"
+    },
+    "src/Tone/core/util/Draw.ts": {
+      "bytes": 3409,
+      "sha256": "38e829d184625e627aff4e6a6ca8eaff59e079b3003cad44631758629952c7a1"
+    },
+    "src/Tone/core/util/Emitter.test.ts": {
+      "bytes": 2658,
+      "sha256": "154d0f947a11f2087718b90a6733e1cc46a59a0f554114133ee496573df3db4c"
+    },
+    "src/Tone/core/util/Emitter.ts": {
+      "bytes": 3403,
+      "sha256": "0acb8536d5034cfb679636a6a0ea3001b8146e2cb3cf7aedb096f1870a3131e6"
+    },
+    "src/Tone/core/util/Interface.ts": {
+      "bytes": 1198,
+      "sha256": "d493d248818542dccfc3e0e273e96ccc1ccce25d11eff4e1177ac3d5b70315a4"
+    },
+    "src/Tone/core/util/IntervalTimeline.test.ts": {
+      "bytes": 10759,
+      "sha256": "939ae47861757cf0cf00557ee7ee64fb563074911030a7f7f90a5fb3be7abc6d"
+    },
+    "src/Tone/core/util/IntervalTimeline.ts": {
+      "bytes": 13615,
+      "sha256": "a40912986190d8f389d8ebfbf94a96159add3bfd941a1da755a67be7594ccd92"
+    },
+    "src/Tone/core/util/Math.ts": {
+      "bytes": 832,
+      "sha256": "520260ddb2f8e820aa3105adf4f36e7562a0dbeaaa327755606436651dbdc02d"
+    },
+    "src/Tone/core/util/StateTimeline.test.ts": {
+      "bytes": 3323,
+      "sha256": "0c79fab6c3440ac3145b817d858b55c186a4d4156a954bfe644e4a24cbe051cd"
+    },
+    "src/Tone/core/util/StateTimeline.ts": {
+      "bytes": 2782,
+      "sha256": "10b2c7c33a3f8a567d44f0c2aa1c1b1fc611fea21c4999bb311a5abfa19480e7"
+    },
+    "src/Tone/core/util/Timeline.test.ts": {
+      "bytes": 16231,
+      "sha256": "4a97833b6a2e76b8c9ad04c9d1024cd21f570d739b8bbea49bad7a434d8bd3d2"
+    },
+    "src/Tone/core/util/Timeline.ts": {
+      "bytes": 12401,
+      "sha256": "1a5d6f098670a0fd03bf5f3638c34a771da4d95577c07ce2a35102d66c34ccf3"
+    },
+    "src/Tone/core/util/TimelineValue.test.ts": {
+      "bytes": 753,
+      "sha256": "177577f9b5ef9554646dd5ffc5bffbb2a932be3b6817355987347ae767d37aa0"
+    },
+    "src/Tone/core/util/TimelineValue.ts": {
+      "bytes": 1119,
+      "sha256": "86e8a6b45c359558aa2f77f9e92e6d6436804661dfbb2fb8c05f7c6e0f954373"
+    },
+    "src/Tone/core/util/TypeCheck.ts": {
+      "bytes": 1472,
+      "sha256": "0bc3491f06257650221f2c2b1d1e3c75b08e38d290f5a9eb8221a17771e5d651"
+    },
+    "src/Tone/core/util/global.d.ts": {
+      "bytes": 300,
+      "sha256": "62fcb0fda855f97464c85fea3dfe673048a23e3119045f63349e39c80ec247e5"
+    },
+    "src/Tone/core/worklet/DelayLine.worklet.ts": {
+      "bytes": 1793,
+      "sha256": "9a4b7f8746e19e7cc3f0d10fa7f1223871d9b95093ad5eb636a6ffef97fbbd6e"
+    },
+    "src/Tone/core/worklet/SingleIOProcessor.worklet.ts": {
+      "bytes": 2085,
+      "sha256": "6a70faca4ed79e532196b8725f44b4399db089a91a6a69786942760343ae109b"
+    },
+    "src/Tone/core/worklet/ToneAudioWorklet.ts": {
+      "bytes": 2549,
+      "sha256": "772035a402f9487b790c2e8d4e4cd386e8cb18d3b8a68c40d74959f6c9d42d98"
+    },
+    "src/Tone/core/worklet/ToneAudioWorkletProcessor.worklet.ts": {
+      "bytes": 811,
+      "sha256": "24166510ab4e7a0b42d5e70b5411f6fab1d7155e51c4c42694c78e8b99afaaa9"
+    },
+    "src/Tone/core/worklet/WorkletGlobalScope.ts": {
+      "bytes": 752,
+      "sha256": "58abd0d3c765c7913c452e6428983a36991594ba5a24b35c49e40302b66179b7"
+    },
+    "src/Tone/effect/AutoFilter.test.ts": {
+      "bytes": 3460,
+      "sha256": "c7c54b01cc61fe9a72b0f52e0806bce4b0e1005d3bbf583ce06ba19b48e7e91c"
+    },
+    "src/Tone/effect/AutoFilter.ts": {
+      "bytes": 2786,
+      "sha256": "07583a944550653c8958d3120d461b22a4b3f5b4ff141276f8ef8f5a98df3b98"
+    },
+    "src/Tone/effect/AutoPanner.test.ts": {
+      "bytes": 2744,
+      "sha256": "86b3259a26c91d708d658005fff496e36b6323495941b30407c77bc59f687d00"
+    },
+    "src/Tone/effect/AutoPanner.ts": {
+      "bytes": 1694,
+      "sha256": "bd5c65a0a026554100bd24e602539bc1027c673676941dcf33e1307adb93ee50"
+    },
+    "src/Tone/effect/AutoWah.test.ts": {
+      "bytes": 1760,
+      "sha256": "0b49bda56d41a9b60b7a453910d55ca5cd3f162ce03458409f037059a51b130c"
+    },
+    "src/Tone/effect/AutoWah.ts": {
+      "bytes": 5509,
+      "sha256": "64bab9bace398ceb7e5758ef5db965d04d89e38657653f5eeaf63bc3c97c0a70"
+    },
+    "src/Tone/effect/BitCrusher.test.ts": {
+      "bytes": 1516,
+      "sha256": "e558bc72ccf59d97f7650d311ea5acd0467eb33c86a78c9d402f5c6dee998221"
+    },
+    "src/Tone/effect/BitCrusher.ts": {
+      "bytes": 3411,
+      "sha256": "1691fa018cef0e17a1e361faa39efc1c326f47bf7edce96d79a0d2aed3c7382a"
+    },
+    "src/Tone/effect/BitCrusher.worklet.ts": {
+      "bytes": 673,
+      "sha256": "61cf17075390a271bffece0b92477c3191db9a61b7efa7c4ce95f43a8907b059"
+    },
+    "src/Tone/effect/Chebyshev.test.ts": {
+      "bytes": 1220,
+      "sha256": "6dd1c805bd41590eba5a1b9c6efffa9b1cca27b92efdb9d0293b7c06df5a0a7f"
+    },
+    "src/Tone/effect/Chebyshev.ts": {
+      "bytes": 3354,
+      "sha256": "f7e5d1dec34b324c9987ed05542f4159d9429f19ceb722407df14128f9af28e1"
+    },
+    "src/Tone/effect/Chorus.test.ts": {
+      "bytes": 2448,
+      "sha256": "e4c7d7b41306f60eae526aa3063f3cc0be62e3d28bee0513a66085f7be4f26b3"
+    },
+    "src/Tone/effect/Chorus.ts": {
+      "bytes": 5803,
+      "sha256": "585a01112842b26ca777140825a1e4500e68ff8ce367eba3f596b4681d96ee98"
+    },
+    "src/Tone/effect/Distortion.test.ts": {
+      "bytes": 1101,
+      "sha256": "acf54825056bfa2058618710e05d38cb1d6bbcca95ca35c607c7662935999d80"
+    },
+    "src/Tone/effect/Distortion.ts": {
+      "bytes": 2445,
+      "sha256": "e7d557877153ca10a61d4048f38fc40dbe1f8312b521400795aee837733a6ef6"
+    },
+    "src/Tone/effect/Effect.ts": {
+      "bytes": 2403,
+      "sha256": "bdfcb07ff491cfe57eecf4ac8651122edb61e024fba884f1b2e0ad0261549c0b"
+    },
+    "src/Tone/effect/FeedbackDelay.test.ts": {
+      "bytes": 2490,
+      "sha256": "3a645f4959564c9d4a89dba8ecdeb68e37a19b6afb84caebda3122bb1327a28f"
+    },
+    "src/Tone/effect/FeedbackDelay.ts": {
+      "bytes": 2033,
+      "sha256": "1487583038f8093c6eee3c4ea62fa1f02875ea99d6438c30df7988a4b21e8222"
+    },
+    "src/Tone/effect/FeedbackEffect.ts": {
+      "bytes": 1707,
+      "sha256": "814dcd78be3bdf9edc096e1b466948e1b74be1ea0ce89f0f78bf8a7eaef1b9f7"
+    },
+    "src/Tone/effect/Freeverb.test.ts": {
+      "bytes": 1266,
+      "sha256": "ee1f62be13e05d44b8daa93f0971cca17d23acc9e5403156a9081e35abd39d8a"
+    },
+    "src/Tone/effect/Freeverb.ts": {
+      "bytes": 4203,
+      "sha256": "191a118dca3f9ff0da3cabd7cca8b48d5396c1fd372e4eb106eea33a35fd6541"
+    },
+    "src/Tone/effect/FrequencyShifter.test.ts": {
+      "bytes": 1686,
+      "sha256": "d0710fd60daed267c276f3b6bf33ca76cfaca6ce63ecb46c514943bf6512d29a"
+    },
+    "src/Tone/effect/FrequencyShifter.ts": {
+      "bytes": 4920,
+      "sha256": "86dacf5554080a15fa68344cfbf4bd1ce67a2d064b53c1594b4687752a57258e"
+    },
+    "src/Tone/effect/JCReverb.test.ts": {
+      "bytes": 1059,
+      "sha256": "99481ab1658b83aa529895a1d4464f4978fcb6541c6567b19e8ccebcd81f7efe"
+    },
+    "src/Tone/effect/JCReverb.ts": {
+      "bytes": 3732,
+      "sha256": "09cfb3eb862634fab0d07b5a499401e219227ebc14521818b1c7116e3f63bf7c"
+    },
+    "src/Tone/effect/LFOEffect.ts": {
+      "bytes": 2500,
+      "sha256": "ecf9378ab76ddb7e9551324038bb9ae3d9958eb2609651a7e4c69d3544d97c9e"
+    },
+    "src/Tone/effect/LFOStereoEffect.test.ts": {
+      "bytes": 2591,
+      "sha256": "bd56b33ad0255a17c2a7f5cfe3ad0448706c8db6b07828110411504db9f35f6c"
+    },
+    "src/Tone/effect/LFOStereoEffect.ts": {
+      "bytes": 2825,
+      "sha256": "606e051668f6e45ffe7f2eef85dbd219d1cc91e8a5db35fec4e406a38ca1fa49"
+    },
+    "src/Tone/effect/MidSideEffect.ts": {
+      "bytes": 2481,
+      "sha256": "b7fcb388e15c38e97d8681fabbb5422ac36ad9605d067d63c066d7d62e2ea871"
+    },
+    "src/Tone/effect/Phaser.test.ts": {
+      "bytes": 1270,
+      "sha256": "8ecc28710b3e3e22d6ff2f44782e82cd8898419a1d4a5c9b642266823017c4b7"
+    },
+    "src/Tone/effect/Phaser.ts": {
+      "bytes": 4013,
+      "sha256": "e02f670d00952ea92fa5c50708f117059cab0a762daaa2a4abdb3a3be90c31db"
+    },
+    "src/Tone/effect/PingPongDelay.test.ts": {
+      "bytes": 1160,
+      "sha256": "650f4cf27a4b5455a995fd65533a5b296a34a96b8f210f4d4a6127f6c52f8014"
+    },
+    "src/Tone/effect/PingPongDelay.ts": {
+      "bytes": 3171,
+      "sha256": "c92565f7c2263505e1f08a0a6020e4b45e4ed0a1120105ace826bf73753ffd2a"
+    },
+    "src/Tone/effect/PitchShift.test.ts": {
+      "bytes": 2000,
+      "sha256": "cf805200abeaaadf4ab28424cf94656011386b13efa5ef6e017b78d5c3ca5301"
+    },
+    "src/Tone/effect/PitchShift.ts": {
+      "bytes": 5877,
+      "sha256": "55ee1df7554f00939fd96e8eba7d3bdb16f739e835544f9ae3227f5802f67246"
+    },
+    "src/Tone/effect/Reverb.test.ts": {
+      "bytes": 2328,
+      "sha256": "d0b4dde0622b82ed011b415958c8dd9ab96b23c3f68ca978364e174f906209fa"
+    },
+    "src/Tone/effect/Reverb.ts": {
+      "bytes": 4112,
+      "sha256": "744331af5fee2a2f7b3798d4484981960bd63d58cf2ffab7d641ef764f0d21a9"
+    },
+    "src/Tone/effect/ReverseDelay.test.ts": {
+      "bytes": 1504,
+      "sha256": "505b1931db88f68e23870172dbacddff016bc8226691342179802967407476df"
+    },
+    "src/Tone/effect/ReverseDelay.ts": {
+      "bytes": 4846,
+      "sha256": "4d11843c5e618c594627ef6b1d67cb72576d79d343c867987dd8e9e852ac5607"
+    },
+    "src/Tone/effect/ReverseDelay.worklet.ts": {
+      "bytes": 1194,
+      "sha256": "89c7454e9c226818f087ca395419ff0e5ae934f4c71c0d37944b55dcf2dc8bcf"
+    },
+    "src/Tone/effect/StereoEffect.ts": {
+      "bytes": 2516,
+      "sha256": "22bd214e6d6c7adcdc1465fbbe9c71696f5e06218eeff8a43deee4e9b002520d"
+    },
+    "src/Tone/effect/StereoFeedbackEffect.ts": {
+      "bytes": 2516,
+      "sha256": "f13cf015fe8e77bfedddfcc3f1dc28bd640d5d171f360e1977f7b7021f11d35a"
+    },
+    "src/Tone/effect/StereoWidener.test.ts": {
+      "bytes": 1236,
+      "sha256": "55fd935e8fe7af4b7348025183d4f2b45de775b8fc3ef147a10b14459eeb8ff5"
+    },
+    "src/Tone/effect/StereoWidener.ts": {
+      "bytes": 3292,
+      "sha256": "c2b197874fa672ab1d3fc57e4a1a5aa1ed58a451532ac1530a097258d3de669c"
+    },
+    "src/Tone/effect/StereoXFeedbackEffect.ts": {
+      "bytes": 1604,
+      "sha256": "655c4f3e1a9568af92bce4a1f7a8b4bcf19151d3a0b21f99511a8d549e9dd2df"
+    },
+    "src/Tone/effect/Tremolo.test.ts": {
+      "bytes": 1684,
+      "sha256": "cffc6771d9737185f517e16f5c30cd7d0aecd4a04db762f732db021a50dc2a90"
+    },
+    "src/Tone/effect/Tremolo.ts": {
+      "bytes": 3430,
+      "sha256": "8773a529655f553f6094ab4ac7376ad2a735298f7ec8b180e6d9eb9d7da6a83d"
+    },
+    "src/Tone/effect/Vibrato.test.ts": {
+      "bytes": 1518,
+      "sha256": "7dba17bfb078528e3b5beeaa5cc244639b87508249d6e228b63fc88d12199503"
+    },
+    "src/Tone/effect/Vibrato.ts": {
+      "bytes": 2784,
+      "sha256": "19cee659575c30b8e31d66786cda7a4637899e9ab1e1994d2d72032f2daed659"
+    },
+    "src/Tone/effect/index.ts": {
+      "bytes": 618,
+      "sha256": "30f2cdb07946fe6a0d8e0995e404b4b546fa8d41266da64aacf77b1117bf9e5f"
+    },
+    "src/Tone/event/Loop.test.ts": {
+      "bytes": 8534,
+      "sha256": "b88c7786c042b71d1cc50c09282653b0505123487ab00fe33294575d0febc731"
+    },
+    "src/Tone/event/Loop.ts": {
+      "bytes": 5009,
+      "sha256": "869b7e32cf794dbac15ef8c37c574ac27c152f92c111356e95f03e26384701dd"
+    },
+    "src/Tone/event/Part.test.ts": {
+      "bytes": 23965,
+      "sha256": "fad8e1edd9dd32889606f1268475ad8bdeb4735090611907f0a11be904b55c3e"
+    },
+    "src/Tone/event/Part.ts": {
+      "bytes": 12530,
+      "sha256": "90c16b7e31a9df450b074ad40df067ecdc924d788048c1ec0e77d88540a912f5"
+    },
+    "src/Tone/event/Pattern.test.ts": {
+      "bytes": 4622,
+      "sha256": "b95cf4858fc6a01c9829ae22cd4269e181049f3becacc77053b325e2fc7d961b"
+    },
+    "src/Tone/event/Pattern.ts": {
+      "bytes": 3090,
+      "sha256": "7dc86d19cb8a7d2788536106078f70e53722032526e445021e2d97deab161a55"
+    },
+    "src/Tone/event/PatternGenerator.test.ts": {
+      "bytes": 3387,
+      "sha256": "d4a314964ceff4ce29c18858c6a61e31b5013db805d8b58bffefbe977e0b3625"
+    },
+    "src/Tone/event/PatternGenerator.ts": {
+      "bytes": 4481,
+      "sha256": "c72f9725408c6f06ddd287fc87fbda7bac53cce4f981d43dc562eac04f965580"
+    },
+    "src/Tone/event/Sequence.test.ts": {
+      "bytes": 11736,
+      "sha256": "62fd1c0b90307ad125aebbbee45c7be830be156aabae8cc491065416fde7c311"
+    },
+    "src/Tone/event/Sequence.ts": {
+      "bytes": 7730,
+      "sha256": "48df6479c85dfb6587479cec2a5528b216e729879b15a591c66284f7a73cec03"
+    },
+    "src/Tone/event/ToneEvent.test.ts": {
+      "bytes": 12245,
+      "sha256": "717239930b80703eef743dd981fc2287c8296dbf13dabd5bdedff57ac6ea83ec"
+    },
+    "src/Tone/event/ToneEvent.ts": {
+      "bytes": 10866,
+      "sha256": "67742a4992d00105732c09d505b662ec66bda63da249bdc8a0da05f681b9eb70"
+    },
+    "src/Tone/event/index.ts": {
+      "bytes": 147,
+      "sha256": "90ec0fb55c059ad019bdd6fdba65ce59e94b6280b31ed4a891f1fce556a24158"
+    },
+    "src/Tone/fromContext.test.ts": {
+      "bytes": 673,
+      "sha256": "701ed433f7948b948b5ea8de55c09b898dec79b810f258396d6ff71096346dfc"
+    },
+    "src/Tone/fromContext.ts": {
+      "bytes": 2671,
+      "sha256": "353099ad1d6553dd86376dd84ad02fa1f02bafdbadef561b5b9cf02c0f448435"
+    },
+    "src/Tone/index.test.ts": {
+      "bytes": 1855,
+      "sha256": "1d4a3274983b1249664b0bcbe2020784c74d5fbbc9829ae8d83a9649c7e50d00"
+    },
+    "src/Tone/index.ts": {
+      "bytes": 4106,
+      "sha256": "315f7e51d4b2cc65c4269653a5020905288ba3ed21ef013a38840027003e2fb2"
+    },
+    "src/Tone/instrument/AMSynth.test.ts": {
+      "bytes": 2070,
+      "sha256": "cef43a5ddfcc280107f7be305c46f9915e0a42c9b15c1d40cf17fd9a277ecdff"
+    },
+    "src/Tone/instrument/AMSynth.ts": {
+      "bytes": 1712,
+      "sha256": "ecdbeb5d132ebcefddfc5a946e2a7c4dae42cfd6e179d7d12243e2c157ddfdaa"
+    },
+    "src/Tone/instrument/DuoSynth.test.ts": {
+      "bytes": 2268,
+      "sha256": "1811df06c0fb0c0ce34f776e95447e48b9138cf9385ce2cd7e5cc8ee3d9ba14a"
+    },
+    "src/Tone/instrument/DuoSynth.ts": {
+      "bytes": 5707,
+      "sha256": "b451f00b018d344bc4b50a044cfaed3de961faf558139abe91bc356053ee311d"
+    },
+    "src/Tone/instrument/FMSynth.test.ts": {
+      "bytes": 1968,
+      "sha256": "dffa3835b747ce43d7884b135f68b6c1b4fe90c0e6da2d78da7913d4e64695ac"
+    },
+    "src/Tone/instrument/FMSynth.ts": {
+      "bytes": 2355,
+      "sha256": "3030fdef1576b0c53dd66c57214b07537252ba618093da3a7850837eb72b7d8f"
+    },
+    "src/Tone/instrument/Instrument.ts": {
+      "bytes": 5694,
+      "sha256": "d683ea8bf7ab6dff8e1028e8467abbba802cee8fef115ba681e62b1801d3c52a"
+    },
+    "src/Tone/instrument/MembraneSynth.test.ts": {
+      "bytes": 2959,
+      "sha256": "f874f4b901f79ea18035adeae636aa8daf588b569c7a59b66a3fb0d7511c4a56"
+    },
+    "src/Tone/instrument/MembraneSynth.ts": {
+      "bytes": 2845,
+      "sha256": "56dc0fc6153771e79c67f3a276201c01ba9e51c36273df5a669835a872b747d1"
+    },
+    "src/Tone/instrument/MetalSynth.test.ts": {
+      "bytes": 1962,
+      "sha256": "f5747b08984c3b557138e4db4fdb8c7948e06ec28735a6af031feb62253e1e97"
+    },
+    "src/Tone/instrument/MetalSynth.ts": {
+      "bytes": 7413,
+      "sha256": "648d6a397143419b12e805ed400bdad55bb91198970efb0872fdd230f483a2cd"
+    },
+    "src/Tone/instrument/ModulationSynth.ts": {
+      "bytes": 5670,
+      "sha256": "1d0cf0b54d72061c321cc4d6c4c801235ef7986f1f4f12a373f0bf78caf4e9a7"
+    },
+    "src/Tone/instrument/MonoSynth.test.ts": {
+      "bytes": 2379,
+      "sha256": "157b85019adac656bacbb3e358c544b7bd24981ae92ce149503508cbe32a41d3"
+    },
+    "src/Tone/instrument/MonoSynth.ts": {
+      "bytes": 5656,
+      "sha256": "5e0f7f8a9d65c12e69a0c321f71c316b7ae49ca4121622381384752dbb66216b"
+    },
+    "src/Tone/instrument/Monophonic.ts": {
+      "bytes": 4256,
+      "sha256": "5294c074a27576e819d0f817b4b5ce511979260a90deaf99f1c24f335d503111"
+    },
+    "src/Tone/instrument/NoiseSynth.test.ts": {
+      "bytes": 1937,
+      "sha256": "6e543d1f835607e5d9b02d390732d0a2c0f651712fe802cd5caafadf10009d11"
+    },
+    "src/Tone/instrument/NoiseSynth.ts": {
+      "bytes": 4146,
+      "sha256": "b0e4ab559dc3ea931d879ce733adee11472a1e1af56523d21576a99b9bda511a"
+    },
+    "src/Tone/instrument/PluckSynth.test.ts": {
+      "bytes": 1693,
+      "sha256": "4f299331f386d2ff77ff6509611e97c97202878d7b2936663ee18578e632cbcb"
+    },
+    "src/Tone/instrument/PluckSynth.ts": {
+      "bytes": 3162,
+      "sha256": "e1df8ec86e4cbbc70d182467b06c4f28135fe6dbf7262ecb1949a5580db350f5"
+    },
+    "src/Tone/instrument/PolySynth.test.ts": {
+      "bytes": 10961,
+      "sha256": "25c2d9597545d48397701ad7bd1adb8ebe1cd7e714a04fa59a9455fc11e3d494"
+    },
+    "src/Tone/instrument/PolySynth.ts": {
+      "bytes": 13378,
+      "sha256": "e3c0925210bb262ca8d09972a04c572106e06b8f24c34ba2aef01e35c81087cf"
+    },
+    "src/Tone/instrument/Sampler.test.ts": {
+      "bytes": 11878,
+      "sha256": "6da8788e88aa80b3f7941ace98128290a989bdd879f719f54356c886390a4c51"
+    },
+    "src/Tone/instrument/Sampler.ts": {
+      "bytes": 14325,
+      "sha256": "f71deb05dc53111cf1b22824b2c5299cf26b701f4f1e7c6703ea8302523a33ba"
+    },
+    "src/Tone/instrument/Synth.test.ts": {
+      "bytes": 5584,
+      "sha256": "e26fe1586d0b71f71d9e7044f48fde98d03625ef7f35f9c37efe7eed0c455c0d"
+    },
+    "src/Tone/instrument/Synth.ts": {
+      "bytes": 4375,
+      "sha256": "2f5ce6d9bc345ca0f369d5c5133c95ac5ebfc6e9d1682ba5de3bcb580a7eb7b1"
+    },
+    "src/Tone/instrument/index.ts": {
+      "bytes": 348,
+      "sha256": "2fe38c1591061ba20461a3c41fb3f0df1b97263722121f0aa8019fc1cb82a81f"
+    },
+    "src/Tone/signal/Abs.test.ts": {
+      "bytes": 945,
+      "sha256": "34b288b2d36622b0c10959c65ef57c0d04a93fcd74c140d0771676771832d1ed"
+    },
+    "src/Tone/signal/Abs.ts": {
+      "bytes": 1015,
+      "sha256": "40d9450378fbab24f0ef66d1bc57c75e825a2eaf582b5773e13466f685004a46"
+    },
+    "src/Tone/signal/Add.test.ts": {
+      "bytes": 1478,
+      "sha256": "af9d7474a5839789037358624e08ddbb212fe7a7fc2306fc777b9f914e960750"
+    },
+    "src/Tone/signal/Add.ts": {
+      "bytes": 1673,
+      "sha256": "d71d303332c725c0e351c20ed0a07b870175353d27ce4b8c2ac0d1674868ac59"
+    },
+    "src/Tone/signal/AudioToGain.test.ts": {
+      "bytes": 1403,
+      "sha256": "2c8082e8ece473775e8f60327d0cbdd998825e5ec6cb3de8295c4280d796997f"
+    },
+    "src/Tone/signal/AudioToGain.ts": {
+      "bytes": 806,
+      "sha256": "2088c7460b61eacb105fd28c9b8c9d115de0947b86d992781b02a98a802e6aa6"
+    },
+    "src/Tone/signal/GainToAudio.test.ts": {
+      "bytes": 991,
+      "sha256": "d43ae9fd4355c895b33d53f1b4876b55b52f6db85aab998ade3d6207cc97f014"
+    },
+    "src/Tone/signal/GainToAudio.ts": {
+      "bytes": 816,
+      "sha256": "89b6c9ac2d642c955c4e82a882a13fa4f00ad7db1d3b4dc5071f0257c39a0748"
+    },
+    "src/Tone/signal/GreaterThan.test.ts": {
+      "bytes": 2009,
+      "sha256": "3e4698958cc9d175342d0b21a37078e11035af80d029581b50d0152fb40d8de4"
+    },
+    "src/Tone/signal/GreaterThan.ts": {
+      "bytes": 2360,
+      "sha256": "e633c1200193f691cd9dbea9105bb1599e283e8ce63e06fbcf08a3029156d455"
+    },
+    "src/Tone/signal/GreaterThanZero.test.ts": {
+      "bytes": 1257,
+      "sha256": "5ab024236ecc1cfdc9b345db6f71b55bfe81df27ca00f1292b960b898e9f9776"
+    },
+    "src/Tone/signal/GreaterThanZero.ts": {
+      "bytes": 1667,
+      "sha256": "4a9b0f44603ba0bb6753a47b4dcd55ecd3550c41d16a0bec473c6679ca553318"
+    },
+    "src/Tone/signal/Multiply.test.ts": {
+      "bytes": 1293,
+      "sha256": "782b5f2c4fee4f348649cd3d5ed563615df433deddb0b9ab674d671c44e108c6"
+    },
+    "src/Tone/signal/Multiply.ts": {
+      "bytes": 2182,
+      "sha256": "2ab94b6ca0a7738b82da74047c1f5298c5c8c5f2054bf84eeea7da76136066e7"
+    },
+    "src/Tone/signal/Negate.test.ts": {
+      "bytes": 729,
+      "sha256": "88f5bf201b6233a495dd619f9521df06af3c3e94f771bdd6f95bdf50a9f6dcb8"
+    },
+    "src/Tone/signal/Negate.ts": {
+      "bytes": 904,
+      "sha256": "ee46fde39849350204622a34c153ad83dde79efa7ffaff4508dd03652335f8f4"
+    },
+    "src/Tone/signal/Pow.test.ts": {
+      "bytes": 954,
+      "sha256": "35835d4e8d881bec3c662b2a657cefae4c6f4078d245e8a7943c68ba8cd11307"
+    },
+    "src/Tone/signal/Pow.ts": {
+      "bytes": 1940,
+      "sha256": "bb206d30b5aaf6709ebd4914af46be1678eea44c20a25fd04112c44c8f49fc98"
+    },
+    "src/Tone/signal/Scale.test.ts": {
+      "bytes": 1587,
+      "sha256": "419c47cd8f2357fb5ee22e528d425e218231e9a081042e160a76696a5a3a614e"
+    },
+    "src/Tone/signal/Scale.ts": {
+      "bytes": 2532,
+      "sha256": "2c61aa0f35bf0467e453e82a688c3587bb004496c4ce2f68f31847cec48c5a06"
+    },
+    "src/Tone/signal/ScaleExp.test.ts": {
+      "bytes": 1319,
+      "sha256": "098b572a132eaa75fc5d3c5032a9efb2fd2a38d0d9da9120a0c0ec8aaf1b22bb"
+    },
+    "src/Tone/signal/ScaleExp.ts": {
+      "bytes": 1802,
+      "sha256": "14e068e144b262ffb82aa12f67458073dd3e910c080e2d2d6c571880b49d4042"
+    },
+    "src/Tone/signal/Signal.test.ts": {
+      "bytes": 21608,
+      "sha256": "dd9c5233be630b3ebd62a5a92474777d9735a3a17441db21c281141983b8cb92"
+    },
+    "src/Tone/signal/Signal.ts": {
+      "bytes": 10260,
+      "sha256": "6d1e5e66d03aadab08a9658baed251c357357f2464f70965b846304b0ec10470"
+    },
+    "src/Tone/signal/SignalOperator.test.ts": {
+      "bytes": 667,
+      "sha256": "b68a54948faa21928be87fe8d6f9af5a0c7fcb9317bf1190fde0c44249fbca57"
+    },
+    "src/Tone/signal/SignalOperator.ts": {
+      "bytes": 986,
+      "sha256": "d8c5e0ffa28be980fce7277c41c6978e7c787f0309fb74c814686d9be34157df"
+    },
+    "src/Tone/signal/Subtract.test.ts": {
+      "bytes": 1563,
+      "sha256": "0507d91b03da827ad3112c1c73151130961965be4fa4367f5b1a714ece87594c"
+    },
+    "src/Tone/signal/Subtract.ts": {
+      "bytes": 2041,
+      "sha256": "9324d82d7c84bdccb71dbe62bd717008497276c8c857d8c4760560071bbb72f7"
+    },
+    "src/Tone/signal/SyncedSignal.test.ts": {
+      "bytes": 8612,
+      "sha256": "134f89ba75c4475ba5cbba7d9a0ce626e02457de99bbc9d60318fb61a5ede86c"
+    },
+    "src/Tone/signal/SyncedSignal.ts": {
+      "bytes": 6150,
+      "sha256": "b28212f9f836d54074d953eb5d10f934edab3afef1b5c0cadbe24c5a77ef36b6"
+    },
+    "src/Tone/signal/ToneConstantSource.test.ts": {
+      "bytes": 8055,
+      "sha256": "3301b9dbbcffea27cdc514a156ff8772c497c80aaa5a2fc6703e69bfff00bef0"
+    },
+    "src/Tone/signal/ToneConstantSource.ts": {
+      "bytes": 3310,
+      "sha256": "e230152284bff7ecb60cf43d87e68534bbdabbac7ae895d1b4f6dc20eafb6f7e"
+    },
+    "src/Tone/signal/WaveShaper.test.ts": {
+      "bytes": 2888,
+      "sha256": "470ea50c3a118ee92d209618b65ac2445eac5810cbf8b4ae0059ae1884855050"
+    },
+    "src/Tone/signal/WaveShaper.ts": {
+      "bytes": 4704,
+      "sha256": "9996c70decddbebdc02f8fa58b373765fc1e3620e2256c23787ec437bac2aff0"
+    },
+    "src/Tone/signal/Zero.test.ts": {
+      "bytes": 594,
+      "sha256": "70b17abb64e19a56b5bbff2f13719d2a36321413e298b23675c2d8cc1a38141d"
+    },
+    "src/Tone/signal/Zero.ts": {
+      "bytes": 1154,
+      "sha256": "14528ad0c267c5e9cd0664f7f8f61df4bd69d1472d277631bf135a99e541819b"
+    },
+    "src/Tone/signal/index.ts": {
+      "bytes": 492,
+      "sha256": "8b52f7f6aa43db920d83b89872e5b25515f8b15e17d18b187ed349f04f12abea"
+    },
+    "src/Tone/source/Noise.test.ts": {
+      "bytes": 2928,
+      "sha256": "8e3e595f1d9cfe8816e8d77413046fd6d7ee3d6a2dc977c1a0cb933cd1199573"
+    },
+    "src/Tone/source/Noise.ts": {
+      "bytes": 7076,
+      "sha256": "c7fc3a4dcc67cf4fe06c66baeb8a3c0cd35fddb600b9aff154b7be1cd17e7b8a"
+    },
+    "src/Tone/source/OneShotSource.ts": {
+      "bytes": 6149,
+      "sha256": "8064c421d2771597d37b828df09972fb21a829880bc0d7ff0a89894cc86e081e"
+    },
+    "src/Tone/source/Source.test.ts": {
+      "bytes": 15605,
+      "sha256": "0f886c97706931261a6eeeb63fa0a8fd7b201b5599c63f824f58987ab69dc48c"
+    },
+    "src/Tone/source/Source.ts": {
+      "bytes": 11140,
+      "sha256": "e4efe5ca7c4b5b0d59180aba587d4d2c59da798e8bada916c987dc42edd61673"
+    },
+    "src/Tone/source/UserMedia.test.ts": {
+      "bytes": 5048,
+      "sha256": "01b5e386ddf05bcf735d8a43224e9bf157145e4ea165b077eb5101b8dd715b84"
+    },
+    "src/Tone/source/UserMedia.ts": {
+      "bytes": 7613,
+      "sha256": "ca1f02ef3710ed44d19dd12d1e873f02c0d1244086a0912f57586bb3346eaead"
+    },
+    "src/Tone/source/buffer/GrainPlayer.test.ts": {
+      "bytes": 6014,
+      "sha256": "f8c54e4dbba56f8bfe5c3e83457fe50439164e8526304ecb793294b3b7b64836"
+    },
+    "src/Tone/source/buffer/GrainPlayer.ts": {
+      "bytes": 7979,
+      "sha256": "838724bad20434c733350f12ca707298417ce72397cc644f2b14ce77f0d3b7d0"
+    },
+    "src/Tone/source/buffer/Player.test.ts": {
+      "bytes": 32269,
+      "sha256": "cf3afa982527cf2608bb1dba5d94b1960741df1b968f659f978d940031e6ed89"
+    },
+    "src/Tone/source/buffer/Player.ts": {
+      "bytes": 15930,
+      "sha256": "aca93b5cbd23b86f3a0aacc0e33cd097cfec3cc4150aa62828733626974854fd"
+    },
+    "src/Tone/source/buffer/Players.test.ts": {
+      "bytes": 7542,
+      "sha256": "43ff308131261fa4a2021e708dba2c8bf8b725e20ff680b453732523f10d426d"
+    },
+    "src/Tone/source/buffer/Players.ts": {
+      "bytes": 6060,
+      "sha256": "7bd32496f6730f69aa45282813903936d202cb914c32cd452a19f286080a7506"
+    },
+    "src/Tone/source/buffer/ToneBufferSource.test.ts": {
+      "bytes": 17156,
+      "sha256": "5223879a924d5ada48779f0e43e62781585f2f8bcfcee066d865e7b620ccf551"
+    },
+    "src/Tone/source/buffer/ToneBufferSource.ts": {
+      "bytes": 6835,
+      "sha256": "11cbf52daeadadb59136fa0c94efacd8e5c3de0f35da172ded3d02f00c8267e8"
+    },
+    "src/Tone/source/index.ts": {
+      "bytes": 636,
+      "sha256": "495a5cca20e022b5fc6cb42b44deda17b700b44c12c31c878722b20c17bf404a"
+    },
+    "src/Tone/source/oscillator/AMOscillator.test.ts": {
+      "bytes": 2114,
+      "sha256": "c31211cef9212a64b6f8f6ea6a6b6010153dc0b085a19cade47da4000fd08890"
+    },
+    "src/Tone/source/oscillator/AMOscillator.ts": {
+      "bytes": 5999,
+      "sha256": "d723d1431106976108f265290e6ed66d6d6d04adb6c2f031a36be75932319ea2"
+    },
+    "src/Tone/source/oscillator/FMOscillator.test.ts": {
+      "bytes": 2586,
+      "sha256": "f2407ae8348a4156d63e3fedb7875738a82f73942c78787a7467e7f9db72b368"
+    },
+    "src/Tone/source/oscillator/FMOscillator.ts": {
+      "bytes": 6438,
+      "sha256": "069c2f2881c06ed9d97df88c0a553ee7d8aba863a4aee4e6b0df8f50e237d139"
+    },
+    "src/Tone/source/oscillator/FatOscillator.test.ts": {
+      "bytes": 2571,
+      "sha256": "f378d792800063d9353a99898f034a9c13f0ffa80171350949eb35620da86ad7"
+    },
+    "src/Tone/source/oscillator/FatOscillator.ts": {
+      "bytes": 6632,
+      "sha256": "ebfd17ba2123125ac6dab7e57740013310afe3daa416c7b4cbeefd8050eb57c2"
+    },
+    "src/Tone/source/oscillator/LFO.test.ts": {
+      "bytes": 6301,
+      "sha256": "e11039317a35e60d8c97a5b0cd331e9dc87e9947581b6522c4894216f532cc35"
+    },
+    "src/Tone/source/oscillator/LFO.ts": {
+      "bytes": 8452,
+      "sha256": "aea3e0940622d346848e6a42229691c9234be5e126edee531330761ffeca09f9"
+    },
+    "src/Tone/source/oscillator/OmniOscillator.test.ts": {
+      "bytes": 8441,
+      "sha256": "811e613fec573743b78d03439060b3a338cd3ac8141801ce2d9c1ac577106b54"
+    },
+    "src/Tone/source/oscillator/OmniOscillator.ts": {
+      "bytes": 13464,
+      "sha256": "d665ced42cdf92103abf50a0b15ed75500609ac401994f8b4484a53ede4ec49f"
+    },
+    "src/Tone/source/oscillator/Oscillator.test.ts": {
+      "bytes": 10225,
+      "sha256": "b7422e9873d6b633f813cfae79cac96b7e7f701bfcf43e795c627aaeadc2ab11"
+    },
+    "src/Tone/source/oscillator/Oscillator.ts": {
+      "bytes": 13213,
+      "sha256": "e7ffc277e680421d423739707e5079816d7a8a3116fafe6b8d9a958ad26753c4"
+    },
+    "src/Tone/source/oscillator/OscillatorInterface.ts": {
+      "bytes": 13013,
+      "sha256": "1268ee711f2d86c0d1d06afae54e011b4831937ba64498a8a7874c630b574677"
+    },
+    "src/Tone/source/oscillator/PWMOscillator.test.ts": {
+      "bytes": 1447,
+      "sha256": "4bdc1c747ba45437c4f8083b611d9a7f2fcd23ca3d34359978efb6c521421647"
+    },
+    "src/Tone/source/oscillator/PWMOscillator.ts": {
+      "bytes": 4613,
+      "sha256": "a305d13826eb94f55d3e3a1b527b9a8fb1606928c85c52d4fed4db21c0376db3"
+    },
+    "src/Tone/source/oscillator/PulseOscillator.test.ts": {
+      "bytes": 3049,
+      "sha256": "17fd8ca745267f582094b37c38f60a7572ff2eee266e42adef088dc80e1ee68e"
+    },
+    "src/Tone/source/oscillator/PulseOscillator.ts": {
+      "bytes": 5902,
+      "sha256": "59f0edaaae5609aa23ed3f3f3573805ecabd2833127a546d3e6e8fb4b184e25a"
+    },
+    "src/Tone/source/oscillator/ToneOscillatorNode.test.ts": {
+      "bytes": 6399,
+      "sha256": "2950fa2cbfe3ea710c3cbd2bb800dd3ed87a98763f799cc0309b45ba76381185"
+    },
+    "src/Tone/source/oscillator/ToneOscillatorNode.ts": {
+      "bytes": 3254,
+      "sha256": "67b78ccee5f347de7b3c92f27107dbc7df4e793b0375e836c9b6e202106fa80c"
+    },
+    "src/Tone/version.ts": {
+      "bytes": 38,
+      "sha256": "faa777e980d80f912276d5cb104cc4add9a2fc2b83d38e8b7afc58526947a1aa"
+    },
+    "src/ui/bind.ts": {
+      "bytes": 1475,
+      "sha256": "1e61d51ec0c8961f956a73ab0ce248d63d41a2032f9b8a7175c68520bc38902a"
+    },
+    "src/ui/build.ts": {
+      "bytes": 835,
+      "sha256": "f29ee00b833169a1b7b9acbb4601e706db62c05c44d3eedd16c159888a535f62"
+    },
+    "src/ui/controls/button.ts": {
+      "bytes": 2678,
+      "sha256": "93ec0646db94ac78440b7633e85186fda7541b806a8eb7f290afe033b9717cbc"
+    },
+    "src/ui/controls/mic-button.ts": {
+      "bytes": 1497,
+      "sha256": "3aa7e64874cfa38ec3005d65c3e2e48bd7efdc2c57221015efca28beb77e14b7"
+    },
+    "src/ui/controls/momentary-button.ts": {
+      "bytes": 2035,
+      "sha256": "e0a39ba557d867094d306d19082f64eded215440096805f48c0629bbcc8548ce"
+    },
+    "src/ui/controls/play-toggle.ts": {
+      "bytes": 1568,
+      "sha256": "80551784395761a4d30ef4af65f543e0935fea1b8453cf4e72124851525b2a66"
+    },
+    "src/ui/controls/slider-pad.ts": {
+      "bytes": 3236,
+      "sha256": "1acc5c7f4daf2bf485f1ce0f482f657787892bf6968e1ef053ad6b57919d991c"
+    },
+    "src/ui/controls/slider.ts": {
+      "bytes": 3298,
+      "sha256": "7609a8952d6accae1facefc38032b17948a94d8d7719bc22d3a596a7d83d35c8"
+    },
+    "src/ui/controls/step-sequencer.ts": {
+      "bytes": 3966,
+      "sha256": "2dbe8923703ab39938dbc36275340dc6296d9d6cb4980c43b779a2b1230703ae"
+    },
+    "src/ui/globals.d.ts": {
+      "bytes": 1689,
+      "sha256": "7a072a82e2f4f38f7271dab3c22ed2ce86bd51b3590ee376f6f0617808e5d11a"
+    },
+    "src/ui/head.ts": {
+      "bytes": 1461,
+      "sha256": "13ab0a42f8748802d48263c721c357e792c5ea590b81359b04c378ee8c3dc80e"
+    },
+    "src/ui/index.ts": {
+      "bytes": 712,
+      "sha256": "a9fba826a7de5a863c400a1a5729d1dee4dc9890e2b903cd6c708d5a491048eb"
+    },
+    "src/ui/inspector/audio-node.ts": {
+      "bytes": 6944,
+      "sha256": "05df538584ee7a9f76330eab9a89926688605a0dca8723250fdaca3fa340a33d"
+    },
+    "src/ui/inspector/drawer.ts": {
+      "bytes": 1335,
+      "sha256": "94b6398778e17ea9baa472ecae5e62e657dc9d3fa760c632c41ad9b8d6ede13d"
+    },
+    "src/ui/inspector/folder.ts": {
+      "bytes": 1864,
+      "sha256": "4a780d946effe2ecc0e9d9354ba992a7e1df425b282a82736183e878d6c712da"
+    },
+    "src/ui/inspector/height.ts": {
+      "bytes": 985,
+      "sha256": "29795f1f52430217c3d5d45096ddfba3b3ccab8782fad3bcf7398c3ea8c02093"
+    },
+    "src/ui/inspector/units.ts": {
+      "bytes": 2803,
+      "sha256": "6defa3f7acae743222f62f23c7a0b18b41abc69096bb7f7f7c7e540b5cd9f36b"
+    },
+    "src/ui/inspector/values/array.ts": {
+      "bytes": 2151,
+      "sha256": "421a443d0f0e0894afd48a0fafde7f0eada4c0387cdeffc109a59ec8199fa83f"
+    },
+    "src/ui/inspector/values/boolean.ts": {
+      "bytes": 1076,
+      "sha256": "43129dbb7aa2f121da33d940440943912379d4cb7b035f06426dd5e419aaa3b5"
+    },
+    "src/ui/inspector/values/number.ts": {
+      "bytes": 4348,
+      "sha256": "a46fbb10df88a6b7ca6b820da592c8ee69c6a624ce723be99ca87c74c728ce9b"
+    },
+    "src/ui/inspector/values/string.ts": {
+      "bytes": 677,
+      "sha256": "9685291ee4add4603ea2badddd907def680033cedd89dc84d55374fa37c8089a"
+    },
+    "src/ui/inspector/values/value.ts": {
+      "bytes": 1549,
+      "sha256": "b4d9a2a4ccc0ef8c216fa9599ab3aa5b54ed55dceb4b14ab42151599b45c8934"
+    },
+    "src/ui/local-index.ts": {
+      "bytes": 160,
+      "sha256": "90e9369382f8b9f7c31d4041537caf838d8b863cb71e43bdd565a86b1297cf97"
+    },
+    "src/ui/package.json": {
+      "bytes": 571,
+      "sha256": "f3a0624c9509463e4d8b863ae67a0fd3397665d841aaa85fc310c5ed300ff12a"
+    },
+    "src/ui/page/code.ts": {
+      "bytes": 2993,
+      "sha256": "abfd7b5aecbe5e50f8413639e0ee6b0936d5578ed87c47055d9a1a051b7215af"
+    },
+    "src/ui/page/example.ts": {
+      "bytes": 7426,
+      "sha256": "335965df5df35d31c74d488f18db9d12286e1311756fe39ae8590323107fa598"
+    },
+    "src/ui/page/loader.ts": {
+      "bytes": 1398,
+      "sha256": "610f6e40188f4f122f9146d2c4ed940a05b2b69a8efc1e6db9ba83b302aec14d"
+    },
+    "src/ui/page/mute.ts": {
+      "bytes": 1675,
+      "sha256": "89e903efab230688abc1c75b3b201df6a69af0118fc3264bc6054e3f20a2bd70"
+    },
+    "src/ui/page/sidebar.ts": {
+      "bytes": 2515,
+      "sha256": "d4abc9285c0a56d8455571e6f3504031ed9b6236c19b266160445decb09cec3e"
+    },
+    "src/ui/piano/keyboard.ts": {
+      "bytes": 2771,
+      "sha256": "be3eb33f089298dd0c65305138a849dc0fe43b418fd23bafc2bf56c87fd672c4"
+    },
+    "src/ui/piano/midi-in.ts": {
+      "bytes": 2753,
+      "sha256": "d6e5554b53f1c53f3d2ed68816fa4b22d6fc5b06db2df19b370e18db485c5721"
+    },
+    "src/ui/piano/note.ts": {
+      "bytes": 3027,
+      "sha256": "bde8d5ebbef24d37525ee4f4248dca1d223e09a358a93a923a110c101d2d80ef"
+    },
+    "src/ui/piano/octave.ts": {
+      "bytes": 2079,
+      "sha256": "c6188061bad971247514ad6b6d140065d910ce6487ac14145dea900f1b659660"
+    },
+    "src/ui/piano/piano.ts": {
+      "bytes": 3454,
+      "sha256": "1b3c4e1739509511d6477f8fcb3111ba8121b820c1259f0f2298889bd11a7451"
+    },
+    "src/ui/styles.ts": {
+      "bytes": 1572,
+      "sha256": "307cf04c09d947915d16c82c53b9bc6bd40e594236add7086043e19ba39dbf09"
+    },
+    "src/ui/tsconfig.json": {
+      "bytes": 461,
+      "sha256": "bfd9f255d08ab9b0874eb093a3749d39cd08f159322c28fcf07db4c6f011c78e"
+    },
+    "src/ui/vis/animation.ts": {
+      "bytes": 588,
+      "sha256": "7c8744f3351f3abc9d2e099a1051580f3b700981d4820c084601578408439a54"
+    },
+    "src/ui/vis/buffer.ts": {
+      "bytes": 805,
+      "sha256": "7e8e13cd9ee081e0066868c2391b5ede6452c2aafa4ac1c03acdcf2f2188cfc6"
+    },
+    "src/ui/vis/compressor.ts": {
+      "bytes": 3621,
+      "sha256": "5d9db5a2a6146036b3f2734ee9192292492c399657b83c48d152c501da17d051"
+    },
+    "src/ui/vis/envelope.ts": {
+      "bytes": 1866,
+      "sha256": "e3af9f74ffa57f7dd6b0010ab5de326a36874028cd4577a740e6cd3fd6f69872"
+    },
+    "src/ui/vis/fft.ts": {
+      "bytes": 661,
+      "sha256": "a7d85819d04b64c17b4e0a11ca055d9aab26ac12bd29550399337b526a4696d2"
+    },
+    "src/ui/vis/filter.ts": {
+      "bytes": 398,
+      "sha256": "482bfa9f79f5999d03134bbe98f3b79cf855ceb507aa55f8546815116b7a9d68"
+    },
+    "src/ui/vis/index.ts": {
+      "bytes": 1421,
+      "sha256": "39a3d9a3ca8e6814e00e87c24ff97a3a94ad21a4379ff3a48756da05e5739d88"
+    },
+    "src/ui/vis/meter.ts": {
+      "bytes": 2039,
+      "sha256": "a1e5b84ee99a7d74d725829aaa536d9aa2aa4a32803a7d25a1005ac14eb1f238"
+    },
+    "src/ui/vis/oscillator.ts": {
+      "bytes": 458,
+      "sha256": "53859f9984fb7ea9f16cbf87bd6725bb98163ab30668cfa19ff5b407550ec027"
+    },
+    "src/ui/vis/vis-base.ts": {
+      "bytes": 3772,
+      "sha256": "432735b3099a5fe07d0ebbc608fcf3e82320d266b4cef64e57643c28bc293bb3"
+    },
+    "src/ui/vis/waveform.ts": {
+      "bytes": 728,
+      "sha256": "333ba0e4718bf1728cfcd4cbf14477f83e33f8378a34d9b51bb4af9613c9407f"
+    }
+  },
+  "chunks": [
+    {
+      "name": "source-01.json",
+      "sha256": "d6760895fca94fa6701d9ae57c2e172e49a3c52b88fb58ada3a2f64b50e27b21",
+      "bytes": 450109
+    },
+    {
+      "name": "source-02.json",
+      "sha256": "acf06fdbcd78c5a48653ce63258c98888a3c614752c4e8a60f00de5664eae8a3",
+      "bytes": 459403
+    },
+    {
+      "name": "source-03.json",
+      "sha256": "d8eeb461229371a1ca302195f21d0f970b995db26f9ed62fb67f8b89d440ea4c",
+      "bytes": 516429
+    },
+    {
+      "name": "source-04.json",
+      "sha256": "5db9791ca0592a1bdc6efd4c2af9c90ae7ef11b2ec0331dfb901f0881c05aaa8",
+      "bytes": 518592
+    },
+    {
+      "name": "source-05.json",
+      "sha256": "4d0b11f30b42d1ed96e204b716b4d1b0add8c4018d32aa650b10df48f8943020",
+      "bytes": 498596
+    },
+    {
+      "name": "source-06.json",
+      "sha256": "70be4635cc1db04095eb9f16b300ae51a9b51455bdd8031ebcf408a39cd00490",
+      "bytes": 511290
+    },
+    {
+      "name": "source-07.json",
+      "sha256": "bd602def325e044893f04d8e12fbe52d1e02ab1b5de326069d40839cea900516",
+      "bytes": 509582
+    },
+    {
+      "name": "source-08.json",
+      "sha256": "575ab7ca936b7165a93c6cf6824d252d79eebb7ae17298b40fc1838a8aa63b06",
+      "bytes": 517270
+    },
+    {
+      "name": "source-09.json",
+      "sha256": "b8d354bd9d98524dd7265c33d30d89160970f4feccbd8524a3e91690c0e2278e",
+      "bytes": 514575
+    },
+    {
+      "name": "source-10.json",
+      "sha256": "acc9c9adbee23f7a3150634a1206a3912742cdda929b91ecce41aadd436dfb47",
+      "bytes": 156694
+    }
+  ]
+}
