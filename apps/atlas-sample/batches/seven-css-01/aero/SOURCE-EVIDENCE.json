@@ -1,0 +1,97 @@
+{
+  "repository": "https://github.com/khang-nd/7.css",
+  "revision": "76d29abe7e76598fc521e707933f9ffa1b320259",
+  "sourcePath": "docs/index.html.ejs",
+  "actualSelectedSources": {
+    "docs/components/window/frame.ejs": "e43060d844090f75c6e74bdf119aaee10fb35c88cc2c1351ea8cf8603f05f724",
+    "docs/components/window/titlebar.ejs": "ea7083867d064d0cec43d5e6747828eb92933ff94fd4de007389e689cd20efa3",
+    "docs/components/window/statusbar.ejs": "d3f011e61c62a3a44bf884c8e7cb78ea6fc054d446b90007ab5d367f94bdb6f9",
+    "docs/components/tabs.ejs": "fb552a831f7d65de2b003f36ae7c7a7455ce91c039326c28cd260d38e21a7088",
+    "docs/components/button.ejs": "59b6a713a16b8e729e3aa5c569e29cd8cdcc46ca36ceff5bf6adaff025a8132c",
+    "docs/components/checkbox.ejs": "c45f76cfdab01e47b275f922f6f9651359be9f78b30639a141c2dc1bbd1f4621",
+    "docs/components/optionbutton.ejs": "ba113a79de426e72788ea37487aac64dc3abd50210c0169a64ee18a56f93d75d",
+    "docs/components/groupbox.ejs": "04b40cbf8d4351e25b1f866bb899cbbd82e2c56f20f7d185f046c3985cff057b",
+    "docs/components/collapse.ejs": "b52c854fc50a1c3a901896df8492af17dedf11e195bc39ac27c508651915986b",
+    "docs/components/treeview.ejs": "48b8e3a1451810e6b7882633dbd97cc525b7adc942b0ea93712d0f8cfc206d32",
+    "gui/_variables.scss": "673c250057a9086bf4ee3f0b1fa29f9aa88974f531e7335f1ae387f7cb7a7ee4",
+    "gui/_typography.scss": "e0fd4ede4bea8bf5af7abac8914d8297ddb35c3701b1e97d3d07953401415d9d",
+    "gui/_button.scss": "01a4f7f3ea4db3dc74d42e5dd44285022e2a115f61b0ca2dae834949283fc694",
+    "gui/_checkbox.scss": "7de43e794840818f202aa4237284b1f554078b154814c7196b346f9d3aa38249",
+    "gui/_radiobutton.scss": "87283d6ec223745b7de4f43dba6bf3631d3d77102ea9c15a1b138f64d40710fe",
+    "gui/_groupbox.scss": "eb3286960757c7395d51a2c81c8127f2c73cd5e332ec366ef38b5ec334619d7a",
+    "gui/_collapse.scss": "46b2940549802d5b83a2e36bda3c3ebad6d8df2e2952bc5086029900a8f79584",
+    "gui/_treeview.scss": "d65beaedb8f0050f67a889772d6b7be91ae6925bd13f1ac90ef3a4eced283f95",
+    "gui/_tabs.scss": "5bd31a4e2a6a7d22238455aeab819d347ab42744ab9bccd59189f857c682a038",
+    "gui/_window.scss": "9ff4af3de68bcd461935b3428d3b8f946bfabf2b9f8937c5431d8740b8a6a7f3",
+    "docs/script.js": "25c164c6b54c2138cfa674bee31af8b0ee818261f3e6f0f9ca9a0d96174ca706",
+    "LICENSE": "5e2bed7a894d6c23a3fc9e2e8f4b90a6b27ed0c6d105eaefb66a8ad985f4b98b",
+    "package.json": "346eb36d399a5827f353e85baf8c1acfc36f08c3258866c7f24b2a74c9a88954"
+  },
+  "sourceVersion": "0.21.1",
+  "lucideSVGHashes": {
+    "minus": "116a64e7f95fe2c31490f084d4abbf49dc15af8e7fab4a29ed5b84bb3c26c00b",
+    "square": "c6c07f247abd06d3164a6749e21812da9092908fe0033f8163149b4ee2e31347",
+    "circle-help": "e2522d899494d7fbd9d1da86175ba3f17a1516a5e8a9aac90517f497884c8b29",
+    "copy": "6828c476979a7e4d5ae3ac726f8fadbcab066ec53299b7f8422cda321a60a841",
+    "x": "0f38855d9d5775c10960ae53e46b745f77914b43f78c43bf8abc39f4d5e06de1"
+  },
+  "dependencies": [
+    {
+      "name": "lucide-static",
+      "version": "0.468.0",
+      "scope": "actual-five-svg-assets",
+      "license": "ISC",
+      "licenseSHA256": "1e7290b35280a048667bbf0ebabac1c7fd52a75300e8b2946ac165715997f2bc"
+    },
+    {
+      "name": "sass",
+      "version": "1.77.8",
+      "scope": "build-only-css-compiler",
+      "license": "MIT",
+      "licenseSHA256": "c128e51e7cf068fc98f558e3d21c1fe35bf50bb2a373fd22a6dff8c14494e2ff"
+    },
+    {
+      "name": "ejs",
+      "version": "3.1.10",
+      "scope": "build-only-template-renderer",
+      "license": "Apache-2.0",
+      "licenseSHA256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    }
+  ],
+  "adaptation": "Original 7.css0.21.1 fixed-revision official documentation selections, 29 original examples across10 original partials: glass frame, titlebar, statusbar, tabs, buttons, checkboxes, option/radio buttons, groupbox, collapsible and treeview. One showcase family, NOT the full25-component docs, not a desktop/window manager. Original example HTML and SCSS retained except globally unique id/for/aria-controls prefixes perexample and five PNG control glyph roles replaced by exact existing Lucide0.468.0 SVGs (minus/square/circle-help/copy/x). Original window buttons remain nonfunctional presentation, not fake minimize/close. Original tabHandler algorithm retained; managed local listeners guard disabled tabs and clean up on exit/error. Hidden pauses CSS animation, reduced motion disables transitions; no continuous JS jobs. Explicitly omitted body demo with embedded dog JPEG, slider/spinner bitmaps, custom bitmap scrollbar, photo backdrop, external analytics/share/badges and copy-to-clipboard code. System Segoe UI/Calibri/Noto Sans/sans-serif stack only, no proprietary font files shipped; actual font availability varies. Frame sits on disclosed plain host backdrop, not original flower photograph. EJS source-example wrappers flattened to rendered original examples, no highlighted code or Copy buttons. CSS compilation/build-only Sass/EJS packages do not execute in runtime. No network/storage/clipboard/forms external action. Actual563 compose and loader, tab mousedown/focus/disabled, native checkbox state, details property, hidden/resume/late failure/early missinghost/oldnode exit tested in JSDOM; not native pixels/glass blur/font acceptance.",
+  "verification": [
+    {
+      "mode": "normal",
+      "pass": true,
+      "actualCompose563": true,
+      "fullOwnedListeners": 0,
+      "blockedCalls": 0,
+      "nativePixelsVerified": false
+    },
+    {
+      "mode": "early",
+      "pass": true,
+      "actualCompose563": true,
+      "fullOwnedListeners": 0,
+      "blockedCalls": 0,
+      "nativePixelsVerified": false
+    },
+    {
+      "mode": "late",
+      "pass": true,
+      "actualCompose563": true,
+      "fullOwnedListeners": 0,
+      "blockedCalls": 0,
+      "nativePixelsVerified": false
+    },
+    {
+      "mode": "reduced",
+      "pass": true,
+      "actualCompose563": true,
+      "fullOwnedListeners": 0,
+      "blockedCalls": 0,
+      "nativePixelsVerified": false
+    }
+  ],
+  "nativeVisualVerified": false
+}
