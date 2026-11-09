@@ -1,0 +1,18 @@
+# Portfolio Performance Report
+
+One original family `tremor-blocks:portfolio-performance-report`, tremorlabs/tremor-blocks fixed revision `b319e8d3d3678a4f60f4802f7e85bc1abc52d598`. Source MIT; distribution MIT, ISC and Apache-2.0. Retains complete original 57 dates × 3 series, headline figures, desktop/mobile chart branches and 3-row × 7-column detail table. All values are upstream illustrative fixtures, not real-time prices, account assets or investment advice. No backend or external requests.
+
+## Retained behavior and minimal changes
+Original Recharts 2.15.0 LineChart, Table, chartUtils, resize hook and formatter preserved. Clicking legend emphasizes the original series; original onValueChange no-op is retained, so the static table never changes. Original tooltip and transparent widened line click targets retained. No screenshot or replacement geometry used in production. Original enableLegendSlider remains false. Public UI has no invented slider toggle.
+
+Shared LineChart's latent scroll control now releases pressed state on mouse leave/blur, legend held-key state on blur, and retains only the newest 400ms post-scroll check. That timeout is cleared on unmount. Interval hooks remain original with their cleanup; iframe wrapper additionally owns repeating timers, pauses on hidden and removes pending tasks on final exit. Supplemental test-only build renders the same original LineChart with enableLegendSlider true and original data to exercise repeated/held-key cleanup. test-runtime.js is not a public asset and not loaded by index.html.
+
+Original CSS classes and chart colors retained. Tailwind 3.4.17 scans original helpers. Unused headless/forms/typography plugins excluded. Unretrieved JetBrains font face removed; system font fallback. Desktop/mobile CSS branch visual appearance has not been verified by a browser.
+
+## Validation and isolation
+Actual ui-vault-544 composePreview with unchanged CSP. Original scene: table structure and values, 100 real legend select/reset cycles, unchanged static table, real pointer tooltip path, hidden closure and old-node inertness, early module throw, partial root event-registration failure, real late stroke-opacity setter failure, pagehide/atlas:dispose, media/observer/timer/listener cleanup and pre-existing external selectionchange preservation. Supplemental scene: 100 keyboard scroll press/releases, held repeat then hidden/unmount and final exit. Detailed exact test outcomes in VERIFICATION.json.
+
+Deterministic JSDOM ResizeObserver/element geometry is a test-only fixture needed for Recharts SVG DOM. It does not verify pixels, path placement, native scrolling smoothness or responsive appearance. Both responsive branches exist in the DOM; that is not a visual pass. Browser visual QA not run.
+
+## Licenses and dependency scope
+SOURCE.json lists installed parsed dependency versions and all their complete notices conservatively; parsed inputs can contain tree-shaken code and are not all asserted emitted. esbuild metafile supplies actual output input bytes. Tailwind notice covers generated CSS, not a runtime import. Recharts 2.15.0 uses D3/victory-vendor and decimal.js-light; all provided licenses included. victory-vendor 36.9.2 omits root notice: full official Victory MIT from v36.9.2 resolved commit dd86278d205f3f306e2ab38c317a6f9c56f0a6f8 plus shipped lib-vendor ISC notices included. Remix React exactly 4.6.0 Apache-2.0; full License from official v4.6.0 commit 8bc436bdd329cf342958d8effdd078bfa74354c6 retained, not current restricted terms. Recharts v2 npm deprecation was observed; matching original implementation deliberately not replaced with incompatible v3.
