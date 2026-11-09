@@ -19,3 +19,6 @@ export function filterItems(items,{query='',category='',kind='',source='',style=
 export function detailHash(id){return '#/item/'+encodeURIComponent(id)}
 export function resolveRoute(hash,items){if(!hash.startsWith('#/item/'))return null;try{return items.find(x=>x.id===decodeURIComponent(hash.slice(7)))??null}catch{return null}}
 export function paginateItems(items,page=1,pageSize=12){const size=Math.max(1,Math.floor(pageSize));const pages=Math.max(1,Math.ceil(items.length/size));const current=Math.min(pages,Math.max(1,Math.floor(page)||1));return {items:items.slice((current-1)*size,current*size),page:current,pages,total:items.length,pageSize:size}}
+
+// Jump input is deliberately stricter than pagination's defensive clamping.
+export function parsePageJump(value,pages){const text=String(value).trim();if(!/^[0-9]+$/.test(text))return null;const n=Number(text);return Number.isSafeInteger(n)&&n>=1&&n<=pages?n:null}
