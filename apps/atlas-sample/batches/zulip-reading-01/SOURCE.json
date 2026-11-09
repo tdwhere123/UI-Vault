@@ -1,0 +1,388 @@
+{
+  "repository": "https://github.com/zulip/zulip",
+  "revision": "f0f02bcb08cb99ea161baec9a6c2edd008217dda",
+  "sourcePath": "web/templates/message_group.hbs",
+  "originals": [
+    {
+      "path": "LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "gitBlob": "d645695673349e3947e8e5ae42332d0ac3164cd7"
+    },
+    {
+      "path": "NOTICE",
+      "sha256": "ef834c61ff290fa1e96b68300e45d3753aafc368dce6137e134c5c270782c61a",
+      "gitBlob": "087f7b06168b54ef1a311bc750f1e74f6323f2a0"
+    },
+    {
+      "path": "docs/THIRDPARTY",
+      "sha256": "99779d99477224d9cd46ecb9f028320fb343882a0685fe00bc237544440fbf91",
+      "gitBlob": "ac34e841122ab3a473d8bd63dd0641c1dc9a4441"
+    },
+    {
+      "path": "package.json",
+      "sha256": "1b1070a0c4f4ee4ccf227693c5ec1f3a769c32ca6d5891928a32edd67e32d0b0",
+      "gitBlob": "c8bb7a84b0a0b311101b988a945992bdcac15fe9"
+    },
+    {
+      "path": "web/postcss.config.js",
+      "sha256": "84bb5e0c7394e25d58bd798ea52e806b12fbe19f3ddda5d4476d2eccc7d4acc7",
+      "gitBlob": "f10779227c2b198be585f77f9bd54d5fee6d1b9b"
+    },
+    {
+      "path": "web/src/css_variables.ts",
+      "sha256": "6a2546e2e2c69ab02fb4d4c02661e4157c5e85b5b32391f11bc9f62515ade1f9",
+      "gitBlob": "daef70b2fa54d97d2c7dbdd564a883eda34e01b2"
+    },
+    {
+      "path": "web/styles/app_components.css",
+      "sha256": "4df5dac257b795afa180db2fa678d538f2c3e82dfdc71a28617e45d1c3a2e15e",
+      "gitBlob": "48e3d2de8ef0e04adfc83b1bb95e7e036a717003"
+    },
+    {
+      "path": "web/styles/app_variables.css",
+      "sha256": "e25e37219839c255e1df2cd888b04a75e04e59fd96991549b7ca99d3cbbe2160",
+      "gitBlob": "c652f163b288c238a33532258894a4d64ffeca1b"
+    },
+    {
+      "path": "web/styles/buttons.css",
+      "sha256": "e1fdbac7ed7497e5186b3cde9d08f2378ca376ad539156c085df62f62588cd42",
+      "gitBlob": "cd3ea825ac056e7049bbc917716482a11cc3e05d"
+    },
+    {
+      "path": "web/styles/components.css",
+      "sha256": "67b112042cf1bbdb66bcc7274eba07aa81dbc355918b8ebd406010638e3c8f10",
+      "gitBlob": "8e7e9cb026651f0bc8c7def8ca609ac8a183d9be"
+    },
+    {
+      "path": "web/styles/dark_theme.css",
+      "sha256": "25eea9ecf885f22ceea2cdfc90227a841998ff69caadd2c47cffac841f938c14",
+      "gitBlob": "a187e1f460db15303a7a79209dbe06df0c97db78"
+    },
+    {
+      "path": "web/styles/message_header.css",
+      "sha256": "ae0138b844589eda4d0f2dc4bbf510a901085b727e8fe4355896a1fd9bce808c",
+      "gitBlob": "4b2d930bfd744941fc617608f352a85791e8507b"
+    },
+    {
+      "path": "web/styles/message_row.css",
+      "sha256": "d14d8d95c5d821ce6d24a5aabb804cba1f7e4fc48e44fc0786601b2ae9400e1b",
+      "gitBlob": "0556dddf01533eedb65dc5d3e79bd9e755277105"
+    },
+    {
+      "path": "web/styles/reactions.css",
+      "sha256": "95b923b8816fb741958c41394f39d376ad4522d4a19d55eccf803558e6edd1b4",
+      "gitBlob": "ffe32004810a9173bd542360f370f71e9744dd95"
+    },
+    {
+      "path": "web/styles/rendered_markdown.css",
+      "sha256": "85c8f6de502a480a08bd99370f51e0c843d86977c2f841573b4d2a897dc204b3",
+      "gitBlob": "cd30682390408f4e0c8e9df28acc6ab7ce7d0ec8"
+    },
+    {
+      "path": "web/styles/user_circles.css",
+      "sha256": "18343b673e0a3f23749e38236e2885444d7f2e3a3f295402b74fa2d3e22b4d9a",
+      "gitBlob": "b9938e442628e77f85f5ca1b02e74665d1a67546"
+    },
+    {
+      "path": "web/styles/zulip.css",
+      "sha256": "6e7583b800542605f2257b6ed4713b6265002d254d97af6aa9f56e2020b37b76",
+      "gitBlob": "732a7fce297f5f1dcecc469e30b7b7265cf4d998"
+    },
+    {
+      "path": "web/templates/bookend.hbs",
+      "sha256": "0034a4bd85b7cc45aa56413a0418afa110b33b185f9b966d6e5dcb58daa3f216",
+      "gitBlob": "dbe928ba5c86d3c17c3fb6375a99df3697b06751"
+    },
+    {
+      "path": "web/templates/components/icon_button.hbs",
+      "sha256": "deec761816d7aca6e4815115414010c10d49f88285e90191fa6369972c9fbfa7",
+      "gitBlob": "68f3f401427a14e72ddbab4c98dba8d2da21eb42"
+    },
+    {
+      "path": "web/templates/edited_notice.hbs",
+      "sha256": "59578c4c86ffc1148e6e7fd70a447b944b57fac214390cbdfd8329ce60919481",
+      "gitBlob": "c2789132b62605233b9ea72dcad7d611482b6300"
+    },
+    {
+      "path": "web/templates/message_avatar.hbs",
+      "sha256": "3afaf443d1242feee5e265be16b62707fe8f32bab83a023913a61edecb94cbb9",
+      "gitBlob": "c32b46eca4e978d7ad93c7fcb43e4b33da4a1436"
+    },
+    {
+      "path": "web/templates/message_body.hbs",
+      "sha256": "8d99d52d812f85fc7bc2a72d9e222a7d89734cd41507f1d3fd305521352fdfd5",
+      "gitBlob": "0ee7c1c56523816728209a4f30f0a34c41a74fcd"
+    },
+    {
+      "path": "web/templates/message_controls.hbs",
+      "sha256": "36f4993b9e2588144c2f101b8a865592762a55983a39dcdf942543e5efa7fe60",
+      "gitBlob": "a46357c1964099984511605d2a56faeec683cdca"
+    },
+    {
+      "path": "web/templates/message_controls_failed_msg.hbs",
+      "sha256": "81cbaf120d4c68f2638128b65add38617a8adc10bd4f8fab046a780aa9275ba4",
+      "gitBlob": "ab058e3af78de7c7d890154730cdf24cc99032eb"
+    },
+    {
+      "path": "web/templates/message_group.hbs",
+      "sha256": "d16985c0f238c332c8fdebcd615670ee0c3c7b33b8e777f83f7c6d436b0ef425",
+      "gitBlob": "6971053ae953d43a46aeca90bfe51d0c3dbe6806"
+    },
+    {
+      "path": "web/templates/message_hidden_dialog.hbs",
+      "sha256": "d6d55e1516c334daddb4e636ab1418b62f7aabd9ec6bbefbcf069b183b3af705",
+      "gitBlob": "23ce8c33b21896b852940a9556165a6b9a53a07b"
+    },
+    {
+      "path": "web/templates/message_reaction.hbs",
+      "sha256": "f3e2ef2caf8624ee1505c4f8a8e4e7185ba1644e3ecf876837e0115693ff2952",
+      "gitBlob": "6df258a093c160b81bda2880f6f36fff05b42142"
+    },
+    {
+      "path": "web/templates/message_reactions.hbs",
+      "sha256": "b3f9418587556e6fb7ec34a7af52006662d46efeaaf287a02771d5c6796edd0c",
+      "gitBlob": "d72441f46b28f0cef4599de3c4641f699d01a0a9"
+    },
+    {
+      "path": "web/templates/message_reminders.hbs",
+      "sha256": "e1841399e5dc02ea5643fb073d526a25b17d36add96888bd838ecccdb26e0cad",
+      "gitBlob": "0bdc978169376327031d4e6404dcaf2aa8e46c1a"
+    },
+    {
+      "path": "web/templates/recipient_row.hbs",
+      "sha256": "5d11a888124458f3018e8ea11028e3167789ee3e1edb88212e10163f943e2e05",
+      "gitBlob": "34c90ce5f286402a7d3defcce2bc4ddec2c8c864"
+    },
+    {
+      "path": "web/templates/single_message.hbs",
+      "sha256": "52823498bfc44a85c374821f0c69d51f895b2dbe949b9132aa3c471600389f02",
+      "gitBlob": "8a09b137f6919bfb6bc014d25e62a8b60e5ec011"
+    },
+    {
+      "path": "web/templates/status_emoji.hbs",
+      "sha256": "1509a983912847122b3d14a06f3c1e3ab288d273113456d105aef52791da5b95",
+      "gitBlob": "f9558148d1a2c0c5649740a7b693c141da35ac2e"
+    },
+    {
+      "path": "web/templates/stream_privacy.hbs",
+      "sha256": "e41d99133764d3330c4f1ae786fcc26207aff21823d0b82301daf9d12ed1b093",
+      "gitBlob": "4f7afa85c7e0cddb28375f5cc04628f4b9fc122d"
+    },
+    {
+      "path": "web/templates/user_full_name.hbs",
+      "sha256": "2e1bc82b6111a8cd277ca7b6fa4239dbdac4cac203add9f2cb60e69f706cd73f",
+      "gitBlob": "63a2925f3c3cdb7a4f2d3e193ab9ab05fe4035fd"
+    }
+  ],
+  "runtimeNpmPackages": [],
+  "buildOnly": [
+    "handlebars4.7.8",
+    "postcss8.5.6",
+    "postcss-extend-rule4.0.0",
+    "postcss-simple-vars7.0.1",
+    "postcss-preset-env10.6.1",
+    "esbuild (local shared)"
+  ],
+  "replacementSvg": [
+    {
+      "name": "chevron-right",
+      "version": "0.468.0",
+      "sha256": "fea488a3b60fd7738bbbf8ca98826ef5c0381347c5fd1048d45ee70a75a51cfe"
+    },
+    {
+      "name": "ellipsis-vertical",
+      "version": "0.468.0",
+      "sha256": "465e0b2fe2d4395bb43dbdd05cf0f21bfdb93674c591d0631c199f703bd99867"
+    },
+    {
+      "name": "hash",
+      "version": "0.468.0",
+      "sha256": "c931748ed106cce67eacfc8358e1cec86d1c7832a4d3ecb2c87a51b180b1da96"
+    },
+    {
+      "name": "link",
+      "version": "0.468.0",
+      "sha256": "4032cd46290556330c5438075a1502b7e0355ec0369f851fb2d51098a2e7d82a"
+    },
+    {
+      "name": "smile",
+      "version": "0.468.0",
+      "sha256": "3ea206130acd9f2b442edb9cb9c987d684a0b3b146d62619e72eb842f29389e3"
+    },
+    {
+      "name": "star",
+      "version": "0.468.0",
+      "sha256": "8169933b68b55d52313fd768386a435038f77dcc49acd198fb5afa965b26ce8b"
+    },
+    {
+      "name": "user",
+      "version": "0.468.0",
+      "sha256": "bb1e0531065db51238a34b348cf8fb8267cd31932dc3f680c9f204a58d1520ea"
+    }
+  ],
+  "iconMapping": [
+    {
+      "name": "hashtag",
+      "source": "hash"
+    },
+    {
+      "name": "chevron-right",
+      "source": "chevron-right"
+    },
+    {
+      "name": "link-alt",
+      "source": "link"
+    },
+    {
+      "name": "more-vertical",
+      "source": "ellipsis-vertical"
+    },
+    {
+      "name": "smile",
+      "source": "smile"
+    },
+    {
+      "name": "more-vertical-spread",
+      "source": "ellipsis-vertical"
+    },
+    {
+      "name": "star",
+      "source": "star"
+    },
+    {
+      "name": "smile",
+      "source": "smile"
+    },
+    {
+      "name": "more-vertical-spread",
+      "source": "ellipsis-vertical"
+    },
+    {
+      "name": "star",
+      "source": "star"
+    },
+    {
+      "name": "hashtag",
+      "source": "hash"
+    },
+    {
+      "name": "chevron-right",
+      "source": "chevron-right"
+    },
+    {
+      "name": "link-alt",
+      "source": "link"
+    },
+    {
+      "name": "more-vertical",
+      "source": "ellipsis-vertical"
+    },
+    {
+      "name": "smile",
+      "source": "smile"
+    },
+    {
+      "name": "more-vertical-spread",
+      "source": "ellipsis-vertical"
+    },
+    {
+      "name": "star",
+      "source": "star"
+    },
+    {
+      "name": "smile",
+      "source": "smile"
+    },
+    {
+      "name": "more-vertical-spread",
+      "source": "ellipsis-vertical"
+    },
+    {
+      "name": "star",
+      "source": "star"
+    },
+    {
+      "name": "hashtag",
+      "source": "hash"
+    },
+    {
+      "name": "chevron-right",
+      "source": "chevron-right"
+    },
+    {
+      "name": "link-alt",
+      "source": "link"
+    },
+    {
+      "name": "more-vertical",
+      "source": "ellipsis-vertical"
+    },
+    {
+      "name": "smile",
+      "source": "smile"
+    },
+    {
+      "name": "more-vertical-spread",
+      "source": "ellipsis-vertical"
+    },
+    {
+      "name": "star",
+      "source": "star"
+    },
+    {
+      "name": "smile",
+      "source": "smile"
+    },
+    {
+      "name": "more-vertical-spread",
+      "source": "ellipsis-vertical"
+    },
+    {
+      "name": "star",
+      "source": "star"
+    }
+  ],
+  "removedUnusedResourceDeclarations": [
+    {
+      "property": "--icon-chevron-down",
+      "value": "url(\"data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='%23333333' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath clip-rule='evenodd' d='M3.52977 5.52973C3.78947 5.27004 4.21053 5.27004 4.47023 5.52973L8 9.05951L11.5298 5.52973C11.7895 5.27004 12.2105 5.27004 12.4702 5.52973C12.7299 5.78943 12.7299 6.21049 12.4702 6.47019L8.47023 10.4702C8.21053 10.7299 7.78947 10.7299 7.52977 10.4702L3.52977 6.47019C3.27008 6.21049 3.27008 5.78943 3.52977 5.52973Z'/%3E%3C/svg%3E\")"
+    },
+    {
+      "property": "--svg-url-rendered-checkbox",
+      "value": "url(\"../images/checkbox.svg\")"
+    },
+    {
+      "property": "--svg-url-thumbnail-loader",
+      "value": "url(\"../images/loading/loader-black.svg\")"
+    },
+    {
+      "property": "--svg-resize-handle",
+      "value": "url(\"../images/resize-handle-black.svg\")"
+    },
+    {
+      "property": "--icon-chevron-down",
+      "value": "url(\"data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='%23DEDEDE' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath clip-rule='evenodd' d='M3.52977 5.52973C3.78947 5.27004 4.21053 5.27004 4.47023 5.52973L8 9.05951L11.5298 5.52973C11.7895 5.27004 12.2105 5.27004 12.4702 5.52973C12.7299 5.78943 12.7299 6.21049 12.4702 6.47019L8.47023 10.4702C8.21053 10.7299 7.78947 10.7299 7.52977 10.4702L3.52977 6.47019C3.27008 6.21049 3.27008 5.78943 3.52977 5.52973Z'/%3E%3C/svg%3E\")"
+    },
+    {
+      "property": "--svg-url-rendered-checkbox",
+      "value": "url(\"../images/checkbox-dark-mode.svg\")"
+    },
+    {
+      "property": "--svg-url-thumbnail-loader",
+      "value": "url(\"../images/loading/loader-white.svg\")"
+    },
+    {
+      "property": "--svg-resize-handle",
+      "value": "url(\"../images/resize-handle-white.svg\")"
+    },
+    {
+      "property": "background-image",
+      "value": "url(\"../images/play_button.svg\")"
+    },
+    {
+      "property": "background-image",
+      "value": "var(\n                --svg-url-rendered-checkbox,\n                url(\"../images/checkbox.svg\")\n            )"
+    }
+  ],
+  "modifications": "# Zulip · 频道与话题阅读\n\n固定 Zulip f0f02bcb08cb99ea161baec9a6c2edd008217dda 的完整 message_group → recipient_row → single_message → message_body Handlebars 模板，使用原消息流、标题、Markdown、配色与组件 CSS。真实 Handlebars 4.7.8 在构建时渲染三话题、六条明确虚构中文消息，包含引用、列表与代码。没有将后端模板手写成相似页面。\n\n范围是原话题分组阅读视图，不是完整 Zulip 服务。频道/话题点击由薄宿主本地筛选已渲染分组，重置可恢复全部；这段筛选不是原 narrow_state 引擎。无登录、真实发送、同步、持久化、用户卡、消息操作菜单或服务端搜索。上述服务按钮明确禁用，不返回假成功。隐藏暂停操作，返回保留选中范围，退出禁用旧链接和按钮并移除自有监听。\n\n媒体/图标透明改动：使用虚构消息的无附件、无状态emoji、无reaction分支；原头像模板里的图片位替换为已授权 Lucide user 原SVG，不伪称原作者头像或原Zulip字形。所有出现的功能字体图标也以Lucide0.468.0原SVG透明替换，保留原布局/类名；详见映射与源码hash。无字体文件，系统字体回退。只删本场景未使用的CSS资源URL声明（视频/图片预览、checkbox、resize等），逐条保留在SOURCE；未删除消息正文。\n\nCSS通过原PostCSS extend/simple-vars/preset-env链和固定css_variables断点编译，再用esbuild标准压缩。没有运行时npm依赖、Handlebars eval或动态模板编译。全部模板预先渲染；宿主是本地原生事件，所有输入fixture固定可信，不支持任意HTML导入。\n\n## 许可与验证\n原Apache2全文、原NOTICE和docs/THIRDPARTY完整包含；后者是上游全项目第三方范围说明，不代表本交付发出了每个包。实际SVG为Lucide ISC与Feather MIT；Handlebars构建器MIT附全文但不在运行包。源码/构建脚本/测试只在本地工作目录，不冒称已公开ZIP。\n\nactual571 compose normal/missing/late三模式关键验证通过：3组6消息、原引用与代码、频道与话题本地过滤、12次重置、hidden暂停/恢复、旧节点退出无复活、监听0及禁止API调用0。CSS经esbuild语法解析；JSDOM不支持部分现代CSS，仅该stylesheet解析诊断不作为视觉失败。没有实际浏览器视觉、字体/排版像素验收。\n"
+}
