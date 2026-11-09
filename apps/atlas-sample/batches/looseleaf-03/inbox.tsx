@@ -152,7 +152,7 @@ export default function Inbox({ as: Root = "main" }: { as?: "main" | "div" } = {
               onStar={(starred) => patch(open.id, { starred })}
               onReply={(text) => {
                 patch(open.id, { replies: [...open.replies, text] })
-                setMessage(`Reply sent to ${open.from.split(" ")[0]}.`)
+                setMessage(`Local reply preview for ${open.from.split(" ")[0]}; no email sent.`)
               }}
             />
           ) : (
