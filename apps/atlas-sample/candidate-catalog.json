@@ -1153,19 +1153,27 @@
   },
   {
     "id": "eldora:logo-cloud-04",
-    "title": "eldora:logo-cloud-04",
     "source": "Eldora UI",
-    "license": "MIT",
     "upstream": "https://github.com/karthikmudunuri/eldoraui/tree/6bb8fd211ecbdfa983f5780bead27d9f3890f20a",
-    "website": "",
-    "buildStatus": "not built",
-    "batch": "batch-001",
     "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/eldora-archive-01/source-archive.zip",
     "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/eldora-archive-01/manifest.json",
-    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "website": "",
+    "repository": "https://github.com/karthikmudunuri/eldoraui",
+    "revision": "6bb8fd211ecbdfa983f5780bead27d9f3890f20a",
+    "title": "错峰品牌轨道",
+    "description": "原三列错峰轮转与弹簧动画，示例图形明确替换为六个许可闭合的技术品牌图标；仅为品牌展示，不表示合作背书。",
+    "behavior": "原三列错峰轮转与弹簧动画，示例图形明确替换为六个许可闭合的技术品牌图标；仅为品牌展示，不表示合作背书。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "视觉与动效",
+    "license": "MIT AND CC0-1.0",
+    "batch": "eldora-logos-01",
+    "preview": "batches/eldora-logos-01/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
     "gaps": [
-      "Remote images and logos not downloaded or assumed MIT",
-      "WebGL required for novatrix-background; actual motion unverified"
+      "六示例品牌已明确更换，非原远端品牌素材，不代表合作或背书。"
     ]
   },
   {
@@ -15086,37 +15094,30 @@
   },
   {
     "id": "neobrutalism:orbital-star-landing",
-    "title": "Neobrutalism · 粗描边星环入口页",
     "source": "Neobrutalism Components",
     "repository": "https://github.com/ekmas/neobrutalism-components",
     "revision": "3306a802724874a85f93079702b2795370a279d4",
-    "sourcePath": "src/app/page.tsx",
     "upstream": "https://github.com/ekmas/neobrutalism-components/blob/3306a802724874a85f93079702b2795370a279d4/src/app/page.tsx",
-    "license": "MIT (root verified only; dependencies/assets not closed)",
-    "visualStyle": "粗黑描边文字、硬边偏移阴影、方格纸底与环绕几何星形构成整屏新粗野主义构图。",
-    "behavior": "原StarField按固定seed分布形状，CSS motion-safe orbit/reverse使环绕与自转抵消；主体原CTA进入文档。",
-    "difference": "整屏视觉入口只一条，不收几十颗星为图标系列、不拆颜色或普通按钮；这不是新的业务工具。",
-    "gaps": [
-      "当前主页核心交互只有导航CTA，不能宣传复杂工作流；轨道CSS连续动画与reduced处理未实际浏览器验证。",
-      "原Next路由、CSS变量/字体、Base UI按钮、Lucide与星形SVG链未完整运行审计；保留原设计来源，星形不另计条。",
-      "仅来源，未构建/运行/视觉验收；传递依赖、媒体字体及CSP、重复操作/退出清理未全审，没有预览/截图或完整源码ZIP。"
-    ],
-    "description": "粗黑描边文字、硬边偏移阴影、方格纸底与环绕几何星形构成整屏新粗野主义构图。 原StarField按固定seed分布形状，CSS motion-safe orbit/reverse使环绕与自转抵消；主体原CTA进入文档。",
-    "category": "产品与营销",
+    "sourcePath": "src/app/page.tsx",
     "licenseEvidence": {
       "url": "https://github.com/ekmas/neobrutalism-components/blob/3306a802724874a85f93079702b2795370a279d4/LICENSE",
       "sha256": "a77140948a68fafb5e0077a287502104203b7ccb11255b311101ec8fe85fa250",
       "scope": "Full root MIT read; selected fixed original source only; runtime and assets not cleared"
     },
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-style-526",
-    "sourceScope": "Selected fixed original code and complete root license evidence, not full runnable/archive",
-    "kind": "原版完整场景（仅来源）",
-    "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted"
+    "difference": "整屏视觉入口只一条，不收几十颗星为图标系列、不拆颜色或普通按钮；这不是新的业务工具。",
+    "title": "粗线星环组件首页",
+    "description": "原星环背景、立体字与组件首页版式；仅展示原首页，按钮提供本地范围说明，不冒充完整文档站、搜索或组件数量。",
+    "behavior": "原星环背景、立体字与组件首页版式；仅展示原首页，按钮提供本地范围说明，不冒充完整文档站、搜索或组件数量。",
+    "kind": "原版页面",
+    "format": "完整交互场景",
+    "category": "产品与营销",
+    "license": "MIT AND ISC AND Apache-2.0",
+    "batch": "neobrutalism-landing-01",
+    "preview": "batches/neobrutalism-landing-01/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": []
   },
   {
     "id": "m4tt72:command-navigation-site",
@@ -19188,38 +19189,53 @@
   },
   {
     "id": "reactive-resume:paper-design-editor",
-    "title": "Reactive Resume · 纸面简历设计场景",
     "source": "Reactive Resume",
     "repository": "https://github.com/reactive-resume/reactive-resume",
     "revision": "fed8ab5aa02248b6d2198757d4608cf6a700aedf",
-    "sourcePath": "apps/web/src/features/resume/editor/chrome.tsx",
-    "upstream": "https://github.com/reactive-resume/reactive-resume/blob/fed8ab5aa02248b6d2198757d4608cf6a700aedf/apps/web/src/features/resume/editor/chrome.tsx",
-    "license": "MIT (root verified; fonts/backend/dependencies not cleared)",
-    "visualStyle": "纸面内容预览与写作/设计面板并置，模板和样式组选项、抽屉与响应式工具条构成文档编排工作室。",
-    "behavior": "原EditorShell按desktop/tablet/phone选择并排/抽屉和assistant位置；TemplateGroup/StyleGroups连接简历模板与排版设置，不只是孤立输入表单。",
-    "difference": "区别普通表单/富文本编辑器：以可打印简历版面与内容分区联动为目标的完整产品；不把每个简历模板计新条目。",
-    "gaps": [
-      "canonical已迁reactive-resume/reactive-resume，API树固定SHA确认并从新repo重取根LICENSE/README和源，不沿用旧AmruthPillai路径为主归属。",
-      "模板字体、照片、导出PDF、AI助手、账户/分享链接与存储传递图未闭合；不读取用户履历、生成或发送求职材料。",
-      "只保留原Web编辑器公共文本入口，未构建、渲染版式、测试分页/打印/编辑清理，无完整可运行包。",
-      "仅来源：未构建/运行/像素验收，所有传递依赖/媒体字体/CSP与重复操作/退出清理尚未闭合，无预览或完整源码ZIP。"
-    ],
-    "description": "纸面内容预览与写作/设计面板并置，模板和样式组选项、抽屉与响应式工具条构成文档编排工作室。 原EditorShell按desktop/tablet/phone选择并排/抽屉和assistant位置；TemplateGroup/StyleGroups连接简历模板与排版设置，不只是孤立输入表单。",
-    "category": "输入与选择",
+    "upstream": "https://github.com/reactive-resume/reactive-resume/blob/fed8ab5aa02248b6d2198757d4608cf6a700aedf/packages/pdf/src/html/web-page.tsx",
+    "sourcePath": "packages/pdf/src/html/web-page.tsx + packages/pdf/src/html/document.ts; apps/web/src/features/resume/share/web-page-preview.tsx",
     "licenseEvidence": {
       "url": "https://github.com/reactive-resume/reactive-resume/blob/fed8ab5aa02248b6d2198757d4608cf6a700aedf/LICENSE",
       "sha256": "d7839f5fa862720b1501a54bcc0d6a2566b59cee221738640bf1508630f73cc1",
       "scope": "Complete actual root license read; original selected code only; embedded assets/runtime not cleared"
     },
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-style-532",
-    "sourceScope": "Selected fixed original source and complete root license evidence; not full runnable/archive",
-    "kind": "原版完整场景（仅来源）",
-    "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted"
+    "difference": "区别普通表单/富文本编辑器：以可打印简历版面与内容分区联动为目标的完整产品；不把每个简历模板计新条目。",
+    "title": "简历分享模板与本地预览",
+    "description": "原十八种简历分享模板及联系方式隐藏，使用本地虚构内容与明确适配的编辑控件；支持宽窄预览，不是纸面排版编辑、文件导出或云端发布。",
+    "behavior": "原十八种简历分享模板及联系方式隐藏，使用本地虚构内容与明确适配的编辑控件；支持宽窄预览，不是纸面排版编辑、文件导出或云端发布。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "展示与媒体",
+    "license": "MIT AND BSD-2-Clause AND BSD-3-Clause",
+    "batch": "reactive-html-01",
+    "preview": "batches/reactive-html-01/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "pass",
+    "gaps": [
+      "Existing paper-design-editor ID reused with explicitly different original HTML share entry; retain previous paper entry as trace. No PDF/WASM/positioned paper editing, full builder UI or server application.",
+      "Local adapter controls and fictional populated résumé, not original builder forms or real personal data. No persistence, publish, AI, file upload or export.",
+      "Original HTML templates/rendering retained. Shadow DOM replaces nested iframe; width media rules map to container queries. Scripts/actions/external link destinations removed.",
+      "Original font faces removed and system fonts forced. No external fonts/profile photos; no pixel-identical typography claim. Original SVG icons preserve source markup and MIT attribution.",
+      "Five ordinary JS files below700KiB; original icon JSON grouped into natural complete statements, no encoded binary/eval/CSP expansion. Actual579 default-cache verification in VERIFICATION.",
+      "17 emitted npm packages fully attributed, exact official root MIT fills three npm missing LICENSE files by registry gitHead. No PDF engine WASM shipped or run.",
+      "All18 template renders and functional local editing/redaction/hidden/dispose/failure tested in JSDOM. Native layout, container-query pixel effects and visual QA not performed."
+    ],
+    "originalCandidateSource": {
+      "source": "Reactive Resume",
+      "sourcePath": "apps/web/src/features/resume/editor/chrome.tsx",
+      "upstream": "https://github.com/reactive-resume/reactive-resume/blob/fed8ab5aa02248b6d2198757d4608cf6a700aedf/apps/web/src/features/resume/editor/chrome.tsx",
+      "revision": "fed8ab5aa02248b6d2198757d4608cf6a700aedf"
+    },
+    "runtime": {
+      "scripts": [
+        "runtime-part-1.js",
+        "runtime-part-2.js",
+        "runtime-part-3.js",
+        "runtime-part-4.js",
+        "runtime.js"
+      ]
+    }
   },
   {
     "id": "stirling-pdf:public-document-workbench",
