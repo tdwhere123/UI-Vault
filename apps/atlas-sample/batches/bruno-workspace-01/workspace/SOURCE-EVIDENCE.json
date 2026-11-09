@@ -1,0 +1,1258 @@
+{
+  "id": "bruno:request-response-workspace",
+  "repository": "https://github.com/usebruno/bruno",
+  "revision": "1982a7b1bfa865194292bd08d0fa9e090ae89b4a",
+  "sourcePath": "packages/bruno-app/src/components/RequestTabPanel/index.js",
+  "scope": "# 请求编辑与文字响应\n\n固定 usebruno/bruno@1982a7b1bfa865194292bd08d0fa9e090ae89b4a 的 HTTP 本地子流程，恢复既有条目，不是完整桌面 Bruno。保原 QueryParams、RequestHeaders、RequestBody 纯文字分支、EditableTable/虚拟行、原 MultiLineEditor/SingleLineEditor/CodeEditor（CodeMirror5）、BulkEditor、TextPreview 与各 StyledWrapper。宿主只提供一个本地 collection/request、选定页签与双栏，复用原 ResponsePane 标签样式和原 light theme/global CSS，不称原 RequestTabPanel 所有布局/协议都接入。\n\n真实可用：参数与 Header 名值/描述、启用开关、删除、新行及 Bulk Edit，原表格排序/重排机制保留；参数编辑经原 reducer 更新本地 URL；文字 Body 经原 CodeMirror 回调更新本地请求，切页签保留编辑。右侧只显示明确固定文字响应，不来自请求，不能真实发送、执行脚本/断言/测试、保存或连接服务。\n\n## 源码抽取与界限\n原 collections 的 setQueryParams/moveQueryParam/updatePathParam/setRequestHeaders/moveRequestHeader/updateRequestBody/updateItemSettings 七函数保持逻辑；原 query serializer、splitOnFirst、uuid、formatSize 直接摘录。单层固定 collection 的查找器、tabs 宽度/焦点状态是明确宿主适配，不宣称整个桌面 Redux。Host fixture 是虚构数据。\n\n原编辑器视觉/编辑回调/搜索和折叠代码保留。未启用变量、AI补全/变量操作、外链打开与持久化连接点以显式空能力适配；示例没有变量，brunovariables 模式委托原 CodeMirror 当前文字模式。原 localStorage 视图存储被隔离禁用，usePersistedState 仅组件内存。JSON/JS/GraphQL模式不开放，相关lint/GraphQL初始化与原lint PNG CSS删除；不把禁用lint声称校验成功。原Header继承逻辑对本地无文件夹fixture返回空祖先，默认header说明仍是原展示，不实际发送。\n\nReact19.0.0，CM5.65.2；其余实际版本逐项列出。原最新版组件与公开发行兼容依赖版本明确保留，不把整个仓库当已构建。原CodeEditor的GraphQL作者头、BrunoMIT、Tabler原SVG MIT及全部实际依赖版权/条款在NOTICES。know-your-http-well直接导入同包headers.json替代无关AMD入口，保原数据。原styles/global及Tailwind3.4.1编译，所有字体只系统fallback；无字体下载/图片/二进制包装，CSS无url资源。\n\n宿主拦系统copy/cut/paste/drop与链接打开，保存/发送action明示不可用不伪成功。隐藏卸载，恢复重置本地fixture；退出或早晚失败释放监听、RAF、interval、timeout、observer和动画。没有后台、Electron/IPC、凭据或网络依赖。\n\n## 验证范围\nactual571 compose normal/reduced/early/failure/production 五模式通过；原CM setValue经原onChange/reducer更新参数URL/Header/Body，checkbox启用过滤、Bulk增加参数及原表格删除、页签保值、隐藏重置/旧回调、早期模块和晚期失败/退出账本归零；禁止API调用0。真实loader加载/缓存重挂/释放在现有8MiB预算内。几何/ResizeObserver采用受控JSDOM桩使原react-virtuoso正常计算行，未改生产虚拟表算法；不等同原生键盘输入/拖拽/像素验收。原MaskedEditor本身有重复类方法，编译器警告已记录，未为测试改写算法。\n\n重建使用已保存 src/adapters/main/build.mjs + package-lock；prepare.py是早期抽取脚本记录，不应用它覆盖最终适配文件。原完整源码/修改差异保存在工作区，不提供假源码ZIP。\n",
+  "originalFiles": [
+    {
+      "path": "license.md",
+      "bytes": 1096,
+      "sha256": "8891070a847e5047bf77d38d88d7dfbab1beab41e37c802b9f5b23f2bbb9c7be",
+      "gitBlob": "f88e206bb5a65c8b70693152a14a678fba471707"
+    },
+    {
+      "path": "packages/bruno-app/package.json",
+      "bytes": 4759,
+      "sha256": "9ef1c5fa6b10ecf284e509f3f9fd4576940be06be522c1b4ca8ce9b9275435b3",
+      "gitBlob": "9b1c3240c57c23e45edfa83a41ddc1fbc58a2c36"
+    },
+    {
+      "path": "packages/bruno-app/src/components/BulkEditor/index.js",
+      "bytes": 3122,
+      "sha256": "0482c760e4b1ed5d5c1eacb3c2149cff515a1e8dbb5d761805682039077173c6",
+      "gitBlob": "c76229b65fb4161241d00e503d90a0fe63cd6525"
+    },
+    {
+      "path": "packages/bruno-app/src/components/CodeEditor/StatusBar/StyledWrapper.js",
+      "bytes": 990,
+      "sha256": "0f983767e2f71dc6e73f4cb19c6a70144555fcb908c17579153b0ce053575ff1",
+      "gitBlob": "4b47f3f38a28d91ef3640767655d151fc99fb9e7"
+    },
+    {
+      "path": "packages/bruno-app/src/components/CodeEditor/StatusBar/index.js",
+      "bytes": 1239,
+      "sha256": "d842cf08ad1192f5a7b2a62308a9fa2e93c3aa2314bf89011a8508e9c833e7c9",
+      "gitBlob": "a434ab9b07df6b25fddb9b663d3cd8ccdb3c31dd"
+    },
+    {
+      "path": "packages/bruno-app/src/components/CodeEditor/StyledWrapper.js",
+      "bytes": 5445,
+      "sha256": "32d36ab2324a6149b30096c0f4a1362b1abc69a4743db28ed427430d3466bd85",
+      "gitBlob": "3573651f683294abacb05d60470b79acf2d2e668"
+    },
+    {
+      "path": "packages/bruno-app/src/components/CodeEditor/index.js",
+      "bytes": 27915,
+      "sha256": "dc17c13fcb7f376a04a66f2bcbc23ba00bd8bf55f9d6293a661181ff5e2942ae",
+      "gitBlob": "eeeacf8c221ced08108a66969b238214c6ec1cfd"
+    },
+    {
+      "path": "packages/bruno-app/src/components/CodeEditor/state-persistence.js",
+      "bytes": 4986,
+      "sha256": "ff6091dc0264da1b7e5f34c8d86555089607fd9861ed47d5c42e04b04b0ce1ac",
+      "gitBlob": "b97633d0f8d0c57d0c11e7d015872e31da6e21d2"
+    },
+    {
+      "path": "packages/bruno-app/src/components/CodeEditor/tokenStyles.js",
+      "bytes": 1543,
+      "sha256": "5c27517aa6ecbdda5d289aef9ca4e4ff8fc17747a35f555eaab3a0408240f17b",
+      "gitBlob": "0f7ef5a7400ec7b9acaf1675e25a8b3ba69132f4"
+    },
+    {
+      "path": "packages/bruno-app/src/components/CodeMirrorSearch/StyledWrapper.js",
+      "bytes": 3346,
+      "sha256": "e2308d8d1bbef3ceffb285d91d268be7a3748e2d5c6ea00e07b038260d1e8dca",
+      "gitBlob": "1e633bbb65bdba5f67e1c9a3883e75527c1a9e06"
+    },
+    {
+      "path": "packages/bruno-app/src/components/CodeMirrorSearch/index.js",
+      "bytes": 16342,
+      "sha256": "4656f9e449b5b640fddb14b707d06f9ab2ff436195013155f5e0015f6bb7a3ba",
+      "gitBlob": "bc720f2f17cf4d1cc72ee874350aa026018f55ea"
+    },
+    {
+      "path": "packages/bruno-app/src/components/CodeMirrorSearch/markingUtils.js",
+      "bytes": 1964,
+      "sha256": "8db81cf137ccaab7786cd97c996a2a4d37c36f6dde93a037fcbad11909fc19fc",
+      "gitBlob": "60fb031d8501ebfbd4164a0bc57033dacf7ad7e8"
+    },
+    {
+      "path": "packages/bruno-app/src/components/CodeMirrorSearch/replaceUtils.js",
+      "bytes": 1612,
+      "sha256": "166f805186b842578e7df736bc6e08583723d447b30fd1e18f4b48ea0fb031d5",
+      "gitBlob": "49d12fba3263d04485450b285d9fd69b4485c74f"
+    },
+    {
+      "path": "packages/bruno-app/src/components/CodeMirrorSearch/searchKeyBindings.js",
+      "bytes": 2168,
+      "sha256": "fa4c1fd195bc344d3c7d7dac38fab213951b9176757b74b23f16d66074f43585",
+      "gitBlob": "5073e3e56a9fed254934828563c3497d70f83637"
+    },
+    {
+      "path": "packages/bruno-app/src/components/CodeMirrorSearch/searchUtils.js",
+      "bytes": 2161,
+      "sha256": "08672bc977a6518c18eb31bf5a5f3b04b944ecbed74655fc9ea7924c86df9286",
+      "gitBlob": "614ab407531e7eefb9f8557e98735dc6d02c2591"
+    },
+    {
+      "path": "packages/bruno-app/src/components/CodeMirrorSearch/useSearchBarHandle.js",
+      "bytes": 3013,
+      "sha256": "efac17736f0c16d743845667657622ebf5344820614d9915c664d95bc5b1d5f7",
+      "gitBlob": "c4268cc8620b8667a80f04453e4ac7e404a3b056"
+    },
+    {
+      "path": "packages/bruno-app/src/components/Dropdown/StyledWrapper.js",
+      "bytes": 5850,
+      "sha256": "b243eef3c1f6db161df43aed323301d3f5b7492953a1337348cbac3f8f3075ae",
+      "gitBlob": "6138a81e1d9d70efcaf9328a2f360a29f7de2253"
+    },
+    {
+      "path": "packages/bruno-app/src/components/Dropdown/index.js",
+      "bytes": 2133,
+      "sha256": "3319a51ecbce34db77a9abf2928171ea77fc5be64fbd410c97377e6d7a0c47d6",
+      "gitBlob": "3dc210ccfcbf674a67ed62e45759ae2c684af6a9"
+    },
+    {
+      "path": "packages/bruno-app/src/components/EditableTable/ColumnSortHeader.js",
+      "bytes": 589,
+      "sha256": "ddc31984157d88f3dbcc3df6d1518015f4e7d7ce2dbf4c5dd3b2526da461cd7d",
+      "gitBlob": "8f5a75e7bb75b64f3590d9f67d7c32170787e12a"
+    },
+    {
+      "path": "packages/bruno-app/src/components/EditableTable/StyledWrapper.js",
+      "bytes": 7762,
+      "sha256": "37504d448dd24d116e9eef22cc8064ca3a4f45083cf821fe4d0f5fcf9779fde5",
+      "gitBlob": "e1ae19f02c44ccb4f8d4f339f1f71a0b455cd108"
+    },
+    {
+      "path": "packages/bruno-app/src/components/EditableTable/descriptionColumn.js",
+      "bytes": 1108,
+      "sha256": "d2889fde58f006aed666bc6dc799199e543e89df1bcbca2d64a8c08c17889f54",
+      "gitBlob": "aab6bb8101fd2176d3e5e49424dc6ea37f14d3c6"
+    },
+    {
+      "path": "packages/bruno-app/src/components/EditableTable/index.js",
+      "bytes": 20891,
+      "sha256": "fd8a6c5c80097630e243dbd1da9b60cd0a2094337e22e229c99c2c2d5cc1cd47",
+      "gitBlob": "095e0d5f4ad46acf5991050b9b5dccfa4ac1fb48"
+    },
+    {
+      "path": "packages/bruno-app/src/components/FilePickerEditor/StyledWrapper.js",
+      "bytes": 2663,
+      "sha256": "0bce5159eb68ba7bb2534120b3fef3f66ed2fb01be14cc4bca6ef3c5fa3d14a9",
+      "gitBlob": "9756f8f173dfc4a685cca05b32659bd4dd875af8"
+    },
+    {
+      "path": "packages/bruno-app/src/components/FilePickerEditor/index.js",
+      "bytes": 5549,
+      "sha256": "c7357274ffa8111f9479f16eae1b04e1e2ca092b1d45fe3a0f3d18a1d03a5e52",
+      "gitBlob": "7fac8a1355879cebf6eb6fd47b41b0d0d5fb088d"
+    },
+    {
+      "path": "packages/bruno-app/src/components/Icons/IconAlertTriangleFilled/index.js",
+      "bytes": 745,
+      "sha256": "9a31ba5c8fcaa9e69ce54db817dc0087f100b33e72e8f8de7f32e0e7ae31aa82",
+      "gitBlob": "508a608b17672a2e50e14964cbb10ee3408885e7"
+    },
+    {
+      "path": "packages/bruno-app/src/components/InfoTip/index.js",
+      "bytes": 1123,
+      "sha256": "a289af98d0a2347b61538ebc3a03c82db496dc383d4dd95e61cdbd8d1dfc2080",
+      "gitBlob": "2af6034edde74bcda249ac1876c599cd8a623708"
+    },
+    {
+      "path": "packages/bruno-app/src/components/MultiLineEditor/StyledWrapper.js",
+      "bytes": 3308,
+      "sha256": "b7a3ec2f8b007ea706de23cf37985ef8dd1a37fce16577c6e68539150525d46b",
+      "gitBlob": "ea25df2b7f548b359ff030a3729d093652338d7e"
+    },
+    {
+      "path": "packages/bruno-app/src/components/MultiLineEditor/index.js",
+      "bytes": 15711,
+      "sha256": "405b7e65d50313b3c54200f755868fe1e77faa95a12284c4761ada9173243b2a",
+      "gitBlob": "db4d01035bee0444891d643c6c4b24ed136869aa"
+    },
+    {
+      "path": "packages/bruno-app/src/components/MultipartFileChipsCell/StyledWrapper.js",
+      "bytes": 4184,
+      "sha256": "b0edaf2eb8005ef38021a63a0c4e26b3d34d9e85de4176dad5c3a9723adbb947",
+      "gitBlob": "2bea4cb1a3bf0f15ee3089a3414b9a11aa9a4b09"
+    },
+    {
+      "path": "packages/bruno-app/src/components/MultipartFileChipsCell/index.js",
+      "bytes": 6656,
+      "sha256": "eb2b2750c55d134ccc060a34ac69ce4446238f4a68cccb9abfbd14067f1c25ed",
+      "gitBlob": "73ee8ac4e11519a9bbf7d76e1847bb050680ed74"
+    },
+    {
+      "path": "packages/bruno-app/src/components/RequestPane/FileBody/StyledWrapper.js",
+      "bytes": 1409,
+      "sha256": "d714628df6604d1b5737fbc203ae715f7a8173a84b2bde84fd1762db038e084b",
+      "gitBlob": "b61837de201534bb87335f50d020d7f34fd07e62"
+    },
+    {
+      "path": "packages/bruno-app/src/components/RequestPane/FileBody/index.js",
+      "bytes": 6814,
+      "sha256": "4dfb128314e46a5b1106ba7077abadb16c3a8eaf1e72e06058ade2d7074fc006",
+      "gitBlob": "8af8d590444fae0ac7132ba7bcb2c04f01a86e00"
+    },
+    {
+      "path": "packages/bruno-app/src/components/RequestPane/FormUrlEncodedParams/StyledWrapper.js",
+      "bytes": 959,
+      "sha256": "271da75ddcddcf438f86aaf6a5b9c77363c4ea6568115f24a56fa74d4570caba",
+      "gitBlob": "70a8edfc4160771a43ef8f4c65e1efefa3616bad"
+    },
+    {
+      "path": "packages/bruno-app/src/components/RequestPane/FormUrlEncodedParams/index.js",
+      "bytes": 3997,
+      "sha256": "229556ec5a3bf6c577254e0b266b7cc99b82b9e4283897e412797ff61536a8f0",
+      "gitBlob": "6f8689229c72f321a36b09bcd888177bd2fc81e2"
+    },
+    {
+      "path": "packages/bruno-app/src/components/RequestPane/HttpRequestPane/index.js",
+      "bytes": 7358,
+      "sha256": "7eabc65c769b9a4739280f7697f3970849e14ba65ea19c81f2b131fdfed08873",
+      "gitBlob": "10586ef1e1ba78fd5403a04afa97baafe2883831"
+    },
+    {
+      "path": "packages/bruno-app/src/components/RequestPane/MultipartFormParams/StyledWrapper.js",
+      "bytes": 662,
+      "sha256": "a0ed90cf64da831d6688a299af9154ec72b7962357e1f18ee2c0b6ea3bf27fcd",
+      "gitBlob": "36f85c31d6bfef3341e0d653ecbc768799288a35"
+    },
+    {
+      "path": "packages/bruno-app/src/components/RequestPane/MultipartFormParams/index.js",
+      "bytes": 9656,
+      "sha256": "ae8d3d51413a034ff38b53bb2f85c284813564fdb3b35657d28acca16ccaff22",
+      "gitBlob": "7b4549f95ac3ea809d87447f29064c342ddaf090"
+    },
+    {
+      "path": "packages/bruno-app/src/components/RequestPane/QueryParams/StyledWrapper.js",
+      "bytes": 1253,
+      "sha256": "9d8946eb9b2d1fbbff3a1d9ceddfa96f8bec37614b074b0c6aca9112c2119ed7",
+      "gitBlob": "ed140d79cab9f8971f2eaf280c7c9ab6bdf95fcb"
+    },
+    {
+      "path": "packages/bruno-app/src/components/RequestPane/QueryParams/index.js",
+      "bytes": 7598,
+      "sha256": "d56361672b363d2c002f2b8af1098d32fc9cdefc5ce0b19b741c664f408de525",
+      "gitBlob": "8f17448a1a893a0e99633338551b004d57de4aa0"
+    },
+    {
+      "path": "packages/bruno-app/src/components/RequestPane/RequestBody/StyledWrapper.js",
+      "bytes": 97,
+      "sha256": "5a052121f45923090b9bd7d2d3725fbe4e7967a35d0e422aa8dcf23cd639254b",
+      "gitBlob": "42da81d6140be9733b8b501e3b03a98dae02074b"
+    },
+    {
+      "path": "packages/bruno-app/src/components/RequestPane/RequestBody/index.js",
+      "bytes": 3152,
+      "sha256": "980beaa372175de5a10a43dfca4f9761d7e7d7e70d15f7748570b6c4abdad9bd",
+      "gitBlob": "c9660631a030d3f08b692f840ff0f1ba6a6a2b1a"
+    },
+    {
+      "path": "packages/bruno-app/src/components/RequestPane/RequestHeaders/StyledWrapper.js",
+      "bytes": 2828,
+      "sha256": "69945c1caf921079c9a488717d85db34b0adf3fffecde97308df516806e86a35",
+      "gitBlob": "b87163ea79afa6114a48df10303f5adf0940753f"
+    },
+    {
+      "path": "packages/bruno-app/src/components/RequestPane/RequestHeaders/getInheritedHeaders.js",
+      "bytes": 2544,
+      "sha256": "c84dcc12aa4ca043f8e1c7527e7927f6e6b5aef4f7652d5db40e3829162017a4",
+      "gitBlob": "0492527f384f4a8f0612876970932a3dadd02a1d"
+    },
+    {
+      "path": "packages/bruno-app/src/components/RequestPane/RequestHeaders/index.js",
+      "bytes": 19362,
+      "sha256": "fb30c026d3929bd512da7a99b26d661028a0770f56a88de1ff6fd53b5fa8ca9b",
+      "gitBlob": "c140718be12e4de299ce779c806443309ae45d79"
+    },
+    {
+      "path": "packages/bruno-app/src/components/RequestTabPanel/index.js",
+      "bytes": 29193,
+      "sha256": "77d6d5bf028ebb90f3230ee0ac749fe89931c870436db945826cf11e0ab3dde3",
+      "gitBlob": "9eaa454c868584efc074e9d6d93beadbaaa6106d"
+    },
+    {
+      "path": "packages/bruno-app/src/components/ResponsePane/QueryResult/QueryResultPreview/TextPreview.js",
+      "bytes": 2357,
+      "sha256": "adddb0d9914325092686e113f21430ad4ace3bd4b7d87d944bc211a366f99d17",
+      "gitBlob": "859279e7fe191110bdb1a7ca52373a96166b8c82"
+    },
+    {
+      "path": "packages/bruno-app/src/components/ResponsePane/QueryResult/index.js",
+      "bytes": 8667,
+      "sha256": "cd6ed2c72bab938c1ab96373cd2efe7274ec3fcb8f6c11ad61921e0308f27f76",
+      "gitBlob": "07c25806af9324240d7d69d12a85785d0e671496"
+    },
+    {
+      "path": "packages/bruno-app/src/components/ResponsePane/ResponseHeaders/StyledWrapper.js",
+      "bytes": 1009,
+      "sha256": "72995634963b1de4d81db503126709faf7b91d76c607f31b6a6ad6fa68e4067b",
+      "gitBlob": "e69662e678d7d6253177337e8e44832be1e17595"
+    },
+    {
+      "path": "packages/bruno-app/src/components/ResponsePane/ResponseHeaders/index.js",
+      "bytes": 1419,
+      "sha256": "ce5a4463edd579425a67f9de7b0c31c532f2ad4b1fe2b1d16fccf48d4b248b0d",
+      "gitBlob": "786387dd88bcc0b94a9f336c1dc470d0168a20f1"
+    },
+    {
+      "path": "packages/bruno-app/src/components/ResponsePane/StyledWrapper.js",
+      "bytes": 2675,
+      "sha256": "5087e5e78ac671ae01f7b1cee8c5941b04bcf94e44125f90e3f3b9fc6648badd",
+      "gitBlob": "9d2fe0451ed80e1a956c6c4be054b296d8060dfc"
+    },
+    {
+      "path": "packages/bruno-app/src/components/ResponsePane/index.js",
+      "bytes": 12196,
+      "sha256": "aae6243d861ec0242e2099f433160b0f3c0e0161ad0b79444a24f3264b54705e",
+      "gitBlob": "24df524fed8f0971a4908de320890cfdcaac1ce1"
+    },
+    {
+      "path": "packages/bruno-app/src/components/SingleLineEditor/StyledWrapper.js",
+      "bytes": 1631,
+      "sha256": "bb7ac11c569bfbb3165fbb69c7147258c2d17a658363e8407599043b48c1c47f",
+      "gitBlob": "a237e03e53f64d0d5fc63f643f8ca25c107b72b1"
+    },
+    {
+      "path": "packages/bruno-app/src/components/SingleLineEditor/index.js",
+      "bytes": 12603,
+      "sha256": "31c99a03d4903d013c9c80c63b2c81e8ba76155934410b8c89b4eda051299067",
+      "gitBlob": "9225880e23d427eb4c129c939111c0a75ac27a37"
+    },
+    {
+      "path": "packages/bruno-app/src/components/ToolHint/index.js",
+      "bytes": 1722,
+      "sha256": "fb5a2b342fabb577781b5a995dadf646099fa02c8fb2fa27a40b74caddfcab7e",
+      "gitBlob": "79c3fb6a40e60d8f77cf0be86e37ffe413e440ce"
+    },
+    {
+      "path": "packages/bruno-app/src/hooks/useChunkedReveal/index.js",
+      "bytes": 1234,
+      "sha256": "7460786e7bd454f9399bdd0f5c5e4615c163fa472d509a2b50cbc2ea5d5b8714",
+      "gitBlob": "0b2ba0f6c0f6238956af9a1e8892a59dceabc415"
+    },
+    {
+      "path": "packages/bruno-app/src/hooks/useDebounce/index.js",
+      "bytes": 955,
+      "sha256": "7432ffc7ce2aeaa5594f979415ff2d75518db37564c99ec32814c3927a8e013f",
+      "gitBlob": "a39a4021509cc3a141b67c8fb990df48b8e52211"
+    },
+    {
+      "path": "packages/bruno-app/src/hooks/useMissingFileCheck/index.js",
+      "bytes": 2384,
+      "sha256": "81400a6a437528f0f5658cafc39342fb1f88172773f8d0232291fb2d8ee62831",
+      "gitBlob": "29488c19395c0c260f20ebdaa4318ac8f26ffd5f"
+    },
+    {
+      "path": "packages/bruno-app/src/hooks/useMouseRowDrag/index.js",
+      "bytes": 4528,
+      "sha256": "f6cd4537df60836554de8b599276459768f1c496db32de4801041f1e84702990",
+      "gitBlob": "3bc7cf31ea9348bb71634feb1b51ebc2a659d42c"
+    },
+    {
+      "path": "packages/bruno-app/src/hooks/useRevealFocusedTableRow/index.js",
+      "bytes": 2538,
+      "sha256": "97d5d0641e160380eab34f1c87f3a9d97193d173d344c94b55922b10639e3fbe",
+      "gitBlob": "40b222724b1edf700586f93bba1e9b3690e07276"
+    },
+    {
+      "path": "packages/bruno-app/src/hooks/useSortCycle/index.js",
+      "bytes": 842,
+      "sha256": "ac876fb2dac50b03b20f3d4e89a86fa8376cb5ffef9f4ee99c53a916e8561099",
+      "gitBlob": "8af3b3f93ef7c21c60c9181f07d4a401b70ba293"
+    },
+    {
+      "path": "packages/bruno-app/src/hooks/useSortableEditableTableRows/index.js",
+      "bytes": 1986,
+      "sha256": "3d6d00f4c03004def5dbed0a38cc8a7aea5c4f42a814e886790efe081e126d78",
+      "gitBlob": "5204ad36e52335b0fb07c674baa9818f91425b3e"
+    },
+    {
+      "path": "packages/bruno-app/src/hooks/useTooltipId/index.js",
+      "bytes": 137,
+      "sha256": "d8b8c921ef8b7fc93f8dfc243512f217c5ea744d8319b71cbcedaa290104aacb",
+      "gitBlob": "ea494beb40efb0ce95be43400ce772882f4f4e8a"
+    },
+    {
+      "path": "packages/bruno-app/src/hooks/useTrackScroll/index.ts",
+      "bytes": 2899,
+      "sha256": "13c99cac76191531daaa3c68b3cded63942bc084c7d3acd05ddf4a03500503eb",
+      "gitBlob": "f02c93f612c74c704426727790b10898167318ed"
+    },
+    {
+      "path": "packages/bruno-app/src/providers/ReduxStore/slices/collections/actions.js",
+      "bytes": 141990,
+      "sha256": "328388332e7ed3e180ce3d4b099f66956ede61d02781c703f3dc0edc98d49e91",
+      "gitBlob": "f59657be03d67bb87ec1348747ec86fb73927ffd"
+    },
+    {
+      "path": "packages/bruno-app/src/providers/ReduxStore/slices/collections/index.js",
+      "bytes": 168416,
+      "sha256": "55e28694a84b25154b9bb20b4d302c099c487d28813ef79f2965e775037b1aeb",
+      "gitBlob": "a21087ec126f9fdbcbb17b002a19cc3f0fb2ffe3"
+    },
+    {
+      "path": "packages/bruno-app/src/providers/Theme/index.js",
+      "bytes": 4949,
+      "sha256": "4181c308742e81c4d4814484dc05843c5c10181fa27f8e2d7b63200d03ee984c",
+      "gitBlob": "d7db29df61ce078435227d370ff86ee7002ab2fe"
+    },
+    {
+      "path": "packages/bruno-app/src/styles/globals.css",
+      "bytes": 5603,
+      "sha256": "2a03e7c1f230e76a68f79a280de735197a29365d11a3ef57d20ebcf778f21476",
+      "gitBlob": "97d9043cac48eeea966b1e3693572d0005d976a6"
+    },
+    {
+      "path": "packages/bruno-app/src/themes/dark/catppuccin-frappe.js",
+      "bytes": 14136,
+      "sha256": "3233aed1e1267c98aff95597de36b5ec74140ff252e9412bff59e06f83fe4273",
+      "gitBlob": "30b5369c81073bf31bb8238233989bb863279c4c"
+    },
+    {
+      "path": "packages/bruno-app/src/themes/dark/catppuccin-macchiato.js",
+      "bytes": 14146,
+      "sha256": "9862f179fbb861f7e46b34fd456231165a6c043c121ac632bf67f5a9565c3eaf",
+      "gitBlob": "ca7840210eb07a71e35cb18527ebb88773d74af3"
+    },
+    {
+      "path": "packages/bruno-app/src/themes/dark/catppuccin-mocha.js",
+      "bytes": 14186,
+      "sha256": "e6670b25adc51ff18d4ac326dcd3dc8d6e85c4dbd8ddf37c60a907106d237f63",
+      "gitBlob": "8adcc1b2f1f759c4813ec01d2a10b3ed856b886d"
+    },
+    {
+      "path": "packages/bruno-app/src/themes/dark/cyberdream-dark.js",
+      "bytes": 13697,
+      "sha256": "4b690506df8b6cf0b957caf002e2826c3e1d38165dc27bd687b542c592b317ea",
+      "gitBlob": "45697198e8a137c51140b471b4ab0507b934a023"
+    },
+    {
+      "path": "packages/bruno-app/src/themes/dark/dark-monochrome.js",
+      "bytes": 13042,
+      "sha256": "ec7100424c124da02a1d165ccac2a48ae442282c16b8c9c410d6777cefed0be8",
+      "gitBlob": "50cd9624a799439a720575ae31524ac696e49f68"
+    },
+    {
+      "path": "packages/bruno-app/src/themes/dark/dark-pastel.js",
+      "bytes": 15101,
+      "sha256": "d03137f75ed35c2d33bc3dc8878085563011d01fa4a489ec0c739882e0440030",
+      "gitBlob": "355312f5fa288a0f0717a11d2f233984de182225"
+    },
+    {
+      "path": "packages/bruno-app/src/themes/dark/dark.js",
+      "bytes": 15402,
+      "sha256": "7d62182e86d54cabb97a7c021da8773a829de90fe0414e6124175cf9fdf9b688",
+      "gitBlob": "d03af1e78b507a23d89df8a07be1f41a2434ef1c"
+    },
+    {
+      "path": "packages/bruno-app/src/themes/dark/dracula.js",
+      "bytes": 14599,
+      "sha256": "82f51da09309668d68c8141672fa8da535af1a87f2f43021940c6eede91a118f",
+      "gitBlob": "00109eca82b52f99d2b03ae4ff6b5373c243e189"
+    },
+    {
+      "path": "packages/bruno-app/src/themes/dark/gruvbox.js",
+      "bytes": 19571,
+      "sha256": "f0c2c8665d1b48ba2e4af69709ebd4cce7777e367c085989607ce3fe39c648fe",
+      "gitBlob": "e78a7f2fbf0b576a6939aae21ba2afb85473d031"
+    },
+    {
+      "path": "packages/bruno-app/src/themes/dark/nord.js",
+      "bytes": 14107,
+      "sha256": "0f89c9706960233c0d3ad2f985d6d6dff36df382d5b7f726ab09315adc82ff6f",
+      "gitBlob": "a948087c9d4fde83c06cf253ab2134d177a6a8cb"
+    },
+    {
+      "path": "packages/bruno-app/src/themes/dark/vscode.js",
+      "bytes": 14267,
+      "sha256": "62cc5a613f746f85b966231cf5b98f81fa85aee513868df2245910d8c5e8a5a2",
+      "gitBlob": "25bd37ef001495b86fd1e04379e8f970a01e0623"
+    },
+    {
+      "path": "packages/bruno-app/src/themes/index.js",
+      "bytes": 4137,
+      "sha256": "944fdd095131259e2fcf7df5237ed3236fd0790cfb15d7945f65f80dfe4f5ae8",
+      "gitBlob": "300231e50e721821db1f931c950f1cd83dece4a1"
+    },
+    {
+      "path": "packages/bruno-app/src/themes/light/catppuccin-latte.js",
+      "bytes": 14215,
+      "sha256": "bece923b5134ab05f538893ea2e5d0cc3edebe3d6ddc66b1a1da09ce11984285",
+      "gitBlob": "c164a99688c57eb8241801e5555de34a05224779"
+    },
+    {
+      "path": "packages/bruno-app/src/themes/light/cyberdream-light.js",
+      "bytes": 13748,
+      "sha256": "9ff204d782e61b66f838919789204429eb6bc3c580ee7d42c577ab32900dc588",
+      "gitBlob": "bd83e82ffac4b323aec94dc5dc68d6cf1bf775b1"
+    },
+    {
+      "path": "packages/bruno-app/src/themes/light/gruvbox.js",
+      "bytes": 19579,
+      "sha256": "799599bbab9b8b8dbaead62324030cbf3ae92b674ff05d628e848d01aec2a065",
+      "gitBlob": "301ce0e81de4fb68afed72a16aa51f30077b10ae"
+    },
+    {
+      "path": "packages/bruno-app/src/themes/light/light-monochrome.js",
+      "bytes": 13124,
+      "sha256": "5e8715c669afff55aed3d50014259d56e7fcabff40e26cb721520ed240f78c9b",
+      "gitBlob": "6379ea05f345e7077f3d0d0de88e23c2f04f65d7"
+    },
+    {
+      "path": "packages/bruno-app/src/themes/light/light-pastel.js",
+      "bytes": 14898,
+      "sha256": "001fc127b105c317f2b707799f7aefba3bcebc1a9d01d66b7d90a65496de8f5a",
+      "gitBlob": "cd3ed05ba4cf058be521d3fca566535e3631122c"
+    },
+    {
+      "path": "packages/bruno-app/src/themes/light/light.js",
+      "bytes": 15702,
+      "sha256": "3a607830866c212abf4b75217c02198cc37d8466c578fff2d4957dd165f19c0c",
+      "gitBlob": "bde4bf017ca8a9f2772e7f3ea40ff338b19bd3ee"
+    },
+    {
+      "path": "packages/bruno-app/src/themes/light/vscode.js",
+      "bytes": 14241,
+      "sha256": "a13097f87e3305af145c5499c8fcfa189c89461e24a90a164f92e513187433fe",
+      "gitBlob": "74c69b06aa527a5a21ede7415af988e9cbfae3ec"
+    },
+    {
+      "path": "packages/bruno-app/src/ui/ActionIcon/StyledWrapper.js",
+      "bytes": 1070,
+      "sha256": "d02061b1fc782334b351b80f90dee74f0566f2859d5fab5742a79c35299623d0",
+      "gitBlob": "e627f71d1cb513868bc6b88d440fea567c0c8f82"
+    },
+    {
+      "path": "packages/bruno-app/src/ui/ActionIcon/index.js",
+      "bytes": 2068,
+      "sha256": "d62218de6c63369e62be181f00b95d2bb9613f502f99df47ba020c757ace8465",
+      "gitBlob": "e02597802d8fbce8a1fedcc0e20e51f40f250ada"
+    },
+    {
+      "path": "packages/bruno-app/src/ui/Portal/index.js",
+      "bytes": 162,
+      "sha256": "d435f91c6f9e54a093bad1d5ee4823604fbaa1191e052f6bdb4154e87f320195",
+      "gitBlob": "17e02e7663dab70e06ffe6869a3d02a9ee0bbf57"
+    },
+    {
+      "path": "packages/bruno-app/src/utils/codemirror/addToScopeSwitcher.js",
+      "bytes": 13999,
+      "sha256": "5aca49e198f6ead46e9506900db00a98f961294742cac0735c66e2212d8175cb",
+      "gitBlob": "bf34ca3da20c76b7415005b766b8c08718c17917"
+    },
+    {
+      "path": "packages/bruno-app/src/utils/codemirror/autocompleteConstants.js",
+      "bytes": 1180,
+      "sha256": "8057ae34cce0e26412800bd914007257d9c239ac619f865e36fd13df1d34c226",
+      "gitBlob": "f0c8a9aa2a7ddc7e11b00ec337c6d2c920e4fdec"
+    },
+    {
+      "path": "packages/bruno-app/src/utils/codemirror/brunoVarInfo.js",
+      "bytes": 49616,
+      "sha256": "69491e324b2c4aabab4b33aac234f2dd1393780411c34291bad0cec79e63be1e",
+      "gitBlob": "9f60ff41ff079b07e7ae67686e4afdf0e0c6e298"
+    },
+    {
+      "path": "packages/bruno-app/src/utils/codemirror/codeMirrorInfoFontSize.js",
+      "bytes": 1166,
+      "sha256": "bbe58b79d3a747dd728d4228691e9e96881f36bbe524564e7df99b78e4521af3",
+      "gitBlob": "2e6d47e778566ca0c54a1fcf7aa56a7d35150a94"
+    },
+    {
+      "path": "packages/bruno-app/src/utils/codemirror/goToVariableDefinition.js",
+      "bytes": 5738,
+      "sha256": "271c1974f1515f9450bf5ce9a13ea64ed7801254b4dcbe497e741c68a82aed06",
+      "gitBlob": "2aa7d72939588a62d7b4c97cfea19ca8b85e0987"
+    },
+    {
+      "path": "packages/bruno-app/src/utils/codemirror/javascript-lint.js",
+      "bytes": 3942,
+      "sha256": "c1e1d140b581e1899219dc901768b1a51f4da465db6a4b03b19daecba8dd7818",
+      "gitBlob": "385479e9937bf0b38ebeaa9f614e42c3541cbc1f"
+    },
+    {
+      "path": "packages/bruno-app/src/utils/codemirror/lint-errors.js",
+      "bytes": 4233,
+      "sha256": "6394305b6ae480e2947b000a230d90b454a5378c583508661fb6c9b43ea1842e",
+      "gitBlob": "1557baafbc980178daa40f70e2e9b77df1a6d4b3"
+    },
+    {
+      "path": "packages/bruno-app/src/utils/codemirror/resize.js",
+      "bytes": 1097,
+      "sha256": "d2f320363b6c0dbc5bcb185ff005a82a41ded4f8d488cc8d98723d22dfb8ea93",
+      "gitBlob": "dc43173f6c2b05259e8bd53e563e44fdf6e6f762"
+    },
+    {
+      "path": "packages/bruno-app/src/utils/codemirror/scopeIcons.js",
+      "bytes": 4348,
+      "sha256": "2eaa0550013bba1a00fa738f89ffe5eeff011fda32817115a9a8443b3411544d",
+      "gitBlob": "945896b3897761eb41e969d67a01b4874946455c"
+    },
+    {
+      "path": "packages/bruno-app/src/utils/codemirror/selection.js",
+      "bytes": 7073,
+      "sha256": "471d871ece4c4ec3f2c40a07d0993c99c75a572bf0b9ddeadb73367b3ece5838",
+      "gitBlob": "771a7cf1187fa7786970862f1cad150abf6ba098"
+    },
+    {
+      "path": "packages/bruno-app/src/utils/codemirror/setup.js",
+      "bytes": 2717,
+      "sha256": "7ca4348244d06a92ea0e6783fadbabec75a171dcf2088cd337361f4633e6b06f",
+      "gitBlob": "1d4b98f4b649564c0cbb4b520eccad294eb71cf5"
+    },
+    {
+      "path": "packages/bruno-app/src/utils/common/bulkKeyValueUtils.js",
+      "bytes": 606,
+      "sha256": "e5b2cf695da88743aad55731d93c6b894f7a3f1a9caa24eda8183fb8cc7e7f2e",
+      "gitBlob": "b165c2f3fe38ee91b5029d5a0341c8ce2f528954"
+    },
+    {
+      "path": "packages/bruno-app/src/utils/common/constants.js",
+      "bytes": 2602,
+      "sha256": "1a8827d6437e5341f7673a9e03f5704ce895488c5d9ce54b28a7f38f5fd7421e",
+      "gitBlob": "5a215a5dbe4bd92452c5de40682c0d8f331c789d"
+    },
+    {
+      "path": "packages/bruno-app/src/utils/common/index.js",
+      "bytes": 16221,
+      "sha256": "cdccf85b9f0e84e0dfb20af3dfe7f393ab3d015e0f3d6f9291de43f009c3d89a",
+      "gitBlob": "ba8b03ce3e9a7f1d54a330d74a964dfe402f7e21"
+    },
+    {
+      "path": "packages/bruno-app/src/utils/common/long-lines.js",
+      "bytes": 1203,
+      "sha256": "0f0944af1d6999f4c70c5d23f0eddfeb6708ef05752a154ff4e7c7c151b6a3aa",
+      "gitBlob": "1a66c2f1db0d96121c3d80bdeda380300a727748"
+    },
+    {
+      "path": "packages/bruno-app/src/utils/common/masked-editor.js",
+      "bytes": 12989,
+      "sha256": "dc867510eacfe12e8cdd52c7e2cde29a7e532276dd739ab90510559e54f24547",
+      "gitBlob": "79f8c71150b2bf358e9f3e9a0dc8fdd0ece1fe40"
+    },
+    {
+      "path": "packages/bruno-app/src/utils/common/multipartContentType.js",
+      "bytes": 310,
+      "sha256": "b421989211fbaa78abd753e984070ebd017882e855c39907de54a9c53278e781",
+      "gitBlob": "a031cb2ff5c840d2770d9ac879644ff374625475"
+    },
+    {
+      "path": "packages/bruno-app/src/utils/common/path.js",
+      "bytes": 8623,
+      "sha256": "b7e6fa734eeb45b4b6fa9f7891cd2d39768946ade77bc5f8e4fad70c7ce7062a",
+      "gitBlob": "c73d88dd66337ae59db35424bef5987453be81a5"
+    },
+    {
+      "path": "packages/bruno-app/src/utils/common/regex.js",
+      "bytes": 521,
+      "sha256": "4b8d1e530e9a0e9f9ea7bb1c0ae131722115e599c73b5216da937b4d286a9447",
+      "gitBlob": "e4fe900614ee4c5a011cf231cd64412b405e7a1b"
+    },
+    {
+      "path": "packages/bruno-app/src/utils/filesystem.js",
+      "bytes": 1244,
+      "sha256": "a96a696809f149a3a2cbf55b973c3e1a919a693dc7d49895024cb6df49e94889",
+      "gitBlob": "a6d1fcd7d3b2a82ed990e714b8b3ecf93ff9e655"
+    },
+    {
+      "path": "packages/bruno-app/src/utils/sortableRows/index.js",
+      "bytes": 1517,
+      "sha256": "d201a2a57ba928cef926bc2c751f9075c058ebe0449252e515a5ab7030745118",
+      "gitBlob": "a1665b6cbdabddefadb4317147432cdf9b5978f8"
+    },
+    {
+      "path": "packages/bruno-app/src/utils/url/index.js",
+      "bytes": 7146,
+      "sha256": "392af15246702e703786f6d95b10c2335b04c5a634f41081c3c1a220aadf5472",
+      "gitBlob": "307b721ef3fe1e629cfb2f8c33209739bae13bfa"
+    },
+    {
+      "path": "packages/bruno-app/src/utils/variables/index.js",
+      "bytes": 8150,
+      "sha256": "40901796b286d9e431bff332f8f478574b5e05f6c1333317ab31ddf1c9a81820",
+      "gitBlob": "b31231f87af36e1b8b6f57c004d25fe6fc9513f1"
+    },
+    {
+      "path": "packages/bruno-app/tailwind.config.js",
+      "bytes": 184,
+      "sha256": "aac3d58d43828d21e368a9b8e986741ebe7137355529885f142ca36ccbe61832",
+      "gitBlob": "567c4ba7d54356df95956824370344125a4cff6f"
+    },
+    {
+      "path": "packages/bruno-common/src/headers/default-headers.ts",
+      "bytes": 4200,
+      "sha256": "fcd14deed729296016d4363f19174c896a5e758f36ec0d4631fcc5f353238da3",
+      "gitBlob": "d905cd5d60080ebb4269ddc7ba036dee2c63c2e2"
+    },
+    {
+      "path": "packages/bruno-common/src/index.ts",
+      "bytes": 1838,
+      "sha256": "117c554368578e7ec1788f077b8c6e68fff6aab7ea53cb5a666c9933f281aae3",
+      "gitBlob": "abba9aae0dbd5f3ce229aafe9508d6e911ca58be"
+    },
+    {
+      "path": "packages/bruno-common/src/utils/index.ts",
+      "bytes": 3076,
+      "sha256": "a2030a2c9526e67a4db061d0407a29322becde7de203713fe1d83e8313d0ecd4",
+      "gitBlob": "d71a78e560daabb8f24beb238502f1f635bfa350"
+    },
+    {
+      "path": "packages/bruno-common/src/utils/url/index.ts",
+      "bytes": 12636,
+      "sha256": "8ea5a585a51748d8cbaf169e27c7ded391a35428339c1316a7c896019f38dedd",
+      "gitBlob": "2a30315e2663afe38cf13608e3a96098d7982497"
+    }
+  ],
+  "runtimeDependencies": [
+    {
+      "name": "@babel/runtime",
+      "version": "7.29.13",
+      "scope": "emitted",
+      "packagePath": "node_modules/@babel/runtime",
+      "license": "MIT",
+      "licenseEvidence": "actual distributed package legal files",
+      "licenseHashes": [
+        "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76"
+      ],
+      "packageJsonSHA256": "fd2befc548dbd378c87e5768a0a0d8a6e5bc2c51db8d39e096682b0ba9a1e6c5"
+    },
+    {
+      "name": "@emotion/is-prop-valid",
+      "version": "1.4.0",
+      "scope": "emitted",
+      "packagePath": "node_modules/@emotion/is-prop-valid",
+      "license": "MIT",
+      "licenseEvidence": "actual distributed package legal files",
+      "licenseHashes": [
+        "6e8d23763cf7cb707ad8f6677aa502ebeca1dda447e6d6e57f6549c1625b9c4a"
+      ],
+      "packageJsonSHA256": "438d9cb8913c89b66aa209a63f6f6401e080df4444a09c1f2b97d08953d422ad"
+    },
+    {
+      "name": "@emotion/memoize",
+      "version": "0.9.0",
+      "scope": "emitted",
+      "packagePath": "node_modules/@emotion/memoize",
+      "license": "MIT",
+      "licenseEvidence": "actual distributed package legal files",
+      "licenseHashes": [
+        "6e8d23763cf7cb707ad8f6677aa502ebeca1dda447e6d6e57f6549c1625b9c4a"
+      ],
+      "packageJsonSHA256": "4cf8cf244fa4a980497617451e97faf1eb80f335f211dce87b997572d4f227e3"
+    },
+    {
+      "name": "@emotion/stylis",
+      "version": "0.8.5",
+      "scope": "emitted",
+      "packagePath": "node_modules/@emotion/stylis",
+      "license": "MIT",
+      "licenseEvidence": "actual distributed package legal files",
+      "licenseHashes": [
+        "6e8d23763cf7cb707ad8f6677aa502ebeca1dda447e6d6e57f6549c1625b9c4a"
+      ],
+      "packageJsonSHA256": "1da8e474cb88a0070baa42cec78a3704dea0889c4decdb38d4e7b7489c83c8b0"
+    },
+    {
+      "name": "@emotion/unitless",
+      "version": "0.7.5",
+      "scope": "emitted",
+      "packagePath": "node_modules/@emotion/unitless",
+      "license": "MIT",
+      "licenseEvidence": "actual distributed package legal files",
+      "licenseHashes": [
+        "6e8d23763cf7cb707ad8f6677aa502ebeca1dda447e6d6e57f6549c1625b9c4a"
+      ],
+      "packageJsonSHA256": "fcc528c2b4dfd1fddce1d59266ca18f789a8ebd82d07e27c32897de58bcf7752"
+    },
+    {
+      "name": "@floating-ui/core",
+      "version": "1.8.0",
+      "scope": "emitted",
+      "packagePath": "node_modules/@floating-ui/core",
+      "license": "MIT",
+      "licenseEvidence": "actual distributed package legal files",
+      "licenseHashes": [
+        "0e4c9a9b6c71019cbbea3bdc20b01223110a9035700f9c960c8fcbf78c2325ce"
+      ],
+      "packageJsonSHA256": "2f24216dd2a32b10e6c868173832a0667c3cdbee92886797b219aadac48d8b99"
+    },
+    {
+      "name": "@floating-ui/dom",
+      "version": "1.8.0",
+      "scope": "emitted",
+      "packagePath": "node_modules/@floating-ui/dom",
+      "license": "MIT",
+      "licenseEvidence": "actual distributed package legal files",
+      "licenseHashes": [
+        "0e4c9a9b6c71019cbbea3bdc20b01223110a9035700f9c960c8fcbf78c2325ce"
+      ],
+      "packageJsonSHA256": "59643af1b1bfc5a80b172c21ccbe21ea56eaa0115378f6077d9934458db25ac1"
+    },
+    {
+      "name": "@floating-ui/utils",
+      "version": "0.2.12",
+      "scope": "emitted",
+      "packagePath": "node_modules/@floating-ui/utils",
+      "license": "MIT",
+      "licenseEvidence": "actual distributed package legal files",
+      "licenseHashes": [
+        "0e4c9a9b6c71019cbbea3bdc20b01223110a9035700f9c960c8fcbf78c2325ce"
+      ],
+      "packageJsonSHA256": "b2138e8855520f4313f26ace0d93a9a9c9e6a862f0299a5aeaccb2370dd1bf40"
+    },
+    {
+      "name": "@reduxjs/toolkit",
+      "version": "1.9.7",
+      "scope": "emitted",
+      "packagePath": "node_modules/@reduxjs/toolkit",
+      "license": "MIT",
+      "licenseEvidence": "actual distributed package legal files",
+      "licenseHashes": [
+        "661ea76e75dd1bbaa23d0166de7acc15f4a58011adb2d57acc42116b5fe8a4a1"
+      ],
+      "packageJsonSHA256": "5f88d39f6f53ea4c5f0b1b1c6bfaccf51ff9a1a9e0335a6d4f085ea834c1a166"
+    },
+    {
+      "name": "@tabler/icons",
+      "version": "1.119.0",
+      "scope": "emitted",
+      "packagePath": "node_modules/@tabler/icons",
+      "license": "MIT",
+      "licenseEvidence": "actual distributed package legal files",
+      "licenseHashes": [
+        "25f6ad076fb683ebcdd7c3426a4c9e1d58f9b3a9d6e0153090145be6d5e8a516"
+      ],
+      "packageJsonSHA256": "e42d52f2d320be5647b0813ea8b3dd9b99fc99703a0417e2aa937df180cabf20"
+    },
+    {
+      "name": "classnames",
+      "version": "2.5.1",
+      "scope": "emitted",
+      "packagePath": "node_modules/classnames",
+      "license": "MIT",
+      "licenseEvidence": "actual distributed package legal files",
+      "licenseHashes": [
+        "0c1c24dcc129cb0c02ee9803cfa7a50061c236a3b59b36a714c27f3ade66d7be"
+      ],
+      "packageJsonSHA256": "d3164167a241350c19ddeaa3d19c8cc3e0044db1e78ef369d17177f0eae793f4"
+    },
+    {
+      "name": "codemirror",
+      "version": "5.65.2",
+      "scope": "emitted",
+      "packagePath": "node_modules/codemirror",
+      "license": "MIT",
+      "licenseEvidence": "actual distributed package legal files",
+      "licenseHashes": [
+        "a3f2fe2ac6b471aa80c737c5d283dd049bdc903a73835ee6d4d2cac02fdd53bf"
+      ],
+      "packageJsonSHA256": "1b5e2d83662ba9bac58da3ccaa466cacdef348a6ee3405a62abaa37596523fe1"
+    },
+    {
+      "name": "hoist-non-react-statics",
+      "version": "3.3.2",
+      "scope": "emitted",
+      "packagePath": "node_modules/hoist-non-react-statics",
+      "license": "BSD-3-Clause",
+      "licenseEvidence": "actual distributed package legal files",
+      "licenseHashes": [
+        "eb32ff0ec52b6ea86e3d3e06c6ad1b68ee03798b6729af13919f6d5c14b368f3"
+      ],
+      "packageJsonSHA256": "9ec927bd187e21a4b3a62e053101963ef8673fc4502282a7755f26a9df8db32e"
+    },
+    {
+      "name": "immer",
+      "version": "9.0.21",
+      "scope": "emitted",
+      "packagePath": "node_modules/immer",
+      "license": "MIT",
+      "licenseEvidence": "actual distributed package legal files",
+      "licenseHashes": [
+        "99cf22f6960a6fe228ec84ea9aefb0d75b27999ece83a3a9801e1c2081fa270b"
+      ],
+      "packageJsonSHA256": "b7e13232fe2645be01aed4578d5fe9b532f5443c49a94e3a40782fde1055cda5"
+    },
+    {
+      "name": "know-your-http-well",
+      "version": "0.5.0",
+      "scope": "emitted",
+      "packagePath": "node_modules/know-your-http-well",
+      "license": "Unlicense",
+      "licenseEvidence": "actual distributed package legal files",
+      "licenseHashes": [
+        "7e12e5df4bae12cb21581ba157ced20e1986a0508dd10d0e8a4ab9a4cf94e85c",
+        "66dff6990831f6771260c5b2e091e0920fec598834110fae02500cecb48dd3c4"
+      ],
+      "packageJsonSHA256": "9ca65ecce705682b294a1a5a73ea7783c7579e514c59c84bceae5fbe04e55dae"
+    },
+    {
+      "name": "linkify-it",
+      "version": "5.0.2",
+      "scope": "emitted",
+      "packagePath": "node_modules/linkify-it",
+      "license": "MIT",
+      "licenseEvidence": "actual distributed package legal files",
+      "licenseHashes": [
+        "95e3f7f0e81e9b4940cdfaa1956aaff5e4dfd2fb1565041e7c78eb9a606f23e3"
+      ],
+      "packageJsonSHA256": "492ffef383ead25ddc4a7615129c3c41eafe1a0a10172680a93fbb5039c84204"
+    },
+    {
+      "name": "lodash",
+      "version": "4.18.1",
+      "scope": "emitted",
+      "packagePath": "node_modules/lodash",
+      "license": "MIT",
+      "licenseEvidence": "actual distributed package legal files",
+      "licenseHashes": [
+        "f71e8ed126b46346494aad5486874cd8f0aafe95092ed67d2e3cb6110f939abc"
+      ],
+      "packageJsonSHA256": "5ef0a453b679125b155af19e1477f93b577ea826a57e1545f77608d326966e6a"
+    },
+    {
+      "name": "nanoid",
+      "version": "3.3.18",
+      "scope": "emitted",
+      "packagePath": "node_modules/nanoid",
+      "license": "MIT",
+      "licenseEvidence": "actual distributed package legal files",
+      "licenseHashes": [
+        "da4db1480d9beea3483a2eda5c53b22238d0827d57da162b48f122e04d2d9987"
+      ],
+      "packageJsonSHA256": "18673eb0d7ed43dd871d59dc22a5670303f5d4eb9b17783b1f698f5840ce1fff"
+    },
+    {
+      "name": "polished",
+      "version": "4.3.1",
+      "scope": "emitted",
+      "packagePath": "node_modules/polished",
+      "license": "MIT",
+      "licenseEvidence": "actual distributed package legal files",
+      "licenseHashes": [
+        "671e164460e3edbb93c0e22813d45dd37c1c643c6a7cbddde0f70c8914aab294"
+      ],
+      "packageJsonSHA256": "c6e8692ad785a5155f25c1094a112d44e6d06eef747de3a0adca1854f175d95b"
+    },
+    {
+      "name": "react",
+      "version": "19.0.0",
+      "scope": "emitted",
+      "packagePath": "node_modules/react",
+      "license": "MIT",
+      "licenseEvidence": "actual distributed package legal files",
+      "licenseHashes": [
+        "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+      ],
+      "packageJsonSHA256": "9000ced5f7bfae3479981149e94f5e3ac9025e6a5fb08ab95c0cebb186123161"
+    },
+    {
+      "name": "react-dom",
+      "version": "19.0.0",
+      "scope": "emitted",
+      "packagePath": "node_modules/react-dom",
+      "license": "MIT",
+      "licenseEvidence": "actual distributed package legal files",
+      "licenseHashes": [
+        "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+      ],
+      "packageJsonSHA256": "cc4fb5f07997d43a095bdae48ea26153970e21c774648bca1708e4ad4fd83469"
+    },
+    {
+      "name": "react-is",
+      "version": "16.13.1",
+      "scope": "emitted",
+      "packagePath": "node_modules/react-is",
+      "license": "MIT",
+      "licenseEvidence": "actual distributed package legal files",
+      "licenseHashes": [
+        "52412d7bc7ce4157ea628bbaacb8829e0a9cb3c58f57f99176126bc8cf2bfc85"
+      ],
+      "packageJsonSHA256": "06784c4340af9853928c519791684487b83076b3c84e8de6ba5f240e33700b71"
+    },
+    {
+      "name": "react-redux",
+      "version": "9.2.0",
+      "scope": "emitted",
+      "packagePath": "node_modules/react-redux",
+      "license": "MIT",
+      "licenseEvidence": "actual distributed package legal files",
+      "licenseHashes": [
+        "635da794c92d278f8355428be0f9922d643f556d4f75f33fe4aca6b98d27affe"
+      ],
+      "packageJsonSHA256": "564f6b5dcd228c192ea78745c87898c3fa7393768341d20714b7862b55860782"
+    },
+    {
+      "name": "react-tooltip",
+      "version": "5.30.0",
+      "scope": "emitted",
+      "packagePath": "node_modules/react-tooltip",
+      "license": "MIT",
+      "licenseEvidence": "actual distributed package legal files",
+      "licenseHashes": [
+        "0239d7a53e20062335788036f347863f94c3471af7d4fc64eac1f8f8587c549a"
+      ],
+      "packageJsonSHA256": "8da7d399a74e26245d37c281f0d5ea859736c11457ce8296780480dde4765d9d"
+    },
+    {
+      "name": "react-virtuoso",
+      "version": "4.18.3",
+      "scope": "emitted",
+      "packagePath": "node_modules/react-virtuoso",
+      "license": "MIT",
+      "licenseEvidence": "actual distributed package legal files",
+      "licenseHashes": [
+        "0c53d51ef7f29a43470f7c3132faf161fb72ea3b99ffa9e928981cd8681be6b8"
+      ],
+      "packageJsonSHA256": "5651742d0079bbb67f9f3c6a7f91e843cedb6d974eca94521b023e292cb6e4b0"
+    },
+    {
+      "name": "redux",
+      "version": "4.2.1",
+      "scope": "emitted",
+      "packagePath": "node_modules/redux",
+      "license": "MIT",
+      "licenseEvidence": "actual distributed package legal files",
+      "licenseHashes": [
+        "f2da73c752c6b87624755edacf927cbd915fa76555d383e74494bad4a5155ab3"
+      ],
+      "packageJsonSHA256": "c283383aa08931298b96ab0688e38ca108437708c447a23eb0413aa904d723c8"
+    },
+    {
+      "name": "redux-thunk",
+      "version": "2.4.2",
+      "scope": "emitted",
+      "packagePath": "node_modules/redux-thunk",
+      "license": "MIT",
+      "licenseEvidence": "actual distributed package legal files",
+      "licenseHashes": [
+        "635da794c92d278f8355428be0f9922d643f556d4f75f33fe4aca6b98d27affe"
+      ],
+      "packageJsonSHA256": "28fde4084744b7257decc0a367a2ba7f3c0e94a9c5ac9633c4498f88b1c92f70"
+    },
+    {
+      "name": "scheduler",
+      "version": "0.25.0",
+      "scope": "emitted",
+      "packagePath": "node_modules/scheduler",
+      "license": "MIT",
+      "licenseEvidence": "actual distributed package legal files",
+      "licenseHashes": [
+        "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+      ],
+      "packageJsonSHA256": "3877c4465b7d25658b0aba07484191ab273aafcd2839c502da64a2da0fbe23eb"
+    },
+    {
+      "name": "shallowequal",
+      "version": "1.1.0",
+      "scope": "emitted",
+      "packagePath": "node_modules/shallowequal",
+      "license": "MIT",
+      "licenseEvidence": "actual distributed package legal files",
+      "licenseHashes": [
+        "709e45bb17277819ce27e9abe5dc8e56fe93081e54adb6e6385517f28aa11ac4"
+      ],
+      "packageJsonSHA256": "fca9733ab63419bb68eb2129b4bc114a0d91a66fb32a63d838fda24ff379b0d6"
+    },
+    {
+      "name": "strip-json-comments",
+      "version": "3.1.1",
+      "scope": "emitted",
+      "packagePath": "node_modules/strip-json-comments",
+      "license": "MIT",
+      "licenseEvidence": "actual distributed package legal files",
+      "licenseHashes": [
+        "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3"
+      ],
+      "packageJsonSHA256": "92b83192db22eb46049920e4b750555193d10eafe609cf2adc4f14125c951ed4"
+    },
+    {
+      "name": "styled-components",
+      "version": "5.3.11",
+      "scope": "emitted",
+      "packagePath": "node_modules/styled-components",
+      "license": "MIT",
+      "licenseEvidence": "official v5.3.11 tag root LICENSE; npm 5.3.11 metadata MIT, no gitHead. SHA of retrieved license retained; API commit lookup403, no guessed hash.",
+      "licenseHashes": [
+        "5b893305a717230e5b0024ff5ca3eec1dc05ba600c9b140730488d97ce56f1e6"
+      ],
+      "packageJsonSHA256": "188ad1a2a7c3536190b9db5271852a7c997a109f8cb5496ba1b62a3a91bdb37c"
+    },
+    {
+      "name": "uc.micro",
+      "version": "2.1.0",
+      "scope": "emitted",
+      "packagePath": "node_modules/uc.micro",
+      "license": "MIT",
+      "licenseEvidence": "actual distributed package legal files",
+      "licenseHashes": [
+        "483acb265f182907d1caf6cff9c16c96f31325ed23792832cc5d8b12d5f88c8a"
+      ],
+      "packageJsonSHA256": "8b60af5ea73b0bac4d26111a3f5b00844657b998f9a3fd473710d9e33d274250"
+    },
+    {
+      "name": "use-sync-external-store",
+      "version": "1.7.0",
+      "scope": "emitted",
+      "packagePath": "node_modules/use-sync-external-store",
+      "license": "MIT",
+      "licenseEvidence": "actual distributed package legal files",
+      "licenseHashes": [
+        "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+      ],
+      "packageJsonSHA256": "ba3694aec166f2f53612c4978bc85fb31dd4eee75a2eccc1ad1a1cc49c9428d2"
+    }
+  ],
+  "compiledCSS": {
+    "name": "tailwindcss",
+    "version": "3.4.1",
+    "license": "MIT"
+  },
+  "additionalLicenseEvidence": [
+    {
+      "repository": "styled-components/styled-components",
+      "ref": "v5.3.11",
+      "url": "https://raw.githubusercontent.com/styled-components/styled-components/v5.3.11/LICENSE",
+      "file": "styled-components_styled-components-LICENSE.txt"
+    },
+    {
+      "repository": "graphql/graphiql",
+      "ref": "a92986247c8593fd01d2c6749bd0379c620ef87c",
+      "url": "https://raw.githubusercontent.com/graphql/graphiql/a92986247c8593fd01d2c6749bd0379c620ef87c/LICENSE",
+      "file": "graphql_graphiql-LICENSE.txt"
+    }
+  ],
+  "modifiedFiles": [
+    {
+      "path": "src/components/CodeEditor/index.js",
+      "sha256": "f9b8dadd592b6af1417eca3f6949306b559936e089f6edce2a7c4ac0aad2478c",
+      "originalSHA256": "dc17c13fcb7f376a04a66f2bcbc23ba00bd8bf55f9d6293a661181ff5e2942ae"
+    },
+    {
+      "path": "src/components/CodeEditor/state-persistence.js",
+      "sha256": "e9439684b275c083b37542e6a8c7c4576a4ea3f3306b3244fe0a7d5dce42c51d",
+      "originalSHA256": "ff6091dc0264da1b7e5f34c8d86555089607fd9861ed47d5c42e04b04b0ce1ac"
+    },
+    {
+      "path": "src/components/RequestPane/RequestBody/index.js",
+      "sha256": "29b98d535230f21c855d71bc9ff663544722de18d6ad48954a187e154f7fcbf7",
+      "originalSHA256": "980beaa372175de5a10a43dfca4f9761d7e7d7e70d15f7748570b6c4abdad9bd"
+    },
+    {
+      "path": "src/utils/codemirror/setup.js",
+      "sha256": "7c460421809fb4d2cfbfb256122d365476c88325f5eeb38e53d2cc033bbc2e46",
+      "originalSHA256": "7ca4348244d06a92ea0e6783fadbabec75a171dcf2088cd337361f4633e6b06f"
+    },
+    {
+      "path": "src/utils/common/regex.js",
+      "sha256": "6255c0a6b07cad22fca28f1874d7b13f05c96c7b20259ca96ce27a18f716420e",
+      "originalSHA256": "4b8d1e530e9a0e9f9ea7bb1c0ae131722115e599c73b5216da937b4d286a9447"
+    },
+    {
+      "path": "src/utils/url/index.js",
+      "sha256": "03e77fe0a8dd4a32af8759a63d2288f779e701dd1320d82e24f3b7d010ee9aed",
+      "originalSHA256": "392af15246702e703786f6d95b10c2335b04c5a634f41081c3c1a220aadf5472"
+    }
+  ],
+  "tests": [
+    {
+      "mode": "normal",
+      "pass": true,
+      "actualCompose571": true,
+      "testOnlyStateExposure": true,
+      "scope": "Original Bruno Params/Headers/CM5 body/TextPreview local subsection. CM setValue triggers original callbacks/reducers,checkbox/queryURL,bulk/table toggle,tab preservation,hidden reset and stale callbacks,early/late fail and cleanup. Geometry/ResizeObserver simulated; no native visual/keyboard/drag acceptance",
+      "cleanup": {
+        "listeners": 0,
+        "timers": 0,
+        "raf": 0,
+        "observers": 0
+      },
+      "blockedCalls": 0
+    },
+    {
+      "mode": "reduced",
+      "pass": true,
+      "actualCompose571": true,
+      "testOnlyStateExposure": true,
+      "scope": "Original Bruno Params/Headers/CM5 body/TextPreview local subsection. CM setValue triggers original callbacks/reducers,checkbox/queryURL,bulk/table toggle,tab preservation,hidden reset and stale callbacks,early/late fail and cleanup. Geometry/ResizeObserver simulated; no native visual/keyboard/drag acceptance",
+      "cleanup": {
+        "listeners": 0,
+        "timers": 0,
+        "raf": 0,
+        "observers": 0
+      },
+      "blockedCalls": 0
+    },
+    {
+      "mode": "early",
+      "pass": true,
+      "actualCompose571": true,
+      "testOnlyStateExposure": true,
+      "scope": "Original Bruno Params/Headers/CM5 body/TextPreview local subsection. CM setValue triggers original callbacks/reducers,checkbox/queryURL,bulk/table toggle,tab preservation,hidden reset and stale callbacks,early/late fail and cleanup. Geometry/ResizeObserver simulated; no native visual/keyboard/drag acceptance",
+      "cleanup": {
+        "listeners": 0,
+        "timers": 0,
+        "raf": 0,
+        "observers": 0
+      },
+      "blockedCalls": 0
+    },
+    {
+      "mode": "failure",
+      "pass": true,
+      "actualCompose571": true,
+      "testOnlyStateExposure": true,
+      "scope": "Original Bruno Params/Headers/CM5 body/TextPreview local subsection. CM setValue triggers original callbacks/reducers,checkbox/queryURL,bulk/table toggle,tab preservation,hidden reset and stale callbacks,early/late fail and cleanup. Geometry/ResizeObserver simulated; no native visual/keyboard/drag acceptance",
+      "cleanup": {
+        "listeners": 0,
+        "timers": 0,
+        "raf": 0,
+        "observers": 0
+      },
+      "blockedCalls": 0
+    },
+    {
+      "mode": "production",
+      "pass": true,
+      "actualCompose571": true,
+      "testOnlyStateExposure": false,
+      "scope": "Original Bruno Params/Headers/CM5 body/TextPreview local subsection. CM setValue triggers original callbacks/reducers,checkbox/queryURL,bulk/table toggle,tab preservation,hidden reset and stale callbacks,early/late fail and cleanup. Geometry/ResizeObserver simulated; no native visual/keyboard/drag acceptance",
+      "cleanup": {
+        "listeners": 0,
+        "timers": 0,
+        "raf": 0,
+        "observers": 0
+      },
+      "blockedCalls": 0
+    }
+  ],
+  "loader": [
+    {
+      "slug": "workspace",
+      "pass": true,
+      "utf16Bytes": 2239588,
+      "fetches": 3,
+      "actualCreatePreviewLoader571": true,
+      "cacheHit": true,
+      "released": true,
+      "iframeExecution": false
+    }
+  ],
+  "hostAdapters": {
+    "adapters/bruno-common.ts": "export type BrunoDefaultHeaderSource = 'bruno' | 'axios' | 'node';\n\nexport type BrunoDefaultHeader = {\n  name: string;\n  /** Value shown in the Headers UI. */\n  previewValue?: string;\n  /** False for required defaults such as Host. */\n  omittable: boolean;\n  source: BrunoDefaultHeaderSource;\n};\n\n/** Headers Bruno, Axios, or Node add automatically on HTTP sends. */\nexport const BRUNO_DEFAULT_HEADERS: BrunoDefaultHeader[] = [\n  {\n    name: 'User-Agent',\n    previewValue: 'bruno-runtime/<version>',\n    omittable: true,\n    source: 'bruno'\n  },\n  {\n    name: 'Accept',\n    previewValue: 'application/json, text/plain, */*',\n    omittable: true,\n    source: 'axios'\n  },\n  {\n    name: 'Accept-Encoding',\n    previewValue: 'gzip, compress, deflate, br',\n    omittable: true,\n    source: 'axios'\n  },\n  {\n    name: 'Connection',\n    previewValue: 'keep-alive',\n    omittable: true,\n    source: 'node'\n  },\n  {\n    name: 'Host',\n    previewValue: '<derived from request URL>',\n    omittable: false,\n    source: 'node'\n  }\n];\n\nexport const getBrunoDefaultHeaderNames = (): string[] =>\n  BRUNO_DEFAULT_HEADERS.map((header) => header.name);\n\ntype RequestWithExplicitHeaderNames = {\n  headers?: Record<string, unknown>;\n  __explicitHeaderNames?: string[];\n};\n\n/** Headers the user or scripts set, not Axios defaults. Refresh before send. */\nexport const refreshExplicitHeaderNames = <T extends RequestWithExplicitHeaderNames>(request: T): T => {\n  const headers = request?.headers;\n  if (!headers || typeof headers !== 'object') {\n    return request;\n  }\n\n  request.__explicitHeaderNames = Object.keys(headers).filter((name) => {\n    const value = headers[name];\n    return value !== undefined && value !== null && value !== false;\n  });\n\n  return request;\n};\n\nexport type ApplyOmitHeadersResult = {\n  /** True when Connection should be stripped after agents are attached. */\n  omitConnection: boolean;\n};\n\ntype AxiosLikeHeaders = {\n  set: (name: string, value: unknown) => void;\n};\n\nconst normalizeHeaderNameList = (names?: string[] | null): string[] => {\n  if (!Array.isArray(names) || !names.length) {\n    return [];\n  }\n\n  return names\n    .map((name) => (typeof name === 'string' ? name.trim() : ''))\n    .filter((name) => name.length > 0);\n};\n\nexport type OmitHeadersOptions = {\n  omitHeaders?: string[] | null;\n  headersToDelete?: string[] | null;\n  explicitHeaderNames?: string[] | null;\n};\n\n/**\n * Lowercased names to drop from a request.\n * Host is never omitted. User-set headers win over omitHeaders.\n * Script deleteHeader always wins.\n */\nconst resolveHeaderNamesToClear = ({\n  omitHeaders,\n  headersToDelete,\n  explicitHeaderNames\n}: OmitHeadersOptions = {}): string[] => {\n  const explicit = new Set(\n    normalizeHeaderNameList(explicitHeaderNames).map((name) => name.toLowerCase())\n  );\n  const deleteSet = new Set(\n    normalizeHeaderNameList(headersToDelete).map((name) => name.toLowerCase())\n  );\n  const omitSet = new Set(\n    normalizeHeaderNameList(omitHeaders).map((name) => name.toLowerCase())\n  );\n\n  return [...new Set<string>([...omitSet, ...deleteSet])].filter((lowerName) => {\n    if (lowerName === 'host') {\n      return false;\n    }\n\n    return !(omitSet.has(lowerName) && !deleteSet.has(lowerName) && explicit.has(lowerName));\n  });\n};\n\n/**\n * True when Connection must stay off the wire. Deleting the header is not enough\n * Node's agent writes it, so the agent has to be built with keepAlive false.\n */\nexport const shouldOmitConnection = (options: OmitHeadersOptions = {}): boolean =>\n  resolveHeaderNamesToClear(options).includes('connection');\n\n/** Drop auto-added headers from an Axios request. Connection is left for the caller. */\nexport const applyOmitHeaders = (\n  headers: AxiosLikeHeaders,\n  options: OmitHeadersOptions = {}\n): ApplyOmitHeadersResult => {\n  const namesToClear = resolveHeaderNamesToClear(options);\n\n  namesToClear.forEach((lowerName) => {\n    if (lowerName !== 'connection') {\n      headers.set(lowerName, null);\n    }\n  });\n\n  return { omitConnection: namesToClear.includes('connection') };\n};\n\n/** User-Agent Bruno sends by default. */\nexport const getBrunoRuntimeUserAgent = (version: string): string =>\n  `bruno-runtime/${version || ''}`;\n",
+    "adapters/collections.js": "import{createSlice}from'@reduxjs/toolkit';import{find,map,filter,cloneDeep,get,set}from'lodash';import{uuid}from'./common';\nconst findCollectionByUid=(collections,uid)=>collections.find(c=>c.uid===uid);const findItemInCollection=(collection,uid)=>collection.items.find(i=>i.uid===uid);const isItemARequest=i=>i.type==='http-request';\nconst splitOnFirst = (str, char) => {\n  if (!str || !str.length) {\n    return [str];\n  }\n\n  // Mask {{ }} template variables so their contents don't interfere with the search\n  const masked = str.replace(/\\{\\{.*?\\}\\}/g, (match) => '_'.repeat(match.length));\n  const index = masked.indexOf(char);\n\n  if (index === -1) {\n    return [str];\n  }\n\n  return [str.slice(0, index), str.slice(index + 1)];\n};\nimport{buildQueryString as stringifyQueryParams}from'./query-utils';\nexport const initialItem={uid:'request-demo',name:'Local request',type:'http-request',request:{method:'GET',url:'https://example.invalid/demo?page=1',params:[{uid:'param1',name:'page',value:'1',description:'Local query example',enabled:true,type:'query'}],headers:[{uid:'header1',name:'Accept',value:'text/plain',description:'Sample only',enabled:true}],body:{mode:'text',text:'Hello from the local request editor.'},auth:{mode:'none'},vars:{req:[],res:[]}},settings:{}};\nexport const initialCollection={uid:'collection-demo',name:'Local demonstration',items:[initialItem],root:{request:{headers:[],auth:{mode:'none'}}}};\nconst slice=createSlice({name:'collections',initialState:{collections:[initialCollection]},reducers:{\n    setQueryParams: (state, action) => {\n      const { collectionUid, itemUid, params } = action.payload;\n\n      const collection = findCollectionByUid(state.collections, collectionUid);\n      if (!collection) {\n        return;\n      }\n\n      const item = findItemInCollection(collection, itemUid);\n      if (!item || !isItemARequest(item)) {\n        return;\n      }\n\n      if (!item.draft) {\n        item.draft = cloneDeep(item);\n      }\n      const existingOtherParams = item.draft.request.params?.filter((p) => p.type !== 'query') || [];\n      const newQueryParams = map(params, ({ uid, name = '', value = '', description = '', annotations = null, type = 'query', enabled = true }) => ({\n        uid: uid || uuid(),\n        name,\n        value,\n        description,\n        annotations,\n        type,\n        enabled\n      }));\n\n      item.draft.request.params = [...newQueryParams, ...existingOtherParams];\n\n      // Update the request URL to reflect the new query params\n      const parts = splitOnFirst(item.draft.request.url, '?');\n      const query = stringifyQueryParams(\n        filter(item.draft.request.params, (p) => p.enabled && p.type === 'query')\n      );\n\n      // If there are enabled query params, append them to the URL\n      if (query && query.length) {\n        item.draft.request.url = parts[0] + '?' + query;\n      } else {\n        // If no enabled query params, remove the query part from URL\n        item.draft.request.url = parts[0];\n      }\n    },\n    moveQueryParam: (state, action) => {\n      const collection = findCollectionByUid(state.collections, action.payload.collectionUid);\n\n      if (collection) {\n        const item = findItemInCollection(collection, action.payload.itemUid);\n\n        if (item && isItemARequest(item)) {\n          // Ensure item.draft is a deep clone of item if not already present\n          if (!item.draft) {\n            item.draft = cloneDeep(item);\n          }\n\n          // Extract payload data\n          const { updateReorderedItem } = action.payload;\n          const params = item.draft.request.params;\n\n          const queryParams = params.filter((param) => param.type === 'query');\n          const pathParams = params.filter((param) => param.type === 'path');\n\n          // Reorder only query params based on updateReorderedItem\n          const reorderedQueryParams = updateReorderedItem.map((uid) => {\n            return queryParams.find((param) => param.uid === uid);\n          });\n          item.draft.request.params = [...reorderedQueryParams, ...pathParams];\n\n          // Update request URL\n          const parts = splitOnFirst(item.draft.request.url, '?');\n          const query = stringifyQueryParams(filter(item.draft.request.params, (p) => p.enabled && p.type === 'query'));\n          if (query && query.length) {\n            item.draft.request.url = parts[0] + '?' + query;\n          } else {\n            item.draft.request.url = parts[0];\n          }\n        }\n      }\n    },\n    updatePathParam: (state, action) => {\n      const collection = findCollectionByUid(state.collections, action.payload.collectionUid);\n\n      if (collection) {\n        const item = findItemInCollection(collection, action.payload.itemUid);\n\n        if (item && isItemARequest(item)) {\n          if (!item.draft) {\n            item.draft = cloneDeep(item);\n          }\n\n          const param = find(\n            item.draft.request.params,\n            (p) => p.uid === action.payload.pathParam.uid && p.type === 'path'\n          );\n\n          if (param) {\n            param.name = action.payload.pathParam.name;\n            param.value = action.payload.pathParam.value;\n            if ('description' in action.payload.pathParam) {\n              param.description = action.payload.pathParam.description;\n            }\n            if ('enabled' in action.payload.pathParam) {\n              param.enabled = action.payload.pathParam.enabled;\n            }\n          }\n        }\n      }\n    },\n    setRequestHeaders: (state, action) => {\n      const { collectionUid, itemUid, headers } = action.payload;\n\n      const collection = findCollectionByUid(state.collections, collectionUid);\n      if (!collection) {\n        return;\n      }\n\n      const item = findItemInCollection(collection, itemUid);\n      if (!item || !isItemARequest(item)) {\n        return;\n      }\n\n      if (!item.draft) {\n        item.draft = cloneDeep(item);\n      }\n      item.draft.request.headers = map(action.payload.headers, ({ uid, name = '', value = '', description = '', annotations = null, enabled = true }) => ({\n        uid: uid || uuid(),\n        name,\n        value,\n        description,\n        annotations,\n        enabled\n      }));\n    },\n    moveRequestHeader: (state, action) => {\n      const collection = findCollectionByUid(state.collections, action.payload.collectionUid);\n\n      if (collection) {\n        const item = findItemInCollection(collection, action.payload.itemUid);\n\n        if (item && isItemARequest(item)) {\n          // Ensure item.draft is a deep clone of item if not already present\n          if (!item.draft) {\n            item.draft = cloneDeep(item);\n          }\n\n          // Extract payload data\n          const { updateReorderedItem } = action.payload;\n          const params = item.draft.request.headers;\n\n          item.draft.request.headers = updateReorderedItem.map((uid) => {\n            return params.find((param) => param.uid === uid);\n          });\n        }\n      }\n    },\n    updateRequestBody: (state, action) => {\n      const collection = findCollectionByUid(state.collections, action.payload.collectionUid);\n\n      if (collection) {\n        const item = findItemInCollection(collection, action.payload.itemUid);\n\n        if (item && isItemARequest(item)) {\n          if (!item.draft) {\n            item.draft = cloneDeep(item);\n          }\n\n          switch (item.draft.request.body.mode) {\n            case 'json': {\n              item.draft.request.body.json = action.payload.content;\n              break;\n            }\n            case 'text': {\n              item.draft.request.body.text = action.payload.content;\n              break;\n            }\n            case 'xml': {\n              item.draft.request.body.xml = action.payload.content;\n              break;\n            }\n            case 'sparql': {\n              item.draft.request.body.sparql = action.payload.content;\n              break;\n            }\n            case 'file': {\n              item.draft.request.body.file = action.payload.content;\n              break;\n            }\n            case 'formUrlEncoded': {\n              item.draft.request.body.formUrlEncoded = action.payload.content;\n              break;\n            }\n            case 'multipartForm': {\n              item.draft.request.body.multipartForm = action.payload.content;\n              break;\n            }\n            case 'grpc': {\n              item.draft.request.body.grpc = action.payload.content;\n              break;\n            }\n            case 'ws': {\n              item.draft.request.body.ws = action.payload.content;\n              break;\n            }\n          }\n        }\n      }\n    },\n    updateItemSettings: (state, action) => {\n      const collection = findCollectionByUid(state.collections, action.payload.collectionUid);\n\n      if (collection) {\n        const item = findItemInCollection(collection, action.payload.itemUid);\n\n        if (item && isItemARequest(item)) {\n          if (!item.draft) {\n            item.draft = cloneDeep(item);\n          }\n          item.draft.settings = { ...item.draft.settings, ...action.payload.settings };\n        }\n      }\n    },}});export const {setQueryParams,moveQueryParam,updatePathParam,setRequestHeaders,moveRequestHeader,updateRequestBody,updateItemSettings}=slice.actions;export const updateSettingsSelectedTab=()=>({type:'local/unavailable'}),updatedFolderSettingsSelectedTab=updateSettingsSelectedTab;export default slice.reducer;\n",
+    "adapters/common.js": "import{customAlphabet}from'nanoid';\nexport const uuid = () => {\n  // https://github.com/ai/nanoid/blob/main/url-alphabet/index.js\n  const urlAlphabet = 'useandom26T198340PX75pxJACKVERYMINDBUSHWOLFGQZbfghjklqvwyzrict';\n  const customNanoId = customAlphabet(urlAlphabet, 21);\n\n  return customNanoId();\n};\nexport const formatSize = (bytes, precision = 1) => {\n  // Handle invalid inputs\n  if (isNaN(bytes) || typeof bytes !== 'number') {\n    return '0B';\n  }\n\n  if (bytes < 1024) {\n    return bytes + 'B';\n  }\n  if (bytes < 1024 * 1024) {\n    return (bytes / 1024).toFixed(precision) + 'KB';\n  }\n  if (bytes < 1024 * 1024 * 1024) {\n    return (bytes / (1024 * 1024)).toFixed(precision) + 'MB';\n  }\n\n  return (bytes / (1024 * 1024 * 1024)).toFixed(precision) + 'GB';\n};",
+    "adapters/http-headers.js": "export {default as headers}from'know-your-http-well/json/headers.json';\n",
+    "adapters/optional.js": "import React from 'react';import CodeMirror from 'codemirror';\nexport const getAllVariables=()=>({}),getVariableNamesWithScope=()=>[],setupAutoComplete=()=>()=>{},showRootHints=()=>{},setupAiAutocomplete=()=>()=>{},buildAutocompleteContext=()=>({}),setupLinkAware=()=>()=>{},resolveLinkClickHandler=()=>undefined;\nexport function defineCodeMirrorBrunoVariablesMode(variables,mode){CodeMirror.defineMode('brunovariables',config=>CodeMirror.getMode(config,mode==='brunovariables'?'text/plain':mode||'text/plain'))}\nexport const SetAsVariableContext=React.createContext({openFromCodeMirror(){}});export const usePersistenceScope=()=> 'local-demo';export const usePersistedState=({default:value})=>React.useState(value);export const saveRequest=()=>({type:'local/disabled-save'}),sendRequest=()=>({type:'local/disabled-send'});\nexport const getTreePathFromCollectionToItem=()=>[];\n",
+    "adapters/platform.js": "export const isMacOS=()=>false;\n",
+    "adapters/query-utils.ts": "/**\n * The scheme a schemeless URL is sent over. \"localhost:8080/api\" and\n * \"{{host}}/api\" (where the variable carries no scheme of its own) both go out\n * over plain HTTP, so this is what callers prepend when a URL has to be parsed\n * or displayed with an explicit scheme.\n */\nconst DEFAULT_SCHEME = 'http://';\n\n/**\n * Returns the explicit network scheme of `url` (without \"://\"), or null when it\n * has none.\n *\n * Per the WHATWG URL Standard, all network-fetch schemes (http, https, ftp,\n * ws, wss, file) require \"://\" — the authority component is mandatory.\n * This means \"localhost:8080\" is NOT a scheme: the colon separates host from\n * port, so callers should prepend `DEFAULT_SCHEME` to it.\n *\n * The scheme character set (ASCII alpha/digit/+/-/.) follows the WHATWG URL\n * scheme-state parser, which accepts the same characters as all major browsers.\n * @see https://url.spec.whatwg.org/#scheme-state\n *\n * @example\n * getExplicitScheme('https://example.com') // 'https'\n * getExplicitScheme('ftp://files.example') // 'ftp'\n * getExplicitScheme('localhost:8080')       // null — port colon, not scheme\n * getExplicitScheme('example.com/api')      // null — no scheme at all\n */\nfunction getExplicitScheme(url: string): string | null {\n  // All WHATWG network schemes require authority (\"://\").\n  const authorityStart = url.indexOf('://');\n  if (authorityStart < 1) return null;\n\n  const scheme = url.slice(0, authorityStart);\n\n  // WHATWG URL scheme-state: first character must be ASCII alpha.\n  const first = scheme[0];\n  const isAlpha = (c: string) => {\n    return (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z');\n  };\n\n  if (!isAlpha(first)) {\n    return null;\n  }\n\n  // Remaining characters must be ASCII alphanumeric, \"+\", \"-\", or \".\".\n  const isSchemeChar = (c: string) => {\n    return isAlpha(c) || (c >= '0' && c <= '9') || c === '+' || c === '-' || c === '.';\n  };\n  return scheme.slice(1).split('').every(isSchemeChar) ? scheme : null;\n}\n\n/**\n * Returns true when `url` already carries an explicit network scheme.\n *\n * @example\n * hasExplicitScheme('https://example.com') // true\n * hasExplicitScheme('localhost:8080')       // false — port colon, not scheme\n */\nfunction hasExplicitScheme(url: string): boolean {\n  return getExplicitScheme(url) !== null;\n}\n\ninterface QueryParam {\n  name: string;\n  value?: string;\n}\n\ninterface BuildQueryStringOptions {\n  encode?: boolean;\n}\n\ninterface ExtractQueryParamsOptions {\n  decode?: boolean;\n  /**\n   * When `true` (default), anything after `#` is discarded before splitting\n   * on `&` — matches the URL-bar reducer's view where `#` is the fragment\n   * delimiter. Pass `false` from callers that want `#` to round-trip as data\n   * (e.g., `encodeUrl`, which encodes `#` to `%23` rather than treating it\n   * as a structural fragment marker).\n   */\n  stripFragment?: boolean;\n}\n\n// Per PR #5507's design contract: when encode is true, run encodeURIComponent on the\n// value even if it's already encoded. Pre-encoded inputs intentionally double-encode\n// (e.g. `%23` → `%2523`) — useful for redirect URLs where the server expects to\n// receive the encoded form after one round of URL-decoding.\nfunction buildQueryString(paramsArray: QueryParam[], { encode = false }: BuildQueryStringOptions = {}): string {\n  return paramsArray\n    .filter(({ name }) => typeof name === 'string' && name.trim().length > 0)\n    .map(({ name, value }) => {\n      const finalName = encode ? encodeURIComponent(name) : name;\n\n      if (value === undefined) {\n        return finalName;\n      }\n\n      const finalValue = encode ? encodeURIComponent(value) : value;\n      return `${finalName}=${finalValue}`;\n    })\n    .join('&');\n}\n\nfunction parseQueryParams(query: string, { decode = false, stripFragment = true }: ExtractQueryParamsOptions = {}): QueryParam[] {\n  if (!query || !query.length) {\n    return [];\n  }\n\n  try {\n    const queryString = stripFragment ? query.split('#')[0] : query;\n    const pairs = queryString.split('&');\n\n    const params = pairs.map((pair) => {\n      const [name, ...valueParts] = pair.split('=');\n\n      if (!name) {\n        return null;\n      }\n\n      // Distinguish between ?param (no '=' at all) and ?param= (has '=' with empty value)\n      const hasEqualsSign = pair.includes('=');\n      const value = hasEqualsSign ? (decode ? decodeURIComponent(valueParts.join('=')) : valueParts.join('=')) : undefined;\n\n      return {\n        name: decode ? decodeURIComponent(name) : name,\n        value\n      };\n    }).filter((param): param is NonNullable<typeof param> => param !== null);\n\n    return params;\n  } catch (error) {\n    console.error('Error parsing query params:', error);\n    return [];\n  }\n}\n\n// decodeURIComponent throws on bare '%' or malformed %XX. Forgiving variant that\n// decodes well-formed escapes and leaves anything else alone. Exported so other\n// modules can use it without each one inventing its own try/catch. Not used\n// inside encodeUrl itself (PR #5507's design is content-blind — no decode-encode).\nconst safeDecodeURIComponent = (s: string): string => {\n  try {\n    return decodeURIComponent(s);\n  } catch {\n    return s.replace(/%[0-9A-Fa-f]{2}/g, (m) => {\n      try {\n        return decodeURIComponent(m);\n      } catch {\n        return m;\n      }\n    });\n  }\n};\n\n// Path-side encoding is idempotent: decode any already-encoded sequence first,\n// then re-encode. The reason — `interpolateVars` in the runtime goes through\n// `new URL(url).pathname`, which auto-encodes path chars (`\"` → `%22`,\n// ` ` → `%20`, etc.) before the request reaches `encodeUrl()` at the wire\n// boundary. Without `safeDecodeURIComponent` here, the second pass would\n// content-blind-encode again (`%22` → `%2522`) and the wire URL would be\n// double-encoded. By decoding-then-encoding we collapse both cases (raw input\n// + already-encoded input) to the same single-encoded form.\n//\n// NOTE: this idempotency is path-side only. The QUERY side stays content-blind\n// per PR #5507's contract — query values are user data and pre-encoded inputs\n// are a legitimate signal that the user wants the encoding to survive a server\n// URL-decode pass (the redirect-URL use case). See `encodeUrl` below.\nconst encodePathSegments = (path: string): string =>\n  path\n    .split('/')\n    .map((segment) => encodeURIComponent(safeDecodeURIComponent(segment)))\n    .join('/');\n\n// Encodes path segments and query name/value pairs when the URL Encoding toggle is on.\n// Content-blind per PR #5507's design contract: applying it to an already-encoded\n// input intentionally double-encodes (e.g. `?q=%20` → `?q=%2520`).\n//\n// `#` is treated as **data**, not as the RFC 3986 §3.5 fragment delimiter:\n//   `?token=abc#def`  →  `?token=abc%23def`   (toggle ON)\n// The previous strip-or-preserve behavior caused surprising UX (silent data\n// loss in the snippet, or asymmetric ON/OFF behavior). Since Bruno is an\n// HTTP API client where fragments are essentially never useful on the wire,\n// encoding `#` as data is the predictable choice. To send a URL with a\n// literal `#section` fragment, toggle OFF — OFF preserves the user's URL\n// byte-for-byte.\nconst encodeUrl = (url: string): string => {\n  if (!url || typeof url !== 'string') {\n    return url;\n  }\n\n  // Separate origin+path from the query string. `#` is intentionally NOT\n  // extracted as a fragment — it flows through as data and ends up encoded\n  // as `%23` either in the path (`encodePathSegments`) or the query value\n  // (`encodeURIComponent` via the parseQueryParams → rebuild loop below).\n  const queryIdx = url.indexOf('?');\n  const originAndPath = queryIdx >= 0 ? url.slice(0, queryIdx) : url;\n  const queryString = queryIdx >= 0 ? url.slice(queryIdx + 1) : '';\n\n  // Preserve scheme + authority verbatim; only encode the path segments.\n  // [^/?#]* matches everything in the authority including userinfo, host, port,\n  // and bracketed IPv6 literals. `#` is excluded so a misplaced `#` (e.g.\n  // `https://example.com#bad/path`) is treated as part of path and encoded.\n  const originMatch = originAndPath.match(/^([a-z][a-z0-9+.-]*:\\/\\/[^/?#]*)?(.*)$/i);\n  const origin = originMatch?.[1] ?? '';\n  const path = originMatch?.[2] ?? originAndPath;\n\n  let result = origin + encodePathSegments(path);\n\n  if (queryIdx >= 0) {\n    // stripFragment: false so `#` in the query value is treated as a literal\n    // byte and gets encoded to `%23` by the encodeURIComponent below.\n    const params = parseQueryParams(queryString, { decode: false, stripFragment: false });\n    const rebuilt = params\n      .map(({ name, value }) => {\n        const encodedName = encodeURIComponent(name);\n        if (value === undefined) {\n          return encodedName;\n        }\n        const encodedValue = encodeURIComponent(value);\n        return `${encodedName}=${encodedValue}`;\n      })\n      .filter((pair) => pair.length > 0 && !pair.startsWith('='))\n      .join('&');\n    result += `?${rebuilt}`;\n  }\n\n  return result;\n};\n\n/**\n * Strip the origin (scheme + authority) from a URL, returning the path, query, and fragment.\n * Returns '/' if the URL has no path component.\n *\n * @example\n * stripOrigin('https://example.com/api/users?name=foo') // '/api/users?name=foo'\n * stripOrigin('http://localhost:3000')                   // '/'\n * stripOrigin('ftp://files.example.com/pub')             // '/pub'\n */\nconst stripOrigin = (url: string): string => {\n  return url.replace(/^[A-Za-z][A-Za-z0-9+.-]*:\\/\\/[^/?#]*/, '') || '/';\n};\n\n/**\n * Normalize a Bruno request URL to a mock-server route path.\n * Strips scheme/host, leading `{{var}}`, query strings; turns remaining `{{var}}` into `:var`\n * so it matches Express-style route params. Callers that persist or display the user-typed URL\n * pass `preserveTemplateVars: true` to keep `{{var}}` intact.\n */\nconst extractMockRoutePath = (rawUrl: unknown, { preserveTemplateVars = false } = {}): string => {\n  if (!rawUrl) {\n    return '/';\n  }\n\n  let cleaned = String(rawUrl).trim();\n  cleaned = cleaned.replace(/^\\{\\{[^}]+\\}\\}/, '');\n\n  if (cleaned.startsWith('http://') || cleaned.startsWith('https://')) {\n    try {\n      cleaned = new URL(cleaned).pathname;\n    } catch {\n      const withoutScheme = cleaned.replace(/^https?:\\/\\//, '');\n      const slashIndex = withoutScheme.indexOf('/');\n      cleaned = slashIndex === -1 ? '/' : withoutScheme.slice(slashIndex);\n      const qIndex = cleaned.indexOf('?');\n      if (qIndex !== -1) {\n        cleaned = cleaned.substring(0, qIndex);\n      }\n    }\n  } else {\n    const ipHostMatch = cleaned.match(/^(?:\\d{1,3}\\.){3}\\d{1,3}(?::\\d+)?(\\/[^?#]*)?/);\n    if (ipHostMatch) {\n      cleaned = ipHostMatch[1] || '/';\n    } else {\n      const domainHostMatch = cleaned.match(/^(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z0-9-]+(?::\\d+)?(\\/[^?#]*)?/);\n      if (domainHostMatch) {\n        cleaned = domainHostMatch[1] || '/';\n      } else {\n        const bareHostMatch = cleaned.match(/^[a-zA-Z0-9-]+:\\d+(\\/[^?#]*)?/);\n        if (bareHostMatch) {\n          cleaned = bareHostMatch[1] || '/';\n        }\n      }\n    }\n\n    const qIndex = cleaned.indexOf('?');\n    if (qIndex !== -1) {\n      cleaned = cleaned.substring(0, qIndex);\n    }\n  }\n\n  if (preserveTemplateVars) {\n    cleaned = cleaned.replace(/%7B%7B([^%]+)%7D%7D/gi, '{{$1}}');\n  } else {\n    cleaned = cleaned.replace(/\\{\\{([^}]+)\\}\\}/g, ':$1');\n  }\n\n  if (!cleaned.startsWith('/')) {\n    cleaned = `/${cleaned}`;\n  }\n  if (cleaned.length > 1 && cleaned.endsWith('/')) {\n    cleaned = cleaned.slice(0, -1);\n  }\n  cleaned = cleaned.replace(/\\/+/g, '/');\n\n  return cleaned || '/';\n};\n\ninterface MockResponseRouteKeyInput {\n  request?: {\n    method?: string;\n    url?: string;\n  } | null;\n  response?: {\n    status?: number | string;\n  } | null;\n}\n\nconst getMockResponseRouteKey = (response?: MockResponseRouteKeyInput | null): string => {\n  const method = (response?.request?.method || 'GET').toUpperCase();\n  const url = extractMockRoutePath(response?.request?.url);\n  const status = Number(response?.response?.status) || 200;\n  return `${method} ${url}::${status}`;\n};\n\nconst isSameOrigin = (url1: string, url2: string): boolean => {\n  try {\n    const parsed1 = new URL(url1);\n    const parsed2 = new URL(url2);\n    return parsed1.origin === parsed2.origin;\n  } catch (err) {\n    return false;\n  }\n};\n\nexport {\n  DEFAULT_SCHEME,\n  getExplicitScheme,\n  hasExplicitScheme,\n  encodeUrl,\n  parseQueryParams,\n  buildQueryString,\n  stripOrigin,\n  safeDecodeURIComponent,\n  extractMockRoutePath,\n  getMockResponseRouteKey,\n  isSameOrigin,\n  type QueryParam,\n  type BuildQueryStringOptions,\n  type ExtractQueryParamsOptions,\n  type MockResponseRouteKeyInput\n};\n",
+    "adapters/tabs.js": "import{createSlice}from'@reduxjs/toolkit';const slice=createSlice({name:'tabs',initialState:{activeTabUid:'request-demo',tabs:[{uid:'request-demo',tableColumnWidths:{}}]},reducers:{updateTableColumnWidths(s,{payload:p}){const t=s.tabs.find(t=>t.uid===p.uid);if(t)t.tableColumnWidths[p.tableId]=p.widths},setFocusTableRow(s,{payload:p}){const t=s.tabs[0];t.focusTableRow=p}}});export const{updateTableColumnWidths,setFocusTableRow}=slice.actions;export const addTab=()=>({type:'local/unavailable'});export default slice.reducer;\n",
+    "adapters/theme.jsx": "import React from'react';import{ThemeProvider as StyledThemeProvider}from'styled-components';import theme from'../src/themes/light/light';export const useTheme=()=>({storedTheme:'light',displayedTheme:'light',theme});export const ThemeProvider=({children})=><StyledThemeProvider theme={theme}>{children}</StyledThemeProvider>;\n",
+    "main.jsx": "import React,{useState}from'react';import{createRoot}from'react-dom/client';import{flushSync}from'react-dom';import Wrapper from './src/components/ResponsePane/StyledWrapper';import './global.css';import './host.css';import{Provider,useSelector}from'react-redux';import{configureStore}from'@reduxjs/toolkit';import collections from'./adapters/collections';import tabs from'./adapters/tabs';import{ThemeProvider}from'./adapters/theme';import Params from'./src/components/RequestPane/QueryParams';import Headers from'./src/components/RequestPane/RequestHeaders';import Body from'./src/components/RequestPane/RequestBody';import TextPreview from'./src/components/ResponsePane/QueryResult/QueryResultPreview/TextPreview';\nconst makeStore=()=>configureStore({reducer:{collections,tabs,app:(s={preferences:{font:{},ai:{enabled:false}}})=>s}});\nfunction App(){const collection=useSelector(s=>s.collections.collections[0]),item=collection.items[0];const[tab,setTab]=useState('Params');const C={Params,Headers,Body}[tab];return <ThemeProvider><aside>本地请求编辑与固定样例响应，不发送网络、不执行测试、不保存或连接服务。</aside><header>{item.draft?.request.url||item.request.url}</header><main style={{display:'grid',gridTemplateColumns:'1fr 1fr',height:650}}><Wrapper className=\"flex-boundary\" style={{overflowY:'auto',height:650}}><nav className=\"tabs flex px-4 border-b\">{['Params','Headers','Body'].map(t=><button className={'tab '+(tab===t?'active':'')} onClick={()=>setTab(t)} key={t}>{t}</button>)}</nav><C item={item} collection={collection}/></Wrapper><Wrapper><h3 className=\"tabs px-4 py-2 border-b text-sm\">固定文字响应</h3><TextPreview data={'This is a local response fixture. No request was sent.\\nstatus: demonstration'}/></Wrapper></main></ThemeProvider>};\nlet root=null,closed=false;const mount=document.getElementById('content');function dispose(){if(closed)return;closed=true;try{root?.unmount()}finally{root=null;cleanupOwned();mount?.replaceChildren()}}function fail(){try{dispose()}finally{document.body.textContent='本地请求编辑示例暂不可用。';document.body.setAttribute('role','alert')}}failure=fail;\nfunction render(){if(closed)return;if(!mount)throw Error('Missing mount');if(document.hidden){root?.unmount();root=null;return}if(root)return;const store=makeStore();root=createRoot(mount,{onUncaughtError:fail});flushSync(()=>root.render(<Provider store={store}><App/></Provider>));if(__TEST__)window.__BRUNO={store}}\nfunction on(t,k,f){t.addEventListener(k,e=>{if(!closed)try{f(e)}catch{fail()}})}try{for(const k of ['copy','cut','paste','drop'])document.addEventListener(k,e=>{e.preventDefault();e.stopImmediatePropagation()},true);document.addEventListener('click',e=>{if(e.target?.closest?.('a[href]')){e.preventDefault();e.stopImmediatePropagation()}},true);on(window,'error',e=>{e.preventDefault();fail()});on(document,'visibilitychange',()=>{if(document.hidden){render();pauseOwned()}else{resumeOwned();render()}});on(window,'pagehide',dispose);on(window,'atlas:dispose',dispose);render();if(document.hidden)pauseOwned()}catch{fail()}\n",
+    "build.mjs": "import fs from'node:fs';import path from'node:path';import esbuild from'../ui-coss-chat-local/node_modules/esbuild/lib/main.js';const optional=['utils/collections','utils/ai','utils/codemirror/aiGhostText','utils/codemirror/autocomplete','utils/codemirror/linkClickHandler','utils/codemirror/linkAware','utils/common/codemirror','providers/SetAsVariable/context','hooks/usePersistedState','hooks/usePersistedState/PersistedScopeProvider','providers/ReduxStore/slices/collections/actions'];const exact={'providers/Theme':'theme.jsx','providers/Theme/index':'theme.jsx','providers/ReduxStore/slices/collections':'collections.js','providers/ReduxStore/slices/tabs':'tabs.js','utils/common':'common.js','utils/common/platform':'platform.js'};const r=await esbuild.build({entryPoints:['main.jsx'],bundle:true,format:'iife',minify:true,charset:'utf8',loader:{'.js':'jsx','.svg':'text'},define:{'process.env.NODE_ENV':'\"production\"','__TEST__':process.env.TEST?'true':'false'},outfile:process.env.TEST?'runtime.test.js':'delivery/workspace/runtime.js',banner:{js:fs.readFileSync('prelude.js','utf8')},footer:{js:`}catch(e){cleanupOwned();document.body.textContent='本地请求编辑示例暂不可用。';document.body.setAttribute('role','alert')}})();`},metafile:true,plugins:[{name:'fixed-local-source',setup(b){b.onResolve({filter:/^know-your-http-well$/},()=>({path:path.resolve('adapters/http-headers.js')}));b.onResolve({filter:/^@usebruno\\/common$/},()=>({path:path.resolve('adapters/bruno-common.ts')}));b.onResolve({filter:/^(components|providers|ui|utils|hooks|themes|src)\\//},a=>{const imp=a.path;if(exact[imp])return{path:path.resolve('adapters',exact[imp])};if(optional.includes(imp)||imp==='utils/collections/index')return{path:path.resolve('adapters/optional.js')};const p=path.resolve('src',imp.replace(/^src\\//,''));const q=[p,p+'.js',p+'.jsx',p+'.ts',p+'.tsx',p+'/index.js',p+'/index.jsx',p+'/index.ts'].find(x=>fs.existsSync(x)&&fs.statSync(x).isFile());return q?{path:q}:null})}}]});fs.writeFileSync('meta.json',JSON.stringify(r.metafile,null,2));\n"
+  }
+}
