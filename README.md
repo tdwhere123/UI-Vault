@@ -2,7 +2,7 @@
 
 网站：<https://tdwhere123.github.io/UI-Vault/>
 
-当前共收录 **780 条**：其中 **527 条可打开预览（241 条原始素材＋286 条后续接入预览）**，另有 **253 条仅来源记录**，不计入主图鉴预览数。原始 241 件包括 215 件精选界面、20 件保留基础素材、6 套图标系列。正在向 1000 件优质素材扩充；图标按系列单列，字重、尺寸和单枚 glyph 不凑数。已有图标重叠暂留待统一整理。
+当前共收录 **798 条**：其中 **528 条可打开预览（241 条原始素材＋287 条后续接入预览）**，另有 **270 条仅来源记录**，不计入主图鉴预览数。原始 241 件包括 215 件精选界面、20 件保留基础素材、6 套图标系列。正在向 1000 件优质素材扩充；图标按系列单列，字重、尺寸和单枚 glyph 不凑数。已有图标重叠暂留待统一整理。
 
 ## 当前内容
 
@@ -396,3 +396,11 @@ Restored existing PaperCSS four-part collapsible reading example with its origin
 Added **18 source-only families**, including layered forest and SVG drawing scenes, fluid cursor and scroll compositions; topic-centric collaboration, meeting stages and cartographic styling; three visually distinct ink, contour and sculptural brand pages; and one Twemoji art family. The other six sources cover nonlinear story authoring, shared spatial scenes, a material sandbox, linked-note graphs, palette construction and stroke-order practice, with exact limitations retained per record. Whole scenes and icon series are counted once, never each glyph, skin tone, layout or state. Twemoji artwork uses complete CC-BY-4.0, code MIT; original artwork attribution is required. Root licenses do not clear images, fonts, GSAP/plugins, models, data services, permissions or backend behavior.
 
 Current totals: **780 collected = 527 previews + 253 source-only records**. Mapped covers remain 470, with 57 posterless previews on the existing bounded live-card path. Existing entries except the restored PaperCSS record, all Grok covers/reports and the main UI remain unchanged.
+
+## Nested explanations and diverse sources · 528 previews / 798 collected
+
+Restored existing Nutshell as genuine inline nested reading, using a trusted offline excerpt of Nicky Case's text and the original section extraction/bubble renderer. Recursive explanations, inner close/backtracking and rapid reopen preserve reading context rather than becoming ordinary details blocks. The original local render branch is explicitly selected inside the unchanged opaque sandbox; remote resolver, iframe/embed/postMessage and optional Markdown routes are removed. Old embedded DOMPurify 2.3.6 is restricted to built-in trusted fixture with its Apache-2.0 license route; unspecified-version Marked is removed, not silently licensed as CC0. No arbitrary URL/HTML input, media, screenshot or network is enabled. DOM/async-failure/cleanup tests are not native geometry, height animation or visual acceptance.
+
+Added **18 source-only families**: audio/shape and sound-effect workflows, spring reordering, spatial periodic-table and visual synthesis; visual Git lessons, model inspection, transformer narration, decision-boundary experiments, score editing and a query-driven detective story; image enhancement, customer conversation and automation builders, plus three distinctive brand/portfolio pages; one Health Icons professional symbol series. Whole workflows and icon families count once, not each model, preset, glyph or appearance.
+
+Current totals: **798 collected = 528 previews + 270 source-only records**. Mapped covers remain 470; 58 posterless previews use bounded live cards. Existing records except the restored Nutshell item and all Grok covers/reports/main UI are preserved. Public MIT entry paths do not authorize excluded enterprise code or transitive services, AGPL sources still carry source obligations, and music/illustrations/models/fonts require separate closure. Health Icons symbols are static references, not medical decisions or access to health data.
