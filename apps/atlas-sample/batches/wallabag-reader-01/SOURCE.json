@@ -1,0 +1,622 @@
+{
+  "repository": "https://github.com/wallabag/wallabag",
+  "revision": "34c43c18cc9eceb070244db74dd6ad8e4f5011bb",
+  "entry": "templates/Entry/entry.html.twig",
+  "fixedFiles": [
+    {
+      "path": "COPYING.md",
+      "gitBlob": "72b9d5d0f393ef861e033288e82a2696bfb2d1db",
+      "sha256": "9927812ed1d034e6b6ed0c71160b2bf33ececf980947806ddf73993013669496"
+    },
+    {
+      "path": "assets/controllers/add_tag_controller.js",
+      "gitBlob": "2afe9c2b6d45ae7f4856c8742c5a5b2213fb12ab",
+      "sha256": "78f957eb6ca3afdab0fa5f183f6707d6c171683274892037b6f488295d081c38"
+    },
+    {
+      "path": "assets/controllers/annotations_controller.js",
+      "gitBlob": "1fd4308f60eab1266d70dff37020d0643e6d2f7b",
+      "sha256": "b6856a972b8cd9a04252b094355b670cba1b93096562fbe698c9dbc13b0669d9"
+    },
+    {
+      "path": "assets/controllers/batch_edit_controller.js",
+      "gitBlob": "e15fc41c5b13ca94fe1aa04646336844c454d284",
+      "sha256": "2c16731bddeaa1a7e43f353b6ad7a22c30c62aa3f9b3f83a0019235d2cbe77e0"
+    },
+    {
+      "path": "assets/controllers/clipboard_controller.js",
+      "gitBlob": "eba297138f535b83c47a77bf2142fff873ef60cf",
+      "sha256": "2f15066fc5809c8fd957720df440e80c29bac9bea79168d7d07948a180dcee44"
+    },
+    {
+      "path": "assets/controllers/config_controller.js",
+      "gitBlob": "804da826aa6eafe9a1f908681726ceaa6b5be9fa",
+      "sha256": "174634b56b80ba8455a6c4b2125f4063bcc29b6c71baf306f0b27975d3de4dfd"
+    },
+    {
+      "path": "assets/controllers/dark_theme_controller.js",
+      "gitBlob": "fc8b6f514418dd1f4cbbfea3232ac06082f5a570",
+      "sha256": "8a8bb82d65a569b2f60e3d93769f3d4d0959fd16d2da1d1870f73dc0d43b8ca9"
+    },
+    {
+      "path": "assets/controllers/entries_navigation_controller.js",
+      "gitBlob": "52bbb11383069f17314fd682e877f9cec871a79e",
+      "sha256": "990aba561510a20613e33185bdf82026de7f14a6572edbc339981c199abb6354"
+    },
+    {
+      "path": "assets/controllers/fake_radio_controller.js",
+      "gitBlob": "a9426a189516963ef2d4269698dc7eed79c510c3",
+      "sha256": "f696533a8d8b4575d4e48f83c53bb242f5f5f6a66e41c93056079a962a8173f9"
+    },
+    {
+      "path": "assets/controllers/highlight_controller.js",
+      "gitBlob": "805ecf7088702e6c4f4ccdf2c9893f938dc6067f",
+      "sha256": "33ae2a0197e84080ba1ca74bfd5d197b6d3e7e746398f950dc8d4393f699e151"
+    },
+    {
+      "path": "assets/controllers/leftbar_controller.js",
+      "gitBlob": "45728a6f02563045bbb9b02b4213f0771d56bab7",
+      "sha256": "eeb749c8987ef95192aa5b1feab6156df70513176d892da1d6ae9c8f1c340656"
+    },
+    {
+      "path": "assets/controllers/materialize/collapsible_controller.js",
+      "gitBlob": "b9e60f38c697fcc648a2783baf531cb6dc31eda6",
+      "sha256": "a84e702d32e507dbc98bdf43ebe4ed99abf352868539bb68b756a6c614d08570"
+    },
+    {
+      "path": "assets/controllers/materialize/dropdown_controller.js",
+      "gitBlob": "12a209d1637dc3c685a8430a79413e07d9306c2a",
+      "sha256": "e4007cbaae3dca09ddaa7d1ed03a99259bba4b6063b59499c8243b800ba5d844"
+    },
+    {
+      "path": "assets/controllers/materialize/fab_controller.js",
+      "gitBlob": "a3a7a18b9b8748db44202883ae8ca2812845fa8f",
+      "sha256": "c3092b8ed0bb6d78675483f6a3310a210b2946eda63157d231fd79b40efd0792"
+    },
+    {
+      "path": "assets/controllers/materialize/form_select_controller.js",
+      "gitBlob": "3a0fcf374b31745eea6ca7774f70d67abe197b3b",
+      "sha256": "39a02ff6722635b49c58ae7fc55c52bd6423047d54eaa9adf0ed07dbf138cd0d"
+    },
+    {
+      "path": "assets/controllers/materialize/range_controller.js",
+      "gitBlob": "bf018b410ced00935aba21ae486f831cc4ece092",
+      "sha256": "83cc02b02e2d8203fd1c06d21b8cf003be7e89a35927c0a798738af173cfbf67"
+    },
+    {
+      "path": "assets/controllers/materialize/sidenav_controller.js",
+      "gitBlob": "c5c9fbd262b2c2fd8a91cc8885f03828ec6b881d",
+      "sha256": "d90f2fd253bd59e0279639e770830f146a82d974e8afd55a83931ac28b1679c6"
+    },
+    {
+      "path": "assets/controllers/materialize/tabs_controller.js",
+      "gitBlob": "312b486d47b0bb4da1e3f205199430450785bb0c",
+      "sha256": "15e7a874584ddaaed6934e8ddfe029c624f38ceda82289d49cec3dd66205fd6a"
+    },
+    {
+      "path": "assets/controllers/materialize/toast_controller.js",
+      "gitBlob": "8a6a511dcf5b01cf7eb53c79081f1a9a3c14bd96",
+      "sha256": "b589ae27036098aa2bbbb4384ba515c96839f4360ecd09fc093c204e0bbcc003"
+    },
+    {
+      "path": "assets/controllers/materialize/tooltip_controller.js",
+      "gitBlob": "93058bb541dcf6c75714f986e15b1cd1b7fc0499",
+      "sha256": "97416e70ae2008ecdab12a437131a9389c9d069d0d4ea65a14864b7b2cde8527"
+    },
+    {
+      "path": "assets/controllers/materialize/waves_controller.js",
+      "gitBlob": "95f40c3f4370966e37e86b512581f8274b15556b",
+      "sha256": "65c7eb53e47d7c560d5b97ce2b2fb0d196120e9aa12f07db16cf9a976c152b6d"
+    },
+    {
+      "path": "assets/controllers/mathjax_controller.js",
+      "gitBlob": "715001f11a4288a5dcb2fd467c47dc5c80941750",
+      "sha256": "ab5bbf3ec2657e034974098151ec2a5cdf2e533f7889c2e987b053e27c12aec1"
+    },
+    {
+      "path": "assets/controllers/qrcode_controller.js",
+      "gitBlob": "c7818bca765036f0b5bcd6247c60ebbd627d8170",
+      "sha256": "2d36cb719c9e07231a561b3d3900c0b3d3f498949f132668ffa4eef6a1c98fa8"
+    },
+    {
+      "path": "assets/controllers/scroll_indicator_controller.js",
+      "gitBlob": "1fab9b4ed2680444503c3c5216eac673ad792365",
+      "sha256": "2ef48f6f087cf42f0fbf45092317a5be230787d5a3f005117a9e05c796c79a71"
+    },
+    {
+      "path": "assets/controllers/scroll_storage_controller.js",
+      "gitBlob": "2bb6fc14b9f5ad86f9de803021e6317d5c17a0c5",
+      "sha256": "5a92c106bcce35fc0a4ddcb3b9a7b208d74d318d827f0e39f5c2bf02b46b9d25"
+    },
+    {
+      "path": "assets/controllers/shortcuts_controller.js",
+      "gitBlob": "22a71c6670de3e17c89b6610f8690b1e2fa79fdb",
+      "sha256": "7b3403dc9b3774bdb1fd025a1e6d70eb5c5409581a3c1e6afb23eddf5d70eef1"
+    },
+    {
+      "path": "assets/controllers/sticky_nav_controller.js",
+      "gitBlob": "12b405b0ebd9970866342c3b2804ac9a669b7383",
+      "sha256": "25e78c5d4154654ce0a764092472d5cd26e58f8f998888b74a289bb805080fb8"
+    },
+    {
+      "path": "assets/controllers/tag_controller.js",
+      "gitBlob": "3f2b6c0543cf986d977225a73bc80bcdc13060de",
+      "sha256": "ca1a34e4aefda71255f4038a4da94680f7f9cf7a824f9e07a2f26802cf6a0507"
+    },
+    {
+      "path": "assets/controllers/topbar_controller.js",
+      "gitBlob": "e200893ad7e5a6aca3a3aa39a233f7d64e0e1727",
+      "sha256": "0ac05d4caafe9006b53defe13caaabb13f9bcca6a9d2902607fe1e41250b24ac"
+    },
+    {
+      "path": "assets/scss/_article.scss",
+      "gitBlob": "36e8b439a33808ab30b40725c944621c18508612",
+      "sha256": "e12f0ab87356cadc9196ead212dd5b9f5e3a29b41bee9fad4d642dd569408597"
+    },
+    {
+      "path": "assets/scss/_cards.scss",
+      "gitBlob": "cf63f31485a7b5dac06ba1f3e522160ab32e73e3",
+      "sha256": "f240a1a1404e3f6df178e64582a4f8c17607cb97a8e2e6088baed98349d85e1a"
+    },
+    {
+      "path": "assets/scss/_dark_theme.scss",
+      "gitBlob": "1f8f718146611499fb1d56ee12a1f92095dd97e9",
+      "sha256": "58e4a755953db960c2ebd632ec2f826cea4402fcded2628f536704a2b4a96474"
+    },
+    {
+      "path": "assets/scss/_entries.scss",
+      "gitBlob": "00174526dec0af471b422c0b371d6da38b396d8c",
+      "sha256": "af3d50824b85875e6a6b8c8e0b45968661f4fe7ee7712013c2027e2c68ccc95e"
+    },
+    {
+      "path": "assets/scss/_filters.scss",
+      "gitBlob": "299dad3d4601295f410668b04e89d6420abe5efc",
+      "sha256": "e76eb778d21fa60b635705ef39e74f4f33c77f16e27f696a3995bce8b512ceb5"
+    },
+    {
+      "path": "assets/scss/_fonts.scss",
+      "gitBlob": "743f1a841ad5a7875bb59ad7f1bb04d833d9edcb",
+      "sha256": "084ccefa5780332955c9855b5729ac539cca8e09a00360ad2c1696fc6b108219"
+    },
+    {
+      "path": "assets/scss/_icons.scss",
+      "gitBlob": "4b96da0cf93965c2330b4f2b64c6345521899a67",
+      "sha256": "5277ae49de7ee91d1c1f1e231710dde855ef6cb78d21ec199ea2c53a46e19546"
+    },
+    {
+      "path": "assets/scss/_layout.scss",
+      "gitBlob": "b2f72c4257c3a2f3aa738aec8e180770a5b173ff",
+      "sha256": "73544014384f8dc005cf1a3dee0ef923a2cd0007521b96b66d690d13009b8e9e"
+    },
+    {
+      "path": "assets/scss/_material-icons.scss",
+      "gitBlob": "ae9aabcdb784ba530de7831e201e5bc261f906c7",
+      "sha256": "5310774640e7b3f553f13a5a22c24bf0bd72789456ce9b72373ec571a6f398c2"
+    },
+    {
+      "path": "assets/scss/_media_queries.scss",
+      "gitBlob": "26dac7ddb4e2dc40f5a10c510940c2c91d50361f",
+      "sha256": "fd28f8c23b03687907f0d9555704e0cb028b7fb528e169fcc07259357001248e"
+    },
+    {
+      "path": "assets/scss/_nav.scss",
+      "gitBlob": "8d4b5f98d8b559da5dd9215856442bb7b3dcea50",
+      "sha256": "07a2a760b5d65a4850a1d966310090625bab685781311b8a926b3caa0d54e1ab"
+    },
+    {
+      "path": "assets/scss/_print.scss",
+      "gitBlob": "2aae8a221202b58e9e4f078a30a1f859e8b689d6",
+      "sha256": "5ad3d02cf29d9fc691e2a714b813d51fb10aafd28a83c5c41c2d78d73e958c9d"
+    },
+    {
+      "path": "assets/scss/_sidenav.scss",
+      "gitBlob": "8f2be7dd3db685bf9c450a07d776a483e12c2534",
+      "sha256": "d7c3e5f74b8c272b400ffa4c85fb709cffbeea2e55f38ad94fb93c4fb7b93f02"
+    },
+    {
+      "path": "assets/scss/_tag_chip.scss",
+      "gitBlob": "8cf0240574955a6b7299e956814045cccb9c04a1",
+      "sha256": "70cb932fe7986d75352a2bc308a860a24a34e3a66d06cb7909bfd4eb95c28fc3"
+    },
+    {
+      "path": "assets/scss/_utilities.scss",
+      "gitBlob": "f3858bea8b92f5efd6f21684ef65c2f5404ecb54",
+      "sha256": "bd0481c352c57d100ff40e8f889bb37101e4300e45e3bdc6db6f56ea3b134a3a"
+    },
+    {
+      "path": "assets/scss/_variables.scss",
+      "gitBlob": "184991289afb8f0f0b077c58635954a4d8b58f81",
+      "sha256": "c28df95a52a5a4c4e1784cfed8358d22ffff60399b027d5438260d6cc0015163"
+    },
+    {
+      "path": "assets/scss/_various.scss",
+      "gitBlob": "b297fcbfed0b8d1c40e94169f37c4b2369a5320f",
+      "sha256": "0aa46c4f5fe0d68bf86dfbf81d7a8ea259e69d16c0889cbbd4a0f62128bc9542"
+    },
+    {
+      "path": "assets/scss/index.scss",
+      "gitBlob": "0524ecf37039b90a67055859abb0e1f36dc9f2d8",
+      "sha256": "b69f642f68bf1312b12de9e37515d70efc35f20a84d06b0d71f8101472d667b0"
+    },
+    {
+      "path": "assets/scss/share.scss",
+      "gitBlob": "b521cfc5607712d83588959ec3b516db9f3bc61e",
+      "sha256": "ed45537b4ee72b47b2032fd0858ad9f1ba9fddc9c6fad10b5b4d4364bed25d8e"
+    },
+    {
+      "path": "composer.json",
+      "gitBlob": "b0a564189519f8a59dfd78761c9d9468e7cad052",
+      "sha256": "19167fa14d9b5f2e5657192888f7f6aef1bf2524d596602cc0e56bea4d1f69f3"
+    },
+    {
+      "path": "package.json",
+      "gitBlob": "37757db12127c0cb35d3bd72a61e8a0d72c7ee68",
+      "sha256": "e233d4d1a9918f124e999d9bdacabb7f1660ef5dfda16a44f70c8617032f9e1e"
+    },
+    {
+      "path": "templates/Entry/Card/_content.html.twig",
+      "gitBlob": "199fd118e9b18f6d347f3d35f64fa05ee90c68d2",
+      "sha256": "f73fd2491b81d2af6c61b6ea801ed82bd66c42cf2d78b5395cf1dfc7fdb8e72d"
+    },
+    {
+      "path": "templates/Entry/Card/_mass_checkbox.html.twig",
+      "gitBlob": "dbd1d80b806b4fc3c81ed854e4e89499f4908ec6",
+      "sha256": "0b660e1ed677b651ca7665df8a4094855848fec625fbc3a7259054c632087aa3"
+    },
+    {
+      "path": "templates/Entry/_card_actions.html.twig",
+      "gitBlob": "0111f9b0075fdec4d68adacd2b6849e535ccedc5",
+      "sha256": "2e92c880e9e77aaeb66e60685b90145c267eab9acd7a893333b8696ff56e7ced"
+    },
+    {
+      "path": "templates/Entry/_card_full_image.html.twig",
+      "gitBlob": "c09beee6e165f03522ef3b91acf9739a60e9152b",
+      "sha256": "65a526c6914ccdd2cf0fd6f880d3efc3eafd39244c150550f6c685d3a89e5f2f"
+    },
+    {
+      "path": "templates/Entry/_card_list.html.twig",
+      "gitBlob": "2710455f129a78de0ef6ba90e70474ea2bf41226",
+      "sha256": "c50efd6867673091777437fee892f1e6a6ba8107d7dd1e5954d3ead4fb349892"
+    },
+    {
+      "path": "templates/Entry/_card_preview.html.twig",
+      "gitBlob": "0a1cf4f2e516217c03ac8850e5e01cf80a26eee7",
+      "sha256": "96da7d0d35037087ce5887c5b1dc69e759740b3945f130203b064f41c4737581"
+    },
+    {
+      "path": "templates/Entry/_feed_link.html.twig",
+      "gitBlob": "97691c0abf002eb6169c4de432bddf22a7a0ecc9",
+      "sha256": "ce6dbca7869df598eaf67de5913a616b41f325d51886799f17e2db52e2429feb"
+    },
+    {
+      "path": "templates/Entry/_reading_time.html.twig",
+      "gitBlob": "404f69377db944be60a5fae3c6dec725dad14dcb",
+      "sha256": "bde24666c9cb2b88c24f7d242cffa9761bcbb9f9393b34f5700896f515617ff4"
+    },
+    {
+      "path": "templates/Entry/_tags.html.twig",
+      "gitBlob": "9890f6de766a335f4a53a47bdb1e99207fcea451",
+      "sha256": "4f0d29e3cbfbdb0658a33251957ee67f8edf6e9784d7af4f30bea3fe73fccbb0"
+    },
+    {
+      "path": "templates/Entry/_title.html.twig",
+      "gitBlob": "78acd4047eb064c169d8a13b5fd714cdd024e3b6",
+      "sha256": "b87871b3cda388d3f2a199797d6b74987faf77dbdc30afd519c7bcdfcf0ecfd9"
+    },
+    {
+      "path": "templates/Entry/edit.html.twig",
+      "gitBlob": "c4e1cad00bf0c377c644d747bd43fe14d3791aed",
+      "sha256": "27f53aad3e0cf8a6fdfa3b4b4e655b95114a078cd4c442aea3036ce1c51d7dbf"
+    },
+    {
+      "path": "templates/Entry/entries.html.twig",
+      "gitBlob": "c3d9dd872ca976fabd4f8588d877d74a6bd7506c",
+      "sha256": "eaa98682068060ccdce1e004f9df3e16820b052b406b9b4f058b5dd6c22ef3db"
+    },
+    {
+      "path": "templates/Entry/entries.xml.twig",
+      "gitBlob": "b286517b7419b5a8dbe231e5f37ee36ad6d38d81",
+      "sha256": "e7909a23bd4b1d23445c88b8b72bc483c55dca51562496a071f84edfda4b2431"
+    },
+    {
+      "path": "templates/Entry/entry.html.twig",
+      "gitBlob": "f6f301f5bbb793f27ee6817e1a32ebff14ee28dc",
+      "sha256": "225ab2f5cbc2081bfe704f0f69f8f7767fd5039f1846d2024fda1abcd91f7300"
+    },
+    {
+      "path": "templates/Entry/new.html.twig",
+      "gitBlob": "af5666a069f2b2cb28dc9b2da7ee65ebaf0863ae",
+      "sha256": "36dba3f6cbab9cf4cf97b7c11c9173bcecf6c3946ace5d8e2cbe3c74adbdaf9c"
+    },
+    {
+      "path": "templates/Entry/new_form.html.twig",
+      "gitBlob": "f1a9cf45e4d6b5eef81896a94a564202329d9f3a",
+      "sha256": "5a7a4615e17b2e4676c9e08591ab53d917b8eb19c13061f13c288051e673a1d8"
+    },
+    {
+      "path": "templates/Entry/search_form.html.twig",
+      "gitBlob": "ebd10e70ac189e4508fb6d813e73f00ff65527b6",
+      "sha256": "4aafa878d3ae553ece59ccdfd83b205316d039d994e81548c639a383c3483062"
+    },
+    {
+      "path": "templates/Entry/share.html.twig",
+      "gitBlob": "5096e451f63330120b029b8961cb9439acd145b2",
+      "sha256": "0c938e2ed1706434a1a770642b7e145ee784182c6b29828b1dba5000957caa91"
+    },
+    {
+      "path": "templates/base.html.twig",
+      "gitBlob": "ad6f05de8a751e145936104508e27c457d67ca38",
+      "sha256": "37f7c59c91d26127e5f0368427dca802cb7d148658755d8c29cff8dd900d6529"
+    },
+    {
+      "path": "templates/layout.html.twig",
+      "gitBlob": "84d743df55c363d21e8a3e9a9a71f75c61a2f443",
+      "sha256": "a3e12ad327ba84c24cc020b0aad1390d776fd6de064554892d858b2160ace812"
+    },
+    {
+      "path": "assets/index.js",
+      "gitBlob": "baa32c78344ee8be63e6786e5eb94316bab28d56",
+      "sha256": "b33f5925863f90dba81d14cad44607f19d50e0d44d24f9881cba7ebff67876ac"
+    },
+    {
+      "path": "translations/messages.zh.yml",
+      "gitBlob": "fc5fc09389638d3f35fc056546c9476ee89b8013",
+      "sha256": "2b62eec44cab52178d1b701ecf16e6d2a761ae310224e7f8bd6375951ca08ce4"
+    }
+  ],
+  "originalCore": {
+    "templates/Entry/entry.html.twig": "{% extends \"layout.html.twig\" %}\n\n{% block title %}{{ entry.title|striptags|default('entry.default_title'|trans)|raw }} ({{ entry.domainName|removeWww }}){% endblock %}\n\n{% block body_class %}entry{% endblock %}\n\n{% set current_path = path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')) %}\n\n{% block menu %}\n    <div class=\"progress\">\n        <div class=\"determinate\" data-controller=\"scroll-indicator\" data-action=\"scroll@window->scroll-indicator#updateWidth\"></div>\n    </div>\n    <nav class=\"hide-on-large-only\" data-controller=\"sticky-nav\" data-action=\"materialize--fab:click@window->sticky-nav#toggle\">\n        <div class=\"nav-panel-item cyan darken-1\">\n            <ul>\n                <li>\n                    <a href=\"#\" data-target=\"slide-out\" class=\"sidenav-trigger\">\n                        <i class=\"material-icons\">menu</i>\n                    </a>\n                </li>\n                <li>\n                    <a class=\"waves-effect\" href=\"{{ path('homepage') }}\">\n                        <i class=\"material-icons\">arrow_back</i>\n                    </a>\n                </li>\n            </ul>\n            <ul class=\"right\">\n                {% if is_granted('ARCHIVE', entry) %}\n                    <li>\n                        <form action=\"{{ path('archive_entry', {'id': entry.id, redirect: current_path}) }}\" method=\"post\" class=\"inline-block\">\n                            <input type=\"hidden\" name=\"token\" value=\"{{ csrf_token('archive-entry') }}\"/>\n\n                            <button type=\"submit\" class=\"waves-effect\" title=\"{{ 'entry.view.left_menu.set_as_read'|trans }}\">\n                                <i class=\"material-icons small\">{% if entry.isArchived == 0 %}done{% else %}unarchive{% endif %}</i>\n                            </button>\n                        </form>\n                    </li>\n                {% endif %}\n                {% if is_granted('STAR', entry) %}\n                    <li>\n                        <form action=\"{{ path('star_entry', {'id': entry.id, redirect: current_path}) }}\" method=\"post\" class=\"inline-block\">\n                            <input type=\"hidden\" name=\"token\" value=\"{{ csrf_token('star-entry') }}\"/>\n\n                            <button type=\"submit\" class=\"waves-effect\" title=\"{{ 'entry.view.left_menu.set_as_starred'|trans }}\">\n                                <i class=\"material-icons small\">{% if entry.isStarred == 0 %}star_outline{% else %}star{% endif %}</i>\n                            </button>\n                        </form>\n                    </li>\n                {% endif %}\n            </ul>\n        </div>\n    </nav>\n    <ul id=\"slide-out\" class=\"left-bar collapsible sidenav sidenav-fixed reader-mode\" data-controller=\"materialize--sidenav materialize--collapsible leftbar\">\n        <li class=\"bold border-bottom hide-on-med-and-down\">\n            <a class=\"waves-effect collapsible-header\" href=\"{{ path('homepage') }}\">\n                <i class=\"material-icons small\">arrow_back</i>\n                <span>{{ 'entry.view.left_menu.back_to_homepage'|trans }}</span>\n            </a>\n            <div class=\"collapsible-body\"></div>\n        </li>\n\n        <li class=\"bold border-bottom hide-on-med-and-down\">\n            <a class=\"waves-effect collapsible-header original\" href=\"{{ entry.url|e }}\" target=\"_blank\" rel=\"noopener\" data-shortcuts-target=\"openOriginal\">\n                <i class=\"material-icons small\">link</i>\n                <span>{{ 'entry.view.left_menu.view_original_article'|trans }}</span>\n            </a>\n            <div class=\"collapsible-body\"></div>\n        </li>\n\n        {% if is_granted('RELOAD', entry) %}\n            <li class=\"bold\">\n                <form action=\"{{ path('reload_entry', {'id': entry.id}) }}\" method=\"post\">\n                    <input type=\"hidden\" name=\"token\" value=\"{{ csrf_token('reload-entry') }}\"/>\n\n                    <button type=\"submit\" class=\"waves-effect collapsible-header\" onclick=\"return confirm('{{ 'entry.confirm.reload'|trans|escape('js') }}')\" title=\"{{ 'entry.view.left_menu.re_fetch_content'|trans }}\">\n                        <i class=\"material-icons small\">refresh</i>\n                        <span>{{ 'entry.view.left_menu.re_fetch_content'|trans }}</span>\n                    </button>\n                </form>\n                <div class=\"collapsible-body\"></div>\n            </li>\n        {% endif %}\n\n        {% set mark_as_read_label = 'entry.view.left_menu.set_as_unread' %}\n        {% if entry.isArchived == 0 %}\n            {% set mark_as_read_label = 'entry.view.left_menu.set_as_read' %}\n        {% endif %}\n\n        {% if is_granted('ARCHIVE', entry) %}\n            <li class=\"bold hide-on-med-and-down\">\n                <form action=\"{{ path('archive_entry', {'id': entry.id, redirect: current_path}) }}\" method=\"post\">\n                    <input type=\"hidden\" name=\"token\" value=\"{{ csrf_token('archive-entry') }}\"/>\n\n                    <button type=\"submit\" class=\"waves-effect collapsible-header\" title=\"{{ mark_as_read_label|trans }}\" data-shortcuts-target=\"markAsRead\">\n                        <i class=\"material-icons small\">{% if entry.isArchived == 0 %}done{% else %}unarchive{% endif %}</i>\n                        <span>{{ mark_as_read_label|trans }}</span>\n                    </button>\n                </form>\n                <div class=\"collapsible-body\"></div>\n            </li>\n        {% endif %}\n\n        {% if is_granted('STAR', entry) %}\n            <li class=\"bold hide-on-med-and-down\">\n                <form action=\"{{ path('star_entry', {'id': entry.id, redirect: current_path}) }}\" method=\"post\">\n                    <input type=\"hidden\" name=\"token\" value=\"{{ csrf_token('star-entry') }}\"/>\n\n                    <button type=\"submit\" class=\"waves-effect collapsible-header favorite\" title=\"{{ 'entry.view.left_menu.set_as_starred'|trans }}\" data-shortcuts-target=\"markAsFavorite\">\n                        <i class=\"material-icons small\">{% if entry.isStarred == 0 %}star_outline{% else %}star{% endif %}</i>\n                        <span>{{ 'entry.view.left_menu.set_as_starred'|trans }}</span>\n                    </button>\n                </form>\n                <div class=\"collapsible-body\"></div>\n            </li>\n        {% endif %}\n\n        {% if is_granted('DELETE', entry) %}\n            <li class=\"bold border-bottom\">\n                <form action=\"{{ path('delete_entry', {'id': entry.id, redirect: current_path}) }}\" method=\"post\">\n                    <input type=\"hidden\" name=\"token\" value=\"{{ csrf_token('delete-entry') }}\"/>\n\n                    <button type=\"submit\" class=\"waves-effect collapsible-header delete\" onclick=\"return confirm('{{ 'entry.confirm.delete'|trans|escape('js') }}')\" title=\"{{ 'entry.view.left_menu.delete'|trans }}\" data-shortcuts-target=\"deleteEntry\">\n                        <i class=\"material-icons small\">delete</i>\n                        <span>{{ 'entry.view.left_menu.delete'|trans }}</span>\n                    </button>\n                </form>\n                <div class=\"collapsible-body\"></div>\n            </li>\n        {% endif %}\n\n        <li class=\"bold border-bottom\">\n            <a class=\"waves-effect collapsible-header\" id=\"nav-btn-add-tag\" data-action=\"click->materialize--sidenav#close click->leftbar#toggleAddTagForm\">\n                <i class=\"material-icons small\">label_outline</i>\n                <span>{{ 'entry.view.left_menu.add_a_tag'|trans }}</span>\n            </a>\n            <div class=\"collapsible-body\"></div>\n        </li>\n\n        <li class=\"bold\">\n            <a class=\"waves-effect collapsible-header\">\n                <i class=\"material-icons small\">brightness_medium</i>\n                <span>{{ 'entry.view.left_menu.theme_toggle'|trans }}</span>\n            </a>\n            <ul class=\"collapsible-body\">\n                <li>\n                    <a href=\"#\" data-action=\"click->dark-theme#useLight:prevent\">\n                        <i class=\"theme-toggle-icon material-icons tiny\">brightness_high</i>\n                        <span>{{ 'entry.view.left_menu.theme_toggle_light'|trans }}</span>\n                    </a>\n                </li>\n                <li>\n                    <a href=\"#\" data-action=\"click->dark-theme#useDark:prevent\">\n                        <i class=\"theme-toggle-icon material-icons tiny\">brightness_low</i>\n                        <span>{{ 'entry.view.left_menu.theme_toggle_dark'|trans }}</span>\n                    </a>\n                </li>\n                <li>\n                    <a href=\"#\" data-action=\"click->dark-theme#useAuto:prevent\">\n                        <i class=\"theme-toggle-icon material-icons tiny\">brightness_auto</i>\n                        <span>{{ 'entry.view.left_menu.theme_toggle_auto'|trans }}</span>\n                    </a>\n                </li>\n            </ul>\n        </li>\n        {% if craue_setting('share_public') or craue_setting('share_twitter') or craue_setting('share_shaarli') or craue_setting('share_diaspora') or craue_setting('share_unmark') or craue_setting('share_linkding') or craue_setting('share_mail') %}\n        <li class=\"bold\">\n            <a class=\"waves-effect collapsible-header\">\n                <i class=\"material-icons small\">share</i>\n                <span>{{ 'entry.view.left_menu.share_content'|trans }}</span>\n            </a>\n            <div class=\"collapsible-body\">\n                <ul>\n                    {% if craue_setting('share_public') %}\n                        {% if is_granted('SHARE', entry) %}\n                            <li>\n                                <form action=\"{{ path('share', {'id': entry.id}) }}\" method=\"post\">\n                                    <input type=\"hidden\" name=\"token\" value=\"{{ csrf_token('share-entry') }}\"/>\n\n                                    <button type=\"submit\" formtarget=\"_blank\" class=\"btn-link tool icon-eye\" title=\"{{ 'entry.view.left_menu.public_link'|trans }}\">\n                                        <span>{{ 'entry.view.left_menu.public_link'|trans }}</span>\n                                    </button>\n                                </form>\n                            </li>\n                        {% endif %}\n                        {% if is_granted('UNSHARE', entry) %}\n                            <li>\n                                <form action=\"{{ path('delete_share', {'id': entry.id}) }}\" method=\"post\">\n                                    <input type=\"hidden\" name=\"token\" value=\"{{ csrf_token('delete-share') }}\"/>\n\n                                    <button type=\"submit\" class=\"btn-link tool icon-no-eye\" title=\"{{ 'entry.view.left_menu.delete_public_link'|trans }}\">\n                                        <span>{{ 'entry.view.left_menu.delete_public_link'|trans }}</span>\n                                    </button>\n                                </form>\n                            </li>\n                        {% endif %}\n                    {% endif %}\n                    {% if craue_setting('share_twitter') %}\n                        <li>\n                            <a href=\"https://twitter.com/share?text={{ entry.title|striptags|url_encode }}%20{{ entry.url|url_encode }}%20via%20@wallabagapp\" target=\"_blank\" rel=\"noopener\" class=\"tool icon-twitter\" title=\"twitter\">\n                                <span>twitter</span>\n                            </a>\n                        </li>\n                    {% endif %}\n                    {% if craue_setting('share_shaarli') %}\n                        <li>\n                        <a href=\"{{ craue_setting('shaarli_url') }}/index.php?post={{ entry.url|url_encode }}&amp;title={{ entry.title|striptags|url_encode }}&amp;tags={{ entry.tags|join(',')|striptags|url_encode }}{% if craue_setting('shaarli_share_origin_url') %}&amp;original_url={{ entry.originUrl|url_encode }}{% endif %}\" target=\"_blank\" rel=\"noopener\" title=\"shaarli\" class=\"tool icon-image shaarli\">\n                                <span>shaarli</span>\n                            </a>\n                        </li>\n                    {% endif %}\n                    {% if craue_setting('share_diaspora') %}\n                        <li>\n                            <a href=\"{{ craue_setting('diaspora_url') }}/bookmarklet?url={{ entry.url|url_encode }}&amp;title={{ entry.title|striptags|url_encode }}&amp;notes=&amp;v=1&amp;noui=1&amp;jump=doclose\" target=\"_blank\" rel=\"noopener\" class=\"tool icon-image diaspora\" title=\"diaspora\">\n                                <span>diaspora*</span>\n                            </a>\n                        </li>\n                    {% endif %}\n                    {% if craue_setting('share_unmark') %}\n                        <li>\n                            <a href=\"{{ craue_setting('unmark_url') }}/mark/add?url={{ entry.url|url_encode }}&amp;title={{ entry.title|striptags|url_encode }}&amp;v=6\" target=\"_blank\" rel=\"noopener\" class=\"tool icon-image unmark\" title=\"unmark\">\n                                <span>unmark.it</span>\n                            </a>\n                        </li>\n                    {% endif %}\n                    {% if craue_setting('share_linkding') %}\n                        <li>\n                            <a href=\"{{ craue_setting('linkding_url') }}/bookmarks/new?url={{ entry.url|url_encode }}\" target=\"_blank\" rel=\"noopener\" class=\"tool icon-image linkding\" title=\"linkding\">\n                                <span>linkding</span>\n                            </a>\n                        </li>\n                    {% endif %}\n                    {% if craue_setting('share_mail') %}\n                        <li>\n                            <a href=\"mailto:?subject={{ entry.title|striptags|url_encode }}&amp;body={{ entry.url|url_encode }}%20via%20@wallabagapp\" title=\"{{ 'entry.view.left_menu.share_email_label'|trans }}\" class=\"tool icon\">\n                                <i class=\"material-icons\">mail</i>\n                                <span>{{ 'entry.view.left_menu.share_email_label'|trans }}</span>\n                            </a>\n                        </li>\n                    {% endif %}\n                </ul>\n            </div>\n        </li>\n        {% endif %}\n\n        {% if craue_setting('show_printlink') %}\n        <li class=\"bold border-bottom hide-on-med-and-down\">\n            <a class=\"waves-effect collapsible-header\" title=\"{{ 'entry.view.left_menu.print'|trans }}\" href=\"javascript: window.print();\">\n                <i class=\"material-icons small\">print</i>\n                <span>{{ 'entry.view.left_menu.print'|trans }}</span>\n            </a>\n            <div class=\"collapsible-body\"></div>\n        </li>\n        {% endif %}\n\n        {% if is_granted('LIST_ENTRIES') %}\n            <li class=\"bold border-top border-bottom\">\n                <a class=\"waves-effect collapsible-header\" title=\"{{ 'menu.top.random_entry'|trans }}\" href=\"{{ path('random_entry', {'type': 'all'}) }}\">\n                    <i class=\"material-icons small\">casino</i>\n                    <span>{{ 'menu.top.random_entry'|trans }}</span>\n                </a>\n            </li>\n        {% endif %}\n\n        {% if is_granted('EXPORT', entry) %}\n            <li class=\"bold\">\n                <a class=\"waves-effect collapsible-header\">\n                    <i class=\"material-icons small\">file_download</i>\n                    <span>{{ 'entry.view.left_menu.export'|trans }}</span>\n                </a>\n                <div class=\"collapsible-body\">\n                    <ul>\n                        {% if craue_setting('export_epub') %}<li><a href=\"{{ path('export_entry', {entry: entry.id, 'format': 'epub'}) }}\" title=\"Generate ePub file\">EPUB</a></li>{% endif %}\n                        {% if craue_setting('export_pdf') %}<li><a href=\"{{ path('export_entry', {entry: entry.id, 'format': 'pdf'}) }}\" title=\"Generate PDF file\">PDF</a></li>{% endif %}\n                        {% if craue_setting('export_csv') %}<li><a href=\"{{ path('export_entry', {entry: entry.id, 'format': 'csv'}) }}\" title=\"Generate CSV file\">CSV</a></li>{% endif %}\n                        {% if craue_setting('export_json') %}<li><a href=\"{{ path('export_entry', {entry: entry.id, 'format': 'json'}) }}\" title=\"Generate JSON file\">JSON</a></li>{% endif %}\n                        {% if craue_setting('export_txt') %}<li><a href=\"{{ path('export_entry', {entry: entry.id, 'format': 'txt'}) }}\" title=\"Generate TXT file\">TXT</a></li>{% endif %}\n                        {% if craue_setting('export_xml') %}<li><a href=\"{{ path('export_entry', {entry: entry.id, 'format': 'xml'}) }}\" title=\"Generate XML file\">XML</a></li>{% endif %}\n                        {% if craue_setting('export_md') %}<li><a href=\"{{ path('export_entry', {entry: entry.id, 'format': 'md'}) }}\" title=\"Generate MD file\">Markdown</a></li>{% endif %}\n                    </ul>\n                </div>\n            </li>\n        {% endif %}\n\n        <li class=\"bold\">\n            <a class=\"waves-effect collapsible-header\" href=\"{{ generate_article_reporting_url(entry) }}\" title=\"{{ 'entry.view.left_menu.problem.description'|trans }}\">\n                <i class=\"material-icons small\">error</i>\n                <span>{{ 'entry.view.left_menu.problem.label'|trans }}</span>\n            </a>\n            <div class=\"collapsible-body\"></div>\n        </li>\n\n    </ul>\n\n{% endblock %}\n\n{% block content %}\n    <div id=\"article\" class=\"article\" data-controller=\"scroll-storage\" data-scroll-storage-entry-id-value=\"{{ entry.id }}\" data-action=\"scroll@window->scroll-storage#saveScroll\">\n        <header>\n            <h1>\n                <span{% if entry.language is defined and entry.language is not null %} lang=\"{{ entry.getHTMLLanguage() }}\"{% endif %}>{{ entry.title|striptags|default('entry.default_title'|trans)|raw }}</span>\n                {% if is_granted('EDIT', entry) %}\n                    <a class=\"title-edit\" href=\"{{ path('edit', {'id': entry.id}) }}\" title=\"{{ 'entry.view.edit_title'|trans }}\"><i class=\"material-icons grey-text\">create</i></a>\n                {% endif %}\n            </h1>\n        </header>\n        <aside class=\"entry-info\">\n            <div class=\"tools entry-tools grey-text\" dir=\"auto\">\n                <ul class=\"stats\">\n                    <li>\n                        {% include \"Entry/_reading_time.html.twig\" with {'entry': entry} only %}\n                    </li>\n                    <li>\n                        <i class=\"material-icons grey-text\" title=\"{{ 'entry.view.created_at'|trans }}\">today</i>\n                        {{ entry.createdAt|date('Y-m-d H:i') }}\n                    </li>\n                    {% if entry.publishedAt is not null %}\n                    <li>\n                        <i class=\"material-icons grey-text\" title=\"{{ 'entry.view.published_at'|trans }}\">create</i>\n                        {{ entry.publishedAt|date('Y-m-d H:i') }}\n                    </li>\n                    {% endif %}\n                    {% if entry.publishedBy is not empty %}\n                        <li>\n                            <i class=\"material-icons grey-text\" title=\"{{ 'entry.view.published_by'|trans }}\">person</i>\n                            {% for author in entry.publishedBy %}\n                                {{ author|raw }}{% if not loop.last %}, {% endif %}\n                            {% endfor %}\n                        </li>\n                    {% endif %}\n                    <li>\n                        <i class=\"material-icons grey-text\">link</i>\n                        <a href=\"{{ entry.url|e }}\" target=\"_blank\" rel=\"noopener\" title=\"{{ 'entry.view.original_article'|trans }} : {{ entry.title|striptags }}\" class=\"tool grey-text\">\n                            {{ entry.domainName|removeWww }}\n                        </a>\n                    </li>\n                    {% if entry.annotations|length %}\n                        <li>\n                            <i class=\"material-icons grey-text\">comment</i>\n                            {{ 'entry.view.annotations_on_the_entry'|trans({'%count%': entry.annotations|length}) }}\n                        </li>\n                    {% endif %}\n                    {% if entry.originUrl is not empty %}\n                        <li>\n                            <i class=\"material-icons grey-text\" title=\"{{ 'entry.view.provided_by'|trans }}\">launch</i>\n                            <a href=\"{{ entry.originUrl|e }}\" target=\"_blank\" rel=\"noopener\" class=\"tool grey-text\" data-tests=\"entry-origin-url\">\n                                {{ entry.originUrl|striptags|removeSchemeAndWww|u.truncate(32) }}\n                            </a>\n                        </li>\n                    {% endif %}\n                </ul>\n                {% include \"Entry/_tags.html.twig\" with {'tags': entry.tags, 'entryId': entry.id, 'withRemove': is_granted('UNTAG', entry)} only %}\n            </div>\n\n            {% if is_granted('TAG', entry) %}\n                <div class=\"input-field hidden\" data-controller=\"add-tag\" data-action=\"leftbar:toggleAddTagForm@window->add-tag#toggle\">\n                    {{ render(controller('Wallabag\\\\Controller\\\\TagController::addTagFormAction', {'id': entry.id})) }}\n                </div>\n            {% endif %}\n\n        </aside>\n        <article\n            {% if entry.language is defined and entry.language is not null %} lang=\"{{ entry.getHTMLLanguage() }}\"{% endif %}\n            data-controller=\"mathjax highlight annotations\"\n            data-annotations-entry-id-value=\"{{ entry.id }}\"\n            data-annotations-create-url-value=\"{{ path('annotations_post_annotation', {'entry': entry.id}) }}\"\n            data-annotations-update-url-value=\"{{ path('annotations_put_annotation', {'annotation': 'idAnnotation'}) }}\"\n            data-annotations-destroy-url-value=\"{{ path('annotations_delete_annotation', {'annotation': 'idAnnotation'}) }}\"\n            data-annotations-search-url-value=\"{{ path('annotations_get_annotations', {'entry': entry.id}) }}\"\n        >\n            {{ entry.content|raw }}\n        </article>\n\n        <div class=\"fixed-action-btn hide-on-large-only\" data-controller=\"materialize--fab\" data-action=\"scroll@window->materialize--fab#autoDisplay click->materialize--fab#click\">\n            <a class=\"btn-floating btn-large\" data-toggle=\"actions\">\n              <i class=\"material-icons\">menu</i>\n            </a>\n            <ul>\n                {% if is_granted('ARCHIVE', entry) %}\n                    <li>\n                      <form action=\"{{ path('archive_entry', {'id': entry.id, redirect: current_path}) }}\" method=\"post\" class=\"inline-block\">\n                          <input type=\"hidden\" name=\"token\" value=\"{{ csrf_token('archive-entry') }}\"/>\n\n                          <button type=\"submit\" class=\"btn-floating\">\n                              <i class=\"material-icons\">{% if entry.isArchived == 0 %}done{% else %}unarchive{% endif %}</i>\n                          </button>\n                      </form>\n                    </li>\n                {% endif %}\n                {% if is_granted('STAR', entry) %}\n                    <li>\n                      <form action=\"{{ path('star_entry', {'id': entry.id, redirect: current_path}) }}\" method=\"post\" class=\"inline-block\">\n                          <input type=\"hidden\" name=\"token\" value=\"{{ csrf_token('star-entry') }}\"/>\n\n                          <button type=\"submit\" class=\"btn-floating\">\n                              <i class=\"material-icons\">{% if entry.isStarred == 0 %}star_outline{% else %}star{% endif %}</i>\n                          </button>\n                      </form>\n                    </li>\n                {% endif %}\n                {% if is_granted('DELETE', entry) %}\n                    <li>\n                      <form action=\"{{ path('delete_entry', {'id': entry.id, redirect: current_path}) }}\" method=\"post\" class=\"inline-block\">\n                          <input type=\"hidden\" name=\"token\" value=\"{{ csrf_token('delete-entry') }}\"/>\n\n                          <button type=\"submit\" class=\"btn-floating\" onclick=\"return confirm('{{ 'entry.confirm.delete'|trans|escape('js') }}')\">\n                              <i class=\"material-icons\">delete</i>\n                          </button>\n                      </form>\n                    </li>\n                {% endif %}\n            </ul>\n        </div>\n    </div>\n{% endblock %}\n\n{% block footer %}\n\n        <style>\n            {{ app.user.config.customCSS|raw }}\n        </style>\n\n{% endblock %}\n",
+    "templates/layout.html.twig": "{% extends \"base.html.twig\" %}\n\n{% set current_route = app.request.attributes.get('_route') %}\n{% set current_route_from_query_params = app.request.query.get('currentRoute') %}\n\n{% set active_route = null %}\n{% if current_route == 'all' or current_route_from_query_params == 'all' %}\n   {% set active_route = 'all' %}\n{% elseif current_route == 'annotated' or current_route_from_query_params == 'annotated' %}\n   {% set active_route = 'annotated' %}\n{% elseif current_route == 'archive' or current_route_from_query_params == 'archive' %}\n   {% set active_route = 'archive' %}\n{% elseif current_route == 'starred' or current_route_from_query_params == 'starred' %}\n   {% set active_route = 'starred' %}\n{% elseif current_route == 'unread' or current_route_from_query_params == 'unread' %}\n   {% set active_route = 'unread' %}\n{% elseif current_route == 'untagged' %}\n   {% set active_route = 'untagged' %}\n{% endif %}\n\n{% block css %}\n    {{ parent() }}\n\n    {{ encore_entry_link_tags('main') }}\n{% endblock %}\n\n{% block scripts %}\n    {{ parent() }}\n\n    {{ encore_entry_script_tags('main') }}\n{% endblock %}\n\n{% block header %}\n{% endblock %}\n\n{% block messages %}\n    {% for flash_message in app.session.flashbag.get('notice') %}\n        <p class=\"hidden\" data-controller=\"materialize--toast\">{{ flash_message|trans }}</p>\n    {% endfor %}\n{% endblock %}\n\n{% block body_class %}index{% endblock %}\n\n{% block menu %}\n    <nav class=\"cyan darken-1\">\n        <ul id=\"slide-out\" class=\"left-bar sidenav sidenav-fixed\" data-controller=\"materialize--sidenav\">\n            {% block logo %}\n                <li class=\"logo border-bottom\">\n                    {% if is_granted('LIST_ENTRIES') %}\n                        <a title=\"{{ 'menu.left.back_to_homepage'|trans }}\" href=\"{{ path('homepage') }}\">\n                            <img src=\"{{ asset('img/logo-square.svg') }}\" alt=\"wallabag logo\" />\n                        </a>\n                    {% else %}\n                        <img src=\"{{ asset('img/logo-square.svg') }}\" alt=\"wallabag logo\"/>\n                    {% endif %}\n                </li>\n            {% endblock %}\n\n            {% if is_granted('LIST_ENTRIES') %}\n                <li class=\"bold {% if active_route == 'unread' %}active{% endif %}\">\n                    <a class=\"waves-effect\" href=\"{{ path('unread') }}\">{{ 'menu.left.unread'|trans }} <span class=\"items-number grey-text\">{{ count_entries('unread') }}</span></a>\n                </li>\n                <li class=\"bold {% if active_route == 'starred' %}active{% endif %}\">\n                    <a class=\"waves-effect\" href=\"{{ path('starred') }}\">{{ 'menu.left.starred'|trans }} <span class=\"items-number grey-text\">{{ count_entries('starred') }}</span></a>\n                </li>\n                <li class=\"bold {% if active_route == 'archive' %}active{% endif %}\">\n                    <a class=\"waves-effect\" href=\"{{ path('archive') }}\">{{ 'menu.left.archive'|trans }} <span class=\"items-number grey-text\">{{ count_entries('archive') }}</span></a>\n                </li>\n                <li class=\"bold {% if active_route == 'annotated' %}active{% endif %}\">\n                    <a class=\"waves-effect\" href=\"{{ path('annotated') }}\">{{ 'menu.left.with_annotations'|trans }} <span class=\"items-number grey-text\">{{ count_entries('annotated') }}</span></a>\n                </li>\n                <li class=\"bold {% if active_route == 'all' %}active{% endif %}\">\n                    <a class=\"waves-effect\" href=\"{{ path('all') }}\">{{ 'menu.left.all_articles'|trans }} <span class=\"items-number grey-text\">{{ count_entries('all') }}</span></a>\n                </li>\n            {% endif %}\n            {% if is_granted('LIST_TAGS') %}\n                <li class=\"bold {% if current_route == 'tags' %}active{% endif %}\">\n                    <a class=\"waves-effect\" href=\"{{ path('tag') }}\">{{ 'menu.left.tags'|trans }} <span class=\"items-number grey-text\">{{ count_tags() }}</span></a>\n                </li>\n            {% endif %}\n        </ul>\n        <div class=\"nav-panels\" data-controller=\"topbar\">\n            <div class=\"nav-panel-item\" data-topbar-target=\"actions\">\n                <div class=\"nav-panel-top\">\n                    <a href=\"#\" data-target=\"slide-out\" class=\"sidenav-trigger\"><i class=\"material-icons\">menu</i></a>\n                    <h1 class=\"left action\">\n                        {% block title %}\n                        {% endblock %}\n                    </h1>\n                </div>\n                <ul class=\"input-field nav-panel-button\">\n                    <li class=\"bold toggle-add-url-container\">\n                        <a class=\"waves-effect toggle-add-url\" data-controller=\"materialize--tooltip\" data-materialize--tooltip-position-value=\"bottom\" data-materialize--tooltip-enter-delay-value=\"50\" data-tooltip=\"{{ 'menu.top.add_new_entry'|trans }}\" href=\"{{ path('new') }}\" data-action=\"topbar#showAddUrl:prevent:stop\" data-shortcuts-target=\"showAddUrl\">\n                            <i class=\"material-icons\">add</i>\n                        </a>\n                    </li>\n                    <li>\n                        <a class=\"waves-effect\" data-controller=\"materialize--tooltip\" data-materialize--tooltip-position-value=\"bottom\" data-materialize--tooltip-enter-delay-value=\"50\" data-tooltip=\"{{ 'menu.top.search'|trans }}\" href=\"javascript: void(null);\" data-action=\"topbar#showSearch:prevent:stop\" data-shortcuts-target=\"showSearch\">\n                            <i class=\"material-icons\">search</i>\n                        </a>\n                    </li>\n                    {% block nav_panel_extra_actions '' %}\n                    <li class=\"bold\">\n                        <a class=\"waves-effect dropdown-trigger\" data-controller=\"materialize--dropdown materialize--tooltip\" data-target=\"dropdown-account\" data-materialize--tooltip-position-value=\"bottom\" data-materialize--tooltip-enter-delay-value=\"50\" data-tooltip=\"{{ 'menu.top.account'|trans }}\" href=\"#\" id=\"news_menu\">\n                            <i class=\"material-icons\" id=\"news_link\">account_circle</i>\n                        </a>\n                    </li>\n                </ul>\n                <ul id=\"dropdown-account\" class=\"dropdown-content\">\n                    {% if is_granted('EDIT_CONFIG') %}\n                        <li><a href=\"{{ path('config') }}\"><i class=\"material-icons\">settings</i> {{ 'menu.left.config'|trans }}</a></li>\n                    {% endif %}\n                    <li><a href=\"{{ path('developer') }}\"><i class=\"material-icons\">smartphone</i> {{ 'menu.left.developer'|trans }}</a></li>\n                    {% if is_granted('IMPORT_ENTRIES') %}\n                        <li><a href=\"{{ path('import') }}\"><i class=\"material-icons\">import_export</i> {{ 'menu.left.import'|trans }}</a></li>\n                    {% endif %}\n                    {% if craue_setting('restricted_access') and is_granted('LIST_SITE_CREDENTIALS') %}\n                        <li><a href=\"{{ path('site_credentials_index') }}\"><i class=\"material-icons\">vpn_key</i> {{ 'menu.left.site_credentials'|trans }}</a></li>\n                    {% endif %}\n                    <li class=\"divider\"></li>\n                    {% set can_list_user = is_granted('LIST_USERS') %}\n                    {% set is_super_admin = is_granted('ROLE_SUPER_ADMIN') %}\n                    {% set can_list_ignore_origin_instance_rules = is_granted('LIST_IGNORE_ORIGIN_INSTANCE_RULES') %}\n                    {% if can_list_user %}\n                        <li><a href=\"{{ path('user_index') }}\"><i class=\"material-icons\">people</i>{{ 'menu.left.users_management'|trans }}</a></li>\n                    {% endif %}\n                    {% if is_super_admin %}\n                        <li><a href=\"{{ path('craue_config_settings_modify') }}\"><i class=\"material-icons\">settings</i> {{ 'menu.left.internal_settings'|trans }}</a></li>\n                    {% endif %}\n                    {% if can_list_ignore_origin_instance_rules %}\n                        <li><a href=\"{{ path('ignore_origin_instance_rules_index') }}\"><i class=\"material-icons\">build</i> {{ 'menu.left.ignore_origin_instance_rules'|trans }}</a></li>\n                    {% endif %}\n                    {% if can_list_user or is_super_admin or can_list_ignore_origin_instance_rules %}\n                        <li class=\"divider\"></li>\n                    {% endif %}\n                    <li>\n                        <a href=\"#\" data-action=\"click->dark-theme#useLight:prevent\">\n                            <i class=\"theme-toggle-icon material-icons tiny\">brightness_high</i>\n                            <span>{{ 'menu.left.theme_toggle_light'|trans }}</span>\n                        </a>\n                    </li>\n                    <li>\n                        <a href=\"#\" data-action=\"click->dark-theme#useDark:prevent\">\n                            <i class=\"theme-toggle-icon material-icons tiny\">brightness_low</i>\n                            <span>{{ 'menu.left.theme_toggle_dark'|trans }}</span>\n                        </a>\n                    </li>\n                    <li>\n                        <a href=\"#\" data-action=\"click->dark-theme#useAuto:prevent\">\n                            <i class=\"theme-toggle-icon material-icons tiny\">brightness_auto</i>\n                            <span>{{ 'menu.left.theme_toggle_auto'|trans }}</span>\n                        </a>\n                    </li>\n                    <li class=\"divider\"></li>\n                    <li><a href=\"{{ path('howto') }}\"><i class=\"material-icons\">live_help</i> {{ 'menu.left.howto'|trans }}</a></li>\n                    <li><a href=\"{{ path('quickstart') }}\"><i class=\"material-icons\">assistant_photo</i> {{ 'menu.left.quickstart'|trans }}</a></li>\n                    <li class=\"divider\"></li>\n                    <li><a href=\"{{ path('fos_user_security_logout') }}\"><i class=\"material-icons\">input</i> {{ 'menu.left.logout'|trans }}</a></li>\n                </ul>\n\n            </div>\n            {% if is_granted('LIST_ENTRIES') %}\n                {{ render(controller('Wallabag\\\\Controller\\\\EntryController::searchFormAction', {'currentRoute': current_route})) }}\n            {% endif %}\n            {% if is_granted('CREATE_ENTRIES') %}\n                {{ render(controller('Wallabag\\\\Controller\\\\EntryController::addEntryFormAction')) }}\n            {% endif %}\n        </div>\n    </nav>\n{% endblock %}\n\n{% block footer %}\n    <footer class=\"page-footer cyan darken-2\">\n        <div class=\"footer-copyright\">\n            <div class=\"container\">\n                <div class=\"row\">\n                    <div class=\"col m12 l8\">\n                        <p class=\"footer-text\">\n                            {{ display_stats() }}\n                        </p>\n                    </div>\n                    <div class=\"col s12 l4\">\n                        <p class=\"footer-text\">\n                            {{ 'footer.wallabag.powered_by'|trans }} <a target=\"_blank\" rel=\"noopener\" href=\"https://wallabag.org\" class=\"grey-text text-lighten-4\">wallabag</a> –\n                            <a class=\"grey-text text-lighten-4\" href=\"{{ path('about') }}\">{{ 'footer.wallabag.about'|trans|lower }}</a>\n                        </p>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </footer>\n{% endblock %}\n",
+    "templates/base.html.twig": "<!DOCTYPE html>\n{% set lang = app.request.locale|default('') -%}\n<html{% if lang is not empty %} lang=\"{{ lang }}\"{% endif %} class=\"{{ theme_class() }}\" data-controller=\"dark-theme shortcuts\" data-shortcuts-entries-navigation-outlet=\"[data-controller~='entries-navigation']\">\n    <head>\n        {% block head %}\n            <meta name=\"viewport\" content=\"initial-scale=1.0\">\n            <meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />\n            <meta name=\"referrer\" content=\"strict-origin-when-cross-origin\">\n            <link rel=\"apple-touch-icon\" type=\"image/png\" href=\"{{ asset('img/appicon/apple-touch-icon-152.png') }}\" sizes=\"152x152\">\n            <link rel=\"icon\" type=\"image/png\" href=\"{{ asset('img/appicon/apple-touch-icon-152.png') }}\" sizes=\"152x152\">\n\n            <link rel=\"apple-touch-icon\" type=\"image/png\" href=\"{{ asset('img/appicon/apple-touch-icon-144.png') }}\" sizes=\"144x144\">\n            <link rel=\"icon\" type=\"image/png\" href=\"{{ asset('img/appicon/apple-touch-icon-144.png') }}\" sizes=\"144x144\">\n\n            <link rel=\"apple-touch-icon\" type=\"image/png\" href=\"{{ asset('img/appicon/apple-touch-icon-120.png') }}\" sizes=\"120x120\">\n            <link rel=\"icon\" type=\"image/png\" href=\"{{ asset('img/appicon/apple-touch-icon-120.png') }}\" sizes=\"120x120\">\n\n            <link rel=\"apple-touch-icon\" type=\"image/png\" href=\"{{ asset('img/appicon/apple-touch-icon-114.png') }}\" sizes=\"114x114\">\n            <link rel=\"icon\" type=\"image/png\" href=\"{{ asset('img/appicon/apple-touch-icon-114.png') }}\" sizes=\"114x114\">\n\n            <link rel=\"apple-touch-icon\" type=\"image/png\" href=\"{{ asset('img/appicon/apple-touch-icon-76.png') }}\" sizes=\"76x76\">\n            <link rel=\"icon\" type=\"image/png\" href=\"{{ asset('img/appicon/apple-touch-icon-76.png') }}\" sizes=\"76x76\">\n\n            <link rel=\"apple-touch-icon\" type=\"image/png\" href=\"{{ asset('img/appicon/apple-touch-icon-72.png') }}\" sizes=\"72x72\">\n            <link rel=\"icon\" type=\"image/png\" href=\"{{ asset('img/appicon/apple-touch-icon-72.png') }}\" sizes=\"72x72\">\n\n            <link rel=\"apple-touch-icon\" type=\"image/png\" href=\"{{ asset('img/appicon/apple-touch-icon-57.png') }}\" sizes=\"57x57\">\n            <link rel=\"icon\" type=\"image/png\" href=\"{{ asset('img/appicon/apple-touch-icon-57.png') }}\" sizes=\"57x57\">\n\n            <link rel=\"apple-touch-icon\" type=\"image/png\" href=\"{{ asset('img/appicon/apple-touch-icon.png') }}\">\n            <link rel=\"icon\" type=\"image/png\" href=\"{{ asset('img/appicon/apple-touch-icon.png') }}\">\n\n            <link rel=\"icon\" type=\"image/x-icon\" href=\"{{ asset('favicon.ico') }}\">\n\n            <link rel=\"manifest\" href=\"{{ asset('manifest.json') }}\">\n\n            {% block css %}\n            {% endblock %}\n            {% if asset_file_exists('custom.css') %}\n                <link rel=\"stylesheet\" href=\"{{ asset('custom.css') }}\">\n            {% endif %}\n            {% block scripts %}\n            <script src=\"{{ asset('bundles/fosjsrouting/js/router.js') }}\"></script>\n            <script src=\"{{ path('fos_js_routing_js', {callback: 'fos.Router.setData'}) }}\"></script>\n            {% endblock %}\n\n            <title>{% block title %}{% endblock %} – wallabag</title>\n        {% endblock %}\n    </head>\n\n    <body class=\"{% block body_class %}{% endblock %}\" data-controller=\"materialize--waves\">\n        {% block header %}{% endblock %}\n\n        <div id=\"main\">\n            {% block menu %}{% endblock %}\n\n            <main>\n                {% block precontent %}{% endblock %}\n\n                {% block messages %}{% endblock %}\n\n                <div id=\"content\" dir=\"auto\">\n                    {% block content %}{% endblock %}\n                </div>\n            </main>\n        </div>\n\n        {% block footer %}{% endblock %}\n\n        {% if craue_setting('matomo_enabled') %}\n            {{ matomo(craue_setting('matomo_host'), craue_setting('matomo_site_id')) }}\n        {% endif %}\n    </body>\n</html>\n",
+    "assets/controllers/dark_theme_controller.js": "import { Controller } from '@hotwired/stimulus';\n\nexport default class extends Controller {\n  connect() {\n    this.mql = window.matchMedia('(prefers-color-scheme: dark)');\n    this.handleThemeChange = this.#choose.bind(this);\n    this.mql.addEventListener('change', this.handleThemeChange);\n\n    this.#choose();\n  }\n\n  disconnect() {\n    this.mql.removeEventListener('change', this.handleThemeChange);\n  }\n\n  useLight() {\n    this.element.classList.remove('dark-theme');\n    document.cookie = 'theme=light;samesite=Lax;path=/;max-age=31536000';\n  }\n\n  useDark() {\n    this.element.classList.add('dark-theme');\n    document.cookie = 'theme=dark;samesite=Lax;path=/;max-age=31536000';\n  }\n\n  useAuto() {\n    document.cookie = 'theme=auto;samesite=Lax;path=/;max-age=0';\n    this.#choose();\n  }\n\n  #choose() {\n    const themeCookieExists = document.cookie.split(';').some((cookie) => cookie.trim().startsWith('theme='));\n\n    if (themeCookieExists) {\n      return;\n    }\n\n    if (this.mql.matches) {\n      this.element.classList.add('dark-theme');\n    } else {\n      this.element.classList.remove('dark-theme');\n    }\n  }\n}\n",
+    "assets/controllers/scroll_indicator_controller.js": "import { Controller } from '@hotwired/stimulus';\n\nexport default class extends Controller {\n  updateWidth() {\n    const referenceHeight = document.body.offsetHeight - window.innerHeight;\n    const scrollPercent = (window.scrollY / referenceHeight) * 100;\n\n    this.element.style.width = `${scrollPercent}%`;\n  }\n}\n",
+    "assets/controllers/materialize/collapsible_controller.js": "import { Controller } from '@hotwired/stimulus';\nimport M from '@materializecss/materialize';\n\nexport default class extends Controller {\n  static values = {\n    accordion: { type: Boolean, default: true },\n  };\n\n  connect() {\n    this.instance = M.Collapsible.init(this.element, { accordion: this.accordionValue });\n  }\n\n  disconnect() {\n    this.instance.destroy();\n  }\n}\n",
+    "assets/controllers/materialize/sidenav_controller.js": "import { Controller } from '@hotwired/stimulus';\nimport M from '@materializecss/materialize';\n\nconst mobileMaxWidth = 993;\n\nexport default class extends Controller {\n  static values = {\n    edge: { type: String, default: 'left' },\n  };\n\n  connect() {\n    this.instance = M.Sidenav.init(this.element, { edge: this.edgeValue });\n  }\n\n  close() {\n    if (window.innerWidth < mobileMaxWidth) {\n      this.instance.close();\n    }\n  }\n\n  disconnect() {\n    this.instance.destroy();\n  }\n}\n"
+  },
+  "changes": [
+    "Original fixed Entry/entry.html.twig extends original layout.html.twig/base.html.twig and includes original _tags/_reading_time. Truly rendered by Twig.js1.17.1 compatible Twig interpreter at build time, not hand-drawn HTML and not a claim to run Symfony/PHP. Translation uses original Chinese YAML; Symfony helpers and entry data are explicit local fixture functions.",
+    "Original fictional Chinese article rendered intact through entry.content. Read-only grant flags false: no account, editing, archive/star persistence, upload, comment/annotation service, export/share or external fetch. The original optional empty-annotation/origin/media branches are used, not photos removed from a real saved article.",
+    "Original desktop/mobile sidenav and collapsible theme menu use Materialize1.2.2 original components, original Stimulus3.2.2 controllers. Only required Materialize cash/component/global/Collapsible/Sidenav modules included. Original unused throttle/Underscore path removed, no algorithm rewritten.",
+    "Same Anime.js2.2.0 original official unminified source is used instead of Materialize embedded compiled copy; animation engine version/algorithm retained and no legacy compiler polyfill bundled. Original cash-dom1.3.5 embedded source preserved with complete matching MIT.",
+    "Original theme controller class changes and system matchMedia behavior retained; its cookie read/write replaced with instance-local preference. Original progress formula gets bounded0..100 and zero-height guard. Reduced-motion uses actual Materialize duration0; hidden pauses tracked timers/RAF and blocks user actions.",
+    "Original SCSS compiled by Sass1.93.2 and Materialize original SCSS; unneeded font-face and IcoMoon/social-image rules excluded. Unused Polymer preloader SCSS not compiled. Normalize7.0.0 and Waves0.7.6 CSS original full MIT retained. No CSS url()/font downloads.",
+    "Material font glyphs are explicitly replaced with approved Lucide-static0.468.0 original inline SVG, not claimed identical original glyph shapes. Exact mapping/hash/sourceSVG retained here. Original button/menu spacing and classes stay. Body font uses explicit system fallback.",
+    "Original empty mobile FAB (no granted actions) omitted; original actual mobile sidenav trigger stays. Add-tag/back/report/original/tag links disabled because no corresponding services/routes; no fake success. Original annotations/math/highlight/scroll-storage and full-site shortcut controllers not registered.",
+    "Owned exit unloads Stimulus controllers and destroys Materialize instances/overlays; cancels Anime and tracked tasks, disconnects observers/listeners, restores global M/cash and document theme; retained old anchors lose href.",
+    "Only runtime/docs/notices seven text files public; complete fixed originals/build/adapter/test source stays local, no ZIP upload claim."
+  ],
+  "dependencies": [
+    {
+      "name": "@hotwired/stimulus",
+      "version": "3.2.2",
+      "scope": "emitted-js",
+      "declaredLicense": "MIT",
+      "licenseFiles": [
+        {
+          "name": "LICENSE.md",
+          "sha256": "a769701f9591876e54a2d50b3a0d90f6d3393e4561b738932667f85a0558b7bd"
+        }
+      ]
+    },
+    {
+      "name": "@materializecss/materialize",
+      "version": "1.2.2",
+      "scope": "selected-original-js-and-compiled-css",
+      "declaredLicense": "MIT",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "20ab3407df4d2cf116be802ff41a19f853250701a4150337092bae214b996279"
+        }
+      ]
+    },
+    {
+      "name": "cash-dom",
+      "version": "1.3.5",
+      "scope": "embedded-cash1.3.5-original",
+      "declaredLicense": "MIT",
+      "licenseFiles": [
+        {
+          "name": "LICENSE.md",
+          "sha256": "6cb44fa635e58c65c39c255c279b9932cfba698776640fe919c3ac9f8a1d1795"
+        }
+      ]
+    },
+    {
+      "name": "animejs",
+      "version": "2.2.0",
+      "scope": "emitted-js-official-unminified-same-version",
+      "declaredLicense": "MIT",
+      "licenseFiles": [
+        {
+          "name": "LICENSE.md",
+          "sha256": "0bda6cd181c145424f41bff72aaeef459a0910d5c0de44ffa3a3a11af6c71c1d"
+        }
+      ]
+    },
+    {
+      "name": "normalize.css",
+      "version": "7.0.0",
+      "scope": "embedded-compiled-css",
+      "declaredLicense": "MIT",
+      "licenseFiles": [
+        {
+          "name": "LICENSE.md",
+          "sha256": "89a9a9ace8be9e79bdc962823479bf980e4a14777ebe51b37e669f658e6f25ef"
+        }
+      ]
+    },
+    {
+      "name": "node-waves",
+      "version": "0.7.6",
+      "scope": "embedded-compiled-css-only",
+      "declaredLicense": "MIT",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "754848e680baef4e50a2843ca6abc74f50be2a23b9ebf713f6d09c02a6907c96"
+        }
+      ]
+    },
+    {
+      "name": "lucide-static",
+      "version": "0.468.0",
+      "scope": "original-svg-replacement",
+      "declaredLicense": "ISC",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "1e7290b35280a048667bbf0ebabac1c7fd52a75300e8b2946ac165715997f2bc"
+        }
+      ]
+    },
+    {
+      "name": "twig",
+      "version": "1.17.1",
+      "scope": "build-time-template-renderer-only",
+      "declaredLicense": "BSD-2-Clause",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "b79420f4f8261913a5c9735f1a055b20d70eb76875ac53367a4f694c11bc3e91"
+        }
+      ]
+    }
+  ],
+  "icons": [
+    {
+      "originalFontName": "menu",
+      "replacement": "menu",
+      "package": "lucide-static@0.468.0",
+      "sha256": "a8da12c1e9b80d9f70001e957ab7e8464d9ad676975702f07d86da8fb47ecdf3",
+      "originalSvg": "<!-- @license lucide-static v0.468.0 - ISC -->\n<svg\n  class=\"lucide lucide-menu\"\n  xmlns=\"http://www.w3.org/2000/svg\"\n  width=\"24\"\n  height=\"24\"\n  viewBox=\"0 0 24 24\"\n  fill=\"none\"\n  stroke=\"currentColor\"\n  stroke-width=\"2\"\n  stroke-linecap=\"round\"\n  stroke-linejoin=\"round\"\n>\n  <line x1=\"4\" x2=\"20\" y1=\"12\" y2=\"12\" />\n  <line x1=\"4\" x2=\"20\" y1=\"6\" y2=\"6\" />\n  <line x1=\"4\" x2=\"20\" y1=\"18\" y2=\"18\" />\n</svg>\n"
+    },
+    {
+      "originalFontName": "arrow_back",
+      "replacement": "arrow-left",
+      "package": "lucide-static@0.468.0",
+      "sha256": "e31ed0af85ffbed2b54f78f37af197c3b84b24e776cba1d27613d6a9ad555a16",
+      "originalSvg": "<!-- @license lucide-static v0.468.0 - ISC -->\n<svg\n  class=\"lucide lucide-arrow-left\"\n  xmlns=\"http://www.w3.org/2000/svg\"\n  width=\"24\"\n  height=\"24\"\n  viewBox=\"0 0 24 24\"\n  fill=\"none\"\n  stroke=\"currentColor\"\n  stroke-width=\"2\"\n  stroke-linecap=\"round\"\n  stroke-linejoin=\"round\"\n>\n  <path d=\"m12 19-7-7 7-7\" />\n  <path d=\"M19 12H5\" />\n</svg>\n"
+    },
+    {
+      "originalFontName": "arrow_back",
+      "replacement": "arrow-left",
+      "package": "lucide-static@0.468.0",
+      "sha256": "e31ed0af85ffbed2b54f78f37af197c3b84b24e776cba1d27613d6a9ad555a16",
+      "originalSvg": "<!-- @license lucide-static v0.468.0 - ISC -->\n<svg\n  class=\"lucide lucide-arrow-left\"\n  xmlns=\"http://www.w3.org/2000/svg\"\n  width=\"24\"\n  height=\"24\"\n  viewBox=\"0 0 24 24\"\n  fill=\"none\"\n  stroke=\"currentColor\"\n  stroke-width=\"2\"\n  stroke-linecap=\"round\"\n  stroke-linejoin=\"round\"\n>\n  <path d=\"m12 19-7-7 7-7\" />\n  <path d=\"M19 12H5\" />\n</svg>\n"
+    },
+    {
+      "originalFontName": "link",
+      "replacement": "link",
+      "package": "lucide-static@0.468.0",
+      "sha256": "4032cd46290556330c5438075a1502b7e0355ec0369f851fb2d51098a2e7d82a",
+      "originalSvg": "<!-- @license lucide-static v0.468.0 - ISC -->\n<svg\n  class=\"lucide lucide-link\"\n  xmlns=\"http://www.w3.org/2000/svg\"\n  width=\"24\"\n  height=\"24\"\n  viewBox=\"0 0 24 24\"\n  fill=\"none\"\n  stroke=\"currentColor\"\n  stroke-width=\"2\"\n  stroke-linecap=\"round\"\n  stroke-linejoin=\"round\"\n>\n  <path d=\"M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71\" />\n  <path d=\"M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71\" />\n</svg>\n"
+    },
+    {
+      "originalFontName": "label_outline",
+      "replacement": "tag",
+      "package": "lucide-static@0.468.0",
+      "sha256": "96b1bc84e7fcfdfd2839e9057b76327f8ad80854fb96ef11a4f120b49cec4e1c",
+      "originalSvg": "<!-- @license lucide-static v0.468.0 - ISC -->\n<svg\n  class=\"lucide lucide-tag\"\n  xmlns=\"http://www.w3.org/2000/svg\"\n  width=\"24\"\n  height=\"24\"\n  viewBox=\"0 0 24 24\"\n  fill=\"none\"\n  stroke=\"currentColor\"\n  stroke-width=\"2\"\n  stroke-linecap=\"round\"\n  stroke-linejoin=\"round\"\n>\n  <path d=\"M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z\" />\n  <circle cx=\"7.5\" cy=\"7.5\" r=\".5\" fill=\"currentColor\" />\n</svg>\n"
+    },
+    {
+      "originalFontName": "brightness_medium",
+      "replacement": "sun-moon",
+      "package": "lucide-static@0.468.0",
+      "sha256": "dc60dad4bee802e0ac3ddaac3b2baffde0579a55c837f8b39a080eda9f831646",
+      "originalSvg": "<!-- @license lucide-static v0.468.0 - ISC -->\n<svg\n  class=\"lucide lucide-sun-moon\"\n  xmlns=\"http://www.w3.org/2000/svg\"\n  width=\"24\"\n  height=\"24\"\n  viewBox=\"0 0 24 24\"\n  fill=\"none\"\n  stroke=\"currentColor\"\n  stroke-width=\"2\"\n  stroke-linecap=\"round\"\n  stroke-linejoin=\"round\"\n>\n  <path d=\"M12 8a2.83 2.83 0 0 0 4 4 4 4 0 1 1-4-4\" />\n  <path d=\"M12 2v2\" />\n  <path d=\"M12 20v2\" />\n  <path d=\"m4.9 4.9 1.4 1.4\" />\n  <path d=\"m17.7 17.7 1.4 1.4\" />\n  <path d=\"M2 12h2\" />\n  <path d=\"M20 12h2\" />\n  <path d=\"m6.3 17.7-1.4 1.4\" />\n  <path d=\"m19.1 4.9-1.4 1.4\" />\n</svg>\n"
+    },
+    {
+      "originalFontName": "brightness_high",
+      "replacement": "sun",
+      "package": "lucide-static@0.468.0",
+      "sha256": "f067e7494a29d825168ef4285d1eb66ef3cd57c33778fd67528247e377a5ff89",
+      "originalSvg": "<!-- @license lucide-static v0.468.0 - ISC -->\n<svg\n  class=\"lucide lucide-sun\"\n  xmlns=\"http://www.w3.org/2000/svg\"\n  width=\"24\"\n  height=\"24\"\n  viewBox=\"0 0 24 24\"\n  fill=\"none\"\n  stroke=\"currentColor\"\n  stroke-width=\"2\"\n  stroke-linecap=\"round\"\n  stroke-linejoin=\"round\"\n>\n  <circle cx=\"12\" cy=\"12\" r=\"4\" />\n  <path d=\"M12 2v2\" />\n  <path d=\"M12 20v2\" />\n  <path d=\"m4.93 4.93 1.41 1.41\" />\n  <path d=\"m17.66 17.66 1.41 1.41\" />\n  <path d=\"M2 12h2\" />\n  <path d=\"M20 12h2\" />\n  <path d=\"m6.34 17.66-1.41 1.41\" />\n  <path d=\"m19.07 4.93-1.41 1.41\" />\n</svg>\n"
+    },
+    {
+      "originalFontName": "brightness_low",
+      "replacement": "moon",
+      "package": "lucide-static@0.468.0",
+      "sha256": "5e5c866dd82fbea5c03e00c778fa283c6efc8c37db3b7937824fe0b8ad5382f7",
+      "originalSvg": "<!-- @license lucide-static v0.468.0 - ISC -->\n<svg\n  class=\"lucide lucide-moon\"\n  xmlns=\"http://www.w3.org/2000/svg\"\n  width=\"24\"\n  height=\"24\"\n  viewBox=\"0 0 24 24\"\n  fill=\"none\"\n  stroke=\"currentColor\"\n  stroke-width=\"2\"\n  stroke-linecap=\"round\"\n  stroke-linejoin=\"round\"\n>\n  <path d=\"M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z\" />\n</svg>\n"
+    },
+    {
+      "originalFontName": "brightness_auto",
+      "replacement": "monitor",
+      "package": "lucide-static@0.468.0",
+      "sha256": "3ef31ab3ab45c174485e0c1dfc3bd3b54ae51cb74df8230a0e136d78ca580efd",
+      "originalSvg": "<!-- @license lucide-static v0.468.0 - ISC -->\n<svg\n  class=\"lucide lucide-monitor\"\n  xmlns=\"http://www.w3.org/2000/svg\"\n  width=\"24\"\n  height=\"24\"\n  viewBox=\"0 0 24 24\"\n  fill=\"none\"\n  stroke=\"currentColor\"\n  stroke-width=\"2\"\n  stroke-linecap=\"round\"\n  stroke-linejoin=\"round\"\n>\n  <rect width=\"20\" height=\"14\" x=\"2\" y=\"3\" rx=\"2\" />\n  <line x1=\"8\" x2=\"16\" y1=\"21\" y2=\"21\" />\n  <line x1=\"12\" x2=\"12\" y1=\"17\" y2=\"21\" />\n</svg>\n"
+    },
+    {
+      "originalFontName": "error",
+      "replacement": "circle-alert",
+      "package": "lucide-static@0.468.0",
+      "sha256": "2c65a5c03a73d3115ce493779f82af98d94f0d72facf1d97c61ea08566bb401c",
+      "originalSvg": "<!-- @license lucide-static v0.468.0 - ISC -->\n<svg\n  class=\"lucide lucide-circle-alert\"\n  xmlns=\"http://www.w3.org/2000/svg\"\n  width=\"24\"\n  height=\"24\"\n  viewBox=\"0 0 24 24\"\n  fill=\"none\"\n  stroke=\"currentColor\"\n  stroke-width=\"2\"\n  stroke-linecap=\"round\"\n  stroke-linejoin=\"round\"\n>\n  <circle cx=\"12\" cy=\"12\" r=\"10\" />\n  <line x1=\"12\" x2=\"12\" y1=\"8\" y2=\"12\" />\n  <line x1=\"12\" x2=\"12.01\" y1=\"16\" y2=\"16\" />\n</svg>\n"
+    },
+    {
+      "originalFontName": "timer",
+      "replacement": "timer",
+      "package": "lucide-static@0.468.0",
+      "sha256": "05ef0be35f3b298f6845bb6f96f2405422ed88ea41d72b55ebb9f5e6875d4a00",
+      "originalSvg": "<!-- @license lucide-static v0.468.0 - ISC -->\n<svg\n  class=\"lucide lucide-timer\"\n  xmlns=\"http://www.w3.org/2000/svg\"\n  width=\"24\"\n  height=\"24\"\n  viewBox=\"0 0 24 24\"\n  fill=\"none\"\n  stroke=\"currentColor\"\n  stroke-width=\"2\"\n  stroke-linecap=\"round\"\n  stroke-linejoin=\"round\"\n>\n  <line x1=\"10\" x2=\"14\" y1=\"2\" y2=\"2\" />\n  <line x1=\"12\" x2=\"15\" y1=\"14\" y2=\"11\" />\n  <circle cx=\"12\" cy=\"14\" r=\"8\" />\n</svg>\n"
+    },
+    {
+      "originalFontName": "today",
+      "replacement": "calendar-days",
+      "package": "lucide-static@0.468.0",
+      "sha256": "b91ebeecee30b2b6f9258f4fdf25c5fc91adbd265bf071139774dea2f9e51ac7",
+      "originalSvg": "<!-- @license lucide-static v0.468.0 - ISC -->\n<svg\n  class=\"lucide lucide-calendar-days\"\n  xmlns=\"http://www.w3.org/2000/svg\"\n  width=\"24\"\n  height=\"24\"\n  viewBox=\"0 0 24 24\"\n  fill=\"none\"\n  stroke=\"currentColor\"\n  stroke-width=\"2\"\n  stroke-linecap=\"round\"\n  stroke-linejoin=\"round\"\n>\n  <path d=\"M8 2v4\" />\n  <path d=\"M16 2v4\" />\n  <rect width=\"18\" height=\"18\" x=\"3\" y=\"4\" rx=\"2\" />\n  <path d=\"M3 10h18\" />\n  <path d=\"M8 14h.01\" />\n  <path d=\"M12 14h.01\" />\n  <path d=\"M16 14h.01\" />\n  <path d=\"M8 18h.01\" />\n  <path d=\"M12 18h.01\" />\n  <path d=\"M16 18h.01\" />\n</svg>\n"
+    },
+    {
+      "originalFontName": "link",
+      "replacement": "link",
+      "package": "lucide-static@0.468.0",
+      "sha256": "4032cd46290556330c5438075a1502b7e0355ec0369f851fb2d51098a2e7d82a",
+      "originalSvg": "<!-- @license lucide-static v0.468.0 - ISC -->\n<svg\n  class=\"lucide lucide-link\"\n  xmlns=\"http://www.w3.org/2000/svg\"\n  width=\"24\"\n  height=\"24\"\n  viewBox=\"0 0 24 24\"\n  fill=\"none\"\n  stroke=\"currentColor\"\n  stroke-width=\"2\"\n  stroke-linecap=\"round\"\n  stroke-linejoin=\"round\"\n>\n  <path d=\"M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71\" />\n  <path d=\"M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71\" />\n</svg>\n"
+    }
+  ],
+  "adaptedHashes": {
+    "src/sidenav.js": "88649e283afb1ab6c89f0805ba9f00470c56d7321f92838a9ded940f2de767fb",
+    "src/theme.js": "f85a7690604a167f29d87798713938cdc6d584bf1615a7fddc3dd8d390868835",
+    "src/materialize.js": "d34f673f51802e22e9759d381df83490189be0da4c35c6778a743c1373bb53c6",
+    "src/collapsible.js": "846e07f0b2af57fdaa05796898ca0f4c35e10ad9bc17209efaac3a0edba9415d",
+    "src/body.html": "35e2a38d21e0c6da5db7a4b9873e2308efca66ad3c5d8dc7758bdbbd4be76bf4",
+    "src/progress.js": "9596f4af5f17dc0de6e577756e2ff5bf699a998c2fddccf2c588b314eefd2274",
+    "src/sticky.js": "25e78c5d4154654ce0a764092472d5cd26e58f8f998888b74a289bb805080fb8",
+    "src/main.js": "0d55a05d9c06288522398e997e63067e0a102145722f6664a2f7231b7e2843a6",
+    "src/scss/_utilities.scss": "bd0481c352c57d100ff40e8f889bb37101e4300e45e3bdc6db6f56ea3b134a3a",
+    "src/scss/_variables.scss": "c28df95a52a5a4c4e1784cfed8358d22ffff60399b027d5438260d6cc0015163",
+    "src/scss/_sidenav.scss": "d7c3e5f74b8c272b400ffa4c85fb709cffbeea2e55f38ad94fb93c4fb7b93f02",
+    "src/scss/_entries.scss": "af3d50824b85875e6a6b8c8e0b45968661f4fe7ee7712013c2027e2c68ccc95e",
+    "src/scss/index.scss": "062e089f0c4369666babd871e6c0ced15b3f5a15f64d056a84e682ade202da98",
+    "src/scss/_print.scss": "5ad3d02cf29d9fc691e2a714b813d51fb10aafd28a83c5c41c2d78d73e958c9d",
+    "src/scss/_tag_chip.scss": "70cb932fe7986d75352a2bc308a860a24a34e3a66d06cb7909bfd4eb95c28fc3",
+    "src/scss/_icons.scss": "3812900274e6243c8b451e558f61c801f127648758cba26813715ac7b188788c",
+    "src/scss/_article.scss": "e12f0ab87356cadc9196ead212dd5b9f5e3a29b41bee9fad4d642dd569408597",
+    "src/scss/_media_queries.scss": "fd28f8c23b03687907f0d9555704e0cb028b7fb528e169fcc07259357001248e",
+    "src/scss/_fonts.scss": "084ccefa5780332955c9855b5729ac539cca8e09a00360ad2c1696fc6b108219",
+    "src/scss/_material-icons.scss": "5310774640e7b3f553f13a5a22c24bf0bd72789456ce9b72373ec571a6f398c2",
+    "src/scss/_filters.scss": "e76eb778d21fa60b635705ef39e74f4f33c77f16e27f696a3995bce8b512ceb5",
+    "src/scss/_nav.scss": "07a2a760b5d65a4850a1d966310090625bab685781311b8a926b3caa0d54e1ab",
+    "src/scss/_cards.scss": "f240a1a1404e3f6df178e64582a4f8c17607cb97a8e2e6088baed98349d85e1a",
+    "src/scss/_dark_theme.scss": "58e4a755953db960c2ebd632ec2f826cea4402fcded2628f536704a2b4a96474",
+    "src/scss/share.scss": "ed45537b4ee72b47b2032fd0858ad9f1ba9fddc9c6fad10b5b4d4364bed25d8e",
+    "src/scss/_layout.scss": "73544014384f8dc005cf1a3dee0ef923a2cd0007521b96b66d690d13009b8e9e",
+    "src/scss/_various.scss": "0aa46c4f5fe0d68bf86dfbf81d7a8ea259e69d16c0889cbbd4a0f62128bc9542"
+  },
+  "buildHashes": {
+    "render.mjs": "ac0082695388bb4bac388bb9c3b83d44e839676cfe65c6112f18da3513c02847",
+    "rendered.html": "7c3b845680ee6e051aeb53729372718e1f79ea440b879bcfc7d2fa8bd042de35",
+    "prepare.mjs": "43a6ee5e16765990eef73dbbe1fbfaedcdf702bb7afba28e9b6a3b3f73ab0ce1",
+    "build.mjs": "cbfeb35158942ec32cc5e521bdf8b281632e8b77671a707c275d5f84f81475c9",
+    "deps/package-lock.json": "4301bbfa61013ea2f2f749686fbe81943e75faf8102e29e3ac0ba5d8835a2dcf"
+  },
+  "commands": [
+    "node render.mjs",
+    "node prepare.mjs",
+    "node build.mjs",
+    "node test.mjs"
+  ],
+  "publication": "7 files only; full source local."
+}
