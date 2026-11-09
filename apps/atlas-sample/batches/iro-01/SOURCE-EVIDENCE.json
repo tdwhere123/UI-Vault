@@ -1,0 +1,119 @@
+{
+  "repository": "https://github.com/jaames/iro.js",
+  "revision": "9f0ae6c8dc22fd819885731966357f06fa0b4943",
+  "version": "5.5.2",
+  "rootLicenseSHA256": "4b89d4518bd135ab4ee154a7bce722246b57a98c3d7efc1a09409898160c2bd1",
+  "originalDemo": {
+    "path": "demo/demo.js",
+    "sha256": "2d5575e7dc03f6519dfe8431387259cd7691344d065a976f2b89d22f48b124de"
+  },
+  "upstreamFiles": [
+    {
+      "path": "src/Box.tsx",
+      "sha256": "4bb2a5e34a5fd18584d31ea09a8056f11fc48915a2aa948cf6dc517496b9047f"
+    },
+    {
+      "path": "src/ColorPicker.tsx",
+      "sha256": "3a027188eee1a4dc58a310fd521faab5dab6bfda8ceb640763801c392e44e02e"
+    },
+    {
+      "path": "src/ComponentTypes.ts",
+      "sha256": "ee274571ee28f07b1cc3f6d28ebda8c8b08a54d3b3be9843884ad97596911933"
+    },
+    {
+      "path": "src/ComponentWrapper.tsx",
+      "sha256": "fa9a2b78d0590ba12a15278195980fcb390c0c4cb29cc3163662b3d9ebc5b047"
+    },
+    {
+      "path": "src/Handle.tsx",
+      "sha256": "f73d78ac2d1d06dc9109ab7e60796aa1593f3bf68fe8abb1f06aa30775cdf5ec"
+    },
+    {
+      "path": "src/Slider.tsx",
+      "sha256": "f505affec8ca7a8529e55bce7fa6a7b4f62101c6f1c3f5795f660498c743b89d"
+    },
+    {
+      "path": "src/Wheel.tsx",
+      "sha256": "a568eb934552a6e3683483a6d626255f2e3d39900c02021f9040d803544f95be"
+    },
+    {
+      "path": "src/createWidget.ts",
+      "sha256": "87e6154abd5a7dac6aef0e140fc4d8440f1a07c1ca93efb75c20a236802557e6"
+    },
+    {
+      "path": "src/index.d.ts",
+      "sha256": "2687924eeb8c58bcf144800e45e396ba4477730a1bd98e646dc86ec43710d536"
+    },
+    {
+      "path": "src/index.ts",
+      "sha256": "dbdfee65c3c4d6259dca5f776ba0d77ba402805d8ff9e5e699cfe913e297d986"
+    }
+  ],
+  "modifiedMPLFiles": [
+    "ComponentWrapper.tsx",
+    "createWidget.ts"
+  ],
+  "core": {
+    "version": "1.2.1",
+    "registry": "https://registry.npmjs.org/@irojs/iro-core/-/iro-core-1.2.1.tgz",
+    "mapSha256": "df155551a63804bd27c209dd9db7f66eb96bcccb1924797081b18f93ef23b994",
+    "preferredSource": "All seven source-map sourcesContent entries published verbatim in public-source/src/core, index.ts is local export aggregator",
+    "sources": [
+      {
+        "path": "../src/color.ts",
+        "sha256": "39bc31e7847446574bfcf25f87228df9d4ef0a61a206a10c5cbce69e9b02d5c9"
+      },
+      {
+        "path": "../src/slider.ts",
+        "sha256": "289409903f44450cfa27ec2291755f6ad06f35d9d8330114a1205d10943bcc02"
+      },
+      {
+        "path": "../src/wheel.ts",
+        "sha256": "686e803033afc3f1e7b2094e736ea9d10bef45dad9f97916ca326623bfbbf1f2"
+      },
+      {
+        "path": "../src/box.ts",
+        "sha256": "be273ceb215d42fa066fbdbfca1229a9fb22893198d216f6d78d3638bbae2ced"
+      },
+      {
+        "path": "../src/util.ts",
+        "sha256": "b894fa51292a36520b28959a8cd79a50ee2008a9b683c426ed02d39e94b386c0"
+      },
+      {
+        "path": "../src/css.ts",
+        "sha256": "706c80dc4c422ea94145a6dc5980ef0f90b75e302d85f644f9e1517ea0d9d645"
+      },
+      {
+        "path": "../src/colorPickerOptions.ts",
+        "sha256": "b0f7250dc8ab1dc62b182bf476f2ecadaf504e900fb4cd6b1d9f285900374d8f"
+      }
+    ]
+  },
+  "dependencyVersions": {
+    "preact": "10.0.0",
+    "@irojs/iro-core": "1.2.1",
+    "esbuild": "0.25.0 (build only)"
+  },
+  "runtimeInputs": [
+    "node_modules/preact/dist/preact.module.js",
+    "src/core/color.ts",
+    "src/core/slider.ts",
+    "src/core/wheel.ts",
+    "src/core/box.ts",
+    "src/core/util.ts",
+    "src/core/css.ts",
+    "src/core/colorPickerOptions.ts",
+    "src/core/index.ts",
+    "src/upstream/ComponentTypes.ts",
+    "src/upstream/ComponentWrapper.tsx",
+    "src/upstream/Handle.tsx",
+    "src/upstream/Slider.tsx",
+    "src/upstream/Box.tsx",
+    "src/upstream/Wheel.tsx",
+    "src/upstream/createWidget.ts",
+    "src/upstream/ColorPicker.tsx",
+    "src/upstream/index.ts",
+    "src/demo-options.ts",
+    "src/host.ts"
+  ]
+}
