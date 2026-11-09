@@ -11236,16 +11236,16 @@
     "license": "MIT (original project code; runtime dependency audit pending)",
     "description": "原版组件面板、画布拖放、字段编辑、层级大纲和历史；官方Bento等内容块可组合为说明页。仅源码收集，尚无离线预览。",
     "previewStatus": "source-only",
-    "buildStatus": "not installed or built; selected original source files collected",
+    "buildStatus": "source-only; official npm 0.24.0 no-iframe minimal mount pilot passed in JSDOM; complete dependency/interaction audit unfinished",
     "sourceScope": "Selected exact source + full root license + package metadata + commit/tree evidence; NOT full repository/archive or closed runtime",
     "batch": "source-review-514",
     "gaps": [
-      "默认AutoFrame访问contentDocument；官方iframe.enabled=false普通div/EditPage分支源码已确认，但尚未运行验证现有opaque sandbox/CSP。",
-      "官方初始fixture有Unsplash图片、GitHub/Cloud CTA；媒体许可不由MIT推定，预览应移除外链/换明确本地fixture",
-      "demo Next工作区别名、Tiptap/DnD依赖较大，尚未安装或构建；所有运行依赖license/NOTICE尚待闭合",
-      "发布按钮/保存必须仅本地内存，不接Puck Cloud；字体/remote CSS/CSP资源路径未完成审计",
-      "仅精确选定源码与根许可已核；未安装/构建/完成全依赖审核，不计入可查看图鉴。",
-      "本地来源证据不冒称完整仓库ZIP已公开；封面交Grok处理，暂无真实本地预览。"
+      "官方iframe.enabled=false最小Heading配置已实际挂载，无内iframe、网络/Worker调用；这不是完整Bento设计或原生浏览器/拖放验收。",
+      "试验运行源为npm @puckeditor/core0.24.0固定integrity，发布包无gitHead；不能将固定仓库源码SHA冒称其精确构建来源。",
+      "侧栏localStorage读取在opaque环境被捕获并产生warning，尚未禁用持久化；正式交付须覆盖resize/读写。",
+      "实际81个运行包许可未逐一闭合；react-remove-scroll-bar缺显式根许可文件需实际版本补证，不等于已被判不可用。",
+      "拖放、字段编辑、删除、历史/取消、重复挂载与订阅/定时器清理未完整验证。",
+      "官方复杂配置媒体/Cloud/发布路径仍待门控；仅源码候选，不增加可查看计数，封面交Grok。"
     ],
     "website": "https://github.com/puckeditor/puck",
     "completedPreviewCount": 0,
@@ -11291,5 +11291,89 @@
     "sourceCollectionReady": true,
     "runtimeRedistributionAuditComplete": false,
     "publicationReady": false
+  },
+  {
+    "id": "cossui:group-chat-demo",
+    "title": "Coss UI · 原版群聊消息状态与成员协作",
+    "source": "Coss UI (formerly Origin UI)",
+    "revision": "fe6ffa81f434a4afe1c01564c13bb237564c42e2",
+    "upstream": "https://github.com/cosscom/ui/blob/fe6ffa81f434a4afe1c01564c13bb237564c42e2/apps/ui/registry/default/chat-demo/chat-demo.tsx",
+    "sourceFile": "apps/ui/registry/default/chat-demo/chat-demo.tsx",
+    "license": "MIT (root code only; complete runtime dependency notices not yet audited)",
+    "category": "Agent与对话",
+    "kind": "完整交互场景",
+    "description": "原版气泡/回复定位/反应与回执详情/成员抽屉/mention输入及失败恢复组合；官方本地模拟群聊，不连接服务。",
+    "buildStatus": "source-only; selected fixed source and full root MIT read; not installed/built/runtime-tested",
+    "gaps": [
+      "Base UI/React/Motion/Lucide及Tailwind实际依赖闭包与全部许可证待锁定审核，根MIT不是全依赖许可结论。",
+      "contenteditable/Selection、clipboard回退、焦点/滚动/窄屏Drawer路径待实际离线CSP验证。",
+      "已读fixture以字母头像/Unicode emoji为主，全部导入资产未穷尽；不授权下载原网站图片/字体。",
+      "原有五类timeout卸载清理，仍需重复发送/重试/情境切换/回复目标删除/hidden与退出的真实状态测试。",
+      "官方群成员/送达/重试仅本地demo，不是真实消息、账号权限或管理后台。",
+      "未构建、无本地preview/封面，不计入可直接查看图鉴。"
+    ],
+    "repository": "https://github.com/cosscom/ui",
+    "website": "https://github.com/cosscom/ui",
+    "batch": "source-review-next-514",
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "sourceScope": "Selected fixed source and full root MIT only; no complete archive or runtime license closure",
+    "licenseEvidence": {
+      "url": "https://github.com/cosscom/ui/blob/fe6ffa81f434a4afe1c01564c13bb237564c42e2/LICENSE",
+      "sha256": "de22ec57b0822d87d5d67d5c7d12b4c0060cd6404a78f2555fbf15497540be23",
+      "scope": "Root project code only; full dependency/media audit pending"
+    }
+  },
+  {
+    "id": "openmoji:exodus-selection",
+    "title": "OpenMoji · Exodus 精选 120 基形",
+    "source": "OpenMoji",
+    "upstream": "https://github.com/hfg-gmuend/openmoji/tree/f9fc506a3f913be9897ab0181d611d4c910a4104",
+    "revision": "f9fc506a3f913be9897ab0181d611d4c910a4104",
+    "version": "17.0.0",
+    "website": "https://openmoji.org/",
+    "preview": "batches/openmoji-01/index.html",
+    "category": "图标系列",
+    "kind": "图标系列",
+    "format": "图标系列",
+    "license": "CC-BY-SA-4.0",
+    "browserVisualQA": "not-run",
+    "selectedBaseCount": 120,
+    "publishedSVGCount": 240,
+    "styleCounts": {
+      "color": 120,
+      "black": 120
+    },
+    "collectionScope": "curated selection, not full collection",
+    "description": "精选交流情绪、文档资料、任务时间与协作工具的 120 基形，保留原 color/black SVG、作者与CC BY-SA署名；合为1图标系列。",
+    "buildStatus": "DOM interaction and all 240 original SVG byte/tree verification passed; browser visual QA not run",
+    "previewStatus": "DOM-tested; visual-pending",
+    "gaps": [
+      "Browser visual QA not run; DOM SVG tree fidelity is tested, not a pixel screenshot.",
+      "Curated 120 bases / 240 color-black SVGs, not the complete 4495-icon OpenMoji collection.",
+      "Original offline viewer shell; upstream graphics and metadata remain CC BY-SA 4.0 with visible attribution and ShareAlike terms.",
+      "图形和元数据CC BY-SA4.0（完整条款/署名/相同方式共享），浏览壳单独MIT；不能把合成运行包笼统称MIT。",
+      "iframe内署名链接仅核href属性，沙箱可能阻止新窗，未宣称点击成功；外层来源/网站链接保留。",
+      "120精选不是完整4495，也不是全球唯一语义数；240图形不拆为UI条目，无封面图片。"
+    ],
+    "knownGaps": [
+      "Browser visual QA not run; DOM SVG tree fidelity is tested, not a pixel screenshot.",
+      "Curated 120 bases / 240 color-black SVGs, not the complete 4495-icon OpenMoji collection.",
+      "Original offline viewer shell; upstream graphics and metadata remain CC BY-SA 4.0 with visible attribution and ShareAlike terms."
+    ],
+    "viewerLicense": "MIT",
+    "batch": "openmoji-01",
+    "styleTags": [
+      "彩色",
+      "粗描边"
+    ],
+    "purposeTags": [
+      "Agent工作流",
+      "图标浏览"
+    ],
+    "behavior": "原120基形/240彩色与黑白SVG及逐作者署名完整保留，本地24项分页、原分组/hexcode/标签搜索、两样式查看与readonly原文；不引上游LGPL助手代码。"
   }
 ]
