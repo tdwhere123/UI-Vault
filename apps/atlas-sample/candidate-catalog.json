@@ -12938,35 +12938,32 @@
   },
   {
     "id": "copilotkit:flight-choice-confirmation",
-    "title": "航班比较、确认与票券回执",
     "source": "CopilotKit",
     "repository": "https://github.com/CopilotKit/CopilotKit",
     "revision": "c7815d9ac96f48fb3a64ad8c18e176a870c81763",
-    "sourcePath": "examples/showcases/oracle-agent-memory/frontend/src/components/FlightOptions.tsx",
     "upstream": "https://github.com/CopilotKit/CopilotKit/blob/c7815d9ac96f48fb3a64ad8c18e176a870c81763/examples/showcases/oracle-agent-memory/frontend/src/components/FlightOptions.tsx",
-    "license": "MIT (root declaration verified; runtime/media not closed)",
-    "behavior": "原航班列表选择→确认/取消→BoardingPass；组件内chosen/booked本地状态，scrollIntoView保持当前流程可见。",
-    "difference": "与既有旅行需求/行程不同，是丰富选择结果到票券式完成回执，不拆各卡。",
-    "gaps": [
-      "原组件注释明确该卡流程本地，不是真预订；品牌/航班数据和票券不能冒充真实。需要原flights格式器及依赖/样式审计，选中后外部数据更换、重复确认/退出未测。",
-      "未安装、构建、运行；传递依赖/媒体许可、默认CSP和生命周期、视觉均未验。"
-    ],
-    "description": "原航班列表选择→确认/取消→BoardingPass；组件内chosen/booked本地状态，scrollIntoView保持当前流程可见。 与既有旅行需求/行程不同，是丰富选择结果到票券式完成回执，不拆各卡。",
-    "category": "Agent与对话",
+    "sourcePath": "examples/showcases/oracle-agent-memory/frontend/src/components/FlightOptions.tsx",
     "licenseEvidence": {
       "url": "https://github.com/CopilotKit/CopilotKit/blob/c7815d9ac96f48fb3a64ad8c18e176a870c81763/LICENSE",
       "sha256": "22b0a2c7cc91403500445f60369d3077ceb86e66b01138483e179728f5da65c4",
       "scope": "Complete root MIT text read; transitive runtime/media not closed"
     },
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-bulk-523",
-    "sourceScope": "Selected fixed original code and root license; no runnable/archive or runtime audit",
-    "kind": "原版完整场景（仅来源）",
-    "buildStatus": "fixed source and root license read; not built or run"
+    "difference": "与既有旅行需求/行程不同，是丰富选择结果到票券式完成回执，不拆各卡。",
+    "title": "虚构航班选择与确认",
+    "description": "原航班选择、取消和确认后示例票券流程；仅虚构本地数据，无真实预订、支付或有效机票。",
+    "behavior": "原航班选择、取消和确认后示例票券流程；仅虚构本地数据，无真实预订、支付或有效机票。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "输入与选择",
+    "license": "MIT",
+    "batch": "copilot-flight-01",
+    "preview": "batches/copilot-flight-01/flight-choice/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime mechanisms and lifecycle tests passed; browser visual QA not run",
+    "gaps": [
+      "Original FlightOptions/FlightCard, BookingConfirmCard and BoardingPass retained with original selection→confirmation→cancel or local setBooked(true) behavior. Original formatTime/stopsLabel retained. This is NOT a booking integration: two host-created obviously fictional Example Air/Sample Airways AAA→BBB DEMO flights, arbitrary2030 dates and fixture prices. No real flight, reservation, payment, passenger account, confirmation code or valid boarding pass exists. Persistent visible warning explicitly explains original Confirm & book / CONFIRMED labels only mutate local demo state. Original cards/inline SVG/classes preserved. Changes to originals: local import aliases, scrollIntoView effect skipped while document.hidden; no geometry or business callback replacement. Host adds Restart local demo (keyed remount), error status and resource ownership. Hidden keeps current local selection/pass state mounted but hidden, capture-blocks clicks, pauses owned work; reveal resumes. Exit unmounts and cleans listeners/RAF/timers/observers; canceled callback identities are checked. Default fixture is bounded2items, no arbitrary JSON input or parseFlights/rememberFlights/cache API is invoked; no unbounded cache population. Local demo fixtures are host-authored, not upstream flight data or real provider results. Date display preserves original locale/timezone formatting. Tailwind4 compiles original classes, system font only. Tests actual543compose,100confirm/cancel/reset cycles, oldconfirm async after reset, hidden-click block/state restore, earlymodule and actual scrollIntoView failure. No network/storage/clipboard/location/credentials/backend. JSDOM scroll and scheduling stubs are not native pixel acceptance. Original reusable components have no ongoing animation; reduced CSS disables transitions."
+    ]
   },
   {
     "id": "copilotkit:connected-tool-results",
@@ -13628,36 +13625,35 @@
   },
   {
     "id": "tremor-blocks:partition-allocation",
-    "title": "双分区容量联动配置",
     "source": "Tremor Blocks",
     "repository": "https://github.com/tremorlabs/tremor-blocks",
     "revision": "b319e8d3d3678a4f60f4802f7e85bc1abc52d598",
-    "sourcePath": "src/content/components/billing-usage/billing-usage-10.tsx",
     "upstream": "https://github.com/tremorlabs/tremor-blocks/blob/b319e8d3d3678a4f60f4802f7e85bc1abc52d598/src/content/components/billing-usage/billing-usage-10.tsx",
-    "license": "MIT (root verified only; dependencies/assets not closed)",
-    "behavior": "原双分区名称编辑、数值输入及滑杆互补联动，单侧0–100约束，另一侧由100减去当前值；完整配置表单布局。",
-    "difference": "相比一般Slider或RRule日期规则，表达共享总量分配，不按两分区拆项。",
-    "gaps": [
-      "Apply/Cancel没有回调，不创建数据库或修改磁盘；原显示GB而状态名percentage，实际仅固定总量100的演示。空输入/NaN、键盘与辅助文本重复ID未测。",
-      "完整运行依赖/图标/素材许可未闭合；只收录固定原源码，不含完整可运行归档。未构建、未运行、未测默认CSP/退出清理、未做浏览器视觉验收。"
-    ],
-    "description": "原双分区名称编辑、数值输入及滑杆互补联动，单侧0–100约束，另一侧由100减去当前值；完整配置表单布局。 相比一般Slider或RRule日期规则，表达共享总量分配，不按两分区拆项。",
-    "category": "输入与选择",
+    "sourcePath": "src/content/components/billing-usage/billing-usage-10.tsx",
     "licenseEvidence": {
       "url": "https://github.com/tremorlabs/tremor-blocks/blob/b319e8d3d3678a4f60f4802f7e85bc1abc52d598/LICENSE.md",
       "sha256": "3546b8d22c1657e8f6d36ae83e8721f894946337d9966e1d84fbfcdfa1c9ae0b",
       "scope": "Full root MIT read; transitive runtime/media permissions not closed"
     },
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-bulk-523",
-    "sourceScope": "Selected fixed original code and complete root license evidence; no complete runnable/archive or runtime audit",
-    "kind": "原版完整场景（仅来源）",
-    "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted",
-    "sourceSha256": "96e6ffd7a95f2d997d875defcd0d276165ad591d10c02020dd291080c3ae4185"
+    "difference": "相比一般Slider或RRule日期规则，表达共享总量分配，不按两分区拆项。",
+    "title": "分区容量配置",
+    "description": "原系统与数据容量互补输入和滑杆，固定一百吉字节本地示例；不执行磁盘或数据库操作。",
+    "behavior": "原系统与数据容量互补输入和滑杆，固定一百吉字节本地示例；不执行磁盘或数据库操作。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "输入与选择",
+    "license": "MIT; Apache-2.0",
+    "batch": "tremor-partition-01",
+    "preview": "batches/tremor-partition-01/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original Input/Slider DOM and keyboard,100cycles,actual543compose/failure/lifecycle verified; visual QA not run.",
+    "gaps": [
+      "Browser visual/pointer-drag/CSP enforcement unverified; DOM state/keyboard-handler tests only.",
+      "Local fixed100GB illustration, no disk/database action; original no-op Apply/Cancel disabled.",
+      "Original unclosed font removed; system fallback disclosed.",
+      "Hidden return resets30/70 and original names."
+    ]
   },
   {
     "id": "tremor-blocks:workspace-package-application",
@@ -13694,36 +13690,37 @@
   },
   {
     "id": "tremor-blocks:audit-evidence-reader",
-    "title": "审计轮次与关联文档阅读",
     "source": "Tremor Blocks",
     "repository": "https://github.com/tremorlabs/tremor-blocks",
     "revision": "b319e8d3d3678a4f60f4802f7e85bc1abc52d598",
-    "sourcePath": "src/content/components/account-and-user-management/account-and-user-management-15.tsx",
     "upstream": "https://github.com/tremorlabs/tremor-blocks/blob/b319e8d3d3678a4f60f4802f7e85bc1abc52d598/src/content/components/account-and-user-management/account-and-user-management-15.tsx",
-    "license": "MIT (root verified only; dependencies/assets not closed)",
-    "behavior": "原multiple Accordion按认证专题展开，组合进度/状态、审计日期与审核人、关联文档分栏；不同专题可同时阅读。",
-    "difference": "区别普通FAQ文本折叠，原内容结构组合审计轮次与材料目录；不拆为多种认证卡。",
-    "gaps": [
-      "审计/认证数据为固定示例，不代表真实合规结果；文档href为#，Edit/Re-Upload无事件，未提供上传或编辑。Accordion依赖Radix与Remix图标，传递许可及交互未审。",
-      "完整运行依赖/图标/素材许可未闭合；只收录固定原源码，不含完整可运行归档。未构建、未运行、未测默认CSP/退出清理、未做浏览器视觉验收。"
-    ],
-    "description": "原multiple Accordion按认证专题展开，组合进度/状态、审计日期与审核人、关联文档分栏；不同专题可同时阅读。 区别普通FAQ文本折叠，原内容结构组合审计轮次与材料目录；不拆为多种认证卡。",
-    "category": "展示与媒体",
+    "sourcePath": "src/content/components/account-and-user-management/account-and-user-management-15.tsx",
     "licenseEvidence": {
       "url": "https://github.com/tremorlabs/tremor-blocks/blob/b319e8d3d3678a4f60f4802f7e85bc1abc52d598/LICENSE.md",
       "sha256": "3546b8d22c1657e8f6d36ae83e8721f894946337d9966e1d84fbfcdfa1c9ae0b",
       "scope": "Full root MIT read; transitive runtime/media permissions not closed"
     },
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-bulk-523",
-    "sourceScope": "Selected fixed original code and complete root license evidence; no complete runnable/archive or runtime audit",
-    "kind": "原版完整场景（仅来源）",
-    "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted",
-    "sourceSha256": "15d6762fae1df1103c1f30e4e2d4667f3622a7737a75e0c046b01246495f8a80"
+    "difference": "区别普通FAQ文本折叠，原内容结构组合审计轮次与材料目录；不拆为多种认证卡。",
+    "title": "审计证据阅读器",
+    "description": "原四组可展开审核记录及文档列表，保留原示例数据；无文件下载、编辑、上传或认证服务。",
+    "behavior": "原四组可展开审核记录及文档列表，保留原示例数据；无文件下载、编辑、上传或认证服务。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "数据与状态",
+    "license": "MIT; Apache-2.0",
+    "batch": "tremor-audit-01",
+    "preview": "batches/tremor-audit-01/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "pass",
+    "gaps": [
+      "Browser visual layout and CSS animation pixels not verified.",
+      "All original names, certification labels, progress and audit dates are upstream static demonstration fixtures, not user facts or certification assertions.",
+      "Document files, editing, re-upload, authentication, downloads and backend are not implemented upstream; these controls are explicitly disabled.",
+      "Original document status fields are retained in source data but the original row UI renders Edit/Re-Upload in that column, not those status strings; no invented status badges.",
+      "Unlicensed/unretrieved JetBrains font-face removed; system font fallback used.",
+      "JSDOM cannot synthesize native Enter/Space button activation: real Radix arrow/Home/End focus tested, semantic button activation awaits browser QA."
+    ]
   },
   {
     "id": "tremor-blocks:portfolio-performance-report",
