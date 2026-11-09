@@ -1,0 +1,24 @@
+# UI Layouts · local attachment composer
+
+Original fixed UI: https://github.com/ui-layouts/uilayouts/blob/88d827d7ec342917ca06f6894e5add65fabbe5d8/apps/ui-layout/registry/components/form/file-upload/chat-form.tsx
+
+Preserves the original compact paperclip, four thumbnail previews, delete controls and message field with the original FileUploader/react-dropzone mechanism. No send button, upload, backend, account or remote optimization. The message is only an editable local input, as upstream. The frontend describes this natural local-only scope rather than presenting QA warnings to the user.
+
+## Local files
+Only image/jpeg and image/png MIME plus matching JPEG/PNG magic prefixes, maximum 1 MB each and four files. Dropzone still handles original input/drop/rejection behavior. Async prefix reads are serialized, abortable and guarded by mount epoch; rapid selections append to current accepted state without stale captured-array overwrite. Extension accept alone is not treated as security validation. Prefix checking is not full decoding or malware scanning; actual browser image decode errors remove/revoke the file and show an inline explanation. SVG/HTML MIME and mismatched prefixes are rejected. No user file is serialized to base64 or exported.
+
+An object URL is created once per accepted File, never during render. Removal, decode error, failure, hidden page and final disposal revoke it exactly once. URLs from partially successful allocation are also reclaimed if a later allocation/render fails. NextImage is transparently replaced with ordinary img so preview requires no optimization server. Existing production composePreview allows blob image sources; its CSP is unchanged. No clipboard, download, storage, network, Worker or dynamic code is used.
+
+## Disclosed changes and lifecycle
+Original layout/classes and Lucide icons remain. Tailwind4 generates the original classes with neutral light theme tokens; small viewport fallback/focus rings/reduced-motion CSS are added. Sonner notification calls route to a local inline status, avoiding a global toast service. FileUploader's original array merge is replaced at the acceptance boundary with serialized local validation; original dropzone, list, controls and layout remain. Unhandled keys such as Tab are not intercepted; original Space spelling is corrected.
+
+Original react-dropzone14.3.8 focus-cancel 300ms timer lacked cleanup. A small build-time source patch scopes that timer and clears it on repeat focus and effect cleanup. Full original and modified source plus patch remain locally. The host catches synchronous module initialization and render failures, removes owned global listeners, and renders an honest terminal fallback. Root delegation handlers are recorded precisely during createRoot and removed on final failure/exit, not temporary hidden unmount. React retains local invalid/load/error handlers on detached INPUT/IMG nodes; these are not misreported as all-listener zero. The test ledger itself retains those nodes and verifies their old events cannot restore state or resources. No unrelated iframe listener is removed. Hidden unmount discards both attachments and typed text; return starts empty. atlas:dispose/pagehide remove the live scene, readers, URLs and owned global listeners; old nodes cannot restore it.
+
+## Tests and limitations
+Build: `node ui-uilayout-attachment-adapt/build.mjs`
+Test: `node ui-uilayout-attachment-adapt/test.mjs`
+Package: `python ui-uilayout-attachment-adapt/pack.py`
+
+Tests use actual ui-vault-536 composePreview, real File objects and original DOM file-input/drop handlers. PNG/JPEG prefix fixtures in tests are intentionally not decoded images: no pixel success is claimed. Checks include rejected MIME/HTML disguised as PNG/oversize, rapid selection merge and four-file cap, drop, decode-error removal, actual ArrowDown/Delete handler, 100 selection/delete cycles, message typing without URL recreation, hidden reset, delayed reader release after hide or final exit, module creation error, real image-element render failure, second URL allocation failure, and picker-open/focus/exit while its cancellation timer is pending. Global and connected-root listeners/timers/RAF and live URLs end at zero; detached React-local handler counts are disclosed in VERIFICATION.json and their old events tested inert; reduced-motion CSS is present. Browser native picker, real bitmap decode/paint, keyboard defaults, narrow layout and actual CSP enforcement are not visually verified.
+
+Complete root and 11 actual runtime package license texts are in LICENSE.txt, including both Lucide ISC and inherited Feather MIT, and tslib 0BSD. Tailwind's build stylesheet MIT is separately included. SOURCE.json identifies exact versions and changes; local originals/build/test are not claimed publicly downloadable. Exactly seven public text assets; no screenshot/cover created.
