@@ -20,3 +20,6 @@
 Run `python extract-sources.py ./source-output` alongside all source parts/index. Install build tools esbuild 0.25.0 and acorn 8.14.0 in extracted directory, then `npm run build`. Runtime dependency source files/package metadata and complete Alertify src/LESS/Gruntfile are included; no network runtime is needed. The original supplied minified glfx matches its official hosted build after removing comment/whitespace/export adapter; preferred official glfx source and build.py are included. Build-output mangled local variable names can differ after sanitizing unused upstream API-key fields; no original API keys are distributed.
 
 Copyrights/full terms: NOTICES.txt. Source origin and exact file hashes: SOURCE.json and source-index.json. Public source packs are UTF8 source text, not encoded binary assets.
+
+## Post-575 preventive binding correction
+Top-level function promotion now uses anonymous expressions assigned to their original outer variable, preserving self-rebinding semantics. All20 miniPaint functions were checked and none self-rebind; the failure found in a different application was not reproduced here. Core drawing/pressure/history/cleanup and final source rebuild tests pass. This corrects the existing575 item, not a new item.
