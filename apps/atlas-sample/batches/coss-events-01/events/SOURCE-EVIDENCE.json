@@ -1,0 +1,293 @@
+{
+  "repository": "https://github.com/cosscom/ui",
+  "revision": "fe6ffa81f434a4afe1c01564c13bb237564c42e2",
+  "sourcePath": "apps/examples/calcom/app/(dashboard)/event-types/event-types-list.tsx",
+  "sourceHashes": {
+    "ui-package.json": "939c08cf55dcc0ccd4719d8ee5e8aad317b4246607086823be83d122d7b5c9d7",
+    "event-types-list.tsx": "fb5893fc75b62b824a1d7e8ee94ec88ff1a51006aa6b0e96085a2abf0abdfc8a",
+    "LICENSE": "c5fd4e7b2b9cc46c144299257369d50ad025fda76e7d731928c7301810c02227",
+    "calcom-package.json": "6aad955acae62948a3f801ffc74f8cd56d50ae1a50c6af14fa1f7c7f30cead81",
+    "packages/ui/src/components/tooltip.tsx": "45211caddbbed0fd92cbeac1649f282e5d697a9125ff28fa1c87549f47cfb39c",
+    "packages/ui/src/components/badge.tsx": "f4bacb31e07bc4209716f18ede8eb6301c1f92662b106259c1e2eddef67b1f2f",
+    "packages/ui/src/components/separator.tsx": "c20ef6cd424248342c530895c4ace648beb7d474effafac274206abdf248ef12",
+    "packages/ui/src/components/group.tsx": "6da238810167f532b015062a355d3dd75eee4ef1885c4cdfd8b10438c1db71ca",
+    "packages/ui/src/components/spinner.tsx": "fcfa2d530f17aac19377750d3786e89e0b959de5e3ef8593b91b281d7d18c9a0",
+    "packages/ui/src/components/scroll-area.tsx": "f53d10dfb8d4305ab06ae6c62766b16f6f4aa5bc5d43c0c683de493c5559531e",
+    "packages/ui/src/components/skeleton.tsx": "f1e6b76605ee193f3b09dae2faff3bf7523ae3eea7614c8ddbd64c90f0f67652",
+    "packages/ui/src/components/switch.tsx": "63a5e8da53214cc2d095b3b26204ea2b04ebadf9fced466001877000551a383a",
+    "packages/ui/src/components/drawer.tsx": "f29328c4e6a9b200ae1c9bd514e94f232a7057cc4ce02eaec6660a86df88030e",
+    "packages/ui/src/components/menu.tsx": "6bb3dff7bed909df48647b64ccc70b5a830a9587134d172617814d87ea87bbc3",
+    "packages/ui/src/components/card.tsx": "9a1fba1170ec539c86e8aad248eec79f610056678e59e4eac5e3ac4320efb7b3",
+    "packages/ui/src/components/button.tsx": "72d778f64be0b407ac771d8738dacd9dd477191580f6a5be098768fb2a559dc7",
+    "packages/ui/src/components/toast.tsx": "cdbeaff5e9947f68f21cfecdc207be036765b0fcea5fb2e0f1a539d55bb60fb7",
+    "packages/ui/src/styles/globals.css": "bfdc6c02403267b5a63c90c1358f822d21acdf2b1dcac34e4bec16df38bc45d3",
+    "packages/ui/src/lib/utils.ts": "02a523d3492e97440de9c080a59f3aa9366ca92bb6914078a75ae8a6f3e90a7f",
+    "packages/ui/src/base-ui/use-render.ts": "9d88f01b0ef2e2b24e8c4d76ebb00c0b573528bc31b0b37767568d771f332ac4",
+    "packages/ui/src/base-ui/merge-props.ts": "fdb3b13d60560a465c321956ff9086ce83977dcf154100f97ca26fe7eb0acbe1",
+    "apps/examples/calcom/hooks/use-loading-state.ts": "6d4cfabd1c6eefd568b0e4656528616605fe8b889078cee932e1c41df900969a",
+    "apps/examples/calcom/components/debug-context.tsx": "a3e571d4f6dd599d05503fed11687ecc10dfa8e1e63c7d75af1b31c35425a6ca",
+    "apps/examples/calcom/components/item-label.tsx": "cb74fd7ee3a7147eb3ffc652b17862e1b5b7c60195b047eb7ca2e4d972a3ecf9",
+    "apps/examples/calcom/components/sortable.tsx": "d38cb290274a443886af396505a72405c88bae06d78e9084dacd15f4d66a393a",
+    "apps/examples/calcom/components/list-item.tsx": "f70a57650581846b68c2c23f28091d676cdba24ba1a2e2b4a260d8f4a89c5761",
+    "apps/examples/calcom/lib/mock-event-types-data.ts": "25e8913bcb18d1299946802aff56206061bc39015beb07e71f52541f9e32561b",
+    "apps/examples/calcom/lib/event-types-types.ts": "2a4ca7660d8240ba967d1c5a47704b48abe8ed3458390f17ead874dfa15dcd60",
+    "apps/examples/calcom/app/globals.css": "a64724ed3e7f7beb297f2b581366bd9950fda8b9e3a8d4fd48a3cf242b9e3592",
+    "apps/examples/calcom/app/(dashboard)/event-types/event-type-actions.tsx": "d95e67bcd451bdd606decdcf0e01866ed591b0fe6fe492612cca39f78abccf83",
+    "apps/examples/calcom/app/(dashboard)/event-types/event-types-list.tsx": "fb5893fc75b62b824a1d7e8ee94ec88ff1a51006aa6b0e96085a2abf0abdfc8a"
+  },
+  "runtimeDependencies": [
+    {
+      "name": "@base-ui/react",
+      "version": "1.9.0",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-coss-chat-local/node_modules/@base-ui/react",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "07fc1b39d69d14bc7d40482a628f47226258eb01265db68ae684944b916beb2a"
+      }
+    },
+    {
+      "name": "@base-ui/utils",
+      "version": "0.5.0",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-coss-chat-local/node_modules/@base-ui/utils",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "07fc1b39d69d14bc7d40482a628f47226258eb01265db68ae684944b916beb2a"
+      }
+    },
+    {
+      "name": "@floating-ui/core",
+      "version": "1.8.0",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-coss-chat-local/node_modules/@floating-ui/core",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "0e4c9a9b6c71019cbbea3bdc20b01223110a9035700f9c960c8fcbf78c2325ce"
+      }
+    },
+    {
+      "name": "@floating-ui/dom",
+      "version": "1.8.0",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-coss-chat-local/node_modules/@floating-ui/dom",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "0e4c9a9b6c71019cbbea3bdc20b01223110a9035700f9c960c8fcbf78c2325ce"
+      }
+    },
+    {
+      "name": "@floating-ui/react-dom",
+      "version": "2.1.9",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-coss-chat-local/node_modules/@floating-ui/react-dom",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "0e4c9a9b6c71019cbbea3bdc20b01223110a9035700f9c960c8fcbf78c2325ce"
+      }
+    },
+    {
+      "name": "@floating-ui/utils",
+      "version": "0.2.12",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-coss-chat-local/node_modules/@floating-ui/utils",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "0e4c9a9b6c71019cbbea3bdc20b01223110a9035700f9c960c8fcbf78c2325ce"
+      }
+    },
+    {
+      "name": "class-variance-authority",
+      "version": "0.7.1",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-coss-chat-local/node_modules/class-variance-authority",
+      "license": "Apache-2.0",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "0ccbf956cffc8dcf515809433cb5242ee67c94513d46e48c261d68d0880de406"
+      }
+    },
+    {
+      "name": "clsx",
+      "version": "2.1.1",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-coss-chat-local/node_modules/clsx",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "license": "9a9edad7baae52622bddf3c15b2ef8a33d2c89f2d25408ad13e8a7481c6b0c97"
+      }
+    },
+    {
+      "name": "lucide-react",
+      "version": "0.555.0",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-coss-chat-local/node_modules/lucide-react",
+      "license": "ISC",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "3c57143f22dac950efebf84002e360bba5458c7b90fe583b0667aaaef1a7256e"
+      }
+    },
+    {
+      "name": "react",
+      "version": "19.3.1",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-coss-chat-local/node_modules/react",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+      }
+    },
+    {
+      "name": "react-dom",
+      "version": "19.3.1",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-coss-chat-local/node_modules/react-dom",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+      }
+    },
+    {
+      "name": "scheduler",
+      "version": "0.28.0",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-coss-chat-local/node_modules/scheduler",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+      }
+    },
+    {
+      "name": "tailwind-merge",
+      "version": "3.4.0",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-coss-chat-local/node_modules/tailwind-merge",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE.md": "d4c70c7ce38cea8778f0aed3fc0bef0a9dbd27f13bd8b6773cbd6d37941971e5"
+      }
+    },
+    {
+      "name": "use-sync-external-store",
+      "version": "1.7.0",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-coss-chat-local/node_modules/use-sync-external-store",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+      }
+    },
+    {
+      "name": "@dnd-kit/accessibility",
+      "version": "3.1.1",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-coss-events-local/extra/node_modules/@dnd-kit/accessibility",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "537607e3f1533ad2c5b12978967f5ab27f34ffb7e626e321017a7ccca6cc24ff"
+      }
+    },
+    {
+      "name": "@dnd-kit/core",
+      "version": "6.3.1",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-coss-events-local/extra/node_modules/@dnd-kit/core",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "537607e3f1533ad2c5b12978967f5ab27f34ffb7e626e321017a7ccca6cc24ff"
+      }
+    },
+    {
+      "name": "@dnd-kit/sortable",
+      "version": "10.0.0",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-coss-events-local/extra/node_modules/@dnd-kit/sortable",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "537607e3f1533ad2c5b12978967f5ab27f34ffb7e626e321017a7ccca6cc24ff"
+      }
+    },
+    {
+      "name": "@dnd-kit/utilities",
+      "version": "3.2.2",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-coss-events-local/extra/node_modules/@dnd-kit/utilities",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "537607e3f1533ad2c5b12978967f5ab27f34ffb7e626e321017a7ccca6cc24ff"
+      }
+    }
+  ],
+  "compiledCSSLicense": {
+    "name": "tailwindcss",
+    "version": "4.3.0",
+    "sha256": "60e0b68c0f35c078eef3a5d29419d0b03ff84ec1df9c3f9d6e39a519a5ae7985"
+  },
+  "adaptation": "Original Coss Calcom EventTypesList complete five fixture rows, EventTypeActions, ListItem, SortableList, mock data, original UI components and root theme retained. Original DndKit Mouse/Touch/Keyboard sensors, sortable collision/arrayMove, drag overlay/release double-RAF, reorder toast with Undo, visibility switches retained; original provider Debug default disables artificial delay. Entire original list component byte-identical. Host mounts original ToastProvider/DebugProvider. Original Preview/Copy/Edit/Duplicate/Embed/Share/Delete menu actions have no handlers; explicitly disabled rather than inventing execution, and original Next Link booking routes rendered as aria-disabled anchors without href. Original file/component geometry and full Tailwind classes retained; no Coss or Cal.com business backend. Source lists fake paid consultation and sample names, not actual availability or prices; persistent Chinese disclaimer says no booking/payment. No profile image imported or fetched, no external font: system sans/mono. Official workspace declares BaseUI1.9/Motion14; Motion is not emitted by this family. Actual emitted versions below, shared cached dependencies and new DndKit10 sortable use original supported APIs. Hide unmounts list and resumes original defaults, deliberately resets order/hidden changes; error/exit unmount and owned scheduler/observer/listener cleanup, stale callbacks inert. Original native pointer/touch geometry, responsive CSS and pixels not verified. Tests run production unmodified IIFE through actual565compose; synthetic800x100 row geometry and PointerEvent test shim exercise real KeyboardSensor/arrayMove, reordered titles, Undo, Escape cancellation, switch state, disabled noops, hidden/reset/old nodes, early module failure and late error. All owned resource ledgers zero. Not a replacement scheduling app or entire Cal.com clone.",
+  "nativeVisualVerified": false,
+  "loaderVerification": [
+    {
+      "slug": "events",
+      "pass": true,
+      "utf16Bytes": 1565770,
+      "fetches": 3,
+      "actualCreatePreviewLoader565": true,
+      "cacheHit": true,
+      "released": true,
+      "iframeExecution": false
+    }
+  ],
+  "tests": [
+    {
+      "mode": "normal",
+      "pass": true,
+      "actualCompose565": true,
+      "geometry": "synthetic 800x100 row rect; original DndKit KeyboardSensor and arrayMove; not native pointer/pixel verification",
+      "cleanup": {
+        "listeners": 0,
+        "timers": 0,
+        "raf": 0,
+        "observers": 0
+      },
+      "blockedCalls": 0
+    },
+    {
+      "mode": "early",
+      "pass": true,
+      "actualCompose565": true,
+      "geometry": "synthetic 800x100 row rect; original DndKit KeyboardSensor and arrayMove; not native pointer/pixel verification",
+      "cleanup": {
+        "listeners": 0,
+        "timers": 0,
+        "raf": 0,
+        "observers": 0
+      },
+      "blockedCalls": 0
+    },
+    {
+      "mode": "reduced",
+      "pass": true,
+      "actualCompose565": true,
+      "geometry": "synthetic 800x100 row rect; original DndKit KeyboardSensor and arrayMove; not native pointer/pixel verification",
+      "cleanup": {
+        "listeners": 0,
+        "timers": 0,
+        "raf": 0,
+        "observers": 0
+      },
+      "blockedCalls": 0
+    },
+    {
+      "mode": "failure",
+      "pass": true,
+      "actualCompose565": true,
+      "geometry": "synthetic 800x100 row rect; original DndKit KeyboardSensor and arrayMove; not native pointer/pixel verification",
+      "cleanup": {
+        "listeners": 0,
+        "timers": 0,
+        "raf": 0,
+        "observers": 0
+      },
+      "blockedCalls": 0
+    }
+  ]
+}
