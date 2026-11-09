@@ -1,0 +1,16 @@
+{
+  "compose": "ui-vault-547",
+  "tests": {
+    "feel": "PASS: original 4-rule table; cell edit/undo/redo; plaintext hostile paste; hidden restore; reset; preserved watermark; stale callbacks and full cleanup { listeners: 0, timers: 0, raf: 0, observers: 0 }\n",
+    "annotation": "BEFORE 0\nAFTERREPLAY 0 null\nLEFT [] 0 0 0\nPASS: original 4-rule table; cell edit/undo/redo; plaintext hostile paste; hidden restore; reset; preserved watermark; stale callbacks and full cleanup { listeners: 0, timers: 0, raf: 0, observers: 0 }\n",
+    "earlyExit": "PASS early-exit clean resources\n",
+    "missingRoot": "PASS missing-root clean resources\n"
+  },
+  "limitations": [
+    "JSDOM controlled geometry/innerText fixtures, not native browser typography, pointer precision, accessibility or pixel verification.",
+    "Only original decision table editor is exposed, not whole DMN DRD/literal/boxed suite. No decision execution, cloud/storage saving, file import/export or external service.",
+    "Hidden rebuild preserves committed local XML but resets undo history and in-progress uncommitted field state.",
+    "Original bpmn.io watermark and links retained under mandatory license condition. Cannot remove or cover it in downstream reuse.",
+    "dmn-font original SVG outlines converted to OFL CSS masks rather than binary font; system body font."
+  ]
+}
