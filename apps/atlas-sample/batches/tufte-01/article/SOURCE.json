@@ -1,0 +1,49 @@
+{
+  "id": "tuftecss:margin-note-essay",
+  "repository": "https://github.com/edwardtufte/tufte-css",
+  "revision": "b5d7b7bbe5ce9c4c50fcfad4f19ee3646cfd7ae1",
+  "paths": [
+    "index.html",
+    "tufte.css",
+    "LICENSE"
+  ],
+  "originals": [
+    {
+      "path": "LICENSE",
+      "sha256": "d294f2ac36f471639ce17b077558bf24ded8790a27834ac4c8ec376e93c5e27b"
+    },
+    {
+      "path": "index.html",
+      "sha256": "5096d0c54d572f157c25643a7bc8ab4bbe7ce1479184d11348b221f3fa3f1764"
+    },
+    {
+      "path": "tufte.css",
+      "sha256": "4ca43dfac57225714c8d903a6e59e44b25fe6424db90240a7c378bd80991765c"
+    }
+  ],
+  "changes": [
+    "Original CSS layout/rules retained; @font-face removed and font names replaced with system fallback. No ET Book binary distributed.",
+    "Original article section/epigraph/figure/fullwidth/sidenote label-checkbox-span patterns retained with wholly original Chinese reading fixture and SVG. No upstream third-party quotations or images.",
+    "Added keyboard activation/ARIA for original label-checkbox mechanism and idempotent pagehide cleanup. Native CSS dark preference retained."
+  ],
+  "runtimeDependencies": [],
+  "contentLicense": "Original fixture and adapter released under MIT; upstream MIT retained in LICENSE.txt",
+  "visualQA": "not-run; no browser geometry, font metrics or SVG pixels verified",
+  "gitBlobVerification": [
+    {
+      "path": "LICENSE",
+      "gitBlob": "16d0a33d89757420e84ad592e47d00f35abe0f6e",
+      "sha256": "d294f2ac36f471639ce17b077558bf24ded8790a27834ac4c8ec376e93c5e27b"
+    },
+    {
+      "path": "index.html",
+      "gitBlob": "96e13efbe05ed693a972840370c900b60acd80f0",
+      "sha256": "5096d0c54d572f157c25643a7bc8ab4bbe7ce1479184d11348b221f3fa3f1764"
+    },
+    {
+      "path": "tufte.css",
+      "gitBlob": "8588467d6ba9e00b0ec971b2dd34adb02da17599",
+      "sha256": "4ca43dfac57225714c8d903a6e59e44b25fe6424db90240a7c378bd80991765c"
+    }
+  ]
+}
