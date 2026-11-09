@@ -1,0 +1,922 @@
+{
+  "repository": "https://github.com/pomber/code-surfer",
+  "revision": "948452f7c1c8adaf019e29600d7d158747a91a90",
+  "path": "sites/docs/decks/demo.mdx",
+  "scope": "Original pure-code selection: complete single-column four steps and two-column five steps. ImageComponent four-step photo sequence, intro logo and external closing links omitted entirely; not the full photo-containing deck.",
+  "originalFiles": {
+    "upstream/packs/code-surfer/src/codeblock-metastring-parser.ts": "a2b3b7984115eaa8a8fb447d601d8eac14544f509938edb55cdeefe97df6c43b",
+    "upstream/packs/code-surfer/src/column-layout.tsx": "a41776b1bbc40dc3b10823ea8faebb47ffa693adaa705ff7195ee1198ff07258",
+    "upstream/packs/code-surfer/src/error-boundary.tsx": "d5cac23fe2baf872d236264387a1ee101d42739e164f0e36837656b95fa866f1",
+    "upstream/packs/code-surfer/src/index.ts": "42f025dcc1a6f57bab1976d37cc38c999b2846ccd709864eaf4d70f908059c8e",
+    "upstream/packs/code-surfer/src/layout.tsx": "b9f2b2b2df1e2131432b43309d86b2fe6773df44f4fca25ee39ccbd52c88a892",
+    "upstream/packs/code-surfer/src/notes.js": "ee370e52305851cffda81bf8fdc09c9c5c4209f4442b6fa90fe43e244f6799ce",
+    "upstream/packs/code-surfer/src/presenter.tsx": "e93db17f9c00a97bd1776cbe57edc020c9fa3e6e9e22e972d1b789da49181313",
+    "upstream/packs/code-surfer/src/step-reader.js": "8ce2bc014108ac1926e2e1b965a8df9b2f90d5fb487b8f6e7487358fef5116a0",
+    "upstream/packs/code-surfer/src/step.js": "36f82eb85ceaaf4c5f41d0762fe0224bfec8e1137c34147c2a1fe0448aef49c0",
+    "upstream/packs/code-surfer/src/types.d.ts": "8d1781f156d1c644b0b31e962e1863ff0aac902965c4a4397f47ad6c562bef6c",
+    "upstream/packs/code-surfer/src/use-spring.js": "cb949e728cc3fe893b4e2b70aacb57588f0332e94c1564bcee5141afea28b2d4",
+    "upstream/packs/code-surfer/src/use-step-spring.js": "36721feb430adf5b9c91b2c30894847f796f481f6db383edba3ad92b0d76d132",
+    "upstream/packs/code-surfer/src/use-steps.js": "9670f994904f0f5f8621e5307372bd7c24e69c35529c968a5d39b90e21e4b858",
+    "upstream/packs/code-surfer/src/use-window-resize.js": "29cc893c9dbc2204ceb34a124a7583c489f0118df93310cbfb2105407eaef7c0",
+    "upstream/packs/code-surfer/test/codeblock-metastring-parser.test.ts": "8e8d2c24f76f6759b60b54dce44dfed36491e976f6e2743932b4de9951b6aaf5",
+    "upstream/packs/standalone/src/animation.test.ts": "273e1f6b54026e69c37f0de0130a51757dd865086b1d5f262459d7ba3ecd99fc",
+    "upstream/packs/standalone/src/animation.ts": "9f74ad809aa9c6b966af446e63263dc6cbf2f4250831c3d0bca49650b4727e41",
+    "upstream/packs/standalone/src/code-surfer.tsx": "0935c03e8d79d21574dd8531bd4cb49aa2f53669c15ef0f9a5744c480a5acd33",
+    "upstream/packs/standalone/src/default-syntaxes.ts": "861926ef8241408bb184efc7b750e67066fe192eafba4dd6b437ce2b79cb7a53",
+    "upstream/packs/standalone/src/dimensions.ts": "33fd9f5cf474823c26c10a5609e0fb764e501ef7b53fc485b245f239855445a0",
+    "upstream/packs/standalone/src/easing.ts": "d0ac93e184ba1623c5a2c69e5aa640ed3fda54baceaf1831d9f88d5d39268f9d",
+    "upstream/packs/standalone/src/errors.tsx": "b401a84098f0df1b0dfdabcc28567f33f74f666ce35bc7b0cc9110e6acca2fce",
+    "upstream/packs/standalone/src/frame.tsx": "41ab10a28d2f6b8d26e64e401f0d212eb509a4af20083b537e372bc7c7475ca7",
+    "upstream/packs/standalone/src/index.tsx": "7fb98d354829543135173d28a48d45a2ce2af57b470275e0b591e6c1ce97dc0a",
+    "upstream/packs/standalone/src/lines.tsx": "5620b72e195f3a99deec799b16e52c441bf474bbdb62f1e0c6c0bf69da279a03",
+    "upstream/packs/standalone/src/tuple.test.ts": "60df8b3b7b3d34d565dcdb3b727601c89c6464b57090610816d841511cd81f50",
+    "upstream/packs/standalone/src/tuple.ts": "74bb3cee1dd62c35a8ddd9e71ed4cb8297515c3bc13696836e4ab3fb62173250",
+    "upstream/packs/standalone/src/types.d.ts": "d92e51697ce7e85ee49aa4c015e90c88db0b72bcd4fa78584a11a42de76a2715",
+    "upstream/packs/standalone/src/use-window-resize.ts": "f15a808633281a537e08411b9fced21d4e9d50f53ea9c3dd80246fedfdc17bd3",
+    "upstream/packs/step-parser/src/differ.test.ts": "3ae8754a4e00d77224097b828d8a3dde2e40aeb9c34511de85150e84473e3cd2",
+    "upstream/packs/step-parser/src/differ.ts": "fe6e3841a364face4fc72f333bf16785c2c1b962f5a3a4386ffa58329dccb5be",
+    "upstream/packs/step-parser/src/focus-parser.test.ts": "0e90393951c86bccea486d9a47e76c4fadba08ace535c13d51d8487ddb30acc5",
+    "upstream/packs/step-parser/src/focus-parser.ts": "8bc1b9627a19c9bf65e2a593d1c4dfa4eb0f588e33e21366d69fff7105d7d6e0",
+    "upstream/packs/step-parser/src/index.ts": "a8650822b3a4a60c625a15390893af58f596bd9b664ce0e61b2ab33354f3647d",
+    "upstream/packs/step-parser/src/object-entries.ts": "01663435ca30b3bac25efdcc936b0abcdf4c2d0d2894d1bcd127ad4c38cebef8",
+    "upstream/packs/step-parser/src/step-parser.test.ts": "06d14eda7eabcdbe7362554b64dafc2f463672f389ce02f008ce3de12621cdee",
+    "upstream/packs/step-parser/src/step-parser.ts": "f641578b0e841a39f5775ee43719598e8d8722479955cbe4638544c73f28fa4f",
+    "upstream/packs/step-parser/src/tokenizer.test.ts": "f44f819fefe2a08a2d99c2eedb35e5f4a4f764c41279b2dff5c5ecd5d6009b9b",
+    "upstream/packs/step-parser/src/tokenizer.ts": "f4cc9e0dbc50860c86473943ba2c458dc644bd860077c716816d06d2f89f7257",
+    "upstream/packs/step-parser/src/types.d.ts": "ef418ffbded686ce29643312a0685d531592e321cbf356812111b921eb203168",
+    "upstream/packs/themes/src/index.ts": "ad0651a09eb812ca131f7c4f146846a56ce852fcd0c5dbbcf2d67a148cf29b53",
+    "upstream/packs/themes/src/styles.tsx": "a09449f33e9ba69cef53a06ca461eff2b1f3c422567ebe4bf1307794e9e890f3",
+    "upstream/packs/themes/src/theme.base.ts": "3f7227514133f20bbac0211f6dd04837b9c668c6db3cfb2ad8f70b18df1ee218",
+    "upstream/packs/themes/src/theme.dracula.ts": "bdcf705d5da3907cc8c238f7f3cba74120cb9c13bf464c0d8a02ab4b7edd7905",
+    "upstream/packs/themes/src/theme.duotone-dark.ts": "22b87dced2ec67a51c1facc62925ab7486b399b78bfea13c222b732144a3e678",
+    "upstream/packs/themes/src/theme.duotone-light.ts": "2271eb00b82e80f773d2dcad7c116ba127b2f5eea3106d71ef10b7ff31c5db24",
+    "upstream/packs/themes/src/theme.github.ts": "26365871c395276e3f2c239eb506e8a1ef6f5567eb26af79913594fdfe918c35",
+    "upstream/packs/themes/src/theme.night-owl.ts": "78878e938f6c1ce918b482a16191567afe8a96b8a3919dc45795b9a70123b604",
+    "upstream/packs/themes/src/theme.oceanic-next.ts": "1a91554653371fc647542a36ed2b2a6b10f911fa298027bc18ea45543e35c1ae",
+    "upstream/packs/themes/src/theme.shades-of-purple.ts": "5ca92a52689577c7660ff607baddfba2f9ee7ecd6a78952db61860d69bc238ae",
+    "upstream/packs/themes/src/theme.ultramin.ts": "0ef70ad392a62c6e4dcb0887c1b94df2de0d5d8f36c592f441574a3542fbd366",
+    "upstream/packs/themes/src/theme.vs-dark.ts": "a8f94ba50ac303fc6f36506ad1fbb1b5470c698951ac3ea44d36c184cd82a149",
+    "upstream/packs/themes/src/utils.test.ts": "a9baba027a3b268720c9f574958ec0d164f935dd777be86729fa8657967d22a9",
+    "upstream/packs/themes/src/utils.ts": "945a4a99765ca40289a68f8250fa4c67c0f3ac18cbb5935ba95a09ed3170e847",
+    "upstream/sites/docs/decks/demo.mdx": "c441f013fd98e561ab5103dc6809a3fba83eef42486e5302cabb6b1d08718dbc",
+    "upstream/license": "33a417fdc896ed5bf4f68fa229bf36c8e15aadb105f26b0a11c2da973bf22873"
+  },
+  "adaptedFiles": {
+    "src/deck/components/app.js": "ee6e8249fd36d2a92df7fceadd10c66169cad914eeb434040dd28c9cca2f88b6",
+    "src/deck/components/appear.js": "20c11351e1dba5d5b442d6e3743eefa43a7cb625058fd5ca4ac36439ae81ecfa",
+    "src/deck/components/clock.js": "723554480e04f847c47544b9e8f0aeca81ff12b5d40bad23e909962323ee00bc",
+    "src/deck/components/deck.js": "ebf793dd8cef0083c3f9ab7465998198524eeb5ac4a816a348f21d1ab71c813c",
+    "src/deck/components/decks.js": "073044ce69093c78985399bc64cea000da3b7fb6ed12c49ee3a5ea34f481522a",
+    "src/deck/components/embed.js": "10e70dab82ba47ae322ad70eca89ef037526c87b41390959612905f21811909a",
+    "src/deck/components/full-screen-code.js": "c30fa1a8ce2d94b3af8207e9c237f83969bac4f21c786e3b467eda7b7e61b1d2",
+    "src/deck/components/grid.js": "24ac5ab4332dcbbcf925ce9bdf7f72c2645b3826aed517f673c39e5fc0fa55de",
+    "src/deck/components/head.js": "081c55c05c6c986b09aa30a0faacac3c5819b9dd05c8ef0677a6afd18929ff71",
+    "src/deck/components/horizontal.js": "9a8ef95cf2052f02beee906a5654bf8562195b0b54a4ce7d34e8a55c0087a354",
+    "src/deck/components/image.js": "50e212f6702cb9dd90259f919e303512d413613faf40b3e9258c4479250a46cb",
+    "src/deck/components/invert.js": "0aaf4c39084c6fc2cab526118234e5383548e0ae1904e9e62ef2ba23f0fd9a94",
+    "src/deck/components/notes.js": "acf61a7f114d0ccc42452bf66ec99c55dad41bd5a44e66b62681156159baa26d",
+    "src/deck/components/overview.js": "f7ba56efeaf555f2476f2e58d1643d1937e671967f88b4ab620809b51d1950f4",
+    "src/deck/components/presenter-footer.js": "6b01128a16502b0b039b9eb84bdd588bfbf26ba40f042461fbfaa44515d4dfbe",
+    "src/deck/components/presenter.js": "d9f5e03e831d96d89b9ca4ba8478d300dc668003ba6399a9e396f6a10ac17602",
+    "src/deck/components/slide-list.js": "b34632704adc1626fb99d26a3722a4688b17ca8d5d6a713b7dfd5cc8a3bea874",
+    "src/deck/components/slide.js": "63dbbe9b89f809e04737b8cb1f690936711c4a36e9d83056408c6f4083379b26",
+    "src/deck/components/split-right.js": "99db9a68abf692f29008f16969d78389684b58d0684f799c084666f9d0211f03",
+    "src/deck/components/split.js": "38fc9e2824aae5ab1c593d738a96f2762c33a408b1c3e8e7b84b65b95c55146b",
+    "src/deck/components/timer.js": "696072f46b264bf1c04990ea689173361cc666c9d5acf17f918213ce3ba843f2",
+    "src/deck/components/wrapper.js": "e1b966df0b4d017356dc2411d0a8819471aadf58327f56f364e5f122fb6a4187",
+    "src/deck/components/zoom.js": "61257feaf5d5ae26bc582baf3b6b67411cb374c14ec3225be1e7c8c042bee992",
+    "src/deck/constants.js": "13cf477b8c736301a3204cc095968d8003281869deb5b01cc2bf25eb12259ce5",
+    "src/deck/context.js": "4e6d942eaf5f3c36b4c883cf890cbc4d466821bcb53803687e492c426269c7b0",
+    "src/deck/convert-legacy-theme.js": "503fbde4e79fbec3f66387d4c642c9296ecf4921e8486c84c6918866e55388ab",
+    "src/deck/gatsby-plugin-theme-ui/components.js": "acc0f610f82e0c129f76ee189060e6d2f414d95c6d9000f2655a69efe2eb2341",
+    "src/deck/gatsby-plugin-theme-ui/index.js": "8e623fe002a6e7f67c8cd30d4d05176d69aff303e889b418b8689c3eda0ea120",
+    "src/deck/hooks/use-deck.js": "8d6528c3b4002e4f4780ee8ee721b5386151d6b8124f1d5795912d3165d4ef4f",
+    "src/deck/hooks/use-keyboard.js": "a9f7510685ba9544f5dc1648a7f27b7a9d8ee65e4a95282562a97de93df683c3",
+    "src/deck/hooks/use-steps.js": "642f15aa641a07640549c3ba4aadb0a3da7dfc03ca4d48affa83031f4631048e",
+    "src/deck/hooks/use-storage.js": "a7d13ee249a872a2dcdf278b486877dfdc469df0c70e0a19f83f29fa857c8367",
+    "src/deck/hooks/use-swipe.js": "e4927d47fab7060580c82d4667d06eb2dbfb8264e7464ceead07da32f1b09db8",
+    "src/deck/index.js": "4fe288ba661da78456d7031b42c7bedbccf5d660e16668d1c8066e491d51cca1",
+    "src/deck/navigate.js": "fc17ccd1d384706a402f3143777df92296ef134099f73bcbe90be41fd8ae6cb6",
+    "src/deck/split-slides.js": "257f27d209add742bff86e78c4881c2ea58582921499e378889f0ed428001b88",
+    "src/deck/templates/deck.js": "f1d326062a9cdf3f5075bfae0aabf291d1c1d2a3c61586babe84f9834e6396b0",
+    "src/deck/templates/decks.js": "02507f5fbab6fb02c9c72ce5925324001d06df118acc1f4aa22a84bcb624ca3c",
+    "src/deck-entry.js": "fb370fbbaa011fb3be14320b566817dfc03994cfb5f4e1bcebbd9ac161135749",
+    "src/main.jsx": "7978eeea1e2b34b7c3bb01fec9f08a0242554b88e1d27eb0be557f892e4ab548",
+    "src/packs/code-surfer/src/codeblock-metastring-parser.ts": "a2b3b7984115eaa8a8fb447d601d8eac14544f509938edb55cdeefe97df6c43b",
+    "src/packs/code-surfer/src/column-layout.tsx": "a41776b1bbc40dc3b10823ea8faebb47ffa693adaa705ff7195ee1198ff07258",
+    "src/packs/code-surfer/src/error-boundary.tsx": "d5cac23fe2baf872d236264387a1ee101d42739e164f0e36837656b95fa866f1",
+    "src/packs/code-surfer/src/index.ts": "42f025dcc1a6f57bab1976d37cc38c999b2846ccd709864eaf4d70f908059c8e",
+    "src/packs/code-surfer/src/layout.tsx": "b9f2b2b2df1e2131432b43309d86b2fe6773df44f4fca25ee39ccbd52c88a892",
+    "src/packs/code-surfer/src/notes.js": "ee370e52305851cffda81bf8fdc09c9c5c4209f4442b6fa90fe43e244f6799ce",
+    "src/packs/code-surfer/src/presenter.tsx": "e93db17f9c00a97bd1776cbe57edc020c9fa3e6e9e22e972d1b789da49181313",
+    "src/packs/code-surfer/src/step-reader.js": "8ce2bc014108ac1926e2e1b965a8df9b2f90d5fb487b8f6e7487358fef5116a0",
+    "src/packs/code-surfer/src/step.js": "36f82eb85ceaaf4c5f41d0762fe0224bfec8e1137c34147c2a1fe0448aef49c0",
+    "src/packs/code-surfer/src/types.d.ts": "8d1781f156d1c644b0b31e962e1863ff0aac902965c4a4397f47ad6c562bef6c",
+    "src/packs/code-surfer/src/use-spring.js": "cb949e728cc3fe893b4e2b70aacb57588f0332e94c1564bcee5141afea28b2d4",
+    "src/packs/code-surfer/src/use-step-spring.js": "2917ec3bf94a44af77df35411eac42c5a045067fbe7c11a17eb1109fda3a7acb",
+    "src/packs/code-surfer/src/use-steps.js": "9670f994904f0f5f8621e5307372bd7c24e69c35529c968a5d39b90e21e4b858",
+    "src/packs/code-surfer/src/use-window-resize.js": "29cc893c9dbc2204ceb34a124a7583c489f0118df93310cbfb2105407eaef7c0",
+    "src/packs/code-surfer/test/codeblock-metastring-parser.test.ts": "8e8d2c24f76f6759b60b54dce44dfed36491e976f6e2743932b4de9951b6aaf5",
+    "src/packs/standalone/src/animation.test.ts": "273e1f6b54026e69c37f0de0130a51757dd865086b1d5f262459d7ba3ecd99fc",
+    "src/packs/standalone/src/animation.ts": "9f74ad809aa9c6b966af446e63263dc6cbf2f4250831c3d0bca49650b4727e41",
+    "src/packs/standalone/src/code-surfer.tsx": "0935c03e8d79d21574dd8531bd4cb49aa2f53669c15ef0f9a5744c480a5acd33",
+    "src/packs/standalone/src/default-syntaxes.ts": "861926ef8241408bb184efc7b750e67066fe192eafba4dd6b437ce2b79cb7a53",
+    "src/packs/standalone/src/dimensions.ts": "33fd9f5cf474823c26c10a5609e0fb764e501ef7b53fc485b245f239855445a0",
+    "src/packs/standalone/src/easing.ts": "d0ac93e184ba1623c5a2c69e5aa640ed3fda54baceaf1831d9f88d5d39268f9d",
+    "src/packs/standalone/src/errors.tsx": "b401a84098f0df1b0dfdabcc28567f33f74f666ce35bc7b0cc9110e6acca2fce",
+    "src/packs/standalone/src/frame.tsx": "41ab10a28d2f6b8d26e64e401f0d212eb509a4af20083b537e372bc7c7475ca7",
+    "src/packs/standalone/src/index.tsx": "7fb98d354829543135173d28a48d45a2ce2af57b470275e0b591e6c1ce97dc0a",
+    "src/packs/standalone/src/lines.tsx": "5620b72e195f3a99deec799b16e52c441bf474bbdb62f1e0c6c0bf69da279a03",
+    "src/packs/standalone/src/tuple.test.ts": "60df8b3b7b3d34d565dcdb3b727601c89c6464b57090610816d841511cd81f50",
+    "src/packs/standalone/src/tuple.ts": "74bb3cee1dd62c35a8ddd9e71ed4cb8297515c3bc13696836e4ab3fb62173250",
+    "src/packs/standalone/src/types.d.ts": "d92e51697ce7e85ee49aa4c015e90c88db0b72bcd4fa78584a11a42de76a2715",
+    "src/packs/standalone/src/use-window-resize.ts": "f15a808633281a537e08411b9fced21d4e9d50f53ea9c3dd80246fedfdc17bd3",
+    "src/packs/step-parser/src/differ.test.ts": "3ae8754a4e00d77224097b828d8a3dde2e40aeb9c34511de85150e84473e3cd2",
+    "src/packs/step-parser/src/differ.ts": "fe6e3841a364face4fc72f333bf16785c2c1b962f5a3a4386ffa58329dccb5be",
+    "src/packs/step-parser/src/focus-parser.test.ts": "0e90393951c86bccea486d9a47e76c4fadba08ace535c13d51d8487ddb30acc5",
+    "src/packs/step-parser/src/focus-parser.ts": "8bc1b9627a19c9bf65e2a593d1c4dfa4eb0f588e33e21366d69fff7105d7d6e0",
+    "src/packs/step-parser/src/index.ts": "a8650822b3a4a60c625a15390893af58f596bd9b664ce0e61b2ab33354f3647d",
+    "src/packs/step-parser/src/object-entries.ts": "01663435ca30b3bac25efdcc936b0abcdf4c2d0d2894d1bcd127ad4c38cebef8",
+    "src/packs/step-parser/src/step-parser.test.ts": "06d14eda7eabcdbe7362554b64dafc2f463672f389ce02f008ce3de12621cdee",
+    "src/packs/step-parser/src/step-parser.ts": "f641578b0e841a39f5775ee43719598e8d8722479955cbe4638544c73f28fa4f",
+    "src/packs/step-parser/src/tokenizer.test.ts": "f44f819fefe2a08a2d99c2eedb35e5f4a4f764c41279b2dff5c5ecd5d6009b9b",
+    "src/packs/step-parser/src/tokenizer.ts": "f4cc9e0dbc50860c86473943ba2c458dc644bd860077c716816d06d2f89f7257",
+    "src/packs/step-parser/src/types.d.ts": "ef418ffbded686ce29643312a0685d531592e321cbf356812111b921eb203168",
+    "src/packs/themes/src/index.ts": "25b70caefc259f81f129c107c2c310e963db13255ce0ed7c8c1208ceaf73a40a",
+    "src/packs/themes/src/styles.tsx": "a09449f33e9ba69cef53a06ca461eff2b1f3c422567ebe4bf1307794e9e890f3",
+    "src/packs/themes/src/theme.base.ts": "3f7227514133f20bbac0211f6dd04837b9c668c6db3cfb2ad8f70b18df1ee218",
+    "src/packs/themes/src/theme.dracula.ts": "bdcf705d5da3907cc8c238f7f3cba74120cb9c13bf464c0d8a02ab4b7edd7905",
+    "src/packs/themes/src/theme.duotone-dark.ts": "22b87dced2ec67a51c1facc62925ab7486b399b78bfea13c222b732144a3e678",
+    "src/packs/themes/src/theme.duotone-light.ts": "2271eb00b82e80f773d2dcad7c116ba127b2f5eea3106d71ef10b7ff31c5db24",
+    "src/packs/themes/src/theme.github.ts": "26365871c395276e3f2c239eb506e8a1ef6f5567eb26af79913594fdfe918c35",
+    "src/packs/themes/src/theme.night-owl.ts": "78878e938f6c1ce918b482a16191567afe8a96b8a3919dc45795b9a70123b604",
+    "src/packs/themes/src/theme.oceanic-next.ts": "1a91554653371fc647542a36ed2b2a6b10f911fa298027bc18ea45543e35c1ae",
+    "src/packs/themes/src/theme.shades-of-purple.ts": "5ca92a52689577c7660ff607baddfba2f9ee7ecd6a78952db61860d69bc238ae",
+    "src/packs/themes/src/theme.ultramin.ts": "0ef70ad392a62c6e4dcb0887c1b94df2de0d5d8f36c592f441574a3542fbd366",
+    "src/packs/themes/src/theme.vs-dark.ts": "a8f94ba50ac303fc6f36506ad1fbb1b5470c698951ac3ea44d36c184cd82a149",
+    "src/packs/themes/src/utils.test.ts": "a9baba027a3b268720c9f574958ec0d164f935dd777be86729fa8657967d22a9",
+    "src/packs/themes/src/utils.ts": "945a4a99765ca40289a68f8250fa4c67c0f3ac18cbb5935ba95a09ed3170e847",
+    "src/selection.jsx": "793bb588838d35e5f3938fd4fc4805c7238e0b4f38f339e502083e7ff2d05c8c",
+    "src/selection.mdx": "cd2594d05523a78b956bd04f4432b894a9edcf20e5957fb020df7ae84133548b",
+    "src/theme-ui.js": "4fb22f1f21962d67669486e9fd75c39439a4d901ad7ab6335942e3ea56b86e71",
+    "build.cjs": "e2fc9cdfa4d637983d37be10e05b1a20318f6554676372a2b578457ba7900df1",
+    "bootstrap.js": "e6adea790a5809713b5a0a289c9535be84ff426d05f5ff946aff1a892eac26eb",
+    "deps/package-lock.json": "65c6e4b1a1d30df05919d39a6c6c766938ea3f37a87d0b7a38735c4fcdbc3fd1"
+  },
+  "dependencies": [
+    {
+      "name": "@emotion/cache",
+      "version": "10.0.29",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "deps/node_modules/@emotion/cache/LICENSE",
+          "sha256": "6e8d23763cf7cb707ad8f6677aa502ebeca1dda447e6d6e57f6549c1625b9c4a"
+        }
+      ]
+    },
+    {
+      "name": "@emotion/core",
+      "version": "10.3.1",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "deps/node_modules/@emotion/core/LICENSE",
+          "sha256": "6e8d23763cf7cb707ad8f6677aa502ebeca1dda447e6d6e57f6549c1625b9c4a"
+        }
+      ]
+    },
+    {
+      "name": "@emotion/hash",
+      "version": "0.8.0",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "deps/node_modules/@emotion/hash/LICENSE",
+          "sha256": "6e8d23763cf7cb707ad8f6677aa502ebeca1dda447e6d6e57f6549c1625b9c4a"
+        }
+      ]
+    },
+    {
+      "name": "@emotion/is-prop-valid",
+      "version": "0.8.8",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "deps/node_modules/@emotion/is-prop-valid/LICENSE",
+          "sha256": "6e8d23763cf7cb707ad8f6677aa502ebeca1dda447e6d6e57f6549c1625b9c4a"
+        }
+      ]
+    },
+    {
+      "name": "@emotion/memoize",
+      "version": "0.7.4",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "deps/node_modules/@emotion/memoize/LICENSE",
+          "sha256": "6e8d23763cf7cb707ad8f6677aa502ebeca1dda447e6d6e57f6549c1625b9c4a"
+        }
+      ]
+    },
+    {
+      "name": "@emotion/serialize",
+      "version": "0.11.16",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "deps/node_modules/@emotion/serialize/LICENSE",
+          "sha256": "6e8d23763cf7cb707ad8f6677aa502ebeca1dda447e6d6e57f6549c1625b9c4a"
+        }
+      ]
+    },
+    {
+      "name": "@emotion/sheet",
+      "version": "0.9.4",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "deps/node_modules/@emotion/sheet/LICENSE",
+          "sha256": "6e8d23763cf7cb707ad8f6677aa502ebeca1dda447e6d6e57f6549c1625b9c4a"
+        }
+      ]
+    },
+    {
+      "name": "@emotion/stylis",
+      "version": "0.8.5",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "deps/node_modules/@emotion/stylis/LICENSE",
+          "sha256": "6e8d23763cf7cb707ad8f6677aa502ebeca1dda447e6d6e57f6549c1625b9c4a"
+        }
+      ]
+    },
+    {
+      "name": "@emotion/unitless",
+      "version": "0.7.5",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "deps/node_modules/@emotion/unitless/LICENSE",
+          "sha256": "6e8d23763cf7cb707ad8f6677aa502ebeca1dda447e6d6e57f6549c1625b9c4a"
+        }
+      ]
+    },
+    {
+      "name": "@emotion/utils",
+      "version": "0.11.3",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "deps/node_modules/@emotion/utils/LICENSE",
+          "sha256": "6e8d23763cf7cb707ad8f6677aa502ebeca1dda447e6d6e57f6549c1625b9c4a"
+        }
+      ]
+    },
+    {
+      "name": "@mdx-js/react",
+      "version": "1.6.22",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "deps/node_modules/@mdx-js/react/license",
+          "sha256": "d63cf746d4c8168a58f986b56cfcbd4b2a634ac7fb34fe684beaf806bd1aced5"
+        }
+      ]
+    },
+    {
+      "name": "@styled-system/css",
+      "version": "5.1.5",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "deps/node_modules/@styled-system/css/LICENSE.md",
+          "sha256": "9fbd6aef54271c1aa17946165d4da0b6e662c745f24195572b4589ead2857aeb"
+        }
+      ]
+    },
+    {
+      "name": "array.prototype.flat",
+      "version": "1.2.4",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "deps/node_modules/array.prototype.flat/LICENSE",
+          "sha256": "567b1f5e84afcfc97685f3c7fce4c7502e1ac7a91e79cf10980ecd6a9ad38583"
+        }
+      ]
+    },
+    {
+      "name": "call-bind",
+      "version": "1.0.9",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "deps/node_modules/call-bind/LICENSE",
+          "sha256": "39c5ec504cf6bd5cd782a7c695828e09189df79f5d94840e4f08feb97b9fd416"
+        }
+      ]
+    },
+    {
+      "name": "call-bind-apply-helpers",
+      "version": "1.0.2",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "deps/node_modules/call-bind-apply-helpers/LICENSE",
+          "sha256": "5e325595b4ea8cfec3802f545b1def5d7b73e4a5b8e9ba63e32a320f67732292"
+        }
+      ]
+    },
+    {
+      "name": "define-data-property",
+      "version": "1.1.4",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "deps/node_modules/call-bind/node_modules/define-data-property/LICENSE",
+          "sha256": "b41d08bc3624d8c436fc80237d73ebb361985a67f4504bbcd703e5ca2b27254c"
+        }
+      ]
+    },
+    {
+      "name": "get-intrinsic",
+      "version": "1.3.0",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "deps/node_modules/call-bind/node_modules/get-intrinsic/LICENSE",
+          "sha256": "39c5ec504cf6bd5cd782a7c695828e09189df79f5d94840e4f08feb97b9fd416"
+        }
+      ]
+    },
+    {
+      "name": "get-proto",
+      "version": "1.0.1",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "deps/node_modules/call-bind/node_modules/get-proto/LICENSE",
+          "sha256": "be46ce1e3b0479af9ce82d22b465a6d7d2ff084fca0aaf3d54172da2b5eb5781"
+        }
+      ]
+    },
+    {
+      "name": "has-property-descriptors",
+      "version": "1.0.2",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "deps/node_modules/call-bind/node_modules/has-property-descriptors/LICENSE",
+          "sha256": "0f0ca96f50793990031ebc488a38f7292ff70bce8ab6a8e5eeda674abc32ccdf"
+        }
+      ]
+    },
+    {
+      "name": "set-function-length",
+      "version": "1.2.2",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "deps/node_modules/call-bind/node_modules/set-function-length/LICENSE",
+          "sha256": "bf9b0d665be2a689851eea667ca9f42066ea1d903b38349c51e6a44b2577680a"
+        }
+      ]
+    },
+    {
+      "name": "deepmerge",
+      "version": "4.3.1",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "deps/node_modules/deepmerge/license.txt",
+          "sha256": "6cfc4687cb2f2d86f4a77e6b526290d3878e5e512f3fec2f4cb36a9cb36f798b"
+        }
+      ]
+    },
+    {
+      "name": "define-properties",
+      "version": "1.2.1",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "deps/node_modules/define-properties/LICENSE",
+          "sha256": "00d402c2bbe7c67369bd01ce2c16b8ed46ccc949a1ee2d6bb8f9606afa8c7434"
+        }
+      ]
+    },
+    {
+      "name": "define-data-property",
+      "version": "1.1.4",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "deps/node_modules/define-properties/node_modules/define-data-property/LICENSE",
+          "sha256": "b41d08bc3624d8c436fc80237d73ebb361985a67f4504bbcd703e5ca2b27254c"
+        }
+      ]
+    },
+    {
+      "name": "has-property-descriptors",
+      "version": "1.0.2",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "deps/node_modules/define-properties/node_modules/has-property-descriptors/LICENSE",
+          "sha256": "0f0ca96f50793990031ebc488a38f7292ff70bce8ab6a8e5eeda674abc32ccdf"
+        }
+      ]
+    },
+    {
+      "name": "object-keys",
+      "version": "1.1.1",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "deps/node_modules/define-properties/node_modules/object-keys/LICENSE",
+          "sha256": "5640e5cbe2e9f57f6ccfdd8dbfbeadb875495bdbcb69d2666ce3177ccd0942e4"
+        }
+      ]
+    },
+    {
+      "name": "diff",
+      "version": "4.0.4",
+      "license": "BSD-3-Clause",
+      "files": [
+        {
+          "path": "deps/node_modules/diff/LICENSE",
+          "sha256": "152f0fb43e953fcf5c56c5bfa4c834bb96b1603e4026319c613dd3e734f305cf"
+        }
+      ]
+    },
+    {
+      "name": "dunder-proto",
+      "version": "1.0.1",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "deps/node_modules/dunder-proto/LICENSE",
+          "sha256": "2b770a704c15de238c3f622b01b0044ddd60b49ee30608ea6991ebf19db7a7a1"
+        }
+      ]
+    },
+    {
+      "name": "es-abstract",
+      "version": "1.24.2",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "deps/node_modules/es-abstract/LICENSE",
+          "sha256": "210549bd75abec340599f291e5ecd95b9acd0d8a713543838ab42f6f462b16bc"
+        }
+      ]
+    },
+    {
+      "name": "call-bound",
+      "version": "1.0.4",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "deps/node_modules/es-abstract/node_modules/call-bound/LICENSE",
+          "sha256": "5e325595b4ea8cfec3802f545b1def5d7b73e4a5b8e9ba63e32a320f67732292"
+        }
+      ]
+    },
+    {
+      "name": "define-data-property",
+      "version": "1.1.4",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "deps/node_modules/es-abstract/node_modules/define-data-property/LICENSE",
+          "sha256": "b41d08bc3624d8c436fc80237d73ebb361985a67f4504bbcd703e5ca2b27254c"
+        }
+      ]
+    },
+    {
+      "name": "es-abstract-get",
+      "version": "1.0.0",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "deps/node_modules/es-abstract/node_modules/es-abstract-get/LICENSE",
+          "sha256": "5b06b483b5c8874fd4e977fedb335067a9e8f722fd45c46ed42797af9d37fbf3"
+        }
+      ]
+    },
+    {
+      "name": "es-to-primitive",
+      "version": "1.3.4",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "deps/node_modules/es-abstract/node_modules/es-to-primitive/LICENSE",
+          "sha256": "c61652db3d2808f667b48af0a358f0d85fd07ad4a0d0b1a50882dec3b764c522"
+        }
+      ]
+    },
+    {
+      "name": "get-intrinsic",
+      "version": "1.3.0",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "deps/node_modules/es-abstract/node_modules/get-intrinsic/LICENSE",
+          "sha256": "39c5ec504cf6bd5cd782a7c695828e09189df79f5d94840e4f08feb97b9fd416"
+        }
+      ]
+    },
+    {
+      "name": "get-proto",
+      "version": "1.0.1",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "deps/node_modules/es-abstract/node_modules/get-proto/LICENSE",
+          "sha256": "be46ce1e3b0479af9ce82d22b465a6d7d2ff084fca0aaf3d54172da2b5eb5781"
+        }
+      ]
+    },
+    {
+      "name": "has-property-descriptors",
+      "version": "1.0.2",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "deps/node_modules/es-abstract/node_modules/has-property-descriptors/LICENSE",
+          "sha256": "0f0ca96f50793990031ebc488a38f7292ff70bce8ab6a8e5eeda674abc32ccdf"
+        }
+      ]
+    },
+    {
+      "name": "has-tostringtag",
+      "version": "1.0.2",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "deps/node_modules/es-abstract/node_modules/has-tostringtag/LICENSE",
+          "sha256": "e2560e002e13281578c75c850061d9255c33d16d732939e8c2db64c2506642fa"
+        }
+      ]
+    },
+    {
+      "name": "is-callable",
+      "version": "1.2.7",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "deps/node_modules/es-abstract/node_modules/is-callable/LICENSE",
+          "sha256": "c61652db3d2808f667b48af0a358f0d85fd07ad4a0d0b1a50882dec3b764c522"
+        }
+      ]
+    },
+    {
+      "name": "is-date-object",
+      "version": "1.1.0",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "deps/node_modules/es-abstract/node_modules/is-date-object/LICENSE",
+          "sha256": "c61652db3d2808f667b48af0a358f0d85fd07ad4a0d0b1a50882dec3b764c522"
+        }
+      ]
+    },
+    {
+      "name": "is-symbol",
+      "version": "1.1.1",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "deps/node_modules/es-abstract/node_modules/is-symbol/LICENSE",
+          "sha256": "c61652db3d2808f667b48af0a358f0d85fd07ad4a0d0b1a50882dec3b764c522"
+        }
+      ]
+    },
+    {
+      "name": "object-inspect",
+      "version": "1.13.4",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "deps/node_modules/es-abstract/node_modules/object-inspect/LICENSE",
+          "sha256": "bd40cc437e28a3ad7bef2ad34e6b72e757b182e67bda1acadbab4ef0476f8232"
+        }
+      ]
+    },
+    {
+      "name": "safe-regex-test",
+      "version": "1.1.0",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "deps/node_modules/es-abstract/node_modules/safe-regex-test/LICENSE",
+          "sha256": "d90bf0a089da4cf43d644ed240a0b3825dcdb705e64e38371d56995a4cc9e4c5"
+        }
+      ]
+    },
+    {
+      "name": "string.prototype.trim",
+      "version": "1.2.11",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "deps/node_modules/es-abstract/node_modules/string.prototype.trim/LICENSE",
+          "sha256": "c16d06f1808d8d8c6ec0f6b6fb7e951126c46730fbb67320863a81f8aa8ca033"
+        }
+      ]
+    },
+    {
+      "name": "es-define-property",
+      "version": "1.0.1",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "deps/node_modules/es-define-property/LICENSE",
+          "sha256": "5e325595b4ea8cfec3802f545b1def5d7b73e4a5b8e9ba63e32a320f67732292"
+        }
+      ]
+    },
+    {
+      "name": "es-errors",
+      "version": "1.3.0",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "deps/node_modules/es-errors/LICENSE",
+          "sha256": "5e325595b4ea8cfec3802f545b1def5d7b73e4a5b8e9ba63e32a320f67732292"
+        }
+      ]
+    },
+    {
+      "name": "es-object-atoms",
+      "version": "1.1.2",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "deps/node_modules/es-object-atoms/LICENSE",
+          "sha256": "5e325595b4ea8cfec3802f545b1def5d7b73e4a5b8e9ba63e32a320f67732292"
+        }
+      ]
+    },
+    {
+      "name": "function-bind",
+      "version": "1.1.2",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "deps/node_modules/function-bind/LICENSE",
+          "sha256": "773e131a7684726005a7e4688a80b4620033bc08499bc1404dd1a1eb3bca725e"
+        }
+      ]
+    },
+    {
+      "name": "gopd",
+      "version": "1.2.0",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "deps/node_modules/gopd/LICENSE",
+          "sha256": "d90bf0a089da4cf43d644ed240a0b3825dcdb705e64e38371d56995a4cc9e4c5"
+        }
+      ]
+    },
+    {
+      "name": "has-symbols",
+      "version": "1.1.0",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "deps/node_modules/has-symbols/LICENSE",
+          "sha256": "206c1adcf206dc0031b11232f5b054ec5f1662407ab1ca415247921cab2068ab"
+        }
+      ]
+    },
+    {
+      "name": "hasown",
+      "version": "2.0.4",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "deps/node_modules/hasown/LICENSE",
+          "sha256": "bf9b0d665be2a689851eea667ca9f42066ea1d903b38349c51e6a44b2577680a"
+        }
+      ]
+    },
+    {
+      "name": "is-regex",
+      "version": "1.2.1",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "deps/node_modules/is-regex/LICENSE",
+          "sha256": "dc0fe5a22d9336f345ee984f9bf56f11f22877a3aa5fd16a1db9a8ca0e23a5d1"
+        }
+      ]
+    },
+    {
+      "name": "call-bound",
+      "version": "1.0.4",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "deps/node_modules/is-regex/node_modules/call-bound/LICENSE",
+          "sha256": "5e325595b4ea8cfec3802f545b1def5d7b73e4a5b8e9ba63e32a320f67732292"
+        }
+      ]
+    },
+    {
+      "name": "get-intrinsic",
+      "version": "1.3.0",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "deps/node_modules/is-regex/node_modules/get-intrinsic/LICENSE",
+          "sha256": "39c5ec504cf6bd5cd782a7c695828e09189df79f5d94840e4f08feb97b9fd416"
+        }
+      ]
+    },
+    {
+      "name": "get-proto",
+      "version": "1.0.1",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "deps/node_modules/is-regex/node_modules/get-proto/LICENSE",
+          "sha256": "be46ce1e3b0479af9ce82d22b465a6d7d2ff084fca0aaf3d54172da2b5eb5781"
+        }
+      ]
+    },
+    {
+      "name": "has-tostringtag",
+      "version": "1.0.2",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "deps/node_modules/is-regex/node_modules/has-tostringtag/LICENSE",
+          "sha256": "e2560e002e13281578c75c850061d9255c33d16d732939e8c2db64c2506642fa"
+        }
+      ]
+    },
+    {
+      "name": "lodash.merge",
+      "version": "4.6.2",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "deps/node_modules/lodash.merge/LICENSE",
+          "sha256": "f71e8ed126b46346494aad5486874cd8f0aafe95092ed67d2e3cb6110f939abc"
+        }
+      ]
+    },
+    {
+      "name": "math-intrinsics",
+      "version": "1.1.0",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "deps/node_modules/math-intrinsics/LICENSE",
+          "sha256": "2b770a704c15de238c3f622b01b0044ddd60b49ee30608ea6991ebf19db7a7a1"
+        }
+      ]
+    },
+    {
+      "name": "object-assign",
+      "version": "4.1.1",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "deps/node_modules/object-assign/license",
+          "sha256": "6fb9754611c20f6649f68805e8c990e83261f29316e29de9e6cedae607b8634c"
+        }
+      ]
+    },
+    {
+      "name": "prismjs",
+      "version": "1.16.0",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "deps/node_modules/prismjs/LICENSE",
+          "sha256": "2b947f0901a7ffcf08a89957da9783c0e9c6e72cb6ce8e959f501ab5409e4d2b"
+        }
+      ]
+    },
+    {
+      "name": "prop-types",
+      "version": "15.8.1",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "deps/node_modules/prop-types/LICENSE",
+          "sha256": "f657f99d3fb9647db92628e96007aabb46e5f04f33e49999075aab8e250ca7ce"
+        }
+      ]
+    },
+    {
+      "name": "react",
+      "version": "16.14.0",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "deps/node_modules/react/LICENSE",
+          "sha256": "52412d7bc7ce4157ea628bbaacb8829e0a9cb3c58f57f99176126bc8cf2bfc85"
+        }
+      ]
+    },
+    {
+      "name": "react-dom",
+      "version": "16.14.0",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "deps/node_modules/react-dom/LICENSE",
+          "sha256": "52412d7bc7ce4157ea628bbaacb8829e0a9cb3c58f57f99176126bc8cf2bfc85"
+        }
+      ]
+    },
+    {
+      "name": "react-swipeable",
+      "version": "5.5.1",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "deps/node_modules/react-swipeable/LICENSE",
+          "sha256": "1100f220a5b0035f545c3aec9301c04a0f73a87f282f4365a9f3c870950d8fea"
+        }
+      ]
+    },
+    {
+      "name": "scheduler",
+      "version": "0.19.1",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "deps/node_modules/scheduler/LICENSE",
+          "sha256": "52412d7bc7ce4157ea628bbaacb8829e0a9cb3c58f57f99176126bc8cf2bfc85"
+        }
+      ]
+    },
+    {
+      "name": "shell-quote",
+      "version": "1.7.3",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "deps/node_modules/shell-quote/LICENSE",
+          "sha256": "8bb16db1b047019e4395965f2cf3611b06c34bf86dc2d0210b3c3f91b53c21fe"
+        }
+      ]
+    },
+    {
+      "name": "theme-ui",
+      "version": "0.2.52",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "deps/node_modules/theme-ui/LICENSE.md",
+          "sha256": "4155bd423d80e3ead83c19887e26a8bf600f6796b316f7ed543f0f77c3b4fcdf"
+        }
+      ]
+    },
+    {
+      "name": "use-spring",
+      "version": "0.2.2",
+      "license": "MIT",
+      "files": [
+        {
+          "path": "deps/node_modules/use-spring/license",
+          "sha256": "03a25ac2f7eee02ba5606da7fa49b4c90687953f4e998fc50846bf1979fc8c2e"
+        }
+      ]
+    },
+    {
+      "name": "mdx-deck",
+      "version": "3.0.10",
+      "gitHead": "92f67fd41e6614091c73742fd51aa04da789eadd",
+      "license": "MIT",
+      "source": "official npm package original src"
+    },
+    {
+      "name": "gatsby-theme-mdx-deck",
+      "version": "3.0.10",
+      "gitHead": "92f67fd41e6614091c73742fd51aa04da789eadd",
+      "license": "MIT",
+      "source": "official npm package original src"
+    }
+  ],
+  "adaptation": [
+    "MDX 1.6.22 compiled at build time, no runtime compiler. Original four packs directly bundled from fixed TS/JS source.",
+    "Official mdx-deck 3.0.10 runtime source extracted from matching gatsby-theme-mdx-deck package. Original App reducer/register, Context, useSteps, slide splitting, Slide, Wrapper and keyboard/swipe step semantics retained. Gatsby URL transition replaced by memory index updates; print/presenter/overview/storage/network navigation not provided. Local previous/next buttons and progress output added for iframe discoverability.",
+    "Theme barrel restricted to original base/nightOwl/vsDark and styling API; unused theme objects excluded. Original pure-code samples, all step metadata/focus ranges and two-column themes unchanged. System UI/monospace fonts replace font dependencies. No external images used.",
+    "theme-ui 0.2.52 persistent color storage disabled. Dynamic constructor fallbacks in lodash.merge/function-bind/get-intrinsic disabled/replaced with static native-compatible equivalents; original CodeSurfer parser and animations unaltered.",
+    "Reduced motion determined once at mount/bundle load: directly selects original target step without spring scheduling. Hidden unmounts original tree and pauses owned tasks; visible remount resets step. Final exit removes all owned listeners/timers/observers/React tree.",
+    "Browser UI pixels, native font measurement, swipe and resize geometry unverified. DOM tests use explicit fixed geometry, not visual acceptance."
+  ],
+  "tooling": {
+    "react": "16.14.0 satisfies original ^16.8.0/^16.10.0",
+    "mdx": "1.6.22 build-only",
+    "esbuild": "0.25.5 build-only",
+    "jsdom": "26.1.0 test-only"
+  }
+}
