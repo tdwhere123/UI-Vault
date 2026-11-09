@@ -1,0 +1,385 @@
+{
+  "repository": "https://github.com/CopilotKit/CopilotKit",
+  "revision": "c7815d9ac96f48fb3a64ad8c18e176a870c81763",
+  "sourcePath": "examples/showcases/antigravity-repo-doctor/src/components/chat/approval-card.tsx",
+  "sourceHashes": {
+    "package.json": "4567a083d54fd1ef44e55225cc1b948aa018d3552632e760977eb1d4af798a74",
+    "LICENSE": "15a0e5343aea872c0573ad72feb6044b336f162d724cc1673c608e6b37ea071b",
+    "src/lib/use-workspace.tsx": "49e0314a0d9ad72b74b061a8b108b1531479942b74cedc35b313789979eb32ae",
+    "src/lib/cn.ts": "ed97d9eacf3a8c7909a21fdec44deae7cad8c885645a3ad86bec29b70a16df5c",
+    "src/lib/theme.ts": "861f382b322e56120cf820f6d7415df2494efcd4d787549fcd7d26f5288b8c82",
+    "src/lib/highlight.ts": "fb3f7a91c9ed40304270519d7cfd4aa05eb155483caf2ad5a3fcf45bc543324e",
+    "src/lib/command-output.ts": "f138b82e1a67c9883270ded8233b061fe3082196ffe1d98350a62c5826649638",
+    "src/lib/paths.ts": "7ff0af4171a1efd25f702e0bb049f6d66eacf614a0dac77ac5218917e0c92aac",
+    "src/lib/builtin-args.ts": "795c7c4eded669b4ece62486dc40d0fd2b3c033da5764d1b275846c444a8e766",
+    "src/lib/diff.ts": "1c10688285f0e07d065843ddd684b5907994b5eeeacdcf092952f6646fe3cc5e",
+    "src/app/globals.css": "6a586986b32d30d415a5b2f216f21d0130d949fe89398ff8c10bfb6095b1c6fa",
+    "src/components/chat/diff-view.tsx": "9f5e427c29c087d31db3849413efda0f95ab214dbb86c90b8fba932aa399b5a7",
+    "src/components/chat/approval-card.tsx": "a9daf43b8d6085f6f30d5458ee2f311704eb93804e4d7be352875d2a4c47eb06"
+  },
+  "runtimeDependencies": [
+    {
+      "name": "clsx",
+      "version": "2.1.1",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-coss-chat-local/node_modules/clsx",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "license": "9a9edad7baae52622bddf3c15b2ef8a33d2c89f2d25408ad13e8a7481c6b0c97"
+      }
+    },
+    {
+      "name": "lucide-react",
+      "version": "0.555.0",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-coss-chat-local/node_modules/lucide-react",
+      "license": "ISC",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "3c57143f22dac950efebf84002e360bba5458c7b90fe583b0667aaaef1a7256e"
+      }
+    },
+    {
+      "name": "react",
+      "version": "19.3.1",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-coss-chat-local/node_modules/react",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+      }
+    },
+    {
+      "name": "react-dom",
+      "version": "19.3.1",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-coss-chat-local/node_modules/react-dom",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+      }
+    },
+    {
+      "name": "scheduler",
+      "version": "0.28.0",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-coss-chat-local/node_modules/scheduler",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+      }
+    },
+    {
+      "name": "tailwind-merge",
+      "version": "3.4.0",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-coss-chat-local/node_modules/tailwind-merge",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE.md": "d4c70c7ce38cea8778f0aed3fc0bef0a9dbd27f13bd8b6773cbd6d37941971e5"
+      }
+    },
+    {
+      "name": "@shikijs/core",
+      "version": "3.13.0",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-shiki-move-adapt/node_modules/@shikijs/core",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "7a9d8d01038aeacf9e5bcdabbddf2a7815200dce9fc1118468cc553e00ae3eee"
+      }
+    },
+    {
+      "name": "@shikijs/engine-javascript",
+      "version": "3.13.0",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-shiki-move-adapt/node_modules/@shikijs/engine-javascript",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "7a9d8d01038aeacf9e5bcdabbddf2a7815200dce9fc1118468cc553e00ae3eee"
+      }
+    },
+    {
+      "name": "@shikijs/langs",
+      "version": "3.13.0",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-shiki-move-adapt/node_modules/@shikijs/langs",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "7a9d8d01038aeacf9e5bcdabbddf2a7815200dce9fc1118468cc553e00ae3eee"
+      }
+    },
+    {
+      "name": "@shikijs/themes",
+      "version": "3.13.0",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-shiki-move-adapt/node_modules/@shikijs/themes",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "7a9d8d01038aeacf9e5bcdabbddf2a7815200dce9fc1118468cc553e00ae3eee"
+      }
+    },
+    {
+      "name": "@shikijs/types",
+      "version": "3.13.0",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-shiki-move-adapt/node_modules/@shikijs/types",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "7a9d8d01038aeacf9e5bcdabbddf2a7815200dce9fc1118468cc553e00ae3eee"
+      }
+    },
+    {
+      "name": "@shikijs/vscode-textmate",
+      "version": "10.1.0",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-shiki-move-adapt/node_modules/@shikijs/vscode-textmate",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE.md": "b5cb7ff7859e7d282d98fc43ab081b0dda5dc659dc3385cf65740c759a7e6a6c"
+      }
+    },
+    {
+      "name": "ccount",
+      "version": "2.0.1",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-shiki-move-adapt/node_modules/ccount",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "license": "63cb98b3f6abfb3c3592c16f88253c1bdc834087bf52671e8ce5609e4eb693cf"
+      }
+    },
+    {
+      "name": "character-entities-html4",
+      "version": "2.1.0",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-shiki-move-adapt/node_modules/character-entities-html4",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "license": "63cb98b3f6abfb3c3592c16f88253c1bdc834087bf52671e8ce5609e4eb693cf"
+      }
+    },
+    {
+      "name": "character-entities-legacy",
+      "version": "3.0.0",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-shiki-move-adapt/node_modules/character-entities-legacy",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "license": "63cb98b3f6abfb3c3592c16f88253c1bdc834087bf52671e8ce5609e4eb693cf"
+      }
+    },
+    {
+      "name": "comma-separated-tokens",
+      "version": "2.0.3",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-shiki-move-adapt/node_modules/comma-separated-tokens",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "license": "ca4662cb5d1b738fbe5350c0d5485ba11773b4b7208974082ae6e129a52d631d"
+      }
+    },
+    {
+      "name": "hast-util-to-html",
+      "version": "9.0.6",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-shiki-move-adapt/node_modules/hast-util-to-html",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "license": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+      }
+    },
+    {
+      "name": "hast-util-whitespace",
+      "version": "3.0.0",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-shiki-move-adapt/node_modules/hast-util-whitespace",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "license": "ca4662cb5d1b738fbe5350c0d5485ba11773b4b7208974082ae6e129a52d631d"
+      }
+    },
+    {
+      "name": "html-void-elements",
+      "version": "3.0.0",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-shiki-move-adapt/node_modules/html-void-elements",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "license": "ca4662cb5d1b738fbe5350c0d5485ba11773b4b7208974082ae6e129a52d631d"
+      }
+    },
+    {
+      "name": "oniguruma-parser",
+      "version": "0.12.2",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-shiki-move-adapt/node_modules/oniguruma-parser",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "5fe78c91b36c6147ed0b6ab1631ce731165b7dd5e00482be1f027d46d12a8082"
+      }
+    },
+    {
+      "name": "oniguruma-to-es",
+      "version": "4.3.6",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-shiki-move-adapt/node_modules/oniguruma-to-es",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "c1a5a1ebc88f3e0f3caa04c0af52bf8f3a5405a467337a09594ae1ad149cec83"
+      }
+    },
+    {
+      "name": "property-information",
+      "version": "7.2.0",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-shiki-move-adapt/node_modules/property-information",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "license": "5d0698266086f217bb11ea0499d33453e401fe479fb9126ad04e625e63d3557b"
+      }
+    },
+    {
+      "name": "regex",
+      "version": "6.1.0",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-shiki-move-adapt/node_modules/regex",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "3d19c2b6246b3072547af2bd05e6b4c09bd3d15955590f1f1e1d20382c919a49"
+      }
+    },
+    {
+      "name": "regex-recursion",
+      "version": "6.0.2",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-shiki-move-adapt/node_modules/regex-recursion",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "3d19c2b6246b3072547af2bd05e6b4c09bd3d15955590f1f1e1d20382c919a49"
+      }
+    },
+    {
+      "name": "regex-utilities",
+      "version": "2.3.0",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-shiki-move-adapt/node_modules/regex-utilities",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "8ca7af4f6c753e5ab8388e1078d94ce4650723bba4b0d4dfe562fbd45fb4a4e6"
+      }
+    },
+    {
+      "name": "shiki",
+      "version": "3.13.0",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-shiki-move-adapt/node_modules/shiki",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "7a9d8d01038aeacf9e5bcdabbddf2a7815200dce9fc1118468cc553e00ae3eee"
+      }
+    },
+    {
+      "name": "space-separated-tokens",
+      "version": "2.0.2",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-shiki-move-adapt/node_modules/space-separated-tokens",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "license": "ca4662cb5d1b738fbe5350c0d5485ba11773b4b7208974082ae6e129a52d631d"
+      }
+    },
+    {
+      "name": "stringify-entities",
+      "version": "4.0.4",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-shiki-move-adapt/node_modules/stringify-entities",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "license": "9f084fac69d8cf1e6ce983ba5a3499c7695ed74a26ec625c38f0fd19fddd5e10"
+      }
+    },
+    {
+      "name": "zwitch",
+      "version": "2.0.4",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-shiki-move-adapt/node_modules/zwitch",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "license": "ca4662cb5d1b738fbe5350c0d5485ba11773b4b7208974082ae6e129a52d631d"
+      }
+    }
+  ],
+  "compiledCSSLicense": {
+    "name": "tailwindcss",
+    "version": "4.3.0",
+    "sha256": "60e0b68c0f35c078eef3a5d29419d0b03ff84ec1df9c3f9d6e39a519a5ae7985"
+  },
+  "adaptation": "Original CopilotKit Repo Doctor ApprovalCard and DiffView retained byte-for-byte, with original described tool risks, approval/denial/note states, send-failure fallback, file diff geometry and real Shiki syntax token pipeline. Host supplies three explicit fictional local command/edit/push requests and local Promise response; autoApprove is always false. No shell, repository, agent, installation, remote push or file writes occur. Persistent Chinese disclaimer clarifies original Approved.Continuing wording means only local state, no real continuation. Fixture reset and intentional local rejection checkbox are host controls, not upstream business actions. relativeToRepo and taskLabel pure functions extracted byte-for-byte from original modules to exclude unrelated Agent/ANSI dependencies. Original theme hook replaced host fixed light mode, no system theme/storage or persistent settings. Original whole CSS and tokens compiled with system font values and host spacing; no fonts/media loaded. Original diff/highlight/builtin-args/path/CN functions unchanged. Compatibility adaptation: original app package pins Shiki4.5.0 and Lucide1.57.0, this bundle uses previously available Shiki3.13.0 and Lucide0.555.0 with original APIs/imported glyph names preserved and executed; not claimed exact original dependency versions. Nine original languages plus two GitHub themes bundled offline with Shiki3.13.0 JavaScript regex engine, no WASM/CDN/dynamic network imports/eval. Original hook cancels late highlighting state on unmount; host bounds listeners/timers/RAF/observers and hides by unmount, visible remount resets fixture. Original highlighter retained as one fixed bounded lazy instance until iframe disposal, no continuously active resources. Full actual emitted package licenses plus Lucide Feather MIT and build CSS license included. Tests actual567compose with blocked network/eval/Function/storage/clipboard APIs, real note/deny payload, approve and repeated-disabled state, simulated local rejection/retry, real Shiki color spans for original edit diff, hidden/old-node cleanup, early-module and late-error failclosed; no native pixels or pointer geometry claimed.",
+  "nativeVisualVerified": false,
+  "loaderVerification": [
+    {
+      "slug": "approval",
+      "pass": true,
+      "utf16Bytes": 2432598,
+      "fetches": 3,
+      "actualCreatePreviewLoader567": true,
+      "cacheHit": true,
+      "released": true,
+      "iframeExecution": false
+    }
+  ],
+  "tests": [
+    {
+      "mode": "normal",
+      "pass": true,
+      "actualCompose567": true,
+      "scope": "Original note/deny/payload,approve/disable,local rejection restores retry,real diff before-after,hide-remount/oldnodes,earlymodule/lateerror; original Shiki JS engine asynchronous pipeline,not native pixels",
+      "cleanup": {
+        "listeners": 0,
+        "timers": 0,
+        "raf": 0,
+        "observers": 0
+      },
+      "blockedCalls": 0
+    },
+    {
+      "mode": "early",
+      "pass": true,
+      "actualCompose567": true,
+      "scope": "Original note/deny/payload,approve/disable,local rejection restores retry,real diff before-after,hide-remount/oldnodes,earlymodule/lateerror; original Shiki JS engine asynchronous pipeline,not native pixels",
+      "cleanup": {
+        "listeners": 0,
+        "timers": 0,
+        "raf": 0,
+        "observers": 0
+      },
+      "blockedCalls": 0
+    },
+    {
+      "mode": "reduced",
+      "pass": true,
+      "actualCompose567": true,
+      "scope": "Original note/deny/payload,approve/disable,local rejection restores retry,real diff before-after,hide-remount/oldnodes,earlymodule/lateerror; original Shiki JS engine asynchronous pipeline,not native pixels",
+      "cleanup": {
+        "listeners": 0,
+        "timers": 0,
+        "raf": 0,
+        "observers": 0
+      },
+      "blockedCalls": 0
+    },
+    {
+      "mode": "failure",
+      "pass": true,
+      "actualCompose567": true,
+      "scope": "Original note/deny/payload,approve/disable,local rejection restores retry,real diff before-after,hide-remount/oldnodes,earlymodule/lateerror; original Shiki JS engine asynchronous pipeline,not native pixels",
+      "cleanup": {
+        "listeners": 0,
+        "timers": 0,
+        "raf": 0,
+        "observers": 0
+      },
+      "blockedCalls": 0
+    }
+  ]
+}
