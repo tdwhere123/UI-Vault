@@ -12734,36 +12734,53 @@
   },
   {
     "id": "novel:selection-writing-workspace",
-    "title": "Novel · 原选区写作与生成菜单",
     "source": "Novel",
     "repository": "https://github.com/steven-tey/novel",
     "revision": "fa95098e66476c466faebb8211baa5869c101a9c",
     "upstream": "https://github.com/steven-tey/novel/blob/fa95098e66476c466faebb8211baa5869c101a9c/apps/web/components/tailwind/advanced-editor.tsx",
-    "website": "https://github.com/steven-tey/novel",
-    "license": "Apache-2.0 root; runtime dependency and media closure not audited",
-    "category": "输入与选择",
-    "kind": "完整原版工作区（未适配）",
-    "description": "原富文本/斜杠菜单、选区生成面板、完成结果替换选区/插入下方/丢弃与保存状态，作为一个写作工作流收集。",
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted",
-    "sourceScope": "Selected fixed original code and complete root license evidence; no complete runnable/archive or runtime audit",
     "licenseEvidence": {
       "url": "https://github.com/steven-tey/novel/blob/fa95098e66476c466faebb8211baa5869c101a9c/LICENSE",
       "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
       "scope": "Complete root license; no transitive runtime/media license closure"
     },
+    "website": "https://github.com/steven-tey/novel",
+    "title": "选区写作与结果接受工作区",
+    "description": "原编辑器、斜杠菜单、选区结果替换、下插及丢弃流程；生成使用明确预录本地示例，不调用AI，草稿仅内存。",
+    "behavior": "原编辑器、斜杠菜单、选区结果替换、下插及丢弃流程；生成使用明确预录本地示例，不调用AI，草稿仅内存。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "输入与选择",
+    "license": "Apache-2.0; MIT; ISC; BSD-2-Clause; BSD-3-Clause; 0BSD",
+    "batch": "novel-workspace-01",
+    "preview": "batches/novel-workspace-01/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "pass",
     "gaps": [
-      "与已有富文本和AI Elements有局部重叠，独立价值限定原选区到生成结果的整套接受/插入/丢弃流程，不拆成多个按钮。",
-      "useCompletion明确请求/api/generate；图片拖放/粘贴请求/api/upload。仅阅读源码，未请求服务或传输内容，未来需要明确本地fixture并关闭真实上传/生成。",
-      "原编辑自动保存到localStorage，opaque环境必须改造；原默认图片/字体、Tiptap/Novel包等完整许可与依赖未审。",
-      "根实际Apache2，不按旧印象标MIT。需处理源码改动说明/NOTICE，选区失效/异步回调/撤销/输入法与退出尚未验。",
-      "全部封面与截图另行处理，本次只收集文本来源；没有预览或假公开源码ZIP。"
+      "AI response is explicitly prerecorded local fixture, identical for options; no inference, network, credentials or AI backend. Original result-selection/replace/insert/discard UI handlers retained.",
+      "Original advanced editor/headless source is fixed. Original default rich-text document retained; remote image/Tweet blocks replaced by explicit unavailable text. No uploads/file drop/cloud saving. Draft status says Saved in memory.",
+      "Remote Tweet renderer replaced by explicit boundary text, image/Youtube embeds cannot fetch/play under unchanged CSP. Selected text-writing workflow is complete, not a claim of full remote media integration.",
+      "Original styling/Tailwind tokens and ProseMirror CSS compiled; external/binary fonts omitted, system fallbacks used including KaTeX CSS without font files. No native font/math/pixel/drag-layout verification.",
+      "Controlled JSDOM Range/DOM geometry and observer fixtures, not native selection/IME/pointer rendering QA. Original callbacks exercised in production bundles.",
+      "Natural complete-JS-statement chunks each independently parse and run, no eval/Function wrappers or binary/base64 payload. Host only uses existing ordered-text loader.",
+      "199 positive-emitted package paths, including nested package identities; 3 separate compiled-CSS contributions. Missing standalone old Radix/scroll-bar licenses use clearly identified MIT supplements from explicit official npm declarations, not fabricated historical LICENSE files.",
+      "TipTap 2.11.2 and ProseMirror versions pinned to original pnpm lock; preserves original drag-handle dependency on __serializeForClipboard. No incompatible latest-package substitution."
     ],
-    "batch": "source-bulk-522"
+    "originalCandidateSource": {
+      "source": "Novel",
+      "upstream": "https://github.com/steven-tey/novel/blob/fa95098e66476c466faebb8211baa5869c101a9c/apps/web/components/tailwind/advanced-editor.tsx",
+      "revision": "fa95098e66476c466faebb8211baa5869c101a9c"
+    },
+    "sourcePath": "apps/web/components/tailwind/advanced-editor.tsx",
+    "runtime": {
+      "scripts": [
+        "runtime-part-1.js",
+        "runtime-part-2.js",
+        "runtime-part-3.js",
+        "runtime-part-4.js",
+        "runtime.js"
+      ]
+    }
   },
   {
     "id": "plate:document-revisions",
