@@ -4,7 +4,7 @@ Existing `svgomg:vector-optimization-inspector`, original fixed full Material UI
 
 Actual compose tests: original result8.54k→5.06k (gzip), precision changes actual output, code view contains actual SVG, active SVG rejected, new vector text optimizes to real path/color output, hidden/resume and final old callbacks/node events leave all resource ledgers zero. Native image pixels/pointer precision not validated.
 
-See SOURCE exact module diffs: worker transport only replaced with bounded async local calls; original SVG iframe deliberately replaced with inert image, validator refuses active/external content, browser integrations removed. Root/positive emitted dependency texts, Pako embedded Zlib headers, Material Apache and original car dedication preserved.
+See SOURCE exact module diffs: worker transport only replaced with bounded async local calls; original SVG iframe deliberately replaced with inert image, validator refuses active/external content, browser integrations removed. Root/18 positive-emitted dependency texts, two additional embedded MDN data versions (2.27.1 and 2.0.28, complete CC0), Pako embedded Zlib headers, Material Apache and original car dedication preserved. MDN data embedded in css-tree dist/data.js is not a separately emitted module.
 
 - Controlled JSDOM geometry/form-named-property fixture, not native SVG raster, font metrics, pointer pan/zoom or performance QA.
 - Original same-thread SVGO/gzip replaces worker transport. Inputs capped150k chars/2500elements; huge SVG documents unsupported.
