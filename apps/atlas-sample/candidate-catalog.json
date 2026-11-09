@@ -3899,21 +3899,26 @@
   },
   {
     "id": "motioncore:fluid-simulation",
-    "title": "fluid-simulation",
     "source": "Motion Core",
-    "license": "MIT",
     "upstream": "https://github.com/kaltwrk/motion-core/tree/74ad6e66d50cc9b1849a505fcd1b352704920745/packages/motion-core/src/lib/components/fluid-simulation",
     "website": "",
-    "buildStatus": "not installed or built",
-    "batch": "batch-002",
-    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "revision": "74ad6e66d50cc9b1849a505fcd1b352704920745",
+    "title": "交互流体模拟",
+    "description": "原着色器与图形机制，保留真实渲染代码，支持隐藏停止与减动模式；依赖浏览器图形能力，不支持时明确提示。",
+    "behavior": "原着色器与图形机制，保留真实渲染代码，支持隐藏停止与减动模式；依赖浏览器图形能力，不支持时明确提示。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "视觉与动效",
+    "license": "MIT; Unlicense",
+    "batch": "motioncore-gpu-01",
+    "preview": "batches/motioncore-gpu-01/fluid-simulation/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "actual548 composition and original OGL lifecycle verified under stub GL; GPU pixels not-run",
     "gaps": [
-      "Official demos import workspace motion-core barrel; recreate selected exports or adapt imports before building. Full-library barrel intentionally not claimed closed.",
-      "Root package/lock and Svelte styles/helpers preserved; monorepo installation not tested.",
-      "WebGL/OGL shaders require real GPU/interaction checks; static source collection does not establish animation or performance.",
-      "Demo remote image/media references not downloaded. water-ripple brush PNG missing and must be supplied under verified rights or replaced with an original brush.",
-      "Package lists MediaPipe among peers, but selected source scan found no getUserMedia/requestPermission calls. No camera or device permissions used.",
-      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+      "WebGL methods/compile return values mocked in lifecycle tests; actual shader compilation/GPU pixels not verified.",
+      "No upstream visible parameter panel: official Demo supplies default props. Host Pause/Restart are disclosed added lifecycle controls.",
+      "No physics/clinical/material measurement claim; original aesthetic scene only."
     ]
   },
   {
@@ -3956,21 +3961,26 @@
   },
   {
     "id": "motioncore:god-rays",
-    "title": "god-rays",
     "source": "Motion Core",
-    "license": "MIT",
     "upstream": "https://github.com/kaltwrk/motion-core/tree/74ad6e66d50cc9b1849a505fcd1b352704920745/packages/motion-core/src/lib/components/god-rays",
     "website": "",
-    "buildStatus": "not installed or built",
-    "batch": "batch-002",
-    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "revision": "74ad6e66d50cc9b1849a505fcd1b352704920745",
+    "title": "体积光束动效",
+    "description": "原着色器与图形机制，保留真实渲染代码，支持隐藏停止与减动模式；依赖浏览器图形能力，不支持时明确提示。",
+    "behavior": "原着色器与图形机制，保留真实渲染代码，支持隐藏停止与减动模式；依赖浏览器图形能力，不支持时明确提示。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "视觉与动效",
+    "license": "MIT; Unlicense",
+    "batch": "motioncore-gpu-01",
+    "preview": "batches/motioncore-gpu-01/god-rays/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "actual548 composition and original OGL lifecycle verified under stub GL; GPU pixels not-run",
     "gaps": [
-      "Official demos import workspace motion-core barrel; recreate selected exports or adapt imports before building. Full-library barrel intentionally not claimed closed.",
-      "Root package/lock and Svelte styles/helpers preserved; monorepo installation not tested.",
-      "WebGL/OGL shaders require real GPU/interaction checks; static source collection does not establish animation or performance.",
-      "Demo remote image/media references not downloaded. water-ripple brush PNG missing and must be supplied under verified rights or replaced with an original brush.",
-      "Package lists MediaPipe among peers, but selected source scan found no getUserMedia/requestPermission calls. No camera or device permissions used.",
-      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+      "WebGL methods/compile return values mocked in lifecycle tests; actual shader compilation/GPU pixels not verified.",
+      "No upstream visible parameter panel: official Demo supplies default props. Host Pause/Restart are disclosed added lifecycle controls.",
+      "No physics/clinical/material measurement claim; original aesthetic scene only."
     ]
   },
   {
@@ -3994,59 +4004,74 @@
   },
   {
     "id": "motioncore:lava-lamp",
-    "title": "lava-lamp",
     "source": "Motion Core",
-    "license": "MIT",
     "upstream": "https://github.com/kaltwrk/motion-core/tree/74ad6e66d50cc9b1849a505fcd1b352704920745/packages/motion-core/src/lib/components/lava-lamp",
     "website": "",
-    "buildStatus": "not installed or built",
-    "batch": "batch-002",
-    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "revision": "74ad6e66d50cc9b1849a505fcd1b352704920745",
+    "title": "熔岩灯动态背景",
+    "description": "原着色器与图形机制，保留真实渲染代码，支持隐藏停止与减动模式；依赖浏览器图形能力，不支持时明确提示。",
+    "behavior": "原着色器与图形机制，保留真实渲染代码，支持隐藏停止与减动模式；依赖浏览器图形能力，不支持时明确提示。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "视觉与动效",
+    "license": "MIT; Unlicense",
+    "batch": "motioncore-gpu-01",
+    "preview": "batches/motioncore-gpu-01/lava-lamp/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "actual548 composition and original OGL lifecycle verified under stub GL; GPU pixels not-run",
     "gaps": [
-      "Official demos import workspace motion-core barrel; recreate selected exports or adapt imports before building. Full-library barrel intentionally not claimed closed.",
-      "Root package/lock and Svelte styles/helpers preserved; monorepo installation not tested.",
-      "WebGL/OGL shaders require real GPU/interaction checks; static source collection does not establish animation or performance.",
-      "Demo remote image/media references not downloaded. water-ripple brush PNG missing and must be supplied under verified rights or replaced with an original brush.",
-      "Package lists MediaPipe among peers, but selected source scan found no getUserMedia/requestPermission calls. No camera or device permissions used.",
-      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+      "WebGL methods/compile return values mocked in lifecycle tests; actual shader compilation/GPU pixels not verified.",
+      "No upstream visible parameter panel: official Demo supplies default props. Host Pause/Restart are disclosed added lifecycle controls.",
+      "No physics/clinical/material measurement claim; original aesthetic scene only."
     ]
   },
   {
     "id": "motioncore:liquid-metal",
-    "title": "liquid-metal",
     "source": "Motion Core",
-    "license": "MIT",
     "upstream": "https://github.com/kaltwrk/motion-core/tree/74ad6e66d50cc9b1849a505fcd1b352704920745/packages/motion-core/src/lib/components/liquid-metal",
     "website": "",
-    "buildStatus": "not installed or built",
-    "batch": "batch-002",
-    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "revision": "74ad6e66d50cc9b1849a505fcd1b352704920745",
+    "title": "流动金属表面",
+    "description": "原着色器与图形机制，保留真实渲染代码，支持隐藏停止与减动模式；依赖浏览器图形能力，不支持时明确提示。",
+    "behavior": "原着色器与图形机制，保留真实渲染代码，支持隐藏停止与减动模式；依赖浏览器图形能力，不支持时明确提示。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "视觉与动效",
+    "license": "MIT; Unlicense",
+    "batch": "motioncore-gpu-01",
+    "preview": "batches/motioncore-gpu-01/liquid-metal/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "actual548 composition and original OGL lifecycle verified under stub GL; GPU pixels not-run",
     "gaps": [
-      "Official demos import workspace motion-core barrel; recreate selected exports or adapt imports before building. Full-library barrel intentionally not claimed closed.",
-      "Root package/lock and Svelte styles/helpers preserved; monorepo installation not tested.",
-      "WebGL/OGL shaders require real GPU/interaction checks; static source collection does not establish animation or performance.",
-      "Demo remote image/media references not downloaded. water-ripple brush PNG missing and must be supplied under verified rights or replaced with an original brush.",
-      "Package lists MediaPipe among peers, but selected source scan found no getUserMedia/requestPermission calls. No camera or device permissions used.",
-      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+      "WebGL methods/compile return values mocked in lifecycle tests; actual shader compilation/GPU pixels not verified.",
+      "No upstream visible parameter panel: official Demo supplies default props. Host Pause/Restart are disclosed added lifecycle controls.",
+      "No physics/clinical/material measurement claim; original aesthetic scene only."
     ]
   },
   {
     "id": "motioncore:plasma-grid",
-    "title": "plasma-grid",
     "source": "Motion Core",
-    "license": "MIT",
     "upstream": "https://github.com/kaltwrk/motion-core/tree/74ad6e66d50cc9b1849a505fcd1b352704920745/packages/motion-core/src/lib/components/plasma-grid",
     "website": "",
-    "buildStatus": "not installed or built",
-    "batch": "batch-002",
-    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "revision": "74ad6e66d50cc9b1849a505fcd1b352704920745",
+    "title": "等离子网格动效",
+    "description": "原着色器与图形机制，保留真实渲染代码，支持隐藏停止与减动模式；依赖浏览器图形能力，不支持时明确提示。",
+    "behavior": "原着色器与图形机制，保留真实渲染代码，支持隐藏停止与减动模式；依赖浏览器图形能力，不支持时明确提示。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "视觉与动效",
+    "license": "MIT; Unlicense",
+    "batch": "motioncore-gpu-01",
+    "preview": "batches/motioncore-gpu-01/plasma-grid/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "actual548 composition and original OGL lifecycle verified under stub GL; GPU pixels not-run",
     "gaps": [
-      "Official demos import workspace motion-core barrel; recreate selected exports or adapt imports before building. Full-library barrel intentionally not claimed closed.",
-      "Root package/lock and Svelte styles/helpers preserved; monorepo installation not tested.",
-      "WebGL/OGL shaders require real GPU/interaction checks; static source collection does not establish animation or performance.",
-      "Demo remote image/media references not downloaded. water-ripple brush PNG missing and must be supplied under verified rights or replaced with an original brush.",
-      "Package lists MediaPipe among peers, but selected source scan found no getUserMedia/requestPermission calls. No camera or device permissions used.",
-      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+      "WebGL methods/compile return values mocked in lifecycle tests; actual shader compilation/GPU pixels not verified.",
+      "No upstream visible parameter panel: official Demo supplies default props. Host Pause/Restart are disclosed added lifecycle controls.",
+      "No physics/clinical/material measurement claim; original aesthetic scene only."
     ]
   },
   {
@@ -12432,98 +12457,81 @@
   },
   {
     "id": "shadcn-admin:conversation-workspace",
-    "title": "Shadcn Admin · 双栏会话工作区",
-    "priority": 3,
-    "decision": "source-only / conditional",
-    "visual": "克制线框、圆形头像与高密度双栏；完整移动端选中会话返回结构。并非有机空间风格，优先级低于文档阅读。",
-    "actual": [
-      "本地联系人名称过滤",
-      "选中会话及移动端返回状态",
-      "新会话弹层选择/移除多名联系人"
-    ],
-    "gaps": [
-      "条件设计参考：与现有会话/设置功能重叠，原提交/操作存在占位；仅收原完整布局，不计可运行交互。",
-      "发送输入/发送按钮无消息追加逻辑；form无onSubmit，不能称聊天发送可用",
-      "电话/视频/图片/附件等按钮为展示入口，无实现",
-      "新会话确认仅showSubmittedData，未建立聊天",
-      "固定JSON是假数据，avatar资源及昵称须逐项审查/换明示fixture",
-      "依赖路由、全局Header/ConfigDrawer及Radix/shadcn UI，尚未完整依赖许可或CSP审计"
-    ],
-    "near": [
-      "looseleaf:chat-app",
-      "smoothui:chat-template",
-      "cossui:group-chat-demo"
-    ],
-    "distinction": "原版完整管理后台聊天视觉体系不同，但功能与现有聊天重叠；不因换皮直接新增预览。",
     "source": "Shadcn Admin",
     "repository": "https://github.com/satnaing/shadcn-admin",
     "revision": "e16c87f213a5ba5e45964e9b67c792105ec74d26",
-    "license": "MIT",
     "upstream": "https://github.com/satnaing/shadcn-admin/blob/e16c87f213a5ba5e45964e9b67c792105ec74d26/src/features/chats/index.tsx",
-    "previewStatus": "source-only",
-    "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted",
-    "category": "Agent与对话",
     "licenseEvidence": {
       "url": "https://github.com/satnaing/shadcn-admin/blob/e16c87f213a5ba5e45964e9b67c792105ec74d26/LICENSE",
       "sha256": "d28c723c33a18dfed6af67b1a0ac368724f79bcb80750d3e080dbcf8dedb9e4b",
       "scope": "Complete root MIT only; runtime dependencies/media not audited"
     },
-    "description": "克制线框、圆形头像与高密度双栏；完整移动端选中会话返回结构。并非有机空间风格，优先级低于文档阅读。",
-    "collectionPriority": "conditional design reference",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-bulk-522",
-    "sourceScope": "Selected fixed original code and complete root license evidence; no complete runnable/archive or runtime audit",
-    "kind": "原版完整场景（仅来源）"
+    "title": "聊天会话工作台",
+    "description": "原会话与五页设置示例，真实本地搜索、选择、验证和路由；不发送消息、不修改真实账户或保存配置。",
+    "behavior": "原会话与五页设置示例，真实本地搜索、选择、验证和路由；不发送消息、不修改真实账户或保存配置。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "Agent与对话",
+    "license": "MIT; ISC; Apache-2.0; 0BSD",
+    "batch": "shadcn-admin-01",
+    "preview": "batches/shadcn-admin-01/chats.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "pass",
+    "gaps": [
+      "Browser visual layout, desktop/mobile pixel appearance and native keyboard default traversal not verified; JSDOM geometry/scroll stubs are explicit.",
+      "All conversations, contact profiles and account defaults are upstream fixtures, not live messages/accounts.",
+      "No actual message sending, attachment upload, voice/video call, account save, team creation, billing or sign-out; unsupported original controls disabled.",
+      "Original NewChat only collects selected users and displays showSubmittedData; no conversation is created.",
+      "Original form validators and fields retained; settings receipts are local only. Appearance changes iframe theme/font choice only, with no cookie/storage persistence.",
+      "All avatar images disabled; original AvatarFallback reused. NewChat bare img replaced by same-source AvatarFallback/initials. Fonts are system fallback, no remote Inter/Manrope fetched.",
+      "Only /chats and /settings plus its four named subpages are registered in memory history; original global navigation dataset is filtered to these local routes."
+    ],
+    "runtime": {
+      "scripts": [
+        "runtime-part-01.js",
+        "runtime.js"
+      ]
+    }
   },
   {
     "id": "shadcn-admin:settings-workspace",
-    "title": "Shadcn Admin · 分区资料与偏好设置页",
-    "priority": 4,
-    "decision": "source-only / conditional",
-    "visual": "整页侧边分区、清晰表单节奏和紧凑说明文字；将所有设置分区视为一个场景，不拆子表单计数。",
-    "actual": [
-      "Profile使用react-hook-form/zod类型与URL校验",
-      "useFieldArray动态新增URL字段",
-      "通知radio/checkbox与appearance偏好控件原逻辑"
-    ],
-    "gaps": [
-      "条件设计参考：与现有会话/设置功能重叠，原提交/操作存在占位；仅收原完整布局，不计可运行交互。",
-      "Profile/通知提交主要showSubmittedData，不是已保存账户设置",
-      "Appearance主题会影响本地主题上下文，持久化需隔离审计",
-      "路由Outlet和外部profile链接必须改为本地fixture安全路径",
-      "不是新表单引擎，已有设置组件很多"
-    ],
-    "near": [
-      "looseleaf:settings-appearance",
-      "astryx:settings-dialog",
-      "assistant-elements:settings-panel"
-    ],
-    "distinction": "完整可路由设置页而非小弹窗；仅设计参考收源，不声称功能独特足以直接预览。",
     "source": "Shadcn Admin",
     "repository": "https://github.com/satnaing/shadcn-admin",
     "revision": "e16c87f213a5ba5e45964e9b67c792105ec74d26",
-    "license": "MIT",
     "upstream": "https://github.com/satnaing/shadcn-admin/blob/e16c87f213a5ba5e45964e9b67c792105ec74d26/src/features/settings/index.tsx",
-    "previewStatus": "source-only",
-    "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted",
-    "category": "输入与选择",
     "licenseEvidence": {
       "url": "https://github.com/satnaing/shadcn-admin/blob/e16c87f213a5ba5e45964e9b67c792105ec74d26/LICENSE",
       "sha256": "d28c723c33a18dfed6af67b1a0ac368724f79bcb80750d3e080dbcf8dedb9e4b",
       "scope": "Complete root MIT only; runtime dependencies/media not audited"
     },
-    "description": "整页侧边分区、清晰表单节奏和紧凑说明文字；将所有设置分区视为一个场景，不拆子表单计数。",
-    "collectionPriority": "conditional design reference",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-bulk-522",
-    "sourceScope": "Selected fixed original code and complete root license evidence; no complete runnable/archive or runtime audit",
-    "kind": "原版完整场景（仅来源）"
+    "title": "多页个人设置工作台",
+    "description": "原会话与五页设置示例，真实本地搜索、选择、验证和路由；不发送消息、不修改真实账户或保存配置。",
+    "behavior": "原会话与五页设置示例，真实本地搜索、选择、验证和路由；不发送消息、不修改真实账户或保存配置。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "输入与选择",
+    "license": "MIT; ISC; Apache-2.0; 0BSD",
+    "batch": "shadcn-admin-01",
+    "preview": "batches/shadcn-admin-01/settings.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "pass",
+    "gaps": [
+      "Browser visual layout, desktop/mobile pixel appearance and native keyboard default traversal not verified; JSDOM geometry/scroll stubs are explicit.",
+      "All conversations, contact profiles and account defaults are upstream fixtures, not live messages/accounts.",
+      "No actual message sending, attachment upload, voice/video call, account save, team creation, billing or sign-out; unsupported original controls disabled.",
+      "Original NewChat only collects selected users and displays showSubmittedData; no conversation is created.",
+      "Original form validators and fields retained; settings receipts are local only. Appearance changes iframe theme/font choice only, with no cookie/storage persistence.",
+      "All avatar images disabled; original AvatarFallback reused. NewChat bare img replaced by same-source AvatarFallback/initials. Fonts are system fallback, no remote Inter/Manrope fetched.",
+      "Only /chats and /settings plus its four named subpages are registered in memory history; original global navigation dataset is filtered to these local routes."
+    ],
+    "runtime": {
+      "scripts": [
+        "runtime-part-01.js",
+        "runtime.js"
+      ]
+    }
   },
   {
     "id": "tailwind-blog:tagged-editorial-archive",
@@ -13194,153 +13202,76 @@
   },
   {
     "id": "radix-icons:official-series",
-    "title": "15px紧凑界面图标系列",
     "source": "Radix Icons",
     "repository": "https://github.com/radix-ui/icons",
     "revision": "112af91ad275a63c3a29b0da2588342af74ef9bf",
-    "sourcePath": "packages/radix-icons/icons/chat-bubble.svg",
     "upstream": "https://github.com/radix-ui/icons/blob/112af91ad275a63c3a29b0da2588342af74ef9bf/packages/radix-icons/icons/chat-bubble.svg",
-    "license": "MIT (fixed SVG source and complete root text verified; full series/runtime not closed)",
-    "behavior": "原15×15细节网格适合Exodus密集工具栏、状态、文件与对话操作。",
-    "difference": "与Lucide/Tabler等语义重叠，区别是原15px紧凑绘制体系，不称新功能。",
-    "gaps": [
-      "仅固定少量原SVG样本及README/完整根许可；未收全系列、不声称完整源码ZIP或可运行预览。",
-      "与既有系列语义重复；一系列仅一条，不按字重、颜色、尺寸或glyph拆页。",
-      "后续需按用途精选、全量SVG安全检查/实际依赖及附加NOTICE核查、离线检索分页与清理测试；浏览器视觉未验。",
-      "不收字体、品牌标志、PNG、封面或截图；封面统一由Grok处理。"
-    ],
-    "description": "原15×15细节网格适合Exodus密集工具栏、状态、文件与对话操作。 与Lucide/Tabler等语义重叠，区别是原15px紧凑绘制体系，不称新功能。",
-    "category": "图标系列",
+    "sourcePath": "packages/radix-icons/icons/chat-bubble.svg",
     "licenseEvidence": {
       "url": "https://github.com/radix-ui/icons/blob/112af91ad275a63c3a29b0da2588342af74ef9bf/LICENSE",
       "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
       "scope": "Full fixed root license read with exact original SVG samples; not a whole-series or future-runtime dependency audit"
     },
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-bulk-523",
-    "sourceScope": "3 original SVG text samples + original README + complete root license; no full asset download or preview",
-    "kind": "图标系列",
-    "buildStatus": "fixed original SVG source and complete root license read; not built, run or visually accepted",
-    "sourceEvidence": [
-      {
-        "path": "packages/radix-icons/icons/chat-bubble.svg",
-        "sha256": "bf215ce071a0d875905a0c5b1fcfa67a8ccd271ea2c3e451a0ba8ee6e1871dcb",
-        "viewBox": "0 0 15 15",
-        "elements": [
-          "svg",
-          "path"
-        ]
-      },
-      {
-        "path": "packages/radix-icons/icons/activity-log.svg",
-        "sha256": "b75ed51e9bd02cece2749cda68c34a75d26b2e7828e632f7e411f8fc6c082f56",
-        "viewBox": "0 0 15 15",
-        "elements": [
-          "svg",
-          "path"
-        ]
-      },
-      {
-        "path": "packages/radix-icons/icons/database.svg",
-        "sha256": "446cd4975ec6a6e9947c2bf579aea40f581669970ab8a58548fee4da6ac64845",
-        "viewBox": "0 0 15 15",
-        "elements": [
-          "svg",
-          "path"
-        ]
-      }
+    "difference": "与Lucide/Tabler等语义重叠，区别是原15px紧凑绘制体系，不称新功能。",
+    "title": "基础界面图标系列",
+    "description": "完整固定目录三百三十二枚原图，支持搜索与分页；图标按整个系列一条收录。",
+    "behavior": "完整固定目录三百三十二枚原图，支持搜索与分页；图标按整个系列一条收录。",
+    "kind": "原版图标系列",
+    "format": "完整交互场景",
+    "category": "图标系列",
+    "license": "MIT",
+    "batch": "icon-series-next-01",
+    "preview": "batches/icon-series-next-01/radix/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime mechanisms and lifecycle tests passed; browser visual QA not run",
+    "gaps": [
+      "All 332 SVGs under packages/radix-icons/icons/ at fixed revision. All files in specified official SVG source directory, not font/React packages. One family, not one UI per glyph; semantics overlap existing series. Original SVG bytes and geometry retained. Shared original UI-Vault/Maki/Bytesize browsing shell adapted once for these3collections; not an upstream application. Search/pagination30+detail/size/color local only, no clipboard/download/API. Color adjusts currentColor rendering, not hardcoded original fills. Internal mask/clip IDs scoped on cloned display nodes to avoid collisions; published ORIGINALS retains exact bytes. Ordinary UTF8 JSON data split at whole records below700KiB; no base64/binary packaging. Complete original rootlicense included; MonoREADME separately confirms SVG use despite font wording. Brand marks belong to owners; MIT not trademark permission or endorsement; known brand names annotated, classification not a comprehensive trademark determination. Hidden defers paint,exit aborts listeners/clears template cache. No native visual QA; DOM/XML/source tests only."
     ],
-    "counts": {
-      "independentFamily": 1,
-      "completedPreviews": 0
-    },
-    "format": "图标家族"
+    "runtime": {
+      "scripts": [
+        "data-01.js",
+        "runtime.js"
+      ]
+    }
   },
   {
     "id": "iconoir:official-series",
-    "title": "Iconoir 轻线条语义图标系列",
     "source": "Iconoir",
     "repository": "https://github.com/iconoir-icons/iconoir",
     "revision": "39834e3f193bc0cca2c36bebb6a650471977433d",
-    "sourcePath": "icons/regular/brain-research.svg",
     "upstream": "https://github.com/iconoir-icons/iconoir/blob/39834e3f193bc0cca2c36bebb6a650471977433d/icons/regular/brain-research.svg",
-    "license": "MIT (fixed SVG source and complete root text verified; full series/runtime not closed)",
-    "behavior": "原24×24轻线条，样本包含研究脑图、对话翻译和检索，适合引用/研究工具。",
-    "difference": "同义图标会与已有系列交叉；此处收作者独立绘制体系，regular/solid不是两个系列。",
-    "gaps": [
-      "仅固定少量原SVG样本及README/完整根许可；未收全系列、不声称完整源码ZIP或可运行预览。",
-      "与既有系列语义重复；一系列仅一条，不按字重、颜色、尺寸或glyph拆页。",
-      "后续需按用途精选、全量SVG安全检查/实际依赖及附加NOTICE核查、离线检索分页与清理测试；浏览器视觉未验。",
-      "不收字体、品牌标志、PNG、封面或截图；封面统一由Grok处理。"
-    ],
-    "description": "原24×24轻线条，样本包含研究脑图、对话翻译和检索，适合引用/研究工具。 同义图标会与已有系列交叉；此处收作者独立绘制体系，regular/solid不是两个系列。",
-    "category": "图标系列",
+    "sourcePath": "icons/regular/brain-research.svg",
     "licenseEvidence": {
       "url": "https://github.com/iconoir-icons/iconoir/blob/39834e3f193bc0cca2c36bebb6a650471977433d/LICENSE",
       "sha256": "869b60da1ada5b896d1f285c3c24ca193d612e308d1710a77a58f2f572eb4fa2",
       "scope": "Full fixed root license read with exact original SVG samples; not a whole-series or future-runtime dependency audit"
     },
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-bulk-523",
-    "sourceScope": "3 original SVG text samples + original README + complete root license; no full asset download or preview",
-    "kind": "图标系列",
-    "buildStatus": "fixed original SVG source and complete root license read; not built, run or visually accepted",
-    "sourceEvidence": [
-      {
-        "path": "icons/regular/brain-research.svg",
-        "sha256": "e3ed2fdf5be673e10b2620e50d3033e896093033b3c76a33d768e6659c0493ac",
-        "viewBox": "0 0 24 24",
-        "elements": [
-          "svg",
-          "path",
-          "path",
-          "path",
-          "path",
-          "path",
-          "path",
-          "path",
-          "path",
-          "path",
-          "path",
-          "path",
-          "path"
-        ]
-      },
-      {
-        "path": "icons/regular/chat-bubble-translate.svg",
-        "sha256": "5bfcf4e188b2ac0c27bebc6554ff289532ce406f1b9977bb0836cb1152b7ba9c",
-        "viewBox": "0 0 24 24",
-        "elements": [
-          "svg",
-          "path",
-          "path"
-        ]
-      },
-      {
-        "path": "icons/regular/bubble-search.svg",
-        "sha256": "c14c85731cbc3c2652f7cb11bac9caa3742cfdf8d7ef270a91703a67e3f6e49e",
-        "viewBox": "0 0 24 24",
-        "elements": [
-          "svg",
-          "path",
-          "path",
-          "path"
-        ]
-      }
+    "difference": "同义图标会与已有系列交叉；此处收作者独立绘制体系，regular/solid不是两个系列。",
+    "title": "线框与实心图标系列",
+    "description": "完整两种风格一千六百七十一枚原图，支持线框与实心切换；风格变体不计新条目。",
+    "behavior": "完整两种风格一千六百七十一枚原图，支持线框与实心切换；风格变体不计新条目。",
+    "kind": "原版图标系列",
+    "format": "完整交互场景",
+    "category": "图标系列",
+    "license": "MIT",
+    "batch": "icon-series-next-01",
+    "preview": "batches/icon-series-next-01/iconoir/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime mechanisms and lifecycle tests passed; browser visual QA not run",
+    "gaps": [
+      "All 1671 SVGs under icons/ at fixed revision. Both complete styles: regular1383 + solid288. Styles do not add families or unique semantics. 1671 SVG files,1383 distinct upstream basenames,288 solid variants of regular names; not1671 unique semantics. One family, not one UI per glyph; semantics overlap existing series. Original SVG bytes and geometry retained. Shared original UI-Vault/Maki/Bytesize browsing shell adapted once for these3collections; not an upstream application. Search/style-filter/pagination30+detail/size/color local only, no clipboard/download/API. Color adjusts currentColor rendering, not hardcoded original fills. Internal mask/clip IDs scoped on cloned display nodes to avoid collisions; published ORIGINALS retains exact bytes. Ordinary UTF8 JSON data split at whole records below700KiB; no base64/binary packaging. Complete original rootlicense included; MonoREADME separately confirms SVG use despite font wording. Brand marks belong to owners; MIT not trademark permission or endorsement; known brand names annotated, classification not a comprehensive trademark determination. Hidden defers paint,exit aborts listeners/clears template cache. No native visual QA; DOM/XML/source tests only."
     ],
-    "counts": {
-      "independentFamily": 1,
-      "completedPreviews": 0
-    },
-    "format": "图标家族"
+    "runtime": {
+      "scripts": [
+        "data-01.js",
+        "data-02.js",
+        "data-03.js",
+        "data-04.js",
+        "runtime.js"
+      ]
+    }
   },
   {
     "id": "akar-icons:official-series",
@@ -19072,65 +19003,38 @@
   },
   {
     "id": "mono-icons:compact-outline-family",
-    "title": "Mono Icons · 轻量圆角线性符号系列",
     "source": "Mono Icons",
     "repository": "https://github.com/mono-company/mono-icons",
     "revision": "43fac75e3d5ff38a55588e8c94a02ed96003a6ac",
-    "sourcePath": "svg/comment.svg",
     "upstream": "https://github.com/mono-company/mono-icons/blob/43fac75e3d5ff38a55588e8c94a02ed96003a6ac/svg/comment.svg",
-    "license": "MIT (actual complete LICENSE.md read; README explicitly covers Mono icons and SVG usage)",
-    "visualStyle": "24px轻量轮廓与小圆角，简洁留白适合内嵌消息工具栏和资料标记。",
-    "behavior": "本轮固定评论、勾选清单、数据库和附件4个原版静态SVG样本；系列只记一条，不把glyph、尺寸或颜色拆条。",
-    "difference": "独立Mono Company设计系列，提供简洁圆角线性语言；与已有通用图标语义有交集，不声称每个形状全球独创或具有新交互。",
-    "description": "简洁圆角轮廓图标家族，适合富消息与轻量工具栏。",
-    "gaps": [
-      "根LICENSE.md保留“Mono Icon Font软件、不覆盖以字体创作的内容”范围说明；README明确SVG使用及Mono icons MIT，不能扩张为第三方作品或商标授权。",
-      "本轮仅固定4个原SVG和完整许可/README，未收齐全族，也未验证搜索、复制、标签与不同尺寸实际可读性。",
-      "原SVG静态path不触发附件上传、数据库访问或消息发送；未运行官网、Figma、npm或CDN字体，不需要任何账号权限。",
-      "尚未接入浏览器预览，无字体二进制、PNG、截图或源码ZIP；图像封面仍由Grok统一处理。"
-    ],
-    "category": "图标系列",
-    "format": "图标家族",
-    "kind": "图标系列",
-    "counts": {
-      "independentFamily": 1,
-      "completedPreviews": 0
-    },
+    "sourcePath": "svg/comment.svg",
     "licenseEvidence": {
       "url": "https://github.com/mono-company/mono-icons/blob/43fac75e3d5ff38a55588e8c94a02ed96003a6ac/LICENSE.md",
       "sha256": "e334b3c64b09ec92f52f5cb397515fd536f703a852ccdbd1435e00eb099592f9",
       "scope": "Complete actual MIT and README SVG-use clarification; four original SVG samples"
     },
-    "sourceEvidence": [
-      {
-        "path": "svg/comment.svg",
-        "sha256": "5ff17414876876bcfdbaa935bcd4e428ae4450001e530021c44427ba78124b1f",
-        "gitBlob": "5cb475ad7058949816498f227b5d326880249789"
-      },
-      {
-        "path": "svg/clipboard-check.svg",
-        "sha256": "86b008a9d7d2c77ec6dc42fd156ea5e8fa51859356f2eb47fdab36ef2829c2e2",
-        "gitBlob": "59264a553e2d8d7d3c9bf87bc8558e4237e61ebd"
-      },
-      {
-        "path": "svg/database.svg",
-        "sha256": "cbb56396b023926c412ee2ebe064bfb7d8deabd011f943c642f8fc636200d97f",
-        "gitBlob": "91cd0c207588a9fd66da01c954e6a150b3bd6423"
-      },
-      {
-        "path": "svg/attachment.svg",
-        "sha256": "2e64981b2fb54ca2d84daca19af57dccd6f53631950ac1e38bf7388815a1dfec",
-        "gitBlob": "21b72c5147765b5fa2748d06deae1c1cfa7009e7"
-      }
+    "difference": "独立Mono Company设计系列，提供简洁圆角线性语言；与已有通用图标语义有交集，不声称每个形状全球独创或具有新交互。",
+    "title": "轻量轮廓图标系列",
+    "description": "完整固定目录一百八十枚原图，支持搜索、尺寸与颜色；按整个系列一条收录。",
+    "behavior": "完整固定目录一百八十枚原图，支持搜索、尺寸与颜色；按整个系列一条收录。",
+    "kind": "原版图标系列",
+    "format": "完整交互场景",
+    "category": "图标系列",
+    "license": "MIT",
+    "batch": "icon-series-next-01",
+    "preview": "batches/icon-series-next-01/mono/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime mechanisms and lifecycle tests passed; browser visual QA not run",
+    "gaps": [
+      "All 180 SVGs under svg/ at fixed revision. All files in specified official SVG source directory, not font/React packages. One family, not one UI per glyph; semantics overlap existing series. Original SVG bytes and geometry retained. Shared original UI-Vault/Maki/Bytesize browsing shell adapted once for these3collections; not an upstream application. Search/pagination30+detail/size/color local only, no clipboard/download/API. Color adjusts currentColor rendering, not hardcoded original fills. Internal mask/clip IDs scoped on cloned display nodes to avoid collisions; published ORIGINALS retains exact bytes. Ordinary UTF8 JSON data split at whole records below700KiB; no base64/binary packaging. Complete original rootlicense included; MonoREADME separately confirms SVG use despite font wording. Brand marks belong to owners; MIT not trademark permission or endorsement; known brand names annotated, classification not a comprehensive trademark determination. Hidden defers paint,exit aborts listeners/clears template cache. No native visual QA; DOM/XML/source tests only."
     ],
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-style-532",
-    "sourceScope": "Four fixed original SVG samples and full MIT root; no complete runnable archive",
-    "buildStatus": "Source inspected and Git blobs verified; no runtime or visual verification"
+    "runtime": {
+      "scripts": [
+        "data-01.js",
+        "runtime.js"
+      ]
+    }
   },
   {
     "id": "momentum:kinetic-countdown",
