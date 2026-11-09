@@ -12351,35 +12351,32 @@
   },
   {
     "id": "chatui:rich-service-conversation",
-    "title": "移动服务型富消息会话",
     "source": "ChatUI",
     "repository": "https://github.com/alibaba/ChatUI",
     "revision": "06c3126ad25a0735c9b48f40582075371ad04cf3",
-    "sourcePath": "demo/src/demo/Chat.tsx",
     "upstream": "https://github.com/alibaba/ChatUI/blob/06c3126ad25a0735c9b48f40582075371ad04cf3/demo/src/demo/Chat.tsx",
-    "license": "MIT (root verified only; dependencies/assets not closed)",
-    "behavior": "原文本发送/延迟模拟回复、快捷短语替换、向前加载历史、skill卡/图文按钮消息、工具栏与消息内弹出层。",
-    "difference": "与Coss群聊不同：移动服务会话、多形态结果/快捷意图与历史刷新；仅收整体，内部各基础卡不另计。",
-    "gaps": [
-      "原TODO未接真实发送；500ms/5秒/800ms计时未取消，window.appendMsg/msgRef全局未清。头像商品/淘宝品牌外部素材待核且要替换声明。相机图片按钮不代表真可用。订单选择demo多tab/发送是占位，明确不独立收它。",
-      "完整传递依赖及素材许可未审；默认CSP/无网络、交互和退出清理、浏览器像素均未验。"
-    ],
-    "description": "原文本发送/延迟模拟回复、快捷短语替换、向前加载历史、skill卡/图文按钮消息、工具栏与消息内弹出层。 与Coss群聊不同：移动服务会话、多形态结果/快捷意图与历史刷新；仅收整体，内部各基础卡不另计。",
-    "category": "Agent与对话",
+    "sourcePath": "demo/src/demo/Chat.tsx",
     "licenseEvidence": {
       "url": "https://github.com/alibaba/ChatUI/blob/06c3126ad25a0735c9b48f40582075371ad04cf3/LICENSE",
       "sha256": "3c0684bbb991a7a77a5a1c62cbcb9795a68036046b367f2d21dae29c8c54f6e0",
       "scope": "Full root MIT read; transitive runtime/media permissions not closed"
     },
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-bulk-522",
-    "sourceScope": "Selected fixed original code and complete root license evidence; no complete runnable/archive or runtime audit",
-    "kind": "原版完整场景（仅来源）",
-    "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted"
+    "difference": "与Coss群聊不同：移动服务会话、多形态结果/快捷意图与历史刷新；仅收整体，内部各基础卡不另计。",
+    "title": "富文字客服会话与快捷短语",
+    "description": "原文字会话、快捷短语、技能卡及评价子流程，回复为固定本地模拟；不包含商品媒体、录音或真实客服服务。",
+    "behavior": "原文字会话、快捷短语、技能卡及评价子流程，回复为固定本地模拟；不包含商品媒体、录音或真实客服服务。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "Agent与对话",
+    "license": "MIT AND Apache-2.0",
+    "batch": "chatui-service-01",
+    "preview": "batches/chatui-service-01/chat/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "原文字富消息子流程，不包含原媒体/商品/录音。无真实客服、AI、账户或后台；隐藏恢复重置。原功能图标以Tabler SVG替换，系统字体。"
+    ]
   },
   {
     "id": "react-avatar-editor:crop-studio",
@@ -16724,36 +16721,34 @@
   },
   {
     "id": "wallabag:saved-article-reading",
-    "title": "侧栏工具与批注稍后读文章页",
     "source": "wallabag",
     "repository": "https://github.com/wallabag/wallabag",
     "revision": "34c43c18cc9eceb070244db74dd6ad8e4f5011bb",
-    "sourcePath": "templates/Entry/entry.html.twig",
     "upstream": "https://github.com/wallabag/wallabag/blob/34c43c18cc9eceb070244db74dd6ad8e4f5011bb/templates/Entry/entry.html.twig",
-    "license": "MIT (root verified only; dependencies/assets not closed)",
-    "behavior": "原长文阅读区与侧栏工具、归档/收藏、标签、亮暗/自动主题，正文挂接原注释控制器；列表入口与阅读页组成一族。",
-    "difference": "区别RSS自动订阅收件：面向用户保存文章的精读/注释/归档；区别Recogito独立批注，保留完整原文章阅读与工具布局，不单算标签卡。",
-    "gaps": [
-      "Symfony/Twig后端路由、CSRF与annotations服务必需；保存/删除/分享/导出是实际外部动作，当前未执行也未做本地替代。Material图标字体、MathJax/highlight及媒体/传递许可未闭合；服务端注释接口不等于离线批注已可用。",
-      "仅固定原件来源；未安装/构建/运行/截图/发布，CSP、媒体字体版权、完整运行许可、交互清理及浏览器视觉均未验。"
-    ],
-    "description": "原长文阅读区与侧栏工具、归档/收藏、标签、亮暗/自动主题，正文挂接原注释控制器；列表入口与阅读页组成一族。 区别RSS自动订阅收件：面向用户保存文章的精读/注释/归档；区别Recogito独立批注，保留完整原文章阅读与工具布局，不单算标签卡。",
-    "category": "展示与媒体",
+    "sourcePath": "templates/Entry/entry.html.twig",
     "licenseEvidence": {
       "url": "https://github.com/wallabag/wallabag/blob/34c43c18cc9eceb070244db74dd6ad8e4f5011bb/COPYING.md",
       "sha256": "9927812ed1d034e6b6ed0c71160b2bf33ececf980947806ddf73993013669496",
       "scope": "Complete root license read; dependency/media/font permissions not closed"
     },
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-style-528",
-    "sourceScope": "Selected fixed original code and complete root license evidence; not a complete runnable archive or runtime audit",
-    "kind": "原版完整场景（仅来源）",
-    "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted",
-    "sourceSha256": "225ab2f5cbc2081bfe704f0f69f8f7767fd5039f1846d2024fda1abcd91f7300"
+    "difference": "区别RSS自动订阅收件：面向用户保存文章的精读/注释/归档；区别Recogito独立批注，保留完整原文章阅读与工具布局，不单算标签卡。",
+    "title": "文章精读与主题侧栏",
+    "description": "原阅读模板、侧栏、主题和阅读进度，使用本地正文；主题只保存在当前内存，不连接账户、后台批注或保存服务。",
+    "behavior": "原阅读模板、侧栏、主题和阅读进度，使用本地正文；主题只保存在当前内存，不连接账户、后台批注或保存服务。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "展示与媒体",
+    "license": "MIT; ISC (Lucide SVG)",
+    "batch": "wallabag-reader-01",
+    "preview": "batches/wallabag-reader-01/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "真实Twig解释生成/actual571 compose关键交互退出通过，视觉未验",
+    "gaps": [
+      "原阅读与本地侧栏/主题子流程，不是完整wallabag账号或同步服务。",
+      "批注/保存/抓取/导出/分享/标签编辑均未接入，不显示假成功；正文为原创虚构fixture。",
+      "功能字体替换为许可已核Lucide原SVG，系统字体回退，原字形有差异；视觉/原生手势未验。"
+    ]
   },
   {
     "id": "silverbullet:document-navigation-workspace",
@@ -17608,46 +17603,35 @@
   },
   {
     "id": "codrops:scroll-typography-scenes",
-    "title": "滚动诗句字形编排",
     "source": "OnScrollTypographyAnimations",
     "repository": "https://github.com/codrops/OnScrollTypographyAnimations",
     "revision": "af28d61d1f8d3d117f5d1e9b09d5209e20a1a212",
-    "sourcePath": "src/index.html",
     "upstream": "https://github.com/codrops/OnScrollTypographyAnimations/blob/af28d61d1f8d3d117f5d1e9b09d5209e20a1a212/src/index.html",
-    "website": "https://tympanus.net/Development/OnScrollTypographyAnimations/",
-    "license": "MIT (root text verified; runtime/assets not closed)",
-    "behavior": "完整诗句页面将字形拆分、透视与滚动编排结合，而非传统方框内容卡。",
-    "difference": "固定完整原始示例入口及相关脚本，一族不拆多个预设；尚未完成运行或视觉验收。",
-    "description": "完整诗句页面将字形拆分、透视与滚动编排结合，而非传统方框内容卡。",
-    "gaps": [
-      "需src/js/index.js、CSS、utils及打包；实际使用GSAP+ScrollTrigger、@studio-freight/lenis和Splitting，各自许可证/版本需闭合。",
-      "index加载Typekit cvn8slu、Google WebFont与Codrops analytics.js；移除遥测，字体授权另核且替换须说明，不应整站照搬执行。",
-      "拆字/包裹节点会影响中文、组合emoji和读屏，长消息不默认逐字；流式追加、销毁、还原原文及reduced-motion待验。",
-      "与已收ScrollTextMotion属不同源码，但同为滚动排版，适配前仍需视觉/行为去重，不按每种data-effect拆计数。",
-      "固定源码及完整根许可已存证；未构建、未运行、未截图，completedPreviewCount=0。"
-    ],
-    "category": "视觉与动效",
+    "sourcePath": "src/index.html",
     "licenseEvidence": {
       "url": "https://github.com/codrops/OnScrollTypographyAnimations/blob/af28d61d1f8d3d117f5d1e9b09d5209e20a1a212/LICENSE",
       "sha256": "85131f2bb7714dc895ff5d7d68db65acc5ad0e5dfd72162869fc8d63dec06056",
       "scope": "Complete original root license retained; runtime/media separate"
     },
-    "sourceSha256": "d6114fae04a8b2c6a715fb611d5585b168dfb5ef4ed7e72f8e65ee2d0dfb95bf",
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-style-530",
-    "sourceScope": "Selected fixed original source and root license; full read-only repo clone retained privately",
-    "kind": "原版风格组件族（仅来源）",
-    "buildStatus": "Fixed source inspected; not built or visually accepted",
-    "additionalSourceEvidence": [
-      {
-        "sourcePath": "src/js/index.js",
-        "url": "https://github.com/codrops/OnScrollTypographyAnimations/blob/af28d61d1f8d3d117f5d1e9b09d5209e20a1a212/src/js/index.js",
-        "sha256": "678e297c7fee67a1ef3bf788c4d5761e3cf7ec63dfc38c181c695a868d267fb0"
-      }
+    "difference": "固定完整原始示例入口及相关脚本，一族不拆多个预设；尚未完成运行或视觉验收。",
+    "website": "https://tympanus.net/Development/OnScrollTypographyAnimations/",
+    "title": "滚动排版与透视文字",
+    "description": "原第一组完整十五个滚动排版效果，整体计一条；保留拆字和滚动编排，远程字体回退为系统字体，不含第二组场景。",
+    "behavior": "原第一组完整十五个滚动排版效果，整体计一条；保留拆字和滚动编排，远程字体回退为系统字体，不含第二组场景。",
+    "kind": "原版视觉场景",
+    "format": "完整交互场景",
+    "category": "视觉与动效",
+    "license": "MIT AND LicenseRef-GSAP-Standard",
+    "batch": "scroll-typography-01",
+    "preview": "batches/scroll-typography-01/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "原Set1全部15个排版效果仅计一条；不是Set2或多条组件。",
+      "远程字体以系统字体回退替代，字形与原网页有差异。",
+      "受控滚动/几何测试不等同原生布局、滚动或像素验收。",
+      "GSAP Standard不是MIT，具体条款随包提供。"
     ]
   },
   {
@@ -18200,46 +18184,32 @@
   },
   {
     "id": "pizzicato:audio-effect-playground",
-    "title": "可操作声效调制面板",
     "source": "pizzicato",
     "repository": "https://github.com/alemangui/pizzicato",
     "revision": "4c3826e46f112743fa0653b6bad56006b98da537",
-    "sourcePath": "site/index.html",
     "upstream": "https://github.com/alemangui/pizzicato/blob/4c3826e46f112743fa0653b6bad56006b98da537/site/index.html",
-    "website": "https://alemangui.github.io/pizzicato/",
-    "license": "MIT (root text verified; runtime/assets not closed)",
-    "behavior": "完整官方演示用播放按钮和参数滑杆呈现回声、滤波与混响的可听对照。",
-    "difference": "固定完整示例场景；同源参数/预设不拆计数，非已运行验收。",
-    "description": "完整官方演示用播放按钮和参数滑杆呈现回声、滤波与混响的可听对照。",
-    "gaps": [
-      "固定HTML依赖site/Pizzicato.js、js/main.js、CSS与音频文件；音频/图片和Prism/Modernizr等依赖权利独立审计。",
-      "main.js顶部含从Dolby来源复制的检测代码，许可未闭；不要随根MIT直接分发该段，移除或以许可明确实现替换并披露。",
-      "原页含麦克风输入和音频文件示例、GA与GitHub外部按钮；禁用麦克风/采集、去遥测与外部脚本，优先本地合成波形演示。",
-      "用户点击才播放、默认低音量、可停止；不把来源链接变为上传/录音功能。所有effects只一场景，不逐参数计数。",
-      "固定源码及完整根许可已存证；未构建、未运行、未截图，completedPreviewCount=0。"
-    ],
-    "category": "展示与媒体",
+    "sourcePath": "site/index.html",
     "licenseEvidence": {
       "url": "https://github.com/alemangui/pizzicato/blob/4c3826e46f112743fa0653b6bad56006b98da537/LICENSE",
       "sha256": "c6c5b1d3b7e14813ba89e117ac9ce409fb0c95ca21b978271f652e4d0d3a0917",
       "scope": "Complete original root license retained; runtime/media separate"
     },
-    "sourceSha256": "b3ee6d6fe1498959a6c8d14c22cd5fc7d00318129daf57337646ef9273dc5375",
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-style-531",
-    "sourceScope": "Selected fixed original source and root license; full read-only repo clone retained privately",
-    "kind": "原版风格组件族（仅来源）",
-    "buildStatus": "Fixed source inspected; not built or visually accepted",
-    "additionalSourceEvidence": [
-      {
-        "sourcePath": "site/js/main.js",
-        "url": "https://github.com/alemangui/pizzicato/blob/4c3826e46f112743fa0653b6bad56006b98da537/site/js/main.js",
-        "sha256": "87321d2966976171d4bd23ddecd90670e95443f6ec0cb290d5be8985786d063d"
-      }
+    "difference": "固定完整示例场景；同源参数/预设不拆计数，非已运行验收。",
+    "website": "https://alemangui.github.io/pizzicato/",
+    "title": "合成波形与声效参数面板",
+    "description": "原波形、包络、延迟和低通控件子集；媒体示例改接明确的本地合成音源，点击才播放，不使用麦克风或网络音频。",
+    "behavior": "原波形、包络、延迟和低通控件子集；媒体示例改接明确的本地合成音源，点击才播放，不使用麦克风或网络音频。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "展示与媒体",
+    "license": "MIT",
+    "batch": "pizzicato-effects-01",
+    "preview": "batches/pizzicato-effects-01/audio/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "精选四段原控件，非全音乐或录音演示。Delay/LowPass改接明确本地测试波形。真实可听与像素未验；WebAudio API桩状态通过。"
     ]
   },
   {
@@ -19077,42 +19047,32 @@
   },
   {
     "id": "githistory:file-version-time-travel",
-    "title": "代码文件的历史漫游",
     "source": "Git History",
     "repository": "https://github.com/pomber/git-history",
     "revision": "a20f6085cf9055b350a4db13cea6e013936da9cd",
-    "sourcePath": "src/history.js",
     "upstream": "https://github.com/pomber/git-history/blob/a20f6085cf9055b350a4db13cea6e013936da9cd/src/history.js",
-    "license": "MIT (complete actual root text; runtime/media not closed)",
-    "behavior": "原 History 通过提交信息、作者和日期引导文件版本切换，代码行在版本间移动过渡，支持滑动/键盘及按需加载更早版本。",
-    "difference": "区别 Diff2Html 单次差异和 LearnGitBranching 教学模拟：以真实仓库某文件的多次历史演化为阅读对象；整套历史交互一族，不按仓库拆分。",
-    "styleTags": [
-      "历史/代码空间"
-    ],
-    "gaps": [
-      "原 App 通过 GitHub/GitLab/Bitbucket provider 联网获取版本，需授权或原创本地虚构历史，不读取未授权私仓。头像/代码原仓许可、token/provider配置、versioner worker 和完整依赖仍待审；useVersionsLoader 未见取消，旧请求晚到/滑动监听/动画退出需测。",
-      "仅只读源码筛选；未安装/构建/运行、交互生命周期或浏览器视觉验收。"
-    ],
-    "description": "原 History 通过提交信息、作者和日期引导文件版本切换，代码行在版本间移动过渡，支持滑动/键盘及按需加载更早版本。 区别 Diff2Html 单次差异和 LearnGitBranching 教学模拟：以真实仓库某文件的多次历史演化为阅读对象；整套历史交互一族，不按仓库拆分。",
-    "category": "数据与状态",
+    "sourcePath": "src/history.js",
     "licenseEvidence": {
       "url": "https://github.com/pomber/git-history/blob/a20f6085cf9055b350a4db13cea6e013936da9cd/license",
       "sha256": "03a25ac2f7eee02ba5606da7fa49b4c90687953f4e998fc50846bf1979fc8c2e",
       "scope": "Complete actual root license; transitive code and media permissions not closed"
     },
-    "sourceEvidence": {
-      "localFile": "evidence/pomber--git-history--src__history.js",
-      "sha256": "84d533b1d1df0c457d9c32075cb5b86094cc1bf863fa016509b2e12650069533"
-    },
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-style-532",
-    "sourceScope": "Fixed original complete UI/demo source and full root license; not a runnable adaptation or full asset archive",
-    "kind": "原版交互场景（仅来源）",
-    "buildStatus": "fixed source and full root license read; not built/run/visually accepted"
+    "difference": "区别 Diff2Html 单次差异和 LearnGitBranching 教学模拟：以真实仓库某文件的多次历史演化为阅读对象；整套历史交互一族，不按仓库拆分。",
+    "title": "代码版本历史漫游",
+    "description": "原提交历史、代码行过渡与键盘差异定位，使用三个虚构本地提交；不读取账户、远程仓库或头像。",
+    "behavior": "原提交历史、代码行过渡与键盘差异定位，使用三个虚构本地提交；不读取账户、远程仓库或头像。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "数据与状态",
+    "license": "MIT AND BSD-3-Clause AND Unlicense (rebound PATENTS included)",
+    "batch": "git-history-01",
+    "preview": "batches/git-history-01/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "虚构三提交本地阅读，不连接或操作真实仓库；隐藏恢复重置，原生触摸/像素未验。"
+    ]
   },
   {
     "id": "codesurfer:code-walkthrough-deck",
