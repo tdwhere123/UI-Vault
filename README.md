@@ -2,7 +2,7 @@
 
 网站：<https://tdwhere123.github.io/UI-Vault/>
 
-当前有 **698 条可直接打开预览（241 条原始素材＋457 条后续接入预览）**，目标为 **1000 条可查看素材**，还差 **302 条**。另有 **196 条待适配来源记录**，不计入完成数。图标按系列计数，不按单枚、字重或尺寸凑数。
+当前有 **710 条可直接打开预览（241 条原始素材＋469 条后续接入预览）**，目标为 **1000 条可查看素材**，还差 **290 条**。另有 **194 条待适配来源记录**，不计入完成数。图标按系列计数，不按单枚、字重或尺寸凑数。
 
 ## 当前内容
 
@@ -593,3 +593,11 @@ Single-library dependency/notice review and shared isolation framework are reuse
 Inventory 894, viewable 698, pending 196. Mapped covers remain470;228 posterless entries use bounded live cards. Three icon-series classification labels were corrected to the canonical icon-family kind; no entries or glyphs were added by that metadata correction. All other existing records and Grok assets are preserved. Browser-native visual/pointer/GPU acceptance has not been claimed.
 
 SVGOMG notice correction: css-tree embeds MDN data2.27.1/2.0.28; complete CC0 terms and exact data hashes added to SOURCE/README/LICENSE. Runtime and preview counts unchanged.
+
+## Original-scope recovery and authorized AstryX expansion · 710 viewable
+
+Restored 2 existing pending entries and added 10 explicitly authorized original Meta AstryX templates and independent component families. No new source-only records. Original 251-entry scope: **57 integrated, 194 remaining**. AstryX expansion is separate, not counted toward that original scope; 33/58 raw template directories now have entries; 71 independent core-component entries cover 74/75 suggested audit families (MoreMenu is included with DropdownMenu, Item is covered by List and Navigation is covered by AppShell, not duplicate entries). The 75-family grouping is an audit plan, not an official component count, and neither range is fully collected.
+
+Single-library dependency/notice review and shared isolation framework are reused; each original scene has critical interaction/cleanup tests and actual preview composition. Ordinary single-IIFE AstryX format remains supported as before; the 700KiB check applies specifically to declared multi-script chunks. No CSP, sandbox, cache or live-card limit changed. Original fonts and unsupported backend capabilities remain explicitly documented. Fixed source and complete license records are included; supplemental standard MIT terms are identified when an official package declares MIT but lacks a separate notice file, without fabricated copyright notices.
+
+Inventory 904, viewable 710, pending 194. Mapped covers remain470;240 posterless entries use bounded live cards. Three icon-series classification labels were corrected to the canonical icon-family kind; no entries or glyphs were added by that metadata correction. All other existing records and Grok assets are preserved. Browser-native visual/pointer/GPU acceptance has not been claimed.
