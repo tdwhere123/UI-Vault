@@ -1,0 +1,126 @@
+--- upstream/ComponentWrapper.tsx
++++ adapted/ComponentWrapper.tsx
+@@ -31,16 +31,19 @@
+     this.uid = (Math.random() + 1).toString(36).substring(5);
+   }
+ 
++  private disposed = false;
++  componentDidMount() {
++    this.base.addEventListener('mousedown', this, { passive: false });
++    this.base.addEventListener('touchstart', this, { passive: false });
++  }
++  componentWillUnmount() {
++    this.disposed = true;
++    this.base?.removeEventListener('mousedown', this);
++    this.base?.removeEventListener('touchstart', this);
++    [...SECONDARY_EVENTS, 'touchcancel'].forEach(type => document.removeEventListener(type, this));
++  }
+   render(props) {
+-    const eventHandler = this.handleEvent.bind(this);
+-
+-    let rootProps = {
+-      onMouseDown: eventHandler,
+-      // https://github.com/jaames/iro.js/issues/126
+-      // https://github.com/preactjs/preact/issues/2113#issuecomment-553408767
+-      ontouchstart: eventHandler,
+-      // onTouchStart: eventHandler,
+-    };
++    let rootProps = {};
+ 
+     const isHorizontal = props.layoutDirection === 'horizontal';
+     const margin = props.margin === null ? props.sliderMargin : props.margin;
+@@ -66,6 +69,7 @@
+   // https://medium.com/@WebReflection/dom-handleevent-a-cross-platform-standard-since-year-2000-5bf17287fd38
+   // TL;DR this lets us have a single point of entry for multiple events, and we can avoid callback/binding hell
+   handleEvent(e: MouseEvent & TouchEvent) {
++    if (this.disposed) return;
+     const inputHandler = this.props.onInput;
+     // Get the screen position of the component
+     const bounds = this.base.getBoundingClientRect();
+@@ -73,7 +77,7 @@
+     e.preventDefault();
+     // Detect if the event is a touch event by checking if it has the `touches` property
+     // If it is a touch event, use the first touch input
+-    const point = e.touches ? e.changedTouches[0] : e;
++    const point = e.touches ? (e.changedTouches[0] || {clientX:bounds.left, clientY:bounds.top}) : e;
+     const x = point.clientX - bounds.left;
+     const y = point.clientY - bounds.top;
+     switch (e.type) {
+@@ -81,7 +85,7 @@
+       case InputEventType.TouchStart:
+         const result = inputHandler(x, y, IroInputType.Start);
+         if (result !== false) {
+-          SECONDARY_EVENTS.forEach(event => {
++          [...SECONDARY_EVENTS, 'touchcancel'].forEach(event => {
+             document.addEventListener(event, this, { passive: false });
+           });
+         }
+@@ -92,8 +96,9 @@
+         break;
+       case InputEventType.MouseUp:
+       case InputEventType.TouchEnd:
++      case 'touchcancel':
+         inputHandler(x, y, IroInputType.End);
+-        SECONDARY_EVENTS.forEach(event => {
++        [...SECONDARY_EVENTS, 'touchcancel'].forEach(event => {
+           document.removeEventListener(event, this, { passive: false } as EventListenerOptions);
+         });
+         break;
+
+--- upstream/createWidget.ts
++++ adapted/createWidget.ts
+@@ -1,4 +1,4 @@
+-import { h, render, ComponentType, Attributes } from 'preact';
++import { h, render, Component, ComponentType, Attributes } from 'preact';
+ 
+ // Turn a component into a widget
+ // This returns a factory function that can be used to create an instance of the widget component
+@@ -11,33 +11,43 @@
+   onMount: (root: Element) => void;
+ }
+ 
++class LocalBoundary extends Component<any, any> {
++  componentDidCatch(error) { this.setState({ failed: true }); Promise.resolve().then(() => this.props.onFailure?.(error)); }
++  render(props, state) { return state.failed ? null : props.children; }
++}
+ export function createWidget<C extends Widget, P>(WidgetComponent: ComponentType) {
+ 
+   const widgetFactory = function (parent: string | HTMLElement, props: Partial<P>): C {
+-    let widget: C; // will become an instance of the widget component class
++    let widget: C; let disposed = false; // will become an instance of the widget component class
+     const widgetRoot = document.createElement('div');
+ 
+     // Render widget into a temp DOM node
+     render(
+-      h(WidgetComponent, {
++      h(LocalBoundary, { onFailure: (props as any).onFailure }, h(WidgetComponent, {
+         ref: ref => widget = ref,
+         ...props,
+-      } as Attributes),
++      } as Attributes)),
+       widgetRoot
+     );
+     
+     function mountWidget() {
++      if (disposed) return;
+       const container = parent instanceof Element ? parent : document.querySelector(parent);
+-      container.appendChild(widget.base);
++      container.appendChild(widgetRoot);
+       widget.onMount(container);
+     };
+     // Mount it into the DOM when the page document is ready
+     if (document.readyState !== 'loading') {
+       mountWidget();
+     } else {
+-      document.addEventListener('DOMContentLoaded', mountWidget);
++      document.addEventListener('DOMContentLoaded', mountWidget, { once: true });
+     }
+ 
++    (widget as any).destroy = () => {
++      if (disposed) return; disposed = true;
++      document.removeEventListener('DOMContentLoaded', mountWidget);
++      render(null, widgetRoot); widgetRoot.remove();
++    };
+     return widget;
+   }
+ 
