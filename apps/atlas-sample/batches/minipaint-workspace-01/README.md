@@ -23,3 +23,6 @@ Copyrights/full terms: NOTICES.txt. Source origin and exact file hashes: SOURCE.
 
 ## Post-575 preventive binding correction
 Top-level function promotion now uses anonymous expressions assigned to their original outer variable, preserving self-rebinding semantics. All20 miniPaint functions were checked and none self-rebind; the failure found in a different application was not reproduced here. Core drawing/pressure/history/cleanup and final source rebuild tests pass. This corrects the existing575 item, not a new item.
+
+## Post-576 rebuild installation clarification
+The extracted package.json now pins all ten actual emitted npm packages as dependencies, plus esbuild0.25.0/acorn8.14.0 build tools. From an extracted directory run `npm install --ignore-scripts --no-audit --no-fund` then `npm run build`; a fresh extraction using this ordinary install and the resulting editor workflow test passed. This avoids npm pruning supplied dependency source directories as extraneous. No runtime or preview behavior changed.
