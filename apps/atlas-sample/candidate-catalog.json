@@ -13499,36 +13499,46 @@
   },
   {
     "id": "actual:budget-automation-editor",
-    "title": "Actual · 目标预算规则编辑面板",
     "source": "Actual Budget",
     "repository": "https://github.com/actualbudget/actual",
     "revision": "7d4c52647b18f1abeae5cb8f09fdd16a6d6b334b",
-    "sourcePath": "packages/desktop-client/src/components/modals/BudgetAutomationsModal/BudgetAutomationsModal.tsx",
-    "upstream": "https://github.com/actualbudget/actual/blob/7d4c52647b18f1abeae5cb8f09fdd16a6d6b334b/packages/desktop-client/src/components/modals/BudgetAutomationsModal/BudgetAutomationsModal.tsx",
-    "license": "MIT (root verified only; dependencies/assets not closed)",
-    "behavior": "原960px复合规则编辑modal：规则列表与编辑区，按类型切换字段；目标金额/截止月份、重复周期及提前支出选项真实dispatch更新。",
-    "difference": "与预算表是配置规则与查看分配两种完整场景；与rrule时间规则不同，涉及金额/目标/类别策略，不把多种规则拆项。",
-    "gaps": [
-      "当前状态由useBudgetAutomations/useCategoryCleanup/useSchedules与数据库query提供；规则迁移/保存不是本地fixture，未执行任何财务动作。",
-      "BySave重复输入有整数解析与blur纠正；仍需完整reducer/副作用/空值/错误分支审查，不声称全部校验通过。",
-      "完整传递依赖/字体/图片许可、离线CSP、交互取消/退出清理与浏览器像素未审未验。没有运行包、预览或源码ZIP下载链接。"
-    ],
-    "description": "原960px复合规则编辑modal：规则列表与编辑区，按类型切换字段；目标金额/截止月份、重复周期及提前支出选项真实dispatch更新。 与预算表是配置规则与查看分配两种完整场景；与rrule时间规则不同，涉及金额/目标/类别策略，不把多种规则拆项。",
-    "category": "输入与选择",
+    "upstream": "https://github.com/actualbudget/actual/blob/7d4c52647b18f1abeae5cb8f09fdd16a6d6b334b/packages/desktop-client/src/components/modals/BudgetAutomationsModal/AutomationEditorPane.tsx",
+    "sourcePath": "packages/desktop-client/src/components/modals/BudgetAutomationsModal/AutomationEditorPane.tsx",
     "licenseEvidence": {
       "url": "https://github.com/actualbudget/actual/blob/7d4c52647b18f1abeae5cb8f09fdd16a6d6b334b/LICENSE.txt",
       "sha256": "71e4b3053e4622e1f5fc5d8aa5336350de32ead39247924c596d659b89b47b6f",
       "scope": "Full root MIT read; selected source paths have no intervening license file; runtime/media not audited"
     },
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-bulk-523",
-    "sourceScope": "Selected fixed original code and complete root license evidence; no complete runnable/archive or runtime audit",
-    "kind": "原版完整场景（仅来源）",
-    "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted"
+    "difference": "与预算表是配置规则与查看分配两种完整场景；与rrule时间规则不同，涉及金额/目标/类别策略，不把多种规则拆项。",
+    "title": "预算自动化规则表单",
+    "description": "原九类自动化规则表单，支持本地编辑、周期与算术输入；不执行预算计算、余额查询或保存。",
+    "behavior": "原九类自动化规则表单，支持本地编辑、周期与算术输入；不执行预算计算、余额查询或保存。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "输入与选择",
+    "license": "MIT AND Apache-2.0 AND BSD-3-Clause",
+    "batch": "actual-automation-01",
+    "preview": "batches/actual-automation-01/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "准确限定为原AutomationEditorPane桌面规则编辑，不含原Modal预算dry-run或保存，不返回假0。",
+      "固定本地类别/提醒/偏好，移除候选余额显示；桌面原UI，移动端整App modal不接。",
+      "真实浏览器像素/触摸和完整辅助技术未验。"
+    ],
+    "originalCandidateSource": {
+      "source": "Actual Budget",
+      "sourcePath": "packages/desktop-client/src/components/modals/BudgetAutomationsModal/BudgetAutomationsModal.tsx",
+      "upstream": "https://github.com/actualbudget/actual/blob/7d4c52647b18f1abeae5cb8f09fdd16a6d6b334b/packages/desktop-client/src/components/modals/BudgetAutomationsModal/BudgetAutomationsModal.tsx",
+      "revision": "7d4c52647b18f1abeae5cb8f09fdd16a6d6b334b"
+    },
+    "runtime": {
+      "scripts": [
+        "runtime-part-1.js",
+        "runtime.js"
+      ]
+    }
   },
   {
     "id": "memos:personal-knowledge-timeline",
@@ -14104,39 +14114,32 @@
   },
   {
     "id": "bookstack:shelf-book-organization",
-    "title": "书架、书籍与章节知识组织",
     "source": "BookStack",
     "repository": "https://github.com/BookStackApp/BookStack",
     "revision": "0b6b667e0d84ebb3406de6de9fadbf4230c29c0b",
-    "sourcePath": "resources/views/shelves/parts/form.blade.php",
     "upstream": "https://github.com/BookStackApp/BookStack/blob/0b6b667e0d84ebb3406de6de9fadbf4230c29c0b/resources/views/shelves/parts/form.blade.php",
-    "license": "MIT (complete root text verified; dependencies/media not closed)",
-    "behavior": "原书架双列表管理：搜索候选书、Sortable拖动加入/移除、按属性排序与反序、hidden输入回传书籍顺序；配套书架网格/列表与书籍章节阅读目录。",
-    "difference": "区别通用文档块编辑：书架→书→章节的知识组织和两列表编排，不算基础sortable控件。",
-    "gaps": [
-      "Laravel Blade权限/服务端渲染/保存不可直接离线；原shelf-sort新建Sortable但未见在该类dispose销毁，监听和排序实例需审。description HTML、封面/图标、Sortable及其他依赖未核。",
-      "未安装、构建、运行；传递依赖/媒体许可、默认CSP、交互和退出清理及浏览器像素均未验。"
-    ],
-    "description": "原书架双列表管理：搜索候选书、Sortable拖动加入/移除、按属性排序与反序、hidden输入回传书籍顺序；配套书架网格/列表与书籍章节阅读目录。 区别通用文档块编辑：书架→书→章节的知识组织和两列表编排，不算基础sortable控件。",
-    "category": "导航与组织",
+    "sourcePath": "resources/views/shelves/parts/form.blade.php",
     "licenseEvidence": {
       "url": "https://github.com/BookStackApp/BookStack/blob/0b6b667e0d84ebb3406de6de9fadbf4230c29c0b/LICENSE",
       "sha256": "ec449a65836765a16f2562fa3ae511d0dc6f2a6eafcad21e7be2b4a30e220465",
       "scope": "Complete actual root license read; not a full dependency/media distribution audit"
     },
-    "sourceEvidence": {
-      "localFile": "evidence/BookStackApp--BookStack--resources__views__shelves__parts__form.blade.php",
-      "sha256": "66dc704f2bca1fefbd8cb91dd2e6469c4d7ad851b7d199d072294b1a2fedb4cd"
-    },
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-bulk-524",
-    "sourceScope": "Selected fixed original code and complete actual root license; no runnable/archive or runtime audit",
-    "kind": "原版完整场景（仅来源）",
-    "buildStatus": "fixed original code and complete root license read; not built, run or visually accepted"
+    "difference": "区别通用文档块编辑：书架→书→章节的知识组织和两列表编排，不算基础sortable控件。",
+    "title": "书架双列表编排",
+    "description": "原书架双列表支持本地添加、移除、排序与搜索；不包含封面、章节阅读或服务端保存。",
+    "behavior": "原书架双列表支持本地添加、移除、排序与搜索；不包含封面、章节阅读或服务端保存。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "导航与组织",
+    "license": "MIT AND public-domain CSS reset",
+    "batch": "bookstack-shelf-01",
+    "preview": "batches/bookstack-shelf-01/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "原书架双列表子流程；不含真实保存、外围富编辑/封面/标签或书籍章节阅读。原生拖拽几何未验。"
+    ]
   },
   {
     "id": "drawdb:relational-schema-workspace",
@@ -16765,36 +16768,38 @@
   },
   {
     "id": "silverbullet:document-navigation-workspace",
-    "title": "Markdown知识文档与停靠导航工作区",
     "source": "SilverBullet",
     "repository": "https://github.com/silverbulletmd/silverbullet",
     "revision": "e91de8698f711cc2c87d35264ce5610ebf36598f",
-    "sourcePath": "client/editor_ui.tsx",
-    "upstream": "https://github.com/silverbulletmd/silverbullet/blob/e91de8698f711cc2c87d35264ce5610ebf36598f/client/editor_ui.tsx",
-    "license": "MIT (root verified only; dependencies/assets not closed)",
-    "behavior": "原编辑器工作区、文档导航根容器与document view组合，提供停靠面板/树行和文档内容视图、行摘要与动作入口；保留原Preact和客户端syscalls设计。",
-    "difference": "区别Quartz只读发布花园：是原交互知识编辑工作区和导航面板，不是静态列表模板；多个树/表视图不拆条。",
-    "gaps": [
-      "依赖Client/datastore/editor syscalls、CodeMirror、Space Lua/插件和数据加载；不是独立无后端编辑器。存储/同步/网络、可执行插件及脚本/CSP安全、Inter字体/图标及完整运行许可未审，未执行任意查询或用户代码。",
-      "仅固定原件来源；未安装/构建/运行/截图/发布，CSP、媒体字体版权、完整运行许可、交互清理及浏览器视觉均未验。"
-    ],
-    "description": "原编辑器工作区、文档导航根容器与document view组合，提供停靠面板/树行和文档内容视图、行摘要与动作入口；保留原Preact和客户端syscalls设计。 区别Quartz只读发布花园：是原交互知识编辑工作区和导航面板，不是静态列表模板；多个树/表视图不拆条。",
-    "category": "导航与组织",
+    "upstream": "https://github.com/silverbulletmd/silverbullet/blob/e91de8698f711cc2c87d35264ce5610ebf36598f/client/components/top_bar.tsx",
+    "sourcePath": "client/components/top_bar.tsx",
     "licenseEvidence": {
       "url": "https://github.com/silverbulletmd/silverbullet/blob/e91de8698f711cc2c87d35264ce5610ebf36598f/LICENSE.md",
       "sha256": "ccf525a3b5c9ac8d843e118932036e6517d4d603f9ff3e474522b632c3996c65",
       "scope": "Complete root license read; dependency/media/font permissions not closed"
     },
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-style-528",
-    "sourceScope": "Selected fixed original code and complete root license evidence; not a complete runnable archive or runtime audit",
-    "kind": "原版完整场景（仅来源）",
-    "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted",
-    "sourceSha256": "daadfe920bce30175e86eba7152f354957adbe5935062a6e93c0757d2eaa2fa0"
+    "difference": "区别Quartz只读发布花园：是原交互知识编辑工作区和导航面板，不是静态列表模板；多个树/表视图不拆条。",
+    "title": "文档树导航与本地编辑",
+    "description": "原文档树、标题编辑与文本编辑分支，三个本地文档可切换、重命名及撤销重做；不含同步、后台或脚本插件。",
+    "behavior": "原文档树、标题编辑与文本编辑分支，三个本地文档可切换、重命名及撤销重做；不含同步、后台或脚本插件。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "导航与组织",
+    "license": "MIT",
+    "batch": "silverbullet-documents-01",
+    "preview": "batches/silverbullet-documents-01/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "原文本编辑/树导航子流程，本地虚构文档，无完整MainUI/Space Lua/同步/持久保存。"
+    ],
+    "originalCandidateSource": {
+      "source": "SilverBullet",
+      "sourcePath": "client/editor_ui.tsx",
+      "upstream": "https://github.com/silverbulletmd/silverbullet/blob/e91de8698f711cc2c87d35264ce5610ebf36598f/client/editor_ui.tsx",
+      "revision": "e91de8698f711cc2c87d35264ce5610ebf36598f"
+    }
   },
   {
     "id": "fontawesome-free:interface-symbol-family",
