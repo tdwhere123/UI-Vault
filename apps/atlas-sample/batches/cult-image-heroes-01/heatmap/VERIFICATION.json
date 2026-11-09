@@ -1,0 +1,84 @@
+{
+  "actual571Compose": true,
+  "runtimeSha256": "03f7b682e81b37ef4d5f9e72927aec2df3c646add9d88649878550795320e3fb",
+  "tests": [
+    {
+      "slug": "heatmap",
+      "mode": "imagefail",
+      "pass": true,
+      "runtimeSha256": "03f7b682e81b37ef4d5f9e72927aec2df3c646add9d88649878550795320e3fb",
+      "drawCommands": 0,
+      "shadersSubmitted": 0,
+      "allocated": 0,
+      "deleted": 0,
+      "contextLossRequests": 1,
+      "imageLoads": 18,
+      "processedBuffers": 0,
+      "firstBufferPixels": [],
+      "scope": "Original Paper preprocessing algorithms executed on synthetic RGBA canvas buffers; original GLSL submitted to stubbed WebGL. Image load, geometry, PNG serialization and GPU are test boundaries, not actual pixels."
+    },
+    {
+      "slug": "heatmap",
+      "mode": "normal",
+      "pass": true,
+      "runtimeSha256": "03f7b682e81b37ef4d5f9e72927aec2df3c646add9d88649878550795320e3fb",
+      "drawCommands": 48,
+      "shadersSubmitted": 12,
+      "allocated": 24,
+      "deleted": 24,
+      "contextLossRequests": 7,
+      "imageLoads": 24,
+      "processedBuffers": 6,
+      "firstBufferPixels": [
+        80,
+        80,
+        80,
+        255,
+        80,
+        80,
+        80,
+        255
+      ],
+      "scope": "Original Paper preprocessing algorithms executed on synthetic RGBA canvas buffers; original GLSL submitted to stubbed WebGL. Image load, geometry, PNG serialization and GPU are test boundaries, not actual pixels."
+    },
+    {
+      "slug": "heatmap",
+      "mode": "pendingexit",
+      "pass": true,
+      "runtimeSha256": "03f7b682e81b37ef4d5f9e72927aec2df3c646add9d88649878550795320e3fb",
+      "drawCommands": 0,
+      "shadersSubmitted": 0,
+      "allocated": 0,
+      "deleted": 0,
+      "contextLossRequests": 1,
+      "imageLoads": 18,
+      "processedBuffers": 0,
+      "firstBufferPixels": [],
+      "scope": "Original Paper preprocessing algorithms executed on synthetic RGBA canvas buffers; original GLSL submitted to stubbed WebGL. Image load, geometry, PNG serialization and GPU are test boundaries, not actual pixels."
+    },
+    {
+      "slug": "heatmap",
+      "mode": "unsupported",
+      "pass": true,
+      "runtimeSha256": "03f7b682e81b37ef4d5f9e72927aec2df3c646add9d88649878550795320e3fb",
+      "drawCommands": 0,
+      "shadersSubmitted": 0,
+      "allocated": 0,
+      "deleted": 0,
+      "contextLossRequests": 0,
+      "imageLoads": 0,
+      "processedBuffers": 0,
+      "firstBufferPixels": [],
+      "scope": "Original Paper preprocessing algorithms executed on synthetic RGBA canvas buffers; original GLSL submitted to stubbed WebGL. Image load, geometry, PNG serialization and GPU are test boundaries, not actual pixels."
+    }
+  ],
+  "allExitLedgers": "All tested runs assert listeners, timers, RAF, observers, object URLs, live GPU resources zero; external call attempts zero.",
+  "shaderSyntax": {
+    "name": "heatmap",
+    "bytes": 7173,
+    "sha256": "2640706c7a1d3c6846b81379b83cbd8360938806cc9c61da9d215238dc740921",
+    "originalShaderSyntaxPassed": true
+  },
+  "browserVisualQA": "not-run",
+  "limits": "JSDOM geometry/Image/Canvas2D drawing and PNG serialization/WebGL are boundary fixtures. Original preprocessing CPU loops execute on synthetic RGBA buffers and original GLSL is submitted; this is not native image decoding, GPU compilation, pixels, timing or mobile visual validation."
+}
