@@ -33,5 +33,11 @@
     },
     "fix": "Anonymous function-expression assignment preserves outer variable reassignment semantics; original function algorithm unchanged.",
     "tests": "normal/early/default loader and fresh extracted-source rebuild plus rebuilt workflow pass"
+  },
+  "post576InstallVerification": {
+    "ordinaryInstall": "npm install --ignore-scripts --no-audit --no-fund",
+    "build": "npm run build",
+    "runtimeWorkflow": "test-rebuilt-npm.mjs PASS",
+    "runtimeUnchangedFrom576": true
   }
 }
