@@ -900,19 +900,27 @@
   },
   {
     "id": "cult:illustration-fluid-rendering",
-    "title": "cult:illustration-fluid-rendering",
     "source": "Cult UI",
-    "license": "MIT",
     "upstream": "https://github.com/nolly-studio/cult-ui/tree/d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
-    "website": "",
-    "buildStatus": "not built",
-    "batch": "batch-001",
     "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/cult-archive-02/source-archive.zip",
     "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/cult-archive-02/manifest.json",
-    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "website": "",
+    "repository": "https://github.com/nolly-studio/cult-ui",
+    "revision": "d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+    "title": "Cult · 流体渲染插画",
+    "description": "原流体渲染完整SVG插画与示例，保留图形、文字、滤镜和层次；静态视觉展示。",
+    "behavior": "原流体渲染完整SVG插画与示例，保留图形、文字、滤镜和层次；静态视觉展示。",
+    "kind": "原版静态视觉组件",
+    "format": "完整静态场景",
+    "category": "数据与状态",
+    "license": "MIT",
+    "batch": "cult-static-02",
+    "preview": "batches/cult-static-02/illustration-fluid-rendering/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime mechanisms and lifecycle tests passed; browser visual QA not run",
     "gaps": [
-      "WebGL if shader library used; unsupported rendering must not be counted as working",
-      "Remote media, commercial brand logos and device trademarks need separate asset review"
+      "Original Cult UI illustration-fluid-rendering component and complete default demo retained. Only import aliases are resolved locally; cn retains original extendTailwindMerge soft-shadow class groups, unrelated siteConfig/absoluteUrl removed. Original SVG path data, gradients, filters, masks, clips, conic-gradient and text not redrawn. useId comes from original component. Original gateway-marketing statements are fixture content, not operational API key management, billing or failover. Original utility classes compiled with Tailwind3.4.17; host supplies light white-card/border theme and system-ui font, no font asset or CDN. Host mount/unmount/error/resource ownership added; hidden unloads static scene and restores on reveal, repeated visible idempotent. SVG reference IDs remain unique and resolve after 100 hidden/reveal mounts. This is a static visual asset, not an interactive chart, running Agent workflow, or text-entry keyboard. Each original full scene is one existing ID; no color variants counted. No icon package emitted in this scene. Normal/reduced/earlymodule/earlySVG/recreation-failure tests use actual539 composePreview; every listener, RAF and timeout cleared. No native pixel acceptance is claimed. These static SVGs have no continuing animation or separate reduced-motion effect. No networking, storage, clipboard, backend, images, screenshots or binary packaging."
     ]
   },
   {
@@ -968,19 +976,27 @@
   },
   {
     "id": "cult:illustration-card-grid",
-    "title": "cult:illustration-card-grid",
     "source": "Cult UI",
-    "license": "MIT",
     "upstream": "https://github.com/nolly-studio/cult-ui/tree/d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
-    "website": "",
-    "buildStatus": "not built",
-    "batch": "batch-001",
     "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/cult-archive-02/source-archive.zip",
     "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/cult-archive-02/manifest.json",
-    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "website": "",
+    "repository": "https://github.com/nolly-studio/cult-ui",
+    "revision": "d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+    "title": "Cult · 三卡 API 插画",
+    "description": "原三卡布局与Gateway SVG插画，保留原文字和视觉层次；API key、计费与failover为营销示例，不是运行服务。",
+    "behavior": "原三卡布局与Gateway SVG插画，保留原文字和视觉层次；API key、计费与failover为营销示例，不是运行服务。",
+    "kind": "原版静态视觉组件",
+    "format": "完整静态场景",
+    "category": "数据与状态",
+    "license": "MIT",
+    "batch": "cult-static-02",
+    "preview": "batches/cult-static-02/illustration-card-grid/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime mechanisms and lifecycle tests passed; browser visual QA not run",
     "gaps": [
-      "WebGL if shader library used; unsupported rendering must not be counted as working",
-      "Remote media, commercial brand logos and device trademarks need separate asset review"
+      "Original Cult UI illustration-card-grid component and complete default demo retained. Only import aliases are resolved locally; cn retains original extendTailwindMerge soft-shadow class groups, unrelated siteConfig/absoluteUrl removed. Original SVG path data, gradients, filters, masks, clips, conic-gradient and text not redrawn. useId comes from original component. Original gateway-marketing statements are fixture content, not operational API key management, billing or failover. Original utility classes compiled with Tailwind3.4.17; host supplies light white-card/border theme and system-ui font, no font asset or CDN. Host mount/unmount/error/resource ownership added; hidden unloads static scene and restores on reveal, repeated visible idempotent. SVG reference IDs remain unique and resolve after 100 hidden/reveal mounts. This is a static visual asset, not an interactive chart, running Agent workflow, or text-entry keyboard. Each original full scene is one existing ID; no color variants counted. No icon package emitted in this scene. Normal/reduced/earlymodule/earlySVG/recreation-failure tests use actual539 composePreview; every listener, RAF and timeout cleared. No native pixel acceptance is claimed. These static SVGs have no continuing animation or separate reduced-motion effect. No networking, storage, clipboard, backend, images, screenshots or binary packaging."
     ]
   },
   {
@@ -19208,51 +19224,35 @@
   },
   {
     "id": "seeing-svg:filter-stage-inspector",
-    "title": "SVG材质分层观察器",
     "source": "seeing-svg-filter",
     "repository": "https://github.com/9am/seeing-svg-filter",
     "revision": "58cdcc6ecd09320d7299824be03830275f301129",
-    "sourcePath": "index.html",
     "upstream": "https://github.com/9am/seeing-svg-filter/blob/58cdcc6ecd09320d7299824be03830275f301129/index.html",
-    "website": "https://9am.github.io/seeing-svg-filter/",
-    "license": "MIT (root text verified; runtime/assets not closed)",
-    "behavior": "完整工具把现有SVG滤镜解析成各阶段连接与预览，解释纹理和光影如何形成。",
-    "difference": "完整固定原始场景入口与补充脚本，不按预设/参数/颜色拆数；尚未运行验收。",
-    "description": "完整工具把现有SVG滤镜解析成各阶段连接与预览，解释纹理和光影如何形成。",
-    "gaps": [
-      "入口含真实默认滤镜和controller/painter/parser/preview模块；需要完整依赖构建，不能只保留标题SVG称工具完成。",
-      "源码用FileReader读取文件并把预览写入DOM；公共演示仅固定白名单SVG，任意导入须先做script/事件/外链过滤和资源限制，未完成安全审计。",
-      "本地文件读取不等于上传，适配不要加服务器或采集；默认源码logo图形与GitHub corner等归属需保留/独立核。",
-      "复杂filter卷积/噪声可能高成本，限尺寸/节点数并测试Safari与移动；这是读解已有滤镜，不是另一个生成器预设。",
-      "固定源码及完整根许可已存证；未构建、未运行、未截图，completedPreviewCount=0。"
-    ],
-    "category": "视觉与动效",
+    "sourcePath": "index.html",
     "licenseEvidence": {
       "url": "https://github.com/9am/seeing-svg-filter/blob/58cdcc6ecd09320d7299824be03830275f301129/LICENSE",
       "sha256": "05056d2a3b2d7f6d46dfdd52233804958e901c813600397a5f8453f783f7193a",
       "scope": "Complete original root license retained; runtime/media separate"
     },
-    "sourceSha256": "8038240b1984ed61428deb92c451cd89f22c739fee847d4c27d8fc1e3a05e841",
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-style-532",
-    "sourceScope": "Selected fixed original source and root license; full read-only repo clone retained privately",
-    "kind": "原版风格组件族（仅来源）",
-    "buildStatus": "Fixed source inspected; not built or visually accepted",
-    "additionalSourceEvidence": [
-      {
-        "sourcePath": "src/controller.js",
-        "url": "https://github.com/9am/seeing-svg-filter/blob/58cdcc6ecd09320d7299824be03830275f301129/src/controller.js",
-        "sha256": "b4bf9630ebb9549239326e084d0a0d6eac3b0c8bee9be184dda9a03ead2a96d6"
-      },
-      {
-        "sourcePath": "src/parser.js",
-        "url": "https://github.com/9am/seeing-svg-filter/blob/58cdcc6ecd09320d7299824be03830275f301129/src/parser.js",
-        "sha256": "5050e52b47639fa8d0ec526965bb11dc79a6bd56cd3ffdfd3dd005e648f1e427"
-      }
+    "difference": "完整固定原始场景入口与补充脚本，不按预设/参数/颜色拆数；尚未运行验收。",
+    "website": "https://9am.github.io/seeing-svg-filter/",
+    "title": "SeeingSVG · 滤镜阶段检查器",
+    "description": "原内置SVG的Parse依赖图与26个真实滤镜阶段，点击查看效果及源码；限定原只读示例，不接受外部SVG。",
+    "behavior": "原内置SVG的Parse依赖图与26个真实滤镜阶段，点击查看效果及源码；限定原只读示例，不接受外部SVG。",
+    "kind": "原版滤镜检查场景",
+    "format": "完整交互场景",
+    "category": "展示与媒体",
+    "license": "MIT; ISC; BSD-2-Clause; BSD-3-Clause; Apache-2.0; 0BSD",
+    "batch": "seeing-svg-01",
+    "preview": "batches/seeing-svg-01/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "pass",
+    "gaps": [
+      "DOM/SVG filter structure tested; browser SVG filter pixel rendering and visual layout not verified.",
+      "Only upstream fixed logo fixture; no import, drop, paste editing, custom SVG or backend.",
+      "Original embedded filter credits Dirk Weber, CodePen EjNEaE; public Pen and official CodePen public-Pen MIT policy checked by parent reviewer.",
+      "SourceGraphic and SourceAlpha panes show the actual generated source-stage SVG, not nonexistent original primitive markup."
     ]
   },
   {
