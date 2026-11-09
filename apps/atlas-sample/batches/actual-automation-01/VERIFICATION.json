@@ -1,0 +1,82 @@
+{
+  "test-early-module.json": {
+    "pass": true,
+    "actualCompose571": true,
+    "scriptElementExecution": true,
+    "earlyModuleFailureFallback": true,
+    "injected": 1,
+    "nativeVisual": false
+  },
+  "test-late.json": {
+    "mode": "late",
+    "pass": true,
+    "actualCompose571": true,
+    "nineOriginalEditorTypes": true,
+    "originalReducerAndLocalValidation": true,
+    "noteAndPriority": true,
+    "hiddenReset": true,
+    "oldNodesInert": true,
+    "listeners": 0,
+    "timers": 0,
+    "raf": 0,
+    "forbiddenCalls": 0,
+    "visual": false
+  },
+  "test-normal.json": {
+    "mode": "normal",
+    "pass": true,
+    "actualCompose571": true,
+    "nineOriginalEditorTypes": true,
+    "originalReducerAndLocalValidation": true,
+    "noteAndPriority": true,
+    "hiddenReset": true,
+    "oldNodesInert": true,
+    "listeners": 0,
+    "timers": 0,
+    "raf": 0,
+    "forbiddenCalls": 0,
+    "visual": false
+  },
+  "test-direct-html.json": {
+    "pass": true,
+    "localResourceLoaderOnly": true,
+    "orderedScripts": [
+      "runtime-part-1.js",
+      "runtime.js"
+    ],
+    "actualOriginalEditorRendered": true,
+    "exit": true,
+    "visual": false
+  },
+  "test-missing.json": {
+    "mode": "missing",
+    "pass": true,
+    "actualCompose571": true,
+    "nineOriginalEditorTypes": false,
+    "originalReducerAndLocalValidation": true,
+    "noteAndPriority": true,
+    "hiddenReset": true,
+    "oldNodesInert": true,
+    "listeners": 0,
+    "timers": 0,
+    "raf": 0,
+    "forbiddenCalls": 0,
+    "visual": false
+  },
+  "test-loader-results.json": [
+    {
+      "slug": ".",
+      "pass": true,
+      "utf16Bytes": 1564806,
+      "fetches": 4,
+      "scripts": [
+        "runtime-part-1.js",
+        "runtime.js"
+      ],
+      "actualCreatePreviewLoader571": true,
+      "cacheHit": true,
+      "released": true,
+      "iframeExecution": false
+    }
+  ]
+}
