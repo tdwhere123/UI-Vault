@@ -1,0 +1,440 @@
+{
+  "repository": "https://github.com/runvendo/fluidkit",
+  "revision": "b1e6e6109e14c31ed43a99e2a373f4727c867ecb",
+  "sourcePath": "playground/showcase/pages/LiquidMenu.tsx",
+  "originals": [
+    {
+      "path": "LICENSE",
+      "sha256": "4dff54095ca763629b98ad21dfc08b525c4e69afa9010bdd2e989bccd4bd49ff",
+      "gitBlob": "8049d8194c343c1ca8998f2186adb03013a72fa2"
+    },
+    {
+      "path": "package.json",
+      "sha256": "e80ad07a282b9f90833d6460b558c269e89dd424b6717f9bacf9102272aa230d",
+      "gitBlob": "fbf8d5d864002af91736791866b13a0753d27d8f"
+    },
+    {
+      "path": "playground/showcase/kit/MountOnView.tsx",
+      "sha256": "94d5d0dfe6c8339a8a37db6c9bc70436614f290f6b4f9dfa72c57b530786444c",
+      "gitBlob": "bd8856b71f1af7a0eacf3267ed5bb88d7d0bbfa8"
+    },
+    {
+      "path": "playground/showcase/kit/PageLayout.tsx",
+      "sha256": "7d5008ebd14beb1e2c791499e121882ff63d5663357e0be82fc493072c10c308",
+      "gitBlob": "d90b26cca706c302bd2d971be4b431dd1598dc0d"
+    },
+    {
+      "path": "playground/showcase/kit/Snippet.tsx",
+      "sha256": "2b8cdd03eca30eb1cde2116b588a0479392f46386d26ccb871cd45efdc70581b",
+      "gitBlob": "8f801112c2b7ca6d8b12d78e8e93a875b6e1b6b0"
+    },
+    {
+      "path": "playground/showcase/kit/Stage.tsx",
+      "sha256": "e89aaec70cb105e8886cab4735082b13815c31ec9fff37a4186369fe0a7a8fe4",
+      "gitBlob": "e1850541e58b3265223d03707fff9eb6e01aa88a"
+    },
+    {
+      "path": "playground/showcase/kit/VariantGrid.tsx",
+      "sha256": "89ee2311cd53c30e3274fd0605785cde4cb1ff5afb71ddba50f0ba3958cb0f20",
+      "gitBlob": "0dd0669d9c99dda8ba4725bcbb410de551c1b9dd"
+    },
+    {
+      "path": "playground/showcase/kit/controls.tsx",
+      "sha256": "6abb97bd004d40aa72d6a96c4d4571aab6dd1ddbea67fd67ec8549c8700a2bf5",
+      "gitBlob": "5f0f310cb7f8d5707314b9d8f2d5a925bb33487f"
+    },
+    {
+      "path": "playground/showcase/kit/index.ts",
+      "sha256": "d600799c3c55bf91426f67e7feb4b9274bff077c61023fae160dbfa00c3a2112",
+      "gitBlob": "72374b826080ff2481be33b94ec1631d41f6b4c9"
+    },
+    {
+      "path": "playground/showcase/pages/LiquidMenu.tsx",
+      "sha256": "69e1bba32f725084f32362132e974ca0408feef24842af57ca77cd62d9282f55",
+      "gitBlob": "a227d4ba48e0048436fd5f2edc87edb0efdd6dc0"
+    },
+    {
+      "path": "playground/showcase/styles.css",
+      "sha256": "1a4c4a50126ac2343fe9f12adcb27571eb8a1ce4ed90f18e35f93057fdd179e1",
+      "gitBlob": "6451db56b12221caab5837f4e9c890e04a7dde0a"
+    },
+    {
+      "path": "src/components/Caustics.tsx",
+      "sha256": "78fc89995f1b58907db1e14d6e7652f1f4454febc928e61c489b8552e3824d60",
+      "gitBlob": "2f6f106c20d8f63707332754d6e831975f2e888f"
+    },
+    {
+      "path": "src/components/Droplets.tsx",
+      "sha256": "951f3b13b8deebeae527af219ccf15bcfaaea8d7f0bd3997edf263a696343f09",
+      "gitBlob": "b8d888fea788fc844aecfb9bf7a7940380300c5f"
+    },
+    {
+      "path": "src/components/FlowStagger.tsx",
+      "sha256": "fe3121e8cd7249ef84a0efe958166e530302d0f85fdc8956f1bf9208544f8a79",
+      "gitBlob": "03ac62f3da5144c2e275d2ea678df5868a5f8b79"
+    },
+    {
+      "path": "src/components/GlassPanes.tsx",
+      "sha256": "39251952b2953d8961e61bb47bfcf5e85dfd27b5169fce83939e39a74a72fa60",
+      "gitBlob": "5083e92ef91fd840f5ca15b75a2b81f574fba48c"
+    },
+    {
+      "path": "src/components/LiquidButton.tsx",
+      "sha256": "212c91b5a6ac1745fa88566d4a6f41f3b854d1467e11fd7f0f757a6ed9cd03d2",
+      "gitBlob": "43311856376892cf5d1fc182d77659a4a2e7e3e5"
+    },
+    {
+      "path": "src/components/LiquidCard.tsx",
+      "sha256": "e074eb9d68fb75772dfe23aead151b86007d6997528cc43f1ae2215c7f8eb75e",
+      "gitBlob": "b3aa0289266ee2edc6903317af6da76821070c6e"
+    },
+    {
+      "path": "src/components/LiquidCheckbox.tsx",
+      "sha256": "2cb6f93d42783fb8857f40a9cad793c36b35f032ac2c5cfc23bf2a4c6edcc94b",
+      "gitBlob": "85dc00c33e73ed66572bb165b730bd4acb2e49d6"
+    },
+    {
+      "path": "src/components/LiquidDialog.tsx",
+      "sha256": "e3080cb68a8d4039035748c4e4c67a80d0fe7c1f75f160c824ebdf2973f889c7",
+      "gitBlob": "8618d9df918a0ad8d05d87c21a211b8340b33bb3"
+    },
+    {
+      "path": "src/components/LiquidField.tsx",
+      "sha256": "c4ebfcd74491fc26f3099bf5eac8de34cf90c86a1828be4bfce5743262ea98dd",
+      "gitBlob": "68ddc4acdb6fa9158eb480834ff88cf198174a7c"
+    },
+    {
+      "path": "src/components/LiquidMenu.tsx",
+      "sha256": "209f7b2d79f4fbf2e87103f91e6e8ed258c20899a495adff2d41aaeef49b15ee",
+      "gitBlob": "c82e7a1ad7080a5b46c31af31e76a6806da21481"
+    },
+    {
+      "path": "src/components/LiquidPanel.tsx",
+      "sha256": "62cc4c0794f9e4f4c7383cb6450f6cb6b09a9471da25ad119e4b0db199c5b7d3",
+      "gitBlob": "c941baf9f64da7d35ceebbc9aafc350eaeda5aa8"
+    },
+    {
+      "path": "src/components/LiquidProgress.tsx",
+      "sha256": "6bedae2ccb2d777413951597adf75f506199d079839f2e37bc485d9e153638a1",
+      "gitBlob": "2ca39aedbed06f30d9a4c0e86a39922055f4c872"
+    },
+    {
+      "path": "src/components/LiquidSlider.tsx",
+      "sha256": "1f50cc1b614e7dad4a33a854c362d79cc6f03750d685e586a91e829857179694",
+      "gitBlob": "3b2ef51b018ad3f8bf05be002da293ac46648c29"
+    },
+    {
+      "path": "src/components/LiquidSwitch.tsx",
+      "sha256": "d0bee43eca26943210d109ae941d9ab8715bb96c0801d1182674a04599768462",
+      "gitBlob": "685b5313bd6b89235c727aaa8909bf3262b6f427"
+    },
+    {
+      "path": "src/components/LiquidText.tsx",
+      "sha256": "47ad41e92dfcaa493647db05af4cc3be1b77b27d1fa65c714d719dc7ae06e044",
+      "gitBlob": "f3bfa4704a7ef9cb701b9ee5b6e18bfbbe2138cd"
+    },
+    {
+      "path": "src/components/LiquidToast.tsx",
+      "sha256": "3648cefbba3b2d0cc2135d2b1e39e040067bf609b0788d4773f533e728c56aa8",
+      "gitBlob": "3c70acafa6507a3acba81469b262d01b35510ea1"
+    },
+    {
+      "path": "src/components/LiquidTooltip.tsx",
+      "sha256": "0309b29c86bc3bc701f275253dd980343f5e6a8778023170b03ace9ebd8a4c23",
+      "gitBlob": "32609ddb80d9cd66697589c72ffadd2460ede86f"
+    },
+    {
+      "path": "src/components/MeniscusDivider.tsx",
+      "sha256": "81c16a3616a680d5dc689c7c841d05600a4c372a064ccd3a36e3f9297b1eb512",
+      "gitBlob": "05f6a7a3adc65c653f3ec0ed623b7147245a7220"
+    },
+    {
+      "path": "src/components/MeshGradient.tsx",
+      "sha256": "72d4f9fb9b95eb9ab4673922260831f364d1551294807f7e644740b82ad8f298",
+      "gitBlob": "6d0106e8e39a74abe82abdcb1c8c1fe260e66d8b"
+    },
+    {
+      "path": "src/components/MorphSurface.tsx",
+      "sha256": "6e978307e56ef958568d092504779e1f86ed8efb597f51bbc483c351628e1c56",
+      "gitBlob": "f759cd52ab9e0a3c632a0e5d6533163bdfd541d9"
+    },
+    {
+      "path": "src/components/Ripple.tsx",
+      "sha256": "065a87c39b1be484f240a7638c693c4716e1cbad4f7e44bc6f6e5b4a3a8eb4d5",
+      "gitBlob": "c250cde0c2e4a32daf2807a2c1a609e16a287647"
+    },
+    {
+      "path": "src/components/Silk.tsx",
+      "sha256": "73266d46bea4670e02565857b51b957f1b36664e083fc4c6be544249442e2d56",
+      "gitBlob": "11552853042d24b87806b17675232a4b576411d4"
+    },
+    {
+      "path": "src/components/Thinking.tsx",
+      "sha256": "3a5267f065e26cdd662edd06a4c5bbd635dc5b90120c982f98e1b89037a54665",
+      "gitBlob": "9dc048f4e188b52ac8491b1d507afd23c6f3c34e"
+    },
+    {
+      "path": "src/components/VoiceBall.tsx",
+      "sha256": "825b5d7225ccafef2596dcc426052e3988243b44610ef3badc24f7143a2b7e77",
+      "gitBlob": "68eddc37f9c3659d7f41640f0b411bb4055a7a3a"
+    },
+    {
+      "path": "src/components/focus.ts",
+      "sha256": "18f94bb6717ee03960ff780309e4540e409e6e8482ab258208b72c75a4461932",
+      "gitBlob": "a53a7e49d825e2b7d953a7beae648dd40b550395"
+    },
+    {
+      "path": "src/components/formControl.ts",
+      "sha256": "85d800048373c285b60b60de3cd2b80ea4dac22d2bb41cb1fb069b867d3f8b0f",
+      "gitBlob": "b559984a6f2c79c48f3d1a9faac3eaf6cb88b44a"
+    },
+    {
+      "path": "src/components/index.ts",
+      "sha256": "659387df97d6edc0cc80a24081592d940d628aafe1e057ebe19813edba07fa41",
+      "gitBlob": "e7082fbcb2d79ca00fdf0364407993a4b333c4f2"
+    },
+    {
+      "path": "src/components/intensity.ts",
+      "sha256": "baaa7ba416fe920f265d62536675c5de55fe6bbd1c4160e378d719132ac6c668",
+      "gitBlob": "2f1021cf53864814329e9af0b985283553353d70"
+    },
+    {
+      "path": "src/components/overlay.ts",
+      "sha256": "97b93926bbcd9eb0bc626383533c7be93c31330ab7c7ced2632a9a57cac29c1c",
+      "gitBlob": "9deefa10d416ee0248f64b52717a0f2b2932ff37"
+    },
+    {
+      "path": "src/components/rim.ts",
+      "sha256": "9451a6ca677f8bfa82e74d4a5554f5579e47a164ba914f67bac8fcfbafb524f2",
+      "gitBlob": "7d01f9fb594a6818622f95c5b6a0e0f12bd2d408"
+    },
+    {
+      "path": "src/components/surface.ts",
+      "sha256": "04b643f56cdab48f4dd32bd1f183ecb3601c5b622e9b2351bbfc9a63d2e13071",
+      "gitBlob": "c84a78adeaf5009a2986dc4a7491ac6261206a6e"
+    },
+    {
+      "path": "src/components/tabs/LiquidTabs.tsx",
+      "sha256": "1c1a303cf06465c384a2c1a1b7ad4f1fc390eab053162de7121f182cef64e3ef",
+      "gitBlob": "638d9e46f38c16d48b4e647d254eaf29a01a3474"
+    },
+    {
+      "path": "src/components/tabs/TabPanel.tsx",
+      "sha256": "7af26ebe9f114b57b99d0f77f9264afb901f56b80d6a4e13a67bbfbc22bf9681",
+      "gitBlob": "8deda907650417c4f6b617a3d3fd4ab58d558945"
+    },
+    {
+      "path": "src/components/tabs/TabsGroup.tsx",
+      "sha256": "5a5e662ed7b00aadeb4be217586d886dace002680e2a1abeb97f47f1458967ba",
+      "gitBlob": "ade26c6190bdf93ce25922624f20b57c18536ccc"
+    },
+    {
+      "path": "src/components/tabs/flows.ts",
+      "sha256": "40f5aebcad3dfdf6a86d6690f79d953ed210d6e627d7e5705ee69d1e113ab4dc",
+      "gitBlob": "efdb26e0dd1628d3ddf22f6c80992f599512aa47"
+    },
+    {
+      "path": "src/components/tabs/index.ts",
+      "sha256": "33dcf80f78304635c404fcd674ff149aab52942d5d783b719db7d234a7e3ed3e",
+      "gitBlob": "8ccaa3973f3c92626fdd7ce6372db18a3dc084f2"
+    },
+    {
+      "path": "src/components/tabs/tint.ts",
+      "sha256": "fb275732214406f684143242c0fdaf4419700c0d6b394fbcc3af604b6a1e0ada",
+      "gitBlob": "ee0275a791ba7e7fe8efcef65bdc389d92b220de"
+    },
+    {
+      "path": "src/components/tabs/useTabList.ts",
+      "sha256": "f54d27a6cbf04444d5094a0056239de8c08025a9b1f969e52a5ffa85b225ff16",
+      "gitBlob": "c284b84c2d4e3cacd46db8fe814b15dff15f86db"
+    },
+    {
+      "path": "src/hooks/index.ts",
+      "sha256": "982c09553d04327dbea866ad52542f0ac19936910510e096db150a80f014d4e9",
+      "gitBlob": "0b8dae32d6fea4a35e250ede7deaa9fc50c297ce"
+    },
+    {
+      "path": "src/hooks/useFlow.ts",
+      "sha256": "0c2c8bcdda9802247495940f540855398341ef50b52b1af4e070dd158b09bb00",
+      "gitBlob": "c1fdc38ba97e44968a722dfb6949f44f065a5f22"
+    },
+    {
+      "path": "src/hooks/useRipple.ts",
+      "sha256": "aa3fbd184777572381251848ed682d44d30bea54de71af4f8d1354aed3ea6a6c",
+      "gitBlob": "aff216f2ef4e011808eeb8f0aefb3735cb446851"
+    },
+    {
+      "path": "src/hooks/useSquish.ts",
+      "sha256": "afe9d9ae23d442f6aa38c34ca3f0b8e194a9b759294d0bb5c5057f367d024b14",
+      "gitBlob": "a2f99182b468c3f6b59d4a9898c6c432523ac672"
+    },
+    {
+      "path": "src/index.ts",
+      "sha256": "cbcac3fc2b29504390369f1a67d966b0db742c3993a38ca5d7b3a4ef0ba1ad02",
+      "gitBlob": "10cff6d74e32fbd44aefa272709a9307704a57bd"
+    },
+    {
+      "path": "src/liquid/LiquidRenderer.tsx",
+      "sha256": "d13d382af62095f77f236fc8eb6daf6d6495000f58b71334e643462452d8a78f",
+      "gitBlob": "bc9bba0c670f46c3ffd0f222e3f5a96ab0446392"
+    },
+    {
+      "path": "src/liquid/caustics.tsx",
+      "sha256": "7927085b0df3b084e66199541c961068641baac1fd3d059130726765ec495dd3",
+      "gitBlob": "1c42af089387ef735cbc0fb4374e683919df4cc3"
+    },
+    {
+      "path": "src/liquid/geometry.ts",
+      "sha256": "0ae5939b44c13810594fb7e951b561849d7991e144252bed75a97b161a3bf60c",
+      "gitBlob": "a4311aa3031ce535884f8eb7c43ab0e7f7147d87"
+    },
+    {
+      "path": "src/liquid/index.ts",
+      "sha256": "8ea627cfefb050e6f1d8cab69cc40e1de73c679ad861bd7d5b522b4a975bc205",
+      "gitBlob": "aab7be113b39884343e0cb066df5b6c49533ac17"
+    },
+    {
+      "path": "src/liquid/materials.ts",
+      "sha256": "7ad474a5d20e82d03ff5368b56abd48558e81a6b516b3400d5d4c3512c36be20",
+      "gitBlob": "2d45ea9ba9be09a040f5372ea2d1793914cbe469"
+    },
+    {
+      "path": "src/liquid/refraction.tsx",
+      "sha256": "b40d92e98a1f00be804e1a1f18b342461d0fe32638733fb97167fdc9d705e0b4",
+      "gitBlob": "a685bde09b590eeb0f58f4538701193ca4d81672"
+    },
+    {
+      "path": "src/liquid/specular.ts",
+      "sha256": "bea9aab14d468593eacd45661e3ee3194ab9256214913a56d656bea44551db94",
+      "gitBlob": "735b085b6e9b3f57537ccc5604a815ecab35d194"
+    },
+    {
+      "path": "src/liquid/tension.ts",
+      "sha256": "160346f76750a9696cd977fa30b4aa7e1e54fb3b0f3fc4fbc34c8db8565eb629",
+      "gitBlob": "7a63568bed6987a7d3c074687c6e84246d99049f"
+    },
+    {
+      "path": "src/liquid/useMotionSprings.ts",
+      "sha256": "b309ba8c6ec74e178c5eba88b334c05db7a8e3d8c6e50164eba8f2b58942a713",
+      "gitBlob": "465cd1665f0b5e64ebadccc6e03f59d078ae370d"
+    },
+    {
+      "path": "src/liquid-metal/index.tsx",
+      "sha256": "466096aae1d48d6335bef606851fb9c60c19e53769908d9a52e9ab3417af4486",
+      "gitBlob": "fcf671dbf360375e1a3c68778ddde71cb96b46b3"
+    },
+    {
+      "path": "src/theme/context.tsx",
+      "sha256": "7eb06ffe68c70bf34f77342fe373c9f534de5ffba18e6efc2ca3b0c3fd519f24",
+      "gitBlob": "a0f8defa05570313249f44d7039889284819a5dc"
+    },
+    {
+      "path": "src/theme/derive.ts",
+      "sha256": "9e4701f58b38c28185822e909d7d215b6c353f60f51a710d4874e8806243abe3",
+      "gitBlob": "08a55d4757ce694164bc1240a97a07387be606be"
+    },
+    {
+      "path": "src/theme/index.ts",
+      "sha256": "4c0971eef9f9493670616092e172a0f0bc5745ce1f09ebf7ca3a52c73dcb16ff",
+      "gitBlob": "d0a743665cfccf89a43b1a5d67687738bbcdfecf"
+    },
+    {
+      "path": "src/theme/theme.ts",
+      "sha256": "0bef0f4b407959cb271740406909bb0089049f6b9ee1a66fd1072d05e65a6904",
+      "gitBlob": "27fea5b6c6a59df3846a2b4c9c57e14598c4175d"
+    },
+    {
+      "path": "src/utils/color.ts",
+      "sha256": "17de26c14b6df43e1227f1ac75d4f1303ec110d705e909a1f9b8fa5a6267924f",
+      "gitBlob": "47a00b105b2cd5b48856499da1763cce1f923ffe"
+    },
+    {
+      "path": "src/utils/constants.ts",
+      "sha256": "2280912cba25cb04c988f75759e634ab3845083feb169825e4714283ee00f233",
+      "gitBlob": "98380d2ff7ce956fbd259b21ce82910a7a2c4714"
+    },
+    {
+      "path": "src/utils/featureDetect.ts",
+      "sha256": "19e67758bf189bf01ecc010d87b0c608ed80d855aec88ca318bf5d2707258b58",
+      "gitBlob": "bb9b45ee24e778e1111cbaff03cd24feeadbc129"
+    },
+    {
+      "path": "src/utils/index.ts",
+      "sha256": "ab6fd487252681217fe69f7cc05db4186a32b3fc786961650e0c4848751e2a0d",
+      "gitBlob": "db2c584edafb4524dac20a0f045de657c80cb611"
+    },
+    {
+      "path": "src/utils/injectStyleOnce.ts",
+      "sha256": "ede33e761e36793712a61d8e9ee123832fedf84bebc3049ce27bad644fb36668",
+      "gitBlob": "5c7968f5038ceb5c92e5d7d3965bdf63b20c291c"
+    },
+    {
+      "path": "src/utils/reducedMotion.ts",
+      "sha256": "1c5c545b54f842fdcb9e386da3d330ebb6727bd93ec0f614abcf5431af780c6a",
+      "gitBlob": "37a9dfaa487316f02a5493da74cb605e8f62ecbb"
+    },
+    {
+      "path": "src/utils/supportsWebGL.ts",
+      "sha256": "0ce406c796fb3e6c2923cb8a8c254ace0b4fa5ed7072083464845b57b8aecdac",
+      "gitBlob": "44a91b449ad3f4c375e46a8952431de70c9847c1"
+    },
+    {
+      "path": "src/utils/useInView.ts",
+      "sha256": "0a1da8ba1f5c6d3d6587ddfe53a2ccc6b1dd3ef6949cae76742caabd3dbb15e4",
+      "gitBlob": "4c0930b766653ca372bdf93c6c49f8b4de3a9a5e"
+    }
+  ],
+  "runtimeDependencies": [
+    {
+      "name": "framer-motion",
+      "version": "12.43.0",
+      "license": "MIT",
+      "licenseSha256": "5ff46083b88563822b0560dd6221ab89d2f74bc97a52d4c97a75020fd62c6f32"
+    },
+    {
+      "name": "motion",
+      "version": "12.23.24",
+      "license": "MIT",
+      "licenseSha256": "1bf0dc3f7727723e5a032ed12164a47cf92c05204cb1a3485f123c24e2833ed1"
+    },
+    {
+      "name": "motion-dom",
+      "version": "12.43.0",
+      "license": "MIT",
+      "licenseSha256": "1bf0dc3f7727723e5a032ed12164a47cf92c05204cb1a3485f123c24e2833ed1"
+    },
+    {
+      "name": "motion-utils",
+      "version": "12.39.0",
+      "license": "MIT",
+      "licenseSha256": "1bf0dc3f7727723e5a032ed12164a47cf92c05204cb1a3485f123c24e2833ed1"
+    },
+    {
+      "name": "react",
+      "version": "19.3.1",
+      "license": "MIT",
+      "licenseSha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+    },
+    {
+      "name": "react-dom",
+      "version": "19.3.1",
+      "license": "MIT",
+      "licenseSha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+    },
+    {
+      "name": "scheduler",
+      "version": "0.28.0",
+      "license": "MIT",
+      "licenseSha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+    }
+  ],
+  "changes": [
+    "Original full LiquidMenu official Page + kit + LiquidButton/LiquidMenu/liquid engine and CSS retained; imports resolve directly to chosen local components.",
+    "Optional caustics branch removed; LiquidMetal/PaperShaders never bundled. Original button refraction defaults false and menu has no refraction prop.",
+    "Original Motion springs kept. Continuous useAnimationFrame replaced by same callback scheduled only while animating&&settling; callback failure stops and disposes host. Static-safe reduced motion uses native removable matchMedia subscription.",
+    "Copy snippet action disabled visibly; original local onSelect only changes selected text, no rename/delete backend.",
+    "Hidden unmount/rebuild resets official page controls/last selection; explicit limitation, not persisted user work. pagehide/atlas:dispose permanently unmount, remove isolated-runtime global listeners. Root and original component render failures get guarded unavailable state."
+  ],
+  "distinction": "Unlike MorphSurface satellite absorption/card expansion, this is the original portal dropdown: trigger-edge spring pour, four side/align combinations, flip-to-fit, roving focus and selection/dismissal. One menu family; parameter choices not separate items.",
+  "visualQA": "not-run"
+}
