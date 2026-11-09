@@ -1,0 +1,159 @@
+{
+  "repository": "https://github.com/CopilotKit/CopilotKit",
+  "revision": "c7815d9ac96f48fb3a64ad8c18e176a870c81763",
+  "sourcePath": "examples/showcases/presentation/src/app/components/main/Presentation.tsx",
+  "sourceHashes": {
+    "tailwind.config.ts": "acf71e6d20ebc35b5317effe675454063e39b527b2f02ffa257cea931a3b2b28",
+    "LICENSE": "15a0e5343aea872c0573ad72feb6044b336f162d724cc1673c608e6b37ea071b",
+    "app/styles.css": "c588c0fe88f3aa7ace950b370875c04c85a0838d9efc2c27ce24b37c4d06e76c",
+    "app/layout.tsx": "82b9f6ecf8816806acbabca1b91c77c0d8faf3ea1d5ee6b63cf36401d978b1a8",
+    "app/globals.css": "c8da7c51dd6ec75583700845eca31a3ee2e3af4e4e4fcb5ea1f4c09d56dcb82d",
+    "app/page.tsx": "4bfb38989d0a85c61fb3560435426f3a601e5080e08d61bc6ec56624929dd93f",
+    "app/favicon.ico": "2b8ad2d33455a8f736fc3a8ebf8f0bdea8848ad4c0db48a2833bd0f9cd775932",
+    "app/types.ts": "d9fd1d3d5fb78b08c01f1cbcf8e542c23e116b2b3eccfb78e6b2234e39ef0830",
+    "app/actions/useAppendSlide.tsx": "e1a21877bb29e6c218df1951a8a3883e104f27b05c60a590308eefb851aa3ce1",
+    "app/actions/useUpdateSlide.tsx": "acd896656225e5a9d6cc1d2ba1a0f6abeff5236341031248f3b82776608beb88",
+    "app/utils/globalAudio.tsx": "9d86aa1a653b98b23f95c12b501abb20ad2aed3dcbcec47ab9d945f63eefbbbf",
+    "app/api/copilotkit/route.ts": "439e2e71ecb8c1ccfc430e53adfc194f1f2bc60d040a1ade33663404182fcd18",
+    "app/api/copilotkit/research.ts": "56c9ce3f6c95869113f65ad2e52ce7166420ee624a451f303a8087ede2f6d0b6",
+    "app/api/transcribe/route.ts": "a61d1c0f495cfe4cb8b7e29c4678ecb20e197608ad58188e183f17f4d473e833",
+    "app/api/tts/route.ts": "e3783115a6d1c51ee117361a9aab36d9a49ea4f7e917435b442993999404ab66",
+    "app/components/misc/SlidePreview.tsx": "770becde13bbe56e4756283dc4f9febba1494db4e32e480ab1cc1ad0d51d231c",
+    "app/components/misc/SlideNumberIndicator.tsx": "1079cc271e773868b3755621f946a8bca42f12f84a0dd3a192b001abb5423a0d",
+    "app/components/main/Header.tsx": "140150f5295b3c4a8d9e2f0b71362920fc1db0e7d0160a11a7e1edd20962c874",
+    "app/components/main/Presentation.tsx": "ad62207e6e52eb29eac344f68b56b52fa2a9b54c36047d3eb0facdf7eb4e0257",
+    "app/components/main/Slide.tsx": "1fd7fdf5f976368a08e5f379a3300a3ad38554ead37bed3c8ab81207da0f735a",
+    "app/components/buttons/SpeakCurrentSlideButton.tsx": "d590c66818e6ab046ce70268d0a1bf4e1ceb1eaa803a9d5f04a14a49ee15aca5",
+    "app/components/buttons/DeleteSlideButton.tsx": "6f00103a95db6423ae43a97e2d73b2a5493a1aca1476d6db8ff2fd487bcf18c3",
+    "app/components/buttons/AddSlideButton.tsx": "f2a8e647df567a4075b0d20c8e9a7f6496adfc6f9d9b5d1fbc1ca86a5527ee07",
+    "app/components/buttons/GenerateSlideButton.tsx": "5cc8f065d2d6532288fa1de189173ef55c54323f4b2222950422619026c585b0",
+    "app/components/buttons/NavButton.tsx": "0b6aa2e7940bb48ee04037db1215ec5b70283e7a6d8e9cd575ee26ae135cc6ef",
+    "app/components/buttons/PerformResearchSwitch.tsx": "c52313235c14cbf3ef911c62342ec7e38c65139f6b62164ad50de32637b0a7fa",
+    "app/components/buttons/ActionButton.tsx": "fde409505e58a8ba47196fac86667be3cc64ad3778d631b73a0255c609bc6e1c"
+  },
+  "runtimeDependencies": [
+    {
+      "name": "clsx",
+      "version": "2.1.1",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-coss-chat-local/node_modules/clsx",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "license": "9a9edad7baae52622bddf3c15b2ef8a33d2c89f2d25408ad13e8a7481c6b0c97"
+      }
+    },
+    {
+      "name": "react",
+      "version": "19.3.1",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-coss-chat-local/node_modules/react",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+      }
+    },
+    {
+      "name": "react-dom",
+      "version": "19.3.1",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-coss-chat-local/node_modules/react-dom",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+      }
+    },
+    {
+      "name": "scheduler",
+      "version": "0.28.0",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-coss-chat-local/node_modules/scheduler",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+      }
+    },
+    {
+      "name": "@heroicons/react",
+      "version": "2.2.0",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-eldora-pair-local/node_modules/@heroicons/react",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "60e0b68c0f35c078eef3a5d29419d0b03ff84ec1df9c3f9d6e39a519a5ae7985"
+      }
+    }
+  ],
+  "compiledCSSLicense": {
+    "name": "tailwindcss",
+    "version": "4.3.0",
+    "sha256": "60e0b68c0f35c078eef3a5d29419d0b03ff84ec1df9c3f9d6e39a519a5ae7985"
+  },
+  "adaptation": "Original Presentation, Slide, Header, Add/Delete/Nav/ActionButton and SlideNumberIndicator form a text-and-speaker-notes editing subflow, NOT the full original photo/AI presentation. Fixed initial and AddSlide loremflickr URL removed and original conditional image column collapsed; no replacement image or blank-image placeholder. Original text controls, 16:9 paper structure, page indicator, insert after current, delete resets index0, last-page guard and previous/next retained. Original backend hooks/useCopilotReadable/useAppendSlide/useUpdateSlide removed; research/Generate/Speak visibly unavailable and do not invoke prompt, Copilot, audio or APIs. Host adds Chinese scope notice and accessible button labels only. Actual fixed Tailwind customBlack/global aspect-ratio rules preserved; compiled with Tailwind4.3 rather than original v3, system fonts. Hide unmounts and intentionally resets unsaved demonstration text on return; no storage or network. Full diff retained locally. All four tests use actual570 compose: editing text/notes persists across original navigation,insert/delete/last-page bounds,10 cycles,disabled backend buttons,no media,hidden remount/oldnodes,earlymodule failure and later ErrorEvent cleanup. Actual570 loader cache/load/release test passes. Full owned listener/timer/RAF/observer ledger0 and forbidden APIs0. JSDOM verifies DOM/state only, not native pixels/keyboard editing or responsive geometry. Original source commit is independent of cached npm versions listed below.",
+  "nativeVisualVerified": false,
+  "loaderVerification": [
+    {
+      "slug": "editor",
+      "pass": true,
+      "utf16Bytes": 510136,
+      "fetches": 3,
+      "actualCreatePreviewLoader570": true,
+      "cacheHit": true,
+      "released": true,
+      "iframeExecution": false
+    }
+  ],
+  "tests": [
+    {
+      "mode": "normal",
+      "pass": true,
+      "actualCompose570": true,
+      "scope": "Original controlled text and narration editing persists across navigation; add/delete/bounds/ten cycles,disabled backend controls,removed photo column,hidden remount/oldnodes,earlymodule/lateerror",
+      "cleanup": {
+        "listeners": 0,
+        "timers": 0,
+        "raf": 0,
+        "observers": 0
+      },
+      "blockedCalls": 0
+    },
+    {
+      "mode": "early",
+      "pass": true,
+      "actualCompose570": true,
+      "scope": "Original controlled text and narration editing persists across navigation; add/delete/bounds/ten cycles,disabled backend controls,removed photo column,hidden remount/oldnodes,earlymodule/lateerror",
+      "cleanup": {
+        "listeners": 0,
+        "timers": 0,
+        "raf": 0,
+        "observers": 0
+      },
+      "blockedCalls": 0
+    },
+    {
+      "mode": "reduced",
+      "pass": true,
+      "actualCompose570": true,
+      "scope": "Original controlled text and narration editing persists across navigation; add/delete/bounds/ten cycles,disabled backend controls,removed photo column,hidden remount/oldnodes,earlymodule/lateerror",
+      "cleanup": {
+        "listeners": 0,
+        "timers": 0,
+        "raf": 0,
+        "observers": 0
+      },
+      "blockedCalls": 0
+    },
+    {
+      "mode": "failure",
+      "pass": true,
+      "actualCompose570": true,
+      "scope": "Original controlled text and narration editing persists across navigation; add/delete/bounds/ten cycles,disabled backend controls,removed photo column,hidden remount/oldnodes,earlymodule/lateerror",
+      "cleanup": {
+        "listeners": 0,
+        "timers": 0,
+        "raf": 0,
+        "observers": 0
+      },
+      "blockedCalls": 0
+    }
+  ]
+}
