@@ -1,0 +1,143 @@
+{
+  "repository": "https://github.com/alemangui/pizzicato",
+  "revision": "4c3826e46f112743fa0653b6bad56006b98da537",
+  "sourcePath": "site/index.html",
+  "originals": [
+    {
+      "path": "LICENSE",
+      "sha256": "c6c5b1d3b7e14813ba89e117ac9ce409fb0c95ca21b978271f652e4d0d3a0917",
+      "gitBlob": "ca61a92c040e042cf578c2bb1bd6de9b54bd565e"
+    },
+    {
+      "path": "distr/Pizzicato.js",
+      "sha256": "b1725b6983395dad6878dd2f9a25ddf02129539bbf7e50408d06f1d19b2e5c96",
+      "gitBlob": "b59393d335d62cd2678da4436347049cbb582988"
+    },
+    {
+      "path": "package.json",
+      "sha256": "b4e06ca8221767432cff85963471b604b71ade911f0c9cde31bd74d8c5accc69",
+      "gitBlob": "eb0b5225993259e95f186c2ba4af6c3d25f7d9da"
+    },
+    {
+      "path": "site/css/main.css",
+      "sha256": "e7e51b117b08c944f5b281ea0f5633a4d9293fbe2b5156bf261af5a16e9612db",
+      "gitBlob": "aa673d614fc6ded73e92f02b8e449f1d7f038b09"
+    },
+    {
+      "path": "site/index.html",
+      "sha256": "b3ee6d6fe1498959a6c8d14c22cd5fc7d00318129daf57337646ef9273dc5375",
+      "gitBlob": "a00e12edfb503af0962f4a6a2b14cc15c614099c"
+    },
+    {
+      "path": "site/js/main.js",
+      "sha256": "87321d2966976171d4bd23ddecd90670e95443f6ec0cb290d5be8985786d063d",
+      "gitBlob": "163c32ad589751a932f44512206f3360505ac3cb"
+    }
+  ],
+  "actualRuntimeDependencies": [],
+  "sourceScope": "Four selected official control sections, original waveform/envelope and original Delay/LowPass with explicitly substituted synthesized source; not complete music/media demo",
+  "modifications": "# 波形与声效实验\n\n恢复旧 pizzicato:audio-effect-playground。同固定官方site/index.html精选四段原完整控件：Waveform、Attack/Release、Delay、Low-Pass Filter，保原HTML区块、参数滑杆、播放/暂停/停止图形CSS与原Pizzicato声图/包络/延迟/滤波算法。一族而非四条，不称整个音乐/麦克风演示都已收。\n\n原前两段原本是合成波形；后两原音乐文件未纳入，明确改用本地220Hz sine/sawtooth测试音驱动原effect与原控制器参数，不冒充原音乐内容。未引入无许可Dolby检测、音频文件、卷积脉冲、白噪声、麦克风、品牌图片、Google字体、GA、GitHub外部脚本、Prism/Modernizr。系统字体；原CSS只取作者自定义及响应式段，排除HTML5Boilerplate通用前后段。代码示例是原静态显示，不执行编辑器内容。\n\n原site segment绑定逻辑被透明改为用户点击才初始化，保原play/pause/stop事件与参数赋值。master音量限0.3、各段默认0.15且滑杆上限0.3，和原音量1有差异。播放一段时停止其他段；若有release尾音仍遵从原包络。固定库IIFE转静态factory，不用eval；传入受控Context工厂与定时器，用于收集原节点和晚回调。原AudioNode.connect补丁在关闭时恢复。没有fetch、文件、录音、存储/系统剪贴板、真实后台。\n\n隐藏或窗口失焦：停止所有节点、断连、关闭AudioContext并取消原release定时器；恢复可继续调控参数但不自动有声，下一次点击重新建context。退出移除所有宿主监听；resume迟到成功/失败有代次与context身份守卫，不可影响新context。构造/连接/不支持/运行异常明确失败关闭，不显示假成功。reduced-motion CSS静止，声音仍必须用户主动操作。\n\n## 验证范围\n七模式actual571 compose：normal/production/early/unsupported/failure/late/reduced。原Sound/Delay/LowPass代码实际运行，在受控WebAudio节点/AudioParam API桩上验证播放/暂停、参数值、声图连接、隐藏恢复、旧计时器、旧resume拒绝、失败断连、全部Context关闭与监听/计时器清零。尚无真实设备可听输出/音色、浏览器AudioParam精确时间或像素验收，API桩不等同声学验证。无交互前Context数量为0，禁止API调用为0。真实loader缓存/释放在8MiB预算内。\n\nruntime无npm依赖，原MIT全文公开。原源码固定Gitblob及SHA保留，修改后的engine/main/build与测试私有保存，不声称源码ZIP发布。\n",
+  "tests": {
+    "test-reduced.json": {
+      "pass": true,
+      "mode": "reduced",
+      "actualCompose571": true,
+      "audioContextMock": true,
+      "nativeAudioNotTested": true,
+      "contextCount": 2,
+      "nodeCount": 64,
+      "listeners": 0,
+      "timers": 0,
+      "forbiddenCalls": 0
+    },
+    "test-early.json": {
+      "pass": true,
+      "mode": "early",
+      "actualCompose571": true,
+      "audioContextMock": true,
+      "nativeAudioNotTested": true,
+      "contextCount": 0,
+      "nodeCount": 0,
+      "listeners": 0,
+      "timers": 0,
+      "forbiddenCalls": 0
+    },
+    "test-production.json": {
+      "pass": true,
+      "mode": "production",
+      "actualCompose571": true,
+      "audioContextMock": true,
+      "nativeAudioNotTested": true,
+      "contextCount": 2,
+      "nodeCount": 64,
+      "listeners": 0,
+      "timers": 0,
+      "forbiddenCalls": 0
+    },
+    "test-unsupported.json": {
+      "pass": true,
+      "mode": "unsupported",
+      "actualCompose571": true,
+      "audioContextMock": true,
+      "nativeAudioNotTested": true,
+      "contextCount": 0,
+      "nodeCount": 0,
+      "listeners": 0,
+      "timers": 0,
+      "forbiddenCalls": 0
+    },
+    "test-late.json": {
+      "pass": true,
+      "mode": "late",
+      "actualCompose571": true,
+      "audioContextMock": true,
+      "nativeAudioNotTested": true,
+      "contextCount": 2,
+      "nodeCount": 58,
+      "listeners": 0,
+      "timers": 0,
+      "forbiddenCalls": 0
+    },
+    "test-normal.json": {
+      "pass": true,
+      "mode": "normal",
+      "actualCompose571": true,
+      "audioContextMock": true,
+      "nativeAudioNotTested": true,
+      "contextCount": 2,
+      "nodeCount": 64,
+      "listeners": 0,
+      "timers": 0,
+      "forbiddenCalls": 0
+    },
+    "test-failure.json": {
+      "pass": true,
+      "mode": "failure",
+      "actualCompose571": true,
+      "audioContextMock": true,
+      "nativeAudioNotTested": true,
+      "contextCount": 2,
+      "nodeCount": 66,
+      "listeners": 0,
+      "timers": 0,
+      "forbiddenCalls": 0
+    },
+    "test-loader-results.json": [
+      {
+        "slug": "audio",
+        "pass": true,
+        "utf16Bytes": 107228,
+        "fetches": 3,
+        "actualCreatePreviewLoader571": true,
+        "cacheHit": true,
+        "released": true,
+        "iframeExecution": false
+      }
+    ]
+  },
+  "adaptedHashes": {
+    "engine.js": "17360f524754d4109643f9292d052c07b99c6aeb3e1f8b0d7c562e9e31d9a160",
+    "main.js": "91df0798588cf68019be18d85ab1d380cf95e8e86239c79b0442b93c5f1c811f",
+    "sections.html": "06c77b5ddce754fb69da28d13c1d7aa05cc0624798d0a5b7d98c2859c598d5a6"
+  }
+}
