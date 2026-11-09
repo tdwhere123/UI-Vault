@@ -14369,36 +14369,34 @@
   },
   {
     "id": "flowbite-admin:pricing-comparison-faq-page",
-    "title": "套餐定价、功能对照与购买FAQ整页",
     "source": "Flowbite Admin Dashboard",
     "repository": "https://github.com/themesberg/flowbite-admin-dashboard",
     "revision": "229df7ff25808ab2bbda65f03f2397a05f7b4288",
-    "sourcePath": "content/pages/pricing.html",
     "upstream": "https://github.com/themesberg/flowbite-admin-dashboard/blob/229df7ff25808ab2bbda65f03f2397a05f7b4288/content/pages/pricing.html",
-    "license": "MIT (root verified only; dependencies/assets not closed)",
-    "behavior": "原完整定价页包含月/年开关外观、三档套餐权益、详细功能比较表及多主题购买FAQ；保持原整页信息层次。",
-    "difference": "不是单个价格卡：完整套餐比较与售前说明阅读页；与Tremor套餐申请的输入/状态场景不同。",
-    "gaps": [
-      "月年checkbox仅CSS切换外观，没有价格联动；CTA/联系/下载均#，不提供购买或下载。FAQ中商品授权文案是演示内容不是本库适用许可；原inline图标来源、Hugo布局/Tailwind/Flowbite传递资源未审。",
-      "仅固定原源码收录；未构建/运行/截图，默认CSP、外部资源、完整依赖及素材许可、交互清理和视觉均未验。"
-    ],
-    "description": "原完整定价页包含月/年开关外观、三档套餐权益、详细功能比较表及多主题购买FAQ；保持原整页信息层次。 不是单个价格卡：完整套餐比较与售前说明阅读页；与Tremor套餐申请的输入/状态场景不同。",
-    "category": "展示与媒体",
+    "sourcePath": "content/pages/pricing.html",
     "licenseEvidence": {
       "url": "https://github.com/themesberg/flowbite-admin-dashboard/blob/229df7ff25808ab2bbda65f03f2397a05f7b4288/LICENSE",
       "sha256": "2ef12ba4b6b1172b8139d382e8b285e1ae034350151a71cb43fe55ca63199e6e",
       "scope": "Complete root MIT read; dependencies and assets not audited"
     },
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-bulk-524",
-    "sourceScope": "Selected fixed original code and complete root license evidence; no complete runnable/archive or runtime audit",
-    "kind": "原版完整场景（仅来源）",
-    "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted",
-    "sourceSha256": "d9efe24b51074cb59b7d84d8d31050bd749b41aaa5197364544010aad0f410b2"
+    "difference": "不是单个价格卡：完整套餐比较与售前说明阅读页；与Tremor套餐申请的输入/状态场景不同。",
+    "title": "订阅方案比较与常见问题",
+    "description": "原3价格卡、完整比较表和18FAQ；月年开关保原视觉状态，不办理购买或改变示例价格。",
+    "behavior": "原3价格卡、完整比较表和18FAQ；月年开关保原视觉状态，不办理购买或改变示例价格。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "产品与营销",
+    "license": "MIT (original page, compiled CSS and Heroicons notices retained)",
+    "batch": "flowbite-pricing-01",
+    "preview": "batches/flowbite-pricing-01/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "actual554 original body/controls and exit checks passed; visuals unverified",
+    "gaps": [
+      "原完整价格内容，未含全站navbar/footer；静态FAQ不伪装折叠控件。",
+      "月/年仅原生checkbox视觉状态，无原价格计算；所有购买/联系链接禁用，无真实服务或承诺。",
+      "Inter改系统sans fallback，无字体文件；浏览器视觉与像素未验。"
+    ]
   },
   {
     "id": "react-three-rapier:joint-chain-scene",
@@ -16598,7 +16596,7 @@
     "kind": "原版交互场景",
     "format": "完整交互场景",
     "category": "展示与媒体",
-    "license": "MIT; ISC; BSD-2-Clause; BSD-3-Clause; BlueOak-1.0.0; Apache-2.0; Zlib; original public-domain fixture dedication",
+    "license": "MIT; ISC; BSD-2-Clause; BSD-3-Clause; BlueOak-1.0.0; Apache-2.0; Zlib; CC0-1.0 (MDN data); original public-domain fixture dedication",
     "batch": "svgomg-01",
     "preview": "batches/svgomg-01/index.html",
     "previewStatus": "DOM-tested; visual-pending",
@@ -19278,42 +19276,32 @@
   },
   {
     "id": "cindyjs:julia-orbit-explanation",
-    "title": "复平面中的轨迹与分形解释",
     "source": "CindyJS",
     "repository": "https://github.com/CindyJS/CindyJS",
     "revision": "c5b87a373e574c0da6137cc95fbe48a8d6e534c5",
-    "sourcePath": "examples/cindygl/08_julia_explanation.html",
     "upstream": "https://github.com/CindyJS/CindyJS/blob/c5b87a373e574c0da6137cc95fbe48a8d6e534c5/examples/cindygl/08_julia_explanation.html",
-    "license": "Apache-2.0 (complete actual root text; runtime/media not closed)",
-    "behavior": "原完整 Julia explanation 示例以可拖复参数 C 更新分形，指针位置生成迭代轨迹与逐步衰减连线，绿色半径边界辅助理解逃逸。",
-    "difference": "区别纯自动分形背景或可换色粒子：参数拖动与鼠标选点直接展示数学迭代过程；只此原完整解释场景，不把相邻 Julia 变体计数。",
-    "styleTags": [
-      "分形/交互解释"
-    ],
-    "gaps": [
-      "原 CindyScript/CindyGL 编译与 shader路径、Apache依赖及NOTICE需专项闭合；autoplay默认开启，需减少运动/暂停/hidden/销毁与失败状态。没有GPU和几何命中验收，不可把能读取公式当实际渲染成功；不改默认 CSP。",
-      "仅只读源码筛选；未安装/构建/运行、交互生命周期或浏览器视觉验收。"
-    ],
-    "description": "原完整 Julia explanation 示例以可拖复参数 C 更新分形，指针位置生成迭代轨迹与逐步衰减连线，绿色半径边界辅助理解逃逸。 区别纯自动分形背景或可换色粒子：参数拖动与鼠标选点直接展示数学迭代过程；只此原完整解释场景，不把相邻 Julia 变体计数。",
-    "category": "展示与媒体",
+    "sourcePath": "examples/cindygl/08_julia_explanation.html",
     "licenseEvidence": {
       "url": "https://github.com/CindyJS/CindyJS/blob/c5b87a373e574c0da6137cc95fbe48a8d6e534c5/LICENSE",
       "sha256": "09e0fc311de19fb80248dcb18d5a134d5cde7f29a017e113a064ce7c5f7e5f93",
       "scope": "Complete actual root license; transitive code and media permissions not closed"
     },
-    "sourceEvidence": {
-      "localFile": "evidence/CindyJS--CindyJS--examples__cindygl__08_julia_explanation.html",
-      "sha256": "cad49d5042cdd73134b5260856ed4d1c9026ea43f3a2bd339f0c8bcbfd4b3be4"
-    },
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-style-532",
-    "sourceScope": "Fixed original complete UI/demo source and full root license; not a runnable adaptation or full asset archive",
-    "kind": "原版交互场景（仅来源）",
-    "buildStatus": "fixed source and full root license read; not built/run/visually accepted"
+    "difference": "区别纯自动分形背景或可换色粒子：参数拖动与鼠标选点直接展示数学迭代过程；只此原完整解释场景，不把相邻 Julia 变体计数。",
+    "title": "复数迭代轨迹与分形",
+    "description": "原完整朱利亚集解释场景，可拖动自由点观察原迭代轨迹；原解释器与着色器实际运行。",
+    "behavior": "原完整朱利亚集解释场景，可拖动自由点观察原迭代轨迹；原解释器与着色器实际运行。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "视觉与动效",
+    "license": "Apache-2.0; MIT (embedded ResizeSensor)",
+    "batch": "cindy-julia-01",
+    "preview": "batches/cindy-julia-01/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Fixed interpreter, generated GLSL and real drag/trajectory commands tested using actual554 compose; native GPU pixels unverified",
+    "gaps": [
+      "Native GPU/pixels and native pointer hit testing unverified; original orbit may numerically overflow."
+    ]
   },
   {
     "id": "stellarium:observational-sky-navigation",
@@ -21288,6 +21276,454 @@
     "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
     "gaps": [
       "Original Meta AstryX navigation/menu/data-display components with explicitly host-authored minimal local fixtures. Not an official complete business app. Collapsible original controlled expansion; DropdownMenu original selection plus actual MoreMenu icon-trigger wrapper shown in same entry, not counted separately; ContextMenu original right-click local selection; Tabs original TabList local panel value; Stepper bounded local steps; List original selectable rows; MetadataList original static labelled sample facts; Token original remove plus host restore. All actions affect local illustrative state only, no network, files, clipboard, service commands or navigation. Same originalcore/neutraltheme/StyleX geometry, per-entry independent IIFE. Fixed source documentation0.7.12 versus installedcore/theme/build0.7.11 compatibility runtime disclosed. Hidden unmount resets localfixture; visible mounts fresh; exit/error cleans owned resources. Actual550compose and loader/cache/release plus each key interaction/exit, shared early/late/reduced under JSDOM. Pointer coordinates for contextmenu are synthetic event positions, not native placement geometry/visual acceptance. StyleX CSS parser warnings recorded separately. RootMIT and all actual emitteddependency full licenses; prior core/StyleX missing-file official supplements clearly identified. MoreMenu reviewed source only forwards configured icon-only props to DropdownMenu; oneentrycoversboth, no alias-based count increase."
+    ]
+  },
+  {
+    "id": "astryx-core:date-input",
+    "source": "Meta AstryX",
+    "repository": "https://github.com/meta/astryx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/core/src/DateInput/DateInput.doc.mjs",
+    "sourcePath": "packages/core/src/DateInput/DateInput.doc.mjs",
+    "licenseEvidence": {
+      "url": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/LICENSE",
+      "sha256": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473",
+      "scope": "Complete fixed original MIT; actual runtime dependency notices supplied in preview assets."
+    },
+    "title": "日期输入",
+    "description": "原组件与明确的本地示例，展示原交互或静态内容；状态不拆条，不提供后台业务。",
+    "behavior": "原组件与明确的本地示例，展示原交互或静态内容；状态不拆条，不提供后台业务。",
+    "kind": "组件",
+    "format": "独立组件",
+    "category": "展示与媒体",
+    "license": "MIT AND ISC AND BSD-3-Clause",
+    "batch": "astryx-content-01",
+    "preview": "batches/astryx-content-01/date-input/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Original Meta AstryX core visual components with explicitly host-authored minimal local documented-API fixtures. DateInput controlled date editing; CodeBlock original JavaScript highlighting/line numbers with supportedhasCopyButton=false, no execution or clipboard; Citation original label/number source display with fictional source and no URL; Timestamp fixed instant format switch with timezoneID=UTC and supportedhasTooltip=false to avoid original defaultcopycard; Tooltip original controlled surface; HoverCard original controlled richcontent surface; InfoTip original press-to-pin behavior and dismissal, not merely Tooltip alias; Toolbar originalslots/layout and local selection buttons. State/format variants stay in oneentryperfamily. Source docs fixedworkspace0.7.12, actualinstalledcore/theme/build0.7.11 compatibilityruntime explicitly disclosed. Original geometry/theme/StyleX preserved. No servicecalls, accounts, files, media, systemclipboard or persistence. Hidden unmount resets localstate; reveal mounts fresh; exit/error ownedresource cleanup. Actual550compose and actualloader/cache/release tests perentry plus keybehavior, shared early/late/reduced; controlledopen verifies originalsurface rendering/state but is not nativepointerhover/delay/placement/visual acceptance. JSDOM StyleX CSS parse warning separatelyrecorded. All rootMIT/emitteddependencyfulllicenses included; prior officialcore/StyleXmissing-file supplements labelled."
+    ]
+  },
+  {
+    "id": "astryx-core:code-block",
+    "source": "Meta AstryX",
+    "repository": "https://github.com/meta/astryx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/core/src/CodeBlock/CodeBlock.doc.mjs",
+    "sourcePath": "packages/core/src/CodeBlock/CodeBlock.doc.mjs",
+    "licenseEvidence": {
+      "url": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/LICENSE",
+      "sha256": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473",
+      "scope": "Complete fixed original MIT; actual runtime dependency notices supplied in preview assets."
+    },
+    "title": "代码块",
+    "description": "原组件与明确的本地示例，展示原交互或静态内容；状态不拆条，不提供后台业务。",
+    "behavior": "原组件与明确的本地示例，展示原交互或静态内容；状态不拆条，不提供后台业务。",
+    "kind": "组件",
+    "format": "独立组件",
+    "category": "展示与媒体",
+    "license": "MIT AND ISC AND BSD-3-Clause",
+    "batch": "astryx-content-01",
+    "preview": "batches/astryx-content-01/code-block/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Original Meta AstryX core visual components with explicitly host-authored minimal local documented-API fixtures. DateInput controlled date editing; CodeBlock original JavaScript highlighting/line numbers with supportedhasCopyButton=false, no execution or clipboard; Citation original label/number source display with fictional source and no URL; Timestamp fixed instant format switch with timezoneID=UTC and supportedhasTooltip=false to avoid original defaultcopycard; Tooltip original controlled surface; HoverCard original controlled richcontent surface; InfoTip original press-to-pin behavior and dismissal, not merely Tooltip alias; Toolbar originalslots/layout and local selection buttons. State/format variants stay in oneentryperfamily. Source docs fixedworkspace0.7.12, actualinstalledcore/theme/build0.7.11 compatibilityruntime explicitly disclosed. Original geometry/theme/StyleX preserved. No servicecalls, accounts, files, media, systemclipboard or persistence. Hidden unmount resets localstate; reveal mounts fresh; exit/error ownedresource cleanup. Actual550compose and actualloader/cache/release tests perentry plus keybehavior, shared early/late/reduced; controlledopen verifies originalsurface rendering/state but is not nativepointerhover/delay/placement/visual acceptance. JSDOM StyleX CSS parse warning separatelyrecorded. All rootMIT/emitteddependencyfulllicenses included; prior officialcore/StyleXmissing-file supplements labelled."
+    ]
+  },
+  {
+    "id": "astryx-core:citation",
+    "source": "Meta AstryX",
+    "repository": "https://github.com/meta/astryx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/core/src/Citation/Citation.doc.mjs",
+    "sourcePath": "packages/core/src/Citation/Citation.doc.mjs",
+    "licenseEvidence": {
+      "url": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/LICENSE",
+      "sha256": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473",
+      "scope": "Complete fixed original MIT; actual runtime dependency notices supplied in preview assets."
+    },
+    "title": "来源引用",
+    "description": "原组件与明确的本地示例，展示原交互或静态内容；状态不拆条，不提供后台业务。",
+    "behavior": "原组件与明确的本地示例，展示原交互或静态内容；状态不拆条，不提供后台业务。",
+    "kind": "组件",
+    "format": "独立组件",
+    "category": "展示与媒体",
+    "license": "MIT AND ISC AND BSD-3-Clause",
+    "batch": "astryx-content-01",
+    "preview": "batches/astryx-content-01/citation/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Original Meta AstryX core visual components with explicitly host-authored minimal local documented-API fixtures. DateInput controlled date editing; CodeBlock original JavaScript highlighting/line numbers with supportedhasCopyButton=false, no execution or clipboard; Citation original label/number source display with fictional source and no URL; Timestamp fixed instant format switch with timezoneID=UTC and supportedhasTooltip=false to avoid original defaultcopycard; Tooltip original controlled surface; HoverCard original controlled richcontent surface; InfoTip original press-to-pin behavior and dismissal, not merely Tooltip alias; Toolbar originalslots/layout and local selection buttons. State/format variants stay in oneentryperfamily. Source docs fixedworkspace0.7.12, actualinstalledcore/theme/build0.7.11 compatibilityruntime explicitly disclosed. Original geometry/theme/StyleX preserved. No servicecalls, accounts, files, media, systemclipboard or persistence. Hidden unmount resets localstate; reveal mounts fresh; exit/error ownedresource cleanup. Actual550compose and actualloader/cache/release tests perentry plus keybehavior, shared early/late/reduced; controlledopen verifies originalsurface rendering/state but is not nativepointerhover/delay/placement/visual acceptance. JSDOM StyleX CSS parse warning separatelyrecorded. All rootMIT/emitteddependencyfulllicenses included; prior officialcore/StyleXmissing-file supplements labelled."
+    ]
+  },
+  {
+    "id": "astryx-core:timestamp",
+    "source": "Meta AstryX",
+    "repository": "https://github.com/meta/astryx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/core/src/Timestamp/Timestamp.doc.mjs",
+    "sourcePath": "packages/core/src/Timestamp/Timestamp.doc.mjs",
+    "licenseEvidence": {
+      "url": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/LICENSE",
+      "sha256": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473",
+      "scope": "Complete fixed original MIT; actual runtime dependency notices supplied in preview assets."
+    },
+    "title": "时间戳",
+    "description": "原组件与明确的本地示例，展示原交互或静态内容；状态不拆条，不提供后台业务。",
+    "behavior": "原组件与明确的本地示例，展示原交互或静态内容；状态不拆条，不提供后台业务。",
+    "kind": "组件",
+    "format": "独立组件",
+    "category": "展示与媒体",
+    "license": "MIT AND ISC AND BSD-3-Clause",
+    "batch": "astryx-content-01",
+    "preview": "batches/astryx-content-01/timestamp/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Original Meta AstryX core visual components with explicitly host-authored minimal local documented-API fixtures. DateInput controlled date editing; CodeBlock original JavaScript highlighting/line numbers with supportedhasCopyButton=false, no execution or clipboard; Citation original label/number source display with fictional source and no URL; Timestamp fixed instant format switch with timezoneID=UTC and supportedhasTooltip=false to avoid original defaultcopycard; Tooltip original controlled surface; HoverCard original controlled richcontent surface; InfoTip original press-to-pin behavior and dismissal, not merely Tooltip alias; Toolbar originalslots/layout and local selection buttons. State/format variants stay in oneentryperfamily. Source docs fixedworkspace0.7.12, actualinstalledcore/theme/build0.7.11 compatibilityruntime explicitly disclosed. Original geometry/theme/StyleX preserved. No servicecalls, accounts, files, media, systemclipboard or persistence. Hidden unmount resets localstate; reveal mounts fresh; exit/error ownedresource cleanup. Actual550compose and actualloader/cache/release tests perentry plus keybehavior, shared early/late/reduced; controlledopen verifies originalsurface rendering/state but is not nativepointerhover/delay/placement/visual acceptance. JSDOM StyleX CSS parse warning separatelyrecorded. All rootMIT/emitteddependencyfulllicenses included; prior officialcore/StyleXmissing-file supplements labelled."
+    ]
+  },
+  {
+    "id": "astryx-core:tooltip",
+    "source": "Meta AstryX",
+    "repository": "https://github.com/meta/astryx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/core/src/Tooltip/Tooltip.doc.mjs",
+    "sourcePath": "packages/core/src/Tooltip/Tooltip.doc.mjs",
+    "licenseEvidence": {
+      "url": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/LICENSE",
+      "sha256": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473",
+      "scope": "Complete fixed original MIT; actual runtime dependency notices supplied in preview assets."
+    },
+    "title": "悬浮提示",
+    "description": "原组件与明确的本地示例，展示原交互或静态内容；状态不拆条，不提供后台业务。",
+    "behavior": "原组件与明确的本地示例，展示原交互或静态内容；状态不拆条，不提供后台业务。",
+    "kind": "组件",
+    "format": "独立组件",
+    "category": "展示与媒体",
+    "license": "MIT AND ISC AND BSD-3-Clause",
+    "batch": "astryx-content-01",
+    "preview": "batches/astryx-content-01/tooltip/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Original Meta AstryX core visual components with explicitly host-authored minimal local documented-API fixtures. DateInput controlled date editing; CodeBlock original JavaScript highlighting/line numbers with supportedhasCopyButton=false, no execution or clipboard; Citation original label/number source display with fictional source and no URL; Timestamp fixed instant format switch with timezoneID=UTC and supportedhasTooltip=false to avoid original defaultcopycard; Tooltip original controlled surface; HoverCard original controlled richcontent surface; InfoTip original press-to-pin behavior and dismissal, not merely Tooltip alias; Toolbar originalslots/layout and local selection buttons. State/format variants stay in oneentryperfamily. Source docs fixedworkspace0.7.12, actualinstalledcore/theme/build0.7.11 compatibilityruntime explicitly disclosed. Original geometry/theme/StyleX preserved. No servicecalls, accounts, files, media, systemclipboard or persistence. Hidden unmount resets localstate; reveal mounts fresh; exit/error ownedresource cleanup. Actual550compose and actualloader/cache/release tests perentry plus keybehavior, shared early/late/reduced; controlledopen verifies originalsurface rendering/state but is not nativepointerhover/delay/placement/visual acceptance. JSDOM StyleX CSS parse warning separatelyrecorded. All rootMIT/emitteddependencyfulllicenses included; prior officialcore/StyleXmissing-file supplements labelled."
+    ]
+  },
+  {
+    "id": "astryx-core:hover-card",
+    "source": "Meta AstryX",
+    "repository": "https://github.com/meta/astryx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/core/src/HoverCard/HoverCard.doc.mjs",
+    "sourcePath": "packages/core/src/HoverCard/HoverCard.doc.mjs",
+    "licenseEvidence": {
+      "url": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/LICENSE",
+      "sha256": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473",
+      "scope": "Complete fixed original MIT; actual runtime dependency notices supplied in preview assets."
+    },
+    "title": "悬浮信息卡",
+    "description": "原组件与明确的本地示例，展示原交互或静态内容；状态不拆条，不提供后台业务。",
+    "behavior": "原组件与明确的本地示例，展示原交互或静态内容；状态不拆条，不提供后台业务。",
+    "kind": "组件",
+    "format": "独立组件",
+    "category": "展示与媒体",
+    "license": "MIT AND ISC AND BSD-3-Clause",
+    "batch": "astryx-content-01",
+    "preview": "batches/astryx-content-01/hover-card/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Original Meta AstryX core visual components with explicitly host-authored minimal local documented-API fixtures. DateInput controlled date editing; CodeBlock original JavaScript highlighting/line numbers with supportedhasCopyButton=false, no execution or clipboard; Citation original label/number source display with fictional source and no URL; Timestamp fixed instant format switch with timezoneID=UTC and supportedhasTooltip=false to avoid original defaultcopycard; Tooltip original controlled surface; HoverCard original controlled richcontent surface; InfoTip original press-to-pin behavior and dismissal, not merely Tooltip alias; Toolbar originalslots/layout and local selection buttons. State/format variants stay in oneentryperfamily. Source docs fixedworkspace0.7.12, actualinstalledcore/theme/build0.7.11 compatibilityruntime explicitly disclosed. Original geometry/theme/StyleX preserved. No servicecalls, accounts, files, media, systemclipboard or persistence. Hidden unmount resets localstate; reveal mounts fresh; exit/error ownedresource cleanup. Actual550compose and actualloader/cache/release tests perentry plus keybehavior, shared early/late/reduced; controlledopen verifies originalsurface rendering/state but is not nativepointerhover/delay/placement/visual acceptance. JSDOM StyleX CSS parse warning separatelyrecorded. All rootMIT/emitteddependencyfulllicenses included; prior officialcore/StyleXmissing-file supplements labelled."
+    ]
+  },
+  {
+    "id": "astryx-core:info-tip",
+    "source": "Meta AstryX",
+    "repository": "https://github.com/meta/astryx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/core/src/InfoTip/InfoTip.doc.mjs",
+    "sourcePath": "packages/core/src/InfoTip/InfoTip.doc.mjs",
+    "licenseEvidence": {
+      "url": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/LICENSE",
+      "sha256": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473",
+      "scope": "Complete fixed original MIT; actual runtime dependency notices supplied in preview assets."
+    },
+    "title": "可固定说明提示",
+    "description": "原组件与明确的本地示例，展示原交互或静态内容；状态不拆条，不提供后台业务。",
+    "behavior": "原组件与明确的本地示例，展示原交互或静态内容；状态不拆条，不提供后台业务。",
+    "kind": "组件",
+    "format": "独立组件",
+    "category": "展示与媒体",
+    "license": "MIT AND ISC AND BSD-3-Clause",
+    "batch": "astryx-content-01",
+    "preview": "batches/astryx-content-01/info-tip/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Original Meta AstryX core visual components with explicitly host-authored minimal local documented-API fixtures. DateInput controlled date editing; CodeBlock original JavaScript highlighting/line numbers with supportedhasCopyButton=false, no execution or clipboard; Citation original label/number source display with fictional source and no URL; Timestamp fixed instant format switch with timezoneID=UTC and supportedhasTooltip=false to avoid original defaultcopycard; Tooltip original controlled surface; HoverCard original controlled richcontent surface; InfoTip original press-to-pin behavior and dismissal, not merely Tooltip alias; Toolbar originalslots/layout and local selection buttons. State/format variants stay in oneentryperfamily. Source docs fixedworkspace0.7.12, actualinstalledcore/theme/build0.7.11 compatibilityruntime explicitly disclosed. Original geometry/theme/StyleX preserved. No servicecalls, accounts, files, media, systemclipboard or persistence. Hidden unmount resets localstate; reveal mounts fresh; exit/error ownedresource cleanup. Actual550compose and actualloader/cache/release tests perentry plus keybehavior, shared early/late/reduced; controlledopen verifies originalsurface rendering/state but is not nativepointerhover/delay/placement/visual acceptance. JSDOM StyleX CSS parse warning separatelyrecorded. All rootMIT/emitteddependencyfulllicenses included; prior officialcore/StyleXmissing-file supplements labelled."
+    ]
+  },
+  {
+    "id": "astryx-core:toolbar",
+    "source": "Meta AstryX",
+    "repository": "https://github.com/meta/astryx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/core/src/Toolbar/Toolbar.doc.mjs",
+    "sourcePath": "packages/core/src/Toolbar/Toolbar.doc.mjs",
+    "licenseEvidence": {
+      "url": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/LICENSE",
+      "sha256": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473",
+      "scope": "Complete fixed original MIT; actual runtime dependency notices supplied in preview assets."
+    },
+    "title": "工具栏",
+    "description": "原组件与明确的本地示例，展示原交互或静态内容；状态不拆条，不提供后台业务。",
+    "behavior": "原组件与明确的本地示例，展示原交互或静态内容；状态不拆条，不提供后台业务。",
+    "kind": "组件",
+    "format": "独立组件",
+    "category": "展示与媒体",
+    "license": "MIT AND ISC AND BSD-3-Clause",
+    "batch": "astryx-content-01",
+    "preview": "batches/astryx-content-01/toolbar/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Original Meta AstryX core visual components with explicitly host-authored minimal local documented-API fixtures. DateInput controlled date editing; CodeBlock original JavaScript highlighting/line numbers with supportedhasCopyButton=false, no execution or clipboard; Citation original label/number source display with fictional source and no URL; Timestamp fixed instant format switch with timezoneID=UTC and supportedhasTooltip=false to avoid original defaultcopycard; Tooltip original controlled surface; HoverCard original controlled richcontent surface; InfoTip original press-to-pin behavior and dismissal, not merely Tooltip alias; Toolbar originalslots/layout and local selection buttons. State/format variants stay in oneentryperfamily. Source docs fixedworkspace0.7.12, actualinstalledcore/theme/build0.7.11 compatibilityruntime explicitly disclosed. Original geometry/theme/StyleX preserved. No servicecalls, accounts, files, media, systemclipboard or persistence. Hidden unmount resets localstate; reveal mounts fresh; exit/error ownedresource cleanup. Actual550compose and actualloader/cache/release tests perentry plus keybehavior, shared early/late/reduced; controlledopen verifies originalsurface rendering/state but is not nativepointerhover/delay/placement/visual acceptance. JSDOM StyleX CSS parse warning separatelyrecorded. All rootMIT/emitteddependencyfulllicenses included; prior officialcore/StyleXmissing-file supplements labelled."
+    ]
+  },
+  {
+    "id": "astryx-core:text",
+    "source": "Meta AstryX",
+    "repository": "https://github.com/meta/astryx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/core/src/Text/Text.doc.mjs",
+    "sourcePath": "packages/core/src/Text/Text.doc.mjs",
+    "licenseEvidence": {
+      "url": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/LICENSE",
+      "sha256": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473",
+      "scope": "Complete fixed original MIT; actual runtime dependency notices supplied in preview assets."
+    },
+    "title": "文字排版",
+    "description": "原组件与明确的本地示例，保留原交互与展示；状态不拆条，不提供后台业务。",
+    "behavior": "原组件与明确的本地示例，保留原交互与展示；状态不拆条，不提供后台业务。",
+    "kind": "组件",
+    "format": "独立组件",
+    "category": "导航与组织",
+    "license": "MIT AND ISC AND BSD-3-Clause",
+    "batch": "astryx-search-01",
+    "preview": "batches/astryx-search-01/text/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Original Meta AstryX core components, explicit host-authored minimal local documented-API fixtures, not a complete official business application. Text originaltype/heading/color; Icon actualsemanticSVGselection noexternalasset; Link originallocalonClick anddisabledstate, no destination; ScrollableArea originalcontainer with30sampleparagraphs; Outline originalnavigation with2localheadings; Toast originaluseToast throughLayerProvider withmanualshow/dismiss, no browsernotification; Typeahead originalsingleselection andTokenizer originalmultipleselection/removabletokens share synchronouslocal3item SearchSource. No remotequeries/files/accounts/clipboardservice/persistence. No hookcounting: Toast entry renders actual original message viewport, hook is not separate entry. Outline exactinstalledcore0.7.11history.pushState removed by same reviewed one-line buildtransform for opaqueiframe; original scroll/focus/selection retained and originalsourcecopyhash provided. All othercore implementations unchanged. Fixed documentation repository0.7.12 with actualcore/theme/build0.7.11 compatibility runtime disclosed. PerentryindependentIIFE sharedStyleX/theme, systemfont. Hiddenunmount resets state, visibleremount, exit/error ownedresourcecleanup. Actual550compose/loader/cache/release with keybehaviors; ScrollableArea synthetic scrollTop/scroll event verifies handler not native overflowgeometry, Outline scrollIntoView API stub is not nativepixel validation. ExactStyleXparserwarning separatelyrecorded. Fullroot/emittedruntime licenses and priorcore/StyleXmissingfileofficialsupplements disclosed."
+    ]
+  },
+  {
+    "id": "astryx-core:icon",
+    "source": "Meta AstryX",
+    "repository": "https://github.com/meta/astryx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/core/src/Icon/Icon.doc.mjs",
+    "sourcePath": "packages/core/src/Icon/Icon.doc.mjs",
+    "licenseEvidence": {
+      "url": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/LICENSE",
+      "sha256": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473",
+      "scope": "Complete fixed original MIT; actual runtime dependency notices supplied in preview assets."
+    },
+    "title": "语义图标",
+    "description": "原组件与明确的本地示例，保留原交互与展示；状态不拆条，不提供后台业务。",
+    "behavior": "原组件与明确的本地示例，保留原交互与展示；状态不拆条，不提供后台业务。",
+    "kind": "组件",
+    "format": "独立组件",
+    "category": "导航与组织",
+    "license": "MIT AND ISC AND BSD-3-Clause",
+    "batch": "astryx-search-01",
+    "preview": "batches/astryx-search-01/icon/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Original Meta AstryX core components, explicit host-authored minimal local documented-API fixtures, not a complete official business application. Text originaltype/heading/color; Icon actualsemanticSVGselection noexternalasset; Link originallocalonClick anddisabledstate, no destination; ScrollableArea originalcontainer with30sampleparagraphs; Outline originalnavigation with2localheadings; Toast originaluseToast throughLayerProvider withmanualshow/dismiss, no browsernotification; Typeahead originalsingleselection andTokenizer originalmultipleselection/removabletokens share synchronouslocal3item SearchSource. No remotequeries/files/accounts/clipboardservice/persistence. No hookcounting: Toast entry renders actual original message viewport, hook is not separate entry. Outline exactinstalledcore0.7.11history.pushState removed by same reviewed one-line buildtransform for opaqueiframe; original scroll/focus/selection retained and originalsourcecopyhash provided. All othercore implementations unchanged. Fixed documentation repository0.7.12 with actualcore/theme/build0.7.11 compatibility runtime disclosed. PerentryindependentIIFE sharedStyleX/theme, systemfont. Hiddenunmount resets state, visibleremount, exit/error ownedresourcecleanup. Actual550compose/loader/cache/release with keybehaviors; ScrollableArea synthetic scrollTop/scroll event verifies handler not native overflowgeometry, Outline scrollIntoView API stub is not nativepixel validation. ExactStyleXparserwarning separatelyrecorded. Fullroot/emittedruntime licenses and priorcore/StyleXmissingfileofficialsupplements disclosed."
+    ]
+  },
+  {
+    "id": "astryx-core:link",
+    "source": "Meta AstryX",
+    "repository": "https://github.com/meta/astryx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/core/src/Link/Link.doc.mjs",
+    "sourcePath": "packages/core/src/Link/Link.doc.mjs",
+    "licenseEvidence": {
+      "url": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/LICENSE",
+      "sha256": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473",
+      "scope": "Complete fixed original MIT; actual runtime dependency notices supplied in preview assets."
+    },
+    "title": "链接组件",
+    "description": "原组件与明确的本地示例，保留原交互与展示；状态不拆条，不提供后台业务。",
+    "behavior": "原组件与明确的本地示例，保留原交互与展示；状态不拆条，不提供后台业务。",
+    "kind": "组件",
+    "format": "独立组件",
+    "category": "导航与组织",
+    "license": "MIT AND ISC AND BSD-3-Clause",
+    "batch": "astryx-search-01",
+    "preview": "batches/astryx-search-01/link/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Original Meta AstryX core components, explicit host-authored minimal local documented-API fixtures, not a complete official business application. Text originaltype/heading/color; Icon actualsemanticSVGselection noexternalasset; Link originallocalonClick anddisabledstate, no destination; ScrollableArea originalcontainer with30sampleparagraphs; Outline originalnavigation with2localheadings; Toast originaluseToast throughLayerProvider withmanualshow/dismiss, no browsernotification; Typeahead originalsingleselection andTokenizer originalmultipleselection/removabletokens share synchronouslocal3item SearchSource. No remotequeries/files/accounts/clipboardservice/persistence. No hookcounting: Toast entry renders actual original message viewport, hook is not separate entry. Outline exactinstalledcore0.7.11history.pushState removed by same reviewed one-line buildtransform for opaqueiframe; original scroll/focus/selection retained and originalsourcecopyhash provided. All othercore implementations unchanged. Fixed documentation repository0.7.12 with actualcore/theme/build0.7.11 compatibility runtime disclosed. PerentryindependentIIFE sharedStyleX/theme, systemfont. Hiddenunmount resets state, visibleremount, exit/error ownedresourcecleanup. Actual550compose/loader/cache/release with keybehaviors; ScrollableArea synthetic scrollTop/scroll event verifies handler not native overflowgeometry, Outline scrollIntoView API stub is not nativepixel validation. ExactStyleXparserwarning separatelyrecorded. Fullroot/emittedruntime licenses and priorcore/StyleXmissingfileofficialsupplements disclosed."
+    ]
+  },
+  {
+    "id": "astryx-core:scrollable-area",
+    "source": "Meta AstryX",
+    "repository": "https://github.com/meta/astryx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/core/src/ScrollableArea/ScrollableArea.doc.mjs",
+    "sourcePath": "packages/core/src/ScrollableArea/ScrollableArea.doc.mjs",
+    "licenseEvidence": {
+      "url": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/LICENSE",
+      "sha256": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473",
+      "scope": "Complete fixed original MIT; actual runtime dependency notices supplied in preview assets."
+    },
+    "title": "滚动内容区",
+    "description": "原组件与明确的本地示例，保留原交互与展示；状态不拆条，不提供后台业务。",
+    "behavior": "原组件与明确的本地示例，保留原交互与展示；状态不拆条，不提供后台业务。",
+    "kind": "组件",
+    "format": "独立组件",
+    "category": "导航与组织",
+    "license": "MIT AND ISC AND BSD-3-Clause",
+    "batch": "astryx-search-01",
+    "preview": "batches/astryx-search-01/scrollable-area/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Original Meta AstryX core components, explicit host-authored minimal local documented-API fixtures, not a complete official business application. Text originaltype/heading/color; Icon actualsemanticSVGselection noexternalasset; Link originallocalonClick anddisabledstate, no destination; ScrollableArea originalcontainer with30sampleparagraphs; Outline originalnavigation with2localheadings; Toast originaluseToast throughLayerProvider withmanualshow/dismiss, no browsernotification; Typeahead originalsingleselection andTokenizer originalmultipleselection/removabletokens share synchronouslocal3item SearchSource. No remotequeries/files/accounts/clipboardservice/persistence. No hookcounting: Toast entry renders actual original message viewport, hook is not separate entry. Outline exactinstalledcore0.7.11history.pushState removed by same reviewed one-line buildtransform for opaqueiframe; original scroll/focus/selection retained and originalsourcecopyhash provided. All othercore implementations unchanged. Fixed documentation repository0.7.12 with actualcore/theme/build0.7.11 compatibility runtime disclosed. PerentryindependentIIFE sharedStyleX/theme, systemfont. Hiddenunmount resets state, visibleremount, exit/error ownedresourcecleanup. Actual550compose/loader/cache/release with keybehaviors; ScrollableArea synthetic scrollTop/scroll event verifies handler not native overflowgeometry, Outline scrollIntoView API stub is not nativepixel validation. ExactStyleXparserwarning separatelyrecorded. Fullroot/emittedruntime licenses and priorcore/StyleXmissingfileofficialsupplements disclosed."
+    ]
+  },
+  {
+    "id": "astryx-core:outline",
+    "source": "Meta AstryX",
+    "repository": "https://github.com/meta/astryx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/core/src/Outline/Outline.doc.mjs",
+    "sourcePath": "packages/core/src/Outline/Outline.doc.mjs",
+    "licenseEvidence": {
+      "url": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/LICENSE",
+      "sha256": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473",
+      "scope": "Complete fixed original MIT; actual runtime dependency notices supplied in preview assets."
+    },
+    "title": "文档大纲",
+    "description": "原组件与明确的本地示例，保留原交互与展示；状态不拆条，不提供后台业务。",
+    "behavior": "原组件与明确的本地示例，保留原交互与展示；状态不拆条，不提供后台业务。",
+    "kind": "组件",
+    "format": "独立组件",
+    "category": "导航与组织",
+    "license": "MIT AND ISC AND BSD-3-Clause",
+    "batch": "astryx-search-01",
+    "preview": "batches/astryx-search-01/outline/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Original Meta AstryX core components, explicit host-authored minimal local documented-API fixtures, not a complete official business application. Text originaltype/heading/color; Icon actualsemanticSVGselection noexternalasset; Link originallocalonClick anddisabledstate, no destination; ScrollableArea originalcontainer with30sampleparagraphs; Outline originalnavigation with2localheadings; Toast originaluseToast throughLayerProvider withmanualshow/dismiss, no browsernotification; Typeahead originalsingleselection andTokenizer originalmultipleselection/removabletokens share synchronouslocal3item SearchSource. No remotequeries/files/accounts/clipboardservice/persistence. No hookcounting: Toast entry renders actual original message viewport, hook is not separate entry. Outline exactinstalledcore0.7.11history.pushState removed by same reviewed one-line buildtransform for opaqueiframe; original scroll/focus/selection retained and originalsourcecopyhash provided. All othercore implementations unchanged. Fixed documentation repository0.7.12 with actualcore/theme/build0.7.11 compatibility runtime disclosed. PerentryindependentIIFE sharedStyleX/theme, systemfont. Hiddenunmount resets state, visibleremount, exit/error ownedresourcecleanup. Actual550compose/loader/cache/release with keybehaviors; ScrollableArea synthetic scrollTop/scroll event verifies handler not native overflowgeometry, Outline scrollIntoView API stub is not nativepixel validation. ExactStyleXparserwarning separatelyrecorded. Fullroot/emittedruntime licenses and priorcore/StyleXmissingfileofficialsupplements disclosed."
+    ]
+  },
+  {
+    "id": "astryx-core:typeahead",
+    "source": "Meta AstryX",
+    "repository": "https://github.com/meta/astryx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/core/src/Typeahead/Typeahead.doc.mjs",
+    "sourcePath": "packages/core/src/Typeahead/Typeahead.doc.mjs",
+    "licenseEvidence": {
+      "url": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/LICENSE",
+      "sha256": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473",
+      "scope": "Complete fixed original MIT; actual runtime dependency notices supplied in preview assets."
+    },
+    "title": "单选搜索输入",
+    "description": "原组件与明确的本地示例，保留原交互与展示；状态不拆条，不提供后台业务。",
+    "behavior": "原组件与明确的本地示例，保留原交互与展示；状态不拆条，不提供后台业务。",
+    "kind": "组件",
+    "format": "独立组件",
+    "category": "导航与组织",
+    "license": "MIT AND ISC AND BSD-3-Clause",
+    "batch": "astryx-search-01",
+    "preview": "batches/astryx-search-01/typeahead/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Original Meta AstryX core components, explicit host-authored minimal local documented-API fixtures, not a complete official business application. Text originaltype/heading/color; Icon actualsemanticSVGselection noexternalasset; Link originallocalonClick anddisabledstate, no destination; ScrollableArea originalcontainer with30sampleparagraphs; Outline originalnavigation with2localheadings; Toast originaluseToast throughLayerProvider withmanualshow/dismiss, no browsernotification; Typeahead originalsingleselection andTokenizer originalmultipleselection/removabletokens share synchronouslocal3item SearchSource. No remotequeries/files/accounts/clipboardservice/persistence. No hookcounting: Toast entry renders actual original message viewport, hook is not separate entry. Outline exactinstalledcore0.7.11history.pushState removed by same reviewed one-line buildtransform for opaqueiframe; original scroll/focus/selection retained and originalsourcecopyhash provided. All othercore implementations unchanged. Fixed documentation repository0.7.12 with actualcore/theme/build0.7.11 compatibility runtime disclosed. PerentryindependentIIFE sharedStyleX/theme, systemfont. Hiddenunmount resets state, visibleremount, exit/error ownedresourcecleanup. Actual550compose/loader/cache/release with keybehaviors; ScrollableArea synthetic scrollTop/scroll event verifies handler not native overflowgeometry, Outline scrollIntoView API stub is not nativepixel validation. ExactStyleXparserwarning separatelyrecorded. Fullroot/emittedruntime licenses and priorcore/StyleXmissingfileofficialsupplements disclosed."
+    ]
+  },
+  {
+    "id": "astryx-core:tokenizer",
+    "source": "Meta AstryX",
+    "repository": "https://github.com/meta/astryx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/core/src/Tokenizer/Tokenizer.doc.mjs",
+    "sourcePath": "packages/core/src/Tokenizer/Tokenizer.doc.mjs",
+    "licenseEvidence": {
+      "url": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/LICENSE",
+      "sha256": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473",
+      "scope": "Complete fixed original MIT; actual runtime dependency notices supplied in preview assets."
+    },
+    "title": "多选标签输入",
+    "description": "原组件与明确的本地示例，保留原交互与展示；状态不拆条，不提供后台业务。",
+    "behavior": "原组件与明确的本地示例，保留原交互与展示；状态不拆条，不提供后台业务。",
+    "kind": "组件",
+    "format": "独立组件",
+    "category": "导航与组织",
+    "license": "MIT AND ISC AND BSD-3-Clause",
+    "batch": "astryx-search-01",
+    "preview": "batches/astryx-search-01/tokenizer/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Original Meta AstryX core components, explicit host-authored minimal local documented-API fixtures, not a complete official business application. Text originaltype/heading/color; Icon actualsemanticSVGselection noexternalasset; Link originallocalonClick anddisabledstate, no destination; ScrollableArea originalcontainer with30sampleparagraphs; Outline originalnavigation with2localheadings; Toast originaluseToast throughLayerProvider withmanualshow/dismiss, no browsernotification; Typeahead originalsingleselection andTokenizer originalmultipleselection/removabletokens share synchronouslocal3item SearchSource. No remotequeries/files/accounts/clipboardservice/persistence. No hookcounting: Toast entry renders actual original message viewport, hook is not separate entry. Outline exactinstalledcore0.7.11history.pushState removed by same reviewed one-line buildtransform for opaqueiframe; original scroll/focus/selection retained and originalsourcecopyhash provided. All othercore implementations unchanged. Fixed documentation repository0.7.12 with actualcore/theme/build0.7.11 compatibility runtime disclosed. PerentryindependentIIFE sharedStyleX/theme, systemfont. Hiddenunmount resets state, visibleremount, exit/error ownedresourcecleanup. Actual550compose/loader/cache/release with keybehaviors; ScrollableArea synthetic scrollTop/scroll event verifies handler not native overflowgeometry, Outline scrollIntoView API stub is not nativepixel validation. ExactStyleXparserwarning separatelyrecorded. Fullroot/emittedruntime licenses and priorcore/StyleXmissingfileofficialsupplements disclosed."
+    ]
+  },
+  {
+    "id": "astryx-core:toast",
+    "source": "Meta AstryX",
+    "repository": "https://github.com/meta/astryx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/core/src/Toast/Toast.doc.mjs",
+    "sourcePath": "packages/core/src/Toast/Toast.doc.mjs",
+    "licenseEvidence": {
+      "url": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/LICENSE",
+      "sha256": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473",
+      "scope": "Complete fixed original MIT; actual runtime dependency notices supplied in preview assets."
+    },
+    "title": "短消息提示",
+    "description": "原组件与明确的本地示例，保留原交互与展示；状态不拆条，不提供后台业务。",
+    "behavior": "原组件与明确的本地示例，保留原交互与展示；状态不拆条，不提供后台业务。",
+    "kind": "组件",
+    "format": "独立组件",
+    "category": "导航与组织",
+    "license": "MIT AND ISC AND BSD-3-Clause",
+    "batch": "astryx-search-01",
+    "preview": "batches/astryx-search-01/toast/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Original Meta AstryX core components, explicit host-authored minimal local documented-API fixtures, not a complete official business application. Text originaltype/heading/color; Icon actualsemanticSVGselection noexternalasset; Link originallocalonClick anddisabledstate, no destination; ScrollableArea originalcontainer with30sampleparagraphs; Outline originalnavigation with2localheadings; Toast originaluseToast throughLayerProvider withmanualshow/dismiss, no browsernotification; Typeahead originalsingleselection andTokenizer originalmultipleselection/removabletokens share synchronouslocal3item SearchSource. No remotequeries/files/accounts/clipboardservice/persistence. No hookcounting: Toast entry renders actual original message viewport, hook is not separate entry. Outline exactinstalledcore0.7.11history.pushState removed by same reviewed one-line buildtransform for opaqueiframe; original scroll/focus/selection retained and originalsourcecopyhash provided. All othercore implementations unchanged. Fixed documentation repository0.7.12 with actualcore/theme/build0.7.11 compatibility runtime disclosed. PerentryindependentIIFE sharedStyleX/theme, systemfont. Hiddenunmount resets state, visibleremount, exit/error ownedresourcecleanup. Actual550compose/loader/cache/release with keybehaviors; ScrollableArea synthetic scrollTop/scroll event verifies handler not native overflowgeometry, Outline scrollIntoView API stub is not nativepixel validation. ExactStyleXparserwarning separatelyrecorded. Fullroot/emittedruntime licenses and priorcore/StyleXmissingfileofficialsupplements disclosed."
     ]
   }
 ]
