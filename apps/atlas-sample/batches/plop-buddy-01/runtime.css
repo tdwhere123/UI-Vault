@@ -1,0 +1,258 @@
+/* @plop-ui/tokens — generated from src/tokens.ts. Do not edit by hand. */
+
+:root {
+  --plop-ink: #2848D8;
+  --plop-ink-text: #1C2E8C;
+  --plop-ink-soft: #3B4A92;
+  --plop-on-ink: #FFF8E7;
+  --plop-paper: #FFFDF7;
+  --plop-paper-back: #E6DCC2;
+  --plop-sheet: #FBF8F0;
+  --plop-track: #EDE4CC;
+  --plop-tomato: #D2381E;
+  --plop-mustard: #F6C445;
+  --plop-bubblegum: #F6A9B8;
+  --plop-periwinkle: #A9B6EE;
+  --plop-mint: #9FD8B8;
+  --plop-leaf: #2F8A57;
+  --plop-tomato-text: #A1301A;
+  --plop-ochre: #B7791F;
+  --plop-berry: #B83A68;
+  --plop-placeholder: #5D69A6;
+  --plop-shadow: rgba(18, 36, 120, 0.2);
+  --plop-shadow-strong: rgba(18, 36, 120, 0.3);
+  --plop-on-fill-ink: #FFF8E7;
+  --plop-on-fill-tomato: #FFF8E7;
+  --plop-on-fill-periwinkle: #1C2E8C;
+  --plop-on-fill-bubblegum: #1C2E8C;
+  --plop-on-fill-mint: #1C2E8C;
+  --plop-on-fill-mustard: #1C2E8C;
+  --plop-on-fill-plain: #2848D8;
+  --plop-fill-ink: var(--plop-ink);
+  --plop-fill-plain: var(--plop-paper);
+  --plop-fill-tomato: var(--plop-tomato);
+  --plop-fill-mustard: var(--plop-mustard);
+  --plop-fill-bubblegum: var(--plop-bubblegum);
+  --plop-fill-periwinkle: var(--plop-periwinkle);
+  --plop-fill-mint: var(--plop-mint);
+  --plop-font-logo: var(--plop-sketchpop, "Sketchpop"), "Patrick Hand", "Chalkboard SE", "Comic Sans MS", system-ui, sans-serif;
+  --plop-font-letter: var(--plop-sketchpop, "Sketchpop"), var(--plop-patrick-hand, "Patrick Hand"), "Patrick Hand", "Chalkboard SE", "Comic Sans MS", system-ui, sans-serif;
+  --plop-font-body: var(--plop-sketchpop, "Sketchpop"), var(--plop-patrick-hand, "Patrick Hand"), "Patrick Hand", "Chalkboard SE", "Comic Sans MS", system-ui, sans-serif;
+  --plop-font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --plop-weight-logo: 900;
+  --plop-weight-letter: 700;
+  --plop-weight-heading: 900;
+  --plop-weight-body: 400;
+  --plop-text-xs: 13px;
+  --plop-text-sm: 15px;
+  --plop-text-md: 17px;
+  --plop-text-body: 19px;
+  --plop-text-lg: 24px;
+  --plop-text-xl: 32px;
+  --plop-text-2xl: 44px;
+  --plop-text-3xl: 72px;
+  --plop-roundness: 1;
+  --plop-radius-sticker: calc(26px * var(--plop-roundness)) calc(20px * var(--plop-roundness)) calc(28px * var(--plop-roundness)) calc(18px * var(--plop-roundness)) / calc(20px * var(--plop-roundness)) calc(28px * var(--plop-roundness)) calc(18px * var(--plop-roundness)) calc(26px * var(--plop-roundness));
+  --plop-radius-face: calc(20px * var(--plop-roundness)) calc(14px * var(--plop-roundness)) calc(22px * var(--plop-roundness)) calc(13px * var(--plop-roundness)) / calc(14px * var(--plop-roundness)) calc(22px * var(--plop-roundness)) calc(13px * var(--plop-roundness)) calc(20px * var(--plop-roundness));
+  --plop-radius-box: calc(14px * var(--plop-roundness)) calc(10px * var(--plop-roundness)) calc(16px * var(--plop-roundness)) calc(11px * var(--plop-roundness)) / calc(11px * var(--plop-roundness)) calc(16px * var(--plop-roundness)) calc(10px * var(--plop-roundness)) calc(14px * var(--plop-roundness));
+  --plop-radius-blob: 50% 46% 53% 48%;
+  --plop-radius-cut: calc(34px * var(--plop-roundness)) calc(26px * var(--plop-roundness)) calc(36px * var(--plop-roundness)) calc(24px * var(--plop-roundness)) / calc(26px * var(--plop-roundness)) calc(36px * var(--plop-roundness)) calc(24px * var(--plop-roundness)) calc(34px * var(--plop-roundness));
+  --plop-stroke: 3px;
+  --plop-stroke-sm: 2.5px;
+  --plop-stroke-illustration: 7px;
+  --plop-hatch-offset-x: 5px;
+  --plop-hatch-offset-y: 7px;
+  --plop-ease-spring: cubic-bezier(.28, 1.75, .5, 1);
+  --plop-duration-spring: 500ms;
+  --plop-ease-squish: cubic-bezier(.2, .9, .3, 1);
+  --plop-duration-squish: 80ms;
+  --plop-boil-interval: 140ms;
+}
+
+[data-plop-roundness] {
+  --plop-radius-sticker: calc(26px * var(--plop-roundness)) calc(20px * var(--plop-roundness)) calc(28px * var(--plop-roundness)) calc(18px * var(--plop-roundness)) / calc(20px * var(--plop-roundness)) calc(28px * var(--plop-roundness)) calc(18px * var(--plop-roundness)) calc(26px * var(--plop-roundness));
+  --plop-radius-face: calc(20px * var(--plop-roundness)) calc(14px * var(--plop-roundness)) calc(22px * var(--plop-roundness)) calc(13px * var(--plop-roundness)) / calc(14px * var(--plop-roundness)) calc(22px * var(--plop-roundness)) calc(13px * var(--plop-roundness)) calc(20px * var(--plop-roundness));
+  --plop-radius-box: calc(14px * var(--plop-roundness)) calc(10px * var(--plop-roundness)) calc(16px * var(--plop-roundness)) calc(11px * var(--plop-roundness)) / calc(11px * var(--plop-roundness)) calc(16px * var(--plop-roundness)) calc(10px * var(--plop-roundness)) calc(14px * var(--plop-roundness));
+  --plop-radius-blob: 50% 46% 53% 48%;
+  --plop-radius-cut: calc(34px * var(--plop-roundness)) calc(26px * var(--plop-roundness)) calc(36px * var(--plop-roundness)) calc(24px * var(--plop-roundness)) / calc(26px * var(--plop-roundness)) calc(36px * var(--plop-roundness)) calc(24px * var(--plop-roundness)) calc(34px * var(--plop-roundness));
+}
+
+:root, [data-plop-surface="poster"] {
+  --plop-bg-l: #EEE7D6;
+  --plop-bg-d: #131A35;
+  --plop-line-a-l: rgba(40,72,216,.08);
+  --plop-line-a-d: rgba(255,248,231,.05);
+  --plop-line-b-l: transparent;
+  --plop-line-b-d: transparent;
+  --plop-on-l: #2848D8;
+  --plop-on-d: #FFF8E7;
+  --plop-on-soft-l: #3B4A92;
+  --plop-on-soft-d: #CFC8B6;
+  --plop-focus-l: #D2381E;
+  --plop-focus-d: #F6C445;
+  --plop-hatch-l: #2848D8;
+  --plop-hatch-d: rgba(255,248,231,.5);
+  --plop-glow-l: rgba(255,255,255,.45);
+  --plop-glow-d: rgba(255,255,255,.04);
+  --plop-surface-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='260' height='260'><filter id='p'><feTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='3' seed='11' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .35  0 0 0 0 .3  0 0 0 0 .2  0 0 0 .55 -.08'/></filter><rect width='100%' height='100%' filter='url(%23p)' opacity='.55'/></svg>"), radial-gradient(ellipse at 15% 0%, var(--plop-glow), transparent 55%);
+  --plop-surface-size: 260px 260px, 100% 100%;
+  --plop-surface-position: 0 0;
+}
+
+[data-plop-surface="mat"] {
+  --plop-bg-l: #2E6B55;
+  --plop-bg-d: #173A2E;
+  --plop-line-a-l: rgba(255,248,231,.22);
+  --plop-line-a-d: rgba(255,248,231,.15);
+  --plop-line-b-l: rgba(255,248,231,.10);
+  --plop-line-b-d: rgba(255,248,231,.06);
+  --plop-on-l: #FFF8E7;
+  --plop-on-d: #FFF8E7;
+  --plop-on-soft-l: #EFE8D5;
+  --plop-on-soft-d: #CFC8B6;
+  --plop-focus-l: #F3B43A;
+  --plop-focus-d: #F3B43A;
+  --plop-hatch-l: rgba(8,30,22,.75);
+  --plop-hatch-d: rgba(0,0,0,.75);
+  --plop-glow-l: transparent;
+  --plop-glow-d: transparent;
+  --plop-surface-image: linear-gradient(var(--plop-line-a) 1.5px, transparent 1.5px), linear-gradient(90deg, var(--plop-line-a) 1.5px, transparent 1.5px), linear-gradient(var(--plop-line-b) 1px, transparent 1px), linear-gradient(90deg, var(--plop-line-b) 1px, transparent 1px);
+  --plop-surface-size: 120px 120px, 120px 120px, 24px 24px, 24px 24px;
+  --plop-surface-position: -1px -1px;
+}
+
+[data-plop-surface="notebook"] {
+  --plop-bg-l: #F8F4E9;
+  --plop-bg-d: #22232C;
+  --plop-line-a-l: #E79C9C;
+  --plop-line-a-d: rgba(231,156,156,.35);
+  --plop-line-b-l: #BFCDF0;
+  --plop-line-b-d: rgba(169,182,238,.16);
+  --plop-on-l: #2848D8;
+  --plop-on-d: #FFF8E7;
+  --plop-on-soft-l: #3B4A92;
+  --plop-on-soft-d: #CFC8B6;
+  --plop-focus-l: #2848D8;
+  --plop-focus-d: #F3B43A;
+  --plop-hatch-l: #2848D8;
+  --plop-hatch-d: rgba(255,248,231,.45);
+  --plop-glow-l: transparent;
+  --plop-glow-d: transparent;
+  --plop-surface-image: linear-gradient(90deg, transparent 62px, var(--plop-line-a) 62px, var(--plop-line-a) 64px, transparent 64px), repeating-linear-gradient(transparent 0 31px, var(--plop-line-b) 31px 32px);
+  --plop-surface-size: auto;
+  --plop-surface-position: 0 0;
+}
+
+[data-plop-surface="kraft"] {
+  --plop-bg-l: #C69C6D;
+  --plop-bg-d: #4E3A28;
+  --plop-line-a-l: rgba(90,60,30,.18);
+  --plop-line-a-d: rgba(18,36,120,.25);
+  --plop-line-b-l: rgba(255,240,210,.14);
+  --plop-line-b-d: rgba(255,240,210,.05);
+  --plop-on-l: #172777;
+  --plop-on-d: #FFF8E7;
+  --plop-on-soft-l: #1C2E8C;
+  --plop-on-soft-d: #CFC8B6;
+  --plop-focus-l: #172777;
+  --plop-focus-d: #F3B43A;
+  --plop-hatch-l: rgba(60,35,15,.75);
+  --plop-hatch-d: rgba(0,0,0,.6);
+  --plop-glow-l: transparent;
+  --plop-glow-d: transparent;
+  --plop-surface-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='p'><feTurbulence type='fractalNoise' baseFrequency='.012 .5' numOctaves='3' seed='4' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .3  0 0 0 0 .2  0 0 0 0 .1  0 0 0 .5 0'/></filter><rect width='100%' height='100%' filter='url(%23p)' opacity='.55'/></svg>"), radial-gradient(var(--plop-line-a) 1px, transparent 1.4px);
+  --plop-surface-size: 220px 220px, 7px 7px;
+  --plop-surface-position: 0 0;
+}
+
+[data-plop-surface="riso"] {
+  --plop-bg-l: #F6A9B8;
+  --plop-bg-d: #43203B;
+  --plop-line-a-l: rgba(210,56,30,.22);
+  --plop-line-a-d: rgba(246,169,184,.16);
+  --plop-line-b-l: transparent;
+  --plop-line-b-d: transparent;
+  --plop-on-l: #172777;
+  --plop-on-d: #FFF8E7;
+  --plop-on-soft-l: #1C2E8C;
+  --plop-on-soft-d: #CFC8B6;
+  --plop-focus-l: #172777;
+  --plop-focus-d: #F3B43A;
+  --plop-hatch-l: #2848D8;
+  --plop-hatch-d: rgba(255,248,231,.45);
+  --plop-glow-l: transparent;
+  --plop-glow-d: transparent;
+  --plop-surface-image: radial-gradient(var(--plop-line-a) 1.6px, transparent 2px);
+  --plop-surface-size: 9px 9px;
+  --plop-surface-position: 0 0;
+}
+
+:root, [data-plop-surface] {
+  --plop-bg: var(--plop-bg-l);
+  --plop-line-a: var(--plop-line-a-l);
+  --plop-line-b: var(--plop-line-b-l);
+  --plop-on: var(--plop-on-l);
+  --plop-on-soft: var(--plop-on-soft-l);
+  --plop-focus: var(--plop-focus-l);
+  --plop-hatch: var(--plop-hatch-l);
+  --plop-glow: var(--plop-glow-l);
+  --plop-shadow-hatch: repeating-linear-gradient(-45deg, var(--plop-hatch) 0 2.2px, transparent 2.2px calc(2.2px + 3.4px));
+  color-scheme: light;
+}
+
+[data-plop-theme="dark"], [data-plop-theme="dark"] [data-plop-surface] {
+  --plop-bg: var(--plop-bg-d);
+  --plop-line-a: var(--plop-line-a-d);
+  --plop-line-b: var(--plop-line-b-d);
+  --plop-on: var(--plop-on-d);
+  --plop-on-soft: var(--plop-on-soft-d);
+  --plop-focus: var(--plop-focus-d);
+  --plop-hatch: var(--plop-hatch-d);
+  --plop-glow: var(--plop-glow-d);
+  color-scheme: dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-plop-theme="light"]),
+  [data-plop-surface]:not([data-plop-theme="light"]):not([data-plop-theme="light"] *) {
+    --plop-bg: var(--plop-bg-d);
+    --plop-line-a: var(--plop-line-a-d);
+    --plop-line-b: var(--plop-line-b-d);
+    --plop-on: var(--plop-on-d);
+    --plop-on-soft: var(--plop-on-soft-d);
+    --plop-focus: var(--plop-focus-d);
+    --plop-hatch: var(--plop-hatch-d);
+    --plop-glow: var(--plop-glow-d);
+    color-scheme: dark;
+  }
+}
+
+/* Paint any element as the active surface: the PlopProvider root, or <body>. */
+.plop-surface {
+  background-color: var(--plop-bg);
+  background-image: var(--plop-surface-image);
+  background-size: var(--plop-surface-size);
+  background-position: var(--plop-surface-position);
+  color: var(--plop-on);
+  font-family: var(--plop-font-body);
+  font-size: var(--plop-text-body);
+  font-feature-settings: "calt" 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Reset any element to "printed on paper": cards, sheets and panels that stay light on every surface. */
+.plop-paper {
+  --plop-on: var(--plop-ink);
+  --plop-on-soft: var(--plop-ink-soft);
+  --plop-focus: var(--plop-ink);
+  --plop-hatch: var(--plop-ink);
+  --plop-shadow-hatch: repeating-linear-gradient(-45deg, var(--plop-hatch) 0 2.2px, transparent 2.2px calc(2.2px + 3.4px));
+  background-color: var(--plop-sheet);
+  color: var(--plop-ink);
+  color-scheme: light;
+}
+
+.a{position:relative;display:inline-block;flex:none;line-height:0;vertical-align:bottom}.b{width:56px}.k{width:84px}.g{width:120px}.o,.v{display:block;width:100%;height:auto;overflow:visible}[data-plop-filters] .o{filter:url(#plop-wob1)}.u{transform-box:fill-box;transform-origin:center;animation:s .9s var(--plop-ease-spring) both}.w{transform-box:fill-box;animation:l 1.1s ease-in both}.t>*{transform-box:fill-box;transform-origin:center;animation:p .7s var(--plop-ease-spring) both}.t>:nth-child(2){animation-delay:.08s}.t>:nth-child(3){animation-delay:.16s}.t>:nth-child(4){animation-delay:.12s}.t>:nth-child(5){animation-delay:.2s}.m>*{transform-box:fill-box;animation:f 2.6s ease-in-out infinite}.m>:nth-child(2){animation-delay:1.3s}.e>*{animation:d 1.4s ease-in-out infinite}.e>:nth-child(2){animation-delay:.2s}.e>:nth-child(3){animation-delay:.4s}.Y .o{transform-origin:50% 100%;animation:c .5s ease-out both}@keyframes s{0%{transform:scale(0) rotate(-40deg)}to{transform:none}}@keyframes l{0%{transform:translateY(-4px);opacity:0}30%{opacity:1}to{transform:translateY(3px)}}@keyframes p{0%{transform:scale(0) translateY(6px);opacity:0}to{transform:none;opacity:1}}@keyframes f{0%,to{transform:translate(0);opacity:.35}50%{transform:translate(2px,-4px);opacity:1}}@keyframes d{0%,to{opacity:.3}50%{opacity:1}}@keyframes c{0%{transform:rotate(0)}25%{transform:rotate(-5deg)}50%{transform:rotate(4deg)}75%{transform:rotate(-2deg)}to{transform:none}}.n{position:relative;display:inline-block;vertical-align:bottom;--peek-w: 56px;--peek-rise: calc(var(--peek-w) * .81 - 2px);padding-top:var(--peek-rise)}.z{--peek-w: 84px}.X{--peek-w: 120px}.i{position:absolute;top:0;left:14px;z-index:0;animation:h .55s var(--plop-ease-spring) both}.j{position:relative;z-index:1;display:block}.y{position:absolute;top:calc(var(--peek-rise) - var(--peek-w) * .16);left:14px;z-index:2;width:var(--peek-w);line-height:0;pointer-events:none;animation:x .4s var(--plop-ease-spring) .15s both}.r .i,.r .y{left:auto;right:14px}.r .i .o{transform:scaleX(-1)}@keyframes h{0%{transform:translateY(60%)}to{transform:none}}@keyframes x{0%{transform:translateY(6px);opacity:0}to{transform:none;opacity:1}}@media(prefers-reduced-motion:reduce){.a:not([data-plop-motion=full] *) *,.a:not([data-plop-motion=full] *),.n:not([data-plop-motion=full] *)>*{animation:none!important}}[data-plop-motion=reduce] .a,[data-plop-motion=reduce] .a *,[data-plop-motion=reduce] .n>*{animation:none!important}
+
+/* Host only: no downloaded Sketchpop or other font. System fallback from original tokens. */
+body{margin:0;font:16px/1.5 system-ui,sans-serif}h1,h2{font-family:var(--plop-font-display)}section{margin:36px 0}fieldset{border:1px solid var(--plop-ink);display:flex;gap:18px;flex-wrap:wrap}label{display:flex;gap:8px;align-items:center}select{font:inherit}#playground{padding-top:24px;min-height:120px}[data-paused] *{animation-play-state:paused!important}@media(max-width:600px){.plop-surface{padding:24px!important}}
