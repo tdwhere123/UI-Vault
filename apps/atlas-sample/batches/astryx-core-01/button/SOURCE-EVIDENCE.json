@@ -1,0 +1,135 @@
+{
+  "repository": "https://github.com/meta/astryx",
+  "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+  "originalEntry": "packages/core/src/Button/Button.doc.mjs",
+  "originalSHA256": "c8ca4b7fe8747a08e0d008fb60d5c0d296ab502ec8d3800f07e4d92a64bc712c",
+  "selectedExample": {
+    "label": "Actions in narrow rows",
+    "code": "\nimport {useState} from 'react';\nimport {Button} from '@astryxdesign/core/Button';\nimport {Card} from '@astryxdesign/core/Card';\nimport {Heading} from '@astryxdesign/core/Heading';\nimport {HStack} from '@astryxdesign/core/HStack';\nimport {Icon} from '@astryxdesign/core/Icon';\nimport {IconButton} from '@astryxdesign/core/IconButton';\nimport {StackItem} from '@astryxdesign/core/Stack';\nimport {TextInput} from '@astryxdesign/core/TextInput';\nimport {VStack} from '@astryxdesign/core/VStack';\n\n// On a phone (or any card narrower than its actions), a labelled Button\n// shrinks with its row and truncates its label with an ellipsis instead of\n// overflowing or being clipped by the card. The full label stays the\n// accessible name. Icon-only buttons keep their square size.\nfunction ReviewersCard() {\n  const [emails, setEmails] = useState('');\n  return (\n    <Card maxWidth={560}>\n      <VStack gap={4}>\n        <HStack gap={2} vAlign=\"center\">\n          <StackItem size=\"fill\">\n            <Heading level={3} maxLines={1}>\n              Design review\n            </Heading>\n          </StackItem>\n          <Button label=\"Request review from the design team\" size=\"sm\" />\n          <IconButton\n            label=\"More review options\"\n            icon={<Icon icon=\"moreHorizontal\" />}\n            variant=\"ghost\"\n            size=\"sm\"\n          />\n        </HStack>\n        <TextInput\n          label=\"Reviewer emails\"\n          placeholder=\"name@example.com\"\n          value={emails}\n          onChange={setEmails}\n        />\n        {/* In a 320px form footer the long primary action truncates.\n            StackItem size=\"static\" keeps the short Cancel label whole. */}\n        <HStack gap={2} hAlign=\"end\">\n          <StackItem size=\"static\">\n            <Button label=\"Cancel\" variant=\"secondary\" />\n          </StackItem>\n          <Button label=\"Send invitations to all 12 reviewers\" variant=\"primary\" />\n        </HStack>\n      </VStack>\n    </Card>\n  );\n}\n"
+  },
+  "dependencies": [
+    {
+      "name": "@astryxdesign/core",
+      "version": "0.7.11",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-astryx-recovery/preview/node_modules/@astryxdesign/core",
+      "licenseFilesSHA256": {
+        "LICENSE": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473"
+      },
+      "supplement": "Actual core0.7.11 package declaresMIT but omitsfullLICENSE. Same-project fixed upstream fullMIT reused from existing reviewed AstryX batch; template repository0.7.12 vs installedruntime0.7.11 compatibility expressly disclosed."
+    },
+    {
+      "name": "@astryxdesign/theme-neutral",
+      "version": "0.7.11",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-astryx-recovery/preview/node_modules/@astryxdesign/theme-neutral",
+      "licenseFilesSHA256": {
+        "LICENSE": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473"
+      },
+      "supplement": null
+    },
+    {
+      "name": "@formatjs/fast-memoize",
+      "version": "3.1.7",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-astryx-recovery/preview/node_modules/@formatjs/fast-memoize",
+      "licenseFilesSHA256": {
+        "LICENSE.md": "b1cc980e28e9e48f377db191578a9361494ca7117185b69dd66cabaf5b460fb7"
+      },
+      "supplement": null
+    },
+    {
+      "name": "@formatjs/icu-messageformat-parser",
+      "version": "3.5.18",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-astryx-recovery/preview/node_modules/@formatjs/icu-messageformat-parser",
+      "licenseFilesSHA256": {
+        "LICENSE.md": "b1cc980e28e9e48f377db191578a9361494ca7117185b69dd66cabaf5b460fb7"
+      },
+      "supplement": null
+    },
+    {
+      "name": "@formatjs/icu-skeleton-parser",
+      "version": "2.1.11",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-astryx-recovery/preview/node_modules/@formatjs/icu-skeleton-parser",
+      "licenseFilesSHA256": {
+        "LICENSE.md": "b1cc980e28e9e48f377db191578a9361494ca7117185b69dd66cabaf5b460fb7"
+      },
+      "supplement": null
+    },
+    {
+      "name": "@stylexjs/stylex",
+      "version": "0.19.0",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-astryx-recovery/preview/node_modules/@stylexjs/stylex",
+      "licenseFilesSHA256": {
+        "stylex-LICENSE": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+      },
+      "supplement": "Actual0.19.0 package declaresMIT but omitsfullLICENSE. Previously reviewed official StyleX rootMIT supplement reused from existing AstryX license cache, not claimed file shipped inside npm."
+    },
+    {
+      "name": "intl-messageformat",
+      "version": "11.2.15",
+      "license": "BSD-3-Clause",
+      "scope": "emitted-runtime",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-astryx-recovery/preview/node_modules/intl-messageformat",
+      "licenseFilesSHA256": {
+        "LICENSE.md": "cc4143615b27c66eafbe913f132a9e41ac14c1e2ec6b2df24dafeaa97f028850"
+      },
+      "supplement": null
+    },
+    {
+      "name": "lucide-react",
+      "version": "1.18.0",
+      "license": "ISC",
+      "scope": "emitted-runtime",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-astryx-recovery/preview/node_modules/lucide-react",
+      "licenseFilesSHA256": {
+        "LICENSE": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57"
+      },
+      "supplement": null
+    },
+    {
+      "name": "react",
+      "version": "19.3.1",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-astryx-recovery/preview/node_modules/react",
+      "licenseFilesSHA256": {
+        "LICENSE": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+      },
+      "supplement": null
+    },
+    {
+      "name": "react-dom",
+      "version": "19.3.1",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-astryx-recovery/preview/node_modules/react-dom",
+      "licenseFilesSHA256": {
+        "LICENSE": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+      },
+      "supplement": null
+    },
+    {
+      "name": "scheduler",
+      "version": "0.28.0",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-astryx-recovery/preview/node_modules/scheduler",
+      "licenseFilesSHA256": {
+        "LICENSE": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+      },
+      "supplement": null
+    }
+  ],
+  "adaptation": "Original Meta AstryX official component documentation examples, not a screenshot or redrawn component. One functional family per entry; subsidiary parts/states not counted separately. The fixed repository workspace is0.7.12; actual installed core/theme/build0.7.11 compatibility runtime is disclosed. Original example JSX preserved; only required imports, default export and host wrapper supplied. Popover selects the complete Recent files example, Drawer selects complete Basic example with original local open state; undefined illustrative alternative examples are not claimed implemented. Button original actions have no business handler, Card sample amounts are static, Calendar is the original Persian month navigation hook example rather than a booking tool. Theme/StyleX/LayerProvider/reset shared setup with per-family independent IIFE. Original system-font fallback; no remote assets/services, backend, storage, clipboard or user-account action. Hidden unmount resets transient component state; reveal mounts fresh. Exit/error releases owned resources. Actual550 compose tests execute original component code under JSDOM; native dialog showModal/close are API stubs, native Escape/top-layer/focus geometry and CSS pixel appearance are NOT visually verified. Original Drawer cancel handler is tested via cancel event. Compiled StyleX CSS JSDOM parser warnings are separately recorded; no native CSS acceptance claim. Root MIT plus exact emitted-package licenses are included; prior reviewed core/StyleX missing-file supplements are labelled as supplements, not npm-shipped files.",
+  "visualVerified": false
+}
