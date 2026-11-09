@@ -1,0 +1,11 @@
+# Wired original combo example
+
+One existing item: `wired:handdrawn-combo`. Three original combo configurations are one scene, not three entries. Fixed upstream revision `0802655b6a0220d17e95e9d1565a7a1b10a24fef`.
+
+Original options and actual pointer/arrow-key selection, Enter/Space popup, Escape/blur close. Disabled control remains disabled, third starts unselected. Check displays all three local values instead of original console logging. No form submission, storage, network or external service.
+
+See ORIGINALS.json for complete fixed original entry/five local source modules/package/license. PROVENANCE.json discloses every compatibility patch and runtime dependency source hashes. LICENSE.txt contains complete upstream MIT and all six bundled dependency licenses, including Lit BSD notices. Host framing and lifecycle guards are adaptation code. No fonts, images, binary or base64 resources.
+
+The production index uses exact runtime.css/runtime.js tags and was executed through ui-vault-535 composePreview unchanged CSP. DOM interaction/lifecycle tests use synthetic geometry solely to exercise logic. Chromium launch is blocked by environment socket permissions; real rendered dimensions/pixel appearance are **not verified**. No screenshots taken. Original item press transitions/scale are explicitly disabled by shadow CSS under prefers-reduced-motion; native media-query appearance is unverified; random rough borders are source-native and not pixel-deterministic.
+
+Lifecycle: hidden closes popups and cancels timers; visible redraws; pagehide/atlas:dispose abort host listeners, clear all three components and disconnect resize observation. Original component resize fallback repaired for reconnect. Own blur/keydown listeners are removed and rebound on normal reconnect; permanent dispose makes old nodes inert. Twelve Lit-local template listeners may remain only on externally retained detached nodes (nine combo event parts, three slotchange parts). They are guarded against post-exit selection, drawing or timers; no window/document listeners remain. This is not a claim of zero listeners on retained detached nodes. Early import and late SVG render errors show an explicit failure alert instead of an empty fake preview.
