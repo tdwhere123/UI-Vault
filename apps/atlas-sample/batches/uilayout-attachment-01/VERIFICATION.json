@@ -1,0 +1,76 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "mode": "normal",
+      "passed": true,
+      "created": 110,
+      "revoked": 110,
+      "detachedReactHandlers": {
+        "INPUT:invalid": 215,
+        "IMG:error": 110,
+        "IMG:load": 110
+      }
+    },
+    {
+      "mode": "early-module",
+      "passed": true,
+      "created": 0,
+      "revoked": 0,
+      "detachedReactHandlers": {}
+    },
+    {
+      "mode": "early-dispose",
+      "passed": true,
+      "created": 0,
+      "revoked": 0,
+      "detachedReactHandlers": {}
+    },
+    {
+      "mode": "url-failure",
+      "passed": true,
+      "created": 1,
+      "revoked": 1,
+      "detachedReactHandlers": {
+        "INPUT:invalid": 2
+      }
+    },
+    {
+      "mode": "late-reader",
+      "passed": true,
+      "created": 0,
+      "revoked": 0,
+      "detachedReactHandlers": {
+        "INPUT:invalid": 4
+      }
+    },
+    {
+      "mode": "render-failure",
+      "passed": true,
+      "created": 1,
+      "revoked": 1,
+      "detachedReactHandlers": {
+        "INPUT:invalid": 4
+      }
+    },
+    {
+      "mode": "picker-focus-exit",
+      "passed": true,
+      "created": 0,
+      "revoked": 0,
+      "detachedReactHandlers": {
+        "INPUT:invalid": 2
+      }
+    },
+    {
+      "mode": "late-reader-exit",
+      "passed": true,
+      "created": 0,
+      "revoked": 0,
+      "detachedReactHandlers": {
+        "INPUT:invalid": 2
+      }
+    }
+  ],
+  "scope": "Original Dropzone File change/drop handlers with real File objects; test signature fixtures are not image-decoding/visual proof. Actual baseline536 compose permits blob img.100 cycles bounded live URLs/global listeners; failures and late-reader hidden cancellation. No native picker or browser pixels/CSP enforcement verified."
+}
