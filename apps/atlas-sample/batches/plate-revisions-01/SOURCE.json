@@ -1,0 +1,4445 @@
+{
+  "repository": "https://github.com/udecode/plate",
+  "revision": "cbd8db29140e3ae56ab54f6c6c40bdf6ad2b9f58",
+  "fixedWorkspacePackages": [
+    "platejs 54.0.0-beta.1 source",
+    "plitejs fixed workspace source"
+  ],
+  "important": "npm platejs@54 beta1 is incompatible and NOT used. Official exports and apps/www tsconfig paths resolve directly to fixed source. Original algorithms compiled by esbuild; no npm same-name substitution.",
+  "fixedEmittedFiles": [
+    {
+      "path": "apps/www/src/components/ui/button.tsx",
+      "sha256": "42cfb79c08ca13b21a788781a421682891f49ab4cda7f2102b8a786249695705",
+      "gitBlob": "477ecb5f2ed5a1ac6178b41db42b1c2fd00fa26e"
+    },
+    {
+      "path": "apps/www/src/lib/utils.ts",
+      "sha256": "74e8fe9d0d680c442ed6adb13e7d119d6c210c19ae6c114313b2a72552be0883",
+      "gitBlob": "9ad0df4269e6fd3b864ca5c7d8b68e47c3b010c2"
+    },
+    {
+      "path": "apps/www/src/registry/components/editor/basic-marks.tsx",
+      "sha256": "093fa1b6c4a033bd1206ade92e8c9187414437f676827e26dc200d306277e690",
+      "gitBlob": "644dd0a87d66acf9e4e4d4fb40093d0bbd35294a"
+    },
+    {
+      "path": "apps/www/src/registry/components/editor/code.tsx",
+      "sha256": "d61b4944ed8b0ca3cc8d8d23081ec42e53c0b620aa78b20dbc694cd7dc01947c",
+      "gitBlob": "a33930623910f2f415f8c09cc309bbbb099b325e"
+    },
+    {
+      "path": "apps/www/src/registry/components/editor/diff.tsx",
+      "sha256": "6a04c8f9a945c6061dca1e9dba63dd70267ee4388e776c12f75248c05185ad8b",
+      "gitBlob": "ff61775dbe86aeafd670aba2ff4edce035045503"
+    },
+    {
+      "path": "apps/www/src/registry/components/editor/highlight.tsx",
+      "sha256": "56f24aba5ddc6a3ab49c73f8a80a7b0590b58ebdafdaa4cae067064518a67253",
+      "gitBlob": "11341f20403c5c49dc99f2d53763bd83114fba94"
+    },
+    {
+      "path": "apps/www/src/registry/components/editor/kbd.tsx",
+      "sha256": "1f21a220b6924d4e8b143b4f0771694549fa47cfb89a33a70ab6acb3a9dfe9b9",
+      "gitBlob": "20625a8d786163c795d11814d630b585f3f405c7"
+    },
+    {
+      "path": "packages/platejs/src/features/basic-nodes/lib/BaseBlockPlugins.ts",
+      "sha256": "5d68e1aca643194517c8729cb18470c999d17bad2af9f75f7af71426cd1439a6",
+      "gitBlob": "d432c3f255d487e98107a776dccfa3b09b915945"
+    },
+    {
+      "path": "packages/platejs/src/features/basic-nodes/lib/BaseHeadingPlugins.ts",
+      "sha256": "041693d94c3b72147680eed6f8befa527dc03644bd86680029fcef06108188c8",
+      "gitBlob": "5a46a1f00e165d4c12bed2514f55110a97521b69"
+    },
+    {
+      "path": "packages/platejs/src/features/basic-nodes/lib/BaseMarkPlugins.ts",
+      "sha256": "c2ffbff58b8c454cab01042930bced89924171a96c496713d9348ff8c9d2e07d",
+      "gitBlob": "c6848333cd3c8b29c9c60588bc63832bfc1f7ff1"
+    },
+    {
+      "path": "packages/platejs/src/internal/failInvariant.ts",
+      "sha256": "9cd4f130ee7f35eadece6b34948afa35760324d268823722d9283923822ed602",
+      "gitBlob": "8eb6a5560d5d37fed97b6156627e396de66e3256"
+    },
+    {
+      "path": "packages/platejs/src/internal/mergePlateRenderedAttributes.ts",
+      "sha256": "9bb27f9a38d4a7d426d3c970e01c757e3da716798b33a348e8b2f81273d754f9",
+      "gitBlob": "0ed4c23f7369ee21eb7aa776b2a24741e4e62242"
+    },
+    {
+      "path": "packages/platejs/src/internal/plugin/OverridePlugin.ts",
+      "sha256": "f9268a8ef787781645ee8efe59dc95abbca07e35d2f60db080ead20b2145f1c5",
+      "gitBlob": "a485962013a1174a98547749f98acaf13a0beea2"
+    },
+    {
+      "path": "packages/platejs/src/internal/plugin/blockInsertion.ts",
+      "sha256": "02544cf3d382ad1a3cc5ba0ec4f675491de86347b8f16cb6c48e962d53de0348",
+      "gitBlob": "152f4eaa1921ab04d09076782ad840c68a3e9cbe"
+    },
+    {
+      "path": "packages/platejs/src/internal/plugin/collectPlateNodeMappings.ts",
+      "sha256": "bd7123c5c5e572f8dcf16c6a029e373eee93a87848761094f56688629bf72071",
+      "gitBlob": "fb0ce3102da48db744e067cb09045d625bcc6be0"
+    },
+    {
+      "path": "packages/platejs/src/internal/plugin/compilePlainTextMappings.ts",
+      "sha256": "06bdce33679a21e74d1aa15a3476eda56b7765a68a58b3d1550983137e250f08",
+      "gitBlob": "c79127ccd3bf2fc7525f1ae012afc468ff1adaf0"
+    },
+    {
+      "path": "packages/platejs/src/internal/plugin/compilePlateFormats.ts",
+      "sha256": "4b3ed88a66bfb24e4107be3e9aa7531854c1c238941aa460c66c119abbd42ff7",
+      "gitBlob": "8229e725181e575ec28b7c075463926597fdce60"
+    },
+    {
+      "path": "packages/platejs/src/internal/plugin/compilePlateModel.ts",
+      "sha256": "689f475fc15d2daa951cf86466b5c9e4d3d1bcf00260f43cfd82e47fbce1dbc5",
+      "gitBlob": "2421ceef4e05870a201301bafafbeacbf8edbd94"
+    },
+    {
+      "path": "packages/platejs/src/internal/plugin/compilePlateShortcuts.ts",
+      "sha256": "4981d36a19e4073925f00d2cc7b6ca87f1845c3d985ebaa8d52b1c4627fa1c47",
+      "gitBlob": "56e784a7f4a9f04ec883834fd990d3f9ed7a3f34"
+    },
+    {
+      "path": "packages/platejs/src/internal/plugin/defaultElementTag.ts",
+      "sha256": "9bc4de699f79a446b3efdcd74f4d8ca48331879f759f54bd12f354f32b88d197",
+      "gitBlob": "165bcb42a2fb91553e2049bc087ec199903993ff"
+    },
+    {
+      "path": "packages/platejs/src/internal/plugin/getPlateDecorationSources.ts",
+      "sha256": "420941860ea1976b72cbc76b10115f431a09d81494cb9917b171644c2389b97b",
+      "gitBlob": "972fec5d1c0534868290c83c1674bf988acb3468"
+    },
+    {
+      "path": "packages/platejs/src/internal/plugin/getPluginRenderAttributes.ts",
+      "sha256": "5e61e7db06541fca95f90e47d14878976d61c6b7c0f4282952b8567c97b06d77",
+      "gitBlob": "3dced39d8b408d37ab46527eb2b357ce2bd262d4"
+    },
+    {
+      "path": "packages/platejs/src/internal/plugin/inlineInsertion.ts",
+      "sha256": "8390838cb6f4e893dd80aa3824f96f8bf7c11d87d9b6595e1604fcf07b749df7",
+      "gitBlob": "8745bc6ab50faba45a3f65af3d803f35c37a5d3e"
+    },
+    {
+      "path": "packages/platejs/src/internal/plugin/insertionAnchor.ts",
+      "sha256": "32eaf278ebeaae8a7cd4e6dab42cf10cb604593c6c895b2001e180e82a62c7b9",
+      "gitBlob": "88641a9f626646fbc4621e28fe7bc9ca79a8de57"
+    },
+    {
+      "path": "packages/platejs/src/internal/plugin/isEditOnlyDisabled.ts",
+      "sha256": "4e36192e23d3b6da44a74e71c680ff5f6b2a08d834582b6422452bc0b1682960",
+      "gitBlob": "a598dd5b9e951ac2f6554ec313ae656d574a57ae"
+    },
+    {
+      "path": "packages/platejs/src/internal/plugin/markdownParagraph.ts",
+      "sha256": "b063b578d40962f811133c2e5ed5f44bcb227fe6c81fd77bdae9e9bf0a7a81f3",
+      "gitBlob": "2afef9f87165931737ed66dedc587636cf6b8665"
+    },
+    {
+      "path": "packages/platejs/src/internal/plugin/mergePluginCapabilities.ts",
+      "sha256": "0ca95e862693c47801bf5d4d851a57c372bb2f2b11f3837d5db9281b15ee861d",
+      "gitBlob": "a621708ce35e5536003cc8f3941d2771b915b992"
+    },
+    {
+      "path": "packages/platejs/src/internal/plugin/pipeInjectNodeProps.tsx",
+      "sha256": "3c814939e87ad111f3acbcf0844c6e4322c51f4cefcbd634bab0b1585a4a228d",
+      "gitBlob": "77349e886fd46707fa1f8538401e2ffb97139726"
+    },
+    {
+      "path": "packages/platejs/src/internal/plugin/plateChangeHandlers.ts",
+      "sha256": "2d3eacf98a11085d5dc98c52e271b21a082a4a688786c00db5929cfd53ab1d07",
+      "gitBlob": "650805b3d2ea8abc70da2594c2384725a1bb2785"
+    },
+    {
+      "path": "packages/platejs/src/internal/plugin/plateRuntime.ts",
+      "sha256": "efe9484349f1e19667b28d5eabfd2d628d336126f0312281260e3f308c7cd03d",
+      "gitBlob": "9ebfe2f5475efe50986216080e75df0fbdb45420"
+    },
+    {
+      "path": "packages/platejs/src/internal/plugin/pluginFormatOperation.ts",
+      "sha256": "9a6b8242f94c50eaa691236c96c0dbbbf0548de501c76f70e33afcc9438d7885",
+      "gitBlob": "98692de1c1ef3309beb388cc13d5349eb9820db9"
+    },
+    {
+      "path": "packages/platejs/src/internal/plugin/pluginInjectNodeProps.ts",
+      "sha256": "beb9d189ec815fef7ab72de88893106ae6d71559a7ed9424bd1e916f09fed95d",
+      "gitBlob": "9f1f1fc8a5800a96b6f43ba7999ba344e8249b2e"
+    },
+    {
+      "path": "packages/platejs/src/internal/plugin/pluginStore.ts",
+      "sha256": "67ff4b2b6d048c506941baa52cbe4034933384db56cd63d338e93175bbddd90e",
+      "gitBlob": "8b8dfb52d2509f749777c180b11d94c47211d89b"
+    },
+    {
+      "path": "packages/platejs/src/internal/plugin/resolvePlugin.ts",
+      "sha256": "48f02d146f061d5c3c549bbb79fb754f63fc31a4377fad967f0ac3c1c51f4c39",
+      "gitBlob": "6d2a71d99456106b86336a7b5ef21fddc59121e1"
+    },
+    {
+      "path": "packages/platejs/src/internal/plugin/resolvePlugins.ts",
+      "sha256": "cb2ce8e388079096b8a93e153536b48b22d48401aed91a984a8492d473ec1bbe",
+      "gitBlob": "a485bb3e81e932720aa09163f2d9eade51c3cbc5"
+    },
+    {
+      "path": "packages/platejs/src/internal/utils/isFunction.ts",
+      "sha256": "178476b6584dd037f8f87328864840935ba2b4a0ad2eee5d0d19348d43c15a01",
+      "gitBlob": "5826378ef19f5a5c1e8fdd4dd7ae6fe204852446"
+    },
+    {
+      "path": "packages/platejs/src/internal/utils/mergePlugins.ts",
+      "sha256": "34227ec7722a98d1ee7b0ab8b84d5e9f4cbe664a3dc07d306b53c89d55963245",
+      "gitBlob": "c46aa736f719ca6f1c76ecb53a7c1b58a4d715ce"
+    },
+    {
+      "path": "packages/platejs/src/internal/utils/snapshotApiValue.ts",
+      "sha256": "8992a1134bb88a6d9a9027f2d2fffbd8d36a4828c66046465a4746b423ad99bf",
+      "gitBlob": "51ca4ea90d4d5bbaa96c260d17cca9ec1c4e789e"
+    },
+    {
+      "path": "packages/platejs/src/internal/utils/urlPolicy.ts",
+      "sha256": "c03ff808f801bf783a8439f502001a05aea4a08256e4f1c218c10a97eeca643d",
+      "gitBlob": "276936dbf9762af84819d5c09492fcd80d2dc2d1"
+    },
+    {
+      "path": "packages/platejs/src/lib/editor/editorApplicationSchema.ts",
+      "sha256": "9bedb840251feb945ee2bd22981733a9259de717d1556b6121e9cd5fe1c544c7",
+      "gitBlob": "cd3cd89b118d256cd783011ed4103622bea1af16"
+    },
+    {
+      "path": "packages/platejs/src/lib/editor/editorUser.internal.ts",
+      "sha256": "70c3cdff4136703c8276907c59abe62d0f58b19635bcde0bf17b75cc62848cb0",
+      "gitBlob": "ed1759a7f916df42e382d984b0fe5b2e2927cdcb"
+    },
+    {
+      "path": "packages/platejs/src/lib/editor/withPlite.ts",
+      "sha256": "42660671d941c6bdca7717f9876ac46b49a4aee0495f12b4b98635d9f049464f",
+      "gitBlob": "a8ba9966cbcfc93a955c9b8c3d99944f30660a4f"
+    },
+    {
+      "path": "packages/platejs/src/lib/libs/zustand.ts",
+      "sha256": "b85d4e6c37b4bfc9f259e0971a9ecf682c7d04c12614c0dd3c007febe4a19fd6",
+      "gitBlob": "0da1ca96e984569aea4c0aa82e5880d455c28ffc"
+    },
+    {
+      "path": "packages/platejs/src/lib/plugin/assertNoPrepareDocument.internal.ts",
+      "sha256": "c8622d953027823fd742d9db70555c3d89c01b8ce99eb492f348ee30e5d5b139",
+      "gitBlob": "d25ebbb0e3f46f2f9dfaa4b00145d5a02ca49c72"
+    },
+    {
+      "path": "packages/platejs/src/lib/plugin/createPluginContext.internal.ts",
+      "sha256": "be9a4b6f1fb66e5df266f9ac116ed0a78b2f87a270f82ce916e4c1f8137d747a",
+      "gitBlob": "237ef7ff90f8e560fef3997344911566f6015192"
+    },
+    {
+      "path": "packages/platejs/src/lib/plugin/defineBasePlugin.internal.ts",
+      "sha256": "479dba8651ac897790fcd5daa3e6fa64df6d2c925a61868c94344f416cecdce0",
+      "gitBlob": "d98714d24f80a20468d8be1a61ec01092cff6004"
+    },
+    {
+      "path": "packages/platejs/src/lib/plugin/definePlugin.ts",
+      "sha256": "f23c41fe5c6715fdf9a34ebeb65ec62de1b0c04198a8263122b522f59b488a2f",
+      "gitBlob": "bea295f5b138dcb60061be0583cb6351adc213b2"
+    },
+    {
+      "path": "packages/platejs/src/lib/plugin/pluginAuthoringContext.ts",
+      "sha256": "56c2009fab9895a53e14c901ed558ecfdedc800c779d145d22ea4b0a5ad0839c",
+      "gitBlob": "46e9bcbaab62767a57d2a6d3d91c4564e8c7d2c9"
+    },
+    {
+      "path": "packages/platejs/src/lib/plugins/HistoryPlugin.ts",
+      "sha256": "c81886a32e5d6eb6b463066114c0920c650291bbe7f83840f3d560d935375125",
+      "gitBlob": "c02de8c73ea1c6cd26950fbcbc7a8d0b6be19fc3"
+    },
+    {
+      "path": "packages/platejs/src/lib/plugins/TransferPlugin.ts",
+      "sha256": "3d8c4263aca7074d00c46c95a3b9f6a8b5cc5b72626d6a087490c4780e1ffcfc",
+      "gitBlob": "3f6bc3e55d5be34fbe6fc30f9cd7d9732b4e434e"
+    },
+    {
+      "path": "packages/platejs/src/lib/plugins/affinity/AffinityPlugin.ts",
+      "sha256": "29a6d6423819e8feb51d755dbdced7164e0a2d499159e224fea2850805e3f10a",
+      "gitBlob": "8453b9473568dd520585d7855891e70621b1340d"
+    },
+    {
+      "path": "packages/platejs/src/lib/plugins/debug/DebugPlugin.ts",
+      "sha256": "9568b3f04af805cbcf0a58d1841040a8fae2895123735d80e931ce6b63623c34",
+      "gitBlob": "6e80e0540f1568759d34a81c7814361166bc0a39"
+    },
+    {
+      "path": "packages/platejs/src/lib/plugins/dom/DOMPlugin.ts",
+      "sha256": "0d5209f6a2d380d6fe3ba0759c589bc9c70cc5b52de4f9e4496f76a2c2d5312e",
+      "gitBlob": "18e697fb71558f37b6d3973be51cbb63809bd229"
+    },
+    {
+      "path": "packages/platejs/src/lib/plugins/dom/plateDOMPlugin.internal.ts",
+      "sha256": "22597352689cdb64134d5ec422b7cb6a411e8ed417d96441d276c593016bb7a7",
+      "gitBlob": "6554dbffceadd6436c21901540f654bf6378c192"
+    },
+    {
+      "path": "packages/platejs/src/lib/plugins/element-state/ElementStatePlugin.ts",
+      "sha256": "a7d097c723d31dc06de0e380ee6cd3fd11ea0f1628a810800af31ed190fe91fd",
+      "gitBlob": "ff110cabeced144439e5baa42f4f66b57057d2dd"
+    },
+    {
+      "path": "packages/platejs/src/lib/plugins/getCorePlugins.internal.ts",
+      "sha256": "64f0f2cb3071c25e4becb23c3aea3a2c3b95e552aae84b01ce42e21138a3fba8",
+      "gitBlob": "270b91421742022a5220375281510c1dc16b6637"
+    },
+    {
+      "path": "packages/platejs/src/lib/plugins/html/HtmlPlugin.ts",
+      "sha256": "235a58eccee41682d6369c6d24a11d187d431b1ed7376e629fc4ef627be3943f",
+      "gitBlob": "4eb5771104746233cbdd81491665690e7879b5f8"
+    },
+    {
+      "path": "packages/platejs/src/lib/plugins/html/htmlAst.ts",
+      "sha256": "9601638f93ff065250d9c5b8dc9fbf5eebf84effabe6d4b25bfdda3fb697c5b0",
+      "gitBlob": "c123a5aab1b24a10997bcae3dcea68268e26228c"
+    },
+    {
+      "path": "packages/platejs/src/lib/plugins/html/htmlDom.ts",
+      "sha256": "0b9d3b68f7d3272abf4da79c33165aa4dcc26cf3c6a3b3f95bd7b22b2b4fd0db",
+      "gitBlob": "0f1f0adccd4cd5371876f8eed73fa50b938ae377"
+    },
+    {
+      "path": "packages/platejs/src/lib/plugins/html/htmlMatcher.internal.ts",
+      "sha256": "be339cdd878b8d6fd4f5aaf79f6ef189a3f70895a029d055c08faca1898531ee",
+      "gitBlob": "16b4198323ef10c8eecbb0436f8df85e43bbb8e5"
+    },
+    {
+      "path": "packages/platejs/src/lib/plugins/html/htmlSafety.ts",
+      "sha256": "2071e088fa80ea9cdb78af967292c35009b3a20be0d5cd590ef3420a2fd2dab6",
+      "gitBlob": "09bde958a4f426d4113d36fc6d9678460fd1133d"
+    },
+    {
+      "path": "packages/platejs/src/lib/plugins/input-rules/InputRulesPlugin.ts",
+      "sha256": "673183af097ac1545f9c945731fbdb02ab0d5b403b294fdc3e901954773c3537",
+      "gitBlob": "988a9656d9b7e9c6a292eba3f32da89e6c010352"
+    },
+    {
+      "path": "packages/platejs/src/lib/plugins/input-rules/createInputRules.ts",
+      "sha256": "ff09f5211884eded786f6c528328c6d2056fb210c3ae4cd3b0a75bc12503b84d",
+      "gitBlob": "edb08e8236a4575383f927aa1a9ac96b9c4bee0f"
+    },
+    {
+      "path": "packages/platejs/src/lib/plugins/input-rules/defineInputRule.ts",
+      "sha256": "1e00b02cc31db8b263e447b0a5acb2552f6740d5a75fcd9d47bd50e90c10395a",
+      "gitBlob": "f4b3c87178f03d5298da1748f78c5ea9dfb97e5c"
+    },
+    {
+      "path": "packages/platejs/src/lib/plugins/input-rules/inputRuleContinuation.internal.ts",
+      "sha256": "893e33e25365954464fbf968e886c14821bdfe6f782919a4a0a62534571e8e91",
+      "gitBlob": "4e73786b0935608725cddf600e296ff350203690"
+    },
+    {
+      "path": "packages/platejs/src/lib/plugins/input-rules/inputRuleVeto.ts",
+      "sha256": "d742aa87eeb89b80f749d2219196d49426155ee5d02cccc854e5f67dd681fbed",
+      "gitBlob": "a4b070d5159d6d9983c0cc9eee46bbcc9c268ca8"
+    },
+    {
+      "path": "packages/platejs/src/lib/plugins/input-rules/markInputRule.internal.ts",
+      "sha256": "5ad4fc8d6221a3997911cf7cfe33e2ca5a74ef73d4322db2e9efc40a755ecdda",
+      "gitBlob": "0e68828388ea91cba136f6c004c5923c721bbeb4"
+    },
+    {
+      "path": "packages/platejs/src/lib/plugins/paragraph/BaseParagraphPlugin.ts",
+      "sha256": "683b4fbf02f6badd5082af3a15a1c0a77898da8448c66cde470daff53adceed0",
+      "gitBlob": "cd9aa9acf2318588d1516f8aae3f1dcd53bf40e1"
+    },
+    {
+      "path": "packages/platejs/src/lib/utils/getInjectMatch.ts",
+      "sha256": "c68a8afea128018e2b275a134929763e528253a28d342066a0432356a932db1e",
+      "gitBlob": "74635a8249ff8a3a398c7c98126fd4b57b597dd1"
+    },
+    {
+      "path": "packages/platejs/src/lib/utils/isDefined.ts",
+      "sha256": "050cef1de3b18375c98c6d0260ddf4fade436007523d708adf96516a28afe906",
+      "gitBlob": "30e45816d08a67994f55d5231af1e967aeef6397"
+    },
+    {
+      "path": "packages/platejs/src/lib/utils/pluginNodeClass.ts",
+      "sha256": "2aab19e6612b0ae17a05c390380fd75a7fde8c44656ce9b610b38689404b089a",
+      "gitBlob": "e8cebbfc25ad77a783d76d651e76e8db62c51d5e"
+    },
+    {
+      "path": "packages/platejs/src/react/components/EditorContentView.internal.tsx",
+      "sha256": "d29a2267e79da614756bb50b55ec5ed233f64c14d4660ab9d3b93a14d06ca5fc",
+      "gitBlob": "33095a1cd66428f0f46d8c3a5c2de8ef4bc64ecd"
+    },
+    {
+      "path": "packages/platejs/src/react/components/EditorRefEffect.tsx",
+      "sha256": "1fb323d3471deb18bc925d3e565a6a46a902e7daf1143d00774b9ff09ef1bb32",
+      "gitBlob": "e8dd42b4cf16cc26e64a58a836f0a4b70a84ed9d"
+    },
+    {
+      "path": "packages/platejs/src/react/components/Plate.tsx",
+      "sha256": "87bef8cbda361b2c22efbe0759e813744037d68ae07c697a870dd872f583948c",
+      "gitBlob": "c4f4a0be5cd58abff81bd2c269063ba8feb646df"
+    },
+    {
+      "path": "packages/platejs/src/react/components/PlateContent.tsx",
+      "sha256": "20f1a2162b21dc5f38086d9824b4b41370dd1ae0a68d86bed56e8360235f510e",
+      "gitBlob": "614bb52d015ef6523c71f7e85c41fb268b5c8484"
+    },
+    {
+      "path": "packages/platejs/src/react/components/PlateRoot.internal.tsx",
+      "sha256": "4d2d7309a4a1700466e58c5ea492b6541e3fb42971117f83f8fbbdf686257ccc",
+      "gitBlob": "1e4516fad7110004cafa4d39e4910cdc5d47df89"
+    },
+    {
+      "path": "packages/platejs/src/react/components/plate-nodes.tsx",
+      "sha256": "e904d3374cd983a8723f435acade29b143901b914e3f2b1db70699e1c79ac47d",
+      "gitBlob": "1afb3602f942cda0151b9a53f0e9f89ecc65dd26"
+    },
+    {
+      "path": "packages/platejs/src/react/editor/getPlateCorePlugins.internal.ts",
+      "sha256": "31e0cf70674ec5f9e2d5db59777f24a035af75b753528b7baab031b4d1140052",
+      "gitBlob": "7aaecc5db22f35afe179e49aa343a1ec3cc0e50b"
+    },
+    {
+      "path": "packages/platejs/src/react/editor/useCreateEditor.ts",
+      "sha256": "b1678b65f8af7c97833cf4ae13271f81fc9213a4b34558868d8a034d867bd7cd",
+      "gitBlob": "42f01aab5a7776f04bf0fc7e8cf6d3c7d4d0c8cb"
+    },
+    {
+      "path": "packages/platejs/src/react/editor/withPlate.ts",
+      "sha256": "4583f5ed0e37101a6529a3f30e1329451631552dc476a375a250810f2293570d",
+      "gitBlob": "9e74d7a10ef14f660c907776b148924cbef40aa9"
+    },
+    {
+      "path": "packages/platejs/src/react/features/basic-nodes/BasicNodesPlugins.tsx",
+      "sha256": "6036e2162f4bb4ffe4f89bf4a1a410ade7e69443c65279d1bc8db8f8d3b130b2",
+      "gitBlob": "93a234c7f3f14d88fdf45bcea7d9058c1c82f8ea"
+    },
+    {
+      "path": "packages/platejs/src/react/internal/block-redraws.tsx",
+      "sha256": "7960f02b38831582032760b8fec0e070a662badff2d57a0a75b536f403835e0f",
+      "gitBlob": "965f0788ad774ddfdb67172f65028458ae644caf"
+    },
+    {
+      "path": "packages/platejs/src/react/internal/createPlateTargetScope.ts",
+      "sha256": "0f72b299c0fd60e0d0eb7135898a4d56b0abcd78411c8ae441683a672c29ae50",
+      "gitBlob": "5516f618fc8e8a21d301b699588229c8f73a0829"
+    },
+    {
+      "path": "packages/platejs/src/react/internal/getPlateEditorInstanceKey.ts",
+      "sha256": "75b41ca7450e57f92c627b5fa6574d4c4eb67d2cc948e6c50b9cb85d19bbf92a",
+      "gitBlob": "a19f967e6c0790e9ed377f8c3e462b378a3adf7f"
+    },
+    {
+      "path": "packages/platejs/src/react/internal/plate-context.tsx",
+      "sha256": "7f6974af0698cbddce0926dfe4b7cf527ab6e997c810561a6a3b4f9b13e3719c",
+      "gitBlob": "6181195bd86b288f378335fb13da8751db0aca58"
+    },
+    {
+      "path": "packages/platejs/src/react/internal/plite-components.ts",
+      "sha256": "9005da8ce733d0841177e67c0932b1faebb5cad26ccd6e50405912b5eee3aadf",
+      "gitBlob": "fce44eccd2a7a507663137bd6c97ffa0bf879e55"
+    },
+    {
+      "path": "packages/platejs/src/react/internal/react-helpers.tsx",
+      "sha256": "35638e4ffb2e97916c72b2e3afbb444f45ea015e93b5ef5b227e61aea1c8f777",
+      "gitBlob": "6fcd9c9f91b825c4193625c8803ecbc5c0d7c9a9"
+    },
+    {
+      "path": "packages/platejs/src/react/internal/rendered-attributes.tsx",
+      "sha256": "cea564bee793da94eeaa5d6ae4b28e10b2e51936ea8d229148e5cd50fad701d5",
+      "gitBlob": "15ce450c7f741d6755a172d614ca13250483ae53"
+    },
+    {
+      "path": "packages/platejs/src/react/internal/useDeepCompareMemo.ts",
+      "sha256": "a634b05a82b1f567f0b4139a83e8deea30116d2e555dbcdfd09ebecb913109e2",
+      "gitBlob": "b85b4b5ad069877b59bd998626d447a0f9449766"
+    },
+    {
+      "path": "packages/platejs/src/react/internal/usePlateInstancesWarn.ts",
+      "sha256": "91012f7078da2694700712e25fd2473e5e0b3ef76ca608674212ae37ea9de937",
+      "gitBlob": "1f09ec5ed407515fc3be13c424009eb3713c4c89"
+    },
+    {
+      "path": "packages/platejs/src/react/internal/usePlateModelRevision.ts",
+      "sha256": "629f050703809231935eb27c6844c6f51c0862a1027c369083d07d5c09a03e94",
+      "gitBlob": "d08241945796c2724554ea00b3d240bf5f5f0d14"
+    },
+    {
+      "path": "packages/platejs/src/react/plugin/createPluginContext.internal.ts",
+      "sha256": "e05f94e8fa9b952076b681fd421f35956701f19c689b2e614a25eaec273a86f1",
+      "gitBlob": "b8d203fca1400d9d721b673d199ffb2a2dad6b96"
+    },
+    {
+      "path": "packages/platejs/src/react/plugin/definePlugin.ts",
+      "sha256": "e9e0843038d9705b7dfffb0c50526d2c70a6d8772123a0cbf9cf320dba48437c",
+      "gitBlob": "d6930ee79477ed328af1a2658d3fd192cc73b811"
+    },
+    {
+      "path": "packages/platejs/src/react/plugin/toReactPlugin.ts",
+      "sha256": "eb61a7b4c5e2e103ce4438e43182605edc38c09566a18f3bb4acf04ebcdafc4b",
+      "gitBlob": "d5e1b7c9aaaf35ee1d566690871fca8b5736ddbb"
+    },
+    {
+      "path": "packages/platejs/src/react/plugins/navigation-feedback/NavigationFeedbackPlugin.ts",
+      "sha256": "d328a2aeec634c04007d85728ab1fe1a7cb673280737ea7f4407044be25653fe",
+      "gitBlob": "1da57cfe375533437550be06f5a377832490898c"
+    },
+    {
+      "path": "packages/platejs/src/react/plugins/paragraph/ParagraphPlugin.tsx",
+      "sha256": "54dd72676b6874b1fc86a1def4080b1fcbf05134576515285f0e34a9512ca46f",
+      "gitBlob": "c874ee71289716ec797f790f379906947a1c9cac"
+    },
+    {
+      "path": "packages/platejs/src/react/stores/element/useElementStore.tsx",
+      "sha256": "da2242a65c5b03aff7892684a8acba50e80cc6b89c2d967fa70abdb470e19b62",
+      "gitBlob": "8ad52e86415afdefc5d3773929ad7d94c2e2ea8e"
+    },
+    {
+      "path": "packages/platejs/src/react/stores/plate-controller/document-focus.internal.ts",
+      "sha256": "07c2525c287b5dd4e1e6471c026003b3df7ada6e7702a4e0ad43b56b7fcd01c3",
+      "gitBlob": "4054e49b461ae6f0a9fa73d54488c69e03b98364"
+    },
+    {
+      "path": "packages/platejs/src/react/stores/plate/useEditor.ts",
+      "sha256": "c9a6cfc63e0960a6b41944e1e11c756a2db4aecb76f8e120e1f00faeb57da666",
+      "gitBlob": "e2badd462ee1aa487724912f5b1e2288023a0381"
+    },
+    {
+      "path": "packages/platejs/src/react/utils/dispatchPlateShortcut.internal.ts",
+      "sha256": "b83a9323ca4de135c0e1ea43e0ecf97236aece3c9d179434d291b37cc3460d4c",
+      "gitBlob": "5644eaa68b14540579dd419c7ad10a2893736702"
+    },
+    {
+      "path": "packages/platejs/src/react/utils/dom-attributes.internal.ts",
+      "sha256": "368151f3e67e94ad7d042458147f28324010312d7c5e5b7b53d6d1604215392b",
+      "gitBlob": "5098d60154e20f80019068044f4616097382c8ab"
+    },
+    {
+      "path": "packages/platejs/src/react/utils/editableKeyDown.internal.ts",
+      "sha256": "f4f9a0d7adfc47971e8dab0bbe625a2013a69568a77cac5e9f0694fd44d3c451",
+      "gitBlob": "95b190dcfbf4ff8f3b9aea54b4d3583d40156bb5"
+    },
+    {
+      "path": "packages/platejs/src/react/utils/getRenderNodeProps.internal.ts",
+      "sha256": "b6fe175e3de8384f7f3c451d385102b746aabe8018b6863a74c64a2440567e6c",
+      "gitBlob": "4445272fd7dbe678173e238e24491c4cff53eed6"
+    },
+    {
+      "path": "packages/platejs/src/react/utils/pipeHandler.internal.ts",
+      "sha256": "cdca214a190ca8a66b14f0e4ede2e16308d67354304c51132e294e34a06476cc",
+      "gitBlob": "87efdcc06ddb00750360258b80cf4ff812724594"
+    },
+    {
+      "path": "packages/platejs/src/react/utils/pipeRenderElement.internal.tsx",
+      "sha256": "eabc0368e9f2fdbf56d764369307d499b26367bba631172fbdbf9eea97c25a12",
+      "gitBlob": "9e7038e342c65c74f0fd427286198d4a5cd9e3d6"
+    },
+    {
+      "path": "packages/platejs/src/react/utils/pipeRenderLeaf.internal.tsx",
+      "sha256": "d8258ce382f795cdba8f62e9492ef11563bc469111eb4c47cf930b107104f28a",
+      "gitBlob": "76a88a664fdb7e752b9d05c4449a4beb11900b7c"
+    },
+    {
+      "path": "packages/platejs/src/react/utils/pipeRenderText.internal.tsx",
+      "sha256": "53e14d9f2acd40e0fc849e928b8f249b400276699bb50be6b037421c07dccf16",
+      "gitBlob": "cd4c4de7466c3805eeb602b248862dd1d9e58123"
+    },
+    {
+      "path": "packages/platejs/src/react/utils/pluginRenderElement.internal.tsx",
+      "sha256": "1d9bb779458c743123ea497a26bee4d69d81e2045ed3051af8b69c1835537989",
+      "gitBlob": "2309ea89b068673d1bbe2fef37d271f71f42918c"
+    },
+    {
+      "path": "packages/platejs/src/react/utils/pluginRenderLeaf.internal.tsx",
+      "sha256": "e61719713e0b7e313b7d791d60183f0150ecc9b7cebfa93a1a4dbd973aa478c6",
+      "gitBlob": "df77157f662c17ed59586ff53b738b90644d2ffc"
+    },
+    {
+      "path": "packages/platejs/src/react/utils/pluginRenderText.internal.tsx",
+      "sha256": "d89ad44dbc31faa4bc04e869b5d6c5016898f17b28f3352ecf7404be38d78bfc",
+      "gitBlob": "1e6da83e85f3910088af7cdebf5a14696f76f023"
+    },
+    {
+      "path": "packages/platejs/src/utils/plate-keys.ts",
+      "sha256": "69265ae265d2e9f32427fad85dd75f9ea993fa477935579a06b085d844f25c23",
+      "gitBlob": "6f46d5a4f91ed04537adad6f86a2ea9891f111a4"
+    },
+    {
+      "path": "packages/plitejs/src/core/anchor-state.ts",
+      "sha256": "a8aac9bf997997dc51706a05eabae2b5230e26d63346cd4e7fb10d2579b35d70",
+      "gitBlob": "8f4502f48af64bc571dee1969c8adea8a2793dfa"
+    },
+    {
+      "path": "packages/plitejs/src/core/anchor.ts",
+      "sha256": "e477f2ecdc650914276f1f63254f1c9a2538c5d98085f943bf923e6d8a279888",
+      "gitBlob": "5daf84c547f3ba00aceeb1b70a379883ae90acfc"
+    },
+    {
+      "path": "packages/plitejs/src/core/authored-document-capability.ts",
+      "sha256": "28d05f90ab78adb39c78e99825c883a5d5a90859c86fbc45ee2b79ab13817589",
+      "gitBlob": "0bb9df36e6870b6e10e742ef95f87eedaa8f15a7"
+    },
+    {
+      "path": "packages/plitejs/src/core/authored-runtime.ts",
+      "sha256": "9da2902bfbf3c9e56cac519db57448239590e509e7586747cc973aa85143aa11",
+      "gitBlob": "f4eff872452b690a2fb502179e90bf89b8454280"
+    },
+    {
+      "path": "packages/plitejs/src/core/change-events.ts",
+      "sha256": "1d94acd9c39ec6481e178a66615a4f2d53ac854c0f2a24075631d31a3b70820c",
+      "gitBlob": "55d63f5bacfadf69d95d962a108f75b923dff0df"
+    },
+    {
+      "path": "packages/plitejs/src/core/change/builder.ts",
+      "sha256": "bc8ba624de076e6b73d9179d7628f40a5b815814dee212c2c2e8b66d6c27833c",
+      "gitBlob": "a6dbf389e11dd5bba765e7020c19bc4bf3b69b4d"
+    },
+    {
+      "path": "packages/plitejs/src/core/change/carried-projection.ts",
+      "sha256": "4f20fd647571a1cbb6d4decd3bdcb1e719731bedfb0378875d82d779f05a58dd",
+      "gitBlob": "3f5a3b29aba58f3f90196af08f6bf364bb72ae8d"
+    },
+    {
+      "path": "packages/plitejs/src/core/change/carried-run.ts",
+      "sha256": "a74a6c69cbab2e49ac2300c6aa64e6389bc7f1fc18d16a2aec5bd203540b7982",
+      "gitBlob": "c3610bda00dbe2e9237bc8d92faa870e1fbab37c"
+    },
+    {
+      "path": "packages/plitejs/src/core/change/carry-program.ts",
+      "sha256": "dee528349f5bd942d53672c1a99409e654b33f3e7d539a5ac1be1dc50f260847",
+      "gitBlob": "cb0214da92a1428ff0ea0bd316c77b6e41ac3637"
+    },
+    {
+      "path": "packages/plitejs/src/core/change/classification.ts",
+      "sha256": "48ebce3afbd1c3939e84229479f75cf9f5c1663113ef90c03d329ac3bd8f2ff2",
+      "gitBlob": "45c5d68f924ae9760eab0cd09e971b5c4a8598ed"
+    },
+    {
+      "path": "packages/plitejs/src/core/change/document-change.ts",
+      "sha256": "f90ffd59e44b87ea0f91f44ec2ebd271b8a8f9a68d966fe5795e805e567c3204",
+      "gitBlob": "d29521a58b78f7fa71083224757fb385d7fb357c"
+    },
+    {
+      "path": "packages/plitejs/src/core/change/document-index.ts",
+      "sha256": "c83e886b8f39ebd101f12129c74b97523088c83e394df685c07cad1ec6eb566a",
+      "gitBlob": "f99850f9f406fa39e6561a14bb0f69a6fd7660fa"
+    },
+    {
+      "path": "packages/plitejs/src/core/change/enclosure.ts",
+      "sha256": "c8f59dd177fda5d6b711270fc698e77a385254f64940954e9cc658a584a0aec5",
+      "gitBlob": "69274b325ac9b42c41cf7d6494a37391500494b6"
+    },
+    {
+      "path": "packages/plitejs/src/core/change/join.ts",
+      "sha256": "68ac02927e32de3b073fdc52dbb7bbaf8a641211eace45b9b8e8263b325568c0",
+      "gitBlob": "a98d17426dd5f73716e24e181492384a910af36f"
+    },
+    {
+      "path": "packages/plitejs/src/core/change/json.ts",
+      "sha256": "ceef1fc1430b73efd0f191ab6fb2896dc348599c5eb419d6c32bcc60d35b16bb",
+      "gitBlob": "c29dbe52531c1abff3582d8146ba76d262952b60"
+    },
+    {
+      "path": "packages/plitejs/src/core/change/lazy-root.ts",
+      "sha256": "4012ab29684c11ee2056ff18292661d7c56c31e6339aba769dff23ea86fa0c47",
+      "gitBlob": "6dc44809c7e68c8574eada1e1a8290a6af1a814d"
+    },
+    {
+      "path": "packages/plitejs/src/core/change/lineage.ts",
+      "sha256": "44f11a01c9503ccbd3d4100237586fadff3a57c6fdd40ad96bbae0d70a3ca763",
+      "gitBlob": "5a55d8e569b3ddbb08b5d81a07d68557b1cc7b6b"
+    },
+    {
+      "path": "packages/plitejs/src/core/change/mapping.ts",
+      "sha256": "b120f56b9fe88a81faefda6e3ee2f48a3b51aec47b85da0bdc52b1d03685104e",
+      "gitBlob": "fde55444a898b781fa948334576be4deb03a4926"
+    },
+    {
+      "path": "packages/plitejs/src/core/change/new-letters.ts",
+      "sha256": "b8734ff8b8210bce4aae7272e108650c9f0f0f9b813a7cd991d8c8b2f1580f0e",
+      "gitBlob": "bd82fd24678605d08f3e3ca69281f9e46dea8e8d"
+    },
+    {
+      "path": "packages/plitejs/src/core/change/range-association.ts",
+      "sha256": "aaeaf32b178d6e23487079424e73dc8048725a4699e1599626161f1d7c8e33ee",
+      "gitBlob": "df6e6f2cab1465751712f3c0dcca4f3e04009b39"
+    },
+    {
+      "path": "packages/plitejs/src/core/change/read-back.ts",
+      "sha256": "24bf9deaf1b4a35996b396abc31af278179a17bad85e5555ed2a836f5f2c824b",
+      "gitBlob": "228cc2c834cb1c9aa886ad757bb7cde987100681"
+    },
+    {
+      "path": "packages/plitejs/src/core/change/root-change.ts",
+      "sha256": "6498185c051da3c3712883c207a6db4a4812a0d7f06a1583516ecab998a0af7c",
+      "gitBlob": "b5fb89ed2663fba49cecc158c3b2d32125e0182c"
+    },
+    {
+      "path": "packages/plitejs/src/core/change/text-splices.ts",
+      "sha256": "6869c3d1c072b957c362d4c09903c44cda925ee0965373f802944e79b8ffdea9",
+      "gitBlob": "9d9e7eacb9c566e2f6f67cedd17c05e59253a9c0"
+    },
+    {
+      "path": "packages/plitejs/src/core/change/tokens.ts",
+      "sha256": "601773f112a5f27bba4422817fec817a66068ffb1dbb038d8f4f0144eb86ab1f",
+      "gitBlob": "0cf99f8722f99d5ce13929ffad3a6a3c43a6ea05"
+    },
+    {
+      "path": "packages/plitejs/src/core/change/transform.ts",
+      "sha256": "b4323cc687ab0a3b9bc66e142e8cd62790aab3d2b46d0748418ff2ca002af2a7",
+      "gitBlob": "8ba1809dcb1f195d1a87cde99926ef16347201bb"
+    },
+    {
+      "path": "packages/plitejs/src/core/change/wrap-fidelity.ts",
+      "sha256": "ca9326b9fca7f94b0aa69bb33d1090b2a0ea04c6b799e36c30974b005bbf3ef4",
+      "gitBlob": "a163631f37452a9c0c78e78e44eb98142235f342"
+    },
+    {
+      "path": "packages/plitejs/src/core/clone.ts",
+      "sha256": "55b3cdbe6871ce104d54abcb562e945ffba96104a834924eea670e8cd3034312",
+      "gitBlob": "c9dbcf91648d58391f0ab4796e1720920c8b4e66"
+    },
+    {
+      "path": "packages/plitejs/src/core/command-definition.ts",
+      "sha256": "30176ffe91105a23581eeb33aa51f06aec3766d9aaeb9c0df320723ff7482ae2",
+      "gitBlob": "6c7b8f8a7473421f212312d4aefc625c551d3cd3"
+    },
+    {
+      "path": "packages/plitejs/src/core/command-document.ts",
+      "sha256": "5af9d12bcc5605dae62a922af341fc46399a8c7cbb9cd74b50dccfddb956861d",
+      "gitBlob": "6f0ae491f31901ccdd2fb6e96c43412adfd05230"
+    },
+    {
+      "path": "packages/plitejs/src/core/command-frame.ts",
+      "sha256": "b43603d2d2f7662eb0678af54bf63330ee3730f0523b1289c8d594fbc7b25fa4",
+      "gitBlob": "28ecd6afc0941f4b20a492fcbf4b51a41e8a450a"
+    },
+    {
+      "path": "packages/plitejs/src/core/command-registry.ts",
+      "sha256": "97d86a12419a92b8a1205528ef7a1822edd26e156a56dde93b4ce21f98184417",
+      "gitBlob": "ad0099a50e28635a83d874c41dc6e4f9398ac32e"
+    },
+    {
+      "path": "packages/plitejs/src/core/commit-publication.ts",
+      "sha256": "0b9d402cfe8a14ec69bb5deb291d5e3a0e159aea3c39ca5c13a982c1c0468e37",
+      "gitBlob": "dd06566b96d3b9a646e86fe47c6112df7c23bee2"
+    },
+    {
+      "path": "packages/plitejs/src/core/commit.ts",
+      "sha256": "0490fe396c59ad49f6972f5fd045f4364e07252f75d65c291d6eb0b8a22d34a8",
+      "gitBlob": "a17eef46cd45f59ffebeca786623e8bbeee6f259"
+    },
+    {
+      "path": "packages/plitejs/src/core/composition-stamp.ts",
+      "sha256": "311fbddd2ff370832b43c805f9643a6634aa6321d2cad2941e69e61612775d35",
+      "gitBlob": "bb8f6a67ffb7e84719da8acc8613bd0703690fc4"
+    },
+    {
+      "path": "packages/plitejs/src/core/content-completion.ts",
+      "sha256": "e61a37c154e171601226e3ac587da2548741357d218a0992d4447e41451cfb1a",
+      "gitBlob": "77c479205c38360eadab08cd2140b97a974f0b3c"
+    },
+    {
+      "path": "packages/plitejs/src/core/content-landing.ts",
+      "sha256": "182d0ec741d127cfc22af0b2d74cc260170ae6eb59789612e47a3744da25170f",
+      "gitBlob": "cf571a1aee81a6b1986095d32c332301f3f0de7d"
+    },
+    {
+      "path": "packages/plitejs/src/core/content-slice-roots.ts",
+      "sha256": "8cd78937cd33149fc9d553e50973e31411e729e48321a12665cd5669c3c6e540",
+      "gitBlob": "9b7518a5f8137b4f7d297ed2bf4eae90a5d6b09d"
+    },
+    {
+      "path": "packages/plitejs/src/core/content-slice.ts",
+      "sha256": "169f071da0831df28d6b95d1e0114dccd50a6482abaeccc495f6ea638fde400a",
+      "gitBlob": "e24f5cd938acc87d21d9cef993a688d2d30e156b"
+    },
+    {
+      "path": "packages/plitejs/src/core/content.ts",
+      "sha256": "a7d12f97d3ea6f4b2b0654fb02c3c1e1377e374c18ac3edc4bc21e94586740fe",
+      "gitBlob": "513414b62bd69a5655f8677ad56c53b179edfa67"
+    },
+    {
+      "path": "packages/plitejs/src/core/correction.ts",
+      "sha256": "b6ad85bdbce8eb761b44e6767e030aee039ce438843a2a41e3a750abdd0d65f8",
+      "gitBlob": "ba23e7ddd02ebb42fbb440540b8f5ff8abeb2c91"
+    },
+    {
+      "path": "packages/plitejs/src/core/default-storage.ts",
+      "sha256": "e6faf8d141ed822eaff7375e375b25af2cdb15b63cb0d988ac5ecde3e6b2e76d",
+      "gitBlob": "53834099a25abf12f449fedef455eceb9b7a477d"
+    },
+    {
+      "path": "packages/plitejs/src/core/document-admission.ts",
+      "sha256": "1522ed74f7f30606ec68d1150bc5edff79cc0c12a5806e4622a4be4f59c00d11",
+      "gitBlob": "6d29bb139d939f810931ae4d3468e0bad123cabb"
+    },
+    {
+      "path": "packages/plitejs/src/core/document-recorder.ts",
+      "sha256": "97583be5105063701f7467175d8a74161cbb07901214da7254deed8c027b093c",
+      "gitBlob": "00f5f630d0c1f77bc5b293187081cfd4a1bc2ca3"
+    },
+    {
+      "path": "packages/plitejs/src/core/document-shape.ts",
+      "sha256": "651efb55dd8a6eff19cf74bfc98ac63a93036786715927a932526330578a3731",
+      "gitBlob": "ab4456c5a3986c8790d73e3b9247e8c090572410"
+    },
+    {
+      "path": "packages/plitejs/src/core/document-view-read.ts",
+      "sha256": "22f3b6c95addd65b0fba349253e82bd01279b187e16aac4dd30b861af1697b13",
+      "gitBlob": "d29aeb673f924f2da7ef3e92d3dba08af8f1549c"
+    },
+    {
+      "path": "packages/plitejs/src/core/draft-track.ts",
+      "sha256": "92c2186540d81b9ea72e1735a79d0537cf9299f1093db6eca62395d1a81642a6",
+      "gitBlob": "b7273036f4b01524e5213009d52cab02ad482ae2"
+    },
+    {
+      "path": "packages/plitejs/src/core/editor-commands.ts",
+      "sha256": "3fcfb13c2a8e58bd390b9dc3b65f1afe7dbd2d5da9f5f56199602d89b15b6c1c",
+      "gitBlob": "4fc707f5c953dad2000e07a892143e086d2e06ca"
+    },
+    {
+      "path": "packages/plitejs/src/core/editor-lifecycle-api.ts",
+      "sha256": "dfa661248c08fde27a9fd73c1d2a002976e222a8e065de8c8b9770f83ca3caac",
+      "gitBlob": "0b56523bd7750a12d4e84dcbdd25879c42c78aab"
+    },
+    {
+      "path": "packages/plitejs/src/core/editor-lifetime.ts",
+      "sha256": "9001fff7939c85dc5de2e33cc47befd622142a95f56568c11af7ed5fca98f954",
+      "gitBlob": "563133342dc920905914b0d9bd534b3e616bcf04"
+    },
+    {
+      "path": "packages/plitejs/src/core/editor-owner.ts",
+      "sha256": "f01c7e87b97c4ffff3b1402fcf4b109d3899d213211c535e131e3048e4c4bd85",
+      "gitBlob": "d8aec90e82b650c4c80ed1a183830b6010eeb0c7"
+    },
+    {
+      "path": "packages/plitejs/src/core/editor-read-execution.ts",
+      "sha256": "37173ac709018144d056512a4872086e5593fa2b80d9068e7b62e752fee0096d",
+      "gitBlob": "56c8117c97d1c55aaef4030536ad3a361a3728ef"
+    },
+    {
+      "path": "packages/plitejs/src/core/editor-read-runtime.ts",
+      "sha256": "0dcb4c265e511b6f0cd9f9e21d8aff3429227ec186ca322b39a2bb75961d545a",
+      "gitBlob": "78042778246586b87939769d2122e430da6ce5b3"
+    },
+    {
+      "path": "packages/plitejs/src/core/editor-reads.ts",
+      "sha256": "10448b9da07a77d4dee2fb2e7c53c6f76b47df64975ebf13c2381605ecff7b16",
+      "gitBlob": "95f23212938a3bb3805edf5cdb7b84c4edd33f2a"
+    },
+    {
+      "path": "packages/plitejs/src/core/editor-runtime.ts",
+      "sha256": "17311d1150fc8e20624bb0ecf6ca47d61cab7056dd6f4081783b9d5cb51b50aa",
+      "gitBlob": "2b55c746622d091c2657af19f92c4830fb4d8644"
+    },
+    {
+      "path": "packages/plitejs/src/core/editor-schema.ts",
+      "sha256": "bdca3955eac4c15401e98caf4d544121e2648df8e71125d9785a3774b778ac27",
+      "gitBlob": "8f9bd06923b29b9839ec713ab341922b8e60f918"
+    },
+    {
+      "path": "packages/plitejs/src/core/editor-view-lifetime.ts",
+      "sha256": "1774a913822388c8355a3a831811a6606a8733c411eeaf0698d9c41cb5f1263a",
+      "gitBlob": "b960c2ce36ac04db2db9df4c275ee4d55af5e6ea"
+    },
+    {
+      "path": "packages/plitejs/src/core/element-owned-root-index.ts",
+      "sha256": "85339decf0b033536f688c433c6ba888a586f9d8b77e251d72d895f18e13795e",
+      "gitBlob": "0bb4c2350117ac5dcdd9abb368e05e7b063fa2d5"
+    },
+    {
+      "path": "packages/plitejs/src/core/get-content-slice.ts",
+      "sha256": "f20ad1122ccf5a5ef53510a175cd87a5ebaf481c41f120d0f9e23d55f61ac044",
+      "gitBlob": "0cb1f0ec4ef176bb77b7f90e7d4ee75901db1ef9"
+    },
+    {
+      "path": "packages/plitejs/src/core/get-fragment.ts",
+      "sha256": "8f15a4d76aac3ec5511d436c9ba04bc301f2a33c2f2dc0a39f9831fc90aec934",
+      "gitBlob": "ee0bef2979c4caf551f89c453bd09ada74974421"
+    },
+    {
+      "path": "packages/plitejs/src/core/import-content-slice.ts",
+      "sha256": "1e782259df96e2474659e38f72409b17ac8df9e3361cbd603f7c67fa971b5221",
+      "gitBlob": "a9a006a9da729d9eed1498415ea2d2b2a717fcf3"
+    },
+    {
+      "path": "packages/plitejs/src/core/initial-value.ts",
+      "sha256": "581502896c48958b0c525e25167b3510d69479ee6b342311997ed19c0b0cc83a",
+      "gitBlob": "3eaa8c14343f31006731b49108557a68afb1a929"
+    },
+    {
+      "path": "packages/plitejs/src/core/insert-limit.ts",
+      "sha256": "2be23cc8cff983ac7ce766e1411accb1f8e6670ee9ef7a957350781d6733981f",
+      "gitBlob": "42f58b829529ba18bce03ceea1cf974942f9854b"
+    },
+    {
+      "path": "packages/plitejs/src/core/is-empty-element.ts",
+      "sha256": "0702575c52a0080ca23aeb50b178aa39836aa843e6bdc59f77ce2418a6432b6a",
+      "gitBlob": "552d75bf7ef5110a8a2f6cf5cca032f70e72e76e"
+    },
+    {
+      "path": "packages/plitejs/src/core/json-fingerprint.ts",
+      "sha256": "99c5c6121a1f897a817c955de2ce62130c1325c31c694d14c33091f71c56cbb7",
+      "gitBlob": "dd2d50881292bf41206a9df3755eed8c12aa0e3f"
+    },
+    {
+      "path": "packages/plitejs/src/core/landing.ts",
+      "sha256": "ea4afcd54e5c2fd7569a1b819667687f0dee27daeb8fae9000a74578a373e518",
+      "gitBlob": "2070ec007edbfb377d4c5d534c4a4800c2a15802"
+    },
+    {
+      "path": "packages/plitejs/src/core/lifecycle-error.ts",
+      "sha256": "1d09d3078b7abc150045afab1bea2714eb69b167e69f42eeb6ca1c0216b09bcc",
+      "gitBlob": "ac76a730ddb6f65193e0adf29757eb70fe561fea"
+    },
+    {
+      "path": "packages/plitejs/src/core/listener-state.ts",
+      "sha256": "eba3a87abac97cb3d0017a65f623a20765a068f1c2a9e11ea905b89d95082c2c",
+      "gitBlob": "691f3f49862be22cb5288d2b7f02a11ee6b08866"
+    },
+    {
+      "path": "packages/plitejs/src/core/measured-sequence.ts",
+      "sha256": "9e5ae900d9637a9ae76b72593dcaa000965391a65aa62f8555c12203b8312e27",
+      "gitBlob": "b1ff1c92eba17429d0c300c5a5e54e36d0caf661"
+    },
+    {
+      "path": "packages/plitejs/src/core/node-property-mutation.ts",
+      "sha256": "01a694314cfb9690f81c889811b28754b834151d6456861aadada44f057471eb",
+      "gitBlob": "d1034fbdad590198a5145b500af6d80115375dbe"
+    },
+    {
+      "path": "packages/plitejs/src/core/node-selection.ts",
+      "sha256": "629d5a982c36084375a18501e1ad1bb4ac2a67456cfd53b30ceb2986537269d8",
+      "gitBlob": "2c5c1dd7b4d93045dc21e0cd524445fba2dce699"
+    },
+    {
+      "path": "packages/plitejs/src/core/persistent-map.ts",
+      "sha256": "c6a9644ea2ecba13b3d5af97b721f433ef0db4f7776bb051dc2dcaae83af188b",
+      "gitBlob": "095aa42fdc8d94c30d9e019ac22246ff3373a8cf"
+    },
+    {
+      "path": "packages/plitejs/src/core/plain-text.ts",
+      "sha256": "dd3634b4a39ec8f7768898bfd8255ff527d6361cb7833597eaf6fb35e34fb3fd",
+      "gitBlob": "2ae680af69342eefd60212d755bf21249dae4e78"
+    },
+    {
+      "path": "packages/plitejs/src/core/plugin-dispatch.ts",
+      "sha256": "3db0727bef148db34be3c0a77e0764e2f14e718c4ed15f8a70033dab33bb04f9",
+      "gitBlob": "c9ff9798d484f13ad106b4d2ca232848f048a596"
+    },
+    {
+      "path": "packages/plitejs/src/core/plugin-point.ts",
+      "sha256": "8f8b35da3b5b890c74cad950cb7138bdaa6c3bace9233633e8f1644bfba1d13c",
+      "gitBlob": "a02c19f49a585f906ce85c9a9a92bc9df7f933f6"
+    },
+    {
+      "path": "packages/plitejs/src/core/plugin-registry.ts",
+      "sha256": "04aead524074cec8d45c3ee97f6768c4f76665f2b0c0f190afe2a5746c480f4f",
+      "gitBlob": "897f5762bcf2af65c90e9b6e3a516be5742809f6"
+    },
+    {
+      "path": "packages/plitejs/src/core/plugin-slot.ts",
+      "sha256": "18331f7c4ec3c23356ea653201ef0d01e74c81a2415812a2b22bb81df81be54d",
+      "gitBlob": "5dc77f61602841075cc107fcbac7b312427869ed"
+    },
+    {
+      "path": "packages/plitejs/src/core/plugin.ts",
+      "sha256": "4f24582b28e2229d7c5501f8d9a94b46c1accb5fb8d6ab6e570b87b03e58dccc",
+      "gitBlob": "43267b6ad05d32d88927bf47155bf77f47ff3527"
+    },
+    {
+      "path": "packages/plitejs/src/core/prefix-occupant-join.ts",
+      "sha256": "95e525805b25328e290938fd545c49fa4c1d9832c4f8e9172b65cac689242926",
+      "gitBlob": "7b91f03909b5c69d8801007dd3d0fcf0aa3d8ce8"
+    },
+    {
+      "path": "packages/plitejs/src/core/profiling.ts",
+      "sha256": "f5e8ea27a4eda605ef7d53c75907aa9904bf89a3ced01db67d70d55fcf4bf715",
+      "gitBlob": "8ec1be3554842f81b58fc458169cd9bedc25e0c5"
+    },
+    {
+      "path": "packages/plitejs/src/core/property-validity.ts",
+      "sha256": "c0a04c7c0a20a3694ed6dbb0e1606ac1d7314c254ef87267189e9cfab815823d",
+      "gitBlob": "484d5d89a1e2b6b77298e83ac08fbebfbe8413f8"
+    },
+    {
+      "path": "packages/plitejs/src/core/public-root.ts",
+      "sha256": "fbcc4eede9a87a7a6c33f17c03baf2550a7414d7e6252d6fd8ea74ec230e213c",
+      "gitBlob": "d2efad0257ea09374376a4d1ad7c4040dc91a786"
+    },
+    {
+      "path": "packages/plitejs/src/core/public-state.ts",
+      "sha256": "e8f56db1fb5c0f467ba1efd92a8887e0a2c192e6c2f1bdd52c5c5152fc25eaa3",
+      "gitBlob": "c9ba8026bbc26c6bc55dcfb925e46a0a75ee064a"
+    },
+    {
+      "path": "packages/plitejs/src/core/read-definition.ts",
+      "sha256": "7c90f693f09ba37bbff847699ff4c3c95253b641c071473ea8e69ca7296b497b",
+      "gitBlob": "3e4f5c4d165bcf1131fdd0781cafb2f81c4abc9b"
+    },
+    {
+      "path": "packages/plitejs/src/core/read-registry.ts",
+      "sha256": "06795cf3d92efc7873436223bf10a722f0724ee7b56382b418c78d7dc632a450",
+      "gitBlob": "59b08d2732c30151be149438df0701eb7a6c21eb"
+    },
+    {
+      "path": "packages/plitejs/src/core/record-store.ts",
+      "sha256": "6b2925ba50ef6961446cc7df620f42046d061191ef38aa116f4afde16407b889",
+      "gitBlob": "4ac7e4d3ab58083a83e81d4753012e7509c4f1df"
+    },
+    {
+      "path": "packages/plitejs/src/core/refusal.ts",
+      "sha256": "0e4c0803483150b69ecdb69e0b4595ea1e471c14b5896edf1d3595b79c052d0a",
+      "gitBlob": "e419dd88f11654050036fa40d9c8d80783c703bc"
+    },
+    {
+      "path": "packages/plitejs/src/core/representation.ts",
+      "sha256": "cf604b5830fda24b5987fff6aa4665b9a04e3f504c270e32503b4d3d808e4480",
+      "gitBlob": "8a72c101293b8c3251407c9b0c7688e4ec41c87e"
+    },
+    {
+      "path": "packages/plitejs/src/core/resolved-token-cursor.ts",
+      "sha256": "767804815aa2fe8962b47afea4512e069bf7e4d0bbc1e2870ab4d4a26a0190af",
+      "gitBlob": "c4fea1a74d25de2ab7f81962cb37c28019f8893e"
+    },
+    {
+      "path": "packages/plitejs/src/core/root-ownership.ts",
+      "sha256": "6a4fc20c0fe84ac82eba4ba2054d121dae9a58c9e208c23e80ba24d6899cb27c",
+      "gitBlob": "75441c1a21731e07f2d871a3f9c93344cdace784"
+    },
+    {
+      "path": "packages/plitejs/src/core/schema-compiler.ts",
+      "sha256": "c93d62fd30017958e35312e2fe1666d55c5c8fe256b94c5616ffb0d7c5fb7669",
+      "gitBlob": "6573200c540a647c4d5a46930f51f4e3233b04b5"
+    },
+    {
+      "path": "packages/plitejs/src/core/schema-contribution-registry.ts",
+      "sha256": "ff09fc56be92444f0fb2001eef8f26ec5e6933ba689b51e7fe8c98b935bbec8a",
+      "gitBlob": "b193f46bdc3d9b63cfbbd01b9a5f257c6b411dcb"
+    },
+    {
+      "path": "packages/plitejs/src/core/schema-definition.ts",
+      "sha256": "0f823713d4dfe951db645fcc255bf4c68d5573db48dbe376e878b8141dc6c04b",
+      "gitBlob": "713a6820c7d2608058a75d57ba7da6e841bf5ede"
+    },
+    {
+      "path": "packages/plitejs/src/core/schema-validation.ts",
+      "sha256": "29dffcc96d585bb7226baddce754d9ac705c76bc8a5ee049190f13d1289277bb",
+      "gitBlob": "c9c5667e75d20e08bdb8412a9c30f3abe165c9aa"
+    },
+    {
+      "path": "packages/plitejs/src/core/screen-reader-announcement.ts",
+      "sha256": "738acf783aa270b2632273a69a8d01783d0ff971df06822a01afc854686c7ba9",
+      "gitBlob": "8269d804068a89bb75d46acf13a517398fbd1921"
+    },
+    {
+      "path": "packages/plitejs/src/core/selection-protocol.ts",
+      "sha256": "b400a265ccb5df39c7b33aaa0d586eff8743e975b63fc1a232ff6171d753aece",
+      "gitBlob": "b15f748a47fed2d1a8a36bfd496cf7d8e763dd91"
+    },
+    {
+      "path": "packages/plitejs/src/core/selection-state.ts",
+      "sha256": "8fdc9ae1ba6ffda2920f44c8360fac9f92932b3303cd77238a09ae24b36f1496",
+      "gitBlob": "3233d0edab08c4d3cf38fd92f08286afc51cb09b"
+    },
+    {
+      "path": "packages/plitejs/src/core/semantic-update-method.ts",
+      "sha256": "92d7a83cd3ca94cd84d436e284f9b8b1cd346ccffd5caf0e2234592403e1b02b",
+      "gitBlob": "05748d126c46a449ab23842c6642cc97282e9117"
+    },
+    {
+      "path": "packages/plitejs/src/core/slice-end-matter.ts",
+      "sha256": "bbb0e73f4870e6f76d28e86a6145dd5d556837075361e77601ef3bc6aaf3eae7",
+      "gitBlob": "1def2ba9175b33bdfe43b763a629fa9cd4b8fe21"
+    },
+    {
+      "path": "packages/plitejs/src/core/slice-fit/compiled-slice-fitter.ts",
+      "sha256": "fa497180c4f810542bc415b41495bea3c2fedd127a09bd6294292b1ec4dcb92c",
+      "gitBlob": "5bf0ded234475b8e2ef5ff40d775136bf194a057"
+    },
+    {
+      "path": "packages/plitejs/src/core/slice-fit/fit-report.ts",
+      "sha256": "37f2a1a2408e53997097cb6f2def704f350b4ec49ce7b05940373acfe88abd87",
+      "gitBlob": "ebf74ac4762ac12b2dbc6351aa120704f8b018e8"
+    },
+    {
+      "path": "packages/plitejs/src/core/slice-fit/frontier.ts",
+      "sha256": "ca49075ef8fd5881d052300d16be1405225e8cf364f7b0fc1082863c4fa917fc",
+      "gitBlob": "6d19eac83fbb4dbdfdf619ba5e0b42e0033d981c"
+    },
+    {
+      "path": "packages/plitejs/src/core/slice-fit/provenance.ts",
+      "sha256": "ce856e9499780ed4f64971782a0e3eb11324c2055a86ed73674e9a7bb047248e",
+      "gitBlob": "597ed68761e471b39ea9c38e2b77a405e8d4d3b9"
+    },
+    {
+      "path": "packages/plitejs/src/core/slice-landing.ts",
+      "sha256": "5f5b476b269feeca43eaaef6b13f287a63040900221050e58dae9ad9434bbaf5",
+      "gitBlob": "950497aec3d0fea9dbe08ad64e4036bfba0823f0"
+    },
+    {
+      "path": "packages/plitejs/src/core/snapshot-index.ts",
+      "sha256": "98c415c41d9c03c22262a452733882057bdf20c8d411ecba124bf3d9b8f7f4b1",
+      "gitBlob": "6630591e18d88040659a31f006f0d923a249cbb1"
+    },
+    {
+      "path": "packages/plitejs/src/core/state-fields.ts",
+      "sha256": "b7d07fbc7df599afc37c0fbdeea00670b392803b67be52905ace11f704744a73",
+      "gitBlob": "0377dad285114537cea9b0eac0b6f6c9fc14b443"
+    },
+    {
+      "path": "packages/plitejs/src/core/survival.ts",
+      "sha256": "ea58d93ce53fffcfa45cfb4d06e1f1c9d0f07d2b32cfe18957e34a7e3eec4374",
+      "gitBlob": "aefe81a396214e055e32aa778321314af4043e05"
+    },
+    {
+      "path": "packages/plitejs/src/core/target-runtime.ts",
+      "sha256": "b1ba1832cec4a86bdf9650ce9cb0e73f45b20c437a64ac7c8dc9158dca1ada04",
+      "gitBlob": "14a479bf10e8c4dda43a65133254c9b45f534d81"
+    },
+    {
+      "path": "packages/plitejs/src/core/transaction-values.ts",
+      "sha256": "a81be80e8ab9b1bd9c241d388d6ec15a9533573a97a750857f650f68a27829b8",
+      "gitBlob": "4d60bca89bf54bb03e942b913c4bb17c71ca59d1"
+    },
+    {
+      "path": "packages/plitejs/src/core/transfer-guard.ts",
+      "sha256": "0e8579980845a414bccf0d1357860813cf9fe52963d962e424d5e19a8be5aa36",
+      "gitBlob": "f832ae0ddf4b111a325fd5a57f323304179946cc"
+    },
+    {
+      "path": "packages/plitejs/src/core/transfer.ts",
+      "sha256": "0cb8c435aec83354b5f64b02647b82be2fa5cb33759349fa2be93a471ba477d6",
+      "gitBlob": "92ac4b947c67111d3a236fced5ed3fe9b29c395b"
+    },
+    {
+      "path": "packages/plitejs/src/core/tx-only.ts",
+      "sha256": "8248ddf43920717bae07b924671cb201a9e2db17a025c22433f50fa14734e48a",
+      "gitBlob": "dc5940fd015be370e9bfec17678868eb77485ad8"
+    },
+    {
+      "path": "packages/plitejs/src/core/unique-values.ts",
+      "sha256": "7ce5bf1da3050ddd8d4eabf2a4ae4f6d5a8fefa1c291ca36a65b50ea3bd2efe3",
+      "gitBlob": "9756b1248c985d617d41ded8eba279361d3c4df6"
+    },
+    {
+      "path": "packages/plitejs/src/core/update-context.ts",
+      "sha256": "67a9297b73ba282f10f6134ce11325031a2f3ce3a3685174269f262d5591ce60",
+      "gitBlob": "2346baee82dd7bb70616b2eb5baa90e21e65c6cd"
+    },
+    {
+      "path": "packages/plitejs/src/core/update-policy.ts",
+      "sha256": "83926d8a0155b6ed9d0b804ad5f884dd5867d30f72131dc8408996999bb121a3",
+      "gitBlob": "30195ea1c7ac6234e72a60feead44e6d6255ecd3"
+    },
+    {
+      "path": "packages/plitejs/src/core/value-codec.ts",
+      "sha256": "991af9949a2d522284ca63bf0b1b5f5f6a1cae8583b31de794484303ed8c3b88",
+      "gitBlob": "6cdef8a0698fbc021f0cc530ead6e381c04cfa83"
+    },
+    {
+      "path": "packages/plitejs/src/core/view-carets.ts",
+      "sha256": "605f7436968fbba0c0fd8d04c3635a058353ee3c5588a9ab48ef7f28caa9e9fe",
+      "gitBlob": "1829c9157527d15e8db67efc6897d5b98415d33f"
+    },
+    {
+      "path": "packages/plitejs/src/core/view-presentation.ts",
+      "sha256": "e761f58f2816c7bec1c566b4e11a782b9b749acb52948999d56d18ac9aef4609",
+      "gitBlob": "d57484461e45f29cfd07a74e5a0307bc75249c10"
+    },
+    {
+      "path": "packages/plitejs/src/core/work.ts",
+      "sha256": "e811007662d7d6dfa70bb4f2c33af2854086218b101c2a4dc9a5b3c705821014",
+      "gitBlob": "e51a436717bb8103a6030592334c42412953d61e"
+    },
+    {
+      "path": "packages/plitejs/src/core/writable-text.ts",
+      "sha256": "8497701b01b29e8d7f76228754abd87bb8eaa1dc874652ea6512287b9ee622d6",
+      "gitBlob": "d55e360f7327c0e9e5d2f60ae998c18ae050eb13"
+    },
+    {
+      "path": "packages/plitejs/src/create-editor.ts",
+      "sha256": "786aa812b6e8469bc78865f30f0e2e04fe4dd038b11e0a83fbe67a555fe7f71c",
+      "gitBlob": "b60dda00bc2728e0a825571cbe4dc1db6a38e9e2"
+    },
+    {
+      "path": "packages/plitejs/src/diff/lib/compare.ts",
+      "sha256": "17b03c729022e94b232d5feb50b56ea150eab20113c10780ae1707089052cc1a",
+      "gitBlob": "5918b5999e4f9ba484236e080c9bc1c3897f830e"
+    },
+    {
+      "path": "packages/plitejs/src/diff/lib/comparison-align.ts",
+      "sha256": "68e128d3d88ba25128c1b067e615fbc89604223a7dbf0abe7d67080d843410c8",
+      "gitBlob": "0fe37afe5e8c8a9259f1591ed1bc5e45228eb36f"
+    },
+    {
+      "path": "packages/plitejs/src/diff/lib/comparison-index.ts",
+      "sha256": "d8e0b955915e81d45726ecc04c3fdbcbb93334600bde907223cc33d65cdb261e",
+      "gitBlob": "1efea08864f2e5cdd8e2624ab1bfbc9d7a0d7899"
+    },
+    {
+      "path": "packages/plitejs/src/diff/lib/comparison-internal.ts",
+      "sha256": "6f57d23365b5584348fec36058ff15d2506d3e9f22018cb6bd85f91fa8cc382e",
+      "gitBlob": "e32e87936e54b22a7c3edd12d79b77f1b1cc5c97"
+    },
+    {
+      "path": "packages/plitejs/src/diff/lib/comparison-matcher.ts",
+      "sha256": "76b25b77568e0dd103f88b68aca126f8e3c66c1eb6072db4b58441e3edaa7a9d",
+      "gitBlob": "c2fa9f85152e71218b882f3d6e5337618d798b5d"
+    },
+    {
+      "path": "packages/plitejs/src/diff/lib/comparison-moves.ts",
+      "sha256": "f296c9a51446b1465a0c50872105795b1e1fb6cabead379b7f07cc21fb4153a5",
+      "gitBlob": "39ed3b6676cfde69ac7c5a28eacf14c2e7eff67b"
+    },
+    {
+      "path": "packages/plitejs/src/diff/lib/comparison-plan.ts",
+      "sha256": "9825644cb9d9613c8840ac4888655718476bbf070e6aa0a3999e6b67a042add7",
+      "gitBlob": "4925aeb8ac551248c49c74bee10088b32fa2544b"
+    },
+    {
+      "path": "packages/plitejs/src/dom/dom-soft-line-end.ts",
+      "sha256": "b0170a3edc01eea195af3888aa1d37dff3cfd1f8311be247e9d55befb2f94c7e",
+      "gitBlob": "1e2cbe73c108cfc782256f9517d71fd206e0660d"
+    },
+    {
+      "path": "packages/plitejs/src/dom/plugin/data-transfer-format.ts",
+      "sha256": "9558f7284d39b692a8cad8ceb8901075a96ee8b6fe181430b39b9ef229bc57f9",
+      "gitBlob": "7c61bbb568c480e9f2098a5107743f7dd08503d1"
+    },
+    {
+      "path": "packages/plitejs/src/dom/plugin/dom-clipboard-runtime.ts",
+      "sha256": "60008e2927dc817ac056a3d6dad94f51dfcdbbd48db50c409f45ea871c5e4309",
+      "gitBlob": "8e6752d7d4aab1cb8212706eab315947e5e427af"
+    },
+    {
+      "path": "packages/plitejs/src/dom/plugin/dom-coverage.ts",
+      "sha256": "8eeceaaec24abd804683b394328e7d44aabd505656251dddc25221ecfad47387",
+      "gitBlob": "9d87c738025c24416d7c3a9dde42414103043114"
+    },
+    {
+      "path": "packages/plitejs/src/dom/plugin/dom-drag-scroll.ts",
+      "sha256": "4020b861500317ce26d2ca769fb1be1ca6a9b11968bdb782d6ea9e11cdd1fcd7",
+      "gitBlob": "2bffcf96510bfb5cc02c8a4871eb49917663bbce"
+    },
+    {
+      "path": "packages/plitejs/src/dom/plugin/dom-drag.ts",
+      "sha256": "2904a8930258a930e737113b18a3d84b82c55adcacc6ddd164e5a19c6c60c896",
+      "gitBlob": "893f9531d74e4b33186a19fd312fd77bd730c515"
+    },
+    {
+      "path": "packages/plitejs/src/dom/plugin/dom-editor.ts",
+      "sha256": "80c82837ea8e34f0c2237af98f8dcdbf9d4403e7fb04537f4cee07345fac51d0",
+      "gitBlob": "11d266498750e40ff0f4835e10902009e0cbb176"
+    },
+    {
+      "path": "packages/plitejs/src/dom/plugin/dom-event-range-targets.ts",
+      "sha256": "8876026edb77849f8074200ffebdc6427ac930d112d548279b1fe7af4d28de04",
+      "gitBlob": "8e2139e489afccd2b26cf171f95a79be5ea27497"
+    },
+    {
+      "path": "packages/plitejs/src/dom/plugin/dom-geometry.ts",
+      "sha256": "66bc95ada6b4afe3bceeca728df3f30f711a4d7e67bb39a26b7bd208bad7ca6e",
+      "gitBlob": "4d75206d871fde01719e040dc83905b8c11f7a74"
+    },
+    {
+      "path": "packages/plitejs/src/dom/plugin/dom-input-runtime.ts",
+      "sha256": "aff75813f99692c20b7ed896c8092363a1a1466e83f9412348776f16c1896287",
+      "gitBlob": "fcd9515f327a07f1709d37ad311b3bb2b818b9e4"
+    },
+    {
+      "path": "packages/plitejs/src/dom/plugin/dom-integrity-observer.ts",
+      "sha256": "8b3f57c3fef26dbc75b24c5a9b063b9b81e791e65c6f52ef9f4a453770570ec6",
+      "gitBlob": "9d993b7c3abc64ceaed742bcc2da91de5caac6f6"
+    },
+    {
+      "path": "packages/plitejs/src/dom/plugin/dom-node-path.ts",
+      "sha256": "316ab0ac29f92797171d3ee77f1fa08c4b21471bb0af26251fa84d2c42cdd9cb",
+      "gitBlob": "09edae63c3a02dff7f449de3c5fb5af71f968ac4"
+    },
+    {
+      "path": "packages/plitejs/src/dom/plugin/dom-phase-scheduler.ts",
+      "sha256": "341ed2248ffb01416dbdd1cc5a07bc99958b931d2d351a80cda23a23829b9b18",
+      "gitBlob": "f78c880addd955c52ed99be0148fcc3dd632eaf8"
+    },
+    {
+      "path": "packages/plitejs/src/dom/plugin/dom-root-runtime.ts",
+      "sha256": "7cb1768e81f15ba55a6e10828021835062a70625c9be7ef833efd9f03b077ee3",
+      "gitBlob": "fff80fd6ca75874a0e7a42a0e55c985d37ce01d1"
+    },
+    {
+      "path": "packages/plitejs/src/dom/plugin/dom-sync-mutation-ownership.ts",
+      "sha256": "a8c3bbbdbea0fdf79865a107c6932955bf7ce9af56d854fbdb905402411df4ea",
+      "gitBlob": "c009438bce2974b1c267bc327715dcbddde92c94"
+    },
+    {
+      "path": "packages/plitejs/src/dom/plugin/dom-text-flow-index.ts",
+      "sha256": "a231eca3768be4988945f823a240b8844f30c7709d027cd81012dcebbd7cc96b",
+      "gitBlob": "4eaceb7fa90482a563e015ac034ad7078444c122"
+    },
+    {
+      "path": "packages/plitejs/src/dom/plugin/dom-text-freshness.ts",
+      "sha256": "13b03aec2e464a521e5f4cad82e5739577b330a07144f4fbfd991929f0658411",
+      "gitBlob": "6bfa1ce3e27b196a44517884947e4f2e2a4dde6a"
+    },
+    {
+      "path": "packages/plitejs/src/dom/plugin/dom-text-proofs.ts",
+      "sha256": "723e8371c06097eb97ac6fa23f2d8922c03868c07a58f660b447f3523e714945",
+      "gitBlob": "4368afff392d66d9ff5c85fa5679bb7bf5a7f37d"
+    },
+    {
+      "path": "packages/plitejs/src/dom/plugin/dom-view-caret.ts",
+      "sha256": "d4953f5337eb83f0c6eb0b34ca892e46f2dc377e1c4f11ddeeff829b37d680b7",
+      "gitBlob": "4a240413af25a846e07de24958d6426c8ffb7cf4"
+    },
+    {
+      "path": "packages/plitejs/src/dom/plugin/with-dom.ts",
+      "sha256": "5de34fa2101f8b7a7f344db8d5f114ee6d46f3b6f62b775ea53495991c33883a",
+      "gitBlob": "0aafa6ffda80c2128b3d98a56f5541f229ad1726"
+    },
+    {
+      "path": "packages/plitejs/src/dom/utils/constants.ts",
+      "sha256": "16f335b8331b5d6374069775953c35b93aee8a3348f031fdec189cac06a70ef9",
+      "gitBlob": "ab8f3d5a67f627e1875d3bea4dc59c2b7042b414"
+    },
+    {
+      "path": "packages/plitejs/src/dom/utils/diff-text.ts",
+      "sha256": "4d152e77a21b64b1203ead9a1eafd98685a91ee274b6ba927bfbae57604e2fed",
+      "gitBlob": "adf37d1f95753bfc02ac9f0add332483dccf95c5"
+    },
+    {
+      "path": "packages/plitejs/src/dom/utils/dom.ts",
+      "sha256": "b1570b60892d1c76c8070070adc93c0bb46b26aa6151cf6024df72fe2988d063",
+      "gitBlob": "4d157a833e79adaccf70df1d579ae73981d9a842"
+    },
+    {
+      "path": "packages/plitejs/src/dom/utils/drag-session.ts",
+      "sha256": "14f99a98544c218ddf870ba3d353e90b5f0b17474fab5efe060fe843bd445ad9",
+      "gitBlob": "e9a6e10de0ed768abbeda372f0456dcdc744e670"
+    },
+    {
+      "path": "packages/plitejs/src/dom/utils/drop-indicator.ts",
+      "sha256": "61403d51db83810e2072820b89ca708ce58089a2eb3a2054975e3cd71b33aa2e",
+      "gitBlob": "bccc887f92b79993a79cb9bea54f59c61da1b5c7"
+    },
+    {
+      "path": "packages/plitejs/src/dom/utils/environment.ts",
+      "sha256": "bffe9c981e3fad806a84917b18aea7e501f5ae1bc11e2df9d18428a3b58f42f4",
+      "gitBlob": "11f5b83f849583f3b5bd64b2f965f68a8d0d8103"
+    },
+    {
+      "path": "packages/plitejs/src/dom/utils/hotkey-match.ts",
+      "sha256": "30fc3d821b167edad481b11e164bff29e9f1e62d59042268674fc616ef40d023",
+      "gitBlob": "3f81d224e0356cd8a98dd059c9dacc64d6e3f4d9"
+    },
+    {
+      "path": "packages/plitejs/src/dom/utils/hotkeys.ts",
+      "sha256": "1e821c71dc5fcd3978fc1ff359a8099bcc8bafa40d7f14718bf6d3f16f2749fa",
+      "gitBlob": "4a6dbe5b538f49771b80bf59197e1f82341d1ae0"
+    },
+    {
+      "path": "packages/plitejs/src/dom/utils/key.ts",
+      "sha256": "9d0417bdbf7d4d2bd05b88bf1e0c0c4ab8b83e53c77ceef819677dd768704157",
+      "gitBlob": "a2d20b508ddaceaaad0439f8113d14d59aab1235"
+    },
+    {
+      "path": "packages/plitejs/src/dom/utils/selection-writes.ts",
+      "sha256": "cb2ba82a3789664836d686d730a3f362c3d5c36cf0f0fee7e24bcbe7d05dbdf1",
+      "gitBlob": "67cc63aecdb59714ef58ad1cca9bc09af139249a"
+    },
+    {
+      "path": "packages/plitejs/src/dom/utils/weak-maps.ts",
+      "sha256": "bf10f881a7a3f777203a97410233901e69f63786a7b1befe646607d51ee5d6ce",
+      "gitBlob": "7e00b7ff15597ad47b81d4610ffa5c007697ad41"
+    },
+    {
+      "path": "packages/plitejs/src/editor-runtime-view.ts",
+      "sha256": "7d8f1c983e65136196e468065962d2f91a44d63f8ed7e0afa39cffe0e1e154ff",
+      "gitBlob": "e2936e9336971b9605fd34581b7e0ef1279e6530"
+    },
+    {
+      "path": "packages/plitejs/src/editor/above.ts",
+      "sha256": "073845b639253ee7d24e2f37c6d1068d743f08046d94647f9f9c2cbb9d387076",
+      "gitBlob": "157ba251d1a63f1bb0b9e239e2f9632960b56363"
+    },
+    {
+      "path": "packages/plitejs/src/editor/add-mark.ts",
+      "sha256": "7ed9f1c16b8876bf5d44815fd6658999a88d1c7d0f9df757dd621a2bc5d58a0e",
+      "gitBlob": "93d14b87dbb8b8dcf47d5112563431ece34747e5"
+    },
+    {
+      "path": "packages/plitejs/src/editor/adjacent-character-point.ts",
+      "sha256": "8f9c9e63f223aca550d1184795ff9b70323f4e4d353355da8067864c9895462c",
+      "gitBlob": "348fd39073c6c945c94828e7210b5525642e3477"
+    },
+    {
+      "path": "packages/plitejs/src/editor/after.ts",
+      "sha256": "40b2a49cae966d4db4ee99047abc9e2b430803d77f35f04941dd07512c5ff2b2",
+      "gitBlob": "ac633a88b4f0c4f239085eb90c759c0c3a8e129c"
+    },
+    {
+      "path": "packages/plitejs/src/editor/before.ts",
+      "sha256": "cbdcfafbb55257db43c108ee3f0803d9281e8bb642597cf8856a235b54f67772",
+      "gitBlob": "7aaf9be399bc2a09564614a0323deec2e0c78688"
+    },
+    {
+      "path": "packages/plitejs/src/editor/block-void-break.ts",
+      "sha256": "c95038ebc0ecce753d21a4a45354bbe776c215dff189ca1033412b3248780d58",
+      "gitBlob": "30cf271f95fb66baeca1585b6094e9f5fa3ed321"
+    },
+    {
+      "path": "packages/plitejs/src/editor/correct-document.ts",
+      "sha256": "b92b75f73dbdd66417313b6b55bff92babd39ac262a12e6057547f2c75bb699b",
+      "gitBlob": "cbeeff42e3b71df14179a6a3c80249c1f5e13876"
+    },
+    {
+      "path": "packages/plitejs/src/editor/delete-backward.ts",
+      "sha256": "8a5d6262ea278960844dc03d6bd38353d976d373c2e17983748a78e0e7b3e45b",
+      "gitBlob": "0ca0c3f09530063fe6a808f8994ef8081cbfcf9b"
+    },
+    {
+      "path": "packages/plitejs/src/editor/delete-forward.ts",
+      "sha256": "ba0351098c9c3553b515acf5f14c5533c0e06f4d4c0acb1f0fe47cd2f204e83b",
+      "gitBlob": "8b67acd567b17ca96d0f0476a3ee29eac91f2bcb"
+    },
+    {
+      "path": "packages/plitejs/src/editor/delete-fragment.ts",
+      "sha256": "d09734c5379ea15a716be936a380780d670e76f3ebf631f55435f61875e689c4",
+      "gitBlob": "5fb17d0354b2a47fe249dbb47fcb5411d0eee731"
+    },
+    {
+      "path": "packages/plitejs/src/editor/edges.ts",
+      "sha256": "5eed669ac019519d17707cbe1e9102d95409e76d1db8892773fc6e612c9c96d9",
+      "gitBlob": "20e619f2df994b2d2edaae0d855bf16001b2c072"
+    },
+    {
+      "path": "packages/plitejs/src/editor/element-read-only.ts",
+      "sha256": "587ed59813bbcec8d908d387711e7a3c8cdb1327b2d4696de638d189e646ce5e",
+      "gitBlob": "e2794367e25a1eed63c32372d800542c1a33d4e0"
+    },
+    {
+      "path": "packages/plitejs/src/editor/exit-break.ts",
+      "sha256": "97979948b482b259c0e17adead7af4251ac7ec1f5e3e51827dbe4702f11ad1af",
+      "gitBlob": "c1f14cc313ff2dba819222db21a169557f1d4e91"
+    },
+    {
+      "path": "packages/plitejs/src/editor/first.ts",
+      "sha256": "25c73e4d968cbf5f910474a7653bd12e02fa63c5d37ace10030677f86c3e0f8c",
+      "gitBlob": "6ad1421bf98b8b245d2e456bdde41d2e8dcae492"
+    },
+    {
+      "path": "packages/plitejs/src/editor/get-void.ts",
+      "sha256": "85a0509339bb8a8d0e8a6bfd840f9894b2807f0dc8d511a538ea7060c9d69638",
+      "gitBlob": "4dea1782761044c0132c8b11298b1bb8cf3b7234"
+    },
+    {
+      "path": "packages/plitejs/src/editor/has-blocks.ts",
+      "sha256": "657febf5637e29ac949b2bcf368e05ce0477f0a06b5db2dc6b051fb0c13ba642",
+      "gitBlob": "8e7eb851a703d3f5e1f646b2e570a48e63b8af57"
+    },
+    {
+      "path": "packages/plitejs/src/editor/has-inlines.ts",
+      "sha256": "311f01043a60dc6676dedcb119127983f4a61c5fe4c10664e281410f099efbb9",
+      "gitBlob": "147cc58964c16b17f1b193e30b896fc930fca9a7"
+    },
+    {
+      "path": "packages/plitejs/src/editor/has-path.ts",
+      "sha256": "7c7e36f206b072e049eb9d1f1e0e4c9905603a61f0ede27cad3eb8854e48b15c",
+      "gitBlob": "c804e4cfad23848df64c9851937b547444493ab1"
+    },
+    {
+      "path": "packages/plitejs/src/editor/has-texts.ts",
+      "sha256": "647ed0da77214255b21a58c44eed8a0d6f782890af85ba863e386a1f5272be75",
+      "gitBlob": "d8fad914e1eda5f5c45f527073cc22a777a4efbe"
+    },
+    {
+      "path": "packages/plitejs/src/editor/insert-break.ts",
+      "sha256": "a8076b8af550f7be2a6fb69c843b7fcfb6cdd9f7b12bcabf10f9cebf8ab13832",
+      "gitBlob": "59c6a835ca8820578705e5cc0d670665713023e3"
+    },
+    {
+      "path": "packages/plitejs/src/editor/insert-default-child.ts",
+      "sha256": "1302e83df852dd1c6a8f781c66232664ee3a4f5326c09ffb68e8e8021a87a284",
+      "gitBlob": "e5945aa2aedff1a916e7cc7e812f79ae4dc388bf"
+    },
+    {
+      "path": "packages/plitejs/src/editor/insert-soft-break.ts",
+      "sha256": "a33ec6e9491b64789a6ede7b95844c482b137b3bbecd7872bf58ce117075bb06",
+      "gitBlob": "189ec7d1dec4db173ff74921690d4ebd50e78da1"
+    },
+    {
+      "path": "packages/plitejs/src/editor/insert-text.ts",
+      "sha256": "b34c28bd488d5c87d03b6cd942acf4fdca8a8ef67be202816f9df2e53bf0d81f",
+      "gitBlob": "4047c0886075aaeb2da0805c4f6f831eca8aa2e8"
+    },
+    {
+      "path": "packages/plitejs/src/editor/is-block.ts",
+      "sha256": "2cbe40043ff8ed818dd264d74f5fed4e5273316399b574e1d057163b785da6ed",
+      "gitBlob": "7ee3f826374e9ce11ac00b50ec0574db6b0419a0"
+    },
+    {
+      "path": "packages/plitejs/src/editor/is-edge.ts",
+      "sha256": "f78a5461c0b5bed4fbb600ef693bd3f3be71d0c2815fd2c29c91c2a760ca5395",
+      "gitBlob": "38f21da56469f7dacaf4618b101b89a5c96d5bf8"
+    },
+    {
+      "path": "packages/plitejs/src/editor/is-editor.ts",
+      "sha256": "fb18a3f5e0bc270a8395b17cbd8cca8fc98acbc1405a4f28ccd19a66bb840220",
+      "gitBlob": "f62771790b6ad968a37fdf753c52505bb50078ca"
+    },
+    {
+      "path": "packages/plitejs/src/editor/is-empty.ts",
+      "sha256": "482efab6ed5d5c0de5691b166b4e42c6f698905fd070664fefa7f8d99acb6f70",
+      "gitBlob": "af1434d69ce4e799881aec7ab822d7b2ce787364"
+    },
+    {
+      "path": "packages/plitejs/src/editor/is-end.ts",
+      "sha256": "582386390a966fc33d0411b12c1ca6b1e7ab9ce7721ee65dee8b446769ee8234",
+      "gitBlob": "bc4919af38f8a4fc8bd69a4442c1d65770e048f0"
+    },
+    {
+      "path": "packages/plitejs/src/editor/is-start.ts",
+      "sha256": "95016525da35af49c5f0ee65f3ca8120d149bdbdc2a67b5e0dbf0ebc74c3af87",
+      "gitBlob": "7c0e9f21ebb67ca2a92143f359d81d29d62ec38a"
+    },
+    {
+      "path": "packages/plitejs/src/editor/last.ts",
+      "sha256": "d99f40d8e15c21dfaef88e0d702bc19960f4fd73f3482de9fb7c9fd8c972f06b",
+      "gitBlob": "fe1c8892c088d7166cca6d00e98b293bcd880f09"
+    },
+    {
+      "path": "packages/plitejs/src/editor/leaf.ts",
+      "sha256": "ef9bb4569e6d49dec434a2d8d68819a5289570f6f47d307b5ddf662a0105a04b",
+      "gitBlob": "0dcf95db8f0223c7a95d9e9eceeb725837e82f80"
+    },
+    {
+      "path": "packages/plitejs/src/editor/levels.ts",
+      "sha256": "3e7eb878f2b7561a206702d04e78e04dfa1bb8a54a48ab18c9771229d5d184c3",
+      "gitBlob": "fc1ae1ab2a11e43ad3531dc978d040693d036a43"
+    },
+    {
+      "path": "packages/plitejs/src/editor/next.ts",
+      "sha256": "fe6d880c16bebafbfce1f830b9ee180a421852b6278ff1531dfe90607d55bbd3",
+      "gitBlob": "7e0afdff96aa57270cebffdf1516e37fe621a018"
+    },
+    {
+      "path": "packages/plitejs/src/editor/node.ts",
+      "sha256": "ee7dc18e60f6f1956922fb8acaf0005969973c02c2a63ccf9442d95d6a867e11",
+      "gitBlob": "5aae7a4a8c3097b306d5cb1fbbd9a255657f6d64"
+    },
+    {
+      "path": "packages/plitejs/src/editor/nodes.ts",
+      "sha256": "6ecac5f52158f7dd10b9aaf091560aaa8378d5f578b9689a3af32761464c48e9",
+      "gitBlob": "9f745a9ef73d3fdc5ee53c9fc2020c57e0df5e6b"
+    },
+    {
+      "path": "packages/plitejs/src/editor/parent.ts",
+      "sha256": "1e416cc2218f24fa11da0d905941729aa819ef42c69c2f9b3246e99910616566",
+      "gitBlob": "0e129397aa121c91e3d987666f592e0479d71cac"
+    },
+    {
+      "path": "packages/plitejs/src/editor/path.ts",
+      "sha256": "5612743781915906f089c2cd5adf04bf8b804e23545d4c92e1c64879a0fe5917",
+      "gitBlob": "10ce976dbf74a46c1343d8176963f0ac0181a516"
+    },
+    {
+      "path": "packages/plitejs/src/editor/point.ts",
+      "sha256": "71777916c986e71ce5030efdcb88c23d4b942443a88bb53d0c80ff87eb718cc2",
+      "gitBlob": "1add221df1469e1aff011493bb3deba768a90aa5"
+    },
+    {
+      "path": "packages/plitejs/src/editor/positions.ts",
+      "sha256": "9c70fd6e9c568f8ac4e44810b6c8e68b7fc2773a7acbef2ac80c8667c2e800a0",
+      "gitBlob": "b9ec88effb3b28171f6d03c42d930362ff5c1ed2"
+    },
+    {
+      "path": "packages/plitejs/src/editor/previous.ts",
+      "sha256": "5312cce012a89b1bab62f252b4dab4f925fd9126cad175611e46f91fd90e796f",
+      "gitBlob": "66e41c676e054a58473b55533d5f20d241417bdd"
+    },
+    {
+      "path": "packages/plitejs/src/editor/project-range.ts",
+      "sha256": "0c9053e9f96f5d5ecb7f58e9a6c1513d5fd93791073085fe9bacfbb38124a56d",
+      "gitBlob": "d6945530afba113609cf29af515becedb51de5d3"
+    },
+    {
+      "path": "packages/plitejs/src/editor/range.ts",
+      "sha256": "6d52e6f151a85f48093e596324d4a10473bd5a2d6b05c3ffd801cbad1a3e8d24",
+      "gitBlob": "a46b83d0b5e2551e61d64e0ee38bedf7be252cee"
+    },
+    {
+      "path": "packages/plitejs/src/editor/remove-mark.ts",
+      "sha256": "e158231e104fe96c1f6eb83d94d24931f0c451b045fce1401690c5e715a82d4b",
+      "gitBlob": "a28d1fbca52affe64fbb89c5bc37d8818229afcf"
+    },
+    {
+      "path": "packages/plitejs/src/editor/should-merge-nodes-remove-prev-node.ts",
+      "sha256": "bf0f31fff687097e292426b5b450a187ea1d2b19cf3d818510d9933a88db51ae",
+      "gitBlob": "0bb41a702b1df489e39545f8e01f2c494f97f5c4"
+    },
+    {
+      "path": "packages/plitejs/src/editor/string.ts",
+      "sha256": "6cd024307522518d90afab2f08f28651f355956387bf7c956986462a8107f7ff",
+      "gitBlob": "6b51a40511e6c77c4697ca5d755d0b702d0da2ce"
+    },
+    {
+      "path": "packages/plitejs/src/editor/toggle-mark.ts",
+      "sha256": "3e69dee0e7bd641a079cc520a8fb5852fde6d0ef1fe9566e95ea819c2b718758",
+      "gitBlob": "754df7a9ae2fa8405d53eb7219a36262874105f3"
+    },
+    {
+      "path": "packages/plitejs/src/editor/unhang-range.ts",
+      "sha256": "515bf54aebface3023c8300afa9a40be86ea15195e0546acd6a12fb3d88d9042",
+      "gitBlob": "a5f33efa1b99701a5250b837deb78064bbe17de6"
+    },
+    {
+      "path": "packages/plitejs/src/history/history-carets.ts",
+      "sha256": "5341a49a7e817cbfeb74df0c2dd19eadf1f0b3f30e9f2706a9f8ba98adea00b4",
+      "gitBlob": "9f94f2e97b298bf2a36acf9b9e5f0d6e48e570c1"
+    },
+    {
+      "path": "packages/plitejs/src/history/history-character-map.ts",
+      "sha256": "1a641547d5bdb1ae7702861b8b7389acc611d13c84165b23a908fc063f40e1c1",
+      "gitBlob": "ebf9667453fb64cf36612e77e0438b84481a7611"
+    },
+    {
+      "path": "packages/plitejs/src/history/history-codec.ts",
+      "sha256": "b3fd7e3883715910f81d45db81eb101c72496a7edbd74a491ca3e411b329c097",
+      "gitBlob": "c8ccb530974f997fbf3ff52ee8cae7eebebb3c4b"
+    },
+    {
+      "path": "packages/plitejs/src/history/history-merge-policy.ts",
+      "sha256": "944fc692c4bba73e1441c06365a37e3b578e28b6923bc8f16942aec49193fdf0",
+      "gitBlob": "1144a2901c8e08f9d86182e37ea5f4ccb321b51b"
+    },
+    {
+      "path": "packages/plitejs/src/history/history-plugin.ts",
+      "sha256": "857e246d254e1473e856b61d6cdb34698e509593c3bd5ab421792b05c5cc93de",
+      "gitBlob": "999d5ca6279473ab644edeafc84ee7916527fc61"
+    },
+    {
+      "path": "packages/plitejs/src/history/history-replay.ts",
+      "sha256": "94660276a48ef80e49d03a555012cdc8e824b86c5259c32f83133a7af9abb426",
+      "gitBlob": "5afecd9c5f0aeb0c78bf5fd2081c08bc07d5dcbd"
+    },
+    {
+      "path": "packages/plitejs/src/history/history-selection.ts",
+      "sha256": "f27298ff2f670171983adf85b33aeb79b96501ec7210f2adf6de2c7cd2ee2209",
+      "gitBlob": "1afd4b1274e7f0180bf4d27f607927cea60af7d7"
+    },
+    {
+      "path": "packages/plitejs/src/history/history-state.ts",
+      "sha256": "f5c089fcaec5bdd5dad69e3e95cc6c32ffa8293478f92783ae250c05101a2326",
+      "gitBlob": "62e212e08da322a17aaa1d1c883b608ac69e94d5"
+    },
+    {
+      "path": "packages/plitejs/src/history/history.ts",
+      "sha256": "dd677b3a24205c5024bc71aef77bfe6c2c6979c4dfb3da9ffdd6494ad150855c",
+      "gitBlob": "d5cdd633247c1af6c1e673fd0aa78756644d0f6f"
+    },
+    {
+      "path": "packages/plitejs/src/interfaces/editor.ts",
+      "sha256": "3b148bca260bf3a44bcc3e062951a483d5aa5cabf8e332eaf7f2dc99762ad491",
+      "gitBlob": "846e00601fbb411e95bf5c52f2b058083fc41d5c"
+    },
+    {
+      "path": "packages/plitejs/src/interfaces/element.ts",
+      "sha256": "5caac280b4e73cab52b5e453fe6320fa55afe3ba27177a13e3642ac36527716a",
+      "gitBlob": "d17b917955e0cccc4817e564ac1b10c7c2f26780"
+    },
+    {
+      "path": "packages/plitejs/src/interfaces/location.ts",
+      "sha256": "dad5c6a89bb741d3b0c767200855f3cbd34cb55c26b7a3d0abc8fa30756a44a4",
+      "gitBlob": "e717eebe72a376efebb48089f3fd675548c43217"
+    },
+    {
+      "path": "packages/plitejs/src/interfaces/node.ts",
+      "sha256": "e28c4be8cdd1c134f99acdb8daa2068ce3da6c3f08072934f710c4df40858dac",
+      "gitBlob": "95363309ed7047a07243657fa272f3f987030510"
+    },
+    {
+      "path": "packages/plitejs/src/interfaces/path.ts",
+      "sha256": "300378d8840346164aed6a3986007c59d515544f90cee60095679e5954c3cfe7",
+      "gitBlob": "c8aeda7e4c3776d33abe688a3634fa5a142ce62b"
+    },
+    {
+      "path": "packages/plitejs/src/interfaces/point.ts",
+      "sha256": "d9209136f206eb6a07af93d9b1894b67f889741ddf3359f84f163bb735063650",
+      "gitBlob": "44d196162de44df792cc9e81871d51a4eaf2c898"
+    },
+    {
+      "path": "packages/plitejs/src/interfaces/range.ts",
+      "sha256": "31467c2e910593777520eb7d62de1028b931e7af6e117407fc5da6239962b491",
+      "gitBlob": "8f5a6993cca5d722fed904a17342df939606f53d"
+    },
+    {
+      "path": "packages/plitejs/src/interfaces/selection.ts",
+      "sha256": "3e6d67248594f073a38d00d9b5f2910f7c6291cde8fb59f9fe1f4fbde912269a",
+      "gitBlob": "9e81fe6ec06f096b8967f882687dd40c4d72efbe"
+    },
+    {
+      "path": "packages/plitejs/src/interfaces/text.ts",
+      "sha256": "540546be12fdbf59e91d27a3962324d3761ced632db2eb8fc4683719b2bb1091",
+      "gitBlob": "a5548b7cc1ec7b41b3ec574693a5404d4d71e35a"
+    },
+    {
+      "path": "packages/plitejs/src/internal/editor-options.ts",
+      "sha256": "e9274985bedd3f340b9525db7624e11d6050d0625e1af983488386eb4d67bc6a",
+      "gitBlob": "a6797a855acdf65525517ab68230704a1d1bedf9"
+    },
+    {
+      "path": "packages/plitejs/src/internal/fail-invariant.ts",
+      "sha256": "9cd4f130ee7f35eadece6b34948afa35760324d268823722d9283923822ed602",
+      "gitBlob": "8eb6a5560d5d37fed97b6156627e396de66e3256"
+    },
+    {
+      "path": "packages/plitejs/src/internal/get-defined.ts",
+      "sha256": "3df25e891f0dd30fdb7f7abe73639567df7250d47fb8cc4defc86834369237bf",
+      "gitBlob": "4365710c04c858f9d4a84cbca1a6e0847694af19"
+    },
+    {
+      "path": "packages/plitejs/src/internal/law-check.ts",
+      "sha256": "e9a76d533b494305259b759a66e0b4de95ce625709c2e071ab18d8aef51148ec",
+      "gitBlob": "082e65153116ac22751e8a8a39733b0e62c4fb55"
+    },
+    {
+      "path": "packages/plitejs/src/internal/range-text-marks.ts",
+      "sha256": "95c7f0a95697997fd2a7f99dd694fbcc777a757e9d4c6396cad1da2107d324bb",
+      "gitBlob": "fee4d9ba85c587fa35bd10905329abbc48720715"
+    },
+    {
+      "path": "packages/plitejs/src/internal/root-location.ts",
+      "sha256": "ac756c6e4bd84c1c74f2f9123f8e3285e7fe804a1117682ffe424a1e20973e72",
+      "gitBlob": "96c98d8e5d80146b653703cfd6675d1901ad138a"
+    },
+    {
+      "path": "packages/plitejs/src/internal/text-run.ts",
+      "sha256": "9275ff011612aa1654e6cc594bbb0f05bb1b9897f0fbcb6b8f67e34855f8333d",
+      "gitBlob": "b1de16d5cde2f1a29d4accfc5c8e9f1951419f16"
+    },
+    {
+      "path": "packages/plitejs/src/internal/view/mapped-view-store.ts",
+      "sha256": "c09cb0d6165e35b386422cbf549174d6419ee582fe3e563caee2434d26696a8b",
+      "gitBlob": "47c8e546e32cf5419ae6f60e6183ab6f79b9ffc7"
+    },
+    {
+      "path": "packages/plitejs/src/range-projection.ts",
+      "sha256": "3cd0c33d958604b86534db8bdaa03af12c87bc65964d6347572b28bc77959c00",
+      "gitBlob": "d5c472f58637fc41c9dfb13ffa061e8b677d1883"
+    },
+    {
+      "path": "packages/plitejs/src/react/components/dom-coverage-boundary.tsx",
+      "sha256": "42eaf69f412634dcf3ed222ea0d91b066e95e9c17f4d216bfa3b204a8ada19bf",
+      "gitBlob": "166bfd18fd0369774ec48070c338a40cbc750833"
+    },
+    {
+      "path": "packages/plitejs/src/react/components/editable-descendant-binding.ts",
+      "sha256": "5e13c5104290c68b15919e22ddc377274509974342935ed3c65e982c9b7f81f4",
+      "gitBlob": "cea542b698f2c17133a1d06b4fe9ba4422317a52"
+    },
+    {
+      "path": "packages/plitejs/src/react/components/editable-dom-commit-fence.tsx",
+      "sha256": "e01fff3aedb1a1b2e27fd879d488ab4cc3b2b99ba0b16e219d82b83e82a5d93a",
+      "gitBlob": "d35cedbb703c1973b7268bd2819376ebbafa7069"
+    },
+    {
+      "path": "packages/plitejs/src/react/components/editable-element-placement.tsx",
+      "sha256": "1594a1007e8cf6bfa5b3d2c9d36bc98f06073e7fc1dc0cc315aa99fd8dcd0568",
+      "gitBlob": "3b9e24ca78b6dbfcc80e76498e2bfaa28eeda950"
+    },
+    {
+      "path": "packages/plitejs/src/react/components/editable-external-text.tsx",
+      "sha256": "6097595f2f76aba38225ef74048e82905307a41792e90e22667be4fa08798661",
+      "gitBlob": "2b1526b4da37680447a91804031ecb895a6dc1e9"
+    },
+    {
+      "path": "packages/plitejs/src/react/components/editable-node-equality.ts",
+      "sha256": "7152f76ad2f741a386e85805144978714bbd725af5018c193451ef0776dc2e5b",
+      "gitBlob": "a72b565599bd4a2619573f4f36799e47c65a9779"
+    },
+    {
+      "path": "packages/plitejs/src/react/components/editable-rendered-element.tsx",
+      "sha256": "81ef84b6dcce192798f78b9d8ea2b7b7a0302c8a98e10ed87c332128bc3cb82a",
+      "gitBlob": "2e9d826c2ec67afe80d9d55fa0deb9811a475904"
+    },
+    {
+      "path": "packages/plitejs/src/react/components/editable-text-blocks.tsx",
+      "sha256": "60060914f310e081641e43b8c18642624b1cf14bf0879388b9f3ddcee956d94c",
+      "gitBlob": "327f0fd3b22876d5685cd05d16ad4a1a01c36ebd"
+    },
+    {
+      "path": "packages/plitejs/src/react/components/editable-text-containers.tsx",
+      "sha256": "737c763b57fb986bba57799956edb307e72793e6e801b4f954359c33a455de30",
+      "gitBlob": "2bab73eb30edcaef7da361ad93e09329fc609e7e"
+    },
+    {
+      "path": "packages/plitejs/src/react/components/editable-text-flow.tsx",
+      "sha256": "08a92e7b3c004af0b890951555e4c8202eae1627b646af48147da18e8247bc39",
+      "gitBlob": "86df2f6baa205159df6cc2f3b6b15de4f100f1d1"
+    },
+    {
+      "path": "packages/plitejs/src/react/components/editable-text-pieces.tsx",
+      "sha256": "f2354feca2dec029244df6e9ebd8430a93dee833ec24539d6e5cf5d0d30eab43",
+      "gitBlob": "ff2606de14367f4da4edc267be96609764afd518"
+    },
+    {
+      "path": "packages/plitejs/src/react/components/editable-text.tsx",
+      "sha256": "20e8381147b2e40329a977e54d6a371bbbf75de17f2a85c618ea39ee395e7c5a",
+      "gitBlob": "c5b8684f7898d1b18a54b6f2ccd9f5e99f88e6c9"
+    },
+    {
+      "path": "packages/plitejs/src/react/components/editable.tsx",
+      "sha256": "c2ce073b4e79c3b3568d353106b1a5b1e745707fd9d0e354720b097f00a5135e",
+      "gitBlob": "a668dd9fc04f820bbf1d8d5f9a80aaaee2f2f3e9"
+    },
+    {
+      "path": "packages/plitejs/src/react/components/editor-announcement-live-region.tsx",
+      "sha256": "0f8d8be92ae2ab535a076584bcece857312a5aaab3b725137ce0aef1863ea204",
+      "gitBlob": "5006ccaf938da79972fb20d04edd066e4f213b76"
+    },
+    {
+      "path": "packages/plitejs/src/react/components/plite-element.tsx",
+      "sha256": "68a98463908a6d0c9d36d98b38e66745de062608739ab532a9c130d3cd38b018",
+      "gitBlob": "2b4acdcf6094500028cf6ed4e05bc3580dd0264d"
+    },
+    {
+      "path": "packages/plitejs/src/react/components/plite-leaf.tsx",
+      "sha256": "ad6d20aae406795bf33f5027735ec1aa801120e9504939f84ce932f1b85c5ec0",
+      "gitBlob": "59f20a040395a7342ed413c9808ee20096a0d794"
+    },
+    {
+      "path": "packages/plitejs/src/react/components/plite-placeholder.tsx",
+      "sha256": "c5f17b834ae23421b801b87beaf766da995e3d8b5eb4bf74031421783ae3f507",
+      "gitBlob": "56a95c6fc716e7c1eb83ce54fb320a950022710c"
+    },
+    {
+      "path": "packages/plitejs/src/react/components/plite-spacer.tsx",
+      "sha256": "31ade82070dc286b7dc72bea55648329a6efdef967f7c99bad2f7bed057382ad",
+      "gitBlob": "0166f9e0a85423ffcb9fc4f6895b2b9f85796438"
+    },
+    {
+      "path": "packages/plitejs/src/react/components/plite-text.tsx",
+      "sha256": "d4e53b7607e59c97b47dd7f4a450e5baac311de4917d7fb536b4745f095ad939",
+      "gitBlob": "4c7bf4be64696569373f97c61fd1978e9518bcbb"
+    },
+    {
+      "path": "packages/plitejs/src/react/components/plite-void-shell.tsx",
+      "sha256": "b1bb5b80051315e959afa8bcd0f76e5ec2eee288038201282edccce103c8fdb7",
+      "gitBlob": "3691656524f7608f85060d751963a38bf0165dc0"
+    },
+    {
+      "path": "packages/plitejs/src/react/components/plite.tsx",
+      "sha256": "a0c4ad60bef27b472b55293838f8e2b436eb30ff059eb31a9a4c35379f99dae7",
+      "gitBlob": "5599d41a8343fa46afc0d433d9adc9ffb6ecc37c"
+    },
+    {
+      "path": "packages/plitejs/src/react/components/text-string.tsx",
+      "sha256": "731d4f1101bcd3645495ab2df0bd24abe4a5c6f970af6dae8f31cc3002f0a4e8",
+      "gitBlob": "f509f04c8b387bb46ee517b86ebf9f273f5ace5f"
+    },
+    {
+      "path": "packages/plitejs/src/react/components/zero-width-string.tsx",
+      "sha256": "5cd9b2bbf3e2cf6765468304d8d87ea660bb691e25e00a29ca9ff85a51cc0cf9",
+      "gitBlob": "cc8c5a026a25bca366629111ae7ca003f244f8c4"
+    },
+    {
+      "path": "packages/plitejs/src/react/context.tsx",
+      "sha256": "77eb3c8b1f162ecfc62bb61bce9006c41da6fcb290f353067d8bcc377cfcb557",
+      "gitBlob": "c34a03e10ee1e9fd3080d123a256e94df5d57273"
+    },
+    {
+      "path": "packages/plitejs/src/react/decoration-context.tsx",
+      "sha256": "40ed58564325aa2bddcfe0958eac5951acb26e62093cc2ff618fc4fa0eed0080",
+      "gitBlob": "091cd5dc1adcc500853d2372b87a5db1bf87d1da"
+    },
+    {
+      "path": "packages/plitejs/src/react/decoration-source.ts",
+      "sha256": "4cc287ab47b7bcb90eac71539873f6b045ea615a6972bd402dfbee5014f465d9",
+      "gitBlob": "9c2b811b3aca88dbf444ef8b07c018a0a4036f41"
+    },
+    {
+      "path": "packages/plitejs/src/react/dom-text-sync.ts",
+      "sha256": "bdd692b5dbe2ed2a154515b7611a846e73cb1c33f5e46e7b431ea127f05f6e30",
+      "gitBlob": "1d0a2cb13907ed08354a7e8bd822336bd508db4e"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/android-composition.ts",
+      "sha256": "ef4f9c3d4f5cea2195f83d7c5a30331e1b2fa1b3e8c9a1721b27daba261c4aad",
+      "gitBlob": "d10bb5a1f2c2cd29d1d5fbfbea689d0eab250dd6"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/caret-engine.ts",
+      "sha256": "d0e6b7fac5d1ad2bf8760916363588a3b6d9709f2ec137bf6a489be6cd8d7e74",
+      "gitBlob": "a3bd769632b2844fc6e5e471d1ee854659207c59"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/clipboard-input-strategy.ts",
+      "sha256": "8147bd28c0b46599622cc36e72d0045a7d0d8597fc272c7c0ce7b57a31e78d0d",
+      "gitBlob": "2bfc9c320db026190dd9509a44735fda8d981615"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/composition-lease.ts",
+      "sha256": "1219569c73f9ad44fd86a8249ccb899b4b8ed0a6b7e43f09fd575139a200cc16",
+      "gitBlob": "1590df117f62473b913f69f08777c288dba4e804"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/composition-state.ts",
+      "sha256": "73b27373ad06ad8e8905085dcd047c3d56523ca4ada74d9e30ac989a2aca0d52",
+      "gitBlob": "024afd9eec95a9fcd38cf32449b0ba5de14756f3"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/content-root-boundaries.ts",
+      "sha256": "3c6c42464b99174085bf9869d9d301208e2b4fd2f7a537934d69fa2f55c0356e",
+      "gitBlob": "c0ac1792a581429393f0f82ad2e4e9a92ccfb490"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/content-root-coordinate-navigation.ts",
+      "sha256": "8f9fe13cfcc90e1081e73994be8d42de5631dc4abaa102a72346353ea55e2aa6",
+      "gitBlob": "ce14ce03cf26e05814bf41db96e8a502a9907b81"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/content-root-navigation-actions.ts",
+      "sha256": "65968278805a6526d54b965b77f79933cb3784b89e345a21e0f97ee8761bf7e9",
+      "gitBlob": "3717c407577d1568d0699acf423111d4138c622a"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/content-root-navigation.ts",
+      "sha256": "54943f3e0f040d42d9242ac6332b851563fd9069e4840c4762042288d88311c7",
+      "gitBlob": "d25beb058662cd639fc7c02776aa054df5308941"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/content-root-owner-target.ts",
+      "sha256": "fdec879472ce3a617db8daa8d0cb34cc9e65936139439a50a77041894bfa6bee",
+      "gitBlob": "d18bb2b1c9608ac3b6240eee0d9931adc85baf06"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/content-root-owners.ts",
+      "sha256": "9138d2a55f2d5180a4c993d9fed315eedb537cd9e937bce420903880dc7640f6",
+      "gitBlob": "83271a7546d145a937f5dc8992d1611c8bc27a57"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/content-root-vertical-geometry.ts",
+      "sha256": "f3afcb973c10a82085faf5660d5b2904a64c3f89abd02d56cbb41e32784acd96",
+      "gitBlob": "61837c5ad64d375a89258e166f5c822920086e4c"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/decoration-repair-bridge.ts",
+      "sha256": "f9b03227d19e877f777d94a3b036de28b91f66f6212147001519ff8c2e80c1c8",
+      "gitBlob": "33acbcc86e2a35b2611732e08c68e49188ad07ac"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/dom-coverage-selection.ts",
+      "sha256": "4d502bb533b1c7de389b288fed88d31b0aa78a2b0106993ca8b4eadc52d0ae29",
+      "gitBlob": "cf7c740e62c3c3aab01257b8368163ee0123a48c"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/dom-coverage-vertical-selection.ts",
+      "sha256": "00bc8bb2a0de9bf04bcd0b5a06f106e5aaf88bddd743b3feb421f9280e215b4e",
+      "gitBlob": "f88666a8e883167486fa27e391f0c8ad5b6e3e7a"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/dom-input-event.ts",
+      "sha256": "6db50967c184e90738f6b2f34686e664f68be42b99e14365d24c2e18d37bc3a0",
+      "gitBlob": "e274e2b39a562bf5295a1d624f4065ebfd15507d"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/dom-repair-queue.ts",
+      "sha256": "e4a5efe941b98278e9f741a15456f476b01a66baa4868aaf6469e4868c77def3",
+      "gitBlob": "cc71ac45e445701bf207371a1d505068a4cda1bf"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/dom-repair-text.ts",
+      "sha256": "dc25d9c8589fb9af697c06dbecb0cd8c42db4c9b2935c8f90dbdafcafe1c8876",
+      "gitBlob": "8e2ff11d058ced69d79fbb8dcbda3ec9967e4322"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/editable-dom-runtime.ts",
+      "sha256": "e0110409fc9fd25dd25da2901e87cfc500a827b2cd7d4e3e8cf8c2cc3066c284",
+      "gitBlob": "85676648697d841063741e6f6a632ccf2b082610"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/editing-epoch-adapter.ts",
+      "sha256": "26b88280d5d1f058a26ced8e3c1101a5cfaf555d08e84ffaacc75d24ea97416a",
+      "gitBlob": "a43da3d434620e899d40c1135eb018a094d9c769"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/editing-kernel.ts",
+      "sha256": "14c683ed9f4b4af2b77bf6d7369740aa937a5ab27ba9b52fcb5a6a09b41563c7",
+      "gitBlob": "12424b177fbd1b5f461be640d2b4b13f99a76691"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/external-text-binding.ts",
+      "sha256": "8a8f66d0c4319fda4fc478b1cd75a8385f89ffd1f67849eb45c2051b9d6e9a60",
+      "gitBlob": "22eed390c95dbbc3c64993b2b46852fa91ebab4c"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/external-text-runtime.ts",
+      "sha256": "f591df6715be19334efef731e8204fdc8242392e0d4772e924e62d64e28af230",
+      "gitBlob": "b6c614af3245113dff9c3207b0a10131731fa6f6"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/history-focus.ts",
+      "sha256": "d42282829a89c56751edc8e3127ff17e5c795a5f93672fd1316111812a4bfb1c",
+      "gitBlob": "db6ba4b2f28286e67b20fb50b246034bff2b80b9"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/history-keyboard.ts",
+      "sha256": "f218428d395fe66317f2cfdacef1ffd434afa79b7009e0ffd6820b2950dabf53",
+      "gitBlob": "1ef69b08925fa60fcdc5895618eb2a808efd0d51"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/input-controller.ts",
+      "sha256": "4d926bd2d1bd6174e24d321656f78495309611e0b0f0143371b8683a5237619b",
+      "gitBlob": "2c52009f2fdf62fff9c46eb5a97f6a62b796f54f"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/input-history.ts",
+      "sha256": "a97295d17a502d8adbf23aca04ec6499a93a82d3de0bad252b9ee92924f56fa4",
+      "gitBlob": "d4d0982d87c18938bc4afd6d51bb4ffd1e1f57cf"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/input-router.ts",
+      "sha256": "8dd2df4880e6d8a4fc55b26e94938f764cc43f7eae6fa4585c17eeb4ca57b2dd",
+      "gitBlob": "8f6920e30a3c106661cb1f7c3259911a5d9f0580"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/input-state.ts",
+      "sha256": "7bdd4fb226177d5a186b304c9c3b3cc1ffd835e53bb9d14d3ed966f6d08dea50",
+      "gitBlob": "35f020b9680d52905e951df1229e6837ce4bb9e4"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/interaction-owner.ts",
+      "sha256": "c8c2bb11c03d0ee019afbd6924bd15ef36b9cef5754f56a553e2eab23f902778",
+      "gitBlob": "1c9996130a29cd0bddf43dfef0131bfc15d6891f"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/keyboard-input-strategy.ts",
+      "sha256": "aeaac83ba50ff265185b66f367340a488d22b25b65d009133ca7b54d29026086",
+      "gitBlob": "c46571a66d8c3354c84b4c4d39eea991ca1302ac"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/line-boundary.ts",
+      "sha256": "142513fdc20845955f713fa7f28dba61666065c098c41976cad46ba4df0139e9",
+      "gitBlob": "7128f3a1a55ed05cae39aed52e8f41df0a29db0c"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/model-input-strategy.ts",
+      "sha256": "c17557cd15605dbb1d32be178155341087c698fc91c72463557941eb08b9e442",
+      "gitBlob": "1707b98fb85e1e77df47c2b0d25d9f21c8e2ed76"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/model-selection-dom-preference.ts",
+      "sha256": "dd273034df99d61234612c31833527d002c6d0fd2bf43b48959adf8a2d162b7d",
+      "gitBlob": "18f468e310641628e7bb7f510fa4d21a2c720b12"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/mutation-block-editing.ts",
+      "sha256": "fbfa12293ab5c47a961dbd0981c0a5442b5abcf532606561d9c604350c559de9",
+      "gitBlob": "e82ef3f11ab50d486651ffbcd9b07792051fb322"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/mutation-controller.ts",
+      "sha256": "3ed70a9f4ca70465c380b8715aa8b0b2c9e83de7fb41de9d27c421fe380764e6",
+      "gitBlob": "bc9790b08cd3f19b52d95768f7ca13fcfb9139a9"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/mutation-full-block-editing.ts",
+      "sha256": "605411af47e550d5ec43325d844f95ccb20905589a41b4d1f16d18c00c3a6fe9",
+      "gitBlob": "3eaa199a29370b113be4ef647da0dca5905c9334"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/mutation-history.ts",
+      "sha256": "35088ac54665bd85cb6574a8a6f6712ffd0483e2e7be2fa90d9fec4544373937",
+      "gitBlob": "6f98ca71f8a62505c50ba0e45f48292f32b5adf8"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/native-input-strategy.ts",
+      "sha256": "09c4df57df8bbd6edb8d17160ddaf63a2608a25ead35608dddceb5c60b84cbfe",
+      "gitBlob": "d47a3e858979c92e439233f92c26256edebe0ffe"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/native-text-input-delta.ts",
+      "sha256": "fc05e5011ca72456bc9c6fcab87367a6aa5940ec9485f402d25473692c5ed9ff",
+      "gitBlob": "5920975712f2358fa9f717ccebdfcef05393f5d5"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/placed-drag.ts",
+      "sha256": "4c9804883bbfe420fec21688973048df97b37cb71f9db071329a4fb01c478755",
+      "gitBlob": "82f5212ad6028584d873cc9a359ca24c73675f68"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/plite-string-coordinate-placement.ts",
+      "sha256": "28d185c507e588a73929592ee4cc94a1e5371af2f9d6b192157d78b72fb78e1a",
+      "gitBlob": "d9ea9e6d3e66dbc032213f0816e88dd715512a24"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/projected-clipboard.ts",
+      "sha256": "6425584d974500d051bcead5fdfeb99967f0703229c5df4fbcb630be3bbf99f9",
+      "gitBlob": "a944d284a6870bdfca950bcfa22860f75b09c133"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/projected-selection-target.ts",
+      "sha256": "5969f5be0929850f0da35f2d51d72a0589ec796afe05011c691a34802f424fd5",
+      "gitBlob": "8d086577fe7a759769862e5ffe7d21ac14e8c50b"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/render-contract-monitor.ts",
+      "sha256": "aa38ad8ed6be51411729b99980c8fc7ca0391f1e755a08b869a99116c8aab753",
+      "gitBlob": "d830f007e268f6bf73502f264ac50a85a0083e5b"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/root-interaction-controller.ts",
+      "sha256": "61fb7e26c2126366b86acf041558f89e3e6166cb1d9ce54bfcf54f5726b89184",
+      "gitBlob": "93ab8c5c4ed6c474afb058257d5f4f06b0d1def0"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/root-interaction-dom-selection-replay.ts",
+      "sha256": "b1df8f4d2f38ad5a2a61283fe1e304a287c0ffa73484e3dd35332200c6c9866b",
+      "gitBlob": "c9a83206bb61a36c0cd9d201fdcc772e8718c61f"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/root-interaction-resolver.ts",
+      "sha256": "d1480081bdf22f850cd71f028b2057af457b07ddf35f381d93f5c80d52ad8108",
+      "gitBlob": "30ab4cb5777f62c84aecd7c17fcfe2211d0fe72e"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/root-selector-sources.ts",
+      "sha256": "0316b5eb087c9ec61839d10d239220848efe5e5a3921df8590edbc28cb55632c",
+      "gitBlob": "55c4c78801af6f4df9e0d3064957196eb99cfb8d"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/runtime-android-engine.ts",
+      "sha256": "40cf2f7f802199ad80282269f5b3c90705e16cdf327270277ac77912282dad79",
+      "gitBlob": "124f4b51ce85147338f40de6bfde6c32dd124a08"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/runtime-before-input-events.ts",
+      "sha256": "5b9dd48cc6a3d212402dcc4ae7bf0dd8bcbe1a6cad902b0d6f56ec069cf5dd55",
+      "gitBlob": "b0b5c822b67c04ae7a6082ec5391665a64b4a832"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/runtime-browser-handle-events.ts",
+      "sha256": "9bbd6e5d9d9ffe1ea46f3680838b275e0207323d134724784a61acaee25cabfd",
+      "gitBlob": "2174c5e03544770ae1e99c7a04a00b2587727d32"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/runtime-clipboard-events.ts",
+      "sha256": "81b2650cd5de139c825a140ab6f343f3acf3ed6607d5e939a7cf6af3d353dbdb",
+      "gitBlob": "6337b34b48ae17b8312c7fe9fc84977e965a3e6f"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/runtime-composition-events.ts",
+      "sha256": "7f4e264436826b7189e7da5aa36c9096b12389df1f9257c58381b8df1e1f3fda",
+      "gitBlob": "4217204a306d57551fc3141e945d6b865ac69d28"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/runtime-drag-events.ts",
+      "sha256": "03851e5a99389b27400ab0de466b8df1cad58175d22897fc0ca8eb5ee44c59cf",
+      "gitBlob": "e28a70caba671996ab59f21a04d6012d47621814"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/runtime-editor-api.ts",
+      "sha256": "4a29ee8b6c59e654750152daf61c9958daf12e0a2f8baddbd0003303f901926c",
+      "gitBlob": "2bdfe3b6ec863450fc592d0bd7fac0c37ad5dcfa"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/runtime-event-engine.ts",
+      "sha256": "ca26a52102811005cb657f01eca54a1625c9cfc0615183f2271cceec789de25f",
+      "gitBlob": "b24e0bff0bdb201407bc78f32c6c589dca706182"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/runtime-focus-mouse-events.ts",
+      "sha256": "6c90a8d7427db7db5fa4445f2756ac86073fc03d64e3fcd1a08cfd0c01271663",
+      "gitBlob": "3c50df9a254544008a33f99df8449b655249fabf"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/runtime-input-events.ts",
+      "sha256": "710e0b846bcd9f29d030f3962db1467517b5c0a1f93368544e98326bd8ae6ec4",
+      "gitBlob": "7153392f9d5e6196bf098238f82ee651a92da0a7"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/runtime-kernel-trace.ts",
+      "sha256": "6cb338db3b55a7df05040870227ff94484e7dd979c923605f965b1a4bb11fd9e",
+      "gitBlob": "3bd2980bf3e6f91b80ba590f7bff3fd338282088"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/runtime-keyboard-events.ts",
+      "sha256": "dbc37d31fabc93acdce71b9cde4a0dd7ca3cbe1d0733fb89d2e6762de43d78d3",
+      "gitBlob": "4a18a14c13e4417e4cc8078402a9fc5cc2446163"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/runtime-live-state.ts",
+      "sha256": "4941a37c364b1a6b303624d69daddd30e4439858a698a3a8832b97338eabe1b7",
+      "gitBlob": "69616e68f13e461105cd4285f75fe65c8401ea52"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/runtime-mutation-state.ts",
+      "sha256": "8478e373faeca2aa96f1093a43822f1609a241fcb7e8dd5b74ab0cd869ce4718",
+      "gitBlob": "1b370beb3878115d20101a59d122d8f5e7f4104f"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/runtime-repair-engine.ts",
+      "sha256": "6c68c61334d6f5723c389f21df566ee513c279e0e8e77596ded784546dd6967c",
+      "gitBlob": "af7dfa9017195cc8e7d82d32867ccdab56d22e02"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/runtime-root-engine.ts",
+      "sha256": "17c3da59e61bbb4d56e3121860ce0370bc2152d6c660406c78a06e834a7ce5f0",
+      "gitBlob": "aa8310dfa5465faed614c1cdc36072008a5e1add"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/runtime-root-lifecycle.ts",
+      "sha256": "249eaf67c825e080f96da73e23f95f91c3df6963ed06d5a47f610c8902e924f6",
+      "gitBlob": "55109b911965ce8c457ff900871e2e20cd387278"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/runtime-root-selection-export.ts",
+      "sha256": "3af12c849087ae1bcb0a5ba00bd9100c8fe731300679d923e9a836540a824cc3",
+      "gitBlob": "bc5f468ff59937072d8dca7a95599d30162b086d"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/runtime-root-selection-import.ts",
+      "sha256": "5d8a0c7e85d50d2b717d19d9416c1e137388d54edb225fb90e7ba21d31932e54",
+      "gitBlob": "12510cf0ca60b3b8ba1cbb1e00c8a36c1b378f03"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/runtime-root-state.ts",
+      "sha256": "72a663544a0eeae8ea2b6a6a5d949d2214686b6dd78ac3fdfc801e85ab88f8c9",
+      "gitBlob": "22111826f2dba3c055966858c92375e62fe6e6a9"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/runtime-selection-engine.ts",
+      "sha256": "cfaecf8ce364a2883b8c8380f147c1a8b38df031fca6ac6a1d3e985f95c94794",
+      "gitBlob": "ada4e8389aa1c0a698a7dd0cf830a29e83fdd0bc"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/runtime-selection-state.ts",
+      "sha256": "ab4625180db24f1f4c114b6d836aec854bf288f25ccadd84e1d0cd81aca962a6",
+      "gitBlob": "0630908b76583038db0694d15f6a7a3a0dec1f11"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/runtime-target-bridge.ts",
+      "sha256": "8c82f95790e5709bd0fd9c27e952f61009d7bae3150f80d95260ed16c8880a91",
+      "gitBlob": "5505794904380356bd1e78446c966666783fd35f"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/schema-runtime-invalidation.ts",
+      "sha256": "a84906b13c91ef7404c9519f64c882879b9cffdcb6dce35829a546b7dc65e370",
+      "gitBlob": "b1b1109f0ae1f2db52502ecd5247a83d1cb477a1"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/selection-change-listener.ts",
+      "sha256": "702e46b93e6276633489d6c253f97be726ab7571a6844980fc6e260f5964bf80",
+      "gitBlob": "de88009c1b21a033159e6f77b39168e7b73a5f47"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/selection-claim.ts",
+      "sha256": "b093e80199eb6c58b938f82bb51553e971d341d9e178fc94a3bec605c3dacf86",
+      "gitBlob": "8ca78dc390c5930a81d236bbda91e33b82f8c2c0"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/selection-controller.ts",
+      "sha256": "84777451057f40bb96b84f99af78c5a183c01d0700fc5a5c6f33fa5da4280243",
+      "gitBlob": "4b7aad4b7482656f47430701215a6d493615de9c"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/selection-dom-range.ts",
+      "sha256": "a27dce42c3c3ff96522e26a12e093e10aeac1aca4e1639fd3a81f3d39e408227",
+      "gitBlob": "92fa5780c1041856be8cdda464e3016d91b76ff0"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/selection-projected-dom.ts",
+      "sha256": "7cf89a9ef56226a7e8032414b9205f45f68fd1eaf2fa15fd5d9aae4436b7f778",
+      "gitBlob": "98a08c36fc7ed92cd4ad914b43a3ac841de8df0e"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/selection-reconciler.ts",
+      "sha256": "809623288a2c9a0983635bcc1bc1ca9ac68e2866f00f45d61ff9fc69fb94c4a1",
+      "gitBlob": "6cf3e2c9df1f7238153163ac44021d16d5ecab82"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/selection-runtime.ts",
+      "sha256": "aff7ab6631dc991be03a4c8ca672add34679c12528cde51c33d2243d4d2f0a46",
+      "gitBlob": "35ec35c215d3b3b7a876ba648537c0cf1d607cb0"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/selection-side-effect-policy.ts",
+      "sha256": "6eae38bdf0f34a51e9155f47284d0eee61eff1678951ea8431f43c7530ce8b85",
+      "gitBlob": "150b748e9234b362a49d5e11d5e35b51d9bf23d1"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/selection-triple-click.ts",
+      "sha256": "f3615bb5fe62cfcf942d4ad7d5209385271106d5bcacd13d889fbdc078721c88",
+      "gitBlob": "dc99a0a70e1cdf975af4e1ec46ec05cbe2feffd6"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/selection-void-target.ts",
+      "sha256": "b7b6de3389eadc41f65c84b3ac4c43965c6c33cd829e526577be9bcf38df51c7",
+      "gitBlob": "560fe307bfe2835afe3c4ca5c84b31d2f921ad27"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/soft-line-end-delete.ts",
+      "sha256": "6bd8a8f694944fb6298fe401e8bbf3afca59312e2bcc137af11e344dfaec5df6",
+      "gitBlob": "03ecb83fdfc00d59e166945e31f74604c733da4c"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/typed-text.ts",
+      "sha256": "b6728e16c7b46200484870cd83bc5315e4fcee15a517c7de0b1eb149a046542f",
+      "gitBlob": "25bf68793dccb7e195e07a422ce3fb7ba378a0d1"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/unread-press.ts",
+      "sha256": "7b55e4cd7c43f1330bb6b11af3aeb984d55459b5f61a6ca8770f67ba793f1044",
+      "gitBlob": "d91e6eb28719d78f0419ca147b0f73f9e80460c8"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/view-caret-restore.ts",
+      "sha256": "3662b9e32b92eadef7b2a56b6c68f944191f79fb009d1137d9136519a8dd3704",
+      "gitBlob": "a8338cb5bf3a10718cded598b1b53e50d577a4ca"
+    },
+    {
+      "path": "packages/plitejs/src/react/editable/view-lines.ts",
+      "sha256": "d890a421147e473c376d71a012c8dea1d18e58587b0d6ab0b7b77173319ea14d",
+      "gitBlob": "ad968f974a02224097a37c6208729a4913b7f3fc"
+    },
+    {
+      "path": "packages/plitejs/src/react/hooks/android-input-manager/android-input-manager.ts",
+      "sha256": "b027d68a6adaf634ea5fbadbfe9051e49e6b86b62141487afaccabfac89d0990",
+      "gitBlob": "e949ca08a93cc72161314fe876fa331b11feddf4"
+    },
+    {
+      "path": "packages/plitejs/src/react/hooks/android-input-manager/use-android-input-manager.ts",
+      "sha256": "15a40f70a2ff8032f05e787fa53a50420b7573d002ad444cf0f0d890121aab78",
+      "gitBlob": "ba89265f0773483fe5ab55f40bc583d6a1207dc7"
+    },
+    {
+      "path": "packages/plitejs/src/react/hooks/focus-plite-editable.ts",
+      "sha256": "646fba0ccab9e836da71f104667230835947c8e67df58ab8656261d282936e18",
+      "gitBlob": "d5e413c24ccb444a9db417393d9b9d63b1c3234e"
+    },
+    {
+      "path": "packages/plitejs/src/react/hooks/use-claim-editable-dom-commit.ts",
+      "sha256": "fbcdbcbc5346f6ee3832b026fa03bf214f3b48300b58b84c6d24f10912c5d619",
+      "gitBlob": "b8dceaaf9e7e4774e115b23befb15ff5cc415762"
+    },
+    {
+      "path": "packages/plitejs/src/react/hooks/use-editor-composing.ts",
+      "sha256": "d6bd908d93690d1435f44ea2983be2341cc5119f943e3d65ee67030df59dd8a7",
+      "gitBlob": "8efc1f1551d2a0dfce6c6af0fd638c7dbb9ca6cc"
+    },
+    {
+      "path": "packages/plitejs/src/react/hooks/use-editor-context.tsx",
+      "sha256": "ee5091914e5a1c513ee25d52cc290b3d9f0a066cce9ff05523baee5c46a55ee8",
+      "gitBlob": "6b4374a2e71d5604c5bf590d6eacf511fd3c0108"
+    },
+    {
+      "path": "packages/plitejs/src/react/hooks/use-editor-dom-scope.ts",
+      "sha256": "25bf846906077cf1eb7485a88c8cfa55deaf6b3147e7a9616dca34a228257733",
+      "gitBlob": "123d2cc02165c84a91966d8bfc40c75ffe829218"
+    },
+    {
+      "path": "packages/plitejs/src/react/hooks/use-editor-focused.ts",
+      "sha256": "be8a37770c6859ff3d56980888027e6c780b541534796612219317cfbc288796",
+      "gitBlob": "eb2f3745aaa85e259f770cc3a953093b70a2da9d"
+    },
+    {
+      "path": "packages/plitejs/src/react/hooks/use-editor-read-only.ts",
+      "sha256": "80bb5181d538827541b8f50cd7cd171cf073bc48843d85d376285d12ab57b056",
+      "gitBlob": "a12f6f838e33e7168079b8bd8135f32d25a96248"
+    },
+    {
+      "path": "packages/plitejs/src/react/hooks/use-editor-runtime-state.ts",
+      "sha256": "6e587e13fc6ecd52ac45e6b616ac39bc4d27c6c5a010dd3b75c36401d1f15e90",
+      "gitBlob": "a245f35816be52f3df4011dfc9a41365f2c74e98"
+    },
+    {
+      "path": "packages/plitejs/src/react/hooks/use-editor-selection.tsx",
+      "sha256": "4cddd405fc0385284295068a14e2c14912c601709e93483cb5906863b8320b3f",
+      "gitBlob": "7c587dbfc864efcf02257d387218ff9c92403d90"
+    },
+    {
+      "path": "packages/plitejs/src/react/hooks/use-editor-selector.tsx",
+      "sha256": "857dbda1cf57bd00e27ce6d7c40ab097878803587544fc24be310a1e616ae065",
+      "gitBlob": "cd52e30e5d1028094bf89ed460a6a331846a7a76"
+    },
+    {
+      "path": "packages/plitejs/src/react/hooks/use-editor-view-state.ts",
+      "sha256": "609fdb6b0bc8a5f92635f8e65239849cefce568c6bd98b4f53600e6a12b00046",
+      "gitBlob": "9c9bc61e140759cf0a0cacd3b5b6872909090689"
+    },
+    {
+      "path": "packages/plitejs/src/react/hooks/use-element.ts",
+      "sha256": "6dddd9ab12b907284f84dd8ec65d432b6c9139ef92823b41be28034e4bc08e58",
+      "gitBlob": "877e7726f1f8211910959899b11f5417bdf76c73"
+    },
+    {
+      "path": "packages/plitejs/src/react/hooks/use-generic-selector.tsx",
+      "sha256": "1cd5bbaa123679be873e0bb4e6d68af6499bbcb3abb0e67c58352a9738594e7a",
+      "gitBlob": "0440cb8cd5661d057b3f30fac5948db679ada05f"
+    },
+    {
+      "path": "packages/plitejs/src/react/hooks/use-hydrated.ts",
+      "sha256": "bc4a197c0273d3982ce41d78523ee473c29c038d721a40e7837b9f4a7619ae37",
+      "gitBlob": "ec7c0cb1c832e77ce659174ce11d6d49b3f968ef"
+    },
+    {
+      "path": "packages/plitejs/src/react/hooks/use-isomorphic-layout-effect.ts",
+      "sha256": "82e988121b7f00ed09225379144c6a915fa9ecd70f9ea1c2f041cd0747aa09df",
+      "gitBlob": "4a1cbe0b770e6f29485eb92acbc3d81b37c5b876"
+    },
+    {
+      "path": "packages/plitejs/src/react/hooks/use-node-selector.tsx",
+      "sha256": "21d75dba801a0890a2d2148482f6d13beb250ec5381923b9aae887e230a687c9",
+      "gitBlob": "b575a8002ecf82b6f25d303214568f09106186f3"
+    },
+    {
+      "path": "packages/plitejs/src/react/hooks/use-plite-child-root.ts",
+      "sha256": "bb27a0f2a36b10fe0ec6dd2a41a4a765647ac5ddffe5dd9ad189b730438f97e6",
+      "gitBlob": "47a3449c5b1c614dfb3336a4f7860fb94907a009"
+    },
+    {
+      "path": "packages/plitejs/src/react/hooks/use-plite-content-root.ts",
+      "sha256": "7b7c5b8af701f4cd39f37e72e030e2fbd1eabe1c4b670beb9ebf05a9e435aefd",
+      "gitBlob": "36ac4b5aad026c8fd705294ef5ff4d137ac72e40"
+    },
+    {
+      "path": "packages/plitejs/src/react/hooks/use-plite-node-ref.tsx",
+      "sha256": "a03314341302d1b70b8760abbba9f1e45de4f50489492afd41118345d09d262d",
+      "gitBlob": "c5f8c5d92c0600b0a38cdb813ad2bbd5a18b5811"
+    },
+    {
+      "path": "packages/plitejs/src/react/hooks/use-plite-root-chrome.ts",
+      "sha256": "ad2e779470b18e6929f2d78f25912d8f910e499c45042cc57d64914b30d4a96d",
+      "gitBlob": "04aa2aeee1337ff2145389ea7830ee8aa4ad949f"
+    },
+    {
+      "path": "packages/plitejs/src/react/hooks/use-plite-runtime.tsx",
+      "sha256": "8638ee8347f897228d516a734424ed53bc926964e26ec3eb32d6c33a973ced93",
+      "gitBlob": "2f99227392b2f0204a743b2985b985c72233889f"
+    },
+    {
+      "path": "packages/plitejs/src/react/hooks/use-runtime-focus-state.ts",
+      "sha256": "9a4bff8a817036c8bb58b251165dc2e2ed41c828acab13709f2f98956f8d403b",
+      "gitBlob": "92b3ff917b37f4d5fceead627be90389f15626eb"
+    },
+    {
+      "path": "packages/plitejs/src/react/hooks/use-selection-geometry.tsx",
+      "sha256": "35563880a21f2080adf0cfc671219e34fe6223fe61ddb9748a37486474fcd31d",
+      "gitBlob": "8a9cae697953292c1414fbccecc57b9992ff8121"
+    },
+    {
+      "path": "packages/plitejs/src/react/inactive-selection.ts",
+      "sha256": "91fa492dce749bcfe38210ab97ac1c818745ba8dbf15451a3419e24b00a4408e",
+      "gitBlob": "20968399062aeb5ac1e56ce81cd16450943699c4"
+    },
+    {
+      "path": "packages/plitejs/src/react/plugin/react-editor.ts",
+      "sha256": "c266c5fa8116076805ba8c9aebc285b483550b0ab477761001217d34c16e49d2",
+      "gitBlob": "481a2d9a74518bc8c1093dcc17da796f010eadb0"
+    },
+    {
+      "path": "packages/plitejs/src/react/plugin/with-react.ts",
+      "sha256": "aa1c582ec466abe4237866fe986f8df43cd28a533cb5c28449362b8030828cf1",
+      "gitBlob": "d06ec59d586a6d30d9e8348127cd725c09498867"
+    },
+    {
+      "path": "packages/plitejs/src/react/range-geometry.ts",
+      "sha256": "41462d1ee73097562523afb887eb542904c4d4afc4db6e57cc3c85567deca9bc",
+      "gitBlob": "78b11408e390cbb5fc4de00930776d8bf7f06286"
+    },
+    {
+      "path": "packages/plitejs/src/react/render-profiler.ts",
+      "sha256": "91078a23226b1906d000a258e602d3b6426bc26603dd691667e297f72d45051a",
+      "gitBlob": "cf2ce6a93795782342ae8691fc2cb79058a0da2d"
+    },
+    {
+      "path": "packages/plitejs/src/react/root-key.ts",
+      "sha256": "e8b374e863b60eb2c5cb705acb63269b6133e66a5586c12a01f988eaea6f97c1",
+      "gitBlob": "3d9d7d6017cdcd90de32085ef84a1135fc931c2f"
+    },
+    {
+      "path": "packages/plitejs/src/react/shell-runtime.ts",
+      "sha256": "93288879af6f09b9ddbad7efc4e961bdf97291a1bd5ea68b95a09ed477df7ca7",
+      "gitBlob": "6e54c915e855bb65a590f8dafed8f8a27c429058"
+    },
+    {
+      "path": "packages/plitejs/src/react/update-policy.ts",
+      "sha256": "a4c005916da1286adab2a29610e350bee81fecacc2b699c4ac427b5e91d75271",
+      "gitBlob": "dbf7898df2f7157a04ef8582bacca224f246ef67"
+    },
+    {
+      "path": "packages/plitejs/src/react/utils/environment.ts",
+      "sha256": "0b0a30269a3086c1b3aaea8293bba6d8add4a2c9e44516b1a27fb481d3310ffe",
+      "gitBlob": "79a88130ef14dd16257528e5f8780ef2f243289d"
+    },
+    {
+      "path": "packages/plitejs/src/react/view-boundary-graph-core.ts",
+      "sha256": "69590015621c3a584eea5ecd8f7993017748ee3db948af4ed0215255e6f21f43",
+      "gitBlob": "e081f4266e31d15c12a304c270d37758031a2945"
+    },
+    {
+      "path": "packages/plitejs/src/react/view-boundary-graph.ts",
+      "sha256": "f5c4bf82fb4755a94d850db3de0b213e2046437c26423b3769ba98f084fed542",
+      "gitBlob": "c2c6e4b9c7a1ebc6b2757de2c0d3aca34d57c957"
+    },
+    {
+      "path": "packages/plitejs/src/react/view-selection-decoration.ts",
+      "sha256": "9bab99020360059e1964828655ae03534a5f89844a242647c2eabf8783394e65",
+      "gitBlob": "ec5f6b29577051d6296faa9df25e053d3c78de3d"
+    },
+    {
+      "path": "packages/plitejs/src/react/view-selection.ts",
+      "sha256": "4697b6cc4454685de39f2a19a163577722a64925cab1dc06f19f432e991ee808",
+      "gitBlob": "6458b075002ca643d71089cb093dd63a800a1a7c"
+    },
+    {
+      "path": "packages/plitejs/src/react/viewport-boundary.tsx",
+      "sha256": "97a4c1b0bcbbfd325f3d992b92425413cd736143f1a56167dce871cae5b7f9c6",
+      "gitBlob": "b7692cb053943b044e30a54a4001ab95ce9faeac"
+    },
+    {
+      "path": "packages/plitejs/src/react/viewport-commands.ts",
+      "sha256": "8a256bdcd88240fa4eda8d5c3242962ce69bcb60ea359d91c403f2dbe0fd3bb4",
+      "gitBlob": "8c9d2556d40cb2fe5739edcc5b78e01aa0d9dd21"
+    },
+    {
+      "path": "packages/plitejs/src/transforms-node/insert-nodes.ts",
+      "sha256": "bf2ce8bbeea7e17ef80e6559fcca9960aa9b585f6d7727adb5a59d2ef926aff7",
+      "gitBlob": "e2734b0fd9b3effc9856f819f67e494fcd7c0c14"
+    },
+    {
+      "path": "packages/plitejs/src/transforms-node/lift-nodes.ts",
+      "sha256": "aff2cbf061078a68c2aeb258dff2cc6bf9090fc26d7663ce23b9a411c43f55eb",
+      "gitBlob": "5056126ca807753dab61aed2792c8e63dd1debd1"
+    },
+    {
+      "path": "packages/plitejs/src/transforms-node/merge-nodes.ts",
+      "sha256": "1d62102820091bba027562ec93665490eefa7f535867bc467b3012126a48db8a",
+      "gitBlob": "9ca7b6e64dd601054f174b7245608c258fcc0ecf"
+    },
+    {
+      "path": "packages/plitejs/src/transforms-node/move-nodes.ts",
+      "sha256": "9fa702db090231a96163d97199ab83fa4f0147b345b15e9e08b5d062c7b64878",
+      "gitBlob": "37a3d745e34ab47226e268c5612b991fbe1eb3ed"
+    },
+    {
+      "path": "packages/plitejs/src/transforms-node/remove-nodes.ts",
+      "sha256": "34669c0b71b40a881ac4e3cc77e9661c9e19ccce24860118a6fc3f583e93037e",
+      "gitBlob": "ce13dc099922f2dad576be4002263f7fc30ee99f"
+    },
+    {
+      "path": "packages/plitejs/src/transforms-node/replace-children.ts",
+      "sha256": "73c1fdde8e8b13b472b14349324bedf0972b847139f33dd3841e201d527c6e32",
+      "gitBlob": "4582245b64809d4e2a184f67266862867234dec8"
+    },
+    {
+      "path": "packages/plitejs/src/transforms-node/set-nodes.ts",
+      "sha256": "d8c1eb4d19d4d8e831002e2e3345d769b42494a9f2aab389a5981875214d6d0b",
+      "gitBlob": "20b3edb8bc0c175e412d8ee9891ba912091e94b7"
+    },
+    {
+      "path": "packages/plitejs/src/transforms-node/split-nodes.ts",
+      "sha256": "33bf4d0b6cdbc0e36252feedade651f39a4f6c40c416eb92accd96c0badfdeb6",
+      "gitBlob": "7cbd47d2d66f40326c2701a9a529e91be379f17e"
+    },
+    {
+      "path": "packages/plitejs/src/transforms-node/unset-nodes.ts",
+      "sha256": "3cff13b3a53f1c77cd359b4a726411b646df5821c73530b8bc736fb2bbba6484",
+      "gitBlob": "bc2fc927bb094c82ad66750d9b841fd5110363dd"
+    },
+    {
+      "path": "packages/plitejs/src/transforms-node/unwrap-nodes.ts",
+      "sha256": "604951f0ecbfc3ab5c9f70401afbbcf899110ef2a5d1d6db59bcc4e6bd7577cf",
+      "gitBlob": "57ec1e89c99fe12d5222df25df92fdd79fdbe53b"
+    },
+    {
+      "path": "packages/plitejs/src/transforms-node/wrap-nodes.ts",
+      "sha256": "16ab84ce57217d28443aae9b30be6978458a7cec0dafa06c5f4dbde1057ffa01",
+      "gitBlob": "0f3a9e251131e76d323ff81aec753347b4af54d4"
+    },
+    {
+      "path": "packages/plitejs/src/transforms-selection/collapse.ts",
+      "sha256": "bc09ff661f1d31d58eecf07a02f97e8f5e80f4f0fac6a398cec50ddc9e139817",
+      "gitBlob": "95b21647273fa310461640a1b64990429396abd5"
+    },
+    {
+      "path": "packages/plitejs/src/transforms-selection/deselect.ts",
+      "sha256": "260cec958b9ecc74d48fcb36761971708687adef232e55c364f35b8fdd444180",
+      "gitBlob": "3f549514a802f45144133e6dd4b5bb71a4ce07aa"
+    },
+    {
+      "path": "packages/plitejs/src/transforms-selection/move.ts",
+      "sha256": "44446d1313bc845196a80a3783f1d0c7c81a6cebef206f6390b2eb6755177ce3",
+      "gitBlob": "139f1049ef3d4f99db7475d46e7070334e316a32"
+    },
+    {
+      "path": "packages/plitejs/src/transforms-selection/select.ts",
+      "sha256": "49560a0397ec43845c370e93facf4cc13233fa49ac169cd44b35007c1a3baff7",
+      "gitBlob": "d19b434a760465f7e1f492a1b73acb5160bdf64d"
+    },
+    {
+      "path": "packages/plitejs/src/transforms-selection/set-point.ts",
+      "sha256": "eb4803c4730bdb15f83380540127d523444e4a4cfa3fa24fce7e24954a410d94",
+      "gitBlob": "356787b37b0276e62a2b09e02527f946cd60ce60"
+    },
+    {
+      "path": "packages/plitejs/src/transforms-selection/set-selection.ts",
+      "sha256": "ad052de2da2c2d9ac3cc833530f4fb825c8d3265f28af5723132f39676172b4a",
+      "gitBlob": "1dee561b0bcc4940d620d3569f20ce78b143b6f3"
+    },
+    {
+      "path": "packages/plitejs/src/transforms-text/delete-text-collapsed-path-targets.ts",
+      "sha256": "2627a1ee5ed2235bbb3a535e59dd3be60e26dd79eb7b263140b38acdeced7152",
+      "gitBlob": "0c5e582cba8d2a48e53dd6ac3fe53be0080fcba8"
+    },
+    {
+      "path": "packages/plitejs/src/transforms-text/delete-text-grid.ts",
+      "sha256": "8f2afb7d7e41fdafa6fdec747b8d053ba1eec551b7ca0c741af928a45c2fa8d0",
+      "gitBlob": "ea9134b26b3cd372e7f0e1e2ade4de93e5a0908b"
+    },
+    {
+      "path": "packages/plitejs/src/transforms-text/delete-text-inline-points.ts",
+      "sha256": "895b16bde8de1659697bfedcafa4df01fe04098b74b4c721f4e81d48af93ca61",
+      "gitBlob": "6a62f1cd0f1052db3d81e1c476c8eeab4eba33d7"
+    },
+    {
+      "path": "packages/plitejs/src/transforms-text/delete-text-plan.ts",
+      "sha256": "d37309412596c6e298c534440fc02fd529b9ab36e7cba7b6ba263a6292e58083",
+      "gitBlob": "cec5cd1bd842380bfa85def2b486543ba10da564"
+    },
+    {
+      "path": "packages/plitejs/src/transforms-text/delete-text-removal.ts",
+      "sha256": "cffa398a5240815bd29a9cbefb422603bd9d140c05c54c859555925f5faa281f",
+      "gitBlob": "723487326cc300c86bc76284f9aee23a24a656ef"
+    },
+    {
+      "path": "packages/plitejs/src/transforms-text/delete-text-structural-cleanup.ts",
+      "sha256": "96c9527905afadc524b54cb4619a68995d0f09ea23f790b46244f6147fd9a4b1",
+      "gitBlob": "48cab49390f0f815492856599c7a7f4eb05801ab"
+    },
+    {
+      "path": "packages/plitejs/src/transforms-text/delete-text-whole-blocks.ts",
+      "sha256": "ca8d8ac86ec38d8d198692faabcaa7f9204f81836426954e065e47906ebea1d9",
+      "gitBlob": "f8246aaf7ad33797c4d37d596921c2e1723b24e4"
+    },
+    {
+      "path": "packages/plitejs/src/transforms-text/delete-text.ts",
+      "sha256": "194ea08d60641cf9a0155265e41d76ca920180f129ffd5f50d5d12a1c048fb3a",
+      "gitBlob": "74dc096e188efa0cd96d95c50c4fb3ecc25ae1b4"
+    },
+    {
+      "path": "packages/plitejs/src/transforms-text/full-document-range.ts",
+      "sha256": "3ff744e030d8730003be5efeb2a108cc7b5e29015c1e560a4bc62ca7d7178c1f",
+      "gitBlob": "166ec1fdf2d485dbbb2b44eafbe5b7aa01c5c92d"
+    },
+    {
+      "path": "packages/plitejs/src/transforms-text/insert-text.ts",
+      "sha256": "6635a1ebe370b1241ec7a498e30771cff2dc6f6c93413d4921df7ae0e5de4560",
+      "gitBlob": "1891b70a5ef4fbd1c1733f669a07e88606e3f3ec"
+    },
+    {
+      "path": "packages/plitejs/src/utils/format-debug-value.ts",
+      "sha256": "a52378767c9436264ab471d1a13717fc0de8d1d04113bca86f1be079c490d43e",
+      "gitBlob": "b27ebb88c4dc60fcf5f3ebf77b70275723e6efcd"
+    },
+    {
+      "path": "packages/plitejs/src/utils/get-default-insert-location.ts",
+      "sha256": "cbaf75a2b325d3a46c12f4575112b7fb102d75f071c76132fdcb9850299a4561",
+      "gitBlob": "a44859b4d9caf1b1ea0661d38dae2550c2add529"
+    },
+    {
+      "path": "packages/plitejs/src/utils/is-object.ts",
+      "sha256": "8732603db4383cbe13592c489bd03ee0a0d2c5a748954e3dc9481dbbb0f25b43",
+      "gitBlob": "63afbf7416a37131ee4339ab96c78dc74b4bd811"
+    },
+    {
+      "path": "packages/plitejs/src/utils/match-path.ts",
+      "sha256": "79e913bcc3ebea05b914cfabe8eb3b2fd8d62a618baec180fde9e6429b238744",
+      "gitBlob": "831d61d63d4644a2d3a68ca76c60a40708f2f939"
+    },
+    {
+      "path": "packages/plitejs/src/utils/node-keys.ts",
+      "sha256": "174cc2ad35d67c198d58eee65acc7fbb459121b6f2e75d31801bba999978b67d",
+      "gitBlob": "639b932bfae5684d38294c85ec67dfa3347e1c30"
+    },
+    {
+      "path": "packages/plitejs/src/utils/node-match.ts",
+      "sha256": "88a87fa928946e71ff0df6ebbc22a4a4323465be323e0d49ce21c437469b8d99",
+      "gitBlob": "6e688b59890ad36885df1f13ad58f43e7b477965"
+    },
+    {
+      "path": "packages/plitejs/src/utils/string.ts",
+      "sha256": "c48568ba55ffd5b2dd84d50bb95d83770a2b7bca46570444a36bc67dad1a8f00",
+      "gitBlob": "9bf2367de8e4d7cea71e613459e060abfea72c30"
+    }
+  ],
+  "runtimeDependencies": [
+    {
+      "path": "node_modules/lodash",
+      "name": "lodash",
+      "version": "4.17.23",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "scope": "positive-emitted npm package",
+      "packageJson": {
+        "name": "lodash",
+        "version": "4.17.23",
+        "description": "Lodash modular utilities.",
+        "keywords": "modules, stdlib, util",
+        "homepage": "https://lodash.com/",
+        "repository": "lodash/lodash",
+        "icon": "https://lodash.com/icon.svg",
+        "license": "MIT",
+        "main": "lodash.js",
+        "author": "John-David Dalton <john.david.dalton@gmail.com>",
+        "contributors": [
+          "John-David Dalton <john.david.dalton@gmail.com>",
+          "Mathias Bynens <mathias@qiwi.be>"
+        ],
+        "scripts": {
+          "test": "echo \"See https://travis-ci.org/lodash-archive/lodash-cli for testing details.\""
+        }
+      },
+      "noticeSource": "node_modules/lodash/LICENSE",
+      "noticeSHA256": "f71e8ed126b46346494aad5486874cd8f0aafe95092ed67d2e3cb6110f939abc"
+    },
+    {
+      "path": "node_modules/react",
+      "name": "react",
+      "version": "19.2.8",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "scope": "positive-emitted npm package",
+      "packageJson": {
+        "name": "react",
+        "description": "React is a JavaScript library for building user interfaces.",
+        "keywords": [
+          "react"
+        ],
+        "version": "19.2.8",
+        "homepage": "https://react.dev/",
+        "bugs": "https://github.com/react/react/issues",
+        "license": "MIT",
+        "files": [
+          "LICENSE",
+          "README.md",
+          "index.js",
+          "cjs/",
+          "compiler-runtime.js",
+          "jsx-runtime.js",
+          "jsx-runtime.react-server.js",
+          "jsx-dev-runtime.js",
+          "jsx-dev-runtime.react-server.js",
+          "react.react-server.js"
+        ],
+        "main": "index.js",
+        "exports": {
+          ".": {
+            "react-server": "./react.react-server.js",
+            "default": "./index.js"
+          },
+          "./package.json": "./package.json",
+          "./jsx-runtime": {
+            "react-server": "./jsx-runtime.react-server.js",
+            "default": "./jsx-runtime.js"
+          },
+          "./jsx-dev-runtime": {
+            "react-server": "./jsx-dev-runtime.react-server.js",
+            "default": "./jsx-dev-runtime.js"
+          },
+          "./compiler-runtime": {
+            "react-server": "./compiler-runtime.js",
+            "default": "./compiler-runtime.js"
+          }
+        },
+        "repository": {
+          "type": "git",
+          "url": "https://github.com/react/react.git",
+          "directory": "packages/react"
+        },
+        "engines": {
+          "node": ">=0.10.0"
+        }
+      },
+      "noticeSource": "node_modules/react/LICENSE",
+      "noticeSHA256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+    },
+    {
+      "path": "node_modules/react-dom",
+      "name": "react-dom",
+      "version": "19.2.8",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "scope": "positive-emitted npm package",
+      "packageJson": {
+        "name": "react-dom",
+        "version": "19.2.8",
+        "description": "React package for working with the DOM.",
+        "main": "index.js",
+        "repository": {
+          "type": "git",
+          "url": "https://github.com/react/react.git",
+          "directory": "packages/react-dom"
+        },
+        "keywords": [
+          "react"
+        ],
+        "license": "MIT",
+        "bugs": {
+          "url": "https://github.com/react/react/issues"
+        },
+        "homepage": "https://react.dev/",
+        "dependencies": {
+          "scheduler": "^0.27.0"
+        },
+        "peerDependencies": {
+          "react": "^19.2.8"
+        },
+        "files": [
+          "LICENSE",
+          "README.md",
+          "client.js",
+          "client.react-server.js",
+          "index.js",
+          "profiling.js",
+          "profiling.react-server.js",
+          "react-dom.react-server.js",
+          "server.browser.js",
+          "server.bun.js",
+          "server.edge.js",
+          "server.js",
+          "server.node.js",
+          "server.react-server.js",
+          "static.browser.js",
+          "static.edge.js",
+          "static.js",
+          "static.node.js",
+          "static.react-server.js",
+          "test-utils.js",
+          "cjs/"
+        ],
+        "exports": {
+          ".": {
+            "react-server": "./react-dom.react-server.js",
+            "default": "./index.js"
+          },
+          "./client": {
+            "react-server": "./client.react-server.js",
+            "default": "./client.js"
+          },
+          "./server": {
+            "react-server": "./server.react-server.js",
+            "workerd": "./server.edge.js",
+            "bun": "./server.bun.js",
+            "deno": "./server.browser.js",
+            "worker": "./server.browser.js",
+            "node": "./server.node.js",
+            "edge-light": "./server.edge.js",
+            "browser": "./server.browser.js",
+            "default": "./server.node.js"
+          },
+          "./server.browser": {
+            "react-server": "./server.react-server.js",
+            "default": "./server.browser.js"
+          },
+          "./server.bun": {
+            "react-server": "./server.react-server.js",
+            "default": "./server.bun.js"
+          },
+          "./server.edge": {
+            "react-server": "./server.react-server.js",
+            "default": "./server.edge.js"
+          },
+          "./server.node": {
+            "react-server": "./server.react-server.js",
+            "default": "./server.node.js"
+          },
+          "./static": {
+            "react-server": "./static.react-server.js",
+            "workerd": "./static.edge.js",
+            "deno": "./static.browser.js",
+            "worker": "./static.browser.js",
+            "node": "./static.node.js",
+            "edge-light": "./static.edge.js",
+            "browser": "./static.browser.js",
+            "default": "./static.node.js"
+          },
+          "./static.browser": {
+            "react-server": "./static.react-server.js",
+            "default": "./static.browser.js"
+          },
+          "./static.edge": {
+            "react-server": "./static.react-server.js",
+            "default": "./static.edge.js"
+          },
+          "./static.node": {
+            "react-server": "./static.react-server.js",
+            "default": "./static.node.js"
+          },
+          "./profiling": {
+            "react-server": "./profiling.react-server.js",
+            "default": "./profiling.js"
+          },
+          "./test-utils": "./test-utils.js",
+          "./package.json": "./package.json"
+        },
+        "browser": {
+          "./server.js": "./server.browser.js",
+          "./static.js": "./static.browser.js"
+        }
+      },
+      "noticeSource": "node_modules/react-dom/LICENSE",
+      "noticeSHA256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+    },
+    {
+      "path": "node_modules/scheduler",
+      "name": "scheduler",
+      "version": "0.27.0",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "scope": "positive-emitted npm package",
+      "packageJson": {
+        "name": "scheduler",
+        "version": "0.27.0",
+        "description": "Cooperative scheduler for the browser environment.",
+        "repository": {
+          "type": "git",
+          "url": "https://github.com/facebook/react.git",
+          "directory": "packages/scheduler"
+        },
+        "license": "MIT",
+        "keywords": [
+          "react"
+        ],
+        "bugs": {
+          "url": "https://github.com/facebook/react/issues"
+        },
+        "homepage": "https://react.dev/",
+        "files": [
+          "LICENSE",
+          "README.md",
+          "index.js",
+          "index.native.js",
+          "unstable_mock.js",
+          "unstable_post_task.js",
+          "cjs/"
+        ]
+      },
+      "noticeSource": "node_modules/scheduler/LICENSE",
+      "noticeSHA256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+    },
+    {
+      "path": "node_modules/diff-match-patch-ts",
+      "name": "diff-match-patch-ts",
+      "version": "0.6.0",
+      "license": "MIT",
+      "files": [
+        "LICENSE.md"
+      ],
+      "scope": "positive-emitted npm package",
+      "packageJson": {
+        "name": "diff-match-patch-ts",
+        "version": "0.6.0",
+        "description": "Port of diff-match-patch to TypeScript.",
+        "exports": {
+          "import": {
+            "types": "./index.d.ts",
+            "default": "./diff-match-patch-ts.mjs"
+          },
+          "require": {
+            "types": "./index.d.ts",
+            "default": "./diff-match-patch-ts.cjs"
+          }
+        },
+        "main": "diff-match-patch-ts.cjs",
+        "module": "diff-match-patch-ts.mjs",
+        "browser": "diff-match-patch-ts.umd.js",
+        "types": "index.d.ts",
+        "scripts": {
+          "build": "rimraf dist && rollup -c rollup.config.mjs && copyfiles package.json README.md LICENSE.md dist",
+          "test": "jest",
+          "lint": "eslint .",
+          "release": "standard-version",
+          "npmpublish": "cd dist && npm publish",
+          "commitmsg": "commitlint -e $GIT_PARAMS"
+        },
+        "repository": {
+          "type": "git",
+          "url": "https://github.com/rars/diff-match-patch-ts"
+        },
+        "keywords": [
+          "diff",
+          "match",
+          "patch"
+        ],
+        "author": "Richard Russell",
+        "license": "MIT",
+        "bugs": {
+          "url": "https://github.com/rars/diff-match-patch-ts/issues"
+        },
+        "homepage": "https://github.com/rars/diff-match-patch-ts#readme",
+        "devDependencies": {
+          "@babel/core": "^7.24.0",
+          "@babel/preset-env": "^7.24.0",
+          "@babel/preset-typescript": "^7.23.3",
+          "@commitlint/cli": "^19.0.3",
+          "@commitlint/config-conventional": "^19.0.3",
+          "@rollup/plugin-typescript": "^11.1.6",
+          "@types/jasmine": "^5.1.4",
+          "@types/jest": "^29.5.12",
+          "@types/jsdom": "^21.1.1",
+          "@types/node": "^20.11.25",
+          "babel-jest": "^29.7.0",
+          "copyfiles": "^2.4.1",
+          "core-js": "^3.7.0",
+          "cz-conventional-changelog": "^3.3.0",
+          "globals": "^15.0.0",
+          "husky": "^9.0.11",
+          "jasmine": "^5.1.0",
+          "jasmine-core": "^5.1.2",
+          "jest": "^29.7.0",
+          "jsdom": "^24.0.0",
+          "prettier": "^3.2.5",
+          "rimraf": "^5.0.0",
+          "rollup": "^4.12.1",
+          "standard-version": "^9.3.2",
+          "ts-loader": "^9.4.2",
+          "ts-node": "^10.9.1",
+          "typescript": "~5.4.0",
+          "typescript-eslint": "^7.1.1"
+        },
+        "config": {
+          "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog"
+          }
+        },
+        "standard-version": {
+          "skip": {
+            "commit": true,
+            "tag": true,
+            "bump": true
+          }
+        }
+      },
+      "noticeSource": "node_modules/diff-match-patch-ts/LICENSE.md",
+      "noticeSHA256": "f7525c97f2e045d250676a7b087442dfb79c7889daa9f008a3cbf03f5362e6d2"
+    },
+    {
+      "path": "node_modules/compute-scroll-into-view",
+      "name": "compute-scroll-into-view",
+      "version": "3.1.1",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "scope": "positive-emitted npm package",
+      "packageJson": {
+        "name": "compute-scroll-into-view",
+        "version": "3.1.1",
+        "description": "The engine that powers scroll-into-view-if-needed",
+        "keywords": [
+          "if-needed",
+          "scroll",
+          "scroll-into-view",
+          "scroll-into-view-if-needed",
+          "scrollIntoView",
+          "scrollIntoViewIfNeeded",
+          "scrollMode",
+          "typescript"
+        ],
+        "homepage": "https://scroll-into-view.dev",
+        "repository": {
+          "type": "git",
+          "url": "git+https://github.com/scroll-into-view/compute-scroll-into-view.git"
+        },
+        "license": "MIT",
+        "author": "Cody Olsen",
+        "sideEffects": false,
+        "type": "module",
+        "exports": {
+          ".": {
+            "types": "./dist/index.d.ts",
+            "source": "./src/index.ts",
+            "require": "./dist/index.cjs",
+            "import": "./dist/index.js",
+            "default": "./dist/index.js"
+          },
+          "./package.json": "./package.json"
+        },
+        "main": "./dist/index.cjs",
+        "module": "./dist/index.js",
+        "source": "./src/index.ts",
+        "typings": "./dist/index.d.ts",
+        "files": [
+          "dist",
+          "src"
+        ],
+        "scripts": {
+          "prebuild": "npx rimraf 'dist'",
+          "build": "pkg build --strict",
+          "prepublishOnly": "npm run build",
+          "test": "npx cross-env JEST_PUPPETEER_CONFIG='jest-puppeteer.config.cjs' jest -c integration/jest.config.cjs",
+          "typecheck": "tsc"
+        },
+        "browserslist": [
+          "> 0.2% and supports es6-module and supports es6-module-dynamic-import and not dead",
+          "maintained node versions"
+        ],
+        "prettier": {
+          "semi": false,
+          "singleQuote": true
+        },
+        "devDependencies": {
+          "@sanity/pkg-utils": "^2.2.5",
+          "@sanity/semantic-release-preset": "^4.0.0",
+          "@types/expect-puppeteer": "^5.0.2",
+          "@types/jest": "^29.4.0",
+          "@types/jest-environment-puppeteer": "^5.0.3",
+          "@types/puppeteer": "^7.0.4",
+          "cross-env": "^7.0.3",
+          "jest": "^29.5.0",
+          "jest-junit": "^15.0.0",
+          "jest-puppeteer": "^8.0.0",
+          "prettier": "^2.8.4",
+          "prettier-plugin-packagejson": "^2.4.3",
+          "puppeteer": "^19.7.0",
+          "rimraf": "^4.1.2",
+          "serve": "^14.2.0",
+          "typescript": "^5.0.0"
+        },
+        "bundlesize": [
+          {
+            "path": "./dist/index.js",
+            "maxSize": "3 kB",
+            "compression": "none"
+          }
+        ]
+      },
+      "noticeSource": "node_modules/compute-scroll-into-view/LICENSE",
+      "noticeSHA256": "dfe2b2d612c7c1de1f32dcab5969bd68ecac0022a7582ca8cd4594729b9c8664"
+    },
+    {
+      "path": "node_modules/scroll-into-view-if-needed",
+      "name": "scroll-into-view-if-needed",
+      "version": "3.1.0",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "scope": "positive-emitted npm package",
+      "packageJson": {
+        "name": "scroll-into-view-if-needed",
+        "version": "3.1.0",
+        "description": "Ponyfill for upcoming Element.scrollIntoView() APIs like scrollMode: if-needed, behavior: smooth and block: center",
+        "keywords": [
+          "behavior-smooth",
+          "if-needed",
+          "polyfill",
+          "ponyfill",
+          "scroll",
+          "scroll-into-view",
+          "scrollIntoView",
+          "scrollIntoViewIfNeeded",
+          "scrollMode",
+          "smooth",
+          "smoothscroll",
+          "typescript"
+        ],
+        "homepage": "https://scroll-into-view.dev",
+        "repository": {
+          "type": "git",
+          "url": "git+https://github.com/scroll-into-view/scroll-into-view-if-needed.git"
+        },
+        "license": "MIT",
+        "author": "Cody Olsen",
+        "sideEffects": false,
+        "type": "module",
+        "exports": {
+          ".": {
+            "types": "./dist/index.d.ts",
+            "source": "./src/index.ts",
+            "require": "./dist/index.cjs",
+            "import": "./dist/index.js",
+            "default": "./dist/index.js"
+          },
+          "./package.json": "./package.json"
+        },
+        "main": "./dist/index.cjs",
+        "module": "./dist/index.js",
+        "source": "./src/index.ts",
+        "typings": "./dist/index.d.ts",
+        "files": [
+          "dist",
+          "src"
+        ],
+        "scripts": {
+          "prebuild": "npm run clean",
+          "build": "pkg build --strict",
+          "clean": "npx rimraf 'dist'",
+          "prepublishOnly": "npm run build",
+          "typecheck": "tsc && tsc --noEmit -p tests/typescript"
+        },
+        "browserslist": [
+          "> 0.2% and supports es6-module and supports es6-module-dynamic-import and not dead and not IE 11",
+          "maintained node versions"
+        ],
+        "prettier": {
+          "semi": false,
+          "singleQuote": true
+        },
+        "dependencies": {
+          "compute-scroll-into-view": "^3.0.2"
+        },
+        "devDependencies": {
+          "@sanity/pkg-utils": "^2.2.5",
+          "@sanity/semantic-release-preset": "^4.0.0",
+          "cross-env": "^7.0.3",
+          "prettier": "^2.8.4",
+          "prettier-plugin-packagejson": "^2.4.3",
+          "rimraf": "^4.1.2",
+          "typescript": "^5.0.0"
+        },
+        "bundlesize": [
+          {
+            "path": "./dist/index.js",
+            "maxSize": "3.3 kB",
+            "compression": "none"
+          }
+        ]
+      },
+      "noticeSource": "node_modules/scroll-into-view-if-needed/LICENSE",
+      "noticeSHA256": "62b9f69bb4ccf131e7e4cc8ce6ec5b4acf3d9848f0ac73c3c2f285d716ff1b5c"
+    },
+    {
+      "path": "node_modules/mutative",
+      "name": "mutative",
+      "version": "1.3.0",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "scope": "positive-emitted npm package",
+      "packageJson": {
+        "name": "mutative",
+        "version": "1.3.0",
+        "description": "A JavaScript library for efficient immutable updates",
+        "main": "dist/index.js",
+        "module": "dist/mutative.esm.js",
+        "umd:main": "dist/mutative.umd.production.min.js",
+        "unpkg": "dist/mutative.umd.production.min.js",
+        "jsdelivr": "dist/mutative.umd.production.min.js",
+        "jsnext:main": "dist/mutative.esm.js",
+        "react-native": "dist/mutative.esm.js",
+        "source": "src/index.ts",
+        "types": "dist/index.d.ts",
+        "exports": {
+          ".": {
+            "import": "./dist/mutative.esm.mjs",
+            "require": "./dist/index.js",
+            "types": "./dist/index.d.ts"
+          },
+          "./*": "./*"
+        },
+        "files": [
+          "dist",
+          "src"
+        ],
+        "scripts": {
+          "test": "jest",
+          "type-check": "tsc --noEmit",
+          "clean": "rimraf dist",
+          "test:coverage": "jest --coverage && coveralls < coverage/lcov.info",
+          "benchmark": "yarn build && yarn benchmark:base && yarn benchmark:object && yarn benchmark:array && yarn benchmark:class",
+          "all-benchmark": "yarn build && NODE_ENV='production' ts-node test/benchmark/index.ts",
+          "benchmark:reducer": "NODE_ENV='production' ts-node test/performance/benchmark-reducer.ts",
+          "benchmark:base": "NODE_ENV='production' ts-node test/performance/benchmark.ts",
+          "benchmark:object": "NODE_ENV='production' ts-node test/performance/benchmark-object.ts",
+          "benchmark:array": "NODE_ENV='production' ts-node test/performance/benchmark-array.ts",
+          "benchmark:class": "NODE_ENV='production' ts-node test/performance/benchmark-class.ts",
+          "performance:read-only": "yarn build && NODE_ENV='production' ts-node test/performance/read-draft/index.ts",
+          "performance:immer": "cd test/__immer_performance_tests__ && NODE_ENV='production' ts-node add-data.ts && NODE_ENV='production' ts-node todo.ts && NODE_ENV='production' ts-node incremental.ts",
+          "performance:basic": "cd test/performance && NODE_ENV='production' ts-node index.ts",
+          "performance:set-map": "cd test/performance && NODE_ENV='production' ts-node set-map.ts",
+          "performance:big-object": "cd test/performance && NODE_ENV='production' ts-node big-object.ts",
+          "performance:sample": "cd test/performance && NODE_ENV='production' ts-node sample.ts",
+          "performance:array-object": "cd test/performance && NODE_ENV='production' ts-node array-object.ts",
+          "performance": "yarn build && yarn performance:immer && yarn performance:basic && yarn performance:set-map && yarn performance:big-object && yarn performance:sample && yarn performance:array-object",
+          "build": "yarn clean && rollup --config --bundleConfigAsCjs",
+          "build:doc": "rimraf docs && typedoc --plugin typedoc-plugin-markdown --out docs src/index.ts --readme none",
+          "commit": "yarn git-cz",
+          "size": "size-limit",
+          "analyze": "size-limit --why",
+          "prettier": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
+          "publish:docs": "yarn clean && cd website && GIT_USER=unadlib USE_SSH=true yarn run deploy",
+          "start:docs": "cd website && yarn run start"
+        },
+        "size-limit": [
+          {
+            "path": "dist/mutative.cjs.production.min.js",
+            "limit": "5 KB"
+          },
+          {
+            "path": "dist/mutative.esm.js",
+            "limit": "5 KB"
+          }
+        ],
+        "repository": {
+          "type": "git",
+          "url": "git+https://github.com/unadlib/mutative.git"
+        },
+        "author": "unadlib",
+        "keywords": [
+          "immutable",
+          "mutable",
+          "copy-on-write",
+          "mutative",
+          "immutability",
+          "mutation"
+        ],
+        "license": "MIT",
+        "engines": {
+          "node": ">=14.0"
+        },
+        "bugs": {
+          "url": "https://github.com/unadlib/mutative/issues"
+        },
+        "homepage": "https://mutative.js.org/",
+        "devDependencies": {
+          "@rollup/plugin-commonjs": "^28.0.6",
+          "@rollup/plugin-node-resolve": "^16.0.1",
+          "@rollup/plugin-replace": "^6.0.2",
+          "@rollup/plugin-terser": "^0.4.4",
+          "@rollup/plugin-typescript": "^12.1.4",
+          "@size-limit/esbuild": "^11.1.6",
+          "@size-limit/esbuild-why": "^11.2.0",
+          "@size-limit/preset-small-lib": "^11.1.6",
+          "@size-limit/webpack": "^11.1.6",
+          "@size-limit/webpack-why": "^11.1.6",
+          "@types/jest": "^30.0.0",
+          "@types/node": "^24.0.13",
+          "@typescript-eslint/eslint-plugin": "^8.15.0",
+          "@typescript-eslint/parser": "^8.43.0",
+          "benchmark": "^2.1.4",
+          "commitizen": "^4.3.1",
+          "coveralls": "^3.1.1",
+          "deep-freeze": "^0.0.1",
+          "eslint": "^9.34.0",
+          "eslint-config-airbnb": "^19.0.4",
+          "eslint-config-prettier": "^10.1.8",
+          "eslint-plugin-import": "^2.30.0",
+          "eslint-plugin-jsx-a11y": "^6.10.0",
+          "eslint-plugin-prettier": "^5.2.1",
+          "eslint-plugin-react": "^7.37.5",
+          "fast-json-patch": "^3.1.1",
+          "immer": "^10.1.3",
+          "immutable": "^5.1.3",
+          "jest": "^30.1.1",
+          "jsdoc-tests": "^1.2.1",
+          "json2csv": "^5.0.7",
+          "lodash": "^4.17.21",
+          "lodash.clonedeep": "^4.5.0",
+          "prettier": "^3.6.2",
+          "quickchart-js": "^3.1.3",
+          "redux": "^5.0.1",
+          "rimraf": "^6.0.1",
+          "rollup": "^4.49.0",
+          "seamless-immutable": "^7.1.4",
+          "size-limit": "^11.1.6",
+          "ts-jest": "^29.4.1",
+          "ts-node": "^10.9.2",
+          "tslib": "^2.8.1",
+          "typedoc": "^0.28.12",
+          "typedoc-plugin-markdown": "^4.8.1",
+          "typescript": "^5.8.3",
+          "yargs": "^17.7.2"
+        },
+        "config": {
+          "commitizen": {
+            "path": "cz-conventional-changelog"
+          }
+        },
+        "jest": {
+          "preset": "ts-jest",
+          "coveragePathIgnorePatterns": [
+            "<rootDir>/test/"
+          ],
+          "transform": {
+            "\\.[jt]sx?$": [
+              "ts-jest",
+              {
+                "tsconfig": {
+                  "noImplicitReturns": false,
+                  "noFallthroughCasesInSwitch": false,
+                  "noUnusedLocals": false,
+                  "noUnusedParameters": false
+                }
+              }
+            ]
+          },
+          "globals": {
+            "__DEV__": true
+          }
+        }
+      },
+      "noticeSource": "node_modules/mutative/LICENSE",
+      "noticeSHA256": "8f0bab26b1edc2caedf89b889ef80305d660d876d240fba8ffb26b7acdfeab18"
+    },
+    {
+      "path": "node_modules/zustand",
+      "name": "zustand",
+      "version": "5.0.11",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "scope": "positive-emitted npm package",
+      "packageJson": {
+        "name": "zustand",
+        "description": "🐻 Bear necessities for state management in React",
+        "private": false,
+        "type": "commonjs",
+        "version": "5.0.11",
+        "main": "./index.js",
+        "types": "./index.d.ts",
+        "typesVersions": {
+          ">=4.5": {
+            "esm/*": [
+              "esm/*"
+            ],
+            "*": [
+              "*"
+            ]
+          },
+          "*": {
+            "esm/*": [
+              "ts_version_4.5_and_above_is_required.d.ts"
+            ],
+            "*": [
+              "ts_version_4.5_and_above_is_required.d.ts"
+            ]
+          }
+        },
+        "exports": {
+          "./package.json": "./package.json",
+          ".": {
+            "react-native": {
+              "types": "./index.d.ts",
+              "default": "./index.js"
+            },
+            "import": {
+              "types": "./esm/index.d.mts",
+              "default": "./esm/index.mjs"
+            },
+            "default": {
+              "types": "./index.d.ts",
+              "default": "./index.js"
+            }
+          },
+          "./*": {
+            "react-native": {
+              "types": "./*.d.ts",
+              "default": "./*.js"
+            },
+            "import": {
+              "types": "./esm/*.d.mts",
+              "default": "./esm/*.mjs"
+            },
+            "default": {
+              "types": "./*.d.ts",
+              "default": "./*.js"
+            }
+          }
+        },
+        "files": [
+          "**"
+        ],
+        "sideEffects": false,
+        "engines": {
+          "node": ">=12.20.0"
+        },
+        "repository": {
+          "type": "git",
+          "url": "git+https://github.com/pmndrs/zustand.git"
+        },
+        "keywords": [
+          "react",
+          "state",
+          "manager",
+          "management",
+          "redux",
+          "store"
+        ],
+        "author": "Paul Henschel",
+        "contributors": [
+          "Jeremy Holcomb (https://github.com/JeremyRH)",
+          "Daishi Kato (https://github.com/dai-shi)"
+        ],
+        "license": "MIT",
+        "bugs": {
+          "url": "https://github.com/pmndrs/zustand/issues"
+        },
+        "homepage": "https://github.com/pmndrs/zustand",
+        "packageManager": "pnpm@10.18.3",
+        "peerDependencies": {
+          "@types/react": ">=18.0.0",
+          "immer": ">=9.0.6",
+          "react": ">=18.0.0",
+          "use-sync-external-store": ">=1.2.0"
+        },
+        "peerDependenciesMeta": {
+          "@types/react": {
+            "optional": true
+          },
+          "immer": {
+            "optional": true
+          },
+          "react": {
+            "optional": true
+          },
+          "use-sync-external-store": {
+            "optional": true
+          }
+        }
+      },
+      "noticeSource": "node_modules/zustand/LICENSE",
+      "noticeSHA256": "c1e6e266563517467b1bf874817d23e426f3149252bd7d42758cd697514b8417"
+    },
+    {
+      "path": "node_modules/parse5",
+      "name": "parse5",
+      "version": "8.0.1",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "scope": "positive-emitted npm package",
+      "packageJson": {
+        "name": "parse5",
+        "type": "module",
+        "description": "HTML parser and serializer.",
+        "version": "8.0.1",
+        "author": "Ivan Nikulin <ifaaan@gmail.com> (https://github.com/inikulin)",
+        "contributors": [
+          "James Garbutt (https://github.com/43081j)",
+          "Felix Boehm (https://github.com/fb55)",
+          "Ivan Nikulin (https://github.com/inikulin)",
+          "Titus (https://github.com/wooorm)"
+        ],
+        "homepage": "https://parse5.js.org",
+        "funding": "https://github.com/inikulin/parse5?sponsor=1",
+        "dependencies": {
+          "entities": "^8.0.0"
+        },
+        "keywords": [
+          "html",
+          "parser",
+          "html5",
+          "WHATWG",
+          "specification",
+          "fast",
+          "html parser",
+          "html5 parser",
+          "htmlparser",
+          "parse5",
+          "serializer",
+          "html serializer",
+          "htmlserializer",
+          "parse",
+          "serialize"
+        ],
+        "license": "MIT",
+        "main": "dist/index.js",
+        "module": "dist/index.js",
+        "types": "dist/index.d.ts",
+        "exports": {
+          ".": {
+            "default": "./dist/index.js"
+          }
+        },
+        "scripts": {},
+        "repository": {
+          "type": "git",
+          "url": "git://github.com/inikulin/parse5.git"
+        },
+        "files": [
+          "dist/**/*.js",
+          "dist/**/*.d.ts"
+        ]
+      },
+      "noticeSource": "node_modules/parse5/LICENSE",
+      "noticeSHA256": "8c535800331e1e4439835555b3f9edc7fe9dee2fab0d8bbbd5a982e8b8343d4d"
+    },
+    {
+      "path": "node_modules/entities",
+      "name": "entities",
+      "version": "8.1.0",
+      "license": "BSD-2-Clause",
+      "files": [
+        "LICENSE"
+      ],
+      "scope": "positive-emitted npm package",
+      "packageJson": {
+        "name": "entities",
+        "version": "8.1.0",
+        "description": "Encode & decode XML and HTML entities with ease & speed",
+        "keywords": [
+          "html entities",
+          "entity decoder",
+          "entity encoding",
+          "html decoding",
+          "html encoding",
+          "xml decoding",
+          "xml encoding"
+        ],
+        "repository": {
+          "type": "git",
+          "url": "https://github.com/fb55/entities.git"
+        },
+        "funding": "https://github.com/fb55/entities?sponsor=1",
+        "license": "BSD-2-Clause",
+        "author": "Felix Boehm <me@feedic.com>",
+        "sideEffects": false,
+        "type": "module",
+        "exports": {
+          ".": {
+            "types": "./dist/index.d.ts",
+            "default": "./dist/index.js"
+          },
+          "./decode": {
+            "types": "./dist/decode.d.ts",
+            "default": "./dist/decode.js"
+          },
+          "./escape": {
+            "types": "./dist/escape.d.ts",
+            "default": "./dist/escape.js"
+          }
+        },
+        "main": "./dist/index.js",
+        "types": "./dist/index.d.ts",
+        "files": [
+          "dist",
+          "src",
+          "!**/*.spec.ts"
+        ],
+        "scripts": {
+          "benchmark": "node --import=tsx scripts/benchmark.ts",
+          "build": "tsc",
+          "build:docs": "typedoc --hideGenerator src/index.ts",
+          "build:encode-trie": "node --import=tsx scripts/write-encode-map.ts",
+          "build:trie": "node --import=tsx scripts/write-decode-map.ts",
+          "format": "npm run format:es && npm run format:biome",
+          "format:biome": "biome check --fix .",
+          "format:es": "npm run lint:es -- --fix",
+          "lint": "npm run lint:es && npm run lint:ts && npm run lint:biome",
+          "lint:biome": "biome check .",
+          "lint:es": "eslint .",
+          "lint:ts": "tsc --noEmit -p tsconfig.eslint.json",
+          "prepublishOnly": "npm run build",
+          "test": "npm run test:vi && npm run lint",
+          "test:vi": "vitest run"
+        },
+        "devDependencies": {
+          "@biomejs/biome": "^2.5.12",
+          "@eslint/compat": "^2.1.1",
+          "@feedic/eslint-config": "^0.5.0",
+          "@types/he": "^1.2.3",
+          "@types/node": "^26.4.1",
+          "eslint": "^10.10.0",
+          "eslint-config-biome": "^2.1.3",
+          "globals": "^17.12.0",
+          "he": "^1.2.0",
+          "html-entities": "^2.6.0",
+          "parse-entities": "^4.0.2",
+          "tinybench": "^6.1.5",
+          "tsx": "^4.23.13",
+          "typedoc": "^0.28.20",
+          "typescript": "^6.0.3",
+          "typescript-eslint": "^8.69.0",
+          "vitest": "^5.0.0"
+        },
+        "engines": {
+          "node": ">=20.19.0"
+        }
+      },
+      "noticeSource": "node_modules/entities/LICENSE",
+      "noticeSHA256": "cb992345949ccd6e8394b2cd6c465f7b897c864f845937dbf64e8997f389e164"
+    },
+    {
+      "path": "node_modules/nanoid",
+      "name": "nanoid",
+      "version": "5.1.6",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "scope": "positive-emitted npm package",
+      "packageJson": {
+        "name": "nanoid",
+        "version": "5.1.6",
+        "description": "A tiny (118 bytes), secure URL-friendly unique string ID generator",
+        "keywords": [
+          "uuid",
+          "random",
+          "id",
+          "url"
+        ],
+        "type": "module",
+        "engines": {
+          "node": "^18 || >=20"
+        },
+        "funding": [
+          {
+            "type": "github",
+            "url": "https://github.com/sponsors/ai"
+          }
+        ],
+        "author": "Andrey Sitnik <andrey@sitnik.ru>",
+        "license": "MIT",
+        "repository": "ai/nanoid",
+        "exports": {
+          ".": {
+            "types": "./index.d.ts",
+            "browser": "./index.browser.js",
+            "react-native": "./index.browser.js",
+            "default": "./index.js"
+          },
+          "./non-secure": "./non-secure/index.js",
+          "./package.json": "./package.json"
+        },
+        "browser": {
+          "./index.js": "./index.browser.js"
+        },
+        "react-native": {
+          "./index.js": "./index.browser.js"
+        },
+        "bin": "./bin/nanoid.js",
+        "sideEffects": false,
+        "types": "./index.d.ts"
+      },
+      "noticeSource": "node_modules/nanoid/LICENSE",
+      "noticeSHA256": "da4db1480d9beea3483a2eda5c53b22238d0827d57da162b48f122e04d2d9987"
+    },
+    {
+      "path": "node_modules/jotai",
+      "name": "jotai",
+      "version": "2.8.4",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "scope": "positive-emitted npm package",
+      "packageJson": {
+        "name": "jotai",
+        "description": "👻 Primitive and flexible state management for React",
+        "private": false,
+        "type": "commonjs",
+        "version": "2.8.4",
+        "main": "./index.js",
+        "types": "./index.d.ts",
+        "typesVersions": {
+          ">=4.8": {
+            "esm/*": [
+              "esm/*"
+            ],
+            "*": [
+              "*"
+            ]
+          },
+          ">=3.8": {
+            "esm/*": [
+              "ts3.8/*"
+            ],
+            "*": [
+              "ts3.8/*"
+            ]
+          },
+          "*": {
+            "esm/*": [
+              "ts_version_3.8_and_above_is_required.d.ts"
+            ],
+            "*": [
+              "ts_version_3.8_and_above_is_required.d.ts"
+            ]
+          }
+        },
+        "exports": {
+          "./package.json": "./package.json",
+          ".": {
+            "import": {
+              "types": "./esm/index.d.mts",
+              "default": "./esm/index.mjs"
+            },
+            "default": {
+              "types": "./index.d.ts",
+              "default": "./index.js"
+            }
+          },
+          "./*": {
+            "import": {
+              "types": "./esm/*.d.mts",
+              "default": "./esm/*.mjs"
+            },
+            "default": {
+              "types": "./*.d.ts",
+              "default": "./*.js"
+            }
+          }
+        },
+        "files": [
+          "**"
+        ],
+        "sideEffects": false,
+        "engines": {
+          "node": ">=12.20.0"
+        },
+        "repository": {
+          "type": "git",
+          "url": "git+https://github.com/pmndrs/jotai.git"
+        },
+        "keywords": [
+          "react",
+          "state",
+          "manager",
+          "management",
+          "recoil",
+          "store"
+        ],
+        "author": "Daishi Kato",
+        "contributors": [],
+        "license": "MIT",
+        "bugs": {
+          "url": "https://github.com/pmndrs/jotai/issues"
+        },
+        "homepage": "https://github.com/pmndrs/jotai",
+        "packageManager": "pnpm@8.15.0",
+        "peerDependencies": {
+          "@types/react": ">=17.0.0",
+          "react": ">=17.0.0"
+        },
+        "peerDependenciesMeta": {
+          "@types/react": {
+            "optional": true
+          },
+          "react": {
+            "optional": true
+          }
+        }
+      },
+      "noticeSource": "node_modules/jotai/LICENSE",
+      "noticeSHA256": "cea97f0609de01f9e17d7b6d5fb5716e7de6404662c56f8c286aef9c5b4ca09c"
+    },
+    {
+      "path": "node_modules/jotai-x",
+      "name": "jotai-x",
+      "version": "2.3.4",
+      "license": "MIT",
+      "files": [],
+      "scope": "positive-emitted npm package",
+      "packageJson": {
+        "name": "jotai-x",
+        "version": "2.3.4",
+        "description": "Jotai store factory for a best-in-class developer experience.",
+        "license": "MIT",
+        "homepage": "https://jotai-x.udecode.dev/",
+        "repository": {
+          "type": "git",
+          "url": "https://github.com/udecode/jotai-x.git",
+          "directory": "packages/jotai-x"
+        },
+        "bugs": {
+          "url": "https://github.com/udecode/jotai-x/issues"
+        },
+        "sideEffects": false,
+        "main": "dist/index.js",
+        "module": "dist/index.mjs",
+        "types": "dist/index.d.ts",
+        "files": [
+          "dist/**/*"
+        ],
+        "exports": {
+          ".": {
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.mjs",
+            "module": "./dist/index.mjs",
+            "require": "./dist/index.js"
+          }
+        },
+        "scripts": {
+          "bench": "yarn build && node ./scripts/bench-store-alternatives.cjs",
+          "build": "yarn p:build",
+          "build:watch": "yarn p:build:watch",
+          "brl": "yarn p:brl",
+          "clean": "yarn p:clean",
+          "lint": "yarn p:lint",
+          "lint:fix": "yarn p:lint:fix",
+          "test": "yarn p:test",
+          "test:watch": "yarn p:test:watch",
+          "typecheck": "yarn p:typecheck"
+        },
+        "peerDependencies": {
+          "@types/react": ">=17.0.0",
+          "jotai": ">=2.0.0",
+          "react": ">=17.0.0"
+        },
+        "peerDependenciesMeta": {
+          "@types/react": {
+            "optional": true
+          },
+          "react": {
+            "optional": true
+          }
+        },
+        "keywords": [
+          "jotai"
+        ],
+        "publishConfig": {
+          "access": "public"
+        }
+      },
+      "noticeEvidence": {
+        "repository": "udecode/jotai-x",
+        "revision": "11cf4bb2e565c7d1734537bea3bf947e474d9a59",
+        "url": "https://raw.githubusercontent.com/udecode/jotai-x/11cf4bb2e565c7d1734537bea3bf947e474d9a59/LICENSE",
+        "file": "udecode--jotai-x-LICENSE.txt",
+        "sha256": "5df218cd6bf499692e632d09c75078466f4e05f7c2ca2bf83febfc98c43a91a1"
+      },
+      "noticeSHA256": "5df218cd6bf499692e632d09c75078466f4e05f7c2ca2bf83febfc98c43a91a1"
+    },
+    {
+      "path": "node_modules/clsx",
+      "name": "clsx",
+      "version": "2.1.1",
+      "license": "MIT",
+      "files": [
+        "license"
+      ],
+      "scope": "positive-emitted npm package",
+      "packageJson": {
+        "name": "clsx",
+        "version": "2.1.1",
+        "repository": "lukeed/clsx",
+        "description": "A tiny (239B) utility for constructing className strings conditionally.",
+        "module": "dist/clsx.mjs",
+        "unpkg": "dist/clsx.min.js",
+        "main": "dist/clsx.js",
+        "types": "clsx.d.ts",
+        "license": "MIT",
+        "exports": {
+          ".": {
+            "import": {
+              "types": "./clsx.d.mts",
+              "default": "./dist/clsx.mjs"
+            },
+            "default": {
+              "types": "./clsx.d.ts",
+              "default": "./dist/clsx.js"
+            }
+          },
+          "./lite": {
+            "import": {
+              "types": "./clsx.d.mts",
+              "default": "./dist/lite.mjs"
+            },
+            "default": {
+              "types": "./clsx.d.ts",
+              "default": "./dist/lite.js"
+            }
+          }
+        },
+        "author": {
+          "name": "Luke Edwards",
+          "email": "luke.edwards05@gmail.com",
+          "url": "https://lukeed.com"
+        },
+        "engines": {
+          "node": ">=6"
+        },
+        "scripts": {
+          "build": "node bin",
+          "test": "uvu -r esm test"
+        },
+        "files": [
+          "*.d.mts",
+          "*.d.ts",
+          "dist"
+        ],
+        "keywords": [
+          "classes",
+          "classname",
+          "classnames"
+        ],
+        "devDependencies": {
+          "esm": "3.2.25",
+          "terser": "4.8.0",
+          "uvu": "0.5.4"
+        }
+      },
+      "noticeSource": "node_modules/clsx/license",
+      "noticeSHA256": "9a9edad7baae52622bddf3c15b2ef8a33d2c89f2d25408ad13e8a7481c6b0c97"
+    },
+    {
+      "path": "node_modules/dequal",
+      "name": "dequal",
+      "version": "2.0.3",
+      "license": "MIT",
+      "files": [
+        "license"
+      ],
+      "scope": "positive-emitted npm package",
+      "packageJson": {
+        "name": "dequal",
+        "version": "2.0.3",
+        "repository": "lukeed/dequal",
+        "description": "A tiny (304B to 489B) utility for check for deep equality",
+        "unpkg": "dist/index.min.js",
+        "module": "dist/index.mjs",
+        "main": "dist/index.js",
+        "types": "index.d.ts",
+        "license": "MIT",
+        "author": {
+          "name": "Luke Edwards",
+          "email": "luke.edwards05@gmail.com",
+          "url": "https://lukeed.com"
+        },
+        "engines": {
+          "node": ">=6"
+        },
+        "scripts": {
+          "build": "bundt",
+          "pretest": "npm run build",
+          "postbuild": "echo \"lite\" | xargs -n1 cp -v index.d.ts",
+          "test": "uvu -r esm test"
+        },
+        "files": [
+          "*.d.ts",
+          "dist",
+          "lite"
+        ],
+        "exports": {
+          ".": {
+            "types": "./index.d.ts",
+            "import": "./dist/index.mjs",
+            "require": "./dist/index.js"
+          },
+          "./lite": {
+            "types": "./index.d.ts",
+            "import": "./lite/index.mjs",
+            "require": "./lite/index.js"
+          },
+          "./package.json": "./package.json"
+        },
+        "modes": {
+          "lite": "src/lite.js",
+          "default": "src/index.js"
+        },
+        "keywords": [
+          "deep",
+          "deep-equal",
+          "equality"
+        ],
+        "devDependencies": {
+          "bundt": "1.0.2",
+          "esm": "3.2.25",
+          "uvu": "0.3.2"
+        }
+      },
+      "noticeSource": "node_modules/dequal/license",
+      "noticeSHA256": "306fa513e39b23a6e8747520de761809d206b99800ef41907b530226574c59ae"
+    },
+    {
+      "path": "node_modules/@radix-ui/react-slot",
+      "name": "@radix-ui/react-slot",
+      "version": "1.2.3",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "scope": "positive-emitted npm package",
+      "packageJson": {
+        "name": "@radix-ui/react-slot",
+        "version": "1.2.3",
+        "license": "MIT",
+        "source": "./src/index.ts",
+        "main": "./dist/index.js",
+        "module": "./dist/index.mjs",
+        "files": [
+          "dist",
+          "README.md"
+        ],
+        "sideEffects": false,
+        "dependencies": {
+          "@radix-ui/react-compose-refs": "1.1.2"
+        },
+        "devDependencies": {
+          "@types/react": "^19.0.7",
+          "@types/react-dom": "^19.0.3",
+          "eslint": "^9.18.0",
+          "react": "^19.1.0",
+          "react-dom": "^19.1.0",
+          "typescript": "^5.7.3",
+          "@repo/eslint-config": "0.0.0",
+          "@repo/typescript-config": "0.0.0",
+          "@repo/builder": "0.0.0"
+        },
+        "peerDependencies": {
+          "@types/react": "*",
+          "react": "^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc"
+        },
+        "peerDependenciesMeta": {
+          "@types/react": {
+            "optional": true
+          }
+        },
+        "homepage": "https://radix-ui.com/primitives",
+        "repository": {
+          "type": "git",
+          "url": "git+https://github.com/radix-ui/primitives.git"
+        },
+        "bugs": {
+          "url": "https://github.com/radix-ui/primitives/issues"
+        },
+        "scripts": {
+          "lint": "eslint --max-warnings 0 src",
+          "clean": "rm -rf dist",
+          "typecheck": "tsc --noEmit",
+          "build": "radix-build"
+        },
+        "types": "./dist/index.d.ts",
+        "exports": {
+          ".": {
+            "import": {
+              "types": "./dist/index.d.mts",
+              "default": "./dist/index.mjs"
+            },
+            "require": {
+              "types": "./dist/index.d.ts",
+              "default": "./dist/index.js"
+            }
+          }
+        }
+      },
+      "noticeSource": "node_modules/@radix-ui/react-slot/LICENSE",
+      "noticeSHA256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "path": "node_modules/@radix-ui/react-compose-refs",
+      "name": "@radix-ui/react-compose-refs",
+      "version": "1.1.2",
+      "license": "MIT",
+      "files": [],
+      "scope": "positive-emitted npm package",
+      "packageJson": {
+        "name": "@radix-ui/react-compose-refs",
+        "version": "1.1.2",
+        "license": "MIT",
+        "source": "./src/index.ts",
+        "main": "./dist/index.js",
+        "module": "./dist/index.mjs",
+        "publishConfig": {
+          "main": "./dist/index.js",
+          "module": "./dist/index.mjs",
+          "types": "./dist/index.d.ts",
+          "exports": {
+            ".": {
+              "import": {
+                "types": "./dist/index.d.mts",
+                "default": "./dist/index.mjs"
+              },
+              "require": {
+                "types": "./dist/index.d.ts",
+                "default": "./dist/index.js"
+              }
+            }
+          }
+        },
+        "files": [
+          "dist",
+          "README.md"
+        ],
+        "sideEffects": false,
+        "scripts": {
+          "lint": "eslint --max-warnings 0 src",
+          "clean": "rm -rf dist",
+          "version": "yarn version"
+        },
+        "devDependencies": {
+          "@repo/eslint-config": "0.0.0",
+          "@repo/typescript-config": "0.0.0",
+          "@types/react": "^19.0.7",
+          "@types/react-dom": "^19.0.3",
+          "eslint": "^9.18.0",
+          "react": "^19.0.0",
+          "react-dom": "^19.0.0",
+          "typescript": "^5.7.3"
+        },
+        "peerDependencies": {
+          "@types/react": "*",
+          "react": "^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc"
+        },
+        "peerDependenciesMeta": {
+          "@types/react": {
+            "optional": true
+          }
+        },
+        "homepage": "https://radix-ui.com/primitives",
+        "repository": {
+          "type": "git",
+          "url": "git+https://github.com/radix-ui/primitives.git"
+        },
+        "bugs": {
+          "url": "https://github.com/radix-ui/primitives/issues"
+        },
+        "exports": {
+          ".": {
+            "import": {
+              "types": "./dist/index.d.mts",
+              "default": "./dist/index.mjs"
+            },
+            "require": {
+              "types": "./dist/index.d.ts",
+              "default": "./dist/index.js"
+            }
+          }
+        },
+        "types": "./dist/index.d.ts"
+      },
+      "noticeEvidence": {
+        "repository": "radix-ui/primitives",
+        "revision": "fcef0668a5c827e5a4baac405474d75680f9a4eb",
+        "url": "https://raw.githubusercontent.com/radix-ui/primitives/fcef0668a5c827e5a4baac405474d75680f9a4eb/LICENSE",
+        "file": "radix-ui--primitives-LICENSE.txt",
+        "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      },
+      "noticeSHA256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "path": "node_modules/class-variance-authority",
+      "name": "class-variance-authority",
+      "version": "0.7.1",
+      "license": "Apache-2.0",
+      "files": [
+        "LICENSE"
+      ],
+      "scope": "positive-emitted npm package",
+      "packageJson": {
+        "name": "class-variance-authority",
+        "version": "0.7.1",
+        "description": "Class Variance Authority 🧬",
+        "keywords": [
+          "Class Variance Authority",
+          "class-variance-authority",
+          "classes",
+          "classname",
+          "classnames",
+          "css",
+          "cva",
+          "stitches",
+          "vanilla-extract",
+          "variants"
+        ],
+        "homepage": "https://github.com/joe-bell/cva#readme",
+        "bugs": "https://github.com/joe-bell/cva/issues",
+        "repository": "https://github.com/joe-bell/cva.git",
+        "funding": "https://polar.sh/cva",
+        "license": "Apache-2.0",
+        "author": "Joe Bell (https://joebell.co.uk)",
+        "exports": {
+          ".": {
+            "import": "./dist/index.mjs",
+            "require": "./dist/index.js",
+            "types": "./dist/index.d.ts"
+          },
+          "./types": {
+            "types": "./dist/types.d.ts"
+          }
+        },
+        "main": "dist/index.js",
+        "module": "dist/index.mjs",
+        "types": "dist/index.d.ts",
+        "files": [
+          "dist/"
+        ],
+        "dependencies": {
+          "clsx": "^2.1.1"
+        },
+        "devDependencies": {
+          "@swc/cli": "0.3.12",
+          "@swc/core": "1.4.16",
+          "@types/node": "20.12.7",
+          "@types/react": "18.2.79",
+          "@types/react-dom": "18.2.25",
+          "bundlesize": "0.18.2",
+          "npm-run-all": "4.1.5",
+          "react": "18.2.0",
+          "react-dom": "18.2.0",
+          "ts-node": "10.9.2",
+          "typescript": "5.4.5"
+        },
+        "scripts": {
+          "build": "run-p build:**",
+          "build:cjs": "swc ./src/index.ts --config-file ./.config/.swcrc -o dist/index.js -C module.type=commonjs",
+          "build:esm": "swc ./src/index.ts --config-file ./.config/.swcrc -o dist/index.mjs -C module.type=es6 ",
+          "build:tsc": "tsc --project .config/tsconfig.build.json",
+          "check": "tsc --project tsconfig.json --noEmit",
+          "bundlesize": "pnpm build && bundlesize -f 'dist/*.js' -s 1.2KB"
+        }
+      },
+      "noticeSource": "node_modules/class-variance-authority/LICENSE",
+      "noticeSHA256": "0ccbf956cffc8dcf515809433cb5242ee67c94513d46e48c261d68d0880de406"
+    },
+    {
+      "path": "node_modules/tailwind-merge",
+      "name": "tailwind-merge",
+      "version": "3.3.1",
+      "license": "MIT",
+      "files": [
+        "LICENSE.md"
+      ],
+      "scope": "positive-emitted npm package",
+      "packageJson": {
+        "name": "tailwind-merge",
+        "version": "3.3.1",
+        "description": "Merge Tailwind CSS classes without style conflicts",
+        "keywords": [
+          "tailwindcss",
+          "tailwind",
+          "css",
+          "classes",
+          "className",
+          "classList",
+          "merge",
+          "conflict",
+          "override"
+        ],
+        "homepage": "https://github.com/dcastil/tailwind-merge",
+        "bugs": {
+          "url": "https://github.com/dcastil/tailwind-merge/issues"
+        },
+        "funding": {
+          "type": "github",
+          "url": "https://github.com/sponsors/dcastil"
+        },
+        "license": "MIT",
+        "author": "Dany Castillo",
+        "files": [
+          "dist",
+          "src"
+        ],
+        "source": "src/index.ts",
+        "exports": {
+          ".": {
+            "types": "./dist/types.d.ts",
+            "require": "./dist/bundle-cjs.js",
+            "import": "./dist/bundle-mjs.mjs",
+            "default": "./dist/bundle-mjs.mjs"
+          },
+          "./es5": {
+            "types": "./dist/types.d.ts",
+            "require": "./dist/es5/bundle-cjs.js",
+            "import": "./dist/es5/bundle-mjs.mjs",
+            "default": "./dist/es5/bundle-mjs.mjs"
+          }
+        },
+        "main": "./dist/bundle-cjs.js",
+        "types": "./dist/types.d.ts",
+        "repository": {
+          "type": "git",
+          "url": "https://github.com/dcastil/tailwind-merge.git"
+        },
+        "sideEffects": false,
+        "scripts": {
+          "build": "rollup --config scripts/rollup.config.mjs",
+          "bench": "vitest bench --config scripts/vitest.config.mts",
+          "test": "vitest --config scripts/vitest.config.mts --coverage",
+          "test:watch": "vitest --config scripts/vitest.config.mts",
+          "test:exports": "node scripts/test-built-package-exports.cjs && node scripts/test-built-package-exports.mjs",
+          "lint": "eslint --max-warnings 0 '**'",
+          "preversion": "if [ -n \"$DANYS_MACHINE\" ]; then git checkout main && git pull; fi",
+          "version": "zx scripts/update-readme.mjs",
+          "postversion": "if [ -n \"$DANYS_MACHINE\" ]; then git push --follow-tags && open https://github.com/dcastil/tailwind-merge/releases; fi"
+        },
+        "dependencies": {},
+        "devDependencies": {
+          "@babel/core": "^7.27.4",
+          "@babel/preset-env": "^7.27.2",
+          "@codspeed/vitest-plugin": "^4.0.1",
+          "@rollup/plugin-babel": "^6.0.4",
+          "@rollup/plugin-node-resolve": "^16.0.1",
+          "@rollup/plugin-typescript": "^12.1.2",
+          "@vitest/coverage-v8": "^3.1.4",
+          "@vitest/eslint-plugin": "^1.2.1",
+          "babel-plugin-annotate-pure-calls": "^0.5.0",
+          "babel-plugin-polyfill-regenerator": "^0.6.4",
+          "eslint": "^9.28.0",
+          "eslint-plugin-import": "^2.31.0",
+          "globby": "^11.1.0",
+          "prettier": "^3.5.3",
+          "rollup": "^4.41.1",
+          "rollup-plugin-delete": "^3.0.1",
+          "rollup-plugin-dts": "^6.2.1",
+          "tslib": "^2.8.1",
+          "typescript": "^5.8.3",
+          "typescript-eslint": "^8.33.0",
+          "vitest": "^3.1.4",
+          "zx": "^8.5.4"
+        },
+        "publishConfig": {
+          "provenance": true
+        },
+        "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
+      },
+      "noticeSource": "node_modules/tailwind-merge/LICENSE.md",
+      "noticeSHA256": "d4c70c7ce38cea8778f0aed3fc0bef0a9dbd27f13bd8b6773cbd6d37941971e5"
+    }
+  ],
+  "buildNotices": [
+    {
+      "name": "tailwindcss",
+      "version": "4.1.8",
+      "license": "MIT",
+      "scope": "compiled CSS/build notice",
+      "licenseSHA256": "60e0b68c0f35c078eef3a5d29419d0b03ff84ec1df9c3f9d6e39a519a5ae7985"
+    },
+    {
+      "name": "tw-animate-css",
+      "version": "1.3.4",
+      "license": "MIT",
+      "scope": "compiled CSS/build notice",
+      "licenseSHA256": "039184dfa0a822397b3f45a435b5b1e538721587fbade96b9fa80f86cb354109"
+    },
+    {
+      "name": "shadcn-prose",
+      "version": "1.0.8",
+      "license": "MIT",
+      "scope": "compiled CSS/build notice",
+      "licenseSHA256": "80de88f4ad58e67d313a1f657ff98a87b4c243ae630ebfc6840af0bef9bdd2ef"
+    },
+    {
+      "name": "tailwind-scrollbar-hide",
+      "version": "4.0.0",
+      "license": "MIT",
+      "scope": "compiled CSS/build notice",
+      "licenseSHA256": "07dfda191a2065012e303aef89f30452c48f2eee2257f485f26cdd156acf2bc2"
+    }
+  ],
+  "sourceAcquisition": "Official codeload archive, selected UTF-8 files only, all 2572 initial files verified against fixed official Git tree. Complete private proof in source-proof.json.",
+  "changes": {
+    "snapshotBound": 20,
+    "snapshotID": "monotonic last.id+1",
+    "source": "Only original demo snapshot array bound changed; all editing, structuredClone, compare AbortController, diff controls and restore preserved."
+  },
+  "adaptations": [
+    "Isolated lifecycle host; hidden unmount resets local scene, exit aborts effects and clears exact owned registrations/timeouts/RAF.",
+    "Direct index loads same ordered complete-statement UTF-8 JS chunks, no binary/source encoding.",
+    "System fonts, original global theme tokens/classes; remote media not loaded under unchanged CSP; links do not navigate.",
+    "Original fixed lock versions selected. react-day-picker 8 declares older React peer range while upstream fixed lock uses React19; npm legacy-peer-deps used to reproduce source lock rather than change runtime version. Calendar is not claimed verified."
+  ]
+}
