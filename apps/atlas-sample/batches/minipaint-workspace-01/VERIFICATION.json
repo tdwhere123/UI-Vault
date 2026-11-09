@@ -1,0 +1,29 @@
+{
+  "result": "pass-key-workflows-not-native-visual",
+  "testFiles": [
+    "test.mjs",
+    "test-early.mjs",
+    "test-math.mjs",
+    "test-zoom.mjs",
+    "loader-test.mjs"
+  ],
+  "loader": {
+    "result": "PASS actual570 adaptCandidate/createPreviewLoader all-or-nothing/retry/remount cache reuse",
+    "scripts": [
+      "runtime-part-1.js",
+      "runtime-part-2.js",
+      "runtime.js"
+    ],
+    "utf16RuntimeHTMLCSSBytes": 2960514,
+    "budgetBytes": 8388608,
+    "cacheStats": {
+      "entries": 5,
+      "bytes": 2960514
+    },
+    "fetches": 15
+  },
+  "sourceRebuild": "PASS: final source pack independently extracted, npm build succeeded with pinned reused build tools, rebuilt production runtime passed full key workflow test (test-rebuilt.mjs). Mangled variable names may differ; original API keys absent.",
+  "nativeVisual": "not-run",
+  "screenshots": "none",
+  "directIndexScripts": "PASS sequential original script list starts real editor; probe.mjs"
+}
