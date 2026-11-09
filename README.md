@@ -2,7 +2,7 @@
 
 网站：<https://tdwhere123.github.io/UI-Vault/>
 
-当前主图鉴有 **515条可打开预览（241条原始素材＋274条后续接入预览）**。后续预览仍标注视觉待验；358条候选中的84条仅来源记录不计入主图鉴。原始241件包括215件精选界面、20件保留基础素材、6套完整图标系列。正在向1000+件优质素材扩充；图标按完整系列单列统计，不按单枚凑数。源码候选、不同配色与框架版本不充数。
+当前主图鉴有 **517条可打开预览（241条原始素材＋276条后续接入预览）**。后续预览仍标注视觉待验；362条候选中的86条仅来源记录不计入主图鉴。原始241件包括215件精选界面、20件保留基础素材、6套完整图标系列。正在向1000+件优质素材扩充；图标按完整系列单列统计，不按单枚凑数。源码候选、不同配色与框架版本不充数。
 
 ## 当前内容
 
@@ -279,3 +279,14 @@ Original OpenMoji graphics and metadata remain CC BY-SA 4.0, with the complete l
 Coss UI's official group-chat scenario is newly collected as one source-only family, not individual message/composer subitems. Fixed source and complete root MIT are verified; full Base UI/React/Motion/Lucide dependency licensing, native contenteditable/focus behavior, asset paths and interrupted message-state flows remain untested. Origin UI's move into the same repository is not counted as a second source.
 
 Puck remains source-only, but its status is more precise: the official no-iframe configuration actually mounted the original minimal editor in a geometry-substituted DOM pilot with no internal iframe/network/worker calls. That does not validate the full Bento configuration, drag-and-drop, history or native browser behavior. Side-panel storage attempts and 81 runtime-package license records still need closure; its npm runtime integrity is recorded separately from the fixed source commit rather than falsely equated. Source collection continues without calling this unfinished preview complete.
+
+## Original group-chat workflow and Pepicons · 517 previews
+
+The gallery now contains **517 preview entries** (241 original + 276 added), with 362 candidate records and 86 source-only records excluded. Coss group-chat is restored from an existing source-only candidate, and Pepicons adds one selected icon series. Three new source-only records are not previews. Existing icon entries and all cover files/mappings remain untouched; 13 current icon entry points include two previously identified overlaps deliberately deferred until Grok's cover batch is complete.
+
+- **Coss UI group chat** retains 55 original source modules for the conversation drawer, replies, reactions, receipts, members, mention input, failed-message retry and simulated message states. Only three original files carry minimal patches: disabled clipboard UI, safe removal of zero-distance reply exits, and preventing an old canceled reply's exit from clearing a newer reply. Five branches and independent production/rapid-reply/early-exit checks passed with explicit layout/font/viewport substitutes. All roles, member changes and deliveries are local fixtures, not real accounts or messages. Clipboard copy/cut/paste is visibly disabled; ordinary typing and mentions remain. Complete notices cover 19 runtime packages and Tailwind, including Lucide ISC/Feather MIT and CVA Apache-2.0. Native pixels, IME, touch, all 15 scenarios and every permission combination are not claimed as tested.
+- **Pepicons Exodus selection** contains 113 original base shapes in pencil/pop/print, 339 SVGs total, counted as one series and not the complete 1,275-base collection. All selected assets match the correctly resolved official v3.1.6 commit; the npm metadata's older gitHead is explicitly not used as release provenance. Original CyCraft graphics retain complete CC BY 4.0 attribution terms; the authored browser shell is separately MIT. Every original SVG text/tree/attribute, all five pages, original categories/search/style switching and cleanup were tested. No rendered-pixel or sandbox-popup success is claimed.
+
+New source-only research includes **BlockNote's block-document/comments workspace** (selected MPL-2.0 core/react/mantine, explicitly excluding GPL/commercial XL packages), **Coss event-type ordering/undo/visibility** (not a complete booking/create product), and **React Arborist's controlled budget hierarchy** (a functional reserve with plain styling, not an aesthetic priority). Their fixed source and complete applicable root licenses were read; no runtime/remote collaboration, financial account, image or complete dependency audit is implied. The official BlockNote collaboration auth endpoint was read in source but not contacted or run. These candidates remain outside the runnable count.
+
+All real browser visual acceptance remains pending where marked. Static covers, lazy detail previews and current sandbox/CSP are unchanged; all cover work remains with Grok.
