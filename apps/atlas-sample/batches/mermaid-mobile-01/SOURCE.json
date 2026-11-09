@@ -1,0 +1,1725 @@
+{
+  "repository": "https://github.com/mermaid-js/mermaid-live-editor",
+  "revision": "4e94efb6d7a20fb22fd743ac335065d24b80eb6a",
+  "sourcePath": "src/lib/components/MobileEditor.svelte + View.svelte + src/lib/util/renderView.ts + panZoom.ts",
+  "scope": [
+    "Official fixed MobileEditor.svelte (real CodeMirror) branch and original View/renderAndPlaceDiagram/PanZoomState. Not desktop Monaco and not a fake substitute: the upstream Editor.svelte selects this component for mobile. The small local container, Code/Config/Reset and zoom buttons are authored integration, not a claim that the full hosted site/Navbar/History was reproduced.",
+    "Original default six-node Christmas/shopping flowchart retained except the optional fa:fa-car prefix was removed; Car text remains. No icon font/binary/font assets or screenshots. Original CodeMirror theme and view grid are preserved; system-font fallback and controlled SVG geometry tests do not constitute pixel/native/IME/drag QA.",
+    "Original Mermaid 12.3.0 flowchart renderer and Dagre layout retained, not a new renderer. Only registration lists were narrowed to flowchart/Dagre to meet local budget. Other diagram/layout loaders, ZenUML, AI, cloud login, sharing/URL import, analytics, font/image icons and rough conversion UI are unavailable; no claim of full-format hosted Mermaid support.",
+    "Original reactive input/validation and mobile edit callbacks retained. Persistence is in-memory; URL subscription never starts. Original View queue retained with disposed guards, original state adds generation checks, panzoom adds final destroy, and render failures gain a visible local alert. A local mode state selects the original light CodeMirror theme; diagram theme config is actually supported.",
+    "Local flowchart code limited to 5000 characters/100 statements and Mermaid maxEdges 80; only flowchart/graph directions accepted. Reject active HTML tags, external URLs, click links, initialization directives and font/image icons. Config limited to 3000 chars with theme/flowchart spacing+curve/look classic/layout dagre allowlist. Strict securityLevel, no external source, htmlLabels false and unchanged host CSP are enforced before actual rendering.",
+    "Original svg2roughjs code remains emitted through renderView but rough is fixed false in this selected scene; no untested hand-drawn control is advertised. No claim of mathematical/binary-font rendering fidelity beyond the original plain-text flowchart fixture.",
+    "88 positive-emitted npm package roots with full actual license texts, plus 2 Mermaid-embedded dependency sources: js-yaml4.3.2 and patched fastdom1.0.12. 26 js-yaml source files byte-match official npm, 2 fastdom source-map modifications are recorded. Fastdom full MIT is from its shipped README; Pako embedded Zlib notices are included separately. DOMPurify uses Apache-2.0 option; Khroma actual shipped license is MIT despite absent package field.",
+    "Actual570 adaptCandidate/createPreviewLoader/default cache: 4412070 UTF16 bytes, 6 entries, below unchanged 8388608 bytes. Cache reuse on remount, missing-script all-or-nothing and error retry passed. Four natural standalone JS chunks below 700KiB; no runtime eval/Function, worker or encoded binary delivery.",
+    "Functional JSDOM tests cover real CodeMirror edit/config callbacks, six-to-three-node original SVG changes, syntax/unsafe input rejection, reset, original panzoom, hidden state retention, late control/callback exit, early/queued exit, missing root and controlled SVG failure. Full listener/task/observer ledger clears; hidden finite parsing may settle. No native/browser/screenshot attempts."
+  ],
+  "dependencies": [
+    {
+      "packagePath": "node_modules/@braintree/sanitize-url",
+      "name": "@braintree/sanitize-url",
+      "version": "7.1.2",
+      "declaredLicense": "MIT",
+      "actualLicense": "MIT",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "bf8403a53853179dea3f07e59ea4b2a0abcd26b77317898b7ce524538411ac9e",
+      "licenses": [
+        {
+          "path": "node_modules/@braintree/sanitize-url/LICENSE",
+          "sha256": "0984740e0c3d725c8044dec7edcefe1dbce180ef5a7bc710c251e19607000158"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/@codemirror/autocomplete",
+      "name": "@codemirror/autocomplete",
+      "version": "6.20.4",
+      "declaredLicense": "MIT",
+      "actualLicense": "MIT",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "6d7fa54e616d69e142ff46b413641688b72b41e944b1aa392ddb2a03957a18b3",
+      "licenses": [
+        {
+          "path": "node_modules/@codemirror/autocomplete/LICENSE",
+          "sha256": "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/@codemirror/commands",
+      "name": "@codemirror/commands",
+      "version": "6.11.1",
+      "declaredLicense": "MIT",
+      "actualLicense": "MIT",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "89c6b42b55084ca449b6956ee6409bcae615a70fdce04b990a1e38bbbc3ad883",
+      "licenses": [
+        {
+          "path": "node_modules/@codemirror/commands/LICENSE",
+          "sha256": "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/@codemirror/lang-css",
+      "name": "@codemirror/lang-css",
+      "version": "6.3.1",
+      "declaredLicense": "MIT",
+      "actualLicense": "MIT",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "f32234b842c2c10291b7edd2c92742e5722d967fe3111b9273d1727ea55ba838",
+      "licenses": [
+        {
+          "path": "node_modules/@codemirror/lang-css/LICENSE",
+          "sha256": "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/@codemirror/lang-html",
+      "name": "@codemirror/lang-html",
+      "version": "6.4.12",
+      "declaredLicense": "MIT",
+      "actualLicense": "MIT",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "22069b53e96982a4a1486fae5fc20f296193cd5e7b9b4c0737848eb1f116b999",
+      "licenses": [
+        {
+          "path": "node_modules/@codemirror/lang-html/LICENSE",
+          "sha256": "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/@codemirror/lang-javascript",
+      "name": "@codemirror/lang-javascript",
+      "version": "6.2.5",
+      "declaredLicense": "MIT",
+      "actualLicense": "MIT",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "d742d5a40c01d601f586063799c0826aab4ec937ccba75dd5d67c3ef03efcc28",
+      "licenses": [
+        {
+          "path": "node_modules/@codemirror/lang-javascript/LICENSE",
+          "sha256": "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/@codemirror/lang-json",
+      "name": "@codemirror/lang-json",
+      "version": "6.0.2",
+      "declaredLicense": "MIT",
+      "actualLicense": "MIT",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "fa13c3641831be0a5d00b343b7880f04d39f3b57f12ec9b3a9784da15c5705e2",
+      "licenses": [
+        {
+          "path": "node_modules/@codemirror/lang-json/LICENSE",
+          "sha256": "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/@codemirror/lang-markdown",
+      "name": "@codemirror/lang-markdown",
+      "version": "6.5.2",
+      "declaredLicense": "MIT",
+      "actualLicense": "MIT",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "0a091f03e88d387798a486206967418294f6fe45adef91097fb05bf8146dd8dc",
+      "licenses": [
+        {
+          "path": "node_modules/@codemirror/lang-markdown/LICENSE",
+          "sha256": "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/@codemirror/lang-yaml",
+      "name": "@codemirror/lang-yaml",
+      "version": "6.1.3",
+      "declaredLicense": "MIT",
+      "actualLicense": "MIT",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "a00f6398dd5982167ff1e79b9c5347f6b4ef7a7dc05b6f691d807be4efb63f89",
+      "licenses": [
+        {
+          "path": "node_modules/@codemirror/lang-yaml/LICENSE",
+          "sha256": "8ac9cfc9c82c397298c2139028d2474d8e0470f2092a97edddccf353bc5d4d36"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/@codemirror/language",
+      "name": "@codemirror/language",
+      "version": "6.13.1",
+      "declaredLicense": "MIT",
+      "actualLicense": "MIT",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "213da785d0246774f4c9dc0527a97e8756119fb2e6c4de6d30575bc221f7dd9b",
+      "licenses": [
+        {
+          "path": "node_modules/@codemirror/language/LICENSE",
+          "sha256": "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/@codemirror/lint",
+      "name": "@codemirror/lint",
+      "version": "6.9.7",
+      "declaredLicense": "MIT",
+      "actualLicense": "MIT",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "c85ba7a1530b1a70616cc5ce35bfed4b8d73993d2499efe584e1a977148f72bd",
+      "licenses": [
+        {
+          "path": "node_modules/@codemirror/lint/LICENSE",
+          "sha256": "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/@codemirror/search",
+      "name": "@codemirror/search",
+      "version": "6.7.2",
+      "declaredLicense": "MIT",
+      "actualLicense": "MIT",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "1137bde0555ba4e2cd3331b655632ff574bc22abe59092204a0bcd94e997a942",
+      "licenses": [
+        {
+          "path": "node_modules/@codemirror/search/LICENSE",
+          "sha256": "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/@codemirror/state",
+      "name": "@codemirror/state",
+      "version": "6.7.6",
+      "declaredLicense": "MIT",
+      "actualLicense": "MIT",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "0d5d4cb502ac5ece9c5c76104fd72b30b4a5b16eeaf7a5d6f0a8abbf295c10c3",
+      "licenses": [
+        {
+          "path": "node_modules/@codemirror/state/LICENSE",
+          "sha256": "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/@codemirror/view",
+      "name": "@codemirror/view",
+      "version": "6.43.15",
+      "declaredLicense": "MIT",
+      "actualLicense": "MIT",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "25ffcd6d7ca21bea40f672586e3bd81d026413a99f7828d537ddb51741afe94a",
+      "licenses": [
+        {
+          "path": "node_modules/@codemirror/view/LICENSE",
+          "sha256": "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/@fsegurai/codemirror-theme-vscode-dark",
+      "name": "@fsegurai/codemirror-theme-vscode-dark",
+      "version": "6.2.8",
+      "declaredLicense": "MIT",
+      "actualLicense": "MIT",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "8bf0af2fecccb25766a1382f2d02917f630ccea3db3f06329da9c55353ffd516",
+      "licenses": [
+        {
+          "path": "node_modules/@fsegurai/codemirror-theme-vscode-dark/LICENSE",
+          "sha256": "82501d585a5fe42968185c99f338b22aa7a179f8c0397844d7ee45cb444c8ded"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/@fsegurai/codemirror-theme-vscode-light",
+      "name": "@fsegurai/codemirror-theme-vscode-light",
+      "version": "6.2.8",
+      "declaredLicense": "MIT",
+      "actualLicense": "MIT",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "5268accc738b1460ad5dde95d21998ff5a8dd70fd5c34f5022bd2ca4a56c669e",
+      "licenses": [
+        {
+          "path": "node_modules/@fsegurai/codemirror-theme-vscode-light/LICENSE",
+          "sha256": "82501d585a5fe42968185c99f338b22aa7a179f8c0397844d7ee45cb444c8ded"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/@iconify/utils",
+      "name": "@iconify/utils",
+      "version": "3.1.7",
+      "declaredLicense": "MIT",
+      "actualLicense": "MIT",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "2235aa624bf2b71beb98529fcf354bbaa6b156c68c7da9214a77c7b26369b499",
+      "licenses": [
+        {
+          "path": "node_modules/@iconify/utils/license.txt",
+          "sha256": "a86793ac023162ce98b91899601c15f6712f44943163c4f92a0a4bf89152b3bf"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/@lezer/common",
+      "name": "@lezer/common",
+      "version": "1.5.5",
+      "declaredLicense": "MIT",
+      "actualLicense": "MIT",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "5018f15f64b384023f6be21b69db566b3befac047a1d129827666fbe786d13b9",
+      "licenses": [
+        {
+          "path": "node_modules/@lezer/common/LICENSE",
+          "sha256": "568902fb66eaf1f11750e966b33fd7b5d7c618e65af09f35ef843635bcf5f1ba"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/@lezer/css",
+      "name": "@lezer/css",
+      "version": "1.3.9",
+      "declaredLicense": "MIT",
+      "actualLicense": "MIT",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "4de52c9e8fd8bc2d611d4c866ae7eeef08aacb4729621f110293a55d25d63943",
+      "licenses": [
+        {
+          "path": "node_modules/@lezer/css/LICENSE",
+          "sha256": "568902fb66eaf1f11750e966b33fd7b5d7c618e65af09f35ef843635bcf5f1ba"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/@lezer/highlight",
+      "name": "@lezer/highlight",
+      "version": "1.2.5",
+      "declaredLicense": "MIT",
+      "actualLicense": "MIT",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "e50eb1fc5c2831ab58274ce2ea6cac989a0c80cc84f9fbabcb4100eee4327710",
+      "licenses": [
+        {
+          "path": "node_modules/@lezer/highlight/LICENSE",
+          "sha256": "568902fb66eaf1f11750e966b33fd7b5d7c618e65af09f35ef843635bcf5f1ba"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/@lezer/html",
+      "name": "@lezer/html",
+      "version": "1.3.13",
+      "declaredLicense": "MIT",
+      "actualLicense": "MIT",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "02ee0f3ba3c1bc874d0a1073e13f82a11732a0cddd6eb773e2d3a429970801a0",
+      "licenses": [
+        {
+          "path": "node_modules/@lezer/html/LICENSE",
+          "sha256": "568902fb66eaf1f11750e966b33fd7b5d7c618e65af09f35ef843635bcf5f1ba"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/@lezer/javascript",
+      "name": "@lezer/javascript",
+      "version": "1.5.6",
+      "declaredLicense": "MIT",
+      "actualLicense": "MIT",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "e081f15ccbfa07a1fb3cfa109f0e555ddd56ad3c9b174926a84e2d3a1d360c75",
+      "licenses": [
+        {
+          "path": "node_modules/@lezer/javascript/LICENSE",
+          "sha256": "568902fb66eaf1f11750e966b33fd7b5d7c618e65af09f35ef843635bcf5f1ba"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/@lezer/json",
+      "name": "@lezer/json",
+      "version": "1.0.3",
+      "declaredLicense": "MIT",
+      "actualLicense": "MIT",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "e97a07988525b370c1a802c0ebb0d18a5aedfbe4d8271695db1edd8c60a21e3d",
+      "licenses": [
+        {
+          "path": "node_modules/@lezer/json/LICENSE",
+          "sha256": "7e744ae18ef84389d576469a5781172b0d50b7981111109f6da7cbc6b4188288"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/@lezer/lr",
+      "name": "@lezer/lr",
+      "version": "1.4.12",
+      "declaredLicense": "MIT",
+      "actualLicense": "MIT",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "e7ae72a09f5942c1a8466056b607a118a70e175098b619a0c660ff6329e414a8",
+      "licenses": [
+        {
+          "path": "node_modules/@lezer/lr/LICENSE",
+          "sha256": "568902fb66eaf1f11750e966b33fd7b5d7c618e65af09f35ef843635bcf5f1ba"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/@lezer/markdown",
+      "name": "@lezer/markdown",
+      "version": "1.8.1",
+      "declaredLicense": "MIT",
+      "actualLicense": "MIT",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "8b76f213413d2f36cab236a1390d07b24488ea906ca59ba665b911499b60dd3d",
+      "licenses": [
+        {
+          "path": "node_modules/@lezer/markdown/LICENSE",
+          "sha256": "54bd812a6d334e0c438b78a43cea74b67e882739fd3450115ddc7c52be5706c1"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/@lezer/yaml",
+      "name": "@lezer/yaml",
+      "version": "1.0.4",
+      "declaredLicense": "MIT",
+      "actualLicense": "MIT",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "57574f3569b47d718ff0098285911e1083837d8c4230e5f9fb83c65f5d3028b6",
+      "licenses": [
+        {
+          "path": "node_modules/@lezer/yaml/LICENSE",
+          "sha256": "8cb910abd2a5463466b7c31958b39d6787ebf9e9f299598266b814bc90dd076b"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/@marijn/find-cluster-break",
+      "name": "@marijn/find-cluster-break",
+      "version": "1.0.4",
+      "declaredLicense": "MIT",
+      "actualLicense": "MIT",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "5ee922ec8f5586c2104e070ad9b60c1c18f32bfc3dad48634f93d3bbbdcd182b",
+      "licenses": [
+        {
+          "path": "node_modules/@marijn/find-cluster-break/LICENSE",
+          "sha256": "9360b00fdd091f05c783b568bdd46c679c41b72415599252de98949462ea1acb"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/clsx",
+      "name": "clsx",
+      "version": "2.1.1",
+      "declaredLicense": "MIT",
+      "actualLicense": "MIT",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "a5e616b9883177fb47c1fca22b6a4ab42be1c3ed6ffae8595a5c7d88630eeec2",
+      "licenses": [
+        {
+          "path": "node_modules/clsx/license",
+          "sha256": "9a9edad7baae52622bddf3c15b2ef8a33d2c89f2d25408ad13e8a7481c6b0c97"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/codemirror",
+      "name": "codemirror",
+      "version": "6.0.2",
+      "declaredLicense": "MIT",
+      "actualLicense": "MIT",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "1e777e57d420a78c1872334497910718e4a2bb9f9f0af4dccb716972216173eb",
+      "licenses": [
+        {
+          "path": "node_modules/codemirror/LICENSE",
+          "sha256": "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/crelt",
+      "name": "crelt",
+      "version": "1.0.7",
+      "declaredLicense": "MIT",
+      "actualLicense": "MIT",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "9e85a4699c12ad932528bc2321986e8f991c1f9b074551a04e3814d72c1cc44a",
+      "licenses": [
+        {
+          "path": "node_modules/crelt/LICENSE",
+          "sha256": "23852ebf6aef7fadffc92514b3c5df163a8651f2c3ed0dbb494cb49d93bd5de5"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/d3-array",
+      "name": "d3-array",
+      "version": "3.2.5",
+      "declaredLicense": "ISC",
+      "actualLicense": "ISC",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "9e3e34222710a8e0fba34884e2b3ebfd6b25546268fd4a2618168d4d77962d54",
+      "licenses": [
+        {
+          "path": "node_modules/d3-array/LICENSE",
+          "sha256": "2a6d2d5f32ba0b755ddbc1c833f766e30cdbe6ebe9a6d4e3e24427721f0b63d3"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/d3-axis",
+      "name": "d3-axis",
+      "version": "3.0.1",
+      "declaredLicense": "ISC",
+      "actualLicense": "ISC",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "49eb93373a6a66ce1ca33bccf86e88ecb3c88e8fcfcfd6a370f2c851749f1b94",
+      "licenses": [
+        {
+          "path": "node_modules/d3-axis/LICENSE",
+          "sha256": "2a6d2d5f32ba0b755ddbc1c833f766e30cdbe6ebe9a6d4e3e24427721f0b63d3"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/d3-brush",
+      "name": "d3-brush",
+      "version": "3.0.1",
+      "declaredLicense": "ISC",
+      "actualLicense": "ISC",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "44f8da1f72bed16dca0a9570d727040877a35d52828fefcd9b14a2f67791e03c",
+      "licenses": [
+        {
+          "path": "node_modules/d3-brush/LICENSE",
+          "sha256": "2a6d2d5f32ba0b755ddbc1c833f766e30cdbe6ebe9a6d4e3e24427721f0b63d3"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/d3-chord",
+      "name": "d3-chord",
+      "version": "3.0.2",
+      "declaredLicense": "ISC",
+      "actualLicense": "ISC",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "2528a9a041edcb1d1eb14ae133ca4ec86aee0e8cc0cc925e85f40c14b00d2463",
+      "licenses": [
+        {
+          "path": "node_modules/d3-chord/LICENSE",
+          "sha256": "2a6d2d5f32ba0b755ddbc1c833f766e30cdbe6ebe9a6d4e3e24427721f0b63d3"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/d3-color",
+      "name": "d3-color",
+      "version": "3.1.1",
+      "declaredLicense": "ISC",
+      "actualLicense": "ISC",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "ffafb1f0fe7e6e9fee6352dffa88e31e68cc9cccd7e0694462366da3aaf01d49",
+      "licenses": [
+        {
+          "path": "node_modules/d3-color/LICENSE",
+          "sha256": "2a6d2d5f32ba0b755ddbc1c833f766e30cdbe6ebe9a6d4e3e24427721f0b63d3"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/d3-contour",
+      "name": "d3-contour",
+      "version": "4.0.3",
+      "declaredLicense": "ISC",
+      "actualLicense": "ISC",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "10b9d0f7292da07b1256d48e86108cfca882b28da4e3e49619cff7493f73e153",
+      "licenses": [
+        {
+          "path": "node_modules/d3-contour/LICENSE",
+          "sha256": "12e8f2deb66dc94bcd002b4257c67f165a15585896a8b91fd817457cd3b28603"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/d3-delaunay",
+      "name": "d3-delaunay",
+      "version": "6.0.6",
+      "declaredLicense": "ISC",
+      "actualLicense": "ISC",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "ba9884c84e212d2f3af3db401eef9ccff7b6a688c4c7db1b9f507866f0b727fe",
+      "licenses": [
+        {
+          "path": "node_modules/d3-delaunay/LICENSE",
+          "sha256": "f7e8b7069fb78f477175e34302c56b62e73aa0b70a48b64510817d6390094414"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/d3-dispatch",
+      "name": "d3-dispatch",
+      "version": "3.0.2",
+      "declaredLicense": "ISC",
+      "actualLicense": "ISC",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "648ce3186a82305b56e51ec9f2913d7a741f9a8c8ae49c00c0f55484ae1c2afb",
+      "licenses": [
+        {
+          "path": "node_modules/d3-dispatch/LICENSE",
+          "sha256": "2a6d2d5f32ba0b755ddbc1c833f766e30cdbe6ebe9a6d4e3e24427721f0b63d3"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/d3-drag",
+      "name": "d3-drag",
+      "version": "3.0.1",
+      "declaredLicense": "ISC",
+      "actualLicense": "ISC",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "7113d61712ba46cd2ac5ca5ca7e51d549a79297853c516a3c35f40e5b5a9f6e5",
+      "licenses": [
+        {
+          "path": "node_modules/d3-drag/LICENSE",
+          "sha256": "2a6d2d5f32ba0b755ddbc1c833f766e30cdbe6ebe9a6d4e3e24427721f0b63d3"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/d3-dsv",
+      "name": "d3-dsv",
+      "version": "3.0.2",
+      "declaredLicense": "ISC",
+      "actualLicense": "ISC",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "047df79146151f9fe3f6ae0f70e1340e13a17b3827f913b866a774859d437896",
+      "licenses": [
+        {
+          "path": "node_modules/d3-dsv/LICENSE",
+          "sha256": "86dfa68e0bbd9a3c151e4c97be48fe58bb56023eff2e796552668fd838a4b69a"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/d3-ease",
+      "name": "d3-ease",
+      "version": "3.0.2",
+      "declaredLicense": "BSD-3-Clause",
+      "actualLicense": "BSD-3-Clause",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "5a073c8572f4530a4b44974302ce39dfed27cf5abf5d476dafbfec6ede51a43a",
+      "licenses": [
+        {
+          "path": "node_modules/d3-ease/LICENSE",
+          "sha256": "82f2a38e51f9013690c0cea086e901b33e51b5f0c3ba837941d7a58073c72917"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/d3-fetch",
+      "name": "d3-fetch",
+      "version": "3.0.2",
+      "declaredLicense": "ISC",
+      "actualLicense": "ISC",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "1faa7b012b89bcd232375e17b85961e36fd7f4f84c419ed28fb3174d0300bf00",
+      "licenses": [
+        {
+          "path": "node_modules/d3-fetch/LICENSE",
+          "sha256": "055e5433e596100f2f10cf4e591f3d480e2b00a44e0956f8aca974bc13cab244"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/d3-force",
+      "name": "d3-force",
+      "version": "3.0.1",
+      "declaredLicense": "ISC",
+      "actualLicense": "ISC",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "00073385860f7668936a0d3ac60d36b74868f6b32f65f1251da3f56907790a4a",
+      "licenses": [
+        {
+          "path": "node_modules/d3-force/LICENSE",
+          "sha256": "2a6d2d5f32ba0b755ddbc1c833f766e30cdbe6ebe9a6d4e3e24427721f0b63d3"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/d3-format",
+      "name": "d3-format",
+      "version": "3.1.3",
+      "declaredLicense": "ISC",
+      "actualLicense": "ISC",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "939feedf46e751b816ecd19b1443f4bd692260d3fc3700be312bd7639fed3630",
+      "licenses": [
+        {
+          "path": "node_modules/d3-format/LICENSE",
+          "sha256": "2a6d2d5f32ba0b755ddbc1c833f766e30cdbe6ebe9a6d4e3e24427721f0b63d3"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/d3-geo",
+      "name": "d3-geo",
+      "version": "3.1.2",
+      "declaredLicense": "ISC",
+      "actualLicense": "ISC",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "6083940308777039f76119da238412a86d93f8b1257b96bd88701ed4c6395d68",
+      "licenses": [
+        {
+          "path": "node_modules/d3-geo/LICENSE",
+          "sha256": "3ded44a2c7935c8f5236f0543069406fdf7256b61b9eaeaddd007e80f19bc959"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/d3-hierarchy",
+      "name": "d3-hierarchy",
+      "version": "3.1.3",
+      "declaredLicense": "ISC",
+      "actualLicense": "ISC",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "dac66fcf9470c81f8164ee11b26d52ec09a205db92bb3fd2a577b618d5b86371",
+      "licenses": [
+        {
+          "path": "node_modules/d3-hierarchy/LICENSE",
+          "sha256": "2a6d2d5f32ba0b755ddbc1c833f766e30cdbe6ebe9a6d4e3e24427721f0b63d3"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/d3-interpolate",
+      "name": "d3-interpolate",
+      "version": "3.0.2",
+      "declaredLicense": "ISC",
+      "actualLicense": "ISC",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "22dd3f7ae2d0152ddb3c02b1f55650d847f9443382d476482c8295d75b952e58",
+      "licenses": [
+        {
+          "path": "node_modules/d3-interpolate/LICENSE",
+          "sha256": "2a6d2d5f32ba0b755ddbc1c833f766e30cdbe6ebe9a6d4e3e24427721f0b63d3"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/d3-path",
+      "name": "d3-path",
+      "version": "3.1.1",
+      "declaredLicense": "ISC",
+      "actualLicense": "ISC",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "37eb23c01f87ef042f0a68ead8318f8555eab92ccfad6402a20e054390e4074e",
+      "licenses": [
+        {
+          "path": "node_modules/d3-path/LICENSE",
+          "sha256": "f5dff44740d51a1849b4d16b657eccf60577fb5d28d8ee46d33dcc780a11f94a"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/d3-polygon",
+      "name": "d3-polygon",
+      "version": "3.0.2",
+      "declaredLicense": "ISC",
+      "actualLicense": "ISC",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "2cad9bef45cc650f562f7242d1a4ab2c6b4db0900330ad257edf2c0fe92846b8",
+      "licenses": [
+        {
+          "path": "node_modules/d3-polygon/LICENSE",
+          "sha256": "2a6d2d5f32ba0b755ddbc1c833f766e30cdbe6ebe9a6d4e3e24427721f0b63d3"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/d3-quadtree",
+      "name": "d3-quadtree",
+      "version": "3.0.2",
+      "declaredLicense": "ISC",
+      "actualLicense": "ISC",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "452b18cc7f62fbcf0ebd74cb96e758a3f3c17a129c85e7776ba8dce010cf3fee",
+      "licenses": [
+        {
+          "path": "node_modules/d3-quadtree/LICENSE",
+          "sha256": "2a6d2d5f32ba0b755ddbc1c833f766e30cdbe6ebe9a6d4e3e24427721f0b63d3"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/d3-random",
+      "name": "d3-random",
+      "version": "3.0.2",
+      "declaredLicense": "ISC",
+      "actualLicense": "ISC",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "23f5c321a342ec18d2b5136db644df8652aaf58a0debe4f50eef315ff870c2cd",
+      "licenses": [
+        {
+          "path": "node_modules/d3-random/LICENSE",
+          "sha256": "2a6d2d5f32ba0b755ddbc1c833f766e30cdbe6ebe9a6d4e3e24427721f0b63d3"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/d3-scale-chromatic",
+      "name": "d3-scale-chromatic",
+      "version": "3.1.1",
+      "declaredLicense": "ISC",
+      "actualLicense": "ISC",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "4fc7bc0c7622042b7104fe23f440c7a152e0cdee667f83d96586e97dce95206e",
+      "licenses": [
+        {
+          "path": "node_modules/d3-scale-chromatic/LICENSE",
+          "sha256": "667e7fd523c85aefbe152167ae59d6cdc0f944720c11d1f17ecef8783d1dcb9b"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/d3-scale",
+      "name": "d3-scale",
+      "version": "4.0.3",
+      "declaredLicense": "ISC",
+      "actualLicense": "ISC",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "1711188394e4911cd2e9b204cd222991467aae2e66f133bb662f47da0fa5ea86",
+      "licenses": [
+        {
+          "path": "node_modules/d3-scale/LICENSE",
+          "sha256": "2a6d2d5f32ba0b755ddbc1c833f766e30cdbe6ebe9a6d4e3e24427721f0b63d3"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/d3-selection",
+      "name": "d3-selection",
+      "version": "3.0.1",
+      "declaredLicense": "ISC",
+      "actualLicense": "ISC",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "0d74390b2fc84f928166317239811a27ad0afe5f54146b34952618a4f2ece730",
+      "licenses": [
+        {
+          "path": "node_modules/d3-selection/LICENSE",
+          "sha256": "2a6d2d5f32ba0b755ddbc1c833f766e30cdbe6ebe9a6d4e3e24427721f0b63d3"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/d3-shape",
+      "name": "d3-shape",
+      "version": "3.2.1",
+      "declaredLicense": "ISC",
+      "actualLicense": "ISC",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "5e31292d998e085e323870a34397e6a2915dd7a862996cbc216d5148a64cdbfa",
+      "licenses": [
+        {
+          "path": "node_modules/d3-shape/LICENSE",
+          "sha256": "2a6d2d5f32ba0b755ddbc1c833f766e30cdbe6ebe9a6d4e3e24427721f0b63d3"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/d3-time-format",
+      "name": "d3-time-format",
+      "version": "4.1.1",
+      "declaredLicense": "ISC",
+      "actualLicense": "ISC",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "1c2642fe4249c60c02ba4cfdbe6a9483df91b3e36248cb679306f563749e9f03",
+      "licenses": [
+        {
+          "path": "node_modules/d3-time-format/LICENSE",
+          "sha256": "2a6d2d5f32ba0b755ddbc1c833f766e30cdbe6ebe9a6d4e3e24427721f0b63d3"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/d3-time",
+      "name": "d3-time",
+      "version": "3.1.1",
+      "declaredLicense": "ISC",
+      "actualLicense": "ISC",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "e3278ba452286857038c9dcf5b88245745e877db6bbe97a0a3bb42ea33f8c33c",
+      "licenses": [
+        {
+          "path": "node_modules/d3-time/LICENSE",
+          "sha256": "2a6d2d5f32ba0b755ddbc1c833f766e30cdbe6ebe9a6d4e3e24427721f0b63d3"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/d3-timer",
+      "name": "d3-timer",
+      "version": "3.0.2",
+      "declaredLicense": "ISC",
+      "actualLicense": "ISC",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "167431bc922ff9ef4f11552d816df44a3f62ec25ba888f84fb53c5f35d7bed8d",
+      "licenses": [
+        {
+          "path": "node_modules/d3-timer/LICENSE",
+          "sha256": "2a6d2d5f32ba0b755ddbc1c833f766e30cdbe6ebe9a6d4e3e24427721f0b63d3"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/d3-transition",
+      "name": "d3-transition",
+      "version": "3.0.2",
+      "declaredLicense": "ISC",
+      "actualLicense": "ISC",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "d4861b6e223e10ac5dc6aad664cca8416ab2603d1b46696805e6eab5043a1940",
+      "licenses": [
+        {
+          "path": "node_modules/d3-transition/LICENSE",
+          "sha256": "2a6d2d5f32ba0b755ddbc1c833f766e30cdbe6ebe9a6d4e3e24427721f0b63d3"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/d3-zoom",
+      "name": "d3-zoom",
+      "version": "3.0.1",
+      "declaredLicense": "ISC",
+      "actualLicense": "ISC",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "8f0c640c430d2dd4b69b006400750bc4bd153f1c80e8bc50dbf870fecf67d85f",
+      "licenses": [
+        {
+          "path": "node_modules/d3-zoom/LICENSE",
+          "sha256": "2a6d2d5f32ba0b755ddbc1c833f766e30cdbe6ebe9a6d4e3e24427721f0b63d3"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/d3",
+      "name": "d3",
+      "version": "7.9.2",
+      "declaredLicense": "ISC",
+      "actualLicense": "ISC",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "6923f1e5629cabccb2d48814484d23d451b94eee62b6ef1cddd55932601e6470",
+      "licenses": [
+        {
+          "path": "node_modules/d3/LICENSE",
+          "sha256": "2a6d2d5f32ba0b755ddbc1c833f766e30cdbe6ebe9a6d4e3e24427721f0b63d3"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/dagre-d3-es",
+      "name": "dagre-d3-es",
+      "version": "7.0.14",
+      "declaredLicense": "MIT",
+      "actualLicense": "MIT",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "24643bcd30aef3932d4776eae974005354e34eb1036c24e6090b8a38b05fcc8e",
+      "licenses": [
+        {
+          "path": "node_modules/dagre-d3-es/LICENSE.md",
+          "sha256": "d01eb84ccce437dbf5fd40853bceea0f287930920acea066597a4a25ead63858"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/dayjs",
+      "name": "dayjs",
+      "version": "1.11.23",
+      "declaredLicense": "MIT",
+      "actualLicense": "MIT",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "680d74784223a074188617adc534fa5460171176d9904501241bbea087c3963b",
+      "licenses": [
+        {
+          "path": "node_modules/dayjs/LICENSE",
+          "sha256": "5faab7526d055651be3aab769d58897be6bd91f3d39d137f25f12dba1b31d5dc"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/dompurify",
+      "name": "dompurify",
+      "version": "3.4.17",
+      "declaredLicense": "(MPL-2.0 OR Apache-2.0)",
+      "actualLicense": "Apache-2.0 selected from upstream dual license",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "e6235e2a233d3f5550e2be3bf826a39f4ff5180a710779c1e16dcdf4b9eb20b9",
+      "licenses": [
+        {
+          "path": "node_modules/dompurify/LICENSE-MPL",
+          "sha256": "fab3dd6bdab226f1c08630b1dd917e11fcb4ec5e1e020e2c16f83a0a13863e85"
+        },
+        {
+          "path": "node_modules/dompurify/LICENSE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/es-toolkit",
+      "name": "es-toolkit",
+      "version": "1.53.2",
+      "declaredLicense": "MIT",
+      "actualLicense": "MIT",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "17def2aafcd0a999dca2585ac9ff96a4ff540b7628d26705a5f33cadd1d4a42a",
+      "licenses": [
+        {
+          "path": "node_modules/es-toolkit/NOTICE",
+          "sha256": "11ee5e3bce9b0a4dde7f73811caf98978e710228d891c3111ad8ef8d7d2a916f"
+        },
+        {
+          "path": "node_modules/es-toolkit/LICENSE",
+          "sha256": "51f3674294d988d89dbebd31273baaeb3c697a15482d9699b14d1fded2e132a7"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/esm-env",
+      "name": "esm-env",
+      "version": "1.2.2",
+      "declaredLicense": "MIT",
+      "actualLicense": "MIT",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "2b0bce63e9a106a1a3fea24b5cef4950cc63dab6c4d6245728c83b21cf00e669",
+      "licenses": [
+        {
+          "path": "node_modules/esm-env/LICENSE",
+          "sha256": "6df5276ee7531fcc5446f19082c12e77bb6c5f081fd2b6d6cf88180a5ee36acd"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/hachure-fill",
+      "name": "hachure-fill",
+      "version": "0.5.2",
+      "declaredLicense": "MIT",
+      "actualLicense": "MIT",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "d241a905b23070ba1a1a821b60b6cb69fff02939416ca8ec5d7ea81fbc40c2dc",
+      "licenses": [
+        {
+          "path": "node_modules/hachure-fill/LICENSE",
+          "sha256": "5e807b516a9be9229ed459880bf353a336e2d947867247290680d437017be391"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/hammerjs",
+      "name": "hammerjs",
+      "version": "2.0.8",
+      "declaredLicense": "MIT",
+      "actualLicense": "MIT",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "4acd8aa8b065441568c12ccbf438bedb08e4c532fbaeb90837e11ae5a6a1d61e",
+      "licenses": [
+        {
+          "path": "node_modules/hammerjs/LICENSE.md",
+          "sha256": "4d93df6544df47a49b25add3aff67ff9ff47e4756d85dd0c3e1beba8520ab9f2"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/js-base64",
+      "name": "js-base64",
+      "version": "3.7.8",
+      "declaredLicense": "BSD-3-Clause",
+      "actualLicense": "BSD-3-Clause",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "f19e81376787c8b53f1fe46f8563b13917805a0b92c91daeeb87f0f5d89d30b5",
+      "licenses": [
+        {
+          "path": "node_modules/js-base64/LICENSE.md",
+          "sha256": "fcf06aacb36ee29237110d6b3a9fbd6296e85ad4324263abf5f8a5cfb5706c81"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/katex",
+      "name": "katex",
+      "version": "0.18.10",
+      "declaredLicense": "MIT",
+      "actualLicense": "MIT",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "ad36604c3a1bbef9c09d0be004a35e23ac763b105d7de1b50c1ffa1f9ace5fe7",
+      "licenses": [
+        {
+          "path": "node_modules/katex/LICENSE",
+          "sha256": "766ccc1f306c885aa45542a9846bbd0a505b27a0374f146778171c2254ce18e3"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/khroma",
+      "name": "khroma",
+      "version": "2.1.0",
+      "declaredLicense": null,
+      "actualLicense": "MIT",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "0d2145738d3cab828da4c5724b45e0dd2577c0ce84503c956d76897e93fa7de2",
+      "licenses": [
+        {
+          "path": "node_modules/khroma/license",
+          "sha256": "66b333b0f66759a0b710459e03f7029abe17f4358114a128d2c972e642961b49"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/lodash-es",
+      "name": "lodash-es",
+      "version": "4.18.1",
+      "declaredLicense": "MIT",
+      "actualLicense": "MIT",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "83d054ea84cf0efe4db931cf24c4ca9dde533a0e49779d26176be9d43061c903",
+      "licenses": [
+        {
+          "path": "node_modules/lodash-es/LICENSE",
+          "sha256": "f71e8ed126b46346494aad5486874cd8f0aafe95092ed67d2e3cb6110f939abc"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/marked",
+      "name": "marked",
+      "version": "16.4.2",
+      "declaredLicense": "MIT",
+      "actualLicense": "MIT",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "78e27dac3c5de404026c6f703b8c0adf1900f9067c8bd16fa83b058f0fb34aa9",
+      "licenses": [
+        {
+          "path": "node_modules/marked/LICENSE.md",
+          "sha256": "8e3a3f82f59a60958f56ca08f445647c32a4733dc7ca6c2c46f6eb898471ab9c"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/mermaid",
+      "name": "mermaid",
+      "version": "12.3.0",
+      "declaredLicense": "MIT",
+      "actualLicense": "MIT",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "55180c3723ad01a8c44163fc9a1ddd9327ff5ac8e60eeaf1b7e83849a449aea2",
+      "licenses": [
+        {
+          "path": "node_modules/mermaid/LICENSE",
+          "sha256": "ec9fb67dcb25eccc416ed56e1aab819222c805a2a4bfe4cb19e7556bf2ffde80"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/pako",
+      "name": "pako",
+      "version": "2.1.0",
+      "declaredLicense": "(MIT AND Zlib)",
+      "actualLicense": "(MIT AND Zlib)",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "268f53a4c305b7b49a63f7aadcdc026b00574fafc5fd6a452351bac21d5417ae",
+      "licenses": [
+        {
+          "path": "node_modules/pako/LICENSE",
+          "sha256": "a04665b3b2de56c66730c1f720f528175739e4104f79073614aa611da1e85539"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/path-data-parser",
+      "name": "path-data-parser",
+      "version": "0.1.0",
+      "declaredLicense": "MIT",
+      "actualLicense": "MIT",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "1884945b4f9fd552dcca06898c56499ed4a898684a436bbc849a3c6097c7d082",
+      "licenses": [
+        {
+          "path": "node_modules/path-data-parser/LICENSE",
+          "sha256": "e9754a00aebde654e80f40bcf41dab667d6a41dfbbd2912bcf14fb07d468bf71"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/points-on-curve",
+      "name": "points-on-curve",
+      "version": "0.2.0",
+      "declaredLicense": "MIT",
+      "actualLicense": "MIT",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "835d5ecc4efec6b433f782113e33970ee748a141f8b78781dfd8aa7178c21ec2",
+      "licenses": [
+        {
+          "path": "node_modules/points-on-curve/LICENSE",
+          "sha256": "e9754a00aebde654e80f40bcf41dab667d6a41dfbbd2912bcf14fb07d468bf71"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/points-on-path",
+      "name": "points-on-path",
+      "version": "0.2.1",
+      "declaredLicense": "MIT",
+      "actualLicense": "MIT",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "98809bf45b801b635d4e552d4782982d294f1383542f14f1ef8eca1c8ad62813",
+      "licenses": [
+        {
+          "path": "node_modules/points-on-path/LICENSE",
+          "sha256": "b6fc1f7f1d96a48bc97176f3dcef959e364c5c17ba44167511de421500a86c6c"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/roughjs",
+      "name": "roughjs",
+      "version": "4.6.6",
+      "declaredLicense": "MIT",
+      "actualLicense": "MIT",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "5e7a5b1b095c0f529236f758a579f9e21736745f7cca5ea413f680584d73915a",
+      "licenses": [
+        {
+          "path": "node_modules/roughjs/LICENSE",
+          "sha256": "dca9a392272606ac748ac0976a2a1133f14eef841c27beaa51a844d53c56a09d"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/style-mod",
+      "name": "style-mod",
+      "version": "4.1.4",
+      "declaredLicense": "MIT",
+      "actualLicense": "MIT",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "0aa5f5995a953bc3f1d02164a5ec0e58d13bf9f7d362c44bf0526e667439f842",
+      "licenses": [
+        {
+          "path": "node_modules/style-mod/LICENSE",
+          "sha256": "cb4474e26547397169061d3586c00022cda5330a1b64fa13e872319f3b63aff1"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/stylis",
+      "name": "stylis",
+      "version": "4.4.0",
+      "declaredLicense": "MIT",
+      "actualLicense": "MIT",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "cc5379e3eef2d7ea3d3a6c5732dd5d263609cbf32eaa3974b1a2e584e1c5091a",
+      "licenses": [
+        {
+          "path": "node_modules/stylis/LICENSE",
+          "sha256": "88c579c6ee44b41137a21321190d177982e5b17d4fa1b83a4a2e3ea325a8fc9a"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/svelte",
+      "name": "svelte",
+      "version": "5.57.3",
+      "declaredLicense": "MIT",
+      "actualLicense": "MIT",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "09eb2907115f906fcfbbf270222af7a07cd1f292aedf5ce5ecc8f93125bc6f82",
+      "licenses": [
+        {
+          "path": "node_modules/svelte/LICENSE.md",
+          "sha256": "06257f4847b13a49a039efb17b944c141e71b12fd8d231b362d86919067d77a3"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/svg-pan-zoom",
+      "name": "svg-pan-zoom",
+      "version": "3.6.2",
+      "declaredLicense": "BSD-2-Clause",
+      "actualLicense": "BSD-2-Clause",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "cf769f5926dbe5456776860bd65e8387f445db51fcd1e3d4fb2a740abfe26a08",
+      "licenses": [
+        {
+          "path": "node_modules/svg-pan-zoom/LICENSE",
+          "sha256": "a4fbaf0b818914459316cb22e1a9d01e0f8786fc10cfe355077cca048daa028a"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/svg-pathdata",
+      "name": "svg-pathdata",
+      "version": "8.0.0",
+      "declaredLicense": "MIT",
+      "actualLicense": "MIT",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "c738084e6e439cede994838365220e273ae0bc7ddbb9ab29dc7455788a6fece0",
+      "licenses": [
+        {
+          "path": "node_modules/svg-pathdata/LICENSE",
+          "sha256": "cd05e8e2516f46a2cd79494bbabdea76f874e8d049dbc19a76b367534a4e013e"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/svg2roughjs",
+      "name": "svg2roughjs",
+      "version": "3.2.3",
+      "declaredLicense": "MIT",
+      "actualLicense": "MIT",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "3ca948b777f388d1449c0226b423ee97e5d413c01314468d300bbfc37d5ebb97",
+      "licenses": [
+        {
+          "path": "node_modules/svg2roughjs/LICENSE.md",
+          "sha256": "ac5d092bb38c9dce75a6db1e83debd8843c1555b408977bbc219e01712c8ae5e"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/tinycolor2",
+      "name": "tinycolor2",
+      "version": "1.6.0",
+      "declaredLicense": "MIT",
+      "actualLicense": "MIT",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "0eee5ba2f0c0dc640abf827db6a355132b945689eb0d3f6d624cc849eab9fbf8",
+      "licenses": [
+        {
+          "path": "node_modules/tinycolor2/LICENSE",
+          "sha256": "c6cb470a9ba0a50d57611aeec1f31da609c5aefdbee8eac7f289bcb0e30625fa"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/ts-dedent",
+      "name": "ts-dedent",
+      "version": "2.3.0",
+      "declaredLicense": "MIT",
+      "actualLicense": "MIT",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "a801e4a43bbb717224ee7e1326dfc4dfacf4bb63a0abb71900a297c171a45de1",
+      "licenses": [
+        {
+          "path": "node_modules/ts-dedent/LICENSE",
+          "sha256": "eff13095d9d762c3bd9dda74370c81e2130c28f2691bc455603abf973bac25b9"
+        }
+      ]
+    },
+    {
+      "packagePath": "node_modules/w3c-keyname",
+      "name": "w3c-keyname",
+      "version": "2.2.8",
+      "declaredLicense": "MIT",
+      "actualLicense": "MIT",
+      "scope": "positive-emitted-runtime",
+      "packageJSONSHA256": "0396c646f74d52c1b0851074ecdb5cabf540af595ceb5e5a5136df2bf3c2f83b",
+      "licenses": [
+        {
+          "path": "node_modules/w3c-keyname/LICENSE",
+          "sha256": "869c30f368eb08735e779027b9f4bc9fea2f39624351856aebe42741f0bc0884"
+        }
+      ]
+    }
+  ],
+  "embeddedDependencies": [
+    {
+      "package": "js-yaml",
+      "version": "4.3.2",
+      "bundledMap": "node_modules/mermaid/dist/chunks/mermaid.core/chunk-HPSUCWAI.mjs.map",
+      "sourcePath": "../../../../../node_modules/.pnpm/js-yaml@4.3.2/node_modules/js-yaml/lib/common.js",
+      "contentSHA256": "72216ccee36a52ece3f21f2d58a679c14c1483201ef6cbbfc4a1aa9cb6d34c9c",
+      "npmSourceSHA256": "72216ccee36a52ece3f21f2d58a679c14c1483201ef6cbbfc4a1aa9cb6d34c9c",
+      "equalToNpmSource": true
+    },
+    {
+      "package": "js-yaml",
+      "version": "4.3.2",
+      "bundledMap": "node_modules/mermaid/dist/chunks/mermaid.core/chunk-HPSUCWAI.mjs.map",
+      "sourcePath": "../../../../../node_modules/.pnpm/js-yaml@4.3.2/node_modules/js-yaml/lib/exception.js",
+      "contentSHA256": "9ef16628112beacc7497c3f3d0ab001c66c2db501f9e21fad4c30e7cd21d1d10",
+      "npmSourceSHA256": "9ef16628112beacc7497c3f3d0ab001c66c2db501f9e21fad4c30e7cd21d1d10",
+      "equalToNpmSource": true
+    },
+    {
+      "package": "js-yaml",
+      "version": "4.3.2",
+      "bundledMap": "node_modules/mermaid/dist/chunks/mermaid.core/chunk-HPSUCWAI.mjs.map",
+      "sourcePath": "../../../../../node_modules/.pnpm/js-yaml@4.3.2/node_modules/js-yaml/lib/snippet.js",
+      "contentSHA256": "c9180c66091356e16a750c07cbc21ee477d6d07e7c39b6a8622e5882cf85326d",
+      "npmSourceSHA256": "c9180c66091356e16a750c07cbc21ee477d6d07e7c39b6a8622e5882cf85326d",
+      "equalToNpmSource": true
+    },
+    {
+      "package": "js-yaml",
+      "version": "4.3.2",
+      "bundledMap": "node_modules/mermaid/dist/chunks/mermaid.core/chunk-HPSUCWAI.mjs.map",
+      "sourcePath": "../../../../../node_modules/.pnpm/js-yaml@4.3.2/node_modules/js-yaml/lib/type.js",
+      "contentSHA256": "a595092ee9fb6901769201ff7e5a485ee5f501bd1519d209af93b37dd2314a32",
+      "npmSourceSHA256": "a595092ee9fb6901769201ff7e5a485ee5f501bd1519d209af93b37dd2314a32",
+      "equalToNpmSource": true
+    },
+    {
+      "package": "js-yaml",
+      "version": "4.3.2",
+      "bundledMap": "node_modules/mermaid/dist/chunks/mermaid.core/chunk-HPSUCWAI.mjs.map",
+      "sourcePath": "../../../../../node_modules/.pnpm/js-yaml@4.3.2/node_modules/js-yaml/lib/schema.js",
+      "contentSHA256": "dd26a9e56d934099eb53e04f242ed1962660e4e64697c300ff5c4bc1a83165da",
+      "npmSourceSHA256": "dd26a9e56d934099eb53e04f242ed1962660e4e64697c300ff5c4bc1a83165da",
+      "equalToNpmSource": true
+    },
+    {
+      "package": "js-yaml",
+      "version": "4.3.2",
+      "bundledMap": "node_modules/mermaid/dist/chunks/mermaid.core/chunk-HPSUCWAI.mjs.map",
+      "sourcePath": "../../../../../node_modules/.pnpm/js-yaml@4.3.2/node_modules/js-yaml/lib/type/str.js",
+      "contentSHA256": "1f8725eac2dc7bed4b91610f21796ed3c057cee44b81a1ae8cc9beb9cd6c63ff",
+      "npmSourceSHA256": "1f8725eac2dc7bed4b91610f21796ed3c057cee44b81a1ae8cc9beb9cd6c63ff",
+      "equalToNpmSource": true
+    },
+    {
+      "package": "js-yaml",
+      "version": "4.3.2",
+      "bundledMap": "node_modules/mermaid/dist/chunks/mermaid.core/chunk-HPSUCWAI.mjs.map",
+      "sourcePath": "../../../../../node_modules/.pnpm/js-yaml@4.3.2/node_modules/js-yaml/lib/type/seq.js",
+      "contentSHA256": "3a38b7f3242737c2e21462c42a8da1682325686cb2b30dc3630e515cf9c45522",
+      "npmSourceSHA256": "3a38b7f3242737c2e21462c42a8da1682325686cb2b30dc3630e515cf9c45522",
+      "equalToNpmSource": true
+    },
+    {
+      "package": "js-yaml",
+      "version": "4.3.2",
+      "bundledMap": "node_modules/mermaid/dist/chunks/mermaid.core/chunk-HPSUCWAI.mjs.map",
+      "sourcePath": "../../../../../node_modules/.pnpm/js-yaml@4.3.2/node_modules/js-yaml/lib/type/map.js",
+      "contentSHA256": "6dd30a02cabaccf71c230464537bda5785093da80cd3319ed3a6481206e2ec7d",
+      "npmSourceSHA256": "6dd30a02cabaccf71c230464537bda5785093da80cd3319ed3a6481206e2ec7d",
+      "equalToNpmSource": true
+    },
+    {
+      "package": "js-yaml",
+      "version": "4.3.2",
+      "bundledMap": "node_modules/mermaid/dist/chunks/mermaid.core/chunk-HPSUCWAI.mjs.map",
+      "sourcePath": "../../../../../node_modules/.pnpm/js-yaml@4.3.2/node_modules/js-yaml/lib/schema/failsafe.js",
+      "contentSHA256": "8e109fccabab5c066b66113f5d68bb74372f48bf589de39e44ed26432a98a27a",
+      "npmSourceSHA256": "8e109fccabab5c066b66113f5d68bb74372f48bf589de39e44ed26432a98a27a",
+      "equalToNpmSource": true
+    },
+    {
+      "package": "js-yaml",
+      "version": "4.3.2",
+      "bundledMap": "node_modules/mermaid/dist/chunks/mermaid.core/chunk-HPSUCWAI.mjs.map",
+      "sourcePath": "../../../../../node_modules/.pnpm/js-yaml@4.3.2/node_modules/js-yaml/lib/type/null.js",
+      "contentSHA256": "5eea804da258ba10fa736199ed0cef9d89dbb01eac1c1bd3609a79a132d1885e",
+      "npmSourceSHA256": "5eea804da258ba10fa736199ed0cef9d89dbb01eac1c1bd3609a79a132d1885e",
+      "equalToNpmSource": true
+    },
+    {
+      "package": "js-yaml",
+      "version": "4.3.2",
+      "bundledMap": "node_modules/mermaid/dist/chunks/mermaid.core/chunk-HPSUCWAI.mjs.map",
+      "sourcePath": "../../../../../node_modules/.pnpm/js-yaml@4.3.2/node_modules/js-yaml/lib/type/bool.js",
+      "contentSHA256": "cc0d255ac6c55064421c19bbea312dcb9e22aee49fa9f8461723d9fbf7a0f8b3",
+      "npmSourceSHA256": "cc0d255ac6c55064421c19bbea312dcb9e22aee49fa9f8461723d9fbf7a0f8b3",
+      "equalToNpmSource": true
+    },
+    {
+      "package": "js-yaml",
+      "version": "4.3.2",
+      "bundledMap": "node_modules/mermaid/dist/chunks/mermaid.core/chunk-HPSUCWAI.mjs.map",
+      "sourcePath": "../../../../../node_modules/.pnpm/js-yaml@4.3.2/node_modules/js-yaml/lib/type/int.js",
+      "contentSHA256": "9d428a6e6de891a52b2b5ebd2bf09f9d1f9506514aaf35c6428f0111ecf86fdb",
+      "npmSourceSHA256": "9d428a6e6de891a52b2b5ebd2bf09f9d1f9506514aaf35c6428f0111ecf86fdb",
+      "equalToNpmSource": true
+    },
+    {
+      "package": "js-yaml",
+      "version": "4.3.2",
+      "bundledMap": "node_modules/mermaid/dist/chunks/mermaid.core/chunk-HPSUCWAI.mjs.map",
+      "sourcePath": "../../../../../node_modules/.pnpm/js-yaml@4.3.2/node_modules/js-yaml/lib/type/float.js",
+      "contentSHA256": "42b4d238e5d00267fe126996b912f34506d273c39725524d662626bb9e2d4e7e",
+      "npmSourceSHA256": "42b4d238e5d00267fe126996b912f34506d273c39725524d662626bb9e2d4e7e",
+      "equalToNpmSource": true
+    },
+    {
+      "package": "js-yaml",
+      "version": "4.3.2",
+      "bundledMap": "node_modules/mermaid/dist/chunks/mermaid.core/chunk-HPSUCWAI.mjs.map",
+      "sourcePath": "../../../../../node_modules/.pnpm/js-yaml@4.3.2/node_modules/js-yaml/lib/schema/json.js",
+      "contentSHA256": "b08f46efd2c45c46c6d3eaf9b05489356d80391c5f7d5094fb8ec7713e796281",
+      "npmSourceSHA256": "b08f46efd2c45c46c6d3eaf9b05489356d80391c5f7d5094fb8ec7713e796281",
+      "equalToNpmSource": true
+    },
+    {
+      "package": "js-yaml",
+      "version": "4.3.2",
+      "bundledMap": "node_modules/mermaid/dist/chunks/mermaid.core/chunk-HPSUCWAI.mjs.map",
+      "sourcePath": "../../../../../node_modules/.pnpm/js-yaml@4.3.2/node_modules/js-yaml/lib/schema/core.js",
+      "contentSHA256": "201ffb119aad04c9397df088452e00910becab9a43a3b3a392370878646c06ad",
+      "npmSourceSHA256": "201ffb119aad04c9397df088452e00910becab9a43a3b3a392370878646c06ad",
+      "equalToNpmSource": true
+    },
+    {
+      "package": "js-yaml",
+      "version": "4.3.2",
+      "bundledMap": "node_modules/mermaid/dist/chunks/mermaid.core/chunk-HPSUCWAI.mjs.map",
+      "sourcePath": "../../../../../node_modules/.pnpm/js-yaml@4.3.2/node_modules/js-yaml/lib/type/timestamp.js",
+      "contentSHA256": "54e2070e0319d7fa3becd426dd5bfdb822b9602bd4a3c366976cbaa2278bdb5c",
+      "npmSourceSHA256": "54e2070e0319d7fa3becd426dd5bfdb822b9602bd4a3c366976cbaa2278bdb5c",
+      "equalToNpmSource": true
+    },
+    {
+      "package": "js-yaml",
+      "version": "4.3.2",
+      "bundledMap": "node_modules/mermaid/dist/chunks/mermaid.core/chunk-HPSUCWAI.mjs.map",
+      "sourcePath": "../../../../../node_modules/.pnpm/js-yaml@4.3.2/node_modules/js-yaml/lib/type/merge.js",
+      "contentSHA256": "4cd0343e63f3c3d7cea620cf122e3dd8f8d1c4c4105d384e8d82d35ae154d1e2",
+      "npmSourceSHA256": "4cd0343e63f3c3d7cea620cf122e3dd8f8d1c4c4105d384e8d82d35ae154d1e2",
+      "equalToNpmSource": true
+    },
+    {
+      "package": "js-yaml",
+      "version": "4.3.2",
+      "bundledMap": "node_modules/mermaid/dist/chunks/mermaid.core/chunk-HPSUCWAI.mjs.map",
+      "sourcePath": "../../../../../node_modules/.pnpm/js-yaml@4.3.2/node_modules/js-yaml/lib/type/binary.js",
+      "contentSHA256": "9dd6a70eb318a123fdc11a36d613419d79535b6ecf105bd865de3a5cbbb60e7c",
+      "npmSourceSHA256": "9dd6a70eb318a123fdc11a36d613419d79535b6ecf105bd865de3a5cbbb60e7c",
+      "equalToNpmSource": true
+    },
+    {
+      "package": "js-yaml",
+      "version": "4.3.2",
+      "bundledMap": "node_modules/mermaid/dist/chunks/mermaid.core/chunk-HPSUCWAI.mjs.map",
+      "sourcePath": "../../../../../node_modules/.pnpm/js-yaml@4.3.2/node_modules/js-yaml/lib/type/omap.js",
+      "contentSHA256": "8a865841abeb5f12a30f39f095967b6ac05ef6240e78872573fb23e8c9b5c47f",
+      "npmSourceSHA256": "8a865841abeb5f12a30f39f095967b6ac05ef6240e78872573fb23e8c9b5c47f",
+      "equalToNpmSource": true
+    },
+    {
+      "package": "js-yaml",
+      "version": "4.3.2",
+      "bundledMap": "node_modules/mermaid/dist/chunks/mermaid.core/chunk-HPSUCWAI.mjs.map",
+      "sourcePath": "../../../../../node_modules/.pnpm/js-yaml@4.3.2/node_modules/js-yaml/lib/type/pairs.js",
+      "contentSHA256": "f9eb5d2dc3cdbf7dd802e0a62b5aa2d09eedeb0509b71a247ebdad223315d6a5",
+      "npmSourceSHA256": "f9eb5d2dc3cdbf7dd802e0a62b5aa2d09eedeb0509b71a247ebdad223315d6a5",
+      "equalToNpmSource": true
+    },
+    {
+      "package": "js-yaml",
+      "version": "4.3.2",
+      "bundledMap": "node_modules/mermaid/dist/chunks/mermaid.core/chunk-HPSUCWAI.mjs.map",
+      "sourcePath": "../../../../../node_modules/.pnpm/js-yaml@4.3.2/node_modules/js-yaml/lib/type/set.js",
+      "contentSHA256": "fa5b815c6334def52dae5b58193d3798f8e53558f6c7f48a643898e996333dd7",
+      "npmSourceSHA256": "fa5b815c6334def52dae5b58193d3798f8e53558f6c7f48a643898e996333dd7",
+      "equalToNpmSource": true
+    },
+    {
+      "package": "js-yaml",
+      "version": "4.3.2",
+      "bundledMap": "node_modules/mermaid/dist/chunks/mermaid.core/chunk-HPSUCWAI.mjs.map",
+      "sourcePath": "../../../../../node_modules/.pnpm/js-yaml@4.3.2/node_modules/js-yaml/lib/schema/default.js",
+      "contentSHA256": "1c4c9573b4c05ce47391c6bcba10401385d8d6a4d596c1c0fd1d6ea664f97ea2",
+      "npmSourceSHA256": "1c4c9573b4c05ce47391c6bcba10401385d8d6a4d596c1c0fd1d6ea664f97ea2",
+      "equalToNpmSource": true
+    },
+    {
+      "package": "js-yaml",
+      "version": "4.3.2",
+      "bundledMap": "node_modules/mermaid/dist/chunks/mermaid.core/chunk-HPSUCWAI.mjs.map",
+      "sourcePath": "../../../../../node_modules/.pnpm/js-yaml@4.3.2/node_modules/js-yaml/lib/loader.js",
+      "contentSHA256": "88a97ccd655f8eb9d81af9b51ab9ddafbab9dc545337e772ba922ab062f8b72d",
+      "npmSourceSHA256": "88a97ccd655f8eb9d81af9b51ab9ddafbab9dc545337e772ba922ab062f8b72d",
+      "equalToNpmSource": true
+    },
+    {
+      "package": "js-yaml",
+      "version": "4.3.2",
+      "bundledMap": "node_modules/mermaid/dist/chunks/mermaid.core/chunk-HPSUCWAI.mjs.map",
+      "sourcePath": "../../../../../node_modules/.pnpm/js-yaml@4.3.2/node_modules/js-yaml/lib/dumper.js",
+      "contentSHA256": "695c80b3c310ef3f6fbd232bbcd3f82464917a008c24f1e05b560f35c20116a0",
+      "npmSourceSHA256": "695c80b3c310ef3f6fbd232bbcd3f82464917a008c24f1e05b560f35c20116a0",
+      "equalToNpmSource": true
+    },
+    {
+      "package": "js-yaml",
+      "version": "4.3.2",
+      "bundledMap": "node_modules/mermaid/dist/chunks/mermaid.core/chunk-HPSUCWAI.mjs.map",
+      "sourcePath": "../../../../../node_modules/.pnpm/js-yaml@4.3.2/node_modules/js-yaml/index.js",
+      "contentSHA256": "e85d524fcd45466669dfc37618284e0c53ccaaf3f4bef1e23cd25ec6c43120bc",
+      "npmSourceSHA256": "e85d524fcd45466669dfc37618284e0c53ccaaf3f4bef1e23cd25ec6c43120bc",
+      "equalToNpmSource": true
+    },
+    {
+      "package": "js-yaml",
+      "version": "4.3.2",
+      "bundledMap": "node_modules/mermaid/dist/chunks/mermaid.core/chunk-HPSUCWAI.mjs.map",
+      "sourcePath": "../../../../../node_modules/.pnpm/js-yaml@4.3.2/node_modules/js-yaml/lib/index_vite_proxy.tmp.mjs",
+      "contentSHA256": "a846cc31e1d31c304edaf94c48624568b699803a79ae2ee88d6e5c66e49552f7",
+      "npmSourceSHA256": "a846cc31e1d31c304edaf94c48624568b699803a79ae2ee88d6e5c66e49552f7",
+      "equalToNpmSource": true
+    },
+    {
+      "package": "fastdom",
+      "version": "1.0.12",
+      "bundledMap": "node_modules/mermaid/dist/chunks/mermaid.core/chunk-STOXU5M4.mjs.map",
+      "sourcePath": "../../../../../node_modules/.pnpm/fastdom@1.0.12_patch_hash=10bad52c2ff6c742f43492850f2a5a74e9d70a33f42a442cdbda4e174356aa87/node_modules/fastdom/fastdom.js",
+      "contentSHA256": "694d6e068abe8a911bee0ee1f2cefe6b26099fd1545aab97f656d61933970278",
+      "npmSourceSHA256": "efd961891488c9f624fc428436cd7c17e7723d9c5e4262f27aef28b790b293dd",
+      "equalToNpmSource": false,
+      "bundledPatch": "--- \n+++ \n@@ -1,4 +1,4 @@\n-!(function(win) {\n+export default (function(win) {\n \n /**\n  * FastDom\n@@ -237,8 +237,5 @@\n // one instance of `FastDom` in an app\n var exports = win.fastdom = (win.fastdom || new FastDom()); // jshint ignore:line\n \n-// Expose to CJS & AMD\n-if ((typeof define) == 'function') define(function() { return exports; });\n-else if ((typeof module) == 'object') module.exports = exports;\n-\n+return exports;\n })( typeof window !== 'undefined' ? window : typeof this != 'undefined' ? this : globalThis);\n"
+    },
+    {
+      "package": "fastdom",
+      "version": "1.0.12",
+      "bundledMap": "node_modules/mermaid/dist/chunks/mermaid.core/chunk-STOXU5M4.mjs.map",
+      "sourcePath": "../../../../../node_modules/.pnpm/fastdom@1.0.12_patch_hash=10bad52c2ff6c742f43492850f2a5a74e9d70a33f42a442cdbda4e174356aa87/node_modules/fastdom/extensions/fastdom-promised.js",
+      "contentSHA256": "a3bc46637053f9e571bedade1611c2a2e5e9eb3f4e443296532546a337c41ff0",
+      "npmSourceSHA256": "75dbddbf2a08e0a0e474b0f0c71946748f76d95365949ba12a099b209a9c5d5d",
+      "equalToNpmSource": false,
+      "bundledPatch": "--- \n+++ \n@@ -1,5 +1,3 @@\n-!(function() {\n-\n /**\n  * Wraps fastdom in a Promise API\n  * for improved control-flow.\n@@ -69,9 +67,5 @@\n   return promise;\n }\n \n-// Expose to CJS, AMD or global\n-if ((typeof define)[0] == 'f') define(function() { return exports; });\n-else if ((typeof module)[0] == 'o') module.exports = exports;\n-else window.fastdomPromised = exports;\n-\n-})();+export const { initialize, mutate, measure, clear } = exports;\n+export default exports;\n"
+    }
+  ],
+  "originals": [
+    {
+      "path": "src/lib/components/MobileEditor.svelte",
+      "originalSHA256": "4fd79103ab605254d1e8223eca554199056698792b022b3a439987262e23cb1c",
+      "adaptedSHA256": "4fd79103ab605254d1e8223eca554199056698792b022b3a439987262e23cb1c",
+      "upstream": "https://github.com/mermaid-js/mermaid-live-editor/blob/4e94efb6d7a20fb22fd743ac335065d24b80eb6a/src/lib/components/MobileEditor.svelte"
+    },
+    {
+      "path": "src/lib/components/View.svelte",
+      "originalSHA256": "09917d83e899f4fa70057e8ab3b33fd6d50f7a45b3ccb6eb629f7b0da8f89b2a",
+      "adaptedSHA256": "737b9538ed8430f7677a26b50e405c141c4786adaa80386df625e99361381228",
+      "upstream": "https://github.com/mermaid-js/mermaid-live-editor/blob/4e94efb6d7a20fb22fd743ac335065d24b80eb6a/src/lib/components/View.svelte"
+    },
+    {
+      "path": "src/lib/constants.ts",
+      "originalSHA256": "1f02a2fa6e52490111fedb6e164296fb542904358437a1fc0cdf3a5a27d24bea",
+      "adaptedSHA256": "61ea9b3d3851e5dfd086dde9d5140a5aabc1375240a9cca3518c7808c3f2f86d",
+      "upstream": "https://github.com/mermaid-js/mermaid-live-editor/blob/4e94efb6d7a20fb22fd743ac335065d24b80eb6a/src/lib/constants.ts"
+    },
+    {
+      "path": "src/lib/util/autoSync.ts",
+      "originalSHA256": "d0d42790fb624ee481060e32cae9c53aa54a34e9fdde6e514117e4b101930d6e",
+      "adaptedSHA256": "d0d42790fb624ee481060e32cae9c53aa54a34e9fdde6e514117e4b101930d6e",
+      "upstream": "https://github.com/mermaid-js/mermaid-live-editor/blob/4e94efb6d7a20fb22fd743ac335065d24b80eb6a/src/lib/util/autoSync.ts"
+    },
+    {
+      "path": "src/lib/util/env.ts",
+      "originalSHA256": "28cd6ef45f6cd1110309d8755e70bbb14ac39e640330bca40e4f0e8dcd46afb2",
+      "adaptedSHA256": "28cd6ef45f6cd1110309d8755e70bbb14ac39e640330bca40e4f0e8dcd46afb2",
+      "upstream": "https://github.com/mermaid-js/mermaid-live-editor/blob/4e94efb6d7a20fb22fd743ac335065d24b80eb6a/src/lib/util/env.ts"
+    },
+    {
+      "path": "src/lib/util/errorHandling.ts",
+      "originalSHA256": "55e406584c959a01d038fe63dfb569da773eafd50c342c6d284165e7028141e5",
+      "adaptedSHA256": "55e406584c959a01d038fe63dfb569da773eafd50c342c6d284165e7028141e5",
+      "upstream": "https://github.com/mermaid-js/mermaid-live-editor/blob/4e94efb6d7a20fb22fd743ac335065d24b80eb6a/src/lib/util/errorHandling.ts"
+    },
+    {
+      "path": "src/lib/util/mermaid.ts",
+      "originalSHA256": "4ba952423bab46453cd3ad1074f82cd6d1576188024f299afddf0941b3cc0aba",
+      "adaptedSHA256": "7d8a1bc492fbf64ad4a28727e338292247d8f5d8179ffee96b3789c224ed3194",
+      "upstream": "https://github.com/mermaid-js/mermaid-live-editor/blob/4e94efb6d7a20fb22fd743ac335065d24b80eb6a/src/lib/util/mermaid.ts"
+    },
+    {
+      "path": "src/lib/util/panZoom.ts",
+      "originalSHA256": "9552360b6419443390ac9a225abe463963fac916b7974d0b698649ee2022e86e",
+      "adaptedSHA256": "e838840e6622c931dbda696b4bb75fde6ddff231954a3b49a82706aca7983492",
+      "upstream": "https://github.com/mermaid-js/mermaid-live-editor/blob/4e94efb6d7a20fb22fd743ac335065d24b80eb6a/src/lib/util/panZoom.ts"
+    },
+    {
+      "path": "src/lib/util/persist.svelte.ts",
+      "originalSHA256": "5dbc41d912967897e538e370c001cd65f27e10e85529413a82ab85686885f36a",
+      "adaptedSHA256": "685fb1b2a05b36a136f816ddd121df226f5c4db21c157debad29018b3209a5d9",
+      "upstream": "https://github.com/mermaid-js/mermaid-live-editor/blob/4e94efb6d7a20fb22fd743ac335065d24b80eb6a/src/lib/util/persist.svelte.ts"
+    },
+    {
+      "path": "src/lib/util/renderView.ts",
+      "originalSHA256": "cfc1972840b9d940ef6a13f659de1b8e3fe74feea02d2d72042d7d09492193ad",
+      "adaptedSHA256": "295455ae6f2d27cbfc9ef860f95fd187b70482971f27f17c227458b7da9af6b5",
+      "upstream": "https://github.com/mermaid-js/mermaid-live-editor/blob/4e94efb6d7a20fb22fd743ac335065d24b80eb6a/src/lib/util/renderView.ts"
+    },
+    {
+      "path": "src/lib/util/sanitize.ts",
+      "originalSHA256": "960377d4b19cd376a05b828a2c0699cfbbb1326a802d90af5a371f9d0407c3ab",
+      "adaptedSHA256": "960377d4b19cd376a05b828a2c0699cfbbb1326a802d90af5a371f9d0407c3ab",
+      "upstream": "https://github.com/mermaid-js/mermaid-live-editor/blob/4e94efb6d7a20fb22fd743ac335065d24b80eb6a/src/lib/util/sanitize.ts"
+    },
+    {
+      "path": "src/lib/util/serde.ts",
+      "originalSHA256": "9ec7d704d9a832a928bd88d137d0cf01f7bbfbdae4f13180db5e8b613e8a0d41",
+      "adaptedSHA256": "9ec7d704d9a832a928bd88d137d0cf01f7bbfbdae4f13180db5e8b613e8a0d41",
+      "upstream": "https://github.com/mermaid-js/mermaid-live-editor/blob/4e94efb6d7a20fb22fd743ac335065d24b80eb6a/src/lib/util/serde.ts"
+    },
+    {
+      "path": "src/lib/util/state.svelte.ts",
+      "originalSHA256": "be8cb2e25dae40901a99c099e379c4ff47e57ee2ae1d79dc3ed5676f095cdf9a",
+      "adaptedSHA256": "f7ec6610c1c20881ddfa599229010c4b8662cbcb0b940f5fe3be8b3fa8878ed3",
+      "upstream": "https://github.com/mermaid-js/mermaid-live-editor/blob/4e94efb6d7a20fb22fd743ac335065d24b80eb6a/src/lib/util/state.svelte.ts"
+    },
+    {
+      "path": "src/lib/util/stats.ts",
+      "originalSHA256": "9bc8355ad41002756130629b1a01725c384bacf25529a2241b70d982e9a461ab",
+      "adaptedSHA256": "6980eeae02f03a839c7cf551b42418adb659f130c4469a49bbe151d2a93b9a6f",
+      "upstream": "https://github.com/mermaid-js/mermaid-live-editor/blob/4e94efb6d7a20fb22fd743ac335065d24b80eb6a/src/lib/util/stats.ts"
+    },
+    {
+      "path": "src/lib/util/util.ts",
+      "originalSHA256": "0200e2e8e27cfa480550d68994d7e44dfea95afe8d202c938ce5418df6c013f9",
+      "adaptedSHA256": "161835fd31f3c6955d29a3c0a9254881c1489e16c1f6e9f3f4738d90eb54767c",
+      "upstream": "https://github.com/mermaid-js/mermaid-live-editor/blob/4e94efb6d7a20fb22fd743ac335065d24b80eb6a/src/lib/util/util.ts"
+    }
+  ],
+  "patches": {
+    "lib/components/View.svelte": "--- \n+++ \n@@ -5,7 +5,7 @@\n   import { renderAndPlaceDiagram } from '$/util/renderView';\n   import { updateCodeStore, validatedState } from '$/util/state.svelte';\n   import { saveStatistics } from '$/util/stats';\n-  import FontAwesome, { mayContainFontAwesome } from '$lib/components/FontAwesome.svelte';\n+  const mayContainFontAwesome=(_code:string)=>false;\n   import uniqueID from 'lodash-es/uniqueId';\n   import type { MermaidConfig } from 'mermaid';\n   import { mode } from 'mode-watcher';\n@@ -21,9 +21,10 @@\n   let rough: boolean;\n   let view: HTMLDivElement | undefined = $state();\n   let error = $state(false);\n+  let localRenderError=$state('');\n   let panZoom = true;\n   let manualUpdate = true;\n-  let waitForFontAwesomeToLoad: FontAwesome['waitForFontAwesomeToLoad'] | undefined = $state();\n+  let waitForFontAwesomeToLoad: (() => Promise<void>) | undefined = $state();\n \n   // Set up panZoom state observer to update the store when pan/zoom changes\n   const setupPanZoomObserver = () => {\n@@ -41,12 +42,14 @@\n   };\n \n   const handleStateChange = async (state: ValidatedState) => {\n+    if(window.__mermaidDisposed)return;\n     const startTime = Date.now();\n     if (state.error !== undefined) {\n       error = true;\n       return;\n     }\n     error = false;\n+    localRenderError='';\n     let diagramType: string | undefined;\n     try {\n       if (container) {\n@@ -83,6 +86,7 @@\n           viewId: uniqueID('graph-')\n         });\n         diagramType = detectedDiagramType;\n+        if(window.__mermaidDisposed)return;\n         if (graphDiv && state.panZoom) {\n           handlePanZoom(state, graphDiv);\n         }\n@@ -94,6 +98,8 @@\n         manualUpdate = false;\n       }\n     } catch (error_) {\n+      if(window.__mermaidDisposed)return;\n+      localRenderError='Diagram rendering unavailable. Close and reopen to retry: '+String(error_);\n       console.error('view fail', error_);\n       error = true;\n     }\n@@ -117,13 +123,14 @@\n   });\n </script>\n \n-<FontAwesome bind:waitForFontAwesomeToLoad />\n+\n \n <div\n   id=\"view\"\n   bind:this={view}\n   class={['h-full w-full', shouldShowGrid && `grid-bg-${mode.current}`, error && 'opacity-50']}>\n   <div id=\"container\" bind:this={container} class=\"h-full overflow-auto\"></div>\n+  {#if localRenderError}<output role=\"alert\">{localRenderError}</output>{/if}\n </div>\n \n <style>\n",
+    "lib/constants.ts": "--- \n+++ \n@@ -47,7 +47,7 @@\n     B --> C{Let me think}\n     C -->|One| D[Laptop]\n     C -->|Two| E[iPhone]\n-    C -->|Three| F[fa:fa-car Car]\n+    C -->|Three| F[Car]\n   `,\n   grid: true,\n   // Empty on purpose: mermaid picks its own theme, look and layout per diagram type.\n",
+    "lib/util/mermaid.ts": "--- \n+++ \n@@ -1,26 +1,28 @@\n-import { diagramData } from '@mermaid-js/examples';\n-import tidyTreeLayouts from '@mermaid-js/layout-tidy-tree';\n-import zenuml from '@mermaid-js/mermaid-zenuml';\n+import {checkCode,checkConfig} from '../../local-safety';\n import type { MermaidConfig, RenderResult } from 'mermaid';\n import mermaid from 'mermaid';\n \n // ELK ships bundled with mermaid 12 and is registered automatically.\n-mermaid.registerLayoutLoaders(tidyTreeLayouts);\n-const init = mermaid.registerExternalDiagrams([zenuml]);\n+\n+const init = Promise.resolve();\n \n export const render = async (\n   config: MermaidConfig,\n   code: string,\n   id: string\n ): Promise<RenderResult> => {\n+  checkCode(code);\n+  checkConfig(JSON.stringify(config));\n+  if(window.__mermaidDisposed)throw Error(\"Preview disposed\");\n   await init;\n \n   // Should be able to call this multiple times without any issues.\n-  mermaid.initialize(config);\n-  return await mermaid.render(id, code);\n+  mermaid.initialize({...config,securityLevel:'strict',startOnLoad:false,maxTextSize:5000,maxEdges:80,flowchart:{...config.flowchart,htmlLabels:false}});\n+  try{return await mermaid.render(id, code)}finally{document.getElementById('d'+id)?.remove();document.getElementById('i'+id)?.remove()}\n };\n \n export const parse = async (code: string) => {\n+  checkCode(code);\n   return await mermaid.parse(code);\n };\n \n@@ -87,22 +89,3 @@\n export const isManagedTheme = (theme: unknown): boolean =>\n   theme === undefined || (typeof theme === 'string' && managedThemes.has(theme));\n \n-type DiagramDefinition = (typeof diagramData)[number];\n-\n-export type SampleExample = DiagramDefinition['examples'][number];\n-\n-const isValidDiagram = (diagram: DiagramDefinition): diagram is Required<DiagramDefinition> => {\n-  return Boolean(diagram.name && diagram.examples && diagram.examples.length > 0);\n-};\n-\n-export const getSampleDiagrams = (): Record<string, SampleExample[]> => {\n-  const samples: Record<string, SampleExample[]> = {};\n-  for (const diagram of diagramData.filter((d) => isValidDiagram(d))) {\n-    // The default example comes first, so it is loaded when clicking the\n-    // diagram name and shown at the top of the example dropdown.\n-    samples[diagram.name.replace(/ (Diagram|Chart|Graph)/, '')] = [...diagram.examples].sort(\n-      (a, b) => Number(b.isDefault ?? false) - Number(a.isDefault ?? false)\n-    );\n-  }\n-  return samples;\n-};\n",
+    "lib/util/panZoom.ts": "--- \n+++ \n@@ -148,6 +148,8 @@\n     this.pzoom?.zoomOut();\n   }\n \n+  public destroy() { this.resizeObserver.disconnect(); this.pzoom?.destroy(); this.pzoom=undefined; this.onPanZoomChange=undefined; }\n+\n   public reset() {\n     this.pzoom?.reset();\n     // Zoom out a bit to avoid overlap with the toolbar\n",
+    "lib/util/persist.svelte.ts": "--- \n+++ \n@@ -1,53 +1 @@\n-/**\n- * Runes-based localStorage persistence, shared by the persisted state in\n- * `state.svelte.ts`, `migrations.svelte.ts`, `promo.svelte.ts` and History.\n- *\n- * Values are stored as plain JSON. Reads of missing or corrupt values fall\n- * back to the provided default, so values written by older versions of the\n- * editor (which serialized plain objects to the same JSON shape) stay loadable.\n- */\n-\n-const hasStorage = (): boolean => typeof window !== 'undefined' && !!window.localStorage;\n-\n-export const readJSON = <T>(key: string, fallback: T): T => {\n-  if (!hasStorage()) {\n-    return fallback;\n-  }\n-  try {\n-    const raw = window.localStorage.getItem(key);\n-    if (raw === null) {\n-      return fallback;\n-    }\n-    // A stored literal \"null\" means the value is absent: the pre-runes\n-    // persistence layer never wrote null and treated it as missing.\n-    return (JSON.parse(raw) as T) ?? fallback;\n-  } catch {\n-    return fallback;\n-  }\n-};\n-\n-export const writeJSON = (key: string, value: unknown): void => {\n-  if (hasStorage()) {\n-    window.localStorage.setItem(key, JSON.stringify(value));\n-  }\n-};\n-\n-export interface Persisted<T> {\n-  value: T;\n-}\n-\n-// A localStorage-backed reactive value. Reads on init, writes on every set.\n-// Raw state: replace `value` wholesale to change it. With a deep proxy,\n-// in-place mutation would update the UI without ever being persisted.\n-export const persisted = <T>(key: string, initial: T): Persisted<T> => {\n-  let value = $state.raw<T>(readJSON(key, initial));\n-  return {\n-    get value() {\n-      return value;\n-    },\n-    set value(next: T) {\n-      value = next;\n-      writeJSON(key, next);\n-    }\n-  };\n-};\n+const cache=new Map<string,unknown>();export const readJSON=<T>(key:string,fallback:T):T=>(cache.get(key) as T)??fallback;export const writeJSON=(key:string,value:unknown)=>{cache.set(key,structuredClone(value))};export const persisted=<T>(key:string,initial:T)=>{let value=$state.raw<T>(readJSON(key,initial));return{get value(){return value},set value(v:T){value=v;writeJSON(key,v)}}};\n",
+    "lib/util/renderView.ts": "--- \n+++ \n@@ -35,6 +35,7 @@\n   if (svg.length === 0) {\n     return { diagramType };\n   }\n+  if(window.__mermaidDisposed || !container.isConnected)return {diagramType};\n   container.innerHTML = svg;\n   let graphDiv = document.querySelector<SVGSVGElement>(`#${viewId}`);\n   if (!graphDiv) {\n",
+    "lib/util/state.svelte.ts": "--- \n+++ \n@@ -1,3 +1,4 @@\n+import {checkConfig} from '../../local-safety';\n import { defaultState } from '$/constants';\n import type { ErrorHash, MarkerData, State, ValidatedState } from '$/types';\n import { resolve } from '$app/paths';\n@@ -68,7 +69,7 @@\n       setTimeout(() => window.location.reload(), 500);\n     }\n     lastDiagramType = diagramType;\n-    JSON.parse(state.mermaid);\n+    checkConfig(state.mermaid);\n   } catch (error) {\n     processed.error = error as Error;\n     errorDebug();\n@@ -119,10 +120,14 @@\n // publishing the result to `validatedState` (and the URL hash, once\n // initURLSubscription has run). Only called from update(), which suppresses\n // dependency tracking.\n+let validationVersion=0;\n const persistAndProcess = (): void => {\n+  if(window.__mermaidDisposed)return;\n+  const version=++validationVersion;\n   const snapshot = $state.snapshot(input) as State;\n   writeJSON(CODE_STORE_KEY, snapshot);\n   void processState(snapshot).then((processed) => {\n+    if(window.__mermaidDisposed||version!==validationVersion)return;\n     validatedCurrent = processed;\n     updateHash?.(processed.serialized);\n     syncManagedTheme(processed.diagramType);\n",
+    "lib/util/stats.ts": "--- \n+++ \n@@ -1,136 +1 @@\n-import { browser } from '$app/environment';\n-import type PlausibleInstance from 'plausible-tracker';\n-import { env } from './env';\n-\n-export let plausible: ReturnType<typeof PlausibleInstance> | undefined;\n-\n-export const initAnalytics = async (): Promise<void> => {\n-  if (!env.analyticsUrl || !browser || plausible) {\n-    return;\n-  }\n-\n-  try {\n-    const { default: Plausible } = await import('plausible-tracker');\n-    plausible = Plausible({\n-      // All tracked stats are public and available at https://p.mermaid.live/mermaid.live\n-      apiHost: env.analyticsUrl,\n-      domain: env.domain,\n-      hashMode: false\n-    });\n-  } catch (error) {\n-    console.log(error);\n-    console.info('Analytics blocked ;)');\n-  }\n-};\n-\n-/**\n- * Build the current page URL for analytics tracking.\n- * Includes origin, pathname, and search (for UTM params),\n- * but never the hash (which contains diagram data).\n- */\n-export const getAnalyticsSafeUrl = (): string => {\n-  return window.location.origin + window.location.pathname + window.location.search;\n-};\n-\n-export const countLines = (code: string): number => {\n-  return (code.match(/\\n/g)?.length ?? 0) + 1;\n-};\n-\n-export const saveStatistics = ({\n-  code,\n-  renderTime,\n-  isRough,\n-  diagramType\n-}: {\n-  code: string;\n-  renderTime: number;\n-  isRough: boolean;\n-  diagramType?: string;\n-}): void => {\n-  if (!diagramType) {\n-    return;\n-  }\n-  const length = countLines(code);\n-  const lengthBucket = getBucket(length);\n-  const renderTimeMsBucket = getBucket(renderTime);\n-  logEvent('render', { diagramType, isRough, lengthBucket, renderTimeMsBucket });\n-};\n-\n-const getBucket = (length: number): string => {\n-  const buckets = [\n-    [10, '0-10'],\n-    [25, '10-25'],\n-    [50, '25-50'],\n-    [100, '50-100'],\n-    [200, '100-200'],\n-    [500, '200-500'],\n-    [700, '500-700'],\n-    [1000, '700-1000'],\n-    [1500, '1000-1500'],\n-    [2500, '1500-2500'],\n-    [4500, '2500-4500'],\n-    [7000, '4500-7000'],\n-    [10_000, '7000-10000']\n-  ] as const;\n-\n-  for (const [threshold, label] of buckets) {\n-    if (length < threshold) {\n-      return label;\n-    }\n-  }\n-\n-  return '10000+';\n-};\n-\n-const minutesToMilliSeconds = (minutes: number): number => {\n-  return minutes * 60_000;\n-};\n-\n-const noDelay = 0;\n-const defaultDelay = minutesToMilliSeconds(1);\n-const delaysPerEvent = {\n-  bannerClick: noDelay,\n-  chooseEditor: noDelay,\n-  copyClipboard: defaultDelay,\n-  copyMarkdown: defaultDelay,\n-  download: defaultDelay,\n-  history: defaultDelay,\n-  loadGist: defaultDelay,\n-  loadSampleDiagram: defaultDelay,\n-  mermaidChartClick: noDelay,\n-  migration: defaultDelay,\n-  mobileViewToggle: defaultDelay,\n-  pwaInstalled: defaultDelay,\n-  render: minutesToMilliSeconds(5),\n-  renderDiagram: defaultDelay,\n-  themeChange: defaultDelay,\n-  version: defaultDelay\n-} as const;\n-export type AnalyticsEvent = keyof typeof delaysPerEvent;\n-const timeouts: Map<string, number> = new Map<string, number>();\n-// manual debounce to reduce the number of events sent to analytics\n-export const logEvent = (\n-  name: AnalyticsEvent,\n-  data?: Record<string, string | number | boolean>\n-): void => {\n-  if (browser && window.location.hostname === 'localhost') {\n-    console.log('[plausible]', name, data);\n-  }\n-  if (!plausible) {\n-    return;\n-  }\n-  const key = data ? JSON.stringify({ data, name }) : name;\n-  if (timeouts.has(key)) {\n-    clearTimeout(timeouts.get(key));\n-  } else {\n-    plausible.trackEvent(name, { props: data }, { url: getAnalyticsSafeUrl() });\n-  }\n-  timeouts.set(\n-    key,\n-    window.setTimeout(() => timeouts.delete(key), delaysPerEvent[name])\n-  );\n-};\n-\n-export const logMermaidChartClick = (source: string): void => {\n-  logEvent('mermaidChartClick', { source });\n-};\n+export const saveStatistics=()=>{};export const logEvent=()=>{};export const logMermaidChartClick=()=>{};\n",
+    "lib/util/util.ts": "--- \n+++ \n@@ -1,133 +1 @@\n-import { C } from '$/constants';\n-import { MCBaseURL } from './env';\n-import { loadDataFromUrl } from './fileLoaders/loader';\n-import { initLoading } from './loading.svelte';\n-import { isOnMermaidAI } from './migration/domainMigration';\n-import { applyMigrations } from './migrations.svelte';\n-import { initURLSubscription, loadState, updateCodeStore, verifyState } from './state.svelte';\n-import { getAnalyticsSafeUrl, initAnalytics, plausible } from './stats';\n-\n-export const getDomain = (url?: string): string => {\n-  if (!url) return '';\n-  const domain = new URL(url).hostname;\n-  return domain;\n-};\n-\n-export const loadStateFromURL = (): void => {\n-  loadState(window.location.hash.slice(1));\n-};\n-\n-export const syncDiagram = (): void => {\n-  updateCodeStore({\n-    updateDiagram: true\n-  });\n-};\n-\n-export const initHandler = async (): Promise<void> => {\n-  applyMigrations();\n-  loadStateFromURL();\n-  await initLoading('Loading Gist...', loadDataFromUrl().catch(console.error));\n-  syncDiagram();\n-  initURLSubscription();\n-  await initAnalytics();\n-  plausible?.trackPageview({\n-    url: getAnalyticsSafeUrl()\n-  });\n-  verifyState();\n-};\n-\n-export const isMac = navigator.platform.toUpperCase().includes('MAC');\n-export const cmdKey = isMac ? 'Cmd' : 'Ctrl';\n-export { MCBaseURL };\n-\n-const buildUtmParams = ({\n-  utmCampaign,\n-  utmMedium\n-}: {\n-  utmCampaign: string;\n-  utmMedium: string;\n-}): URLSearchParams =>\n-  new URLSearchParams({\n-    utm_campaign: utmCampaign,\n-    utm_medium: utmMedium,\n-    utm_source: getUTMSource()\n-  });\n-\n-export const getCheckoutUrl = (utm: { utmCampaign: string; utmMedium: string }): string => {\n-  const params = buildUtmParams(utm);\n-  params.set('coupon', 'arDfyFT8');\n-  params.set('tier', 'plus');\n-  return `${MCBaseURL}/app/user/billing/checkout?${params.toString()}`;\n-};\n-\n-export const getMermaidAiLiveUrl = (utm: { utmCampaign: string; utmMedium: string }): string => {\n-  return `${MCBaseURL}/live?${buildUtmParams(utm).toString()}`;\n-};\n-\n-export const getContactSalesUrl = (): string => {\n-  const params = new URLSearchParams({\n-    contactSubject: 'contactSales',\n-    utm_campaign: 'contact_sales',\n-    utm_medium: 'button',\n-    utm_source: getUTMSource()\n-  });\n-  return `${MCBaseURL}/contact-us?${params.toString()}`;\n-};\n-\n-let count = 0;\n-export const errorDebug = (limit = 1000) => {\n-  count += 1;\n-  if (count > limit) {\n-    console.log(count, limit);\n-    // eslint-disable-next-line no-debugger\n-    debugger;\n-  }\n-};\n-\n-export const formatJSON = (data: unknown): string => JSON.stringify(data, undefined, 2);\n-export const fetchJSON = async <T>(url: string): Promise<T> => {\n-  const res = await fetch(url);\n-  return res.json() as T;\n-};\n-export const fetchText = async (url: string): Promise<string> => {\n-  const res = await fetch(url);\n-  return res.text();\n-};\n-\n-export const copyToClipboard = async (text: string) => {\n-  try {\n-    await navigator.clipboard.writeText(text);\n-  } catch {\n-    fallbackCopyToClipboard(text);\n-  }\n-};\n-\n-function fallbackCopyToClipboard(text: string) {\n-  const textArea = document.createElement('textarea');\n-  textArea.value = text;\n-  // Make the textarea out of viewport\n-  textArea.style.position = 'fixed';\n-  textArea.style.left = '-999999px';\n-  textArea.style.top = '-999999px';\n-  document.body.append(textArea);\n-\n-  textArea.focus();\n-  textArea.select();\n-\n-  try {\n-    // The deprecated but widely supported method\n-    document.execCommand('copy');\n-  } catch (error) {\n-    console.error('Failed to copy:', error);\n-    throw error;\n-  } finally {\n-    textArea.remove();\n-  }\n-}\n-\n-export const getUTMSource = (): string => {\n-  if (typeof window !== 'undefined' && isOnMermaidAI()) {\n-    return C.aiLiveEditor;\n-  }\n-  return C.utmSource;\n-};\n+export const errorDebug=()=>{};export const formatJSON=(data:unknown):string=>JSON.stringify(data,undefined,2);export const getUTMSource=()=> 'mermaid_live_editor';export const MCBaseURL='';\n",
+    "mermaid-core-adapted.mjs": {
+      "upstreamNpmFile": "node_modules/mermaid/dist/mermaid.core.mjs",
+      "originalSHA256": "fafa28691baf87948a63ec13009437278f25d43ca7d85e74b71f3b53897e1738",
+      "adaptedSHA256": "beefe64ccbf77542836a4e2711c4345f5b294891a05d38f1f4679709ded33c4e",
+      "diff": "--- \n+++ \n@@ -785,45 +785,7 @@\n       return text.toLowerCase().trimStart().startsWith(\"---\");\n     }\n   );\n-  if (true) {\n-    registerLazyLoadedDiagrams(detector_default2, detector_default4, architectureDetector_default);\n-  }\n-  registerLazyLoadedDiagrams(\n-    afDetector_default,\n-    c4Detector_default,\n-    detector_default5,\n-    classDetector_V2_default,\n-    erDetector_default,\n-    ganttDetector_default,\n-    info,\n-    pie,\n-    requirementDetector_default,\n-    sequenceDetector_default,\n-    detector_default,\n-    flowDetector_v2_default,\n-    detector_default3,\n-    gitGraphDetector_default,\n-    stateDetector_V2_default,\n-    journeyDetector_default,\n-    quadrantDetector_default,\n-    sankeyDetector_default,\n-    packet,\n-    xychartDetector_default,\n-    blockDetector_default,\n-    detector_default7,\n-    detector_default6,\n-    radar,\n-    ishikawa,\n-    treemap,\n-    railroad,\n-    railroadEbnf,\n-    railroadAbnf,\n-    railroadPeg,\n-    vennDetector_default,\n-    wardleyDetector_default,\n-    cynefin,\n-    usecase\n-  );\n+  registerLazyLoadedDiagrams(flowDetector_v2_default);\n }, \"addDiagrams\");\n \n // src/diagram-api/loadDiagram.ts\n"
+    },
+    "mermaid-layout-adapted.mjs": {
+      "upstreamNpmFile": "node_modules/mermaid/dist/chunks/mermaid.core/chunk-CFHHFPVC.mjs",
+      "originalSHA256": "0445dafa1fb1750897b83bcce15a8d3c094b74c26416e09f050a901be759b3d1",
+      "adaptedSHA256": "df95af95655698e3fb401681f230603bd668dcd18929c36c60e7721afb841b33",
+      "diff": "--- \n+++ \n@@ -71,26 +71,7 @@\n   ];\n }, \"elkLayoutLoaders\");\n var registerDefaultLayoutLoaders = /* @__PURE__ */ __name(() => {\n-  registerLayoutLoaders([\n-    {\n-      name: \"dagre\",\n-      loader: /* @__PURE__ */ __name(async () => await import(\"./dagre-SPEB5RXH.mjs\"), \"loader\")\n-    },\n-    {\n-      name: \"swimlane\",\n-      loader: /* @__PURE__ */ __name(async () => await import(\"./swimlanes-UMQ2AFYF.mjs\"), \"loader\")\n-    },\n-    // elkjs is ~1.6 MB of source, so it is excluded from the tiny build along\n-    // with the other large features. `getRegisteredLayoutAlgorithm` then falls\n-    // back to dagre for diagrams that ask for an ELK layout there.\n-    ...true ? [\n-      {\n-        name: \"cose-bilkent\",\n-        loader: /* @__PURE__ */ __name(async () => await import(\"./cose-bilkent-JH36ORCC.mjs\"), \"loader\")\n-      },\n-      ...elkLayoutLoaders()\n-    ] : []\n-  ]);\n+  registerLayoutLoaders([{name:\"dagre\",loader:async()=>await import(\"./dagre-SPEB5RXH.mjs\")}]);\n }, \"registerDefaultLayoutLoaders\");\n registerDefaultLayoutLoaders();\n var render = /* @__PURE__ */ __name(async (data4Layout, svg) => {\n"
+    }
+  },
+  "authoredHost": "import {mount,unmount}from'svelte';import App from'./App.svelte';let app:ReturnType<typeof mount>|undefined;const life=window.__jsonLifetime;let dead=false;let closing:Promise<void>;const close=()=>{if(dead)return closing;dead=true;window.__mermaidDisposed=true;return closing=Promise.resolve(app?unmount(app):undefined).catch(()=>{}).finally(()=>{document.body.replaceChildren();life.release()})};life.setShutdown(close);try{const target=document.getElementById('root');if(!target)throw Error('Missing editor root');app=mount(App,{target});document.addEventListener('click',e=>{if((e.target as Element)?.closest?.('a'))e.preventDefault()},true);document.addEventListener('visibilitychange',()=>{if(document.hidden)(document.activeElement as HTMLElement)?.blur()})}catch(e){void close().then(()=>{const p=document.createElement('p');p.setAttribute('role','alert');p.textContent='Mermaid local scene unavailable.';document.body.append(p)})}\n",
+  "authoredContainer": "<script lang=\"ts\">\nimport MobileEditor from './lib/components/MobileEditor.svelte';\nimport View from './lib/components/View.svelte';\nimport {validatedState,updateCode,updateConfig,updateCodeStore,verifyState,defaultState} from './lib/util/state.svelte';\nimport {PanZoomState} from './lib/util/panZoom';\nimport {onMount}from'svelte';\nconst panZoomState=new PanZoomState();let mode=$state('code');\nconst onUpdate=(text:string)=>{if(mode==='code')updateCode(text);else updateConfig(text)};\nconst select=(v:string)=>{mode=v;updateCodeStore({editorMode:v as 'code'|'config'})};\nonMount(()=>{verifyState();return()=>panZoomState.destroy()});\n</script>\n<header><strong>Mermaid Live</strong><span>Official mobile editor · local flowchart scene · no AI/cloud</span></header>\n<main><section class=\"editor-panel\"><nav><button class:active={mode==='code'} onclick={()=>select('code')}>Code</button><button class:active={mode==='config'} onclick={()=>select('config')}>Config</button><button onclick={()=>{updateCode(defaultState.code);updateConfig('{}')}}>Reset example</button></nav><div class=\"editor\"><MobileEditor {onUpdate}/></div>{#if validatedState.current.error}<output role=\"status\">{validatedState.current.error.message}</output>{/if}</section><section class=\"preview\"><nav><button onclick={()=>panZoomState.zoomIn()}>Zoom in</button><button onclick={()=>panZoomState.zoomOut()}>Zoom out</button><button onclick={()=>panZoomState.reset()}>Fit</button></nav><View {panZoomState}/></section></main>\n<style>header{height:48px;display:flex;align-items:center;gap:18px;padding:0 18px;background:#fff;border-bottom:1px solid #e2e8f0}header span{color:#64748b;font-size:12px}main{display:grid;grid-template-columns:minmax(240px,1fr) minmax(240px,1fr);height:calc(100vh - 49px)}section{min-width:0;min-height:0;display:flex;flex-direction:column}.editor-panel{border-right:1px solid #e2e8f0}.editor{flex:1;min-height:0}nav{display:flex;gap:6px;padding:8px;background:#f8fafc;border-bottom:1px solid #e2e8f0}button{background:white;border:1px solid #cbd5e1;color:#334155;border-radius:6px;padding:6px 12px;cursor:pointer}button.active{background:#e0e7ff;border-color:#818cf8}output{font:12px monospace;color:#991b1b;background:#fff1f2;max-height:130px;overflow:auto;padding:12px}.preview :global(#view){flex:1;min-height:0}@media(max-width:600px){main{grid-template-columns:1fr;grid-template-rows:1fr 1fr}.editor-panel{border-right:0;border-bottom:1px solid #ccc}header span{font-size:10px}}</style>\n",
+  "localSafety": "export function checkCode(code:string){if(code.length>5000)throw Error('Local scene limit: 5,000 characters');if(!/^\\s*(flowchart|graph)\\s+(TD|TB|BT|RL|LR)\\b/.test(code))throw Error('This local scene supports the original flowchart/Dagre renderer only');if(/<\\s*[a-z/]|javascript:|https?:|data:|\\bclick\\b|\\bfa[blrs]?:|%%\\s*\\{|@\\{[^}]*\\b(img|icon)\\b/i.test(code))throw Error('External links, active HTML, font/image icons and initialization directives are unavailable in this local scene');if((code.match(/[;\\n]/g)||[]).length>100)throw Error('Local scene limit: 100 statements');}\nexport function checkConfig(raw:string){if(raw.length>3000)throw Error('Local config limit: 3,000 characters');const config=JSON.parse(raw,(k,v)=>{if(['__proto__','constructor','prototype'].includes(k))throw Error('Unsafe config key');return v});const allowed=new Set(['theme','flowchart','look','layout']);for(const key of Object.keys(config))if(!allowed.has(key))throw Error('Local config supports theme, flowchart, look and layout only');if(config.layout&&config.layout!=='dagre')throw Error('Only the original Dagre layout is bundled');if(config.look&&config.look!=='classic')throw Error('This scene uses the classic renderer');if(config.theme&&!['default','neutral','dark','forest','neo','neo-dark','redux','redux-dark','redux-color','redux-dark-color'].includes(config.theme))throw Error('Unsupported theme');if(config.flowchart){for(const[key,v]of Object.entries(config.flowchart)){if(['nodeSpacing','rankSpacing'].includes(key)){if(typeof v!=='number'||v<10||v>150)throw Error('Spacing must be 10–150')}else if(key==='curve'){if(!['linear','basis','step','stepBefore','stepAfter','monotoneX'].includes(String(v)))throw Error('Unsupported curve')}else if(key==='htmlLabels'){if(v!==false)throw Error('HTML labels are unavailable')}else throw Error('Unsupported flowchart option')}}return config;}\n",
+  "lifetimePrefix": "(function(){const proto=EventTarget.prototype,add=proto.addEventListener,remove=proto.removeEventListener;const intervals=new Set(),si=window.setInterval.bind(window),ci=window.clearInterval.bind(window);const listeners=[],timers=new Map(),frames=new Map();let dead=false,closing=false,shutdown=null;const st=window.setTimeout.bind(window),ct=window.clearTimeout.bind(window),rf=window.requestAnimationFrame.bind(window),cf=window.cancelAnimationFrame.bind(window),cap=o=>typeof o==='boolean'?o:!!o?.capture;\nproto.addEventListener=function(t,f,o){if(dead)return;if(!listeners.some(x=>x.el===this&&x.t===t&&x.f===f&&x.c===cap(o)))listeners.push({el:this,t,f,o,c:cap(o)});return add.call(this,t,f,o)};proto.removeEventListener=function(t,f,o){const i=listeners.findIndex(x=>x.el===this&&x.t===t&&x.f===f&&x.c===cap(o));if(i>=0)listeners.splice(i,1);return remove.call(this,t,f,o)};\nwindow.setTimeout=(f,t,...a)=>{if(dead)return 0;let id=st(()=>{if(!timers.has(id)||dead)return;timers.delete(id);f(...a)},t);timers.set(id,true);return id};window.clearTimeout=id=>{timers.delete(id);ct(id)};window.requestAnimationFrame=f=>{if(dead)return 0;let id=rf(t=>{if(!frames.has(id)||dead)return;frames.delete(id);f(t)});frames.set(id,true);return id};window.cancelAnimationFrame=id=>{frames.delete(id);cf(id)};\nwindow.setInterval=(fn,ms,...args)=>{if(dead)return 0;let id=si(()=>{if(!dead&&intervals.has(id))fn(...args)},ms);intervals.add(id);return id};window.clearInterval=id=>{intervals.delete(id);ci(id)};const observed=new Set(),observerOriginals={};for(const name of ['MutationObserver','ResizeObserver','IntersectionObserver']){const Original=window[name];if(!Original)continue;observerOriginals[name]=Original;window[name]=class extends Original{constructor(...a){super(...a);observed.add(this)}observe(...a){if(!dead){observed.add(this);return super.observe(...a)}}disconnect(){observed.delete(this);return super.disconnect()}}}function release(){if(dead)return;dead=true;for(const observer of observed)observer.disconnect();observed.clear();for(const name in observerOriginals)window[name]=observerOriginals[name];for(const id of intervals)ci(id);intervals.clear();window.setInterval=si;window.clearInterval=ci;for(const x of listeners.splice(0))remove.call(x.el,x.t,x.f,x.o);for(const id of timers.keys())ct(id);timers.clear();for(const id of frames.keys())cf(id);frames.clear();proto.addEventListener=add;proto.removeEventListener=remove;window.setTimeout=st;window.clearTimeout=ct;window.requestAnimationFrame=rf;window.cancelAnimationFrame=cf;delete window.__jsonLifetime}\nfunction close(){if(closing)return;closing=true;if(shutdown)shutdown();else release()}\nwindow.__jsonLifetime={close,release,setShutdown:fn=>{shutdown=fn;if(closing)fn()}};window.addEventListener('pagehide',close);window.addEventListener('atlas:dispose',close);function fail(e){e.preventDefault();close();const p=document.createElement('p');p.setAttribute('role','alert');p.textContent='Editor unavailable. Close and reopen to retry.';document.body.append(p)}window.addEventListener('error',fail);window.addEventListener('unhandledrejection',fail);})();\n",
+  "build": "import fs from'node:fs';import path from'node:path';import esbuild from'esbuild';import{compile,compileModule}from'svelte/compiler';import{parse}from'acorn';let css=[];const plugin={name:'original-svelte-and-scoped-flowchart',setup(b){b.onLoad({filter:/\\.svelte$/},async a=>{const c=compile(fs.readFileSync(a.path,'utf8'),{filename:a.path,generate:'client',css:'external'});if(c.css)css.push(c.css.code);return{contents:c.js.code,loader:'js'}});b.onLoad({filter:/\\.svelte\\.ts$/},async a=>{const stripped=await esbuild.transform(fs.readFileSync(a.path,'utf8'),{loader:'ts'});return{contents:compileModule(stripped.code,{filename:a.path,generate:'client'}).js.code,loader:'js'}});b.onLoad({filter:/mermaid\\.core\\.mjs$/},a=>{let s=fs.readFileSync(a.path,'utf8');let start=s.indexOf('  if (true) {\\n    registerLazyLoadedDiagrams('),end=s.indexOf('}, \"addDiagrams\");',start);if(start<0||end<0)throw Error('Registration source mismatch');s=s.slice(0,start)+'  registerLazyLoadedDiagrams(flowDetector_v2_default);\\n'+s.slice(end);fs.writeFileSync('mermaid-core-adapted.mjs',s);return{contents:s,loader:'js'}});b.onLoad({filter:/chunk-CFHHFPVC\\.mjs$/},a=>{let s=fs.readFileSync(a.path,'utf8');const start=s.indexOf('  registerLayoutLoaders(['),end=s.indexOf('}, \"registerDefaultLayoutLoaders\");',start);s=s.slice(0,start)+'  registerLayoutLoaders([{name:\"dagre\",loader:async()=>await import(\"./dagre-SPEB5RXH.mjs\")}]);\\n'+s.slice(end);fs.writeFileSync('mermaid-layout-adapted.mjs',s);return{contents:s,loader:'js'}})}};\nconst result=await esbuild.build({entryPoints:['main.ts'],bundle:true,format:'cjs',platform:'browser',conditions:['browser'],define:{'process.env.NODE_ENV':'\"production\"','import.meta.env':'{}'},alias:{'$':path.resolve('lib'),'$lib':path.resolve('lib'),'$app/paths':path.resolve('paths.ts'),'mode-watcher':path.resolve('local-mode.svelte.ts'),mermaid:path.resolve('node_modules/mermaid/dist/mermaid.core.mjs')},plugins:[plugin],loader:{'.woff':'empty','.woff2':'empty','.ttf':'empty'},minifyWhitespace:true,minifyIdentifiers:true,minifySyntax:false,write:false,metafile:true});const js=result.outputFiles[0].text;let chunks=[],s=fs.readFileSync('prefix.js','utf8');for(const n of parse(js,{ecmaVersion:'latest'}).body){const t=js.slice(n.start,n.end)+';\\n';if(Buffer.byteLength(t)>700*1024)throw Error('large statement '+Buffer.byteLength(t));if(Buffer.byteLength(s+t)>650*1024){chunks.push(s);s=''}s+=t}chunks.push(s);const scripts=chunks.map((_,i)=>i===chunks.length-1?'runtime.js':`runtime-part-${i+1}.js`);chunks.forEach((c,i)=>fs.writeFileSync('delivery/'+scripts[i],c));fs.writeFileSync('scripts.json',JSON.stringify(scripts));fs.writeFileSync('metafile.json',JSON.stringify(result.metafile,null,2));fs.writeFileSync('delivery/runtime.css','html,body{margin:0;height:100%;font:14px system-ui;color:#0f172a}.size-full,.h-full{height:100%}.w-full,.size-full{width:100%}.overflow-auto{overflow:auto}.opacity-50{opacity:.5}'+css.join('\\n'));fs.writeFileSync('delivery/index.html','<!doctype html><html><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>Mermaid Live original mobile editor</title><link rel=\"stylesheet\" href=\"runtime.css\"></head><body><div id=\"root\"></div>'+scripts.map(n=>`<script src=\"${n}\"></script>`).join('')+'</body></html>');console.log(chunks.map(c=>Buffer.byteLength(c)));\n",
+  "codeloadArchiveSHA256": "507969ade68ffc4303ffe20d6a709ef4f02a1c0a818122f9dc10a714334173f8",
+  "installedLockSHA256": "c1ad3689ddca45af19863f2eee7c5dd16de731c9b6ceecaa26ca3828fd48aa23",
+  "upstreamLockSHA256": "d9d0d0b64cc6950dfd83b9a25d5fbcc4f1423254ef2fd41c9db5ece482eccee9"
+}
