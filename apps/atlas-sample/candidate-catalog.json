@@ -13516,37 +13516,40 @@
   },
   {
     "id": "memos:personal-knowledge-timeline",
-    "title": "Memos · 即写即读知识时间线",
     "source": "Memos",
     "repository": "https://github.com/usememos/memos",
     "revision": "e4f3fb2d2d114f6eaea6ec75a10b0a274f57a8a1",
-    "sourcePath": "web/src/pages/Home.tsx",
-    "upstream": "https://github.com/usememos/memos/blob/e4f3fb2d2d114f6eaea6ec75a10b0a274f57a8a1/web/src/pages/Home.tsx",
-    "license": "MIT (root verified only; dependencies/assets not closed)",
-    "behavior": "原个人知识时间线整合新备忘录输入、分页阅读、空间/作者/筛选范围、置顶排序；MemoView与编辑/阅读模式复用并支持任务项更新。",
-    "difference": "这是完整轻量知识记录场景，不把富文本编辑器、卡片或任务checkbox各算一条；与单个聊天消息不同。",
-    "gaps": [
-      "原依赖账号/Auth、后端Memo mutations和生成Proto服务；本轮无账号/数据/保存调用。",
-      "编辑会话懒加载，含draft cache、音频/上传/菜单链；未来需剔除mic/上传/网络和持久化，不能直接按无网络预览使用。",
-      "头像/附件/外链metadata为实际服务资源，当前仅收代码未收媒体。",
-      "完整传递依赖/字体/图片许可、离线CSP、交互取消/退出清理与浏览器像素未审未验。没有运行包、预览或源码ZIP下载链接。"
-    ],
-    "description": "原个人知识时间线整合新备忘录输入、分页阅读、空间/作者/筛选范围、置顶排序；MemoView与编辑/阅读模式复用并支持任务项更新。 这是完整轻量知识记录场景，不把富文本编辑器、卡片或任务checkbox各算一条；与单个聊天消息不同。",
-    "category": "Agent与对话",
+    "upstream": "https://github.com/usememos/memos/blob/e4f3fb2d2d114f6eaea6ec75a10b0a274f57a8a1/web/src/components/MemoView/MemoView.tsx",
+    "sourcePath": "web/src/components/MemoView/MemoView.tsx",
     "licenseEvidence": {
       "url": "https://github.com/usememos/memos/blob/e4f3fb2d2d114f6eaea6ec75a10b0a274f57a8a1/LICENSE",
       "sha256": "dadc85262cec40d1344736b57da50814194ff721ab98012c09cd9d35c4b8582a",
       "scope": "Full root MIT read; selected source paths have no intervening license file; runtime/media not audited"
     },
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-bulk-523",
-    "sourceScope": "Selected fixed original code and complete root license evidence; no complete runnable/archive or runtime audit",
-    "kind": "原版完整场景（仅来源）",
-    "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted"
+    "difference": "这是完整轻量知识记录场景，不把富文本编辑器、卡片或任务checkbox各算一条；与单个聊天消息不同。",
+    "title": "便笺时间线与标签阅读",
+    "description": "原便笺阅读卡、富文字、长文展开与标签筛选，使用本地虚构便笺；不提供编辑保存、评论或真实账户服务。",
+    "behavior": "原便笺阅读卡、富文字、长文展开与标签筛选，使用本地虚构便笺；不提供编辑保存、评论或真实账户服务。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "展示与媒体",
+    "license": "MIT; ISC (Lucide and embedded icons)",
+    "batch": "memos-reader-01",
+    "preview": "batches/memos-reader-01/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "actual571 compose关键交互/退出通过，视觉未验",
+    "gaps": [
+      "原便笺只读时间线范围，三条虚构文本与空附件；不是完整Memos服务。",
+      "编辑保存/发布/账号/评论/附件/分享/数学与图表等未接入，不显示假成功。",
+      "原字体系统回退；真实像素布局未验。"
+    ],
+    "originalCandidateSource": {
+      "source": "Memos",
+      "sourcePath": "web/src/pages/Home.tsx",
+      "upstream": "https://github.com/usememos/memos/blob/e4f3fb2d2d114f6eaea6ec75a10b0a274f57a8a1/web/src/pages/Home.tsx",
+      "revision": "e4f3fb2d2d114f6eaea6ec75a10b0a274f57a8a1"
+    }
   },
   {
     "id": "cal-diy:public-booking-flow",
@@ -13845,39 +13848,34 @@
   },
   {
     "id": "chainlit:execution-message-tree",
-    "title": "嵌套工具执行过程与富消息",
     "source": "Chainlit",
     "repository": "https://github.com/Chainlit/chainlit",
     "revision": "190ea74239d9e84b26e7c91bc2882dd038942564",
-    "sourcePath": "frontend/src/components/chat/Messages/Message/index.tsx",
     "upstream": "https://github.com/Chainlit/chainlit/blob/190ea74239d9e84b26e7c91bc2882dd038942564/frontend/src/components/chat/Messages/Message/index.tsx",
-    "license": "Apache-2.0 (complete root text verified; dependencies/media not closed)",
-    "behavior": "原Message/Step递归子步骤、输入输出、运行渐变/错误色、可折叠树与结束自动收起；尊重原隐藏/仅工具展示配置。",
-    "difference": "与已有单工具卡不同：多层执行消息组合及内容策略，不拆每个Step算新族。",
-    "gaps": [
-      "仅开发者提供的可公开步骤/工具结果，不冒称读取模型私密推理；react-client状态/Markdown/附件/反馈链路及动态HTML开关需离线约束；Apache NOTICE和依赖/媒体未全审。",
-      "未安装、构建、运行；传递依赖/媒体许可、默认CSP、交互和退出清理及浏览器像素均未验。"
-    ],
-    "description": "原Message/Step递归子步骤、输入输出、运行渐变/错误色、可折叠树与结束自动收起；尊重原隐藏/仅工具展示配置。 与已有单工具卡不同：多层执行消息组合及内容策略，不拆每个Step算新族。",
-    "category": "Agent与对话",
+    "sourcePath": "frontend/src/components/chat/Messages/Message/index.tsx",
     "licenseEvidence": {
       "url": "https://github.com/Chainlit/chainlit/blob/190ea74239d9e84b26e7c91bc2882dd038942564/LICENSE",
       "sha256": "7b757190ac55f65952db722558afdcd2ae42ed943625c1b79d15b657de7a8c05",
       "scope": "Complete actual root license read; not a full dependency/media distribution audit"
     },
-    "sourceEvidence": {
-      "localFile": "evidence/Chainlit--chainlit--frontend__src__components__chat__Messages__Message__index.tsx",
-      "sha256": "8f46cbaeaaaa225925f97211fd4cb8f9336baf1618a59515b3eaa9e2ffb0a456"
-    },
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-bulk-524",
-    "sourceScope": "Selected fixed original code and complete actual root license; no runnable/archive or runtime audit",
-    "kind": "原版完整场景（仅来源）",
-    "buildStatus": "fixed original code and complete root license read; not built, run or visually accepted"
+    "difference": "与已有单工具卡不同：多层执行消息组合及内容策略，不拆每个Step算新族。",
+    "title": "嵌套执行步骤与富消息",
+    "description": "原消息、步骤树、富文字与折叠行为，以虚构公开步骤示例展示完成、错误和显示策略；不连接真实代理、附件或反馈服务。",
+    "behavior": "原消息、步骤树、富文字与折叠行为，以虚构公开步骤示例展示完成、错误和显示策略；不连接真实代理、附件或反馈服务。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "Agent与对话",
+    "license": "Apache-2.0; MIT; ISC; 0BSD (dependencies)",
+    "batch": "chainlit-tree-01",
+    "preview": "batches/chainlit-tree-01/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "actual571 compose关键状态/退出通过，视觉未验",
+    "gaps": [
+      "限定原公开执行步骤与富消息场景，不是Chainlit全站；无真实Agent/账号/后台。",
+      "不含附件/上传/反馈/用户编辑/HTML/LaTeX/代码块高亮；本地fixture不包含这些内容，不假装已接入。",
+      "系统字体回退；真实像素与动效未验。"
+    ]
   },
   {
     "id": "librechat:versioned-artifact-workspace",
@@ -13917,39 +13915,32 @@
   },
   {
     "id": "jupyterlab:notebook-document-scene",
-    "title": "代码与富输出混排笔记本",
     "source": "JupyterLab",
     "repository": "https://github.com/jupyterlab/jupyterlab",
     "revision": "1c917ab158ef862c86630291ecd0771f0b6de8ba",
-    "sourcePath": "examples/notebook/src/index.ts",
     "upstream": "https://github.com/jupyterlab/jupyterlab/blob/1c917ab158ef862c86630291ecd0771f0b6de8ba/examples/notebook/src/index.ts",
-    "license": "BSD-3-Clause (complete root text verified; dependencies/media not closed)",
-    "behavior": "原NotebookPanel完整示例，工具栏、cell类型选择、命令系统、内核名称/状态与文档打开；commands提供运行/插入/删除等notebook动作。",
-    "difference": "区别富文本/代码沙盒：有序代码单元、Markdown和执行输出的文档工作流，一套完整场景。",
-    "gaps": [
-      "依赖Jupyter服务/内核/文档管理，不是纯前端可执行；图鉴只允许明确本地fixture且不能假运行代码。输出HTML信任边界、扩展/图形/依赖许可证、键盘和dispose未审。",
-      "未安装、构建、运行；传递依赖/媒体许可、默认CSP、交互和退出清理及浏览器像素均未验。"
-    ],
-    "description": "原NotebookPanel完整示例，工具栏、cell类型选择、命令系统、内核名称/状态与文档打开；commands提供运行/插入/删除等notebook动作。 区别富文本/代码沙盒：有序代码单元、Markdown和执行输出的文档工作流，一套完整场景。",
-    "category": "导航与组织",
+    "sourcePath": "examples/notebook/src/index.ts",
     "licenseEvidence": {
       "url": "https://github.com/jupyterlab/jupyterlab/blob/1c917ab158ef862c86630291ecd0771f0b6de8ba/LICENSE",
       "sha256": "8202286e1296fc999db2253da5244a65c28072287d4b580c2b11caff3014de76",
       "scope": "Complete actual root license read; not a full dependency/media distribution audit"
     },
-    "sourceEvidence": {
-      "localFile": "evidence/jupyterlab--jupyterlab--examples__notebook__src__index.ts",
-      "sha256": "034a8d592cc1dfec9ed9dd7a70704cd0ea2f988bb89a7dede667039fef22de08"
-    },
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-bulk-524",
-    "sourceScope": "Selected fixed original code and complete actual root license; no runnable/archive or runtime audit",
-    "kind": "原版完整场景（仅来源）",
-    "buildStatus": "fixed original code and complete root license read; not built, run or visually accepted"
+    "difference": "区别富文本/代码沙盒：有序代码单元、Markdown和执行输出的文档工作流，一套完整场景。",
+    "title": "本地笔记本文档与单元编辑",
+    "description": "原笔记本、代码编辑器、工具栏与命令面板的本地编辑子流程，支持单元类型、增删及撤销重做；不连接内核、不执行代码或保存至服务器。",
+    "behavior": "原笔记本、代码编辑器、工具栏与命令面板的本地编辑子流程，支持单元类型、增删及撤销重做；不连接内核、不执行代码或保存至服务器。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "数据与状态",
+    "license": "BSD-3-Clause AND BSD-2-Clause AND MIT AND ISC AND 0BSD",
+    "batch": "jupyter-notebook-01",
+    "preview": "batches/jupyter-notebook-01/notebook/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "# 本地单元笔记本\n\n固定 JupyterLab 1c917ab158ef862c86630291ecd0771f0b6de8ba 官方 examples/notebook/src/index.ts 与 commands.ts 的本地文档编辑子流程。原 NotebookModel、Notebook、CodeMirror 配置、Jupyter 工具栏/单元类型选择、Lumino 命令面板与原单元动作保留；不是整个服务端 NotebookPanel 示例，不包含执行内核、保存、会话、服务端补全、搜索扩展或协作。宿主提供两格明确虚构文档，代码绝不执行，输出是已有固定文字，不伪称计算结果。\n\n保留原插入、删除、拆分、合并、上下选择、撤销重做和编辑/命令模式动作；原对应快捷键摘录保留，命令 ID 为隔离宿主统一命名。原 CellType 组件接真实 Notebook content，仅无服务 Panel 外层被宿主 SplitPanel/Panel 替代。不仿造 ServiceManager/SessionContext。原示例 CodeMirror 创建逻辑保持，MathJax 与内核补全不引入。\n\n纯文字/Markdown 输出；保留原 sanitizer，并收紧 Markdown 标签/属性，不允许用户 HTML 脚本、图片或链接资源。图像/富媒体输出、系统剪贴板/外部拖入/外链操作禁用。Jupyter 系统剪贴板可选探测改为 undefined，使用原不可用路径；lib0 强制原内存 fallback，避免 opaque origin 的存储探测。无网络权限、账户、文件上传或执行环境。\n\n原 CSS 与 SVG 图标保留，webpack ~ CSS 导入解析为真实 npm 文件；CSS 中原 SVG 使用 UTF8 percent-encoded data:image/svg+xml，不是二进制包装、截图或重画。系统字体，无下载字体。源码中的通用 base64 解码/图像帮助函数仍可能存在，但本地允许的 MIME factories 不提供图像，交付不含编码二进制素材。\n\n隐藏卸载并重置；返回新建本地文档。pagehide/atlas:dispose、早期初始化异常与晚期失败释放宿主/框架所有被跟踪监听、RAF、计时器及观察器。模块对 IntersectionObserver 的原包装也在退出恢复。无真实后台行为。\n\n## 来源、版本与许可\n实际 Notebook/CodeMirror 4.7.0-beta.1（部分同版 monorepo 包自有版本，详列），安装的 notebook/src/panel.ts 与 widget.ts 对固定 Git 原件逐字一致。npm metadata 无 gitHead，不虚构映射。120 个实际 JS/CSS 发出包路径逐项列许可；Jupyter/Lumino/FAST 等 npm 缺 LICENSE 的采用官方固定根全文，保留版本元数据。Lumino 固定44aea979…对应14包当前版本逐项匹配，但不声称每个源字节已与发布包重构对比。Jupyter Ydoc 与 UI Toolkit 用实际对应版本 tag 固定commit根许可；FAST 用各精确 npm gitHead 根许可。BSD/MIT/ISC/0BSD 原文完整保留。品牌或项目名称仅来源标识，不声称背书。\n\n## 测试范围\nactual571 compose：normal/reduced/early/failure/production；实际原工具栏点击增删、原 CellType 选择、原命令 insert/delete/undo/redo、隐藏恢复、旧回调、失败与退出账本归零；禁止 API 调用计数0。真实 createPreviewLoader 加载/缓存命中/释放通过，总 UTF16 缓存7058678 B（不扩8MiB限制）。Range/布局/Observer 为 JSDOM 控制桩，不代表原生键盘选区、IME、拖拽/缩放或像素验收。内置 Yjs 可能产生上游未集成类型警告，实测模型与单元变化及清理正常；不把警告隐藏为视觉通过。\n"
+    ]
   },
   {
     "id": "drawio:multi-page-diagram-document",
@@ -17733,42 +17724,37 @@
   },
   {
     "id": "twine:branching-story-map",
-    "title": "非线性故事段落编排",
     "source": "Twine",
     "repository": "https://github.com/klembot/twinejs",
     "revision": "2c3b80144ba6f1fe9d8a4e5e11a2349ba55fc310",
-    "sourcePath": "src/routes/story-edit/story-edit-route.tsx",
     "upstream": "https://github.com/klembot/twinejs/blob/2c3b80144ba6f1fe9d8a4e5e11a2349ba55fc310/src/routes/story-edit/story-edit-route.tsx",
-    "license": "GPL-3.0 (complete actual root text; runtime/media not closed)",
-    "behavior": "原 StoryEditRoute 将段落地图、框选拖移、缩放、模糊查找、编辑对话框和撤销状态串联，故事连线来自段落间链接。",
-    "difference": "区别既有普通流程图/知识图谱：节点是可编辑且能作为起点测试的故事段落，整套非线性叙事创作一族，不拆每种故事格式。",
-    "styleTags": [
-      "叙事/故事空间"
-    ],
-    "gaps": [
-      "GPL 对应源/修改与构建公开义务未履行；捆绑 Snowman/SugarCube 等 story-format 各自许可需另审。故事播放可能执行用户 HTML/脚本，不可照搬到默认 CSP；本地存储、导出/下载、外链及拖动/销毁未验。",
-      "仅只读源码筛选；未安装/构建/运行、交互生命周期或浏览器视觉验收。"
-    ],
-    "description": "原 StoryEditRoute 将段落地图、框选拖移、缩放、模糊查找、编辑对话框和撤销状态串联，故事连线来自段落间链接。 区别既有普通流程图/知识图谱：节点是可编辑且能作为起点测试的故事段落，整套非线性叙事创作一族，不拆每种故事格式。",
-    "category": "展示与媒体",
+    "sourcePath": "src/routes/story-edit/story-edit-route.tsx",
     "licenseEvidence": {
       "url": "https://github.com/klembot/twinejs/blob/2c3b80144ba6f1fe9d8a4e5e11a2349ba55fc310/LICENSE",
       "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
       "scope": "Complete actual root license; transitive code and media permissions not closed"
     },
-    "sourceEvidence": {
-      "localFile": "evidence/klembot--twinejs--src__routes__story-edit__story-edit-route.tsx",
-      "sha256": "7936b26dc4630de61c0479724dad4770da78aeeb4f3c3150547a737b01091540"
-    },
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-style-530",
-    "sourceScope": "Fixed original complete UI/demo source and full root license; not a runnable adaptation or full asset archive",
-    "kind": "原版交互场景（仅来源）",
-    "buildStatus": "fixed source and full root license read; not built/run/visually accepted"
+    "difference": "区别既有普通流程图/知识图谱：节点是可编辑且能作为起点测试的故事段落，整套非线性叙事创作一族，不拆每种故事格式。",
+    "title": "分支故事地图与段落编辑",
+    "description": "原本地故事地图、段落编辑、链接节点生成及撤销重做；不播放、发布或持久保存故事，附对应源码与构建说明。",
+    "behavior": "原本地故事地图、段落编辑、链接节点生成及撤销重做；不播放、发布或持久保存故事，附对应源码与构建说明。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "数据与状态",
+    "license": "GPL-3.0 AND MIT AND ISC AND Apache-2.0 AND BSD-3-Clause",
+    "batch": "twine-map-01",
+    "preview": "batches/twine-map-01/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [],
+    "runtime": {
+      "scripts": [
+        "runtime-start.js",
+        "runtime-code-1.js",
+        "runtime.js"
+      ]
+    }
   },
   {
     "id": "hubs:spatial-room-collaboration",
