@@ -17112,42 +17112,36 @@
   },
   {
     "id": "loopy:feedback-system-simulation",
-    "title": "手绘反馈回路模拟台",
     "source": "LOOPY",
     "repository": "https://github.com/ncase/loopy",
     "revision": "2d8e13f0a006f4024f27ad1712d7f9c2c1ad7cd9",
-    "sourcePath": "v1.1/index.html",
     "upstream": "https://github.com/ncase/loopy/blob/2d8e13f0a006f4024f27ad1712d7f9c2c1ad7cd9/v1.1/index.html",
-    "license": "CC0-1.0 (complete actual root text; runtime/media not closed)",
-    "behavior": "原系统思考工具可画出节点与有正负影响的连线，切到播放模式点击注入信号，观察回路传播；原模型/播放控制与编辑界面共同组成一个场景。",
-    "difference": "区别 ReactFlow/思维图的静态连线：这里是可运行的因果反馈与信号传播，用于解释 Agent 流程或系统关系，不声称模型能预测真实世界。",
-    "styleTags": [
-      "手绘/反馈空间"
-    ],
-    "gaps": [
-      "根 CC0 不自动覆盖 minpubsub 等嵌入第三方；字体、图标与例图需逐项核。Loopy.js 存在未保留句柄的 30FPS setInterval 和自递归 RAF，退出清理要修；原 URL导入/文件导入导出、全局订阅与图形命中未验证。",
-      "仅只读源码筛选；未安装/构建/运行、交互生命周期或浏览器视觉验收。"
-    ],
-    "description": "原系统思考工具可画出节点与有正负影响的连线，切到播放模式点击注入信号，观察回路传播；原模型/播放控制与编辑界面共同组成一个场景。 区别 ReactFlow/思维图的静态连线：这里是可运行的因果反馈与信号传播，用于解释 Agent 流程或系统关系，不声称模型能预测真实世界。",
-    "category": "数据与状态",
+    "sourcePath": "v1.1/index.html",
     "licenseEvidence": {
       "url": "https://github.com/ncase/loopy/blob/2d8e13f0a006f4024f27ad1712d7f9c2c1ad7cd9/LICENSE.txt",
       "sha256": "36ffd9dc085d529a7e60e1276d73ae5a030b020313e6c5408593a6ae2af39673",
       "scope": "Complete actual root license; transitive code and media permissions not closed"
     },
-    "sourceEvidence": {
-      "localFile": "evidence/ncase--loopy--v1.1__index.html",
-      "sha256": "3ba9f640b4c4f26e4d4da64c9b6c23301d5b2a1ab2b36202503a7613acd1731e"
-    },
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-style-529",
-    "sourceScope": "Fixed original complete UI/demo source and full root license; not a runnable adaptation or full asset archive",
-    "kind": "原版交互场景（仅来源）",
-    "buildStatus": "fixed source and full root license read; not built/run/visually accepted"
+    "difference": "区别 ReactFlow/思维图的静态连线：这里是可运行的因果反馈与信号传播，用于解释 Agent 流程或系统关系，不声称模型能预测真实世界。",
+    "title": "反馈回路编辑与模拟",
+    "description": "原双节点正负反馈示例：编辑节点与关系、绘制/拖动/擦除、真实本地信号传播与重置。位图工具改文字/CSS，本地不保存。",
+    "behavior": "原双节点正负反馈示例：编辑节点与关系、绘制/拖动/擦除、真实本地信号传播与重置。位图工具改文字/CSS，本地不保存。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "数据与状态",
+    "license": "CC0-1.0; MIT (embedded MinPubSub)",
+    "batch": "loopy-workspace-01",
+    "preview": "batches/loopy-workspace-01/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "pass",
+    "gaps": [
+      "Canvas geometry/draw-command fixture only; no native pixels, real pointer handwriting recognition or performance acceptance.",
+      "Original PNG toolbar/slider/control glyphs replaced by authored text and CSS, custom cursor/balloon tooltip skin omitted. Original system font unchanged.",
+      "URL/file import, file download, save-link/history, external examples/howto/GIF and embeds disabled; no remote simulation, AI or persistence.",
+      "Original two-node/positive-negative relationship fixture, drawing/dragging/erase/label tools and model signal propagation retained. Automated tests exercise actual input handlers and original model methods, not a full native drawing gesture.",
+      "Hidden pauses original update+draw loops while retaining model; disposal clears frame resources and DOM handlers. Reduced-motion CSS removes transitions; explicit Play still runs the original simulation."
+    ]
   },
   {
     "id": "trust:cooperation-story-sandbox",
@@ -17190,42 +17184,33 @@
   },
   {
     "id": "fieldplay:vector-flow-explorer",
-    "title": "有机流场与粒子轨迹探索",
     "source": "FieldPlay",
     "repository": "https://github.com/anvaka/fieldplay",
     "revision": "11d602df5338e7bd80b10c01334f60594c396539",
-    "sourcePath": "src/App.vue",
     "upstream": "https://github.com/anvaka/fieldplay/blob/11d602df5338e7bd80b10c01334f60594c396539/src/App.vue",
-    "license": "MIT (complete actual root text; runtime/media not closed)",
-    "behavior": "原全屏 WebGL 流场界面把速度函数编辑、轨迹画布、随机方程、暂停与高级参数联动，显示粒子沿向量场运动的空间纹理。",
-    "difference": "区别现有球体、布料和静态粒子装饰：用户能更改速度场本身并探索流向，不把不同方程参数拆成多个收录。",
-    "styleTags": [
-      "有机/流场材料"
-    ],
-    "gaps": [
-      "实际 shader/noise、Vue、panzoom/GLSL 工具及内联图标许可尚未闭合；音频/视频/图像输入、GLSL 远程引入及分享需要明确关闭或隔离。虽有 scene.dispose，不代表 GL 资源、失败态、上下文丢失及所有 RAF/输入都已验；没有真实 GPU/像素运行。",
-      "仅只读源码筛选；未安装/构建/运行、交互生命周期或浏览器视觉验收。"
-    ],
-    "description": "原全屏 WebGL 流场界面把速度函数编辑、轨迹画布、随机方程、暂停与高级参数联动，显示粒子沿向量场运动的空间纹理。 区别现有球体、布料和静态粒子装饰：用户能更改速度场本身并探索流向，不把不同方程参数拆成多个收录。",
-    "category": "展示与媒体",
+    "sourcePath": "src/App.vue",
     "licenseEvidence": {
       "url": "https://github.com/anvaka/fieldplay/blob/11d602df5338e7bd80b10c01334f60594c396539/LICENSE",
       "sha256": "eacf0841fb89097ba61900a4d14b38a2ccfdea20853036ffae69b92dba910ed1",
       "scope": "Complete actual root license; transitive code and media permissions not closed"
     },
-    "sourceEvidence": {
-      "localFile": "evidence/anvaka--fieldplay--src__App.vue",
-      "sha256": "cc78166ba5c0c5b9456d350aa7ecf126aaffb167b37be3182e0b8fc1e76f033c"
-    },
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-style-529",
-    "sourceScope": "Fixed original complete UI/demo source and full root license; not a runnable adaptation or full asset archive",
-    "kind": "原版交互场景（仅来源）",
-    "buildStatus": "fixed source and full root license read; not built/run/visually accepted"
+    "difference": "区别现有球体、布料和静态粒子装饰：用户能更改速度场本身并探索流向，不把不同方程参数拆成多个收录。",
+    "title": "速度场编辑与粒子探索",
+    "description": "原GLSL速度场编辑、错误恢复、随机场、粒子参数、暂停与视野平移缩放；离线限定原WebGL管线。",
+    "behavior": "原GLSL速度场编辑、错误恢复、随机场、粒子参数、暂停与视野平移缩放；离线限定原WebGL管线。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "视觉与动效",
+    "license": "MIT AND BSD-3-Clause AND ISC AND OFL-1.1 AND CC-BY-SA-3.0",
+    "batch": "fieldplay-01",
+    "preview": "batches/fieldplay-01/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "actual558 compose；10关键生产模式，原parser编辑/恢复与生命周期通过；WebGL为命令替身，不称原生渲染通过。",
+    "gaps": [
+      "原生GPU、像素与设备性能未验；分享/录制/音视频/远程include不可用。",
+      "HSV小函数为公开说明的独立数学替换；非完整原联网功能。"
+    ]
   },
   {
     "id": "h5p:interactive-video-chapters",
@@ -22068,6 +22053,90 @@
     "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
     "gaps": [
       "Complete original fixed Meta AstryX page source retained byte-for-byte, not a functioning account service. Source workspace0.7.12 with compatible installed core/theme0.7.11 disclosed. Settings original two-column account fields, local navigation selection, settings-search and local checkbox states; Save buttons have no original handler, navigation changes selection only not panel contents. No password/security/account changes are applied. Login-card original empty-input validation and timer-driven simulated incorrect-password result; no authentication or credential storage/transmission. Use fictional sample values only; never enter real credentials. Original login plain variant is grouped here, not another entry. Host supplies Theme/LayerProvider/system font, blocks external navigation and submits, owns timers/listeners; hidden unmount resets local state. Original byte-identical source, full emitted dependency licenses and reviewed missing-file core/StyleX official supplements. Actual compose/loader and state/error/exit tests; native visual/layout not verified."
+    ]
+  },
+  {
+    "id": "astryx:dashboard",
+    "source": "Meta AstryX",
+    "repository": "https://github.com/meta/astryx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/cli/assets/templates/pages/dashboard/page.tsx",
+    "sourcePath": "packages/cli/assets/templates/pages/dashboard/page.tsx",
+    "licenseEvidence": {
+      "url": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/LICENSE",
+      "sha256": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473",
+      "scope": "Complete fixed original MIT; actual runtime dependency notices supplied in preview assets."
+    },
+    "title": "用户活动与参与概览",
+    "description": "原完整多区用户活动分析页，保留原图表、分组与示例数据；无真实数据刷新或后台服务。",
+    "behavior": "原完整多区用户活动分析页，保留原图表、分组与示例数据；无真实数据刷新或后台服务。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "数据与状态",
+    "license": "MIT AND ISC AND BSD-3-Clause",
+    "batch": "astryx-dashboard-01",
+    "preview": "batches/astryx-dashboard-01/dashboard/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Full fixed original Meta AstryX analytics dashboard page retained byte-for-byte, not a live monitoring service or newly authored chart shell. Original active-user lines, four metric cards/sparklines, demographics region/role bars, top-pages/top-events tables and illustrative links are preserved as one complete page. Fixed datasets; original Reload/View more have no handler, no refresh or external navigation is claimed. Source0.7.12 versus installed core/theme0.7.11 compatibility disclosed. Shared Theme/LayerProvider/StyleX and bounded host lifecycle; hidden unmount/reset, exit/early/late failure cleanup. Root MIT and exact emitted dependency license texts including Recharts/victory-vendor sublicenses retained. Actual compose/loader and original DOM content tested; chart geometry/hover/native visual layout not verified in JSDOM."
+    ]
+  },
+  {
+    "id": "astryx:form-wizard-vertical",
+    "source": "Meta AstryX",
+    "repository": "https://github.com/meta/astryx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/cli/assets/templates/pages/form-wizard-vertical/page.tsx",
+    "sourcePath": "packages/cli/assets/templates/pages/form-wizard-vertical/page.tsx",
+    "licenseEvidence": {
+      "url": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/LICENSE",
+      "sha256": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473",
+      "scope": "Complete fixed original MIT; actual runtime dependency notices supplied in preview assets."
+    },
+    "title": "出版草稿分步校验",
+    "description": "原完整本地表单与校验流程，图片仅按固定官方CLI语义替换为原中性占位；不实际发送、支付或出版。",
+    "behavior": "原完整本地表单与校验流程，图片仅按固定官方CLI语义替换为原中性占位；不实际发送、支付或出版。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "输入与选择",
+    "license": "MIT AND ISC AND BSD-3-Clause",
+    "batch": "astryx-form-fallback-01",
+    "preview": "batches/astryx-form-fallback-01/form-wizard-vertical/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Original full Meta AstryX non-media-led forms. Only original preview image URL replaced using exact fixed official CLI replaceDemoMedia/stripTemplateAssetRefs and original PLACEHOLDER_IMAGE, not custom artwork, photo or cover screenshot. Official docsite artwork is not included; neutral image clearly disclosed in foreground. All other original page code and validation retained. form-wizard-vertical is five-step publishing draft profile/book/distribution/payout-agreements/final-review; Stripe button only toggles original local state, no service or binding agreement. Original final Submit only validates, no success/publication invented. Cover replacement FileInput only local metadata, no upload. form-two-column is local inquiry form with required-name/email/details feedback, not message sending. Fixed source0.7.12 and installed core/theme0.7.11 compatibility disclosed. Shared bounded Theme/LayerProvider host; hidden unmount resets fields, exit/early/late cleanup. Original account/business labels use fictional input only; no credentials, payments, exports or external navigation. Full runtime licenses. JSDOM DOM state and actual compose/loader tests, no native image decode/pixel/drag acceptance."
+    ]
+  },
+  {
+    "id": "astryx:form-two-column",
+    "source": "Meta AstryX",
+    "repository": "https://github.com/meta/astryx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/cli/assets/templates/pages/form-two-column/page.tsx",
+    "sourcePath": "packages/cli/assets/templates/pages/form-two-column/page.tsx",
+    "licenseEvidence": {
+      "url": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/LICENSE",
+      "sha256": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473",
+      "scope": "Complete fixed original MIT; actual runtime dependency notices supplied in preview assets."
+    },
+    "title": "双栏咨询表单",
+    "description": "原完整本地表单与校验流程，图片仅按固定官方CLI语义替换为原中性占位；不实际发送、支付或出版。",
+    "behavior": "原完整本地表单与校验流程，图片仅按固定官方CLI语义替换为原中性占位；不实际发送、支付或出版。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "输入与选择",
+    "license": "MIT AND ISC AND BSD-3-Clause",
+    "batch": "astryx-form-fallback-01",
+    "preview": "batches/astryx-form-fallback-01/form-two-column/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Original full Meta AstryX non-media-led forms. Only original preview image URL replaced using exact fixed official CLI replaceDemoMedia/stripTemplateAssetRefs and original PLACEHOLDER_IMAGE, not custom artwork, photo or cover screenshot. Official docsite artwork is not included; neutral image clearly disclosed in foreground. All other original page code and validation retained. form-wizard-vertical is five-step publishing draft profile/book/distribution/payout-agreements/final-review; Stripe button only toggles original local state, no service or binding agreement. Original final Submit only validates, no success/publication invented. Cover replacement FileInput only local metadata, no upload. form-two-column is local inquiry form with required-name/email/details feedback, not message sending. Fixed source0.7.12 and installed core/theme0.7.11 compatibility disclosed. Shared bounded Theme/LayerProvider host; hidden unmount resets fields, exit/early/late cleanup. Original account/business labels use fictional input only; no credentials, payments, exports or external navigation. Full runtime licenses. JSDOM DOM state and actual compose/loader tests, no native image decode/pixel/drag acceptance."
     ]
   }
 ]
