@@ -1,0 +1,782 @@
+{
+  "repository": "https://github.com/usememos/memos",
+  "revision": "e4f3fb2d2d114f6eaea6ec75a10b0a274f57a8a1",
+  "entry": "web/src/components/MemoView/MemoView.tsx",
+  "completeTreeVerified": true,
+  "sourceFiles": [
+    {
+      "path": "LICENSE",
+      "gitBlob": "ad324eef282c58316ff9dfc8ed5086d120a2311c",
+      "sha256": "dadc85262cec40d1344736b57da50814194ff721ab98012c09cd9d35c4b8582a"
+    },
+    {
+      "path": "web/package.json",
+      "gitBlob": "4c9be0eaba130e0f6ce1ba4f525832dc879aae39",
+      "sha256": "59e57e787811027ed75e2b0ddbe33fd422cfe61b4dc55d146164762095e324de"
+    },
+    {
+      "path": "web/src/components/MemoEditor/MemoEditor.tsx",
+      "gitBlob": "785411d999dfbf203ba3c555154ec692c17aa887",
+      "sha256": "25f2b2694014f91b0d659a55477eb26c0841d332cfb1fbb041d839e3bd0af162"
+    },
+    {
+      "path": "web/src/components/MemoEditor/MemoMarkdown.tsx",
+      "gitBlob": "9f36ccd13acc1ce256e64cb0965fe58857b1c4f3",
+      "sha256": "bba492605f446d770d6054a1763c4db1a477094603a838675f4e0dc5dcbc0c42"
+    },
+    {
+      "path": "web/src/components/MemoEditor/README.md",
+      "gitBlob": "638b42cda1a9bccb8762eb7c15d36ed0bed30bc6",
+      "sha256": "02adaf6e3b00bb96893d0decefbe11092166566cb2d19bbc84af0c78e43cab41"
+    },
+    {
+      "path": "web/src/components/MemoEditor/edit/EditSession.tsx",
+      "gitBlob": "80f9f193347b031398a3cce47d9b68568f3b43e4",
+      "sha256": "c327141e643cef4799aacdecb961f600b858d1feb623a2322e514e356e4b9e3d"
+    },
+    {
+      "path": "web/src/components/MemoEditor/edit/Editor.tsx",
+      "gitBlob": "e99dc961fc423b30a2864cc439405cedf089c407",
+      "sha256": "2efcfe682ccdfd8005868ccc8dfc7235d5ffe1b10ae259f881a884c409c50def"
+    },
+    {
+      "path": "web/src/components/MemoEditor/edit/Toolbar/AudienceMenu.tsx",
+      "gitBlob": "cda3b015f1da511e00c4d372fa7d3738b9dd949a",
+      "sha256": "1da0ccc0a59d295d239946e97e3ea460908ff5a10d6396eef53b8a78f3cb60e5"
+    },
+    {
+      "path": "web/src/components/MemoEditor/edit/Toolbar/EditorToolbar.tsx",
+      "gitBlob": "3742b6213fc9d036a409873563c0b00410775c15",
+      "sha256": "420f29956c0306f0fd20b3c4518d8f78f8ef370f8390f0ffcb7ab570842fc22b"
+    },
+    {
+      "path": "web/src/components/MemoEditor/edit/Toolbar/InsertMenu.tsx",
+      "gitBlob": "8b9e595321801d98b4cb81e3c015165c92625699",
+      "sha256": "4b4e22cdc808612c34113e49a5b7f3ea16a564db7852f6a1070b34757006574a"
+    },
+    {
+      "path": "web/src/components/MemoEditor/edit/Toolbar/index.ts",
+      "gitBlob": "02236e6fafe208e4c4794d646183734e4b90170e",
+      "sha256": "b14385bc0a75c31f5f79284636a02b1130719ec6d72d8fd495d866b5ff1e2cd7"
+    },
+    {
+      "path": "web/src/components/MemoEditor/edit/components/AudioRecorderPanel.tsx",
+      "gitBlob": "758c3cc986fd9c1e2fb60a9dc74fb65e665b56d6",
+      "sha256": "318e795cab5b0144a2b66e40ee86225e5cb95544fe73ec1e1b1fe0e834c834e7"
+    },
+    {
+      "path": "web/src/components/MemoEditor/edit/components/EditorContent.tsx",
+      "gitBlob": "7f5b98f7326c85587d640957794f7d196bd3a8d3",
+      "sha256": "e25635704cfc90415b6123b0c5cbd28e1abfec075ea406edcc982406159896e0"
+    },
+    {
+      "path": "web/src/components/MemoEditor/edit/components/EditorMetadata.tsx",
+      "gitBlob": "6da29f21dcf9d84819cd1daf6df70a665065fb6c",
+      "sha256": "6bd2e285cb433136bdb4cb5ecc7d01e9f8a5bf289ea05b94df68ad65a7e2c193"
+    },
+    {
+      "path": "web/src/components/MemoEditor/edit/components/EditorSuggestions.tsx",
+      "gitBlob": "115be3f576a708597f35d8972480427d6a320792",
+      "sha256": "ad7b027d5820a378cb7082fd59cd392ea1a55f2011124828d28cb89ba51f2f17"
+    },
+    {
+      "path": "web/src/components/MemoEditor/edit/components/FocusModeOverlay.tsx",
+      "gitBlob": "58d12b5eb1fe0894b1ea6cc84af03e9f35646f12",
+      "sha256": "e87ddc4a48a9007dc3f2dc674873543e38d545ab25acdaf320bf6e8b27f555e7"
+    },
+    {
+      "path": "web/src/components/MemoEditor/edit/components/TimestampPopover.tsx",
+      "gitBlob": "1fbf460d007e328edd9f9b648abd04fa6cd8b57b",
+      "sha256": "f4421a979c84120bbba06ac5e93541196ecea2c517dd36e655d1642d189c804c"
+    },
+    {
+      "path": "web/src/components/MemoEditor/edit/components/VoiceWaveform.tsx",
+      "gitBlob": "4eefd6310275caaab6123189de3facfc879d113a",
+      "sha256": "06cb63aef643029ea75f770f31d582a8a0968522434d94cd878e98eab7cc88cc"
+    },
+    {
+      "path": "web/src/components/MemoEditor/edit/components/index.ts",
+      "gitBlob": "c74457200a677f9a7a26496abf46c91211d3de0b",
+      "sha256": "0c632c11cfff1ecf523b38765745ed55bdd6adad409f23ddfb370118b0682ded"
+    },
+    {
+      "path": "web/src/components/MemoEditor/edit/constants.ts",
+      "gitBlob": "58939ba2a984c895d5503da92bfab03e15981328",
+      "sha256": "b0a2053b1f485e611981146af14fa8daeb4d6ae4cf1494e0efddc9a3ae805ea3"
+    },
+    {
+      "path": "web/src/components/MemoEditor/edit/controller.ts",
+      "gitBlob": "b870e07ab3b7c58a39cd5aa21df424dd392d46aa",
+      "sha256": "6506a1e5ff45a52627d6ad25d83ac2fd51b0775150d96cbb55edf07a806f6592"
+    },
+    {
+      "path": "web/src/components/MemoEditor/edit/draftKey.ts",
+      "gitBlob": "6a4298de2e1cb582f2ec69e83b7f248e28700618",
+      "sha256": "abc799e657c164ae6ed5024b4a6bc40207281d8e7721209b4c61c5622602fe3e"
+    },
+    {
+      "path": "web/src/components/MemoEditor/edit/editor.css",
+      "gitBlob": "f480f2fdab96a19f8b6fe8bf9cf8d20f4df75058",
+      "sha256": "734534cca591296a8dfd57b7c975745274cadc560738208e8ee2fbc6ada67070"
+    },
+    {
+      "path": "web/src/components/MemoEditor/edit/extensions.ts",
+      "gitBlob": "f5f7485af1e372a551d58706901b795d0be2c524",
+      "sha256": "e0a950f9cb75f42614b052d1a98dc0322b3db977276680699ab3aee8bc71e13d"
+    },
+    {
+      "path": "web/src/components/MemoEditor/edit/hooks/index.ts",
+      "gitBlob": "7686aa7e591d61b1d9451fc8fcb00c80cdb3d3d5",
+      "sha256": "047bd74ee3ca6ab8460eac7d148b24722fae5085d2309face6b8512ad99074ac"
+    },
+    {
+      "path": "web/src/components/MemoEditor/edit/hooks/useAttachmentTranscription.ts",
+      "gitBlob": "7318e8d5239a870ed030d7b70d2716547b08dfe2",
+      "sha256": "0c486ff9a88d6e71e6cc745ee306619971a30a7ec44bbd2cbd46b7b27733bd9a"
+    },
+    {
+      "path": "web/src/components/MemoEditor/edit/hooks/useAudioRecorder.ts",
+      "gitBlob": "d613e7bc27e4ccd0f8925ca5b398d57cf5bd3439",
+      "sha256": "012c2f2aed4d271b563e04e29ba2446be50b1f911d1efa9dd9e85dbc26b4a5f2"
+    },
+    {
+      "path": "web/src/components/MemoEditor/edit/hooks/useAudioWaveform.ts",
+      "gitBlob": "69b042def4f68a7b35a84a553a0c195d0c3d6351",
+      "sha256": "d98fab6ad7003d990764ba92445c0e781ec8e57833f63e330cb973a50fb758a4"
+    },
+    {
+      "path": "web/src/components/MemoEditor/edit/hooks/useAutoSave.ts",
+      "gitBlob": "458910967c85188a59209e5e6266512bfb98162c",
+      "sha256": "567f8aa5cd6504f58b2d5c2f616c3f278673c84080f0af9abf4aeb8249d34fe4"
+    },
+    {
+      "path": "web/src/components/MemoEditor/edit/hooks/useBlobUrls.ts",
+      "gitBlob": "df20260ed3ff9f1a782cb9eaff4229b6825b1b6c",
+      "sha256": "110eb1e500711ef3d41389647c7d257504a95acd806b9fdeb3757ff9220ee0e4"
+    },
+    {
+      "path": "web/src/components/MemoEditor/edit/hooks/useDrawing.ts",
+      "gitBlob": "1ccabda786aa2f5502a35ac596e8af26bb0fd49b",
+      "sha256": "62c3dc623dbb14ee7c1755c28fba2d3b96c9024bd4ab33cc5eec395536fba605"
+    },
+    {
+      "path": "web/src/components/MemoEditor/edit/hooks/useFileUpload.ts",
+      "gitBlob": "2a420598bea46fb63fed6716a02bdfd68b002c3b",
+      "sha256": "1b5c88e926786789b4a7c334d9198457a901ff34705fdf16ed58e6aa3e4584bd"
+    },
+    {
+      "path": "web/src/components/MemoEditor/edit/hooks/useFocusMode.ts",
+      "gitBlob": "d90b8b89fa42bdf188fceecaa6f04d54b1071516",
+      "sha256": "ff0c5d4ee29051afb9a27146c7e87a97d6d1d532a86570d2d5edc39a727d830c"
+    },
+    {
+      "path": "web/src/components/MemoEditor/edit/hooks/useInlineImageUpload.ts",
+      "gitBlob": "14a814b64c20d1a642283931b5429ca554aa4e47",
+      "sha256": "8b3fb27a9fe6b549ed850cd3e4444166744f427d8350ea1761bec3d52adbd96c"
+    },
+    {
+      "path": "web/src/components/MemoEditor/edit/hooks/useLinkMemo.ts",
+      "gitBlob": "081a2ad1430b96ec53094e1385f25b5a8f779573",
+      "sha256": "2be775a9e24a3f47aadcb61166302500b3517a50ea8313825330d921c84a0cbf"
+    },
+    {
+      "path": "web/src/components/MemoEditor/edit/hooks/useLocation.ts",
+      "gitBlob": "b7e47772b2e36a3832747ec7e1179668475f6780",
+      "sha256": "c2571a76cb9ec7b60dc34bbf35e66c58183c484f84cdd09a47752fb8dff9d747"
+    },
+    {
+      "path": "web/src/components/MemoEditor/edit/hooks/useMemoInit.ts",
+      "gitBlob": "5583d988ca216fca66b52c51052beacd07c960e4",
+      "sha256": "b09817d8135d70c53519749ec05f99324bfaa6e932c916e59f6a585eb4a58450"
+    },
+    {
+      "path": "web/src/components/MemoEditor/edit/hooks/useMemoSave.ts",
+      "gitBlob": "366dba161ee4bf1ae1cedf3799841dbd787a1189",
+      "sha256": "0fdb6e777c6850cccd84493b2f894c1b9ad9df74ddb36e4a19eacb06408121eb"
+    },
+    {
+      "path": "web/src/components/MemoEditor/edit/initialState.ts",
+      "gitBlob": "b6b9a0fecd2f7fb9297417fb36bc148e9b9c0c28",
+      "sha256": "f6d92ea6fa2ae146c0ac8e247368b9f347fe08c3a56386fb1cc850ab73eb269a"
+    },
+    {
+      "path": "web/src/components/MemoEditor/edit/services/cacheService.ts",
+      "gitBlob": "35ace571880b2b5bf9d9b819748fd2990a1d14af",
+      "sha256": "5cfe4b746d501bf6f980b1454d524b26dcd15861d0009dc84ea816964917f3d4"
+    },
+    {
+      "path": "web/src/components/MemoEditor/edit/services/errorService.ts",
+      "gitBlob": "30755c704a857952935738e3ed1ad739742b5cf9",
+      "sha256": "ddc3edcf3572cf29b514917828979d2e3d48181d9c42b9fe3ade93d2c478ce91"
+    },
+    {
+      "path": "web/src/components/MemoEditor/edit/services/index.ts",
+      "gitBlob": "5bd92a587afeeeed5bcf46cceb028c2dda13b20e",
+      "sha256": "aab0e0b15b6c460183edfcff347e14589eee8f648b2fa254d41d4d96fb3f0727"
+    },
+    {
+      "path": "web/src/components/MemoEditor/edit/services/mediaMetadataService.ts",
+      "gitBlob": "dd733a294c2234530f5b0d9b06601edbe69485ae",
+      "sha256": "6fd80a99d062177e2543b4b7f3a62e6f2f5c27eeabb0388dc1315eb98b9abd90"
+    },
+    {
+      "path": "web/src/components/MemoEditor/edit/services/memoService.ts",
+      "gitBlob": "6cae26ce737a22d1d049aabd1dc89c81d83c7f31",
+      "sha256": "bdac8501f2a8dc1edbf010496da80a03778e978e16b1ba7c953901a30e98ec85"
+    },
+    {
+      "path": "web/src/components/MemoEditor/edit/services/transcriptionService.ts",
+      "gitBlob": "a3eca39355f7d7f741ecea282a7f1cbeb582f004",
+      "sha256": "e0d16a929e2828f965e51065c44cb8550e0b0a6a0ba32a238b7bbd8d8b3ceaba"
+    },
+    {
+      "path": "web/src/components/MemoEditor/edit/services/uploadService.ts",
+      "gitBlob": "240b1a153910940cf4b08b5c7065778f35199eb5",
+      "sha256": "b645201e0e2a25b663a4b658edb3b4dc6fa5240cb206850199089d0ff757e14b"
+    },
+    {
+      "path": "web/src/components/MemoEditor/edit/services/validationService.ts",
+      "gitBlob": "875649ebd702e8c722404dfe6f7d8d86cca9441f",
+      "sha256": "b7ea176109f929afffedecef7d558522c958900f591819ca9d1345920000d4e1"
+    },
+    {
+      "path": "web/src/components/MemoEditor/edit/state/actions.ts",
+      "gitBlob": "1a4369bb3204ec8ac3442c3a30c8da1a7b388f91",
+      "sha256": "191d2ca42608faae131c0b7e5f6c347ed3325060c821feb78e57dd0242310518"
+    },
+    {
+      "path": "web/src/components/MemoEditor/edit/state/context.tsx",
+      "gitBlob": "65c8393b2be0ee93d65fe511d9a64c0aed2138f2",
+      "sha256": "1965e279ca580e1306faea77eab4b3dfa88dffe4aaca6b9044f7fecff7a25208"
+    },
+    {
+      "path": "web/src/components/MemoEditor/edit/state/index.ts",
+      "gitBlob": "b4bece2871d88ec29c191d9a376e339db7377257",
+      "sha256": "de21e3fc72e3204cdc065b590defaa270e2f27ca44eafc4addc434655efb1584"
+    },
+    {
+      "path": "web/src/components/MemoEditor/edit/state/reducer.ts",
+      "gitBlob": "2f2082af22ea6fcc1642becdc3c7570792804f86",
+      "sha256": "a417aff4494b013473bb2f0c7691a340a0fd762c9638eb3dbe04b08f8ef15876"
+    },
+    {
+      "path": "web/src/components/MemoEditor/edit/state/types.ts",
+      "gitBlob": "da511696bdfec00dbeea90158b2aed78f48e2b60",
+      "sha256": "3d9e87923a55c0c807014da52aac8fd6495cb96ac32abbdddcebd461c7a4e374"
+    },
+    {
+      "path": "web/src/components/MemoEditor/edit/types/attachment.ts",
+      "gitBlob": "a8c30bc267d1cf07da6a6163389e35a833e99460",
+      "sha256": "f0b9c463d9f68aeb0a2e50d898f4bf7534536e6de314cc3051a9e4c928de4b7f"
+    },
+    {
+      "path": "web/src/components/MemoEditor/edit/types/components.ts",
+      "gitBlob": "461718c47991443a1795bde2a13bf0dd0dbd7f8d",
+      "sha256": "fd03c52f1160a84ca8e4398a15ccc2d2628c39fc291214405fbea8667d1ebf46"
+    },
+    {
+      "path": "web/src/components/MemoEditor/edit/types/editorController.ts",
+      "gitBlob": "fcb8e5c83c331dc71d61e16d71019983a697cd07",
+      "sha256": "5ffee7c1cc7f73e88a1525ee65b687b40b6bf11fdf22c856481cd743268a6fda"
+    },
+    {
+      "path": "web/src/components/MemoEditor/edit/types/index.ts",
+      "gitBlob": "d4d48cecd7180959554655f1ec0cb650aff3a3e6",
+      "sha256": "16ce4660495d81da5c6495285efe5b3bd6fa06885434589a0c440a8eac70efae"
+    },
+    {
+      "path": "web/src/components/MemoEditor/edit/types/insertMenu.ts",
+      "gitBlob": "9a60eb4918861e2f20e92274eb4da51e4b64203b",
+      "sha256": "4483e52b7739afa18fe0bec13ba98ad151ee649c8f6b1968ec5606e5fec3404d"
+    },
+    {
+      "path": "web/src/components/MemoEditor/edit/uploadAnchors.ts",
+      "gitBlob": "83172a36ff4e3e1a41f21c433aab5da53659f1d4",
+      "sha256": "24bb5e973995bcac535b708fea5da2f248b6e08778c4cefd0e3c6c2f678cfbc8"
+    },
+    {
+      "path": "web/src/components/MemoEditor/edit/utils/deriveDefaultCreateTime.ts",
+      "gitBlob": "f4764a0a544bce393c480a9f5872f4654c067d4c",
+      "sha256": "8afb5c4d6b2f0057c87923f62c6eb23a54ea106678a3aea5b27486e612190da0"
+    },
+    {
+      "path": "web/src/components/MemoEditor/index.ts",
+      "gitBlob": "80f7633e5f6109b4adddf7058ae487ef72e319f8",
+      "sha256": "7f02f4ca1114ed95636bc92f12e200b14753b859682880b94e00b57e75f1c73d"
+    },
+    {
+      "path": "web/src/components/MemoEditor/useMemoDecorations.ts",
+      "gitBlob": "f235133eb47686e203b8a6acb2ccd7d2e50cae7d",
+      "sha256": "2ea16df7bfb49e16fb3dae1c1c0439f89a1ef5352f660b417eb2a8fd5b40ae17"
+    },
+    {
+      "path": "web/src/components/MemoEditor/view/LinkMetadataCard.tsx",
+      "gitBlob": "a938ac1c5811411c842eb73f8e4ac58570c695b4",
+      "sha256": "7a359c0655ec0d04975371514f477b08ad7ff2ff90178d7a6cd875ba0bb9ae9b"
+    },
+    {
+      "path": "web/src/components/MemoEditor/view/MemoContentView.tsx",
+      "gitBlob": "8ec8ce692521f5873f4fb48b68dc40aa984f9095",
+      "sha256": "6b4a58fd44f905691b3119e2ee5dea27a8dc921f269ce7863918e689301f4d09"
+    },
+    {
+      "path": "web/src/components/MemoEditor/view/headings.ts",
+      "gitBlob": "8a0c5bf31510465df78cddcd454ece9ee27a5292",
+      "sha256": "cc97f53750e09cb1855c55dfdc4598a840d922cee5db2ad746b9069d15b7cb05"
+    },
+    {
+      "path": "web/src/components/MemoEditor/view/linkCards.ts",
+      "gitBlob": "7acbb0ef3f31f6f92547ef3325f4575a9906a75d",
+      "sha256": "0937b0433f79e338da8f89bd37f022ed40ab6fd529e9531e8ec6e25f1695f84a"
+    },
+    {
+      "path": "web/src/components/MemoEditor/view/useSearchMatchHighlight.ts",
+      "gitBlob": "e152ff5eab0d2202fdfdf8cdae022a63cc80babb",
+      "sha256": "0ced640a128c952ea7d65c12778a25cddae8cc4000d241c3f8e1739485257516"
+    },
+    {
+      "path": "web/src/components/MemoEditor/view/useTagNavigation.ts",
+      "gitBlob": "31dfca5a3963c14dc54a55a05417688b197b1e10",
+      "sha256": "98375a28baabd11ecc0d00e9b925b8bb38569976676640e8b1a4e493e3a97c9a"
+    },
+    {
+      "path": "web/src/components/MemoView/MemoView.tsx",
+      "gitBlob": "89e3a1577a3b826ca5a46f63980974f184c7a95e",
+      "sha256": "0993b2f26bfa3e20f7d8a2466f1f93216947d2c1780cb7a5971551529d33ca23"
+    },
+    {
+      "path": "web/src/components/MemoView/MemoViewContext.tsx",
+      "gitBlob": "250c89d909951b8548a0549639d3f9b37d148421",
+      "sha256": "cfa66cca398cc0de28fd56f39c82e0408a097de206f687dbe5b9d4508d045154"
+    },
+    {
+      "path": "web/src/components/MemoView/components/MemoBody.tsx",
+      "gitBlob": "3b2bffb5f5d26cfbca0f3beab3618a30dcd97cf5",
+      "sha256": "6768810e803899da86a139cfbf0a3b2d93446fb239d476b0d3bb705d07868f67"
+    },
+    {
+      "path": "web/src/components/MemoView/components/MemoCommentListView.tsx",
+      "gitBlob": "ea5da0ec1da4719c050c32cacc9c8803bfc11bd6",
+      "sha256": "5eba8c3e4e286bd24a5e7f36c39fc0b0e1b0f1526f40ff7f8ac3b9785bc22625"
+    },
+    {
+      "path": "web/src/components/MemoView/components/MemoHeader.tsx",
+      "gitBlob": "e99a61bd23fa36cc3d57fcbe34af7a0f2154b2cf",
+      "sha256": "e8f14bf8ad3a03a2a7839019b0007d3a64c44804fe6ee41f2cabec35223e9776"
+    },
+    {
+      "path": "web/src/components/MemoView/components/MemoPinnedMark.tsx",
+      "gitBlob": "a48fe6ccdeffd992865041cf9e4d665b252a1078",
+      "sha256": "ad5f636e65057b2d1af0e3beb3d9f9171c0a5253cd4ca9abc29b60b0d1f09bd1"
+    },
+    {
+      "path": "web/src/components/MemoView/components/MemoSpaceBadge.tsx",
+      "gitBlob": "4712b53afdc6aadcf0017cdc490a93ca94d64fe4",
+      "sha256": "400e4a1e583d87d126b6ed4ed5d710fe66161e095a75b1700adaf9c9a98ffe49"
+    },
+    {
+      "path": "web/src/components/MemoView/components/index.ts",
+      "gitBlob": "a2baa27bf0df84305db13addd935f952e4b042c9",
+      "sha256": "606a4c5efe4e7481ba02a6fb9c3c21a248cf9169fe5866dd195ae75864381a42"
+    },
+    {
+      "path": "web/src/components/MemoView/constants.ts",
+      "gitBlob": "42703b68be9480edd26357e0808a96dc0606b516",
+      "sha256": "9428aa98407f907000cc0b9df4d205230ebbdd2b477ad0650494218c84c2f3f2"
+    },
+    {
+      "path": "web/src/components/MemoView/hooks/index.ts",
+      "gitBlob": "05ab9323e68ae00ec54825481e82defae90b0c00",
+      "sha256": "593d9ba1e3eb0114ed8348825854539a922d01070b311759a8bb2dea04e38091"
+    },
+    {
+      "path": "web/src/components/MemoView/hooks/useImagePreview.ts",
+      "gitBlob": "49fd9de38f6e4a107c588234c0007329fada8085",
+      "sha256": "661e7a2f9d4dfd69d1e65fbe536f0d6c3442edcb8ab42febf6f4ec3592aa2720"
+    },
+    {
+      "path": "web/src/components/MemoView/hooks/useMemoHandlers.ts",
+      "gitBlob": "320f31b7261eb671a72f60dd035cd1629581b5c7",
+      "sha256": "02e249d74a5df12b0b84f03cc657e9a5c815d28b16b41c37d68fc4fb3239ebfe"
+    },
+    {
+      "path": "web/src/components/MemoView/index.ts",
+      "gitBlob": "8dbbf0f275ab1b17d87f97d3ffd800ed65c46d46",
+      "sha256": "74be024189b792d4f4f3c5851ebb1e94ecc4da48eb10c9ac21ef29187fe33485"
+    },
+    {
+      "path": "web/src/components/MemoView/navigation.ts",
+      "gitBlob": "39bcde7ab797d91648c3ed0495da5dff925dcbfe",
+      "sha256": "165a348fb9d83a67c9d1767162acac358e69e7db2d29c5996277bd711a3bdc02"
+    },
+    {
+      "path": "web/src/components/MemoView/types.ts",
+      "gitBlob": "070fc33d0ec68eb110ae634679f53c80db657341",
+      "sha256": "7e9f77af64ec446e4ee8b58165f8011bd7154569b1d78b9387b8a5fc832c9bde"
+    },
+    {
+      "path": "web/src/components/PagedMemoList/EmptyLine.tsx",
+      "gitBlob": "b76ae060395d03ceaeaa9bf503daacbb82572000",
+      "sha256": "5b162b6e957d526057c5849a2f5ab798f26bebf795897c459e2dc38f32de6df2"
+    },
+    {
+      "path": "web/src/components/PagedMemoList/MemoListError.tsx",
+      "gitBlob": "18c1fa2d46417d78bc18d781271cf4987e738bf2",
+      "sha256": "2e9299c266cc68ac6e40b156e864cbed0a9eb5827ac7ca7fecdefe7878e762e5"
+    },
+    {
+      "path": "web/src/components/PagedMemoList/PagedMemoList.tsx",
+      "gitBlob": "d13f899df26f912ba2f2936f3ac5c981b3aa5e2e",
+      "sha256": "7dc46641d7b48cc1106770ea537d316a6974b40b546702a531d62503f716d2b5"
+    },
+    {
+      "path": "web/src/components/PagedMemoList/index.ts",
+      "gitBlob": "34f6b42ec2918ae950789c0d138a0a7a0013c780",
+      "sha256": "b2f81f7c66c9bf8d8e05c9351b3ac6877ce999885fde9abe0fddafe22ce1b874"
+    },
+    {
+      "path": "web/src/components/PagedMemoList/memoCardHeight.ts",
+      "gitBlob": "a8033ebb19d86175c08853c32a273d111abad6ac",
+      "sha256": "e8c7f67739a9e7fc2e6d999098d562ea507307e3ec9d549332ff9ce887cd5765"
+    },
+    {
+      "path": "web/src/index.css",
+      "gitBlob": "5816c83f59c0fce0de0b6ac06a3000fa449b7fdf",
+      "sha256": "5f18fcd47762c6126a7ff88080be6759c4a752cfd115be7b02e19e48efd9d6e3"
+    },
+    {
+      "path": "web/src/components/ClampedSection.tsx",
+      "gitBlob": "e0bd06913d35c51f8876ecd2643bfbd10794b021",
+      "sha256": "34442e3a69b5deeba8fc2eda8274f7a11acaf3130bf08571699708664ef1b912"
+    },
+    {
+      "path": "web/src/components/RelativeTime.tsx",
+      "gitBlob": "f372e0179801170a313e9edc8a5aa2de4cd47b62",
+      "sha256": "eaf9bfaa08400e15c41f0ed0edd36133b51b7657f6ec1b6a53bca8c88e565e66"
+    },
+    {
+      "path": "web/src/components/UserAvatar.tsx",
+      "gitBlob": "6f0843ac8a10576de4f7eb882836f3dede58f384",
+      "sha256": "3dfa846d198cb6ad84a94ae374dd3b001f5a18e4fcb37c14021905fb70a2c629"
+    },
+    {
+      "path": "web/src/components/VisibilityIcon.tsx",
+      "gitBlob": "1ff69c437744d74a42541e60c6365e1cf2c907fa",
+      "sha256": "058df1ce367504413b5bbedf1d3a507382c8b3e5bbb49e18548d187579ba164e"
+    },
+    {
+      "path": "web/src/lib/markdownStyles.ts",
+      "gitBlob": "8e859cd8962096acd6cb0602cb9bd7783748fa3c",
+      "sha256": "c72209581ac00814e64b22b3bb08f11b6283ea71fa6cc32d8ec06572c3aaace0"
+    },
+    {
+      "path": "web/src/lib/memo-ast.ts",
+      "gitBlob": "c09d8cfea3df7cf1e8596b389628b296b2a73864",
+      "sha256": "4e3d5a0f2fd2e00b5fedff48b48186dcf7541b821a9e411973616a60674e6231"
+    },
+    {
+      "path": "web/src/lib/memo-markdown.ts",
+      "gitBlob": "8c2cb6c525460f8b708d815aa0f62656a41edddf",
+      "sha256": "a539ebfcfce2291afe7b61c740b192c7c5bff26cbb88ed2d0b88304bc09b9459"
+    },
+    {
+      "path": "web/src/lib/tag.ts",
+      "gitBlob": "3a3685038f9a5f271dd3d9f042988562e1b9f24a",
+      "sha256": "6a75ef55002f518efb6e991499aaf6744e3d8e37319164d101f3d000e8406c3b"
+    },
+    {
+      "path": "web/src/themes/default.css",
+      "gitBlob": "e3b9700ad1fd56cda095bab9ed8645538324b72c",
+      "sha256": "48463c3dfb71099f13d49c09ee40c990a463549c65792f8342e70e42c9d5bdeb"
+    },
+    {
+      "path": "web/src/themes/paper.css",
+      "gitBlob": "f5b4bb5b8e38f8d836c2f595a0bc1cb44f082463",
+      "sha256": "fea9aa1498b13f49cede96c31fcfd4fb5d312ce1375fa9e036d278344f6a06d5"
+    },
+    {
+      "path": "web/src/lib/memo-comments.ts",
+      "gitBlob": "96ed01d92100752cc40af5e922ccdb3676ac3d7d",
+      "sha256": "a1894a578b212dd44fc323f4b4c3e5260c2bd666da8a80ea63bc532d5371851c"
+    },
+    {
+      "path": "web/src/utils/markdown-manipulation.ts",
+      "gitBlob": "cadeda020df020c4ef897c907e8f9da557776ced",
+      "sha256": "95c9bb86419113ed09eb837603a58dfdd6962568bf8b8efe01d73985697ab39d"
+    },
+    {
+      "path": "web/src/utils/search-match.ts",
+      "gitBlob": "4431436f9e3f94cff9fc90a9df0b1c07710fadf0",
+      "sha256": "0d99658621037c70469adba3d7312e723aeaef6de43389476e163bacaf42b2a3"
+    }
+  ],
+  "originalCore": {
+    "components/MemoView/MemoView.tsx": "import { forwardRef, memo, Suspense, useCallback, useEffect, useImperativeHandle, useLayoutEffect, useMemo, useRef, useState } from \"react\";\nimport { useLocation } from \"react-router-dom\";\nimport { useColumnGridUntrapped } from \"@/components/ColumnGrid/ColumnGridContext\";\nimport { useAuth } from \"@/contexts/AuthContext\";\nimport { useResolvedUser } from \"@/contexts/MentionResolutionContext\";\nimport useCurrentUser from \"@/hooks/useCurrentUser\";\nimport { isMemoBlurred } from \"@/lib/tag\";\nimport { cn } from \"@/lib/utils\";\nimport { State } from \"@/types/proto/api/common_pb\";\nimport { lazyWithReload } from \"@/utils/lazy\";\nimport { canManageMemo } from \"@/utils/user\";\nimport { MemoBody, MemoCommentListView, MemoHeader } from \"./components\";\nimport MemoPinnedMark from \"./components/MemoPinnedMark\";\nimport { MEMO_CARD_BASE_CLASSES } from \"./constants\";\nimport { useImagePreview } from \"./hooks\";\nimport { computeCommentAmount, MemoViewContext } from \"./MemoViewContext\";\nimport { isMemoDetailPath, resolveMemoParentPage } from \"./navigation\";\nimport type { MemoViewHandle, MemoViewProps } from \"./types\";\n\nconst MemoShareImageDialog = lazyWithReload(() => import(\"../MemoActionMenu/MemoShareImageDialog\"));\nconst PreviewImageDialog = lazyWithReload(() => import(\"../PreviewImageDialog\"));\n\nconst MemoView = forwardRef<MemoViewHandle, MemoViewProps>((props, ref) => {\n  const {\n    memo: memoData,\n    className,\n    parentPage: parentPageProp,\n    compact,\n    timeDisplay,\n    showCreator,\n    showVisibility,\n    showPinned,\n    showSpace,\n  } = props;\n  const cardRef = useRef<HTMLDivElement>(null);\n  const [isEditing, setIsEditing] = useState(false);\n  const [cardWidth, setCardWidth] = useState(0);\n\n  const currentUser = useCurrentUser();\n  const { userTagsSetting } = useAuth();\n  const creator = useResolvedUser(memoData.creator, { enabled: Boolean(showCreator || props.shareImageDialogOpen) });\n  const isArchived = memoData.state === State.ARCHIVED;\n  const readonly = !canManageMemo(memoData, currentUser);\n  const location = useLocation();\n  const parentPage = resolveMemoParentPage({\n    explicitParentPage: parentPageProp,\n    pathname: location.pathname,\n    search: location.search,\n    memoName: memoData.name,\n  });\n\n  // Blur content when any tag has blur_content enabled in the current user's tag settings.\n  // The detail page controls the reveal so the sidebar outline can follow it.\n  const [localShowBlurredContent, setLocalShowBlurredContent] = useState(false);\n  const blurControlled = props.showBlurredContent !== undefined;\n  const showBlurredContent = props.showBlurredContent ?? localShowBlurredContent;\n  const onShowBlurredContentChange = props.onShowBlurredContentChange;\n  const blurred = isMemoBlurred(memoData, userTagsSetting);\n  const toggleBlurVisibility = useCallback(() => {\n    const next = !showBlurredContent;\n    if (!blurControlled) {\n      setLocalShowBlurredContent(next);\n    }\n    onShowBlurredContentChange?.(next);\n  }, [blurControlled, onShowBlurredContentChange, showBlurredContent]);\n\n  const { previewState, openPreview, setPreviewOpen } = useImagePreview();\n\n  const focusMountedEditor = useCallback(() => {\n    const editorRoot = cardRef.current?.querySelector<HTMLElement>('.memo-editor-root[contenteditable=\"true\"]');\n    const fallbackInput = cardRef.current?.querySelector<HTMLElement>(\"textarea, input\");\n    (editorRoot ?? fallbackInput)?.focus();\n  }, []);\n\n  // The body edits in place: the card, its header and its frame stay, and the memo's\n  // own editing session takes the body's place until it saves or cancels.\n  const openEditor = useCallback(() => {\n    if (isEditing) {\n      focusMountedEditor();\n      return;\n    }\n    setIsEditing(true);\n  }, [focusMountedEditor, isEditing]);\n  const closeEditor = useCallback(() => setIsEditing(false), []);\n\n  // The grid keys tiles by memo name (see getMemoKey), so the focused editor\n  // identifies its own tile by name and untraps it for the duration.\n  const { setUntrappedKey, clearUntrappedKey } = useColumnGridUntrapped();\n  const handleFocusModeChange = useCallback(\n    (isFocusMode: boolean) => {\n      if (isFocusMode) {\n        setUntrappedKey(memoData.name);\n      } else {\n        clearUntrappedKey(memoData.name);\n      }\n    },\n    [memoData.name, setUntrappedKey, clearUntrappedKey],\n  );\n  // Release the slot when the editor closes or this card unmounts. Both calls\n  // are ownership-scoped, so mounting cards never clobber another card's slot.\n  useEffect(() => {\n    if (!isEditing) {\n      clearUntrappedKey(memoData.name);\n    }\n  }, [isEditing, memoData.name, clearUntrappedKey]);\n  useEffect(() => () => clearUntrappedKey(memoData.name), [memoData.name, clearUntrappedKey]);\n\n  useImperativeHandle(ref, () => ({ openEditor }), [openEditor]);\n\n  const isInMemoDetailPage = isMemoDetailPath(location.pathname, memoData.name);\n  const showCommentPreview = !isInMemoDetailPage && computeCommentAmount(memoData) > 0;\n\n  // The card width is only needed by the share-image dialog. Keep feed cards\n  // free of a permanent ResizeObserver and measure only while that dialog is open.\n  useLayoutEffect(() => {\n    if (!props.shareImageDialogOpen) {\n      return;\n    }\n\n    const card = cardRef.current;\n    if (!card) {\n      return;\n    }\n\n    const updateWidth = (nextWidth?: number) => {\n      const width = Math.round(nextWidth ?? card.getBoundingClientRect().width);\n      setCardWidth((prev) => (prev === width ? prev : width));\n    };\n\n    updateWidth();\n\n    if (typeof ResizeObserver === \"undefined\") {\n      const handleResize = () => updateWidth();\n      window.addEventListener(\"resize\", handleResize);\n      return () => window.removeEventListener(\"resize\", handleResize);\n    }\n\n    const resizeObserver = new ResizeObserver((entries) => {\n      updateWidth(entries[0]?.contentRect.width);\n    });\n\n    resizeObserver.observe(card);\n    return () => resizeObserver.disconnect();\n  }, [props.shareImageDialogOpen]);\n\n  const contextValue = useMemo(\n    () => ({\n      memo: memoData,\n      creator,\n      currentUser,\n      parentPage,\n      cardWidth,\n      isArchived,\n      readonly,\n      showBlurredContent,\n      blurred,\n      isEditing,\n      openEditor,\n      closeEditor,\n      onEditorFocusModeChange: handleFocusModeChange,\n      toggleBlurVisibility,\n      openPreview,\n    }),\n    [\n      memoData,\n      creator,\n      currentUser,\n      parentPage,\n      cardWidth,\n      isArchived,\n      readonly,\n      showBlurredContent,\n      blurred,\n      isEditing,\n      openEditor,\n      closeEditor,\n      handleFocusModeChange,\n      toggleBlurVisibility,\n      openPreview,\n    ],\n  );\n\n  const article = (\n    <article\n      className={cn(MEMO_CARD_BASE_CLASSES, \"group/memo\", showCommentPreview ? \"mb-0 rounded-b-none\" : \"mb-2\", className)}\n      ref={cardRef}\n      tabIndex={readonly ? -1 : 0}\n    >\n      {/* The editing session's Markdown tag takes the pinned mark's corner. */}\n      {showPinned && memoData.pinned && !isEditing && <MemoPinnedMark />}\n      <MemoHeader timeDisplay={timeDisplay} showCreator={showCreator} showVisibility={showVisibility} showSpace={showSpace} />\n\n      <MemoBody compact={compact} showCreator={showCreator} />\n\n      {previewState.items.length > 0 && (\n        <Suspense fallback={null}>\n          <PreviewImageDialog\n            open={previewState.open}\n            onOpenChange={setPreviewOpen}\n            items={previewState.items}\n            initialIndex={previewState.index}\n          />\n        </Suspense>\n      )}\n\n      {props.onShareImageDialogOpenChange && props.shareImageDialogOpen && (\n        <Suspense fallback={null}>\n          <MemoShareImageDialog open onOpenChange={props.onShareImageDialogOpenChange} />\n        </Suspense>\n      )}\n    </article>\n  );\n\n  const memoDisplay = showCommentPreview ? (\n    <div className=\"w-full mb-2\">\n      {article}\n      <MemoCommentListView />\n    </div>\n  ) : (\n    article\n  );\n\n  return <MemoViewContext.Provider value={contextValue}>{memoDisplay}</MemoViewContext.Provider>;\n});\n\nMemoView.displayName = \"MemoView\";\n\nexport default memo(MemoView);\n",
+    "components/MemoView/components/MemoHeader.tsx": "import { Badge, Button, buttonClasses, Popover, Tooltip } from \"@usememos/ui\";\nimport { SmilePlusIcon } from \"lucide-react\";\nimport { Link, useLocation } from \"react-router-dom\";\nimport RelativeTime from \"@/components/RelativeTime\";\nimport { useNewMemo } from \"@/contexts/NewMemoContext\";\nimport i18n from \"@/i18n\";\nimport { cn } from \"@/lib/utils\";\nimport { getCreatorHomePath } from \"@/router/routes\";\nimport { Visibility } from \"@/types/proto/api/memo_service_pb\";\nimport type { User } from \"@/types/proto/api/user_service_pb\";\nimport { useTranslate } from \"@/utils/i18n\";\nimport { getVisibilityOption } from \"@/utils/memo\";\nimport MemoActionMenu from \"../../MemoActionMenu\";\nimport { ReactionSelector } from \"../../MemoReactionListView\";\nimport UserAvatar from \"../../UserAvatar\";\nimport VisibilityIcon from \"../../VisibilityIcon\";\nimport { MEMO_TIME_CONTROL_CLASSES } from \"../constants\";\nimport { useMemoViewContext, useMemoViewDerived } from \"../MemoViewContext\";\nimport { createMemoNavigationState, isMemoDetailPath } from \"../navigation\";\nimport type { MemoHeaderProps } from \"../types\";\nimport MemoSpaceBadge from \"./MemoSpaceBadge\";\n\n/** The card's trailing actions are the package's 24px ghost squares (`sm`), whether or not they are package buttons. */\nconst MEMO_HEADER_ACTION_CLASSES = buttonClasses({ variant: \"ghost\", size: \"sm\", iconOnly: true });\n\nconst MemoHeader: React.FC<MemoHeaderProps> = ({ timeDisplay = \"relative\", showCreator, showVisibility, showSpace }) => {\n  const t = useTranslate();\n\n  const { memo, creator, currentUser, parentPage, isArchived, readonly, isEditing, openEditor } = useMemoViewContext();\n  const location = useLocation();\n  const { createTime, updateTime, displayTime: memoDisplayTime, isDisplayingUpdatedTime, relativeTimeFormat } = useMemoViewDerived();\n  const { newMemoName } = useNewMemo();\n  const visibilityOption = getVisibilityOption(memo.visibility);\n\n  const timeValue = isArchived ? (\n    memoDisplayTime?.toLocaleString(i18n.language)\n  ) : timeDisplay === \"time\" ? (\n    memoDisplayTime?.toLocaleTimeString(i18n.language, { hour: \"numeric\", minute: \"2-digit\" })\n  ) : (\n    <RelativeTime date={memoDisplayTime} format={relativeTimeFormat} />\n  );\n  const displayTime = isDisplayingUpdatedTime ? (\n    <>\n      {t(\"common.last-updated-at\")} {timeValue}\n    </>\n  ) : (\n    timeValue\n  );\n  const timeTooltip = {\n    createdAt: createTime ? `${t(\"common.created-at\")}: ${createTime.toLocaleString(i18n.language)}` : undefined,\n    updatedAt:\n      updateTime && (!createTime || updateTime.getTime() !== createTime.getTime())\n        ? `${t(\"common.last-updated-at\")}: ${updateTime.toLocaleString(i18n.language)}`\n        : undefined,\n  };\n  const spaceMetadata = showSpace && memo.space ? <MemoSpaceBadge spaceName={memo.space} /> : null;\n  const showsCreator = Boolean(showCreator && creator);\n  const isNew = memo.name === newMemoName;\n\n  // While the card edits in place, the session's timestamp row is the header: the body\n  // hands it the identity (`CreatorDisplay`) to lead with, and the time, visibility and\n  // Space show once, in their editable form. Reacting or opening the action menu makes no\n  // sense mid-edit, and the \"new\" mark is for finding the memo in the list, not for the\n  // person editing it.\n  if (isEditing) return null;\n\n  return (\n    // A fixed 24px row, the height of its action squares, so the card's top edge never\n    // moves with what the header happens to show.\n    <div className=\"flex h-6 w-full items-center justify-between gap-2\">\n      <div className=\"flex min-w-0 flex-1 items-center gap-2\">\n        {/* The time stays visible while the creator and Space badge can shrink and truncate. */}\n        <div data-slot=\"memo-header-meta\" className=\"flex min-w-0 items-center gap-1.5 overflow-hidden\">\n          {showsCreator && creator && <CreatorDisplay creator={creator} />}\n          <TimeDisplay\n            displayTime={displayTime}\n            timeTooltip={timeTooltip}\n            memoName={memo.name}\n            parentPage={parentPage}\n            isCurrentPage={isMemoDetailPath(location.pathname, memo.name)}\n          />\n          {spaceMetadata}\n        </div>\n        {isNew && <NewBadge />}\n      </div>\n\n      <div\n        data-slot=\"memo-header-actions\"\n        // The same 4px gaps on touch screens, so the actions read as one group. Each square's hit\n        // area keeps its 44px height but narrows to the 28px pitch, so neighbors meet halfway\n        // instead of a later square's area covering the edge of the one before it. The selector only\n        // resizes the package's touch-screen pseudo-element; Tailwind's `after:` would also create\n        // one on desktop, where it sits beside the icon and pushes it off center.\n        className=\"flex shrink-0 select-none flex-row items-center justify-end gap-1 [&_.mu-hit::after]:w-7\"\n      >\n        {currentUser && !isArchived && (\n          // On desktop the picker's trigger shows only while the card is engaged or the picker is open.\n          <span className=\"flex sm:hidden sm:group-hover:flex sm:group-focus-within:flex sm:has-[[data-popup-open]]:flex\">\n            <ReactionSelector memo={memo} trigger={<Button variant=\"ghost\" size=\"sm\" icon={<SmilePlusIcon />} />} />\n          </span>\n        )}\n\n        {showVisibility && memo.visibility !== Visibility.PRIVATE && (\n          // The audience is information, not an action: a hover card that a click or tap also opens.\n          <Popover.Root>\n            <Popover.Trigger\n              openOnHover\n              delay={300}\n              aria-label={visibilityOption && t(visibilityOption.labelKey)}\n              className={MEMO_HEADER_ACTION_CLASSES}\n            >\n              <VisibilityIcon visibility={memo.visibility} className=\"text-current\" />\n            </Popover.Trigger>\n            {visibilityOption && (\n              <Popover.Popup align=\"end\" variant=\"list\" className=\"w-56\">\n                <Popover.Title>{t(visibilityOption.labelKey)}</Popover.Title>\n                <Popover.Description>{t(visibilityOption.descriptionKey)}</Popover.Description>\n              </Popover.Popup>\n            )}\n          </Popover.Root>\n        )}\n\n        <MemoActionMenu memo={memo} parentPage={parentPage} readonly={readonly} onEdit={openEditor} />\n      </div>\n    </div>\n  );\n};\n\nconst NewBadge = () => {\n  const t = useTranslate();\n  return (\n    <Badge tone=\"primary\" className=\"shrink-0\">\n      {t(\"memo.new-badge\")}\n    </Badge>\n  );\n};\n\n/**\n * The author on one line with the time: a 20px avatar in a 20px slot, then the name in\n * medium 13px foreground ink. It is the identity, so it carries the weight; the time after\n * it is muted, after a separator. The editing session leads its timestamp row with it, so\n * the card's header reads the same mid-edit.\n */\nexport const CreatorDisplay: React.FC<{ creator: User }> = ({ creator }) => (\n  <>\n    <Link\n      className={cn(\n        \"flex min-w-0 shrink items-center gap-1.5 rounded-mu-sm mu-label-sm text-mu-ink transition-colors hover:text-mu-ink/80\",\n        \"mu-focus\",\n      )}\n      to={getCreatorHomePath(creator.username)}\n      viewTransition\n    >\n      <span className=\"flex size-5 shrink-0 items-center justify-center\">\n        <UserAvatar className=\"size-5\" avatarUrl={creator.avatarUrl} name={creator.displayName || creator.username} />\n      </span>\n      <span className=\"min-w-0 truncate\">{creator.displayName || creator.username}</span>\n    </Link>\n    <span aria-hidden=\"true\" className=\"shrink-0 text-mu-ink-muted/40\">\n      ·\n    </span>\n  </>\n);\n\ninterface TimeTooltipContent {\n  createdAt?: string;\n  updatedAt?: string;\n}\n\nconst TimeTooltip = ({ children, content }: { children: React.ReactElement; content: TimeTooltipContent }) => (\n  <Tooltip.Root>\n    <Tooltip.Trigger render={children} />\n    <Tooltip.Popup align=\"start\" className=\"flex flex-col items-start gap-0.5 whitespace-nowrap text-left\">\n      {content.createdAt && <span>{content.createdAt}</span>}\n      {content.updatedAt && <span>{content.updatedAt}</span>}\n    </Tooltip.Popup>\n  </Tooltip.Root>\n);\n\ninterface TimeDisplayProps {\n  displayTime: React.ReactNode;\n  timeTooltip: TimeTooltipContent;\n  memoName: string;\n  parentPage: string;\n  /** On the memo's own page the permalink would lead nowhere, so the time is plain text. */\n  isCurrentPage: boolean;\n}\n\n/** The timestamp is the memo's permalink: a real link, so it previews its URL and opens in a new tab. */\nconst TimeDisplay: React.FC<TimeDisplayProps> = ({ displayTime, timeTooltip, memoName, parentPage, isCurrentPage }) => (\n  <TimeTooltip content={timeTooltip}>\n    {isCurrentPage ? (\n      <span className=\"shrink-0 whitespace-nowrap mu-caption text-mu-ink-muted select-none\">{displayTime}</span>\n    ) : (\n      <Link\n        className={cn(MEMO_TIME_CONTROL_CLASSES, \"underline-offset-2 hover:underline\")}\n        to={`/${memoName}`}\n        state={createMemoNavigationState(parentPage)}\n        viewTransition\n      >\n        {displayTime}\n      </Link>\n    )}\n  </TimeTooltip>\n);\n\nexport default MemoHeader;\n",
+    "components/MemoView/components/MemoBody.tsx": "import { Button } from \"@usememos/ui\";\nimport { EyeIcon } from \"lucide-react\";\nimport { useMemo } from \"react\";\nimport ClampedSection from \"@/components/ClampedSection\";\nimport { MemoEditor } from \"@/components/MemoEditor/MemoEditor\";\nimport { AttachmentGallery, MemoMetadataRows } from \"@/components/MemoMetadata\";\nimport { separateAttachments } from \"@/components/MemoMetadata/Attachment/attachmentHelpers\";\nimport { isReferenceRelation } from \"@/components/MemoMetadata/Relation/relationHelpers\";\nimport useCurrentUser from \"@/hooks/useCurrentUser\";\nimport { cn } from \"@/lib/utils\";\nimport { useTranslate } from \"@/utils/i18n\";\nimport { filterInlineManagedAttachments } from \"@/utils/managed-attachment\";\nimport { canManageMemo } from \"@/utils/user\";\nimport { MemoReactionListView } from \"../../MemoReactionListView\";\nimport { useMemoHandlers } from \"../hooks\";\nimport { useMemoViewContext } from \"../MemoViewContext\";\nimport type { MemoBodyProps } from \"../types\";\nimport { CreatorDisplay } from \"./MemoHeader\";\n\nconst BlurOverlay: React.FC<{ onClick?: () => void }> = ({ onClick }) => {\n  const t = useTranslate();\n  return (\n    <div className=\"absolute inset-0 z-10 flex items-center justify-center\">\n      <Button type=\"button\" variant=\"neutral\" size=\"sm\" onClick={onClick} icon={<EyeIcon />}>\n        {t(\"memo.click-to-show-sensitive-content\")}\n      </Button>\n    </div>\n  );\n};\n\nconst MemoBody: React.FC<MemoBodyProps> = ({ compact, showCreator }) => {\n  const {\n    memo,\n    creator,\n    parentPage,\n    showBlurredContent,\n    blurred,\n    readonly,\n    isEditing,\n    openEditor,\n    closeEditor,\n    onEditorFocusModeChange,\n    openPreview,\n    toggleBlurVisibility,\n  } = useMemoViewContext();\n\n  const { handleMemoContentClick, handleMemoContentDoubleClick } = useMemoHandlers({ readonly, openEditor, openPreview });\n\n  const referencedMemos = memo.relations.filter(isReferenceRelation);\n  const hasText = memo.content.trim() !== \"\";\n  const currentUser = useCurrentUser();\n  // Memoized so AttachmentListView's own useMemo chain keeps its cache across body renders.\n  const attachmentOnlyItems = useMemo(\n    () => filterInlineManagedAttachments(memo.content, memo.attachments),\n    [memo.content, memo.attachments],\n  );\n  const { visual, audio, docs } = useMemo(() => separateAttachments(attachmentOnlyItems), [attachmentOnlyItems]);\n\n  // Editing takes the body's place inside the card's own frame: the session brings its\n  // attachments, metadata and toolbar, so the read-only rows and reactions step aside.\n  // Its timestamp row stands in for the header, leading with the creator when the\n  // header would have shown one.\n  if (isEditing) {\n    return (\n      <div data-slot=\"memo-body\" className=\"w-full\">\n        <MemoEditor\n          mode=\"edit\"\n          name={memo.name}\n          frameless\n          timestampLead={showCreator && creator ? <CreatorDisplay creator={creator} /> : undefined}\n          autoFocus\n          onConfirm={closeEditor}\n          onCancel={closeEditor}\n          onFocusModeChange={onEditorFocusModeChange}\n        />\n      </div>\n    );\n  }\n\n  return (\n    <div className=\"w-full flex flex-col justify-start items-start gap-2\">\n      <div data-slot=\"memo-body\" className=\"relative w-full\">\n        <div\n          className={cn(\n            \"w-full flex flex-col justify-start items-start gap-2\",\n            blurred && !showBlurredContent && \"blur-lg transition-all duration-200\",\n          )}\n        >\n          {/* Compact bounds the whole body — attachments included — behind one Show more.\n              Reactions stay outside so they never hide under the fade. */}\n          <ClampedSection enabled={Boolean(compact)}>\n            {/* A memo of attachments alone has no text: an empty editor would still take a line and a gap. */}\n            {hasText && (\n              <MemoEditor\n                name={memo.name}\n                parentPage={parentPage}\n                compact={Boolean(compact)}\n                onClick={handleMemoContentClick}\n                onDoubleClick={handleMemoContentDoubleClick}\n              />\n            )}\n            <AttachmentGallery\n              visual={visual}\n              onImagePreview={openPreview}\n              drawings={{ memo, canEdit: !readonly && canManageMemo(memo, currentUser) }}\n            />\n            <MemoMetadataRows\n              audio={audio}\n              docs={docs}\n              relations={referencedMemos}\n              currentMemoName={memo.name}\n              parentPage={parentPage}\n              location={memo.location}\n            />\n          </ClampedSection>\n        </div>\n\n        {blurred && !showBlurredContent && <BlurOverlay onClick={toggleBlurVisibility} />}\n      </div>\n\n      <MemoReactionListView memo={memo} reactions={memo.reactions} />\n    </div>\n  );\n};\n\nexport default MemoBody;\n",
+    "components/ClampedSection.tsx": "import { Button } from \"@usememos/ui\";\nimport { ChevronDownIcon, ChevronUpIcon } from \"lucide-react\";\nimport { type ReactNode, useEffect, useRef, useState } from \"react\";\nimport { cn } from \"@/lib/utils\";\nimport { useTranslate } from \"@/utils/i18n\";\n\n// A collapsed section shows this much content; anything taller folds behind a fade.\nexport const CLAMP_PREVIEW_HEIGHT_PX = 360;\n// Only fold when content is taller than this, so cards barely over the preview aren't\n// clamped for the sake of a few hidden pixels.\nexport const CLAMP_TRIGGER_HEIGHT_PX = 420;\n\ninterface ClampedSectionProps {\n  /** When false, children render untouched with no measurement. */\n  enabled: boolean;\n  children: ReactNode;\n}\n\n/**\n * The one truncation mechanism for compact cards: measure the content, and when it is\n * tall enough, collapse it to a fixed-height preview with a fade and a Show more/less\n * toggle. The inner div is never clamped, so observing it keeps the measurement live\n * while images and embeds load.\n */\nconst ClampedSection = ({ enabled, children }: ClampedSectionProps) => {\n  const t = useTranslate();\n  const measureRef = useRef<HTMLDivElement>(null);\n  const [clamped, setClamped] = useState(false);\n  const [expanded, setExpanded] = useState(false);\n\n  useEffect(() => {\n    const el = measureRef.current;\n    if (!enabled || !el) {\n      setClamped(false);\n      return;\n    }\n    const check = () => setClamped(el.offsetHeight > CLAMP_TRIGGER_HEIGHT_PX);\n    check();\n    if (typeof ResizeObserver === \"undefined\") return;\n    const observer = new ResizeObserver(check);\n    observer.observe(el);\n    return () => observer.disconnect();\n  }, [enabled]);\n\n  const collapsed = clamped && !expanded;\n\n  return (\n    <>\n      <div\n        className={cn(\"relative w-full\", collapsed && \"overflow-hidden\")}\n        style={collapsed ? { maxHeight: CLAMP_PREVIEW_HEIGHT_PX } : undefined}\n      >\n        <div ref={measureRef} className=\"w-full flex flex-col justify-start items-start gap-2\">\n          {children}\n        </div>\n        {collapsed && (\n          <div className=\"pointer-events-none absolute inset-x-0 bottom-0 h-12 bg-linear-to-t from-mu-surface from-0% via-mu-surface/60 via-40% to-transparent to-100%\" />\n        )}\n      </div>\n      {clamped && (\n        <Button\n          variant=\"ghost\"\n          size=\"sm\"\n          aria-expanded={!collapsed}\n          iconEnd={collapsed ? <ChevronDownIcon /> : <ChevronUpIcon />}\n          onClick={() => setExpanded((prev) => !prev)}\n        >\n          {t(collapsed ? \"memo.show-more\" : \"memo.show-less\")}\n        </Button>\n      )}\n    </>\n  );\n};\n\nexport default ClampedSection;\n",
+    "components/MemoEditor/MemoMarkdown.tsx": "import type { Editor, EditorMode, Extension, Theme } from \"@usememos/editor\";\nimport { MarkdownEditor, type MarkdownEditorProps } from \"@usememos/editor/react\";\nimport \"@usememos/editor/style.css\";\nimport { type Ref, useCallback, useMemo, useState } from \"react\";\nimport { MEMO_MARKDOWN } from \"@/lib/memo-ast\";\nimport { MEMO_EDITOR_THEME, memoEditorLabels, memoExtensions, memoResolveUrl, memoSanitizeHtml } from \"@/lib/memo-markdown\";\nimport type { Attachment } from \"@/types/proto/api/attachment_service_pb\";\nimport { useTranslate } from \"@/utils/i18n\";\nimport { useMemoDecorations } from \"./useMemoDecorations\";\n\nexport interface MemoMarkdownProps {\n  /** The Markdown. Applied only when it is not a value the editor emitted itself. */\n  value: string;\n  /** Editing, or the read-only memo view. Default read-only. Updates live. */\n  editable?: boolean;\n  /** While read-only, lets the viewer tick task items; each tick reports the new Markdown through `onChange`. */\n  taskToggle?: boolean;\n  onChange?: (markdown: string) => void;\n  /** Mod+Enter or Ctrl+Enter while editing. */\n  onSubmit?: () => void;\n  /** Rich text, or the whole memo as Markdown text. Switching changes no text. */\n  mode?: EditorMode;\n  placeholder?: string;\n  /** The memo's attachments, so images of managed attachments resolve to their served URL. */\n  attachments?: readonly Attachment[];\n  /** Extensions beyond the memo syntax, for editing. Keep the array's identity stable: a new set of names recreates the editor. */\n  extensions?: readonly Extension[];\n  /** The core editor instance. */\n  editorRef?: Ref<Editor | null>;\n  headingIds?: MarkdownEditorProps[\"headingIds\"];\n  onLinkClick?: MarkdownEditorProps[\"onLinkClick\"];\n  /** A tag was clicked to be followed (a plain click while read-only, Mod+click while editing), without its `#`. */\n  onTagClick?: (tag: string) => void;\n  /** A mention of someone who exists was clicked to be followed, without its `@`. */\n  onMentionClick?: (username: string) => void;\n  /** Attributes for the editable root, such as `spellcheck`. */\n  attributes?: Record<string, string>;\n  /** The formatting toolbar and the image toolbar. Read once; the editor hides them while read-only. */\n  toolbar?: boolean;\n  /** The slash menu's items, or `false` for none. Read once. */\n  slashMenu?: MarkdownEditorProps[\"slashMenu\"];\n  /** The editor's look. Default MEMO_EDITOR_THEME. Updates live. */\n  theme?: Theme;\n  className?: string;\n}\n\nconst assignRef = <T,>(ref: Ref<T> | undefined, value: T) => {\n  if (typeof ref === \"function\") ref(value);\n  else if (ref) ref.current = value;\n};\n\n/**\n * A memo's Markdown in memos' dialect, look and policy, shown by the same editor whether\n * read-only or editing: the memo syntax extensions (math, footnotes, tags, mentions,\n * highlighted code, Mermaid), raw HTML through memos' sanitizer, the theme in the app's CSS variables, the\n * translated labels, the image and link URL policy, and tags and mentions decorated from\n * the viewer's data. Everything a memo surface adds sits around this component.\n */\nexport const MemoMarkdown = (props: MemoMarkdownProps) => {\n  const {\n    value,\n    editable = false,\n    taskToggle,\n    onChange,\n    onSubmit,\n    mode,\n    placeholder,\n    attachments,\n    extensions,\n    editorRef,\n    headingIds,\n    onLinkClick,\n    onTagClick,\n    onMentionClick,\n    attributes,\n    toolbar,\n    slashMenu,\n    theme = MEMO_EDITOR_THEME,\n    className,\n  } = props;\n  const t = useTranslate();\n  const [editor, setEditor] = useState<Editor | null>(null);\n  const attach = useCallback(\n    (instance: Editor | null) => {\n      setEditor(instance);\n      assignRef(editorRef, instance);\n    },\n    [editorRef],\n  );\n\n  const decorations = useMemoDecorations(editor, value, editable, { onTagClick, onMentionClick });\n  const baseExtensions = useMemo(() => memoExtensions({ tags: decorations.tags, mentions: decorations.mentions }), [decorations]);\n  const allExtensions = useMemo(\n    () => (extensions?.length ? [...baseExtensions, ...extensions] : baseExtensions),\n    [baseExtensions, extensions],\n  );\n  const labels = useMemo(() => memoEditorLabels(t), [t]);\n  const resolveUrl = useMemo(() => memoResolveUrl(attachments), [attachments]);\n  return (\n    <MarkdownEditor\n      ref={attach}\n      value={value}\n      // The React wrapper calls the latest callbacks, so inline functions are fine.\n      onChange={onChange}\n      onSubmit={onSubmit ? () => onSubmit() : undefined}\n      editable={editable}\n      taskToggle={taskToggle}\n      mode={mode}\n      placeholder={placeholder}\n      markdown={MEMO_MARKDOWN}\n      extensions={allExtensions}\n      theme={theme}\n      labels={labels}\n      attributes={attributes}\n      resolveUrl={resolveUrl}\n      referrerPolicy=\"no-referrer\"\n      sanitizeHtml={memoSanitizeHtml}\n      headingIds={headingIds}\n      onLinkClick={onLinkClick}\n      toolbar={toolbar}\n      slashMenu={slashMenu}\n      className={className}\n    />\n  );\n};\n",
+    "components/MemoEditor/view/MemoContentView.tsx": "import type { Editor } from \"@usememos/editor\";\nimport { memo, useEffect, useMemo, useRef, useState } from \"react\";\nimport { createPortal } from \"react-dom\";\nimport { useNavigate } from \"react-router-dom\";\nimport { MemoMarkdown } from \"@/components/MemoEditor/MemoMarkdown\";\nimport { createMemoNavigationState } from \"@/components/MemoView/navigation\";\nimport { useContentSearchTerms } from \"@/contexts/MemoFilterContext\";\nimport { useDevicePreferences } from \"@/hooks/useDevicePreferences\";\nimport { useNearViewport } from \"@/hooks/useNearViewport\";\nimport { markdownStyles } from \"@/lib/markdownStyles\";\nimport { cn } from \"@/lib/utils\";\nimport { getCreatorHomePath } from \"@/router/routes\";\nimport type { Attachment } from \"@/types/proto/api/attachment_service_pb\";\nimport { findAnchorTarget } from \"@/utils/markdown-manipulation\";\nimport { headingSlugs } from \"./headings\";\nimport LinkMetadataCard from \"./LinkMetadataCard\";\nimport { type LinkCardMount, linkCardsExtension } from \"./linkCards\";\nimport { useSearchMatchHighlight } from \"./useSearchMatchHighlight\";\nimport { useTagNavigation } from \"./useTagNavigation\";\n\nexport interface MemoContentViewProps {\n  content: string;\n  /** Attachments bound to this memo, used to resolve managed image URLs in share/S3 modes. */\n  attachments?: readonly Attachment[];\n  /** Resource name of the memo (e.g. `memos/abc123`). Lets in-memo anchor links open the memo detail page. */\n  memoName?: string;\n  /** Collection page that rendered the memo, preserved when an inline link opens its detail page. */\n  parentPage?: string;\n  /** The card renders collapsed (ClampedSection), so in-memo anchor links navigate instead of scrolling. */\n  compact?: boolean;\n  /**\n   * Lets the viewer tick task items, for a memo they can manage. Called with the new\n   * Markdown, in which only the ticked item's `[ ]` or `[x]` changed.\n   */\n  onTaskToggle?: (content: string) => void;\n  className?: string;\n  contentClassName?: string;\n  onClick?: (e: React.MouseEvent) => void;\n  onDoubleClick?: (e: React.MouseEvent) => void;\n}\n\nconst LinkPreview = ({ href }: { href: string }) => {\n  const { ref, isNearViewport } = useNearViewport<HTMLAnchorElement>();\n  const fallback = (\n    <a ref={ref} href={href} target=\"_blank\" rel=\"noopener noreferrer\" className={markdownStyles.link}>\n      {href}\n    </a>\n  );\n  return <LinkMetadataCard url={href} fallback={fallback} enabled={isNearViewport} />;\n};\n\n/** A mounted card, keyed for React: the element is the editor's, so the key cannot be derived from the block. */\ninterface LinkCard extends LinkCardMount {\n  readonly key: number;\n}\nlet nextLinkCardKey = 0;\n\n/**\n * A memo's content, read-only, with the memo view's own surface over MemoMarkdown: tags and\n * mentions navigate, in-memo anchors scroll, bare links become preview cards, and the page's\n * search matches are painted. Owners can tick task items: each tick reports the new Markdown,\n * in which only that item's `[ ]` or `[x]` changed. Truncation is not this component's\n * concern — compact cards are bounded by ClampedSection around the whole memo body;\n * `compact` only tells in-memo anchor links to open the detail page, since a collapsed card\n * may hide their target. MemoEditor shows a memo by name through it; previews pass content.\n */\nconst MemoContentViewImpl = (props: MemoContentViewProps) => {\n  const { className, contentClassName, content, attachments, memoName, parentPage, compact, onTaskToggle, onClick, onDoubleClick } = props;\n  const navigate = useNavigate();\n  const { linkPreview: linkPreviewEnabled } = useDevicePreferences();\n  const navigateToTag = useTagNavigation(parentPage);\n  // Whatever the page's search matched is painted here, without altering the rendered tree.\n  const contentRef = useRef<HTMLDivElement>(null);\n  useSearchMatchHighlight(contentRef, useContentSearchTerms());\n  const [editor, setEditor] = useState<Editor | null>(null);\n\n  // Bare links become preview cards through the editor's block view: it hands over an\n  // element per such paragraph and keeps it while the block is unchanged, so the card\n  // portaled into it survives renders. Built once; the setting is read through a ref and\n  // applied with a refresh of this view.\n  const [cards, setCards] = useState<readonly LinkCard[]>([]);\n  const linkPreviewEnabledRef = useRef(linkPreviewEnabled);\n  linkPreviewEnabledRef.current = linkPreviewEnabled;\n  const linkCards = useMemo(\n    () => [\n      linkCardsExtension({\n        isEnabled: () => linkPreviewEnabledRef.current,\n        onMount: (mount) =>\n          setCards((previous) => [...previous.filter((card) => card.element !== mount.element), { ...mount, key: nextLinkCardKey++ }]),\n        onUnmount: (element) => setCards((previous) => previous.filter((card) => card.element !== element)),\n      }),\n    ],\n    [],\n  );\n  const appliedLinkPreview = useRef(linkPreviewEnabled);\n  useEffect(() => {\n    if (appliedLinkPreview.current === linkPreviewEnabled) return;\n    appliedLinkPreview.current = linkPreviewEnabled;\n    editor?.refreshViews(\"linkCards\");\n  }, [editor, linkPreviewEnabled]);\n\n  // In-memo anchors scroll within this memo; a collapsed card may hide the target, so it opens the detail page.\n  const handleLinkClick = ({ href }: { href: string }) => {\n    if (!href.startsWith(\"#\")) return false;\n    const id = decodeURIComponent(href.slice(1));\n    const target = !compact && id && contentRef.current ? findAnchorTarget(contentRef.current, id) : null;\n    if (target) {\n      target.scrollIntoView({ behavior: \"smooth\", block: \"center\" });\n    } else if (memoName) {\n      navigate(`/${memoName}${href}`, { state: parentPage ? createMemoNavigationState(parentPage) : undefined });\n    }\n    return true;\n  };\n\n  return (\n    <div className={`w-full flex flex-col justify-start items-start text-mu-ink ${className || \"\"}`}>\n      <div\n        ref={contentRef}\n        data-memo-content\n        data-memo-name={memoName}\n        className={cn(\n          \"relative w-full max-w-full wrap-break-word text-base leading-6\",\n          \"[&_.katex-display]:max-w-full\",\n          \"[&_.katex-display]:overflow-x-auto\",\n          \"[&_.katex-display]:overflow-y-hidden\",\n          contentClassName,\n        )}\n        onMouseUp={onClick}\n        onDoubleClick={onDoubleClick}\n      >\n        <MemoMarkdown\n          editorRef={setEditor}\n          value={content}\n          onChange={onTaskToggle}\n          taskToggle={Boolean(onTaskToggle)}\n          toolbar={false}\n          slashMenu={false}\n          attachments={attachments}\n          extensions={linkCards}\n          headingIds={headingSlugs}\n          onLinkClick={handleLinkClick}\n          // Tags filter the list when clicked here; mentions of people who exist open their page.\n          onTagClick={navigateToTag}\n          onMentionClick={(username) => navigate(getCreatorHomePath(username))}\n          className=\"memo-content-root\"\n        />\n        {cards.map((card) => createPortal(<LinkPreview href={card.href} />, card.element, String(card.key)))}\n      </div>\n    </div>\n  );\n};\n\nexport const MemoContentView = memo(MemoContentViewImpl);\n",
+    "components/MemoEditor/view/useTagNavigation.ts": "import { useLocation } from \"react-router-dom\";\nimport { isMemoResourcePath, withMemoFilter } from \"@/components/MemoView/navigation\";\nimport { type MemoFilter, stringifyFilters, useMemoFilterContext } from \"@/contexts/MemoFilterContext\";\nimport useNavigateTo from \"@/hooks/useNavigateTo\";\nimport { Routes } from \"@/router\";\n\n/**\n * What clicking a tag in a memo does. On a memo detail page it opens the collection the\n * memo came from, filtered by the tag. In a list it toggles the tag as the one tag filter.\n */\nexport function useTagNavigation(parentPage: string | undefined): (tag: string) => void {\n  const location = useLocation();\n  const navigateTo = useNavigateTo();\n  const { getFiltersByFactor, removeFilter, addFilter } = useMemoFilterContext();\n\n  return (tag: string) => {\n    if (isMemoResourcePath(location.pathname)) {\n      navigateTo(withMemoFilter(parentPage || Routes.HOME, stringifyFilters([{ factor: \"tagSearch\", value: tag }])));\n      return;\n    }\n\n    const isActive = getFiltersByFactor(\"tagSearch\").some((filter: MemoFilter) => filter.value === tag);\n    if (isActive) {\n      removeFilter((f: MemoFilter) => f.factor === \"tagSearch\" && f.value === tag);\n    } else {\n      // Remove all existing tag filters first, then add the new one\n      removeFilter((f: MemoFilter) => f.factor === \"tagSearch\");\n      addFilter({ factor: \"tagSearch\", value: tag });\n    }\n  };\n}\n"
+  },
+  "adaptedHashes": {
+    "src/navigate.ts": "fd88b4d927e7583f433bb343eb203218cc5710b3f7fd9a141f3f94ce1bf5908f",
+    "src/fixture.tsx": "571778b18cb878f4e24b8d07a903e7658710a12b9e56bbbb5279dd786584879c",
+    "src/index.css": "5f18fcd47762c6126a7ff88080be6759c4a752cfd115be7b02e19e48efd9d6e3",
+    "src/main.tsx": "01276c0bc6c8896f4791076c8626c59c168e716ab85d3ad30635684eca27a3e3",
+    "src/current.ts": "de8e1ddca1378a0b07db601b572f7b08628018c1f7aafdb72e16d6d7bf7e6f79",
+    "src/utils/search-match.ts": "0d99658621037c70469adba3d7312e723aeaef6de43389476e163bacaf42b2a3",
+    "src/utils/markdown-manipulation.ts": "95c9bb86419113ed09eb837603a58dfdd6962568bf8b8efe01d73985697ab39d",
+    "src/components/ClampedSection.tsx": "34442e3a69b5deeba8fc2eda8274f7a11acaf3130bf08571699708664ef1b912",
+    "src/themes/default.css": "48463c3dfb71099f13d49c09ee40c990a463549c65792f8342e70e42c9d5bdeb",
+    "src/themes/paper.css": "fea9aa1498b13f49cede96c31fcfd4fb5d312ce1375fa9e036d278344f6a06d5",
+    "src/lib/memo-ast.ts": "4e3d5a0f2fd2e00b5fedff48b48186dcf7541b821a9e411973616a60674e6231",
+    "src/lib/memo-markdown.ts": "071169813467f0278c4bcd26376cd193243fffd3fff585ebb64d50fdb9ca4ca3",
+    "src/lib/markdownStyles.ts": "c72209581ac00814e64b22b3bb08f11b6283ea71fa6cc32d8ec06572c3aaace0",
+    "src/lib/memo-comments.ts": "a1894a578b212dd44fc323f4b4c3e5260c2bd666da8a80ea63bc532d5371851c",
+    "src/components/MemoEditor/useMemoDecorations.ts": "2ea16df7bfb49e16fb3dae1c1c0439f89a1ef5352f660b417eb2a8fd5b40ae17",
+    "src/components/MemoEditor/MemoMarkdown.tsx": "bba492605f446d770d6054a1763c4db1a477094603a838675f4e0dc5dcbc0c42",
+    "src/components/MemoEditor/MemoEditor.tsx": "57610b60c92245e4ff4f9704a4262167cc57b23e80a38a4b921257c43a1b65af",
+    "src/components/MemoEditor/index.ts": "00b8066c6ed2c01a0cb451195cc8cce62ab0c4f2e5ab952f67743c5038380715",
+    "src/components/MemoView/MemoViewContext.tsx": "cfa66cca398cc0de28fd56f39c82e0408a097de206f687dbe5b9d4508d045154",
+    "src/components/MemoView/constants.ts": "9428aa98407f907000cc0b9df4d205230ebbdd2b477ad0650494218c84c2f3f2",
+    "src/components/MemoView/navigation.ts": "165a348fb9d83a67c9d1767162acac358e69e7db2d29c5996277bd711a3bdc02",
+    "src/components/MemoView/MemoView.tsx": "64ba3cbb23851a09b6909b45a76a0f4f8fe8215ac828687ee07f821814b29681",
+    "src/components/MemoView/types.ts": "7e9f77af64ec446e4ee8b58165f8011bd7154569b1d78b9387b8a5fc832c9bde",
+    "src/components/MemoView/index.ts": "74be024189b792d4f4f3c5851ebb1e94ecc4da48eb10c9ac21ef29187fe33485",
+    "src/components/MemoEditor/view/MemoContentView.tsx": "ba2b7ff28f4fe73b7fa9b04365be05ee87f78c0710a472d267543339b468fbc4",
+    "src/components/MemoEditor/view/useSearchMatchHighlight.ts": "0ced640a128c952ea7d65c12778a25cddae8cc4000d241c3f8e1739485257516",
+    "src/components/MemoEditor/view/headings.ts": "cc97f53750e09cb1855c55dfdc4598a840d922cee5db2ad746b9069d15b7cb05",
+    "src/components/MemoEditor/view/LinkMetadataCard.tsx": "7a359c0655ec0d04975371514f477b08ad7ff2ff90178d7a6cd875ba0bb9ae9b",
+    "src/components/MemoEditor/view/linkCards.ts": "0937b0433f79e338da8f89bd37f022ed40ab6fd529e9531e8ec6e25f1695f84a",
+    "src/components/MemoEditor/view/useTagNavigation.ts": "98375a28baabd11ecc0d00e9b925b8bb38569976676640e8b1a4e493e3a97c9a",
+    "src/components/MemoView/hooks/useImagePreview.ts": "661e7a2f9d4dfd69d1e65fbe536f0d6c3442edcb8ab42febf6f4ec3592aa2720",
+    "src/components/MemoView/hooks/useMemoHandlers.ts": "02e249d74a5df12b0b84f03cc657e9a5c815d28b16b41c37d68fc4fb3239ebfe",
+    "src/components/MemoView/hooks/index.ts": "593d9ba1e3eb0114ed8348825854539a922d01070b311759a8bb2dea04e38091",
+    "src/components/MemoView/components/MemoPinnedMark.tsx": "ad5f636e65057b2d1af0e3beb3d9f9171c0a5253cd4ca9abc29b60b0d1f09bd1",
+    "src/components/MemoView/components/MemoCommentListView.tsx": "5eba8c3e4e286bd24a5e7f36c39fc0b0e1b0f1526f40ff7f8ac3b9785bc22625",
+    "src/components/MemoView/components/MemoBody.tsx": "d96052bbb5c202fbf069e0dc5e19fea2b4a2bae9760335fad1f85965e80d7507",
+    "src/components/MemoView/components/MemoHeader.tsx": "abfdcc75f43e461a47b419f5d27ba6eb1d7ab5d1a24a61cfd4e3407cea7d8492",
+    "src/components/MemoView/components/MemoSpaceBadge.tsx": "f7119ac49f08e1cde51c3dd602dc06fe8f9987476c181cfde5c373c07cadde99",
+    "src/components/MemoView/components/index.ts": "5e6aba47e2a809e6aa97d3cf6a810ddd58c02382fd4595cd42d84ca65e0e0bb5"
+  },
+  "dependencies": [
+    {
+      "name": "react",
+      "version": "19.3.1",
+      "license": "MIT",
+      "scope": "emitted-js",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+        }
+      ]
+    },
+    {
+      "name": "scheduler",
+      "version": "0.28.0",
+      "license": "MIT",
+      "scope": "emitted-js",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+        }
+      ]
+    },
+    {
+      "name": "react-dom",
+      "version": "19.3.1",
+      "license": "MIT",
+      "scope": "emitted-js",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+        }
+      ]
+    },
+    {
+      "name": "clsx",
+      "version": "2.1.1",
+      "license": "MIT",
+      "scope": "emitted-js",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "9a9edad7baae52622bddf3c15b2ef8a33d2c89f2d25408ad13e8a7481c6b0c97"
+        }
+      ]
+    },
+    {
+      "name": "tailwind-merge",
+      "version": "3.5.0",
+      "license": "MIT",
+      "scope": "emitted-js",
+      "licenseFiles": [
+        {
+          "name": "LICENSE.md",
+          "sha256": "d4c70c7ce38cea8778f0aed3fc0bef0a9dbd27f13bd8b6773cbd6d37941971e5"
+        }
+      ]
+    },
+    {
+      "name": "@usememos/ui",
+      "version": "26.11.9",
+      "license": "MIT",
+      "scope": "emitted-js",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "e4b0631d60c8b81219f31613d422ed8c254c432cd68bb27f85abb59ca5ffd354"
+        }
+      ]
+    },
+    {
+      "name": "@base-ui/utils",
+      "version": "0.5.0",
+      "license": "MIT",
+      "scope": "emitted-js",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "07fc1b39d69d14bc7d40482a628f47226258eb01265db68ae684944b916beb2a"
+        }
+      ]
+    },
+    {
+      "name": "@floating-ui/utils",
+      "version": "0.2.12",
+      "license": "MIT",
+      "scope": "emitted-js",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "0e4c9a9b6c71019cbbea3bdc20b01223110a9035700f9c960c8fcbf78c2325ce"
+        }
+      ]
+    },
+    {
+      "name": "@base-ui/react",
+      "version": "1.9.0",
+      "license": "MIT",
+      "scope": "emitted-js",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "07fc1b39d69d14bc7d40482a628f47226258eb01265db68ae684944b916beb2a"
+        }
+      ]
+    },
+    {
+      "name": "reselect",
+      "version": "5.3.0",
+      "license": "MIT",
+      "scope": "parsed-js",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "e98047a5dee068b33f82e8c4b7a63037b5108c93393198efd4097753004af5dd"
+        }
+      ]
+    },
+    {
+      "name": "use-sync-external-store",
+      "version": "1.7.0",
+      "license": "MIT",
+      "scope": "emitted-js",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+        }
+      ]
+    },
+    {
+      "name": "@floating-ui/core",
+      "version": "1.8.0",
+      "license": "MIT",
+      "scope": "emitted-js",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "0e4c9a9b6c71019cbbea3bdc20b01223110a9035700f9c960c8fcbf78c2325ce"
+        }
+      ]
+    },
+    {
+      "name": "@floating-ui/dom",
+      "version": "1.8.0",
+      "license": "MIT",
+      "scope": "emitted-js",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "0e4c9a9b6c71019cbbea3bdc20b01223110a9035700f9c960c8fcbf78c2325ce"
+        }
+      ]
+    },
+    {
+      "name": "@floating-ui/react-dom",
+      "version": "2.1.9",
+      "license": "MIT",
+      "scope": "emitted-js",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "0e4c9a9b6c71019cbbea3bdc20b01223110a9035700f9c960c8fcbf78c2325ce"
+        }
+      ]
+    },
+    {
+      "name": "lucide-react",
+      "version": "1.70.0",
+      "license": "ISC",
+      "scope": "emitted-js",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57"
+        }
+      ]
+    },
+    {
+      "name": "@usememos/editor",
+      "version": "26.11.0",
+      "license": "MIT",
+      "scope": "emitted-js",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "5ff2759993ae7a2d0a02826021cb9aa7608a6cb4ab238b5329e02ea7c70cfb44"
+        }
+      ]
+    },
+    {
+      "name": "tailwindcss",
+      "version": "4.3.0",
+      "license": "MIT",
+      "scope": "compiled-css",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "60e0b68c0f35c078eef3a5d29419d0b03ff84ec1df9c3f9d6e39a519a5ae7985"
+        }
+      ]
+    }
+  ],
+  "embeddedIconNotice": "/*! Icons from Lucide (lucide-static 1.55.0), https://lucide.dev\n * ISC License. Copyright (c) 2026 Lucide Icons and Contributors.\n * Permission to use, copy, modify, and/or distribute this software for any\n * purpose with or without fee is hereby granted, provided that the above\n * copyright notice and this permission notice appear in all copies.\n * THE SOFTWARE IS PROVIDED \"AS IS\" AND THE AUTHOR DISCLAIMS ALL WARRANTIES\n * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF\n * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR\n * ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES\n * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN\n * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF\n * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.\n */",
+  "changes": [
+    "Retain original MemoView article/pinned layout, MemoHeader timestamp+Tooltip, MemoBody, ClampedSection measurement/fade/toggle, MemoContentView and MemoMarkdown renderer, original tag and heading/navigation algorithms.",
+    "This is a read-only local three-memo timeline, not Home service or full Memos: fictional texts, empty attachments/relations/reactions, no current user, no creator/avatar/media; only local tag filtering and permalink view. Parent/card rendering style is original.",
+    "Explicit empty/disabled service branches: EditSession, upload/audio/draft/publish, reactions, action menus, comments, space/avatar/share dialogs. No empty placeholders or fake success controls displayed. No user input or claimed editing workflow.",
+    "Original MemoEditor view branch retained in a small read-only facade; edit requests fail closed. Local useMemoByName returns fixture state, query/auth/router hooks are an in-memory adapter, not fake HTTP.",
+    "The fixture excludes HTML, math, Mermaid, code highlighting, images and outgoing links. Their async engines are removed; no alternate math/parser/diagram rendering. Original editor/parser and tag/mention/footnote mechanisms remain; URL resolver returns null and HTML sanitizer returns no nodes.",
+    "Original theme and full application CSS compiled with original @usememos/ui/editor package CSS. No webfonts/images downloaded; original font stacks fallback. Original inline SVG CSS checkmarks and original engine icons retained, with embedded Lucide attribution.",
+    "No browser storage or network; hidden tasks pause, owned listeners/timers/RAF are cleared on exit. Original toolkit geometry and visual layout not browser-validated.",
+    "Exact editor26.11.0/ui26.11.9/base-ui1.9.0 match source. React19.3.1, Lucide-react1.70.0, Tailwind4.3.0 are installed compatible versions rather than pretending full original lock resolution."
+  ],
+  "packageLockSha256": "d52f6e2debd0f227cbd325f5eb07ec85208744fcdbf12a2aab8dfbf6fde12d95",
+  "publication": "7 files only. Full originals/adapted source/tests remain in local workspace; no source archive claimed."
+}
