@@ -2,7 +2,7 @@
 
 网站：<https://tdwhere123.github.io/UI-Vault/>
 
-当前有 **561 条可直接打开预览（241 条原始素材＋320 条后续接入预览）**，目标为 **1000 条可查看素材**，还差 **439 条**。另有 **254 条待适配来源记录**，只是工作清单，**不计入1000目标完成数**。图标按系列计数，不按单枚glyph、字重或尺寸凑数，已有重叠暂待统一整理。
+当前有 **562 条可直接打开预览（241 条原始素材＋321 条后续接入预览）**，目标为 **1000 条可查看素材**，还差 **438 条**。另有 **253 条待适配来源记录**，只是工作清单，**不计入1000目标完成数**。图标按系列计数，不按单枚glyph、字重或尺寸凑数，已有重叠暂待统一整理。
 
 ## 当前内容
 
@@ -465,3 +465,9 @@ Restored **3 existing pending entries**, without adding source-only records: See
 ### Large original text sources
 
 The preview host now supports optional ordered, same-directory UTF-8 JavaScript source chunks (at most16 files, each below700KiB), with strict path/tag validation and atomic composition. Missing or invalid parts show an error instead of a partial preview. Shared pending requests use per-consumer cancellation, with bounded cache entries and byte budget. Existing single-file previews remain compatible, CSP and iframe permissions are unchanged. This infrastructure does not count as an extra UI entry; Healthicons is not counted until its actual source and integration pass.
+
+## Existing-source preview conversion · 562 directly viewable
+
+Restored **1 existing pending entries**, without adding source-only records: Healthicons · 完整四规格信息图形. Each keeps the actual source mechanism and its disclosed adaptation boundary, complete license text and lifecycle tests. Authored local host controls, replacement text, system fonts and static math are identified rather than misrepresented as original services or external data. No new permissions, network services, screenshots or covers.
+
+**562 viewable / 1000 target, 438 remaining**. The **253 source-only records remain pending**, not completed entries. Worklist count remains815. Mapped covers remain470; 92 posterless previews use bounded live cards. Existing records outside the restored IDs, all Grok images/reports and main interface behavior are preserved. DOM/Canvas command tests are not native pixel, touch, typography or performance acceptance.
