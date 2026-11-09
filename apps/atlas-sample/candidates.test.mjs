@@ -8,7 +8,8 @@ const read=p=>readFile(new URL(p,import.meta.url),'utf8');
 test('source baseline is preserved; new families have previews or explicit reviewed source-only status',async()=>{
  const a=JSON.parse(await read('candidate-catalog.json')).map(adaptCandidate),b=JSON.parse(await read('items.json'));
  const baseline=JSON.parse(await read('candidate-baseline-ids.json'));assert.equal(baseline.length,185);assert(baseline.every(id=>a.some(x=>x.id===id)));assert(a.filter(x=>!baseline.includes(x.id)).every(x=>x.preview||(x.previewStatus==='source-only'&&x.sourceCollectionReady===true&&x.runtimeRedistributionAuditComplete===false&&x.completedPreviewCount===0&&/^[a-f0-9]{40}$/.test(x.revision)&&/^https:\/\/github\.com\//.test(x.licenseEvidence?.url||'')&&/^[a-f0-9]{64}$/.test(x.licenseEvidence?.sha256||''))));assert.equal(new Set([...a,...b].map(x=>x.id)).size,a.length+b.length);
- const categories=['Agent与对话','输入与选择','导航与组织','数据与状态','展示与媒体','产品与营销','视觉与动效','图标系列'];assert(a.every(x=>x.pending&&x.featured&&categories.includes(x.category)));
+ const categories=['Agent与对话','输入与选择','导航与组织','数据与状态','展示与媒体','产品与营销','视觉与动效','图标系列'];assert(a.every(x=>x.pending&&categories.includes(x.category)));
+ assert(a.filter(x=>x.preview).every(x=>x.featured));assert(a.filter(x=>!x.preview).every(x=>!x.featured));
  assert(a.filter(x=>x.format==='图标家族').every(x=>x.kind==='图标系列'));
  assert(a.filter(x=>x.batch==='batch-002').every(x=>!x.bundle));
 });
