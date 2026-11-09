@@ -1,0 +1,437 @@
+{
+  "repository": "https://github.com/CopilotKit/CopilotKit",
+  "revision": "c7815d9ac96f48fb3a64ad8c18e176a870c81763",
+  "sourcePath": "examples/showcases/a2ui-pdf-analyst/src/components/SurfaceCanvas.tsx",
+  "sourceHashes": {
+    "package.json": "695ba66070c3f429b00e8ea085c881e19575eaed58a501db3b023cc70c2ba805",
+    "LICENSE": "15a0e5343aea872c0573ad72feb6044b336f162d724cc1673c608e6b37ea071b",
+    "src/components/Split.tsx": "8609bb1d6a5e67de511fbd3e7f9d2c705875f812e67194262157562e85867cbd",
+    "src/components/SurfaceCanvas.tsx": "ea1fce099047c8abdd0fce82155dabf75bb7114e2fd169bc0c2dec18ccab2ce9",
+    "src/a2ui/theme.css": "727bbf384adb94735a15bd0278f3b6c041620f181a2afeb2eae1062d79e6e6f8",
+    "src/a2ui/surface-bus.ts": "9a3010426cb442d9127400cb3b75a1b25e98d0d0b6ebec4152fe2a1cf44c72af",
+    "src/app/globals.css": "f74728fa31a45d19bebfaf37ffc19627090c038a9423325899a22c1bb117f256",
+    "src/a2ui/catalog/renderers.tsx": "8b0e3bc1b7f09a12d9f03ef465fb3109e1fe8c72a9908ba4be66388696e65f38",
+    "src/a2ui/catalog/index.ts": "7c75e6c6153fb9fbe18ec7dd3300982ff1cc2167cf5390f1868e9d60c6d3a163",
+    "src/a2ui/catalog/definitions.ts": "22a1ef692126895596c5dcf0aaeac5fe0e2291b5b765e631d60b4e320cc4e906"
+  },
+  "runtimeDependencies": [
+    {
+      "name": "@a2ui/web_core",
+      "version": "0.9.0",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-a2ui-local/node_modules/@a2ui/web_core",
+      "license": "Apache-2.0",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "f9946796a8a5bd5981565142fa42e3b0cc36aef6f80e86beaf5905b3c0fef1b5"
+      }
+    },
+    {
+      "name": "@copilotkit/a2ui-renderer",
+      "version": "1.57.4",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-a2ui-local/node_modules/@copilotkit/a2ui-renderer",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "15a0e5343aea872c0573ad72feb6044b336f162d724cc1673c608e6b37ea071b"
+      }
+    },
+    {
+      "name": "@preact/signals-core",
+      "version": "1.14.5",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-a2ui-local/node_modules/@preact/signals-core",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "a11fc89e4c6b118854c7a667734a0b2e6bf2af5e45c6686de31adbccc8f3ae8d"
+      }
+    },
+    {
+      "name": "clsx",
+      "version": "2.1.1",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-a2ui-local/node_modules/clsx",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "license": "9a9edad7baae52622bddf3c15b2ef8a33d2c89f2d25408ad13e8a7481c6b0c97"
+      }
+    },
+    {
+      "name": "date-fns",
+      "version": "4.4.0",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-a2ui-local/node_modules/date-fns",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE.md": "8d3951c38967b964b1fe259bfd200c2647cc04c858b55a4414e3122a60f1ef4b"
+      }
+    },
+    {
+      "name": "react",
+      "version": "19.3.1",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-a2ui-local/node_modules/react",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+      }
+    },
+    {
+      "name": "react-dom",
+      "version": "19.3.1",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-a2ui-local/node_modules/react-dom",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+      }
+    },
+    {
+      "name": "scheduler",
+      "version": "0.28.0",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-a2ui-local/node_modules/scheduler",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+      }
+    },
+    {
+      "name": "zod",
+      "version": "3.25.76",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-a2ui-local/node_modules/zod",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "3f1189b28e3866e0d979968d466b78f813f76827cfdca1fbb124cc0a5c8841f8"
+      }
+    },
+    {
+      "name": "zod-to-json-schema",
+      "version": "3.25.2",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-a2ui-local/node_modules/zod-to-json-schema",
+      "license": "ISC",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "80d3168ad2f70f6f5bb2ab22b23414707abf6f0a392034891481ae36a1a429d4"
+      }
+    },
+    {
+      "name": "@reduxjs/toolkit",
+      "version": "2.14.0",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-astryx-batch-local/extra-deps/node_modules/@reduxjs/toolkit",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "49784961ec6c4941437b7a2c54d8977d0528076a9e7c73dd40f7d0942b8f106d"
+      }
+    },
+    {
+      "name": "clsx",
+      "version": "2.1.1",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-astryx-batch-local/extra-deps/node_modules/clsx",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "license": "9a9edad7baae52622bddf3c15b2ef8a33d2c89f2d25408ad13e8a7481c6b0c97"
+      }
+    },
+    {
+      "name": "d3-array",
+      "version": "3.2.5",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-astryx-batch-local/extra-deps/node_modules/d3-array",
+      "license": "ISC",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "2a6d2d5f32ba0b755ddbc1c833f766e30cdbe6ebe9a6d4e3e24427721f0b63d3"
+      }
+    },
+    {
+      "name": "d3-color",
+      "version": "3.1.1",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-astryx-batch-local/extra-deps/node_modules/d3-color",
+      "license": "ISC",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "2a6d2d5f32ba0b755ddbc1c833f766e30cdbe6ebe9a6d4e3e24427721f0b63d3"
+      }
+    },
+    {
+      "name": "d3-format",
+      "version": "3.1.3",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-astryx-batch-local/extra-deps/node_modules/d3-format",
+      "license": "ISC",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "2a6d2d5f32ba0b755ddbc1c833f766e30cdbe6ebe9a6d4e3e24427721f0b63d3"
+      }
+    },
+    {
+      "name": "d3-interpolate",
+      "version": "3.0.2",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-astryx-batch-local/extra-deps/node_modules/d3-interpolate",
+      "license": "ISC",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "2a6d2d5f32ba0b755ddbc1c833f766e30cdbe6ebe9a6d4e3e24427721f0b63d3"
+      }
+    },
+    {
+      "name": "d3-path",
+      "version": "3.1.1",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-astryx-batch-local/extra-deps/node_modules/d3-path",
+      "license": "ISC",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "f5dff44740d51a1849b4d16b657eccf60577fb5d28d8ee46d33dcc780a11f94a"
+      }
+    },
+    {
+      "name": "d3-scale",
+      "version": "4.0.3",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-astryx-batch-local/extra-deps/node_modules/d3-scale",
+      "license": "ISC",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "2a6d2d5f32ba0b755ddbc1c833f766e30cdbe6ebe9a6d4e3e24427721f0b63d3"
+      }
+    },
+    {
+      "name": "d3-shape",
+      "version": "3.2.1",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-astryx-batch-local/extra-deps/node_modules/d3-shape",
+      "license": "ISC",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "2a6d2d5f32ba0b755ddbc1c833f766e30cdbe6ebe9a6d4e3e24427721f0b63d3"
+      }
+    },
+    {
+      "name": "d3-time",
+      "version": "3.1.1",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-astryx-batch-local/extra-deps/node_modules/d3-time",
+      "license": "ISC",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "2a6d2d5f32ba0b755ddbc1c833f766e30cdbe6ebe9a6d4e3e24427721f0b63d3"
+      }
+    },
+    {
+      "name": "d3-time-format",
+      "version": "4.1.1",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-astryx-batch-local/extra-deps/node_modules/d3-time-format",
+      "license": "ISC",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "2a6d2d5f32ba0b755ddbc1c833f766e30cdbe6ebe9a6d4e3e24427721f0b63d3"
+      }
+    },
+    {
+      "name": "decimal.js-light",
+      "version": "2.5.1",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-astryx-batch-local/extra-deps/node_modules/decimal.js-light",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENCE.md": "fc0397fbd5c128bec7edef4e8d3f45e15db5fd043cdd0a2edfc4f14d47fbc3e4"
+      }
+    },
+    {
+      "name": "es-toolkit",
+      "version": "1.53.2",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-astryx-batch-local/extra-deps/node_modules/es-toolkit",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "NOTICE": "11ee5e3bce9b0a4dde7f73811caf98978e710228d891c3111ad8ef8d7d2a916f",
+        "LICENSE": "51f3674294d988d89dbebd31273baaeb3c697a15482d9699b14d1fded2e132a7"
+      }
+    },
+    {
+      "name": "eventemitter3",
+      "version": "5.0.4",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-astryx-batch-local/extra-deps/node_modules/eventemitter3",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "3aecc12b1cb28832b5f65ab64291de96568c3f236a74d646281b4491f7bcadbf"
+      }
+    },
+    {
+      "name": "immer",
+      "version": "11.2.9",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-astryx-batch-local/extra-deps/node_modules/immer",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "99cf22f6960a6fe228ec84ea9aefb0d75b27999ece83a3a9801e1c2081fa270b"
+      }
+    },
+    {
+      "name": "react-is",
+      "version": "19.2.0",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-astryx-batch-local/extra-deps/node_modules/react-is",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+      }
+    },
+    {
+      "name": "react-redux",
+      "version": "9.3.1",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-astryx-batch-local/extra-deps/node_modules/react-redux",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE.md": "f2da73c752c6b87624755edacf927cbd915fa76555d383e74494bad4a5155ab3"
+      }
+    },
+    {
+      "name": "recharts",
+      "version": "3.9.2",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-astryx-batch-local/extra-deps/node_modules/recharts",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "2d3aa48a8d1d3b93093680e8e68d3a64cfb590c3ade377ffcaefc69dac7c2ce5"
+      }
+    },
+    {
+      "name": "redux",
+      "version": "5.0.1",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-astryx-batch-local/extra-deps/node_modules/redux",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE.md": "f2da73c752c6b87624755edacf927cbd915fa76555d383e74494bad4a5155ab3"
+      }
+    },
+    {
+      "name": "redux-thunk",
+      "version": "3.1.0",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-astryx-batch-local/extra-deps/node_modules/redux-thunk",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE.md": "635da794c92d278f8355428be0f9922d643f556d4f75f33fe4aca6b98d27affe"
+      }
+    },
+    {
+      "name": "reselect",
+      "version": "5.2.0",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-astryx-batch-local/extra-deps/node_modules/reselect",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "e98047a5dee068b33f82e8c4b7a63037b5108c93393198efd4097753004af5dd"
+      }
+    },
+    {
+      "name": "tiny-invariant",
+      "version": "1.3.3",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-astryx-batch-local/extra-deps/node_modules/tiny-invariant",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "b1c501095de70182748cb8e8d97ac5577701a4ef3b755ba30d59fd87b24bdb0f"
+      }
+    },
+    {
+      "name": "use-sync-external-store",
+      "version": "1.7.0",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-astryx-batch-local/extra-deps/node_modules/use-sync-external-store",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+      }
+    },
+    {
+      "name": "victory-vendor",
+      "version": "37.4.1",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-astryx-batch-local/extra-deps/node_modules/victory-vendor",
+      "license": "MIT AND ISC AND BSD-3-Clause",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE.txt": "909af77588b84d9e557d26c4bd1a26a282aaba7123c4a839c75287c803166955"
+      }
+    }
+  ],
+  "compiledCSSLicense": {
+    "name": "tailwindcss",
+    "version": "4.3.0",
+    "sha256": "60e0b68c0f35c078eef3a5d29419d0b03ff84ec1df9c3f9d6e39a519a5ae7985"
+  },
+  "adaptation": "Original fixed CopilotKit PDF Analyst SurfaceCanvas, surface-bus, full custom definitions/catalog/renderers and scene styles retained, rendered through actual @copilotkit/a2ui-renderer1.57.4 A2UIProvider/A2UIRenderer and Google @a2ui/web_core0.9 MessageProcessor, not lookalike manually-rendered cards. Explicit host-authored local v0.9 fixture exercises Stack/Heading/Callout/ChoiceChips/StatCard/DataTable/Button with three document rows, dynamic Zod3 path bindings and real dispatched actions; it is not a complete PDF analyst/AI application or a claim every catalog chart was tested. No PDF upload/read, LLM, real document extraction, agent or network. Original useAgent/addMessage/runAgent wrapper replaced explicit onLocalAction callback; selecting original chips updates data model through real protocol messages, button records local action text. Original entire catalog renderer/definition files byte-identical. Original CanvasInner duplicate-create filtering retained; added actual A2uiMessageSchema validation before any bookkeeping and deferred created-id commit until after processing/getSurface check, failure rethrows to host failclosed. This is controlled fixture handling, not general arbitrary-batch rollback; malformed remote input not exposed. Added unmount unsubscribe/clearSurfaces/createdRefs cleanup; host surfaceBus reset on hide/exit and64action bounded reset prevent unbounded local replay. Original styles and a2ui/theme.css exact fixed source collected; omitted react-ui chat stylesheet because chat is not mounted, retained local scene/theme CSS, system fonts. Compatibility versions: fixed app declares React19.2.4/Recharts^3.8.1, emitted React19.3.1/Recharts3.9.2; A2UI1.57.4 and Zod3.25.76 match original protocol majors. Complete34 emitted package-path instances (including duplicate clsx path),fullMIT/ISC/Apache2/BSD text including all victory-vendor bundled licenses; no separately published NOTICE in web_core distribution. Actual570compose four modes and loader pass: initial3protocol ops,real ChoiceChips action+data binding3to1 table rows,Buttondispatch,10filter changes,duplicate create replay,reset,hidden oldnodes,earlymodule/lateerror; resource ledgers0 and blockedAPI calls0. Schema test uses actual runtime schema on invalid version/empty-components and source ordering checks, not a claimed full rollback test. Native browser chart/pixels/layout not verified; no images/native screenshots/shared repository changes.",
+  "nativeVisualVerified": false,
+  "loaderVerification": [
+    {
+      "slug": "surfaces",
+      "pass": true,
+      "utf16Bytes": 1773908,
+      "fetches": 3,
+      "actualCreatePreviewLoader570": true,
+      "cacheHit": true,
+      "released": true,
+      "iframeExecution": false
+    }
+  ],
+  "schemaVerification": {
+    "pass": true,
+    "scope": "Actual web_core0.9 Zod protocol schema rejects malformed version/empty component list;source ordering check validates before creation bookkeeping. Not a general transaction rollback or arbitrary remote operation API."
+  },
+  "tests": [
+    {
+      "mode": "normal",
+      "pass": true,
+      "actualCompose570": true,
+      "scope": "Actual A2UIProvider/MessageProcessor/catalog/GenericBinder/renderer;3message initial fixture,ChoiceChips action->real data model update3to1rows,Buttondispatch,repeated10filter changes,duplicatecreate dedupe,replay/reset,hidden/oldnode,earlymodule/lateerror;not native visual or PDF/AI",
+      "cleanup": {
+        "listeners": 0,
+        "timers": 0,
+        "raf": 0,
+        "observers": 0
+      },
+      "blockedCalls": 0
+    },
+    {
+      "mode": "early",
+      "pass": true,
+      "actualCompose570": true,
+      "scope": "Actual A2UIProvider/MessageProcessor/catalog/GenericBinder/renderer;3message initial fixture,ChoiceChips action->real data model update3to1rows,Buttondispatch,repeated10filter changes,duplicatecreate dedupe,replay/reset,hidden/oldnode,earlymodule/lateerror;not native visual or PDF/AI",
+      "cleanup": {
+        "listeners": 0,
+        "timers": 0,
+        "raf": 0,
+        "observers": 0
+      },
+      "blockedCalls": 0
+    },
+    {
+      "mode": "reduced",
+      "pass": true,
+      "actualCompose570": true,
+      "scope": "Actual A2UIProvider/MessageProcessor/catalog/GenericBinder/renderer;3message initial fixture,ChoiceChips action->real data model update3to1rows,Buttondispatch,repeated10filter changes,duplicatecreate dedupe,replay/reset,hidden/oldnode,earlymodule/lateerror;not native visual or PDF/AI",
+      "cleanup": {
+        "listeners": 0,
+        "timers": 0,
+        "raf": 0,
+        "observers": 0
+      },
+      "blockedCalls": 0
+    },
+    {
+      "mode": "failure",
+      "pass": true,
+      "actualCompose570": true,
+      "scope": "Actual A2UIProvider/MessageProcessor/catalog/GenericBinder/renderer;3message initial fixture,ChoiceChips action->real data model update3to1rows,Buttondispatch,repeated10filter changes,duplicatecreate dedupe,replay/reset,hidden/oldnode,earlymodule/lateerror;not native visual or PDF/AI",
+      "cleanup": {
+        "listeners": 0,
+        "timers": 0,
+        "raf": 0,
+        "observers": 0
+      },
+      "blockedCalls": 0
+    }
+  ]
+}
