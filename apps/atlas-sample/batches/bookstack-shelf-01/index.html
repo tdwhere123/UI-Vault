@@ -1,0 +1,366 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="runtime.css"></head><body><main id="content" class="card content-wrap"><h1>书架双列表编排</h1><p>原书架排序组件的本地虚构书目，不连接账户、不保存到服务器。可搜索、加入、移除和排序；不含封面、富文本编辑或标签管理。</p><div component="shelf-sort" class="grid half gap-xl">
+    <div class="form-group">
+        <label for="books" id="shelf-sort-books-label">书架中的书籍</label>
+        <input refs="shelf-sort@input" type="hidden" name="books"
+               value="1,2">
+        <div class="scroll-box-header-item flex-container-row items-center py-xs">
+            <span class="px-m py-xs">拖动调整顺序</span>
+            <div class="dropdown-container ml-auto" component="dropdown">
+                <button refs="dropdown@toggle"
+                        type="button"
+                        title="排序选项"
+                        class="icon-button px-xs py-xxs mx-xs text-bigger"
+                        aria-haspopup="true"
+                        aria-expanded="false">
+                    <svg class="svg-icon" aria-hidden="true" style="fill:none" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <circle cx="5" cy="12" r="1" />
+  <circle cx="12" cy="12" r="1" />
+  <circle cx="19" cy="12" r="1" />
+</svg>
+
+
+
+                </button>
+                <div refs="dropdown@menu shelf-sort@sort-button-container" class="dropdown-menu" role="menu">
+                    <button type="button" class="text-item"
+                            data-sort="name">按名称排序</button>
+                    <button type="button" class="text-item"
+                            data-sort="created">按创建时间排序</button>
+                    <button type="button" class="text-item"
+                            data-sort="updated">按更新时间排序</button>
+                </div>
+            </div>
+        </div>
+        <ul refs="shelf-sort@shelf-book-list"
+            aria-labelledby="shelf-sort-books-label"
+            class="scroll-box configured-option-list">
+            <li data-id="1"
+     data-name="证据记录"
+     data-created="1700000000"
+     data-updated="1701000000"
+     class="scroll-box-item">
+    <div class="handle px-s"><svg class="svg-icon" aria-hidden="true" style="fill:none" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-grip-vertical" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <circle cx="9" cy="5" r="1" />
+  <circle cx="9" cy="12" r="1" />
+  <circle cx="9" cy="19" r="1" />
+  <circle cx="15" cy="5" r="1" />
+  <circle cx="15" cy="12" r="1" />
+  <circle cx="15" cy="19" r="1" />
+</svg>
+
+
+</div>
+    <div class="text-book"><svg class="svg-icon" aria-hidden="true" style="fill:none" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-book" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
+  <path d="M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
+  <line x1="3" y1="6" x2="3" y2="19" />
+  <line x1="12" y1="6" x2="12" y2="19" />
+  <line x1="21" y1="6" x2="21" y2="19" />
+</svg>
+
+
+证据记录</div>
+    <div class="buttons flex-container-row items-center ml-auto px-xxs py-xs">
+        <button type="button" data-action="move_up" class="icon-button p-xxs"
+                title="上移"><svg class="svg-icon" aria-hidden="true" style="fill:none" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-up" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <polyline points="6 15 12 9 18 15" />
+</svg>
+
+
+</button>
+        <button type="button" data-action="move_down" class="icon-button p-xxs"
+                title="下移"><svg class="svg-icon" aria-hidden="true" style="fill:none" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-down" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <polyline points="6 9 12 15 18 9" />
+</svg>
+
+
+</button>
+        <button type="button" data-action="remove" class="icon-button p-xxs"
+                title="移除"><svg class="svg-icon" aria-hidden="true" style="fill:none" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-minus" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <line x1="5" y1="12" x2="19" y2="12" />
+</svg>
+
+
+</button>
+        <button type="button" data-action="add" class="icon-button p-xxs"
+                title="加入书架"><svg class="svg-icon" aria-hidden="true" style="fill:none" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-plus" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <line x1="12" y1="5" x2="12" y2="19" />
+  <line x1="5" y1="12" x2="19" y2="12" />
+</svg>
+
+
+</button>
+    </div>
+</li><li data-id="2"
+     data-name="设计原则"
+     data-created="1700001000"
+     data-updated="1700998000"
+     class="scroll-box-item">
+    <div class="handle px-s"><svg class="svg-icon" aria-hidden="true" style="fill:none" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-grip-vertical" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <circle cx="9" cy="5" r="1" />
+  <circle cx="9" cy="12" r="1" />
+  <circle cx="9" cy="19" r="1" />
+  <circle cx="15" cy="5" r="1" />
+  <circle cx="15" cy="12" r="1" />
+  <circle cx="15" cy="19" r="1" />
+</svg>
+
+
+</div>
+    <div class="text-book"><svg class="svg-icon" aria-hidden="true" style="fill:none" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-book" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
+  <path d="M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
+  <line x1="3" y1="6" x2="3" y2="19" />
+  <line x1="12" y1="6" x2="12" y2="19" />
+  <line x1="21" y1="6" x2="21" y2="19" />
+</svg>
+
+
+设计原则</div>
+    <div class="buttons flex-container-row items-center ml-auto px-xxs py-xs">
+        <button type="button" data-action="move_up" class="icon-button p-xxs"
+                title="上移"><svg class="svg-icon" aria-hidden="true" style="fill:none" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-up" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <polyline points="6 15 12 9 18 15" />
+</svg>
+
+
+</button>
+        <button type="button" data-action="move_down" class="icon-button p-xxs"
+                title="下移"><svg class="svg-icon" aria-hidden="true" style="fill:none" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-down" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <polyline points="6 9 12 15 18 9" />
+</svg>
+
+
+</button>
+        <button type="button" data-action="remove" class="icon-button p-xxs"
+                title="移除"><svg class="svg-icon" aria-hidden="true" style="fill:none" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-minus" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <line x1="5" y1="12" x2="19" y2="12" />
+</svg>
+
+
+</button>
+        <button type="button" data-action="add" class="icon-button p-xxs"
+                title="加入书架"><svg class="svg-icon" aria-hidden="true" style="fill:none" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-plus" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <line x1="12" y1="5" x2="12" y2="19" />
+  <line x1="5" y1="12" x2="19" y2="12" />
+</svg>
+
+
+</button>
+    </div>
+</li>
+        </ul>
+    </div>
+    <div class="form-group">
+        <label for="books" id="shelf-sort-all-books-label">可添加的书籍</label>
+        <input type="text" refs="shelf-sort@book-search" class="scroll-box-search"
+               placeholder="搜索书籍">
+        <ul refs="shelf-sort@all-book-list"
+            aria-labelledby="shelf-sort-all-books-label"
+            class="scroll-box available-option-list">
+            <li data-id="3"
+     data-name="每周复盘"
+     data-created="1700002000"
+     data-updated="1700996000"
+     class="scroll-box-item">
+    <div class="handle px-s"><svg class="svg-icon" aria-hidden="true" style="fill:none" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-grip-vertical" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <circle cx="9" cy="5" r="1" />
+  <circle cx="9" cy="12" r="1" />
+  <circle cx="9" cy="19" r="1" />
+  <circle cx="15" cy="5" r="1" />
+  <circle cx="15" cy="12" r="1" />
+  <circle cx="15" cy="19" r="1" />
+</svg>
+
+
+</div>
+    <div class="text-book"><svg class="svg-icon" aria-hidden="true" style="fill:none" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-book" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
+  <path d="M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
+  <line x1="3" y1="6" x2="3" y2="19" />
+  <line x1="12" y1="6" x2="12" y2="19" />
+  <line x1="21" y1="6" x2="21" y2="19" />
+</svg>
+
+
+每周复盘</div>
+    <div class="buttons flex-container-row items-center ml-auto px-xxs py-xs">
+        <button type="button" data-action="move_up" class="icon-button p-xxs"
+                title="上移"><svg class="svg-icon" aria-hidden="true" style="fill:none" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-up" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <polyline points="6 15 12 9 18 15" />
+</svg>
+
+
+</button>
+        <button type="button" data-action="move_down" class="icon-button p-xxs"
+                title="下移"><svg class="svg-icon" aria-hidden="true" style="fill:none" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-down" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <polyline points="6 9 12 15 18 9" />
+</svg>
+
+
+</button>
+        <button type="button" data-action="remove" class="icon-button p-xxs"
+                title="移除"><svg class="svg-icon" aria-hidden="true" style="fill:none" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-minus" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <line x1="5" y1="12" x2="19" y2="12" />
+</svg>
+
+
+</button>
+        <button type="button" data-action="add" class="icon-button p-xxs"
+                title="加入书架"><svg class="svg-icon" aria-hidden="true" style="fill:none" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-plus" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <line x1="12" y1="5" x2="12" y2="19" />
+  <line x1="5" y1="12" x2="19" y2="12" />
+</svg>
+
+
+</button>
+    </div>
+</li><li data-id="4"
+     data-name="研究方法"
+     data-created="1700003000"
+     data-updated="1700994000"
+     class="scroll-box-item">
+    <div class="handle px-s"><svg class="svg-icon" aria-hidden="true" style="fill:none" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-grip-vertical" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <circle cx="9" cy="5" r="1" />
+  <circle cx="9" cy="12" r="1" />
+  <circle cx="9" cy="19" r="1" />
+  <circle cx="15" cy="5" r="1" />
+  <circle cx="15" cy="12" r="1" />
+  <circle cx="15" cy="19" r="1" />
+</svg>
+
+
+</div>
+    <div class="text-book"><svg class="svg-icon" aria-hidden="true" style="fill:none" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-book" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
+  <path d="M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
+  <line x1="3" y1="6" x2="3" y2="19" />
+  <line x1="12" y1="6" x2="12" y2="19" />
+  <line x1="21" y1="6" x2="21" y2="19" />
+</svg>
+
+
+研究方法</div>
+    <div class="buttons flex-container-row items-center ml-auto px-xxs py-xs">
+        <button type="button" data-action="move_up" class="icon-button p-xxs"
+                title="上移"><svg class="svg-icon" aria-hidden="true" style="fill:none" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-up" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <polyline points="6 15 12 9 18 15" />
+</svg>
+
+
+</button>
+        <button type="button" data-action="move_down" class="icon-button p-xxs"
+                title="下移"><svg class="svg-icon" aria-hidden="true" style="fill:none" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-down" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <polyline points="6 9 12 15 18 9" />
+</svg>
+
+
+</button>
+        <button type="button" data-action="remove" class="icon-button p-xxs"
+                title="移除"><svg class="svg-icon" aria-hidden="true" style="fill:none" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-minus" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <line x1="5" y1="12" x2="19" y2="12" />
+</svg>
+
+
+</button>
+        <button type="button" data-action="add" class="icon-button p-xxs"
+                title="加入书架"><svg class="svg-icon" aria-hidden="true" style="fill:none" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-plus" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <line x1="12" y1="5" x2="12" y2="19" />
+  <line x1="5" y1="12" x2="19" y2="12" />
+</svg>
+
+
+</button>
+    </div>
+</li><li data-id="5"
+     data-name="项目日志"
+     data-created="1700004000"
+     data-updated="1700992000"
+     class="scroll-box-item">
+    <div class="handle px-s"><svg class="svg-icon" aria-hidden="true" style="fill:none" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-grip-vertical" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <circle cx="9" cy="5" r="1" />
+  <circle cx="9" cy="12" r="1" />
+  <circle cx="9" cy="19" r="1" />
+  <circle cx="15" cy="5" r="1" />
+  <circle cx="15" cy="12" r="1" />
+  <circle cx="15" cy="19" r="1" />
+</svg>
+
+
+</div>
+    <div class="text-book"><svg class="svg-icon" aria-hidden="true" style="fill:none" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-book" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
+  <path d="M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
+  <line x1="3" y1="6" x2="3" y2="19" />
+  <line x1="12" y1="6" x2="12" y2="19" />
+  <line x1="21" y1="6" x2="21" y2="19" />
+</svg>
+
+
+项目日志</div>
+    <div class="buttons flex-container-row items-center ml-auto px-xxs py-xs">
+        <button type="button" data-action="move_up" class="icon-button p-xxs"
+                title="上移"><svg class="svg-icon" aria-hidden="true" style="fill:none" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-up" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <polyline points="6 15 12 9 18 15" />
+</svg>
+
+
+</button>
+        <button type="button" data-action="move_down" class="icon-button p-xxs"
+                title="下移"><svg class="svg-icon" aria-hidden="true" style="fill:none" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-down" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <polyline points="6 9 12 15 18 9" />
+</svg>
+
+
+</button>
+        <button type="button" data-action="remove" class="icon-button p-xxs"
+                title="移除"><svg class="svg-icon" aria-hidden="true" style="fill:none" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-minus" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <line x1="5" y1="12" x2="19" y2="12" />
+</svg>
+
+
+</button>
+        <button type="button" data-action="add" class="icon-button p-xxs"
+                title="加入书架"><svg class="svg-icon" aria-hidden="true" style="fill:none" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-plus" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <line x1="12" y1="5" x2="12" y2="19" />
+  <line x1="5" y1="12" x2="19" y2="12" />
+</svg>
+
+
+</button>
+    </div>
+</li>
+        </ul>
+    </div>
+</div></main><script src="runtime.js"></script></body></html>
