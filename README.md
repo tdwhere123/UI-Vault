@@ -2,7 +2,7 @@
 
 网站：<https://tdwhere123.github.io/UI-Vault/>
 
-当前共收录 **762 条**：其中 **526 条可打开预览（241 条原始素材＋285 条后续接入预览）**，另有 **236 条仅来源记录**，不计入主图鉴预览数。原始 241 件包括 215 件精选界面、20 件保留基础素材、6 套图标系列。正在向 1000 件优质素材扩充；图标按系列单列，字重、尺寸和单枚 glyph 不凑数。已有图标重叠暂留待统一整理。
+当前共收录 **780 条**：其中 **527 条可打开预览（241 条原始素材＋286 条后续接入预览）**，另有 **253 条仅来源记录**，不计入主图鉴预览数。原始 241 件包括 215 件精选界面、20 件保留基础素材、6 套图标系列。正在向 1000 件优质素材扩充；图标按系列单列，字重、尺寸和单枚 glyph 不凑数。已有图标重叠暂留待统一整理。
 
 ## 当前内容
 
@@ -388,3 +388,11 @@ Only glass/flat are included. Optional LiquidMetal/PaperShaders/WebGL caustics a
 Added **19 source-only families**: paper disclosures, hand-drawn forms/charts, marginal-note essays, retro console and early-web styles; explanatory reading, feedback systems, cooperation stories, flow fields, interactive video and Bayesian stories; low-poly modeling, visual site building, block programming, and three differentiated restaurant/agency/industrial landing pages; one Font Awesome Free icon series. Retro branded/font/GIF material is explicitly not cleared, and source references are not published runtime/media packages. Font Awesome SVG icons use CC-BY-4.0, fonts OFL and non-icon code MIT, not blanket MIT; no Pro or brand assets are included.
 
 Current totals: **762 collected = 526 previews + 236 source-only records**. Mapped covers remain 470 and 56 previews use bounded posterless live cards. All existing entries except the restored Fluidkit source, all Grok covers/reports and the main UI remain preserved.
+
+## Paper disclosures and diverse sources · 527 previews / 780 collected
+
+Restored existing PaperCSS four-part collapsible reading example with its original HTML/text and checked-selector geometry, not a redrawn hand-drawn substitute. Keyboard and ARIA synchronization, unique IDs for two independent examples and collapse-all controls are explicit local enhancements. Hidden views retain their DOM and checked states. Plop is a sequential progress timeline; this is multi-section reading disclosure, not another color variant. Full PaperCSS ISC and embedded normalize.css 7.0.0 MIT are retained. Google font import is removed in favor of the original fallback; no runtime JS package, network, screenshot or permission expansion is involved. DOM interaction/failure/cleanup tests do not constitute CSS transition/typography pixels or complete native accessibility acceptance.
+
+Added **18 source-only families**, including layered forest and SVG drawing scenes, fluid cursor and scroll compositions; topic-centric collaboration, meeting stages and cartographic styling; three visually distinct ink, contour and sculptural brand pages; and one Twemoji art family. The other six sources cover nonlinear story authoring, shared spatial scenes, a material sandbox, linked-note graphs, palette construction and stroke-order practice, with exact limitations retained per record. Whole scenes and icon series are counted once, never each glyph, skin tone, layout or state. Twemoji artwork uses complete CC-BY-4.0, code MIT; original artwork attribution is required. Root licenses do not clear images, fonts, GSAP/plugins, models, data services, permissions or backend behavior.
+
+Current totals: **780 collected = 527 previews + 253 source-only records**. Mapped covers remain 470, with 57 posterless previews on the existing bounded live-card path. Existing entries except the restored PaperCSS record, all Grok covers/reports and the main UI remain unchanged.
