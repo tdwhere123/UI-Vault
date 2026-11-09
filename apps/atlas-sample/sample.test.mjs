@@ -69,3 +69,7 @@ test('slim catalog records can be searched without detail-only metadata',()=>{
  assert.equal(filterItems(slim,{query:'absent'}).length,0);
  assert.equal(filterItems(slim,{category:'输入与选择',query:'Paper'}).length,0);
 });
+
+import {parsePageJump} from './atlas-model.mjs';
+test('page jump accepts only valid in-range whole page numbers',()=>{for(const v of ['1','44',' 12 ','0012'])assert.equal(parsePageJump(v,44),Number(v));for(const v of ['', ' ', '0','-1','45','1.5','1e1','Infinity','NaN','abc','9007199254740992'])assert.equal(parsePageJump(v,44),null);assert.equal(parsePageJump('2',1),null)});
+test('jumped pages keep active filters and clamp when the result set shrinks',()=>{const all=Array.from({length:521},(_,i)=>({id:i,source:i%2?'a':'b'}));const selected=filterItems(all,{source:'a'});const last=paginateItems(selected,parsePageJump('22',22));assert.equal(last.page,22);assert.equal(last.items[0].id,505);assert.equal(paginateItems(selected.slice(0,3),22).page,1);assert.equal(paginateItems([],44).page,1)});
