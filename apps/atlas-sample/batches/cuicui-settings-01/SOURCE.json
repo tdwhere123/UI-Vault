@@ -1,0 +1,1145 @@
+{
+  "repository": "https://github.com/damien-schneider/cuicui",
+  "revision": "c7db00f2e98753c277f1aec6e316520038f4e0a0",
+  "upstreamLicense": "MIT",
+  "distributionLicense": "MIT; ISC",
+  "inspiration": {
+    "name": "UI Labs",
+    "url": "https://www.uilabs.dev/",
+    "evidence": "upstream/component.ts"
+  },
+  "upstream": [
+    {
+      "path": "upstream/cn.ts",
+      "sha256": "4acbc7165a8d54738ff62b51414e772c08fe78434e524e6d8770180d3ba2925f",
+      "text": "import { type ClassValue, clsx } from \"clsx\";\nimport { twMerge } from \"tailwind-merge\";\n\nexport function cn(...inputs: ClassValue[]) {\n  return twMerge(clsx(inputs));\n}\n"
+    },
+    {
+      "path": "upstream/component.ts",
+      "sha256": "b2def6ef1d27e53cded2bc70aa39618a0b3a3bae9693cd4eafa4a72582cfefb0",
+      "text": "import type { ComponentMetaType } from \"@/lib/types/component\";\n\nexport const Component: ComponentMetaType = {\n  sizePreview: \"sm\",\n  name: \"Dynamic Settings\",\n  description: \"Settings with lots of micro-interactions and animations.\",\n  componentBadges: [\"updated\"],\n  inspiration: \"UI Labs\",\n  inspirationLink: \"https://www.uilabs.dev/\",\n};\n\nexport default Component;\n"
+    },
+    {
+      "path": "upstream/default.variant.tsx",
+      "sha256": "d733fb92dc2f4f01fea565ddd419f6069fc817e05eee6c8cd6d0b5aa0e99dc40",
+      "text": "\"use client\";\nimport { AnimatePresence, motion } from \"motion/react\";\n\nimport { PlusIcon, SquareIcon } from \"lucide-react\";\nimport { useState } from \"react\";\nimport { toast } from \"sonner\";\nimport { cn } from \"@/cuicui/utils/cn\";\n\n//TODO : Improve by refactoring the different sections into their own components\n//TODO : Improve by adding a dark version\n//TODO : Add dimensions section with sliders\n\nconst menuCategories = [\n  { label: \"Dimensions\", slug: \"dimensions\", menuWidth: 320, menuHeight: 240 },\n  {\n    label: \"Aspect Ratio\",\n    slug: \"aspect-ratio\",\n    menuWidth: 320,\n    menuHeight: 188,\n  },\n  { label: \"Prompt\", slug: \"prompt\", menuWidth: 320, menuHeight: 240 },\n] as const;\n\nexport default function DynamicSettingsVariant1() {\n  const [isOpen, setIsOpen] = useState(false);\n  const [subMenuSelected, setSubMenuSelected] = useState(\"dimensions\");\n  const handleOpenSettings = () => {\n    setIsOpen(!isOpen);\n  };\n  return (\n    <motion.div\n      animate={{\n        height: isOpen\n          ? menuCategories.find((item) => item.slug === subMenuSelected)\n              ?.menuHeight\n          : 52,\n        width: isOpen\n          ? menuCategories.find((item) => item.slug === subMenuSelected)\n              ?.menuWidth\n          : 132,\n      }}\n      className={cn(\n        \"items-center justify-between overflow-hidden rounded-2xl bg-neutral-900 p-2 text-neutral-50 shadow-lg\",\n        !isOpen && \"hover:bg-neutral-800\",\n      )}\n      transition={{\n        type: \"spring\",\n        duration: 0.6,\n        // damping: 8,\n        // stiffness: 120,\n      }}\n    >\n      <div className=\"h-full\">\n        <div\n          className={cn(\n            \"flex h-full transform-gpu flex-col justify-between gap-2 transition-all duration-300\",\n          )}\n        >\n          <div\n            className={cn(\n              \"group flex transform-gpu items-center justify-between gap-2 transition-all duration-300\",\n            )}\n          >\n            {isOpen ? (\n              <NavigationMenu\n                setSubMenuSelected={setSubMenuSelected}\n                subMenuSelected={subMenuSelected}\n              />\n            ) : (\n              <button\n                className={cn(\n                  \"flex transform-gpu gap-2 text-nowrap p-2 font-medium text-neutral-500 text-sm transition-all group-hover:text-neutral-50\",\n                )}\n                onClick={() => setIsOpen(true)}\n                type=\"button\"\n              >\n                Add Style\n              </button>\n            )}\n            <button\n              className=\"size-8 transform-gpu text-neutral-400 transition-colors duration-500 hover:text-neutral-300\"\n              onClick={() => handleOpenSettings()}\n              type=\"button\"\n            >\n              <PlusIcon\n                className={cn(\n                  \" transform-gpu transition-transform duration-300\",\n                  isOpen ? \"rotate-45\" : \"rotate-0\",\n                )}\n              />\n            </button>\n          </div>\n          {isOpen && subMenuSelected === \"aspect-ratio\" && (\n            <motion.div\n              animate={{ opacity: 1, filter: \"blur(0px)\" }}\n              className=\"flex flex-col justify-between gap-4\"\n              initial={{ opacity: 0, filter: \"blur(4px)\" }}\n              transition={{ duration: 1.2, type: \"spring\" }}\n            >\n              <AspectRatioSection />\n              <div className=\"flex justify-between\">\n                <div className=\"ml-2 flex items-center gap-2\">\n                  <div className=\"size-2 rounded-full bg-yellow-200\" />\n                  <p className=\"text-neutral-500 text-sm\">Changes</p>\n                </div>\n                <button\n                  className=\"rounded-lg bg-yellow-200 px-2 py-1 font-medium text-neutral-800\"\n                  onClick={() => {\n                    handleOpenSettings();\n                    toast.message(\"Changes done\", {\n                      description: \"Changes validated and applied successfully\",\n                    });\n                  }}\n                  type=\"submit\"\n                >\n                  Apply Changes\n                </button>\n              </div>\n            </motion.div>\n          )}\n          {isOpen && subMenuSelected === \"prompt\" && (\n            <motion.div\n              animate={{ opacity: 1, filter: \"blur(0px)\" }}\n              className=\"flex h-full flex-col justify-between gap-4\"\n              initial={{ opacity: 0, filter: \"blur(4px)\" }}\n              transition={{ duration: 1.2, type: \"spring\" }}\n            >\n              <textarea\n                className=\"h-[120px] w-full resize-none rounded-[6px] bg-transparent px-2 py-[6px] text-sm text-white placeholder:text-white/30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-yellow-200 focus-visible:outline-offset-2\"\n                placeholder=\"Add a new prompt\"\n              />\n              <div className=\"flex justify-between\">\n                <div className=\"ml-2 flex items-center gap-2\">\n                  <div className=\"size-2 rounded-full bg-yellow-200\" />\n                  <p className=\"text-neutral-500 text-sm\">Changes</p>\n                </div>\n                <button\n                  className=\"rounded-lg bg-yellow-200 px-2 py-1 font-medium text-neutral-800\"\n                  onClick={() => {\n                    handleOpenSettings();\n                    toast.message(\"Changes done\", {\n                      description: \"Changes validated and applied successfully\",\n                    });\n                  }}\n                  type=\"submit\"\n                >\n                  Apply Changes\n                </button>\n              </div>\n            </motion.div>\n          )}\n          {isOpen && subMenuSelected === \"dimensions\" && (\n            <motion.div\n              animate={{ opacity: 1, filter: \"blur(0px)\" }}\n              className=\"flex flex-col justify-between gap-4\"\n              initial={{ opacity: 0, filter: \"blur(4px)\" }}\n              transition={{ duration: 1.2, type: \"spring\" }}\n            >\n              <div className=\"flex justify-between\">\n                <div className=\"ml-2 flex items-center gap-2\">\n                  <div className=\"size-2 rounded-full bg-yellow-200\" />\n                  <p className=\"text-neutral-500 text-sm\">Changes</p>\n                </div>\n                <button\n                  className=\"rounded-lg bg-yellow-200 px-2 py-1 font-medium text-neutral-800\"\n                  onClick={() => {\n                    handleOpenSettings();\n                    toast.message(\"Changes done\", {\n                      description: \"Changes validated and applied successfully\",\n                    });\n                  }}\n                  type=\"submit\"\n                >\n                  Apply Changes\n                </button>\n              </div>\n            </motion.div>\n          )}\n        </div>\n      </div>\n    </motion.div>\n  );\n}\n\nconst aspectRatioList = [\n  { label: \"1:1\", icon: SquareIcon },\n  { label: \"16:9\", icon: SquareIcon },\n  { label: \"21:9\", icon: SquareIcon },\n  { label: \"3:4\", icon: SquareIcon },\n  { label: \"4:3\", icon: SquareIcon },\n  { label: \"Custom\", icon: SquareIcon },\n];\n\nfunction AspectRatioSection() {\n  const [selected, setSelected] = useState<number>(0);\n  return (\n    <div className=\"flex flex-wrap gap-2\">\n      {aspectRatioList.map((item, index) => (\n        <button\n          className={cn(\n            \"inline-flex w-fit transform-gpu items-center gap-2 rounded-md px-3 py-2 transition-colors duration-300\",\n            index === selected\n              ? \"bg-yellow-200/10 text-yellow-200\"\n              : \"text-neutral-500 hover:text-yellow-200\",\n          )}\n          key={item.label}\n          onClick={() => setSelected(index)}\n          type=\"button\"\n        >\n          <item.icon className=\"size-5 stroke-yellow-200\" />\n          {item.label}\n        </button>\n      ))}\n    </div>\n  );\n}\n// function SliderRow() {\n//   return (\n//     <div className=\"flex items-center gap-2\">\n//       <div className=\"rounded-full size-2 bg-yellow-200\" />\n//       <p className=\"text-sm text-neutral-500\">Changes</p>\n//     </div>\n//   );\n// }\n\nfunction NavigationMenu({\n  setSubMenuSelected,\n  subMenuSelected,\n}: Readonly<{\n  setSubMenuSelected: (slug: string) => void;\n  subMenuSelected: string;\n}>) {\n  return (\n    <nav className=\"flex flex-row\">\n      {menuCategories.map((button, _index) => (\n        <button\n          className={cn(\n            \"relative inline-flex w-fit transform-gpu whitespace-nowrap rounded-md px-2 py-1 font-medium text-neutral-500 text-sm transition-colors duration-300 hover:text-neutral-50\",\n            subMenuSelected === button.slug && \"text-neutral-200\",\n          )}\n          key={button.label}\n          onClick={() => setSubMenuSelected(button.slug)}\n          type=\"button\"\n        >\n          <p className=\"z-20\">{button.label}</p>\n          <AnimatePresence>\n            {subMenuSelected === button.slug && (\n              <motion.div\n                animate={{ opacity: 1, scale: 1 }}\n                className=\"absolute top-0 right-0 bottom-0 left-0 z-10 rounded-md bg-neutral-700 dark:bg-neutral-800\"\n                exit={{ opacity: 0, scale: 0.9 }}\n                initial={{ opacity: 0, scale: 0.95 }}\n                layout={true}\n                layoutId=\"focused-element\"\n                transition={{ duration: 0.3, ease: \"easeInOut\" }}\n              />\n            )}\n          </AnimatePresence>\n        </button>\n      ))}\n    </nav>\n  );\n}\n"
+    },
+    {
+      "path": "upstream/license.md",
+      "sha256": "54ac0d8156b307d40d64781894b929300529c6d30db28e2368448dbdb15db6b0",
+      "text": "MIT License\n\nCopyright (c) 2024 Damien Schneider\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n"
+    }
+  ],
+  "adaptation": [
+    {
+      "path": "src/cn.ts",
+      "sha256": "4acbc7165a8d54738ff62b51414e772c08fe78434e524e6d8770180d3ba2925f",
+      "text": "import { type ClassValue, clsx } from \"clsx\";\nimport { twMerge } from \"tailwind-merge\";\n\nexport function cn(...inputs: ClassValue[]) {\n  return twMerge(clsx(inputs));\n}\n"
+    },
+    {
+      "path": "src/main.tsx",
+      "sha256": "cc556fed1f2f2080b7f81479dace8232461db8bb99b633a817a0649a6e35331b",
+      "text": "import React,{Component}from'react';import{createRoot}from'react-dom/client';import{flushSync}from'react-dom';import{Toaster,toast}from'sonner';import{MotionConfig}from'motion/react';import Settings from'./settings';\ndeclare const registerCleanup:(fn:()=>void)=>void;declare const fatal:(e:unknown)=>void;declare const pauseTasks:()=>void;declare const resumeTasks:()=>void;\nclass Boundary extends Component<React.PropsWithChildren,{failed:boolean}>{state={failed:false};static getDerivedStateFromError(){return{failed:true}}componentDidCatch(e:unknown){fatal(e)}render(){return this.state.failed?null:this.props.children}}\nlet root:ReturnType<typeof createRoot>|undefined;let disposed=false;\nfunction visible(){if(disposed)return;try{if(!document.hidden)resumeTasks();else toast.dismiss(\"settings-demo\");flushSync(()=>root?.render(document.hidden?null:<Boundary><MotionConfig reducedMotion=\"user\"><section className=\"shell\"><p className=\"notice\">本地交互演示，不保存或应用真实设置。Dimensions为原作者未实现区；Apply仅显示回执并收起。</p><div className=\"stage\"><Settings/></div><p className=\"credit\">Cuicui · Inspiration: UI Labs (uilabs.dev)</p></section><Toaster position=\"bottom-center\"/></MotionConfig></Boundary>));document.documentElement.toggleAttribute('data-hidden',document.hidden);if(document.hidden)pauseTasks()}catch(e){fatal(e)}}\nregisterCleanup(()=>{if(disposed)return;disposed=true;document.removeEventListener('visibilitychange',visible);toast.dismiss(\"settings-demo\");queueMicrotask(()=>{try{root?.unmount()}catch{}root=undefined})});\ntry{root=createRoot(document.getElementById('root')!,{onUncaughtError:fatal,onCaughtError:fatal});document.addEventListener('visibilitychange',visible);visible()}catch(e){fatal(e)}\n"
+    },
+    {
+      "path": "src/settings.tsx",
+      "sha256": "b16100248b6e30e9ba0426942fade27fa691810e1e3268ffce052d10aa33f721",
+      "text": "\"use client\";\nimport { AnimatePresence, motion, useReducedMotion } from \"motion/react\";\n\nimport { PlusIcon, SquareIcon } from \"lucide-react\";\nimport { useState } from \"react\";\nimport { toast } from \"sonner\";\nimport { cn } from \"./cn\";\n\n//TODO : Improve by refactoring the different sections into their own components\n//TODO : Improve by adding a dark version\n//TODO : Add dimensions section with sliders\n\nconst menuCategories = [\n  { label: \"Dimensions\", slug: \"dimensions\", menuWidth: 320, menuHeight: 240 },\n  {\n    label: \"Aspect Ratio\",\n    slug: \"aspect-ratio\",\n    menuWidth: 320,\n    menuHeight: 188,\n  },\n  { label: \"Prompt\", slug: \"prompt\", menuWidth: 320, menuHeight: 240 },\n] as const;\n\nexport default function DynamicSettingsVariant1() {\n  const reduce = useReducedMotion();\n  const [isOpen, setIsOpen] = useState(false);\n  const [subMenuSelected, setSubMenuSelected] = useState(\"dimensions\");\n  const handleOpenSettings = () => {\n    setIsOpen(!isOpen);\n  };\n  return (\n    <motion.div\n      animate={{\n        height: isOpen\n          ? menuCategories.find((item) => item.slug === subMenuSelected)\n              ?.menuHeight\n          : 52,\n        width: isOpen\n          ? menuCategories.find((item) => item.slug === subMenuSelected)\n              ?.menuWidth\n          : 132,\n      }}\n      className={cn(\n        \"items-center justify-between overflow-hidden rounded-2xl bg-neutral-900 p-2 text-neutral-50 shadow-lg\",\n        !isOpen && \"hover:bg-neutral-800\",\n      )}\n      transition={reduce ? {duration:0} : {\n        type: \"spring\",\n        duration: 0.6,\n        // damping: 8,\n        // stiffness: 120,\n      }}\n    >\n      <div className=\"h-full\">\n        <div\n          className={cn(\n            \"flex h-full transform-gpu flex-col justify-between gap-2 transition-all duration-300\",\n          )}\n        >\n          <div\n            className={cn(\n              \"group flex transform-gpu items-center justify-between gap-2 transition-all duration-300\",\n            )}\n          >\n            {isOpen ? (\n              <NavigationMenu\n                setSubMenuSelected={setSubMenuSelected}\n                subMenuSelected={subMenuSelected}\n              />\n            ) : (\n              <button\n                className={cn(\n                  \"flex transform-gpu gap-2 text-nowrap p-2 font-medium text-neutral-500 text-sm transition-all group-hover:text-neutral-50\",\n                )}\n                onClick={() => setIsOpen(true)}\n                type=\"button\"\n              >\n                Add Style\n              </button>\n            )}\n            <button\n              aria-label={isOpen ? \"Close settings\" : \"Open settings\"}\n              className=\"size-8 transform-gpu text-neutral-400 transition-colors duration-500 hover:text-neutral-300\"\n              onClick={() => handleOpenSettings()}\n              type=\"button\"\n            >\n              <PlusIcon\n                className={cn(\n                  \" transform-gpu transition-transform duration-300\",\n                  isOpen ? \"rotate-45\" : \"rotate-0\",\n                )}\n              />\n            </button>\n          </div>\n          {isOpen && subMenuSelected === \"aspect-ratio\" && (\n            <motion.div\n              animate={{ opacity: 1, filter: \"blur(0px)\" }}\n              className=\"flex flex-col justify-between gap-4\"\n              initial={{ opacity: 0, filter: \"blur(4px)\" }}\n              transition={reduce ? {duration:0} : { duration: 1.2, type: \"spring\" }}\n            >\n              <AspectRatioSection />\n              <div className=\"flex justify-between\">\n                <div className=\"ml-2 flex items-center gap-2\">\n                  <div className=\"size-2 rounded-full bg-yellow-200\" />\n                  <p className=\"text-neutral-500 text-sm\">Changes</p>\n                </div>\n                <button\n                  className=\"rounded-lg bg-yellow-200 px-2 py-1 font-medium text-neutral-800\"\n                  onClick={() => {\n                    handleOpenSettings();\n                    toast.message(\"本地演示回执\", { id: \"settings-demo\",\n                      description: \"仅演示，未应用或保存设置\",\n                    });\n                  }}\n                  type=\"button\"\n                >\n                  Apply Changes\n                </button>\n              </div>\n            </motion.div>\n          )}\n          {isOpen && subMenuSelected === \"prompt\" && (\n            <motion.div\n              animate={{ opacity: 1, filter: \"blur(0px)\" }}\n              className=\"flex h-full flex-col justify-between gap-4\"\n              initial={{ opacity: 0, filter: \"blur(4px)\" }}\n              transition={reduce ? {duration:0} : { duration: 1.2, type: \"spring\" }}\n            >\n              <textarea\n                className=\"h-[120px] w-full resize-none rounded-[6px] bg-transparent px-2 py-[6px] text-sm text-white placeholder:text-white/30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-yellow-200 focus-visible:outline-offset-2\"\n                aria-label=\"Prompt\" placeholder=\"Add a new prompt\"\n              />\n              <div className=\"flex justify-between\">\n                <div className=\"ml-2 flex items-center gap-2\">\n                  <div className=\"size-2 rounded-full bg-yellow-200\" />\n                  <p className=\"text-neutral-500 text-sm\">Changes</p>\n                </div>\n                <button\n                  className=\"rounded-lg bg-yellow-200 px-2 py-1 font-medium text-neutral-800\"\n                  onClick={() => {\n                    handleOpenSettings();\n                    toast.message(\"本地演示回执\", { id: \"settings-demo\",\n                      description: \"仅演示，未应用或保存设置\",\n                    });\n                  }}\n                  type=\"button\"\n                >\n                  Apply Changes\n                </button>\n              </div>\n            </motion.div>\n          )}\n          {isOpen && subMenuSelected === \"dimensions\" && (\n            <motion.div\n              animate={{ opacity: 1, filter: \"blur(0px)\" }}\n              className=\"flex flex-col justify-between gap-4\"\n              initial={{ opacity: 0, filter: \"blur(4px)\" }}\n              transition={reduce ? {duration:0} : { duration: 1.2, type: \"spring\" }}\n            >\n              <div className=\"flex justify-between\">\n                <div className=\"ml-2 flex items-center gap-2\">\n                  <div className=\"size-2 rounded-full bg-yellow-200\" />\n                  <p className=\"text-neutral-500 text-sm\">Changes</p>\n                </div>\n                <button\n                  className=\"rounded-lg bg-yellow-200 px-2 py-1 font-medium text-neutral-800\"\n                  onClick={() => {\n                    handleOpenSettings();\n                    toast.message(\"本地演示回执\", { id: \"settings-demo\",\n                      description: \"仅演示，未应用或保存设置\",\n                    });\n                  }}\n                  type=\"button\"\n                >\n                  Apply Changes\n                </button>\n              </div>\n            </motion.div>\n          )}\n        </div>\n      </div>\n    </motion.div>\n  );\n}\n\nconst aspectRatioList = [\n  { label: \"1:1\", icon: SquareIcon },\n  { label: \"16:9\", icon: SquareIcon },\n  { label: \"21:9\", icon: SquareIcon },\n  { label: \"3:4\", icon: SquareIcon },\n  { label: \"4:3\", icon: SquareIcon },\n  { label: \"Custom\", icon: SquareIcon },\n];\n\nfunction AspectRatioSection() {\n  const [selected, setSelected] = useState<number>(0);\n  return (\n    <div className=\"flex flex-wrap gap-2\">\n      {aspectRatioList.map((item, index) => (\n        <button\n          className={cn(\n            \"inline-flex w-fit transform-gpu items-center gap-2 rounded-md px-3 py-2 transition-colors duration-300\",\n            index === selected\n              ? \"bg-yellow-200/10 text-yellow-200\"\n              : \"text-neutral-500 hover:text-yellow-200\",\n          )}\n          aria-pressed={index === selected}\n          key={item.label}\n          onClick={() => setSelected(index)}\n          type=\"button\"\n        >\n          <item.icon className=\"size-5 stroke-yellow-200\" />\n          {item.label}\n        </button>\n      ))}\n    </div>\n  );\n}\n// function SliderRow() {\n//   return (\n//     <div className=\"flex items-center gap-2\">\n//       <div className=\"rounded-full size-2 bg-yellow-200\" />\n//       <p className=\"text-sm text-neutral-500\">Changes</p>\n//     </div>\n//   );\n// }\n\nfunction NavigationMenu({\n  setSubMenuSelected,\n  subMenuSelected,\n}: Readonly<{\n  setSubMenuSelected: (slug: string) => void;\n  subMenuSelected: string;\n}>) {\n  const reduce = useReducedMotion();\n  return (\n    <nav className=\"flex flex-row\">\n      {menuCategories.map((button, _index) => (\n        <button\n          className={cn(\n            \"relative inline-flex w-fit transform-gpu whitespace-nowrap rounded-md px-2 py-1 font-medium text-neutral-500 text-sm transition-colors duration-300 hover:text-neutral-50\",\n            subMenuSelected === button.slug && \"text-neutral-200\",\n          )}\n          aria-pressed={subMenuSelected === button.slug}\n          key={button.label}\n          onClick={() => setSubMenuSelected(button.slug)}\n          type=\"button\"\n        >\n          <p className=\"z-20\">{button.label}</p>\n          <AnimatePresence>\n            {subMenuSelected === button.slug && (\n              <motion.div\n                animate={{ opacity: 1, scale: 1 }}\n                className=\"absolute top-0 right-0 bottom-0 left-0 z-10 rounded-md bg-neutral-700 dark:bg-neutral-800\"\n                exit={{ opacity: 0, scale: 0.9 }}\n                initial={{ opacity: 0, scale: 0.95 }}\n                layout={true}\n                layoutId=\"focused-element\"\n                transition={reduce ? {duration:0} : { duration: 0.3, ease: \"easeInOut\" }}\n              />\n            )}\n          </AnimatePresence>\n        </button>\n      ))}\n    </nav>\n  );\n}\n"
+    },
+    {
+      "path": "bootstrap.js",
+      "sha256": "ce61b244a014851815e670da55664d7d0588157724d54774257c5378effb32df",
+      "text": "(function(){\nlet stopped=false,failed=false,teardown=()=>{},own=[];const timers=new Map(),frames=new Map(),intervals=new Map();let serial=1,paused=document.hidden;\nconst proto=EventTarget.prototype,add=proto.addEventListener,remove=proto.removeEventListener;\nconst set=window.setTimeout.bind(window),clear=window.clearTimeout.bind(window),raf=window.requestAnimationFrame.bind(window),caf=window.cancelAnimationFrame.bind(window);\nconst mediaRestore=new Set(),observers=new Set(),originalObservers={};const originalMatchMedia=window.matchMedia;\nconst nativeInterval=window.setInterval,nativeClearInterval=window.clearInterval;\nconst basePointer=document.body.style.pointerEvents,baseOverflow=document.body.style.overflow;\nfunction registerCleanup(fn){teardown=fn}\nfunction trackedAdd(type,fn,options){if(!fn)return add.call(this,type,fn,options);const capture=typeof options==='boolean'?options:!!options?.capture;if(!own.some(x=>x.target===this&&x.type===type&&x.fn===fn&&x.capture===capture))own.push({target:this,type,fn,options,capture});return add.call(this,type,fn,options)}\nfunction trackedRemove(type,fn,options){const capture=typeof options==='boolean'?options:!!options?.capture;own=own.filter(x=>!(x.target===this&&x.type===type&&x.fn===fn&&x.capture===capture));return remove.call(this,type,fn,options)}\nfunction cancelTasks(){intervals.clear();for(const task of timers.values())clear(task.handle);timers.clear();for(const task of frames.values())caf(task.handle);frames.clear()}\nfunction release(){cancelTasks();for(const restore of mediaRestore)restore();mediaRestore.clear();window.matchMedia=originalMatchMedia;for(const observer of observers)observer.disconnect();for(const name in originalObservers)window[name]=originalObservers[name];for(const x of own.splice(0))remove.call(x.target,x.type,x.fn,x.options);proto.addEventListener=add;proto.removeEventListener=remove;window.setInterval=nativeInterval;window.clearInterval=nativeClearInterval;window.setTimeout=set;window.clearTimeout=clear;window.requestAnimationFrame=raf;window.cancelAnimationFrame=caf;document.body.style.pointerEvents=basePointer;document.body.style.overflow=baseOverflow;document.querySelectorAll('[data-radix-focus-guard]').forEach(n=>n.remove());}\nfunction exit(){if(stopped)return;stopped=true;try{teardown()}catch{}queueMicrotask(release)}\nfunction fatal(error){if(failed)return;failed=true;exit();queueMicrotask(()=>{try{const p=document.createElement('p');p.setAttribute('role','alert');p.textContent='预览已停止，请关闭后重新打开。';document.body.append(p)}catch{}})}\ntry{\nfor(const name of ['ResizeObserver','IntersectionObserver','MutationObserver']){const Original=window[name];if(!Original)continue;originalObservers[name]=Original;window[name]=class extends Original{constructor(...args){super(...args);observers.add(this)}disconnect(){super.disconnect();observers.delete(this)}}}\nwindow.matchMedia=function(...args){const m=originalMatchMedia.apply(window,args);if(m.addListener&&m.removeListener){const a=m.addListener,r=m.removeListener,callbacks=new Set();const restore=()=>{for(const fn of callbacks)r.call(m,fn);m.addListener=a;m.removeListener=r};m.addListener=function(fn){callbacks.add(fn);mediaRestore.add(restore);return a.call(m,fn)};m.removeListener=function(fn){callbacks.delete(fn);if(!callbacks.size)mediaRestore.delete(restore);return r.call(m,fn)}}return m};\nproto.addEventListener=trackedAdd;proto.removeEventListener=trackedRemove;\nfunction scheduleTimer(id,task){task.started=performance.now();task.handle=set(()=>{timers.delete(id);if(stopped)return;try{task.fn(...task.args)}catch(e){fatal(e)}},task.remaining)}\nfunction scheduleFrame(id,task){task.handle=raf(time=>{frames.delete(id);if(stopped)return;try{task.fn(time)}catch(e){fatal(e)}})}\nwindow.setTimeout=(fn,ms=0,...args)=>{if(stopped)return 0;const id=serial++,task={fn,args,remaining:ms,handle:0,started:0};timers.set(id,task);if(!paused)scheduleTimer(id,task);return id};window.clearTimeout=id=>{const task=timers.get(id);if(task)clear(task.handle);timers.delete(id)};\nwindow.requestAnimationFrame=fn=>{if(stopped)return 0;const id=serial++,task={fn,handle:0};frames.set(id,task);if(!paused)scheduleFrame(id,task);return id};window.cancelAnimationFrame=id=>{const task=frames.get(id);if(task)caf(task.handle);frames.delete(id)};\nfunction pauseTasks(){if(paused)return;paused=true;for(const task of timers.values()){clear(task.handle);task.remaining=Math.max(0,task.remaining-(performance.now()-task.started))}for(const task of frames.values())caf(task.handle)}\nfunction resumeTasks(){if(!paused||stopped)return;paused=false;for(const [id,task] of timers)scheduleTimer(id,task);for(const [id,task] of frames)scheduleFrame(id,task)}\nwindow.setInterval=(fn,ms=0,...args)=>{if(stopped)return 0;const id=serial++;const tick=()=>{if(!intervals.has(id)||stopped)return;try{fn(...args)}catch(e){fatal(e);return}if(intervals.has(id))intervals.set(id,window.setTimeout(tick,ms))};intervals.set(id,window.setTimeout(tick,ms));return id};window.clearInterval=id=>{const handle=intervals.get(id);if(handle!==undefined)window.clearTimeout(handle);intervals.delete(id)};\nwindow.addEventListener('pagehide',exit);window.addEventListener('atlas:dispose',exit);window.addEventListener('error',e=>{e.preventDefault();fatal(e.error)});window.addEventListener('unhandledrejection',e=>{e.preventDefault();fatal(e.reason)});\nconst retiredNodeObserver=new MutationObserver(()=>{if(stopped)return;const retired=own.filter(x=>x.target instanceof Node&&!x.target.isConnected);for(const x of retired)remove.call(x.target,x.type,x.fn,x.options);own=own.filter(x=>!retired.includes(x))});retiredNodeObserver.observe(document.body,{childList:true,subtree:true});\n/* MODULE_START */\n"
+    },
+    {
+      "path": "build.mjs",
+      "sha256": "d75231e869cda8490823a801934d83bf4d81f0a1578329c672844b6571500ac9",
+      "text": "import fs from'node:fs';import esbuild from'../../ui-smooth-chat-adapt/node_modules/esbuild/lib/main.js';const b=new URL('.',import.meta.url).pathname;const r=esbuild.buildSync({entryPoints:[b+'src/main.tsx'],outfile:b+'delivery/runtime.js',bundle:true,format:'iife',jsx:'automatic',minify:true,target:'es2020',define:{'process.env.NODE_ENV':'\"production\"'},banner:{js:fs.readFileSync(b+'bootstrap.js','utf8')},footer:{js:'}catch(e){fatal(e)}})();'},metafile:true,legalComments:'eof'});fs.writeFileSync(b+'metafile.json',JSON.stringify(r.metafile,null,2));\n"
+    },
+    {
+      "path": "setup.py",
+      "sha256": "219314bfbf9a200b35d88aa3c9dbc4c68943f1053e9579476802769a231d2d18",
+      "text": "from pathlib import Path\nimport re\np=Path(__file__).parent\ns=(p/'upstream/default.variant.tsx').read_text().replace('AnimatePresence, motion','AnimatePresence, motion, useReducedMotion').replace('@/cuicui/utils/cn','./cn')\ns=s.replace('export default function DynamicSettingsVariant1() {','export default function DynamicSettingsVariant1() {\\n  const reduce = useReducedMotion();')\ns=s.replace('  return (\\n    <nav', '  const reduce = useReducedMotion();\\n  return (\\n    <nav')\ns=re.sub(r'transition=\\{\\{(.*?)\\}\\}', r'transition={reduce ? {duration:0} : {\\1}}',s,flags=re.S)\ns=s.replace('toast.message(\"Changes done\", {','toast.message(\"本地演示回执\", { id: \"settings-demo\",').replace('description: \"Changes validated and applied successfully\"','description: \"仅演示，未应用或保存设置\"')\ns=s.replace('className=\"size-8 transform-gpu','aria-label={isOpen ? \"Close settings\" : \"Open settings\"}\\n              className=\"size-8 transform-gpu')\ns=s.replace('placeholder=\"Add a new prompt\"','aria-label=\"Prompt\" placeholder=\"Add a new prompt\"').replace('type=\"submit\"','type=\"button\"')\ns=s.replace('key={item.label}', 'aria-pressed={index === selected}\\n          key={item.label}').replace('key={button.label}', 'aria-pressed={subMenuSelected === button.slug}\\n          key={button.label}')\n(p/'src/settings.tsx').write_text(s);(p/'src/cn.ts').write_bytes((p/'upstream/cn.ts').read_bytes())\n"
+    },
+    {
+      "path": "styles.css",
+      "sha256": "4aaa0ce1a1769ea2e6c689d405610aa84afd13a034fc1c5b05a9babacbda5346",
+      "text": "@import \"../../ui-smooth-chat-adapt/node_modules/tailwindcss\" source(none);\n@source \"./src\";\nhtml,body{margin:0;min-height:100%;font-family:ui-sans-serif,system-ui,sans-serif;background:#f5f5f5;color:#171717}body{min-height:460px;padding:24px}.shell{max-width:680px;margin:auto}.notice,.credit{font-size:12px;line-height:1.7;color:#737373}.stage{min-height:310px;display:flex;align-items:center;justify-content:center;padding:20px 0}.credit{text-align:center}button:focus-visible{outline:2px solid #fde68a;outline-offset:2px}html[data-hidden] *{animation:none!important;transition:none!important}@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}\n"
+    },
+    {
+      "path": "test.mjs",
+      "sha256": "afce68d6a1b3feec11812366e1722c41a83a392bd10cdd6b9c3a16c1b1a7a976",
+      "text": "import fs from'node:fs';import assert from'node:assert/strict';import{JSDOM,VirtualConsole}from'../../alaya-pr112/node_modules/.pnpm/jsdom@24.1.3_supports-color@7.2.0/node_modules/jsdom/lib/api.js';import{composePreview}from'../../ui-vault-545/apps/atlas-sample/preview-runtime.mjs';\nconst b=new URL('.',import.meta.url).pathname,read=n=>fs.readFileSync(b+'delivery/'+n,'utf8'),sleep=ms=>new Promise(r=>setTimeout(r,ms));const result={};\nasync function boot(mode){const observerActive=new Set(),legacyMedia=new Set();const ledger=[],tasks=new Set(),rafTasks=new Set(),errors=[];let hidden=false,externalHits=0,external;const vc=new VirtualConsole();vc.on('jsdomError',e=>{if(!e.message.includes('Could not parse CSS'))errors.push(e.message)});let js=read('runtime.js');if(mode==='early')js=js.replace('/* MODULE_START */','throw Error(\"early\");');const dom=new JSDOM(composePreview(read('index.html'),read('runtime.css'),js,{cssHref:'runtime.css',scriptSrc:'runtime.js'}),{runScripts:'dangerously',pretendToBeVisual:true,virtualConsole:vc,beforeParse(w){const matches=w.Element.prototype.matches;w.Element.prototype.matches=function(selector){if([':modal',':popover-open',':fullscreen'].includes(selector))return false;return matches.call(this,selector)};Object.defineProperty(w.document,'hidden',{get:()=>hidden});w.ResizeObserver=class{observe(){observerActive.add(this)}unobserve(){}disconnect(){observerActive.delete(this)}};const OriginalMO=w.MutationObserver;w.MutationObserver=class extends OriginalMO{observe(...args){observerActive.add(this);return super.observe(...args)}disconnect(){observerActive.delete(this);return super.disconnect()}};w.matchMedia=()=>{const m=new w.EventTarget();m.matches=mode==='reduced';m.media='';m.addListener=fn=>legacyMedia.add(fn);m.removeListener=fn=>legacyMedia.delete(fn);return m};w.PointerEvent=w.MouseEvent;const add=w.EventTarget.prototype.addEventListener,remove=w.EventTarget.prototype.removeEventListener;w.EventTarget.prototype.addEventListener=function(type,fn,opts){if(!ledger.some(x=>x.target===this&&x.type===type&&x.fn===fn))ledger.push({target:this,type,fn,opts,stack:new Error().stack});const result=add.call(this,type,fn,opts);if(mode==='partial'&&type==='pointermove')throw Error('partial React root listener init');return result};w.EventTarget.prototype.removeEventListener=function(type,fn,opts){const i=ledger.findIndex(x=>x.target===this&&x.type===type&&x.fn===fn);if(i>=0)ledger.splice(i,1);return remove.call(this,type,fn,opts)};const set=w.setTimeout.bind(w),clear=w.clearTimeout.bind(w),raf=w.requestAnimationFrame.bind(w),caf=w.cancelAnimationFrame.bind(w);w.setTimeout=(fn,ms,...args)=>{let id=set(()=>{tasks.delete(id);fn(...args)},ms);tasks.add(id);return id};w.clearTimeout=id=>{tasks.delete(id);clear(id)};w.requestAnimationFrame=fn=>{let id=raf(t=>{rafTasks.delete(id);fn(t)});rafTasks.add(id);return id};w.cancelAnimationFrame=id=>{rafTasks.delete(id);caf(id)};w.fetch=()=>{throw Error('network')};w.open=()=>{throw Error('popup')};w.eval=()=>{throw Error('eval')};if(mode==='external'){external=()=>externalHits++;w.document.addEventListener('selectionchange',external)};;}});await sleep(60);const w=dom.window,d=w.document,click=e=>{assert(e,'click target');e.dispatchEvent(new w.MouseEvent('click',{bubbles:true}))};const owned=()=>ledger.filter(x=>!x.stack.includes('nwsapi')&&!['load','DOMContentLoaded'].includes(x.type));return{dom,w,d,click,ledger,tasks,rafTasks,errors,owned,observerActive,legacyMedia,externalHits:()=>externalHits,external,hide:async v=>{hidden=v;d.dispatchEvent(new w.Event('visibilitychange'));await sleep(50)}}}\n\n\nlet t=await boot();const byText=label=>[...t.d.querySelectorAll('button')].find(n=>n.textContent.trim()===label);const open=()=>t.click(byText('Add Style'));assert(byText('Add Style'));open();await sleep(10);assert(byText('Dimensions'));assert(!t.d.querySelector('input[type=range]'));t.click(byText('Aspect Ratio'));await sleep(10);for(const label of ['1:1','16:9','21:9','3:4','4:3','Custom']){t.click(byText(label));await sleep(5);assert.equal(byText(label).getAttribute('aria-pressed'),'true')}t.click(byText('Prompt'));await sleep(10);const input=t.d.querySelector('textarea');assert(input);input.value='local fixture prompt';input.dispatchEvent(new t.w.Event('input',{bubbles:true}));t.click(byText('Dimensions'));await sleep(5);t.click(byText('Prompt'));await sleep(5);assert.equal(t.d.querySelector('textarea').value,'');result.originalLocalState=true;\nlet counts=[],taskCounts=[];for(let i=0;i<100;i++){if(byText('Add Style'))open();await sleep(5);t.click(byText('Apply Changes'));await sleep(10);assert(byText('Add Style'));counts.push(t.owned().length);taskCounts.push(t.tasks.size+t.rafTasks.size)}await sleep(1500);assert(t.d.querySelector('[data-sonner-toast]'));assert.equal(t.d.querySelectorAll('[data-sonner-toast]').length,1);assert(t.d.body.textContent.includes('仅演示，未应用或保存设置'));assert.equal(new Set(counts.slice(-10)).size,1);assert(Math.max(...taskCounts)<30);result.apply100={last10Listeners:counts.slice(-10),maxHostTasks:Math.max(...taskCounts),oneToast:true};\nopen();await sleep(10);const old=t.d.querySelector('[aria-label=\"Close settings\"]');await t.hide(true);assert.equal(t.tasks.size+t.rafTasks.size,0);await t.hide(false);assert(byText('Add Style'));t.click(old);await sleep(20);assert(byText('Add Style'));assert.equal(t.d.querySelectorAll('[data-sonner-toast]').length,0);result.hiddenOldNodeAndNoLateToast=true;\nopen();await sleep(5);const apply=byText('Apply Changes');t.click(apply);t.w.dispatchEvent(new t.w.Event('atlas:dispose'));await sleep(100);assert.equal(t.owned().length,0);assert.equal(t.tasks.size+t.rafTasks.size,0);assert.equal(t.observerActive.size,0);assert.equal(t.legacyMedia.size,0);assert(!t.d.querySelector('[data-sonner-toast]'));t.click(apply);await sleep(50);assert(!t.d.querySelector('[data-sonner-toast]'));assert.deepEqual(t.errors,[]);result.pendingToastExit=true;t.dom.window.close();\nfor(const mode of ['reduced','early','partial','late','pagehide','external']){t=await boot(mode);if(mode==='late'){const original=t.d.createElement.bind(t.d);t.d.createElement=(name,...args)=>{if(name==='nav')throw Error('real late navigation DOM creation');return original(name,...args)};t.click([...t.d.querySelectorAll('button')].find(n=>n.textContent==='Add Style'));await sleep(30)}else if(mode==='reduced'){t.click([...t.d.querySelectorAll('button')].find(n=>n.textContent==='Add Style'));await sleep(20);assert(t.d.querySelector('nav'));t.w.dispatchEvent(new t.w.Event('pagehide'))}else if(mode==='pagehide'||mode==='external')t.w.dispatchEvent(new t.w.Event('pagehide'));await sleep(40);if(['early','partial','late'].includes(mode))assert(t.d.querySelector('[role=alert]'),mode);if(mode==='external'){assert.equal(t.owned().length,1);t.d.dispatchEvent(new t.w.Event('selectionchange'));assert.equal(t.externalHits(),1);t.d.removeEventListener('selectionchange',t.external)}assert.equal(t.owned().length,0,mode);assert.equal(t.tasks.size+t.rafTasks.size,0,mode);assert.equal(t.observerActive.size,0,mode);assert.equal(t.legacyMedia.size,0,mode);result[mode]=true;t.dom.window.close()}\nresult.actual545Compose=true;result.browserVisualQA='not-run';console.log(JSON.stringify(result,null,2));\n"
+    },
+    {
+      "path": "package.json",
+      "sha256": "ceb197a6dbe7e1b34f3cb58730bba6041c0838b4408f2b98ab2f328decf52688",
+      "text": "{\"private\":true,\"type\":\"module\",\"dependencies\":{\"react\":\"19.2.0\",\"react-dom\":\"19.2.0\",\"motion\":\"12.23.24\",\"lucide-react\":\"0.468.0\",\"sonner\":\"2.0.7\",\"clsx\":\"2.1.1\",\"tailwind-merge\":\"3.3.1\"}}\n"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "064eed7612d87270e306fcbd3542f6276d6e4ce29af5850cadf150de2da97ec8",
+      "text": "{\n  \"name\": \"settings\",\n  \"lockfileVersion\": 3,\n  \"requires\": true,\n  \"packages\": {\n    \"\": {\n      \"dependencies\": {\n        \"clsx\": \"2.1.1\",\n        \"lucide-react\": \"0.468.0\",\n        \"motion\": \"12.23.24\",\n        \"react\": \"19.2.0\",\n        \"react-dom\": \"19.2.0\",\n        \"sonner\": \"2.0.7\",\n        \"tailwind-merge\": \"3.3.1\"\n      }\n    },\n    \"node_modules/clsx\": {\n      \"version\": \"2.1.1\",\n      \"resolved\": \"https://registry.npmjs.org/clsx/-/clsx-2.1.1.tgz\",\n      \"integrity\": \"sha512-eYm0QWBtUrBWZWG0d386OGAw16Z995PiOVo2B7bjWSbHedGl5e0ZWaq65kOGgUSNesEIDkB9ISbTg/JK9dhCZA==\",\n      \"license\": \"MIT\",\n      \"engines\": {\n        \"node\": \">=6\"\n      }\n    },\n    \"node_modules/framer-motion\": {\n      \"version\": \"12.43.0\",\n      \"resolved\": \"https://registry.npmjs.org/framer-motion/-/framer-motion-12.43.0.tgz\",\n      \"integrity\": \"sha512-1eaL3RvR/kAlbG7UYcpMptEyzPoENO0c6w7ZnB3/hh2vSAz/6uGAFn6fdoqTBguNstf3MsFhJHsD/0DHiclG+g==\",\n      \"license\": \"MIT\",\n      \"dependencies\": {\n        \"motion-dom\": \"^12.43.0\",\n        \"motion-utils\": \"^12.39.0\",\n        \"tslib\": \"^2.4.0\"\n      },\n      \"peerDependencies\": {\n        \"@emotion/is-prop-valid\": \"*\",\n        \"react\": \"^18.0.0 || ^19.0.0\",\n        \"react-dom\": \"^18.0.0 || ^19.0.0\"\n      },\n      \"peerDependenciesMeta\": {\n        \"@emotion/is-prop-valid\": {\n          \"optional\": true\n        },\n        \"react\": {\n          \"optional\": true\n        },\n        \"react-dom\": {\n          \"optional\": true\n        }\n      }\n    },\n    \"node_modules/lucide-react\": {\n      \"version\": \"0.468.0\",\n      \"resolved\": \"https://registry.npmjs.org/lucide-react/-/lucide-react-0.468.0.tgz\",\n      \"integrity\": \"sha512-6koYRhnM2N0GGZIdXzSeiNwguv1gt/FAjZOiPl76roBi3xKEXa4WmfpxgQwTTL4KipXjefrnf3oV4IsYhi4JFA==\",\n      \"license\": \"ISC\",\n      \"peerDependencies\": {\n        \"react\": \"^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0-rc\"\n      }\n    },\n    \"node_modules/motion\": {\n      \"version\": \"12.23.24\",\n      \"resolved\": \"https://registry.npmjs.org/motion/-/motion-12.23.24.tgz\",\n      \"integrity\": \"sha512-Rc5E7oe2YZ72N//S3QXGzbnXgqNrTESv8KKxABR20q2FLch9gHLo0JLyYo2hZ238bZ9Gx6cWhj9VO0IgwbMjCw==\",\n      \"license\": \"MIT\",\n      \"dependencies\": {\n        \"framer-motion\": \"^12.23.24\",\n        \"tslib\": \"^2.4.0\"\n      },\n      \"peerDependencies\": {\n        \"@emotion/is-prop-valid\": \"*\",\n        \"react\": \"^18.0.0 || ^19.0.0\",\n        \"react-dom\": \"^18.0.0 || ^19.0.0\"\n      },\n      \"peerDependenciesMeta\": {\n        \"@emotion/is-prop-valid\": {\n          \"optional\": true\n        },\n        \"react\": {\n          \"optional\": true\n        },\n        \"react-dom\": {\n          \"optional\": true\n        }\n      }\n    },\n    \"node_modules/motion-dom\": {\n      \"version\": \"12.43.0\",\n      \"resolved\": \"https://registry.npmjs.org/motion-dom/-/motion-dom-12.43.0.tgz\",\n      \"integrity\": \"sha512-azKON4d9S65PEoFUiQTMTgPheEmzf2QngdRc50AKfJp9Q9mmcBVw22c8eMq9k8kxOFHdL7+WZY7N/5F/lwiDag==\",\n      \"license\": \"MIT\",\n      \"dependencies\": {\n        \"motion-utils\": \"^12.39.0\"\n      }\n    },\n    \"node_modules/motion-utils\": {\n      \"version\": \"12.39.0\",\n      \"resolved\": \"https://registry.npmjs.org/motion-utils/-/motion-utils-12.39.0.tgz\",\n      \"integrity\": \"sha512-8nadJAJjTtqRkmRF36FoJTrywK9nnFmnPwnSMyxaOCU7GDjN9RTMJIxx9De8ErM+vpPhMccr/6fo5WciyQLnMQ==\",\n      \"license\": \"MIT\"\n    },\n    \"node_modules/react\": {\n      \"version\": \"19.2.0\",\n      \"resolved\": \"https://registry.npmjs.org/react/-/react-19.2.0.tgz\",\n      \"integrity\": \"sha512-tmbWg6W31tQLeB5cdIBOicJDJRR2KzXsV7uSK9iNfLWQ5bIZfxuPEHp7M8wiHyHnn0DD1i7w3Zmin0FtkrwoCQ==\",\n      \"license\": \"MIT\",\n      \"engines\": {\n        \"node\": \">=0.10.0\"\n      }\n    },\n    \"node_modules/react-dom\": {\n      \"version\": \"19.2.0\",\n      \"resolved\": \"https://registry.npmjs.org/react-dom/-/react-dom-19.2.0.tgz\",\n      \"integrity\": \"sha512-UlbRu4cAiGaIewkPyiRGJk0imDN2T3JjieT6spoL2UeSf5od4n5LB/mQ4ejmxhCFT1tYe8IvaFulzynWovsEFQ==\",\n      \"license\": \"MIT\",\n      \"dependencies\": {\n        \"scheduler\": \"^0.27.0\"\n      },\n      \"peerDependencies\": {\n        \"react\": \"^19.2.0\"\n      }\n    },\n    \"node_modules/scheduler\": {\n      \"version\": \"0.27.0\",\n      \"resolved\": \"https://registry.npmjs.org/scheduler/-/scheduler-0.27.0.tgz\",\n      \"integrity\": \"sha512-eNv+WrVbKu1f3vbYJT/xtiF5syA5HPIMtf9IgY/nKg0sWqzAUEvqY/xm7OcZc/qafLx/iO9FgOmeSAp4v5ti/Q==\",\n      \"license\": \"MIT\"\n    },\n    \"node_modules/sonner\": {\n      \"version\": \"2.0.7\",\n      \"resolved\": \"https://registry.npmjs.org/sonner/-/sonner-2.0.7.tgz\",\n      \"integrity\": \"sha512-W6ZN4p58k8aDKA4XPcx2hpIQXBRAgyiWVkYhT7CvK6D3iAu7xjvVyhQHg2/iaKJZ1XVJ4r7XuwGL+WGEK37i9w==\",\n      \"license\": \"MIT\",\n      \"peerDependencies\": {\n        \"react\": \"^18.0.0 || ^19.0.0 || ^19.0.0-rc\",\n        \"react-dom\": \"^18.0.0 || ^19.0.0 || ^19.0.0-rc\"\n      }\n    },\n    \"node_modules/tailwind-merge\": {\n      \"version\": \"3.3.1\",\n      \"resolved\": \"https://registry.npmjs.org/tailwind-merge/-/tailwind-merge-3.3.1.tgz\",\n      \"integrity\": \"sha512-gBXpgUm/3rp1lMZZrM/w7D8GKqshif0zAymAhbCyIt8KMe+0v9DQ7cdYLR4FHH/cKpdTXb+A/tKKU3eolfsI+g==\",\n      \"license\": \"MIT\",\n      \"funding\": {\n        \"type\": \"github\",\n        \"url\": \"https://github.com/sponsors/dcastil\"\n      }\n    },\n    \"node_modules/tslib\": {\n      \"version\": \"2.9.1\",\n      \"resolved\": \"https://registry.npmjs.org/tslib/-/tslib-2.9.1.tgz\",\n      \"integrity\": \"sha512-a4Ux9VKuIMHsOS7ENbEq6hK2ZGYIT27Rtl0E4eD9KqwxhKiQeMZE/9xb3IdYwWaSOyIBQLExhQgXDTYoiCxnWA==\",\n      \"license\": \"0BSD\"\n    }\n  }\n}\n"
+    }
+  ],
+  "dependencyNoticeScope": [
+    {
+      "name": "clsx",
+      "version": "2.1.1",
+      "license": "MIT",
+      "scope": "conservative parsed dependency scope, not all necessarily emitted; Tailwind build notice covers generated CSS",
+      "notices": [
+        {
+          "path": "ui-cuicui-pair-local/settings/node_modules/clsx/license",
+          "sha256": "9a9edad7baae52622bddf3c15b2ef8a33d2c89f2d25408ad13e8a7481c6b0c97"
+        }
+      ]
+    },
+    {
+      "name": "framer-motion",
+      "version": "12.43.0",
+      "license": "MIT",
+      "scope": "conservative parsed dependency scope, not all necessarily emitted; Tailwind build notice covers generated CSS",
+      "notices": [
+        {
+          "path": "ui-cuicui-pair-local/settings/node_modules/framer-motion/LICENSE.md",
+          "sha256": "5ff46083b88563822b0560dd6221ab89d2f74bc97a52d4c97a75020fd62c6f32"
+        }
+      ]
+    },
+    {
+      "name": "lucide-react",
+      "version": "0.468.0",
+      "license": "ISC",
+      "scope": "conservative parsed dependency scope, not all necessarily emitted; Tailwind build notice covers generated CSS",
+      "notices": [
+        {
+          "path": "ui-cuicui-pair-local/settings/node_modules/lucide-react/LICENSE",
+          "sha256": "1e7290b35280a048667bbf0ebabac1c7fd52a75300e8b2946ac165715997f2bc"
+        }
+      ]
+    },
+    {
+      "name": "motion",
+      "version": "12.23.24",
+      "license": "MIT",
+      "scope": "conservative parsed dependency scope, not all necessarily emitted; Tailwind build notice covers generated CSS",
+      "notices": [
+        {
+          "path": "ui-cuicui-pair-local/settings/node_modules/motion/LICENSE.md",
+          "sha256": "1bf0dc3f7727723e5a032ed12164a47cf92c05204cb1a3485f123c24e2833ed1"
+        }
+      ]
+    },
+    {
+      "name": "motion-dom",
+      "version": "12.43.0",
+      "license": "MIT",
+      "scope": "conservative parsed dependency scope, not all necessarily emitted; Tailwind build notice covers generated CSS",
+      "notices": [
+        {
+          "path": "ui-cuicui-pair-local/settings/node_modules/motion-dom/LICENSE.md",
+          "sha256": "1bf0dc3f7727723e5a032ed12164a47cf92c05204cb1a3485f123c24e2833ed1"
+        }
+      ]
+    },
+    {
+      "name": "motion-utils",
+      "version": "12.39.0",
+      "license": "MIT",
+      "scope": "conservative parsed dependency scope, not all necessarily emitted; Tailwind build notice covers generated CSS",
+      "notices": [
+        {
+          "path": "ui-cuicui-pair-local/settings/node_modules/motion-utils/LICENSE.md",
+          "sha256": "1bf0dc3f7727723e5a032ed12164a47cf92c05204cb1a3485f123c24e2833ed1"
+        }
+      ]
+    },
+    {
+      "name": "react",
+      "version": "19.2.0",
+      "license": "MIT",
+      "scope": "conservative parsed dependency scope, not all necessarily emitted; Tailwind build notice covers generated CSS",
+      "notices": [
+        {
+          "path": "ui-cuicui-pair-local/settings/node_modules/react/LICENSE",
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+        }
+      ]
+    },
+    {
+      "name": "react-dom",
+      "version": "19.2.0",
+      "license": "MIT",
+      "scope": "conservative parsed dependency scope, not all necessarily emitted; Tailwind build notice covers generated CSS",
+      "notices": [
+        {
+          "path": "ui-cuicui-pair-local/settings/node_modules/react-dom/LICENSE",
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+        }
+      ]
+    },
+    {
+      "name": "scheduler",
+      "version": "0.27.0",
+      "license": "MIT",
+      "scope": "conservative parsed dependency scope, not all necessarily emitted; Tailwind build notice covers generated CSS",
+      "notices": [
+        {
+          "path": "ui-cuicui-pair-local/settings/node_modules/scheduler/LICENSE",
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+        }
+      ]
+    },
+    {
+      "name": "sonner",
+      "version": "2.0.7",
+      "license": "MIT",
+      "scope": "conservative parsed dependency scope, not all necessarily emitted; Tailwind build notice covers generated CSS",
+      "notices": [
+        {
+          "path": "ui-cuicui-pair-local/settings/node_modules/sonner/LICENSE.md",
+          "sha256": "da9201378c36ffd81f51ad0b305f3f0981e90bc558789210ad65d1161eec3b7d"
+        }
+      ]
+    },
+    {
+      "name": "tailwind-merge",
+      "version": "3.3.1",
+      "license": "MIT",
+      "scope": "conservative parsed dependency scope, not all necessarily emitted; Tailwind build notice covers generated CSS",
+      "notices": [
+        {
+          "path": "ui-cuicui-pair-local/settings/node_modules/tailwind-merge/LICENSE.md",
+          "sha256": "d4c70c7ce38cea8778f0aed3fc0bef0a9dbd27f13bd8b6773cbd6d37941971e5"
+        }
+      ]
+    },
+    {
+      "name": "tailwindcss",
+      "version": "4.3.0",
+      "license": "MIT",
+      "scope": "conservative parsed dependency scope, not all necessarily emitted; Tailwind build notice covers generated CSS",
+      "notices": [
+        {
+          "path": "ui-smooth-chat-adapt/node_modules/tailwindcss/LICENSE",
+          "sha256": "60e0b68c0f35c078eef3a5d29419d0b03ff84ec1df9c3f9d6e39a519a5ae7985"
+        }
+      ]
+    }
+  ],
+  "outputInputs": {
+    "ui-cuicui-pair-local/settings/node_modules/react/cjs/react.production.js": {
+      "bytesInOutput": 7616
+    },
+    "ui-cuicui-pair-local/settings/node_modules/react/index.js": {
+      "bytesInOutput": 50
+    },
+    "ui-cuicui-pair-local/settings/node_modules/scheduler/cjs/scheduler.production.js": {
+      "bytesInOutput": 3662
+    },
+    "ui-cuicui-pair-local/settings/node_modules/scheduler/index.js": {
+      "bytesInOutput": 51
+    },
+    "ui-cuicui-pair-local/settings/node_modules/react-dom/cjs/react-dom.production.js": {
+      "bytesInOutput": 3342
+    },
+    "ui-cuicui-pair-local/settings/node_modules/react-dom/index.js": {
+      "bytesInOutput": 253
+    },
+    "ui-cuicui-pair-local/settings/node_modules/react-dom/cjs/react-dom-client.production.js": {
+      "bytesInOutput": 176855
+    },
+    "ui-cuicui-pair-local/settings/node_modules/react-dom/client.js": {
+      "bytesInOutput": 253
+    },
+    "ui-cuicui-pair-local/settings/node_modules/react/cjs/react-jsx-runtime.production.js": {
+      "bytesInOutput": 364
+    },
+    "ui-cuicui-pair-local/settings/node_modules/react/jsx-runtime.js": {
+      "bytesInOutput": 51
+    },
+    "ui-cuicui-pair-local/settings/src/main.tsx": {
+      "bytesInOutput": 1520
+    },
+    "ui-cuicui-pair-local/settings/node_modules/sonner/dist/index.mjs": {
+      "bytesInOutput": 34222
+    },
+    "ui-cuicui-pair-local/settings/node_modules/framer-motion/dist/es/components/AnimatePresence/index.mjs": {
+      "bytesInOutput": 1220
+    },
+    "ui-cuicui-pair-local/settings/node_modules/framer-motion/dist/es/context/LayoutGroupContext.mjs": {
+      "bytesInOutput": 44
+    },
+    "ui-cuicui-pair-local/settings/node_modules/framer-motion/dist/es/utils/use-constant.mjs": {
+      "bytesInOutput": 108
+    },
+    "ui-cuicui-pair-local/settings/node_modules/framer-motion/dist/es/utils/use-isomorphic-effect.mjs": {
+      "bytesInOutput": 58
+    },
+    "ui-cuicui-pair-local/settings/node_modules/framer-motion/dist/es/utils/is-browser.mjs": {
+      "bytesInOutput": 25
+    },
+    "ui-cuicui-pair-local/settings/node_modules/framer-motion/dist/es/components/AnimatePresence/PresenceChild.mjs": {
+      "bytesInOutput": 800
+    },
+    "ui-cuicui-pair-local/settings/node_modules/framer-motion/dist/es/context/PresenceContext.mjs": {
+      "bytesInOutput": 46
+    },
+    "ui-cuicui-pair-local/settings/node_modules/framer-motion/dist/es/components/AnimatePresence/PopChild.mjs": {
+      "bytesInOutput": 1731
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-utils/dist/es/array.mjs": {
+      "bytesInOutput": 102
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-utils/dist/es/index.mjs": {
+      "bytesInOutput": 0
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-utils/dist/es/clamp.mjs": {
+      "bytesInOutput": 30
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-utils/dist/es/errors.mjs": {
+      "bytesInOutput": 24
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-utils/dist/es/global-config.mjs": {
+      "bytesInOutput": 10
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-utils/dist/es/is-numerical-string.mjs": {
+      "bytesInOutput": 49
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-utils/dist/es/is-object.mjs": {
+      "bytesInOutput": 39
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-utils/dist/es/is-zero-value-string.mjs": {
+      "bytesInOutput": 32
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-utils/dist/es/memo.mjs": {
+      "bytesInOutput": 55
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-utils/dist/es/noop.mjs": {
+      "bytesInOutput": 12
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-utils/dist/es/pipe.mjs": {
+      "bytesInOutput": 43
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-utils/dist/es/progress.mjs": {
+      "bytesInOutput": 47
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-utils/dist/es/subscription-manager.mjs": {
+      "bytesInOutput": 354
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-utils/dist/es/time-conversion.mjs": {
+      "bytesInOutput": 28
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-utils/dist/es/velocity-per-second.mjs": {
+      "bytesInOutput": 28
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-utils/dist/es/easing/cubic-bezier.mjs": {
+      "bytesInOutput": 289
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-utils/dist/es/easing/modifiers/mirror.mjs": {
+      "bytesInOutput": 45
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-utils/dist/es/easing/modifiers/reverse.mjs": {
+      "bytesInOutput": 22
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-utils/dist/es/easing/back.mjs": {
+      "bytesInOutput": 48
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-utils/dist/es/easing/anticipate.mjs": {
+      "bytesInOutput": 64
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-utils/dist/es/easing/circ.mjs": {
+      "bytesInOutput": 55
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-utils/dist/es/easing/ease.mjs": {
+      "bytesInOutput": 57
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-utils/dist/es/easing/utils/is-easing-array.mjs": {
+      "bytesInOutput": 50
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-utils/dist/es/easing/utils/is-bezier-definition.mjs": {
+      "bytesInOutput": 50
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-utils/dist/es/easing/utils/map.mjs": {
+      "bytesInOutput": 415
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/frameloop/order.mjs": {
+      "bytesInOutput": 98
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/frameloop/render-step.mjs": {
+      "bytesInOutput": 383
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/frameloop/batcher.mjs": {
+      "bytesInOutput": 749
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/frameloop/frame.mjs": {
+      "bytesInOutput": 109
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/frameloop/sync-time.mjs": {
+      "bytesInOutput": 174
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/animation/utils/is-css-variable.mjs": {
+      "bytesInOutput": 294
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/value/types/numbers/index.mjs": {
+      "bytesInOutput": 123
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/value/types/utils/sanitize.mjs": {
+      "bytesInOutput": 32
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/value/types/utils/float-regex.mjs": {
+      "bytesInOutput": 37
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/value/types/utils/is-nullish.mjs": {
+      "bytesInOutput": 30
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/value/types/utils/single-color-regex.mjs": {
+      "bytesInOutput": 125
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/value/types/color/utils.mjs": {
+      "bytesInOutput": 291
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/value/types/color/rgba.mjs": {
+      "bytesInOutput": 262
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/value/types/color/hex.mjs": {
+      "bytesInOutput": 378
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/value/types/numbers/units.mjs": {
+      "bytesInOutput": 250
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/value/types/color/hsla.mjs": {
+      "bytesInOutput": 228
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/value/types/color/index.mjs": {
+      "bytesInOutput": 283
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/value/types/utils/color-regex.mjs": {
+      "bytesInOutput": 124
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/value/types/complex/index.mjs": {
+      "bytesInOutput": 1247
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/value/types/color/hsla-to-rgba.mjs": {
+      "bytesInOutput": 376
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/utils/mix/immediate.mjs": {
+      "bytesInOutput": 35
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/utils/mix/number.mjs": {
+      "bytesInOutput": 25
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/utils/mix/color.mjs": {
+      "bytesInOutput": 515
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/utils/mix/visibility.mjs": {
+      "bytesInOutput": 92
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/utils/mix/complex.mjs": {
+      "bytesInOutput": 1186
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/utils/mix/index.mjs": {
+      "bytesInOutput": 105
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/animation/drivers/frame.mjs": {
+      "bytesInOutput": 137
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/animation/waapi/utils/linear.mjs": {
+      "bytesInOutput": 164
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/animation/generators/utils/calc-duration.mjs": {
+      "bytesInOutput": 98
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/animation/generators/utils/create-generator-easing.mjs": {
+      "bytesInOutput": 145
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/animation/generators/spring.mjs": {
+      "bytesInOutput": 3358
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/animation/generators/utils/velocity.mjs": {
+      "bytesInOutput": 73
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/animation/generators/inertia.mjs": {
+      "bytesInOutput": 725
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/utils/interpolate.mjs": {
+      "bytesInOutput": 634
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/animation/keyframes/offsets/fill.mjs": {
+      "bytesInOutput": 93
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/animation/keyframes/offsets/default.mjs": {
+      "bytesInOutput": 51
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/animation/keyframes/offsets/time.mjs": {
+      "bytesInOutput": 38
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/animation/generators/keyframes.mjs": {
+      "bytesInOutput": 331
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/animation/keyframes/get-final.mjs": {
+      "bytesInOutput": 161
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/animation/utils/replace-transition-type.mjs": {
+      "bytesInOutput": 121
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/animation/utils/WithPromise.mjs": {
+      "bytesInOutput": 226
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/animation/JSAnimation.mjs": {
+      "bytesInOutput": 4481
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/animation/keyframes/utils/fill-wildcards.mjs": {
+      "bytesInOutput": 62
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/render/dom/parse-transform.mjs": {
+      "bytesInOutput": 1149
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/render/utils/keys-transform.mjs": {
+      "bytesInOutput": 206
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/animation/keyframes/utils/unit-conversion.mjs": {
+      "bytesInOutput": 777
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/animation/keyframes/KeyframesResolver.mjs": {
+      "bytesInOutput": 1574
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/render/dom/is-css-var.mjs": {
+      "bytesInOutput": 29
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/render/dom/style-set.mjs": {
+      "bytesInOutput": 63
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/utils/supports/flags.mjs": {
+      "bytesInOutput": 10
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/utils/supports/memo.mjs": {
+      "bytesInOutput": 50
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/utils/supports/scroll-timeline.mjs": {
+      "bytesInOutput": 63
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/utils/supports/linear-easing.mjs": {
+      "bytesInOutput": 135
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/animation/waapi/easing/cubic-bezier.mjs": {
+      "bytesInOutput": 59
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/animation/waapi/easing/supported.mjs": {
+      "bytesInOutput": 209
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/animation/waapi/easing/map-easing.mjs": {
+      "bytesInOutput": 139
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/animation/waapi/start-waapi-animation.mjs": {
+      "bytesInOutput": 368
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/animation/generators/utils/is-generator.mjs": {
+      "bytesInOutput": 65
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/animation/waapi/utils/apply-generator.mjs": {
+      "bytesInOutput": 126
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/animation/NativeAnimation.mjs": {
+      "bytesInOutput": 2248
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/animation/waapi/utils/unsupported-easing.mjs": {
+      "bytesInOutput": 151
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/animation/NativeAnimationExtended.mjs": {
+      "bytesInOutput": 497
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/animation/utils/is-animatable.mjs": {
+      "bytesInOutput": 137
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/animation/utils/can-animate.mjs": {
+      "bytesInOutput": 413
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/animation/utils/make-animation-instant.mjs": {
+      "bytesInOutput": 47
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/animation/waapi/utils/accelerated-values.mjs": {
+      "bytesInOutput": 78
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/animation/waapi/utils/is-browser-color.mjs": {
+      "bytesInOutput": 163
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/animation/waapi/supports/waapi.mjs": {
+      "bytesInOutput": 585
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/animation/AsyncMotionValueAnimation.mjs": {
+      "bytesInOutput": 2178
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/animation/utils/calc-child-stagger.mjs": {
+      "bytesInOutput": 163
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/value/index.mjs": {
+      "bytesInOutput": 2529
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/animation/utils/resolve-transition.mjs": {
+      "bytesInOutput": 84
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/animation/utils/get-value-transition.mjs": {
+      "bytesInOutput": 68
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/animation/utils/default-transitions.mjs": {
+      "bytesInOutput": 317
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/animation/utils/is-transition-defined.mjs": {
+      "bytesInOutput": 201
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/animation/interfaces/motion-value.mjs": {
+      "bytesInOutput": 878
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/animation/utils/css-variables-conversion.mjs": {
+      "bytesInOutput": 481
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/index.mjs": {
+      "bytesInOutput": 0
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/render/utils/resolve-variants.mjs": {
+      "bytesInOutput": 328
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/render/utils/resolve-dynamic-variants.mjs": {
+      "bytesInOutput": 77
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/render/utils/keys-position.mjs": {
+      "bytesInOutput": 71
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/render/utils/is-keyframes-target.mjs": {
+      "bytesInOutput": 27
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/render/utils/setters.mjs": {
+      "bytesInOutput": 256
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/value/utils/is-motion-value.mjs": {
+      "bytesInOutput": 31
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/value/will-change/is.mjs": {
+      "bytesInOutput": 38
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/value/will-change/add-will-change.mjs": {
+      "bytesInOutput": 164
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/render/dom/utils/camel-to-dash.mjs": {
+      "bytesInOutput": 69
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/animation/optimized-appear/data-id.mjs": {
+      "bytesInOutput": 42
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/animation/optimized-appear/get-appear-id.mjs": {
+      "bytesInOutput": 34
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/animation/interfaces/visual-element-target.mjs": {
+      "bytesInOutput": 1024
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/animation/interfaces/visual-element-variant.mjs": {
+      "bytesInOutput": 783
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/animation/interfaces/visual-element.mjs": {
+      "bytesInOutput": 289
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/value/types/auto.mjs": {
+      "bytesInOutput": 39
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/value/types/test.mjs": {
+      "bytesInOutput": 23
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/value/types/dimensions.mjs": {
+      "bytesInOutput": 50
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/animation/keyframes/utils/is-none.mjs": {
+      "bytesInOutput": 86
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/value/types/complex/filter.mjs": {
+      "bytesInOutput": 368
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/value/types/complex/mask.mjs": {
+      "bytesInOutput": 155
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/value/types/int.mjs": {
+      "bytesInOutput": 36
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/value/types/maps/transform.mjs": {
+      "bytesInOutput": 275
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/value/types/maps/number.mjs": {
+      "bytesInOutput": 843
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/value/types/maps/defaults.mjs": {
+      "bytesInOutput": 230
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/value/types/utils/animatable-none.mjs": {
+      "bytesInOutput": 128
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/animation/keyframes/utils/make-none-animatable.mjs": {
+      "bytesInOutput": 200
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/animation/keyframes/DOMKeyframesResolver.mjs": {
+      "bytesInOutput": 1542
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/utils/border-radius.mjs": {
+      "bytesInOutput": 105
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/utils/resolve-elements.mjs": {
+      "bytesInOutput": 234
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/value/types/utils/get-as-type.mjs": {
+      "bytesInOutput": 53
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/utils/is-html-element.mjs": {
+      "bytesInOutput": 74
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/frameloop/microtask.mjs": {
+      "bytesInOutput": 49
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/gestures/drag/state/is-active.mjs": {
+      "bytesInOutput": 51
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/gestures/drag/state/set-active.mjs": {
+      "bytesInOutput": 126
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/gestures/utils/setup.mjs": {
+      "bytesInOutput": 113
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/gestures/hover.mjs": {
+      "bytesInOutput": 673
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/gestures/utils/is-node-or-child.mjs": {
+      "bytesInOutput": 50
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/gestures/utils/is-primary-pointer.mjs": {
+      "bytesInOutput": 90
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/gestures/press/utils/is-keyboard-accessible.mjs": {
+      "bytesInOutput": 237
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/gestures/press/utils/state.mjs": {
+      "bytesInOutput": 19
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/gestures/press/utils/keyboard.mjs": {
+      "bytesInOutput": 452
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/gestures/press/index.mjs": {
+      "bytesInOutput": 760
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/utils/is-svg-element.mjs": {
+      "bytesInOutput": 51
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/resize/handle-element.mjs": {
+      "bytesInOutput": 614
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/resize/handle-window.mjs": {
+      "bytesInOutput": 329
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/resize/index.mjs": {
+      "bytesInOutput": 59
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/stats/buffer.mjs": {
+      "bytesInOutput": 46
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/utils/is-svg-svg-element.mjs": {
+      "bytesInOutput": 47
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/value/types/utils/find.mjs": {
+      "bytesInOutput": 42
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/projection/geometry/models.mjs": {
+      "bytesInOutput": 131
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/render/store.mjs": {
+      "bytesInOutput": 19
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/render/utils/is-animation-controls.mjs": {
+      "bytesInOutput": 79
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/render/utils/is-variant-label.mjs": {
+      "bytesInOutput": 59
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/render/utils/variant-props.mjs": {
+      "bytesInOutput": 110
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/render/utils/is-controlling-variants.mjs": {
+      "bytesInOutput": 101
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/render/utils/motion-values.mjs": {
+      "bytesInOutput": 356
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/render/utils/reduced-motion/state.mjs": {
+      "bytesInOutput": 38
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/render/utils/reduced-motion/index.mjs": {
+      "bytesInOutput": 216
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/render/VisualElement.mjs": {
+      "bytesInOutput": 6997
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/render/dom/DOMVisualElement.mjs": {
+      "bytesInOutput": 525
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/render/Feature.mjs": {
+      "bytesInOutput": 70
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/projection/geometry/conversion.mjs": {
+      "bytesInOutput": 296
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/projection/utils/has-transform.mjs": {
+      "bytesInOutput": 273
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/projection/geometry/delta-apply.mjs": {
+      "bytesInOutput": 1102
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/projection/utils/measure.mjs": {
+      "bytesInOutput": 158
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/render/html/utils/build-transform.mjs": {
+      "bytesInOutput": 530
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/render/html/utils/build-styles.mjs": {
+      "bytesInOutput": 402
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/render/html/utils/render.mjs": {
+      "bytesInOutput": 136
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/projection/styles/scale-border-radius.mjs": {
+      "bytesInOutput": 235
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/projection/styles/scale-box-shadow.mjs": {
+      "bytesInOutput": 313
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/projection/styles/scale-correction.mjs": {
+      "bytesInOutput": 159
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/render/utils/is-forced-motion-value.mjs": {
+      "bytesInOutput": 121
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/render/html/utils/scrape-motion-values.mjs": {
+      "bytesInOutput": 170
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/render/html/HTMLVisualElement.mjs": {
+      "bytesInOutput": 630
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/render/svg/utils/path.mjs": {
+      "bytesInOutput": 218
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/render/svg/utils/build-attrs.mjs": {
+      "bytesInOutput": 685
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/render/svg/utils/camel-case-attrs.mjs": {
+      "bytesInOutput": 359
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/render/svg/utils/is-svg-tag.mjs": {
+      "bytesInOutput": 54
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/render/svg/utils/render.mjs": {
+      "bytesInOutput": 104
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/render/svg/utils/scrape-motion-values.mjs": {
+      "bytesInOutput": 167
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/render/svg/SVGVisualElement.mjs": {
+      "bytesInOutput": 492
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/render/utils/get-variant-context.mjs": {
+      "bytesInOutput": 263
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/render/utils/shallow-compare.mjs": {
+      "bytesInOutput": 140
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/render/utils/animation-state.mjs": {
+      "bytesInOutput": 2679
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/projection/geometry/copy.mjs": {
+      "bytesInOutput": 185
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/projection/geometry/delta-calc.mjs": {
+      "bytesInOutput": 788
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/projection/geometry/delta-remove.mjs": {
+      "bytesInOutput": 511
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/projection/geometry/utils.mjs": {
+      "bytesInOutput": 480
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/projection/utils/each-axis.mjs": {
+      "bytesInOutput": 37
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/projection/styles/transform.mjs": {
+      "bytesInOutput": 571
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/projection/animation/mix-values.mjs": {
+      "bytesInOutput": 667
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/animation/animate/single-value.mjs": {
+      "bytesInOutput": 80
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/events/add-dom-event.mjs": {
+      "bytesInOutput": 100
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/projection/utils/compare-by-depth.mjs": {
+      "bytesInOutput": 30
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/projection/utils/flat-tree.mjs": {
+      "bytesInOutput": 240
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/utils/delay.mjs": {
+      "bytesInOutput": 115
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/value/utils/resolve-motion-value.mjs": {
+      "bytesInOutput": 38
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/projection/shared/stack.mjs": {
+      "bytesInOutput": 1298
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/projection/node/state.mjs": {
+      "bytesInOutput": 53
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/projection/node/create-projection-node.mjs": {
+      "bytesInOutput": 23108
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/projection/node/DocumentProjectionNode.mjs": {
+      "bytesInOutput": 239
+    },
+    "ui-cuicui-pair-local/settings/node_modules/motion-dom/dist/es/projection/node/HTMLProjectionNode.mjs": {
+      "bytesInOutput": 344
+    },
+    "ui-cuicui-pair-local/settings/node_modules/framer-motion/dist/es/context/MotionConfigContext.mjs": {
+      "bytesInOutput": 101
+    },
+    "ui-cuicui-pair-local/settings/node_modules/framer-motion/dist/es/utils/use-composed-ref.mjs": {
+      "bytesInOutput": 348
+    },
+    "ui-cuicui-pair-local/settings/node_modules/framer-motion/dist/es/components/AnimatePresence/use-presence.mjs": {
+      "bytesInOutput": 272
+    },
+    "ui-cuicui-pair-local/settings/node_modules/framer-motion/dist/es/components/AnimatePresence/utils.mjs": {
+      "bytesInOutput": 129
+    },
+    "ui-cuicui-pair-local/settings/node_modules/framer-motion/dist/es/index.mjs": {
+      "bytesInOutput": 0
+    },
+    "ui-cuicui-pair-local/settings/node_modules/framer-motion/dist/es/context/LazyContext.mjs": {
+      "bytesInOutput": 53
+    },
+    "ui-cuicui-pair-local/settings/node_modules/framer-motion/dist/es/motion/features/definitions.mjs": {
+      "bytesInOutput": 566
+    },
+    "ui-cuicui-pair-local/settings/node_modules/framer-motion/dist/es/motion/features/load-features.mjs": {
+      "bytesInOutput": 70
+    },
+    "ui-cuicui-pair-local/settings/node_modules/framer-motion/dist/es/components/MotionConfig/index.mjs": {
+      "bytesInOutput": 362
+    },
+    "ui-cuicui-pair-local/settings/node_modules/framer-motion/dist/es/motion/utils/valid-prop.mjs": {
+      "bytesInOutput": 642
+    },
+    "ui-cuicui-pair-local/settings/node_modules/framer-motion/dist/es/render/dom/utils/filter-props.mjs": {
+      "bytesInOutput": 333
+    },
+    "ui-cuicui-pair-local/settings/node_modules/framer-motion/dist/es/motion/index.mjs": {
+      "bytesInOutput": 975
+    },
+    "ui-cuicui-pair-local/settings/node_modules/framer-motion/dist/es/context/MotionContext/index.mjs": {
+      "bytesInOutput": 44
+    },
+    "ui-cuicui-pair-local/settings/node_modules/framer-motion/dist/es/context/MotionContext/create.mjs": {
+      "bytesInOutput": 201
+    },
+    "ui-cuicui-pair-local/settings/node_modules/framer-motion/dist/es/context/MotionContext/utils.mjs": {
+      "bytesInOutput": 143
+    },
+    "ui-cuicui-pair-local/settings/node_modules/framer-motion/dist/es/render/dom/use-render.mjs": {
+      "bytesInOutput": 266
+    },
+    "ui-cuicui-pair-local/settings/node_modules/framer-motion/dist/es/render/html/use-props.mjs": {
+      "bytesInOutput": 594
+    },
+    "ui-cuicui-pair-local/settings/node_modules/framer-motion/dist/es/render/html/utils/create-render-state.mjs": {
+      "bytesInOutput": 64
+    },
+    "ui-cuicui-pair-local/settings/node_modules/framer-motion/dist/es/render/svg/use-props.mjs": {
+      "bytesInOutput": 233
+    },
+    "ui-cuicui-pair-local/settings/node_modules/framer-motion/dist/es/render/svg/utils/create-render-state.mjs": {
+      "bytesInOutput": 32
+    },
+    "ui-cuicui-pair-local/settings/node_modules/framer-motion/dist/es/render/svg/lowercase-elements.mjs": {
+      "bytesInOutput": 211
+    },
+    "ui-cuicui-pair-local/settings/node_modules/framer-motion/dist/es/render/dom/utils/is-svg-component.mjs": {
+      "bytesInOutput": 100
+    },
+    "ui-cuicui-pair-local/settings/node_modules/framer-motion/dist/es/motion/utils/use-visual-state.mjs": {
+      "bytesInOutput": 773
+    },
+    "ui-cuicui-pair-local/settings/node_modules/framer-motion/dist/es/render/html/use-html-visual-state.mjs": {
+      "bytesInOutput": 65
+    },
+    "ui-cuicui-pair-local/settings/node_modules/framer-motion/dist/es/render/svg/use-svg-visual-state.mjs": {
+      "bytesInOutput": 65
+    },
+    "ui-cuicui-pair-local/settings/node_modules/framer-motion/dist/es/motion/utils/symbol.mjs": {
+      "bytesInOutput": 43
+    },
+    "ui-cuicui-pair-local/settings/node_modules/framer-motion/dist/es/motion/utils/use-motion-ref.mjs": {
+      "bytesInOutput": 376
+    },
+    "ui-cuicui-pair-local/settings/node_modules/framer-motion/dist/es/motion/utils/use-visual-element.mjs": {
+      "bytesInOutput": 1727
+    },
+    "ui-cuicui-pair-local/settings/node_modules/framer-motion/dist/es/context/SwitchLayoutGroupContext.mjs": {
+      "bytesInOutput": 44
+    },
+    "ui-cuicui-pair-local/settings/node_modules/framer-motion/dist/es/utils/is-ref-object.mjs": {
+      "bytesInOutput": 95
+    },
+    "ui-cuicui-pair-local/settings/node_modules/framer-motion/dist/es/render/components/create-proxy.mjs": {
+      "bytesInOutput": 193
+    },
+    "ui-cuicui-pair-local/settings/node_modules/framer-motion/dist/es/render/dom/create-visual-element.mjs": {
+      "bytesInOutput": 99
+    },
+    "ui-cuicui-pair-local/settings/node_modules/framer-motion/dist/es/motion/features/animation/index.mjs": {
+      "bytesInOutput": 470
+    },
+    "ui-cuicui-pair-local/settings/node_modules/framer-motion/dist/es/motion/features/animation/exit.mjs": {
+      "bytesInOutput": 962
+    },
+    "ui-cuicui-pair-local/settings/node_modules/framer-motion/dist/es/motion/features/animations.mjs": {
+      "bytesInOutput": 50
+    },
+    "ui-cuicui-pair-local/settings/node_modules/framer-motion/dist/es/events/event-info.mjs": {
+      "bytesInOutput": 82
+    },
+    "ui-cuicui-pair-local/settings/node_modules/framer-motion/dist/es/events/add-pointer-event.mjs": {
+      "bytesInOutput": 44
+    },
+    "ui-cuicui-pair-local/settings/node_modules/framer-motion/dist/es/utils/get-context-window.mjs": {
+      "bytesInOutput": 57
+    },
+    "ui-cuicui-pair-local/settings/node_modules/framer-motion/dist/es/utils/distance.mjs": {
+      "bytesInOutput": 105
+    },
+    "ui-cuicui-pair-local/settings/node_modules/framer-motion/dist/es/gestures/pan/PanSession.mjs": {
+      "bytesInOutput": 3862
+    },
+    "ui-cuicui-pair-local/settings/node_modules/framer-motion/dist/es/gestures/drag/utils/constraints.mjs": {
+      "bytesInOutput": 926
+    },
+    "ui-cuicui-pair-local/settings/node_modules/framer-motion/dist/es/gestures/drag/VisualElementDragControls.mjs": {
+      "bytesInOutput": 7428
+    },
+    "ui-cuicui-pair-local/settings/node_modules/framer-motion/dist/es/gestures/drag/index.mjs": {
+      "bytesInOutput": 586
+    },
+    "ui-cuicui-pair-local/settings/node_modules/framer-motion/dist/es/gestures/pan/index.mjs": {
+      "bytesInOutput": 757
+    },
+    "ui-cuicui-pair-local/settings/node_modules/framer-motion/dist/es/motion/features/layout/MeasureLayout.mjs": {
+      "bytesInOutput": 1571
+    },
+    "ui-cuicui-pair-local/settings/node_modules/framer-motion/dist/es/motion/features/drag.mjs": {
+      "bytesInOutput": 79
+    },
+    "ui-cuicui-pair-local/settings/node_modules/framer-motion/dist/es/gestures/hover.mjs": {
+      "bytesInOutput": 328
+    },
+    "ui-cuicui-pair-local/settings/node_modules/framer-motion/dist/es/gestures/focus.mjs": {
+      "bytesInOutput": 514
+    },
+    "ui-cuicui-pair-local/settings/node_modules/framer-motion/dist/es/gestures/press.mjs": {
+      "bytesInOutput": 538
+    },
+    "ui-cuicui-pair-local/settings/node_modules/framer-motion/dist/es/motion/features/viewport/observers.mjs": {
+      "bytesInOutput": 365
+    },
+    "ui-cuicui-pair-local/settings/node_modules/framer-motion/dist/es/motion/features/viewport/index.mjs": {
+      "bytesInOutput": 970
+    },
+    "ui-cuicui-pair-local/settings/node_modules/framer-motion/dist/es/motion/features/gestures.mjs": {
+      "bytesInOutput": 84
+    },
+    "ui-cuicui-pair-local/settings/node_modules/framer-motion/dist/es/motion/features/layout.mjs": {
+      "bytesInOutput": 53
+    },
+    "ui-cuicui-pair-local/settings/node_modules/framer-motion/dist/es/render/components/motion/feature-bundle.mjs": {
+      "bytesInOutput": 33
+    },
+    "ui-cuicui-pair-local/settings/node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs": {
+      "bytesInOutput": 17
+    },
+    "ui-cuicui-pair-local/settings/node_modules/framer-motion/dist/es/utils/reduced-motion/use-reduced-motion.mjs": {
+      "bytesInOutput": 92
+    },
+    "ui-cuicui-pair-local/settings/node_modules/lucide-react/dist/esm/createLucideIcon.js": {
+      "bytesInOutput": 192
+    },
+    "ui-cuicui-pair-local/settings/node_modules/lucide-react/dist/esm/shared/src/utils.js": {
+      "bytesInOutput": 148
+    },
+    "ui-cuicui-pair-local/settings/node_modules/lucide-react/dist/esm/Icon.js": {
+      "bytesInOutput": 370
+    },
+    "ui-cuicui-pair-local/settings/node_modules/lucide-react/dist/esm/defaultAttributes.js": {
+      "bytesInOutput": 176
+    },
+    "ui-cuicui-pair-local/settings/node_modules/lucide-react/dist/esm/icons/plus.js": {
+      "bytesInOutput": 94
+    },
+    "ui-cuicui-pair-local/settings/node_modules/lucide-react/dist/esm/icons/square.js": {
+      "bytesInOutput": 88
+    },
+    "ui-cuicui-pair-local/settings/node_modules/lucide-react/dist/esm/lucide-react.js": {
+      "bytesInOutput": 0
+    },
+    "ui-cuicui-pair-local/settings/src/settings.tsx": {
+      "bytesInOutput": 5857
+    },
+    "ui-cuicui-pair-local/settings/node_modules/clsx/dist/clsx.mjs": {
+      "bytesInOutput": 362
+    },
+    "ui-cuicui-pair-local/settings/node_modules/tailwind-merge/dist/bundle-mjs.mjs": {
+      "bytesInOutput": 24483
+    },
+    "ui-cuicui-pair-local/settings/src/cn.ts": {
+      "bytesInOutput": 35
+    }
+  },
+  "duplicateCheck": [
+    {
+      "file": "candidate-catalog.json",
+      "item": {
+        "id": "cuicui:dynamic-settings",
+        "title": "dynamic-settings",
+        "source": "Cuicui",
+        "license": "MIT",
+        "upstream": "https://github.com/damien-schneider/cuicui/tree/c7db00f2e98753c277f1aec6e316520038f4e0a0/packages/ui/cuicui/application-ui/settings/dynamic-settings",
+        "website": "",
+        "buildStatus": "Fixed source and root MIT reviewed; NOT built or runtime-tested; incomplete or overlapping candidate, excluded from gallery",
+        "batch": "batch-002",
+        "description": "原胶囊展开设置面板的未完成示例，不是可应用的完整设置器。",
+        "gaps": [
+          "固定入口与根MIT已核，未构建，依赖许可尚未全链核验。",
+          "Dimensions明确TODO；比例状态未上提，Prompt未受控；Apply仅关闭和toast，没有实际验证或应用。",
+          "本项无远程媒体/导出/剪贴板缺口；不得补写功能后冒称原版已完成。",
+          "焦点/Escape/可访问名称与减少运动待验证；与现有设置和变形浮层重合，暂不恢复。",
+          "519轮源码复筛：Dimensions TODO无尺寸控件；Apply Changes仅关闭面板及toast成功，Prompt未保存/绑定。不能称真实已应用设置。"
+        ],
+        "sourceReview": {
+          "revision": "c7db00f2e98753c277f1aec6e316520038f4e0a0",
+          "sha256": "7d7fd6f8172cc60e069853cc289679f5d79f47abe87e4c339e6d855a90389cde",
+          "decision": "keep source-only; do not count preview",
+          "note": "Dimensions TODO无尺寸控件；Apply Changes仅关闭面板及toast成功，Prompt未保存/绑定。不能称真实已应用设置。"
+        }
+      }
+    }
+  ],
+  "knownGaps": [
+    "Dimensions is an upstream TODO, no slider or real dimension editing implemented.",
+    "Apply only closes the local panel and shows a Sonner demonstration receipt; nothing is saved/applied remotely or persisted.",
+    "Aspect selection and uncontrolled prompt reset on section unmount as upstream; no persistence invented.",
+    "Motion initial reduced preference tested; no claim of immediate dynamic OS-preference change.",
+    "Browser pixel/layout/animation and native keyboard default activation not visually tested."
+  ]
+}
