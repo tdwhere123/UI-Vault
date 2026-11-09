@@ -45,9 +45,9 @@ export default function DashboardAnalytics({ as: Root = "main" }: { as?: "main" 
                 </ToggleGroupItem>
               ))}
             </ToggleGroup>
-            <Button variant="outline" onClick={() => downloadCsv(period)}>
+            <Button variant="outline" disabled title="Downloads are unavailable in this isolated preview">
               <Icon name="download" />
-              Export CSV
+              CSV unavailable in preview
             </Button>
           </div>
         </div>
