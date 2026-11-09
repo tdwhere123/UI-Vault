@@ -1,0 +1,52 @@
+{
+  "repository": "https://github.com/nolly-studio/cult-ui",
+  "revision": "d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+  "originalComponent": "apps/www/registry/default/ui/illustration-fluid-rendering.tsx",
+  "originalDemo": "apps/www/registry/default/example/illustration-fluid-rendering-demo.tsx",
+  "originalFilesSHA256": {
+    "LICENSE.md": "78045e58dfd5f039ad350ad293da2ad9a2c0362b82dadb069b1c10be382ddac7",
+    "apps/www/lib/utils.ts": "7cf92ac6e9a70c0c68a993becf674ec7c373653bc5dc3379e366c352e5ee1a41",
+    "apps/www/registry/default/ui/illustration-fluid-rendering.tsx": "5148ee74fa8dc6d363d7f31b1365972d23df37c99d8da5cf2e52d5fbdf1d5fda",
+    "apps/www/registry/default/example/illustration-fluid-rendering-demo.tsx": "458c75e741ac79a5dc44322f42a3de478c6feeab1df4dba69cc5fcc466bb6bb3"
+  },
+  "dependencies": [
+    {
+      "name": "clsx",
+      "version": "2.1.1",
+      "license": "MIT",
+      "scope": "emitted-runtime"
+    },
+    {
+      "name": "react",
+      "version": "19.1.0",
+      "license": "MIT",
+      "scope": "emitted-runtime"
+    },
+    {
+      "name": "react-dom",
+      "version": "19.1.0",
+      "license": "MIT",
+      "scope": "emitted-runtime"
+    },
+    {
+      "name": "scheduler",
+      "version": "0.26.0",
+      "license": "MIT",
+      "scope": "emitted-runtime"
+    },
+    {
+      "name": "tailwind-merge",
+      "version": "3.3.1",
+      "license": "MIT",
+      "scope": "emitted-runtime"
+    },
+    {
+      "name": "tailwindcss",
+      "version": "3.4.17",
+      "license": "MIT",
+      "scope": "compiled-css"
+    }
+  ],
+  "adaptation": "Original Cult UI illustration-fluid-rendering component and complete default demo retained. Only import aliases are resolved locally; cn retains original extendTailwindMerge soft-shadow class groups, unrelated siteConfig/absoluteUrl removed. Original SVG path data, gradients, filters, masks, clips, conic-gradient and text not redrawn. useId comes from original component. Original gateway-marketing statements are fixture content, not operational API key management, billing or failover. Original utility classes compiled with Tailwind3.4.17; host supplies light white-card/border theme and system-ui font, no font asset or CDN. Host mount/unmount/error/resource ownership added; hidden unloads static scene and restores on reveal, repeated visible idempotent. SVG reference IDs remain unique and resolve after 100 hidden/reveal mounts. This is a static visual asset, not an interactive chart, running Agent workflow, or text-entry keyboard. Each original full scene is one existing ID; no color variants counted. No icon package emitted in this scene. Normal/reduced/earlymodule/earlySVG/recreation-failure tests use actual539 composePreview; every listener, RAF and timeout cleared. No native pixel acceptance is claimed. These static SVGs have no continuing animation or separate reduced-motion effect. No networking, storage, clipboard, backend, images, screenshots or binary packaging.",
+  "visualVerified": false
+}
