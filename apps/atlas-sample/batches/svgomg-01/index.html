@@ -1,0 +1,689 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>SVGOMG · Local SVG optimization</title>
+    <meta name="theme-color" content="#303f9f">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+    
+    
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="SVGOMG">
+    <meta name="twitter:card" content="summary">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <meta property="og:title" content="SVGOMG · Local SVG optimization">
+    
+    
+    
+    
+  <link rel="stylesheet" href="runtime.css"></head>
+  <body>
+    <div class="app-output">
+      <div class="main-menu">
+        <div class="overlay"></div>
+        <nav class="menu">
+          <div class="app-title">
+            <svg class="logo" viewBox="0 0 600 600"><path fill="#0097a7" d="M0 1.995h600V600H0z"/><path fill="#00bcd4" d="M0 0h600v395.68H0z"/><path d="M269.224 530.33 519 395.485H269.224V530.33zM214.35 91.847H519v303.638H214.35V91.847z" opacity=".22"/><path fill="#fff" d="M80 341.735h189.224V530.33H80z"/></svg>
+
+            <div class="title-text">
+              <h1>SVGOMG</h1>
+              <p>Powered by <a href="https://github.com/svg/svgo">SVGO v4.0.0</a></p>
+            </div>
+          </div>
+          <ul>
+            <li>
+              <button class="load-file unbutton menu-item" type="button">
+                <svg class="icon" viewBox="0 0 24 24"><path d="M9 16h6v-6h4l-7-7-7 7h4zm-4 2h14v2H5z"/></svg>
+
+                <span class="menu-item-text">Open SVG</span>
+              </button>
+              <input type="file" class="load-file-input" accept=".svg">
+            </li>
+            <li>
+              <label class="menu-input menu-item">
+                <svg class="icon" viewBox="0 0 24 24"><path d="M19 2h-4.2C14.4.8 13.3 0 12 0c-1.3 0-2.4.8-2.8 2H5C4 2 3 3 3 4v16c0 1 1 2 2 2h14c1 0 2-1 2-2V4c0-1-1-2-2-2zm-7 0c.6 0 1 .5 1 1s-.5 1-1 1-1-.5-1-1 .5-1 1-1zm7 18H5V4h2v3h10V4h2v16z"/></svg>
+
+                <span class="input-area">
+                  <textarea class="paste-input"></textarea>
+                  <span class="label-txt">Paste markup</span>
+                </span>
+              </label>
+            </li>
+            <li>
+              <button class="load-demo unbutton menu-item" type="button">
+                <svg class="icon" viewBox="0 0 24 24"><path d="M18.92 6c-.2-.58-.76-1-1.42-1h-11c-.66 0-1.2.42-1.42 1L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-6zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/></svg>
+
+                <span class="menu-item-text">Demo</span>
+              </button>
+            </li>
+            
+          </ul>
+          <div class="menu-extra"></div>
+        </nav>
+      </div>
+      <div class="toolbar">
+        <div class="menu-toolbar-item">
+          <button class="unbutton menu-btn" type="button" title="Menu">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+
+          </button>
+        </div>
+        <form class="material-tabs view-toggler">
+          <label class="material-tab">
+            <input type="radio" name="output" value="image" checked>
+            <span class="selected"></span>
+            Image
+          </label>
+          <label class="material-tab">
+            <input type="radio" name="output" value="code">
+            <span class="selected"></span>
+            Markup
+          </label>
+        </form>
+      </div>
+      <div class="main">
+        <div class="output">
+          <div class="action-button-container">
+            <div class="minor-action-container"></div>
+            <div class="results-container"></div>
+          </div>
+        </div>
+        <div class="settings">
+          <div class="results-container-mobile"></div>
+          <div class="settings-scroller">
+            <section class="global">
+              <h1 class="settings-sub-heading">Global settings</h1>
+              <label class="setting-item-toggle">
+                <input type="checkbox" name="original">
+                <span class="material-switch">
+  <span class="track"></span>
+  <span class="handle"></span>
+</span>
+                Show original
+              </label>
+              <label class="setting-item-toggle">
+                <input type="checkbox" name="gzip" checked>
+                <span class="material-switch">
+  <span class="track"></span>
+  <span class="handle"></span>
+</span>
+                Compare gzipped
+              </label>
+              <label class="setting-item-toggle">
+                <input type="checkbox" name="pretty">
+                <span class="material-switch">
+  <span class="track"></span>
+  <span class="handle"></span>
+</span>
+                Prettify markup
+              </label>
+              <label class="setting-item-toggle">
+                <input type="checkbox" name="multipass">
+                <span class="material-switch">
+  <span class="track"></span>
+  <span class="handle"></span>
+</span>
+                Multipass
+              </label>
+              <label class="setting-item-range">
+                <span class="label-text">Number precision</span>
+                <input type="range" min="0" max="8" step="1" value="3" name="floatPrecision">
+              </label>
+              <label class="setting-item-range">
+                <span class="label-text">Transform precision</span>
+                <input type="range" min="0" max="8" step="1" value="5" name="transformPrecision">
+              </label>
+            </section>
+            <section class="plugins">
+              <h1 class="settings-sub-heading">Features</h1>
+              
+                <label class="setting-item-toggle">
+                  <input type="checkbox"
+                         name="removeDoctype"
+                         checked>
+                  <span class="material-switch">
+  <span class="track"></span>
+  <span class="handle"></span>
+</span>
+                  Remove doctype
+                </label>
+              
+                <label class="setting-item-toggle">
+                  <input type="checkbox"
+                         name="removeXMLProcInst"
+                         checked>
+                  <span class="material-switch">
+  <span class="track"></span>
+  <span class="handle"></span>
+</span>
+                  Remove XML instructions
+                </label>
+              
+                <label class="setting-item-toggle">
+                  <input type="checkbox"
+                         name="removeComments"
+                         checked>
+                  <span class="material-switch">
+  <span class="track"></span>
+  <span class="handle"></span>
+</span>
+                  Remove comments
+                </label>
+              
+                <label class="setting-item-toggle">
+                  <input type="checkbox"
+                         name="removeMetadata"
+                         checked>
+                  <span class="material-switch">
+  <span class="track"></span>
+  <span class="handle"></span>
+</span>
+                  Remove &lt;metadata&gt;
+                </label>
+              
+                <label class="setting-item-toggle">
+                  <input type="checkbox"
+                         name="removeXMLNS"
+                         >
+                  <span class="material-switch">
+  <span class="track"></span>
+  <span class="handle"></span>
+</span>
+                  Remove xmlns
+                </label>
+              
+                <label class="setting-item-toggle">
+                  <input type="checkbox"
+                         name="removeEditorsNSData"
+                         checked>
+                  <span class="material-switch">
+  <span class="track"></span>
+  <span class="handle"></span>
+</span>
+                  Remove editor data
+                </label>
+              
+                <label class="setting-item-toggle">
+                  <input type="checkbox"
+                         name="cleanupAttrs"
+                         checked>
+                  <span class="material-switch">
+  <span class="track"></span>
+  <span class="handle"></span>
+</span>
+                  Clean up attribute whitespace
+                </label>
+              
+                <label class="setting-item-toggle">
+                  <input type="checkbox"
+                         name="mergeStyles"
+                         checked>
+                  <span class="material-switch">
+  <span class="track"></span>
+  <span class="handle"></span>
+</span>
+                  Merge styles
+                </label>
+              
+                <label class="setting-item-toggle">
+                  <input type="checkbox"
+                         name="inlineStyles"
+                         checked>
+                  <span class="material-switch">
+  <span class="track"></span>
+  <span class="handle"></span>
+</span>
+                  Inline styles
+                </label>
+              
+                <label class="setting-item-toggle">
+                  <input type="checkbox"
+                         name="minifyStyles"
+                         checked>
+                  <span class="material-switch">
+  <span class="track"></span>
+  <span class="handle"></span>
+</span>
+                  Minify styles
+                </label>
+              
+                <label class="setting-item-toggle">
+                  <input type="checkbox"
+                         name="convertStyleToAttrs"
+                         >
+                  <span class="material-switch">
+  <span class="track"></span>
+  <span class="handle"></span>
+</span>
+                  Style to attributes
+                </label>
+              
+                <label class="setting-item-toggle">
+                  <input type="checkbox"
+                         name="cleanupIds"
+                         checked>
+                  <span class="material-switch">
+  <span class="track"></span>
+  <span class="handle"></span>
+</span>
+                  Clean up IDs
+                </label>
+              
+                <label class="setting-item-toggle">
+                  <input type="checkbox"
+                         name="removeRasterImages"
+                         >
+                  <span class="material-switch">
+  <span class="track"></span>
+  <span class="handle"></span>
+</span>
+                  Remove raster images
+                </label>
+              
+                <label class="setting-item-toggle">
+                  <input type="checkbox"
+                         name="removeUselessDefs"
+                         checked>
+                  <span class="material-switch">
+  <span class="track"></span>
+  <span class="handle"></span>
+</span>
+                  Remove unused defs
+                </label>
+              
+                <label class="setting-item-toggle">
+                  <input type="checkbox"
+                         name="cleanupNumericValues"
+                         checked>
+                  <span class="material-switch">
+  <span class="track"></span>
+  <span class="handle"></span>
+</span>
+                  Round/rewrite numbers
+                </label>
+              
+                <label class="setting-item-toggle">
+                  <input type="checkbox"
+                         name="cleanupListOfValues"
+                         >
+                  <span class="material-switch">
+  <span class="track"></span>
+  <span class="handle"></span>
+</span>
+                  Round/rewrite number lists
+                </label>
+              
+                <label class="setting-item-toggle">
+                  <input type="checkbox"
+                         name="convertColors"
+                         checked>
+                  <span class="material-switch">
+  <span class="track"></span>
+  <span class="handle"></span>
+</span>
+                  Minify colours
+                </label>
+              
+                <label class="setting-item-toggle">
+                  <input type="checkbox"
+                         name="removeUnknownsAndDefaults"
+                         checked>
+                  <span class="material-switch">
+  <span class="track"></span>
+  <span class="handle"></span>
+</span>
+                  Remove unknowns &amp; defaults
+                </label>
+              
+                <label class="setting-item-toggle">
+                  <input type="checkbox"
+                         name="removeNonInheritableGroupAttrs"
+                         checked>
+                  <span class="material-switch">
+  <span class="track"></span>
+  <span class="handle"></span>
+</span>
+                  Remove unneeded group attrs
+                </label>
+              
+                <label class="setting-item-toggle">
+                  <input type="checkbox"
+                         name="removeUselessStrokeAndFill"
+                         checked>
+                  <span class="material-switch">
+  <span class="track"></span>
+  <span class="handle"></span>
+</span>
+                  Remove useless stroke &amp; fill
+                </label>
+              
+                <label class="setting-item-toggle">
+                  <input type="checkbox"
+                         name="removeViewBox"
+                         >
+                  <span class="material-switch">
+  <span class="track"></span>
+  <span class="handle"></span>
+</span>
+                  Remove viewBox
+                </label>
+              
+                <label class="setting-item-toggle">
+                  <input type="checkbox"
+                         name="cleanupEnableBackground"
+                         checked>
+                  <span class="material-switch">
+  <span class="track"></span>
+  <span class="handle"></span>
+</span>
+                  Remove/tidy enable-background
+                </label>
+              
+                <label class="setting-item-toggle">
+                  <input type="checkbox"
+                         name="removeHiddenElems"
+                         checked>
+                  <span class="material-switch">
+  <span class="track"></span>
+  <span class="handle"></span>
+</span>
+                  Remove hidden elements
+                </label>
+              
+                <label class="setting-item-toggle">
+                  <input type="checkbox"
+                         name="removeEmptyText"
+                         checked>
+                  <span class="material-switch">
+  <span class="track"></span>
+  <span class="handle"></span>
+</span>
+                  Remove empty text
+                </label>
+              
+                <label class="setting-item-toggle">
+                  <input type="checkbox"
+                         name="convertShapeToPath"
+                         checked>
+                  <span class="material-switch">
+  <span class="track"></span>
+  <span class="handle"></span>
+</span>
+                  Shapes to (smaller) paths
+                </label>
+              
+                <label class="setting-item-toggle">
+                  <input type="checkbox"
+                         name="moveElemsAttrsToGroup"
+                         checked>
+                  <span class="material-switch">
+  <span class="track"></span>
+  <span class="handle"></span>
+</span>
+                  Move attrs to parent group
+                </label>
+              
+                <label class="setting-item-toggle">
+                  <input type="checkbox"
+                         name="moveGroupAttrsToElems"
+                         checked>
+                  <span class="material-switch">
+  <span class="track"></span>
+  <span class="handle"></span>
+</span>
+                  Move group attrs to elements
+                </label>
+              
+                <label class="setting-item-toggle">
+                  <input type="checkbox"
+                         name="collapseGroups"
+                         checked>
+                  <span class="material-switch">
+  <span class="track"></span>
+  <span class="handle"></span>
+</span>
+                  Collapse useless groups
+                </label>
+              
+                <label class="setting-item-toggle">
+                  <input type="checkbox"
+                         name="convertPathData"
+                         checked>
+                  <span class="material-switch">
+  <span class="track"></span>
+  <span class="handle"></span>
+</span>
+                  Round/rewrite paths
+                </label>
+              
+                <label class="setting-item-toggle">
+                  <input type="checkbox"
+                         name="convertEllipseToCircle"
+                         checked>
+                  <span class="material-switch">
+  <span class="track"></span>
+  <span class="handle"></span>
+</span>
+                  Convert non-eccentric &lt;ellipse&gt; to &lt;circle&gt;
+                </label>
+              
+                <label class="setting-item-toggle">
+                  <input type="checkbox"
+                         name="convertTransform"
+                         checked>
+                  <span class="material-switch">
+  <span class="track"></span>
+  <span class="handle"></span>
+</span>
+                  Round/rewrite transforms
+                </label>
+              
+                <label class="setting-item-toggle">
+                  <input type="checkbox"
+                         name="removeEmptyAttrs"
+                         checked>
+                  <span class="material-switch">
+  <span class="track"></span>
+  <span class="handle"></span>
+</span>
+                  Remove empty attrs
+                </label>
+              
+                <label class="setting-item-toggle">
+                  <input type="checkbox"
+                         name="removeEmptyContainers"
+                         checked>
+                  <span class="material-switch">
+  <span class="track"></span>
+  <span class="handle"></span>
+</span>
+                  Remove empty containers
+                </label>
+              
+                <label class="setting-item-toggle">
+                  <input type="checkbox"
+                         name="mergePaths"
+                         checked>
+                  <span class="material-switch">
+  <span class="track"></span>
+  <span class="handle"></span>
+</span>
+                  Merge paths
+                </label>
+              
+                <label class="setting-item-toggle">
+                  <input type="checkbox"
+                         name="removeUnusedNS"
+                         checked>
+                  <span class="material-switch">
+  <span class="track"></span>
+  <span class="handle"></span>
+</span>
+                  Remove unused namespaces
+                </label>
+              
+                <label class="setting-item-toggle">
+                  <input type="checkbox"
+                         name="reusePaths"
+                         >
+                  <span class="material-switch">
+  <span class="track"></span>
+  <span class="handle"></span>
+</span>
+                  Replace duplicate elements with links
+                </label>
+              
+                <label class="setting-item-toggle">
+                  <input type="checkbox"
+                         name="sortAttrs"
+                         checked>
+                  <span class="material-switch">
+  <span class="track"></span>
+  <span class="handle"></span>
+</span>
+                  Sort attrs
+                </label>
+              
+                <label class="setting-item-toggle">
+                  <input type="checkbox"
+                         name="sortDefsChildren"
+                         checked>
+                  <span class="material-switch">
+  <span class="track"></span>
+  <span class="handle"></span>
+</span>
+                  Sort children of &lt;defs&gt;
+                </label>
+              
+                <label class="setting-item-toggle">
+                  <input type="checkbox"
+                         name="removeTitle"
+                         >
+                  <span class="material-switch">
+  <span class="track"></span>
+  <span class="handle"></span>
+</span>
+                  Remove &lt;title&gt;
+                </label>
+              
+                <label class="setting-item-toggle">
+                  <input type="checkbox"
+                         name="removeDesc"
+                         checked>
+                  <span class="material-switch">
+  <span class="track"></span>
+  <span class="handle"></span>
+</span>
+                  Remove &lt;desc&gt;
+                </label>
+              
+                <label class="setting-item-toggle">
+                  <input type="checkbox"
+                         name="removeDimensions"
+                         >
+                  <span class="material-switch">
+  <span class="track"></span>
+  <span class="handle"></span>
+</span>
+                  Prefer viewBox to width/height
+                </label>
+              
+                <label class="setting-item-toggle">
+                  <input type="checkbox"
+                         name="removeStyleElement"
+                         >
+                  <span class="material-switch">
+  <span class="track"></span>
+  <span class="handle"></span>
+</span>
+                  Remove style elements
+                </label>
+              
+                <label class="setting-item-toggle">
+                  <input type="checkbox"
+                         name="removeScripts"
+                         >
+                  <span class="material-switch">
+  <span class="track"></span>
+  <span class="handle"></span>
+</span>
+                  Remove scripts
+                </label>
+              
+                <label class="setting-item-toggle">
+                  <input type="checkbox"
+                         name="removeOffCanvasPaths"
+                         >
+                  <span class="material-switch">
+  <span class="track"></span>
+  <span class="handle"></span>
+</span>
+                  Remove out-of-bounds paths
+                </label>
+              
+                <label class="setting-item-toggle">
+                  <input type="checkbox"
+                         name="convertOneStopGradients"
+                         >
+                  <span class="material-switch">
+  <span class="track"></span>
+  <span class="handle"></span>
+</span>
+                  Convert one-stop gradients to solid colours
+                </label>
+              
+                <label class="setting-item-toggle">
+                  <input type="checkbox"
+                         name="removeDeprecatedAttrs"
+                         checked>
+                  <span class="material-switch">
+  <span class="track"></span>
+  <span class="handle"></span>
+</span>
+                  Remove deprecated attributes
+                </label>
+              
+                <label class="setting-item-toggle">
+                  <input type="checkbox"
+                         name="removeXlink"
+                         >
+                  <span class="material-switch">
+  <span class="track"></span>
+  <span class="handle"></span>
+</span>
+                  Replace xlink with native SVG
+                </label>
+              
+            </section>
+            <div class="setting-reset-row">
+              <button class="unbutton setting-reset" type="button">Reset all</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="preloader">
+        <div class="spinner">
+          <div class="spinner-container">
+            <div class="spinner-layer">
+              <div class="circle-clipper left">
+                <div class="circle"></div>
+              </div>
+              <div class="gap-patch">
+                <div class="circle"></div>
+              </div>
+              <div class="circle-clipper right">
+                <div class="circle"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p>Sorry, wasn't ready…</p>
+      </div>
+      
+    </div>
+  <script src="runtime-part-1.js"></script><script src="runtime.js"></script></body>
+</html>
