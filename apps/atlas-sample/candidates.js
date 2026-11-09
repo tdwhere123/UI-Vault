@@ -1,3 +1,4 @@
+import {localizeItem} from './display-names.mjs';
 const $ = id => document.getElementById(id);
 const PAGE_SIZE = 18;
 let items = [], page = 1, returnFocus;
@@ -78,7 +79,7 @@ function card(item, index) {
 function filteredItems() {
   const q = $('candidate-search').value.trim().toLocaleLowerCase();
   const source = $('candidate-source').value;
-  return items.filter(item => (!source || source === item.source) && (!$('has-preview').checked || safeURL(item.preview, true)) && (!q || [item.id, item.title, item.source, item.description].filter(Boolean).join(' ').toLocaleLowerCase().includes(q)));
+  return items.filter(item => (!source || source === item.source) && (!$('has-preview').checked || safeURL(item.preview, true)) && (!q || [item.id, item.title, item.source, item.description, item.keywords].filter(Boolean).join(' ').toLocaleLowerCase().includes(q)));
 }
 function render() {
   const filtered = filteredItems(), pages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
@@ -99,7 +100,7 @@ for (const [id, delta] of [['previous', -1], ['next', 1]]) $(id).addEventListene
 try {
   const response = await fetch('candidate-catalog.json');
   if (!response.ok) throw Error(`HTTP ${response.status}`);
-  const data = await response.json(); items = Array.isArray(data) ? data : data.items;
+  const data = await response.json(); items = (Array.isArray(data) ? data : data.items).map(localizeItem);
   if (!Array.isArray(items)) throw Error('Invalid candidate catalog');
   $('total').textContent = items.length; $('nav-count').textContent = items.length;
   for (const source of [...new Set(items.map(item => item.source).filter(Boolean))].sort()) { const option = el('option', source); option.value = source; $('candidate-source').append(option); }
