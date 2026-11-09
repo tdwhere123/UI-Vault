@@ -1,0 +1,39 @@
+{
+  "tests": {
+    "originalLocalState": true,
+    "apply100": {
+      "last10Listeners": [
+        147,
+        147,
+        147,
+        147,
+        147,
+        147,
+        147,
+        147,
+        147,
+        147
+      ],
+      "maxHostTasks": 2,
+      "oneToast": true
+    },
+    "hiddenOldNodeAndNoLateToast": true,
+    "pendingToastExit": true,
+    "reduced": true,
+    "early": true,
+    "partial": true,
+    "late": true,
+    "pagehide": true,
+    "external": true,
+    "actual545Compose": true,
+    "browserVisualQA": "not-run"
+  },
+  "runtimeSha256": "84000af4f6c835c297a030920f78aa7d7d1a363cb5f8e7a8d18ac4d154d14ddd",
+  "knownGaps": [
+    "Dimensions is an upstream TODO, no slider or real dimension editing implemented.",
+    "Apply only closes the local panel and shows a Sonner demonstration receipt; nothing is saved/applied remotely or persisted.",
+    "Aspect selection and uncontrolled prompt reset on section unmount as upstream; no persistence invented.",
+    "Motion initial reduced preference tested; no claim of immediate dynamic OS-preference change.",
+    "Browser pixel/layout/animation and native keyboard default activation not visually tested."
+  ]
+}
