@@ -1,0 +1,366 @@
+{
+  "repository": "https://github.com/johnnesky/beepbox",
+  "revision": "355e510099d230d066d95074c16d748d59fe054c",
+  "sourcePath": "editor/SongEditor.ts",
+  "sourceUrl": "https://github.com/johnnesky/beepbox/blob/355e510099d230d066d95074c16d748d59fe054c/editor/SongEditor.ts",
+  "rootLicenseSha256": "11bda08d0a35daa31dea162bce1aeaae999938fe7bddabd9709602c28af998ef",
+  "scope": "Original complete SongEditor, blank original song; real pattern note drawing, channels/bars/instrument controls and undo/redo/synth. Restricted IO features explicitly unavailable. No imported music fixture.",
+  "sources": {
+    "editor/ArrayBufferReader.ts": {
+      "adaptedSha256": "8928985a530cef679cd2e4ca84f0aec500a6a4f3a85f41ea3b9fbca99b9a8e97",
+      "originalSha256": "8928985a530cef679cd2e4ca84f0aec500a6a4f3a85f41ea3b9fbca99b9a8e97",
+      "changed": false
+    },
+    "editor/ArrayBufferWriter.ts": {
+      "adaptedSha256": "b7c8f26842f80cb0245522f7b4fb348b7ddd1c5842cdf5d097956c10fc71163d",
+      "originalSha256": "b7c8f26842f80cb0245522f7b4fb348b7ddd1c5842cdf5d097956c10fc71163d",
+      "changed": false
+    },
+    "editor/BarScrollBar.ts": {
+      "adaptedSha256": "d98c1f237b8ebb8e954ad20037c2d599caefacb330cc86f991ec4ee6945aa356",
+      "originalSha256": "d98c1f237b8ebb8e954ad20037c2d599caefacb330cc86f991ec4ee6945aa356",
+      "changed": false
+    },
+    "editor/BeatsPerBarPrompt.ts": {
+      "adaptedSha256": "eb82ac6e473f3dee111996220fa25c9370c77c15333d238f18d48b55dda2fee6",
+      "originalSha256": "5882294114422899e03ac491cd13a4a5fff0aedc3c84497217a916264c76150c",
+      "changed": true
+    },
+    "editor/Change.ts": {
+      "adaptedSha256": "d478f94607eab336b60e5ffc1ffe51d32be82d89ea09023704e21fba0adddc63",
+      "originalSha256": "d478f94607eab336b60e5ffc1ffe51d32be82d89ea09023704e21fba0adddc63",
+      "changed": false
+    },
+    "editor/ChangeNotifier.ts": {
+      "adaptedSha256": "3577a218fd709b94c5b98bc808b2a9bfd08b051f41ccb64aa158ff2d29a425de",
+      "originalSha256": "3577a218fd709b94c5b98bc808b2a9bfd08b051f41ccb64aa158ff2d29a425de",
+      "changed": false
+    },
+    "editor/ChannelRow.ts": {
+      "adaptedSha256": "293e908367bf8c05db178ebcc236b8f50739197903982ccea43ae1a1d5f25191",
+      "originalSha256": "293e908367bf8c05db178ebcc236b8f50739197903982ccea43ae1a1d5f25191",
+      "changed": false
+    },
+    "editor/ChannelSettingsPrompt.ts": {
+      "adaptedSha256": "1a66f3fc51388f5346f0483b3f82b86820677db887a5b859dcd18021e9112f9f",
+      "originalSha256": "1a66f3fc51388f5346f0483b3f82b86820677db887a5b859dcd18021e9112f9f",
+      "changed": false
+    },
+    "editor/ColorConfig.ts": {
+      "adaptedSha256": "a1449dbf9bf3d4b5ad734e3683f24b8f364e3bdfa0f698b9e25d1a2cad3c1a0a",
+      "originalSha256": "a1449dbf9bf3d4b5ad734e3683f24b8f364e3bdfa0f698b9e25d1a2cad3c1a0a",
+      "changed": false
+    },
+    "editor/EasyPointers.ts": {
+      "adaptedSha256": "888d0dcb3f1c97b310f056106d35864354f9dd9b53f4578d160aca0ff48fa336",
+      "originalSha256": "888d0dcb3f1c97b310f056106d35864354f9dd9b53f4578d160aca0ff48fa336",
+      "changed": false
+    },
+    "editor/EditorConfig.ts": {
+      "adaptedSha256": "7f5ef42a0a07801161805fa5934b653521b464e727b5a65fc05546f4f427b214",
+      "originalSha256": "7f5ef42a0a07801161805fa5934b653521b464e727b5a65fc05546f4f427b214",
+      "changed": false
+    },
+    "editor/EnvelopeEditor.ts": {
+      "adaptedSha256": "7a533e5ae944834fb69a2618f4bd05f9932db8c4d5daf429842fa85a640cba08",
+      "originalSha256": "7a533e5ae944834fb69a2618f4bd05f9932db8c4d5daf429842fa85a640cba08",
+      "changed": false
+    },
+    "editor/ExportPrompt.ts": {
+      "adaptedSha256": "78589011d1f66946146c643f2f4cf040102e0cf6698a461487000f2adef650ac",
+      "originalSha256": "7d98151fd6e682b85f2ad7aa7bff54768815ace058980cc8f241a7c0120cd053",
+      "changed": true
+    },
+    "editor/FadeInOutEditor.ts": {
+      "adaptedSha256": "da2d9245b965e36bb48a1d61b148ffb7dd0cceddff42c8b3e226c4d5a0c6468b",
+      "originalSha256": "da2d9245b965e36bb48a1d61b148ffb7dd0cceddff42c8b3e226c4d5a0c6468b",
+      "changed": false
+    },
+    "editor/FilterEditor.ts": {
+      "adaptedSha256": "cc65aada0ccbb9fa2ec2c013a7e167f31df4e16c70bff1e671895c9a3bca4a63",
+      "originalSha256": "cc65aada0ccbb9fa2ec2c013a7e167f31df4e16c70bff1e671895c9a3bca4a63",
+      "changed": false
+    },
+    "editor/HarmonicsEditor.ts": {
+      "adaptedSha256": "6b70a526b795c8ede776dfccdfa203277609451c653ffd1ad5e781a6708f3cb4",
+      "originalSha256": "6b70a526b795c8ede776dfccdfa203277609451c653ffd1ad5e781a6708f3cb4",
+      "changed": false
+    },
+    "editor/ImportPrompt.ts": {
+      "adaptedSha256": "bcf54fdda0decb8eed5e94aa7612244693d7ae3cc6e0e0494660729fcff92ff6",
+      "originalSha256": "bcf54fdda0decb8eed5e94aa7612244693d7ae3cc6e0e0494660729fcff92ff6",
+      "changed": false
+    },
+    "editor/KeyboardLayout.ts": {
+      "adaptedSha256": "f2fdf003d658059146f1a656dc1d44484b5cb4014d008a748e958d66bdb66b37",
+      "originalSha256": "f2fdf003d658059146f1a656dc1d44484b5cb4014d008a748e958d66bdb66b37",
+      "changed": false
+    },
+    "editor/Layout.ts": {
+      "adaptedSha256": "f0262fe5aee5a9d1d7a9b25e29998d2880e6f98254753b6a9d4ce6994b8de977",
+      "originalSha256": "f0262fe5aee5a9d1d7a9b25e29998d2880e6f98254753b6a9d4ce6994b8de977",
+      "changed": false
+    },
+    "editor/LayoutPrompt.ts": {
+      "adaptedSha256": "36c27b8bce92efd0c5951ff09ff1a78d5e6e1e7bbcb5deca954dc3a30ad8b4dd",
+      "originalSha256": "36c27b8bce92efd0c5951ff09ff1a78d5e6e1e7bbcb5deca954dc3a30ad8b4dd",
+      "changed": false
+    },
+    "editor/LoopEditor.ts": {
+      "adaptedSha256": "4931995c9a947c68dfc196f57cbadec7d9d936b28164d703ae4cca24b007d9ff",
+      "originalSha256": "4931995c9a947c68dfc196f57cbadec7d9d936b28164d703ae4cca24b007d9ff",
+      "changed": false
+    },
+    "editor/Midi.ts": {
+      "adaptedSha256": "f355d45579a2a4c07d978d285e70cda1f2a30e2262eb2c8303d5b26dae6fcc2c",
+      "originalSha256": "f355d45579a2a4c07d978d285e70cda1f2a30e2262eb2c8303d5b26dae6fcc2c",
+      "changed": false
+    },
+    "editor/MidiInput.ts": {
+      "adaptedSha256": "a88692971202076a3dd2b7867adde07b72d823f0b1dead7a2a0b670d929234d3",
+      "originalSha256": "8a22dc8a75658b4600d5902226e2defff9d20443943899dc72f175a04a6df5d3",
+      "changed": true
+    },
+    "editor/MoveNotesSidewaysPrompt.ts": {
+      "adaptedSha256": "b9d850194cfb52d333fa21af3985dad50cb27ae0894d52b97ae6a66bb2307b85",
+      "originalSha256": "3a441ceeba7f38d57aff0b52c0e48a674e6625492b191bbc3a682e9653c34ba0",
+      "changed": true
+    },
+    "editor/MuteEditor.ts": {
+      "adaptedSha256": "dda1656e6a0eb4e5bcfa3974ad57afef368012115a2848e480318112015357f7",
+      "originalSha256": "dda1656e6a0eb4e5bcfa3974ad57afef368012115a2848e480318112015357f7",
+      "changed": false
+    },
+    "editor/OctaveScrollBar.ts": {
+      "adaptedSha256": "e71a457b8b08e88b801d12380bbd4a5cc657346f10bd49c90e662b7f4df16394",
+      "originalSha256": "e71a457b8b08e88b801d12380bbd4a5cc657346f10bd49c90e662b7f4df16394",
+      "changed": false
+    },
+    "editor/PatternEditor.ts": {
+      "adaptedSha256": "a6ba271f8a32da4e08932700cb164d3de9bc92f0417f25d58862e33bea523b05",
+      "originalSha256": "6aae71da3890a777fd4363ec17f4b3dec79927b69889da3aada508cca0bedd51",
+      "changed": true
+    },
+    "editor/Piano.ts": {
+      "adaptedSha256": "7f5ecd5bd33544112c55a5a47a2ab593e3d399c74798e6062ab1331a5247d06c",
+      "originalSha256": "7f5ecd5bd33544112c55a5a47a2ab593e3d399c74798e6062ab1331a5247d06c",
+      "changed": false
+    },
+    "editor/Preferences.ts": {
+      "adaptedSha256": "d2f16420368aff0e0fd93e07d0ccef5d793cafc652a8899887282c7e3036e764",
+      "originalSha256": "e5a9d3a541e86a344baf92d1a7b15a087326862149034231c3718659b6fd4cd7",
+      "changed": true
+    },
+    "editor/Prompt.ts": {
+      "adaptedSha256": "f726186c42a4f6b68e190371fc6c400699321ea9a340c596ddec5495c8c3214c",
+      "originalSha256": "f726186c42a4f6b68e190371fc6c400699321ea9a340c596ddec5495c8c3214c",
+      "changed": false
+    },
+    "editor/RecordingSetupPrompt.ts": {
+      "adaptedSha256": "dafb138e10c5d1c9ef1451b7719b74abb5e007a0d581b6e55c42148113c35b59",
+      "originalSha256": "dafb138e10c5d1c9ef1451b7719b74abb5e007a0d581b6e55c42148113c35b59",
+      "changed": false
+    },
+    "editor/Selection.ts": {
+      "adaptedSha256": "f23c7aef6be1175c08dd49e3e5be311c20dfb890287274305cd730dd9fce0dea",
+      "originalSha256": "c7e304386dd3004458c4f8808e78ff84e434fe12e712decf01576f6417467d1d",
+      "changed": true
+    },
+    "editor/SongDocument.ts": {
+      "adaptedSha256": "27e41208b25f37f2c0be39bc151f6d94877f94d68c7a9d77ee62e9a3d50370ff",
+      "originalSha256": "1678da23f0ccc1ddb925e12eef7bf473fd55b8e43a7505a9d7cbf41f1b5e19d5",
+      "changed": true
+    },
+    "editor/SongDurationPrompt.ts": {
+      "adaptedSha256": "5f9008545cbd3aabedd78b49e575b042d684885f2d1d79d005e81405f6551c32",
+      "originalSha256": "1de71da4aa708f45fc968d52213d59ce410ac909dc41ef162332bcbea97f5e7f",
+      "changed": true
+    },
+    "editor/SongEditor.ts": {
+      "adaptedSha256": "c53849ad2ebee2d6eee57f86d152fd058dbfecc80e9277329d70bbc82458b7c2",
+      "originalSha256": "d902de9c2185b682fea6feb44a2b6acbd31ae6bc1edda70741c4f9db52ceb06a",
+      "changed": true
+    },
+    "editor/SongPerformance.ts": {
+      "adaptedSha256": "d41c4f2ba6b4539d2e9bf087c95527e45a9888537f60f801514e9a9a4c686274",
+      "originalSha256": "e1afbcace6dec153e8a03837c2d75c0023baef4da47a9c02ae15193e859945d0",
+      "changed": true
+    },
+    "editor/SongRecovery.ts": {
+      "adaptedSha256": "4ea66d8de4fc9e12cd6bc73a6ba580b486fe205d5893d88bb73fe6a07dee3f7e",
+      "originalSha256": "f9ac45d168be3e094ca6566435a958081253da454e78e5a87d728d4c077a38c4",
+      "changed": true
+    },
+    "editor/SongRecoveryPrompt.ts": {
+      "adaptedSha256": "ebcc90e98284873bb78c9571d75cf463b7a64a2fdb241bf890b8b1717dd7c30e",
+      "originalSha256": "faca9ae1568ae1a497a5c0c0532911cbd3b925d4238d71c37ad36776f3bc7673",
+      "changed": true
+    },
+    "editor/SongRenderer.ts": {
+      "adaptedSha256": "1aba5c73e6358f10d5b58ab12673b383c8f7894f119540be625cf83c11445968",
+      "originalSha256": "1aba5c73e6358f10d5b58ab12673b383c8f7894f119540be625cf83c11445968",
+      "changed": false
+    },
+    "editor/SpectrumEditor.ts": {
+      "adaptedSha256": "8d738363b2b93528e06ab585c04f3e04bc21e41d0bf4d695d1fda2df9dd0b665",
+      "originalSha256": "8d738363b2b93528e06ab585c04f3e04bc21e41d0bf4d695d1fda2df9dd0b665",
+      "changed": false
+    },
+    "editor/SustainPrompt.ts": {
+      "adaptedSha256": "5be0096bda09ed699a6d69ca597711c153a12c3366271a496018af5fd45da681",
+      "originalSha256": "5be0096bda09ed699a6d69ca597711c153a12c3366271a496018af5fd45da681",
+      "changed": false
+    },
+    "editor/TipPrompt.ts": {
+      "adaptedSha256": "53a61c5f7089743d47d5b77a19250852929365bfffd797ddea76cf73038d92ce",
+      "originalSha256": "53a61c5f7089743d47d5b77a19250852929365bfffd797ddea76cf73038d92ce",
+      "changed": false
+    },
+    "editor/TrackEditor.ts": {
+      "adaptedSha256": "749ea3351bc79aa1759556b4878c6d2d0c2c2de220b15ed8b939a8cfdb40de5b",
+      "originalSha256": "749ea3351bc79aa1759556b4878c6d2d0c2c2de220b15ed8b939a8cfdb40de5b",
+      "changed": false
+    },
+    "editor/changes.ts": {
+      "adaptedSha256": "ffd9b0dbc4a0cae03f89ba94e85021b681c97640b6a29500035ef7465876fac7",
+      "originalSha256": "ffd9b0dbc4a0cae03f89ba94e85021b681c97640b6a29500035ef7465876fac7",
+      "changed": false
+    },
+    "editor/index.ts": {
+      "adaptedSha256": "e3a1379b3c3e7e42840e3bdcdf0361591307c8b7f63628e9a095018f78765370",
+      "originalSha256": "e3a1379b3c3e7e42840e3bdcdf0361591307c8b7f63628e9a095018f78765370",
+      "changed": false
+    },
+    "editor/style.ts": {
+      "adaptedSha256": "c57bd92b9a1cdfd07ee622c14c8d081e45787fe87a536d950cd09f2b94740243",
+      "originalSha256": "c57bd92b9a1cdfd07ee622c14c8d081e45787fe87a536d950cd09f2b94740243",
+      "changed": false
+    },
+    "main.ts": {
+      "adaptedSha256": "fb214bc05889203294307ec6b4d8ef245f284c447674f5b5652f6862b64a31fb"
+    },
+    "memory.ts": {
+      "adaptedSha256": "c1749274319c43c30c210c4f1c4ac721b8ee8ea3c34a24407f78359d2358255c"
+    },
+    "synth/Deque.ts": {
+      "adaptedSha256": "703e09810eb62d44fc802e9ee575e3a1760e2c6ca561c0817cc37d7fcd1808e2",
+      "originalSha256": "703e09810eb62d44fc802e9ee575e3a1760e2c6ca561c0817cc37d7fcd1808e2",
+      "changed": false
+    },
+    "synth/FFT.ts": {
+      "adaptedSha256": "873119722b4c71660a66603b880152eef5a8307b2d4cef471472dcf113f29ce6",
+      "originalSha256": "873119722b4c71660a66603b880152eef5a8307b2d4cef471472dcf113f29ce6",
+      "changed": false
+    },
+    "synth/SynthConfig.ts": {
+      "adaptedSha256": "42946a7326a44ab5c95d573106093dd4e1d4e66f19a5071cf47f0bf1a100e4e5",
+      "originalSha256": "42946a7326a44ab5c95d573106093dd4e1d4e66f19a5071cf47f0bf1a100e4e5",
+      "changed": false
+    },
+    "synth/filtering.ts": {
+      "adaptedSha256": "ef1db072e6a82642f1adee110ed72ea335940b2bce2d372fbcea5ab88b81876f",
+      "originalSha256": "ef1db072e6a82642f1adee110ed72ea335940b2bce2d372fbcea5ab88b81876f",
+      "changed": false
+    },
+    "synth/index.ts": {
+      "adaptedSha256": "dbe3bc1e01505c0a90df7854344026ca7cf6b22ff2e40fdc88e8c6eeecdbfcf6",
+      "originalSha256": "dbe3bc1e01505c0a90df7854344026ca7cf6b22ff2e40fdc88e8c6eeecdbfcf6",
+      "changed": false
+    },
+    "synth/synth.ts": {
+      "adaptedSha256": "9eb356285fe9c3c68c147153f40891701d6c450fc990842e60b5337abcc3bcda",
+      "originalSha256": "885cc1216f8bffe5898c2bb6c7fac95fb7698bd1bee5d296d71a6e4c3bc0ff54",
+      "changed": true
+    }
+  },
+  "actualEmittedModules": {
+    "src/synth/SynthConfig.ts": 18519,
+    "deps/node_modules/imperative-html/dist/esm/elements-base.js": 2639,
+    "deps/node_modules/imperative-html/dist/esm/elements-strict.js": 2497,
+    "src/editor/ColorConfig.ts": 10618,
+    "src/editor/style.ts": 39349,
+    "src/memory.ts": 291,
+    "src/editor/EditorConfig.ts": 85419,
+    "src/editor/Layout.ts": 3655,
+    "src/synth/FFT.ts": 1097,
+    "src/synth/Deque.ts": 1774,
+    "src/synth/filtering.ts": 2977,
+    "src/synth/synth.ts": 165784,
+    "src/editor/EasyPointers.ts": 31200,
+    "src/editor/SongRecovery.ts": 1860,
+    "src/editor/Change.ts": 1031,
+    "src/editor/changes.ts": 56041,
+    "src/editor/SongPerformance.ts": 6730,
+    "src/editor/MidiInput.ts": 66,
+    "src/editor/Selection.ts": 16300,
+    "src/editor/Preferences.ts": 3795,
+    "src/editor/ChangeNotifier.ts": 1040,
+    "src/editor/SongDocument.ts": 8779,
+    "src/editor/TipPrompt.ts": 20288,
+    "src/editor/PatternEditor.ts": 32925,
+    "src/editor/EnvelopeEditor.ts": 3272,
+    "src/editor/FadeInOutEditor.ts": 3906,
+    "src/editor/FilterEditor.ts": 7946,
+    "src/editor/ChannelRow.ts": 1791,
+    "src/editor/MuteEditor.ts": 1205,
+    "src/editor/TrackEditor.ts": 7824,
+    "src/editor/LayoutPrompt.ts": 2720,
+    "src/editor/LoopEditor.ts": 6140,
+    "src/editor/SpectrumEditor.ts": 4067,
+    "src/editor/HarmonicsEditor.ts": 3827,
+    "src/editor/BarScrollBar.ts": 4341,
+    "src/editor/OctaveScrollBar.ts": 4960,
+    "src/editor/KeyboardLayout.ts": 4086,
+    "src/editor/Piano.ts": 6071,
+    "src/editor/BeatsPerBarPrompt.ts": 2762,
+    "src/editor/MoveNotesSidewaysPrompt.ts": 2459,
+    "src/editor/SongDurationPrompt.ts": 2694,
+    "src/editor/SustainPrompt.ts": 2170,
+    "src/editor/ChannelSettingsPrompt.ts": 4400,
+    "src/editor/RecordingSetupPrompt.ts": 7761,
+    "src/editor/SongEditor.ts": 61479,
+    "src/main.ts": 645
+  },
+  "generatedFunctionCounts": {
+    "algorithms": 13,
+    "feedbacks": 18,
+    "voices": [
+      1,
+      2
+    ],
+    "categories": {
+      "fm": {
+        "count": 234,
+        "bytes": 1430579
+      },
+      "string": {
+        "count": 2,
+        "bytes": 18423
+      },
+      "effects": {
+        "count": 128,
+        "bytes": 1842224
+      }
+    },
+    "totalBodyBytes": 3291226
+  },
+  "equivalence": {
+    "identicalFunctionBodies": 364,
+    "pcmCases": 362,
+    "nonzeroSamples": 1482156,
+    "scope": "All 364 exact generator body token equivalence; 362 complete original/static FM/effect song CPU PCM cases, EQ-on body equivalence included but not independently materialized EQ settings; no native audio"
+  },
+  "generatorBodiesSha256": "62543d6b931e50a95c976e40028df54f4ff6ad5462b0a022fa31ea9470b02723",
+  "adaptationDiffSha256": "0fb4b764df0d174e0fdad78c6d313d2109f04286226dcc1366cb0b6fc5bdf40f",
+  "buildSha256": "f2119dc5343af5e32349a3cf9db52156cc62be256f426122d8e756474c0eb4d0",
+  "lockSha256": "803e5edc24124ef7fa1be7963b66e95384321e7aabaabe21993e475b15f346a5",
+  "changes": [
+    "All 3 runtime dynamic function constructors replaced by lookup into ordinary precompiled static factories. Original fixed generators enumerated 13*18 FM, 2 string voices, all 128 effect signatures; no invented synth algorithm or oscillator substitute.",
+    "Original browser/session storage switched to scoped in-memory local/session stores. Original bounded 100-entry session undo branch retained, displayBrowserUrl forced false; URL initialization/history writes/popstate/hashchange omitted. State discarded on preview exit.",
+    "File import/export/recovery prompt imports and entry points disabled; external file/url/share/copy/embed menu actions disabled; external clipboard method no-op including keyboard path. Internal pattern/instrument copy in memory retained. MIDI handler replaced explicit unavailable stub; autoPlay disabled; service worker registration removed; recording unavailable.",
+    "Original dynamic UI controls and readable inline SVG icons retained. Preview explanatory text/system font only; no remote media or binary wrappers.",
+    "AudioContext activation guards document.hidden; original scriptProcessor callback protected by active-node identity; teardown nulls callback, clears live input, disconnects and closes contexts even if node initialization/disconnect fails. Promise failures are reported, not advertised as successful sound.",
+    "Reduced motion suppresses original perpetual UI/playhead RAF polling while keeping event updates; original CPU audio synth stays usable by deliberate play. Hidden stops/closes audio and pauses tasks; visible does not resume audio automatically.",
+    "Host lifecycle owns timers/RAF/listeners/observers and deletes static factory globals on all exits, including module/early failure."
+  ]
+}
