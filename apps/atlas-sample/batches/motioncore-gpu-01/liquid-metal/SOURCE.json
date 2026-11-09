@@ -1,0 +1,142 @@
+{
+  "repository": "https://github.com/kaltwrk/motion-core",
+  "revision": "74ad6e66d50cc9b1849a505fcd1b352704920745",
+  "entry": "apps/web/src/routes/docs/liquid-metal/",
+  "originalSHA256": {
+    "packages/motion-core/src/lib/components/liquid-metal/LiquidMetal.svelte": "8b7c9f5b998999f784e94473e0f6a209edd5999511e2b6420af71184cb44a2fa",
+    "packages/motion-core/src/lib/components/liquid-metal/LiquidMetalScene.svelte": "2ca175800a5c6be79f840fd147025be426cc47de30ca6bb291bcbaa55b1df7d9",
+    "packages/motion-core/src/lib/components/liquid-metal/component.json": "46cc55b01d288f53cbbc4b5fce2971bf1354101f2e1533dc2efc29de7a3363b7",
+    "apps/web/src/routes/docs/liquid-metal/LiquidMetalDemo.svelte": "259d76a58029b233c7823305746143bd2b6be3be3bbe2e4edfc17faa88949dfc",
+    "LICENSE": "fff0422ca6211471f534a4373a6338f418cd4e0d9cd0e3190e29179da474801c",
+    "packages/motion-core/src/lib/helpers/color.ts": "7941b14a7e4d7305f2d2ec3a55f91c591e309a5e8de4cf3d7e08dee68507630b",
+    "packages/motion-core/src/lib/utils/cn.ts": "0fca478853f3fc4310e40ebff727a53da7ec677938f4e3e0d5ecaa62e936a199"
+  },
+  "dependencies": [
+    {
+      "name": "clsx",
+      "version": "2.1.1",
+      "license": "MIT",
+      "files": {
+        "license": "9a9edad7baae52622bddf3c15b2ef8a33d2c89f2d25408ad13e8a7481c6b0c97"
+      }
+    },
+    {
+      "name": "esm-env",
+      "version": "1.2.2",
+      "license": "MIT",
+      "files": {
+        "LICENSE": "6df5276ee7531fcc5446f19082c12e77bb6c5f081fd2b6d6cf88180a5ee36acd"
+      }
+    },
+    {
+      "name": "ogl",
+      "version": "1.0.11",
+      "license": "Unlicense",
+      "files": {
+        "README.md": "431694c5ceee21023d54c8d11663e028d2f845f00fa49e59cce25f43944c7479"
+      }
+    },
+    {
+      "name": "svelte",
+      "version": "5.39.6",
+      "license": "MIT",
+      "files": {
+        "LICENSE.md": "06257f4847b13a49a039efb17b944c141e71b12fd8d231b362d86919067d77a3"
+      }
+    },
+    {
+      "name": "tailwind-merge",
+      "version": "3.4.0",
+      "license": "MIT",
+      "files": {
+        "LICENSE.md": "d4c70c7ce38cea8778f0aed3fc0bef0a9dbd27f13bd8b6773cbd6d37941971e5"
+      }
+    }
+  ],
+  "inlineShadersUnchanged": [
+    {
+      "sha256": "fa6279063941ece95184efd90d016c13f84742d38fd1448c7eb9ac16d42e7fd0",
+      "bytes": 147
+    },
+    {
+      "sha256": "19ba2cf3ad85da2fbc925049ad741707f6099bea5caf6737f8cd91453c5db48c",
+      "bytes": 4408
+    }
+  ],
+  "syntaxParser": [
+    {
+      "slug": "liquid-metal",
+      "index": 0,
+      "sha256": "fa6279063941ece95184efd90d016c13f84742d38fd1448c7eb9ac16d42e7fd0",
+      "bytes": 147,
+      "syntax": "pass",
+      "limitation": "GLSL ES parser only, not driver compile/link or GPU output"
+    },
+    {
+      "slug": "liquid-metal",
+      "index": 1,
+      "sha256": "19ba2cf3ad85da2fbc925049ad741707f6099bea5caf6737f8cd91453c5db48c",
+      "bytes": 4408,
+      "syntax": "pass",
+      "limitation": "GLSL ES parser only, not driver compile/link or GPU output"
+    }
+  ],
+  "tests": [
+    {
+      "slug": "liquid-metal",
+      "mode": "reduced",
+      "pass": true,
+      "drawCommands": 4,
+      "shadersSubmitted": 8,
+      "allocated": 24,
+      "deleted": 24,
+      "contextLossRequests": 4,
+      "scope": "Original OGL and original GLSL submitted to stubbed WebGL. No native shader compilation or pixels verified."
+    },
+    {
+      "slug": "liquid-metal",
+      "mode": "normal",
+      "pass": true,
+      "drawCommands": 4,
+      "shadersSubmitted": 8,
+      "allocated": 24,
+      "deleted": 24,
+      "contextLossRequests": 4,
+      "scope": "Original OGL and original GLSL submitted to stubbed WebGL. No native shader compilation or pixels verified."
+    },
+    {
+      "slug": "liquid-metal",
+      "mode": "shaderfail",
+      "pass": true,
+      "drawCommands": 0,
+      "shadersSubmitted": 1,
+      "allocated": 5,
+      "deleted": 5,
+      "contextLossRequests": 1,
+      "scope": "Original OGL and original GLSL submitted to stubbed WebGL. No native shader compilation or pixels verified."
+    },
+    {
+      "slug": "liquid-metal",
+      "mode": "contextlost",
+      "pass": true,
+      "drawCommands": 1,
+      "shadersSubmitted": 2,
+      "allocated": 6,
+      "deleted": 6,
+      "contextLossRequests": 1,
+      "scope": "Original OGL and original GLSL submitted to stubbed WebGL. No native shader compilation or pixels verified."
+    }
+  ],
+  "changes": [
+    "Original Demo workspace barrel replaced with exact local component import. No GSAP/MediaPipe imported.",
+    "Original Scene only DPR bounded at2; GLSL literals and geometry/runtime loops retained.",
+    "Shared host owns RAF/timeouts and WebGL resources, checks compile/link status, handles errors/contextlost, hides by unmount/dispose and rebuilds on return.",
+    "Reduced motion schedules one original frame; pause retains last frame and resume/restart rebuilds original default scene.",
+    "No new artistic effects, placeholder canvas, remote texture/media or native screenshot. Utility CSS only implements original wrapper classes, plus explicit host chrome."
+  ],
+  "limitations": [
+    "WebGL methods/compile return values mocked in lifecycle tests; actual shader compilation/GPU pixels not verified.",
+    "No upstream visible parameter panel: official Demo supplies default props. Host Pause/Restart are disclosed added lifecycle controls.",
+    "No physics/clinical/material measurement claim; original aesthetic scene only."
+  ]
+}
