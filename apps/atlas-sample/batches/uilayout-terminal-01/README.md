@@ -1,0 +1,20 @@
+# Terminal Intro Sequence
+
+One existing item: `uilayout:terminal-intro-sequence`. The distribution combines MIT and ISC licensing (including Feather-derived MIT portions); the original UI Layouts source is MIT, revision `88d827d7ec342917ca06f6894e5add65fabbe5d8`.
+
+The original eight phases, three DOM-cell shimmer bars (not canvas), label/icon timing, progress/tokens, three typed log lines, dividers and final message are retained. Labels are local simulation only: no command, Agent, network or account operation occurs. The host adds restart/stop and a concise simulation notice, not a fake backend result.
+
+## Lifecycle adaptation
+Owned timeout/rAF scopes clear all pending work on stop, restart, unmount, pagehide or atlas:dispose. Hidden documents suspend queued timers and rAF without wall-clock catch-up, then resume the same progress. Reduced motion completes every original phase quickly without looping animations. A single shared failure path covers createRoot, module initialization, React ErrorBoundary, scheduled callbacks, unhandled errors/rejections and genuine later DOM-render failure. Lifecycle cleanup is registered before module listeners are installed; partial initialization also rolls back. Failure renders a short recoverable preview error, not a success screen. No production test globals are exposed.
+
+## Verification and limits
+VERIFICATION.json records actual `ui-vault-536/apps/atlas-sample/preview-runtime.mjs` composition using the exact runtime/CSS and its production CSP, normal completion, hidden typing and shimmer suspension/resumption, initially hidden start, dynamic reduced-motion change, 100 alternating bar/typing restart-interrupt cycles, both dispose signals and root-delegate removal, external listener preservation, stale detached control non-revival, real early-module/createRoot/partial-media-init/async React-render/late shimmer DOM-setter failures.
+
+The externally instrumented clock observed a maximum of two pending host callbacks, one pending owned sequence callback during cycle sampling, and zero pending callbacks after each stop and teardown. All application window/visibility/media listeners are removed. The document selectionchange and root-delegated handlers added during createRoot are captured precisely and removed on final cleanup; external pre-existing document listeners are preserved. Only JSDOM's selector-engine mouseover/mouseout handlers remain in the document ledger, proven by their callback source and nwsapi allocation stack. Detached internal React-node listeners may remain on detached nodes until garbage collection; a saved old control cannot revive the disposed app, and no claim of all-node listeners being zero is made.
+
+No browser visual inspection, screenshot, physical touch/geometry, device-font or actual frame-timing QA was performed. JSDOM24 reports unsupported Tailwind4 CSS parsing; exact CSS is composed unchanged, and this diagnostic is recorded rather than hidden or treated as visual validation. Original minimum terminal width and device monospace font stack remain; the host permits horizontal scrolling on narrow screens.
+
+## Source and reproduction
+SOURCE.json contains original file text/hashes, adapted source, bootstrap, build/test scripts and exact dependency versions. LICENSE.txt includes the complete UI Layouts MIT, React/ReactDOM/Scheduler MIT, Lucide ISC plus Feather MIT, and Tailwind MIT notices. No external media/fonts or remote workers are used.
+
+This independent workspace uses existing read-only `../ui-smooth-chat-adapt/node_modules`; no root npm command or dependency installation occurred. Build with `node build.mjs`, then `node_modules/.bin/tailwindcss -i styles.css -o delivery/runtime.css --minify`; test with `node test.mjs > test-results.json`, package with `python pack.py`. The test references the existing JSDOM dependency and 536 compose module; adjust paths only for another workspace. Seven public UTF-8 files are listed in the local manifest. No repository/deployment writes were performed.
