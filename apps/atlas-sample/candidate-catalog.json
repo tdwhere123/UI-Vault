@@ -1070,19 +1070,27 @@
   },
   {
     "id": "eldora:header-01",
-    "title": "eldora:header-01",
     "source": "Eldora UI",
-    "license": "MIT",
     "upstream": "https://github.com/karthikmudunuri/eldoraui/tree/6bb8fd211ecbdfa983f5780bead27d9f3890f20a",
-    "website": "",
-    "buildStatus": "not built",
-    "batch": "batch-001",
     "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/eldora-archive-01/source-archive.zip",
     "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/eldora-archive-01/manifest.json",
-    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "website": "",
+    "repository": "https://github.com/karthikmudunuri/eldoraui",
+    "revision": "6bb8fd211ecbdfa983f5780bead27d9f3890f20a",
+    "title": "Eldora · 导航与抽屉展示",
+    "description": "原完整Hero/Section页面、移动抽屉与本地主题切换；导航目标仅为组件示例，不执行注册或站点跳转。",
+    "behavior": "原完整Hero/Section页面、移动抽屉与本地主题切换；导航目标仅为组件示例，不执行注册或站点跳转。",
+    "kind": "原版导航组件场景",
+    "format": "完整页面示例",
+    "category": "产品与营销",
+    "license": "MIT AND Apache-2.0 AND ISC",
+    "batch": "eldora-01",
+    "preview": "batches/eldora-01/header-01/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime mechanisms and lifecycle tests passed; browser visual QA not run",
     "gaps": [
-      "Remote images and logos not downloaded or assumed MIT",
-      "WebGL required for novatrix-background; actual motion unverified"
+      "Header original Hero/Section page, scroll-width Motion navbar, real mobile drawer/overlay/open-close, local ThemeToggle. Original navLinks all / and page has no matching anchors: navigation/active-section success is NOT claimed. Free-trial links are disconnected. Button aria-labels added only for menu open/close; source geometry and variants retained. Original full Eldora page and local component tree retained, with narrow documented framework adaptations. Next Link is a local inert anchor with visible disabled-destination title; all default anchor navigation prevented, no successful routing or checkout is simulated. Original button/CVA/Radix source retained. Only required original Icons.logo wrapper/Logo and cn retained, unrelated icon/site helpers omitted. NextThemes replaced by local in-memory context preserving theme on hidden/remount, no storage/OS setting access. Original globals.css, Tailwind4 and tw-animate-css compiled; native system font rather than downloaded Geist. Host adds scope note, error handling, hidden subtree unmount/restore, owned listener/RAF/WAAPI/timeouts cleanup, atlas:dispose/pagehide; animation records finish/cancel removal retains original onfinish. Hidden cancels owned timers, including original500ms manual-scroll flag timer. No network, clipboard, backend or binary assets. Original brand/sample marketing text is demo material, not endorsement or an offer. Test uses controlled RAF/performance/640px geometry, actual540compose, 100hide/reveal cycles and actual original state; not native pixel/WAAPI/layout verification. Actual emitted dependency identities are resolved to the nearest named/versioned package root, including both installed paths each of react-aria3.53.1 and react-stately3.51.0 in pricing; parsed-only outer wrappers are not mislabeled as runtime. These Apache distributions contain LICENSE but no NOTICE files. Complete exact runtime notices and CSS licenses retained."
     ]
   },
   {
@@ -1157,19 +1165,27 @@
   },
   {
     "id": "eldora:pricing-02",
-    "title": "eldora:pricing-02",
     "source": "Eldora UI",
-    "license": "MIT",
     "upstream": "https://github.com/karthikmudunuri/eldoraui/tree/6bb8fd211ecbdfa983f5780bead27d9f3890f20a",
-    "website": "",
-    "buildStatus": "not built",
-    "batch": "batch-001",
     "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/eldora-archive-01/source-archive.zip",
     "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/eldora-archive-01/manifest.json",
-    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "website": "",
+    "repository": "https://github.com/karthikmudunuri/eldoraui",
+    "revision": "6bb8fd211ecbdfa983f5780bead27d9f3890f20a",
+    "title": "Eldora · 三档功能对照表",
+    "description": "原完整三档价格与功能对照，移动菜单可展开查看；原固定Starter展示，不切换套餐或购买。",
+    "behavior": "原完整三档价格与功能对照，移动菜单可展开查看；原固定Starter展示，不切换套餐或购买。",
+    "kind": "原版价格表展示",
+    "format": "完整页面示例",
+    "category": "产品与营销",
+    "license": "MIT AND Apache-2.0",
+    "batch": "eldora-01",
+    "preview": "batches/eldora-01/pricing-02/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime mechanisms and lifecycle tests passed; browser visual QA not run",
     "gaps": [
-      "Remote images and logos not downloaded or assumed MIT",
-      "WebGL required for novatrix-background; actual motion unverified"
+      "Original full three-tier feature table remains fixed selectedTier=tiers[0]. Headless mobile menu can open/close and inspect original tier labels but links are disconnected and never change tier. Original Get started buttons explicitly disabled with demo-only title; no purchase or signup. All original rows/prices/features preserved. Original full Eldora page and local component tree retained, with narrow documented framework adaptations. Next Link is a local inert anchor with visible disabled-destination title; all default anchor navigation prevented, no successful routing or checkout is simulated. Original button/CVA/Radix source retained. Only required original Icons.logo wrapper/Logo and cn retained, unrelated icon/site helpers omitted. NextThemes replaced by local in-memory context preserving theme on hidden/remount, no storage/OS setting access. Original globals.css, Tailwind4 and tw-animate-css compiled; native system font rather than downloaded Geist. Host adds scope note, error handling, hidden subtree unmount/restore, owned listener/RAF/WAAPI/timeouts cleanup, atlas:dispose/pagehide; animation records finish/cancel removal retains original onfinish. Hidden cancels owned timers, including original500ms manual-scroll flag timer. No network, clipboard, backend or binary assets. Original brand/sample marketing text is demo material, not endorsement or an offer. Test uses controlled RAF/performance/640px geometry, actual540compose, 100hide/reveal cycles and actual original state; not native pixel/WAAPI/layout verification. Actual emitted dependency identities are resolved to the nearest named/versioned package root, including both installed paths each of react-aria3.53.1 and react-stately3.51.0 in pricing; parsed-only outer wrappers are not mislabeled as runtime. These Apache distributions contain LICENSE but no NOTICE files. Complete exact runtime notices and CSS licenses retained."
     ]
   },
   {
