@@ -1,0 +1,35 @@
+{
+  "actual554Compose": true,
+  "originalLayoutsRendered": true,
+  "originalCompleteMDXArticles": 2,
+  "localTagPaginationNavigation": true,
+  "noNetworkStorageBackend": true,
+  "tests": [
+    {
+      "mode": "reader",
+      "pass": true,
+      "connectedAndGlobalListeners": 0,
+      "detachedFrameworkListeners": 0
+    },
+    {
+      "mode": "archive",
+      "pass": true,
+      "connectedAndGlobalListeners": 0,
+      "detachedFrameworkListeners": 0
+    },
+    {
+      "mode": "early-exit",
+      "pass": true,
+      "connectedAndGlobalListeners": 0,
+      "detachedFrameworkListeners": 0
+    },
+    {
+      "mode": "missing-root",
+      "pass": true,
+      "connectedAndGlobalListeners": 0,
+      "detachedFrameworkListeners": 0
+    }
+  ],
+  "browserVisualQA": "not-run",
+  "note": "Original Next routing replaced by in-memory path provider for two fixed articles; no actual Next server/fullsite. Detached React handlers on test-retained nodes, if present, are inert and not counted as global cleanup."
+}
