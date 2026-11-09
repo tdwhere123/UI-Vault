@@ -1,0 +1,2080 @@
+{
+  "repository": "https://github.com/jupyterlab/jupyterlab",
+  "revision": "1c917ab158ef862c86630291ecd0771f0b6de8ba",
+  "scope": "# 本地单元笔记本\n\n固定 JupyterLab 1c917ab158ef862c86630291ecd0771f0b6de8ba 官方 examples/notebook/src/index.ts 与 commands.ts 的本地文档编辑子流程。原 NotebookModel、Notebook、CodeMirror 配置、Jupyter 工具栏/单元类型选择、Lumino 命令面板与原单元动作保留；不是整个服务端 NotebookPanel 示例，不包含执行内核、保存、会话、服务端补全、搜索扩展或协作。宿主提供两格明确虚构文档，代码绝不执行，输出是已有固定文字，不伪称计算结果。\n\n保留原插入、删除、拆分、合并、上下选择、撤销重做和编辑/命令模式动作；原对应快捷键摘录保留，命令 ID 为隔离宿主统一命名。原 CellType 组件接真实 Notebook content，仅无服务 Panel 外层被宿主 SplitPanel/Panel 替代。不仿造 ServiceManager/SessionContext。原示例 CodeMirror 创建逻辑保持，MathJax 与内核补全不引入。\n\n纯文字/Markdown 输出；保留原 sanitizer，并收紧 Markdown 标签/属性，不允许用户 HTML 脚本、图片或链接资源。图像/富媒体输出、系统剪贴板/外部拖入/外链操作禁用。Jupyter 系统剪贴板可选探测改为 undefined，使用原不可用路径；lib0 强制原内存 fallback，避免 opaque origin 的存储探测。无网络权限、账户、文件上传或执行环境。\n\n原 CSS 与 SVG 图标保留，webpack ~ CSS 导入解析为真实 npm 文件；CSS 中原 SVG 使用 UTF8 percent-encoded data:image/svg+xml，不是二进制包装、截图或重画。系统字体，无下载字体。源码中的通用 base64 解码/图像帮助函数仍可能存在，但本地允许的 MIME factories 不提供图像，交付不含编码二进制素材。\n\n隐藏卸载并重置；返回新建本地文档。pagehide/atlas:dispose、早期初始化异常与晚期失败释放宿主/框架所有被跟踪监听、RAF、计时器及观察器。模块对 IntersectionObserver 的原包装也在退出恢复。无真实后台行为。\n\n## 来源、版本与许可\n实际 Notebook/CodeMirror 4.7.0-beta.1（部分同版 monorepo 包自有版本，详列），安装的 notebook/src/panel.ts 与 widget.ts 对固定 Git 原件逐字一致。npm metadata 无 gitHead，不虚构映射。120 个实际 JS/CSS 发出包路径逐项列许可；Jupyter/Lumino/FAST 等 npm 缺 LICENSE 的采用官方固定根全文，保留版本元数据。Lumino 固定44aea979…对应14包当前版本逐项匹配，但不声称每个源字节已与发布包重构对比。Jupyter Ydoc 与 UI Toolkit 用实际对应版本 tag 固定commit根许可；FAST 用各精确 npm gitHead 根许可。BSD/MIT/ISC/0BSD 原文完整保留。品牌或项目名称仅来源标识，不声称背书。\n\n## 测试范围\nactual571 compose：normal/reduced/early/failure/production；实际原工具栏点击增删、原 CellType 选择、原命令 insert/delete/undo/redo、隐藏恢复、旧回调、失败与退出账本归零；禁止 API 调用计数0。真实 createPreviewLoader 加载/缓存命中/释放通过，总 UTF16 缓存7058678 B（不扩8MiB限制）。Range/布局/Observer 为 JSDOM 控制桩，不代表原生键盘选区、IME、拖拽/缩放或像素验收。内置 Yjs 可能产生上游未集成类型警告，实测模型与单元变化及清理正常；不把警告隐藏为视觉通过。\n",
+  "sourceFiles": [
+    {
+      "path": "LICENSE",
+      "sha256": "8202286e1296fc999db2253da5244a65c28072287d4b580c2b11caff3014de76"
+    },
+    {
+      "path": "examples/notebook/package.json",
+      "sha256": "28fc8e142a2d09078bd53732e4530c1fc8fde5cfc76a9fe55cc0bfeca20f7cda"
+    },
+    {
+      "path": "examples/notebook/src/style.ts",
+      "sha256": "2ca5238094ce176931946cf8bcb23e5fafdc72a6220440137c55ec9945812e8a"
+    },
+    {
+      "path": "jupyterlab--jupyterlab--examples__notebook__src__commands.ts",
+      "sha256": "21ad0b2a9dc503daea82ec234faf1b63e14b1515f39b0375a9cd3d5020cf6307"
+    },
+    {
+      "path": "jupyterlab--jupyterlab--examples__notebook__src__index.ts",
+      "sha256": "034a8d592cc1dfec9ed9dd7a70704cd0ea2f988bb89a7dede667039fef22de08"
+    },
+    {
+      "path": "package.json",
+      "sha256": "f9d90bbd70e869526219237839b94f83594bdae4247c6b7d58b10c18e4bc122b"
+    },
+    {
+      "path": "packages/docregistry/src/context.ts",
+      "sha256": "65a3f4b4ab22052fd0346265955be56c58a4b7e7ee16e9b947cf667072a819a7"
+    },
+    {
+      "path": "packages/notebook/package.json",
+      "sha256": "fbb7cee39ce64862e73f3e0e9585f909be7199439e47212b5440fd1411f68483"
+    },
+    {
+      "path": "packages/notebook/src/panel.ts",
+      "sha256": "a980c10732a34796562475a7cf7967af456eff3d6476cec7e8cd1ab3290fd889"
+    },
+    {
+      "path": "packages/notebook/src/widget.ts",
+      "sha256": "93029ce4bb1fd628c9812693af3d02479173ebc7820a01dac1a868699fcb0c73"
+    }
+  ],
+  "runtimeDependencies": [
+    {
+      "name": "@codemirror/autocomplete",
+      "version": "6.20.4",
+      "packagePath": "node_modules/@codemirror/autocomplete",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "MIT",
+      "licenseEvidence": "distributed package legal files",
+      "licenseURL": null,
+      "licenseSHA256": [
+        "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07"
+      ],
+      "packageJsonSHA256": "6d7fa54e616d69e142ff46b413641688b72b41e944b1aa392ddb2a03957a18b3"
+    },
+    {
+      "name": "@codemirror/commands",
+      "version": "6.11.1",
+      "packagePath": "node_modules/@codemirror/commands",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "MIT",
+      "licenseEvidence": "distributed package legal files",
+      "licenseURL": null,
+      "licenseSHA256": [
+        "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07"
+      ],
+      "packageJsonSHA256": "89c6b42b55084ca449b6956ee6409bcae615a70fdce04b990a1e38bbbc3ad883"
+    },
+    {
+      "name": "@codemirror/lang-cpp",
+      "version": "6.0.3",
+      "packagePath": "node_modules/@codemirror/lang-cpp",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "MIT",
+      "licenseEvidence": "distributed package legal files",
+      "licenseURL": null,
+      "licenseSHA256": [
+        "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07"
+      ],
+      "packageJsonSHA256": "46d1e30c23607ce65257f18cdda62505da70c70e43c104cd3dead8c5151e8246"
+    },
+    {
+      "name": "@codemirror/lang-css",
+      "version": "6.3.1",
+      "packagePath": "node_modules/@codemirror/lang-css",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "MIT",
+      "licenseEvidence": "distributed package legal files",
+      "licenseURL": null,
+      "licenseSHA256": [
+        "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07"
+      ],
+      "packageJsonSHA256": "f32234b842c2c10291b7edd2c92742e5722d967fe3111b9273d1727ea55ba838"
+    },
+    {
+      "name": "@codemirror/lang-html",
+      "version": "6.4.12",
+      "packagePath": "node_modules/@codemirror/lang-html",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "MIT",
+      "licenseEvidence": "distributed package legal files",
+      "licenseURL": null,
+      "licenseSHA256": [
+        "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07"
+      ],
+      "packageJsonSHA256": "22069b53e96982a4a1486fae5fc20f296193cd5e7b9b4c0737848eb1f116b999"
+    },
+    {
+      "name": "@codemirror/lang-java",
+      "version": "6.0.2",
+      "packagePath": "node_modules/@codemirror/lang-java",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "MIT",
+      "licenseEvidence": "distributed package legal files",
+      "licenseURL": null,
+      "licenseSHA256": [
+        "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07"
+      ],
+      "packageJsonSHA256": "e81d3a30ab5a5b13ee23a0a6b447c98575484aedc5c4ceab48fde57ec2f52772"
+    },
+    {
+      "name": "@codemirror/lang-javascript",
+      "version": "6.2.5",
+      "packagePath": "node_modules/@codemirror/lang-javascript",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "MIT",
+      "licenseEvidence": "distributed package legal files",
+      "licenseURL": null,
+      "licenseSHA256": [
+        "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07"
+      ],
+      "packageJsonSHA256": "d742d5a40c01d601f586063799c0826aab4ec937ccba75dd5d67c3ef03efcc28"
+    },
+    {
+      "name": "@codemirror/lang-json",
+      "version": "6.0.2",
+      "packagePath": "node_modules/@codemirror/lang-json",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "MIT",
+      "licenseEvidence": "distributed package legal files",
+      "licenseURL": null,
+      "licenseSHA256": [
+        "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07"
+      ],
+      "packageJsonSHA256": "fa13c3641831be0a5d00b343b7880f04d39f3b57f12ec9b3a9784da15c5705e2"
+    },
+    {
+      "name": "@codemirror/lang-markdown",
+      "version": "6.5.2",
+      "packagePath": "node_modules/@codemirror/lang-markdown",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "MIT",
+      "licenseEvidence": "distributed package legal files",
+      "licenseURL": null,
+      "licenseSHA256": [
+        "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07"
+      ],
+      "packageJsonSHA256": "0a091f03e88d387798a486206967418294f6fe45adef91097fb05bf8146dd8dc"
+    },
+    {
+      "name": "@codemirror/lang-php",
+      "version": "6.0.2",
+      "packagePath": "node_modules/@codemirror/lang-php",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "MIT",
+      "licenseEvidence": "distributed package legal files",
+      "licenseURL": null,
+      "licenseSHA256": [
+        "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07"
+      ],
+      "packageJsonSHA256": "a0c74105f19437cf177b347c3729d45367b29f7377eda99901e91e656166a9d9"
+    },
+    {
+      "name": "@codemirror/lang-python",
+      "version": "6.2.1",
+      "packagePath": "node_modules/@codemirror/lang-python",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "MIT",
+      "licenseEvidence": "distributed package legal files",
+      "licenseURL": null,
+      "licenseSHA256": [
+        "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07"
+      ],
+      "packageJsonSHA256": "b41b6ef98a65a5a85cf91eb269e27cf15987a9f0761437ad9569dcc467b9941c"
+    },
+    {
+      "name": "@codemirror/lang-rust",
+      "version": "6.0.2",
+      "packagePath": "node_modules/@codemirror/lang-rust",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "MIT",
+      "licenseEvidence": "distributed package legal files",
+      "licenseURL": null,
+      "licenseSHA256": [
+        "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07"
+      ],
+      "packageJsonSHA256": "70551677eaffb82bec7c7b1d66e03f923d20907327f51b70e3ce2fa2770019a0"
+    },
+    {
+      "name": "@codemirror/lang-sql",
+      "version": "6.10.0",
+      "packagePath": "node_modules/@codemirror/lang-sql",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "MIT",
+      "licenseEvidence": "distributed package legal files",
+      "licenseURL": null,
+      "licenseSHA256": [
+        "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07"
+      ],
+      "packageJsonSHA256": "fbfe481bb73659c34bdb8dfe9918e83efcc0e79baaaa2fe2e418f409ca3eb9c8"
+    },
+    {
+      "name": "@codemirror/lang-wast",
+      "version": "6.0.2",
+      "packagePath": "node_modules/@codemirror/lang-wast",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "MIT",
+      "licenseEvidence": "distributed package legal files",
+      "licenseURL": null,
+      "licenseSHA256": [
+        "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07"
+      ],
+      "packageJsonSHA256": "452d8f93066581c2ea01dd2072eb7e79b529a5b151f5ee566804b26d8ac5d074"
+    },
+    {
+      "name": "@codemirror/lang-xml",
+      "version": "6.1.0",
+      "packagePath": "node_modules/@codemirror/lang-xml",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "MIT",
+      "licenseEvidence": "distributed package legal files",
+      "licenseURL": null,
+      "licenseSHA256": [
+        "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07"
+      ],
+      "packageJsonSHA256": "dd6145ca1b97e241554c55b6a010313ecd63951a85a89c7606a6feb85efceaf8"
+    },
+    {
+      "name": "@codemirror/language",
+      "version": "6.13.1",
+      "packagePath": "node_modules/@codemirror/language",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "MIT",
+      "licenseEvidence": "distributed package legal files",
+      "licenseURL": null,
+      "licenseSHA256": [
+        "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07"
+      ],
+      "packageJsonSHA256": "213da785d0246774f4c9dc0527a97e8756119fb2e6c4de6d30575bc221f7dd9b"
+    },
+    {
+      "name": "@codemirror/legacy-modes",
+      "version": "6.5.5",
+      "packagePath": "node_modules/@codemirror/legacy-modes",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "MIT",
+      "licenseEvidence": "distributed package legal files",
+      "licenseURL": null,
+      "licenseSHA256": [
+        "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07"
+      ],
+      "packageJsonSHA256": "b505e189de44c5ae8282b64c2fe45f3f3e4e76ce0b1b0006d5fdf308ebe314ce"
+    },
+    {
+      "name": "@codemirror/search",
+      "version": "6.7.2",
+      "packagePath": "node_modules/@codemirror/search",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "MIT",
+      "licenseEvidence": "distributed package legal files",
+      "licenseURL": null,
+      "licenseSHA256": [
+        "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07"
+      ],
+      "packageJsonSHA256": "1137bde0555ba4e2cd3331b655632ff574bc22abe59092204a0bcd94e997a942"
+    },
+    {
+      "name": "@codemirror/state",
+      "version": "6.7.6",
+      "packagePath": "node_modules/@codemirror/state",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "MIT",
+      "licenseEvidence": "distributed package legal files",
+      "licenseURL": null,
+      "licenseSHA256": [
+        "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07"
+      ],
+      "packageJsonSHA256": "0d5d4cb502ac5ece9c5c76104fd72b30b4a5b16eeaf7a5d6f0a8abbf295c10c3"
+    },
+    {
+      "name": "@codemirror/streamparser",
+      "version": "6.0.0",
+      "packagePath": "node_modules/@codemirror/streamparser",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "MIT",
+      "licenseEvidence": "distributed package legal files",
+      "licenseURL": null,
+      "licenseSHA256": [
+        "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07"
+      ],
+      "packageJsonSHA256": "f16c27dba359affc7be51edf2e94b4afce4f9e83bb34541d5cc4dbb4e2638f7d"
+    },
+    {
+      "name": "@codemirror/view",
+      "version": "6.43.15",
+      "packagePath": "node_modules/@codemirror/view",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "MIT",
+      "licenseEvidence": "distributed package legal files",
+      "licenseURL": null,
+      "licenseSHA256": [
+        "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07"
+      ],
+      "packageJsonSHA256": "25ffcd6d7ca21bea40f672586e3bd81d026413a99f7828d537ddb51741afe94a"
+    },
+    {
+      "name": "@jupyter/react-components",
+      "version": "0.17.1",
+      "packagePath": "node_modules/@jupyter/react-components",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "BSD-3-Clause",
+      "licenseEvidence": "official repository root license, package metadata declares same license",
+      "licenseURL": "https://raw.githubusercontent.com/jupyterlab-contrib/jupyter-ui-toolkit/84496d1ee45fa3bb7557547dce6c9ffa84a90922/LICENSE",
+      "licenseSHA256": [
+        "6ec2d5d8aa9ea9bba384e53bdb7d401721a861bbafb5dce9e0a4de5ebdcd71fc"
+      ],
+      "packageJsonSHA256": "5425dde5e983a7c932f055ee6fad1c30d2db3708a4c6bb1291fd17ef2f77e6fe"
+    },
+    {
+      "name": "@jupyter/web-components",
+      "version": "0.17.1",
+      "packagePath": "node_modules/@jupyter/web-components",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "BSD-3-Clause",
+      "licenseEvidence": "official repository root license, package metadata declares same license",
+      "licenseURL": "https://raw.githubusercontent.com/jupyterlab-contrib/jupyter-ui-toolkit/84496d1ee45fa3bb7557547dce6c9ffa84a90922/LICENSE",
+      "licenseSHA256": [
+        "6ec2d5d8aa9ea9bba384e53bdb7d401721a861bbafb5dce9e0a4de5ebdcd71fc"
+      ],
+      "packageJsonSHA256": "15fdc11c80d0f79d89ee001b7bb72a64026b325a117ce7af7fa0688a4e30e0cb"
+    },
+    {
+      "name": "@jupyter/ydoc",
+      "version": "4.2.1",
+      "packagePath": "node_modules/@jupyter/ydoc",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "BSD-3-Clause",
+      "licenseEvidence": "official repository root license, package metadata declares same license",
+      "licenseURL": "https://raw.githubusercontent.com/jupyter-server/jupyter_ydoc/f6f76d61bac4449d9a4b3aa9933493cfeaed8cce/LICENSE",
+      "licenseSHA256": [
+        "76aa61b056e19e5ccf2bb56591ceba65cee0ecf4be7b57659f4ec65c85691424"
+      ],
+      "packageJsonSHA256": "587bc83aa2f0a9e5309151fcd4ac8672784c6698b93458a7f086577d0d20359c"
+    },
+    {
+      "name": "@jupyterlab/apputils",
+      "version": "4.8.0-beta.1",
+      "packagePath": "node_modules/@jupyterlab/apputils",
+      "scopes": [
+        "compiled-css",
+        "runtime-js"
+      ],
+      "license": "BSD-3-Clause",
+      "licenseEvidence": "official repository root license, package metadata declares same license",
+      "licenseURL": "https://github.com/jupyterlab/jupyterlab/blob/1c917ab158ef862c86630291ecd0771f0b6de8ba/LICENSE",
+      "licenseSHA256": [
+        "8202286e1296fc999db2253da5244a65c28072287d4b580c2b11caff3014de76"
+      ],
+      "packageJsonSHA256": "34cbbcfcefd32722631b8428687486c868d598231958ec997ddd906f080b5bde"
+    },
+    {
+      "name": "@jupyterlab/attachments",
+      "version": "4.7.0-beta.1",
+      "packagePath": "node_modules/@jupyterlab/attachments",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "BSD-3-Clause",
+      "licenseEvidence": "official repository root license, package metadata declares same license",
+      "licenseURL": "https://github.com/jupyterlab/jupyterlab/blob/1c917ab158ef862c86630291ecd0771f0b6de8ba/LICENSE",
+      "licenseSHA256": [
+        "8202286e1296fc999db2253da5244a65c28072287d4b580c2b11caff3014de76"
+      ],
+      "packageJsonSHA256": "7990c12c8c62ebfab51427b1e06945a5a598a3ba826ae1087bab79acb6857911"
+    },
+    {
+      "name": "@jupyterlab/cells",
+      "version": "4.7.0-beta.1",
+      "packagePath": "node_modules/@jupyterlab/cells",
+      "scopes": [
+        "compiled-css",
+        "runtime-js"
+      ],
+      "license": "BSD-3-Clause",
+      "licenseEvidence": "official repository root license, package metadata declares same license",
+      "licenseURL": "https://github.com/jupyterlab/jupyterlab/blob/1c917ab158ef862c86630291ecd0771f0b6de8ba/LICENSE",
+      "licenseSHA256": [
+        "8202286e1296fc999db2253da5244a65c28072287d4b580c2b11caff3014de76"
+      ],
+      "packageJsonSHA256": "81d17955356ab75ee1257b8830719d5252adce67c471b338f154cbf205bf245f"
+    },
+    {
+      "name": "@jupyterlab/codeeditor",
+      "version": "4.7.0-beta.1",
+      "packagePath": "node_modules/@jupyterlab/codeeditor",
+      "scopes": [
+        "compiled-css",
+        "runtime-js"
+      ],
+      "license": "BSD-3-Clause",
+      "licenseEvidence": "official repository root license, package metadata declares same license",
+      "licenseURL": "https://github.com/jupyterlab/jupyterlab/blob/1c917ab158ef862c86630291ecd0771f0b6de8ba/LICENSE",
+      "licenseSHA256": [
+        "8202286e1296fc999db2253da5244a65c28072287d4b580c2b11caff3014de76"
+      ],
+      "packageJsonSHA256": "512504877a2cfa1026f3f00210f0d553d1f69609f122e0261c89dff1e54e83ab"
+    },
+    {
+      "name": "@jupyterlab/codemirror",
+      "version": "4.7.0-beta.1",
+      "packagePath": "node_modules/@jupyterlab/codemirror",
+      "scopes": [
+        "compiled-css",
+        "runtime-js"
+      ],
+      "license": "BSD-3-Clause",
+      "licenseEvidence": "official repository root license, package metadata declares same license",
+      "licenseURL": "https://github.com/jupyterlab/jupyterlab/blob/1c917ab158ef862c86630291ecd0771f0b6de8ba/LICENSE",
+      "licenseSHA256": [
+        "8202286e1296fc999db2253da5244a65c28072287d4b580c2b11caff3014de76"
+      ],
+      "packageJsonSHA256": "4b6e1c98540cec22bca206112ebd6ab473f704c16dc85616b5947bb24d337dd2"
+    },
+    {
+      "name": "@jupyterlab/coreutils",
+      "version": "6.7.0-beta.1",
+      "packagePath": "node_modules/@jupyterlab/coreutils",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "BSD-3-Clause",
+      "licenseEvidence": "official repository root license, package metadata declares same license",
+      "licenseURL": "https://github.com/jupyterlab/jupyterlab/blob/1c917ab158ef862c86630291ecd0771f0b6de8ba/LICENSE",
+      "licenseSHA256": [
+        "8202286e1296fc999db2253da5244a65c28072287d4b580c2b11caff3014de76"
+      ],
+      "packageJsonSHA256": "074623f7329ba84ff0cb536f3a7ad0f61a4bfee47fae98f8b2502549dc8be5ba"
+    },
+    {
+      "name": "@jupyterlab/docregistry",
+      "version": "4.7.0-beta.1",
+      "packagePath": "node_modules/@jupyterlab/docregistry",
+      "scopes": [
+        "compiled-css"
+      ],
+      "license": "BSD-3-Clause",
+      "licenseEvidence": "official repository root license, package metadata declares same license",
+      "licenseURL": "https://github.com/jupyterlab/jupyterlab/blob/1c917ab158ef862c86630291ecd0771f0b6de8ba/LICENSE",
+      "licenseSHA256": [
+        "8202286e1296fc999db2253da5244a65c28072287d4b580c2b11caff3014de76"
+      ],
+      "packageJsonSHA256": "c0044c87853af07d5cb86732c6b307ece5b9aaa070873765834034dded568d43"
+    },
+    {
+      "name": "@jupyterlab/documentsearch",
+      "version": "4.7.0-beta.1",
+      "packagePath": "node_modules/@jupyterlab/documentsearch",
+      "scopes": [
+        "compiled-css"
+      ],
+      "license": "BSD-3-Clause",
+      "licenseEvidence": "official repository root license, package metadata declares same license",
+      "licenseURL": "https://github.com/jupyterlab/jupyterlab/blob/1c917ab158ef862c86630291ecd0771f0b6de8ba/LICENSE",
+      "licenseSHA256": [
+        "8202286e1296fc999db2253da5244a65c28072287d4b580c2b11caff3014de76"
+      ],
+      "packageJsonSHA256": "9e9e5de8447b2e7411c45f91e9292c10b0621ebfa1058de2134cab9a2777db3b"
+    },
+    {
+      "name": "@jupyterlab/filebrowser",
+      "version": "4.7.0-beta.1",
+      "packagePath": "node_modules/@jupyterlab/filebrowser",
+      "scopes": [
+        "compiled-css"
+      ],
+      "license": "BSD-3-Clause",
+      "licenseEvidence": "official repository root license, package metadata declares same license",
+      "licenseURL": "https://github.com/jupyterlab/jupyterlab/blob/1c917ab158ef862c86630291ecd0771f0b6de8ba/LICENSE",
+      "licenseSHA256": [
+        "8202286e1296fc999db2253da5244a65c28072287d4b580c2b11caff3014de76"
+      ],
+      "packageJsonSHA256": "10831e1d54b7e1962304c5c47a5e4aa74b54431ff1dd717ec0b40d28509e9e8a"
+    },
+    {
+      "name": "@jupyterlab/markedparser-extension",
+      "version": "4.7.0-beta.1",
+      "packagePath": "node_modules/@jupyterlab/markedparser-extension",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "BSD-3-Clause",
+      "licenseEvidence": "official repository root license, package metadata declares same license",
+      "licenseURL": "https://github.com/jupyterlab/jupyterlab/blob/1c917ab158ef862c86630291ecd0771f0b6de8ba/LICENSE",
+      "licenseSHA256": [
+        "8202286e1296fc999db2253da5244a65c28072287d4b580c2b11caff3014de76"
+      ],
+      "packageJsonSHA256": "a2963d5fe26026db62a59f555d306530614521cde55205f36f72e037a5b782cb"
+    },
+    {
+      "name": "@jupyterlab/nbformat",
+      "version": "4.7.0-beta.1",
+      "packagePath": "node_modules/@jupyterlab/nbformat",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "BSD-3-Clause",
+      "licenseEvidence": "official repository root license, package metadata declares same license",
+      "licenseURL": "https://github.com/jupyterlab/jupyterlab/blob/1c917ab158ef862c86630291ecd0771f0b6de8ba/LICENSE",
+      "licenseSHA256": [
+        "8202286e1296fc999db2253da5244a65c28072287d4b580c2b11caff3014de76"
+      ],
+      "packageJsonSHA256": "3bffc188bff594904fe6b4f309e17ff8dca9a6fa1fea1095cc80c2ef4d4e6797"
+    },
+    {
+      "name": "@jupyterlab/notebook",
+      "version": "4.7.0-beta.1",
+      "packagePath": "node_modules/@jupyterlab/notebook",
+      "scopes": [
+        "compiled-css",
+        "runtime-js"
+      ],
+      "license": "BSD-3-Clause",
+      "licenseEvidence": "official repository root license, package metadata declares same license",
+      "licenseURL": "https://github.com/jupyterlab/jupyterlab/blob/1c917ab158ef862c86630291ecd0771f0b6de8ba/LICENSE",
+      "licenseSHA256": [
+        "8202286e1296fc999db2253da5244a65c28072287d4b580c2b11caff3014de76"
+      ],
+      "packageJsonSHA256": "fbb7cee39ce64862e73f3e0e9585f909be7199439e47212b5440fd1411f68483"
+    },
+    {
+      "name": "@jupyterlab/observables",
+      "version": "5.7.0-beta.1",
+      "packagePath": "node_modules/@jupyterlab/observables",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "BSD-3-Clause",
+      "licenseEvidence": "official repository root license, package metadata declares same license",
+      "licenseURL": "https://github.com/jupyterlab/jupyterlab/blob/1c917ab158ef862c86630291ecd0771f0b6de8ba/LICENSE",
+      "licenseSHA256": [
+        "8202286e1296fc999db2253da5244a65c28072287d4b580c2b11caff3014de76"
+      ],
+      "packageJsonSHA256": "0637bf2aae5a751639a83da34989c04895820b98191b4b405b5afe31fc77b7db"
+    },
+    {
+      "name": "@jupyterlab/outputarea",
+      "version": "4.7.0-beta.1",
+      "packagePath": "node_modules/@jupyterlab/outputarea",
+      "scopes": [
+        "compiled-css",
+        "runtime-js"
+      ],
+      "license": "BSD-3-Clause",
+      "licenseEvidence": "official repository root license, package metadata declares same license",
+      "licenseURL": "https://github.com/jupyterlab/jupyterlab/blob/1c917ab158ef862c86630291ecd0771f0b6de8ba/LICENSE",
+      "licenseSHA256": [
+        "8202286e1296fc999db2253da5244a65c28072287d4b580c2b11caff3014de76"
+      ],
+      "packageJsonSHA256": "80fc518d5f022442c4eb19cfeba97d727fec49cc1917e3afb89e1352ef028dbf"
+    },
+    {
+      "name": "@jupyterlab/rendermime",
+      "version": "4.7.0-beta.1",
+      "packagePath": "node_modules/@jupyterlab/rendermime",
+      "scopes": [
+        "compiled-css",
+        "runtime-js"
+      ],
+      "license": "BSD-3-Clause",
+      "licenseEvidence": "official repository root license, package metadata declares same license",
+      "licenseURL": "https://github.com/jupyterlab/jupyterlab/blob/1c917ab158ef862c86630291ecd0771f0b6de8ba/LICENSE",
+      "licenseSHA256": [
+        "8202286e1296fc999db2253da5244a65c28072287d4b580c2b11caff3014de76"
+      ],
+      "packageJsonSHA256": "63ac751edbe03d6c62230f4f0fb693f62f50ebaca2597573127f8e5948f8bbe1"
+    },
+    {
+      "name": "@jupyterlab/services",
+      "version": "7.7.0-beta.1",
+      "packagePath": "node_modules/@jupyterlab/services",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "BSD-3-Clause",
+      "licenseEvidence": "official repository root license, package metadata declares same license",
+      "licenseURL": "https://github.com/jupyterlab/jupyterlab/blob/1c917ab158ef862c86630291ecd0771f0b6de8ba/LICENSE",
+      "licenseSHA256": [
+        "8202286e1296fc999db2253da5244a65c28072287d4b580c2b11caff3014de76"
+      ],
+      "packageJsonSHA256": "8be0502bd977383a474d1c7c4859b0978b36473df5437b18366818b474f7d44a"
+    },
+    {
+      "name": "@jupyterlab/statedb",
+      "version": "4.7.0-beta.1",
+      "packagePath": "node_modules/@jupyterlab/statedb",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "BSD-3-Clause",
+      "licenseEvidence": "official repository root license, package metadata declares same license",
+      "licenseURL": "https://github.com/jupyterlab/jupyterlab/blob/1c917ab158ef862c86630291ecd0771f0b6de8ba/LICENSE",
+      "licenseSHA256": [
+        "8202286e1296fc999db2253da5244a65c28072287d4b580c2b11caff3014de76"
+      ],
+      "packageJsonSHA256": "084ad4fa2e96e5af27f2d1f00cedd549f4931896bf03257b58cdcc159a937eff"
+    },
+    {
+      "name": "@jupyterlab/statusbar",
+      "version": "4.7.0-beta.1",
+      "packagePath": "node_modules/@jupyterlab/statusbar",
+      "scopes": [
+        "compiled-css",
+        "runtime-js"
+      ],
+      "license": "BSD-3-Clause",
+      "licenseEvidence": "official repository root license, package metadata declares same license",
+      "licenseURL": "https://github.com/jupyterlab/jupyterlab/blob/1c917ab158ef862c86630291ecd0771f0b6de8ba/LICENSE",
+      "licenseSHA256": [
+        "8202286e1296fc999db2253da5244a65c28072287d4b580c2b11caff3014de76"
+      ],
+      "packageJsonSHA256": "1f6cb2e32743914bb129040bb5c7bbd77137675a7c37e45dcd1fa10dec3b4d3c"
+    },
+    {
+      "name": "@jupyterlab/theme-light-extension",
+      "version": "4.7.0-beta.1",
+      "packagePath": "node_modules/@jupyterlab/theme-light-extension",
+      "scopes": [
+        "compiled-css"
+      ],
+      "license": "BSD-3-Clause",
+      "licenseEvidence": "official repository root license, package metadata declares same license",
+      "licenseURL": "https://github.com/jupyterlab/jupyterlab/blob/1c917ab158ef862c86630291ecd0771f0b6de8ba/LICENSE",
+      "licenseSHA256": [
+        "8202286e1296fc999db2253da5244a65c28072287d4b580c2b11caff3014de76"
+      ],
+      "packageJsonSHA256": "0da867a5779709f1dc3cdf093a76c4c538e688add5342e667955e7a853a4a92f"
+    },
+    {
+      "name": "@jupyterlab/toc",
+      "version": "6.7.0-beta.1",
+      "packagePath": "node_modules/@jupyterlab/toc",
+      "scopes": [
+        "compiled-css",
+        "runtime-js"
+      ],
+      "license": "BSD-3-Clause",
+      "licenseEvidence": "official repository root license, package metadata declares same license",
+      "licenseURL": "https://github.com/jupyterlab/jupyterlab/blob/1c917ab158ef862c86630291ecd0771f0b6de8ba/LICENSE",
+      "licenseSHA256": [
+        "8202286e1296fc999db2253da5244a65c28072287d4b580c2b11caff3014de76"
+      ],
+      "packageJsonSHA256": "989bf8214e6e107fe0c82aec3daa0a91f6b60cf9e33eece7c2f53dd1b9b99e10"
+    },
+    {
+      "name": "@jupyterlab/translation",
+      "version": "4.7.0-beta.1",
+      "packagePath": "node_modules/@jupyterlab/translation",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "BSD-3-Clause",
+      "licenseEvidence": "official repository root license, package metadata declares same license",
+      "licenseURL": "https://github.com/jupyterlab/jupyterlab/blob/1c917ab158ef862c86630291ecd0771f0b6de8ba/LICENSE",
+      "licenseSHA256": [
+        "8202286e1296fc999db2253da5244a65c28072287d4b580c2b11caff3014de76"
+      ],
+      "packageJsonSHA256": "a843bc8eae256b3b91d1fb340105b2b962cfbef7204f864b553de416eebd3081"
+    },
+    {
+      "name": "@jupyterlab/ui-components",
+      "version": "4.7.0-beta.1",
+      "packagePath": "node_modules/@jupyterlab/ui-components",
+      "scopes": [
+        "compiled-css",
+        "runtime-js"
+      ],
+      "license": "BSD-3-Clause",
+      "licenseEvidence": "official repository root license, package metadata declares same license",
+      "licenseURL": "https://github.com/jupyterlab/jupyterlab/blob/1c917ab158ef862c86630291ecd0771f0b6de8ba/LICENSE",
+      "licenseSHA256": [
+        "8202286e1296fc999db2253da5244a65c28072287d4b580c2b11caff3014de76"
+      ],
+      "packageJsonSHA256": "5c169ee0295468c90905b876fcbefd47da2c4485b8ad935be1a030954dbe6138"
+    },
+    {
+      "name": "@lezer/common",
+      "version": "1.5.5",
+      "packagePath": "node_modules/@lezer/common",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "MIT",
+      "licenseEvidence": "distributed package legal files",
+      "licenseURL": null,
+      "licenseSHA256": [
+        "568902fb66eaf1f11750e966b33fd7b5d7c618e65af09f35ef843635bcf5f1ba"
+      ],
+      "packageJsonSHA256": "5018f15f64b384023f6be21b69db566b3befac047a1d129827666fbe786d13b9"
+    },
+    {
+      "name": "@lezer/cpp",
+      "version": "1.1.6",
+      "packagePath": "node_modules/@lezer/cpp",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "MIT",
+      "licenseEvidence": "distributed package legal files",
+      "licenseURL": null,
+      "licenseSHA256": [
+        "54bd812a6d334e0c438b78a43cea74b67e882739fd3450115ddc7c52be5706c1"
+      ],
+      "packageJsonSHA256": "d0f2fdf4adab614aeb112a79b203cdaf20b90e4c5baa561b03572f50fba1c40e"
+    },
+    {
+      "name": "@lezer/css",
+      "version": "1.3.9",
+      "packagePath": "node_modules/@lezer/css",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "MIT",
+      "licenseEvidence": "distributed package legal files",
+      "licenseURL": null,
+      "licenseSHA256": [
+        "568902fb66eaf1f11750e966b33fd7b5d7c618e65af09f35ef843635bcf5f1ba"
+      ],
+      "packageJsonSHA256": "4de52c9e8fd8bc2d611d4c866ae7eeef08aacb4729621f110293a55d25d63943"
+    },
+    {
+      "name": "@lezer/generator",
+      "version": "1.8.1",
+      "packagePath": "node_modules/@lezer/generator",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "MIT",
+      "licenseEvidence": "distributed package legal files",
+      "licenseURL": null,
+      "licenseSHA256": [
+        "568902fb66eaf1f11750e966b33fd7b5d7c618e65af09f35ef843635bcf5f1ba"
+      ],
+      "packageJsonSHA256": "accea699727402d84e0a68a6df07fd617dc7f8be7f47b886c68f2e0b35a01a59"
+    },
+    {
+      "name": "@lezer/highlight",
+      "version": "1.2.5",
+      "packagePath": "node_modules/@lezer/highlight",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "MIT",
+      "licenseEvidence": "distributed package legal files",
+      "licenseURL": null,
+      "licenseSHA256": [
+        "568902fb66eaf1f11750e966b33fd7b5d7c618e65af09f35ef843635bcf5f1ba"
+      ],
+      "packageJsonSHA256": "e50eb1fc5c2831ab58274ce2ea6cac989a0c80cc84f9fbabcb4100eee4327710"
+    },
+    {
+      "name": "@lezer/html",
+      "version": "1.3.13",
+      "packagePath": "node_modules/@lezer/html",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "MIT",
+      "licenseEvidence": "distributed package legal files",
+      "licenseURL": null,
+      "licenseSHA256": [
+        "568902fb66eaf1f11750e966b33fd7b5d7c618e65af09f35ef843635bcf5f1ba"
+      ],
+      "packageJsonSHA256": "02ee0f3ba3c1bc874d0a1073e13f82a11732a0cddd6eb773e2d3a429970801a0"
+    },
+    {
+      "name": "@lezer/java",
+      "version": "1.1.5",
+      "packagePath": "node_modules/@lezer/java",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "MIT",
+      "licenseEvidence": "distributed package legal files",
+      "licenseURL": null,
+      "licenseSHA256": [
+        "54bd812a6d334e0c438b78a43cea74b67e882739fd3450115ddc7c52be5706c1"
+      ],
+      "packageJsonSHA256": "85cbb86ecb02eafd7d8eca78200b332bf6253aa3f60320ae0b9262d2bd9b3430"
+    },
+    {
+      "name": "@lezer/javascript",
+      "version": "1.5.6",
+      "packagePath": "node_modules/@lezer/javascript",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "MIT",
+      "licenseEvidence": "distributed package legal files",
+      "licenseURL": null,
+      "licenseSHA256": [
+        "568902fb66eaf1f11750e966b33fd7b5d7c618e65af09f35ef843635bcf5f1ba"
+      ],
+      "packageJsonSHA256": "e081f15ccbfa07a1fb3cfa109f0e555ddd56ad3c9b174926a84e2d3a1d360c75"
+    },
+    {
+      "name": "@lezer/json",
+      "version": "1.0.3",
+      "packagePath": "node_modules/@lezer/json",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "MIT",
+      "licenseEvidence": "distributed package legal files",
+      "licenseURL": null,
+      "licenseSHA256": [
+        "7e744ae18ef84389d576469a5781172b0d50b7981111109f6da7cbc6b4188288"
+      ],
+      "packageJsonSHA256": "e97a07988525b370c1a802c0ebb0d18a5aedfbe4d8271695db1edd8c60a21e3d"
+    },
+    {
+      "name": "@lezer/lr",
+      "version": "1.4.12",
+      "packagePath": "node_modules/@lezer/lr",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "MIT",
+      "licenseEvidence": "distributed package legal files",
+      "licenseURL": null,
+      "licenseSHA256": [
+        "568902fb66eaf1f11750e966b33fd7b5d7c618e65af09f35ef843635bcf5f1ba"
+      ],
+      "packageJsonSHA256": "e7ae72a09f5942c1a8466056b607a118a70e175098b619a0c660ff6329e414a8"
+    },
+    {
+      "name": "@lezer/markdown",
+      "version": "1.8.1",
+      "packagePath": "node_modules/@lezer/markdown",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "MIT",
+      "licenseEvidence": "distributed package legal files",
+      "licenseURL": null,
+      "licenseSHA256": [
+        "54bd812a6d334e0c438b78a43cea74b67e882739fd3450115ddc7c52be5706c1"
+      ],
+      "packageJsonSHA256": "8b76f213413d2f36cab236a1390d07b24488ea906ca59ba665b911499b60dd3d"
+    },
+    {
+      "name": "@lezer/php",
+      "version": "1.0.6",
+      "packagePath": "node_modules/@lezer/php",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "MIT",
+      "licenseEvidence": "distributed package legal files",
+      "licenseURL": null,
+      "licenseSHA256": [
+        "568902fb66eaf1f11750e966b33fd7b5d7c618e65af09f35ef843635bcf5f1ba"
+      ],
+      "packageJsonSHA256": "3e2a730f3e50892a7fd3ac92444f1f5d533ea500654680cb0eadbe1f7e320923"
+    },
+    {
+      "name": "@lezer/python",
+      "version": "1.1.19",
+      "packagePath": "node_modules/@lezer/python",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "MIT",
+      "licenseEvidence": "distributed package legal files",
+      "licenseURL": null,
+      "licenseSHA256": [
+        "54bd812a6d334e0c438b78a43cea74b67e882739fd3450115ddc7c52be5706c1"
+      ],
+      "packageJsonSHA256": "8c2cc2fd4873eed5275566f525a1ebe0517bc916d1b814026bd003e423dbe0d4"
+    },
+    {
+      "name": "@lezer/rust",
+      "version": "1.0.3",
+      "packagePath": "node_modules/@lezer/rust",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "MIT",
+      "licenseEvidence": "distributed package legal files",
+      "licenseURL": null,
+      "licenseSHA256": [
+        "568902fb66eaf1f11750e966b33fd7b5d7c618e65af09f35ef843635bcf5f1ba"
+      ],
+      "packageJsonSHA256": "80bf52df864afbb92341020c4c1bec8d601f7b10fb381d3de916574e3a416da6"
+    },
+    {
+      "name": "@lezer/xml",
+      "version": "1.0.6",
+      "packagePath": "node_modules/@lezer/xml",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "MIT",
+      "licenseEvidence": "distributed package legal files",
+      "licenseURL": null,
+      "licenseSHA256": [
+        "568902fb66eaf1f11750e966b33fd7b5d7c618e65af09f35ef843635bcf5f1ba"
+      ],
+      "packageJsonSHA256": "8ff784e9257567fbec5bf33ae69761fceb9578d3a23707e8c585c1d1299ed5fb"
+    },
+    {
+      "name": "@lumino/algorithm",
+      "version": "2.0.5",
+      "packagePath": "node_modules/@lumino/algorithm",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "BSD-3-Clause",
+      "licenseEvidence": "official repository root license, package metadata declares same license",
+      "licenseURL": "https://raw.githubusercontent.com/jupyterlab/lumino/44aea979d5d2c77665d651383d27179a63596957/LICENSE",
+      "licenseSHA256": [
+        "b0da99e8c73e7fdad117622971e6d16379fd01b5d0b60589de7133b6fec59422"
+      ],
+      "packageJsonSHA256": "7bcb3bd89f23858a0dc0946a40067a77152c44659d5f26577c77592edfabb9ad"
+    },
+    {
+      "name": "@lumino/collections",
+      "version": "2.0.5",
+      "packagePath": "node_modules/@lumino/collections",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "BSD-3-Clause",
+      "licenseEvidence": "official repository root license, package metadata declares same license",
+      "licenseURL": "https://raw.githubusercontent.com/jupyterlab/lumino/44aea979d5d2c77665d651383d27179a63596957/LICENSE",
+      "licenseSHA256": [
+        "b0da99e8c73e7fdad117622971e6d16379fd01b5d0b60589de7133b6fec59422"
+      ],
+      "packageJsonSHA256": "ca210130436880936f0b92e023e48d88da53e16ad47a2d9b86f9908dddfc7697"
+    },
+    {
+      "name": "@lumino/commands",
+      "version": "2.3.4",
+      "packagePath": "node_modules/@lumino/commands",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "BSD-3-Clause",
+      "licenseEvidence": "official repository root license, package metadata declares same license",
+      "licenseURL": "https://raw.githubusercontent.com/jupyterlab/lumino/44aea979d5d2c77665d651383d27179a63596957/LICENSE",
+      "licenseSHA256": [
+        "b0da99e8c73e7fdad117622971e6d16379fd01b5d0b60589de7133b6fec59422"
+      ],
+      "packageJsonSHA256": "927c8b8000ef33d1da376f5cacdb095f33a3d25d2f181a557e74c77c515ff57a"
+    },
+    {
+      "name": "@lumino/coreutils",
+      "version": "2.2.3",
+      "packagePath": "node_modules/@lumino/coreutils",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "BSD-3-Clause",
+      "licenseEvidence": "official repository root license, package metadata declares same license",
+      "licenseURL": "https://raw.githubusercontent.com/jupyterlab/lumino/44aea979d5d2c77665d651383d27179a63596957/LICENSE",
+      "licenseSHA256": [
+        "b0da99e8c73e7fdad117622971e6d16379fd01b5d0b60589de7133b6fec59422"
+      ],
+      "packageJsonSHA256": "d2f0071523e10300d8c542e1a9d83e12bd66ac4ab19274e096888493606a34ba"
+    },
+    {
+      "name": "@lumino/disposable",
+      "version": "2.1.6",
+      "packagePath": "node_modules/@lumino/disposable",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "BSD-3-Clause",
+      "licenseEvidence": "official repository root license, package metadata declares same license",
+      "licenseURL": "https://raw.githubusercontent.com/jupyterlab/lumino/44aea979d5d2c77665d651383d27179a63596957/LICENSE",
+      "licenseSHA256": [
+        "b0da99e8c73e7fdad117622971e6d16379fd01b5d0b60589de7133b6fec59422"
+      ],
+      "packageJsonSHA256": "8f09cbb6c70a767b674a2e66227f85b1e52c06f1215bac696f1d5d708f645ccc"
+    },
+    {
+      "name": "@lumino/domutils",
+      "version": "2.0.5",
+      "packagePath": "node_modules/@lumino/domutils",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "BSD-3-Clause",
+      "licenseEvidence": "official repository root license, package metadata declares same license",
+      "licenseURL": "https://raw.githubusercontent.com/jupyterlab/lumino/44aea979d5d2c77665d651383d27179a63596957/LICENSE",
+      "licenseSHA256": [
+        "b0da99e8c73e7fdad117622971e6d16379fd01b5d0b60589de7133b6fec59422"
+      ],
+      "packageJsonSHA256": "fbfd69988a9b5ed7c3aad1d97c9769ccd2839577b992caebfb946fe89e60c4e4"
+    },
+    {
+      "name": "@lumino/dragdrop",
+      "version": "2.1.9",
+      "packagePath": "node_modules/@lumino/dragdrop",
+      "scopes": [
+        "compiled-css",
+        "runtime-js"
+      ],
+      "license": "BSD-3-Clause",
+      "licenseEvidence": "official repository root license, package metadata declares same license",
+      "licenseURL": "https://raw.githubusercontent.com/jupyterlab/lumino/44aea979d5d2c77665d651383d27179a63596957/LICENSE",
+      "licenseSHA256": [
+        "b0da99e8c73e7fdad117622971e6d16379fd01b5d0b60589de7133b6fec59422"
+      ],
+      "packageJsonSHA256": "37193c48c60095736087925646dc3d28c74f0b6af085e94d265155cb2db0f26f"
+    },
+    {
+      "name": "@lumino/keyboard",
+      "version": "2.0.5",
+      "packagePath": "node_modules/@lumino/keyboard",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "BSD-3-Clause",
+      "licenseEvidence": "official repository root license, package metadata declares same license",
+      "licenseURL": "https://raw.githubusercontent.com/jupyterlab/lumino/44aea979d5d2c77665d651383d27179a63596957/LICENSE",
+      "licenseSHA256": [
+        "b0da99e8c73e7fdad117622971e6d16379fd01b5d0b60589de7133b6fec59422"
+      ],
+      "packageJsonSHA256": "bc52aa71a8659ef98dd41c0740cfbb54fbfa7d94220b9af65a6bf3fe96dd7c0e"
+    },
+    {
+      "name": "@lumino/messaging",
+      "version": "2.0.5",
+      "packagePath": "node_modules/@lumino/messaging",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "BSD-3-Clause",
+      "licenseEvidence": "official repository root license, package metadata declares same license",
+      "licenseURL": "https://raw.githubusercontent.com/jupyterlab/lumino/44aea979d5d2c77665d651383d27179a63596957/LICENSE",
+      "licenseSHA256": [
+        "b0da99e8c73e7fdad117622971e6d16379fd01b5d0b60589de7133b6fec59422"
+      ],
+      "packageJsonSHA256": "b45bc2be9ae11a5e87c4a0541ad60b5bfb9c75f421d0805d362369dd50a42f12"
+    },
+    {
+      "name": "@lumino/polling",
+      "version": "2.1.6",
+      "packagePath": "node_modules/@lumino/polling",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "BSD-3-Clause",
+      "licenseEvidence": "official repository root license, package metadata declares same license",
+      "licenseURL": "https://raw.githubusercontent.com/jupyterlab/lumino/44aea979d5d2c77665d651383d27179a63596957/LICENSE",
+      "licenseSHA256": [
+        "b0da99e8c73e7fdad117622971e6d16379fd01b5d0b60589de7133b6fec59422"
+      ],
+      "packageJsonSHA256": "5c48a62813ed1b7df3b1e41211840427c2d0f57d12a17b750f3b650d356e4243"
+    },
+    {
+      "name": "@lumino/properties",
+      "version": "2.0.5",
+      "packagePath": "node_modules/@lumino/properties",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "BSD-3-Clause",
+      "licenseEvidence": "official repository root license, package metadata declares same license",
+      "licenseURL": "https://raw.githubusercontent.com/jupyterlab/lumino/44aea979d5d2c77665d651383d27179a63596957/LICENSE",
+      "licenseSHA256": [
+        "b0da99e8c73e7fdad117622971e6d16379fd01b5d0b60589de7133b6fec59422"
+      ],
+      "packageJsonSHA256": "34c980fd9be43a741c31b51979271908c4cc76b2f55021a4157292b40969e89a"
+    },
+    {
+      "name": "@lumino/signaling",
+      "version": "2.1.6",
+      "packagePath": "node_modules/@lumino/signaling",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "BSD-3-Clause",
+      "licenseEvidence": "official repository root license, package metadata declares same license",
+      "licenseURL": "https://raw.githubusercontent.com/jupyterlab/lumino/44aea979d5d2c77665d651383d27179a63596957/LICENSE",
+      "licenseSHA256": [
+        "b0da99e8c73e7fdad117622971e6d16379fd01b5d0b60589de7133b6fec59422"
+      ],
+      "packageJsonSHA256": "a4e764715568cca6c7a6f51462ad27b4e259b5ad6fb4d2491c09fc7375effdfd"
+    },
+    {
+      "name": "@lumino/virtualdom",
+      "version": "2.0.5",
+      "packagePath": "node_modules/@lumino/virtualdom",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "BSD-3-Clause",
+      "licenseEvidence": "official repository root license, package metadata declares same license",
+      "licenseURL": "https://raw.githubusercontent.com/jupyterlab/lumino/44aea979d5d2c77665d651383d27179a63596957/LICENSE",
+      "licenseSHA256": [
+        "b0da99e8c73e7fdad117622971e6d16379fd01b5d0b60589de7133b6fec59422"
+      ],
+      "packageJsonSHA256": "798f689b8a01748de46ff7e28c487d40bcfc6fc2637750e649b20abfe6b5943e"
+    },
+    {
+      "name": "@lumino/widgets",
+      "version": "2.10.0",
+      "packagePath": "node_modules/@lumino/widgets",
+      "scopes": [
+        "compiled-css",
+        "runtime-js"
+      ],
+      "license": "BSD-3-Clause",
+      "licenseEvidence": "official repository root license, package metadata declares same license",
+      "licenseURL": "https://raw.githubusercontent.com/jupyterlab/lumino/44aea979d5d2c77665d651383d27179a63596957/LICENSE",
+      "licenseSHA256": [
+        "b0da99e8c73e7fdad117622971e6d16379fd01b5d0b60589de7133b6fec59422"
+      ],
+      "packageJsonSHA256": "170a4d9716087508d9e439098ca6af71fc2d780df18a7bed030c3fa544b21591"
+    },
+    {
+      "name": "@marijn/find-cluster-break",
+      "version": "1.0.4",
+      "packagePath": "node_modules/@marijn/find-cluster-break",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "MIT",
+      "licenseEvidence": "distributed package legal files",
+      "licenseURL": null,
+      "licenseSHA256": [
+        "9360b00fdd091f05c783b568bdd46c679c41b72415599252de98949462ea1acb"
+      ],
+      "packageJsonSHA256": "5ee922ec8f5586c2104e070ad9b60c1c18f32bfc3dad48634f93d3bbbdcd182b"
+    },
+    {
+      "name": "@microsoft/fast-colors",
+      "version": "5.3.1",
+      "packagePath": "node_modules/@microsoft/fast-colors",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "MIT",
+      "licenseEvidence": "official repository root license, package metadata declares same license",
+      "licenseURL": "https://github.com/microsoft/fast/blob/e86a638b9e84cbf36d950025889742944e68e512/LICENSE",
+      "licenseSHA256": [
+        "efd3e2455191853bb2fb22f794e521f9097f4e95c9327c2a34be53fb172a2d5a"
+      ],
+      "packageJsonSHA256": "cb7b1efadcda675ec78636a61fe04035989d57d81d2b88ef5865d2805e28f2bf"
+    },
+    {
+      "name": "@microsoft/fast-element",
+      "version": "1.14.0",
+      "packagePath": "node_modules/@microsoft/fast-element",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "MIT",
+      "licenseEvidence": "official repository root license, package metadata declares same license",
+      "licenseURL": "https://github.com/microsoft/fast/blob/fca56adbb60e805ae2cd99c984f8886f1332d26d/LICENSE",
+      "licenseSHA256": [
+        "efd3e2455191853bb2fb22f794e521f9097f4e95c9327c2a34be53fb172a2d5a"
+      ],
+      "packageJsonSHA256": "e67eb88c58e7bf49baf7f55d91c48744f42ec9a3168209a301301631b9ded79c"
+    },
+    {
+      "name": "@microsoft/fast-foundation",
+      "version": "2.50.0",
+      "packagePath": "node_modules/@microsoft/fast-foundation",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "MIT",
+      "licenseEvidence": "official repository root license, package metadata declares same license",
+      "licenseURL": "https://github.com/microsoft/fast/blob/fca56adbb60e805ae2cd99c984f8886f1332d26d/LICENSE",
+      "licenseSHA256": [
+        "efd3e2455191853bb2fb22f794e521f9097f4e95c9327c2a34be53fb172a2d5a"
+      ],
+      "packageJsonSHA256": "add9e56fad21da87edd3b68a6e7facf113544bb58be6e593f131cae59765639c"
+    },
+    {
+      "name": "@microsoft/fast-web-utilities",
+      "version": "5.4.1",
+      "packagePath": "node_modules/@microsoft/fast-web-utilities",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "MIT",
+      "licenseEvidence": "official repository root license, package metadata declares same license",
+      "licenseURL": "https://github.com/microsoft/fast/blob/c49a98f7f1bd8e167b0b7a96a181990f9a675f34/LICENSE",
+      "licenseSHA256": [
+        "efd3e2455191853bb2fb22f794e521f9097f4e95c9327c2a34be53fb172a2d5a"
+      ],
+      "packageJsonSHA256": "31b00b8ee1282d3aec9eadceaddfa74f3b8e75be15b49965151b8252b85501f8"
+    },
+    {
+      "name": "@plutojl/lang-julia",
+      "version": "1.2.0",
+      "packagePath": "node_modules/@plutojl/lang-julia",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "MIT",
+      "licenseEvidence": "distributed package legal files",
+      "licenseURL": null,
+      "licenseSHA256": [
+        "36906066b6ae6db06546a45075166e967d1a05ae62f62e5a4b9d8e108892e3b1"
+      ],
+      "packageJsonSHA256": "20d16aceb68cf7002790fe17610c7a174b56f1a2e2fcc389c8c13788a66e001f"
+    },
+    {
+      "name": "@plutojl/lezer-julia",
+      "version": "1.2.0",
+      "packagePath": "node_modules/@plutojl/lezer-julia",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "MIT",
+      "licenseEvidence": "distributed package legal files",
+      "licenseURL": null,
+      "licenseSHA256": [
+        "36906066b6ae6db06546a45075166e967d1a05ae62f62e5a4b9d8e108892e3b1"
+      ],
+      "packageJsonSHA256": "e00d9e0a66136244c7d809d48e4dd5dfbbfbb39bfa60bcb0ae20e5204e717d80"
+    },
+    {
+      "name": "crelt",
+      "version": "1.0.7",
+      "packagePath": "node_modules/crelt",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "MIT",
+      "licenseEvidence": "distributed package legal files",
+      "licenseURL": null,
+      "licenseSHA256": [
+        "23852ebf6aef7fadffc92514b3c5df163a8651f2c3ed0dbb494cb49d93bd5de5"
+      ],
+      "packageJsonSHA256": "9e85a4699c12ad932528bc2321986e8f991c1f9b074551a04e3814d72c1cc44a"
+    },
+    {
+      "name": "deepmerge",
+      "version": "4.3.1",
+      "packagePath": "node_modules/deepmerge",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "MIT",
+      "licenseEvidence": "distributed package legal files",
+      "licenseURL": null,
+      "licenseSHA256": [
+        "6cfc4687cb2f2d86f4a77e6b526290d3878e5e512f3fec2f4cb36a9cb36f798b"
+      ],
+      "packageJsonSHA256": "f56978e7a6da1a3c6edee41abb54f98584a2fa2680458c48db820ae772fef0c9"
+    },
+    {
+      "name": "dom-serializer",
+      "version": "2.0.0",
+      "packagePath": "node_modules/dom-serializer",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "MIT",
+      "licenseEvidence": "distributed package legal files",
+      "licenseURL": null,
+      "licenseSHA256": [
+        "94cfe87de9b178e8fee313a19178e625129e2ce559db32e772e7bd95114ee6ff"
+      ],
+      "packageJsonSHA256": "098603e7fee62c07fb392e31dae4dc151a3e03c72555ce1f9182011fbf898501"
+    },
+    {
+      "name": "domelementtype",
+      "version": "2.3.0",
+      "packagePath": "node_modules/domelementtype",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "BSD-2-Clause",
+      "licenseEvidence": "distributed package legal files",
+      "licenseURL": null,
+      "licenseSHA256": [
+        "cb992345949ccd6e8394b2cd6c465f7b897c864f845937dbf64e8997f389e164"
+      ],
+      "packageJsonSHA256": "4ddf28a1e60ae7ec15f62cda0d72eb06bcae05b3819942d971c841b7cc0b6930"
+    },
+    {
+      "name": "domhandler",
+      "version": "5.0.3",
+      "packagePath": "node_modules/domhandler",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "BSD-2-Clause",
+      "licenseEvidence": "distributed package legal files",
+      "licenseURL": null,
+      "licenseSHA256": [
+        "cb992345949ccd6e8394b2cd6c465f7b897c864f845937dbf64e8997f389e164"
+      ],
+      "packageJsonSHA256": "cbb42a446eef285863e04158c7f269e0e7b8e868c1042d6845e996d760f7376c"
+    },
+    {
+      "name": "domutils",
+      "version": "3.2.2",
+      "packagePath": "node_modules/domutils",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "BSD-2-Clause",
+      "licenseEvidence": "distributed package legal files",
+      "licenseURL": null,
+      "licenseSHA256": [
+        "cb992345949ccd6e8394b2cd6c465f7b897c864f845937dbf64e8997f389e164"
+      ],
+      "packageJsonSHA256": "9a04689cc67f52e9f7323e0dd4d18c8cbe68744c3373ad524d133ddf12bf99ab"
+    },
+    {
+      "name": "entities",
+      "version": "4.5.0",
+      "packagePath": "node_modules/entities",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "BSD-2-Clause",
+      "licenseEvidence": "distributed package legal files",
+      "licenseURL": null,
+      "licenseSHA256": [
+        "cb992345949ccd6e8394b2cd6c465f7b897c864f845937dbf64e8997f389e164"
+      ],
+      "packageJsonSHA256": "c92f657f679669a91bc32cd98f0b4812b3f4a9c6f3b3af3022a70cb25b7efc7c"
+    },
+    {
+      "name": "escape-string-regexp",
+      "version": "4.0.0",
+      "packagePath": "node_modules/escape-string-regexp",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "MIT",
+      "licenseEvidence": "distributed package legal files",
+      "licenseURL": null,
+      "licenseSHA256": [
+        "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3"
+      ],
+      "packageJsonSHA256": "63763f28aefa6c49e6e6599e44b7c9aa5afd6518ae04bcfa534ff3759ad428e8"
+    },
+    {
+      "name": "exenv-es6",
+      "version": "1.1.1",
+      "packagePath": "node_modules/exenv-es6",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "MIT",
+      "licenseEvidence": "distributed package legal files",
+      "licenseURL": null,
+      "licenseSHA256": [
+        "902e3b6a3989d97343c8087e1adfc1af555069ea991648d0c791799c118a1590"
+      ],
+      "packageJsonSHA256": "a49bb7fb8b5906fee2aa7eca539457572aa2475b5a09732db31c1638bec81a68"
+    },
+    {
+      "name": "free-style",
+      "version": "3.1.0",
+      "packagePath": "node_modules/free-style",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "MIT",
+      "licenseEvidence": "distributed package legal files",
+      "licenseURL": null,
+      "licenseSHA256": [
+        "4eeb3271453a891df609e5a9f4ee79a68307f730c13417a3bfeffa604ac8cf25"
+      ],
+      "packageJsonSHA256": "7eab539b39d2d5ded8e2019a48a1b4467ff01479177264a0dccc561df5a1eed8"
+    },
+    {
+      "name": "github-slugger",
+      "version": "2.0.0",
+      "packagePath": "node_modules/github-slugger",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "ISC",
+      "licenseEvidence": "distributed package legal files",
+      "licenseURL": null,
+      "licenseSHA256": [
+        "542aefa99456832996da0cc63b14d8b89f04a30ba403e241dbe3e5aaf49fa372"
+      ],
+      "packageJsonSHA256": "64acc287c16e42020ee771348b28b472e634a9c273d29f2faabf647b67fdb909"
+    },
+    {
+      "name": "htmlparser2",
+      "version": "8.0.2",
+      "packagePath": "node_modules/htmlparser2",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "MIT",
+      "licenseEvidence": "distributed package legal files",
+      "licenseURL": null,
+      "licenseSHA256": [
+        "204cfa747341660e4da64cd23e8c876c6b20279d247f48564993d3fc4a2eab47"
+      ],
+      "packageJsonSHA256": "59a1ccf2ff631d6c789aab23076f531299100f7d63d3e0b2102c179ff79b8d6b"
+    },
+    {
+      "name": "is-plain-object",
+      "version": "5.1.0",
+      "packagePath": "node_modules/is-plain-object",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "MIT",
+      "licenseEvidence": "distributed package legal files",
+      "licenseURL": null,
+      "licenseSHA256": [
+        "4cd903859549d4b20b571041f96dfae1136ed079c476126268f9d7cc1b611150"
+      ],
+      "packageJsonSHA256": "0fe1587ff3b255249a880f58ab02fa29ecb384438adac241724ae28c1434a9ff"
+    },
+    {
+      "name": "lib0",
+      "version": "0.2.119",
+      "packagePath": "node_modules/lib0",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "MIT",
+      "licenseEvidence": "distributed package legal files",
+      "licenseURL": null,
+      "licenseSHA256": [
+        "5446db1e43fe52faf3faab7e9959fe3762ac11bdc61c0945934c498affd52d73"
+      ],
+      "packageJsonSHA256": "342e94588b6c52baa00c14b403c9be794cfcad4a9319f6be00a9c86f9829074e"
+    },
+    {
+      "name": "lodash.escape",
+      "version": "4.0.1",
+      "packagePath": "node_modules/lodash.escape",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "MIT",
+      "licenseEvidence": "distributed package legal files",
+      "licenseURL": null,
+      "licenseSHA256": [
+        "ffd8b33b354585f4ce119f19c53728281e48a97b074491eb6bf6d5c5ff305272"
+      ],
+      "packageJsonSHA256": "17b2f3a1d7410ab9a3dd76b975ce6fc5e487638975011261600464347affaf62"
+    },
+    {
+      "name": "marked",
+      "version": "17.0.6",
+      "packagePath": "node_modules/marked",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "MIT",
+      "licenseEvidence": "distributed package legal files",
+      "licenseURL": null,
+      "licenseSHA256": [
+        "8e3a3f82f59a60958f56ca08f445647c32a4733dc7ca6c2c46f6eb898471ab9c"
+      ],
+      "packageJsonSHA256": "bbba02618ed635ecfc09085eb13c24dc41017df5526ef305bc39c48d563bbd8d"
+    },
+    {
+      "name": "marked-gfm-heading-id",
+      "version": "4.1.4",
+      "packagePath": "node_modules/marked-gfm-heading-id",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "MIT",
+      "licenseEvidence": "distributed package legal files",
+      "licenseURL": null,
+      "licenseSHA256": [
+        "a846b93fda6af8008a89d1394d827afc60d62eebb70c68efbfeeafe0b01928ed"
+      ],
+      "packageJsonSHA256": "0936b436ebd5e9f3da09b0070b5416eaa8f2fc63a960d258f3f3f9beea3ffc37"
+    },
+    {
+      "name": "marked-mangle",
+      "version": "1.1.14",
+      "packagePath": "node_modules/marked-mangle",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "MIT",
+      "licenseEvidence": "distributed package legal files",
+      "licenseURL": null,
+      "licenseSHA256": [
+        "a846b93fda6af8008a89d1394d827afc60d62eebb70c68efbfeeafe0b01928ed"
+      ],
+      "packageJsonSHA256": "73fc0021ee4061b72794b91e94d82538ef7c1464a91c635eed3964e635c8ae01"
+    },
+    {
+      "name": "minimist",
+      "version": "1.2.8",
+      "packagePath": "node_modules/minimist",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "MIT",
+      "licenseEvidence": "distributed package legal files",
+      "licenseURL": null,
+      "licenseSHA256": [
+        "435a6722c786b0a56fbe7387028f1d9d3f3a2d0fb615bb8fee118727c3f59b7b"
+      ],
+      "packageJsonSHA256": "252881f6a068a3e70386706d88a694b5e8e9e053b6d9f309fd9a329e651bbf81"
+    },
+    {
+      "name": "nanoid",
+      "version": "3.3.20",
+      "packagePath": "node_modules/nanoid",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "MIT",
+      "licenseEvidence": "distributed package legal files",
+      "licenseURL": null,
+      "licenseSHA256": [
+        "da4db1480d9beea3483a2eda5c53b22238d0827d57da162b48f122e04d2d9987"
+      ],
+      "packageJsonSHA256": "e2a77185ded1c006171e4e2f8b316d0e3b4c51a135a190851cfc888ea428f6bf"
+    },
+    {
+      "name": "parse-srcset",
+      "version": "1.0.2",
+      "packagePath": "node_modules/parse-srcset",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "MIT",
+      "licenseEvidence": "distributed package legal files",
+      "licenseURL": null,
+      "licenseSHA256": [
+        "240b6a23478dc1b044a457f1e9260c725d50b66b2502f7c3240f54f79c13ab58"
+      ],
+      "packageJsonSHA256": "85de89bdbb2225109c9af147844db04d0c089e16ecc0e0d7280aa5fddfba42e5"
+    },
+    {
+      "name": "path-browserify",
+      "version": "1.0.1",
+      "packagePath": "node_modules/path-browserify",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "MIT",
+      "licenseEvidence": "distributed package legal files",
+      "licenseURL": null,
+      "licenseSHA256": [
+        "a22b9d5763f574e5db347c30acc0b33eaf4846767c03d2e27d012e864e79a824"
+      ],
+      "packageJsonSHA256": "8adb61e752398b45fbcf7bc35f254b74302622b100e49915a4905e74c97acb42"
+    },
+    {
+      "name": "picocolors",
+      "version": "1.1.1",
+      "packagePath": "node_modules/picocolors",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "ISC",
+      "licenseEvidence": "distributed package legal files",
+      "licenseURL": null,
+      "licenseSHA256": [
+        "6582629e2979466878f6014313dcc2f3756c9616148682227ce3063dde310750"
+      ],
+      "packageJsonSHA256": "ef2ac226c4811d312e12c64214c453878653e834482125ae475f27cea60de737"
+    },
+    {
+      "name": "postcss",
+      "version": "8.5.32",
+      "packagePath": "node_modules/postcss",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "MIT",
+      "licenseEvidence": "distributed package legal files",
+      "licenseURL": null,
+      "licenseSHA256": [
+        "5be1f3465bba68a626777f984878814aaf35e7ef8e9fd314d469bcf887050fb8"
+      ],
+      "packageJsonSHA256": "cee36f32138d673439accf98ba0b09c7d3df79a12202f9ee16198d3e2671edf1"
+    },
+    {
+      "name": "querystringify",
+      "version": "2.2.0",
+      "packagePath": "node_modules/querystringify",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "MIT",
+      "licenseEvidence": "distributed package legal files",
+      "licenseURL": null,
+      "licenseSHA256": [
+        "3b2a6a268aa815dec121d614245e03b5c68db1f044d5b525e36db7d5dc7fb9c3"
+      ],
+      "packageJsonSHA256": "52a9fb122bf39ca64b3724f8d419273b0500918a186333a3a0c0f2db28f05073"
+    },
+    {
+      "name": "react",
+      "version": "18.3.1",
+      "packagePath": "node_modules/react",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "MIT",
+      "licenseEvidence": "distributed package legal files",
+      "licenseURL": null,
+      "licenseSHA256": [
+        "52412d7bc7ce4157ea628bbaacb8829e0a9cb3c58f57f99176126bc8cf2bfc85"
+      ],
+      "packageJsonSHA256": "d4e68a5c96babb20cad1daafea8b78822eae45b341552cf5418d06a5304fa64c"
+    },
+    {
+      "name": "react-dom",
+      "version": "18.3.1",
+      "packagePath": "node_modules/react-dom",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "MIT",
+      "licenseEvidence": "distributed package legal files",
+      "licenseURL": null,
+      "licenseSHA256": [
+        "52412d7bc7ce4157ea628bbaacb8829e0a9cb3c58f57f99176126bc8cf2bfc85"
+      ],
+      "packageJsonSHA256": "d2f29e31bd48b833e48cd7bbf41f192e8ee4ff8da249fdbe10d4ac4114b8b12e"
+    },
+    {
+      "name": "requires-port",
+      "version": "1.0.0",
+      "packagePath": "node_modules/requires-port",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "MIT",
+      "licenseEvidence": "distributed package legal files",
+      "licenseURL": null,
+      "licenseSHA256": [
+        "3b2a6a268aa815dec121d614245e03b5c68db1f044d5b525e36db7d5dc7fb9c3"
+      ],
+      "packageJsonSHA256": "537ddc6900b1f1996989cc61a3e170d918bed0ab5cc77a49245bcc59361e8f47"
+    },
+    {
+      "name": "sanitize-html",
+      "version": "2.12.1",
+      "packagePath": "node_modules/sanitize-html",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "MIT",
+      "licenseEvidence": "distributed package legal files",
+      "licenseURL": null,
+      "licenseSHA256": [
+        "24526b61784870909780321dac50fcd3a33ff0bdfd507549dd63163899237bd1"
+      ],
+      "packageJsonSHA256": "61fe78e873c80e1fcec6f0890d4013c85086c90b30d8ddee10c0ddbf9e7e1c63"
+    },
+    {
+      "name": "scheduler",
+      "version": "0.23.2",
+      "packagePath": "node_modules/scheduler",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "MIT",
+      "licenseEvidence": "distributed package legal files",
+      "licenseURL": null,
+      "licenseSHA256": [
+        "52412d7bc7ce4157ea628bbaacb8829e0a9cb3c58f57f99176126bc8cf2bfc85"
+      ],
+      "packageJsonSHA256": "0893643a24576d727174e639586b8833a53f2a7b4a2199a719b9cfcebe9bae88"
+    },
+    {
+      "name": "style-mod",
+      "version": "4.1.4",
+      "packagePath": "node_modules/style-mod",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "MIT",
+      "licenseEvidence": "distributed package legal files",
+      "licenseURL": null,
+      "licenseSHA256": [
+        "cb4474e26547397169061d3586c00022cda5330a1b64fa13e872319f3b63aff1"
+      ],
+      "packageJsonSHA256": "0aa5f5995a953bc3f1d02164a5ec0e58d13bf9f7d362c44bf0526e667439f842"
+    },
+    {
+      "name": "tabbable",
+      "version": "5.3.3",
+      "packagePath": "node_modules/tabbable",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "MIT",
+      "licenseEvidence": "distributed package legal files",
+      "licenseURL": null,
+      "licenseSHA256": [
+        "8e714750725e75c8b31172ef84c0805f94873f86e3b5cfca8a948553f0778fa1"
+      ],
+      "packageJsonSHA256": "2bd2eeadc973d14cc0f164c7e7ad89ba1a31596d5245b72c70c0ba80eff881a3"
+    },
+    {
+      "name": "tslib",
+      "version": "1.14.1",
+      "packagePath": "node_modules/tslib",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "0BSD",
+      "licenseEvidence": "distributed package legal files",
+      "licenseURL": null,
+      "licenseSHA256": [
+        "dd835e67a9a297da32f9467d7677a5d02c8e50e10f15da43b810147c79c04b9b",
+        "210b19e543130388c68654b7497e967119ce17145f66ab7d85688fbd70f08751"
+      ],
+      "packageJsonSHA256": "f685f35daa1c75b3e6e3e2e9158de36130e34aee095498f65af9e508ea2d56b0"
+    },
+    {
+      "name": "typestyle",
+      "version": "2.4.0",
+      "packagePath": "node_modules/typestyle",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "MIT",
+      "licenseEvidence": "distributed package legal files",
+      "licenseURL": null,
+      "licenseSHA256": [
+        "2fab35b3985df8137a3beae98c3719f35da0af97c53c6f4d2b55e4b72f7e8851"
+      ],
+      "packageJsonSHA256": "1e3a2ea1cc4027607dc2c1d455e9a4d2b8cddeb8f86278138914e0dd47800225"
+    },
+    {
+      "name": "url-parse",
+      "version": "1.5.10",
+      "packagePath": "node_modules/url-parse",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "MIT",
+      "licenseEvidence": "distributed package legal files",
+      "licenseURL": null,
+      "licenseSHA256": [
+        "3b2a6a268aa815dec121d614245e03b5c68db1f044d5b525e36db7d5dc7fb9c3"
+      ],
+      "packageJsonSHA256": "c3047872ef776e7eff8a0440e8c7c70d8d8c6dae4f5d09dc651a83820734a746"
+    },
+    {
+      "name": "w3c-keyname",
+      "version": "2.2.8",
+      "packagePath": "node_modules/w3c-keyname",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "MIT",
+      "licenseEvidence": "distributed package legal files",
+      "licenseURL": null,
+      "licenseSHA256": [
+        "869c30f368eb08735e779027b9f4bc9fea2f39624351856aebe42741f0bc0884"
+      ],
+      "packageJsonSHA256": "0396c646f74d52c1b0851074ecdb5cabf540af595ceb5e5a5136df2bf3c2f83b"
+    },
+    {
+      "name": "y-protocols",
+      "version": "1.0.7",
+      "packagePath": "node_modules/y-protocols",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "MIT",
+      "licenseEvidence": "distributed package legal files",
+      "licenseURL": null,
+      "licenseSHA256": [
+        "5446db1e43fe52faf3faab7e9959fe3762ac11bdc61c0945934c498affd52d73"
+      ],
+      "packageJsonSHA256": "657427a2b9e32ca9a00d2fb2cf5a228a573dad5a6651e64e9182f88d6e8e4949"
+    },
+    {
+      "name": "yjs",
+      "version": "13.6.33",
+      "packagePath": "node_modules/yjs",
+      "scopes": [
+        "runtime-js"
+      ],
+      "license": "MIT",
+      "licenseEvidence": "distributed package legal files",
+      "licenseURL": null,
+      "licenseSHA256": [
+        "341baa53605ed85d6f95782322854cca56c655ebc7fd4712649b8e7afc6020ff"
+      ],
+      "packageJsonSHA256": "98fdd1ee9edadf72f4608f5bfd8aa4a9f23fca05d2c56b11f5d0520cf267f85d"
+    }
+  ],
+  "rootLicensePins": [
+    {
+      "repository": "jupyterlab/lumino",
+      "revision": "44aea979d5d2c77665d651383d27179a63596957",
+      "url": "https://raw.githubusercontent.com/jupyterlab/lumino/44aea979d5d2c77665d651383d27179a63596957/LICENSE",
+      "file": "jupyterlab_lumino-44aea979d5d2c77665d651383d27179a63596957-LICENSE.txt",
+      "sha256": "b0da99e8c73e7fdad117622971e6d16379fd01b5d0b60589de7133b6fec59422"
+    },
+    {
+      "repository": "jupyter-server/jupyter_ydoc",
+      "revision": "f6f76d61bac4449d9a4b3aa9933493cfeaed8cce",
+      "url": "https://raw.githubusercontent.com/jupyter-server/jupyter_ydoc/f6f76d61bac4449d9a4b3aa9933493cfeaed8cce/LICENSE",
+      "file": "jupyter-server_jupyter_ydoc-f6f76d61bac4449d9a4b3aa9933493cfeaed8cce-LICENSE.txt",
+      "sha256": "76aa61b056e19e5ccf2bb56591ceba65cee0ecf4be7b57659f4ec65c85691424"
+    },
+    {
+      "repository": "jupyterlab-contrib/jupyter-ui-toolkit",
+      "revision": "84496d1ee45fa3bb7557547dce6c9ffa84a90922",
+      "url": "https://raw.githubusercontent.com/jupyterlab-contrib/jupyter-ui-toolkit/84496d1ee45fa3bb7557547dce6c9ffa84a90922/LICENSE",
+      "file": "jupyterlab-contrib_jupyter-ui-toolkit-84496d1ee45fa3bb7557547dce6c9ffa84a90922-LICENSE.txt",
+      "sha256": "6ec2d5d8aa9ea9bba384e53bdb7d401721a861bbafb5dce9e0a4de5ebdcd71fc"
+    }
+  ],
+  "luminoVersions": [
+    {
+      "name": "commands",
+      "installedVersion": "2.3.4",
+      "sourceVersion": "2.3.4",
+      "match": true,
+      "url": "https://raw.githubusercontent.com/jupyterlab/lumino/44aea979d5d2c77665d651383d27179a63596957/packages/commands/package.json"
+    },
+    {
+      "name": "dragdrop",
+      "installedVersion": "2.1.9",
+      "sourceVersion": "2.1.9",
+      "match": true,
+      "url": "https://raw.githubusercontent.com/jupyterlab/lumino/44aea979d5d2c77665d651383d27179a63596957/packages/dragdrop/package.json"
+    },
+    {
+      "name": "keyboard",
+      "installedVersion": "2.0.5",
+      "sourceVersion": "2.0.5",
+      "match": true,
+      "url": "https://raw.githubusercontent.com/jupyterlab/lumino/44aea979d5d2c77665d651383d27179a63596957/packages/keyboard/package.json"
+    },
+    {
+      "name": "polling",
+      "installedVersion": "2.1.6",
+      "sourceVersion": "2.1.6",
+      "match": true,
+      "url": "https://raw.githubusercontent.com/jupyterlab/lumino/44aea979d5d2c77665d651383d27179a63596957/packages/polling/package.json"
+    },
+    {
+      "name": "widgets",
+      "installedVersion": "2.10.0",
+      "sourceVersion": "2.10.0",
+      "match": true,
+      "url": "https://raw.githubusercontent.com/jupyterlab/lumino/44aea979d5d2c77665d651383d27179a63596957/packages/widgets/package.json"
+    },
+    {
+      "name": "algorithm",
+      "installedVersion": "2.0.5",
+      "sourceVersion": "2.0.5",
+      "match": true,
+      "url": "https://raw.githubusercontent.com/jupyterlab/lumino/44aea979d5d2c77665d651383d27179a63596957/packages/algorithm/package.json"
+    },
+    {
+      "name": "disposable",
+      "installedVersion": "2.1.6",
+      "sourceVersion": "2.1.6",
+      "match": true,
+      "url": "https://raw.githubusercontent.com/jupyterlab/lumino/44aea979d5d2c77665d651383d27179a63596957/packages/disposable/package.json"
+    },
+    {
+      "name": "domutils",
+      "installedVersion": "2.0.5",
+      "sourceVersion": "2.0.5",
+      "match": true,
+      "url": "https://raw.githubusercontent.com/jupyterlab/lumino/44aea979d5d2c77665d651383d27179a63596957/packages/domutils/package.json"
+    },
+    {
+      "name": "coreutils",
+      "installedVersion": "2.2.3",
+      "sourceVersion": "2.2.3",
+      "match": true,
+      "url": "https://raw.githubusercontent.com/jupyterlab/lumino/44aea979d5d2c77665d651383d27179a63596957/packages/coreutils/package.json"
+    },
+    {
+      "name": "signaling",
+      "installedVersion": "2.1.6",
+      "sourceVersion": "2.1.6",
+      "match": true,
+      "url": "https://raw.githubusercontent.com/jupyterlab/lumino/44aea979d5d2c77665d651383d27179a63596957/packages/signaling/package.json"
+    },
+    {
+      "name": "messaging",
+      "installedVersion": "2.0.5",
+      "sourceVersion": "2.0.5",
+      "match": true,
+      "url": "https://raw.githubusercontent.com/jupyterlab/lumino/44aea979d5d2c77665d651383d27179a63596957/packages/messaging/package.json"
+    },
+    {
+      "name": "properties",
+      "installedVersion": "2.0.5",
+      "sourceVersion": "2.0.5",
+      "match": true,
+      "url": "https://raw.githubusercontent.com/jupyterlab/lumino/44aea979d5d2c77665d651383d27179a63596957/packages/properties/package.json"
+    },
+    {
+      "name": "virtualdom",
+      "installedVersion": "2.0.5",
+      "sourceVersion": "2.0.5",
+      "match": true,
+      "url": "https://raw.githubusercontent.com/jupyterlab/lumino/44aea979d5d2c77665d651383d27179a63596957/packages/virtualdom/package.json"
+    },
+    {
+      "name": "collections",
+      "installedVersion": "2.0.5",
+      "sourceVersion": "2.0.5",
+      "match": true,
+      "url": "https://raw.githubusercontent.com/jupyterlab/lumino/44aea979d5d2c77665d651383d27179a63596957/packages/collections/package.json"
+    }
+  ],
+  "notebookSourceMatches": {
+    "panel.ts": true,
+    "widget.ts": true
+  },
+  "modifications": {
+    "main.ts": "import{createNotebook}from'./src/createNotebook';import{setupCommands,COMMAND_IDS}from'./src/commands';import{CommandRegistry}from'@lumino/commands';import{CommandPalette,SplitPanel,Panel,Widget}from'@lumino/widgets';import{Toolbar,CommandToolbarButton}from'@jupyterlab/apputils';import{NotebookActions,ToolbarItems}from'@jupyterlab/notebook';\nimport'@jupyterlab/notebook/style/index.css';import'@jupyterlab/codemirror/style/index.css';import'@jupyterlab/theme-light-extension/style/theme.css';import'./host.css';\nlet scene:any=null,closed=false;const mount=document.getElementById('content');function unmount(){if(!scene)return;const old=scene;scene=null;old.panel.dispose();old.model.dispose()}function dispose(){if(closed)return;closed=true;try{unmount()}finally{cleanupOwned();mount?.replaceChildren()}}function fail(){try{dispose()}finally{document.body.textContent='本地笔记本暂不可用。';document.body.setAttribute('role','alert')}}failure=fail;\nfunction render(){if(closed||scene||document.hidden)return;if(!mount)throw Error('Missing notebook mount');const {notebook,model}=createNotebook();const commands=new CommandRegistry(),palette=new CommandPalette({commands}),panel=new SplitPanel(),right=new Panel(),toolbar=new Toolbar();scene={notebook,model,commands,panel};setupCommands(commands,palette,notebook);for(const id of [COMMAND_IDS.insert,COMMAND_IDS.deleteCell])toolbar.addItem(id,new CommandToolbarButton({commands,id,args:{toolbar:true}}));toolbar.addItem('cellType',ToolbarItems.createCellTypeItem({content:notebook} as any));right.addWidget(toolbar);right.addWidget(notebook);panel.orientation='horizontal';panel.spacing=0;panel.addWidget(palette);panel.addWidget(right);SplitPanel.setStretch(palette,0);SplitPanel.setStretch(right,1);panel.addClass('jp-ThemedContainer');panel.id='main';Widget.attach(panel,mount);panel.update();if(__TEST__)(window as any).__JP={notebook,model,commands};}\nfunction on(t:any,k:string,f:any){t.addEventListener(k,(e:any)=>{if(!closed)try{f(e)}catch{fail()}})}try{for(const k of ['copy','cut','paste','drop'])document.addEventListener(k,e=>{e.preventDefault();e.stopImmediatePropagation()},true);document.addEventListener('click',e=>{if((e.target as Element)?.closest?.('a[href]')){e.preventDefault();e.stopImmediatePropagation()}},true);on(window,'error',(e:any)=>{e.preventDefault();fail()});on(document,'visibilitychange',()=>{if(document.hidden){unmount();pauseOwned()}else{resumeOwned();render()}});on(window,'resize',()=>scene?.panel.update());on(window,'pagehide',dispose);on(window,'atlas:dispose',dispose);on(document,'keydown',(e:KeyboardEvent)=>scene?.commands.processKeydownEvent(e));render();if(document.hidden)pauseOwned()}catch{fail()}\n",
+    "src/createNotebook.ts": "import {Sanitizer} from '@jupyterlab/apputils';\nimport {CodeMirrorEditorFactory,CodeMirrorMimeTypeService,EditorExtensionRegistry,EditorLanguageRegistry,EditorThemeRegistry,ybinding} from '@jupyterlab/codemirror';\nimport {createMarkdownParser} from '@jupyterlab/markedparser-extension';\nimport {Notebook,NotebookModel,StaticNotebook} from '@jupyterlab/notebook';\nimport {standardRendererFactories as initialFactories,RenderMimeRegistry} from '@jupyterlab/rendermime';\nimport type {IYText} from '@jupyter/ydoc';\nexport function createNotebook(){\n  const languages = new EditorLanguageRegistry();\n\n  const sanitizer=new Sanitizer();\n  const rendermime = new RenderMimeRegistry({sanitizer:{sanitize:(dirty:string)=>sanitizer.sanitize(dirty,{allowedTags:['p','div','span','h1','h2','h3','h4','h5','h6','em','strong','b','i','del','s','blockquote','ul','ol','li','pre','code','br','hr','table','thead','tbody','tr','th','td'],allowedAttributes:{'*':['class'],th:['colspan','rowspan'],td:['colspan','rowspan']}})},\n    initialFactories: initialFactories.filter(f => f.mimeTypes.some(t => [\"text/plain\",\"text/markdown\"].includes(t))),\n    markdownParser: createMarkdownParser(languages)\n  });\n\n  const editorExtensions = () => {\n    const themes = new EditorThemeRegistry();\n    EditorThemeRegistry.getDefaultThemes().forEach(theme => {\n      themes.addTheme(theme);\n    });\n    const registry = new EditorExtensionRegistry();\n\n    EditorExtensionRegistry.getDefaultExtensions({ themes }).forEach(\n      extensionFactory => {\n        registry.addExtension(extensionFactory);\n      }\n    );\n    registry.addExtension({\n      name: 'shared-model-binding',\n      factory: options => {\n        const sharedModel = options.model.sharedModel as IYText;\n        return EditorExtensionRegistry.createImmutableExtension(\n          ybinding({\n            ytext: sharedModel.ysource,\n            undoManager: sharedModel.undoManager ?? undefined\n          })\n        );\n      }\n    });\n    return registry;\n  };\n  EditorLanguageRegistry.getDefaultLanguages()\n    .filter(language =>\n      ['ipython', 'julia', 'python'].includes(language.name.toLowerCase())\n    )\n    .forEach(language => {\n      languages.addLanguage(language);\n    });\n  // Language for Markdown cells\n  languages.addLanguage({\n    name: 'ipythongfm',\n    mime: 'text/x-ipythongfm',\n    load: async () => {\n      const m = await import('@codemirror/lang-markdown');\n      type TCodeLanguageResolver = Extract<\n        NonNullable<\n          NonNullable<Parameters<typeof m.markdown>[0]>['codeLanguages']\n        >,\n        (info: string) => unknown\n      >;\n      const codeLanguages: TCodeLanguageResolver = info =>\n        languages.findBest(\n          info\n        ) as unknown as ReturnType<TCodeLanguageResolver>;\n      return m.markdown({\n        codeLanguages\n      });\n    }\n  });\n  const factoryService = new CodeMirrorEditorFactory({\n    extensions: editorExtensions(),\n    languages\n  });\n  const mimeTypeService = new CodeMirrorMimeTypeService(languages);\n  const contentFactory = new Notebook.ContentFactory({\n    editorFactory: factoryService.newInlineEditor\n  });\n\n\nconst notebook=new Notebook({rendermime,contentFactory,mimeTypeService,notebookConfig:{...StaticNotebook.defaultNotebookConfig,windowingMode:'none'}});\nconst model=new NotebookModel();model.fromJSON({nbformat:4,nbformat_minor:5,metadata:{language_info:{name:'python'}},cells:[{id:'intro',cell_type:'markdown',metadata:{},source:'# 本地笔记本\\n\\n原 Jupyter 单元编辑器。下方输出是固定文档内容，不执行代码。'},{id:'code',cell_type:'code',metadata:{},execution_count:null,source:'sum([2, 3, 5])',outputs:[{output_type:'stream',name:'stdout',text:'固定示例输出：10\\n'}]}]});notebook.model=model;return{notebook,model};}\n",
+    "src/commands.ts": "import {NotebookActions} from '@jupyterlab/notebook';\nimport {addIcon,deleteIcon} from '@jupyterlab/ui-components';\nconst COMMAND_IDS={'editMode': 'notebook:editMode', 'commandMode': 'notebook:commandMode', 'selectBelow': 'notebook:selectBelow', 'selectAbove': 'notebook:selectAbove', 'extendAbove': 'notebook:extendAbove', 'extendTop': 'notebook:extendTop', 'extendBelow': 'notebook:extendBelow', 'extendBottom': 'notebook:extendBottom', 'merge': 'notebook:merge', 'split': 'notebook:split', 'undo': 'notebook:undo', 'redo': 'notebook:redo', 'insert': 'notebook:insert', 'deleteCell': 'notebook:deleteCell'};\nexport{COMMAND_IDS};\nexport function setupCommands(commands:any,palette:any,notebook:any){const nbWidget={content:notebook};\n  commands.addCommand(COMMAND_IDS.editMode, {\n    label: 'Edit Mode',\n    execute: () => {\n      nbWidget.content.mode = 'edit';\n    }\n  });\n  commands.addCommand(COMMAND_IDS.commandMode, {\n    label: 'Command Mode',\n    execute: () => {\n      nbWidget.content.mode = 'command';\n    }\n  });\n  commands.addCommand(COMMAND_IDS.selectBelow, {\n    label: 'Select Below',\n    execute: () => NotebookActions.selectBelow(nbWidget.content)\n  });\n  commands.addCommand(COMMAND_IDS.selectAbove, {\n    label: 'Select Above',\n    execute: () => NotebookActions.selectAbove(nbWidget.content)\n  });\n  commands.addCommand(COMMAND_IDS.extendAbove, {\n    label: 'Extend Above',\n    execute: () => NotebookActions.extendSelectionAbove(nbWidget.content)\n  });\n  commands.addCommand(COMMAND_IDS.extendTop, {\n    label: 'Extend to Top',\n    execute: () => NotebookActions.extendSelectionAbove(nbWidget.content, true)\n  });\n  commands.addCommand(COMMAND_IDS.extendBelow, {\n    label: 'Extend Below',\n    execute: () => NotebookActions.extendSelectionBelow(nbWidget.content)\n  });\n  commands.addCommand(COMMAND_IDS.extendBottom, {\n    label: 'Extend to Bottom',\n    execute: () => NotebookActions.extendSelectionBelow(nbWidget.content, true)\n  });\n  commands.addCommand(COMMAND_IDS.merge, {\n    label: 'Merge Cells',\n    execute: () => NotebookActions.mergeCells(nbWidget.content)\n  });\n  commands.addCommand(COMMAND_IDS.split, {\n    label: 'Split Cell',\n    execute: () => NotebookActions.splitCell(nbWidget.content)\n  });\n  commands.addCommand(COMMAND_IDS.undo, {\n    label: 'Undo',\n    execute: () => NotebookActions.undo(nbWidget.content)\n  });\n  commands.addCommand(COMMAND_IDS.redo, {\n    label: 'Redo',\n    execute: () => NotebookActions.redo(nbWidget.content)\n  });\n  commands.addCommand(COMMAND_IDS.insert, {\n    label: args => (args.toolbar ? '' : 'Insert a cell below'),\n    caption: 'Insert a cell below',\n    icon: args => (args.toolbar ? addIcon : undefined),\n    execute: () => NotebookActions.insertBelow(nbWidget.content)\n  });\n  commands.addCommand(COMMAND_IDS.deleteCell, {\n    label: args => (args.toolbar ? '' : 'Delete the selected cells'),\n    caption: 'Delete the selected cells',\n    icon: args => (args.toolbar ? deleteIcon : undefined),\n    execute: () => NotebookActions.deleteCells(nbWidget.content)\n  });\nObject.values(COMMAND_IDS).forEach(command=>palette.addItem({command,category:'Notebook'}));\nconst bindings=[    {\n      selector: '.jp-Notebook.jp-mod-commandMode:not(.jp-mod-readWrite) :focus',\n      keys: ['Enter'],\n      command: COMMAND_IDS.editMode\n    },    {\n      selector: '.jp-Notebook.jp-mod-editMode',\n      keys: ['Escape'],\n      command: COMMAND_IDS.commandMode\n    },    {\n      selector: '.jp-Notebook.jp-mod-commandMode:not(.jp-mod-readWrite) :focus',\n      keys: ['Shift M'],\n      command: COMMAND_IDS.merge\n    },    {\n      selector: '.jp-Notebook.jp-mod-editMode',\n      keys: ['Ctrl Shift -'],\n      command: COMMAND_IDS.split\n    },    {\n      selector: '.jp-Notebook.jp-mod-commandMode:not(.jp-mod-readWrite) :focus',\n      keys: ['J'],\n      command: COMMAND_IDS.selectBelow\n    },    {\n      selector: '.jp-Notebook.jp-mod-commandMode:not(.jp-mod-readWrite) :focus',\n      keys: ['ArrowDown'],\n      command: COMMAND_IDS.selectBelow\n    },    {\n      selector: '.jp-Notebook.jp-mod-commandMode:not(.jp-mod-readWrite) :focus',\n      keys: ['K'],\n      command: COMMAND_IDS.selectAbove\n    },    {\n      selector: '.jp-Notebook.jp-mod-commandMode:not(.jp-mod-readWrite) :focus',\n      keys: ['ArrowUp'],\n      command: COMMAND_IDS.selectAbove\n    },    {\n      selector: '.jp-Notebook.jp-mod-commandMode:not(.jp-mod-readWrite) :focus',\n      keys: ['Shift K'],\n      command: COMMAND_IDS.extendAbove\n    },    {\n      selector: '.jp-Notebook.jp-mod-commandMode:not(.jp-mod-readWrite) :focus',\n      keys: ['Shift J'],\n      command: COMMAND_IDS.extendBelow\n    },    {\n      selector: '.jp-Notebook.jp-mod-commandMode:not(.jp-mod-readWrite) :focus',\n      keys: ['Z'],\n      command: COMMAND_IDS.undo\n    },    {\n      selector: '.jp-Notebook.jp-mod-commandMode:not(.jp-mod-readWrite) :focus',\n      keys: ['Y'],\n      command: COMMAND_IDS.redo\n    }];bindings.forEach(binding=>commands.addKeyBinding(binding));}\n",
+    "build.mjs": "import esbuild from'../ui-coss-chat-local/node_modules/esbuild/lib/main.js';import fs from'node:fs';import path from'node:path';import{createRequire}from'node:module';const require=createRequire(import.meta.url);const r=await esbuild.build({entryPoints:['main.ts'],bundle:true,format:'iife',minify:true,charset:'utf8',loader:{'.svg':'text'},define:{'process.env.NODE_ENV':'\"production\"','__TEST__':process.env.TEST?'true':'false'},outfile:process.env.TEST?'runtime.test.js':'delivery/notebook/runtime.js',metafile:true,plugins:[{name:'webpack-css-imports',setup(b){b.onLoad({filter:/lib0\\/(?:src\\/)?storage\\.js$/},a=>({contents:fs.readFileSync(a.path,'utf8').replace(/try \\{[\\s\\S]*?\\} catch \\(e\\) \\{ \\}/,'/* Use original in-memory fallback; no storage probe. */'),loader:'js'}));b.onResolve({filter:/\\.svg$/},a=>a.kind==='url-token'?{path:'data:image/svg+xml,'+encodeURIComponent(fs.readFileSync(path.resolve(a.resolveDir,a.path),'utf8')),external:true}:null);b.onLoad({filter:/apputils\\/lib\\/clipboard\\.js$/},a=>({contents:fs.readFileSync(a.path,'utf8').replace('return navigator.clipboard;','return undefined;'),loader:'js'}));b.onResolve({filter:/^~/},a=>({path:require.resolve(a.path.slice(1))}))}}],banner:{js:fs.readFileSync('prelude.js','utf8')},footer:{js:`}catch(e){cleanupOwned();document.body.textContent='本地笔记本暂不可用。';document.body.setAttribute('role','alert')}})();`}});fs.writeFileSync('meta.json',JSON.stringify(r.metafile,null,2));\n",
+    "prelude.js": "(()=>{let dead=false,paused=false,seq=0;const intervals=new Map(),si=window.setInterval.bind(window),ci=window.clearInterval.bind(window);const listeners=[],frames=new Map(),timers=new Map(),animations=new Map();const add=EventTarget.prototype.addEventListener,rem=EventTarget.prototype.removeEventListener,raf=window.requestAnimationFrame.bind(window),caf=window.cancelAnimationFrame.bind(window),st=window.setTimeout.bind(window),ct=window.clearTimeout.bind(window),animate=Element.prototype.animate;let failure=()=>{};const observerTypes=['ResizeObserver','IntersectionObserver','MutationObserver'],observerOriginals={},observers=new Set();for(const k of observerTypes){const Base=window[k];observerOriginals[k]=Base;if(Base)window[k]=class extends Base{constructor(fn,...args){super((...a)=>{if(observers.has(this)&&!dead&&!document.hidden)try{fn(...a)}catch{failure()}},...args);observers.add(this)}disconnect(){observers.delete(this);super.disconnect()}}}\nEventTarget.prototype.addEventListener=function(k,f,o){if(f)listeners.push([this,k,f,o]);return add.call(this,k,f,o)};\nEventTarget.prototype.removeEventListener=function(k,f,o){const i=listeners.findIndex(x=>x[0]===this&&x[1]===k&&x[2]===f);if(i>=0)listeners.splice(i,1);return rem.call(this,k,f,o)};\nfunction schedule(job,id){const generation=job.generation=(job.generation||0)+1;job.native=raf(t=>{if(frames.get(id)!==job||job.generation!==generation)return;frames.delete(id);if(!dead&&!paused)try{job.f(t)}catch{failure()}})}\nwindow.requestAnimationFrame=f=>{if(dead)return 0;const id=++seq,job={f,native:null};frames.set(id,job);if(!paused)schedule(job,id);return id};window.cancelAnimationFrame=id=>{const j=frames.get(id);if(j)caf(j.native);frames.delete(id)};\nwindow.setTimeout=(f,ms,...args)=>{if(dead)return 0;const id=st(()=>{if(!timers.has(id))return;timers.delete(id);if(!dead)try{f(...args)}catch{failure()}},ms);timers.set(id,true);return id};window.clearTimeout=id=>{timers.delete(id);ct(id)};\nwindow.setInterval=(f,ms,...args)=>{if(dead)return 0;const id=si(()=>{if(intervals.has(id)&&!dead&&!document.hidden)try{f(...args)}catch{failure()}},ms);intervals.set(id,true);return id};window.clearInterval=id=>{intervals.delete(id);ci(id)};\nif(animate)Element.prototype.animate=function(...args){const a=animate.apply(this,args);const done=()=>{const f=animations.get(a);if(f){rem.call(a,'finish',f);rem.call(a,'cancel',f);animations.delete(a)}};animations.set(a,done);add.call(a,'finish',done);add.call(a,'cancel',done);return a};\nfunction cancelAnimations(){for(const[a,done]of [...animations]){try{a.cancel()}catch{}done()}animations.clear()}\nfunction pauseOwned(){paused=true;for(const j of frames.values())caf(j.native);cancelAnimations()}\nfunction resumeOwned(){if(dead)return;paused=false;for(const[id,j]of frames)schedule(j,id)}\nfunction cleanupOwned(){dead=true;for(const id of intervals.keys())ci(id);intervals.clear();window.setInterval=si;window.clearInterval=ci;for(const o of [...observers])o.disconnect();for(const k of observerTypes)if(observerOriginals[k])window[k]=observerOriginals[k];pauseOwned();frames.clear();for(const id of timers.keys())ct(id);timers.clear();for(const[t,k,f,o]of listeners)rem.call(t,k,f,o);listeners.length=0;EventTarget.prototype.addEventListener=add;EventTarget.prototype.removeEventListener=rem;window.requestAnimationFrame=raf;window.cancelAnimationFrame=caf;window.setTimeout=st;window.clearTimeout=ct;if(animate)Element.prototype.animate=animate}\ntry{\n"
+  },
+  "tests": [
+    {
+      "mode": "normal",
+      "pass": true,
+      "actualCompose571": true,
+      "testOnlyStateExposure": true,
+      "scope": "Original Jupyter NotebookModel/Notebook with original extracted cell commands; insert/delete/undo/redo, rendered cell count, hidden reset/stale callback,early/late failure and disposal. No kernel/server; native keyboard/contenteditable/geometry unverified",
+      "cleanup": {
+        "listeners": 0,
+        "timers": 0,
+        "raf": 0,
+        "observers": 0
+      },
+      "blockedCalls": 0
+    },
+    {
+      "mode": "reduced",
+      "pass": true,
+      "actualCompose571": true,
+      "testOnlyStateExposure": true,
+      "scope": "Original Jupyter NotebookModel/Notebook with original extracted cell commands; insert/delete/undo/redo, rendered cell count, hidden reset/stale callback,early/late failure and disposal. No kernel/server; native keyboard/contenteditable/geometry unverified",
+      "cleanup": {
+        "listeners": 0,
+        "timers": 0,
+        "raf": 0,
+        "observers": 0
+      },
+      "blockedCalls": 0
+    },
+    {
+      "mode": "early",
+      "pass": true,
+      "actualCompose571": true,
+      "testOnlyStateExposure": true,
+      "scope": "Original Jupyter NotebookModel/Notebook with original extracted cell commands; insert/delete/undo/redo, rendered cell count, hidden reset/stale callback,early/late failure and disposal. No kernel/server; native keyboard/contenteditable/geometry unverified",
+      "cleanup": {
+        "listeners": 0,
+        "timers": 0,
+        "raf": 0,
+        "observers": 0
+      },
+      "blockedCalls": 0
+    },
+    {
+      "mode": "failure",
+      "pass": true,
+      "actualCompose571": true,
+      "testOnlyStateExposure": true,
+      "scope": "Original Jupyter NotebookModel/Notebook with original extracted cell commands; insert/delete/undo/redo, rendered cell count, hidden reset/stale callback,early/late failure and disposal. No kernel/server; native keyboard/contenteditable/geometry unverified",
+      "cleanup": {
+        "listeners": 0,
+        "timers": 0,
+        "raf": 0,
+        "observers": 0
+      },
+      "blockedCalls": 0
+    },
+    {
+      "mode": "production",
+      "pass": true,
+      "actualCompose571": true,
+      "testOnlyStateExposure": false,
+      "scope": "Original Jupyter NotebookModel/Notebook with original extracted cell commands; insert/delete/undo/redo, rendered cell count, hidden reset/stale callback,early/late failure and disposal. No kernel/server; native keyboard/contenteditable/geometry unverified",
+      "cleanup": {
+        "listeners": 0,
+        "timers": 0,
+        "raf": 0,
+        "observers": 0
+      },
+      "blockedCalls": 0
+    }
+  ],
+  "loader": [
+    {
+      "slug": "notebook",
+      "pass": true,
+      "utf16Bytes": 7058678,
+      "fetches": 3,
+      "actualCreatePreviewLoader571": true,
+      "cacheHit": true,
+      "released": true,
+      "iframeExecution": false
+    }
+  ]
+}
