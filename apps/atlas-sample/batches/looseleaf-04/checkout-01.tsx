@@ -81,10 +81,10 @@ export default function Checkout01({ className, defaultQty = DEFAULT_QTY, orderN
         <Mascot pose="celebrate" size={132} seed="checkout-done" />
         <div className="grid gap-2">
           <h2 id={`${formId}-done`} ref={done} tabIndex={-1} className="font-script text-5xl leading-none font-bold outline-none">
-            Thank you, {placed.name.trim().split(/\s+/)[0]}
+            Demo checkout complete, {placed.name.trim().split(/\s+/)[0]}
           </h2>
           <p className="text-lg text-muted-foreground">
-            Order <span className="ll-num font-bold text-foreground">{placed.number}</span> is paid. The receipt is on its way to {placed.email}.
+            Order <span className="ll-num font-bold text-foreground">{placed.number}</span> is a local preview for {placed.email}.
           </p>
         </div>
         <div className="relative">
@@ -103,7 +103,7 @@ export default function Checkout01({ className, defaultQty = DEFAULT_QTY, orderN
               )}
             </ReceiptLines>
             <ReceiptTotal circled>{money(placed.totals.total)}</ReceiptTotal>
-            <ReceiptFooter>paid by card - thank you</ReceiptFooter>
+            <ReceiptFooter>demo receipt - no payment made</ReceiptFooter>
           </Receipt>
           <Stamp name="stamp-paid" className="absolute -end-6 -top-4 sm:-end-12" seed="paid" />
         </div>
@@ -130,7 +130,7 @@ export default function Checkout01({ className, defaultQty = DEFAULT_QTY, orderN
             <PageTitle as="h2" id={`${formId}-title`} underline="wavy" seed="checkout-title">
               Checkout
             </PageTitle>
-            <PageDescription>Three short steps and it is on its way. We ask for nothing we do not need.</PageDescription>
+            <PageDescription>Local demo only. Use fictional details; no payment, order or email is sent.</PageDescription>
           </PageHeader>
           {failure ? (
             <Alert variant="destructive">
