@@ -1,0 +1,62 @@
+{
+  "repository": "https://github.com/educlopez/smoothui",
+  "revision": "c45420a8523ec60a92f7724a2418ab83edaa1425",
+  "sourceFiles": [
+    {
+      "path": "packages/smoothui/components/book/index.tsx",
+      "sha256": "6ce7aca6b92f4dd6e628cf1ecbac70a59a99705f4022e487becb415c510f998f"
+    },
+    {
+      "path": "apps/docs/examples/book.tsx",
+      "sha256": "0078d42f14dc2be55f91dfa368de06f2fd48db8867e12aabedbdeffeac63ae93"
+    },
+    {
+      "path": "packages/smoothui-utils/cn.ts",
+      "sha256": "4acbc7165a8d54738ff62b51414e772c08fe78434e524e6d8770180d3ba2925f"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "9877f4310c0549e5ce26affe52ba97c4e60325472bdcdd308a92fccd90f119cc"
+    }
+  ],
+  "runtimeDependencies": [
+    {
+      "name": "clsx",
+      "version": "2.1.1",
+      "license": "MIT",
+      "licenseSHA256": "9a9edad7baae52622bddf3c15b2ef8a33d2c89f2d25408ad13e8a7481c6b0c97"
+    },
+    {
+      "name": "react",
+      "version": "19.3.1",
+      "license": "MIT",
+      "licenseSHA256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+    },
+    {
+      "name": "react-dom",
+      "version": "19.3.1",
+      "license": "MIT",
+      "licenseSHA256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+    },
+    {
+      "name": "scheduler",
+      "version": "0.28.0",
+      "license": "MIT",
+      "licenseSHA256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+    },
+    {
+      "name": "tailwind-merge",
+      "version": "3.3.1",
+      "license": "MIT",
+      "licenseSHA256": "d4c70c7ce38cea8778f0aed3fc0bef0a9dbd27f13bd8b6773cbd6d37941971e5"
+    }
+  ],
+  "geometryVerification": "Original Book source exactly unchanged after reversing only two import-path replacements; default full demo retained.",
+  "changes": [
+    "Resolve original cn import to exact local original cn.",
+    "Replace motion/react useReducedMotion import with original local useSyncExternalStore matchMedia hook, with dynamic preference response and per-mount unsubscribe, partial-subscribe failure cleanup. No Motion bundled or claimed unchanged.",
+    "Generate original Tailwind classes, neutral background/foreground and system font; no external font or media.",
+    "Host scopes root/global handlers and catches early initialization/render failures; hidden unmount/visible remount."
+  ],
+  "sourceArchivePublic": false
+}
