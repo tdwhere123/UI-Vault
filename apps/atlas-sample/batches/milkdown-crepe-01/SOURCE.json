@@ -1,0 +1,2134 @@
+{
+  "repository": "https://github.com/Milkdown/milkdown",
+  "revision": "0655111f3bb8393e959ce3f3d107c83edce29c3a",
+  "story": "storybook/stories/crepe/crepe.stories.ts: Empty",
+  "originalFiles": [
+    {
+      "path": "packages/crepe/package.json",
+      "gitBlob": "c8865301733bfd285fd83c10685815e03e6fb313",
+      "sha256": "de85df60735f997f918f13b7061b1975603ddfddc12fb3d0235f9e4481820820"
+    },
+    {
+      "path": "package.json",
+      "gitBlob": "b824cbaa569566f6b44314772710c542b1b5c152",
+      "sha256": "1821113af2c72435fcbad2efa5a7495ba33962952be6ae655d5ebafecf2310b9"
+    },
+    {
+      "path": "LICENSE",
+      "gitBlob": "c41b60e64553f66f8f2c4124be2791de2dca25f1",
+      "sha256": "a9d856fd85b6598d7e894ce064a35921f2fb9bb4d903b905dd8d7b639e05422f"
+    },
+    {
+      "path": "storybook/stories/crepe/crepe.stories.ts",
+      "gitBlob": "604deb3685ea1b94309d02addf0c6b4352ac4e9b",
+      "sha256": "1c91ef7257b2e7a8f1d66abe178089cf70a65b0f73f9737ca75215701d0aedd2"
+    },
+    {
+      "path": "storybook/stories/crepe/crepe-dark.stories.ts",
+      "gitBlob": "809f4953974c41622bdf07b58cfa2853f54f0476",
+      "sha256": "079e02ff7b660af22fd6fe2ab19272418d074ad594977d0a8701c1d532f2b84b"
+    },
+    {
+      "path": "storybook/stories/crepe/frame.stories.ts",
+      "gitBlob": "a2f945f08b01273df649e838443e72bbd3a386dd",
+      "sha256": "295dfc403cca08f763b376ecde206f42340c72ceded91c547dcc5846f5fac566"
+    },
+    {
+      "path": "storybook/stories/crepe/style.css",
+      "gitBlob": "f08e539d6d14ad22c41a0c82cbb0aa5881997cc7",
+      "sha256": "f212d3b204fd979aa5e6c69d3c9d4d44c5a83a52bc0f3a6c784aae15f6ec023d"
+    },
+    {
+      "path": "storybook/stories/crepe/frame-dark.stories.ts",
+      "gitBlob": "8e20b764cc6e8183abe7cff1ed0d9c1f2f9567ab",
+      "sha256": "aba768cf5cdb77a9d5f04f3f874a89f150d9af10edd6ac4e76f9a2a79e18823c"
+    },
+    {
+      "path": "storybook/stories/crepe/setup.ts",
+      "gitBlob": "bbbdbf693081b04f59635c85beb94618166a52ff",
+      "sha256": "f5cd3588c5d1b68c24029152caad199991a53cc7677c1e8f199e0c4721afe1b0"
+    },
+    {
+      "path": "storybook/stories/crepe/nord.stories.ts",
+      "gitBlob": "f006de97265674ebfcdc58ac6ceb995cb7f162c8",
+      "sha256": "76823f823ca2a144d8d61c5778f91af02a8bab00081fdc31ecaf5f778bd07d31"
+    },
+    {
+      "path": "storybook/stories/crepe/nord-dark.stories.ts",
+      "gitBlob": "a6ab367b84e38f01f17a0947a290d973ab5d02da",
+      "sha256": "ddd811bb599b588ec2925561db3954c0f97e5aeac854dcc9ff9fe0f60b645c9a"
+    }
+  ],
+  "runtimeDistribution": "@milkdown/crepe 7.23.0, same version as fixed source package.json; npm published bundles used, not asserted byte-identical source build",
+  "dependencies": [
+    {
+      "path": "node_modules/@lezer/common",
+      "name": "@lezer/common",
+      "version": "1.5.5",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@lezer/common/LICENSE",
+      "licenseSHA256": "568902fb66eaf1f11750e966b33fd7b5d7c618e65af09f35ef843635bcf5f1ba",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@marijn/find-cluster-break",
+      "name": "@marijn/find-cluster-break",
+      "version": "1.0.4",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@marijn/find-cluster-break/LICENSE",
+      "licenseSHA256": "9360b00fdd091f05c783b568bdd46c679c41b72415599252de98949462ea1acb",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@codemirror/state",
+      "name": "@codemirror/state",
+      "version": "6.7.6",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@codemirror/state/LICENSE",
+      "licenseSHA256": "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/style-mod",
+      "name": "style-mod",
+      "version": "4.1.4",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/style-mod/LICENSE",
+      "licenseSHA256": "cb4474e26547397169061d3586c00022cda5330a1b64fa13e872319f3b63aff1",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/w3c-keyname",
+      "name": "w3c-keyname",
+      "version": "2.2.8",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/w3c-keyname/LICENSE",
+      "licenseSHA256": "869c30f368eb08735e779027b9f4bc9fea2f39624351856aebe42741f0bc0884",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/crelt",
+      "name": "crelt",
+      "version": "1.0.7",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/crelt/LICENSE",
+      "licenseSHA256": "23852ebf6aef7fadffc92514b3c5df163a8651f2c3ed0dbb494cb49d93bd5de5",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@codemirror/view",
+      "name": "@codemirror/view",
+      "version": "6.43.15",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@codemirror/view/LICENSE",
+      "licenseSHA256": "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@lezer/highlight",
+      "name": "@lezer/highlight",
+      "version": "1.2.5",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@lezer/highlight/LICENSE",
+      "licenseSHA256": "568902fb66eaf1f11750e966b33fd7b5d7c618e65af09f35ef843635bcf5f1ba",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@codemirror/streamparser",
+      "name": "@codemirror/streamparser",
+      "version": "6.0.0",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@codemirror/streamparser/LICENSE",
+      "licenseSHA256": "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@codemirror/language",
+      "name": "@codemirror/language",
+      "version": "6.13.1",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@codemirror/language/LICENSE",
+      "licenseSHA256": "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@lezer/lr",
+      "name": "@lezer/lr",
+      "version": "1.4.12",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@lezer/lr/LICENSE",
+      "licenseSHA256": "568902fb66eaf1f11750e966b33fd7b5d7c618e65af09f35ef843635bcf5f1ba",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@codemirror/autocomplete",
+      "name": "@codemirror/autocomplete",
+      "version": "6.20.4",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@codemirror/autocomplete/LICENSE",
+      "licenseSHA256": "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@codemirror/lang-sql",
+      "name": "@codemirror/lang-sql",
+      "version": "6.10.0",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@codemirror/lang-sql/LICENSE",
+      "licenseSHA256": "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@lezer/cpp",
+      "name": "@lezer/cpp",
+      "version": "1.1.6",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@lezer/cpp/LICENSE",
+      "licenseSHA256": "54bd812a6d334e0c438b78a43cea74b67e882739fd3450115ddc7c52be5706c1",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@codemirror/lang-cpp",
+      "name": "@codemirror/lang-cpp",
+      "version": "6.0.3",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@codemirror/lang-cpp/LICENSE",
+      "licenseSHA256": "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@lezer/css",
+      "name": "@lezer/css",
+      "version": "1.3.9",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@lezer/css/LICENSE",
+      "licenseSHA256": "568902fb66eaf1f11750e966b33fd7b5d7c618e65af09f35ef843635bcf5f1ba",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@codemirror/lang-css",
+      "name": "@codemirror/lang-css",
+      "version": "6.3.1",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@codemirror/lang-css/LICENSE",
+      "licenseSHA256": "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@lezer/go",
+      "name": "@lezer/go",
+      "version": "1.0.1",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@lezer/go/LICENSE",
+      "licenseSHA256": "54bd812a6d334e0c438b78a43cea74b67e882739fd3450115ddc7c52be5706c1",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@codemirror/lang-go",
+      "name": "@codemirror/lang-go",
+      "version": "6.0.1",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@codemirror/lang-go/LICENSE",
+      "licenseSHA256": "8ac9cfc9c82c397298c2139028d2474d8e0470f2092a97edddccf353bc5d4d36",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@lezer/html",
+      "name": "@lezer/html",
+      "version": "1.3.13",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@lezer/html/LICENSE",
+      "licenseSHA256": "568902fb66eaf1f11750e966b33fd7b5d7c618e65af09f35ef843635bcf5f1ba",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@lezer/javascript",
+      "name": "@lezer/javascript",
+      "version": "1.5.6",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@lezer/javascript/LICENSE",
+      "licenseSHA256": "568902fb66eaf1f11750e966b33fd7b5d7c618e65af09f35ef843635bcf5f1ba",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@codemirror/lang-javascript",
+      "name": "@codemirror/lang-javascript",
+      "version": "6.2.5",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@codemirror/lang-javascript/LICENSE",
+      "licenseSHA256": "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@codemirror/lang-html",
+      "name": "@codemirror/lang-html",
+      "version": "6.4.12",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@codemirror/lang-html/LICENSE",
+      "licenseSHA256": "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@lezer/java",
+      "name": "@lezer/java",
+      "version": "1.1.5",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@lezer/java/LICENSE",
+      "licenseSHA256": "54bd812a6d334e0c438b78a43cea74b67e882739fd3450115ddc7c52be5706c1",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@codemirror/lang-java",
+      "name": "@codemirror/lang-java",
+      "version": "6.0.2",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@codemirror/lang-java/LICENSE",
+      "licenseSHA256": "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@codemirror/lang-jinja",
+      "name": "@codemirror/lang-jinja",
+      "version": "6.0.1",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@codemirror/lang-jinja/LICENSE",
+      "licenseSHA256": "b4e0493aa23478551cb0107827041574f9eb2eba010c72b28c158260e99e011b",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@lezer/json",
+      "name": "@lezer/json",
+      "version": "1.0.3",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@lezer/json/LICENSE",
+      "licenseSHA256": "7e744ae18ef84389d576469a5781172b0d50b7981111109f6da7cbc6b4188288",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@codemirror/lang-json",
+      "name": "@codemirror/lang-json",
+      "version": "6.0.2",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@codemirror/lang-json/LICENSE",
+      "licenseSHA256": "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@codemirror/lang-less",
+      "name": "@codemirror/lang-less",
+      "version": "6.0.2",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@codemirror/lang-less/LICENSE",
+      "licenseSHA256": "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@codemirror/lang-liquid",
+      "name": "@codemirror/lang-liquid",
+      "version": "6.3.3",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@codemirror/lang-liquid/LICENSE",
+      "licenseSHA256": "eef03b313cffb45dc43cc7f0c99dcb3b3f48dc39b4ea659c4a13fdcefbab7213",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@lezer/markdown",
+      "name": "@lezer/markdown",
+      "version": "1.8.1",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@lezer/markdown/LICENSE",
+      "licenseSHA256": "54bd812a6d334e0c438b78a43cea74b67e882739fd3450115ddc7c52be5706c1",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@codemirror/lang-markdown",
+      "name": "@codemirror/lang-markdown",
+      "version": "6.5.2",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@codemirror/lang-markdown/LICENSE",
+      "licenseSHA256": "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@lezer/php",
+      "name": "@lezer/php",
+      "version": "1.0.6",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@lezer/php/LICENSE",
+      "licenseSHA256": "568902fb66eaf1f11750e966b33fd7b5d7c618e65af09f35ef843635bcf5f1ba",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@codemirror/lang-php",
+      "name": "@codemirror/lang-php",
+      "version": "6.0.2",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@codemirror/lang-php/LICENSE",
+      "licenseSHA256": "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@lezer/python",
+      "name": "@lezer/python",
+      "version": "1.1.19",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@lezer/python/LICENSE",
+      "licenseSHA256": "54bd812a6d334e0c438b78a43cea74b67e882739fd3450115ddc7c52be5706c1",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@codemirror/lang-python",
+      "name": "@codemirror/lang-python",
+      "version": "6.2.1",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@codemirror/lang-python/LICENSE",
+      "licenseSHA256": "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@lezer/rust",
+      "name": "@lezer/rust",
+      "version": "1.0.3",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@lezer/rust/LICENSE",
+      "licenseSHA256": "568902fb66eaf1f11750e966b33fd7b5d7c618e65af09f35ef843635bcf5f1ba",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@codemirror/lang-rust",
+      "name": "@codemirror/lang-rust",
+      "version": "6.0.2",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@codemirror/lang-rust/LICENSE",
+      "licenseSHA256": "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@lezer/sass",
+      "name": "@lezer/sass",
+      "version": "1.1.0",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@lezer/sass/LICENSE",
+      "licenseSHA256": "568902fb66eaf1f11750e966b33fd7b5d7c618e65af09f35ef843635bcf5f1ba",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@codemirror/lang-sass",
+      "name": "@codemirror/lang-sass",
+      "version": "6.0.2",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@codemirror/lang-sass/LICENSE",
+      "licenseSHA256": "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@codemirror/lang-wast",
+      "name": "@codemirror/lang-wast",
+      "version": "6.0.2",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@codemirror/lang-wast/LICENSE",
+      "licenseSHA256": "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@lezer/xml",
+      "name": "@lezer/xml",
+      "version": "1.0.6",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@lezer/xml/LICENSE",
+      "licenseSHA256": "568902fb66eaf1f11750e966b33fd7b5d7c618e65af09f35ef843635bcf5f1ba",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@codemirror/lang-xml",
+      "name": "@codemirror/lang-xml",
+      "version": "6.1.0",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@codemirror/lang-xml/LICENSE",
+      "licenseSHA256": "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@lezer/yaml",
+      "name": "@lezer/yaml",
+      "version": "1.0.4",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@lezer/yaml/LICENSE",
+      "licenseSHA256": "8cb910abd2a5463466b7c31958b39d6787ebf9e9f299598266b814bc90dd076b",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@codemirror/lang-yaml",
+      "name": "@codemirror/lang-yaml",
+      "version": "6.1.3",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@codemirror/lang-yaml/LICENSE",
+      "licenseSHA256": "8ac9cfc9c82c397298c2139028d2474d8e0470f2092a97edddccf353bc5d4d36",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@codemirror/legacy-modes",
+      "name": "@codemirror/legacy-modes",
+      "version": "6.5.5",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@codemirror/legacy-modes/LICENSE",
+      "licenseSHA256": "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@codemirror/lang-vue",
+      "name": "@codemirror/lang-vue",
+      "version": "0.1.3",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@codemirror/lang-vue/LICENSE",
+      "licenseSHA256": "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@codemirror/lang-angular",
+      "name": "@codemirror/lang-angular",
+      "version": "0.1.4",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@codemirror/lang-angular/LICENSE",
+      "licenseSHA256": "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/extend",
+      "name": "extend",
+      "version": "3.0.2",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/extend/LICENSE",
+      "licenseSHA256": "97af7428f93afbab9bf79cd09254da1357161794f4255eb1b4599f04dd2d2e7c",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/lodash-es",
+      "name": "lodash-es",
+      "version": "4.18.1",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/lodash-es/LICENSE",
+      "licenseSHA256": "f71e8ed126b46346494aad5486874cd8f0aafe95092ed67d2e3cb6110f939abc",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@codemirror/language-data",
+      "name": "@codemirror/language-data",
+      "version": "6.5.2",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@codemirror/language-data/LICENSE",
+      "licenseSHA256": "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@codemirror/theme-one-dark",
+      "name": "@codemirror/theme-one-dark",
+      "version": "6.1.3",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@codemirror/theme-one-dark/LICENSE",
+      "licenseSHA256": "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@milkdown/exception",
+      "name": "@milkdown/exception",
+      "version": "7.23.0",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@milkdown/exception/LICENSE",
+      "licenseSHA256": "a9d856fd85b6598d7e894ce064a35921f2fb9bb4d903b905dd8d7b639e05422f",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@milkdown/ctx",
+      "name": "@milkdown/ctx",
+      "version": "7.23.0",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@milkdown/ctx/LICENSE",
+      "licenseSHA256": "a9d856fd85b6598d7e894ce064a35921f2fb9bb4d903b905dd8d7b639e05422f",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/mdast-util-to-string",
+      "name": "mdast-util-to-string",
+      "version": "4.0.0",
+      "license": "MIT",
+      "files": [
+        "license"
+      ],
+      "licenseSource": "node_modules/mdast-util-to-string/license",
+      "licenseSHA256": "63cb98b3f6abfb3c3592c16f88253c1bdc834087bf52671e8ce5609e4eb693cf",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/decode-named-character-reference",
+      "name": "decode-named-character-reference",
+      "version": "1.3.0",
+      "license": "MIT",
+      "files": [
+        "license"
+      ],
+      "licenseSource": "node_modules/decode-named-character-reference/license",
+      "licenseSHA256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/micromark-util-chunked",
+      "name": "micromark-util-chunked",
+      "version": "2.0.1",
+      "license": "MIT",
+      "files": [
+        "license"
+      ],
+      "licenseSource": "node_modules/micromark-util-chunked/license",
+      "licenseSHA256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/micromark-util-combine-extensions",
+      "name": "micromark-util-combine-extensions",
+      "version": "2.0.1",
+      "license": "MIT",
+      "files": [
+        "license"
+      ],
+      "licenseSource": "node_modules/micromark-util-combine-extensions/license",
+      "licenseSHA256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/micromark-util-decode-numeric-character-reference",
+      "name": "micromark-util-decode-numeric-character-reference",
+      "version": "2.0.2",
+      "license": "MIT",
+      "files": [
+        "license"
+      ],
+      "licenseSource": "node_modules/micromark-util-decode-numeric-character-reference/license",
+      "licenseSHA256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/micromark-util-normalize-identifier",
+      "name": "micromark-util-normalize-identifier",
+      "version": "2.0.1",
+      "license": "MIT",
+      "files": [
+        "license"
+      ],
+      "licenseSource": "node_modules/micromark-util-normalize-identifier/license",
+      "licenseSHA256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/micromark-util-character",
+      "name": "micromark-util-character",
+      "version": "2.1.1",
+      "license": "MIT",
+      "files": [
+        "license"
+      ],
+      "licenseSource": "node_modules/micromark-util-character/license",
+      "licenseSHA256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/micromark-factory-space",
+      "name": "micromark-factory-space",
+      "version": "2.1.0",
+      "license": "MIT",
+      "files": [
+        "license"
+      ],
+      "licenseSource": "node_modules/micromark-factory-space/license",
+      "licenseSHA256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/micromark",
+      "name": "micromark",
+      "version": "4.0.3",
+      "license": "MIT",
+      "files": [
+        "license"
+      ],
+      "licenseSource": "node_modules/micromark/license",
+      "licenseSHA256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/micromark-util-edit-map",
+      "name": "micromark-util-edit-map",
+      "version": "1.0.0",
+      "license": "MIT",
+      "files": [
+        "license"
+      ],
+      "licenseSource": "node_modules/micromark-util-edit-map/license",
+      "licenseSHA256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/micromark-util-classify-character",
+      "name": "micromark-util-classify-character",
+      "version": "2.0.1",
+      "license": "MIT",
+      "files": [
+        "license"
+      ],
+      "licenseSource": "node_modules/micromark-util-classify-character/license",
+      "licenseSHA256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/micromark-util-resolve-all",
+      "name": "micromark-util-resolve-all",
+      "version": "2.0.1",
+      "license": "MIT",
+      "files": [
+        "license"
+      ],
+      "licenseSource": "node_modules/micromark-util-resolve-all/license",
+      "licenseSHA256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/micromark-core-commonmark",
+      "name": "micromark-core-commonmark",
+      "version": "2.0.4",
+      "license": "MIT",
+      "files": [
+        "license"
+      ],
+      "licenseSource": "node_modules/micromark-core-commonmark/license",
+      "licenseSHA256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/micromark-util-subtokenize",
+      "name": "micromark-util-subtokenize",
+      "version": "2.1.0",
+      "license": "MIT",
+      "files": [
+        "license"
+      ],
+      "licenseSource": "node_modules/micromark-util-subtokenize/license",
+      "licenseSHA256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/micromark-factory-destination",
+      "name": "micromark-factory-destination",
+      "version": "2.0.1",
+      "license": "MIT",
+      "files": [
+        "license"
+      ],
+      "licenseSource": "node_modules/micromark-factory-destination/license",
+      "licenseSHA256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/micromark-factory-label",
+      "name": "micromark-factory-label",
+      "version": "2.0.1",
+      "license": "MIT",
+      "files": [
+        "license"
+      ],
+      "licenseSource": "node_modules/micromark-factory-label/license",
+      "licenseSHA256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/micromark-factory-title",
+      "name": "micromark-factory-title",
+      "version": "2.0.1",
+      "license": "MIT",
+      "files": [
+        "license"
+      ],
+      "licenseSource": "node_modules/micromark-factory-title/license",
+      "licenseSHA256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/micromark-factory-whitespace",
+      "name": "micromark-factory-whitespace",
+      "version": "2.0.1",
+      "license": "MIT",
+      "files": [
+        "license"
+      ],
+      "licenseSource": "node_modules/micromark-factory-whitespace/license",
+      "licenseSHA256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/micromark-util-html-tag-name",
+      "name": "micromark-util-html-tag-name",
+      "version": "2.0.1",
+      "license": "MIT",
+      "files": [
+        "license"
+      ],
+      "licenseSource": "node_modules/micromark-util-html-tag-name/license",
+      "licenseSHA256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/micromark-util-decode-string",
+      "name": "micromark-util-decode-string",
+      "version": "2.0.1",
+      "license": "MIT",
+      "files": [
+        "license"
+      ],
+      "licenseSource": "node_modules/micromark-util-decode-string/license",
+      "licenseSHA256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/unist-util-stringify-position",
+      "name": "unist-util-stringify-position",
+      "version": "4.0.0",
+      "license": "MIT",
+      "files": [
+        "license"
+      ],
+      "licenseSource": "node_modules/unist-util-stringify-position/license",
+      "licenseSHA256": "ca4662cb5d1b738fbe5350c0d5485ba11773b4b7208974082ae6e129a52d631d",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/mdast-util-from-markdown",
+      "name": "mdast-util-from-markdown",
+      "version": "2.1.0",
+      "license": "MIT",
+      "files": [
+        "license"
+      ],
+      "licenseSource": "node_modules/mdast-util-from-markdown/license",
+      "licenseSHA256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/remark-parse",
+      "name": "remark-parse",
+      "version": "11.0.0",
+      "license": "MIT",
+      "files": [
+        "license"
+      ],
+      "licenseSource": "node_modules/remark-parse/license",
+      "licenseSHA256": "413654b0a78b98661dce96d2aff2e4d075603d220b8483e28b1aa010ccc138b4",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/unist-util-is",
+      "name": "unist-util-is",
+      "version": "6.0.1",
+      "license": "MIT",
+      "files": [
+        "license"
+      ],
+      "licenseSource": "node_modules/unist-util-is/license",
+      "licenseSHA256": "82974dbf2639d13edab95c32ed9cb6c0867ede272cd2e07ce47ce8548fe55c05",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/mdast-util-phrasing",
+      "name": "mdast-util-phrasing",
+      "version": "4.1.0",
+      "license": "MIT",
+      "files": [
+        "license"
+      ],
+      "licenseSource": "node_modules/mdast-util-phrasing/license",
+      "licenseSHA256": "b6d1a4e1831b177acc96f22a817d4f0f4c18419355badc3125754445fc69e3a7",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/zwitch",
+      "name": "zwitch",
+      "version": "2.0.4",
+      "license": "MIT",
+      "files": [
+        "license"
+      ],
+      "licenseSource": "node_modules/zwitch/license",
+      "licenseSHA256": "ca4662cb5d1b738fbe5350c0d5485ba11773b4b7208974082ae6e129a52d631d",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/mdast-util-to-markdown",
+      "name": "mdast-util-to-markdown",
+      "version": "2.2.3",
+      "license": "MIT",
+      "files": [
+        "license"
+      ],
+      "licenseSource": "node_modules/mdast-util-to-markdown/license",
+      "licenseSHA256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/longest-streak",
+      "name": "longest-streak",
+      "version": "3.1.0",
+      "license": "MIT",
+      "files": [
+        "license"
+      ],
+      "licenseSource": "node_modules/longest-streak/license",
+      "licenseSHA256": "9f084fac69d8cf1e6ce983ba5a3499c7695ed74a26ec625c38f0fd19fddd5e10",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/unist-util-visit-parents",
+      "name": "unist-util-visit-parents",
+      "version": "6.1.0",
+      "license": "MIT",
+      "files": [
+        "license"
+      ],
+      "licenseSource": "node_modules/unist-util-visit-parents/license",
+      "licenseSHA256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/unist-util-visit",
+      "name": "unist-util-visit",
+      "version": "5.2.0",
+      "license": "MIT",
+      "files": [
+        "license"
+      ],
+      "licenseSource": "node_modules/unist-util-visit/license",
+      "licenseSHA256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/remark-stringify",
+      "name": "remark-stringify",
+      "version": "11.0.0",
+      "license": "MIT",
+      "files": [
+        "license"
+      ],
+      "licenseSource": "node_modules/remark-stringify/license",
+      "licenseSHA256": "413654b0a78b98661dce96d2aff2e4d075603d220b8483e28b1aa010ccc138b4",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/bail",
+      "name": "bail",
+      "version": "2.0.2",
+      "license": "MIT",
+      "files": [
+        "license"
+      ],
+      "licenseSource": "node_modules/bail/license",
+      "licenseSHA256": "63cb98b3f6abfb3c3592c16f88253c1bdc834087bf52671e8ce5609e4eb693cf",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/unified",
+      "name": "unified",
+      "version": "11.0.5",
+      "license": "MIT",
+      "files": [
+        "license"
+      ],
+      "licenseSource": "node_modules/unified/license",
+      "licenseSHA256": "05811400116ed61f1a7693b78fe8ca6598c155a12f3978e609db4df648a4cb3d",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/devlop",
+      "name": "devlop",
+      "version": "1.1.0",
+      "license": "MIT",
+      "files": [
+        "license"
+      ],
+      "licenseSource": "node_modules/devlop/license",
+      "licenseSHA256": "6f296a5eccc1dc96714bb94ebaa9cac25b0a1467d74cc5263ac4d0646ab01f62",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/is-plain-obj",
+      "name": "is-plain-obj",
+      "version": "4.1.0",
+      "license": "MIT",
+      "files": [
+        "license"
+      ],
+      "licenseSource": "node_modules/is-plain-obj/license",
+      "licenseSHA256": "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/trough",
+      "name": "trough",
+      "version": "2.2.0",
+      "license": "MIT",
+      "files": [
+        "license"
+      ],
+      "licenseSource": "node_modules/trough/license",
+      "licenseSHA256": "6c03fd41cfd7c92d8aa8a2fa521b94b2683f059123281dcf921ddea9216b6254",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/vfile-message",
+      "name": "vfile-message",
+      "version": "4.0.4",
+      "license": "MIT",
+      "files": [
+        "license"
+      ],
+      "licenseSource": "node_modules/vfile-message/license",
+      "licenseSHA256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/vfile",
+      "name": "vfile",
+      "version": "6.0.3",
+      "license": "MIT",
+      "files": [
+        "license"
+      ],
+      "licenseSource": "node_modules/vfile/license",
+      "licenseSHA256": "05811400116ed61f1a7693b78fe8ca6598c155a12f3978e609db4df648a4cb3d",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/orderedmap",
+      "name": "orderedmap",
+      "version": "2.1.1",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/orderedmap/LICENSE",
+      "licenseSHA256": "869c30f368eb08735e779027b9f4bc9fea2f39624351856aebe42741f0bc0884",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/prosemirror-model",
+      "name": "prosemirror-model",
+      "version": "1.25.13",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/prosemirror-model/LICENSE",
+      "licenseSHA256": "ef0b452ced6304db2ce78ca66de1fc7b97bab05bc1750c95df359ed3fe1d65c8",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/prosemirror-transform",
+      "name": "prosemirror-transform",
+      "version": "1.12.5",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/prosemirror-transform/LICENSE",
+      "licenseSHA256": "ef0b452ced6304db2ce78ca66de1fc7b97bab05bc1750c95df359ed3fe1d65c8",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/prosemirror-state",
+      "name": "prosemirror-state",
+      "version": "1.4.4",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/prosemirror-state/LICENSE",
+      "licenseSHA256": "ef0b452ced6304db2ce78ca66de1fc7b97bab05bc1750c95df359ed3fe1d65c8",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/prosemirror-commands",
+      "name": "prosemirror-commands",
+      "version": "1.7.2",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/prosemirror-commands/LICENSE",
+      "licenseSHA256": "ef0b452ced6304db2ce78ca66de1fc7b97bab05bc1750c95df359ed3fe1d65c8",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/prosemirror-inputrules",
+      "name": "prosemirror-inputrules",
+      "version": "1.5.1",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/prosemirror-inputrules/LICENSE",
+      "licenseSHA256": "ef0b452ced6304db2ce78ca66de1fc7b97bab05bc1750c95df359ed3fe1d65c8",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@milkdown/prose",
+      "name": "@milkdown/prose",
+      "version": "7.23.0",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@milkdown/prose/LICENSE",
+      "licenseSHA256": "a9d856fd85b6598d7e894ce064a35921f2fb9bb4d903b905dd8d7b639e05422f",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/prosemirror-keymap",
+      "name": "prosemirror-keymap",
+      "version": "1.2.3",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/prosemirror-keymap/LICENSE",
+      "licenseSHA256": "ef0b452ced6304db2ce78ca66de1fc7b97bab05bc1750c95df359ed3fe1d65c8",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@milkdown/transformer",
+      "name": "@milkdown/transformer",
+      "version": "7.23.0",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@milkdown/transformer/LICENSE",
+      "licenseSHA256": "a9d856fd85b6598d7e894ce064a35921f2fb9bb4d903b905dd8d7b639e05422f",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/prosemirror-view",
+      "name": "prosemirror-view",
+      "version": "1.42.9",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/prosemirror-view/LICENSE",
+      "licenseSHA256": "ef0b452ced6304db2ce78ca66de1fc7b97bab05bc1750c95df359ed3fe1d65c8",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@milkdown/core",
+      "name": "@milkdown/core",
+      "version": "7.23.0",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@milkdown/core/LICENSE",
+      "licenseSHA256": "a9d856fd85b6598d7e894ce064a35921f2fb9bb4d903b905dd8d7b639e05422f",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/nanoid",
+      "name": "nanoid",
+      "version": "6.0.2",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/nanoid/LICENSE",
+      "licenseSHA256": "4383cb2c3608397ce7a4159502614ed66890f8999c2a9c056dd3b1024d6721f0",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@milkdown/utils",
+      "name": "@milkdown/utils",
+      "version": "7.23.0",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@milkdown/utils/LICENSE",
+      "licenseSHA256": "a9d856fd85b6598d7e894ce064a35921f2fb9bb4d903b905dd8d7b639e05422f",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/prosemirror-changeset",
+      "name": "prosemirror-changeset",
+      "version": "2.4.6",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/prosemirror-changeset/LICENSE",
+      "licenseSHA256": "7543dfe82fa61d5bb2478c78cbd9dfb2cbd500b6ac2893b24ed925773b67fb70",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@milkdown/plugin-diff",
+      "name": "@milkdown/plugin-diff",
+      "version": "7.23.0",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@milkdown/plugin-diff/LICENSE",
+      "licenseSHA256": "a9d856fd85b6598d7e894ce064a35921f2fb9bb4d903b905dd8d7b639e05422f",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@milkdown/components",
+      "name": "@milkdown/components",
+      "version": "7.23.0",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@milkdown/components/LICENSE",
+      "licenseSHA256": "a9d856fd85b6598d7e894ce064a35921f2fb9bb4d903b905dd8d7b639e05422f",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@milkdown/plugin-streaming",
+      "name": "@milkdown/plugin-streaming",
+      "version": "7.23.0",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@milkdown/plugin-streaming/LICENSE",
+      "licenseSHA256": "a9d856fd85b6598d7e894ce064a35921f2fb9bb4d903b905dd8d7b639e05422f",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/dompurify",
+      "name": "dompurify",
+      "version": "3.4.17",
+      "license": "(MPL-2.0 OR Apache-2.0)",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/dompurify/LICENSE",
+      "licenseSHA256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@floating-ui/utils",
+      "name": "@floating-ui/utils",
+      "version": "0.2.12",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@floating-ui/utils/LICENSE",
+      "licenseSHA256": "0e4c9a9b6c71019cbbea3bdc20b01223110a9035700f9c960c8fcbf78c2325ce",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@floating-ui/core",
+      "name": "@floating-ui/core",
+      "version": "1.8.0",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@floating-ui/core/LICENSE",
+      "licenseSHA256": "0e4c9a9b6c71019cbbea3bdc20b01223110a9035700f9c960c8fcbf78c2325ce",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@floating-ui/dom",
+      "name": "@floating-ui/dom",
+      "version": "1.8.0",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@floating-ui/dom/LICENSE",
+      "licenseSHA256": "0e4c9a9b6c71019cbbea3bdc20b01223110a9035700f9c960c8fcbf78c2325ce",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@milkdown/plugin-tooltip",
+      "name": "@milkdown/plugin-tooltip",
+      "version": "7.23.0",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@milkdown/plugin-tooltip/LICENSE",
+      "licenseSHA256": "a9d856fd85b6598d7e894ce064a35921f2fb9bb4d903b905dd8d7b639e05422f",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@vue/shared",
+      "name": "@vue/shared",
+      "version": "3.5.45",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@vue/shared/LICENSE",
+      "licenseSHA256": "1bb85cc9b13b81ef41c81c51866172fc345e0503c86726a6755b796590b70175",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@vue/reactivity",
+      "name": "@vue/reactivity",
+      "version": "3.5.45",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@vue/reactivity/LICENSE",
+      "licenseSHA256": "1bb85cc9b13b81ef41c81c51866172fc345e0503c86726a6755b796590b70175",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@vue/runtime-core",
+      "name": "@vue/runtime-core",
+      "version": "3.5.45",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@vue/runtime-core/LICENSE",
+      "licenseSHA256": "1bb85cc9b13b81ef41c81c51866172fc345e0503c86726a6755b796590b70175",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@vue/runtime-dom",
+      "name": "@vue/runtime-dom",
+      "version": "3.5.45",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@vue/runtime-dom/LICENSE",
+      "licenseSHA256": "1bb85cc9b13b81ef41c81c51866172fc345e0503c86726a6755b796590b70175",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/vue",
+      "name": "vue",
+      "version": "3.5.45",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/vue/LICENSE",
+      "licenseSHA256": "1bb85cc9b13b81ef41c81c51866172fc345e0503c86726a6755b796590b70175",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/clsx",
+      "name": "clsx",
+      "version": "2.1.1",
+      "license": "MIT",
+      "files": [
+        "license"
+      ],
+      "licenseSource": "node_modules/clsx/license",
+      "licenseSHA256": "9a9edad7baae52622bddf3c15b2ef8a33d2c89f2d25408ad13e8a7481c6b0c97",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@milkdown/plugin-block",
+      "name": "@milkdown/plugin-block",
+      "version": "7.23.0",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@milkdown/plugin-block/LICENSE",
+      "licenseSHA256": "a9d856fd85b6598d7e894ce064a35921f2fb9bb4d903b905dd8d7b639e05422f",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/prosemirror-schema-list",
+      "name": "prosemirror-schema-list",
+      "version": "1.6.0",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/prosemirror-schema-list/LICENSE",
+      "licenseSHA256": "ef0b452ced6304db2ce78ca66de1fc7b97bab05bc1750c95df359ed3fe1d65c8",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/mdast-util-definitions",
+      "name": "mdast-util-definitions",
+      "version": "6.0.0",
+      "license": "MIT",
+      "files": [
+        "license"
+      ],
+      "licenseSource": "node_modules/mdast-util-definitions/license",
+      "licenseSHA256": "c7bac77e21a64800a0dab2c72acac9764b8161ee257b20d74831dd7ee8c3151e",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/remark-inline-links",
+      "name": "remark-inline-links",
+      "version": "7.0.0",
+      "license": "MIT",
+      "files": [
+        "license"
+      ],
+      "licenseSource": "node_modules/remark-inline-links/license",
+      "licenseSHA256": "63cb98b3f6abfb3c3592c16f88253c1bdc834087bf52671e8ce5609e4eb693cf",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@milkdown/preset-commonmark",
+      "name": "@milkdown/preset-commonmark",
+      "version": "7.23.0",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@milkdown/preset-commonmark/LICENSE",
+      "licenseSHA256": "a9d856fd85b6598d7e894ce064a35921f2fb9bb4d903b905dd8d7b639e05422f",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@milkdown/plugin-slash",
+      "name": "@milkdown/plugin-slash",
+      "version": "7.23.0",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@milkdown/plugin-slash/LICENSE",
+      "licenseSHA256": "a9d856fd85b6598d7e894ce064a35921f2fb9bb4d903b905dd8d7b639e05422f",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/prosemirror-tables",
+      "name": "prosemirror-tables",
+      "version": "1.8.5",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/prosemirror-tables/LICENSE",
+      "licenseSHA256": "d1d2046ebbe6362f9ad8fd4d62e9074f2553f289c0e1de895a650f10ba5f4239",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/prosemirror-safari-ime-span",
+      "name": "prosemirror-safari-ime-span",
+      "version": "1.0.2",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/prosemirror-safari-ime-span/LICENSE",
+      "licenseSHA256": "c1e8209738e26d3af4d3f76ed9137ad9e9eab27b03ef20544758112df53e8cf9",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/ccount",
+      "name": "ccount",
+      "version": "2.0.1",
+      "license": "MIT",
+      "files": [
+        "license"
+      ],
+      "licenseSource": "node_modules/ccount/license",
+      "licenseSHA256": "63cb98b3f6abfb3c3592c16f88253c1bdc834087bf52671e8ce5609e4eb693cf",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/escape-string-regexp",
+      "name": "escape-string-regexp",
+      "version": "5.0.0",
+      "license": "MIT",
+      "files": [
+        "license"
+      ],
+      "licenseSource": "node_modules/escape-string-regexp/license",
+      "licenseSHA256": "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/mdast-util-find-and-replace",
+      "name": "mdast-util-find-and-replace",
+      "version": "3.0.4",
+      "license": "MIT",
+      "files": [
+        "license"
+      ],
+      "licenseSource": "node_modules/mdast-util-find-and-replace/license",
+      "licenseSHA256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/mdast-util-gfm-autolink-literal",
+      "name": "mdast-util-gfm-autolink-literal",
+      "version": "2.1.0",
+      "license": "MIT",
+      "files": [
+        "license"
+      ],
+      "licenseSource": "node_modules/mdast-util-gfm-autolink-literal/license",
+      "licenseSHA256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/mdast-util-gfm-footnote",
+      "name": "mdast-util-gfm-footnote",
+      "version": "2.1.0",
+      "license": "MIT",
+      "files": [
+        "license"
+      ],
+      "licenseSource": "node_modules/mdast-util-gfm-footnote/license",
+      "licenseSHA256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/mdast-util-gfm-strikethrough",
+      "name": "mdast-util-gfm-strikethrough",
+      "version": "2.0.1",
+      "license": "MIT",
+      "files": [
+        "license"
+      ],
+      "licenseSource": "node_modules/mdast-util-gfm-strikethrough/license",
+      "licenseSHA256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/markdown-table",
+      "name": "markdown-table",
+      "version": "3.1.0",
+      "license": "MIT",
+      "files": [
+        "license"
+      ],
+      "licenseSource": "node_modules/markdown-table/license",
+      "licenseSHA256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/mdast-util-gfm-table",
+      "name": "mdast-util-gfm-table",
+      "version": "2.0.1",
+      "license": "MIT",
+      "files": [
+        "license"
+      ],
+      "licenseSource": "node_modules/mdast-util-gfm-table/license",
+      "licenseSHA256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/mdast-util-gfm-task-list-item",
+      "name": "mdast-util-gfm-task-list-item",
+      "version": "2.0.1",
+      "license": "MIT",
+      "files": [
+        "license"
+      ],
+      "licenseSource": "node_modules/mdast-util-gfm-task-list-item/license",
+      "licenseSHA256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/mdast-util-gfm",
+      "name": "mdast-util-gfm",
+      "version": "3.1.0",
+      "license": "MIT",
+      "files": [
+        "license"
+      ],
+      "licenseSource": "node_modules/mdast-util-gfm/license",
+      "licenseSHA256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/micromark-extension-gfm-autolink-literal",
+      "name": "micromark-extension-gfm-autolink-literal",
+      "version": "2.1.0",
+      "license": "MIT",
+      "files": [
+        "license"
+      ],
+      "licenseSource": "node_modules/micromark-extension-gfm-autolink-literal/license",
+      "licenseSHA256": "536804b3adbff17dbbb9ed0d2bf9655b78f07640278581e37e3d7475282d5e61",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/micromark-extension-gfm-footnote",
+      "name": "micromark-extension-gfm-footnote",
+      "version": "2.1.0",
+      "license": "MIT",
+      "files": [
+        "license"
+      ],
+      "licenseSource": "node_modules/micromark-extension-gfm-footnote/license",
+      "licenseSHA256": "807a88522a850092aece49486207c17c313c4d5708ac276524840fe1caa0b0fa",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/micromark-extension-gfm-strikethrough",
+      "name": "micromark-extension-gfm-strikethrough",
+      "version": "2.1.0",
+      "license": "MIT",
+      "files": [
+        "license"
+      ],
+      "licenseSource": "node_modules/micromark-extension-gfm-strikethrough/license",
+      "licenseSHA256": "536804b3adbff17dbbb9ed0d2bf9655b78f07640278581e37e3d7475282d5e61",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/micromark-extension-gfm-table",
+      "name": "micromark-extension-gfm-table",
+      "version": "2.1.2",
+      "license": "MIT",
+      "files": [
+        "license"
+      ],
+      "licenseSource": "node_modules/micromark-extension-gfm-table/license",
+      "licenseSHA256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/micromark-extension-gfm-task-list-item",
+      "name": "micromark-extension-gfm-task-list-item",
+      "version": "2.1.0",
+      "license": "MIT",
+      "files": [
+        "license"
+      ],
+      "licenseSource": "node_modules/micromark-extension-gfm-task-list-item/license",
+      "licenseSHA256": "536804b3adbff17dbbb9ed0d2bf9655b78f07640278581e37e3d7475282d5e61",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/micromark-extension-gfm",
+      "name": "micromark-extension-gfm",
+      "version": "3.0.0",
+      "license": "MIT",
+      "files": [
+        "license"
+      ],
+      "licenseSource": "node_modules/micromark-extension-gfm/license",
+      "licenseSHA256": "536804b3adbff17dbbb9ed0d2bf9655b78f07640278581e37e3d7475282d5e61",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/remark-gfm",
+      "name": "remark-gfm",
+      "version": "4.0.1",
+      "license": "MIT",
+      "files": [
+        "license"
+      ],
+      "licenseSource": "node_modules/remark-gfm/license",
+      "licenseSHA256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@milkdown/preset-gfm",
+      "name": "@milkdown/preset-gfm",
+      "version": "7.23.0",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@milkdown/preset-gfm/LICENSE",
+      "licenseSHA256": "a9d856fd85b6598d7e894ce064a35921f2fb9bb4d903b905dd8d7b639e05422f",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@codemirror/commands",
+      "name": "@codemirror/commands",
+      "version": "6.11.1",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@codemirror/commands/LICENSE",
+      "licenseSHA256": "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@milkdown/crepe",
+      "name": "@milkdown/crepe",
+      "version": "7.23.0",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@milkdown/crepe/LICENSE",
+      "licenseSHA256": "a9d856fd85b6598d7e894ce064a35921f2fb9bb4d903b905dd8d7b639e05422f",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/rope-sequence",
+      "name": "rope-sequence",
+      "version": "1.3.4",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/rope-sequence/LICENSE",
+      "licenseSHA256": "530424aebdd0e73f53238d1f89df250057bc8d8ce090cf5954197fadce5bf226",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/prosemirror-history",
+      "name": "prosemirror-history",
+      "version": "1.5.1",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/prosemirror-history/LICENSE",
+      "licenseSHA256": "ef0b452ced6304db2ce78ca66de1fc7b97bab05bc1750c95df359ed3fe1d65c8",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/codemirror",
+      "name": "codemirror",
+      "version": "6.0.2",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/codemirror/LICENSE",
+      "licenseSHA256": "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@codemirror/search",
+      "name": "@codemirror/search",
+      "version": "6.7.2",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@codemirror/search/LICENSE",
+      "licenseSHA256": "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@codemirror/lint",
+      "name": "@codemirror/lint",
+      "version": "6.9.7",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@codemirror/lint/LICENSE",
+      "licenseSHA256": "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@ocavue/utils",
+      "name": "@ocavue/utils",
+      "version": "1.12.0",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@ocavue/utils/LICENSE",
+      "licenseSHA256": "6342baaa447cb6d0e84be677e26f07eb30de3eab88ae26ae99989062797cbc5d",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/prosemirror-drop-indicator",
+      "name": "prosemirror-drop-indicator",
+      "version": "0.1.4",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/prosemirror-drop-indicator/LICENSE",
+      "licenseSHA256": "6342baaa447cb6d0e84be677e26f07eb30de3eab88ae26ae99989062797cbc5d",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/prosemirror-gapcursor",
+      "name": "prosemirror-gapcursor",
+      "version": "1.4.1",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/prosemirror-gapcursor/LICENSE",
+      "licenseSHA256": "ef0b452ced6304db2ce78ca66de1fc7b97bab05bc1750c95df359ed3fe1d65c8",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@milkdown/plugin-cursor",
+      "name": "@milkdown/plugin-cursor",
+      "version": "7.23.0",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@milkdown/plugin-cursor/LICENSE",
+      "licenseSHA256": "a9d856fd85b6598d7e894ce064a35921f2fb9bb4d903b905dd8d7b639e05422f",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/prosemirror-virtual-cursor",
+      "name": "prosemirror-virtual-cursor",
+      "version": "0.4.2",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/prosemirror-virtual-cursor/LICENSE",
+      "licenseSHA256": "784abd61b4f27de35bb3d20a3eed771fc216622759b47dd0884a87d0c6f8bfcc",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/katex",
+      "name": "katex",
+      "version": "0.19.1",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/katex/LICENSE",
+      "licenseSHA256": "766ccc1f306c885aa45542a9846bbd0a505b27a0374f146778171c2254ce18e3",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/mdast-util-math",
+      "name": "mdast-util-math",
+      "version": "3.0.0",
+      "license": "MIT",
+      "files": [
+        "license"
+      ],
+      "licenseSource": "node_modules/mdast-util-math/license",
+      "licenseSHA256": "536804b3adbff17dbbb9ed0d2bf9655b78f07640278581e37e3d7475282d5e61",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/micromark-extension-math",
+      "name": "micromark-extension-math",
+      "version": "3.1.0",
+      "license": "MIT",
+      "files": [
+        "license"
+      ],
+      "licenseSource": "node_modules/micromark-extension-math/license",
+      "licenseSHA256": "536804b3adbff17dbbb9ed0d2bf9655b78f07640278581e37e3d7475282d5e61",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/remark-math",
+      "name": "remark-math",
+      "version": "6.0.0",
+      "license": "MIT",
+      "files": [],
+      "licenseSource": "license-evidence/remark-math-LICENSE",
+      "licenseSHA256": "cb992262f361a5359e6771c28740d33c7041e15332ae8537fae40538992591a9",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@milkdown/plugin-clipboard",
+      "name": "@milkdown/plugin-clipboard",
+      "version": "7.23.0",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@milkdown/plugin-clipboard/LICENSE",
+      "licenseSHA256": "a9d856fd85b6598d7e894ce064a35921f2fb9bb4d903b905dd8d7b639e05422f",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@milkdown/plugin-history",
+      "name": "@milkdown/plugin-history",
+      "version": "7.23.0",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@milkdown/plugin-history/LICENSE",
+      "licenseSHA256": "a9d856fd85b6598d7e894ce064a35921f2fb9bb4d903b905dd8d7b639e05422f",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@milkdown/plugin-indent",
+      "name": "@milkdown/plugin-indent",
+      "version": "7.23.0",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@milkdown/plugin-indent/LICENSE",
+      "licenseSHA256": "a9d856fd85b6598d7e894ce064a35921f2fb9bb4d903b905dd8d7b639e05422f",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@milkdown/plugin-listener",
+      "name": "@milkdown/plugin-listener",
+      "version": "7.23.0",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@milkdown/plugin-listener/LICENSE",
+      "licenseSHA256": "a9d856fd85b6598d7e894ce064a35921f2fb9bb4d903b905dd8d7b639e05422f",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@milkdown/plugin-trailing",
+      "name": "@milkdown/plugin-trailing",
+      "version": "7.23.0",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@milkdown/plugin-trailing/LICENSE",
+      "licenseSHA256": "a9d856fd85b6598d7e894ce064a35921f2fb9bb4d903b905dd8d7b639e05422f",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@milkdown/plugin-upload",
+      "name": "@milkdown/plugin-upload",
+      "version": "7.23.0",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@milkdown/plugin-upload/LICENSE",
+      "licenseSHA256": "a9d856fd85b6598d7e894ce064a35921f2fb9bb4d903b905dd8d7b639e05422f",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@babel/runtime",
+      "name": "@babel/runtime",
+      "version": "7.29.13",
+      "license": "MIT",
+      "files": [
+        "LICENSE"
+      ],
+      "licenseSource": "node_modules/@babel/runtime/LICENSE",
+      "licenseSHA256": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@uiw/codemirror-theme-basic",
+      "name": "@uiw/codemirror-theme-basic",
+      "version": "4.25.4",
+      "license": "MIT",
+      "files": [],
+      "licenseSource": "license-evidence/uiw-LICENSE",
+      "licenseSHA256": "fd1f049b3bb5cbaf5143516b72dbc6805cd30cca0cda94edb37160e37662fd17",
+      "scope": "positive-emitted runtime"
+    },
+    {
+      "path": "node_modules/@uiw/codemirror-themes",
+      "name": "@uiw/codemirror-themes",
+      "version": "4.25.4",
+      "license": "MIT",
+      "files": [],
+      "licenseSource": "license-evidence/uiw-LICENSE",
+      "licenseSHA256": "fd1f049b3bb5cbaf5143516b72dbc6805cd30cca0cda94edb37160e37662fd17",
+      "scope": "positive-emitted runtime"
+    }
+  ],
+  "licenseEvidence": [
+    {
+      "path": "license-evidence/remark-math-LICENSE",
+      "sha256": "cb992262f361a5359e6771c28740d33c7041e15332ae8537fae40538992591a9"
+    },
+    {
+      "path": "license-evidence/_uiw_codemirror-themes_4.25.4.json",
+      "sha256": "20ac10e046b5609293b05f9a27d4f89da7d04e5b96907bc607d4c268c36ba6db"
+    },
+    {
+      "path": "license-evidence/_uiw_codemirror-theme-basic_4.25.4.json",
+      "sha256": "13c65af99f19775df4647309c2460c691defbe3fadb252593c919c3a6b3f4cb2"
+    },
+    {
+      "path": "license-evidence/uiw-LICENSE",
+      "sha256": "fd1f049b3bb5cbaf5143516b72dbc6805cd30cca0cda94edb37160e37662fd17"
+    },
+    {
+      "path": "license-evidence/remark-math_6.0.0.json",
+      "sha256": "91b9dada61fb39f1591117ed9c04636230f573b447425a4ce87daa6afdb0242a"
+    }
+  ],
+  "chunking": "Five sequential UTF-8 classic scripts split only at complete top-level AST statements, each <650KiB; no base64 source wrapping, binary or permission expansion. Direct index loads same ordered files."
+}
