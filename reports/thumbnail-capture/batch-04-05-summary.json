@@ -1,0 +1,561 @@
+{
+  "batch": "04-05",
+  "revision": "parent-accepted-36-contain-plus-4-tight-small-cards",
+  "items_in_batch": 40,
+  "accepted_static_covers": 36,
+  "component_failures": 1,
+  "needs_recapture": 3,
+  "failed_ids": [
+    "vis-timeline:local-task-planner"
+  ],
+  "needs_recapture_ids": [
+    "blode:dnd-grid",
+    "cuicui:react-signature",
+    "smoothui:image-metadata-preview"
+  ],
+  "cover_visual_review": "passed for all 36; parent static Read of contact sheets",
+  "interaction_acceptance": "not_tested",
+  "crop_policy": "默认整 iframe contain；仅 4 张独立小卡有把握紧裁主体（flip-calendar/dialog-stack/selection-actions/tool-call-card）；agent-card/notification-stack/agent-handoff/grow-nodes 保留 contain",
+  "tight_small_cards": [
+    "aicanvas:flip-calendar",
+    "kibo:dialog-stack",
+    "beautiful-ui:selection-actions",
+    "affectui:tool-call-card"
+  ],
+  "kept_full_contain_among_8": [
+    "assistant-elements:agent-card",
+    "affectui:notification-stack",
+    "assistant-elements:agent-handoff",
+    "reactflow:grow-nodes"
+  ],
+  "baseline_missing_covers_universe": 271,
+  "cumulative_success_covers": 81,
+  "cumulative_failed": 1,
+  "cumulative_needs_recapture": 3,
+  "unprocessed": 186,
+  "incomplete_total_not_success": 190,
+  "partition_equation": "81 success + 1 failed + 3 needs_recapture + 186 unprocessed = 271",
+  "bytes_range": [
+    2750,
+    16536
+  ],
+  "all_success_fit": "contain",
+  "items": [
+    {
+      "id": "affectui:notification-stack",
+      "path": "apps/atlas-sample/thumbnails/affectui--notification-stack.webp",
+      "bytes": 2750,
+      "sha256": "e02d8e1e6a1fc942dc531bbc2836ef12d6af69ab35dac83a6e41e7d782da5ec8",
+      "fit": "contain",
+      "requested_rect": [
+        0,
+        0,
+        1538,
+        579
+      ],
+      "cover_visual_review": "passed"
+    },
+    {
+      "id": "affectui:tool-call-card",
+      "path": "apps/atlas-sample/thumbnails/affectui--tool-call-card.webp",
+      "bytes": 9494,
+      "sha256": "6507a0d981ddaef3d5370a23ab04c0708729d3ebb34245454bec6b7fddcc05bf",
+      "fit": "contain",
+      "requested_rect": [
+        421,
+        175,
+        696,
+        224
+      ],
+      "cover_visual_review": "passed"
+    },
+    {
+      "id": "aicanvas:flip-calendar",
+      "path": "apps/atlas-sample/thumbnails/aicanvas--flip-calendar.webp",
+      "bytes": 5816,
+      "sha256": "878f6fc7228ab011e3af0f2851efb0a879a633ef911a2399abde9a122d28c8c4",
+      "fit": "contain",
+      "requested_rect": [
+        527,
+        88,
+        480,
+        482
+      ],
+      "cover_visual_review": "passed"
+    },
+    {
+      "id": "aicanvas:new-project-modal",
+      "path": "apps/atlas-sample/thumbnails/aicanvas--new-project-modal.webp",
+      "bytes": 7292,
+      "sha256": "0ce28e097f2a0d0409806407606e5fa38fd845c2be2bcfe8c14d1e74191eb191",
+      "fit": "contain",
+      "requested_rect": [
+        480,
+        140,
+        580,
+        360
+      ],
+      "cover_visual_review": "passed"
+    },
+    {
+      "id": "assistant-elements:agent-card",
+      "path": "apps/atlas-sample/thumbnails/assistant-elements--agent-card.webp",
+      "bytes": 4414,
+      "sha256": "b0a0d02d64ebc3d7bb3690c5e4025e4d160200e7b5b0f72f38ec39e76a19fcec",
+      "fit": "contain",
+      "requested_rect": [
+        0,
+        0,
+        1538,
+        579
+      ],
+      "cover_visual_review": "passed"
+    },
+    {
+      "id": "assistant-elements:agent-handoff",
+      "path": "apps/atlas-sample/thumbnails/assistant-elements--agent-handoff.webp",
+      "bytes": 4120,
+      "sha256": "8d59030728ac630223686434ea7927131398e7b39c6d5dde4a69c3c5295608f1",
+      "fit": "contain",
+      "requested_rect": [
+        0,
+        0,
+        1538,
+        579
+      ],
+      "cover_visual_review": "passed"
+    },
+    {
+      "id": "astryx:ai-chat-landing",
+      "path": "apps/atlas-sample/thumbnails/astryx--ai-chat-landing.webp",
+      "bytes": 4564,
+      "sha256": "a9c2e145553e097bff5afe12c351a5d4e72121f434a3993d9599c15511f327fc",
+      "fit": "contain",
+      "requested_rect": [
+        0,
+        0,
+        1538,
+        579
+      ],
+      "cover_visual_review": "passed"
+    },
+    {
+      "id": "astryx:canvas-editor",
+      "path": "apps/atlas-sample/thumbnails/astryx--canvas-editor.webp",
+      "bytes": 9194,
+      "sha256": "9aa579bc5ca329aef7818c70927ec80f66c410002cc17f4112f9387c29eda1d8",
+      "fit": "contain",
+      "requested_rect": [
+        0,
+        0,
+        1538,
+        579
+      ],
+      "cover_visual_review": "passed"
+    },
+    {
+      "id": "astryx:file-explorer",
+      "path": "apps/atlas-sample/thumbnails/astryx--file-explorer.webp",
+      "bytes": 7580,
+      "sha256": "20a5d930fc3fc62e4e97dfa9503baeba59624e6658b6e023c2fb3d056e5fc83d",
+      "fit": "contain",
+      "requested_rect": [
+        0,
+        0,
+        1538,
+        579
+      ],
+      "cover_visual_review": "passed"
+    },
+    {
+      "id": "astryx:incident-console",
+      "path": "apps/atlas-sample/thumbnails/astryx--incident-console.webp",
+      "bytes": 16536,
+      "sha256": "d5cbd59b7b1a1aa6463462cabfaaaa80f092f69dd7f15ee5e71610a83a00d48c",
+      "fit": "contain",
+      "requested_rect": [
+        0,
+        0,
+        1538,
+        579
+      ],
+      "cover_visual_review": "passed"
+    },
+    {
+      "id": "beautiful-ui:selection-actions",
+      "path": "apps/atlas-sample/thumbnails/beautiful-ui--selection-actions.webp",
+      "bytes": 8790,
+      "sha256": "5ea495cb1b7a0f8034ed04b35ef8493f116a3b529a38191a4fc2b642d0f92e6c",
+      "fit": "contain",
+      "requested_rect": [
+        500,
+        280,
+        520,
+        160
+      ],
+      "cover_visual_review": "passed"
+    },
+    {
+      "id": "blode:ios-cards",
+      "path": "apps/atlas-sample/thumbnails/blode--ios-cards.webp",
+      "bytes": 7720,
+      "sha256": "0f0b6d7cb9b6b04e1be49bc5a7e9fd2f7deb6359239ee77f26ebf1ddf2dc969e",
+      "fit": "contain",
+      "requested_rect": [
+        0,
+        0,
+        1538,
+        579
+      ],
+      "cover_visual_review": "passed"
+    },
+    {
+      "id": "bpmn-js:local-review-modeler",
+      "path": "apps/atlas-sample/thumbnails/bpmn-js--local-review-modeler.webp",
+      "bytes": 7960,
+      "sha256": "3a637dccfb9ce6b88f0ff3164ef8078adc544485689f0d13e4c2e0da9a7643ec",
+      "fit": "contain",
+      "requested_rect": [
+        0,
+        0,
+        1538,
+        579
+      ],
+      "cover_visual_review": "passed"
+    },
+    {
+      "id": "cuicui:messaging-like-qna",
+      "path": "apps/atlas-sample/thumbnails/cuicui--messaging-like-qna.webp",
+      "bytes": 6498,
+      "sha256": "02221783065656f66826c616fcc4abe032aa3d2c48f177b31d49ab55f9b39c2b",
+      "fit": "contain",
+      "requested_rect": [
+        0,
+        0,
+        1538,
+        579
+      ],
+      "cover_visual_review": "passed"
+    },
+    {
+      "id": "cult:ai-instructions",
+      "path": "apps/atlas-sample/thumbnails/cult--ai-instructions.webp",
+      "bytes": 7016,
+      "sha256": "4778edf79f6d7df0acea75ad11769156ec13ff69fa2ff049b6e2d160c69d987a",
+      "fit": "contain",
+      "requested_rect": [
+        0,
+        0,
+        1538,
+        579
+      ],
+      "cover_visual_review": "passed"
+    },
+    {
+      "id": "cult:family-drawer",
+      "path": "apps/atlas-sample/thumbnails/cult--family-drawer.webp",
+      "bytes": 5110,
+      "sha256": "a239cf8ec321e5c4dd4ff3906c2f5cea1cb8666fb0b6526a55879b6b8d58ef2a",
+      "fit": "contain",
+      "requested_rect": [
+        0,
+        0,
+        1538,
+        579
+      ],
+      "cover_visual_review": "passed"
+    },
+    {
+      "id": "elevenlabs:matrix",
+      "path": "apps/atlas-sample/thumbnails/elevenlabs--matrix.webp",
+      "bytes": 3772,
+      "sha256": "61dc4442bcf1791037081298bf5136bb555c374df1bb848f2e761223f5734578",
+      "fit": "contain",
+      "requested_rect": [
+        0,
+        0,
+        1538,
+        579
+      ],
+      "cover_visual_review": "passed"
+    },
+    {
+      "id": "elevenlabs:transcript",
+      "path": "apps/atlas-sample/thumbnails/elevenlabs--transcript.webp",
+      "bytes": 7436,
+      "sha256": "26c3309bfcc4d86906638c28b572090191fc70cf2b9993fc26116e7e42cd1b7e",
+      "fit": "contain",
+      "requested_rect": [
+        0,
+        0,
+        1538,
+        579
+      ],
+      "cover_visual_review": "passed"
+    },
+    {
+      "id": "formbuilder:local-designer",
+      "path": "apps/atlas-sample/thumbnails/formbuilder--local-designer.webp",
+      "bytes": 6714,
+      "sha256": "66540e0147b6c83bfed8e778501a2318cd857050b906e2bcfd065b01efd0478a",
+      "fit": "contain",
+      "requested_rect": [
+        0,
+        0,
+        1538,
+        579
+      ],
+      "cover_visual_review": "passed"
+    },
+    {
+      "id": "jsondiffpatch:reversible-structure-review",
+      "path": "apps/atlas-sample/thumbnails/jsondiffpatch--reversible-structure-review.webp",
+      "bytes": 6400,
+      "sha256": "ebfa80abb368ef2c752deefb32914763cbf2ec56000d2bc86c9521862a426d6c",
+      "fit": "contain",
+      "requested_rect": [
+        0,
+        0,
+        1538,
+        579
+      ],
+      "cover_visual_review": "passed"
+    },
+    {
+      "id": "kibo:deck",
+      "path": "apps/atlas-sample/thumbnails/kibo--deck.webp",
+      "bytes": 3192,
+      "sha256": "0f30a5d2a0783c49d82b82964ec6e57c0dfa27670b334a14df40b91cb3beecb3",
+      "fit": "contain",
+      "requested_rect": [
+        0,
+        0,
+        1538,
+        579
+      ],
+      "cover_visual_review": "passed"
+    },
+    {
+      "id": "kibo:dialog-stack",
+      "path": "apps/atlas-sample/thumbnails/kibo--dialog-stack.webp",
+      "bytes": 4866,
+      "sha256": "09cfb234b870b23a917a320eb75f0389be43ad02116fbf9949999532024b6800",
+      "fit": "contain",
+      "requested_rect": [
+        456,
+        156,
+        612,
+        266
+      ],
+      "cover_visual_review": "passed"
+    },
+    {
+      "id": "orb:guided-onboarding",
+      "path": "apps/atlas-sample/thumbnails/orb--guided-onboarding.webp",
+      "bytes": 8348,
+      "sha256": "9950f768521c256a47f8c4788a5aa4d73db2bdd0c9da4eab9c8ac0e49d35585a",
+      "fit": "contain",
+      "requested_rect": [
+        0,
+        0,
+        1538,
+        579
+      ],
+      "cover_visual_review": "passed"
+    },
+    {
+      "id": "orb:push-to-talk",
+      "path": "apps/atlas-sample/thumbnails/orb--push-to-talk.webp",
+      "bytes": 7470,
+      "sha256": "8b0d0719a41999659e6369165976f97159cf8dd852b09c86078cf3a2e6fc0162",
+      "fit": "contain",
+      "requested_rect": [
+        0,
+        0,
+        1538,
+        579
+      ],
+      "cover_visual_review": "passed"
+    },
+    {
+      "id": "promptkit:composer",
+      "path": "apps/atlas-sample/thumbnails/promptkit--composer.webp",
+      "bytes": 3450,
+      "sha256": "d598ec57fe28c6b4f3807d693e5de802bd0b4e362e44e1d1043b802376b79c17",
+      "fit": "contain",
+      "requested_rect": [
+        0,
+        0,
+        1538,
+        579
+      ],
+      "cover_visual_review": "passed"
+    },
+    {
+      "id": "promptkit:feedback-bar",
+      "path": "apps/atlas-sample/thumbnails/promptkit--feedback-bar.webp",
+      "bytes": 3302,
+      "sha256": "6bc32879a6016dd22d0cddd9d24386969019703be7fc10a3f298b7d090485c49",
+      "fit": "contain",
+      "requested_rect": [
+        0,
+        0,
+        1538,
+        579
+      ],
+      "cover_visual_review": "passed"
+    },
+    {
+      "id": "reactflow:floating-network",
+      "path": "apps/atlas-sample/thumbnails/reactflow--floating-network.webp",
+      "bytes": 4152,
+      "sha256": "e5d45c8960bbc68e711835d379e1388de1b70eb51eb82c98b5f74759cc513495",
+      "fit": "contain",
+      "requested_rect": [
+        0,
+        0,
+        1538,
+        579
+      ],
+      "cover_visual_review": "passed"
+    },
+    {
+      "id": "reactflow:grow-nodes",
+      "path": "apps/atlas-sample/thumbnails/reactflow--grow-nodes.webp",
+      "bytes": 3244,
+      "sha256": "e1a2e3972482e6ba80456bafc4126cfe28b1cf0e77cc48470a5a33b6a7b59a86",
+      "fit": "contain",
+      "requested_rect": [
+        0,
+        0,
+        1538,
+        579
+      ],
+      "cover_visual_review": "passed"
+    },
+    {
+      "id": "spatialboard:custom-nodes",
+      "path": "apps/atlas-sample/thumbnails/spatialboard--custom-nodes.webp",
+      "bytes": 8722,
+      "sha256": "0260270367c544dc01d038454aaf7bbe81bf8aaf2de6b7b03ddb9c5a754b89ae",
+      "fit": "contain",
+      "requested_rect": [
+        0,
+        0,
+        1538,
+        579
+      ],
+      "cover_visual_review": "passed"
+    },
+    {
+      "id": "speedscope:synthetic-agent-flamegraph",
+      "path": "apps/atlas-sample/thumbnails/speedscope--synthetic-agent-flamegraph.webp",
+      "bytes": 7138,
+      "sha256": "7b8f7ee7fc2d7b3c97d85c68ce9487e962a58075f3275dc3ead767ad77e5751f",
+      "fit": "contain",
+      "requested_rect": [
+        0,
+        0,
+        1538,
+        579
+      ],
+      "cover_visual_review": "passed"
+    },
+    {
+      "id": "tambo:form",
+      "path": "apps/atlas-sample/thumbnails/tambo--form.webp",
+      "bytes": 4480,
+      "sha256": "8acaa4d08de33cca42460ff3f4eebfff79c756c745634f24adca895171635a5d",
+      "fit": "contain",
+      "requested_rect": [
+        0,
+        0,
+        1538,
+        579
+      ],
+      "cover_visual_review": "passed"
+    },
+    {
+      "id": "uilayout:tree-code-viewer",
+      "path": "apps/atlas-sample/thumbnails/uilayout--tree-code-viewer.webp",
+      "bytes": 9272,
+      "sha256": "a7dbfaf21cceffda29289a76daa959c08c5236eb4ae622d9203eb722f17dc202",
+      "fit": "contain",
+      "requested_rect": [
+        0,
+        0,
+        1538,
+        579
+      ],
+      "cover_visual_review": "passed"
+    },
+    {
+      "id": "uiw:markdown-workbench",
+      "path": "apps/atlas-sample/thumbnails/uiw--markdown-workbench.webp",
+      "bytes": 11244,
+      "sha256": "c43424dea0b9efc1c77f9fa76c5fd48899b65bb73c2605121b665c3d0e90ee8f",
+      "fit": "contain",
+      "requested_rect": [
+        0,
+        0,
+        1538,
+        579
+      ],
+      "cover_visual_review": "passed"
+    },
+    {
+      "id": "venn:evidence-overlap",
+      "path": "apps/atlas-sample/thumbnails/venn--evidence-overlap.webp",
+      "bytes": 5646,
+      "sha256": "9685392f0390cd33719b55faad97c6cd1878f070ee99642e228db8cd8975ba90",
+      "fit": "contain",
+      "requested_rect": [
+        0,
+        0,
+        1538,
+        579
+      ],
+      "cover_visual_review": "passed"
+    },
+    {
+      "id": "winbox:task-room",
+      "path": "apps/atlas-sample/thumbnails/winbox--task-room.webp",
+      "bytes": 10158,
+      "sha256": "17518f932f37f510931f625e07158159f2722fdc7321e38e6cb7a9ff58bbd49f",
+      "fit": "contain",
+      "requested_rect": [
+        0,
+        0,
+        1538,
+        579
+      ],
+      "cover_visual_review": "passed"
+    },
+    {
+      "id": "xterm:readonly-log-replay",
+      "path": "apps/atlas-sample/thumbnails/xterm--readonly-log-replay.webp",
+      "bytes": 4930,
+      "sha256": "9a7b8bd5704e6a61dcf23077929e80f2e95654d6ee34b1c389e03652931d4ef0",
+      "fit": "contain",
+      "requested_rect": [
+        0,
+        0,
+        1538,
+        579
+      ],
+      "cover_visual_review": "passed"
+    }
+  ],
+  "tests": {
+    "tool": "10/10 OK",
+    "build": "37/37 pass",
+    "export": "will run after commit to empty dir"
+  },
+  "diff_allowlist": "仅 thumbnails/*.webp + records/*.json + batch-04-05-summary.json + partition-271.json；shared files 零改动",
+  "git": {
+    "branch": "thumbnails/real-preview-20261109-aheng",
+    "parent_head": "c9bf316"
+  },
+  "timezone": "Asia/Taipei (UTC+8)",
+  "generated_at_local": "2026-11-09 08:26:39"
+}
