@@ -1,5 +1,5 @@
 /** Evidence-scoped, reversible overlays. Never edits catalogue records in place. */
-export const POLICY_VERSION = '581-fancy-31-v2';
+export const POLICY_VERSION = 'quality-scope-20261109-batch2';
 export function validateRules(rules) {
   const seen = new Set();
   for (const r of rules) {
