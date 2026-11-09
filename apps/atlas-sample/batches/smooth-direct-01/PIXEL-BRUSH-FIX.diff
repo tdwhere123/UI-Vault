@@ -1,0 +1,125 @@
+diff --git a/ui-smooth-adapt/src/components/pixel-brush-canvas/index.tsx b/ui-pixel-brush-fix/src/components/pixel-brush-canvas/index.tsx
+index ee1f902..10d9154 100644
+--- a/ui-smooth-adapt/src/components/pixel-brush-canvas/index.tsx
++++ b/ui-pixel-brush-fix/src/components/pixel-brush-canvas/index.tsx
+@@ -449,6 +449,24 @@ const PixelBrushCanvas = ({
+   );
+   const [cursor, setCursor] = useState<Cell>({ x: 0, y: 0 });
+   const [announcement, setAnnouncement] = useState("");
++  const [canvasError, setCanvasError] = useState("");
++  const activePointerRef = useRef<number | null>(null);
++  const cancelGesture = () => {
++    const id = activePointerRef.current;
++    activePointerRef.current = null;
++    isPaintingRef.current = false;
++    lastPaintedRef.current = null;
++    dragStartRef.current = null;
++    const canvas = canvasRef.current;
++    if (id !== null && canvas?.hasPointerCapture(id)) canvas.releasePointerCapture(id);
++  };
++  useEffect(() => {
++    const hide = () => { if (document.hidden) cancelGesture(); };
++    document.addEventListener("visibilitychange", hide);
++    window.addEventListener("blur", cancelGesture);
++    window.addEventListener("pagehide", cancelGesture);
++    return () => { document.removeEventListener("visibilitychange", hide); window.removeEventListener("blur", cancelGesture); window.removeEventListener("pagehide", cancelGesture); cancelGesture(); };
++  }, []);
+ 
+   useEffect(() => {
+     if (color !== undefined) {
+@@ -480,6 +498,7 @@ const PixelBrushCanvas = ({
+     canvas.height = Math.round(cssHeight * dpr);
+     const ctx = canvas.getContext("2d");
+     if (!ctx) {
++      setCanvasError("Canvas 2D unavailable. Drawing is disabled.");
+       return;
+     }
+     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+@@ -504,6 +523,7 @@ const PixelBrushCanvas = ({
+     (box: BoundingBox) => {
+       const ctx = canvasRef.current?.getContext("2d");
+       if (!ctx) {
++        setCanvasError("Canvas 2D unavailable. Drawing is disabled.");
+         return;
+       }
+       drawRegion(
+@@ -631,7 +651,17 @@ const PixelBrushCanvas = ({
+     onColorChange?.(index);
+   };
+ 
++  const validPoint = (event: ReactPointerEvent<HTMLCanvasElement>) => {
++    const rect = event.currentTarget.getBoundingClientRect();
++    return Number.isFinite(event.clientX) && Number.isFinite(event.clientY) && Number.isFinite(rect.left) && Number.isFinite(rect.top) && Number.isFinite(rect.width) && Number.isFinite(rect.height) && rect.width > 0 && rect.height > 0;
++  };
+   const handlePointerDown = (event: ReactPointerEvent<HTMLCanvasElement>) => {
++    if (canvasError || document.hidden || activePointerRef.current !== null || event.button !== 0 || !validPoint(event)) return;
++    const ctx = event.currentTarget.getContext("2d");
++    if (!ctx) { setCanvasError("Canvas 2D unavailable. Drawing is disabled."); return; }
++    try { event.currentTarget.setPointerCapture(event.pointerId); }
++    catch { setCanvasError("Pointer capture unavailable. Drawing is disabled."); return; }
++    activePointerRef.current = event.pointerId;
+     const rect = event.currentTarget.getBoundingClientRect();
+     const cell = getCellFromPoint(
+       event.clientX,
+@@ -645,7 +675,6 @@ const PixelBrushCanvas = ({
+     setCursor(cell);
+ 
+     if (internalBrush === "pencil" || internalBrush === "eraser") {
+-      event.currentTarget.setPointerCapture(event.pointerId);
+       isPaintingRef.current = true;
+       lastPaintedRef.current = null;
+       pushUndoSnapshot();
+@@ -666,7 +695,7 @@ const PixelBrushCanvas = ({
+   };
+ 
+   const handlePointerMove = (event: ReactPointerEvent<HTMLCanvasElement>) => {
+-    if (!isPaintingRef.current) {
++    if (canvasError || document.hidden || activePointerRef.current !== event.pointerId || !validPoint(event) || !isPaintingRef.current) {
+       return;
+     }
+     const rect = event.currentTarget.getBoundingClientRect();
+@@ -692,6 +721,9 @@ const PixelBrushCanvas = ({
+   };
+ 
+   const handlePointerUp = (event: ReactPointerEvent<HTMLCanvasElement>) => {
++    if (activePointerRef.current !== event.pointerId) return;
++    if (canvasError || document.hidden || !validPoint(event)) { cancelGesture(); return; }
++    activePointerRef.current = null;
+     if (isPaintingRef.current) {
+       isPaintingRef.current = false;
+       lastPaintedRef.current = null;
+@@ -719,6 +751,7 @@ const PixelBrushCanvas = ({
+       announceFocusedCell(end.x, end.y);
+     }
+     dragStartRef.current = null;
++    if (event.currentTarget.hasPointerCapture(event.pointerId)) event.currentTarget.releasePointerCapture(event.pointerId);
+   };
+ 
+   const moveCursor = (dx: number, dy: number) => {
+@@ -762,6 +795,7 @@ const PixelBrushCanvas = ({
+   };
+ 
+   const handleKeyDown = (event: ReactKeyboardEvent<HTMLDivElement>) => {
++    if (canvasError || document.hidden) return;
+     const isUndoShortcut =
+       (event.metaKey || event.ctrlKey) && event.key.toLowerCase() === "z";
+     if (isUndoShortcut) {
+@@ -811,6 +845,7 @@ const PixelBrushCanvas = ({
+ 
+   return (
+     <div className={cn("inline-flex flex-col gap-3", className)}>
++      {canvasError && <p role="alert">{canvasError}</p>}
+       <div className="inline-block rounded-lg border border-border bg-muted/40 p-2">
+         {/* biome-ignore lint/a11y/noNoninteractiveElementInteractions: role="application" is the keyboard-operable pixel grid; no semantic element models 2D arrow-key navigation */}
+         <div
+@@ -825,7 +860,9 @@ const PixelBrushCanvas = ({
+           <canvas
+             className="block touch-none rounded-sm"
+             onPointerDown={handlePointerDown}
+-            onPointerLeave={handlePointerUp}
++            onPointerLeave={(event) => { if (activePointerRef.current === event.pointerId && !event.currentTarget.hasPointerCapture(event.pointerId)) cancelGesture(); }}
++            onPointerCancel={(event) => { if (activePointerRef.current === event.pointerId) cancelGesture(); }}
++            onLostPointerCapture={(event) => { if (activePointerRef.current === event.pointerId) cancelGesture(); }}
+             onPointerMove={handlePointerMove}
+             onPointerUp={handlePointerUp}
+             ref={canvasRef}
