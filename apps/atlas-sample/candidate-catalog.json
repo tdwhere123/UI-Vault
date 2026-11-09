@@ -13139,35 +13139,35 @@
   },
   {
     "id": "svar:gantt-task-editor",
-    "title": "任务依赖甘特与编辑侧栏",
     "source": "SVAR React Gantt",
     "repository": "https://github.com/svar-widgets/react-gantt",
     "revision": "c595a2f5fcfe3294af622526b2f0dbd6a91336d8",
-    "sourcePath": "demos/cases/GanttEditor.jsx",
     "upstream": "https://github.com/svar-widgets/react-gantt/blob/c595a2f5fcfe3294af622526b2f0dbd6a91336d8/demos/cases/GanttEditor.jsx",
-    "license": "MIT (root declaration verified; runtime/media not closed)",
-    "behavior": "原Gantt加载任务/links/scales，新增任务事件自动show-editor，真实Editor注册日期、links、资源等编辑项。",
-    "difference": "已有kibo:gantt为相邻族，本项价值限定原任务编辑器与依赖状态联动，不把时间轴换皮单收。",
-    "gaps": [
-      "根MIT已读，不代表@svar-ui/gantt-store/react-editor等传递包许可闭合；付费或高级能力不得由root推断。依赖编辑事件、时区、资源/自动排期是否免费及拖动取消未验。",
-      "未安装、构建、运行；传递依赖/媒体许可、默认CSP和生命周期、视觉均未验。"
-    ],
-    "description": "原Gantt加载任务/links/scales，新增任务事件自动show-editor，真实Editor注册日期、links、资源等编辑项。 已有kibo:gantt为相邻族，本项价值限定原任务编辑器与依赖状态联动，不把时间轴换皮单收。",
-    "category": "导航与组织",
+    "sourcePath": "demos/cases/GanttEditor.jsx",
     "licenseEvidence": {
       "url": "https://github.com/svar-widgets/react-gantt/blob/c595a2f5fcfe3294af622526b2f0dbd6a91336d8/license.txt",
       "sha256": "f67940f42e0289ad97438c81243b0197dfeab58d0d986947f607cd4f3dc590c0",
       "scope": "Complete root MIT text read; transitive runtime/media not closed"
     },
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-bulk-523",
-    "sourceScope": "Selected fixed original code and root license; no runnable/archive or runtime audit",
-    "kind": "原版完整场景（仅来源）",
-    "buildStatus": "fixed source and root license read; not built or run"
+    "difference": "已有kibo:gantt为相邻族，本项价值限定原任务编辑器与依赖状态联动，不把时间轴换皮单收。",
+    "title": "任务甘特图与依赖编辑",
+    "description": "原任务计划、依赖及编辑侧栏，保留本地编辑和新增删除；功能图标透明替换为官方矢量。",
+    "behavior": "原任务计划、依赖及编辑侧栏，保留本地编辑和新增删除；功能图标透明替换为官方矢量。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "数据与状态",
+    "license": "MIT (original/components); ISC and Feather MIT (Lucide replacement SVG); five MIT-declared packages use marked full-text supplement",
+    "batch": "svar-gantt-01",
+    "preview": "batches/svar-gantt-01/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "actual560 compose关键原任务操作/隐藏保持/失败退出测试通过；视觉和canvas像素未验",
+    "gaps": [
+      "原wx-icons功能字体图标透明替换为Lucide原SVG，不是原字形；Roboto/OpenSans系统字体回退。",
+      "本地原fixture编辑，无项目后台；新增任务沿原默认日期可能位于当前时间窗外。",
+      "5实际依赖包只提供MIT声明，标准MIT正文透明补充，原metadata保留；不伪称包内原LICENSE。",
+      "Canvas像素、拖放几何与真实浏览器视觉未验；JSDOM测试仅DOM/数据/事件。"
+    ]
   },
   {
     "id": "react-mosaic:tabbed-workspace",
@@ -14950,40 +14950,33 @@
   },
   {
     "id": "7css:aero-glass-showcase",
-    "title": "Aero玻璃桌面控件",
     "source": "7.css",
     "repository": "https://github.com/khang-nd/7.css",
     "revision": "76d29abe7e76598fc521e707933f9ffa1b320259",
-    "sourcePath": "docs/index.html.ejs",
     "upstream": "https://github.com/khang-nd/7.css/blob/76d29abe7e76598fc521e707933f9ffa1b320259/docs/index.html.ejs",
-    "website": "https://khang-nd.github.io/7.css/",
-    "license": "MIT (root source text verified; runtime/assets not closed)",
-    "behavior": "透明玻璃框及桌面菜单、控件视觉体系。",
-    "difference": "与98.css继承相关但材质不同，作为一套风格族而非大量重复控件。",
-    "description": "透明玻璃框及桌面菜单、控件视觉体系。 与98.css继承相关但材质不同，作为一套风格族而非大量重复控件。",
-    "gaps": [
-      "固定docs/index.html.ejs依赖docs/components/*.ejs、SCSS构建与docs/script.js，未生成或运行完整展示。",
-      "gui/_typography.scss的系统字体使用方式及任何字体再分发须独立核实；gui/icon含PNG/SVG/GIF系统风格素材，根MIT不自动闭合各素材来源权利。",
-      "docs/flower-aaronburden-unsplash.jpg图片权利/归属尚待核；不要直接打包作为已授权素材。",
-      "玻璃窗口样式不等于窗口管理器；菜单/标签/弹层键盘及透明材质跨浏览器效果未验。",
-      "未构建、未运行、未浏览器视觉验收；当前completedPreviewCount=0，publicationReady=false。"
-    ],
-    "category": "视觉与动效",
+    "sourcePath": "docs/index.html.ejs",
     "licenseEvidence": {
       "url": "https://github.com/khang-nd/7.css/blob/76d29abe7e76598fc521e707933f9ffa1b320259/LICENSE",
       "sha256": "5e2bed7a894d6c23a3fc9e2e8f4b90a6b27ed0c6d105eaefb66a8ad985f4b98b",
       "scope": "Complete original root text read; not full runtime/media closure"
     },
-    "sourceSha256": "698394a0918b96a2e18162408329a378edb2bbec8a42245d6733921c8e23d026",
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-style-526",
-    "sourceScope": "Selected fixed original source and root license; no full runnable archive",
-    "kind": "原版场景或组件族（仅来源）",
-    "buildStatus": "Fixed original source read; not built, run or visually accepted"
+    "difference": "与98.css继承相关但材质不同，作为一套风格族而非大量重复控件。",
+    "website": "https://khang-nd.github.io/7.css/",
+    "title": "玻璃桌面控件精选",
+    "description": "原官方精选玻璃窗框、页签和表单控件，一族展示；仅控件效果，不执行桌面窗口管理。",
+    "behavior": "原官方精选玻璃窗框、页签和表单控件，一族展示；仅控件效果，不执行桌面窗口管理。",
+    "kind": "原版风格组件族",
+    "format": "精选组件图鉴",
+    "category": "展示与媒体",
+    "license": "MIT AND ISC",
+    "batch": "seven-css-01",
+    "preview": "batches/seven-css-01/aero/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Original 7.css0.21.1 fixed-revision official documentation selections, 29 original examples across10 original partials: glass frame, titlebar, statusbar, tabs, buttons, checkboxes, option/radio buttons, groupbox, collapsible and treeview. One showcase family, NOT the full25-component docs, not a desktop/window manager. Original example HTML and SCSS retained except globally unique id/for/aria-controls prefixes perexample and five PNG control glyph roles replaced by exact existing Lucide0.468.0 SVGs (minus/square/circle-help/copy/x). Original window buttons remain nonfunctional presentation, not fake minimize/close. Original tabHandler algorithm retained; managed local listeners guard disabled tabs and clean up on exit/error. Hidden pauses CSS animation, reduced motion disables transitions; no continuous JS jobs. Explicitly omitted body demo with embedded dog JPEG, slider/spinner bitmaps, custom bitmap scrollbar, photo backdrop, external analytics/share/badges and copy-to-clipboard code. System Segoe UI/Calibri/Noto Sans/sans-serif stack only, no proprietary font files shipped; actual font availability varies. Frame sits on disclosed plain host backdrop, not original flower photograph. EJS source-example wrappers flattened to rendered original examples, no highlighted code or Copy buttons. CSS compilation/build-only Sass/EJS packages do not execute in runtime. No network/storage/clipboard/forms external action. Actual563 compose and loader, tab mousedown/focus/disabled, native checkbox state, details property, hidden/resume/late failure/early missinghost/oldnode exit tested in JSDOM; not native pixels/glass blur/font acceptance."
+    ]
   },
   {
     "id": "liqui:glass-form",
@@ -15609,39 +15602,35 @@
   },
   {
     "id": "augmented-ui:cut-corner-surfaces",
-    "title": "非矩形切角赛博界面",
     "source": "augmented-ui",
     "repository": "https://github.com/propjockey/augmented-ui",
     "revision": "c39f40a4c68f2836d12e4cb73e34a1c9173381db",
-    "sourcePath": "augmented-ui.css",
     "upstream": "https://github.com/propjockey/augmented-ui/blob/c39f40a4c68f2836d12e4cb73e34a1c9173381db/augmented-ui.css",
-    "website": "http://augmented-ui.com/",
-    "license": "BSD-2-Clause (root text verified; runtime/assets not closed)",
-    "behavior": "以CSS切角、边框和形状变量构成非矩形科幻界面轮廓。",
-    "difference": "一套几何表面语言，而非把每个角/颜色排列算一条完整UI。",
-    "description": "以CSS切角、边框和形状变量构成非矩形科幻界面轮廓。 一套几何表面语言，而非把每个角/颜色排列算一条完整UI。",
-    "gaps": [
-      "固定仓CSS版本与现在线上v2文档可能不同，不能套用新版API/展示冒称该SHA可运行；需用同revision属性生成最小例。",
-      "纯CSS不提供任务状态、拖动或网络交互；需如实标注表面样式，不把外观称完整Agent控件。",
-      "CSS clip-path兼容、文字遮挡、窄屏/焦点轮廓及高对比模式待验；示例若另取图片/字体须独立核权利。",
-      "固定源码/根许可仅为来源证据；未构建、未运行、未截图验收，completedPreviewCount=0。"
-    ],
-    "category": "视觉与动效",
+    "sourcePath": "augmented-ui.css",
     "licenseEvidence": {
       "url": "https://github.com/propjockey/augmented-ui/blob/c39f40a4c68f2836d12e4cb73e34a1c9173381db/LICENSE",
       "sha256": "4a5cec470c5bce6cc9298bfe8010764d69628d770103cc4f76d50b22b3489d01",
       "scope": "Complete original root license retained; runtime/media separate"
     },
-    "sourceSha256": "a696137b316013cbc7f1f36927c6eab419fc32ec9224e84b08628c5558c45a53",
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-style-527",
-    "sourceScope": "Selected fixed original source and root license; no full runnable archive",
-    "kind": "原版风格组件族（仅来源）",
-    "buildStatus": "Fixed source inspected; not built or visually accepted"
+    "difference": "一套几何表面语言，而非把每个角/颜色排列算一条完整UI。",
+    "website": "http://augmented-ui.com/",
+    "title": "非矩形切角表面图鉴",
+    "description": "固定原版CSS与本地图鉴框架：展示四种原角部组合，调整尺寸和边框；不是上游整站或业务应用。",
+    "behavior": "固定原版CSS与本地图鉴框架：展示四种原角部组合，调整尺寸和边框；不是上游整站或业务应用。",
+    "kind": "原版样式族与本地图鉴",
+    "format": "样式族图鉴",
+    "category": "视觉与动效",
+    "license": "BSD-2-Clause; complete fixed original CSS/license; host-authored local gallery",
+    "batch": "augmented-gallery-01",
+    "preview": "batches/augmented-gallery-01/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Fixed CSS bytes preserved; four original corner mixin combinations with local range controller; actual563 compose and DOM tests passed",
+    "gaps": [
+      "Host-authored minimal CSS gallery, not an original upstream complete application; four combinations only, not all mixins.",
+      "Browser polygon clipping/geometry and native pixel appearance not visually validated.",
+      "No business operation, backend, media, fonts or network; controls only change original CSS variables."
+    ]
   },
   {
     "id": "nescss:pixel-message-balloons",
@@ -18533,42 +18522,32 @@
   },
   {
     "id": "tfplayground:decision-boundary-training",
-    "title": "神经网络决策边界实验",
     "source": "TensorFlow Playground",
     "repository": "https://github.com/tensorflow/playground",
     "revision": "02469bd3751764b20486015d4202b792af5362a6",
-    "sourcePath": "src/playground.ts",
     "upstream": "https://github.com/tensorflow/playground/blob/02469bd3751764b20486015d4202b792af5362a6/src/playground.ts",
-    "license": "Apache-2.0 (complete actual root text; runtime/media not closed)",
-    "behavior": "原训练实验界面可选择二维数据与输入特征，修改隐藏层/神经元、学习率/噪声/批大小，播放/暂停或逐步训练并观察决策边界和损失。",
-    "difference": "区别 LLM 三维解说与模型文件检查：这是教学用小网络训练反馈一族；源码自有 tiny neural network，不假称调用完整 TensorFlow 或远程大模型。",
-    "styleTags": [
-      "模型/反馈实验"
-    ],
-    "gaps": [
-      "原 analytics.js 与外链需关闭，D3/图标/字体等完整许可未审；URL状态、定时训练/绘图、重置中断与退出清理待测。数据是教学样本，不是用户任务的真实预测准确率；默认 CSP/像素与数学正确性未验。",
-      "仅只读源码筛选；未安装/构建/运行、交互生命周期或浏览器视觉验收。"
-    ],
-    "description": "原训练实验界面可选择二维数据与输入特征，修改隐藏层/神经元、学习率/噪声/批大小，播放/暂停或逐步训练并观察决策边界和损失。 区别 LLM 三维解说与模型文件检查：这是教学用小网络训练反馈一族；源码自有 tiny neural network，不假称调用完整 TensorFlow 或远程大模型。",
-    "category": "数据与状态",
+    "sourcePath": "src/playground.ts",
     "licenseEvidence": {
       "url": "https://github.com/tensorflow/playground/blob/02469bd3751764b20486015d4202b792af5362a6/LICENSE",
       "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
       "scope": "Complete actual root license; transitive code and media permissions not closed"
     },
-    "sourceEvidence": {
-      "localFile": "evidence/tensorflow--playground--src__playground.ts",
-      "sha256": "5d5c4b2c4e6329d1d656a295c86a213dbcb8e2bd01bd5f7377e453698e9f55a2"
-    },
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-style-531",
-    "sourceScope": "Fixed original complete UI/demo source and full root license; not a runnable adaptation or full asset archive",
-    "kind": "原版交互场景（仅来源）",
-    "buildStatus": "fixed source and full root license read; not built/run/visually accepted"
+    "difference": "区别 LLM 三维解说与模型文件检查：这是教学用小网络训练反馈一族；源码自有 tiny neural network，不假称调用完整 TensorFlow 或远程大模型。",
+    "title": "神经网络训练与决策边界",
+    "description": "原本地神经网络训练、数据分布、网络层与特征调整，真实损失和决策边界变化；系统符号替代远程图标字体。",
+    "behavior": "原本地神经网络训练、数据分布、网络层与特征调整，真实损失和决策边界变化；系统符号替代远程图标字体。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "数据与状态",
+    "license": "Apache-2.0 AND BSD-3-Clause AND MIT",
+    "batch": "tfplayground-01",
+    "preview": "batches/tfplayground-01/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "actual563 compose; original NN loss and heatmap-buffer changes plus layer/rate/pause/lifecycle checked. No native pixels.",
+    "gaps": [
+      "原生像素/手势/移动端及长时间训练性能待验；远程字体与分享禁用，按钮符号有明确差异。"
+    ]
   },
   {
     "id": "abcjs:score-edit-and-audition",
