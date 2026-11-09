@@ -12658,5 +12658,1163 @@
       "全部封面与截图另行处理，本次只收集文本来源；没有预览或假公开源码ZIP。"
     ],
     "batch": "source-bulk-522"
+  },
+  {
+    "id": "plate:document-revisions",
+    "title": "编辑文档快照与逐版恢复",
+    "source": "Plate",
+    "repository": "https://github.com/udecode/plate",
+    "revision": "cbd8db29140e3ae56ab54f6c6c40bdf6ad2b9f58",
+    "sourcePath": "apps/www/src/registry/examples/version-history-demo.tsx",
+    "upstream": "https://github.com/udecode/plate/blob/cbd8db29140e3ae56ab54f6c6c40bdf6ad2b9f58/apps/www/src/registry/examples/version-history-demo.tsx",
+    "license": "MIT (source license verified; runtime dependencies/assets not closed)",
+    "behavior": "原编辑器保存内存快照，列表恢复历史版本，最近两次保存做异步结构差异比较并呈现错误态。",
+    "difference": "区别于代码Diff阅读器与通用检查点卡：原文档编辑、保存、恢复和结构比较形成完整循环。",
+    "gaps": [
+      "platejs/diff与编辑器包传递许可/导入链未闭合；源码含AbortController取消比较，不等于运行清理已验证；没有持久化或远端版本。",
+      "完整依赖与媒体权利、默认隔离预览、交互清理和实际视觉均未验；未上传或声称存在完整运行包。"
+    ],
+    "description": "原编辑器保存内存快照，列表恢复历史版本，最近两次保存做异步结构差异比较并呈现错误态。 区别于代码Diff阅读器与通用检查点卡：原文档编辑、保存、恢复和结构比较形成完整循环。",
+    "category": "输入与选择",
+    "licenseEvidence": {
+      "url": "https://github.com/udecode/plate/blob/cbd8db29140e3ae56ab54f6c6c40bdf6ad2b9f58/LICENSE",
+      "sha256": "8b649e3569682298f50ed2048210e8f528034feb56f5d43a9977a7d60b0f7065",
+      "scope": "Full root MIT read; Plate apps/www and React Email demo local MIT also read where applicable. Runtime and media licenses not closed."
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-bulk-523",
+    "sourceScope": "Selected fixed original source and complete applicable source license; not full runtime/archive",
+    "kind": "原版完整场景（仅来源）",
+    "buildStatus": "fixed original source read; not built, run or visually accepted"
+  },
+  {
+    "id": "plate:structured-stream-replay",
+    "title": "结构化Markdown逐块回放工作台",
+    "source": "Plate",
+    "repository": "https://github.com/udecode/plate",
+    "revision": "cbd8db29140e3ae56ab54f6c6c40bdf6ad2b9f58",
+    "sourcePath": "apps/www/src/registry/examples/markdown-streaming-demo.tsx",
+    "upstream": "https://github.com/udecode/plate/blob/cbd8db29140e3ae56ab54f6c6c40bdf6ad2b9f58/apps/www/src/registry/examples/markdown-streaming-demo.tsx",
+    "license": "MIT (source license verified; runtime dependencies/assets not closed)",
+    "behavior": "原始token/自定义文本双栏流式预览，可暂停继续、停止严格解析、逐块定位与重置；可编辑输出和静态输出切换。",
+    "difference": "不同于普通打字机：保留不完整表格、列、链接和列表的部分解析/最终解析，以及chunk时序控制；全部场景只计一族。",
+    "gaps": [
+      "定时器与AbortController逻辑已读未运行；大量编辑器插件、DND/媒体/数学等依赖未审闭；样例远程图片和链接必须隔离，实际模型不在本地实现。",
+      "完整依赖与媒体权利、默认隔离预览、交互清理和实际视觉均未验；未上传或声称存在完整运行包。"
+    ],
+    "description": "原始token/自定义文本双栏流式预览，可暂停继续、停止严格解析、逐块定位与重置；可编辑输出和静态输出切换。 不同于普通打字机：保留不完整表格、列、链接和列表的部分解析/最终解析，以及chunk时序控制；全部场景只计一族。",
+    "category": "展示与媒体",
+    "licenseEvidence": {
+      "url": "https://github.com/udecode/plate/blob/cbd8db29140e3ae56ab54f6c6c40bdf6ad2b9f58/LICENSE",
+      "sha256": "8b649e3569682298f50ed2048210e8f528034feb56f5d43a9977a7d60b0f7065",
+      "scope": "Full root MIT read; Plate apps/www and React Email demo local MIT also read where applicable. Runtime and media licenses not closed."
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-bulk-523",
+    "sourceScope": "Selected fixed original source and complete applicable source license; not full runtime/archive",
+    "kind": "原版完整场景（仅来源）",
+    "buildStatus": "fixed original source read; not built, run or visually accepted"
+  },
+  {
+    "id": "react-email:protocol-product-digest",
+    "title": "Protocol深色产品更新长信",
+    "source": "React Email",
+    "repository": "https://github.com/resend/react-email",
+    "revision": "674d8ec2804b86be5d99156383fb1810179847bf",
+    "sourcePath": "apps/demo/emails/03-Protocol/product-update.tsx",
+    "upstream": "https://github.com/resend/react-email/blob/674d8ec2804b86be5d99156383fb1810179847bf/apps/demo/emails/03-Protocol/product-update.tsx",
+    "license": "MIT (source license verified; runtime dependencies/assets not closed)",
+    "behavior": "原深色大字标题、重点功能、双列延伸阅读与页脚的完整邮件布局，响应式排版。",
+    "difference": "邮件富内容而非可操作Agent工作台；不同于普通卡片，收整篇设计，不把栏目/按钮拆条。",
+    "gaps": [
+      "纯展示HTML邮件，无发送/订阅/任务功能；外部字体、dither图片、社交商标权利未审；链接只是传入url，不能当真实工作流。",
+      "完整依赖与媒体权利、默认隔离预览、交互清理和实际视觉均未验；未上传或声称存在完整运行包。"
+    ],
+    "description": "原深色大字标题、重点功能、双列延伸阅读与页脚的完整邮件布局，响应式排版。 邮件富内容而非可操作Agent工作台；不同于普通卡片，收整篇设计，不把栏目/按钮拆条。",
+    "category": "展示与媒体",
+    "licenseEvidence": {
+      "url": "https://github.com/resend/react-email/blob/674d8ec2804b86be5d99156383fb1810179847bf/LICENSE.md",
+      "sha256": "824a5acd4cf751b349d2f37513b94c682bceddbf6ead1d0225ff0aaa9b7eb2e4",
+      "scope": "Full root MIT read; Plate apps/www and React Email demo local MIT also read where applicable. Runtime and media licenses not closed."
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-bulk-523",
+    "sourceScope": "Selected fixed original source and complete applicable source license; not full runtime/archive",
+    "kind": "原版完整场景（仅来源）",
+    "buildStatus": "fixed original source read; not built, run or visually accepted"
+  },
+  {
+    "id": "react-email:studio-delivery-receipt",
+    "title": "Studio订单出库通知富内容",
+    "source": "React Email",
+    "repository": "https://github.com/resend/react-email",
+    "revision": "674d8ec2804b86be5d99156383fb1810179847bf",
+    "sourcePath": "apps/demo/emails/05-Studio/order-shipping.tsx",
+    "upstream": "https://github.com/resend/react-email/blob/674d8ec2804b86be5d99156383fb1810179847bf/apps/demo/emails/05-Studio/order-shipping.tsx",
+    "license": "MIT (source license verified; runtime dependencies/assets not closed)",
+    "behavior": "原柔和浅底出库通知，主追踪CTA、产品行、配送说明与FAQ长条。",
+    "difference": "与Protocol编辑型长信不同的信息结构和视觉体系；只收一份交易通知，不把相近付款/订单配色拆数。",
+    "gaps": [
+      "纯展示邮件，追踪/More跳转同一参数url；没有物流查询；图片/品牌/外部字体未清理；样例订单和退款措辞不代表任何真实承诺。",
+      "完整依赖与媒体权利、默认隔离预览、交互清理和实际视觉均未验；未上传或声称存在完整运行包。"
+    ],
+    "description": "原柔和浅底出库通知，主追踪CTA、产品行、配送说明与FAQ长条。 与Protocol编辑型长信不同的信息结构和视觉体系；只收一份交易通知，不把相近付款/订单配色拆数。",
+    "category": "展示与媒体",
+    "licenseEvidence": {
+      "url": "https://github.com/resend/react-email/blob/674d8ec2804b86be5d99156383fb1810179847bf/LICENSE.md",
+      "sha256": "824a5acd4cf751b349d2f37513b94c682bceddbf6ead1d0225ff0aaa9b7eb2e4",
+      "scope": "Full root MIT read; Plate apps/www and React Email demo local MIT also read where applicable. Runtime and media licenses not closed."
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-bulk-523",
+    "sourceScope": "Selected fixed original source and complete applicable source license; not full runtime/archive",
+    "kind": "原版完整场景（仅来源）",
+    "buildStatus": "fixed original source read; not built, run or visually accepted"
+  },
+  {
+    "id": "revealjs:scrolling-animated-brief",
+    "title": "滚动驱动的形变简报",
+    "source": "reveal.js",
+    "repository": "https://github.com/hakimel/reveal.js",
+    "revision": "e240e175232fa2de660a02bc0d7bf5f655b159bb",
+    "sourcePath": "examples/scroll.html",
+    "upstream": "https://github.com/hakimel/reveal.js/blob/e240e175232fa2de660a02bc0d7bf5f655b159bb/examples/scroll.html",
+    "license": "MIT (source license verified; runtime dependencies/assets not closed)",
+    "behavior": "原纵向滚动分段简报，渐进片段、元素匹配形变、代码行分步高亮，滚动条随背景变化。",
+    "difference": "一套完整滚动简报，所有形变和代码段只计一族；与impress的空间透视演示不同，不拆AutoAnimate为重复项。",
+    "gaps": [
+      "原例有远程背景图/视频与Notes插件，后续需禁用外联/弹窗并闭合字体/高亮插件许可；hash和键盘路由需隔离；尚未构建或检查真实滚动几何。",
+      "完整依赖与媒体权利、默认隔离预览、交互清理和实际视觉均未验；未上传或声称存在完整运行包。"
+    ],
+    "description": "原纵向滚动分段简报，渐进片段、元素匹配形变、代码行分步高亮，滚动条随背景变化。 一套完整滚动简报，所有形变和代码段只计一族；与impress的空间透视演示不同，不拆AutoAnimate为重复项。",
+    "category": "视觉与动效",
+    "licenseEvidence": {
+      "url": "https://github.com/hakimel/reveal.js/blob/e240e175232fa2de660a02bc0d7bf5f655b159bb/LICENSE",
+      "sha256": "b2883e4b610bfa1b4d8fff84c4d4b825cc7d553cbd9fec4777c04068a2859dc0",
+      "scope": "Full root MIT read; Plate apps/www and React Email demo local MIT also read where applicable. Runtime and media licenses not closed."
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-bulk-523",
+    "sourceScope": "Selected fixed original source and complete applicable source license; not full runtime/archive",
+    "kind": "原版完整场景（仅来源）",
+    "buildStatus": "fixed original source read; not built, run or visually accepted"
+  },
+  {
+    "id": "react-page:multilingual-cell-editor",
+    "title": "多语言网格内容编辑工作台",
+    "source": "React Page",
+    "repository": "https://github.com/react-page/react-page",
+    "revision": "7a1039347284ce4f654b78b23ed82ccc3502c64c",
+    "sourcePath": "examples/pages/index.tsx",
+    "upstream": "https://github.com/react-page/react-page/blob/7a1039347284ce4f654b78b23ed82ccc3502c64c/examples/pages/index.tsx",
+    "license": "MIT (source license verified; runtime dependencies/assets not closed)",
+    "behavior": "原多语言cell页面编辑器，内容插件组合、编辑状态回传和重置入口。",
+    "difference": "与Puck/miniPaint/文档编辑器明确区分为可组合布局cell编辑；整套工作台只计一条，不按插件或语言拆数。",
+    "gaps": [
+      "与已收页面编辑器有用途重叠，保留另一原版实现而非宣称独创功能；demo plugins含Twitter/视频/图片等外部内容；所谓上传实际计时模拟+blobURL且未见revoke，需清理；依赖和素材未审。",
+      "完整依赖与媒体权利、默认隔离预览、交互清理和实际视觉均未验；未上传或声称存在完整运行包。"
+    ],
+    "description": "原多语言cell页面编辑器，内容插件组合、编辑状态回传和重置入口。 与Puck/miniPaint/文档编辑器明确区分为可组合布局cell编辑；整套工作台只计一条，不按插件或语言拆数。",
+    "category": "输入与选择",
+    "licenseEvidence": {
+      "url": "https://github.com/react-page/react-page/blob/7a1039347284ce4f654b78b23ed82ccc3502c64c/LICENSE",
+      "sha256": "869da1d5a8d92a0491fea25406ffbddefbd8f9d597f967018c6e8463cdc0d87d",
+      "scope": "Full root MIT read; Plate apps/www and React Email demo local MIT also read where applicable. Runtime and media licenses not closed."
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-bulk-523",
+    "sourceScope": "Selected fixed original source and complete applicable source license; not full runtime/archive",
+    "kind": "原版完整场景（仅来源）",
+    "buildStatus": "fixed original source read; not built, run or visually accepted"
+  },
+  {
+    "id": "copilotkit:flight-choice-confirmation",
+    "title": "航班比较、确认与票券回执",
+    "source": "CopilotKit",
+    "repository": "https://github.com/CopilotKit/CopilotKit",
+    "revision": "c7815d9ac96f48fb3a64ad8c18e176a870c81763",
+    "sourcePath": "examples/showcases/oracle-agent-memory/frontend/src/components/FlightOptions.tsx",
+    "upstream": "https://github.com/CopilotKit/CopilotKit/blob/c7815d9ac96f48fb3a64ad8c18e176a870c81763/examples/showcases/oracle-agent-memory/frontend/src/components/FlightOptions.tsx",
+    "license": "MIT (root declaration verified; runtime/media not closed)",
+    "behavior": "原航班列表选择→确认/取消→BoardingPass；组件内chosen/booked本地状态，scrollIntoView保持当前流程可见。",
+    "difference": "与既有旅行需求/行程不同，是丰富选择结果到票券式完成回执，不拆各卡。",
+    "gaps": [
+      "原组件注释明确该卡流程本地，不是真预订；品牌/航班数据和票券不能冒充真实。需要原flights格式器及依赖/样式审计，选中后外部数据更换、重复确认/退出未测。",
+      "未安装、构建、运行；传递依赖/媒体许可、默认CSP和生命周期、视觉均未验。"
+    ],
+    "description": "原航班列表选择→确认/取消→BoardingPass；组件内chosen/booked本地状态，scrollIntoView保持当前流程可见。 与既有旅行需求/行程不同，是丰富选择结果到票券式完成回执，不拆各卡。",
+    "category": "Agent与对话",
+    "licenseEvidence": {
+      "url": "https://github.com/CopilotKit/CopilotKit/blob/c7815d9ac96f48fb3a64ad8c18e176a870c81763/LICENSE",
+      "sha256": "22b0a2c7cc91403500445f60369d3077ceb86e66b01138483e179728f5da65c4",
+      "scope": "Complete root MIT text read; transitive runtime/media not closed"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-bulk-523",
+    "sourceScope": "Selected fixed original code and root license; no runnable/archive or runtime audit",
+    "kind": "原版完整场景（仅来源）",
+    "buildStatus": "fixed source and root license read; not built or run"
+  },
+  {
+    "id": "copilotkit:connected-tool-results",
+    "title": "工具连接需求与邮件新闻结果",
+    "source": "CopilotKit",
+    "repository": "https://github.com/CopilotKit/CopilotKit",
+    "revision": "c7815d9ac96f48fb3a64ad8c18e176a870c81763",
+    "sourcePath": "examples/showcases/arcade-tools/components/tool-cards.tsx",
+    "upstream": "https://github.com/CopilotKit/CopilotKit/blob/c7815d9ac96f48fb3a64ad8c18e176a870c81763/examples/showcases/arcade-tools/components/tool-cards.tsx",
+    "license": "MIT (root declaration verified; runtime/media not closed)",
+    "behavior": "原授权需求/加载/错误/邮件列表与发送结果/新闻结果渲染，parseResult容错，外部URL只接受http(s)。",
+    "difference": "不是再收审批按钮：同一次工具运行的连接要求与不同富结果呈现一族。",
+    "gaps": [
+      "多数为props驱动渲染，授权按钮是真外链非本地OAuth；邮件发送只是结果卡不是已实现本地发送。内联图形形似Lucide/Feather须补具体归属，根MIT不能替代其潜在许可；账号与外链全需隔离。",
+      "未安装、构建、运行；传递依赖/媒体许可、默认CSP和生命周期、视觉均未验。"
+    ],
+    "description": "原授权需求/加载/错误/邮件列表与发送结果/新闻结果渲染，parseResult容错，外部URL只接受http(s)。 不是再收审批按钮：同一次工具运行的连接要求与不同富结果呈现一族。",
+    "category": "Agent与对话",
+    "licenseEvidence": {
+      "url": "https://github.com/CopilotKit/CopilotKit/blob/c7815d9ac96f48fb3a64ad8c18e176a870c81763/LICENSE",
+      "sha256": "22b0a2c7cc91403500445f60369d3077ceb86e66b01138483e179728f5da65c4",
+      "scope": "Complete root MIT text read; transitive runtime/media not closed"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-bulk-523",
+    "sourceScope": "Selected fixed original code and root license; no runnable/archive or runtime audit",
+    "kind": "原版完整场景（仅来源）",
+    "buildStatus": "fixed source and root license read; not built or run"
+  },
+  {
+    "id": "copilotkit:multi-agent-live-canvas",
+    "title": "多Agent执行画布与研究日志",
+    "source": "CopilotKit",
+    "repository": "https://github.com/CopilotKit/CopilotKit",
+    "revision": "c7815d9ac96f48fb3a64ad8c18e176a870c81763",
+    "sourcePath": "examples/showcases/multi-agent-canvas/frontend/src/components/canvas.tsx",
+    "upstream": "https://github.com/CopilotKit/CopilotKit/blob/c7815d9ac96f48fb3a64ad8c18e176a870c81763/examples/showcases/multi-agent-canvas/frontend/src/components/canvas.tsx",
+    "license": "MIT (root declaration verified; runtime/media not closed)",
+    "behavior": "原旅行/研究/MCP分栏与聊天，执行Agent/node悬浮状态，配置modal；researcher结合实时日志、骨架与Markdown结果。",
+    "difference": "不同ReactFlow节点编辑，是多个实际Agent界面的状态聚合；不声称拖线流程或通用无限画布。",
+    "gaps": [
+      "直接useCoAgent/useCoAgentStateRender需后端，研究日志setTimeout滚动需清理；MCP配置、Google/map链路需禁用。完整来源有价值但未做离线fixture或CSP/依赖/资产审核。",
+      "未安装、构建、运行；传递依赖/媒体许可、默认CSP和生命周期、视觉均未验。"
+    ],
+    "description": "原旅行/研究/MCP分栏与聊天，执行Agent/node悬浮状态，配置modal；researcher结合实时日志、骨架与Markdown结果。 不同ReactFlow节点编辑，是多个实际Agent界面的状态聚合；不声称拖线流程或通用无限画布。",
+    "category": "Agent与对话",
+    "licenseEvidence": {
+      "url": "https://github.com/CopilotKit/CopilotKit/blob/c7815d9ac96f48fb3a64ad8c18e176a870c81763/LICENSE",
+      "sha256": "22b0a2c7cc91403500445f60369d3077ceb86e66b01138483e179728f5da65c4",
+      "scope": "Complete root MIT text read; transitive runtime/media not closed"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-bulk-523",
+    "sourceScope": "Selected fixed original code and root license; no runnable/archive or runtime audit",
+    "kind": "原版完整场景（仅来源）",
+    "buildStatus": "fixed source and root license read; not built or run"
+  },
+  {
+    "id": "copilotkit:a2ui-document-surfaces",
+    "title": "PDF分析的双栏生成式界面",
+    "source": "CopilotKit",
+    "repository": "https://github.com/CopilotKit/CopilotKit",
+    "revision": "c7815d9ac96f48fb3a64ad8c18e176a870c81763",
+    "sourcePath": "examples/showcases/a2ui-pdf-analyst/src/components/SurfaceCanvas.tsx",
+    "upstream": "https://github.com/CopilotKit/CopilotKit/blob/c7815d9ac96f48fb3a64ad8c18e176a870c81763/examples/showcases/a2ui-pdf-analyst/src/components/SurfaceCanvas.tsx",
+    "license": "MIT (root declaration verified; runtime/media not closed)",
+    "behavior": "原A2UI surface消息消费、createSurface去重和增量更新，动作人类可读标签，配套Split可拖分栏。",
+    "difference": "不同PDF像素批注：生成式UI协议驱动分析结果画布；不是声称本组件能解析PDF。",
+    "gaps": [
+      "需要真实catalog/surface-bus/renderer/agent；本轮未取catalog具体路径，传递源仍不完整。Split读写localStorage；processMessages失败仅warn且提前记created可能阻重试。不能原样声称离线可用或无存储。",
+      "未安装、构建、运行；传递依赖/媒体许可、默认CSP和生命周期、视觉均未验。"
+    ],
+    "description": "原A2UI surface消息消费、createSurface去重和增量更新，动作人类可读标签，配套Split可拖分栏。 不同PDF像素批注：生成式UI协议驱动分析结果画布；不是声称本组件能解析PDF。",
+    "category": "Agent与对话",
+    "licenseEvidence": {
+      "url": "https://github.com/CopilotKit/CopilotKit/blob/c7815d9ac96f48fb3a64ad8c18e176a870c81763/LICENSE",
+      "sha256": "22b0a2c7cc91403500445f60369d3077ceb86e66b01138483e179728f5da65c4",
+      "scope": "Complete root MIT text read; transitive runtime/media not closed"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-bulk-523",
+    "sourceScope": "Selected fixed original code and root license; no runnable/archive or runtime audit",
+    "kind": "原版完整场景（仅来源）",
+    "buildStatus": "fixed source and root license read; not built or run"
+  },
+  {
+    "id": "copilotkit:research-artifact-workspace",
+    "title": "研究任务、产物与来源联动",
+    "source": "CopilotKit",
+    "repository": "https://github.com/CopilotKit/CopilotKit",
+    "revision": "c7815d9ac96f48fb3a64ad8c18e176a870c81763",
+    "sourcePath": "examples/showcases/deep-agents/src/components/Workspace.tsx",
+    "upstream": "https://github.com/CopilotKit/CopilotKit/blob/c7815d9ac96f48fb3a64ad8c18e176a870c81763/examples/showcases/deep-agents/src/components/Workspace.tsx",
+    "license": "MIT (root declaration verified; runtime/media not closed)",
+    "behavior": "原研究任务状态、折叠分区、产物文件列表，文件modal Markdown阅读、关闭及下载入口，来源清单。",
+    "difference": "不同上一批章节编辑：这里是多产物/任务和证据清单的交付视图，不再写报告正文。",
+    "gaps": [
+      "文件下载/Markdown链接需明确隔离，完整状态来自Agent外部props；不冒称真实研究结果。下载Blob、全局keydown/模态关闭及退出、传递依赖媒体未验。",
+      "未安装、构建、运行；传递依赖/媒体许可、默认CSP和生命周期、视觉均未验。"
+    ],
+    "description": "原研究任务状态、折叠分区、产物文件列表，文件modal Markdown阅读、关闭及下载入口，来源清单。 不同上一批章节编辑：这里是多产物/任务和证据清单的交付视图，不再写报告正文。",
+    "category": "Agent与对话",
+    "licenseEvidence": {
+      "url": "https://github.com/CopilotKit/CopilotKit/blob/c7815d9ac96f48fb3a64ad8c18e176a870c81763/LICENSE",
+      "sha256": "22b0a2c7cc91403500445f60369d3077ceb86e66b01138483e179728f5da65c4",
+      "scope": "Complete root MIT text read; transitive runtime/media not closed"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-bulk-523",
+    "sourceScope": "Selected fixed original code and root license; no runnable/archive or runtime audit",
+    "kind": "原版完整场景（仅来源）",
+    "buildStatus": "fixed source and root license read; not built or run"
+  },
+  {
+    "id": "svar:gantt-task-editor",
+    "title": "任务依赖甘特与编辑侧栏",
+    "source": "SVAR React Gantt",
+    "repository": "https://github.com/svar-widgets/react-gantt",
+    "revision": "c595a2f5fcfe3294af622526b2f0dbd6a91336d8",
+    "sourcePath": "demos/cases/GanttEditor.jsx",
+    "upstream": "https://github.com/svar-widgets/react-gantt/blob/c595a2f5fcfe3294af622526b2f0dbd6a91336d8/demos/cases/GanttEditor.jsx",
+    "license": "MIT (root declaration verified; runtime/media not closed)",
+    "behavior": "原Gantt加载任务/links/scales，新增任务事件自动show-editor，真实Editor注册日期、links、资源等编辑项。",
+    "difference": "已有kibo:gantt为相邻族，本项价值限定原任务编辑器与依赖状态联动，不把时间轴换皮单收。",
+    "gaps": [
+      "根MIT已读，不代表@svar-ui/gantt-store/react-editor等传递包许可闭合；付费或高级能力不得由root推断。依赖编辑事件、时区、资源/自动排期是否免费及拖动取消未验。",
+      "未安装、构建、运行；传递依赖/媒体许可、默认CSP和生命周期、视觉均未验。"
+    ],
+    "description": "原Gantt加载任务/links/scales，新增任务事件自动show-editor，真实Editor注册日期、links、资源等编辑项。 已有kibo:gantt为相邻族，本项价值限定原任务编辑器与依赖状态联动，不把时间轴换皮单收。",
+    "category": "导航与组织",
+    "licenseEvidence": {
+      "url": "https://github.com/svar-widgets/react-gantt/blob/c595a2f5fcfe3294af622526b2f0dbd6a91336d8/license.txt",
+      "sha256": "f67940f42e0289ad97438c81243b0197dfeab58d0d986947f607cd4f3dc590c0",
+      "scope": "Complete root MIT text read; transitive runtime/media not closed"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-bulk-523",
+    "sourceScope": "Selected fixed original code and root license; no runnable/archive or runtime audit",
+    "kind": "原版完整场景（仅来源）",
+    "buildStatus": "fixed source and root license read; not built or run"
+  },
+  {
+    "id": "react-mosaic:tabbed-workspace",
+    "title": "可分割与分组标签的工作区",
+    "source": "React Mosaic",
+    "repository": "https://github.com/nomcopter/react-mosaic",
+    "revision": "a189cd943d6d602672bc111163157697b8befd41",
+    "sourcePath": "apps/website/src/components/Demo/index.tsx",
+    "upstream": "https://github.com/nomcopter/react-mosaic/blob/a189cd943d6d602672bc111163157697b8befd41/apps/website/src/components/Demo/index.tsx",
+    "license": "Apache-2.0 (root declaration verified; runtime/media not closed)",
+    "behavior": "原n-ary split/tab嵌套布局、窗口添加/分割、自动平衡、标题编辑、主题选择；ExampleWindow原演示填充内容。",
+    "difference": "不同WinBox浮动窗口：可停靠树式多窗与标签组织；演示内部表格不另计，且不宣称业务编辑功能。",
+    "gaps": [
+      "根文件只有Apache声明与链接，完整标准条款另存Apache-2.0-supplement.txt且明确非根原件。Blueprint/图标/DnD等依赖notices/资源未审；原虚构员工表不是真资料，拖拽/空树/多窗退出未验。",
+      "未安装、构建、运行；传递依赖/媒体许可、默认CSP和生命周期、视觉均未验。"
+    ],
+    "description": "原n-ary split/tab嵌套布局、窗口添加/分割、自动平衡、标题编辑、主题选择；ExampleWindow原演示填充内容。 不同WinBox浮动窗口：可停靠树式多窗与标签组织；演示内部表格不另计，且不宣称业务编辑功能。",
+    "category": "导航与组织",
+    "licenseEvidence": {
+      "url": "https://github.com/nomcopter/react-mosaic/blob/a189cd943d6d602672bc111163157697b8befd41/LICENSE",
+      "sha256": "0b3cad824c861fc48106c8f7a5c5a1cde67f9a86468c38d80dcb00cd543bc052",
+      "scope": "Original root Apache-2.0 declaration read; full standard terms saved separately, not claimed as upstream root text; runtime/media not closed"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-bulk-523",
+    "sourceScope": "Selected fixed original code and root license; no runnable/archive or runtime audit",
+    "kind": "原版完整场景（仅来源）",
+    "buildStatus": "fixed source and root license read; not built or run"
+  },
+  {
+    "id": "cmdk:raycast-command-menu",
+    "title": "Raycast风格搜索与子命令菜单",
+    "source": "cmdk",
+    "repository": "https://github.com/dip/cmdk",
+    "revision": "dd2250ed608443e8f32bafc5fa2d1d07a3746aa3",
+    "sourcePath": "website/components/cmdk/raycast.tsx",
+    "upstream": "https://github.com/dip/cmdk/blob/dd2250ed608443e8f32bafc5fa2d1d07a3746aa3/website/components/cmdk/raycast.tsx",
+    "license": "MIT (root declaration verified; runtime/media not closed)",
+    "behavior": "原Command选中/检索列表、⌘K打开Actions popover、二级动作搜索、关闭焦点回输入；配套原精细SCSS。",
+    "difference": "完整两层命令查找场景，不拆基础输入/Popover；与通用导航有概念交集，保留原键盘和子动作结构才有价值。",
+    "gaps": [
+      "Open Application/Show in Finder等SubItem无执行onSelect，不是假装可操作OS；Raycast/Linear/Figma/Slack/YouTube图标品牌资产须另核或透明替换。theme/Radix/cmdk依赖与全键盘/清理未验。",
+      "未安装、构建、运行；传递依赖/媒体许可、默认CSP和生命周期、视觉均未验。"
+    ],
+    "description": "原Command选中/检索列表、⌘K打开Actions popover、二级动作搜索、关闭焦点回输入；配套原精细SCSS。 完整两层命令查找场景，不拆基础输入/Popover；与通用导航有概念交集，保留原键盘和子动作结构才有价值。",
+    "category": "导航与组织",
+    "licenseEvidence": {
+      "url": "https://github.com/dip/cmdk/blob/dd2250ed608443e8f32bafc5fa2d1d07a3746aa3/LICENSE.md",
+      "sha256": "c237b1f4da2bd0ab944bd89d04bcfb333f9739b6232cec876ecc70b104325ceb",
+      "scope": "Complete root MIT text read; transitive runtime/media not closed"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-bulk-523",
+    "sourceScope": "Selected fixed original code and root license; no runnable/archive or runtime audit",
+    "kind": "原版完整场景（仅来源）",
+    "buildStatus": "fixed source and root license read; not built or run"
+  },
+  {
+    "id": "radix-icons:official-series",
+    "title": "15px紧凑界面图标系列",
+    "source": "Radix Icons",
+    "repository": "https://github.com/radix-ui/icons",
+    "revision": "112af91ad275a63c3a29b0da2588342af74ef9bf",
+    "sourcePath": "packages/radix-icons/icons/chat-bubble.svg",
+    "upstream": "https://github.com/radix-ui/icons/blob/112af91ad275a63c3a29b0da2588342af74ef9bf/packages/radix-icons/icons/chat-bubble.svg",
+    "license": "MIT (fixed SVG source and complete root text verified; full series/runtime not closed)",
+    "behavior": "原15×15细节网格适合Exodus密集工具栏、状态、文件与对话操作。",
+    "difference": "与Lucide/Tabler等语义重叠，区别是原15px紧凑绘制体系，不称新功能。",
+    "gaps": [
+      "仅固定少量原SVG样本及README/完整根许可；未收全系列、不声称完整源码ZIP或可运行预览。",
+      "与既有系列语义重复；一系列仅一条，不按字重、颜色、尺寸或glyph拆页。",
+      "后续需按用途精选、全量SVG安全检查/实际依赖及附加NOTICE核查、离线检索分页与清理测试；浏览器视觉未验。",
+      "不收字体、品牌标志、PNG、封面或截图；封面统一由Grok处理。"
+    ],
+    "description": "原15×15细节网格适合Exodus密集工具栏、状态、文件与对话操作。 与Lucide/Tabler等语义重叠，区别是原15px紧凑绘制体系，不称新功能。",
+    "category": "图标系列",
+    "licenseEvidence": {
+      "url": "https://github.com/radix-ui/icons/blob/112af91ad275a63c3a29b0da2588342af74ef9bf/LICENSE",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+      "scope": "Full fixed root license read with exact original SVG samples; not a whole-series or future-runtime dependency audit"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-bulk-523",
+    "sourceScope": "3 original SVG text samples + original README + complete root license; no full asset download or preview",
+    "kind": "图标系列",
+    "buildStatus": "fixed original SVG source and complete root license read; not built, run or visually accepted",
+    "sourceEvidence": [
+      {
+        "path": "packages/radix-icons/icons/chat-bubble.svg",
+        "sha256": "bf215ce071a0d875905a0c5b1fcfa67a8ccd271ea2c3e451a0ba8ee6e1871dcb",
+        "viewBox": "0 0 15 15",
+        "elements": [
+          "svg",
+          "path"
+        ]
+      },
+      {
+        "path": "packages/radix-icons/icons/activity-log.svg",
+        "sha256": "b75ed51e9bd02cece2749cda68c34a75d26b2e7828e632f7e411f8fc6c082f56",
+        "viewBox": "0 0 15 15",
+        "elements": [
+          "svg",
+          "path"
+        ]
+      },
+      {
+        "path": "packages/radix-icons/icons/database.svg",
+        "sha256": "446cd4975ec6a6e9947c2bf579aea40f581669970ab8a58548fee4da6ac64845",
+        "viewBox": "0 0 15 15",
+        "elements": [
+          "svg",
+          "path"
+        ]
+      }
+    ],
+    "counts": {
+      "independentFamily": 1,
+      "completedPreviews": 0
+    },
+    "format": "图标家族"
+  },
+  {
+    "id": "iconoir:official-series",
+    "title": "Iconoir 轻线条语义图标系列",
+    "source": "Iconoir",
+    "repository": "https://github.com/iconoir-icons/iconoir",
+    "revision": "39834e3f193bc0cca2c36bebb6a650471977433d",
+    "sourcePath": "icons/regular/brain-research.svg",
+    "upstream": "https://github.com/iconoir-icons/iconoir/blob/39834e3f193bc0cca2c36bebb6a650471977433d/icons/regular/brain-research.svg",
+    "license": "MIT (fixed SVG source and complete root text verified; full series/runtime not closed)",
+    "behavior": "原24×24轻线条，样本包含研究脑图、对话翻译和检索，适合引用/研究工具。",
+    "difference": "同义图标会与已有系列交叉；此处收作者独立绘制体系，regular/solid不是两个系列。",
+    "gaps": [
+      "仅固定少量原SVG样本及README/完整根许可；未收全系列、不声称完整源码ZIP或可运行预览。",
+      "与既有系列语义重复；一系列仅一条，不按字重、颜色、尺寸或glyph拆页。",
+      "后续需按用途精选、全量SVG安全检查/实际依赖及附加NOTICE核查、离线检索分页与清理测试；浏览器视觉未验。",
+      "不收字体、品牌标志、PNG、封面或截图；封面统一由Grok处理。"
+    ],
+    "description": "原24×24轻线条，样本包含研究脑图、对话翻译和检索，适合引用/研究工具。 同义图标会与已有系列交叉；此处收作者独立绘制体系，regular/solid不是两个系列。",
+    "category": "图标系列",
+    "licenseEvidence": {
+      "url": "https://github.com/iconoir-icons/iconoir/blob/39834e3f193bc0cca2c36bebb6a650471977433d/LICENSE",
+      "sha256": "869b60da1ada5b896d1f285c3c24ca193d612e308d1710a77a58f2f572eb4fa2",
+      "scope": "Full fixed root license read with exact original SVG samples; not a whole-series or future-runtime dependency audit"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-bulk-523",
+    "sourceScope": "3 original SVG text samples + original README + complete root license; no full asset download or preview",
+    "kind": "图标系列",
+    "buildStatus": "fixed original SVG source and complete root license read; not built, run or visually accepted",
+    "sourceEvidence": [
+      {
+        "path": "icons/regular/brain-research.svg",
+        "sha256": "e3ed2fdf5be673e10b2620e50d3033e896093033b3c76a33d768e6659c0493ac",
+        "viewBox": "0 0 24 24",
+        "elements": [
+          "svg",
+          "path",
+          "path",
+          "path",
+          "path",
+          "path",
+          "path",
+          "path",
+          "path",
+          "path",
+          "path",
+          "path",
+          "path"
+        ]
+      },
+      {
+        "path": "icons/regular/chat-bubble-translate.svg",
+        "sha256": "5bfcf4e188b2ac0c27bebc6554ff289532ce406f1b9977bb0836cb1152b7ba9c",
+        "viewBox": "0 0 24 24",
+        "elements": [
+          "svg",
+          "path",
+          "path"
+        ]
+      },
+      {
+        "path": "icons/regular/bubble-search.svg",
+        "sha256": "c14c85731cbc3c2652f7cb11bac9caa3742cfdf8d7ef270a91703a67e3f6e49e",
+        "viewBox": "0 0 24 24",
+        "elements": [
+          "svg",
+          "path",
+          "path",
+          "path"
+        ]
+      }
+    ],
+    "counts": {
+      "independentFamily": 1,
+      "completedPreviews": 0
+    },
+    "format": "图标家族"
+  },
+  {
+    "id": "akar-icons:official-series",
+    "title": "Akar 圆润界面图标系列",
+    "source": "Akar Icons",
+    "repository": "https://github.com/artcoholic/akar-icons",
+    "revision": "a88023a51bfc3cb86c3bbb3db8fce39b1a58729b",
+    "sourcePath": "src/svg/chat-edit.svg",
+    "upstream": "https://github.com/artcoholic/akar-icons/blob/a88023a51bfc3cb86c3bbb3db8fce39b1a58729b/src/svg/chat-edit.svg",
+    "license": "MIT (fixed SVG source and complete root text verified; full series/runtime not closed)",
+    "behavior": "原24px圆角轮廓与对话编辑/批准/提问，适合亲和的Agent消息操作。",
+    "difference": "与已有圆角线图标语义重叠，不将各状态/大小视作新UI。",
+    "gaps": [
+      "仅固定少量原SVG样本及README/完整根许可；未收全系列、不声称完整源码ZIP或可运行预览。",
+      "与既有系列语义重复；一系列仅一条，不按字重、颜色、尺寸或glyph拆页。",
+      "后续需按用途精选、全量SVG安全检查/实际依赖及附加NOTICE核查、离线检索分页与清理测试；浏览器视觉未验。",
+      "不收字体、品牌标志、PNG、封面或截图；封面统一由Grok处理。"
+    ],
+    "description": "原24px圆角轮廓与对话编辑/批准/提问，适合亲和的Agent消息操作。 与已有圆角线图标语义重叠，不将各状态/大小视作新UI。",
+    "category": "图标系列",
+    "licenseEvidence": {
+      "url": "https://github.com/artcoholic/akar-icons/blob/a88023a51bfc3cb86c3bbb3db8fce39b1a58729b/LICENSE",
+      "sha256": "87500dbc60dd758dc91c72927a647ed4fdb162effc6dbc2073a2c9f51ba695c0",
+      "scope": "Full fixed root license read with exact original SVG samples; not a whole-series or future-runtime dependency audit"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-bulk-523",
+    "sourceScope": "3 original SVG text samples + original README + complete root license; no full asset download or preview",
+    "kind": "图标系列",
+    "buildStatus": "fixed original SVG source and complete root license read; not built, run or visually accepted",
+    "sourceEvidence": [
+      {
+        "path": "src/svg/chat-edit.svg",
+        "sha256": "600a0d7b351f3553c722fad6d522f64c7cfbe0d3c2e5d208ab7d08ae8c444147",
+        "viewBox": "0 0 24 24",
+        "elements": [
+          "svg",
+          "path",
+          "path",
+          "path",
+          "path"
+        ]
+      },
+      {
+        "path": "src/svg/chat-question.svg",
+        "sha256": "28ee698e07affe7330e7b10301a7375ed6bc858e1de2e6d97e56911c9ffa381f",
+        "viewBox": "0 0 24 24",
+        "elements": [
+          "svg",
+          "path",
+          "path",
+          "path"
+        ]
+      },
+      {
+        "path": "src/svg/chat-approve.svg",
+        "sha256": "2626c2abde3cb9c71a8cfe4b1332040a4b3f268d4a3c893e21cd70bf4f870337",
+        "viewBox": "0 0 24 24",
+        "elements": [
+          "svg",
+          "path",
+          "path",
+          "path"
+        ]
+      }
+    ],
+    "counts": {
+      "independentFamily": 1,
+      "completedPreviews": 0
+    },
+    "format": "图标家族"
+  },
+  {
+    "id": "eva-icons:official-series",
+    "title": "Eva 填充与轮廓图标系列",
+    "source": "Eva Icons",
+    "repository": "https://github.com/akveo/eva-icons",
+    "revision": "70d2471ff88ab1385d3310b93a406243377b53d5",
+    "sourcePath": "package/icons/fill/svg/activity.svg",
+    "upstream": "https://github.com/akveo/eva-icons/blob/70d2471ff88ab1385d3310b93a406243377b53d5/package/icons/fill/svg/activity.svg",
+    "license": "MIT (fixed SVG source and complete root text verified; full series/runtime not closed)",
+    "behavior": "原fill/outline界面图标，样本含活动/文件/新增文件夹；上游另有四种动画配置但本轮未适配。",
+    "difference": "一套完整作者系列，填充/轮廓或四动画不是多个新族；不宣称动画已验证。",
+    "gaps": [
+      "仅固定少量原SVG样本及README/完整根许可；未收全系列、不声称完整源码ZIP或可运行预览。",
+      "与既有系列语义重复；一系列仅一条，不按字重、颜色、尺寸或glyph拆页。",
+      "后续需按用途精选、全量SVG安全检查/实际依赖及附加NOTICE核查、离线检索分页与清理测试；浏览器视觉未验。",
+      "不收字体、品牌标志、PNG、封面或截图；封面统一由Grok处理。",
+      "四种原动画只在README可见，未恢复动画实现；不能算本轮动画已接入。"
+    ],
+    "description": "原fill/outline界面图标，样本含活动/文件/新增文件夹；上游另有四种动画配置但本轮未适配。 一套完整作者系列，填充/轮廓或四动画不是多个新族；不宣称动画已验证。",
+    "category": "图标系列",
+    "licenseEvidence": {
+      "url": "https://github.com/akveo/eva-icons/blob/70d2471ff88ab1385d3310b93a406243377b53d5/LICENSE.txt",
+      "sha256": "4788c563f8871931bce41ede59379a5277ac1a473e289f9100924149ce8bd311",
+      "scope": "Full fixed root license read with exact original SVG samples; not a whole-series or future-runtime dependency audit"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-bulk-523",
+    "sourceScope": "3 original SVG text samples + original README + complete root license; no full asset download or preview",
+    "kind": "图标系列",
+    "buildStatus": "fixed original SVG source and complete root license read; not built, run or visually accepted",
+    "sourceEvidence": [
+      {
+        "path": "package/icons/fill/svg/activity.svg",
+        "sha256": "2fc44f985308b22eee52f6e7e154c1d3c23c96e669a692decd699d963ef0adb0",
+        "viewBox": "0 0 24 24",
+        "elements": [
+          "svg",
+          "defs",
+          "style",
+          "title",
+          "g",
+          "g",
+          "g",
+          "rect",
+          "path"
+        ]
+      },
+      {
+        "path": "package/icons/fill/svg/file-text.svg",
+        "sha256": "a863d6554117983c9a9d5bb0a76173f2b90c0c803f47cf68bbca6c3b1e985422",
+        "viewBox": "0 0 24 24",
+        "elements": [
+          "svg",
+          "defs",
+          "style",
+          "title",
+          "g",
+          "g",
+          "g",
+          "rect",
+          "path"
+        ]
+      },
+      {
+        "path": "package/icons/fill/svg/folder-add.svg",
+        "sha256": "6993d310b59bbe362eda2ab19b858af6a100e801c3922f2d78b070ed61e4d830",
+        "viewBox": "0 0 24 24",
+        "elements": [
+          "svg",
+          "defs",
+          "style",
+          "title",
+          "g",
+          "g",
+          "g",
+          "rect",
+          "path"
+        ]
+      }
+    ],
+    "counts": {
+      "independentFamily": 1,
+      "completedPreviews": 0
+    },
+    "format": "图标家族"
+  },
+  {
+    "id": "material-symbols:official-series",
+    "title": "Material Symbols 界面符号系列",
+    "source": "Material Symbols",
+    "repository": "https://github.com/google/material-design-icons",
+    "revision": "10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7",
+    "sourcePath": "symbols/web/chat/materialsymbolsrounded/chat_24px.svg",
+    "upstream": "https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/chat/materialsymbolsrounded/chat_24px.svg",
+    "license": "Apache-2.0 (fixed SVG source and complete root text verified; full series/runtime not closed)",
+    "behavior": "Google官方Material Symbols，采原rounded24px对话和搜索SVG文本，适合密集产品导航。",
+    "difference": "与Lucide/Fluent等重复语义明确；outlined/rounded/sharp及字重/尺寸只计一个系列，不收旧Material Icons作第二条。",
+    "gaps": [
+      "仅固定少量原SVG样本及README/完整根许可；未收全系列、不声称完整源码ZIP或可运行预览。",
+      "与既有系列语义重复；一系列仅一条，不按字重、颜色、尺寸或glyph拆页。",
+      "后续需按用途精选、全量SVG安全检查/实际依赖及附加NOTICE核查、离线检索分页与清理测试；浏览器视觉未验。",
+      "不收字体、品牌标志、PNG、封面或截图；封面统一由Grok处理。"
+    ],
+    "description": "Google官方Material Symbols，采原rounded24px对话和搜索SVG文本，适合密集产品导航。 与Lucide/Fluent等重复语义明确；outlined/rounded/sharp及字重/尺寸只计一个系列，不收旧Material Icons作第二条。",
+    "category": "图标系列",
+    "licenseEvidence": {
+      "url": "https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE",
+      "sha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd",
+      "scope": "Full fixed root license read with exact original SVG samples; not a whole-series or future-runtime dependency audit"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-bulk-523",
+    "sourceScope": "2 original SVG text samples + original README + complete root license; no full asset download or preview",
+    "kind": "图标系列",
+    "buildStatus": "fixed original SVG source and complete root license read; not built, run or visually accepted",
+    "sourceEvidence": [
+      {
+        "path": "symbols/web/chat/materialsymbolsrounded/chat_24px.svg",
+        "sha256": "da947cf56264abaad93709bc8eb24bd4c12567284473fcfed93fd421a57c33e1",
+        "viewBox": "0 -960 960 960",
+        "elements": [
+          "svg",
+          "path"
+        ]
+      },
+      {
+        "path": "symbols/web/search/materialsymbolsrounded/search_24px.svg",
+        "sha256": "8d12ac6ba27a23ccf0e57794c28481ce9c978efcb2f80ba6d2979ccdf238c993",
+        "viewBox": "0 -960 960 960",
+        "elements": [
+          "svg",
+          "path"
+        ]
+      }
+    ],
+    "counts": {
+      "independentFamily": 1,
+      "completedPreviews": 0
+    },
+    "format": "图标家族"
+  },
+  {
+    "id": "majesticons:official-series",
+    "title": "Majesticons 圆角线面图标系列",
+    "source": "Majesticons",
+    "repository": "https://github.com/halfmage/majesticons",
+    "revision": "c4b63e565fd03be0bdc9da578da1e52efbcd8856",
+    "sourcePath": "line/chat-signal-line.svg",
+    "upstream": "https://github.com/halfmage/majesticons/blob/c4b63e565fd03be0bdc9da578da1e52efbcd8856/line/chat-signal-line.svg",
+    "license": "MIT (fixed SVG source and complete root text verified; full series/runtime not closed)",
+    "behavior": "原24px线条/实体图形，信号对话和状态对话等适合Agent工作流状态。",
+    "difference": "与Pixelart同作者但非同一绘制系列，连续圆角/线面而非像素；不按line/solid或状态变体拆条。",
+    "gaps": [
+      "仅固定少量原SVG样本及README/完整根许可；未收全系列、不声称完整源码ZIP或可运行预览。",
+      "与既有系列语义重复；一系列仅一条，不按字重、颜色、尺寸或glyph拆页。",
+      "后续需按用途精选、全量SVG安全检查/实际依赖及附加NOTICE核查、离线检索分页与清理测试；浏览器视觉未验。",
+      "不收字体、品牌标志、PNG、封面或截图；封面统一由Grok处理。"
+    ],
+    "description": "原24px线条/实体图形，信号对话和状态对话等适合Agent工作流状态。 与Pixelart同作者但非同一绘制系列，连续圆角/线面而非像素；不按line/solid或状态变体拆条。",
+    "category": "图标系列",
+    "licenseEvidence": {
+      "url": "https://github.com/halfmage/majesticons/blob/c4b63e565fd03be0bdc9da578da1e52efbcd8856/LICENSE",
+      "sha256": "3384c6c2fd1aaaa1f3be9bfd69a63ba858106d54ea7399f06685fd1e5264eb21",
+      "scope": "Full fixed root license read with exact original SVG samples; not a whole-series or future-runtime dependency audit"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-bulk-523",
+    "sourceScope": "3 original SVG text samples + original README + complete root license; no full asset download or preview",
+    "kind": "图标系列",
+    "buildStatus": "fixed original SVG source and complete root license read; not built, run or visually accepted",
+    "sourceEvidence": [
+      {
+        "path": "line/chat-signal-line.svg",
+        "sha256": "70c761a96150b9234e77720ffe7020eb5da9a8531b5cda9328ef38c3b2d37d30",
+        "viewBox": "0 0 24 24",
+        "elements": [
+          "svg",
+          "path"
+        ]
+      },
+      {
+        "path": "line/chat-status-line.svg",
+        "sha256": "1fea2449c8f7b7d61cc4128368d845c20783d284d5db3b125f3bd18001082ac5",
+        "viewBox": "0 0 24 24",
+        "elements": [
+          "svg",
+          "path",
+          "path",
+          "circle"
+        ]
+      },
+      {
+        "path": "solid/chat-text.svg",
+        "sha256": "f525dd278ad29d5578ccb84de0fc94cdc726ab93a0152cec8f153770124758fa",
+        "viewBox": "0 0 24 24",
+        "elements": [
+          "svg",
+          "path"
+        ]
+      }
+    ],
+    "counts": {
+      "independentFamily": 1,
+      "completedPreviews": 0
+    },
+    "format": "图标家族"
+  },
+  {
+    "id": "actual:envelope-budget-workspace",
+    "title": "Actual · 信封预算分配工作区",
+    "source": "Actual Budget",
+    "repository": "https://github.com/actualbudget/actual",
+    "revision": "7d4c52647b18f1abeae5cb8f09fdd16a6d6b334b",
+    "sourcePath": "packages/desktop-client/src/components/budget/BudgetTable.tsx",
+    "upstream": "https://github.com/actualbudget/actual/blob/7d4c52647b18f1abeae5cb8f09fdd16a6d6b334b/packages/desktop-client/src/components/budget/BudgetTable.tsx",
+    "license": "MIT (root verified only; dependencies/assets not closed)",
+    "behavior": "原分类分组预算、月份编辑、分组折叠和类别重排；余额菜单切换转移/覆盖超支，并向预算action传参。",
+    "difference": "区别普通任务表：预算/实际/余额及类别资金分配构成完整产品界面；不把每个菜单拆条。",
+    "gaps": [
+      "原onBudgetAction会修改预算数据，当前只读代码未连接账户/用户账本；未来仅合成数据，不能宣传真实转账或预算建议。",
+      "依赖Actual core/query/store、拖排/快捷键以及sessionStorage滚动恢复，不能把所收组件当独立可运行UI。",
+      "完整传递依赖/字体/图片许可、离线CSP、交互取消/退出清理与浏览器像素未审未验。没有运行包、预览或源码ZIP下载链接。"
+    ],
+    "description": "原分类分组预算、月份编辑、分组折叠和类别重排；余额菜单切换转移/覆盖超支，并向预算action传参。 区别普通任务表：预算/实际/余额及类别资金分配构成完整产品界面；不把每个菜单拆条。",
+    "category": "数据与状态",
+    "licenseEvidence": {
+      "url": "https://github.com/actualbudget/actual/blob/7d4c52647b18f1abeae5cb8f09fdd16a6d6b334b/LICENSE.txt",
+      "sha256": "71e4b3053e4622e1f5fc5d8aa5336350de32ead39247924c596d659b89b47b6f",
+      "scope": "Full root MIT read; selected source paths have no intervening license file; runtime/media not audited"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-bulk-523",
+    "sourceScope": "Selected fixed original code and complete root license evidence; no complete runnable/archive or runtime audit",
+    "kind": "原版完整场景（仅来源）",
+    "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted"
+  },
+  {
+    "id": "actual:budget-automation-editor",
+    "title": "Actual · 目标预算规则编辑面板",
+    "source": "Actual Budget",
+    "repository": "https://github.com/actualbudget/actual",
+    "revision": "7d4c52647b18f1abeae5cb8f09fdd16a6d6b334b",
+    "sourcePath": "packages/desktop-client/src/components/modals/BudgetAutomationsModal/BudgetAutomationsModal.tsx",
+    "upstream": "https://github.com/actualbudget/actual/blob/7d4c52647b18f1abeae5cb8f09fdd16a6d6b334b/packages/desktop-client/src/components/modals/BudgetAutomationsModal/BudgetAutomationsModal.tsx",
+    "license": "MIT (root verified only; dependencies/assets not closed)",
+    "behavior": "原960px复合规则编辑modal：规则列表与编辑区，按类型切换字段；目标金额/截止月份、重复周期及提前支出选项真实dispatch更新。",
+    "difference": "与预算表是配置规则与查看分配两种完整场景；与rrule时间规则不同，涉及金额/目标/类别策略，不把多种规则拆项。",
+    "gaps": [
+      "当前状态由useBudgetAutomations/useCategoryCleanup/useSchedules与数据库query提供；规则迁移/保存不是本地fixture，未执行任何财务动作。",
+      "BySave重复输入有整数解析与blur纠正；仍需完整reducer/副作用/空值/错误分支审查，不声称全部校验通过。",
+      "完整传递依赖/字体/图片许可、离线CSP、交互取消/退出清理与浏览器像素未审未验。没有运行包、预览或源码ZIP下载链接。"
+    ],
+    "description": "原960px复合规则编辑modal：规则列表与编辑区，按类型切换字段；目标金额/截止月份、重复周期及提前支出选项真实dispatch更新。 与预算表是配置规则与查看分配两种完整场景；与rrule时间规则不同，涉及金额/目标/类别策略，不把多种规则拆项。",
+    "category": "输入与选择",
+    "licenseEvidence": {
+      "url": "https://github.com/actualbudget/actual/blob/7d4c52647b18f1abeae5cb8f09fdd16a6d6b334b/LICENSE.txt",
+      "sha256": "71e4b3053e4622e1f5fc5d8aa5336350de32ead39247924c596d659b89b47b6f",
+      "scope": "Full root MIT read; selected source paths have no intervening license file; runtime/media not audited"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-bulk-523",
+    "sourceScope": "Selected fixed original code and complete root license evidence; no complete runnable/archive or runtime audit",
+    "kind": "原版完整场景（仅来源）",
+    "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted"
+  },
+  {
+    "id": "memos:personal-knowledge-timeline",
+    "title": "Memos · 即写即读知识时间线",
+    "source": "Memos",
+    "repository": "https://github.com/usememos/memos",
+    "revision": "e4f3fb2d2d114f6eaea6ec75a10b0a274f57a8a1",
+    "sourcePath": "web/src/pages/Home.tsx",
+    "upstream": "https://github.com/usememos/memos/blob/e4f3fb2d2d114f6eaea6ec75a10b0a274f57a8a1/web/src/pages/Home.tsx",
+    "license": "MIT (root verified only; dependencies/assets not closed)",
+    "behavior": "原个人知识时间线整合新备忘录输入、分页阅读、空间/作者/筛选范围、置顶排序；MemoView与编辑/阅读模式复用并支持任务项更新。",
+    "difference": "这是完整轻量知识记录场景，不把富文本编辑器、卡片或任务checkbox各算一条；与单个聊天消息不同。",
+    "gaps": [
+      "原依赖账号/Auth、后端Memo mutations和生成Proto服务；本轮无账号/数据/保存调用。",
+      "编辑会话懒加载，含draft cache、音频/上传/菜单链；未来需剔除mic/上传/网络和持久化，不能直接按无网络预览使用。",
+      "头像/附件/外链metadata为实际服务资源，当前仅收代码未收媒体。",
+      "完整传递依赖/字体/图片许可、离线CSP、交互取消/退出清理与浏览器像素未审未验。没有运行包、预览或源码ZIP下载链接。"
+    ],
+    "description": "原个人知识时间线整合新备忘录输入、分页阅读、空间/作者/筛选范围、置顶排序；MemoView与编辑/阅读模式复用并支持任务项更新。 这是完整轻量知识记录场景，不把富文本编辑器、卡片或任务checkbox各算一条；与单个聊天消息不同。",
+    "category": "Agent与对话",
+    "licenseEvidence": {
+      "url": "https://github.com/usememos/memos/blob/e4f3fb2d2d114f6eaea6ec75a10b0a274f57a8a1/LICENSE",
+      "sha256": "dadc85262cec40d1344736b57da50814194ff721ab98012c09cd9d35c4b8582a",
+      "scope": "Full root MIT read; selected source paths have no intervening license file; runtime/media not audited"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-bulk-523",
+    "sourceScope": "Selected fixed original code and complete root license evidence; no complete runnable/archive or runtime audit",
+    "kind": "原版完整场景（仅来源）",
+    "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted"
+  },
+  {
+    "id": "cal-diy:public-booking-flow",
+    "title": "Cal DIY · 访客选时与预约流程",
+    "source": "Cal DIY",
+    "repository": "https://github.com/calcom/cal.diy",
+    "revision": "2eb48eccd8aca8a0c0ffabf28cf92e298b33ecee",
+    "sourcePath": "apps/web/modules/bookings/components/Booker.tsx",
+    "upstream": "https://github.com/calcom/cal.diy/blob/2eb48eccd8aca8a0c0ffabf28cf92e298b33ecee/apps/web/modules/bookings/components/Booker.tsx",
+    "license": "MIT (root verified only; dependencies/assets not closed)",
+    "behavior": "原月/周/列式选时布局，事件信息、日期/时区与可用时段，选择时间后预约表单/确认；容量满额/缺席/不可用和创建中有状态分支。",
+    "difference": "Cal DIY原访客预约界面；现有Coss event-type-ordering为目录排序，不是访客预约流程，与FullCalendar事件编辑也不同；三布局只算一族。",
+    "gaps": [
+      "原请求calcom/cal.com已指向canonical calcom/cal.diy，当前固定SHA的根及6子目录LICENSE均为MIT正文（尾换行差异）。此结论仅针对Cal DIY原件，不覆盖Cal.com平台或商业服务；平台/支付/embed导入链的传递依赖及服务权限未审。",
+      "Booker包装hook依赖实际可用时段/创建预约/邮箱验证/CAPTCHA/支付等链；没有请求服务或创建任何预约。",
+      "需要拆除真实提交/邮箱验证码/外部captcha与配置，仅本地fixture才可能预览；媒体及运行依赖尚未审。",
+      "完整传递依赖/字体/图片许可、离线CSP、交互取消/退出清理与浏览器像素未审未验。没有运行包、预览或源码ZIP下载链接。"
+    ],
+    "description": "原月/周/列式选时布局，事件信息、日期/时区与可用时段，选择时间后预约表单/确认；容量满额/缺席/不可用和创建中有状态分支。 Cal DIY原访客预约界面；现有Coss event-type-ordering为目录排序，不是访客预约流程，与FullCalendar事件编辑也不同；三布局只算一族。",
+    "category": "输入与选择",
+    "licenseEvidence": {
+      "url": "https://github.com/calcom/cal.diy/blob/2eb48eccd8aca8a0c0ffabf28cf92e298b33ecee/LICENSE",
+      "sha256": "95f3d2c4bf316ccec41144d528fb9902de0bf91c635cc404bd94c7f7ebac321c",
+      "scope": "Current Cal DIY root MIT and all six nested LICENSE texts read; no intervening license in selected apps/web paths. NOT a claim about Cal.com platform/service or runtime dependencies."
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-bulk-523",
+    "sourceScope": "Selected fixed original code and complete root license evidence; no complete runnable/archive or runtime audit",
+    "kind": "原版完整场景（仅来源）",
+    "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted"
+  },
+  {
+    "id": "tremor-blocks:partition-allocation",
+    "title": "双分区容量联动配置",
+    "source": "Tremor Blocks",
+    "repository": "https://github.com/tremorlabs/tremor-blocks",
+    "revision": "b319e8d3d3678a4f60f4802f7e85bc1abc52d598",
+    "sourcePath": "src/content/components/billing-usage/billing-usage-10.tsx",
+    "upstream": "https://github.com/tremorlabs/tremor-blocks/blob/b319e8d3d3678a4f60f4802f7e85bc1abc52d598/src/content/components/billing-usage/billing-usage-10.tsx",
+    "license": "MIT (root verified only; dependencies/assets not closed)",
+    "behavior": "原双分区名称编辑、数值输入及滑杆互补联动，单侧0–100约束，另一侧由100减去当前值；完整配置表单布局。",
+    "difference": "相比一般Slider或RRule日期规则，表达共享总量分配，不按两分区拆项。",
+    "gaps": [
+      "Apply/Cancel没有回调，不创建数据库或修改磁盘；原显示GB而状态名percentage，实际仅固定总量100的演示。空输入/NaN、键盘与辅助文本重复ID未测。",
+      "完整运行依赖/图标/素材许可未闭合；只收录固定原源码，不含完整可运行归档。未构建、未运行、未测默认CSP/退出清理、未做浏览器视觉验收。"
+    ],
+    "description": "原双分区名称编辑、数值输入及滑杆互补联动，单侧0–100约束，另一侧由100减去当前值；完整配置表单布局。 相比一般Slider或RRule日期规则，表达共享总量分配，不按两分区拆项。",
+    "category": "输入与选择",
+    "licenseEvidence": {
+      "url": "https://github.com/tremorlabs/tremor-blocks/blob/b319e8d3d3678a4f60f4802f7e85bc1abc52d598/LICENSE.md",
+      "sha256": "3546b8d22c1657e8f6d36ae83e8721f894946337d9966e1d84fbfcdfa1c9ae0b",
+      "scope": "Full root MIT read; transitive runtime/media permissions not closed"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-bulk-523",
+    "sourceScope": "Selected fixed original code and complete root license evidence; no complete runnable/archive or runtime audit",
+    "kind": "原版完整场景（仅来源）",
+    "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted",
+    "sourceSha256": "96e6ffd7a95f2d997d875defcd0d276165ad591d10c02020dd291080c3ae4185"
+  },
+  {
+    "id": "tremor-blocks:workspace-package-application",
+    "title": "工作区套餐选择与申请表单",
+    "source": "Tremor Blocks",
+    "repository": "https://github.com/tremorlabs/tremor-blocks",
+    "revision": "b319e8d3d3678a4f60f4802f7e85bc1abc52d598",
+    "sourcePath": "src/content/components/form-layouts/form-layout-05.tsx",
+    "upstream": "https://github.com/tremorlabs/tremor-blocks/blob/b319e8d3d3678a4f60f4802f7e85bc1abc52d598/src/content/components/form-layouts/form-layout-05.tsx",
+    "license": "MIT (root verified only; dependencies/assets not closed)",
+    "behavior": "原姓名/工作邮箱/公司规模表单，三档RadioCard套餐与对应功能清单联动、原必填属性和邮箱输入；完整分栏申请场景。",
+    "difference": "不是普通登录表单或单个价格卡；申请字段与套餐说明在同一原版复合场景，三个套餐仅计一族。",
+    "gaps": [
+      "Apply/Go back无本地提交回执，原form未preventDefault；不是注册或购买。套餐文案是原fixture且含Lorem，onClick更新说明与键盘Radio变更同步尚未测；重复ID/描述关联需复核。",
+      "完整运行依赖/图标/素材许可未闭合；只收录固定原源码，不含完整可运行归档。未构建、未运行、未测默认CSP/退出清理、未做浏览器视觉验收。"
+    ],
+    "description": "原姓名/工作邮箱/公司规模表单，三档RadioCard套餐与对应功能清单联动、原必填属性和邮箱输入；完整分栏申请场景。 不是普通登录表单或单个价格卡；申请字段与套餐说明在同一原版复合场景，三个套餐仅计一族。",
+    "category": "输入与选择",
+    "licenseEvidence": {
+      "url": "https://github.com/tremorlabs/tremor-blocks/blob/b319e8d3d3678a4f60f4802f7e85bc1abc52d598/LICENSE.md",
+      "sha256": "3546b8d22c1657e8f6d36ae83e8721f894946337d9966e1d84fbfcdfa1c9ae0b",
+      "scope": "Full root MIT read; transitive runtime/media permissions not closed"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-bulk-523",
+    "sourceScope": "Selected fixed original code and complete root license evidence; no complete runnable/archive or runtime audit",
+    "kind": "原版完整场景（仅来源）",
+    "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted",
+    "sourceSha256": "ee708594382f3fc3635423283e728de1556f23b39215ffbaef7a6c65276bfd54"
+  },
+  {
+    "id": "tremor-blocks:audit-evidence-reader",
+    "title": "审计轮次与关联文档阅读",
+    "source": "Tremor Blocks",
+    "repository": "https://github.com/tremorlabs/tremor-blocks",
+    "revision": "b319e8d3d3678a4f60f4802f7e85bc1abc52d598",
+    "sourcePath": "src/content/components/account-and-user-management/account-and-user-management-15.tsx",
+    "upstream": "https://github.com/tremorlabs/tremor-blocks/blob/b319e8d3d3678a4f60f4802f7e85bc1abc52d598/src/content/components/account-and-user-management/account-and-user-management-15.tsx",
+    "license": "MIT (root verified only; dependencies/assets not closed)",
+    "behavior": "原multiple Accordion按认证专题展开，组合进度/状态、审计日期与审核人、关联文档分栏；不同专题可同时阅读。",
+    "difference": "区别普通FAQ文本折叠，原内容结构组合审计轮次与材料目录；不拆为多种认证卡。",
+    "gaps": [
+      "审计/认证数据为固定示例，不代表真实合规结果；文档href为#，Edit/Re-Upload无事件，未提供上传或编辑。Accordion依赖Radix与Remix图标，传递许可及交互未审。",
+      "完整运行依赖/图标/素材许可未闭合；只收录固定原源码，不含完整可运行归档。未构建、未运行、未测默认CSP/退出清理、未做浏览器视觉验收。"
+    ],
+    "description": "原multiple Accordion按认证专题展开，组合进度/状态、审计日期与审核人、关联文档分栏；不同专题可同时阅读。 区别普通FAQ文本折叠，原内容结构组合审计轮次与材料目录；不拆为多种认证卡。",
+    "category": "展示与媒体",
+    "licenseEvidence": {
+      "url": "https://github.com/tremorlabs/tremor-blocks/blob/b319e8d3d3678a4f60f4802f7e85bc1abc52d598/LICENSE.md",
+      "sha256": "3546b8d22c1657e8f6d36ae83e8721f894946337d9966e1d84fbfcdfa1c9ae0b",
+      "scope": "Full root MIT read; transitive runtime/media permissions not closed"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-bulk-523",
+    "sourceScope": "Selected fixed original code and complete root license evidence; no complete runnable/archive or runtime audit",
+    "kind": "原版完整场景（仅来源）",
+    "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted",
+    "sourceSha256": "15d6762fae1df1103c1f30e4e2d4667f3622a7737a75e0c046b01246495f8a80"
+  },
+  {
+    "id": "tremor-blocks:portfolio-performance-report",
+    "title": "多资产走势与收益明细报告",
+    "source": "Tremor Blocks",
+    "repository": "https://github.com/tremorlabs/tremor-blocks",
+    "revision": "b319e8d3d3678a4f60f4802f7e85bc1abc52d598",
+    "sourcePath": "src/content/components/chart-compositions/chart-composition-01.tsx",
+    "upstream": "https://github.com/tremorlabs/tremor-blocks/blob/b319e8d3d3678a4f60f4802f7e85bc1abc52d598/src/content/components/chart-compositions/chart-composition-01.tsx",
+    "license": "MIT (root verified only; dependencies/assets not closed)",
+    "behavior": "原多序列LineChart、汇总数值和收益明细表组合，移动端与桌面端原响应式展示；数据为固定数组。",
+    "difference": "不同于单独chart primitive或表格换皮：保留原趋势+多维资金明细组合报告，不按序列/断点拆项。",
+    "gaps": [
+      "原onValueChange为空回调，不能宣称图表选点联动下表；不是实时行情/投资建议/交易。LineChart底层Recharts等导入链、媒体/字体/CSP/资源与传递许可未完整审查。",
+      "完整运行依赖/图标/素材许可未闭合；只收录固定原源码，不含完整可运行归档。未构建、未运行、未测默认CSP/退出清理、未做浏览器视觉验收。"
+    ],
+    "description": "原多序列LineChart、汇总数值和收益明细表组合，移动端与桌面端原响应式展示；数据为固定数组。 不同于单独chart primitive或表格换皮：保留原趋势+多维资金明细组合报告，不按序列/断点拆项。",
+    "category": "展示与媒体",
+    "licenseEvidence": {
+      "url": "https://github.com/tremorlabs/tremor-blocks/blob/b319e8d3d3678a4f60f4802f7e85bc1abc52d598/LICENSE.md",
+      "sha256": "3546b8d22c1657e8f6d36ae83e8721f894946337d9966e1d84fbfcdfa1c9ae0b",
+      "scope": "Full root MIT read; transitive runtime/media permissions not closed"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-bulk-523",
+    "sourceScope": "Selected fixed original code and complete root license evidence; no complete runnable/archive or runtime audit",
+    "kind": "原版完整场景（仅来源）",
+    "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted",
+    "sourceSha256": "507e9a80c69330184f8ec1407f6e367df71c32891f2f18b108a199d807b74cea"
   }
 ]
