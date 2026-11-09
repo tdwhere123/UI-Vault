@@ -15666,40 +15666,33 @@
   },
   {
     "id": "bootstra386:dos-component-language",
-    "title": "DOS字符式界面组件",
     "source": "BOOTSTRA.386",
     "repository": "https://github.com/kristopolous/BOOTSTRA.386",
     "revision": "3af1895e7212f36566d4d46e867e8c4073528e8f",
-    "sourcePath": "v2.3.1/docs/components.html",
     "upstream": "https://github.com/kristopolous/BOOTSTRA.386/blob/3af1895e7212f36566d4d46e867e8c4073528e8f/v2.3.1/docs/components.html",
-    "website": "https://bootstra386.com",
-    "license": "Apache-2.0 (root text verified; runtime/assets not closed)",
-    "behavior": "以早期PC字符风格、单色块和像素轮廓重呈现桌面式组件。",
-    "difference": "不同于Windows98/Aero以及RPG；整套DOS风格示例只计一族。",
-    "description": "以早期PC字符风格、单色块和像素轮廓重呈现桌面式组件。 不同于Windows98/Aero以及RPG；整套DOS风格示例只计一族。",
-    "gaps": [
-      "特意固定v2.3.1组件文档而非混用v3/v4：仓不同Bootstrap版本许可证不同，必须按选定依赖逐文件保留声明。",
-      "选定文档使用assets/...相对链接，而仓资源在v2.3.1/assets；独立封装需正确重定位并保留原文件来源，不能直接打开文档便声称资源完整。",
-      "旧jQuery/Bootstrap插件及字体/图标来源尚未完整闭合；旧依赖潜在安全/兼容问题要求离线隔离，不接收任意HTML或外部输入。",
-      "原文档含外链/下载/社交等控件，适配仅保留本地样式与交互样例，不执行真实登录/提交；移动布局与键盘未验。",
-      "固定源码/根许可仅为来源证据；未构建、未运行、未截图验收，completedPreviewCount=0。"
-    ],
-    "category": "视觉与动效",
+    "sourcePath": "v2.3.1/docs/components.html",
     "licenseEvidence": {
       "url": "https://github.com/kristopolous/BOOTSTRA.386/blob/3af1895e7212f36566d4d46e867e8c4073528e8f/LICENSE",
       "sha256": "59899c6091b540582ed617e8eeaac4919dc985ccfc35459ee9752b699be5205b",
       "scope": "Complete original root license retained; runtime/media separate"
     },
-    "sourceSha256": "689e543d5cca036dc1a48c0216d8a2c2b466af3b82ea833fcfeda0ed8983725c",
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-style-527",
-    "sourceScope": "Selected fixed original source and root license; no full runnable archive",
-    "kind": "原版风格组件族（仅来源）",
-    "buildStatus": "Fixed source inspected; not built or visually accepted"
+    "difference": "不同于Windows98/Aero以及RPG；整套DOS风格示例只计一族。",
+    "website": "https://bootstra386.com",
+    "title": "复古字符终端风格控件",
+    "description": "十个完整官方表格、表单、进度与面板示例，一族展示；系统等宽回退，不模拟终端或插件业务。",
+    "behavior": "十个完整官方表格、表单、进度与面板示例，一族展示；系统等宽回退，不模拟终端或插件业务。",
+    "kind": "原版风格组件族",
+    "format": "精选组件图鉴",
+    "category": "展示与媒体",
+    "license": "Apache-2.0",
+    "batch": "bootstra386-01",
+    "preview": "batches/bootstra386-01/controls/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "One selected official BOOTSTRA.386 v2.3.1 controls family, not the complete website or a DOS emulator. Ten entire official bs-docs-example nodes: first two Tables examples, default Forms example, first four Progress examples, first three Misc wells. Original DOM inside each example preserved exactly; host only groups and labels. Native local field/checkbox and submit prevention, original table rows and fixed progress percentages retained. No fabricated task, save or terminal actions. No original JS plugins needed for these static/native examples: jQuery, analytics, social scripts and bootstrap-386 intro are NOT emitted. Fixedsys font-face and Glyphicons PNG URLs removed; original CSS fallback Monaco/Menlo/Consolas/Courier New/monospace retained without DOS font reference. Original typography metrics, colors, borders, responsive rules retained; system font shapes differ. Host adds spacing/focus outlines/hidden pause and reduced-motion rules. Original icon CSS remains unused and its background-image is none; no replacement icon. All original examples requiring icons, images, password/login, external links or JS plugin behavior excluded. Apache-2.0 actual root LICENSE and both original CSS headers agree; package.json says ISC but describes itself as package-management tracking, not the stylesheet license, so runtime follows explicit original Apache notices. No third-party JavaScript runtime dependency. Exit clears owned DOM/listeners; hidden preserves native state. JSDOM actual564 compose/native input/submit/early missing host/late failure/reduced/old nodes/loader tests pass; native browser pixels, Fixedsys typography, CSS animation appearance not verified."
+    ]
   },
   {
     "id": "axiom:carved-toggle",
@@ -16986,40 +16979,33 @@
   },
   {
     "id": "psone:console-control-scene",
-    "title": "早期游戏机菜单场景",
     "source": "PSone.css",
     "repository": "https://github.com/micah5/PSone.css",
     "revision": "c0c302577c2e8d3bbfb82c65d5ba34c4f03b58fc",
-    "sourcePath": "index.html",
     "upstream": "https://github.com/micah5/PSone.css/blob/c0c302577c2e8d3bbfb82c65d5ba34c4f03b58fc/index.html",
-    "website": "https://micah5.github.io/PSone.css/",
-    "license": "MIT (root text verified; runtime/assets not closed)",
-    "behavior": "原完整展示以早期游戏菜单、立体边框和像素文字呈现按钮、容器与表单。",
-    "difference": "完整固定示例场景，非单独引擎；同一来源控件/配色/预设不拆数。",
-    "description": "原完整展示以早期游戏菜单、立体边框和像素文字呈现按钮、容器与表单。",
-    "gaps": [
-      "低优先级风格候选；依赖PSone CSS与fonts，Final_Fantasy_VII/Play/RationalTWDisplay/pixcyr2字体权利未独立闭合，不能随根MIT直接再分发。",
-      "页面logo、PlayStation/Final Fantasy品牌标记与字符图形不因代码MIT获得授权；不搬logo/游戏品牌素材，替换须说明。",
-      "只是一组CSS控件，不含游戏机模拟、真实保存/联网或账号功能；局部form需本地示例，焦点/对比度与中文字体降级待验。",
-      "固定源码及完整根许可已存证；未构建、未运行、未截图，completedPreviewCount=0。"
-    ],
-    "category": "视觉与动效",
+    "sourcePath": "index.html",
     "licenseEvidence": {
       "url": "https://github.com/micah5/PSone.css/blob/c0c302577c2e8d3bbfb82c65d5ba34c4f03b58fc/LICENSE",
       "sha256": "b1bcdcbe69c6c70f0ee1938ddd2a279efa097a2743a52b510c8cb6a6e32954ef",
       "scope": "Complete original root license retained; runtime/media separate"
     },
-    "sourceSha256": "92bd279e96212d084b0ba450ca75de30b537914ebd3faa5bdcdd1769dd3c82cf",
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-style-529",
-    "sourceScope": "Selected fixed original source and root license; full read-only repo clone retained privately",
-    "kind": "原版风格组件族（仅来源）",
-    "buildStatus": "Fixed source inspected; not built or visually accepted",
-    "adaptationPriority": "optional-low"
+    "difference": "完整固定示例场景，非单独引擎；同一来源控件/配色/预设不拆数。",
+    "website": "https://micah5.github.io/PSone.css/",
+    "title": "复古主机立体控件精选",
+    "description": "原官方五组按钮、容器、进度、单选与表单示例；系统等宽字体回退，不包含游戏标志、媒体或虚构主机功能。",
+    "behavior": "原官方五组按钮、容器、进度、单选与表单示例；系统等宽字体回退，不包含游戏标志、媒体或虚构主机功能。",
+    "kind": "原版风格组件族",
+    "format": "精选组件图鉴",
+    "category": "展示与媒体",
+    "license": "MIT",
+    "batch": "psone-css-01",
+    "preview": "batches/psone-css-01/console/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Fixed original PSone.css official index selections: five complete original sections Buttons, Containers, Progress bars, Radios, Forms. All source section DOM retained, not a new game/desktop application. Original colored gradient buttons, blue/gray container surfaces, percentage progress bars, native radios and text fields retained as ONE family, not variants counted separately. Original buttons/progress are presentation, no game save/login/transaction or task progress asserted. Entire original Icons section, header/logo/favicon/GIF glyphs excluded. Four unclosed font-face families (FinalFantasyVII,PixelCyr,Play,RationalTWDisplay) are not distributed or loaded; system monospace fallback and explicitly disclosed body/input/title metric adjustments keep text usable, so typography is NOT original proprietary pixel font. No custom replacement glyphs. Original selected surface CSS preserved, source icon rules stripped, original inline responsive styles retained; host adds readable spacing/focus indication and pause/reduced rules. No network/telemetry/clipboard/storage, no JS timers or animation engine. Native input state remains through hidden/resume; exit/error listeners removed and original content cleared. Actual564compose/loader and JSDOM radio/field/disabled/hidden state/earlymissinghost/latefailure/oldnodecleanup pass; CSS animation/raster/pixel/font native rendering not verified."
+    ]
   },
   {
     "id": "geobootstrap:early-web-playground",
@@ -17917,42 +17903,35 @@
   },
   {
     "id": "hanziwriter:stroke-practice-scene",
-    "title": "汉字笔画演示与书写练习",
     "source": "Hanzi Writer",
     "repository": "https://github.com/chanind/hanzi-writer",
     "revision": "83a762374e2344f2fb8cceca4a2ac5dfeca386f5",
-    "sourcePath": "demo/index.html",
     "upstream": "https://github.com/chanind/hanzi-writer/blob/83a762374e2344f2fb8cceca4a2ac5dfeca386f5/demo/index.html",
-    "license": "MIT (code only; character data separate) (complete actual root text; runtime/media not closed)",
-    "behavior": "原 demo 可更换汉字、显示/隐藏字形与轮廓、逐笔动画并进入笔顺练习；正确/错误笔画回调返回用户轨迹。",
-    "difference": "区别静态图标或文字动画：内容是可接受用户笔画的汉字练习场景，完整一族，不按每个字计数。",
-    "styleTags": [
-      "书写/内容交互"
-    ],
-    "gaps": [
-      "字形与笔顺数据源自 Make Me a Hanzi/Arphic，README 明示 Arphic Public License，不能用根 MIT 覆盖，数据许可全文与实际字符包还待闭合。原页面加载 polyfill.io 外脚本必须删除/本地替代；动态字库加载、重换字销毁/晚到回调、练习命中与移动端未验，不能宣称离线可用。",
-      "仅只读源码筛选；未安装/构建/运行、交互生命周期或浏览器视觉验收。"
-    ],
-    "description": "原 demo 可更换汉字、显示/隐藏字形与轮廓、逐笔动画并进入笔顺练习；正确/错误笔画回调返回用户轨迹。 区别静态图标或文字动画：内容是可接受用户笔画的汉字练习场景，完整一族，不按每个字计数。",
-    "category": "展示与媒体",
+    "sourcePath": "demo/index.html",
     "licenseEvidence": {
       "url": "https://github.com/chanind/hanzi-writer/blob/83a762374e2344f2fb8cceca4a2ac5dfeca386f5/LICENSE",
       "sha256": "7735d83cdf892c8db41c27103b42c89b4b63149770c1e08ae13cbbebb81da637",
       "scope": "Complete actual root license; transitive code and media permissions not closed"
     },
-    "sourceEvidence": {
-      "localFile": "evidence/chanind--hanzi-writer--demo__index.html",
-      "sha256": "fefd50eac7047a344c8f6f2708c0f33b1b2e72dbea82b9d819cb1e3eda44f36a"
-    },
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-style-530",
-    "sourceScope": "Fixed original complete UI/demo source and full root license; not a runnable adaptation or full asset archive",
-    "kind": "原版交互场景（仅来源）",
-    "buildStatus": "fixed source and full root license read; not built/run/visually accepted"
+    "difference": "区别静态图标或文字动画：内容是可接受用户笔画的汉字练习场景，完整一族，不按每个字计数。",
+    "title": "汉字笔顺与描红练习",
+    "description": "原笔顺引擎、轮廓、动画与真实轨迹识别练习，离线内置我、人、永三字；字形独立许可与完整原数据保留。",
+    "behavior": "原笔顺引擎、轮廓、动画与真实轨迹识别练习，离线内置我、人、永三字；字形独立许可与完整原数据保留。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "输入与选择",
+    "license": "MIT (engine); Arphic Public License (unchanged original glyph/stroke data)",
+    "batch": "hanziwriter-01",
+    "preview": "batches/hanziwriter-01/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "actual564 compose原路径/真实错误与正确笔画匹配/换字/隐藏退出测试通过；视觉未验",
+    "gaps": [
+      "离线仅原我/人/永3字，未内置字不会联网，非完整字库。",
+      "不使用未核HEX颜色解析分支，改等值RGB常量；字形/中线/识别原实现保留。",
+      "字形数据Arphic Public License独立于引擎MIT，原license及3JSON真实公开。",
+      "JSDOM几何fixture不等于真实笔设备/触控/视觉验收；字体沿原sans-serif回退。"
+    ]
   },
   {
     "id": "zulip:topic-organized-collaboration",
