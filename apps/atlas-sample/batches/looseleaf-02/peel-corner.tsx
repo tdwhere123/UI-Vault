@@ -13,7 +13,7 @@ export const meta = {
 
 export default function Example() {
   const [open, setOpen] = React.useState(false)
-  const [copied, setCopied] = React.useState(false)
+  const [copied, setCopied] = React.useState<boolean | string>(false)
   return (
     <div className="flex flex-col items-center gap-3">
       <PeelCorner peeled={open} onPeeledChange={setOpen} className="w-80" label="Reveal the voucher code">
@@ -28,11 +28,16 @@ export default function Example() {
               size="xs"
               variant="outline"
               onClick={async () => {
-                await navigator.clipboard?.writeText("FREE-10")
-                setCopied(true)
+                try {
+                  if (!navigator.clipboard?.writeText) throw new Error("Clipboard unavailable")
+                  await navigator.clipboard.writeText("FREE-10")
+                  setCopied(true)
+                } catch {
+                  setCopied("Copy unavailable")
+                }
               }}
             >
-              {copied ? "Copied" : "Copy code"}
+              {copied === true ? "Copied" : typeof copied === "string" ? copied : "Copy code"}
             </Button>
           </div>
         </PeelCornerUnder>
