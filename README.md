@@ -2,7 +2,7 @@
 
 网站：<https://tdwhere123.github.io/UI-Vault/>
 
-当前有 **564 条可直接打开预览（241 条原始素材＋323 条后续接入预览）**，目标为 **1000 条可查看素材**，还差 **436 条**。另有 **251 条待适配来源记录**，只是工作清单，**不计入1000目标完成数**。图标按系列计数，不按单枚glyph、字重或尺寸凑数，已有重叠暂待统一整理。
+当前有 **566 条可直接打开预览（241 条原始素材＋325 条后续接入预览）**，目标为 **1000 条可查看素材**，还差 **434 条**。另有 **249 条待适配来源记录**，只是工作清单，**不计入1000目标完成数**。图标按系列计数，不按单枚glyph、字重或尺寸凑数，已有重叠暂待统一整理。
 
 ## 当前内容
 
@@ -477,3 +477,9 @@ Restored **1 existing pending entries**, without adding source-only records: Hea
 Restored **2 existing pending entries**, without adding source-only records: Eldora · 导航与抽屉展示, Eldora · 三档功能对照表. Each keeps the actual source mechanism and its disclosed adaptation boundary, complete license text and lifecycle tests. Authored local host controls, replacement text, system fonts and static math are identified rather than misrepresented as original services or external data. No new permissions, network services, screenshots or covers.
 
 **564 viewable / 1000 target, 436 remaining**. The **251 source-only records remain pending**, not completed entries. Worklist count remains815. Mapped covers remain470; 94 posterless previews use bounded live cards. Existing records outside the restored IDs, all Grok images/reports and main interface behavior are preserved. DOM/Canvas command tests are not native pixel, touch, typography or performance acceptance.
+
+## Existing-source preview conversion · 566 directly viewable
+
+Restored **2 existing pending entries**, without adding source-only records: SmoothUI · 立体书封, SmoothUI · 富链接阅读弹层. Each keeps the actual source mechanism and its disclosed adaptation boundary, complete license text and lifecycle tests. Authored local host controls, replacement text, system fonts and static math are identified rather than misrepresented as original services or external data. No new permissions, network services, screenshots or covers.
+
+**566 viewable / 1000 target, 434 remaining**. The **249 source-only records remain pending**, not completed entries. Worklist count remains815. Mapped covers remain470; 96 posterless previews use bounded live cards. Existing records outside the restored IDs, all Grok images/reports and main interface behavior are preserved. DOM/Canvas command tests are not native pixel, touch, typography or performance acceptance.
