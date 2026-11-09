@@ -2573,28 +2573,27 @@
   },
   {
     "id": "smoothui:book",
-    "title": "立体书封交互",
     "source": "SmoothUI",
-    "license": "MIT (root code notice; external artwork not included)",
     "upstream": "https://github.com/educlopez/smoothui/tree/c45420a8523ec60a92f7724a2418ab83edaa1425/packages/smoothui/components/book",
     "website": "",
-    "buildStatus": "not installed or built",
-    "batch": "batch-002",
-    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "revision": "c45420a8523ec60a92f7724a2418ab83edaa1425",
+    "title": "SmoothUI · 立体书封",
+    "description": "原纯CSS立体书封，保留书脊、页边、条纹和悬停变换；装饰性书封，不是阅读器或购买界面。",
+    "behavior": "原纯CSS立体书封，保留书脊、页边、条纹和悬停变换；装饰性书封，不是阅读器或购买界面。",
+    "kind": "原版立体视觉组件",
+    "format": "完整交互场景",
+    "category": "视觉与动效",
+    "license": "MIT",
+    "batch": "smooth-book-01",
+    "preview": "batches/smooth-book-01/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original source geometry, actual541compose, preference/lifecycle/failure DOM tests passed; browser visual QA not run.",
     "gaps": [
-      "Workspace aliases and shared package dependencies require integration; source closure checked, build not attempted.",
-      "Official shared data includes remote generated portraits, scenes, app icons and sample product artwork. Asset URLs preserved for reference; binaries not downloaded and image redistribution rights not assumed.",
-      "Root documentation CSS imports external fumadocs package styles; original lock retained.",
-      "Visual fidelity, animation, mobile behavior, accessibility and interaction correctness not yet tested.",
-      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。",
-      "519轮源码复筛：有纸页厚度/书脊CSS材质，但仅hover旋转封面，没有翻页/内容阅读交互。本轮不以书名变体计数。"
-    ],
-    "sourceReview": {
-      "revision": "c45420a8523ec60a92f7724a2418ab83edaa1425",
-      "sha256": "d2cf6efbcded07ef1c2bdd9dffefa22aac46901343f0c77bce8b9a208c860aa2",
-      "decision": "keep source-only; do not count preview",
-      "note": "有纸页厚度/书脊CSS材质，但仅hover旋转封面，没有翻页/内容阅读交互。本轮不以书名变体计数。"
-    }
+      "Browser visual QA not run: CSS3D hover, gradients, cqw geometry, shadows and system font metrics unverified.",
+      "Decorative static/hover cover, not interactive reading or purchase; no original keyboard action.",
+      "Motion reduced-motion hook transparently replaced with scoped local subscription; original Book geometry retained."
+    ]
   },
   {
     "id": "smoothui:dither-chart",
@@ -2958,27 +2957,28 @@
   },
   {
     "id": "smoothui:rich-popover",
-    "title": "媒体富内容浮层",
     "source": "SmoothUI",
-    "license": "MIT (root code notice; external artwork not included)",
     "upstream": "https://github.com/educlopez/smoothui/tree/c45420a8523ec60a92f7724a2418ab83edaa1425/packages/smoothui/components/rich-popover",
     "website": "",
-    "buildStatus": "Fixed source and root MIT reviewed; NOT built or runtime-tested; incomplete or overlapping candidate, excluded from gallery",
-    "batch": "batch-002",
-    "description": "原圆角引用卡浮层，展示标题、说明、时间及操作；不含图片/视频播放器。",
+    "revision": "c45420a8523ec60a92f7724a2418ab83edaa1425",
+    "title": "SmoothUI · 富链接阅读弹层",
+    "description": "原正文富链接与详细说明弹层，支持键盘开关、Escape和点外关闭；保留上游示例文字，不播放视频或访问外站。",
+    "behavior": "原正文富链接与详细说明弹层，支持键盘开关、Escape和点外关闭；保留上游示例文字，不播放视频或访问外站。",
+    "kind": "原版富内容交互组件",
+    "format": "完整交互场景",
+    "category": "Agent与对话",
+    "license": "MIT; ISC; Apache-2.0; 0BSD",
+    "batch": "smooth-rich-popover-01",
+    "preview": "batches/smooth-rich-popover-01/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "pass",
     "gaps": [
-      "固定入口与根MIT已核，未构建；Radix/Motion/SmoothButton等实际依赖许可尚待核齐。",
-      "内部无img/video，不缺远程照片；官方demo的推广正文不是本轮已核实时事实，未来须替换为明确本地引用。",
-      "原span触发器缺键盘可达性，外站跳转和默认品牌图标需处理；不可放宽CSP。",
-      "已有减少运动分支，但关闭exit属性不代表退出动画实际运行；与已有引用浮层去重后才考虑恢复。",
-      "519轮源码复筛：原Radix富内容popover可开关，但与已收行内citation语义/布局相近；原demo指YouTube宣传链接，无本地媒体内容。"
-    ],
-    "sourceReview": {
-      "revision": "c45420a8523ec60a92f7724a2418ab83edaa1425",
-      "sha256": "d93ed9982b3ca2def564eeacb56dfd5e3d0a162a00d5d1decfbac43a8109f1b6",
-      "decision": "keep source-only; do not count preview",
-      "note": "原Radix富内容popover可开关，但与已收行内citation语义/布局相近；原demo指YouTube宣传链接，无本地媒体内容。"
-    }
+      "Browser visual rendering/geometry not inspected.",
+      "All article claims are upstream demo copy, not current factual assertions.",
+      "Original links retained as attribution; sandbox does not permit popups. No navigation, YouTube player, network API or playback is claimed.",
+      "Motion initial reduced-motion mode tested; instantaneous OS preference change not claimed. Hiding closes and unmounts the popover; restoration starts closed."
+    ]
   },
   {
     "id": "smoothui:scrubber",
