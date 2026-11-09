@@ -2215,20 +2215,31 @@
   },
   {
     "id": "spring:springy-boxes",
-    "title": "35个立体方块的弹簧空间编排",
     "source": "react-spring official demos",
-    "license": "MIT",
     "upstream": "https://github.com/pmndrs/react-spring/tree/eb09c7914721c2e5957c4bc817d7abddf317576c",
     "website": "",
-    "buildStatus": "not built",
-    "batch": "batch-002",
-    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "revision": "eb09c7914721c2e5957c4bc817d7abddf317576c",
+    "title": "弹簧盒子空间编排",
+    "description": "原完整 Three/GPU 场景与真实空间变换；不可用明确报错，不模拟替代。",
+    "behavior": "原完整 Three/GPU 场景与真实空间变换；不可用明确报错，不模拟替代。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "视觉与动效",
+    "license": "MIT",
+    "batch": "spatial-gpu-02",
+    "preview": "batches/spatial-gpu-02/springy-boxes/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "actual554 compose, real original engine commands and key lifecycle verified; no native pixels",
     "gaps": [
-      "Old sandbox dependencies may need transparent compatibility adaptation",
-      "Remote photos and rocket image not included",
-      "springy-boxes requires actual WebGL testing and interval cleanup review",
-      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
-    ]
+      "原生 GPU/像素未验；实际引擎渲染命令和生命周期在模拟GL下验证。"
+    ],
+    "runtime": {
+      "scripts": [
+        "runtime-three.js",
+        "runtime.js"
+      ]
+    }
   },
   {
     "id": "kibo:calendar",
@@ -11996,34 +12007,39 @@
   },
   {
     "id": "dmn-js:decision-table-editor",
-    "title": "DMN-js · 原版决策规则表编辑器",
     "source": "DMN-js",
-    "revision": "9a030255f758869b8bf445a465c75eeacd0dbbec",
     "repository": "https://github.com/bpmn-io/dmn-js",
-    "sourceFile": "packages/dmn-js-decision-table/src/Editor.js",
-    "license": "Custom bpmn.io license (MIT-style + mandatory visible watermark); not plain MIT",
-    "description": "原输入/输出规则矩阵、命中策略、编辑与上下文菜单；不等于真实决策执行服务。",
-    "gaps": [
-      "必须保留原bpmn.io水印代码与完整可见性，不能按纯MIT移除。",
-      "dmn-font/FEEL及Inferno/table-js/diagram-js完整依赖许可与资源未闭合，不包装字体二进制。",
-      "原剪贴板/keybindings、XML/导出入口需本地门控；编辑/撤销/拖动取消/退出未验证。",
-      "无可运行preview或像素验收，不计入主图鉴。"
-    ],
+    "revision": "9a030255f758869b8bf445a465c75eeacd0dbbec",
     "upstream": "https://github.com/bpmn-io/dmn-js/blob/9a030255f758869b8bf445a465c75eeacd0dbbec/packages/dmn-js-decision-table/src/Editor.js",
-    "buildStatus": "source-only; exact source/root license read; not installed, built or runtime-tested",
-    "kind": "完整交互场景",
-    "category": "数据与状态",
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-review-next-517",
-    "sourceScope": "Selected original code and full root license only; not runtime dependency closure",
     "licenseEvidence": {
       "url": "https://github.com/bpmn-io/dmn-js/blob/9a030255f758869b8bf445a465c75eeacd0dbbec/LICENSE",
       "sha256": "5788cf8bd61481776cee1c943595525499a1355c045e9244f92e6c8092c06770",
       "scope": "Complete root license; transitive runtime/assets not fully audited"
+    },
+    "title": "决策规则表编辑器",
+    "description": "原完整决策规则表，FEEL 与注释编辑、撤销重做及本地 XML。",
+    "behavior": "原完整决策规则表，FEEL 与注释编辑、撤销重做及本地 XML。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "数据与状态",
+    "license": "bpmn.io license (mandatory watermark); MIT; ISC; OFL-1.1",
+    "batch": "dmn-table-01",
+    "preview": "batches/dmn-table-01/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "pass",
+    "gaps": [
+      "JSDOM controlled geometry/innerText fixtures, not native browser typography, pointer precision, accessibility or pixel verification.",
+      "Only original decision table editor is exposed, not whole DMN DRD/literal/boxed suite. No decision execution, cloud/storage saving, file import/export or external service.",
+      "Hidden rebuild preserves committed local XML but resets undo history and in-progress uncommitted field state.",
+      "Original bpmn.io watermark and links retained under mandatory license condition. Cannot remove or cover it in downstream reuse.",
+      "dmn-font original SVG outlines converted to OFL CSS masks rather than binary font; system body font."
+    ],
+    "runtime": {
+      "scripts": [
+        "runtime-part-01.js",
+        "runtime.js"
+      ]
     }
   },
   {
@@ -13764,37 +13780,32 @@
   },
   {
     "id": "vanta:spatial-network-field",
-    "title": "Vanta空间线网氛围",
     "source": "Vanta",
     "repository": "https://github.com/tengbao/vanta",
     "revision": "f8b351906688b56f0fc744e53bde81fc3c56f150",
-    "sourcePath": "src/vanta.net.js",
     "upstream": "https://github.com/tengbao/vanta/blob/f8b351906688b56f0fc744e53bde81fc3c56f150/src/vanta.net.js",
-    "license": "MIT (root source text verified; runtime/assets not closed)",
-    "behavior": "原Three空间点阵按距离连线，视点响应指针，点缓慢绕转与明暗混合形成深色几何氛围。",
-    "difference": "纯装饰空间场而非真实Agent拓扑；整个参数/配色体系只计一族，不把各背景效果拆数。",
-    "description": "原Three空间点阵按距离连线，视点响应指针，点缓慢绕转与明暗混合形成深色几何氛围。 纯装饰空间场而非真实Agent拓扑；整个参数/配色体系只计一族，不把各背景效果拆数。",
-    "gaps": [
-      "仅NET源适用此记录；Fog另引用Patricio与Morgan McGuire外部噪声，未闭权利而排除，根MIT不覆盖它的全部派生链。",
-      "依赖Three版本/API兼容、GPU、资源销毁、异步resize帧、隐藏/退出未测；原init失败会只留底色，适配必须明确失败不能冒充运行成功。",
-      "原Raycaster创建被注释，不宣称已启用指针近点放大；设备方向虽支持但默认关闭，未申请权限。",
-      "仅固定原入口和相关源码审查；完整依赖、媒体/字体权利、默认隔离运行、生命周期、浏览器视觉均未验。"
-    ],
-    "category": "视觉与动效",
+    "sourcePath": "src/vanta.net.js",
     "licenseEvidence": {
       "url": "https://github.com/tengbao/vanta/blob/f8b351906688b56f0fc744e53bde81fc3c56f150/LICENSE.md",
       "sha256": "65df69dccc2a06fcf307e81da62c0f64b4abc03fe64a23944427a69642edadcb",
       "scope": "Complete original root text read; not complete runtime/media/license closure"
     },
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-bulk-524",
-    "sourceScope": "Selected fixed original source and root license; no full runnable archive",
-    "kind": "原版完整场景（仅来源）",
-    "buildStatus": "Fixed original source read; not built, run or visually accepted"
+    "difference": "纯装饰空间场而非真实Agent拓扑；整个参数/配色体系只计一族，不把各背景效果拆数。",
+    "title": "空间连线网络",
+    "description": "原完整 Three/GPU 场景与真实空间变换；不可用明确报错，不模拟替代。",
+    "behavior": "原完整 Three/GPU 场景与真实空间变换；不可用明确报错，不模拟替代。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "视觉与动效",
+    "license": "MIT",
+    "batch": "spatial-gpu-02",
+    "preview": "batches/spatial-gpu-02/vanta-net/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "actual554 compose, real original engine commands and key lifecycle verified; no native pixels",
+    "gaps": [
+      "原生 GPU/像素未验；实际引擎渲染命令和生命周期在模拟GL下验证。"
+    ]
   },
   {
     "id": "wavesurfer:audio-region-review",
@@ -17573,61 +17584,45 @@
   },
   {
     "id": "twemoji:color-emoji-family",
-    "title": "Twemoji · 彩色表情符号系列",
     "source": "Twemoji (jdecked community continuation)",
     "repository": "https://github.com/jdecked/twemoji",
     "revision": "b6b55fef1e8636b540a6d016a4729ca8cdf2e60b",
-    "sourcePath": "assets/svg/1f916.svg",
     "upstream": "https://github.com/jdecked/twemoji/blob/b6b55fef1e8636b540a6d016a4729ca8cdf2e60b/assets/svg/1f916.svg",
-    "license": "Graphics CC-BY-4.0; code MIT (both complete actual files read)",
-    "visualStyle": "36px原生画布的平涂彩色表情，圆润色块与少量内阴影，区别OpenMoji描边风格。",
-    "behavior": "四个原SVG样本覆盖机器人、气泡、脑和附件，用于Exodus消息反应与富内容标记；静态图形不自带表情选择器或发送功能。",
-    "difference": "整个Twemoji设计系列一条，不按Unicode码位、肤色、组合或字号拆数；现有Emoji Mart是选择交互不是同一套美术来源，不把它们合成新增多个入口。",
-    "description": "Twemoji平涂彩色表情符号系列，适合消息反应和富内容标签；整套美术风格只记一条，不按单枚表情计数。",
-    "gaps": [
-      "实际LICENSE-GRAPHICS为完整CC BY4，代码另MIT，不能把SVG称MIT；公开改编须保留Twemoji项目及原作者/版权、许可链接和修改说明，不暗示Twitter或维护者背书。",
-      "仅固定读取4SVG样本与双LICENSE/README，未收完整Unicode族/组合及目录映射，也未适配搜索/可访问名称或复制，不声称全系列可查看。",
-      "本轮不运行原DOM解析器、不接CDN、不读取或改写用户消息；若未来采用解析代码需核网络默认路径、安全输入与清理边界。",
-      "与OpenMoji用途相近但美术体系不同；尚未做原生像素并排验收、全量SVG安全和跨尺寸排版验证，无字体/PNG二进制或封面。"
-    ],
-    "category": "图标系列",
-    "format": "图标家族",
-    "kind": "图标系列",
-    "counts": {
-      "independentFamily": 1,
-      "completedPreviews": 0
-    },
+    "sourcePath": "assets/svg/1f916.svg",
     "licenseEvidence": {
       "url": "https://github.com/jdecked/twemoji/blob/b6b55fef1e8636b540a6d016a4729ca8cdf2e60b/LICENSE-GRAPHICS",
       "sha256": "8ae9438818c26e4873b91d8c6ad620526c011e27e125677f13031eda903f007c",
       "scope": "Actual complete CC-BY-4.0 graphics and MIT code license read; four fixed SVG samples only"
     },
-    "sourceEvidence": [
-      {
-        "path": "assets/svg/1f4ac.svg",
-        "sha256": "3cd2e0204c15fc63a774987307640088a7125ff99ac5748776ffabc0531ee466"
-      },
-      {
-        "path": "assets/svg/1f4ce.svg",
-        "sha256": "9f2588001d33bbd832b3ceeb48dbe2ae15101d47a433bd40fbebaa7e8eac3a62"
-      },
-      {
-        "path": "assets/svg/1f916.svg",
-        "sha256": "20e5f9466f9c909d9cdf67a83af252df198ba686c57cfc0271afab9d48cee699"
-      },
-      {
-        "path": "assets/svg/1f9e0.svg",
-        "sha256": "74941007c155caffc21e0cf1da9935688adc5a13b49704a69d1c8b682ae81293"
-      }
+    "difference": "整个Twemoji设计系列一条，不按Unicode码位、肤色、组合或字号拆数；现有Emoji Mart是选择交互不是同一套美术来源，不把它们合成新增多个入口。",
+    "title": "彩色表情基础单码位子集",
+    "description": "原系列的1422个基础单码位表情，可搜索分页；并非完整4009图形，2587个组合、旗帜、肤色等其余图形尚未接入。",
+    "behavior": "原系列的1422个基础单码位表情，可搜索分页；并非完整4009图形，2587个组合、旗帜、肤色等其余图形尚未接入。",
+    "kind": "图标系列",
+    "format": "图标家族",
+    "category": "图标系列",
+    "license": "CC-BY-4.0 graphics; original MIT code notice also retained",
+    "batch": "twemoji-subset-01",
+    "preview": "batches/twemoji-subset-01/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Actual554 compose/direct HTML and selected original SVG checks passed; pixels unverified",
+    "gaps": [
+      "基础单码位子集1422/原4009文件，不含组合、旗帜序列及5肤色修饰符；其余2587文件未接入。",
+      "按原表情/码位搜索，无额外语义名称词典；尺寸/码位不作为新条目。",
+      "原SVG图形CCBY4.0，保留项目及作者归属；不是MIT图形或商标/品牌背书。",
+      "原图像素、颜色与跨浏览器排版未视觉验收。"
     ],
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-style-530",
-    "sourceScope": "Four fixed SVG samples, two complete original licenses and README, not complete runnable/archive",
-    "buildStatus": "Fixed original source read; not built, run or visually accepted"
+    "runtime": {
+      "scripts": [
+        "data-01.js",
+        "data-02.js",
+        "data-03.js",
+        "data-04.js",
+        "data-05.js",
+        "runtime.js"
+      ]
+    }
   },
   {
     "id": "atropos:layered-forest-scene",
@@ -20952,6 +20947,174 @@
     "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
     "gaps": [
       "Original full Meta AstryX template retained, including original local fixture data and state logic; not an independently rebuilt shell. Fixed source repository workspace0.7.12 uses actual installedcore/theme/build0.7.11 compatibility runtime with exact emitted versions below. Recharts3.9.2 and original Heroicons/Lucide glyph dependencies are licensed. No media/font/image assets needed. Original page data is illustrative, not live alerts, real invoices, actual model benchmarks or real cohort analytics. Original buttons without handlers (such as Export/Download PDF/CLI actions) remain demonstrative controls, no downloads or business action are claimed. Shared neutralTheme/StyleX/LayerProvider per-template independent IIFE. Documentation-design only: original clipboard CodeBlock affordance disabled using supportedhasCopyButton=false; page and exact runtime Outline history.pushState removed for opaque iframe while retaining original scroll/focus/selection. External navigation and form submission blocked by host. Hidden unmount resets ephemeral local state; visible mounts fresh; exit/error releases owned resources. Actual553compose and createPreviewLoader/cache/release plus each page key original behavior tested with JSDOM APIs; chart layout dimensions and native SVG/CSS/pixel rendering are not visually verified. Exact StyleX CSS parse warning separately recorded. Full root and actual emitted runtime licenses included, including victory-vendor bundledD3 texts; prior core/StyleX missing-file official supplements expressly identified. No real AI/backend/service integration."
+    ]
+  },
+  {
+    "id": "astryx:form-wizard-dialog",
+    "source": "Meta AstryX",
+    "repository": "https://github.com/meta/astryx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/cli/assets/templates/pages/form-wizard-dialog/page.tsx",
+    "sourcePath": "packages/cli/assets/templates/pages/form-wizard-dialog/page.tsx",
+    "licenseEvidence": {
+      "url": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/LICENSE",
+      "sha256": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473",
+      "scope": "Complete fixed original MIT; actual runtime dependency notices supplied in preview assets."
+    },
+    "title": "定期报告三步向导",
+    "description": "原完整页面与本地示例数据，保留原页面结构及本地状态；不提供后台服务。",
+    "behavior": "原完整页面与本地示例数据，保留原页面结构及本地状态；不提供后台服务。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "产品与营销",
+    "license": "MIT AND ISC AND BSD-3-Clause",
+    "batch": "astryx-expansion-03",
+    "preview": "batches/astryx-expansion-03/form-wizard-dialog/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Original full Meta AstryX pages retained byte-for-byte, not rebuilt business shells. Fixed source0.7.12 repository and actual installedcore/theme/build0.7.11 compatibility runtime disclosed with exact emitted dependencies. All datasets, invoices, reports, users and CI results are illustrative. form-wizard-dialog is upstream isInline gallery presentation, NOT an actual opening modal or report list: original3steps report/data,frequency/date/timezone,recipients/attachment; completion toast/reset only, no scheduling or email. Existing form-wizard is a distinct4stepworkspace/invitation/plan/review flow, not this one. form-wizard-inline is original6stepCI local simulation including timer-driven Connect/Inspect/Trial and reachable runner-memory failure; no repository/network/command execution. dashboard-progress originalphase filtering of Gantt/workstreams/risks; comparison original analytics fixture controls; composition originalportfolio surface with range-label selection (do not claim selecting a range recomputes static series). documentation originalstaticcomponent landing page, no external destination or business action claimed. Original no-op Export/View more/Get started controls remain illustrations. Host blocks navigation and forms, labels fictional context explicitly, supplies shared neutralTheme/StyleX/LayerProvider and bounded lifecycle. Hidden unmount resets transient state; visible fresh mounts. No media or binary/font replacements. Each page independent IIFE. Tests actual553compose/createPreviewLoader/cache/release, originalkeyinteractions, sharedearly/late/reduced, CI simulatedfailure-to-recovery; no nativechartpixels/layout verification. CompiledStyleX CSS parsing warning recorded separately. Full rootMIT and actualemittedlicense texts inclvictory-vendor sublicenses; core/StyleX missing-fileofficialsupplements disclosed."
+    ]
+  },
+  {
+    "id": "astryx:form-wizard-inline",
+    "source": "Meta AstryX",
+    "repository": "https://github.com/meta/astryx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/cli/assets/templates/pages/form-wizard-inline/page.tsx",
+    "sourcePath": "packages/cli/assets/templates/pages/form-wizard-inline/page.tsx",
+    "licenseEvidence": {
+      "url": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/LICENSE",
+      "sha256": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473",
+      "scope": "Complete fixed original MIT; actual runtime dependency notices supplied in preview assets."
+    },
+    "title": "连续集成设置流程",
+    "description": "原完整页面与本地示例数据，保留原页面结构及本地状态；不提供后台服务。",
+    "behavior": "原完整页面与本地示例数据，保留原页面结构及本地状态；不提供后台服务。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "产品与营销",
+    "license": "MIT AND ISC AND BSD-3-Clause",
+    "batch": "astryx-expansion-03",
+    "preview": "batches/astryx-expansion-03/form-wizard-inline/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Original full Meta AstryX pages retained byte-for-byte, not rebuilt business shells. Fixed source0.7.12 repository and actual installedcore/theme/build0.7.11 compatibility runtime disclosed with exact emitted dependencies. All datasets, invoices, reports, users and CI results are illustrative. form-wizard-dialog is upstream isInline gallery presentation, NOT an actual opening modal or report list: original3steps report/data,frequency/date/timezone,recipients/attachment; completion toast/reset only, no scheduling or email. Existing form-wizard is a distinct4stepworkspace/invitation/plan/review flow, not this one. form-wizard-inline is original6stepCI local simulation including timer-driven Connect/Inspect/Trial and reachable runner-memory failure; no repository/network/command execution. dashboard-progress originalphase filtering of Gantt/workstreams/risks; comparison original analytics fixture controls; composition originalportfolio surface with range-label selection (do not claim selecting a range recomputes static series). documentation originalstaticcomponent landing page, no external destination or business action claimed. Original no-op Export/View more/Get started controls remain illustrations. Host blocks navigation and forms, labels fictional context explicitly, supplies shared neutralTheme/StyleX/LayerProvider and bounded lifecycle. Hidden unmount resets transient state; visible fresh mounts. No media or binary/font replacements. Each page independent IIFE. Tests actual553compose/createPreviewLoader/cache/release, originalkeyinteractions, sharedearly/late/reduced, CI simulatedfailure-to-recovery; no nativechartpixels/layout verification. CompiledStyleX CSS parsing warning recorded separately. Full rootMIT and actualemittedlicense texts inclvictory-vendor sublicenses; core/StyleX missing-fileofficialsupplements disclosed."
+    ]
+  },
+  {
+    "id": "astryx:dashboard-progress",
+    "source": "Meta AstryX",
+    "repository": "https://github.com/meta/astryx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/cli/assets/templates/pages/dashboard-progress/page.tsx",
+    "sourcePath": "packages/cli/assets/templates/pages/dashboard-progress/page.tsx",
+    "licenseEvidence": {
+      "url": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/LICENSE",
+      "sha256": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473",
+      "scope": "Complete fixed original MIT; actual runtime dependency notices supplied in preview assets."
+    },
+    "title": "项目阶段与进度",
+    "description": "原完整页面与本地示例数据，保留原页面结构及本地状态；不提供后台服务。",
+    "behavior": "原完整页面与本地示例数据，保留原页面结构及本地状态；不提供后台服务。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "产品与营销",
+    "license": "MIT AND ISC AND BSD-3-Clause",
+    "batch": "astryx-expansion-03",
+    "preview": "batches/astryx-expansion-03/dashboard-progress/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Original full Meta AstryX pages retained byte-for-byte, not rebuilt business shells. Fixed source0.7.12 repository and actual installedcore/theme/build0.7.11 compatibility runtime disclosed with exact emitted dependencies. All datasets, invoices, reports, users and CI results are illustrative. form-wizard-dialog is upstream isInline gallery presentation, NOT an actual opening modal or report list: original3steps report/data,frequency/date/timezone,recipients/attachment; completion toast/reset only, no scheduling or email. Existing form-wizard is a distinct4stepworkspace/invitation/plan/review flow, not this one. form-wizard-inline is original6stepCI local simulation including timer-driven Connect/Inspect/Trial and reachable runner-memory failure; no repository/network/command execution. dashboard-progress originalphase filtering of Gantt/workstreams/risks; comparison original analytics fixture controls; composition originalportfolio surface with range-label selection (do not claim selecting a range recomputes static series). documentation originalstaticcomponent landing page, no external destination or business action claimed. Original no-op Export/View more/Get started controls remain illustrations. Host blocks navigation and forms, labels fictional context explicitly, supplies shared neutralTheme/StyleX/LayerProvider and bounded lifecycle. Hidden unmount resets transient state; visible fresh mounts. No media or binary/font replacements. Each page independent IIFE. Tests actual553compose/createPreviewLoader/cache/release, originalkeyinteractions, sharedearly/late/reduced, CI simulatedfailure-to-recovery; no nativechartpixels/layout verification. CompiledStyleX CSS parsing warning recorded separately. Full rootMIT and actualemittedlicense texts inclvictory-vendor sublicenses; core/StyleX missing-fileofficialsupplements disclosed."
+    ]
+  },
+  {
+    "id": "astryx:dashboard-comparison",
+    "source": "Meta AstryX",
+    "repository": "https://github.com/meta/astryx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/cli/assets/templates/pages/dashboard-comparison/page.tsx",
+    "sourcePath": "packages/cli/assets/templates/pages/dashboard-comparison/page.tsx",
+    "licenseEvidence": {
+      "url": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/LICENSE",
+      "sha256": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473",
+      "scope": "Complete fixed original MIT; actual runtime dependency notices supplied in preview assets."
+    },
+    "title": "用户分析比较",
+    "description": "原完整页面与本地示例数据，保留原页面结构及本地状态；不提供后台服务。",
+    "behavior": "原完整页面与本地示例数据，保留原页面结构及本地状态；不提供后台服务。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "产品与营销",
+    "license": "MIT AND ISC AND BSD-3-Clause",
+    "batch": "astryx-expansion-03",
+    "preview": "batches/astryx-expansion-03/dashboard-comparison/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Original full Meta AstryX pages retained byte-for-byte, not rebuilt business shells. Fixed source0.7.12 repository and actual installedcore/theme/build0.7.11 compatibility runtime disclosed with exact emitted dependencies. All datasets, invoices, reports, users and CI results are illustrative. form-wizard-dialog is upstream isInline gallery presentation, NOT an actual opening modal or report list: original3steps report/data,frequency/date/timezone,recipients/attachment; completion toast/reset only, no scheduling or email. Existing form-wizard is a distinct4stepworkspace/invitation/plan/review flow, not this one. form-wizard-inline is original6stepCI local simulation including timer-driven Connect/Inspect/Trial and reachable runner-memory failure; no repository/network/command execution. dashboard-progress originalphase filtering of Gantt/workstreams/risks; comparison original analytics fixture controls; composition originalportfolio surface with range-label selection (do not claim selecting a range recomputes static series). documentation originalstaticcomponent landing page, no external destination or business action claimed. Original no-op Export/View more/Get started controls remain illustrations. Host blocks navigation and forms, labels fictional context explicitly, supplies shared neutralTheme/StyleX/LayerProvider and bounded lifecycle. Hidden unmount resets transient state; visible fresh mounts. No media or binary/font replacements. Each page independent IIFE. Tests actual553compose/createPreviewLoader/cache/release, originalkeyinteractions, sharedearly/late/reduced, CI simulatedfailure-to-recovery; no nativechartpixels/layout verification. CompiledStyleX CSS parsing warning recorded separately. Full rootMIT and actualemittedlicense texts inclvictory-vendor sublicenses; core/StyleX missing-fileofficialsupplements disclosed."
+    ]
+  },
+  {
+    "id": "astryx:dashboard-composition",
+    "source": "Meta AstryX",
+    "repository": "https://github.com/meta/astryx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/cli/assets/templates/pages/dashboard-composition/page.tsx",
+    "sourcePath": "packages/cli/assets/templates/pages/dashboard-composition/page.tsx",
+    "licenseEvidence": {
+      "url": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/LICENSE",
+      "sha256": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473",
+      "scope": "Complete fixed original MIT; actual runtime dependency notices supplied in preview assets."
+    },
+    "title": "资产构成仪表板",
+    "description": "原完整页面与本地示例数据，保留原页面结构及本地状态；不提供后台服务。",
+    "behavior": "原完整页面与本地示例数据，保留原页面结构及本地状态；不提供后台服务。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "产品与营销",
+    "license": "MIT AND ISC AND BSD-3-Clause",
+    "batch": "astryx-expansion-03",
+    "preview": "batches/astryx-expansion-03/dashboard-composition/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Original full Meta AstryX pages retained byte-for-byte, not rebuilt business shells. Fixed source0.7.12 repository and actual installedcore/theme/build0.7.11 compatibility runtime disclosed with exact emitted dependencies. All datasets, invoices, reports, users and CI results are illustrative. form-wizard-dialog is upstream isInline gallery presentation, NOT an actual opening modal or report list: original3steps report/data,frequency/date/timezone,recipients/attachment; completion toast/reset only, no scheduling or email. Existing form-wizard is a distinct4stepworkspace/invitation/plan/review flow, not this one. form-wizard-inline is original6stepCI local simulation including timer-driven Connect/Inspect/Trial and reachable runner-memory failure; no repository/network/command execution. dashboard-progress originalphase filtering of Gantt/workstreams/risks; comparison original analytics fixture controls; composition originalportfolio surface with range-label selection (do not claim selecting a range recomputes static series). documentation originalstaticcomponent landing page, no external destination or business action claimed. Original no-op Export/View more/Get started controls remain illustrations. Host blocks navigation and forms, labels fictional context explicitly, supplies shared neutralTheme/StyleX/LayerProvider and bounded lifecycle. Hidden unmount resets transient state; visible fresh mounts. No media or binary/font replacements. Each page independent IIFE. Tests actual553compose/createPreviewLoader/cache/release, originalkeyinteractions, sharedearly/late/reduced, CI simulatedfailure-to-recovery; no nativechartpixels/layout verification. CompiledStyleX CSS parsing warning recorded separately. Full rootMIT and actualemittedlicense texts inclvictory-vendor sublicenses; core/StyleX missing-fileofficialsupplements disclosed."
+    ]
+  },
+  {
+    "id": "astryx:documentation",
+    "source": "Meta AstryX",
+    "repository": "https://github.com/meta/astryx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/cli/assets/templates/pages/documentation/page.tsx",
+    "sourcePath": "packages/cli/assets/templates/pages/documentation/page.tsx",
+    "licenseEvidence": {
+      "url": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/LICENSE",
+      "sha256": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473",
+      "scope": "Complete fixed original MIT; actual runtime dependency notices supplied in preview assets."
+    },
+    "title": "组件文档落地页",
+    "description": "原完整页面与本地示例数据，保留原页面结构及本地状态；不提供后台服务。",
+    "behavior": "原完整页面与本地示例数据，保留原页面结构及本地状态；不提供后台服务。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "产品与营销",
+    "license": "MIT AND ISC AND BSD-3-Clause",
+    "batch": "astryx-expansion-03",
+    "preview": "batches/astryx-expansion-03/documentation/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Original full Meta AstryX pages retained byte-for-byte, not rebuilt business shells. Fixed source0.7.12 repository and actual installedcore/theme/build0.7.11 compatibility runtime disclosed with exact emitted dependencies. All datasets, invoices, reports, users and CI results are illustrative. form-wizard-dialog is upstream isInline gallery presentation, NOT an actual opening modal or report list: original3steps report/data,frequency/date/timezone,recipients/attachment; completion toast/reset only, no scheduling or email. Existing form-wizard is a distinct4stepworkspace/invitation/plan/review flow, not this one. form-wizard-inline is original6stepCI local simulation including timer-driven Connect/Inspect/Trial and reachable runner-memory failure; no repository/network/command execution. dashboard-progress originalphase filtering of Gantt/workstreams/risks; comparison original analytics fixture controls; composition originalportfolio surface with range-label selection (do not claim selecting a range recomputes static series). documentation originalstaticcomponent landing page, no external destination or business action claimed. Original no-op Export/View more/Get started controls remain illustrations. Host blocks navigation and forms, labels fictional context explicitly, supplies shared neutralTheme/StyleX/LayerProvider and bounded lifecycle. Hidden unmount resets transient state; visible fresh mounts. No media or binary/font replacements. Each page independent IIFE. Tests actual553compose/createPreviewLoader/cache/release, originalkeyinteractions, sharedearly/late/reduced, CI simulatedfailure-to-recovery; no nativechartpixels/layout verification. CompiledStyleX CSS parsing warning recorded separately. Full rootMIT and actualemittedlicense texts inclvictory-vendor sublicenses; core/StyleX missing-fileofficialsupplements disclosed."
     ]
   }
 ]
