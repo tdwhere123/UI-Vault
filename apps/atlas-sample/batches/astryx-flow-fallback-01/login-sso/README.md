@@ -1,3 +1,7 @@
 # Meta AstryX · login-sso
 
 Complete original Meta AstryX local interaction pages, not real authentication or commerce. Exact official CLI stripTemplateAssetRefs/replaceDemoMedia with original neutral PLACEHOLDER_IMAGE replaces only original root-relative fixtures (login-sso1,checkout-wizard3); no photo/artwork delivery claimed. login-sso original email-domain routing, SSO-confirm or password-fallback, back navigation and simulated password failure. Original SSO Continue only sets loading, not a successful connection; user may Go back. checkout-wizard original four-step cart/promo/derived totals, shipping validation, delivery and payment-format checks, original local completion fixture. No network, credentials, actual payment/order/address submission. Use fictional sample input ONLY, never real cards/passwords/personal information. Fixed source0.7.12 and compatible core/theme0.7.11 runtime documented. Original page code unchanged apart from exact official media replacements and explicit autoComplete=off on every TextInput to discourage credential/card autofill; browser-specific password manager enforcement is not certified; shared bounded host owns resources and blocks navigation/submits, hidden unmount resets. Full emitted licenses. Synthetic DOM and actual compose/loader testing, native layout/image decode not verified.
+
+## SSO示范操作修正
+
+原SSO确认页Continue只进入loading，没有连接或完成分支。此处保留原输入、域名识别、提供方卡片、返回及密码失败演示；SSO Continue明确禁用，并显示本地不可连接/不会登录或跳转提示。不伪造成功，不联网，不改变付款模板或共享组件。运行包仅两处定点替换，原源差异与基线hash见独立修正证据；不是重新构建全库。测试为实际当前宿主compose与原输入/返回/密码失败逻辑，原生视觉仍未验。
