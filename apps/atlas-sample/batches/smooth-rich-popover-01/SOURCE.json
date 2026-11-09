@@ -1,0 +1,538 @@
+{
+  "repository": "https://github.com/educlopez/smoothui",
+  "revision": "c45420a8523ec60a92f7724a2418ab83edaa1425",
+  "upstreamLicense": "MIT",
+  "distributionLicense": "MIT; ISC; Apache-2.0; 0BSD",
+  "upstream": [
+    {
+      "path": "upstream/LICENSE",
+      "sha256": "9877f4310c0549e5ce26affe52ba97c4e60325472bdcdd308a92fccd90f119cc",
+      "text": "MIT License\n\nCopyright (c) 2024 Eduardo Calvo\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n"
+    },
+    {
+      "path": "upstream/cn.ts",
+      "sha256": "4acbc7165a8d54738ff62b51414e772c08fe78434e524e6d8770180d3ba2925f",
+      "text": "import { type ClassValue, clsx } from \"clsx\";\nimport { twMerge } from \"tailwind-merge\";\n\nexport function cn(...inputs: ClassValue[]) {\n  return twMerge(clsx(inputs));\n}\n"
+    },
+    {
+      "path": "upstream/demo.tsx",
+      "sha256": "9ae97c89a1dcc00daeb485a4b32de00a9573be6d201cd15bb54d1cd6fd00ff3b",
+      "text": "\"use client\";\n\nimport RichPopover, {\n  YouTubeIcon,\n} from \"@repo/smoothui/components/rich-popover\";\n\nexport default function RichPopoverDemo() {\n  return (\n    <div className=\"flex items-center justify-center p-6\">\n      <div className=\"max-w-2xl space-y-4 text-base leading-relaxed\">\n        <p className=\"text-muted-foreground\">\n          OpenAI has just announced their latest breakthrough in artificial\n          intelligence\n          <RichPopover\n            actionHref=\"https://www.youtube.com/watch?v=boJG84Jcf-4\"\n            actionLabel=\"Watch announcement\"\n            description={\n              '\"GPT-5 features state-of-the-art performance across coding, math, writing assistance, health, visual perception, and more. Use GPT-5 to build websites, create apps, and tap into its improved writing capabilities to help with everyday tasks like reports, emails, and editing.\"'\n            }\n            href=\"https://www.youtube.com/watch?v=boJG84Jcf-4\"\n            meta=\"0:00–2:15\"\n            title=\"Introducing GPT-5\"\n            trigger={\n              <span className=\"mx-2 inline-flex size-8 cursor-pointer items-center justify-center rounded-md border bg-background align-middle\">\n                <YouTubeIcon className=\"h-4 w-4 fill-red-600\" />\n              </span>\n            }\n          />\n          marking a significant leap forward in AI capabilities. This new model\n          represents the most advanced language model ever created, with\n          unprecedented performance across multiple domains including coding,\n          mathematics, and creative writing.\n        </p>\n        <p className=\"text-muted-foreground\">\n          GPT-5&apos;s enhanced capabilities extend beyond traditional text\n          processing to include improved visual perception and health-related\n          assistance, making it a versatile tool for both professional and\n          personal use. The model is now rolling out to all users, democratizing\n          access to cutting-edge AI technology.\n        </p>\n      </div>\n    </div>\n  );\n}\n"
+    },
+    {
+      "path": "upstream/rich-popover.tsx",
+      "sha256": "908979dc2aca8f3177cb0beb4435fa7419d9ae01e5dc1b2c95e44bb90a6d67a0",
+      "text": "\"use client\";\n\nimport {\n  Arrow as PopoverArrow,\n  Content as PopoverContent,\n  Portal as PopoverPortal,\n  Root as PopoverRoot,\n  Trigger as PopoverTrigger,\n} from \"@radix-ui/react-popover\";\nimport SmoothButton from \"@repo/smoothui/components/smooth-button\";\nimport { cn } from \"@repo/smoothui-utils\";\nimport { Clock, ExternalLink, Play } from \"lucide-react\";\nimport { motion, useReducedMotion } from \"motion/react\";\n\nimport type * as React from \"react\";\n\nexport interface RichTooltipProps {\n  actionHref?: string;\n  actionLabel?: string;\n  align?: \"start\" | \"center\" | \"end\";\n  className?: string;\n  description?: string;\n  href?: string;\n  icon?: React.ReactNode;\n  meta?: string;\n  onActionClick?: () => void;\n  side?: \"top\" | \"bottom\" | \"left\" | \"right\";\n  title: string;\n  trigger: React.ReactNode;\n}\n\nexport function YouTubeIcon({\n  className = \"h-4 w-4 fill-red-600\",\n}: {\n  className?: string;\n}) {\n  return (\n    <svg\n      aria-label=\"YouTube\"\n      className={className}\n      focusable=\"false\"\n      height=\"16\"\n      role=\"img\"\n      viewBox=\"0 0 16 16\"\n      width=\"16\"\n      xmlns=\"http://www.w3.org/2000/svg\"\n    >\n      <path d=\"M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z\" />\n    </svg>\n  );\n}\n\nexport default function RichTooltip({\n  trigger,\n  title,\n  description,\n  icon,\n  href,\n  actionLabel,\n  actionHref,\n  onActionClick,\n  meta,\n  className = \"\",\n  side = \"top\",\n  align = \"center\",\n}: RichTooltipProps) {\n  const shouldReduceMotion = useReducedMotion();\n  const Title = (\n    <div className=\"flex items-center gap-2 font-medium text-sm\">\n      {icon ?? <YouTubeIcon />}\n      {href ? (\n        <a\n          className=\"inline-flex items-center gap-1 hover:underline\"\n          href={href}\n          rel=\"noopener noreferrer\"\n          target=\"_blank\"\n        >\n          <span>{title}</span>\n          <ExternalLink className=\"h-3.5 w-3.5 opacity-70\" />\n        </a>\n      ) : (\n        <span>{title}</span>\n      )}\n    </div>\n  );\n\n  const renderAction = () => {\n    if (!actionLabel) {\n      return null;\n    }\n\n    const actionClassName =\n      \"bg-white text-black hover:bg-white/90 dark:bg-white dark:text-black\";\n\n    if (actionHref) {\n      return (\n        <SmoothButton\n          asChild\n          className={actionClassName}\n          shape=\"pill\"\n          size=\"xs\"\n          variant=\"solid\"\n        >\n          <a href={actionHref} rel=\"noopener noreferrer\" target=\"_blank\">\n            <Play className=\"h-3.5 w-3.5\" /> {actionLabel}\n          </a>\n        </SmoothButton>\n      );\n    }\n\n    return (\n      <SmoothButton\n        className={actionClassName}\n        onClick={onActionClick}\n        shape=\"pill\"\n        size=\"xs\"\n        type=\"button\"\n        variant=\"solid\"\n      >\n        <Play className=\"h-3.5 w-3.5\" /> {actionLabel}\n      </SmoothButton>\n    );\n  };\n\n  const Action = renderAction();\n\n  return (\n    <PopoverRoot>\n      <PopoverTrigger asChild>{trigger}</PopoverTrigger>\n      <PopoverPortal>\n        <PopoverContent\n          align={align}\n          asChild\n          className={cn(\"z-50\", className)}\n          side={side}\n          sideOffset={8}\n        >\n          <motion.div\n            animate={\n              shouldReduceMotion\n                ? { opacity: 1 }\n                : { filter: \"blur(0px)\", opacity: 1, scale: 1, y: 0 }\n            }\n            className=\"relative rounded-2xl border border-white/10 bg-black px-4 py-3 text-white shadow-xl\"\n            exit={\n              shouldReduceMotion\n                ? { opacity: 0, transition: { duration: 0 } }\n                : { filter: \"blur(8px)\", opacity: 0, scale: 0.95, y: 5 }\n            }\n            initial={\n              shouldReduceMotion\n                ? { opacity: 1 }\n                : { filter: \"blur(8px)\", opacity: 0, scale: 0.95, y: 5 }\n            }\n            transition={\n              shouldReduceMotion\n                ? { duration: 0 }\n                : {\n                    damping: 30,\n                    duration: 0.2,\n                    stiffness: 500,\n                    type: \"spring\" as const,\n                  }\n            }\n          >\n            {Title}\n            {description ? (\n              <p className=\"mt-3 max-w-xs text-balance text-base text-white/90 leading-relaxed\">\n                {description}\n              </p>\n            ) : null}\n            {meta || Action ? (\n              <div className=\"mt-4 flex items-center justify-between gap-3\">\n                {meta ? (\n                  <span className=\"inline-flex items-center gap-1 rounded-full bg-white/10 px-3 py-1 text-white text-xs\">\n                    <Clock className=\"h-3.5 w-3.5\" /> {meta}\n                  </span>\n                ) : (\n                  <span />\n                )}\n                {Action}\n              </div>\n            ) : null}\n\n            {/* Tail */}\n            <PopoverArrow className=\"fill-black\" />\n          </motion.div>\n        </PopoverContent>\n      </PopoverPortal>\n    </PopoverRoot>\n  );\n}\n"
+    },
+    {
+      "path": "upstream/smooth-button.tsx",
+      "sha256": "839897997b84fb4f6f581bc377a0549c8f7a9b75a8ceaa12b4bcc496e3a28598",
+      "text": "\"use client\";\n\nimport { cn } from \"@repo/smoothui-utils\";\nimport { cva, type VariantProps } from \"class-variance-authority\";\nimport { AnimatePresence, motion, useReducedMotion } from \"motion/react\";\nimport {\n  type ButtonHTMLAttributes,\n  cloneElement,\n  isValidElement,\n  type ReactElement,\n  type ReactNode,\n  type Ref,\n  useEffect,\n  useRef,\n} from \"react\";\n\n/**\n * SmoothButton — the first primitive of the SmoothUI Design System.\n *\n * Three orthogonal axes (see design-system/components/button.md):\n *   variant → appearance only (solid | soft | outline | ghost | link | candy)\n *   color   → hue (accent | neutral | destructive | blue | amber | green)\n *   size    → xs | sm | default | lg + icon-*\n *\n * The `color` axis only sets CSS custom props (--btn, --btn-hover, --btn-fg);\n * each `variant` consumes them generically, so 6 variants × 6 colors stay 12\n * class strings, not 36. When no `color` is given, CSS var fallbacks apply\n * (candy → brand, everything else → neutral/foreground).\n *\n * Legacy variants `default` / `secondary` / `destructive` are preserved verbatim\n * for back-compat with existing call sites and ignore the `color` axis.\n */\nconst smoothButtonVariants = cva(\n  \"relative inline-flex cursor-pointer items-center justify-center gap-2 whitespace-nowrap font-medium outline-none ring-offset-background transition-[transform,background-color,border-color,color,box-shadow] duration-150 ease-out focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-solid focus-visible:outline-offset-2 active:scale-[0.97] disabled:pointer-events-none disabled:bg-muted disabled:text-muted-foreground disabled:shadow-none disabled:ring-1 disabled:ring-foreground/20 motion-reduce:transition-none motion-reduce:active:scale-100 [&_svg]:pointer-events-none [&_svg]:shrink-0\",\n  {\n    defaultVariants: {\n      shape: \"default\",\n      size: \"default\",\n      variant: \"default\",\n    },\n    variants: {\n      color: {\n        accent:\n          \"[--btn-fg:var(--color-on-brand)] [--btn-hover:var(--color-brand-secondary)] [--btn-text:var(--color-brand-ink)] [--btn:var(--color-brand)]\",\n        amber:\n          \"[--btn-fg:var(--color-amber-fg)] [--btn-hover:var(--color-amber-hover)] [--btn-text:var(--color-amber-ink)] [--btn:var(--color-amber)]\",\n        blue: \"[--btn-fg:var(--color-blue-fg)] [--btn-hover:var(--color-blue-hover)] [--btn-text:var(--color-blue-ink)] [--btn:var(--color-blue)]\",\n        destructive:\n          \"[--btn-fg:var(--color-destructive-fg)] [--btn-hover:var(--color-destructive-hover)] [--btn-text:var(--color-destructive-ink)] [--btn:var(--color-destructive)]\",\n        green:\n          \"[--btn-fg:var(--color-green-fg)] [--btn-hover:var(--color-green-hover)] [--btn-text:var(--color-green-ink)] [--btn:var(--color-green)]\",\n        neutral:\n          \"[--btn-fg:var(--color-background)] [--btn-hover:var(--color-smooth-900)] [--btn:var(--color-foreground)]\",\n      },\n      shape: {\n        default: \"\",\n        pill: \"rounded-full!\",\n        square: \"rounded-none!\",\n      },\n      size: {\n        default: \"h-10 gap-2 rounded-md px-4 py-2 text-sm [&_svg]:size-4\",\n        icon: \"size-10 rounded-md [&_svg]:size-4\",\n        \"icon-lg\": \"size-11 rounded-lg [&_svg]:size-5\",\n        \"icon-sm\":\n          \"pointer-coarse:after:-translate-1/2 size-9 rounded-md pointer-coarse:after:absolute pointer-coarse:after:top-1/2 pointer-coarse:after:left-1/2 pointer-coarse:after:size-full pointer-coarse:after:min-h-10 pointer-coarse:after:min-w-10 pointer-coarse:after:content-[''] [&_svg]:size-4\",\n        lg: \"h-11 gap-2 rounded-lg px-8 text-base [&_svg]:size-5\",\n        sm: \"pointer-coarse:after:-translate-1/2 h-9 gap-1.5 rounded-md px-3 text-sm pointer-coarse:after:absolute pointer-coarse:after:top-1/2 pointer-coarse:after:left-1/2 pointer-coarse:after:size-full pointer-coarse:after:min-h-10 pointer-coarse:after:min-w-10 pointer-coarse:after:content-[''] [&_svg]:size-4\",\n        xs: \"pointer-coarse:after:-translate-1/2 h-7 gap-1.5 rounded-sm px-2.5 text-xs pointer-coarse:after:absolute pointer-coarse:after:top-1/2 pointer-coarse:after:left-1/2 pointer-coarse:after:size-full pointer-coarse:after:min-h-10 pointer-coarse:after:min-w-10 pointer-coarse:after:content-[''] [&_svg]:size-3.5\",\n      },\n      variant: {\n        candy:\n          \"border-[0.5px] border-on-brand/25 bg-gradient-to-b from-[var(--btn,var(--color-brand))] to-[var(--btn-hover,var(--color-brand-secondary))] text-[var(--btn-fg,var(--color-on-brand))] text-shadow-sm shadow-black/20 shadow-md ring-1 ring-[color-mix(in_oklab,var(--color-foreground)_15%,var(--btn,var(--color-brand)))] hover:from-[var(--btn-hover,var(--color-brand-secondary))] hover:to-[var(--btn-hover,var(--color-brand-secondary))] [&_svg]:drop-shadow-sm\",\n        // --- legacy (preserved verbatim, ignore `color`) ---\n        default:\n          \"bg-primary text-primary-foreground shadow-xs hover:bg-primary/90\",\n        destructive:\n          \"bg-gradient-to-b from-destructive-top to-destructive text-destructive-fg text-shadow-sm shadow-[0px_1px_2px_var(--color-btn-drop),0px_0px_0px_1px_var(--color-destructive-edge),inset_0px_0.75px_0px_var(--color-btn-sheen)] hover:from-destructive hover:to-destructive\",\n        ghost:\n          \"text-[var(--btn-text,var(--btn,var(--color-foreground)))] hover:bg-[color-mix(in_oklab,var(--btn,var(--color-foreground))_10%,transparent)]\",\n        link: \"text-[var(--btn-text,var(--btn,var(--color-foreground)))] underline-offset-4 hover:underline\",\n        outline:\n          \"border border-transparent bg-background text-[var(--btn-text,var(--btn,var(--color-foreground)))] shadow-black/15 shadow-sm ring-1 ring-foreground/10 hover:bg-primary dark:ring-foreground/15\",\n        secondary:\n          \"bg-secondary text-secondary-foreground shadow-xs hover:bg-secondary/80\",\n        soft: \"bg-[color-mix(in_oklab,var(--btn,var(--color-foreground))_12%,transparent)] text-[var(--btn-text,var(--btn,var(--color-foreground)))] hover:bg-[color-mix(in_oklab,var(--btn,var(--color-foreground))_18%,transparent)]\",\n        // --- new decoupled system (consume --btn / --btn-hover / --btn-fg) ---\n        solid:\n          \"bg-[var(--btn,var(--color-foreground))] text-[var(--btn-fg,var(--color-background))] shadow-xs hover:bg-[var(--btn-hover,var(--color-smooth-900))]\",\n      },\n    },\n  }\n);\n\nexport type SmoothButtonProps = Omit<\n  ButtonHTMLAttributes<HTMLButtonElement>,\n  \"prefix\" | \"color\"\n> &\n  VariantProps<typeof smoothButtonVariants> & {\n    asChild?: boolean;\n    /** Show a spinner that morphs the button width without layout jump. */\n    loading?: boolean;\n    /** Content before the label (icon, Kbd…). */\n    prefix?: ReactNode;\n    /** Content after the label. */\n    suffix?: ReactNode;\n    /** Opt-in Safari force-press depth (scales to 0.94 under pressure). */\n    forcePress?: boolean;\n    ref?: Ref<HTMLButtonElement>;\n  };\n\nconst Spinner = () => (\n  <svg\n    aria-hidden=\"true\"\n    className=\"size-[1em] animate-spin\"\n    fill=\"none\"\n    viewBox=\"0 0 24 24\"\n  >\n    <circle\n      className=\"opacity-25\"\n      cx=\"12\"\n      cy=\"12\"\n      r=\"10\"\n      stroke=\"currentColor\"\n      strokeWidth=\"3\"\n    />\n    <path\n      className=\"opacity-90\"\n      d=\"M12 2a10 10 0 0 1 10 10\"\n      stroke=\"currentColor\"\n      strokeLinecap=\"round\"\n      strokeWidth=\"3\"\n    />\n  </svg>\n);\n\nconst mergeRefs =\n  <T,>(...refs: (Ref<T> | undefined)[]) =>\n  (node: T | null) => {\n    for (const ref of refs) {\n      if (typeof ref === \"function\") {\n        ref(node);\n      } else if (ref) {\n        (ref as { current: T | null }).current = node;\n      }\n    }\n  };\n\n/**\n * SmoothUI SmoothButton — Base UI twin (default).\n * Same visuals/variants as the Radix twin; `asChild` via cloneElement (no Slot).\n */\nfunction SmoothButton({\n  className,\n  variant,\n  color,\n  size,\n  shape,\n  asChild = false,\n  loading = false,\n  forcePress = false,\n  prefix,\n  suffix,\n  disabled,\n  children,\n  ref,\n  ...props\n}: SmoothButtonProps) {\n  const shouldReduceMotion = useReducedMotion();\n  const localRef = useRef<HTMLButtonElement>(null);\n\n  // Safari-only force-press: deepen the press past the normal active scale.\n  useEffect(() => {\n    const node = localRef.current;\n    if (!(forcePress && node) || shouldReduceMotion) {\n      return;\n    }\n    const FORCE_THRESHOLD = 2; // Safari's \"force click\" boundary\n    const onForce = (e: Event) => {\n      const force = (e as Event & { webkitForce?: number }).webkitForce ?? 0;\n      node.style.transform = force >= FORCE_THRESHOLD ? \"scale(0.94)\" : \"\";\n    };\n    const reset = () => {\n      node.style.transform = \"\";\n    };\n    node.addEventListener(\"webkitmouseforcechanged\", onForce);\n    node.addEventListener(\"mouseup\", reset);\n    node.addEventListener(\"mouseleave\", reset);\n    return () => {\n      node.removeEventListener(\"webkitmouseforcechanged\", onForce);\n      node.removeEventListener(\"mouseup\", reset);\n      node.removeEventListener(\"mouseleave\", reset);\n    };\n  }, [forcePress, shouldReduceMotion]);\n\n  const classes = cn(\n    smoothButtonVariants({ className, color, shape, size, variant })\n  );\n  const variantName = variant ?? \"default\";\n\n  // asChild defers all rendering to the consumer's element — slots/loading\n  // are not injected (single-child contract, Slot-compatible).\n  if (asChild) {\n    if (!isValidElement(children)) {\n      return null;\n    }\n    const child = children as ReactElement<{\n      className?: string;\n      ref?: Ref<HTMLButtonElement>;\n    }>;\n    return cloneElement(child, {\n      ...props,\n      className: cn(classes, child.props.className),\n      \"data-variant\": variantName,\n      ref: mergeRefs(ref, child.props.ref, localRef),\n    } as never);\n  }\n\n  const setRefs = mergeRefs(ref, localRef);\n\n  return (\n    <button\n      aria-busy={loading || undefined}\n      className={classes}\n      data-variant={variantName}\n      disabled={disabled || loading}\n      ref={setRefs}\n      type={props.type ?? \"button\"}\n      {...props}\n    >\n      <AnimatePresence initial={false}>\n        {loading ? (\n          <motion.span\n            animate={{ marginRight: \"0.5rem\", opacity: 1, width: \"1em\" }}\n            className=\"inline-flex shrink-0 items-center justify-center overflow-hidden\"\n            exit={{ marginRight: 0, opacity: 0, width: 0 }}\n            initial={\n              shouldReduceMotion\n                ? { marginRight: \"0.5rem\", opacity: 1, width: \"1em\" }\n                : { marginRight: 0, opacity: 0, width: 0 }\n            }\n            key=\"spinner\"\n            transition={\n              shouldReduceMotion\n                ? { duration: 0 }\n                : { bounce: 0.1, duration: 0.25, type: \"spring\" }\n            }\n          >\n            <Spinner />\n          </motion.span>\n        ) : null}\n      </AnimatePresence>\n      {prefix}\n      {children}\n      {suffix}\n    </button>\n  );\n}\n\nexport default SmoothButton;\nexport { smoothButtonVariants };\n"
+    }
+  ],
+  "adaptation": [
+    {
+      "path": "src/demo.tsx",
+      "sha256": "08991f8a285e37e8a1221f01e8c6e71dde568545be729687871f95bfbe002c3e",
+      "text": "\"use client\";\n\nimport RichPopover, {\n  YouTubeIcon,\n} from \"./rich-popover\";\n\nexport default function RichPopoverDemo() {\n  return (\n    <div className=\"flex items-center justify-center p-6\">\n      <div className=\"max-w-2xl space-y-4 text-base leading-relaxed\">\n        <p className=\"text-muted-foreground\">\n          OpenAI has just announced their latest breakthrough in artificial\n          intelligence\n          <RichPopover\n            actionHref=\"https://www.youtube.com/watch?v=boJG84Jcf-4\"\n            actionLabel=\"Watch announcement\"\n            description={\n              '\"GPT-5 features state-of-the-art performance across coding, math, writing assistance, health, visual perception, and more. Use GPT-5 to build websites, create apps, and tap into its improved writing capabilities to help with everyday tasks like reports, emails, and editing.\"'\n            }\n            href=\"https://www.youtube.com/watch?v=boJG84Jcf-4\"\n            meta=\"0:00–2:15\"\n            title=\"Introducing GPT-5\"\n            trigger={\n              <button type=\"button\" aria-label=\"查看文章富链接\" className=\"mx-2 inline-flex size-8 cursor-pointer items-center justify-center rounded-md border bg-background align-middle\">\n                <YouTubeIcon className=\"h-4 w-4 fill-red-600\" />\n              </button>\n            }\n          />\n          marking a significant leap forward in AI capabilities. This new model\n          represents the most advanced language model ever created, with\n          unprecedented performance across multiple domains including coding,\n          mathematics, and creative writing.\n        </p>\n        <p className=\"text-muted-foreground\">\n          GPT-5&apos;s enhanced capabilities extend beyond traditional text\n          processing to include improved visual perception and health-related\n          assistance, making it a versatile tool for both professional and\n          personal use. The model is now rolling out to all users, democratizing\n          access to cutting-edge AI technology.\n        </p>\n      </div>\n    </div>\n  );\n}\n"
+    },
+    {
+      "path": "src/main.tsx",
+      "sha256": "fec6f97858efc81d9e263836c509b2389e7bf891e46d1b41097f09d82140fad3",
+      "text": "import React,{Component,useEffect,useState} from 'react';import{createRoot}from'react-dom/client';import{flushSync}from'react-dom';import Demo from './demo';\ndeclare const registerCleanup:(fn:()=>void)=>void;declare const fatal:(e:unknown)=>void;declare const pauseTasks:()=>void;declare const resumeTasks:()=>void;\nclass Boundary extends Component<React.PropsWithChildren,{failed:boolean}>{state={failed:false};static getDerivedStateFromError(){return{failed:true}}componentDidCatch(e:unknown){fatal(e)}render(){return this.state.failed?null:this.props.children}}\nlet root:ReturnType<typeof createRoot>|undefined;let disposed=false;\nconst visible=()=>{if(disposed)return;try{if(!document.hidden)resumeTasks();flushSync(()=>root?.render(document.hidden?null:<Boundary><section className=\"shell\"><header><h1>富链接阅读</h1><p>上游文章演示 · 内容保留原文，不代表当前发布信息。</p></header><Demo/><footer>链接保留原始出处；此隔离预览不打开外站，也不播放视频。</footer><button type=\"button\" id=\"outside\" className=\"outside\">正文区域</button></section></Boundary>));document.documentElement.toggleAttribute('data-hidden',document.hidden);if(document.hidden)pauseTasks()}catch(e){fatal(e)}};\nregisterCleanup(()=>{if(disposed)return;disposed=true;document.removeEventListener('visibilitychange',visible);queueMicrotask(()=>{try{root?.unmount()}catch{}root=undefined})});\ntry{root=createRoot(document.getElementById('root')!,{onUncaughtError:fatal,onCaughtError:fatal});document.addEventListener('visibilitychange',visible);visible()}catch(e){fatal(e)}\n"
+    },
+    {
+      "path": "src/rich-popover.tsx",
+      "sha256": "ab9dc488e37f182c7d332d951b3820d82efc3f494828cfb9cae600a179b7968c",
+      "text": "\"use client\";\n\nimport {\n  Arrow as PopoverArrow,\n  Content as PopoverContent,\n  Portal as PopoverPortal,\n  Root as PopoverRoot,\n  Trigger as PopoverTrigger,\n} from \"@radix-ui/react-popover\";\nimport SmoothButton from \"./smooth-button\";\nimport { cn } from \"./utils\";\nimport { Clock, ExternalLink, Play } from \"lucide-react\";\nimport { motion, useReducedMotion } from \"motion/react\";\n\nimport type * as React from \"react\";\n\nexport interface RichTooltipProps {\n  actionHref?: string;\n  actionLabel?: string;\n  align?: \"start\" | \"center\" | \"end\";\n  className?: string;\n  description?: string;\n  href?: string;\n  icon?: React.ReactNode;\n  meta?: string;\n  onActionClick?: () => void;\n  side?: \"top\" | \"bottom\" | \"left\" | \"right\";\n  title: string;\n  trigger: React.ReactNode;\n}\n\nexport function YouTubeIcon({\n  className = \"h-4 w-4 fill-red-600\",\n}: {\n  className?: string;\n}) {\n  return (\n    <svg\n      aria-label=\"YouTube\"\n      className={className}\n      focusable=\"false\"\n      height=\"16\"\n      role=\"img\"\n      viewBox=\"0 0 16 16\"\n      width=\"16\"\n      xmlns=\"http://www.w3.org/2000/svg\"\n    >\n      <path d=\"M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z\" />\n    </svg>\n  );\n}\n\nexport default function RichTooltip({\n  trigger,\n  title,\n  description,\n  icon,\n  href,\n  actionLabel,\n  actionHref,\n  onActionClick,\n  meta,\n  className = \"\",\n  side = \"top\",\n  align = \"center\",\n}: RichTooltipProps) {\n  const shouldReduceMotion = useReducedMotion();\n  const Title = (\n    <div className=\"flex items-center gap-2 font-medium text-sm\">\n      {icon ?? <YouTubeIcon />}\n      {href ? (\n        <a\n          className=\"inline-flex items-center gap-1 hover:underline\"\n          href={href}\n          rel=\"noopener noreferrer\"\n          target=\"_blank\"\n        >\n          <span>{title}</span>\n          <ExternalLink className=\"h-3.5 w-3.5 opacity-70\" />\n        </a>\n      ) : (\n        <span>{title}</span>\n      )}\n    </div>\n  );\n\n  const renderAction = () => {\n    if (!actionLabel) {\n      return null;\n    }\n\n    const actionClassName =\n      \"bg-white text-black hover:bg-white/90 dark:bg-white dark:text-black\";\n\n    if (actionHref) {\n      return (\n        <SmoothButton\n          asChild\n          className={actionClassName}\n          shape=\"pill\"\n          size=\"xs\"\n          variant=\"solid\"\n        >\n          <a href={actionHref} rel=\"noopener noreferrer\" target=\"_blank\">\n            <Play className=\"h-3.5 w-3.5\" /> {actionLabel}\n          </a>\n        </SmoothButton>\n      );\n    }\n\n    return (\n      <SmoothButton\n        className={actionClassName}\n        onClick={onActionClick}\n        shape=\"pill\"\n        size=\"xs\"\n        type=\"button\"\n        variant=\"solid\"\n      >\n        <Play className=\"h-3.5 w-3.5\" /> {actionLabel}\n      </SmoothButton>\n    );\n  };\n\n  const Action = renderAction();\n\n  return (\n    <PopoverRoot>\n      <PopoverTrigger asChild>{trigger}</PopoverTrigger>\n      <PopoverPortal>\n        <PopoverContent\n          align={align}\n          asChild\n          className={cn(\"z-50\", className)}\n          side={side}\n          sideOffset={8}\n        >\n          <motion.div\n            animate={\n              shouldReduceMotion\n                ? { opacity: 1 }\n                : { filter: \"blur(0px)\", opacity: 1, scale: 1, y: 0 }\n            }\n            className=\"relative rounded-2xl border border-white/10 bg-black px-4 py-3 text-white shadow-xl\"\n            exit={\n              shouldReduceMotion\n                ? { opacity: 0, transition: { duration: 0 } }\n                : { filter: \"blur(8px)\", opacity: 0, scale: 0.95, y: 5 }\n            }\n            initial={\n              shouldReduceMotion\n                ? { opacity: 1 }\n                : { filter: \"blur(8px)\", opacity: 0, scale: 0.95, y: 5 }\n            }\n            transition={\n              shouldReduceMotion\n                ? { duration: 0 }\n                : {\n                    damping: 30,\n                    duration: 0.2,\n                    stiffness: 500,\n                    type: \"spring\" as const,\n                  }\n            }\n          >\n            {Title}\n            {description ? (\n              <p className=\"mt-3 max-w-xs text-balance text-base text-white/90 leading-relaxed\">\n                {description}\n              </p>\n            ) : null}\n            {meta || Action ? (\n              <div className=\"mt-4 flex items-center justify-between gap-3\">\n                {meta ? (\n                  <span className=\"inline-flex items-center gap-1 rounded-full bg-white/10 px-3 py-1 text-white text-xs\">\n                    <Clock className=\"h-3.5 w-3.5\" /> {meta}\n                  </span>\n                ) : (\n                  <span />\n                )}\n                {Action}\n              </div>\n            ) : null}\n\n            {/* Tail */}\n            <PopoverArrow className=\"fill-black\" />\n          </motion.div>\n        </PopoverContent>\n      </PopoverPortal>\n    </PopoverRoot>\n  );\n}\n"
+    },
+    {
+      "path": "src/smooth-button.tsx",
+      "sha256": "63900a1fdab7115cce38a89d4abb92d1c2ba720bf0c0e7715046f61b3e8dba38",
+      "text": "\"use client\";\n\nimport { cn } from \"./utils\";\nimport { cva, type VariantProps } from \"class-variance-authority\";\nimport { AnimatePresence, motion, useReducedMotion } from \"motion/react\";\nimport {\n  type ButtonHTMLAttributes,\n  cloneElement,\n  isValidElement,\n  type ReactElement,\n  type ReactNode,\n  type Ref,\n  useEffect,\n  useRef,\n} from \"react\";\n\n/**\n * SmoothButton — the first primitive of the SmoothUI Design System.\n *\n * Three orthogonal axes (see design-system/components/button.md):\n *   variant → appearance only (solid | soft | outline | ghost | link | candy)\n *   color   → hue (accent | neutral | destructive | blue | amber | green)\n *   size    → xs | sm | default | lg + icon-*\n *\n * The `color` axis only sets CSS custom props (--btn, --btn-hover, --btn-fg);\n * each `variant` consumes them generically, so 6 variants × 6 colors stay 12\n * class strings, not 36. When no `color` is given, CSS var fallbacks apply\n * (candy → brand, everything else → neutral/foreground).\n *\n * Legacy variants `default` / `secondary` / `destructive` are preserved verbatim\n * for back-compat with existing call sites and ignore the `color` axis.\n */\nconst smoothButtonVariants = cva(\n  \"relative inline-flex cursor-pointer items-center justify-center gap-2 whitespace-nowrap font-medium outline-none ring-offset-background transition-[transform,background-color,border-color,color,box-shadow] duration-150 ease-out focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-solid focus-visible:outline-offset-2 active:scale-[0.97] disabled:pointer-events-none disabled:bg-muted disabled:text-muted-foreground disabled:shadow-none disabled:ring-1 disabled:ring-foreground/20 motion-reduce:transition-none motion-reduce:active:scale-100 [&_svg]:pointer-events-none [&_svg]:shrink-0\",\n  {\n    defaultVariants: {\n      shape: \"default\",\n      size: \"default\",\n      variant: \"default\",\n    },\n    variants: {\n      color: {\n        accent:\n          \"[--btn-fg:var(--color-on-brand)] [--btn-hover:var(--color-brand-secondary)] [--btn-text:var(--color-brand-ink)] [--btn:var(--color-brand)]\",\n        amber:\n          \"[--btn-fg:var(--color-amber-fg)] [--btn-hover:var(--color-amber-hover)] [--btn-text:var(--color-amber-ink)] [--btn:var(--color-amber)]\",\n        blue: \"[--btn-fg:var(--color-blue-fg)] [--btn-hover:var(--color-blue-hover)] [--btn-text:var(--color-blue-ink)] [--btn:var(--color-blue)]\",\n        destructive:\n          \"[--btn-fg:var(--color-destructive-fg)] [--btn-hover:var(--color-destructive-hover)] [--btn-text:var(--color-destructive-ink)] [--btn:var(--color-destructive)]\",\n        green:\n          \"[--btn-fg:var(--color-green-fg)] [--btn-hover:var(--color-green-hover)] [--btn-text:var(--color-green-ink)] [--btn:var(--color-green)]\",\n        neutral:\n          \"[--btn-fg:var(--color-background)] [--btn-hover:var(--color-smooth-900)] [--btn:var(--color-foreground)]\",\n      },\n      shape: {\n        default: \"\",\n        pill: \"rounded-full!\",\n        square: \"rounded-none!\",\n      },\n      size: {\n        default: \"h-10 gap-2 rounded-md px-4 py-2 text-sm [&_svg]:size-4\",\n        icon: \"size-10 rounded-md [&_svg]:size-4\",\n        \"icon-lg\": \"size-11 rounded-lg [&_svg]:size-5\",\n        \"icon-sm\":\n          \"pointer-coarse:after:-translate-1/2 size-9 rounded-md pointer-coarse:after:absolute pointer-coarse:after:top-1/2 pointer-coarse:after:left-1/2 pointer-coarse:after:size-full pointer-coarse:after:min-h-10 pointer-coarse:after:min-w-10 pointer-coarse:after:content-[''] [&_svg]:size-4\",\n        lg: \"h-11 gap-2 rounded-lg px-8 text-base [&_svg]:size-5\",\n        sm: \"pointer-coarse:after:-translate-1/2 h-9 gap-1.5 rounded-md px-3 text-sm pointer-coarse:after:absolute pointer-coarse:after:top-1/2 pointer-coarse:after:left-1/2 pointer-coarse:after:size-full pointer-coarse:after:min-h-10 pointer-coarse:after:min-w-10 pointer-coarse:after:content-[''] [&_svg]:size-4\",\n        xs: \"pointer-coarse:after:-translate-1/2 h-7 gap-1.5 rounded-sm px-2.5 text-xs pointer-coarse:after:absolute pointer-coarse:after:top-1/2 pointer-coarse:after:left-1/2 pointer-coarse:after:size-full pointer-coarse:after:min-h-10 pointer-coarse:after:min-w-10 pointer-coarse:after:content-[''] [&_svg]:size-3.5\",\n      },\n      variant: {\n        candy:\n          \"border-[0.5px] border-on-brand/25 bg-gradient-to-b from-[var(--btn,var(--color-brand))] to-[var(--btn-hover,var(--color-brand-secondary))] text-[var(--btn-fg,var(--color-on-brand))] text-shadow-sm shadow-black/20 shadow-md ring-1 ring-[color-mix(in_oklab,var(--color-foreground)_15%,var(--btn,var(--color-brand)))] hover:from-[var(--btn-hover,var(--color-brand-secondary))] hover:to-[var(--btn-hover,var(--color-brand-secondary))] [&_svg]:drop-shadow-sm\",\n        // --- legacy (preserved verbatim, ignore `color`) ---\n        default:\n          \"bg-primary text-primary-foreground shadow-xs hover:bg-primary/90\",\n        destructive:\n          \"bg-gradient-to-b from-destructive-top to-destructive text-destructive-fg text-shadow-sm shadow-[0px_1px_2px_var(--color-btn-drop),0px_0px_0px_1px_var(--color-destructive-edge),inset_0px_0.75px_0px_var(--color-btn-sheen)] hover:from-destructive hover:to-destructive\",\n        ghost:\n          \"text-[var(--btn-text,var(--btn,var(--color-foreground)))] hover:bg-[color-mix(in_oklab,var(--btn,var(--color-foreground))_10%,transparent)]\",\n        link: \"text-[var(--btn-text,var(--btn,var(--color-foreground)))] underline-offset-4 hover:underline\",\n        outline:\n          \"border border-transparent bg-background text-[var(--btn-text,var(--btn,var(--color-foreground)))] shadow-black/15 shadow-sm ring-1 ring-foreground/10 hover:bg-primary dark:ring-foreground/15\",\n        secondary:\n          \"bg-secondary text-secondary-foreground shadow-xs hover:bg-secondary/80\",\n        soft: \"bg-[color-mix(in_oklab,var(--btn,var(--color-foreground))_12%,transparent)] text-[var(--btn-text,var(--btn,var(--color-foreground)))] hover:bg-[color-mix(in_oklab,var(--btn,var(--color-foreground))_18%,transparent)]\",\n        // --- new decoupled system (consume --btn / --btn-hover / --btn-fg) ---\n        solid:\n          \"bg-[var(--btn,var(--color-foreground))] text-[var(--btn-fg,var(--color-background))] shadow-xs hover:bg-[var(--btn-hover,var(--color-smooth-900))]\",\n      },\n    },\n  }\n);\n\nexport type SmoothButtonProps = Omit<\n  ButtonHTMLAttributes<HTMLButtonElement>,\n  \"prefix\" | \"color\"\n> &\n  VariantProps<typeof smoothButtonVariants> & {\n    asChild?: boolean;\n    /** Show a spinner that morphs the button width without layout jump. */\n    loading?: boolean;\n    /** Content before the label (icon, Kbd…). */\n    prefix?: ReactNode;\n    /** Content after the label. */\n    suffix?: ReactNode;\n    /** Opt-in Safari force-press depth (scales to 0.94 under pressure). */\n    forcePress?: boolean;\n    ref?: Ref<HTMLButtonElement>;\n  };\n\nconst Spinner = () => (\n  <svg\n    aria-hidden=\"true\"\n    className=\"size-[1em] animate-spin\"\n    fill=\"none\"\n    viewBox=\"0 0 24 24\"\n  >\n    <circle\n      className=\"opacity-25\"\n      cx=\"12\"\n      cy=\"12\"\n      r=\"10\"\n      stroke=\"currentColor\"\n      strokeWidth=\"3\"\n    />\n    <path\n      className=\"opacity-90\"\n      d=\"M12 2a10 10 0 0 1 10 10\"\n      stroke=\"currentColor\"\n      strokeLinecap=\"round\"\n      strokeWidth=\"3\"\n    />\n  </svg>\n);\n\nconst mergeRefs =\n  <T,>(...refs: (Ref<T> | undefined)[]) =>\n  (node: T | null) => {\n    for (const ref of refs) {\n      if (typeof ref === \"function\") {\n        ref(node);\n      } else if (ref) {\n        (ref as { current: T | null }).current = node;\n      }\n    }\n  };\n\n/**\n * SmoothUI SmoothButton — Base UI twin (default).\n * Same visuals/variants as the Radix twin; `asChild` via cloneElement (no Slot).\n */\nfunction SmoothButton({\n  className,\n  variant,\n  color,\n  size,\n  shape,\n  asChild = false,\n  loading = false,\n  forcePress = false,\n  prefix,\n  suffix,\n  disabled,\n  children,\n  ref,\n  ...props\n}: SmoothButtonProps) {\n  const shouldReduceMotion = useReducedMotion();\n  const localRef = useRef<HTMLButtonElement>(null);\n\n  // Safari-only force-press: deepen the press past the normal active scale.\n  useEffect(() => {\n    const node = localRef.current;\n    if (!(forcePress && node) || shouldReduceMotion) {\n      return;\n    }\n    const FORCE_THRESHOLD = 2; // Safari's \"force click\" boundary\n    const onForce = (e: Event) => {\n      const force = (e as Event & { webkitForce?: number }).webkitForce ?? 0;\n      node.style.transform = force >= FORCE_THRESHOLD ? \"scale(0.94)\" : \"\";\n    };\n    const reset = () => {\n      node.style.transform = \"\";\n    };\n    node.addEventListener(\"webkitmouseforcechanged\", onForce);\n    node.addEventListener(\"mouseup\", reset);\n    node.addEventListener(\"mouseleave\", reset);\n    return () => {\n      node.removeEventListener(\"webkitmouseforcechanged\", onForce);\n      node.removeEventListener(\"mouseup\", reset);\n      node.removeEventListener(\"mouseleave\", reset);\n    };\n  }, [forcePress, shouldReduceMotion]);\n\n  const classes = cn(\n    smoothButtonVariants({ className, color, shape, size, variant })\n  );\n  const variantName = variant ?? \"default\";\n\n  // asChild defers all rendering to the consumer's element — slots/loading\n  // are not injected (single-child contract, Slot-compatible).\n  if (asChild) {\n    if (!isValidElement(children)) {\n      return null;\n    }\n    const child = children as ReactElement<{\n      className?: string;\n      ref?: Ref<HTMLButtonElement>;\n    }>;\n    return cloneElement(child, {\n      ...props,\n      className: cn(classes, child.props.className),\n      \"data-variant\": variantName,\n      ref: mergeRefs(ref, child.props.ref, localRef),\n    } as never);\n  }\n\n  const setRefs = mergeRefs(ref, localRef);\n\n  return (\n    <button\n      aria-busy={loading || undefined}\n      className={classes}\n      data-variant={variantName}\n      disabled={disabled || loading}\n      ref={setRefs}\n      type={props.type ?? \"button\"}\n      {...props}\n    >\n      <AnimatePresence initial={false}>\n        {loading ? (\n          <motion.span\n            animate={{ marginRight: \"0.5rem\", opacity: 1, width: \"1em\" }}\n            className=\"inline-flex shrink-0 items-center justify-center overflow-hidden\"\n            exit={{ marginRight: 0, opacity: 0, width: 0 }}\n            initial={\n              shouldReduceMotion\n                ? { marginRight: \"0.5rem\", opacity: 1, width: \"1em\" }\n                : { marginRight: 0, opacity: 0, width: 0 }\n            }\n            key=\"spinner\"\n            transition={\n              shouldReduceMotion\n                ? { duration: 0 }\n                : { bounce: 0.1, duration: 0.25, type: \"spring\" }\n            }\n          >\n            <Spinner />\n          </motion.span>\n        ) : null}\n      </AnimatePresence>\n      {prefix}\n      {children}\n      {suffix}\n    </button>\n  );\n}\n\nexport default SmoothButton;\nexport { smoothButtonVariants };\n"
+    },
+    {
+      "path": "src/utils.ts",
+      "sha256": "4acbc7165a8d54738ff62b51414e772c08fe78434e524e6d8770180d3ba2925f",
+      "text": "import { type ClassValue, clsx } from \"clsx\";\nimport { twMerge } from \"tailwind-merge\";\n\nexport function cn(...inputs: ClassValue[]) {\n  return twMerge(clsx(inputs));\n}\n"
+    },
+    {
+      "path": "bootstrap.js",
+      "sha256": "5e217d3a0860123cd5b879b8bd1eca278684573dad8d8828abf9529dcfbf06d7",
+      "text": "(function(){\nlet stopped=false,failed=false,teardown=()=>{},own=[];const timers=new Map(),frames=new Map();let serial=1,paused=document.hidden;\nconst proto=EventTarget.prototype,add=proto.addEventListener,remove=proto.removeEventListener;\nconst set=window.setTimeout.bind(window),clear=window.clearTimeout.bind(window),raf=window.requestAnimationFrame.bind(window),caf=window.cancelAnimationFrame.bind(window);\nconst mediaRestore=new Set(),observers=new Set(),originalObservers={};const originalMatchMedia=window.matchMedia;\nconst basePointer=document.body.style.pointerEvents,baseOverflow=document.body.style.overflow;\nfunction registerCleanup(fn){teardown=fn}\nfunction trackedAdd(type,fn,options){if(!fn)return add.call(this,type,fn,options);const capture=typeof options==='boolean'?options:!!options?.capture;if(!own.some(x=>x.target===this&&x.type===type&&x.fn===fn&&x.capture===capture))own.push({target:this,type,fn,options,capture});return add.call(this,type,fn,options)}\nfunction trackedRemove(type,fn,options){const capture=typeof options==='boolean'?options:!!options?.capture;own=own.filter(x=>!(x.target===this&&x.type===type&&x.fn===fn&&x.capture===capture));return remove.call(this,type,fn,options)}\nfunction cancelTasks(){for(const task of timers.values())clear(task.handle);timers.clear();for(const task of frames.values())caf(task.handle);frames.clear()}\nfunction release(){cancelTasks();for(const restore of mediaRestore)restore();mediaRestore.clear();window.matchMedia=originalMatchMedia;for(const observer of observers)observer.disconnect();for(const name in originalObservers)window[name]=originalObservers[name];for(const x of own.splice(0))remove.call(x.target,x.type,x.fn,x.options);proto.addEventListener=add;proto.removeEventListener=remove;window.setTimeout=set;window.clearTimeout=clear;window.requestAnimationFrame=raf;window.cancelAnimationFrame=caf;document.body.style.pointerEvents=basePointer;document.body.style.overflow=baseOverflow;document.querySelectorAll('[data-radix-focus-guard]').forEach(n=>n.remove());}\nfunction exit(){if(stopped)return;stopped=true;try{teardown()}catch{}queueMicrotask(release)}\nfunction fatal(error){if(failed)return;failed=true;exit();queueMicrotask(()=>{try{const p=document.createElement('p');p.setAttribute('role','alert');p.textContent='预览已停止，请关闭后重新打开。';document.body.append(p)}catch{}})}\ntry{\nfor(const name of ['ResizeObserver','IntersectionObserver','MutationObserver']){const Original=window[name];if(!Original)continue;originalObservers[name]=Original;window[name]=class extends Original{constructor(...args){super(...args);observers.add(this)}disconnect(){super.disconnect();observers.delete(this)}}}\nwindow.matchMedia=function(...args){const m=originalMatchMedia.apply(window,args);if(m.addListener&&m.removeListener){const a=m.addListener,r=m.removeListener,callbacks=new Set();const restore=()=>{for(const fn of callbacks)r.call(m,fn);m.addListener=a;m.removeListener=r};m.addListener=function(fn){callbacks.add(fn);mediaRestore.add(restore);return a.call(m,fn)};m.removeListener=function(fn){callbacks.delete(fn);if(!callbacks.size)mediaRestore.delete(restore);return r.call(m,fn)}}return m};\nproto.addEventListener=trackedAdd;proto.removeEventListener=trackedRemove;\nfunction scheduleTimer(id,task){task.started=performance.now();task.handle=set(()=>{timers.delete(id);if(stopped)return;try{task.fn(...task.args)}catch(e){fatal(e)}},task.remaining)}\nfunction scheduleFrame(id,task){task.handle=raf(time=>{frames.delete(id);if(stopped)return;try{task.fn(time)}catch(e){fatal(e)}})}\nwindow.setTimeout=(fn,ms=0,...args)=>{if(stopped)return 0;const id=serial++,task={fn,args,remaining:ms,handle:0,started:0};timers.set(id,task);if(!paused)scheduleTimer(id,task);return id};window.clearTimeout=id=>{const task=timers.get(id);if(task)clear(task.handle);timers.delete(id)};\nwindow.requestAnimationFrame=fn=>{if(stopped)return 0;const id=serial++,task={fn,handle:0};frames.set(id,task);if(!paused)scheduleFrame(id,task);return id};window.cancelAnimationFrame=id=>{const task=frames.get(id);if(task)caf(task.handle);frames.delete(id)};\nfunction pauseTasks(){if(paused)return;paused=true;for(const task of timers.values()){clear(task.handle);task.remaining=Math.max(0,task.remaining-(performance.now()-task.started))}for(const task of frames.values())caf(task.handle)}\nfunction resumeTasks(){if(!paused||stopped)return;paused=false;for(const [id,task] of timers)scheduleTimer(id,task);for(const [id,task] of frames)scheduleFrame(id,task)}\nwindow.addEventListener('pagehide',exit);window.addEventListener('atlas:dispose',exit);window.addEventListener('error',e=>{e.preventDefault();fatal(e.error)});window.addEventListener('unhandledrejection',e=>{e.preventDefault();fatal(e.reason)});\n/* MODULE_START */\n"
+    },
+    {
+      "path": "build.mjs",
+      "sha256": "d75231e869cda8490823a801934d83bf4d81f0a1578329c672844b6571500ac9",
+      "text": "import fs from'node:fs';import esbuild from'../../ui-smooth-chat-adapt/node_modules/esbuild/lib/main.js';const b=new URL('.',import.meta.url).pathname;const r=esbuild.buildSync({entryPoints:[b+'src/main.tsx'],outfile:b+'delivery/runtime.js',bundle:true,format:'iife',jsx:'automatic',minify:true,target:'es2020',define:{'process.env.NODE_ENV':'\"production\"'},banner:{js:fs.readFileSync(b+'bootstrap.js','utf8')},footer:{js:'}catch(e){fatal(e)}})();'},metafile:true,legalComments:'eof'});fs.writeFileSync(b+'metafile.json',JSON.stringify(r.metafile,null,2));\n"
+    },
+    {
+      "path": "styles.css",
+      "sha256": "cb92c1638596dc2b5374019d36ec894f9aa7f765391effe5f340f8184d5bfb18",
+      "text": "@import \"../../ui-smooth-chat-adapt/node_modules/tailwindcss\" source(none);\n@source \"./src\";\n@theme { --color-background:#fff;--color-foreground:#171717;--color-muted-foreground:#60636b;--color-border:#e5e7eb;--color-ring:#737373; }\nhtml,body{margin:0;min-height:100%;font-family:ui-sans-serif,system-ui,sans-serif;background:#fafafa;color:#171717}body{min-height:480px;padding:32px 20px}.shell{max-width:760px;margin:0 auto}.shell header{padding:12px 24px}.shell h1{font-size:20px;font-weight:600;margin-bottom:8px}.shell header p,.shell footer{font-size:12px;color:#74777f}.shell footer{padding:12px 24px}.outside{margin:8px 24px;padding:5px 12px;border:1px solid #ddd;border-radius:999px;font-size:12px;color:#555}button:focus-visible{outline:2px solid #737373;outline-offset:3px}html[data-hidden] *{animation:none!important;transition:none!important}@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}\n"
+    },
+    {
+      "path": "test.mjs",
+      "sha256": "b760a3bcadb5cff9b565f19965af31698ae1363919c58a62a05e20dcf46ca249",
+      "text": "import fs from'node:fs';import assert from'node:assert/strict';import{JSDOM,VirtualConsole}from'../../alaya-pr112/node_modules/.pnpm/jsdom@24.1.3_supports-color@7.2.0/node_modules/jsdom/lib/api.js';import{composePreview}from'../../ui-vault-541/apps/atlas-sample/preview-runtime.mjs';\nconst b=new URL('.',import.meta.url).pathname,read=n=>fs.readFileSync(b+'delivery/'+n,'utf8'),sleep=ms=>new Promise(r=>setTimeout(r,ms));const result={};\nasync function boot(mode){const observerActive=new Set(),legacyMedia=new Set();const ledger=[],tasks=new Set(),rafTasks=new Set(),errors=[];let hidden=false,externalHits=0,external;const vc=new VirtualConsole();vc.on('jsdomError',e=>{if(!e.message.includes('Could not parse CSS'))errors.push(e.message)});let js=read('runtime.js');if(mode==='early')js=js.replace('/* MODULE_START */','throw Error(\"early\");');const dom=new JSDOM(composePreview(read('index.html'),read('runtime.css'),js,{cssHref:'runtime.css',scriptSrc:'runtime.js'}),{runScripts:'dangerously',pretendToBeVisual:true,virtualConsole:vc,beforeParse(w){const matches=w.Element.prototype.matches;w.Element.prototype.matches=function(selector){if([':modal',':popover-open',':fullscreen'].includes(selector))return false;return matches.call(this,selector)};Object.defineProperty(w.document,'hidden',{get:()=>hidden});w.ResizeObserver=class{observe(){observerActive.add(this)}unobserve(){}disconnect(){observerActive.delete(this)}};const OriginalMO=w.MutationObserver;w.MutationObserver=class extends OriginalMO{observe(...args){observerActive.add(this);return super.observe(...args)}disconnect(){observerActive.delete(this);return super.disconnect()}};w.matchMedia=()=>{const m=new w.EventTarget();m.matches=mode==='reduced';m.media='';m.addListener=fn=>legacyMedia.add(fn);m.removeListener=fn=>legacyMedia.delete(fn);return m};w.PointerEvent=w.MouseEvent;const add=w.EventTarget.prototype.addEventListener,remove=w.EventTarget.prototype.removeEventListener;w.EventTarget.prototype.addEventListener=function(type,fn,opts){if(!ledger.some(x=>x.target===this&&x.type===type&&x.fn===fn))ledger.push({target:this,type,fn,opts,stack:new Error().stack});return add.call(this,type,fn,opts)};w.EventTarget.prototype.removeEventListener=function(type,fn,opts){const i=ledger.findIndex(x=>x.target===this&&x.type===type&&x.fn===fn);if(i>=0)ledger.splice(i,1);return remove.call(this,type,fn,opts)};const set=w.setTimeout.bind(w),clear=w.clearTimeout.bind(w),raf=w.requestAnimationFrame.bind(w),caf=w.cancelAnimationFrame.bind(w);w.setTimeout=(fn,ms,...args)=>{let id=set(()=>{tasks.delete(id);fn(...args)},ms);tasks.add(id);return id};w.clearTimeout=id=>{tasks.delete(id);clear(id)};w.requestAnimationFrame=fn=>{let id=raf(t=>{rafTasks.delete(id);fn(t)});rafTasks.add(id);return id};w.cancelAnimationFrame=id=>{rafTasks.delete(id);caf(id)};w.fetch=()=>{throw Error('network')};w.open=()=>{throw Error('popup')};w.eval=()=>{throw Error('eval')};if(mode==='external'){external=()=>externalHits++;w.document.addEventListener('selectionchange',external)};if(mode==='partial')w.matchMedia=()=>{throw Error('partial media init')};}});await sleep(60);const w=dom.window,d=w.document,click=e=>{assert(e,'click target');e.dispatchEvent(new w.MouseEvent('click',{bubbles:true}))};const owned=()=>ledger.filter(x=>!x.stack.includes('nwsapi')&&!['load','DOMContentLoaded'].includes(x.type));return{dom,w,d,click,ledger,tasks,rafTasks,errors,owned,observerActive,legacyMedia,externalHits:()=>externalHits,external,hide:async v=>{hidden=v;d.dispatchEvent(new w.Event('visibilitychange'));await sleep(50)}}}\nlet t=await boot();assert(!t.d.querySelector('[role=alert]'));const trigger=()=>t.d.querySelector('[aria-label=\"查看文章富链接\"]');assert(trigger());let maxListeners=0,maxTasks=0;const listenerCounts=[];for(let i=0;i<100;i++){trigger().focus();t.click(trigger());await sleep(8);assert(t.d.querySelector('[role=dialog]'),'opened '+i);t.d.dispatchEvent(new t.w.KeyboardEvent('keydown',{key:'Escape',bubbles:true}));await sleep(8);assert(!t.d.querySelector('[role=dialog]'),'closed '+i);assert.equal(t.d.activeElement,trigger(),'ESC focus restore');listenerCounts.push(t.owned().length);assert.equal(t.d.body.style.pointerEvents,'');maxListeners=Math.max(maxListeners,t.owned().length);maxTasks=Math.max(maxTasks,t.tasks.size+t.rafTasks.size)}assert(maxListeners<=300);assert(maxTasks<=3);assert.equal(new Set(listenerCounts.slice(-10)).size,1);result.repeat100={maxListeners,maxTasks,last10Listeners:listenerCounts.slice(-10)};t.click(trigger());await sleep(30);const dialog=t.d.querySelector('[role=dialog]');assert(dialog.textContent.includes('Introducing GPT-5'));assert(dialog.textContent.includes('0:00–2:15'));assert.equal(dialog.querySelectorAll('a').length,2);for(const a of dialog.querySelectorAll('a')){assert.equal(a.rel,'noopener noreferrer');assert.equal(a.target,'_blank')}assert(!t.d.querySelector('iframe,img'));const old=trigger();await t.hide(true);assert(!t.d.querySelector('[role=dialog]'));assert.equal(t.tasks.size+t.rafTasks.size,0);await t.hide(false);assert(trigger());t.click(old);await sleep(20);assert(!t.d.querySelector('[role=dialog]'));t.click(trigger());await sleep(20);t.d.querySelector('#outside').dispatchEvent(new t.w.MouseEvent('pointerdown',{bubbles:true}));await sleep(20);assert(!t.d.querySelector('[role=dialog]'));t.click(trigger());await sleep(20);t.d.querySelector('#outside').focus();await sleep(20);assert(!t.d.querySelector('[role=dialog]'));result.hiddenOldNodesAndOutside=true;result.escapeAndOutsideFocus=true;t.click(trigger());await sleep(20);t.w.dispatchEvent(new t.w.Event('atlas:dispose'));await sleep(50);assert.equal(t.owned().length,0,JSON.stringify(t.owned().map(x=>x.type)));assert.equal(t.tasks.size+t.rafTasks.size,0);assert.equal(t.observerActive.size,0);assert.equal(t.legacyMedia.size,0);assert.equal(t.d.body.style.pointerEvents,'');assert.equal(t.d.querySelectorAll('[data-radix-focus-guard]').length,0);t.click(old);await sleep(20);assert(!t.d.querySelector('[role=dialog]'));result.exit=true;assert.deepEqual(t.errors,[]);t.dom.window.close();\nfor(const mode of ['reduced','early','partial','late','pagehide','external']){t=await boot(mode);if(mode==='reduced'){t.click(t.d.querySelector('[aria-label]'));await sleep(30);assert(t.d.querySelector('[role=dialog]'));t.w.dispatchEvent(new t.w.Event('atlas:dispose'))}else if(mode==='late'){const orig=t.w.Element.prototype.setAttribute;t.w.Element.prototype.setAttribute=function(name,value){if(name==='role'&&value==='dialog')throw Error('real late dialog setter');return orig.call(this,name,value)};t.click(t.d.querySelector('[aria-label=\"查看文章富链接\"]'));await sleep(50)}else if(mode==='pagehide'||mode==='external')t.w.dispatchEvent(new t.w.Event('pagehide'));await sleep(60);if(['early','partial','late'].includes(mode))assert(t.d.querySelector('[role=alert]'),mode);if(mode==='external'){assert.equal(t.owned().length,1);t.w.document.dispatchEvent(new t.w.Event('selectionchange'));assert.equal(t.externalHits(),1);t.w.document.removeEventListener('selectionchange',t.external)}assert.equal(t.owned().length,0,mode+JSON.stringify(t.owned().map(x=>x.type)));assert.equal(t.tasks.size+t.rafTasks.size,0,mode);assert.equal(t.observerActive.size,0,mode);assert.equal(t.legacyMedia.size,0,mode);assert.equal(t.d.body.style.pointerEvents,'');result[mode]=true;t.dom.window.close()}\nresult.actual541Compose=true;result.browserVisualQA='not-run';console.log(JSON.stringify(result,null,2));\n"
+    },
+    {
+      "path": "package.json",
+      "sha256": "fbba9e276129c9c7e107ef745adb4115ae0541664eb03e093b3fdcba3b4dea76",
+      "text": "{\"private\":true,\"type\":\"module\",\"dependencies\":{\"react\":\"19.2.0\",\"react-dom\":\"19.2.0\",\"@radix-ui/react-popover\":\"1.1.15\",\"motion\":\"12.23.24\",\"lucide-react\":\"0.468.0\",\"class-variance-authority\":\"0.7.1\",\"clsx\":\"2.1.1\",\"tailwind-merge\":\"3.3.1\"}}\n"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "fa39c0ed23608be3a0460e21cbd7cd24b1b9e0ec14c7d4dd6cfd992287d2cb2e",
+      "text": "{\n  \"name\": \"rich-popover\",\n  \"lockfileVersion\": 3,\n  \"requires\": true,\n  \"packages\": {\n    \"\": {\n      \"dependencies\": {\n        \"@radix-ui/react-popover\": \"1.1.15\",\n        \"class-variance-authority\": \"0.7.1\",\n        \"clsx\": \"2.1.1\",\n        \"lucide-react\": \"0.468.0\",\n        \"motion\": \"12.23.24\",\n        \"react\": \"19.2.0\",\n        \"react-dom\": \"19.2.0\",\n        \"tailwind-merge\": \"3.3.1\"\n      }\n    },\n    \"node_modules/@floating-ui/core\": {\n      \"version\": \"1.8.0\",\n      \"resolved\": \"https://registry.npmjs.org/@floating-ui/core/-/core-1.8.0.tgz\",\n      \"integrity\": \"sha512-0CIZ5itps/8x7BG8dEIhs53BvCUH2PCoogtakwRTut+Arm58sJooJ0AuZhLw2HJYIR5cMLNPBSS728sPho2khQ==\",\n      \"license\": \"MIT\",\n      \"dependencies\": {\n        \"@floating-ui/utils\": \"^0.2.12\"\n      }\n    },\n    \"node_modules/@floating-ui/dom\": {\n      \"version\": \"1.8.0\",\n      \"resolved\": \"https://registry.npmjs.org/@floating-ui/dom/-/dom-1.8.0.tgz\",\n      \"integrity\": \"sha512-yXSrzeHZBTZadLOlfyhCkJHNeLJnHRnRInwdZ40L7ZiaAtrBwoYlsDrX3v5zB1Utk7CLfzcOVnVVWoXEky7Ceg==\",\n      \"license\": \"MIT\",\n      \"dependencies\": {\n        \"@floating-ui/core\": \"^1.8.0\",\n        \"@floating-ui/utils\": \"^0.2.12\"\n      }\n    },\n    \"node_modules/@floating-ui/react-dom\": {\n      \"version\": \"2.1.9\",\n      \"resolved\": \"https://registry.npmjs.org/@floating-ui/react-dom/-/react-dom-2.1.9.tgz\",\n      \"integrity\": \"sha512-JDjEFGCpImxDCA7JJKviA0M9+RtmJdj0m/NVU5IMgBK+AmZouAQQ7/+2GLH0GXXY0YMw9oXPB8hKdbPYg5QLYg==\",\n      \"license\": \"MIT\",\n      \"dependencies\": {\n        \"@floating-ui/dom\": \"^1.8.0\"\n      },\n      \"peerDependencies\": {\n        \"react\": \">=16.8.0\",\n        \"react-dom\": \">=16.8.0\"\n      }\n    },\n    \"node_modules/@floating-ui/utils\": {\n      \"version\": \"0.2.12\",\n      \"resolved\": \"https://registry.npmjs.org/@floating-ui/utils/-/utils-0.2.12.tgz\",\n      \"integrity\": \"sha512-HpCo8tmWzLVad5s2d19EhAz5zqrrQ6s69qd6moPMQvkOuSwDT1YgRfWSVuc4ennqrgv3OHppiOGMQ7oC13yIww==\",\n      \"license\": \"MIT\"\n    },\n    \"node_modules/@radix-ui/primitive\": {\n      \"version\": \"1.1.3\",\n      \"resolved\": \"https://registry.npmjs.org/@radix-ui/primitive/-/primitive-1.1.3.tgz\",\n      \"integrity\": \"sha512-JTF99U/6XIjCBo0wqkU5sK10glYe27MRRsfwoiq5zzOEZLHU3A3KCMa5X/azekYRCJ0HlwI0crAXS/5dEHTzDg==\",\n      \"license\": \"MIT\"\n    },\n    \"node_modules/@radix-ui/react-arrow\": {\n      \"version\": \"1.1.7\",\n      \"resolved\": \"https://registry.npmjs.org/@radix-ui/react-arrow/-/react-arrow-1.1.7.tgz\",\n      \"integrity\": \"sha512-F+M1tLhO+mlQaOWspE8Wstg+z6PwxwRd8oQ8IXceWz92kfAmalTRf0EjrouQeo7QssEPfCn05B4Ihs1K9WQ/7w==\",\n      \"license\": \"MIT\",\n      \"dependencies\": {\n        \"@radix-ui/react-primitive\": \"2.1.3\"\n      },\n      \"peerDependencies\": {\n        \"@types/react\": \"*\",\n        \"@types/react-dom\": \"*\",\n        \"react\": \"^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc\",\n        \"react-dom\": \"^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc\"\n      },\n      \"peerDependenciesMeta\": {\n        \"@types/react\": {\n          \"optional\": true\n        },\n        \"@types/react-dom\": {\n          \"optional\": true\n        }\n      }\n    },\n    \"node_modules/@radix-ui/react-compose-refs\": {\n      \"version\": \"1.1.2\",\n      \"resolved\": \"https://registry.npmjs.org/@radix-ui/react-compose-refs/-/react-compose-refs-1.1.2.tgz\",\n      \"integrity\": \"sha512-z4eqJvfiNnFMHIIvXP3CY57y2WJs5g2v3X0zm9mEJkrkNv4rDxu+sg9Jh8EkXyeqBkB7SOcboo9dMVqhyrACIg==\",\n      \"license\": \"MIT\",\n      \"peerDependencies\": {\n        \"@types/react\": \"*\",\n        \"react\": \"^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc\"\n      },\n      \"peerDependenciesMeta\": {\n        \"@types/react\": {\n          \"optional\": true\n        }\n      }\n    },\n    \"node_modules/@radix-ui/react-context\": {\n      \"version\": \"1.1.2\",\n      \"resolved\": \"https://registry.npmjs.org/@radix-ui/react-context/-/react-context-1.1.2.tgz\",\n      \"integrity\": \"sha512-jCi/QKUM2r1Ju5a3J64TH2A5SpKAgh0LpknyqdQ4m6DCV0xJ2HG1xARRwNGPQfi1SLdLWZ1OJz6F4OMBBNiGJA==\",\n      \"license\": \"MIT\",\n      \"peerDependencies\": {\n        \"@types/react\": \"*\",\n        \"react\": \"^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc\"\n      },\n      \"peerDependenciesMeta\": {\n        \"@types/react\": {\n          \"optional\": true\n        }\n      }\n    },\n    \"node_modules/@radix-ui/react-dismissable-layer\": {\n      \"version\": \"1.1.11\",\n      \"resolved\": \"https://registry.npmjs.org/@radix-ui/react-dismissable-layer/-/react-dismissable-layer-1.1.11.tgz\",\n      \"integrity\": \"sha512-Nqcp+t5cTB8BinFkZgXiMJniQH0PsUt2k51FUhbdfeKvc4ACcG2uQniY/8+h1Yv6Kza4Q7lD7PQV0z0oicE0Mg==\",\n      \"license\": \"MIT\",\n      \"dependencies\": {\n        \"@radix-ui/primitive\": \"1.1.3\",\n        \"@radix-ui/react-compose-refs\": \"1.1.2\",\n        \"@radix-ui/react-primitive\": \"2.1.3\",\n        \"@radix-ui/react-use-callback-ref\": \"1.1.1\",\n        \"@radix-ui/react-use-escape-keydown\": \"1.1.1\"\n      },\n      \"peerDependencies\": {\n        \"@types/react\": \"*\",\n        \"@types/react-dom\": \"*\",\n        \"react\": \"^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc\",\n        \"react-dom\": \"^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc\"\n      },\n      \"peerDependenciesMeta\": {\n        \"@types/react\": {\n          \"optional\": true\n        },\n        \"@types/react-dom\": {\n          \"optional\": true\n        }\n      }\n    },\n    \"node_modules/@radix-ui/react-focus-guards\": {\n      \"version\": \"1.1.3\",\n      \"resolved\": \"https://registry.npmjs.org/@radix-ui/react-focus-guards/-/react-focus-guards-1.1.3.tgz\",\n      \"integrity\": \"sha512-0rFg/Rj2Q62NCm62jZw0QX7a3sz6QCQU0LpZdNrJX8byRGaGVTqbrW9jAoIAHyMQqsNpeZ81YgSizOt5WXq0Pw==\",\n      \"license\": \"MIT\",\n      \"peerDependencies\": {\n        \"@types/react\": \"*\",\n        \"react\": \"^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc\"\n      },\n      \"peerDependenciesMeta\": {\n        \"@types/react\": {\n          \"optional\": true\n        }\n      }\n    },\n    \"node_modules/@radix-ui/react-focus-scope\": {\n      \"version\": \"1.1.7\",\n      \"resolved\": \"https://registry.npmjs.org/@radix-ui/react-focus-scope/-/react-focus-scope-1.1.7.tgz\",\n      \"integrity\": \"sha512-t2ODlkXBQyn7jkl6TNaw/MtVEVvIGelJDCG41Okq/KwUsJBwQ4XVZsHAVUkK4mBv3ewiAS3PGuUWuY2BoK4ZUw==\",\n      \"license\": \"MIT\",\n      \"dependencies\": {\n        \"@radix-ui/react-compose-refs\": \"1.1.2\",\n        \"@radix-ui/react-primitive\": \"2.1.3\",\n        \"@radix-ui/react-use-callback-ref\": \"1.1.1\"\n      },\n      \"peerDependencies\": {\n        \"@types/react\": \"*\",\n        \"@types/react-dom\": \"*\",\n        \"react\": \"^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc\",\n        \"react-dom\": \"^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc\"\n      },\n      \"peerDependenciesMeta\": {\n        \"@types/react\": {\n          \"optional\": true\n        },\n        \"@types/react-dom\": {\n          \"optional\": true\n        }\n      }\n    },\n    \"node_modules/@radix-ui/react-id\": {\n      \"version\": \"1.1.1\",\n      \"resolved\": \"https://registry.npmjs.org/@radix-ui/react-id/-/react-id-1.1.1.tgz\",\n      \"integrity\": \"sha512-kGkGegYIdQsOb4XjsfM97rXsiHaBwco+hFI66oO4s9LU+PLAC5oJ7khdOVFxkhsmlbpUqDAvXw11CluXP+jkHg==\",\n      \"license\": \"MIT\",\n      \"dependencies\": {\n        \"@radix-ui/react-use-layout-effect\": \"1.1.1\"\n      },\n      \"peerDependencies\": {\n        \"@types/react\": \"*\",\n        \"react\": \"^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc\"\n      },\n      \"peerDependenciesMeta\": {\n        \"@types/react\": {\n          \"optional\": true\n        }\n      }\n    },\n    \"node_modules/@radix-ui/react-popover\": {\n      \"version\": \"1.1.15\",\n      \"resolved\": \"https://registry.npmjs.org/@radix-ui/react-popover/-/react-popover-1.1.15.tgz\",\n      \"integrity\": \"sha512-kr0X2+6Yy/vJzLYJUPCZEc8SfQcf+1COFoAqauJm74umQhta9M7lNJHP7QQS3vkvcGLQUbWpMzwrXYwrYztHKA==\",\n      \"license\": \"MIT\",\n      \"dependencies\": {\n        \"@radix-ui/primitive\": \"1.1.3\",\n        \"@radix-ui/react-compose-refs\": \"1.1.2\",\n        \"@radix-ui/react-context\": \"1.1.2\",\n        \"@radix-ui/react-dismissable-layer\": \"1.1.11\",\n        \"@radix-ui/react-focus-guards\": \"1.1.3\",\n        \"@radix-ui/react-focus-scope\": \"1.1.7\",\n        \"@radix-ui/react-id\": \"1.1.1\",\n        \"@radix-ui/react-popper\": \"1.2.8\",\n        \"@radix-ui/react-portal\": \"1.1.9\",\n        \"@radix-ui/react-presence\": \"1.1.5\",\n        \"@radix-ui/react-primitive\": \"2.1.3\",\n        \"@radix-ui/react-slot\": \"1.2.3\",\n        \"@radix-ui/react-use-controllable-state\": \"1.2.2\",\n        \"aria-hidden\": \"^1.2.4\",\n        \"react-remove-scroll\": \"^2.6.3\"\n      },\n      \"peerDependencies\": {\n        \"@types/react\": \"*\",\n        \"@types/react-dom\": \"*\",\n        \"react\": \"^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc\",\n        \"react-dom\": \"^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc\"\n      },\n      \"peerDependenciesMeta\": {\n        \"@types/react\": {\n          \"optional\": true\n        },\n        \"@types/react-dom\": {\n          \"optional\": true\n        }\n      }\n    },\n    \"node_modules/@radix-ui/react-popper\": {\n      \"version\": \"1.2.8\",\n      \"resolved\": \"https://registry.npmjs.org/@radix-ui/react-popper/-/react-popper-1.2.8.tgz\",\n      \"integrity\": \"sha512-0NJQ4LFFUuWkE7Oxf0htBKS6zLkkjBH+hM1uk7Ng705ReR8m/uelduy1DBo0PyBXPKVnBA6YBlU94MBGXrSBCw==\",\n      \"license\": \"MIT\",\n      \"dependencies\": {\n        \"@floating-ui/react-dom\": \"^2.0.0\",\n        \"@radix-ui/react-arrow\": \"1.1.7\",\n        \"@radix-ui/react-compose-refs\": \"1.1.2\",\n        \"@radix-ui/react-context\": \"1.1.2\",\n        \"@radix-ui/react-primitive\": \"2.1.3\",\n        \"@radix-ui/react-use-callback-ref\": \"1.1.1\",\n        \"@radix-ui/react-use-layout-effect\": \"1.1.1\",\n        \"@radix-ui/react-use-rect\": \"1.1.1\",\n        \"@radix-ui/react-use-size\": \"1.1.1\",\n        \"@radix-ui/rect\": \"1.1.1\"\n      },\n      \"peerDependencies\": {\n        \"@types/react\": \"*\",\n        \"@types/react-dom\": \"*\",\n        \"react\": \"^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc\",\n        \"react-dom\": \"^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc\"\n      },\n      \"peerDependenciesMeta\": {\n        \"@types/react\": {\n          \"optional\": true\n        },\n        \"@types/react-dom\": {\n          \"optional\": true\n        }\n      }\n    },\n    \"node_modules/@radix-ui/react-portal\": {\n      \"version\": \"1.1.9\",\n      \"resolved\": \"https://registry.npmjs.org/@radix-ui/react-portal/-/react-portal-1.1.9.tgz\",\n      \"integrity\": \"sha512-bpIxvq03if6UNwXZ+HTK71JLh4APvnXntDc6XOX8UVq4XQOVl7lwok0AvIl+b8zgCw3fSaVTZMpAPPagXbKmHQ==\",\n      \"license\": \"MIT\",\n      \"dependencies\": {\n        \"@radix-ui/react-primitive\": \"2.1.3\",\n        \"@radix-ui/react-use-layout-effect\": \"1.1.1\"\n      },\n      \"peerDependencies\": {\n        \"@types/react\": \"*\",\n        \"@types/react-dom\": \"*\",\n        \"react\": \"^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc\",\n        \"react-dom\": \"^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc\"\n      },\n      \"peerDependenciesMeta\": {\n        \"@types/react\": {\n          \"optional\": true\n        },\n        \"@types/react-dom\": {\n          \"optional\": true\n        }\n      }\n    },\n    \"node_modules/@radix-ui/react-presence\": {\n      \"version\": \"1.1.5\",\n      \"resolved\": \"https://registry.npmjs.org/@radix-ui/react-presence/-/react-presence-1.1.5.tgz\",\n      \"integrity\": \"sha512-/jfEwNDdQVBCNvjkGit4h6pMOzq8bHkopq458dPt2lMjx+eBQUohZNG9A7DtO/O5ukSbxuaNGXMjHicgwy6rQQ==\",\n      \"license\": \"MIT\",\n      \"dependencies\": {\n        \"@radix-ui/react-compose-refs\": \"1.1.2\",\n        \"@radix-ui/react-use-layout-effect\": \"1.1.1\"\n      },\n      \"peerDependencies\": {\n        \"@types/react\": \"*\",\n        \"@types/react-dom\": \"*\",\n        \"react\": \"^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc\",\n        \"react-dom\": \"^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc\"\n      },\n      \"peerDependenciesMeta\": {\n        \"@types/react\": {\n          \"optional\": true\n        },\n        \"@types/react-dom\": {\n          \"optional\": true\n        }\n      }\n    },\n    \"node_modules/@radix-ui/react-primitive\": {\n      \"version\": \"2.1.3\",\n      \"resolved\": \"https://registry.npmjs.org/@radix-ui/react-primitive/-/react-primitive-2.1.3.tgz\",\n      \"integrity\": \"sha512-m9gTwRkhy2lvCPe6QJp4d3G1TYEUHn/FzJUtq9MjH46an1wJU+GdoGC5VLof8RX8Ft/DlpshApkhswDLZzHIcQ==\",\n      \"license\": \"MIT\",\n      \"dependencies\": {\n        \"@radix-ui/react-slot\": \"1.2.3\"\n      },\n      \"peerDependencies\": {\n        \"@types/react\": \"*\",\n        \"@types/react-dom\": \"*\",\n        \"react\": \"^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc\",\n        \"react-dom\": \"^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc\"\n      },\n      \"peerDependenciesMeta\": {\n        \"@types/react\": {\n          \"optional\": true\n        },\n        \"@types/react-dom\": {\n          \"optional\": true\n        }\n      }\n    },\n    \"node_modules/@radix-ui/react-slot\": {\n      \"version\": \"1.2.3\",\n      \"resolved\": \"https://registry.npmjs.org/@radix-ui/react-slot/-/react-slot-1.2.3.tgz\",\n      \"integrity\": \"sha512-aeNmHnBxbi2St0au6VBVC7JXFlhLlOnvIIlePNniyUNAClzmtAUEY8/pBiK3iHjufOlwA+c20/8jngo7xcrg8A==\",\n      \"license\": \"MIT\",\n      \"dependencies\": {\n        \"@radix-ui/react-compose-refs\": \"1.1.2\"\n      },\n      \"peerDependencies\": {\n        \"@types/react\": \"*\",\n        \"react\": \"^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc\"\n      },\n      \"peerDependenciesMeta\": {\n        \"@types/react\": {\n          \"optional\": true\n        }\n      }\n    },\n    \"node_modules/@radix-ui/react-use-callback-ref\": {\n      \"version\": \"1.1.1\",\n      \"resolved\": \"https://registry.npmjs.org/@radix-ui/react-use-callback-ref/-/react-use-callback-ref-1.1.1.tgz\",\n      \"integrity\": \"sha512-FkBMwD+qbGQeMu1cOHnuGB6x4yzPjho8ap5WtbEJ26umhgqVXbhekKUQO+hZEL1vU92a3wHwdp0HAcqAUF5iDg==\",\n      \"license\": \"MIT\",\n      \"peerDependencies\": {\n        \"@types/react\": \"*\",\n        \"react\": \"^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc\"\n      },\n      \"peerDependenciesMeta\": {\n        \"@types/react\": {\n          \"optional\": true\n        }\n      }\n    },\n    \"node_modules/@radix-ui/react-use-controllable-state\": {\n      \"version\": \"1.2.2\",\n      \"resolved\": \"https://registry.npmjs.org/@radix-ui/react-use-controllable-state/-/react-use-controllable-state-1.2.2.tgz\",\n      \"integrity\": \"sha512-BjasUjixPFdS+NKkypcyyN5Pmg83Olst0+c6vGov0diwTEo6mgdqVR6hxcEgFuh4QrAs7Rc+9KuGJ9TVCj0Zzg==\",\n      \"license\": \"MIT\",\n      \"dependencies\": {\n        \"@radix-ui/react-use-effect-event\": \"0.0.2\",\n        \"@radix-ui/react-use-layout-effect\": \"1.1.1\"\n      },\n      \"peerDependencies\": {\n        \"@types/react\": \"*\",\n        \"react\": \"^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc\"\n      },\n      \"peerDependenciesMeta\": {\n        \"@types/react\": {\n          \"optional\": true\n        }\n      }\n    },\n    \"node_modules/@radix-ui/react-use-effect-event\": {\n      \"version\": \"0.0.2\",\n      \"resolved\": \"https://registry.npmjs.org/@radix-ui/react-use-effect-event/-/react-use-effect-event-0.0.2.tgz\",\n      \"integrity\": \"sha512-Qp8WbZOBe+blgpuUT+lw2xheLP8q0oatc9UpmiemEICxGvFLYmHm9QowVZGHtJlGbS6A6yJ3iViad/2cVjnOiA==\",\n      \"license\": \"MIT\",\n      \"dependencies\": {\n        \"@radix-ui/react-use-layout-effect\": \"1.1.1\"\n      },\n      \"peerDependencies\": {\n        \"@types/react\": \"*\",\n        \"react\": \"^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc\"\n      },\n      \"peerDependenciesMeta\": {\n        \"@types/react\": {\n          \"optional\": true\n        }\n      }\n    },\n    \"node_modules/@radix-ui/react-use-escape-keydown\": {\n      \"version\": \"1.1.1\",\n      \"resolved\": \"https://registry.npmjs.org/@radix-ui/react-use-escape-keydown/-/react-use-escape-keydown-1.1.1.tgz\",\n      \"integrity\": \"sha512-Il0+boE7w/XebUHyBjroE+DbByORGR9KKmITzbR7MyQ4akpORYP/ZmbhAr0DG7RmmBqoOnZdy2QlvajJ2QA59g==\",\n      \"license\": \"MIT\",\n      \"dependencies\": {\n        \"@radix-ui/react-use-callback-ref\": \"1.1.1\"\n      },\n      \"peerDependencies\": {\n        \"@types/react\": \"*\",\n        \"react\": \"^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc\"\n      },\n      \"peerDependenciesMeta\": {\n        \"@types/react\": {\n          \"optional\": true\n        }\n      }\n    },\n    \"node_modules/@radix-ui/react-use-layout-effect\": {\n      \"version\": \"1.1.1\",\n      \"resolved\": \"https://registry.npmjs.org/@radix-ui/react-use-layout-effect/-/react-use-layout-effect-1.1.1.tgz\",\n      \"integrity\": \"sha512-RbJRS4UWQFkzHTTwVymMTUv8EqYhOp8dOOviLj2ugtTiXRaRQS7GLGxZTLL1jWhMeoSCf5zmcZkqTl9IiYfXcQ==\",\n      \"license\": \"MIT\",\n      \"peerDependencies\": {\n        \"@types/react\": \"*\",\n        \"react\": \"^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc\"\n      },\n      \"peerDependenciesMeta\": {\n        \"@types/react\": {\n          \"optional\": true\n        }\n      }\n    },\n    \"node_modules/@radix-ui/react-use-rect\": {\n      \"version\": \"1.1.1\",\n      \"resolved\": \"https://registry.npmjs.org/@radix-ui/react-use-rect/-/react-use-rect-1.1.1.tgz\",\n      \"integrity\": \"sha512-QTYuDesS0VtuHNNvMh+CjlKJ4LJickCMUAqjlE3+j8w+RlRpwyX3apEQKGFzbZGdo7XNG1tXa+bQqIE7HIXT2w==\",\n      \"license\": \"MIT\",\n      \"dependencies\": {\n        \"@radix-ui/rect\": \"1.1.1\"\n      },\n      \"peerDependencies\": {\n        \"@types/react\": \"*\",\n        \"react\": \"^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc\"\n      },\n      \"peerDependenciesMeta\": {\n        \"@types/react\": {\n          \"optional\": true\n        }\n      }\n    },\n    \"node_modules/@radix-ui/react-use-size\": {\n      \"version\": \"1.1.1\",\n      \"resolved\": \"https://registry.npmjs.org/@radix-ui/react-use-size/-/react-use-size-1.1.1.tgz\",\n      \"integrity\": \"sha512-ewrXRDTAqAXlkl6t/fkXWNAhFX9I+CkKlw6zjEwk86RSPKwZr3xpBRso655aqYafwtnbpHLj6toFzmd6xdVptQ==\",\n      \"license\": \"MIT\",\n      \"dependencies\": {\n        \"@radix-ui/react-use-layout-effect\": \"1.1.1\"\n      },\n      \"peerDependencies\": {\n        \"@types/react\": \"*\",\n        \"react\": \"^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc\"\n      },\n      \"peerDependenciesMeta\": {\n        \"@types/react\": {\n          \"optional\": true\n        }\n      }\n    },\n    \"node_modules/@radix-ui/rect\": {\n      \"version\": \"1.1.1\",\n      \"resolved\": \"https://registry.npmjs.org/@radix-ui/rect/-/rect-1.1.1.tgz\",\n      \"integrity\": \"sha512-HPwpGIzkl28mWyZqG52jiqDJ12waP11Pa1lGoiyUkIEuMLBP0oeK/C89esbXrxsky5we7dfd8U58nm0SgAWpVw==\",\n      \"license\": \"MIT\"\n    },\n    \"node_modules/aria-hidden\": {\n      \"version\": \"1.2.6\",\n      \"resolved\": \"https://registry.npmjs.org/aria-hidden/-/aria-hidden-1.2.6.tgz\",\n      \"integrity\": \"sha512-ik3ZgC9dY/lYVVM++OISsaYDeg1tb0VtP5uL3ouh1koGOaUMDPpbFIei4JkFimWUFPn90sbMNMXQAIVOlnYKJA==\",\n      \"license\": \"MIT\",\n      \"dependencies\": {\n        \"tslib\": \"^2.0.0\"\n      },\n      \"engines\": {\n        \"node\": \">=10\"\n      }\n    },\n    \"node_modules/class-variance-authority\": {\n      \"version\": \"0.7.1\",\n      \"resolved\": \"https://registry.npmjs.org/class-variance-authority/-/class-variance-authority-0.7.1.tgz\",\n      \"integrity\": \"sha512-Ka+9Trutv7G8M6WT6SeiRWz792K5qEqIGEGzXKhAE6xOWAY6pPH8U+9IY3oCMv6kqTmLsv7Xh/2w2RigkePMsg==\",\n      \"license\": \"Apache-2.0\",\n      \"dependencies\": {\n        \"clsx\": \"^2.1.1\"\n      },\n      \"funding\": {\n        \"url\": \"https://polar.sh/cva\"\n      }\n    },\n    \"node_modules/clsx\": {\n      \"version\": \"2.1.1\",\n      \"resolved\": \"https://registry.npmjs.org/clsx/-/clsx-2.1.1.tgz\",\n      \"integrity\": \"sha512-eYm0QWBtUrBWZWG0d386OGAw16Z995PiOVo2B7bjWSbHedGl5e0ZWaq65kOGgUSNesEIDkB9ISbTg/JK9dhCZA==\",\n      \"license\": \"MIT\",\n      \"engines\": {\n        \"node\": \">=6\"\n      }\n    },\n    \"node_modules/detect-node-es\": {\n      \"version\": \"1.1.0\",\n      \"resolved\": \"https://registry.npmjs.org/detect-node-es/-/detect-node-es-1.1.0.tgz\",\n      \"integrity\": \"sha512-ypdmJU/TbBby2Dxibuv7ZLW3Bs1QEmM7nHjEANfohJLvE0XVujisn1qPJcZxg+qDucsr+bP6fLD1rPS3AhJ7EQ==\",\n      \"license\": \"MIT\"\n    },\n    \"node_modules/framer-motion\": {\n      \"version\": \"12.43.0\",\n      \"resolved\": \"https://registry.npmjs.org/framer-motion/-/framer-motion-12.43.0.tgz\",\n      \"integrity\": \"sha512-1eaL3RvR/kAlbG7UYcpMptEyzPoENO0c6w7ZnB3/hh2vSAz/6uGAFn6fdoqTBguNstf3MsFhJHsD/0DHiclG+g==\",\n      \"license\": \"MIT\",\n      \"dependencies\": {\n        \"motion-dom\": \"^12.43.0\",\n        \"motion-utils\": \"^12.39.0\",\n        \"tslib\": \"^2.4.0\"\n      },\n      \"peerDependencies\": {\n        \"@emotion/is-prop-valid\": \"*\",\n        \"react\": \"^18.0.0 || ^19.0.0\",\n        \"react-dom\": \"^18.0.0 || ^19.0.0\"\n      },\n      \"peerDependenciesMeta\": {\n        \"@emotion/is-prop-valid\": {\n          \"optional\": true\n        },\n        \"react\": {\n          \"optional\": true\n        },\n        \"react-dom\": {\n          \"optional\": true\n        }\n      }\n    },\n    \"node_modules/get-nonce\": {\n      \"version\": \"1.0.1\",\n      \"resolved\": \"https://registry.npmjs.org/get-nonce/-/get-nonce-1.0.1.tgz\",\n      \"integrity\": \"sha512-FJhYRoDaiatfEkUK8HKlicmu/3SGFD51q3itKDGoSTysQJBnfOcxU5GxnhE1E6soB76MbT0MBtnKJuXyAx+96Q==\",\n      \"license\": \"MIT\",\n      \"engines\": {\n        \"node\": \">=6\"\n      }\n    },\n    \"node_modules/lucide-react\": {\n      \"version\": \"0.468.0\",\n      \"resolved\": \"https://registry.npmjs.org/lucide-react/-/lucide-react-0.468.0.tgz\",\n      \"integrity\": \"sha512-6koYRhnM2N0GGZIdXzSeiNwguv1gt/FAjZOiPl76roBi3xKEXa4WmfpxgQwTTL4KipXjefrnf3oV4IsYhi4JFA==\",\n      \"license\": \"ISC\",\n      \"peerDependencies\": {\n        \"react\": \"^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0-rc\"\n      }\n    },\n    \"node_modules/motion\": {\n      \"version\": \"12.23.24\",\n      \"resolved\": \"https://registry.npmjs.org/motion/-/motion-12.23.24.tgz\",\n      \"integrity\": \"sha512-Rc5E7oe2YZ72N//S3QXGzbnXgqNrTESv8KKxABR20q2FLch9gHLo0JLyYo2hZ238bZ9Gx6cWhj9VO0IgwbMjCw==\",\n      \"license\": \"MIT\",\n      \"dependencies\": {\n        \"framer-motion\": \"^12.23.24\",\n        \"tslib\": \"^2.4.0\"\n      },\n      \"peerDependencies\": {\n        \"@emotion/is-prop-valid\": \"*\",\n        \"react\": \"^18.0.0 || ^19.0.0\",\n        \"react-dom\": \"^18.0.0 || ^19.0.0\"\n      },\n      \"peerDependenciesMeta\": {\n        \"@emotion/is-prop-valid\": {\n          \"optional\": true\n        },\n        \"react\": {\n          \"optional\": true\n        },\n        \"react-dom\": {\n          \"optional\": true\n        }\n      }\n    },\n    \"node_modules/motion-dom\": {\n      \"version\": \"12.43.0\",\n      \"resolved\": \"https://registry.npmjs.org/motion-dom/-/motion-dom-12.43.0.tgz\",\n      \"integrity\": \"sha512-azKON4d9S65PEoFUiQTMTgPheEmzf2QngdRc50AKfJp9Q9mmcBVw22c8eMq9k8kxOFHdL7+WZY7N/5F/lwiDag==\",\n      \"license\": \"MIT\",\n      \"dependencies\": {\n        \"motion-utils\": \"^12.39.0\"\n      }\n    },\n    \"node_modules/motion-utils\": {\n      \"version\": \"12.39.0\",\n      \"resolved\": \"https://registry.npmjs.org/motion-utils/-/motion-utils-12.39.0.tgz\",\n      \"integrity\": \"sha512-8nadJAJjTtqRkmRF36FoJTrywK9nnFmnPwnSMyxaOCU7GDjN9RTMJIxx9De8ErM+vpPhMccr/6fo5WciyQLnMQ==\",\n      \"license\": \"MIT\"\n    },\n    \"node_modules/react\": {\n      \"version\": \"19.2.0\",\n      \"resolved\": \"https://registry.npmjs.org/react/-/react-19.2.0.tgz\",\n      \"integrity\": \"sha512-tmbWg6W31tQLeB5cdIBOicJDJRR2KzXsV7uSK9iNfLWQ5bIZfxuPEHp7M8wiHyHnn0DD1i7w3Zmin0FtkrwoCQ==\",\n      \"license\": \"MIT\",\n      \"engines\": {\n        \"node\": \">=0.10.0\"\n      }\n    },\n    \"node_modules/react-dom\": {\n      \"version\": \"19.2.0\",\n      \"resolved\": \"https://registry.npmjs.org/react-dom/-/react-dom-19.2.0.tgz\",\n      \"integrity\": \"sha512-UlbRu4cAiGaIewkPyiRGJk0imDN2T3JjieT6spoL2UeSf5od4n5LB/mQ4ejmxhCFT1tYe8IvaFulzynWovsEFQ==\",\n      \"license\": \"MIT\",\n      \"dependencies\": {\n        \"scheduler\": \"^0.27.0\"\n      },\n      \"peerDependencies\": {\n        \"react\": \"^19.2.0\"\n      }\n    },\n    \"node_modules/react-remove-scroll\": {\n      \"version\": \"2.7.2\",\n      \"resolved\": \"https://registry.npmjs.org/react-remove-scroll/-/react-remove-scroll-2.7.2.tgz\",\n      \"integrity\": \"sha512-Iqb9NjCCTt6Hf+vOdNIZGdTiH1QSqr27H/Ek9sv/a97gfueI/5h1s3yRi1nngzMUaOOToin5dI1dXKdXiF+u0Q==\",\n      \"license\": \"MIT\",\n      \"dependencies\": {\n        \"react-remove-scroll-bar\": \"^2.3.7\",\n        \"react-style-singleton\": \"^2.2.3\",\n        \"tslib\": \"^2.1.0\",\n        \"use-callback-ref\": \"^1.3.3\",\n        \"use-sidecar\": \"^1.1.3\"\n      },\n      \"engines\": {\n        \"node\": \">=10\"\n      },\n      \"peerDependencies\": {\n        \"@types/react\": \"*\",\n        \"react\": \"^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0 || ^19.0.0-rc\"\n      },\n      \"peerDependenciesMeta\": {\n        \"@types/react\": {\n          \"optional\": true\n        }\n      }\n    },\n    \"node_modules/react-remove-scroll-bar\": {\n      \"version\": \"2.3.8\",\n      \"resolved\": \"https://registry.npmjs.org/react-remove-scroll-bar/-/react-remove-scroll-bar-2.3.8.tgz\",\n      \"integrity\": \"sha512-9r+yi9+mgU33AKcj6IbT9oRCO78WriSj6t/cF8DWBZJ9aOGPOTEDvdUDz1FwKim7QXWwmHqtdHnRJfhAxEG46Q==\",\n      \"license\": \"MIT\",\n      \"dependencies\": {\n        \"react-style-singleton\": \"^2.2.2\",\n        \"tslib\": \"^2.0.0\"\n      },\n      \"engines\": {\n        \"node\": \">=10\"\n      },\n      \"peerDependencies\": {\n        \"@types/react\": \"*\",\n        \"react\": \"^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0\"\n      },\n      \"peerDependenciesMeta\": {\n        \"@types/react\": {\n          \"optional\": true\n        }\n      }\n    },\n    \"node_modules/react-style-singleton\": {\n      \"version\": \"2.2.3\",\n      \"resolved\": \"https://registry.npmjs.org/react-style-singleton/-/react-style-singleton-2.2.3.tgz\",\n      \"integrity\": \"sha512-b6jSvxvVnyptAiLjbkWLE/lOnR4lfTtDAl+eUC7RZy+QQWc6wRzIV2CE6xBuMmDxc2qIihtDCZD5NPOFl7fRBQ==\",\n      \"license\": \"MIT\",\n      \"dependencies\": {\n        \"get-nonce\": \"^1.0.0\",\n        \"tslib\": \"^2.0.0\"\n      },\n      \"engines\": {\n        \"node\": \">=10\"\n      },\n      \"peerDependencies\": {\n        \"@types/react\": \"*\",\n        \"react\": \"^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0 || ^19.0.0-rc\"\n      },\n      \"peerDependenciesMeta\": {\n        \"@types/react\": {\n          \"optional\": true\n        }\n      }\n    },\n    \"node_modules/scheduler\": {\n      \"version\": \"0.27.0\",\n      \"resolved\": \"https://registry.npmjs.org/scheduler/-/scheduler-0.27.0.tgz\",\n      \"integrity\": \"sha512-eNv+WrVbKu1f3vbYJT/xtiF5syA5HPIMtf9IgY/nKg0sWqzAUEvqY/xm7OcZc/qafLx/iO9FgOmeSAp4v5ti/Q==\",\n      \"license\": \"MIT\"\n    },\n    \"node_modules/tailwind-merge\": {\n      \"version\": \"3.3.1\",\n      \"resolved\": \"https://registry.npmjs.org/tailwind-merge/-/tailwind-merge-3.3.1.tgz\",\n      \"integrity\": \"sha512-gBXpgUm/3rp1lMZZrM/w7D8GKqshif0zAymAhbCyIt8KMe+0v9DQ7cdYLR4FHH/cKpdTXb+A/tKKU3eolfsI+g==\",\n      \"license\": \"MIT\",\n      \"funding\": {\n        \"type\": \"github\",\n        \"url\": \"https://github.com/sponsors/dcastil\"\n      }\n    },\n    \"node_modules/tslib\": {\n      \"version\": \"2.9.1\",\n      \"resolved\": \"https://registry.npmjs.org/tslib/-/tslib-2.9.1.tgz\",\n      \"integrity\": \"sha512-a4Ux9VKuIMHsOS7ENbEq6hK2ZGYIT27Rtl0E4eD9KqwxhKiQeMZE/9xb3IdYwWaSOyIBQLExhQgXDTYoiCxnWA==\",\n      \"license\": \"0BSD\"\n    },\n    \"node_modules/use-callback-ref\": {\n      \"version\": \"1.3.3\",\n      \"resolved\": \"https://registry.npmjs.org/use-callback-ref/-/use-callback-ref-1.3.3.tgz\",\n      \"integrity\": \"sha512-jQL3lRnocaFtu3V00JToYz/4QkNWswxijDaCVNZRiRTO3HQDLsdu1ZtmIUvV4yPp+rvWm5j0y0TG/S61cuijTg==\",\n      \"license\": \"MIT\",\n      \"dependencies\": {\n        \"tslib\": \"^2.0.0\"\n      },\n      \"engines\": {\n        \"node\": \">=10\"\n      },\n      \"peerDependencies\": {\n        \"@types/react\": \"*\",\n        \"react\": \"^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0 || ^19.0.0-rc\"\n      },\n      \"peerDependenciesMeta\": {\n        \"@types/react\": {\n          \"optional\": true\n        }\n      }\n    },\n    \"node_modules/use-sidecar\": {\n      \"version\": \"1.1.3\",\n      \"resolved\": \"https://registry.npmjs.org/use-sidecar/-/use-sidecar-1.1.3.tgz\",\n      \"integrity\": \"sha512-Fedw0aZvkhynoPYlA5WXrMCAMm+nSWdZt6lzJQ7Ok8S6Q+VsHmHpRWndVRJ8Be0ZbkfPc5LRYH+5XrzXcEeLRQ==\",\n      \"license\": \"MIT\",\n      \"dependencies\": {\n        \"detect-node-es\": \"^1.1.0\",\n        \"tslib\": \"^2.0.0\"\n      },\n      \"engines\": {\n        \"node\": \">=10\"\n      },\n      \"peerDependencies\": {\n        \"@types/react\": \"*\",\n        \"react\": \"^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0 || ^19.0.0-rc\"\n      },\n      \"peerDependenciesMeta\": {\n        \"@types/react\": {\n          \"optional\": true\n        }\n      }\n    }\n  }\n}\n"
+    }
+  ],
+  "dependencyScopeCounts": {
+    "emitted": 41,
+    "parsed-tree-shaken": 3,
+    "compiled-css": 1
+  },
+  "runtimeDependencies": [
+    {
+      "scope": "compiled-css",
+      "name": "tailwindcss",
+      "version": "4.3.0",
+      "license": "MIT",
+      "licenseFiles": [
+        "ui-smooth-chat-adapt/node_modules/tailwindcss/LICENSE"
+      ]
+    },
+    {
+      "scope": "emitted",
+      "name": "@floating-ui/core",
+      "version": "1.8.0",
+      "license": "MIT",
+      "licenseFiles": [
+        "ui-smooth-pair-local/rich-popover/node_modules/@floating-ui/core/LICENSE"
+      ]
+    },
+    {
+      "scope": "emitted",
+      "name": "@floating-ui/dom",
+      "version": "1.8.0",
+      "license": "MIT",
+      "licenseFiles": [
+        "ui-smooth-pair-local/rich-popover/node_modules/@floating-ui/dom/LICENSE"
+      ]
+    },
+    {
+      "scope": "emitted",
+      "name": "@floating-ui/react-dom",
+      "version": "2.1.9",
+      "license": "MIT",
+      "licenseFiles": [
+        "ui-smooth-pair-local/rich-popover/node_modules/@floating-ui/react-dom/LICENSE"
+      ]
+    },
+    {
+      "scope": "emitted",
+      "name": "@floating-ui/utils",
+      "version": "0.2.12",
+      "license": "MIT",
+      "licenseFiles": [
+        "ui-smooth-pair-local/rich-popover/node_modules/@floating-ui/utils/LICENSE"
+      ]
+    },
+    {
+      "scope": "emitted",
+      "name": "@radix-ui/primitive",
+      "version": "1.1.3",
+      "license": "MIT",
+      "licenseFiles": [
+        "ui-smooth-pair-local/rich-popover/node_modules/@radix-ui/primitive/LICENSE"
+      ]
+    },
+    {
+      "scope": "emitted",
+      "name": "@radix-ui/react-arrow",
+      "version": "1.1.7",
+      "license": "MIT",
+      "licenseFiles": [
+        "ui-smooth-pair-local/rich-popover/node_modules/@radix-ui/react-arrow/LICENSE"
+      ]
+    },
+    {
+      "scope": "emitted",
+      "name": "@radix-ui/react-compose-refs",
+      "version": "1.1.2",
+      "license": "MIT",
+      "licenseFiles": [
+        "ui-smooth-pair-local/rich-popover/node_modules/@radix-ui/react-popover/LICENSE"
+      ]
+    },
+    {
+      "scope": "emitted",
+      "name": "@radix-ui/react-context",
+      "version": "1.1.2",
+      "license": "MIT",
+      "licenseFiles": [
+        "ui-smooth-pair-local/rich-popover/node_modules/@radix-ui/react-popover/LICENSE"
+      ]
+    },
+    {
+      "scope": "emitted",
+      "name": "@radix-ui/react-dismissable-layer",
+      "version": "1.1.11",
+      "license": "MIT",
+      "licenseFiles": [
+        "ui-smooth-pair-local/rich-popover/node_modules/@radix-ui/react-dismissable-layer/LICENSE"
+      ]
+    },
+    {
+      "scope": "emitted",
+      "name": "@radix-ui/react-focus-guards",
+      "version": "1.1.3",
+      "license": "MIT",
+      "licenseFiles": [
+        "ui-smooth-pair-local/rich-popover/node_modules/@radix-ui/react-focus-guards/LICENSE"
+      ]
+    },
+    {
+      "scope": "emitted",
+      "name": "@radix-ui/react-focus-scope",
+      "version": "1.1.7",
+      "license": "MIT",
+      "licenseFiles": [
+        "ui-smooth-pair-local/rich-popover/node_modules/@radix-ui/react-focus-scope/LICENSE"
+      ]
+    },
+    {
+      "scope": "emitted",
+      "name": "@radix-ui/react-id",
+      "version": "1.1.1",
+      "license": "MIT",
+      "licenseFiles": [
+        "ui-smooth-pair-local/rich-popover/node_modules/@radix-ui/react-popover/LICENSE"
+      ]
+    },
+    {
+      "scope": "emitted",
+      "name": "@radix-ui/react-popover",
+      "version": "1.1.15",
+      "license": "MIT",
+      "licenseFiles": [
+        "ui-smooth-pair-local/rich-popover/node_modules/@radix-ui/react-popover/LICENSE"
+      ]
+    },
+    {
+      "scope": "emitted",
+      "name": "@radix-ui/react-popper",
+      "version": "1.2.8",
+      "license": "MIT",
+      "licenseFiles": [
+        "ui-smooth-pair-local/rich-popover/node_modules/@radix-ui/react-popper/LICENSE"
+      ]
+    },
+    {
+      "scope": "emitted",
+      "name": "@radix-ui/react-portal",
+      "version": "1.1.9",
+      "license": "MIT",
+      "licenseFiles": [
+        "ui-smooth-pair-local/rich-popover/node_modules/@radix-ui/react-portal/LICENSE"
+      ]
+    },
+    {
+      "scope": "emitted",
+      "name": "@radix-ui/react-presence",
+      "version": "1.1.5",
+      "license": "MIT",
+      "licenseFiles": [
+        "ui-smooth-pair-local/rich-popover/node_modules/@radix-ui/react-presence/LICENSE"
+      ]
+    },
+    {
+      "scope": "emitted",
+      "name": "@radix-ui/react-primitive",
+      "version": "2.1.3",
+      "license": "MIT",
+      "licenseFiles": [
+        "ui-smooth-pair-local/rich-popover/node_modules/@radix-ui/react-primitive/LICENSE"
+      ]
+    },
+    {
+      "scope": "emitted",
+      "name": "@radix-ui/react-slot",
+      "version": "1.2.3",
+      "license": "MIT",
+      "licenseFiles": [
+        "ui-smooth-pair-local/rich-popover/node_modules/@radix-ui/react-slot/LICENSE"
+      ]
+    },
+    {
+      "scope": "emitted",
+      "name": "@radix-ui/react-use-callback-ref",
+      "version": "1.1.1",
+      "license": "MIT",
+      "licenseFiles": [
+        "ui-smooth-pair-local/rich-popover/node_modules/@radix-ui/react-popover/LICENSE"
+      ]
+    },
+    {
+      "scope": "emitted",
+      "name": "@radix-ui/react-use-controllable-state",
+      "version": "1.2.2",
+      "license": "MIT",
+      "licenseFiles": [
+        "ui-smooth-pair-local/rich-popover/node_modules/@radix-ui/react-use-controllable-state/LICENSE"
+      ]
+    },
+    {
+      "scope": "parsed-tree-shaken",
+      "name": "@radix-ui/react-use-effect-event",
+      "version": "0.0.2",
+      "license": "MIT",
+      "licenseFiles": [
+        "ui-smooth-pair-local/rich-popover/node_modules/@radix-ui/react-use-effect-event/LICENSE"
+      ]
+    },
+    {
+      "scope": "emitted",
+      "name": "@radix-ui/react-use-escape-keydown",
+      "version": "1.1.1",
+      "license": "MIT",
+      "licenseFiles": [
+        "ui-smooth-pair-local/rich-popover/node_modules/@radix-ui/react-popover/LICENSE"
+      ]
+    },
+    {
+      "scope": "emitted",
+      "name": "@radix-ui/react-use-layout-effect",
+      "version": "1.1.1",
+      "license": "MIT",
+      "licenseFiles": [
+        "ui-smooth-pair-local/rich-popover/node_modules/@radix-ui/react-popover/LICENSE"
+      ]
+    },
+    {
+      "scope": "emitted",
+      "name": "@radix-ui/react-use-size",
+      "version": "1.1.1",
+      "license": "MIT",
+      "licenseFiles": [
+        "ui-smooth-pair-local/rich-popover/node_modules/@radix-ui/react-popover/LICENSE"
+      ]
+    },
+    {
+      "scope": "emitted",
+      "name": "aria-hidden",
+      "version": "1.2.6",
+      "license": "MIT",
+      "licenseFiles": [
+        "ui-smooth-pair-local/rich-popover/node_modules/aria-hidden/LICENSE"
+      ]
+    },
+    {
+      "scope": "emitted",
+      "name": "class-variance-authority",
+      "version": "0.7.1",
+      "license": "Apache-2.0",
+      "licenseFiles": [
+        "ui-smooth-pair-local/rich-popover/node_modules/class-variance-authority/LICENSE"
+      ]
+    },
+    {
+      "scope": "emitted",
+      "name": "clsx",
+      "version": "2.1.1",
+      "license": "MIT",
+      "licenseFiles": [
+        "ui-smooth-pair-local/rich-popover/node_modules/clsx/license"
+      ]
+    },
+    {
+      "scope": "parsed-tree-shaken",
+      "name": "detect-node-es",
+      "version": "1.1.0",
+      "license": "MIT",
+      "licenseFiles": [
+        "ui-smooth-pair-local/rich-popover/node_modules/detect-node-es/LICENSE"
+      ]
+    },
+    {
+      "scope": "emitted",
+      "name": "framer-motion",
+      "version": "12.43.0",
+      "license": "MIT",
+      "licenseFiles": [
+        "ui-smooth-pair-local/rich-popover/node_modules/framer-motion/LICENSE.md"
+      ]
+    },
+    {
+      "scope": "emitted",
+      "name": "get-nonce",
+      "version": "1.0.1",
+      "license": "MIT",
+      "licenseFiles": [
+        "ui-smooth-pair-local/rich-popover/node_modules/get-nonce/LICENSE"
+      ]
+    },
+    {
+      "scope": "emitted",
+      "name": "lucide-react",
+      "version": "0.468.0",
+      "license": "ISC",
+      "licenseFiles": [
+        "ui-smooth-pair-local/rich-popover/node_modules/lucide-react/LICENSE"
+      ]
+    },
+    {
+      "scope": "parsed-tree-shaken",
+      "name": "motion",
+      "version": "12.23.24",
+      "license": "MIT",
+      "licenseFiles": [
+        "ui-smooth-pair-local/rich-popover/node_modules/motion/LICENSE.md"
+      ]
+    },
+    {
+      "scope": "emitted",
+      "name": "motion-dom",
+      "version": "12.43.0",
+      "license": "MIT",
+      "licenseFiles": [
+        "ui-smooth-pair-local/rich-popover/node_modules/motion-dom/LICENSE.md"
+      ]
+    },
+    {
+      "scope": "emitted",
+      "name": "motion-utils",
+      "version": "12.39.0",
+      "license": "MIT",
+      "licenseFiles": [
+        "ui-smooth-pair-local/rich-popover/node_modules/motion-utils/LICENSE.md"
+      ]
+    },
+    {
+      "scope": "emitted",
+      "name": "react",
+      "version": "19.2.0",
+      "license": "MIT",
+      "licenseFiles": [
+        "ui-smooth-pair-local/rich-popover/node_modules/react/LICENSE"
+      ]
+    },
+    {
+      "scope": "emitted",
+      "name": "react-dom",
+      "version": "19.2.0",
+      "license": "MIT",
+      "licenseFiles": [
+        "ui-smooth-pair-local/rich-popover/node_modules/react-dom/LICENSE"
+      ]
+    },
+    {
+      "scope": "emitted",
+      "name": "react-remove-scroll",
+      "version": "2.7.2",
+      "license": "MIT",
+      "licenseFiles": [
+        "ui-smooth-pair-local/rich-popover/node_modules/react-remove-scroll/LICENSE"
+      ]
+    },
+    {
+      "scope": "emitted",
+      "name": "react-remove-scroll-bar",
+      "version": "2.3.8",
+      "license": "MIT",
+      "licenseFiles": [
+        "ui-smooth-pair-local/rich-popover/license-evidence/react-remove-scroll-bar-LICENSE"
+      ]
+    },
+    {
+      "scope": "emitted",
+      "name": "react-style-singleton",
+      "version": "2.2.3",
+      "license": "MIT",
+      "licenseFiles": [
+        "ui-smooth-pair-local/rich-popover/node_modules/react-style-singleton/LICENSE"
+      ]
+    },
+    {
+      "scope": "emitted",
+      "name": "scheduler",
+      "version": "0.27.0",
+      "license": "MIT",
+      "licenseFiles": [
+        "ui-smooth-pair-local/rich-popover/node_modules/scheduler/LICENSE"
+      ]
+    },
+    {
+      "scope": "emitted",
+      "name": "tailwind-merge",
+      "version": "3.3.1",
+      "license": "MIT",
+      "licenseFiles": [
+        "ui-smooth-pair-local/rich-popover/node_modules/tailwind-merge/LICENSE.md"
+      ]
+    },
+    {
+      "scope": "emitted",
+      "name": "tslib",
+      "version": "2.9.1",
+      "license": "0BSD",
+      "licenseFiles": [
+        "ui-smooth-pair-local/rich-popover/node_modules/tslib/LICENSE.txt"
+      ]
+    },
+    {
+      "scope": "emitted",
+      "name": "use-callback-ref",
+      "version": "1.3.3",
+      "license": "MIT",
+      "licenseFiles": [
+        "ui-smooth-pair-local/rich-popover/node_modules/use-callback-ref/LICENSE"
+      ]
+    },
+    {
+      "scope": "emitted",
+      "name": "use-sidecar",
+      "version": "1.1.3",
+      "license": "MIT",
+      "licenseFiles": [
+        "ui-smooth-pair-local/rich-popover/node_modules/use-sidecar/LICENSE"
+      ]
+    }
+  ],
+  "additionalLicenseEvidence": {
+    "package": "react-remove-scroll-bar@2.3.8",
+    "npmGitHead": "b3b1287aad81def2e2ae707274b74531b61ddbaf",
+    "licenseRevision": "8ca9ba5ea52de03308fe8ced94f7b159a44d28ff",
+    "boundary": "npm tarball omits LICENSE; npm gitHead LICENSE returns 404. Full MIT notice from official repository current fixed revision, not falsely attributed to npm gitHead.",
+    "url": "https://raw.githubusercontent.com/theKashey/react-remove-scroll-bar/8ca9ba5ea52de03308fe8ced94f7b159a44d28ff/LICENSE",
+    "sha256": "a79aae0c0f21990d9d963bb3c5a79cdcea9a46f8523ba55c58d7fe776b6ebc84"
+  },
+  "iconEvidence": {
+    "repository": "https://github.com/twbs/icons",
+    "tag": "v1.13.1",
+    "revision": "ce0e49dd063243118a115f17ad1fe1fe7576d552",
+    "files": [
+      {
+        "path": "LICENSE",
+        "url": "https://raw.githubusercontent.com/twbs/icons/ce0e49dd063243118a115f17ad1fe1fe7576d552/LICENSE",
+        "sha256": "0fb3e11bd57e896c5a512afd64864d28a37de45d19835016c87ca1ad19ead969",
+        "gitBlob": "f95243911022df8e34bb8c73c87ef491ee1696cf"
+      },
+      {
+        "path": "icons/youtube.svg",
+        "url": "https://raw.githubusercontent.com/twbs/icons/ce0e49dd063243118a115f17ad1fe1fe7576d552/icons/youtube.svg",
+        "sha256": "c0b162de4d7b47a90a67b518d7890a94b65d8eefab11a05cb8d68ac7505d891f",
+        "gitBlob": "3c9c0be38959a2753cf0f4586856d4706ff20e01"
+      }
+    ],
+    "smoothuiPathByteExact": true,
+    "boundary": "Additional upstream icon attribution; does not grant YouTube trademark rights"
+  },
+  "iconOriginal": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" class=\"bi bi-youtube\" viewBox=\"0 0 16 16\">\n  <path d=\"M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z\"/>\n</svg>",
+  "knownGaps": [
+    "Browser visual rendering/geometry not inspected.",
+    "All article claims are upstream demo copy, not current factual assertions.",
+    "Original links retained as attribution; sandbox does not permit popups. No navigation, YouTube player, network API or playback is claimed.",
+    "Motion initial reduced-motion mode tested; instantaneous OS preference change not claimed. Hiding closes and unmounts the popover; restoration starts closed."
+  ]
+}
