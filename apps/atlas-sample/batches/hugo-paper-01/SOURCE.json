@@ -1,0 +1,141 @@
+{
+  "repository": "https://github.com/nanxiaobei/hugo-paper",
+  "revision": "f7ed52a1da04aa2c536a9c075354191dc10152f8",
+  "template": "layouts/_default/single.html",
+  "article": "exampleSite/content/post/emoji-support.md",
+  "originalArticleText": "+++\nauthor = \"lee.so\"\ntitle = \"Emoji Support\"\ndate = \"2019-03-05\"\ndescription = \"Guide to emoji usage in Hugo\"\ntags = [\n    \"emoji\",\n]\n+++\n\nEmoji can be enabled in a Hugo project in a number of ways.\n\n<!--more-->\n\nThe [`emojify`](https://gohugo.io/functions/emojify/) function can be called directly in templates or [Inline Shortcodes](https://gohugo.io/templates/shortcode-templates/#inline-shortcodes).\n\nTo enable emoji globally, set `enableEmoji` to `true` in your site's [configuration](https://gohugo.io/getting-started/configuration/) and then you can type emoji shorthand codes directly in content files; e.g.\n\n<p><span class=\"nowrap\"><span class=\"emojify\">🙈</span> <code>:see_no_evil:</code></span>  <span class=\"nowrap\"><span class=\"emojify\">🙉</span> <code>:hear_no_evil:</code></span>  <span class=\"nowrap\"><span class=\"emojify\">🙊</span> <code>:speak_no_evil:</code></span></p>\n<br>\n\nThe [Emoji cheat sheet](http://www.emoji-cheat-sheet.com/) is a useful reference for emoji shorthand codes.\n\n---\n\n**N.B.** The above steps enable Unicode Standard emoji characters and sequences in Hugo, however the rendering of these glyphs depends on the browser and the platform. To style the emoji you can either use a third party emoji font or a font stack; e.g.\n\n{{< highlight html >}}\n.emoji {\nfont-family: Apple Color Emoji, Segoe UI Emoji, NotoColorEmoji, Segoe UI Symbol, Android Emoji, EmojiSymbols;\n}\n{{< /highlight >}}\n\n{{< css.inline >}}\n\n<style>\n.emojify {\n\tfont-family: Apple Color Emoji, Segoe UI Emoji, NotoColorEmoji, Segoe UI Symbol, Android Emoji, EmojiSymbols;\n\tfont-size: 2rem;\n\tvertical-align: middle;\n}\n@media screen and (max-width:650px) {\n  .nowrap {\n    display: block;\n    margin: 25px 0;\n  }\n}\n</style>\n\n{{< /css.inline >}}\n",
+  "originalLicenseSha256": "76deed9f2fa154342300b72c2e4d36876b15639b01035ddc86a1a2d113da6a35",
+  "fixedOriginalsVerified": [
+    {
+      "path": "LICENSE",
+      "sha256": "76deed9f2fa154342300b72c2e4d36876b15639b01035ddc86a1a2d113da6a35",
+      "gitBlob": "1a5ea1c1f4892d61ef36e4a4a6fd79286b4e6add",
+      "bytes": 1066
+    },
+    {
+      "path": "README.md",
+      "sha256": "82243cbdf9644673d2401fc2e233fa2c9f2e18a58851c135d80762d056edcf7c",
+      "gitBlob": "8dfa5fdeea3fd805f654d3d8ad0497f5bc39359e",
+      "bytes": 4089
+    },
+    {
+      "path": "assets/app.css",
+      "sha256": "c5c9df7480d714a8bf56d39568ba89069958d7290cd3c165bf307b059aa42c30",
+      "gitBlob": "f18f5f5b8a53094f4ab71ba4b02a52186d2e8453",
+      "bytes": 2082
+    },
+    {
+      "path": "assets/custom.css",
+      "sha256": "f780625cedd3dd76d1a9048400731fe137fbb4d5d81f5804743ed53dcbbe1b68",
+      "gitBlob": "3564a82bb0cc068b4db174f00913d2771ee60f81",
+      "bytes": 53
+    },
+    {
+      "path": "assets/main.css",
+      "sha256": "cc4c7387c4a15f82ae245093aeceed40620938ec351f7db467bf4864e6c507b4",
+      "gitBlob": "b4b8964d536bba2b9c42df84c9f6181ab091f73d",
+      "bytes": 62025
+    },
+    {
+      "path": "exampleSite/content/post/emoji-support.md",
+      "sha256": "1b1119a511bd646c10beed1e3884b6f6b15ebb07655020e4868c8b6d46af3941",
+      "gitBlob": "472149c9ebf6c208da07330ddf69b86ab2f1a979",
+      "bytes": 1756
+    },
+    {
+      "path": "layouts/404.html",
+      "sha256": "7eda5130a2922543b9ae9c1b7e5be34ea3216da2cd0d47430b15ce4be952e6ab",
+      "gitBlob": "4eda784909b06786d522062bc0c68c6266d81f3d",
+      "bytes": 139
+    },
+    {
+      "path": "layouts/_default/baseof.html",
+      "sha256": "e6eac0353179d4e38127953a6075f0db8c8c87f02704e7ec0a095330abb32f03",
+      "gitBlob": "d3f53759a3f96929db582a9b93a5841c10b688cf",
+      "bytes": 1931
+    },
+    {
+      "path": "layouts/_default/list.html",
+      "sha256": "448a60c91254e9a7a7884d3091237e10d0061e17b8c4f9bf33cc09eaa3b63807",
+      "gitBlob": "81546392e6196451a152fe79845ed638dbd17cfa",
+      "bytes": 2357
+    },
+    {
+      "path": "layouts/_default/single.html",
+      "sha256": "820650bcc462a787134c7e1571306a770df19c0ed879f42308f0dabd05b25170",
+      "gitBlob": "03458dc4d8d629693e08e99468070867a5cd8493",
+      "bytes": 4643
+    },
+    {
+      "path": "layouts/partials/footer.html",
+      "sha256": "6f56c98747ce7473789108363fecfbb8fcd311cd32a42b91b80b40d4b6e58827",
+      "gitBlob": "4445baa9ed466890b02bd1eb8456b2531f56e4e6",
+      "bytes": 593
+    },
+    {
+      "path": "layouts/partials/head.html",
+      "sha256": "26635d1470933decbb67740ce6ac67bf5ae35999718f99e05da4a9cfaf11ec40",
+      "gitBlob": "e1de87c2fa4c2d3978c0edbf23ad04dc7de51aa2",
+      "bytes": 3099
+    },
+    {
+      "path": "layouts/partials/header.html",
+      "sha256": "eac3e6e36b3c346089e2c7d11e235d9c3e2527dda2bec0a1ca4feb7235cdacbf",
+      "gitBlob": "b325343340e444574e6d77ed47d31c18cfdf9962",
+      "bytes": 3870
+    },
+    {
+      "path": "layouts/partials/math.html",
+      "sha256": "5ebb669f21e14dd476be4451d95db24d5db6a47def1f900c7364535c46c6c170",
+      "gitBlob": "c4cfc0ebb0958254d283f10174b1bee6bc3b3678",
+      "bytes": 1288
+    },
+    {
+      "path": "layouts/partials/mermaid.html",
+      "sha256": "c9fa7853ae1f2d41c35ed5fd904a7776ed123f26cf90f3c6185da79a144d0038",
+      "gitBlob": "96ca5e23e47192a569bb8e11c531e43362fc3833",
+      "bytes": 456
+    },
+    {
+      "path": "layouts/shortcodes/collapse.html",
+      "sha256": "18539aa4db8f37c3b4da77e17b1c6e1cd07dfc68525ca9d0983d1904c666b439",
+      "gitBlob": "1c8fa594c73908444a68f36e8e3fa8a83ae29039",
+      "bytes": 418
+    },
+    {
+      "path": "static/theme.svg",
+      "sha256": "09400820d0fe8aaf2a13c94758f35a85b61331f09aee7bc342904cdb151168e0",
+      "gitBlob": "b12bc66dd2b664efee875dd0312c276b59820238",
+      "bytes": 869
+    }
+  ],
+  "hugo": {
+    "version": "0.148.2 extended",
+    "download": "https://github.com/gohugoio/hugo/releases/download/v0.148.2/hugo_extended_0.148.2_linux-amd64.tar.gz",
+    "archiveSha256": "dff500ade0d4b999ab0c680f4c6123756bb86904b5924d68c0e8ffb260195277",
+    "buildOnly": true
+  },
+  "siteConfig": "baseURL = \"https://offline.invalid/\"\ntitle = \"Paper\"\ntheme = \"theme\"\nthemesDir = \"..\"\nenableInlineShortcodes = true\ndisableKinds = ['taxonomy','term','RSS','sitemap']\n[params]\ncolor = 'linen'\nmonoDarkIcon = true\ndisableHLJS = true\ndisablePostNavigation = true\n[markup.goldmark.renderer]\nunsafe = true\n[[menu.main]]\nname = \"Emoji Support\"\nurl = \"/emoji-support/\"\n",
+  "generatedHTMLSha256": "ebfa2e41beb7f699bf18dcee5683d699351c213b63c8d32fb80c04922c78dc39",
+  "adaptedOriginalLogic": "\n    \n    const htmlClass = document.documentElement.classList;\n    later(() => {\n      htmlClass.remove('not-ready');\n    }, 10);\n\n    \n    const btnMenu = document.querySelector('.btn-menu');\n    on(btnMenu,'click', () => {\n      htmlClass.toggle('open');\n    });\n\n    \n    const metaTheme = document.querySelector('meta[name=\"theme-color\"]');\n    const lightBg = '#faf8f1'.replace(/\"/g, '');\n    const setDark = (isDark) => {\n      metaTheme.setAttribute('content', isDark ? \"rgb(0 0 0 / 85%)\" : lightBg);\n      htmlClass[isDark ? 'add' : 'remove']('dark');\n      storage.setItem('dark', isDark);\n    };\n\n    \n    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');\n    if (htmlClass.contains('dark')) {\n      setDark(true);\n    } else {\n      const darkVal = storage.getItem('dark');\n      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);\n    }\n\n    \n    on(darkScheme,'change', (event) => {\n      setDark(event.matches);\n    });\n\n    \n    const btnDark = document.querySelector('.btn-dark');\n    on(btnDark,'click', () => {\n      setDark(storage.getItem('dark') !== 'true');\n    });\n  ",
+  "changes": [
+    "Real Hugo0.148.2extended templates; only .Site.Language.Locale→.Site.Language.Lang compatibility edit in baseof, original English lang output retained.",
+    "Original complete emoji-support article with its inline styles and Hugo highlight shortcode; no invented prose.",
+    "Original configured monoDarkIcon=true uses original static/theme.svg lossless percent SVG; unused PNG CSS declaration removed.",
+    "Original dark/menu handlers retained, localStorage replaced by private per-preview memory; 10ms readiness timer and listeners tracked for cleanup.",
+    "HLJS disabled using upstream disableHLJS configuration; article code highlighted by real Hugo build.",
+    "No avatar/social/disqus config; global external links non-navigable, readable attribution retained."
+  ],
+  "runtimeDependencies": [],
+  "preservedBuildStyleDependencies": [
+    "upstream compiled Tailwind4.1.18 and declared typography0.5.19"
+  ],
+  "prepareEvidence": {
+    "originalGeneratedHTML": 6711,
+    "styleBytes": 56944,
+    "runtimeBytes": 2662,
+    "articleBodyRetained": true,
+    "templateViaRealHugo": true
+  },
+  "browserVisualQA": "not-run"
+}
