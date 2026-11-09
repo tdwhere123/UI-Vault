@@ -18300,42 +18300,35 @@
   },
   {
     "id": "poline:spatial-palette-picker",
-    "title": "空间锚点驱动的色彩编排",
     "source": "Poline",
     "repository": "https://github.com/meodai/poline",
     "revision": "c0bf44b06d549eb7bd5ecc1ac84cd3c58eb296cc",
-    "sourcePath": "dist/picker.html",
     "upstream": "https://github.com/meodai/poline/blob/c0bf44b06d549eb7bd5ecc1ac84cd3c58eb296cc/dist/picker.html",
-    "license": "MIT (complete actual root text; runtime/media not closed)",
-    "behavior": "原 Poline Picker 页面以可拖色轮锚点、饱和度环与色彩路径生成调色板，选项和色块响应同一模型，src/webcomponent.ts 保留原交互实现。",
-    "difference": "区别单一 hex/RGB 输入：通过空间锚点关系与插值路径组织一组色彩，整体交互一族，不按色板变体计数；不是另造引擎外壳。",
-    "styleTags": [
-      "色彩/空间材料"
-    ],
-    "gaps": [
-      "原 Google Aboreto/Work Sans 字体需离线许可/替换，导出或复制入口与外链需核；当前根 MIT 不代表所有页面图像/标志和依赖已审。虽有 disconnectedCallback，拖动中取消、重复挂载与键盘/触控/真实像素未测。",
-      "仅只读源码筛选；未安装/构建/运行、交互生命周期或浏览器视觉验收。"
-    ],
-    "description": "原 Poline Picker 页面以可拖色轮锚点、饱和度环与色彩路径生成调色板，选项和色块响应同一模型，src/webcomponent.ts 保留原交互实现。 区别单一 hex/RGB 输入：通过空间锚点关系与插值路径组织一组色彩，整体交互一族，不按色板变体计数；不是另造引擎外壳。",
-    "category": "展示与媒体",
+    "sourcePath": "dist/picker.html",
     "licenseEvidence": {
       "url": "https://github.com/meodai/poline/blob/c0bf44b06d549eb7bd5ecc1ac84cd3c58eb296cc/LICENSE",
       "sha256": "a7ad25d24bf0987585fdd42e392b395d81151e5ca4d0bf87c44e345105d8da2c",
-      "scope": "Complete actual root license; transitive code and media permissions not closed"
+      "scope": "Complete actual MIT root; original engine and web component are sole runtime source, no external runtime dependencies"
     },
-    "sourceEvidence": {
-      "localFile": "evidence/meodai--poline--dist__picker.html",
-      "sha256": "e5941c4885f2348ee40a79e6b5255a4a3e9d19708d4a23dbc529bfc38ea5f79d"
-    },
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-style-530",
-    "sourceScope": "Fixed original complete UI/demo source and full root license; not a runnable adaptation or full asset archive",
-    "kind": "原版交互场景（仅来源）",
-    "buildStatus": "fixed source and full root license read; not built/run/visually accepted"
+    "difference": "区别单一 hex/RGB 输入：通过空间锚点关系与插值路径组织一组色彩，整体交互一族，不按色板变体计数；不是另造引擎外壳。",
+    "title": "Poline · 空间锚点配色",
+    "license": "MIT",
+    "category": "展示与媒体",
+    "kind": "多锚点色彩编排场景",
+    "format": "完整交互场景",
+    "batch": "poline-01",
+    "preview": "batches/poline-01/palette-picker/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original picker web component and unchanged interpolation engine; DOM controls, pointer-state and lifecycle tests; native SVG geometry and color display unverified",
+    "description": "拖动色轮锚点与饱和度环，用空间连线和三轴插值组织一组配色；步数、闭环和色相操作联动原版色板。",
+    "behavior": "原Poline Picker完整控制场景：锚点增删、外环饱和度、三轴插值、步数与闭环，隐藏中止拖动并保留色板，退出清理。",
+    "gaps": [
+      "使用原版dist/picker.html场景、web component与未改动的index.ts引擎；移除Google字体，使用本地字体回退，无截图、二进制或外部资源。",
+      "原OKLch/Lch输出实际上基于HSL的线性近似，前台保留approximate说明；不冒充符合色度学的空间转换或对比度可访问性认证。",
+      "补充pointercancel/lostcapture/blur/hidden清理、输入框快捷键隔离和零尺寸保护；本地模型不修改宿主主题、不读写剪贴板或外部文件。",
+      "DOM测试包含原外环饱和度变化、键盘、重设、隐藏和失败退出；几何与指针capture使用模拟，不等于原生拖动、SVG绘制、触屏、色彩显示或像素验收；封面交Grok。"
+    ]
   },
   {
     "id": "hanziwriter:stroke-practice-scene",
@@ -19315,5 +19308,702 @@
     "kind": "原版完整场景（仅来源）",
     "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted",
     "sourceSha256": "56a94e3dd47b42b28953685d5a8289cb535fb001592a08cca5eaea11e169729e"
+  },
+  {
+    "id": "mono-icons:compact-outline-family",
+    "title": "Mono Icons · 轻量圆角线性符号系列",
+    "source": "Mono Icons",
+    "repository": "https://github.com/mono-company/mono-icons",
+    "revision": "43fac75e3d5ff38a55588e8c94a02ed96003a6ac",
+    "sourcePath": "svg/comment.svg",
+    "upstream": "https://github.com/mono-company/mono-icons/blob/43fac75e3d5ff38a55588e8c94a02ed96003a6ac/svg/comment.svg",
+    "license": "MIT (actual complete LICENSE.md read; README explicitly covers Mono icons and SVG usage)",
+    "visualStyle": "24px轻量轮廓与小圆角，简洁留白适合内嵌消息工具栏和资料标记。",
+    "behavior": "本轮固定评论、勾选清单、数据库和附件4个原版静态SVG样本；系列只记一条，不把glyph、尺寸或颜色拆条。",
+    "difference": "独立Mono Company设计系列，提供简洁圆角线性语言；与已有通用图标语义有交集，不声称每个形状全球独创或具有新交互。",
+    "description": "简洁圆角轮廓图标家族，适合富消息与轻量工具栏。",
+    "gaps": [
+      "根LICENSE.md保留“Mono Icon Font软件、不覆盖以字体创作的内容”范围说明；README明确SVG使用及Mono icons MIT，不能扩张为第三方作品或商标授权。",
+      "本轮仅固定4个原SVG和完整许可/README，未收齐全族，也未验证搜索、复制、标签与不同尺寸实际可读性。",
+      "原SVG静态path不触发附件上传、数据库访问或消息发送；未运行官网、Figma、npm或CDN字体，不需要任何账号权限。",
+      "尚未接入浏览器预览，无字体二进制、PNG、截图或源码ZIP；图像封面仍由Grok统一处理。"
+    ],
+    "category": "图标系列",
+    "format": "图标家族",
+    "kind": "图标系列",
+    "counts": {
+      "independentFamily": 1,
+      "completedPreviews": 0
+    },
+    "licenseEvidence": {
+      "url": "https://github.com/mono-company/mono-icons/blob/43fac75e3d5ff38a55588e8c94a02ed96003a6ac/LICENSE.md",
+      "sha256": "e334b3c64b09ec92f52f5cb397515fd536f703a852ccdbd1435e00eb099592f9",
+      "scope": "Complete actual MIT and README SVG-use clarification; four original SVG samples"
+    },
+    "sourceEvidence": [
+      {
+        "path": "svg/comment.svg",
+        "sha256": "5ff17414876876bcfdbaa935bcd4e428ae4450001e530021c44427ba78124b1f",
+        "gitBlob": "5cb475ad7058949816498f227b5d326880249789"
+      },
+      {
+        "path": "svg/clipboard-check.svg",
+        "sha256": "86b008a9d7d2c77ec6dc42fd156ea5e8fa51859356f2eb47fdab36ef2829c2e2",
+        "gitBlob": "59264a553e2d8d7d3c9bf87bc8558e4237e61ebd"
+      },
+      {
+        "path": "svg/database.svg",
+        "sha256": "cbb56396b023926c412ee2ebe064bfb7d8deabd011f943c642f8fc636200d97f",
+        "gitBlob": "91cd0c207588a9fd66da01c954e6a150b3bd6423"
+      },
+      {
+        "path": "svg/attachment.svg",
+        "sha256": "2e64981b2fb54ca2d84daca19af57dccd6f53631950ac1e38bf7388815a1dfec",
+        "gitBlob": "21b72c5147765b5fa2748d06deae1c1cfa7009e7"
+      }
+    ],
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-532",
+    "sourceScope": "Four fixed original SVG samples and full MIT root; no complete runnable archive",
+    "buildStatus": "Source inspected and Git blobs verified; no runtime or visual verification"
+  },
+  {
+    "id": "momentum:kinetic-countdown",
+    "title": "惯性拨数倒计时",
+    "source": "momentum-slider",
+    "repository": "https://github.com/lmgonzalves/momentum-slider",
+    "revision": "b7b8a22ee759532b4fdc36340d49ac003a4fed61",
+    "sourcePath": "countdown-timer/index.html",
+    "upstream": "https://github.com/lmgonzalves/momentum-slider/blob/b7b8a22ee759532b4fdc36340d49ac003a4fed61/countdown-timer/index.html",
+    "website": "https://lmgonzalves.github.io/momentum-slider/countdown-timer/",
+    "license": "MIT (root text verified; runtime/assets not closed)",
+    "behavior": "完整官方小场景先惯性拨选1至60秒，再切换倒计时、进度与停止状态。",
+    "difference": "完整固定原始场景入口与补充脚本，不按预设/参数/颜色拆数；尚未运行验收。",
+    "description": "完整官方小场景先惯性拨选1至60秒，再切换倒计时、进度与停止状态。",
+    "gaps": [
+      "需js/countdown-timer.js、momentum-slider.js、normalize/countdown CSS，不是只展示滑块引擎；真实setInterval计时但并非后台可靠提醒。",
+      "源码写documentElement的--progress，需限定容器并在卸载clearInterval、销毁拖动事件；多实例、页面后台节流与恢复待验。",
+      "Roboto Mono远程Google字体需独立OFL与本地化；键盘拨数、读屏状态、触屏滚动冲突与减动待验。",
+      "不把1–60数值或同仓portfolio-carousel另计条目，选择无照片场景避免不必要素材风险。",
+      "固定源码及完整根许可已存证；未构建、未运行、未截图，completedPreviewCount=0。"
+    ],
+    "category": "视觉与动效",
+    "licenseEvidence": {
+      "url": "https://github.com/lmgonzalves/momentum-slider/blob/b7b8a22ee759532b4fdc36340d49ac003a4fed61/LICENSE",
+      "sha256": "ca8091cca512daf6b57061bb6d3afc241bb23398739d6eaf24c0a08006674c09",
+      "scope": "Complete original root license retained; runtime/media separate"
+    },
+    "sourceSha256": "63630fa542444ced44db9522fc9e9e3f43cf9805ecec64998131faf846d53eca",
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-532",
+    "sourceScope": "Selected fixed original source and root license; full read-only repo clone retained privately",
+    "kind": "原版风格组件族（仅来源）",
+    "buildStatus": "Fixed source inspected; not built or visually accepted",
+    "additionalSourceEvidence": [
+      {
+        "sourcePath": "js/countdown-timer.js",
+        "url": "https://github.com/lmgonzalves/momentum-slider/blob/b7b8a22ee759532b4fdc36340d49ac003a4fed61/js/countdown-timer.js",
+        "sha256": "ab0ad4658861da9633c1f87d6c071885861c23ac6b88fd22c99f574739ff0a56"
+      }
+    ]
+  },
+  {
+    "id": "colorthief:image-palette-scene",
+    "title": "图片取色与色板展示",
+    "source": "color-thief",
+    "repository": "https://github.com/lokesh/color-thief",
+    "revision": "a19bce8570322ca619df1f3cae6e0d6efd446639",
+    "sourcePath": "index.html",
+    "upstream": "https://github.com/lokesh/color-thief/blob/a19bce8570322ca619df1f3cae6e0d6efd446639/index.html",
+    "website": "https://lokeshdhakar.com/projects/color-thief/",
+    "license": "MIT (root text verified; runtime/assets not closed)",
+    "behavior": "完整官方页面从样例图提取主色、色板与swatches，把视觉附件转成可用颜色信息。",
+    "difference": "完整固定原始场景入口与补充脚本，不按预设/参数/颜色拆数；尚未运行验收。",
+    "description": "完整官方页面从样例图提取主色、色板与swatches，把视觉附件转成可用颜色信息。",
+    "gaps": [
+      "实际页面内联脚本使用getColorSync/getPaletteSync/getSwatchesSync与progressive API；依赖同SHA dist/umd/color-thief.global.js，必须构建对应版。",
+      "示例图片/视频权利须逐素材闭合；图库不是代码MIT自动授权，可换自有素材并披露，不直接拉任意远程图片。",
+      "Canvas读像素受CORS与图像解码限制；大图降采样、加载失败、透明图、颜色一致性及低性能设备待验。",
+      "同一图片分析场景不按图像、算法API或配色拆数；提取色不代表设计对比度/可访问性合格，不自动改用户主题。",
+      "固定源码及完整根许可已存证；未构建、未运行、未截图，completedPreviewCount=0。"
+    ],
+    "category": "视觉与动效",
+    "licenseEvidence": {
+      "url": "https://github.com/lokesh/color-thief/blob/a19bce8570322ca619df1f3cae6e0d6efd446639/LICENSE",
+      "sha256": "4468f5c71227b4b4797f0f4785c8c551ea3c8a643bc6a8738a5aff7baee28b83",
+      "scope": "Complete original root license retained; runtime/media separate"
+    },
+    "sourceSha256": "dcf481478ad4e3bbd0d04b75c5f9165a93a5d4f67062b7317393776986d5a9a6",
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-532",
+    "sourceScope": "Selected fixed original source and root license; full read-only repo clone retained privately",
+    "kind": "原版风格组件族（仅来源）",
+    "buildStatus": "Fixed source inspected; not built or visually accepted",
+    "additionalSourceEvidence": []
+  },
+  {
+    "id": "iro:multi-handle-color-wheel",
+    "title": "多柄色轮调色台",
+    "source": "iro.js",
+    "repository": "https://github.com/jaames/iro.js",
+    "revision": "9f0ae6c8dc22fd819885731966357f06fa0b4943",
+    "sourcePath": "demo/index.html",
+    "upstream": "https://github.com/jaames/iro.js/blob/9f0ae6c8dc22fd819885731966357f06fa0b4943/demo/index.html",
+    "website": "https://iro.js.org/",
+    "license": "MPL-2.0 (root text verified; runtime/assets not closed)",
+    "behavior": "完整官方demo把多颜色手柄、色轮和通道滑杆组合，支持直接操纵颜色。",
+    "difference": "完整固定原始场景入口与补充脚本，不按预设/参数/颜色拆数；尚未运行验收。",
+    "description": "完整官方demo把多颜色手柄、色轮和通道滑杆组合，支持直接操纵颜色。",
+    "gaps": [
+      "根实际Mozilla Public License 2.0，不是MIT；修改受覆盖文件与分发需满足源码提供/声明义务，独立记录依赖许可。",
+      "HTML的base=/page、绝对/iro.js和/demo.js需修复为同revision构建与路径；demo.js是完整配置，不能只拿空div作预览。",
+      "demo含多个方向色轮作为功能测试，只选一个组合场景不按轮数/颜色/通道拆计数；与Poline曲线配色生成不同但须视觉筛选。",
+      "键盘可达性、选中颜色文本、透明棋盘对比及中文输入格式需验；不自动写系统剪贴板或修改宿主主题。",
+      "固定源码及完整根许可已存证；未构建、未运行、未截图，completedPreviewCount=0。"
+    ],
+    "category": "视觉与动效",
+    "licenseEvidence": {
+      "url": "https://github.com/jaames/iro.js/blob/9f0ae6c8dc22fd819885731966357f06fa0b4943/LICENSE.txt",
+      "sha256": "4b89d4518bd135ab4ee154a7bce722246b57a98c3d7efc1a09409898160c2bd1",
+      "scope": "Complete original root license retained; runtime/media separate"
+    },
+    "sourceSha256": "966621724facaf9880aae6c7db7c1be4537b748ad146cae5a5f59e138a5cb831",
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-532",
+    "sourceScope": "Selected fixed original source and root license; full read-only repo clone retained privately",
+    "kind": "原版风格组件族（仅来源）",
+    "buildStatus": "Fixed source inspected; not built or visually accepted",
+    "additionalSourceEvidence": [
+      {
+        "sourcePath": "demo/demo.js",
+        "url": "https://github.com/jaames/iro.js/blob/9f0ae6c8dc22fd819885731966357f06fa0b4943/demo/demo.js",
+        "sha256": "2d5575e7dc03f6519dfe8431387259cd7691344d065a976f2b89d22f48b124de"
+      }
+    ]
+  },
+  {
+    "id": "seeing-svg:filter-stage-inspector",
+    "title": "SVG材质分层观察器",
+    "source": "seeing-svg-filter",
+    "repository": "https://github.com/9am/seeing-svg-filter",
+    "revision": "58cdcc6ecd09320d7299824be03830275f301129",
+    "sourcePath": "index.html",
+    "upstream": "https://github.com/9am/seeing-svg-filter/blob/58cdcc6ecd09320d7299824be03830275f301129/index.html",
+    "website": "https://9am.github.io/seeing-svg-filter/",
+    "license": "MIT (root text verified; runtime/assets not closed)",
+    "behavior": "完整工具把现有SVG滤镜解析成各阶段连接与预览，解释纹理和光影如何形成。",
+    "difference": "完整固定原始场景入口与补充脚本，不按预设/参数/颜色拆数；尚未运行验收。",
+    "description": "完整工具把现有SVG滤镜解析成各阶段连接与预览，解释纹理和光影如何形成。",
+    "gaps": [
+      "入口含真实默认滤镜和controller/painter/parser/preview模块；需要完整依赖构建，不能只保留标题SVG称工具完成。",
+      "源码用FileReader读取文件并把预览写入DOM；公共演示仅固定白名单SVG，任意导入须先做script/事件/外链过滤和资源限制，未完成安全审计。",
+      "本地文件读取不等于上传，适配不要加服务器或采集；默认源码logo图形与GitHub corner等归属需保留/独立核。",
+      "复杂filter卷积/噪声可能高成本，限尺寸/节点数并测试Safari与移动；这是读解已有滤镜，不是另一个生成器预设。",
+      "固定源码及完整根许可已存证；未构建、未运行、未截图，completedPreviewCount=0。"
+    ],
+    "category": "视觉与动效",
+    "licenseEvidence": {
+      "url": "https://github.com/9am/seeing-svg-filter/blob/58cdcc6ecd09320d7299824be03830275f301129/LICENSE",
+      "sha256": "05056d2a3b2d7f6d46dfdd52233804958e901c813600397a5f8453f783f7193a",
+      "scope": "Complete original root license retained; runtime/media separate"
+    },
+    "sourceSha256": "8038240b1984ed61428deb92c451cd89f22c739fee847d4c27d8fc1e3a05e841",
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-532",
+    "sourceScope": "Selected fixed original source and root license; full read-only repo clone retained privately",
+    "kind": "原版风格组件族（仅来源）",
+    "buildStatus": "Fixed source inspected; not built or visually accepted",
+    "additionalSourceEvidence": [
+      {
+        "sourcePath": "src/controller.js",
+        "url": "https://github.com/9am/seeing-svg-filter/blob/58cdcc6ecd09320d7299824be03830275f301129/src/controller.js",
+        "sha256": "b4bf9630ebb9549239326e084d0a0d6eac3b0c8bee9be184dda9a03ead2a96d6"
+      },
+      {
+        "sourcePath": "src/parser.js",
+        "url": "https://github.com/9am/seeing-svg-filter/blob/58cdcc6ecd09320d7299824be03830275f301129/src/parser.js",
+        "sha256": "5050e52b47639fa8d0ec526965bb11dc79a6bd56cd3ffdfd3dd005e648f1e427"
+      }
+    ]
+  },
+  {
+    "id": "svgfilter:node-material-editor",
+    "title": "节点式SVG材质编辑器",
+    "source": "svg-filter-editor",
+    "repository": "https://github.com/poletaevvlad/svg-filter-editor",
+    "revision": "ecc2a0ce171680da51dad0276dbcfa5c6d04fc30",
+    "sourcePath": "src/index.html",
+    "upstream": "https://github.com/poletaevvlad/svg-filter-editor/blob/ecc2a0ce171680da51dad0276dbcfa5c6d04fc30/src/index.html",
+    "website": "https://poletaevvlad.github.io/svg-filter-editor/",
+    "license": "MIT (root text verified; runtime/assets not closed)",
+    "behavior": "完整原应用通过节点连线与参数编辑组合模糊、位移、光照和混合，实现可见材质预览。",
+    "difference": "完整固定原始场景入口与补充脚本，不按预设/参数/颜色拆数；尚未运行验收。",
+    "description": "完整原应用通过节点连线与参数编辑组合模糊、位移、光照和混合，实现可见材质预览。",
+    "gaps": [
+      "根LICENSE.md为MIT，仓另有LICENSE-3RD-PARTY.md，包含React等真实第三方声明；需完整保留，不能误拿第三方文档当根许可。",
+      "入口需main.js/root.js、components/primitives、样式和Grunt构建；ReactDOM.render及旧依赖版本需兼容隔离，不能直接按现代React JSX接入。",
+      "SVG/image primitive及文本预览可能引用外部资源；演示限定本地固定素材，不自动读取用户文件/外链或导出到外部服务，导入安全待验。",
+      "节点连接与拖拽需键盘替代、可读结构/参数表及高成本滤镜限制；与Seeing工具区别为实际编辑连接，不逐primitive增加数量。",
+      "固定源码及完整根许可已存证；未构建、未运行、未截图，completedPreviewCount=0。"
+    ],
+    "category": "视觉与动效",
+    "licenseEvidence": {
+      "url": "https://github.com/poletaevvlad/svg-filter-editor/blob/ecc2a0ce171680da51dad0276dbcfa5c6d04fc30/LICENSE.md",
+      "sha256": "3f1af3283e9edbb39dabdeb0e82fa337ed29be4bd3cd5939946db382d629cdbf",
+      "scope": "Complete original root license retained; runtime/media separate"
+    },
+    "sourceSha256": "5c41318c37f83931b246bcb8b52b110d578c6f0fd60d4c716b2b479ec725f92d",
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-532",
+    "sourceScope": "Selected fixed original source and root license; full read-only repo clone retained privately",
+    "kind": "原版风格组件族（仅来源）",
+    "buildStatus": "Fixed source inspected; not built or visually accepted",
+    "additionalSourceEvidence": [
+      {
+        "sourcePath": "src/main.js",
+        "url": "https://github.com/poletaevvlad/svg-filter-editor/blob/ecc2a0ce171680da51dad0276dbcfa5c6d04fc30/src/main.js",
+        "sha256": "2ee2af893111ade2d68a2206f571f2ae96b9ef5702a83c3734790c38d7c2521d"
+      },
+      {
+        "sourcePath": "src/root.js",
+        "url": "https://github.com/poletaevvlad/svg-filter-editor/blob/ecc2a0ce171680da51dad0276dbcfa5c6d04fc30/src/root.js",
+        "sha256": "4e0ff16e1560689c009b0918a4a7d5202b1b530f44447d3525c478dd6e5db66e"
+      },
+      {
+        "sourcePath": "LICENSE-3RD-PARTY.md",
+        "url": "https://github.com/poletaevvlad/svg-filter-editor/blob/ecc2a0ce171680da51dad0276dbcfa5c6d04fc30/LICENSE-3RD-PARTY.md",
+        "sha256": "be7d350562a0f5114c504e22f806a9c2fc2fb4aebd373d937f7c686b3fac7d7d"
+      }
+    ]
+  },
+  {
+    "id": "storymap:geographic-narrative",
+    "title": "地点与图文联动的空间叙事",
+    "source": "StoryMapJS",
+    "repository": "https://github.com/NUKnightLab/StoryMapJS",
+    "revision": "84483da56c73b747528419543001682d963e5aa6",
+    "sourcePath": "storymap/templates/_demo.html",
+    "upstream": "https://github.com/NUKnightLab/StoryMapJS/blob/84483da56c73b747528419543001682d963e5aa6/storymap/templates/_demo.html",
+    "license": "MPL-2.0 (complete actual root text; runtime/media not closed)",
+    "behavior": "原首页演示以 demo.json 初始化 StoryMap，将逐章图文媒体与地点地图联动；原 StoryMap.js 负责导航、显示更新和地图/故事交互。",
+    "difference": "区别一般地图控件和 TimelineJS：主要结构是沿地点顺序理解事件，整套叙事一族，不按每个地标或底图拆数。",
+    "styleTags": [
+      "地图/地点叙事"
+    ],
+    "gaps": [
+      "MPL 对应修改源/构建公开义务尚未闭合；Leaflet 与嵌入媒体/图标/字体完整许可待审。原 demo 包含外部图片/媒体和地图服务，地图瓦片及底图 attribution/服务条款不可被根许可覆盖；Jinja模板需构建，resize 监听和离场清理未测，不扩 CSP。",
+      "仅只读源码筛选；未安装/构建/运行、交互生命周期或浏览器视觉验收。"
+    ],
+    "description": "原首页演示以 demo.json 初始化 StoryMap，将逐章图文媒体与地点地图联动；原 StoryMap.js 负责导航、显示更新和地图/故事交互。 区别一般地图控件和 TimelineJS：主要结构是沿地点顺序理解事件，整套叙事一族，不按每个地标或底图拆数。",
+    "category": "展示与媒体",
+    "licenseEvidence": {
+      "url": "https://github.com/NUKnightLab/StoryMapJS/blob/84483da56c73b747528419543001682d963e5aa6/LICENSE",
+      "sha256": "2e0747d9a39cff6a75941fd2284c10d6fbb9dd6fcc81d48858ccece97bf8e218",
+      "scope": "Complete actual root license; transitive code and media permissions not closed"
+    },
+    "sourceEvidence": {
+      "localFile": "evidence/NUKnightLab--StoryMapJS--storymap__templates___demo.html",
+      "sha256": "c48f93529b12a3d165442f5f124b12a2e85a29a8e56a9a76de0181cfefd2ed12"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-532",
+    "sourceScope": "Fixed original complete UI/demo source and full root license; not a runnable adaptation or full asset archive",
+    "kind": "原版交互场景（仅来源）",
+    "buildStatus": "fixed source and full root license read; not built/run/visually accepted"
+  },
+  {
+    "id": "soundcite:inline-audio-quotation",
+    "title": "文字段落中的可听引用",
+    "source": "Soundcite",
+    "repository": "https://github.com/NUKnightLab/soundcite",
+    "revision": "2b32d5ec8a2f808391bbcaa61d1434b0789e8722",
+    "sourcePath": "website/templates/_demo.html",
+    "upstream": "https://github.com/NUKnightLab/soundcite/blob/2b32d5ec8a2f808391bbcaa61d1434b0789e8722/website/templates/_demo.html",
+    "license": "MPL-2.0 (complete actual root text; runtime/media not closed)",
+    "behavior": "原演示把一个句内短语变成可播放的音频片段，按 data-start/data-end 播放指定区间，并用文字背景表现进度，保持段落阅读上下文。",
+    "difference": "区别普通媒体播放器或 H5P 题卡：声音嵌在原句中而非另开播放区，适合采访/解释中的引用片段；完整一族，不按每个音频算新增。",
+    "styleTags": [
+      "音频/内联叙事"
+    ],
+    "gaps": [
+      "原示例 Tahrir 报道/音频版权需独立核或透明替换，根 MPL 不授权媒体。原代码按需加载 SoundCloud SDK 和 Popcorn，含旧公共 client_id 不应用于新集成；必须禁外部服务或重新授权。音频 CSP/手势、片段结束/反复点击及退出清理未验；修改源公开和完整依赖许可未闭合。",
+      "仅只读源码筛选；未安装/构建/运行、交互生命周期或浏览器视觉验收。"
+    ],
+    "description": "原演示把一个句内短语变成可播放的音频片段，按 data-start/data-end 播放指定区间，并用文字背景表现进度，保持段落阅读上下文。 区别普通媒体播放器或 H5P 题卡：声音嵌在原句中而非另开播放区，适合采访/解释中的引用片段；完整一族，不按每个音频算新增。",
+    "category": "展示与媒体",
+    "licenseEvidence": {
+      "url": "https://github.com/NUKnightLab/soundcite/blob/2b32d5ec8a2f808391bbcaa61d1434b0789e8722/LICENSE",
+      "sha256": "2e0747d9a39cff6a75941fd2284c10d6fbb9dd6fcc81d48858ccece97bf8e218",
+      "scope": "Complete actual root license; transitive code and media permissions not closed"
+    },
+    "sourceEvidence": {
+      "localFile": "evidence/NUKnightLab--soundcite--website__templates___demo.html",
+      "sha256": "dff008a7b58b5308956d52bc7b0789e27cc64479c40bd3fe1a6926a625ae5d38"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-532",
+    "sourceScope": "Fixed original complete UI/demo source and full root license; not a runnable adaptation or full asset archive",
+    "kind": "原版交互场景（仅来源）",
+    "buildStatus": "fixed source and full root license read; not built/run/visually accepted"
+  },
+  {
+    "id": "githistory:file-version-time-travel",
+    "title": "代码文件的历史漫游",
+    "source": "Git History",
+    "repository": "https://github.com/pomber/git-history",
+    "revision": "a20f6085cf9055b350a4db13cea6e013936da9cd",
+    "sourcePath": "src/history.js",
+    "upstream": "https://github.com/pomber/git-history/blob/a20f6085cf9055b350a4db13cea6e013936da9cd/src/history.js",
+    "license": "MIT (complete actual root text; runtime/media not closed)",
+    "behavior": "原 History 通过提交信息、作者和日期引导文件版本切换，代码行在版本间移动过渡，支持滑动/键盘及按需加载更早版本。",
+    "difference": "区别 Diff2Html 单次差异和 LearnGitBranching 教学模拟：以真实仓库某文件的多次历史演化为阅读对象；整套历史交互一族，不按仓库拆分。",
+    "styleTags": [
+      "历史/代码空间"
+    ],
+    "gaps": [
+      "原 App 通过 GitHub/GitLab/Bitbucket provider 联网获取版本，需授权或原创本地虚构历史，不读取未授权私仓。头像/代码原仓许可、token/provider配置、versioner worker 和完整依赖仍待审；useVersionsLoader 未见取消，旧请求晚到/滑动监听/动画退出需测。",
+      "仅只读源码筛选；未安装/构建/运行、交互生命周期或浏览器视觉验收。"
+    ],
+    "description": "原 History 通过提交信息、作者和日期引导文件版本切换，代码行在版本间移动过渡，支持滑动/键盘及按需加载更早版本。 区别 Diff2Html 单次差异和 LearnGitBranching 教学模拟：以真实仓库某文件的多次历史演化为阅读对象；整套历史交互一族，不按仓库拆分。",
+    "category": "数据与状态",
+    "licenseEvidence": {
+      "url": "https://github.com/pomber/git-history/blob/a20f6085cf9055b350a4db13cea6e013936da9cd/license",
+      "sha256": "03a25ac2f7eee02ba5606da7fa49b4c90687953f4e998fc50846bf1979fc8c2e",
+      "scope": "Complete actual root license; transitive code and media permissions not closed"
+    },
+    "sourceEvidence": {
+      "localFile": "evidence/pomber--git-history--src__history.js",
+      "sha256": "84d533b1d1df0c457d9c32075cb5b86094cc1bf863fa016509b2e12650069533"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-532",
+    "sourceScope": "Fixed original complete UI/demo source and full root license; not a runnable adaptation or full asset archive",
+    "kind": "原版交互场景（仅来源）",
+    "buildStatus": "fixed source and full root license read; not built/run/visually accepted"
+  },
+  {
+    "id": "codesurfer:code-walkthrough-deck",
+    "title": "逐步聚焦的代码讲解演示",
+    "source": "Code Surfer",
+    "repository": "https://github.com/pomber/code-surfer",
+    "revision": "948452f7c1c8adaf019e29600d7d158747a91a90",
+    "sourcePath": "sites/docs/decks/demo.mdx",
+    "upstream": "https://github.com/pomber/code-surfer/blob/948452f7c1c8adaf019e29600d7d158747a91a90/sites/docs/decks/demo.mdx",
+    "license": "MIT (complete actual root text; runtime/media not closed)",
+    "behavior": "原 MDX 演示用 CodeSurfer/Step/Columns 将代码段、行列焦点、字幕和幻灯步骤连接，切换时保留行对应并平移/缩放聚焦当前解释。",
+    "difference": "区别编辑器、语法高亮或历史文件查看：这是作者安排好的代码演讲节奏与阅读焦点，非执行代码；完整原演示一族，不按主题色或每页拆。",
+    "styleTags": [
+      "代码/讲解叙事"
+    ],
+    "gaps": [
+      "原 mdx-deck、Prism/主题及动画依赖许可未闭合，MDX 必须预编译而非放宽 unsafe-eval。原 surfer.jpg、logo 与字体独立审，代码示例不是功能实现；键盘/滚轮/动画中断与卸载清理、窄屏像素未验。",
+      "仅只读源码筛选；未安装/构建/运行、交互生命周期或浏览器视觉验收。"
+    ],
+    "description": "原 MDX 演示用 CodeSurfer/Step/Columns 将代码段、行列焦点、字幕和幻灯步骤连接，切换时保留行对应并平移/缩放聚焦当前解释。 区别编辑器、语法高亮或历史文件查看：这是作者安排好的代码演讲节奏与阅读焦点，非执行代码；完整原演示一族，不按主题色或每页拆。",
+    "category": "展示与媒体",
+    "licenseEvidence": {
+      "url": "https://github.com/pomber/code-surfer/blob/948452f7c1c8adaf019e29600d7d158747a91a90/license",
+      "sha256": "33a417fdc896ed5bf4f68fa229bf36c8e15aadb105f26b0a11c2da973bf22873",
+      "scope": "Complete actual root license; transitive code and media permissions not closed"
+    },
+    "sourceEvidence": {
+      "localFile": "evidence/pomber--code-surfer--sites__docs__decks__demo.mdx",
+      "sha256": "c441f013fd98e561ab5103dc6809a3fba83eef42486e5302cabb6b1d08718dbc"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-532",
+    "sourceScope": "Fixed original complete UI/demo source and full root license; not a runnable adaptation or full asset archive",
+    "kind": "原版交互场景（仅来源）",
+    "buildStatus": "fixed source and full root license read; not built/run/visually accepted"
+  },
+  {
+    "id": "cindyjs:julia-orbit-explanation",
+    "title": "复平面中的轨迹与分形解释",
+    "source": "CindyJS",
+    "repository": "https://github.com/CindyJS/CindyJS",
+    "revision": "c5b87a373e574c0da6137cc95fbe48a8d6e534c5",
+    "sourcePath": "examples/cindygl/08_julia_explanation.html",
+    "upstream": "https://github.com/CindyJS/CindyJS/blob/c5b87a373e574c0da6137cc95fbe48a8d6e534c5/examples/cindygl/08_julia_explanation.html",
+    "license": "Apache-2.0 (complete actual root text; runtime/media not closed)",
+    "behavior": "原完整 Julia explanation 示例以可拖复参数 C 更新分形，指针位置生成迭代轨迹与逐步衰减连线，绿色半径边界辅助理解逃逸。",
+    "difference": "区别纯自动分形背景或可换色粒子：参数拖动与鼠标选点直接展示数学迭代过程；只此原完整解释场景，不把相邻 Julia 变体计数。",
+    "styleTags": [
+      "分形/交互解释"
+    ],
+    "gaps": [
+      "原 CindyScript/CindyGL 编译与 shader路径、Apache依赖及NOTICE需专项闭合；autoplay默认开启，需减少运动/暂停/hidden/销毁与失败状态。没有GPU和几何命中验收，不可把能读取公式当实际渲染成功；不改默认 CSP。",
+      "仅只读源码筛选；未安装/构建/运行、交互生命周期或浏览器视觉验收。"
+    ],
+    "description": "原完整 Julia explanation 示例以可拖复参数 C 更新分形，指针位置生成迭代轨迹与逐步衰减连线，绿色半径边界辅助理解逃逸。 区别纯自动分形背景或可换色粒子：参数拖动与鼠标选点直接展示数学迭代过程；只此原完整解释场景，不把相邻 Julia 变体计数。",
+    "category": "展示与媒体",
+    "licenseEvidence": {
+      "url": "https://github.com/CindyJS/CindyJS/blob/c5b87a373e574c0da6137cc95fbe48a8d6e534c5/LICENSE",
+      "sha256": "09e0fc311de19fb80248dcb18d5a134d5cde7f29a017e113a064ce7c5f7e5f93",
+      "scope": "Complete actual root license; transitive code and media permissions not closed"
+    },
+    "sourceEvidence": {
+      "localFile": "evidence/CindyJS--CindyJS--examples__cindygl__08_julia_explanation.html",
+      "sha256": "cad49d5042cdd73134b5260856ed4d1c9026ea43f3a2bd339f0c8bcbfd4b3be4"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-532",
+    "sourceScope": "Fixed original complete UI/demo source and full root license; not a runnable adaptation or full asset archive",
+    "kind": "原版交互场景（仅来源）",
+    "buildStatus": "fixed source and full root license read; not built/run/visually accepted"
+  },
+  {
+    "id": "stellarium:observational-sky-navigation",
+    "title": "时间与观测位置驱动的星空漫游",
+    "source": "Stellarium Web Engine",
+    "repository": "https://github.com/Stellarium/stellarium-web-engine",
+    "revision": "2103935134e09ba1715171241769fce03cebebe4",
+    "sourcePath": "apps/web-frontend/src/App.vue",
+    "upstream": "https://github.com/Stellarium/stellarium-web-engine/blob/2103935134e09ba1715171241769fce03cebebe4/apps/web-frontend/src/App.vue",
+    "license": "AGPL-3.0 (complete actual root text; runtime/media not closed)",
+    "behavior": "原 Web 前端连接星空引擎、时间/日期、观测位置、天体搜索和选中对象说明，天空显示随观测状态变化，而不是静态星空图片。",
+    "difference": "区别已有地理地图/球体：核心是观测时间/方向与天体信息的空间内容导航，整个原星空应用一族，不按星座拆。",
+    "styleTags": [
+      "星空/空间内容"
+    ],
+    "gaps": [
+      "原 mounted 加载 WASM 后立即 getGeolocation/反向地理查询，必须移除自动定位或经明确授权，不把读取源码当定位许可。AGPL 对应源和网络服务义务未闭合；skydata/星图文化、Roboto字体与完整依赖许可另审，WASM/数据二进制不包装。GPU/传感器/时间循环/退出未验证，不能声称离线可观测。",
+      "仅只读源码筛选；未安装/构建/运行、交互生命周期或浏览器视觉验收。"
+    ],
+    "description": "原 Web 前端连接星空引擎、时间/日期、观测位置、天体搜索和选中对象说明，天空显示随观测状态变化，而不是静态星空图片。 区别已有地理地图/球体：核心是观测时间/方向与天体信息的空间内容导航，整个原星空应用一族，不按星座拆。",
+    "category": "展示与媒体",
+    "licenseEvidence": {
+      "url": "https://github.com/Stellarium/stellarium-web-engine/blob/2103935134e09ba1715171241769fce03cebebe4/LICENSE-AGPL-3.0.txt",
+      "sha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0",
+      "scope": "Complete actual root license; transitive code and media permissions not closed"
+    },
+    "sourceEvidence": {
+      "localFile": "evidence/Stellarium--stellarium-web-engine--apps__web-frontend__src__App.vue",
+      "sha256": "f7c4192b1b069e24844c28848f7bab937a593f906c03db108fed63a613ae2e89"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-532",
+    "sourceScope": "Fixed original complete UI/demo source and full root license; not a runnable adaptation or full asset archive",
+    "kind": "原版交互场景（仅来源）",
+    "buildStatus": "fixed source and full root license read; not built/run/visually accepted"
+  },
+  {
+    "id": "reactive-resume:paper-design-editor",
+    "title": "Reactive Resume · 纸面简历设计场景",
+    "source": "Reactive Resume",
+    "repository": "https://github.com/reactive-resume/reactive-resume",
+    "revision": "fed8ab5aa02248b6d2198757d4608cf6a700aedf",
+    "sourcePath": "apps/web/src/features/resume/editor/chrome.tsx",
+    "upstream": "https://github.com/reactive-resume/reactive-resume/blob/fed8ab5aa02248b6d2198757d4608cf6a700aedf/apps/web/src/features/resume/editor/chrome.tsx",
+    "license": "MIT (root verified; fonts/backend/dependencies not cleared)",
+    "visualStyle": "纸面内容预览与写作/设计面板并置，模板和样式组选项、抽屉与响应式工具条构成文档编排工作室。",
+    "behavior": "原EditorShell按desktop/tablet/phone选择并排/抽屉和assistant位置；TemplateGroup/StyleGroups连接简历模板与排版设置，不只是孤立输入表单。",
+    "difference": "区别普通表单/富文本编辑器：以可打印简历版面与内容分区联动为目标的完整产品；不把每个简历模板计新条目。",
+    "gaps": [
+      "canonical已迁reactive-resume/reactive-resume，API树固定SHA确认并从新repo重取根LICENSE/README和源，不沿用旧AmruthPillai路径为主归属。",
+      "模板字体、照片、导出PDF、AI助手、账户/分享链接与存储传递图未闭合；不读取用户履历、生成或发送求职材料。",
+      "只保留原Web编辑器公共文本入口，未构建、渲染版式、测试分页/打印/编辑清理，无完整可运行包。",
+      "仅来源：未构建/运行/像素验收，所有传递依赖/媒体字体/CSP与重复操作/退出清理尚未闭合，无预览或完整源码ZIP。"
+    ],
+    "description": "纸面内容预览与写作/设计面板并置，模板和样式组选项、抽屉与响应式工具条构成文档编排工作室。 原EditorShell按desktop/tablet/phone选择并排/抽屉和assistant位置；TemplateGroup/StyleGroups连接简历模板与排版设置，不只是孤立输入表单。",
+    "category": "输入与选择",
+    "licenseEvidence": {
+      "url": "https://github.com/reactive-resume/reactive-resume/blob/fed8ab5aa02248b6d2198757d4608cf6a700aedf/LICENSE",
+      "sha256": "d7839f5fa862720b1501a54bcc0d6a2566b59cee221738640bf1508630f73cc1",
+      "scope": "Complete actual root license read; original selected code only; embedded assets/runtime not cleared"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-532",
+    "sourceScope": "Selected fixed original source and complete root license evidence; not full runnable/archive",
+    "kind": "原版完整场景（仅来源）",
+    "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted"
+  },
+  {
+    "id": "stirling-pdf:public-document-workbench",
+    "title": "Stirling PDF · 公共文档工作区入口",
+    "source": "Stirling PDF public editor core",
+    "repository": "https://github.com/Stirling-Tools/Stirling-PDF",
+    "revision": "d74543712c8214548b823859c8dba4cf2e52a875",
+    "sourcePath": "frontend/src/editor/core/components/layout/Workbench.tsx",
+    "upstream": "https://github.com/Stirling-Tools/Stirling-PDF/blob/d74543712c8214548b823859c8dba4cf2e52a875/frontend/src/editor/core/components/layout/Workbench.tsx",
+    "license": "MIT for selected editor/core only; proprietary/engine/processor excluded",
+    "visualStyle": "文档占主视野的工作区，浮动工具条、文件/附件侧栏与不同工作模式组合，强调文档空间而非工具清单。",
+    "behavior": "原Workbench根据tool workflow选择工作内容并响应文件/移动布局；Viewer选择PDF或非PDF视图，并保持portfolio附件会话和边栏。",
+    "difference": "区别纯PDF文本解析器：原完整文档工作区壳与多文件/附件阅读结构；不把几十个PDF处理按钮拆条，也不宣称处理引擎已获授权。",
+    "gaps": [
+      "根LICENSE明确排除app/proprietary、app/saas、engine及editor的proprietary/desktop/saas/cloud、整个processor等路径。只收editor/core原件；选定路径不在排除范围。",
+      "engine/processor/proprietary User License禁止无授权分发，完整条款只作本地边界证据，不取其实现；公共入口alias可在不同构建解析到受限实现，完整图未核，禁止按整产品MIT处理。",
+      "文档引擎、后端/文件处理、签名覆盖层与输入输出动作未运行；无文书签署、上传、下载或转换，当前仅条件来源参考。",
+      "仅来源：未构建/运行/像素验收，所有传递依赖/媒体字体/CSP与重复操作/退出清理尚未闭合，无预览或完整源码ZIP。"
+    ],
+    "description": "文档占主视野的工作区，浮动工具条、文件/附件侧栏与不同工作模式组合，强调文档空间而非工具清单。 原Workbench根据tool workflow选择工作内容并响应文件/移动布局；Viewer选择PDF或非PDF视图，并保持portfolio附件会话和边栏。",
+    "category": "展示与媒体",
+    "licenseEvidence": {
+      "url": "https://github.com/Stirling-Tools/Stirling-PDF/blob/d74543712c8214548b823859c8dba4cf2e52a875/LICENSE",
+      "sha256": "e37c7ec776906aebe25e48288da4305afd45dee92f0231ddec68af59cbd7736b",
+      "scope": "Complete actual root license read; original selected code only; embedded assets/runtime not cleared"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-532",
+    "sourceScope": "Selected fixed original source and complete root license evidence; not full runnable/archive",
+    "kind": "原版完整场景（仅来源）",
+    "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted",
+    "collectionPriority": "条件来源参考/仅MIT公共core入口；受限处理引擎与完整alias图不纳入"
+  },
+  {
+    "id": "invokeai:layered-generation-canvas",
+    "title": "InvokeAI · 分层图像生成画布场景",
+    "source": "InvokeAI Web v2 canvas",
+    "repository": "https://github.com/invoke-ai/InvokeAI",
+    "revision": "83507c67a9a17ff0b84bd7a5b12b74673ce4aa6f",
+    "sourcePath": "invokeai/frontend/webv2/src/workbench/widgets/canvas/CanvasWidgetView.tsx",
+    "upstream": "https://github.com/invoke-ai/InvokeAI/blob/83507c67a9a17ff0b84bd7a5b12b74673ce4aa6f/invokeai/frontend/webv2/src/workbench/widgets/canvas/CanvasWidgetView.tsx",
+    "license": "Apache-2.0 (root verified; model/runtime/assets not cleared)",
+    "visualStyle": "原画布为中心，浮动工具带、图层上下文菜单和底部生成候选暂存条，组织区域式图像创作与结果选择。",
+    "behavior": "原CanvasWidgetView通过CanvasEngine处理画布/图层交互和项目mutation，CanvasSurface呈现原引擎容器；StagingBar控制候选槽位与结果选择，ToolStrip对应真实绘制工具。",
+    "difference": "区别Upscayl增强对照与通用照片编辑：包含图层/区域生成和多候选暂存的原创作场景；不把候选数/模型/画笔样式拆新条。",
+    "gaps": [
+      "固定源码选择webv2子树，未宣称当前所有发布包默认使用该界面；完整根Apache2保留，但模型权重/训练数据/生成媒体不由此许可覆盖。",
+      "原canvas engine、模型grid/生成队列、project mutations、剪贴板/文件drop与服务端调用未隔离；不加载模型、生成图片或读取剪贴板。",
+      "README/后端有第三方图像模块各自LICENSE，所有传递图、字体/图片、WebGL/Canvas像素和取消清理未闭合，无运行预览。",
+      "仅来源：未构建/运行/像素验收，所有传递依赖/媒体字体/CSP与重复操作/退出清理尚未闭合，无预览或完整源码ZIP。"
+    ],
+    "description": "原画布为中心，浮动工具带、图层上下文菜单和底部生成候选暂存条，组织区域式图像创作与结果选择。 原CanvasWidgetView通过CanvasEngine处理画布/图层交互和项目mutation，CanvasSurface呈现原引擎容器；StagingBar控制候选槽位与结果选择，ToolStrip对应真实绘制工具。",
+    "category": "输入与选择",
+    "licenseEvidence": {
+      "url": "https://github.com/invoke-ai/InvokeAI/blob/83507c67a9a17ff0b84bd7a5b12b74673ce4aa6f/LICENSE",
+      "sha256": "39301589f2cba7f40297c7da05c7e5d164f704caa979665b117c353203c9cf03",
+      "scope": "Complete actual root license read; original selected code only; embedded assets/runtime not cleared"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-532",
+    "sourceScope": "Selected fixed original source and complete root license evidence; not full runnable/archive",
+    "kind": "原版完整场景（仅来源）",
+    "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted"
+  },
+  {
+    "id": "domus-picturae:gallery-narrative-site",
+    "title": "巨字画廊与横向展厅、纵深私藏整站",
+    "source": "Domus Picturae",
+    "repository": "https://github.com/mearashadowfax/DomusPicturae",
+    "revision": "26cf8a97fac2ec2edf164f076be9f27c7097238a",
+    "sourcePath": "src/views/HomeView.astro",
+    "upstream": "https://github.com/mearashadowfax/DomusPicturae/blob/26cf8a97fac2ec2edf164f076be9f27c7097238a/src/views/HomeView.astro",
+    "license": "MIT (root verified only; dependencies/assets not closed)",
+    "behavior": "原巨字遮罩揭幕首页串联作品、艺术家与展览；水平滚轮展厅和沿Z轴分布最多11件作品的私藏阅读场景，原Astro视图及滚动逻辑保留。",
+    "difference": "不同于普通图片网格：有原横向展厅和纵深场景、作品可售/非售分流的完整艺术品牌叙事；多语言/子页不拆条。",
+    "gaps": [
+      "固定仅取得相关原视图，非完整离线归档。GSAP/ScrollTrigger/SplitText、Lenis、字体Satoshi/Fontshare与Baskervville、艺术图片独立许可待审；README明确艺术家与作品为虚构。表单未配置仅demo日志，配置后会发webhook；Keystatic仅开发模式，sessionStorage及动效退出未验。",
+      "仅固定原件来源；未安装/构建/运行/截图/发布，CSP、媒体字体版权、完整运行许可、交互清理及浏览器视觉均未验。"
+    ],
+    "description": "原巨字遮罩揭幕首页串联作品、艺术家与展览；水平滚轮展厅和沿Z轴分布最多11件作品的私藏阅读场景，原Astro视图及滚动逻辑保留。 不同于普通图片网格：有原横向展厅和纵深场景、作品可售/非售分流的完整艺术品牌叙事；多语言/子页不拆条。",
+    "category": "产品与营销",
+    "licenseEvidence": {
+      "url": "https://github.com/mearashadowfax/DomusPicturae/blob/26cf8a97fac2ec2edf164f076be9f27c7097238a/LICENSE",
+      "sha256": "65b0c7b670006fba29142caa8a2e7b714bf7ad74de23901c52ef895f7411da67",
+      "scope": "Complete root license read; dependency/media/font permissions not closed"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-532",
+    "sourceScope": "Selected fixed original code and complete root license evidence; not a complete runnable archive or runtime audit",
+    "kind": "原版完整场景（仅来源）",
+    "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted",
+    "sourceSha256": "16327ffebbb0b1f89029d78960f8bedce514fa4760d40f24fa019828d8c9e28f"
+  },
+  {
+    "id": "midblock-architecture:street-facade-narrative",
+    "title": "街缝建筑、彩色立面与楼层切片叙事整页",
+    "source": "Midblock Architecture",
+    "repository": "https://github.com/8bsite/architecture-website-template",
+    "revision": "7ec5c2f4f1ca2e22ab17c95c1f3e9d2bf3035cca",
+    "sourcePath": "index.html",
+    "upstream": "https://github.com/8bsite/architecture-website-template/blob/7ec5c2f4f1ca2e22ab17c95c1f3e9d2bf3035cca/index.html",
+    "license": "MIT (root verified only; dependencies/assets not closed)",
+    "behavior": "原街道照片切片与阶梯色块、按地块相对宽度横向排列的五个建筑、方法扫描线、地块登记表、楼层切片和原生details问答、联系表单组成完整品牌页。",
+    "difference": "虽与Sillage同作者，但不是黑白作品筛选页换色：用窄地块宽度和建筑楼层切片组织叙事与滚动，是独立空间构图。",
+    "gaps": [
+      "当前固定index.html为CSS scroll-driven+inline motion无库版，未收旧index.gsap.html。CREDITS原逐图Unsplash及字体OFL声明已保存但独立许可未闭合；远程照片/Google字体存在。联系表单仅验证、展示感谢并清空，不发请求；人物/地址/项目均示例，浏览器动效兼容/清理与CSP未验。",
+      "仅固定原件来源；未安装/构建/运行/截图/发布，CSP、媒体字体版权、完整运行许可、交互清理及浏览器视觉均未验。"
+    ],
+    "description": "原街道照片切片与阶梯色块、按地块相对宽度横向排列的五个建筑、方法扫描线、地块登记表、楼层切片和原生details问答、联系表单组成完整品牌页。 虽与Sillage同作者，但不是黑白作品筛选页换色：用窄地块宽度和建筑楼层切片组织叙事与滚动，是独立空间构图。",
+    "category": "产品与营销",
+    "licenseEvidence": {
+      "url": "https://github.com/8bsite/architecture-website-template/blob/7ec5c2f4f1ca2e22ab17c95c1f3e9d2bf3035cca/LICENSE",
+      "sha256": "bf6dc1ef87d6f84fe3962bf6a46179cd9bbeb4c713a6caf024add08be792578b",
+      "scope": "Complete root license read; dependency/media/font permissions not closed"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-532",
+    "sourceScope": "Selected fixed original code and complete root license evidence; not a complete runnable archive or runtime audit",
+    "kind": "原版完整场景（仅来源）",
+    "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted",
+    "sourceSha256": "6726a3d52ebb0c159634f9d11dd2f9c1be91c613693b3be7b7edf8c020d1b994"
   }
 ]
