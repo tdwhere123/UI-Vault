@@ -1,0 +1,166 @@
+{
+  "repository": "https://github.com/kaltwrk/motion-core",
+  "revision": "74ad6e66d50cc9b1849a505fcd1b352704920745",
+  "entry": "apps/web/src/routes/docs/glitter-cloth/",
+  "originalSHA256": {
+    "packages/motion-core/src/lib/components/glitter-cloth/GlitterCloth.svelte": "33f76a2d21e281442632391569150c01de6cb27dc8d56afe91e54c520bd322cb",
+    "packages/motion-core/src/lib/components/glitter-cloth/component.json": "ac48bffd8d842af447ff0d3197b11876d167f03e56d3003aea57101432a8949b",
+    "packages/motion-core/src/lib/components/glitter-cloth/GlitterClothScene.svelte": "e173ca27561a4604c2521e44192d116765eb807a4b06d21183f2a1f906ccfe4d",
+    "apps/web/src/routes/docs/glitter-cloth/GlitterClothDemo.svelte": "abc3c912ea89abd29bcb887c000a8659fd095e4b0a7413c94673739e531b3c37",
+    "LICENSE": "fff0422ca6211471f534a4373a6338f418cd4e0d9cd0e3190e29179da474801c",
+    "packages/motion-core/src/lib/helpers/color.ts": "7941b14a7e4d7305f2d2ec3a55f91c591e309a5e8de4cf3d7e08dee68507630b",
+    "packages/motion-core/src/lib/utils/cn.ts": "0fca478853f3fc4310e40ebff727a53da7ec677938f4e3e0d5ecaa62e936a199"
+  },
+  "dependencies": [
+    {
+      "name": "clsx",
+      "version": "2.1.1",
+      "license": "MIT",
+      "files": {
+        "license": "9a9edad7baae52622bddf3c15b2ef8a33d2c89f2d25408ad13e8a7481c6b0c97"
+      }
+    },
+    {
+      "name": "esm-env",
+      "version": "1.2.2",
+      "license": "MIT",
+      "files": {
+        "LICENSE": "6df5276ee7531fcc5446f19082c12e77bb6c5f081fd2b6d6cf88180a5ee36acd"
+      }
+    },
+    {
+      "name": "ogl",
+      "version": "1.0.11",
+      "license": "Unlicense",
+      "files": {
+        "README.md": "431694c5ceee21023d54c8d11663e028d2f845f00fa49e59cce25f43944c7479"
+      }
+    },
+    {
+      "name": "svelte",
+      "version": "5.39.6",
+      "license": "MIT",
+      "files": {
+        "LICENSE.md": "06257f4847b13a49a039efb17b944c141e71b12fd8d231b362d86919067d77a3"
+      }
+    },
+    {
+      "name": "tailwind-merge",
+      "version": "3.4.0",
+      "license": "MIT",
+      "files": {
+        "LICENSE.md": "d4c70c7ce38cea8778f0aed3fc0bef0a9dbd27f13bd8b6773cbd6d37941971e5"
+      }
+    }
+  ],
+  "noiseAttribution": {
+    "family": "Ashima Arts/Ian McEwan/Stefan Gustavson simplex3D, adapted coefficients; not byte-identical whole shader",
+    "reference": "https://github.com/ashima/webgl-noise/tree/6abed1e77ed1e18b181627c35f688eb30c9fe75e",
+    "fullLicenseSHA256": "bdafce1bb01517c9ae6c4f3620c01340790b5e9d039ae9e356347d1174250916",
+    "referenceSHA256": "bf18982b8edd25218b5096cba6f7838a0508416be51acd1fd88d0ba8acb5169e"
+  },
+  "inlineShadersUnchanged": [
+    {
+      "sha256": "fa6279063941ece95184efd90d016c13f84742d38fd1448c7eb9ac16d42e7fd0",
+      "bytes": 147
+    },
+    {
+      "sha256": "ca96136e760fa49709c22204d06e91e0d39d85cc1d3808373506b836888a5e2b",
+      "bytes": 4555
+    }
+  ],
+  "syntaxParser": [
+    {
+      "slug": "glitter-cloth",
+      "index": 2,
+      "sha256": "fa6279063941ece95184efd90d016c13f84742d38fd1448c7eb9ac16d42e7fd0",
+      "bytes": 147,
+      "syntax": "pass",
+      "limitation": "GLSL ES parser only, not driver compile/link or GPU output"
+    },
+    {
+      "slug": "glitter-cloth",
+      "index": 3,
+      "sha256": "ca96136e760fa49709c22204d06e91e0d39d85cc1d3808373506b836888a5e2b",
+      "bytes": 4555,
+      "syntax": "pass",
+      "limitation": "GLSL ES parser only, not driver compile/link or GPU output"
+    }
+  ],
+  "tests": [
+    {
+      "slug": "glitter-cloth",
+      "mode": "shaderfail",
+      "pass": true,
+      "drawCommands": 0,
+      "shadersSubmitted": 1,
+      "allocated": 5,
+      "deleted": 5,
+      "contextLossRequests": 1,
+      "scope": "Original OGL and original GLSL submitted to stubbed WebGL. No native shader compilation or pixels verified."
+    },
+    {
+      "slug": "glitter-cloth",
+      "mode": "normal",
+      "pass": true,
+      "drawCommands": 4,
+      "shadersSubmitted": 8,
+      "allocated": 24,
+      "deleted": 24,
+      "contextLossRequests": 4,
+      "uniformDefaultsVerified": [
+        "uBrightness=1",
+        "uNoiseScale=4",
+        "uBlendStrength=.02",
+        "uVignetteStrength=50",
+        "uVignettePower=.5"
+      ],
+      "scope": "Original OGL and original GLSL submitted to stubbed WebGL. No native shader compilation or pixels verified."
+    },
+    {
+      "slug": "glitter-cloth",
+      "mode": "unsupported",
+      "pass": true,
+      "drawCommands": 0,
+      "shadersSubmitted": 0,
+      "allocated": 0,
+      "deleted": 0,
+      "contextLossRequests": 0,
+      "scope": "Original OGL and original GLSL submitted to stubbed WebGL. No native shader compilation or pixels verified."
+    },
+    {
+      "slug": "glitter-cloth",
+      "mode": "contextlost",
+      "pass": true,
+      "drawCommands": 1,
+      "shadersSubmitted": 2,
+      "allocated": 6,
+      "deleted": 6,
+      "contextLossRequests": 1,
+      "scope": "Original OGL and original GLSL submitted to stubbed WebGL. No native shader compilation or pixels verified."
+    },
+    {
+      "slug": "glitter-cloth",
+      "mode": "reduced",
+      "pass": true,
+      "drawCommands": 4,
+      "shadersSubmitted": 8,
+      "allocated": 24,
+      "deleted": 24,
+      "contextLossRequests": 4,
+      "scope": "Original OGL and original GLSL submitted to stubbed WebGL. No native shader compilation or pixels verified."
+    }
+  ],
+  "changes": [
+    "Original Demo workspace barrel replaced with exact local component import. No GSAP/MediaPipe imported.",
+    "Original Scene only DPR bounded at2; GLSL literals and geometry/runtime loops retained.",
+    "Shared host owns RAF/timeouts and WebGL resources, checks compile/link status, handles errors/contextlost, hides by unmount/dispose and rebuilds on return.",
+    "Reduced motion schedules one original frame; pause retains last frame and resume/restart rebuilds original default scene.",
+    "No new artistic effects, placeholder canvas, remote texture/media or native screenshot. Utility CSS only implements original wrapper classes, plus explicit host chrome."
+  ],
+  "limitations": [
+    "WebGL methods/compile return values mocked in lifecycle tests; actual shader compilation/GPU pixels not verified.",
+    "No upstream visible parameter panel: official Demo supplies default props. Host Pause/Restart are disclosed added lifecycle controls.",
+    "No physics/clinical/material measurement claim; original aesthetic scene only."
+  ]
+}
