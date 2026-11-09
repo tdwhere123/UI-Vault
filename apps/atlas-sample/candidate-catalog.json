@@ -17437,42 +17437,34 @@
   },
   {
     "id": "nutshell:expandable-explanation-essay",
-    "title": "文章中的层叠解释与回读",
     "source": "Nutshell",
     "repository": "https://github.com/ncase/nutshell",
     "revision": "d91469e1b2c9be8294d30542bf50f317953a9d01",
-    "sourcePath": "index.html",
     "upstream": "https://github.com/ncase/nutshell/blob/d91469e1b2c9be8294d30542bf50f317953a9d01/index.html",
-    "license": "CC0-1.0 (original content only) (complete actual root text; runtime/media not closed)",
-    "behavior": "原演示长文将链接展开为段内解释，解释可继续嵌套展开、收起并保留阅读上下文；原 nutshell.js 负责展开动画、定位和内容解析。",
-    "difference": "区别普通 accordion 或 tooltip：解释直接改变长文布局，形成分层阅读路径，适合 Agent 答案中可选深度证据；整套文章交互一族。",
-    "styleTags": [
-      "层叠叙事/阅读"
-    ],
-    "gaps": [
-      "README 明确 CC0 只覆盖作者原代码/图文，内嵌 DOMPurify/Marked 有各自许可，尚未全文闭合。原支持远程文章/Wikipedia/YouTube/媒体/iframe，必须限定本地可信素材并禁外部请求；消息监听/递归定时器及收起后晚到 fetch 未测，不以原净化调用替代安全审查。",
-      "仅只读源码筛选；未安装/构建/运行、交互生命周期或浏览器视觉验收。"
-    ],
-    "description": "原演示长文将链接展开为段内解释，解释可继续嵌套展开、收起并保留阅读上下文；原 nutshell.js 负责展开动画、定位和内容解析。 区别普通 accordion 或 tooltip：解释直接改变长文布局，形成分层阅读路径，适合 Agent 答案中可选深度证据；整套文章交互一族。",
-    "category": "展示与媒体",
+    "sourcePath": "index.html",
     "licenseEvidence": {
       "url": "https://github.com/ncase/nutshell/blob/d91469e1b2c9be8294d30542bf50f317953a9d01/LICENSE",
       "sha256": "5537d4d10b76b81b6e8dfd8b644480a4b1efa332fbb0cdb61126c5be781ef7b4",
       "scope": "Complete actual root license; transitive code and media permissions not closed"
     },
-    "sourceEvidence": {
-      "localFile": "evidence/ncase--nutshell--index.html",
-      "sha256": "11777faf7e8a251faaac1a704ba2766f64796b928c448a8352e40b641484900d"
-    },
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-style-529",
-    "sourceScope": "Fixed original complete UI/demo source and full root license; not a runnable adaptation or full asset archive",
-    "kind": "原版交互场景（仅来源）",
-    "buildStatus": "fixed source and full root license read; not built/run/visually accepted"
+    "title": "Nutshell · 段内层叠解释",
+    "license": "CC0-1.0 AND Apache-2.0",
+    "category": "展示与媒体",
+    "kind": "递归解释阅读场景",
+    "format": "完整交互场景",
+    "batch": "nutshell-01",
+    "preview": "batches/nutshell-01/inline-essay/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original inline recursive section/bubble renderer with trusted offline excerpt; optional remote/embed/Markdown routes removed, DOM lifecycle tests; native layout and animation unverified",
+    "description": "点击句中关键词，就地展开原文解释并继续递归深入；关闭内层后回到上一层，保持阅读上下文。",
+    "behavior": "原Nutshell标题段落提取、内联bubble和句子回接；本地可信原文摘选、两层递归、快速关重开、隐藏保留和退出清理。",
+    "gaps": [
+      "这是Nicky Case原文的离线文字摘选，不是完整官网；图片、跨站引用、嵌入分享和真实外部资料获取均未包含。",
+      "保留原层叠展开机制，不替换成普通details；为opaque iframe明确选原本地渲染分支，禁远程resolver/iframe/embed/postMessage，不放宽CSP。",
+      "原CC0及DOMPurify2.3.6所选Apache2路线完整条款附带；旧sanitizer仅处理内置可信fixture，不开放任意HTML/URL；未定版本Marked及可选Markdown注解路径移除。",
+      "DOM嵌套/折返/键盘适配/快速重开/隐藏/异步失败/退出通过，不等于原生inline几何、高度动画、辅助技术或像素验收；封面仍交Grok。"
+    ]
   },
   {
     "id": "loopy:feedback-system-simulation",
@@ -18590,5 +18582,738 @@
     "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted",
     "sourceSha256": "250d95a2d3ccdafc9f9a7ca1da367e7aaf240b3c6ee847e9a0d65bc78ac5e192",
     "collectionPriority": "条件来源参考：GSAP/算法/字体运行再分发尚未闭合"
+  },
+  {
+    "id": "healthicons:clinical-research-symbol-family",
+    "title": "Health Icons · 医疗与研究符号系列",
+    "source": "Health Icons",
+    "repository": "https://github.com/resolvetosavelives/healthicons",
+    "revision": "2080c1b40e4829f2f4217e03bc22908b4e402f6b",
+    "sourcePath": "public/icons/svg/outline/devices/microscope.svg",
+    "upstream": "https://github.com/resolvetosavelives/healthicons/blob/2080c1b40e4829f2f4217e03bc22908b4e402f6b/public/icons/svg/outline/devices/microscope.svg",
+    "license": "Icons/packages CC0-1.0; website code MIT (complete actual combined root text read)",
+    "visualStyle": "48px网格上的专业设备与记录轮廓，currentColor路径形成线面细节，覆盖通用工具图标较少的研究语义。",
+    "behavior": "四个静态SVG样本为显微镜、样本、趋势图和工作表；可用于研究资料与富消息内容分类，不提供医疗判断或表单服务。",
+    "difference": "整个专业设计系列只记一条，outline/filled/24px及各glyph不拆数；语义与普通线性图标有交集，但该族补专业设备和研究记录符号。",
+    "description": "专业医疗与研究符号系列，用于资料分类和富内容标记；整套系列只计一条，不按单glyph或填充样式增加数量。",
+    "gaps": [
+      "实际完整根LICENSE区分图标/包CC0与网站代码MIT；CC0不授商标/专利或第三人权利，不等于医疗符号在所有场景都无其他要求。",
+      "本轮仅4个48px outline原SVG、README与根全文，未完整收集系列、填充/24px或名称映射；不声称全量搜索、复制与可访问浏览完成。",
+      "静态符号不证明医学适用性或诊断结果，未访问用户健康信息、不连接医疗服务，也没有替用户做判断。",
+      "未运行网站Next/Figma同步或其环境配置，不索要凭据；全量SVG安全与尺寸/像素/标签可读性待验，无PNG/字体/截图或完整ZIP。"
+    ],
+    "category": "图标系列",
+    "format": "图标家族",
+    "kind": "图标系列",
+    "counts": {
+      "independentFamily": 1,
+      "completedPreviews": 0
+    },
+    "licenseEvidence": {
+      "url": "https://github.com/resolvetosavelives/healthicons/blob/2080c1b40e4829f2f4217e03bc22908b4e402f6b/LICENSE",
+      "sha256": "d36196c6c2b0a983415778adddf81bfe63c51f408e707a36fa2b029d65e92d06",
+      "scope": "Complete actual CC0 icons/packages and MIT website root read; four SVG samples only"
+    },
+    "sourceEvidence": [
+      {
+        "path": "public/icons/svg/outline/devices/medical-sample.svg",
+        "sha256": "2404760d734cd3a5b572995ae94986c993fc4c0d413a1907bf77ae87b83244de"
+      },
+      {
+        "path": "public/icons/svg/outline/devices/microscope.svg",
+        "sha256": "e12b3a49b7fa97185ebd40469b133f99c4ed329e7bde111f5b10fa410304b86e"
+      },
+      {
+        "path": "public/icons/svg/outline/graphs/chart-line.svg",
+        "sha256": "9d9ee3957143ba09229991e721fd7bc354832f6adbb952806e4e70666684d8fe"
+      },
+      {
+        "path": "public/icons/svg/outline/objects/health-worker_form.svg",
+        "sha256": "3e0db9de01c5f1207968f9d6316055ceffda289d02ecaca84a755816a40838ca"
+      }
+    ],
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-531",
+    "sourceScope": "Four fixed original SVG samples and complete combined root license; no full runnable/archive",
+    "buildStatus": "Fixed source inspected; no runtime or visual verification"
+  },
+  {
+    "id": "tonejs:envelope-visual-scene",
+    "title": "音色包络与有机图形联动",
+    "source": "Tone.js",
+    "repository": "https://github.com/Tonejs/Tone.js",
+    "revision": "105c04cc00289caf49684ac5c7621bce8a042c4c",
+    "sourcePath": "examples/funkyShape.html",
+    "upstream": "https://github.com/Tonejs/Tone.js/blob/105c04cc00289caf49684ac5c7621bce8a042c4c/examples/funkyShape.html",
+    "website": "https://tonejs.github.io/examples/funkyShape",
+    "license": "MIT (root text verified; runtime/assets not closed)",
+    "behavior": "官方完整示例将鼓点、低音与蜂鸣包络映射为波纹、漂移圆与方形，展示音形同步。",
+    "difference": "固定完整示例场景；同源参数/预设不拆计数，非已运行验收。",
+    "description": "官方完整示例将鼓点、低音与蜂鸣包络映射为波纹、漂移圆与方形，展示音形同步。",
+    "gaps": [
+      "固定完整HTML含p5绘制与Tone音序代码；依赖tone-ui.js和p5 1.0.0 CDN，Tone组件加载/构建链及各自许可需本地闭合。",
+      "只允许主动播放，默认静音；不自动启动AudioContext、不申请麦克风，音量上限与一键停止必须保留。",
+      "音符/波形是演示合成，不是Agent实时听觉或用户音频分析；动态几何减动、离屏暂停、Tone Transport与p5销毁待验。",
+      "固定源码及完整根许可已存证；未构建、未运行、未截图，completedPreviewCount=0。"
+    ],
+    "category": "展示与媒体",
+    "licenseEvidence": {
+      "url": "https://github.com/Tonejs/Tone.js/blob/105c04cc00289caf49684ac5c7621bce8a042c4c/LICENSE.md",
+      "sha256": "c2f9e2f9fd21639e8f8976e56b7df01d6efcc3b003dfd43ca59d4b10616efce7",
+      "scope": "Complete original root license retained; runtime/media separate"
+    },
+    "sourceSha256": "a7cae018d8b53ee7b86825ca268a7316da98ff33234bc21a01e68a7f35ba56cc",
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-531",
+    "sourceScope": "Selected fixed original source and root license; full read-only repo clone retained privately",
+    "kind": "原版风格组件族（仅来源）",
+    "buildStatus": "Fixed source inspected; not built or visually accepted",
+    "additionalSourceEvidence": []
+  },
+  {
+    "id": "pizzicato:audio-effect-playground",
+    "title": "可操作声效调制面板",
+    "source": "pizzicato",
+    "repository": "https://github.com/alemangui/pizzicato",
+    "revision": "4c3826e46f112743fa0653b6bad56006b98da537",
+    "sourcePath": "site/index.html",
+    "upstream": "https://github.com/alemangui/pizzicato/blob/4c3826e46f112743fa0653b6bad56006b98da537/site/index.html",
+    "website": "https://alemangui.github.io/pizzicato/",
+    "license": "MIT (root text verified; runtime/assets not closed)",
+    "behavior": "完整官方演示用播放按钮和参数滑杆呈现回声、滤波与混响的可听对照。",
+    "difference": "固定完整示例场景；同源参数/预设不拆计数，非已运行验收。",
+    "description": "完整官方演示用播放按钮和参数滑杆呈现回声、滤波与混响的可听对照。",
+    "gaps": [
+      "固定HTML依赖site/Pizzicato.js、js/main.js、CSS与音频文件；音频/图片和Prism/Modernizr等依赖权利独立审计。",
+      "main.js顶部含从Dolby来源复制的检测代码，许可未闭；不要随根MIT直接分发该段，移除或以许可明确实现替换并披露。",
+      "原页含麦克风输入和音频文件示例、GA与GitHub外部按钮；禁用麦克风/采集、去遥测与外部脚本，优先本地合成波形演示。",
+      "用户点击才播放、默认低音量、可停止；不把来源链接变为上传/录音功能。所有effects只一场景，不逐参数计数。",
+      "固定源码及完整根许可已存证；未构建、未运行、未截图，completedPreviewCount=0。"
+    ],
+    "category": "展示与媒体",
+    "licenseEvidence": {
+      "url": "https://github.com/alemangui/pizzicato/blob/4c3826e46f112743fa0653b6bad56006b98da537/LICENSE",
+      "sha256": "c6c5b1d3b7e14813ba89e117ac9ce409fb0c95ca21b978271f652e4d0d3a0917",
+      "scope": "Complete original root license retained; runtime/media separate"
+    },
+    "sourceSha256": "b3ee6d6fe1498959a6c8d14c22cd5fc7d00318129daf57337646ef9273dc5375",
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-531",
+    "sourceScope": "Selected fixed original source and root license; full read-only repo clone retained privately",
+    "kind": "原版风格组件族（仅来源）",
+    "buildStatus": "Fixed source inspected; not built or visually accepted",
+    "additionalSourceEvidence": [
+      {
+        "sourcePath": "site/js/main.js",
+        "url": "https://github.com/alemangui/pizzicato/blob/4c3826e46f112743fa0653b6bad56006b98da537/site/js/main.js",
+        "sha256": "87321d2966976171d4bd23ddecd90670e95443f6ec0cb290d5be8985786d063d"
+      }
+    ]
+  },
+  {
+    "id": "reactmotion:spring-ball-reorder",
+    "title": "弹簧彩球拖拽重排",
+    "source": "react-motion",
+    "repository": "https://github.com/chenglou/react-motion",
+    "revision": "9e3ce95bacaa9a1b259f969870a21c727232cc68",
+    "sourcePath": "demos/demo2-draggable-balls/Demo.jsx",
+    "upstream": "https://github.com/chenglou/react-motion/blob/9e3ce95bacaa9a1b259f969870a21c727232cc68/demos/demo2-draggable-balls/Demo.jsx",
+    "website": "https://chenglou.github.io/react-motion/demos/demo2-draggable-balls/",
+    "license": "MIT (root text verified; runtime/assets not closed)",
+    "behavior": "官方完整11彩球场景，在拖动时弹性让位并重新排序，比方框列表更具触感。",
+    "difference": "固定完整示例场景；同源参数/预设不拆计数，非已运行验收。",
+    "description": "官方完整11彩球场景，在拖动时弹性让位并重新排序，比方框列表更具触感。",
+    "gaps": [
+      "真实Demo.jsx包含布局、拖拽与重排，需index.jsx/index.html样式、react-motion源码及lodash.range；旧React编译栈适配需锁兼容版本。",
+      "原componentDidMount在window挂touch/mouse监听，未见componentWillUnmount清理；需限制容器、清理监听，避免全站touchmove.preventDefault。",
+      "键盘排序、读屏顺序、触摸滚动冲突与减动需要补验；只是本地排序，不代表持久保存或多Agent调度。",
+      "仅此彩球场景，不收同仓头像照片/水波/画廊为新增源，避免版权和同引擎膨胀。",
+      "固定源码及完整根许可已存证；未构建、未运行、未截图，completedPreviewCount=0。"
+    ],
+    "category": "视觉与动效",
+    "licenseEvidence": {
+      "url": "https://github.com/chenglou/react-motion/blob/9e3ce95bacaa9a1b259f969870a21c727232cc68/LICENSE",
+      "sha256": "b6668b94bd2da751d4441d406a86488f8f0f66a2af63bb48e9684d39ea68069b",
+      "scope": "Complete original root license retained; runtime/media separate"
+    },
+    "sourceSha256": "c3b7ab9deb16b4b07191538833a2d6382341f977d21e442848ad0866a1784b6d",
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-531",
+    "sourceScope": "Selected fixed original source and root license; full read-only repo clone retained privately",
+    "kind": "原版风格组件族（仅来源）",
+    "buildStatus": "Fixed source inspected; not built or visually accepted",
+    "additionalSourceEvidence": [
+      {
+        "sourcePath": "demos/demo2-draggable-balls/index.html",
+        "url": "https://github.com/chenglou/react-motion/blob/9e3ce95bacaa9a1b259f969870a21c727232cc68/demos/demo2-draggable-balls/index.html",
+        "sha256": "daff3f6a29a2dc7fd092143681a6ce2e309187ec8b431ebcb47ddd7db2dcb4b1"
+      },
+      {
+        "sourcePath": "demos/demo2-draggable-balls/index.jsx",
+        "url": "https://github.com/chenglou/react-motion/blob/9e3ce95bacaa9a1b259f969870a21c727232cc68/demos/demo2-draggable-balls/index.jsx",
+        "sha256": "067bc75dd2d09cb8d82f8de736c528453137314ad5553a2b5228801d8ecbd002"
+      }
+    ]
+  },
+  {
+    "id": "threejs:spatial-element-table",
+    "title": "周期表空间编排",
+    "source": "three.js",
+    "repository": "https://github.com/mrdoob/three.js",
+    "revision": "739478bc5ac18509be78095ed8f2fa4403b8207e",
+    "sourcePath": "examples/css3d_periodictable.html",
+    "upstream": "https://github.com/mrdoob/three.js/blob/739478bc5ac18509be78095ed8f2fa4403b8207e/examples/css3d_periodictable.html",
+    "website": "https://threejs.org/examples/css3d_periodictable.html",
+    "license": "MIT (root text verified; runtime/assets not closed)",
+    "behavior": "完整官方CSS3D例子可把元素卡片排成表格、球面、螺旋和立体网格，拖转浏览。",
+    "difference": "固定完整示例场景；同源参数/预设不拆计数，非已运行验收。",
+    "description": "完整官方CSS3D例子可把元素卡片排成表格、球面、螺旋和立体网格，拖转浏览。",
+    "gaps": [
+      "HTML完整含元素数据与布局交互，依赖Three、tween.module、TrackballControls、CSS3DRenderer及main.css；必须同SHA构建，不使用未锁CDN。",
+      "CSS3D DOM而非WebGL模型，不应称真实化学模拟；所有布局合计一族，元素118条不算118组件。",
+      "原viewport禁缩放、控件主要鼠标拖转；需恢复缩放和可读列表/键盘替代、减动、焦点顺序与手机性能验证。",
+      "需核清tween等独立许可及事件/动画销毁，示例系统Helvetica只引用名称，不得额外打包商业字体。",
+      "固定源码及完整根许可已存证；未构建、未运行、未截图，completedPreviewCount=0。"
+    ],
+    "category": "视觉与动效",
+    "licenseEvidence": {
+      "url": "https://github.com/mrdoob/three.js/blob/739478bc5ac18509be78095ed8f2fa4403b8207e/LICENSE",
+      "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+      "scope": "Complete original root license retained; runtime/media separate"
+    },
+    "sourceSha256": "504a0577e2a874405d87cebf930d250978a8a28f5bcbaa897dec375d8b684951",
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-531",
+    "sourceScope": "Selected fixed original source and root license; full read-only repo clone retained privately",
+    "kind": "原版风格组件族（仅来源）",
+    "buildStatus": "Fixed source inspected; not built or visually accepted",
+    "additionalSourceEvidence": [
+      {
+        "sourcePath": "examples/jsm/controls/TrackballControls.js",
+        "url": "https://github.com/mrdoob/three.js/blob/739478bc5ac18509be78095ed8f2fa4403b8207e/examples/jsm/controls/TrackballControls.js",
+        "sha256": "cce95baddf589c16fea901b70f2038eca4557357937e1b03f8c76fe7ffe7457f"
+      },
+      {
+        "sourcePath": "examples/jsm/renderers/CSS3DRenderer.js",
+        "url": "https://github.com/mrdoob/three.js/blob/739478bc5ac18509be78095ed8f2fa4403b8207e/examples/jsm/renderers/CSS3DRenderer.js",
+        "sha256": "cd1f6bfaff0e2efa8a95b8cca6e96b0eea957d6a6057d875de8bab720b49057b"
+      }
+    ]
+  },
+  {
+    "id": "hydra:visual-synthesis-editor",
+    "title": "实时视觉合成画布",
+    "source": "hydra",
+    "repository": "https://github.com/hydra-synth/hydra",
+    "revision": "523e0feaf3f49899b759ce0e7afabe0114ddfe2b",
+    "sourcePath": "src/views/main.js",
+    "upstream": "https://github.com/hydra-synth/hydra/blob/523e0feaf3f49899b759ce0e7afabe0114ddfe2b/src/views/main.js",
+    "website": "https://hydra.ojack.xyz/",
+    "license": "AGPL-3.0 (root full text; package says AGPL) (root text verified; runtime/assets not closed)",
+    "behavior": "真实完整Web应用把代码编辑和实时反馈视觉画布叠合，适合高级生成艺术工具候选。",
+    "difference": "固定完整示例场景；同源参数/预设不拆计数，非已运行验收。",
+    "description": "真实完整Web应用把代码编辑和实时反馈视觉画布叠合，适合高级生成艺术工具候选。",
+    "gaps": [
+      "低优先级强copyleft来源：根为完整AGPL v3非MIT，分发/修改及网络交互对应源码义务须明确履行；需确认具体适用版本与依赖兼容，不直接塞进闭源包。",
+      "入口需index.js、Hydra.js、EditorComponent及stores、HydraSynth/Choo/CodeMirror与CSS。不是仅引擎，但全应用隔离成本高。",
+      "Hydra.js默认detectAudio:true，且serverURL非null会初始化PatchBay WebRTC；必须detectAudio:false并设serverURL:null，不申请麦克风/摄像头/屏幕，不连房间。",
+      "具有REPL代码执行、URL代码加载和扩展能力；公开预览仅白名单固定本地表达式，禁任意不可信JS、外部脚本与网络源。",
+      "反馈图形可能强闪烁/高GPU负载，默认静态低对比预设、主动启动和hush停止，限分辨率并验证减动/释放。",
+      "固定源码及完整根许可已存证；未构建、未运行、未截图，completedPreviewCount=0。"
+    ],
+    "category": "展示与媒体",
+    "licenseEvidence": {
+      "url": "https://github.com/hydra-synth/hydra/blob/523e0feaf3f49899b759ce0e7afabe0114ddfe2b/LICENSE",
+      "sha256": "7f8f48e4266aa8fd3033dfaa4bb7f6e83a60c6e099f82d4959b81de90e67cd8f",
+      "scope": "Complete original root license retained; runtime/media separate"
+    },
+    "sourceSha256": "62ee9ab88f275d9bf59753a0654123f03f57c2a5371664ca98e3c10739a9799d",
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-531",
+    "sourceScope": "Selected fixed original source and root license; full read-only repo clone retained privately",
+    "kind": "原版风格组件族（仅来源）",
+    "buildStatus": "Fixed source inspected; not built or visually accepted",
+    "additionalSourceEvidence": [
+      {
+        "sourcePath": "index.js",
+        "url": "https://github.com/hydra-synth/hydra/blob/523e0feaf3f49899b759ce0e7afabe0114ddfe2b/index.js",
+        "sha256": "e8b72c31bdf80c224f59c46e59c6b024ce3dfa4fc6cb7ab5edb964f9a567441a"
+      },
+      {
+        "sourcePath": "src/views/Hydra.js",
+        "url": "https://github.com/hydra-synth/hydra/blob/523e0feaf3f49899b759ce0e7afabe0114ddfe2b/src/views/Hydra.js",
+        "sha256": "0828cf85d4395823ef9c01f0c68591b49db2e700a8f3d60c21b910140f95ede8"
+      },
+      {
+        "sourcePath": "src/stores/store.js",
+        "url": "https://github.com/hydra-synth/hydra/blob/523e0feaf3f49899b759ce0e7afabe0114ddfe2b/src/stores/store.js",
+        "sha256": "b8519ebcac074421d7f52a05a36fa28ea5b42aa46ec36bc0add15a8329688c30"
+      }
+    ],
+    "adaptationPriority": "optional-low-copyleft-isolation-required"
+  },
+  {
+    "id": "learngitbranching:visual-command-lessons",
+    "title": "命令与分支变化的互动关卡",
+    "source": "Learn Git Branching",
+    "repository": "https://github.com/pcottle/learnGitBranching",
+    "revision": "a0fac58a4a98d2b6ca5cccb8fe1da76c48249a8e",
+    "sourcePath": "index.html",
+    "upstream": "https://github.com/pcottle/learnGitBranching/blob/a0fac58a4a98d2b6ca5cccb8fe1da76c48249a8e/index.html",
+    "license": "MIT (complete actual root text; runtime/media not closed)",
+    "behavior": "原关卡界面将模拟命令行、当前提交树、目标图与指导对话串联，输入命令后观察分支/提交迁移并对照目标，支持目标展开与关卡切换。",
+    "difference": "区别普通终端或静态关系图：操作被可视化为版本历史状态转换；是 Git 教学模拟，不执行真实 git 或修改用户仓库，整个教学场景一族。",
+    "styleTags": [
+      "空间教学/状态迁移"
+    ],
+    "gaps": [
+      "原 jQuery/Raphael/React/字体图标、关卡翻译完整依赖及素材许可待审；源码设置全局对象、focus/resize/beforeunload 键盘监听，含 sessionStorage 失败重载，必须限制宿主影响。动画队列/快捷键/中断与退出未测，不能把源码模拟理解为真实 Git 验证。",
+      "仅只读源码筛选；未安装/构建/运行、交互生命周期或浏览器视觉验收。"
+    ],
+    "description": "原关卡界面将模拟命令行、当前提交树、目标图与指导对话串联，输入命令后观察分支/提交迁移并对照目标，支持目标展开与关卡切换。 区别普通终端或静态关系图：操作被可视化为版本历史状态转换；是 Git 教学模拟，不执行真实 git 或修改用户仓库，整个教学场景一族。",
+    "category": "展示与媒体",
+    "licenseEvidence": {
+      "url": "https://github.com/pcottle/learnGitBranching/blob/a0fac58a4a98d2b6ca5cccb8fe1da76c48249a8e/LICENSE.md",
+      "sha256": "2b4a732e77065fa8df773b230e9ef905026c20dead9fcaf5d1b4a13ff5832f3e",
+      "scope": "Complete actual root license; transitive code and media permissions not closed"
+    },
+    "sourceEvidence": {
+      "localFile": "evidence/pcottle--learnGitBranching--index.html",
+      "sha256": "3ee513e664154231aaf72538aab98bee2ab597497b67f85ad5eea997da8adac8"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-531",
+    "sourceScope": "Fixed original complete UI/demo source and full root license; not a runnable adaptation or full asset archive",
+    "kind": "原版交互场景（仅来源）",
+    "buildStatus": "fixed source and full root license read; not built/run/visually accepted"
+  },
+  {
+    "id": "netron:model-structure-explorer",
+    "title": "模型结构与张量属性漫游",
+    "source": "Netron",
+    "repository": "https://github.com/lutzroeder/netron",
+    "revision": "37377fd1480501404e58ff579cf4c3f3a867572c",
+    "sourcePath": "source/view.js",
+    "upstream": "https://github.com/lutzroeder/netron/blob/37377fd1480501404e58ff579cf4c3f3a867572c/source/view.js",
+    "license": "MIT (complete actual root text; runtime/media not closed)",
+    "behavior": "原模型查看器提供图节点定位/搜索、结构导航、模型与节点属性侧栏及输入输出张量信息，原 browser host 负责文件/URL与窗口环境。",
+    "difference": "区别一般节点画布：读取具体模型格式并检查算子/张量结构，不是编辑流程或模拟训练；整体模型阅读一族。",
+    "styleTags": [
+      "模型/结构证据"
+    ],
+    "gaps": [
+      "原 browser.js 包含 ipinfo 请求、遥测与 cookie，必须全部禁用；还有 Worker、动态格式模块与模型 URL/文件路径，不能直接套默认 CSP。模型权重/样本二进制和格式依赖许可证未闭合，不能包装上传；文件解析错误、worker/图布局与退出未验。",
+      "仅只读源码筛选；未安装/构建/运行、交互生命周期或浏览器视觉验收。"
+    ],
+    "description": "原模型查看器提供图节点定位/搜索、结构导航、模型与节点属性侧栏及输入输出张量信息，原 browser host 负责文件/URL与窗口环境。 区别一般节点画布：读取具体模型格式并检查算子/张量结构，不是编辑流程或模拟训练；整体模型阅读一族。",
+    "category": "数据与状态",
+    "licenseEvidence": {
+      "url": "https://github.com/lutzroeder/netron/blob/37377fd1480501404e58ff579cf4c3f3a867572c/LICENSE",
+      "sha256": "535cb2c7c8990f967c106e3035e4df8d3e070144af1163b86c8bb58b65fe5e88",
+      "scope": "Complete actual root license; transitive code and media permissions not closed"
+    },
+    "sourceEvidence": {
+      "localFile": "evidence/lutzroeder--netron--source__view.js",
+      "sha256": "44781bc1b142855b9bce41be0a294919be30386281615f523fd069e751f591e8"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-531",
+    "sourceScope": "Fixed original complete UI/demo source and full root license; not a runnable adaptation or full asset archive",
+    "kind": "原版交互场景（仅来源）",
+    "buildStatus": "fixed source and full root license read; not built/run/visually accepted"
+  },
+  {
+    "id": "llmviz:transformer-spatial-walkthrough",
+    "title": "Transformer 张量空间讲解",
+    "source": "LLM Visualization",
+    "repository": "https://github.com/bbycroft/llm-viz",
+    "revision": "9da93742382f1bf36c020c38a1ace454e82c4490",
+    "sourcePath": "src/llm/LayerView.tsx",
+    "upstream": "https://github.com/bbycroft/llm-viz/blob/9da93742382f1bf36c020c38a1ace454e82c4490/src/llm/LayerView.tsx",
+    "license": "MIT (complete actual root text; runtime/media not closed)",
+    "behavior": "原 LLM 页面将三维张量布局、相机漫游、分阶段时间线与解释侧栏联动，SelfAttention walkthrough 用视觉步骤讲解矩阵与数据流。",
+    "difference": "与 Netron 的静态模型属性检查不同：此处是计算过程的三维动画叙事；与训练游乐场不同：不把它说成通用模型训练/真实 Agent 性能。",
+    "styleTags": [
+      "三维/计算叙事"
+    ],
+    "gaps": [
+      "原取 gpt-nano-sort JSON 张量、字体图集与 native/WASM bindings，GPU/字体资源及全部依赖许可未闭合，不可二进制包装或扩大 CSP。相机复制剪贴板、RAF、异步初始化失败/退出和真实像素未验；不是已能离线展示完整过程。",
+      "仅只读源码筛选；未安装/构建/运行、交互生命周期或浏览器视觉验收。"
+    ],
+    "description": "原 LLM 页面将三维张量布局、相机漫游、分阶段时间线与解释侧栏联动，SelfAttention walkthrough 用视觉步骤讲解矩阵与数据流。 与 Netron 的静态模型属性检查不同：此处是计算过程的三维动画叙事；与训练游乐场不同：不把它说成通用模型训练/真实 Agent 性能。",
+    "category": "展示与媒体",
+    "licenseEvidence": {
+      "url": "https://github.com/bbycroft/llm-viz/blob/9da93742382f1bf36c020c38a1ace454e82c4490/LICENSE",
+      "sha256": "97780c03931db18c9770a3932a264182d3d3603d142a72cba8033c94786e0f93",
+      "scope": "Complete actual root license; transitive code and media permissions not closed"
+    },
+    "sourceEvidence": {
+      "localFile": "evidence/bbycroft--llm-viz--src__llm__LayerView.tsx",
+      "sha256": "4476070c770c971e7f762fa8923449ee9bd5c0c511340c02a307caa9471d430e"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-531",
+    "sourceScope": "Fixed original complete UI/demo source and full root license; not a runnable adaptation or full asset archive",
+    "kind": "原版交互场景（仅来源）",
+    "buildStatus": "fixed source and full root license read; not built/run/visually accepted"
+  },
+  {
+    "id": "tfplayground:decision-boundary-training",
+    "title": "神经网络决策边界实验",
+    "source": "TensorFlow Playground",
+    "repository": "https://github.com/tensorflow/playground",
+    "revision": "02469bd3751764b20486015d4202b792af5362a6",
+    "sourcePath": "src/playground.ts",
+    "upstream": "https://github.com/tensorflow/playground/blob/02469bd3751764b20486015d4202b792af5362a6/src/playground.ts",
+    "license": "Apache-2.0 (complete actual root text; runtime/media not closed)",
+    "behavior": "原训练实验界面可选择二维数据与输入特征，修改隐藏层/神经元、学习率/噪声/批大小，播放/暂停或逐步训练并观察决策边界和损失。",
+    "difference": "区别 LLM 三维解说与模型文件检查：这是教学用小网络训练反馈一族；源码自有 tiny neural network，不假称调用完整 TensorFlow 或远程大模型。",
+    "styleTags": [
+      "模型/反馈实验"
+    ],
+    "gaps": [
+      "原 analytics.js 与外链需关闭，D3/图标/字体等完整许可未审；URL状态、定时训练/绘图、重置中断与退出清理待测。数据是教学样本，不是用户任务的真实预测准确率；默认 CSP/像素与数学正确性未验。",
+      "仅只读源码筛选；未安装/构建/运行、交互生命周期或浏览器视觉验收。"
+    ],
+    "description": "原训练实验界面可选择二维数据与输入特征，修改隐藏层/神经元、学习率/噪声/批大小，播放/暂停或逐步训练并观察决策边界和损失。 区别 LLM 三维解说与模型文件检查：这是教学用小网络训练反馈一族；源码自有 tiny neural network，不假称调用完整 TensorFlow 或远程大模型。",
+    "category": "数据与状态",
+    "licenseEvidence": {
+      "url": "https://github.com/tensorflow/playground/blob/02469bd3751764b20486015d4202b792af5362a6/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "scope": "Complete actual root license; transitive code and media permissions not closed"
+    },
+    "sourceEvidence": {
+      "localFile": "evidence/tensorflow--playground--src__playground.ts",
+      "sha256": "5d5c4b2c4e6329d1d656a295c86a213dbcb8e2bd01bd5f7377e453698e9f55a2"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-531",
+    "sourceScope": "Fixed original complete UI/demo source and full root license; not a runnable adaptation or full asset archive",
+    "kind": "原版交互场景（仅来源）",
+    "buildStatus": "fixed source and full root license read; not built/run/visually accepted"
+  },
+  {
+    "id": "abcjs:score-edit-and-audition",
+    "title": "乐谱源码与五线谱试听",
+    "source": "ABCJS",
+    "repository": "https://github.com/paulrosen/abcjs",
+    "revision": "2e399a65fdf12a0dfaf80a0837cc0f182c67fb37",
+    "sourcePath": "examples/editor-synth.html",
+    "upstream": "https://github.com/paulrosen/abcjs/blob/2e399a65fdf12a0dfaf80a0837cc0f182c67fb37/examples/editor-synth.html",
+    "license": "MIT (actual root text) (complete actual root text; runtime/media not closed)",
+    "behavior": "原完整 Editor and Synth 示例把 ABC 文本编辑、谱面渲染、警告、音符点击试听及循环/重播/进度/速度控件联动，并有 MIDI 导出入口。",
+    "difference": "区别 BeepBox 格点乐曲或键盘音色面板：重点是可读记谱语法到五线谱版式和选中音符反馈，完整一族，不按曲目拆。",
+    "styleTags": [
+      "记谱/富媒体"
+    ],
+    "gaps": [
+      "根实际为 MIT 全文，API 未识别标签不据此误称无许可。原外链 logo、默认 Cooley 曲谱版本与音色采样/字体需逐项审；WebAudio/样本网络、MIDI下载及监听/旧编辑器销毁未验。原 getMidiFile encoded 导出不代表允许二进制包装上传，当前不执行导出或音频。",
+      "仅只读源码筛选；未安装/构建/运行、交互生命周期或浏览器视觉验收。"
+    ],
+    "description": "原完整 Editor and Synth 示例把 ABC 文本编辑、谱面渲染、警告、音符点击试听及循环/重播/进度/速度控件联动，并有 MIDI 导出入口。 区别 BeepBox 格点乐曲或键盘音色面板：重点是可读记谱语法到五线谱版式和选中音符反馈，完整一族，不按曲目拆。",
+    "category": "展示与媒体",
+    "licenseEvidence": {
+      "url": "https://github.com/paulrosen/abcjs/blob/2e399a65fdf12a0dfaf80a0837cc0f182c67fb37/LICENSE.md",
+      "sha256": "d7bdcd152b978adee22a2f9b92a4d72c4ec2c20a86512766c7c210b462b54702",
+      "scope": "Complete actual root license; transitive code and media permissions not closed"
+    },
+    "sourceEvidence": {
+      "localFile": "evidence/paulrosen--abcjs--examples__editor-synth.html",
+      "sha256": "f455431283e7b45c639dfaa8dfeb63f3a1ae326b6905bbbb29c7dffd1e7443c5"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-531",
+    "sourceScope": "Fixed original complete UI/demo source and full root license; not a runnable adaptation or full asset archive",
+    "kind": "原版交互场景（仅来源）",
+    "buildStatus": "fixed source and full root license read; not built/run/visually accepted"
+  },
+  {
+    "id": "sqlmystery:query-driven-detective-story",
+    "title": "查询推进的侦探故事",
+    "source": "SQL Murder Mystery",
+    "repository": "https://github.com/NUKnightLab/sql-mysteries",
+    "revision": "a7aa22701bd41b24e905be387fb17326db982df9",
+    "sourcePath": "index.html",
+    "upstream": "https://github.com/NUKnightLab/sql-mysteries/blob/a7aa22701bd41b24e905be387fb17326db982df9/index.html",
+    "license": "MIT (original code); CC-BY-SA-4.0 (original text/content per README) (complete actual root text; runtime/media not closed)",
+    "behavior": "原故事页面将调查线索、SQL 编辑框、运行结果表与答案检查结合，用户用查询逐步找到虚构案件线索，保留原互动叙事而非普通数据库工作台。",
+    "difference": "区别静态推理文章：查询行为决定能看到的证据，适合 Agent 可解释调查流程参考；虚构人物和案件，不据此对现实个人做指控。",
+    "styleTags": [
+      "互动叙事/证据查询"
+    ],
+    "gaps": [
+      "README 明确代码 MIT、文字/内容 CC BY-SA4，侦探插图另为 Vecteezy free license，不可根 MIT 覆盖全站；内容条款/图片再分发权限待专项闭合。原 SQL worker 和 arraybuffer 数据库、CDN样式/字体/脚本默认不能直接离线跑；不得编码数据库包装，worker消息串行/错误和退出未验。",
+      "仅只读源码筛选；未安装/构建/运行、交互生命周期或浏览器视觉验收。"
+    ],
+    "description": "原故事页面将调查线索、SQL 编辑框、运行结果表与答案检查结合，用户用查询逐步找到虚构案件线索，保留原互动叙事而非普通数据库工作台。 区别静态推理文章：查询行为决定能看到的证据，适合 Agent 可解释调查流程参考；虚构人物和案件，不据此对现实个人做指控。",
+    "category": "展示与媒体",
+    "licenseEvidence": {
+      "url": "https://github.com/NUKnightLab/sql-mysteries/blob/a7aa22701bd41b24e905be387fb17326db982df9/LICENSE",
+      "sha256": "a878165901d4659dbe6fd0ec5cce8e2f2070a675e1551341e9554fab9422ffdd",
+      "scope": "Complete actual root license; transitive code and media permissions not closed"
+    },
+    "sourceEvidence": {
+      "localFile": "evidence/NUKnightLab--sql-mysteries--index.html",
+      "sha256": "ebef3c6082a2f851016d677ca12ca72ae1395c6d3d78ec342a103deb7115cb03"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-531",
+    "sourceScope": "Fixed original complete UI/demo source and full root license; not a runnable adaptation or full asset archive",
+    "kind": "原版交互场景（仅来源）",
+    "buildStatus": "fixed source and full root license read; not built/run/visually accepted"
+  },
+  {
+    "id": "upscayl:image-enhancement-workspace",
+    "title": "Upscayl · 图片增强对照工作区",
+    "source": "Upscayl",
+    "repository": "https://github.com/upscayl/upscayl",
+    "revision": "a00d55fee90e0f9435d5eaa86e76700df8199af8",
+    "sourcePath": "renderer/pages/index.tsx",
+    "upstream": "https://github.com/upscayl/upscayl/blob/a00d55fee90e0f9435d5eaa86e76700df8199af8/renderer/pages/index.tsx",
+    "license": "AGPL-3.0 (root verified; models/engine/assets not cleared)",
+    "visualStyle": "图片占主体的增强结果工作区，侧边步骤控制、进度与原图/结果滑动对照和局部透镜视图，便于检查工具产物。",
+    "behavior": "原Home用Electron选择输入与输出路径并接收处理结果；MainContent切换结果视图，SliderView基于ReactCompareSlider对照两图，LensViewer维护指针局部放大。",
+    "difference": "区别TOAST通用图片编辑和单独image-comparison组件：完整图像增强工具输入/进度/结果编排；滑动与透镜合一族不计两项。",
+    "gaps": [
+      "根AGPLv3全文保留；模型权重、原生推理引擎/图形依赖、示例图片及商标授权尚未审，不能根许可覆盖。 仓库另附Real-ESRGAN BSD3全文已保留，但不代表所有实际模型与原生构件已逐项核准。",
+      "window.electron.invoke/原生文件系统与file:///图像是实际宿主依赖，现网页opaque sandbox不能直接运行；不选文件/执行增强/下载模型。",
+      "不把滑动对比演示等同真正超分辨率成功；原结果输出、GPU、重复任务/中断/退出清理均未验证。",
+      "仅来源：未构建/运行/像素验收，所有传递依赖/媒体字体/CSP与重复操作/退出清理尚未闭合，无预览或完整源码ZIP。"
+    ],
+    "description": "图片占主体的增强结果工作区，侧边步骤控制、进度与原图/结果滑动对照和局部透镜视图，便于检查工具产物。 原Home用Electron选择输入与输出路径并接收处理结果；MainContent切换结果视图，SliderView基于ReactCompareSlider对照两图，LensViewer维护指针局部放大。",
+    "category": "展示与媒体",
+    "licenseEvidence": {
+      "url": "https://github.com/upscayl/upscayl/blob/a00d55fee90e0f9435d5eaa86e76700df8199af8/LICENSE",
+      "sha256": "8486a10c4393cee1c25392769ddd3b2d6c242d6ec7928e1414efff7dfb2f07ef",
+      "scope": "Complete actual root license read; original selected code only; embedded assets/runtime not cleared"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-531",
+    "sourceScope": "Selected fixed original source and complete root license evidence; not full runnable/archive",
+    "kind": "原版完整场景（仅来源）",
+    "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted"
+  },
+  {
+    "id": "chatwoot:agent-conversation-workspace",
+    "title": "Chatwoot · 客服协作会话工作区",
+    "source": "Chatwoot public conversation UI",
+    "repository": "https://github.com/chatwoot/chatwoot",
+    "revision": "625d5964e3cb3f1d917b43c3b8332219e525a4b8",
+    "sourcePath": "app/javascript/dashboard/routes/dashboard/conversation/ConversationView.vue",
+    "upstream": "https://github.com/chatwoot/chatwoot/blob/625d5964e3cb3f1d917b43c3b8332219e525a4b8/app/javascript/dashboard/routes/dashboard/conversation/ConversationView.vue",
+    "license": "MIT Expat for selected public paths; enterprise excluded",
+    "visualStyle": "会话队列、中央消息/回复区、联系人上下文侧栏的三栏客服界面，支持紧凑与展开布局，区分公开回复和内部笔记。",
+    "behavior": "原ConversationView编排ChatList/ConversationBox/Sidebar及路由离开清选中状态；ReplyBox管理公开/私密回复、附件与Copilot接口，Header呈现会话状态/动作。",
+    "difference": "不是单个聊天输入换皮：客服收件队列、联系人上下文和内部协作回复的完整场景；与已有普通聊天共享语义，不声称新消息基础类型。",
+    "gaps": [
+      "根LICENSE明确enterprise/为单独商业许可，第三方各归原许可；只收app/javascript公共MIT覆盖入口，enterprise/LICENSE仅作条款证据，不搬EE实现。",
+      "ReplyBox含CopilotReply/useCopilotReply和实际发送/附件接口，传递图与商业功能条件未闭合；不能标整个Chatwoot全MIT或离线可运行。",
+      "真实渠道账号、客户消息/联系人、发送、附件上传和后端事件均未连接；退出监听/异步竞态/隐私安全未运行测试。",
+      "仅来源：未构建/运行/像素验收，所有传递依赖/媒体字体/CSP与重复操作/退出清理尚未闭合，无预览或完整源码ZIP。"
+    ],
+    "description": "会话队列、中央消息/回复区、联系人上下文侧栏的三栏客服界面，支持紧凑与展开布局，区分公开回复和内部笔记。 原ConversationView编排ChatList/ConversationBox/Sidebar及路由离开清选中状态；ReplyBox管理公开/私密回复、附件与Copilot接口，Header呈现会话状态/动作。",
+    "category": "Agent与对话",
+    "licenseEvidence": {
+      "url": "https://github.com/chatwoot/chatwoot/blob/625d5964e3cb3f1d917b43c3b8332219e525a4b8/LICENSE",
+      "sha256": "602d38a808315f221a5e72e2e90e40cb9300f09aa4b317a6a8f1a0c7a3d2175d",
+      "scope": "Complete actual root license read; original selected code only; embedded assets/runtime not cleared"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-531",
+    "sourceScope": "Selected fixed original source and complete root license evidence; not full runnable/archive",
+    "kind": "原版完整场景（仅来源）",
+    "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted",
+    "collectionPriority": "条件来源参考/仅公共入口；EE及完整运行图尚未闭合"
+  },
+  {
+    "id": "activepieces:trigger-action-flow-builder",
+    "title": "Activepieces · 触发动作流程构建场景",
+    "source": "Activepieces public builder",
+    "repository": "https://github.com/activepieces/activepieces",
+    "revision": "8fc37e6eb914ff22d1bc3c66dbb4447813364d5e",
+    "sourcePath": "packages/web/src/app/builder/index.tsx",
+    "upstream": "https://github.com/activepieces/activepieces/blob/8fc37e6eb914ff22d1bc3c66dbb4447813364d5e/packages/web/src/app/builder/index.tsx",
+    "license": "MIT Expat for selected public web paths; EE directories excluded",
+    "visualStyle": "居中触发/动作流程画布，浮动数据选择器与可调宽步骤设置侧栏，原流程节点和连接关系构成自动化编排场景。",
+    "behavior": "原Builder连接FlowCanvas、步骤设置、运行/版本侧栏及流程锁；DataSelector为上游输出引用选择，FlowCanvas使用真实流程状态与canvas hooks。",
+    "difference": "区别Langflow模型链与BPMN标准建模：连接具体集成触发/动作及输入输出映射的原自动化产品。节点/分支/步骤不拆多个族。",
+    "gaps": [
+      "根LICENSE排除packages/ee及packages/server/api/src/app/ee，EE商业条款全文仅为边界证据；选中packages/web入口在公共MIT范围，不收EE实现。",
+      "真实flow socket/锁、测试步骤、运行/发布与第三方集成凭据需要后端，功能分层和所有传递依赖未闭合；不可称运行包再分发审查通过。",
+      "不连接任何集成账户、不执行自动化/代码步骤/模型或外部消息；原流程中断、异步返回和退出清理未运行验证。",
+      "仅来源：未构建/运行/像素验收，所有传递依赖/媒体字体/CSP与重复操作/退出清理尚未闭合，无预览或完整源码ZIP。"
+    ],
+    "description": "居中触发/动作流程画布，浮动数据选择器与可调宽步骤设置侧栏，原流程节点和连接关系构成自动化编排场景。 原Builder连接FlowCanvas、步骤设置、运行/版本侧栏及流程锁；DataSelector为上游输出引用选择，FlowCanvas使用真实流程状态与canvas hooks。",
+    "category": "Agent与对话",
+    "licenseEvidence": {
+      "url": "https://github.com/activepieces/activepieces/blob/8fc37e6eb914ff22d1bc3c66dbb4447813364d5e/LICENSE",
+      "sha256": "d490fc48488c4f5a721d354f0a5cce0972c7e3de768ac3e0c5851c3de79f3c9b",
+      "scope": "Complete actual root license read; original selected code only; embedded assets/runtime not cleared"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-531",
+    "sourceScope": "Selected fixed original source and complete root license evidence; not full runnable/archive",
+    "kind": "原版完整场景（仅来源）",
+    "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted",
+    "collectionPriority": "条件来源参考/仅公共入口；EE及完整运行图尚未闭合"
+  },
+  {
+    "id": "aurelle-parfums:perfume-brand-world",
+    "title": "香水瓶三维陈列与香调叙事整页",
+    "source": "Aurelle Parfums",
+    "repository": "https://github.com/zainshah3464/Aurelle-Parfums",
+    "revision": "8d9beb6293b8670ea7cbc820ad3df12c15fbf4cb",
+    "sourcePath": "src/app/page.tsx",
+    "upstream": "https://github.com/zainshah3464/Aurelle-Parfums/blob/8d9beb6293b8670ea7cbc820ad3df12c15fbf4cb/src/app/page.tsx",
+    "license": "MIT (root verified only; dependencies/assets not closed)",
+    "behavior": "原香水品牌整页串联Hero、瓶身陈列、香调、品牌故事与产品；React Three Fiber瓶体原组件，原Carousel滚动更新active并支持前后/点选定位。",
+    "difference": "不是金属结状物件换皮：保留多个香水瓶与香调/故事的完整品牌叙事；不按单瓶或香型拆条。",
+    "gaps": [
+      "Three/drei环境、GSAP/ScrollTrigger、Lenis/光照及字体资源完整许可未闭合；GPU效果未验。产品、预约/购买CTA及文案为源演示，不是可成交商店；媒体权利、网络与退出清理未测。",
+      "仅固定原件来源；未安装/构建/运行/截图/发布，CSP、媒体字体版权、完整运行许可、交互清理及浏览器视觉均未验。"
+    ],
+    "description": "原香水品牌整页串联Hero、瓶身陈列、香调、品牌故事与产品；React Three Fiber瓶体原组件，原Carousel滚动更新active并支持前后/点选定位。 不是金属结状物件换皮：保留多个香水瓶与香调/故事的完整品牌叙事；不按单瓶或香型拆条。",
+    "category": "产品与营销",
+    "licenseEvidence": {
+      "url": "https://github.com/zainshah3464/Aurelle-Parfums/blob/8d9beb6293b8670ea7cbc820ad3df12c15fbf4cb/LICENSE",
+      "sha256": "e458fb09254bcb3dc0bd88b59f943c489479cf8d840c4958c3709b29982ffacb",
+      "scope": "Complete root license read; dependency/media/font permissions not closed"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-531",
+    "sourceScope": "Selected fixed original code and complete root license evidence; not a complete runnable archive or runtime audit",
+    "kind": "原版完整场景（仅来源）",
+    "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted",
+    "sourceSha256": "796935678b95e9429a2adbbcac8a4f105e2af2a47fe23ed4f3d49eac0354ed22"
+  },
+  {
+    "id": "8b-sillage:agency-editorial-site",
+    "title": "黑白大字制作工作室与作品筛选整页",
+    "source": "8B Sillage",
+    "repository": "https://github.com/8bsite/creative-agency-website-template",
+    "revision": "1be4dd602126d26cd7dfb5a87aef9d7e75a85729",
+    "sourcePath": "index.html",
+    "upstream": "https://github.com/8bsite/creative-agency-website-template/blob/1be4dd602126d26cd7dfb5a87aef9d7e75a85729/index.html",
+    "license": "MIT (root verified only; dependencies/assets not closed)",
+    "behavior": "原黑白大写字标、细线分区与彩色作品照片；完整宣言、作品筛选、featured case、服务/流程、团队、工作室和联系段落；CSS滚动动效与原inline交互。",
+    "difference": "不同于Positivus圆润插画：是高对比编辑式制作工作室视觉，原作品分类和大字长页编排；每段不拆条。",
+    "gaps": [
+      "固定当前版README声明无JS库，不沿旧搜索摘要称GSAP。CREDITS逐照片标Unsplash及字体OFL，但只保存说明未独立核所有素材；默认图片联网。邮件用.example占位，视频/联系/业务不能冒称真实；动画兼容与清理未验。",
+      "仅固定原件来源；未安装/构建/运行/截图/发布，CSP、媒体字体版权、完整运行许可、交互清理及浏览器视觉均未验。"
+    ],
+    "description": "原黑白大写字标、细线分区与彩色作品照片；完整宣言、作品筛选、featured case、服务/流程、团队、工作室和联系段落；CSS滚动动效与原inline交互。 不同于Positivus圆润插画：是高对比编辑式制作工作室视觉，原作品分类和大字长页编排；每段不拆条。",
+    "category": "产品与营销",
+    "licenseEvidence": {
+      "url": "https://github.com/8bsite/creative-agency-website-template/blob/1be4dd602126d26cd7dfb5a87aef9d7e75a85729/LICENSE",
+      "sha256": "bf6dc1ef87d6f84fe3962bf6a46179cd9bbeb4c713a6caf024add08be792578b",
+      "scope": "Complete root license read; dependency/media/font permissions not closed"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-531",
+    "sourceScope": "Selected fixed original code and complete root license evidence; not a complete runnable archive or runtime audit",
+    "kind": "原版完整场景（仅来源）",
+    "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted",
+    "sourceSha256": "b942b8a202998a5956c6b7cd4edd2a0674bfa35c383015464b0b985ed64d7cc4"
+  },
+  {
+    "id": "joao-eduardo-portfolio:fluid-type-portfolio",
+    "title": "有机光团与巨字作品叙事站",
+    "source": "João Eduardo Portfolio",
+    "repository": "https://github.com/joapedu/portfolio",
+    "revision": "ada78b3f37b08985da743d56ceb04b5963ea142b",
+    "sourcePath": "src/app/(home)/page.tsx",
+    "upstream": "https://github.com/joapedu/portfolio/blob/ada78b3f37b08985da743d56ceb04b5963ea142b/src/app/(home)/page.tsx",
+    "license": "MIT (root verified only; dependencies/assets not closed)",
+    "behavior": "原巨字多行Landing、鼠标跟随旋转形变blob/noise背景、编号作品画廊及技能/关于/联系整站；原GSAP动效与Contentful项目载入结构。",
+    "difference": "与Brittany文本分栏/复古Dhiraj桌面不同，强调大字与有机光团的原创个人品牌编排；不是替换姓名的新壳。",
+    "gaps": [
+      "getContent/getAllProjects依赖Contentful，当前仅取得原UI源码无CMS内容或凭据。GSAP/Lenis、字体、作品图片/作者素材及完整传递许可待审；无限blob动画/指针监听退出未验，不声称离线完整运行。",
+      "仅固定原件来源；未安装/构建/运行/截图/发布，CSP、媒体字体版权、完整运行许可、交互清理及浏览器视觉均未验。"
+    ],
+    "description": "原巨字多行Landing、鼠标跟随旋转形变blob/noise背景、编号作品画廊及技能/关于/联系整站；原GSAP动效与Contentful项目载入结构。 与Brittany文本分栏/复古Dhiraj桌面不同，强调大字与有机光团的原创个人品牌编排；不是替换姓名的新壳。",
+    "category": "产品与营销",
+    "licenseEvidence": {
+      "url": "https://github.com/joapedu/portfolio/blob/ada78b3f37b08985da743d56ceb04b5963ea142b/LICENSE",
+      "sha256": "2fb325f83bf11a25b1252edc18959536fb5e1cb831467f6a1fddffc69c04f4d4",
+      "scope": "Complete root license read; dependency/media/font permissions not closed"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-531",
+    "sourceScope": "Selected fixed original code and complete root license evidence; not a complete runnable archive or runtime audit",
+    "kind": "原版完整场景（仅来源）",
+    "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted",
+    "sourceSha256": "56a94e3dd47b42b28953685d5a8289cb535fb001592a08cca5eaea11e169729e"
   }
 ]
