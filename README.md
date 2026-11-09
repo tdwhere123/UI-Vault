@@ -2,7 +2,7 @@
 
 网站：<https://tdwhere123.github.io/UI-Vault/>
 
-当前主图鉴有 **517条可打开预览（241条原始素材＋276条后续接入预览）**。后续预览仍标注视觉待验；362条候选中的86条仅来源记录不计入主图鉴。原始241件包括215件精选界面、20件保留基础素材、6套完整图标系列。正在向1000+件优质素材扩充；图标按完整系列单列统计，不按单枚凑数。源码候选、不同配色与框架版本不充数。
+当前共收录 **654 条**：其中 **522 条可打开预览（241 条原始素材＋281 条后续接入预览）**，另有 **132 条仅来源记录**，不计入主图鉴预览数。原始 241 件包括 215 件精选界面、20 件保留基础素材、6 套图标系列。正在向 1000 件优质素材扩充；图标按系列单列，字重、尺寸和单枚 glyph 不凑数。已有图标重叠暂留待统一整理。
 
 ## 当前内容
 
@@ -10,9 +10,9 @@ Looseleaf 39件、Magic UI 36件、HyperUI 20件、Kokonut UI 49件、Bencho 27�
 
 其中46件保留在跨用途的Agent工作流集合，覆盖对话、推理、工具调用、审阅、状态与任务流程；首页优先呈现这些素材。演示是本地UI，不冒充已接入真实模型。
 
-精选包含纸张手绘界面、真实交互和动效，不只是普通按钮表单。每项提供隔离运行预览、行为范围、上游来源、原件代码和完整源码下载。静态展示项不冒充交互；前端演示不连接真实账号、支付或后台。
+精选包含纸张手绘界面、真实交互和动效，不只是普通按钮表单。可预览项提供隔离运行入口、行为范围与上游来源；原件或下载是否已发布以各条目实际资源为准，不把仅来源条目当可运行归档。静态展示项不冒充交互；前端演示不连接真实账号、支付或后台。
 
-前端按紧凑图鉴结构独立实现，没有复制LeiBox受限制代码。桌面三列、手机单列与抽屉分类；分类搜索、来源筛选、可直达详情。每页12条，列表只展示实际浏览器拍摄的轻量封面，不加载各组件运行包；进入详情后才启动单个隔离预览，切源码或离开后释放。列表采用独立轻目录，完整依赖与原件信息按需读取。返回保留页码与筛选。
+前端按紧凑图鉴结构独立实现，没有复制LeiBox受限制代码。桌面三列、手机单列与抽屉分类；分类搜索、来源筛选、可直达详情。每页12条，支持直接输入页码跳转。有封面项显示轻量图片；无封面且有实际预览的项使用有界实时卡片，列表最多同时运行1项，离开视口或分页即释放。进入详情后运行单个隔离预览，切源码或离开后释放。列表采用独立轻目录，完整依赖与原件信息按需读取。返回保留页码与筛选。
 
 旧版图库、70份旧包与其专用归档工具链已按用户要求退出当前工作树；可从 Git 历史 `3a2e440` 恢复。新版素材运行资源、原件下载和许可证均保留，不将旧包冒充已迁移素材。
 
@@ -330,3 +330,11 @@ The new source-only batch covers six distinct CopilotKit rich-content/coauthorin
 **Formity** retains the original dark focused interview and selection-dependent loop, including required fields/ranges, back navigation that can reduce the selected languages, empty-language boundaries, the non-developer Listbox branch, local result output and restart. Fixed react/system workspace sources are built directly; production contains no expry or dynamic compiler. Original input console logging is removed, and the isolated preview releases listeners/overlays on exit. Complete notices cover 23 actual runtime packages, React Aria's Apache obligations, Prism's embedded MIT notice, Tailwind and the original workspaces. Production flow tests and independent old-form/old-popup/early-exit checks passed; native focus geometry, IME, touch and pixels remain unverified. Use only fictional local information; no model or account service is connected.
 
 This batch is based on **76b1232**, preserving direct page jumping, normalized presentation and the bounded-live-preview changes and all 229 Grok thumbnail mappings, 503 image files and capture reports. Thus 470 preview entries retain mapped posters (241 original + 229 candidates), while 52 have no poster and follow the bounded-live behavior, at most one visible live card. No covers were created or modified. Current icon entry points remain 14, representing 12 design series with older overlaps intentionally retained.
+
+## Bulk source round 523 · 522 previews / 654 collected
+
+Added **28 source-only entries** after fixed-source and applicable license review. There are now **654 collected entries: 522 previews and 132 source-only records**. Preview count, 470 mapped covers, 52 posterless live-card entries and all existing icon entries are unchanged. Source records are not runnable previews or uploaded source ZIPs.
+
+The batch covers original document revision/streaming tools, rich email/report scenes, animated presentation and cell-layout editors, Agent rich results/workspaces, and six distinct new icon series, plus the selected original application scenes recorded in the catalog. Each icon family is one source record, not each glyph/size/weight. Concepts may overlap prior sources; differences and original placeholder/backend actions are disclosed, not marketed as entirely new functionality.
+
+Source licenses do not settle all runtime, font, media, trademark or service obligations. React Mosaic provides an original Apache declaration, with standard full terms kept separately in research rather than falsely called the original root file. Restricted Square UI, current css.gg and Unicons sources were excluded. No restricted source is republished. No new runtime, image, sandbox permission or frontend warning label was added. Covers remain with Grok, and existing icon consolidation remains deferred.
