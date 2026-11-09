@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "tests": [
+    "round 1: original long-document structures, 8 theme/font cycles, 3 sidenote click/keyboard open-close, all anchor destinations focus+scroll, pagehide and detached controls inert; 0 forbidden calls",
+    "round 2: original long-document structures, 8 theme/font cycles, 3 sidenote click/keyboard open-close, all anchor destinations focus+scroll, pagehide and detached controls inert; 0 forbidden calls",
+    "round 3: original long-document structures, 8 theme/font cycles, 3 sidenote click/keyboard open-close, all anchor destinations focus+scroll, pagehide and detached controls inert; 0 forbidden calls",
+    "missing-font: guarded fallback/cleanup, native inputs disabled, zero owned listeners, old labels inert, no uncaught error or forbidden call",
+    "missing-note: guarded fallback/cleanup, native inputs disabled, zero owned listeners, old labels inert, no uncaught error or forbidden call",
+    "immediate-exit: guarded fallback/cleanup, native inputs disabled, zero owned listeners, old labels inert, no uncaught error or forbidden call",
+    "late-missing-output: guarded fallback/cleanup, native inputs disabled, zero owned listeners, old labels inert, no uncaught error or forbidden call",
+    "late-scroll-failure: guarded fallback/cleanup, native inputs disabled, zero owned listeners, old labels inert, no uncaught error or forbidden call"
+  ],
+  "limitations": [
+    "JSDOM tests DOM state, focus and scrollIntoView invocation, not actual scrolling, layout, fonts, CSS side-note geometry or browser pixels.",
+    "No MathJax/Prism or font binaries; static HTML math and system fonts."
+  ]
+}
