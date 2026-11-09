@@ -25,8 +25,13 @@ export function createPreviewLoader({cache=createTextCache(),connected=frame=>fr
 }
 /** At most maxActive previews run. Hidden/offscreen cards own no live document. */
 export function createPreviewPool({loader,Observer=globalThis.IntersectionObserver,maxActive=6}={}){
- const records=new Map();let suspended=false,serial=0;
- function reconcile(){const chosen=new Set(suspended?[]:[...records.values()].filter(r=>r.visible).sort((a,b)=>a.top-b.top||a.order-b.order).slice(0,maxActive));for(const r of records.values()){if(chosen.has(r)&&!r.active){r.active=true;r.element.dataset.previewState='loading';loader.mount(r.frame,r.item,{onReady:()=>{if(r.active)r.element.dataset.previewState='ready'},onError:()=>{if(r.active)r.element.dataset.previewState='error'}})}else if(!chosen.has(r)&&r.active){r.active=false;loader.release(r.frame);r.element.dataset.previewState='idle'}}}
+ const records=new Map();let suspended=false,serial=0,preferred=null;
+ function reconcile(){
+  const chosen=new Set(suspended?[]:[...records.values()].filter(r=>r.visible).sort((a,b)=>Number(b.element===preferred)-Number(a.element===preferred)||a.top-b.top||a.order-b.order).slice(0,maxActive));
+  // Release first, including when the selected card precedes the old one in DOM order.
+  for(const r of records.values())if(!chosen.has(r)&&r.active){r.active=false;loader.release(r.frame);r.element.dataset.previewState='idle'}
+  for(const r of chosen)if(!r.active){r.active=true;r.element.dataset.previewState='loading';loader.mount(r.frame,r.item,{onReady:()=>{if(r.active)r.element.dataset.previewState='ready'},onError:()=>{if(r.active)r.element.dataset.previewState='error'}})}
+ }
  const observer=Observer?new Observer(entries=>{for(const e of entries){const r=records.get(e.target);if(r){r.visible=e.isIntersecting;r.top=e.boundingClientRect?.top??0}}reconcile()},{rootMargin:'0px',threshold:.05}):null;
- return {register(frame,item,element){const r={frame,item,element,visible:!observer,active:false,top:0,order:serial++};records.set(element,r);element.dataset.previewState='idle';observer?.observe(element);if(!observer)reconcile()},suspend(value=true){suspended=value;reconcile()},clear(){observer?.disconnect();for(const r of records.values())loader.release(r.frame);records.clear()},stats(){return {registered:records.size,active:[...records.values()].filter(r=>r.active).length,suspended}},destroy(){this.clear();suspended=true}};
+ return {register(frame,item,element){const r={frame,item,element,visible:false,active:false,top:0,order:serial++};records.set(element,r);element.dataset.previewState='idle';observer?.observe(element);if(!observer)reconcile()},prefer(element){preferred=records.has(element)?element:null;if(!observer)for(const r of records.values())r.visible=r.element===preferred;reconcile()},suspend(value=true){suspended=value;reconcile()},clear(){preferred=null;observer?.disconnect();for(const r of records.values()){r.active=false;loader.release(r.frame);r.element.dataset.previewState='idle'}records.clear()},stats(){return {registered:records.size,active:[...records.values()].filter(r=>r.active).length,suspended}},destroy(){this.clear();suspended=true}};
 }
