@@ -1,0 +1,47 @@
+{
+  "repository": "https://github.com/kopiro/siriwave",
+  "revision": "744cb00235b7900733efff25dc73b4d1ab77c92d",
+  "version": "2.4.0",
+  "sourcePath": "src/index.ts",
+  "originalFiles": [
+    {
+      "path": "LICENSE",
+      "sha256": "2895598c988e615210dac52580a35ec00e007cf3995ab7178644cc1bc47d6a39"
+    },
+    {
+      "path": "index.html",
+      "sha256": "844db2d3f613816e42d7a94e96da358077411b6bb447091f4fdba10b6c46e420"
+    },
+    {
+      "path": "package.json",
+      "sha256": "89a431d11dd6065568dc2554e028e8e66ff9612b37cbeeb4decd00a9275f3a23"
+    },
+    {
+      "path": "src/classic-curve.ts",
+      "sha256": "31e8efe216358bef21a26dcc05392bb964fddf459d0f3af181961b1e0e15578e"
+    },
+    {
+      "path": "src/index.ts",
+      "sha256": "e3fcd85a6da3103be8c0525d99dfbdfb9a535a5129e2a83f86a6406284fa12eb"
+    },
+    {
+      "path": "src/ios9-curve.ts",
+      "sha256": "a9ffb689b6c8aff9f462f165a915f9bf94a741a2a137a51a7614fdc1eeec889f"
+    }
+  ],
+  "runtimeDependencies": [],
+  "sourceAdaptations": [
+    "Original Canvas engine and math retained, not a screenshot/static substitute. Host toolbar/native controls are authored isolation shell, not original dat.GUI/Vue documentation app.",
+    "Local decorative/math demonstration only, no microphone/audio-analysis/recognition/AI/backend. No audio permissions, data uploads, remote resources or binary packaging.",
+    "Private component-owned canvas, DPR fixed1 and measured width capped900px, no body background mutation. Zero-size defers construction and pauses existing loop; positive resize recovers.",
+    "Pause/resume preserves desired playback and parameter/model state; hidden stops draw loop, visible respects user pause/reduced choice. Restart explicitly recreates a fresh original model.",
+    "Reduced draws one real original frame with no RAF remaining. Canvas null context/startup/render errors and explicit contextlost events dispose and show real unavailable state. Event/observer ownership and terminal exit prevent stale controls from restoring work.",
+    "Uses original official ios9 fluorescent curve style. Classic source remains required local module but UI only demonstrates ios9; iOS13 WIP is not included.",
+    "Original curve files byte-identical. index.ts factors original clear/lerp/draw/phase body into drawOnce, guards RAF by run and catches late errors via onError. Removed phase-reset on pause/start so pause does not reset phase.",
+    "Host setAmplitude/setSpeed retained for running interpolation; paused/reduced inputs snap requested amplitude/speed; single-frame drawing is gated to visible positive-size canvas, so hidden/zero-size inputs preserve parameters without draw.",
+    "Original ios9 curve spawn uses Date.now; hidden stops rendering, but wall-clock spawning can refresh when resumed. Do not claim a deterministic simulation time freeze."
+  ],
+  "browserVisualQA": "not-run",
+  "noAudioPermissions": true,
+  "canvasTest": "Canvas draw-command recorder and explicit RAF/bounds/ResizeObserver stubs; no pixels rendered"
+}
