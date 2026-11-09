@@ -12299,35 +12299,34 @@
   },
   {
     "id": "copilotkit:research-sections-canvas",
-    "title": "研究章节流式阅读与人工改稿",
     "source": "CopilotKit",
     "repository": "https://github.com/CopilotKit/CopilotKit",
     "revision": "c7815d9ac96f48fb3a64ad8c18e176a870c81763",
-    "sourcePath": "examples/showcases/research-canvas/final/frontend/src/components/documents-view.tsx",
     "upstream": "https://github.com/CopilotKit/CopilotKit/blob/c7815d9ac96f48fb3a64ad8c18e176a870c81763/examples/showcases/research-canvas/final/frontend/src/components/documents-view.tsx",
-    "license": "MIT (root verified only; dependencies/assets not closed)",
-    "behavior": "原全文/单节模式、章节缩略导航、标题/内容编辑写回state；Agent运行时禁编辑，新streamingSection显示进当前视图。",
-    "difference": "与BlockNote通用块编辑/批注不同：Agent生成分节报告与人工接管的同屏语义；非普通工作台排列。",
-    "gaps": [
-      "useResearch/useCopilotChat后台须本地隔离；并发streaming抢选中节/人工编辑竞争需测；Markdown/链接/导出/依赖及传递素材尚未全读。",
-      "完整传递依赖及素材许可未审；默认CSP/无网络、交互和退出清理、浏览器像素均未验。"
-    ],
-    "description": "原全文/单节模式、章节缩略导航、标题/内容编辑写回state；Agent运行时禁编辑，新streamingSection显示进当前视图。 与BlockNote通用块编辑/批注不同：Agent生成分节报告与人工接管的同屏语义；非普通工作台排列。",
-    "category": "Agent与对话",
+    "sourcePath": "examples/showcases/research-canvas/final/frontend/src/components/documents-view.tsx",
     "licenseEvidence": {
       "url": "https://github.com/CopilotKit/CopilotKit/blob/c7815d9ac96f48fb3a64ad8c18e176a870c81763/LICENSE",
       "sha256": "15a0e5343aea872c0573ad72feb6044b336f162d724cc1673c608e6b37ea071b",
       "scope": "Full root MIT read; transitive runtime/media permissions not closed"
     },
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-bulk-522",
-    "sourceScope": "Selected fixed original code and complete root license evidence; no complete runnable/archive or runtime audit",
-    "kind": "原版完整场景（仅来源）",
-    "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted"
+    "difference": "与BlockNote通用块编辑/批注不同：Agent生成分节报告与人工接管的同屏语义；非普通工作台排列。",
+    "title": "分节研究报告编辑画布",
+    "description": "原全文和分节阅读、缩略导航、标题正文编辑及参考文献，以虚构本地报告和模拟流状态演示；不执行真实研究或模型调用。",
+    "behavior": "原全文和分节阅读、缩略导航、标题正文编辑及参考文献，以虚构本地报告和模拟流状态演示；不执行真实研究或模型调用。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "Agent与对话",
+    "license": "MIT; ISC; Apache-2.0; 0BSD (full dependency notices)",
+    "batch": "research-sections-01",
+    "preview": "batches/research-sections-01/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "actual569 compose原编辑/导航/Markdown安全/模拟流状态与退出通过；视觉未验",
+    "gaps": [
+      "本地虚构报告与模拟运行状态，没有模型/搜索/后端/持久化。",
+      "Markdown禁用HTML/图片媒体，链接仅文本；原外部字体使用系统回退。",
+      "React18替原19预发行，实际版本/许可证列明；真实布局/滚动/视觉待验。"
+    ]
   },
   {
     "id": "chatui:rich-service-conversation",
@@ -12928,35 +12927,34 @@
   },
   {
     "id": "revealjs:scrolling-animated-brief",
-    "title": "滚动驱动的形变简报",
     "source": "reveal.js",
     "repository": "https://github.com/hakimel/reveal.js",
     "revision": "e240e175232fa2de660a02bc0d7bf5f655b159bb",
-    "sourcePath": "examples/scroll.html",
     "upstream": "https://github.com/hakimel/reveal.js/blob/e240e175232fa2de660a02bc0d7bf5f655b159bb/examples/scroll.html",
-    "license": "MIT (source license verified; runtime dependencies/assets not closed)",
-    "behavior": "原纵向滚动分段简报，渐进片段、元素匹配形变、代码行分步高亮，滚动条随背景变化。",
-    "difference": "一套完整滚动简报，所有形变和代码段只计一族；与impress的空间透视演示不同，不拆AutoAnimate为重复项。",
-    "gaps": [
-      "原例有远程背景图/视频与Notes插件，后续需禁用外联/弹窗并闭合字体/高亮插件许可；hash和键盘路由需隔离；尚未构建或检查真实滚动几何。",
-      "完整依赖与媒体权利、默认隔离预览、交互清理和实际视觉均未验；未上传或声称存在完整运行包。"
-    ],
-    "description": "原纵向滚动分段简报，渐进片段、元素匹配形变、代码行分步高亮，滚动条随背景变化。 一套完整滚动简报，所有形变和代码段只计一族；与impress的空间透视演示不同，不拆AutoAnimate为重复项。",
-    "category": "视觉与动效",
+    "sourcePath": "examples/scroll.html",
     "licenseEvidence": {
       "url": "https://github.com/hakimel/reveal.js/blob/e240e175232fa2de660a02bc0d7bf5f655b159bb/LICENSE",
       "sha256": "b2883e4b610bfa1b4d8fff84c4d4b825cc7d553cbd9fec4777c04068a2859dc0",
       "scope": "Full root MIT read; Plate apps/www and React Email demo local MIT also read where applicable. Runtime and media licenses not closed."
     },
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-bulk-523",
-    "sourceScope": "Selected fixed original source and complete applicable source license; not full runtime/archive",
-    "kind": "原版完整场景（仅来源）",
-    "buildStatus": "fixed original source read; not built, run or visually accepted"
+    "difference": "一套完整滚动简报，所有形变和代码段只计一族；与impress的空间透视演示不同，不拆AutoAnimate为重复项。",
+    "title": "滚动驱动的形变代码简报",
+    "description": "原滚动简报的八个文字、形变和代码章节，保留渐进、自动形变与行号高亮；不包含原图片和视频两页。",
+    "behavior": "原滚动简报的八个文字、形变和代码章节，保留渐进、自动形变与行号高亮；不包含原图片和视频两页。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "视觉与动效",
+    "license": "MIT; BSD-3-Clause (Highlight.js)",
+    "batch": "reveal-scroll-01",
+    "preview": "batches/reveal-scroll-01/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "actual569 compose原滚动触发/形变状态/代码高亮/导航/退出通过；视觉未验",
+    "gaps": [
+      "8页原无媒体章节节选，不含原远程图片/视频2页，不宣称原完整媒体演示。",
+      "原内嵌字体不打包，保留系统字体回退；关闭外部预览overlay未使用图标/加载GIF不打包。",
+      "JSDOM几何与CSS初始值fixture仅验证状态逻辑；真实滚动/AutoAnimate/字体像素未验。"
+    ]
   },
   {
     "id": "react-page:multilingual-cell-editor",
@@ -13082,35 +13080,32 @@
   },
   {
     "id": "copilotkit:a2ui-document-surfaces",
-    "title": "PDF分析的双栏生成式界面",
     "source": "CopilotKit",
     "repository": "https://github.com/CopilotKit/CopilotKit",
     "revision": "c7815d9ac96f48fb3a64ad8c18e176a870c81763",
-    "sourcePath": "examples/showcases/a2ui-pdf-analyst/src/components/SurfaceCanvas.tsx",
     "upstream": "https://github.com/CopilotKit/CopilotKit/blob/c7815d9ac96f48fb3a64ad8c18e176a870c81763/examples/showcases/a2ui-pdf-analyst/src/components/SurfaceCanvas.tsx",
-    "license": "MIT (root declaration verified; runtime/media not closed)",
-    "behavior": "原A2UI surface消息消费、createSurface去重和增量更新，动作人类可读标签，配套Split可拖分栏。",
-    "difference": "不同PDF像素批注：生成式UI协议驱动分析结果画布；不是声称本组件能解析PDF。",
-    "gaps": [
-      "需要真实catalog/surface-bus/renderer/agent；本轮未取catalog具体路径，传递源仍不完整。Split读写localStorage；processMessages失败仅warn且提前记created可能阻重试。不能原样声称离线可用或无存储。",
-      "未安装、构建、运行；传递依赖/媒体许可、默认CSP和生命周期、视觉均未验。"
-    ],
-    "description": "原A2UI surface消息消费、createSurface去重和增量更新，动作人类可读标签，配套Split可拖分栏。 不同PDF像素批注：生成式UI协议驱动分析结果画布；不是声称本组件能解析PDF。",
-    "category": "Agent与对话",
+    "sourcePath": "examples/showcases/a2ui-pdf-analyst/src/components/SurfaceCanvas.tsx",
     "licenseEvidence": {
       "url": "https://github.com/CopilotKit/CopilotKit/blob/c7815d9ac96f48fb3a64ad8c18e176a870c81763/LICENSE",
       "sha256": "15a0e5343aea872c0573ad72feb6044b336f162d724cc1673c608e6b37ea071b",
       "scope": "Complete root MIT text read; transitive runtime/media not closed"
     },
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-bulk-523",
-    "sourceScope": "Selected fixed original code and root license; no runnable/archive or runtime audit",
-    "kind": "原版完整场景（仅来源）",
-    "buildStatus": "fixed source and root license read; not built or run"
+    "difference": "不同PDF像素批注：生成式UI协议驱动分析结果画布；不是声称本组件能解析PDF。",
+    "title": "协议驱动文档结果面板",
+    "description": "原协议渲染器、组件目录和文档面板，以本地示例演示数据绑定、筛选与动作派发；不读取PDF、不生成报告或调用代理。",
+    "behavior": "原协议渲染器、组件目录和文档面板，以本地示例演示数据绑定、筛选与动作派发；不读取PDF、不生成报告或调用代理。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "Agent与对话",
+    "license": "MIT AND ISC AND Apache-2.0 AND BSD-3-Clause",
+    "batch": "a2ui-surfaces-01",
+    "preview": "batches/a2ui-surfaces-01/surfaces/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Original fixed CopilotKit PDF Analyst SurfaceCanvas, surface-bus, full custom definitions/catalog/renderers and scene styles retained, rendered through actual @copilotkit/a2ui-renderer1.57.4 A2UIProvider/A2UIRenderer and Google @a2ui/web_core0.9 MessageProcessor, not lookalike manually-rendered cards. Explicit host-authored local v0.9 fixture exercises Stack/Heading/Callout/ChoiceChips/StatCard/DataTable/Button with three document rows, dynamic Zod3 path bindings and real dispatched actions; it is not a complete PDF analyst/AI application or a claim every catalog chart was tested. No PDF upload/read, LLM, real document extraction, agent or network. Original useAgent/addMessage/runAgent wrapper replaced explicit onLocalAction callback; selecting original chips updates data model through real protocol messages, button records local action text. Original entire catalog renderer/definition files byte-identical. Original CanvasInner duplicate-create filtering retained; added actual A2uiMessageSchema validation before any bookkeeping and deferred created-id commit until after processing/getSurface check, failure rethrows to host failclosed. This is controlled fixture handling, not general arbitrary-batch rollback; malformed remote input not exposed. Added unmount unsubscribe/clearSurfaces/createdRefs cleanup; host surfaceBus reset on hide/exit and64action bounded reset prevent unbounded local replay. Original styles and a2ui/theme.css exact fixed source collected; omitted react-ui chat stylesheet because chat is not mounted, retained local scene/theme CSS, system fonts. Compatibility versions: fixed app declares React19.2.4/Recharts^3.8.1, emitted React19.3.1/Recharts3.9.2; A2UI1.57.4 and Zod3.25.76 match original protocol majors. Complete34 emitted package-path instances (including duplicate clsx path),fullMIT/ISC/Apache2/BSD text including all victory-vendor bundled licenses; no separately published NOTICE in web_core distribution. Actual570compose four modes and loader pass: initial3protocol ops,real ChoiceChips action+data binding3to1 table rows,Buttondispatch,10filter changes,duplicate create replay,reset,hidden oldnodes,earlymodule/lateerror; resource ledgers0 and blockedAPI calls0. Schema test uses actual runtime schema on invalid version/empty-components and source ordering checks, not a claimed full rollback test. Native browser chart/pixels/layout not verified; no images/native screenshots/shared repository changes."
+    ]
   },
   {
     "id": "copilotkit:research-artifact-workspace",
@@ -16562,42 +16557,40 @@
   },
   {
     "id": "beepbox:pattern-song-composer",
-    "title": "像素格点乐曲编排台",
     "source": "BeepBox",
     "repository": "https://github.com/johnnesky/beepbox",
     "revision": "355e510099d230d066d95074c16d748d59fe054c",
-    "sourcePath": "editor/SongEditor.ts",
     "upstream": "https://github.com/johnnesky/beepbox/blob/355e510099d230d066d95074c16d748d59fe054c/editor/SongEditor.ts",
-    "license": "MIT (complete actual root text; runtime/media not closed)",
-    "behavior": "原乐曲编辑器连接音高/时值 PatternEditor、分轨 TrackEditor、循环段与音色/节奏选项，支持格点音符绘制及合成试听。",
-    "difference": "区别已有 Tinysynth 音色控制台：中心是多小节、多声部 pattern/乐曲结构编排，像素谱面与时间网格完整一族。",
-    "styleTags": [
-      "复古/音符编排"
-    ],
-    "gaps": [
-      "SongEditor.ts:691 直接调用 serviceWorker.register('/service_worker.js', {scope:'/'})，适配必须移除或隔离该注册，不能让图库预览注册根作用域 Service Worker。MidiInput 存在 requestMIDIAccess 及状态/focus 监听，必须禁用或明确授权，不因来源收集而请求。WebAudio 需用户手势与 all-notes-off/AudioContext 清理；URL歌曲/本地保存、导出和嵌入音乐归属/全部依赖未审。没有听觉/像素验收，也不把虚构乐曲当真实创作。",
-      "仅只读源码筛选；未安装/构建/运行、交互生命周期或浏览器视觉验收。"
-    ],
-    "description": "原乐曲编辑器连接音高/时值 PatternEditor、分轨 TrackEditor、循环段与音色/节奏选项，支持格点音符绘制及合成试听。 区别已有 Tinysynth 音色控制台：中心是多小节、多声部 pattern/乐曲结构编排，像素谱面与时间网格完整一族。",
-    "category": "展示与媒体",
+    "sourcePath": "editor/SongEditor.ts",
     "licenseEvidence": {
       "url": "https://github.com/johnnesky/beepbox/blob/355e510099d230d066d95074c16d748d59fe054c/LICENSE.md",
       "sha256": "11bda08d0a35daa31dea162bce1aeaae999938fe7bddabd9709602c28af998ef",
       "scope": "Complete actual root license; transitive code and media permissions not closed"
     },
-    "sourceEvidence": {
-      "localFile": "evidence/johnnesky--beepbox--editor__SongEditor.ts",
-      "sha256": "d902de9c2185b682fea6feb44a2b6acbd31ae6bc1edda70741c4f9db52ceb06a"
-    },
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-style-528",
-    "sourceScope": "Fixed original complete UI/demo source and full root license; not a runnable adaptation or full asset archive",
-    "kind": "原版交互场景（仅来源）",
-    "buildStatus": "fixed source and full root license read; not built/run/visually accepted"
+    "difference": "区别已有 Tinysynth 音色控制台：中心是多小节、多声部 pattern/乐曲结构编排，像素谱面与时间网格完整一族。",
+    "title": "格点旋律与音色编排器",
+    "description": "原格点乐曲编辑、音色、节奏与合成试听，原动态算法在构建时静态预编译；本地临时作品，无录制、云端存储或外部设备连接。",
+    "behavior": "原格点乐曲编辑、音色、节奏与合成试听，原动态算法在构建时静态预编译；本地临时作品，无录制、云端存储或外部设备连接。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "展示与媒体",
+    "license": "MIT",
+    "batch": "beepbox-local-01",
+    "preview": "batches/beepbox-local-01/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "actual569 production loader/cache and original SVG edit/synth PCM verified with DOM/WebAudio interface substitutes; native pixels/audio unverified",
+    "gaps": [
+      "Native browser responsive visuals/touch and hardware audible playback not verified.",
+      "External IO, hardware MIDI, recording, persistent recovery and share workflows deliberately unavailable; session-only editing."
+    ],
+    "runtime": {
+      "scripts": [
+        "runtime-functions-01.js",
+        "runtime-functions-02.js",
+        "runtime.js"
+      ]
+    }
   },
   {
     "id": "audiobookshelf:chapter-listening-reader",
@@ -18423,42 +18416,45 @@
   },
   {
     "id": "netron:model-structure-explorer",
-    "title": "模型结构与张量属性漫游",
     "source": "Netron",
     "repository": "https://github.com/lutzroeder/netron",
     "revision": "37377fd1480501404e58ff579cf4c3f3a867572c",
-    "sourcePath": "source/view.js",
     "upstream": "https://github.com/lutzroeder/netron/blob/37377fd1480501404e58ff579cf4c3f3a867572c/source/view.js",
-    "license": "MIT (complete actual root text; runtime/media not closed)",
-    "behavior": "原模型查看器提供图节点定位/搜索、结构导航、模型与节点属性侧栏及输入输出张量信息，原 browser host 负责文件/URL与窗口环境。",
-    "difference": "区别一般节点画布：读取具体模型格式并检查算子/张量结构，不是编辑流程或模拟训练；整体模型阅读一族。",
-    "styleTags": [
-      "模型/结构证据"
-    ],
-    "gaps": [
-      "原 browser.js 包含 ipinfo 请求、遥测与 cookie，必须全部禁用；还有 Worker、动态格式模块与模型 URL/文件路径，不能直接套默认 CSP。模型权重/样本二进制和格式依赖许可证未闭合，不能包装上传；文件解析错误、worker/图布局与退出未验。",
-      "仅只读源码筛选；未安装/构建/运行、交互生命周期或浏览器视觉验收。"
-    ],
-    "description": "原模型查看器提供图节点定位/搜索、结构导航、模型与节点属性侧栏及输入输出张量信息，原 browser host 负责文件/URL与窗口环境。 区别一般节点画布：读取具体模型格式并检查算子/张量结构，不是编辑流程或模拟训练；整体模型阅读一族。",
-    "category": "数据与状态",
+    "sourcePath": "source/view.js",
     "licenseEvidence": {
       "url": "https://github.com/lutzroeder/netron/blob/37377fd1480501404e58ff579cf4c3f3a867572c/LICENSE",
       "sha256": "535cb2c7c8990f967c106e3035e4df8d3e070144af1163b86c8bb58b65fe5e88",
       "scope": "Complete actual root license; transitive code and media permissions not closed"
     },
-    "sourceEvidence": {
-      "localFile": "evidence/lutzroeder--netron--source__view.js",
-      "sha256": "44781bc1b142855b9bce41be0a294919be30386281615f523fd069e751f591e8"
-    },
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-style-531",
-    "sourceScope": "Fixed original complete UI/demo source and full root license; not a runnable adaptation or full asset archive",
-    "kind": "原版交互场景（仅来源）",
-    "buildStatus": "fixed source and full root license read; not built/run/visually accepted"
+    "difference": "区别一般节点画布：读取具体模型格式并检查算子/张量结构，不是编辑流程或模拟训练；整体模型阅读一族。",
+    "title": "模型结构与张量属性查看器",
+    "description": "原模型读取、图形、属性、搜索与缩放，提供明确原创四算子模型及受限本地文本编辑；不执行推理，不支持全部模型格式。",
+    "behavior": "原模型读取、图形、属性、搜索与缩放，提供明确原创四算子模型及受限本地文本编辑；不执行推理，不支持全部模型格式。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "数据与状态",
+    "license": "MIT",
+    "batch": "netron-local-01",
+    "preview": "batches/netron-local-01/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "pass",
+    "gaps": [
+      "Original Netron View, sidebar, graph rendering/search/zoom and original ModelFactoryService + official message.ModelFactory .netron JSON reader. Not the original network-enabled browser host, not all Netron file formats. No inference, training, credentials, model download or real trained weights.",
+      "The four-operator classifier JSON is authored specifically for this local preview, NOT an official sample, user model or evidence of real model performance. Original reader builds graph operators, connections and tensor shape/type metadata. Synthetic Dense/ReLU/Dense/Softmax nodes are illustrative.",
+      "The small JSON editing dialog and two helper controls are authored adapters. Bound to one graph, 1–32 operators, <=128 values/connections, <=70000 characters, finite scalar attributes and bounded tensor dimensions. Rejects active markup, external URLs, prototype keys and binary initializer payloads before original parsing. Not a generic JSON/ONNX/PyTorch importer.",
+      "Original serial Dagre branch runs locally without Worker. Only grapher Node-only fs diagnostic output was removed. Two disposed guards were added after asynchronous View.start initialization boundaries; normal reader/layout/inspection algorithms are unchanged. Original source patches/hashes are provided.",
+      "Original full inline SVG toolbar graphics, HTML structure, system fonts and grapher CSS are retained. Original browser host with telemetry/cookies/remote file opening is not emitted. Host storage is an in-memory Map. External opening, sharing, saving, image export and arbitrary file access are unavailable.",
+      "No emitted npm runtime dependencies. Fourteen fixed upstream source modules plus authored host/fixture and disposal wrapper. Netron root MIT is complete. Dagre source points to dagrejs/dagre and graphlib: full official historical MIT notices are additionally preserved as conservative upstream attribution; this is not a claim that the adapted Netron file is byte-identical to those npm releases.",
+      "Actual569 adapter/createPreviewLoader/default-cache measured 2032094 UTF16 bytes for HTML/CSS/two scripts, below unchanged 8388608-byte budget; remount cache reuse, failure all-or-nothing and retry passed. Every JS chunk is a natural complete-statement file below 700 KiB, no encoded payload/eval/Function/runtime compilation.",
+      "JSDOM functional tests use controlled SVG BBox/matrix fixtures, not native pixel/layout/drag or visual fidelity QA. Hidden pages blur inputs and retain model; finite work may settle. Final exit clears listeners/timers/intervals/RAF and invalidates old controls/callbacks. Early exit and missing root covered."
+    ],
+    "runtime": {
+      "scripts": [
+        "runtime-part-1.js",
+        "runtime.js"
+      ]
+    }
   },
   {
     "id": "llmviz:transformer-spatial-walkthrough",
