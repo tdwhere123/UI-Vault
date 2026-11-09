@@ -1,0 +1,21 @@
+{
+  "pass": true,
+  "checks": [
+    "Explicit head, complete original-structure article, 2 authored SVGs, retained 760px checkbox-note CSS, no external resources/font binaries",
+    "Upstream CSS exact prefix after precisely declared font-only substitutions",
+    "Unique IDs, all article navigation anchors resolve, 3 original checkbox/label/aside associations initialize",
+    "24 repeated native label clicks and 24 Enter/Space activations toggle real original checkbox state and ARIA; no stale state",
+    "Exit while note open removes owned listeners, disables native controls; old label/key events and repeated pagehide cannot revive state",
+    "Immediate exit after synchronous init cleans all listeners without pending callbacks",
+    "Broken association initialization reports unavailable, cleans partial listeners, retains readable article"
+  ],
+  "blockedAPIInvocations": 0,
+  "resourceRequests": 0,
+  "remainingOwnedListeners": 0,
+  "timersCreated": 0,
+  "browserVisualQA": "not-run",
+  "limitations": [
+    "JSDOM cannot validate narrow-screen geometry, typography, SVG pixels, screen-reader speech or real-browser focus order.",
+    "System fonts replace upstream ET Book; authored article/SVG replace original third-party quotes/images."
+  ]
+}
