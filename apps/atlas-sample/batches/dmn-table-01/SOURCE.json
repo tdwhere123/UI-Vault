@@ -1,0 +1,2724 @@
+{
+  "repository": "https://github.com/bpmn-io/dmn-js",
+  "revision": "9a030255f758869b8bf445a465c75eeacd0dbbec",
+  "fixedSourceAcquisition": "Normal official codeload at fixed SHA; selected 460 UTF8 source files retained with SHA256. Not claimed as independent Git blob verification.",
+  "sourceProof": [
+    {
+      "path": "LICENSE",
+      "sha256": "0a0a9e85ba6a802fbc6e79c422b36f0e9528926c9022d29036f87e9fe101587b"
+    },
+    {
+      "path": "package.json",
+      "sha256": "685d0bfcd6471f0078fe81a2ae3d190c1109bcf03c7ae33720d9d49280e8c54b"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/.babelrc",
+      "sha256": "c439df3f8115c92c649b97454c13c17344320b22d8796966c878cbbe7e4b5099"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/.gitignore",
+      "sha256": "76b5a357391276b282a516f54f48ef3c207f46d8192dc58c208d5183d38415f8"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/LICENSE",
+      "sha256": "0a0a9e85ba6a802fbc6e79c422b36f0e9528926c9022d29036f87e9fe101587b"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/README.md",
+      "sha256": "64e9ea457e7c1f534d8931d28443cbd9046229f86deb14ed43f6dc064ec4dcdf"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/assets/css/dmn-js-decision-table-controls.css",
+      "sha256": "5af9f66fc8e36ef814a5ab7dd75ed599ec1d747bee775305e506e46886ed0433"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/assets/css/dmn-js-decision-table.css",
+      "sha256": "feea9314779b27317683d6d26dc9e68a1ff75c40132604d58afa9005c9b07d14"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/karma.conf.js",
+      "sha256": "7497d0f404af57219a0edeb522db8868b00ad42e9a4578d10aaa12d4bb3d4370"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/package.json",
+      "sha256": "2060264d4157680dcce7cc961228ccf0825971330320e9d02293ba268fc3c40e"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/Editor.js",
+      "sha256": "3a968efcf59e83e0755d56b9f69a5d0752fba34f99db9d3db239859764cfa5ef"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/Viewer.js",
+      "sha256": "3a2d73076f8df95f9b3d5b68a0f1419fa8eeb60af9de7e035759d9fa7e975408"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/core/index.js",
+      "sha256": "2df2f4f5a7ca186afebd40e1952f256d1be5ff38a26e4400256dbcc87647518e"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/add-input-output/AddInputOutputProvider.js",
+      "sha256": "9c6cc0ea99314bda9f0820f9aea5300298d4e376daf214f8b6bb4cd1da57fb57"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/add-input-output/components/AddInput.js",
+      "sha256": "b29b1b670cccd62d1e8c35ac02f45391bcbe8d8848c94f11533d3e347b71176b"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/add-input-output/components/AddOutput.js",
+      "sha256": "004ff49eee71cdaa76fcbfe2ba016a7dc98b78d6c907d0c56533e27f62f46784"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/add-input-output/index.js",
+      "sha256": "e1bf62df528101d81982064e1e1a3629c3b0a21bff6bcdd5b26f588082819ebd"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/add-rule/AddRule.js",
+      "sha256": "ca36495a5293c10cc1b4688b3f372d0b8a0d7cf0ae1defaeccff83b30536fcac"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/add-rule/components/AddRuleFootComponent.js",
+      "sha256": "2cd63b638ca534b9a22b34f7478cc00c743970bb350bbe2efffeef9536a40625"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/add-rule/index.js",
+      "sha256": "306b794acb46ba0d9c173f5c1a3611ed2b72c4f32929f44b32f02c13edf09e5f"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/allowed-values/AllowedValuesEditingProvider.js",
+      "sha256": "261369bc3ef19dbf646def2cd7c5b04f7471e6dd6b5c19733c31456efc34c4f2"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/allowed-values/Utils.js",
+      "sha256": "b675ec5824741df00b15d363257251c0694f9abc31735f051f5114e524ec08af"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/allowed-values/behavior/AllowedValuesUpdateBehavior.js",
+      "sha256": "7eb3c5dddb5c91545ff5728bcb330522fedf8cc0d0507bb3e4188bf735b644fa"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/allowed-values/components/AllowedValuesEditing.js",
+      "sha256": "839f50923eed23bf17afbcba4bad76354239c4f93f65340d46c33b858f9df27c"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/allowed-values/index.js",
+      "sha256": "b6aba828c2ac1c7aa5bb71a1f6a2d24807f63aee157816af2a6984db4440d49c"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/annotations/AnnotationsProvider.js",
+      "sha256": "c8e5ed0d9986d6f2af4326a417f9e415854a9a9c8ff62daa4ad5137d0b1b23a5"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/annotations/components/AnnotationCell.js",
+      "sha256": "8175ffbfcc943f9ba7e832810e2c1a09d1973440b304a5464f5b8f29aaba97ce"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/annotations/components/AnnotationHeader.js",
+      "sha256": "b88edaadafc97823f8e989ec00ef939d37eb73fd15692430a22922054b4d558c"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/annotations/editor/AnnotationsEditingProvider.js",
+      "sha256": "4a5027fd54620428091443b6b52367bb8d98b039908bc951786d493d5beb26f5"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/annotations/editor/components/AnnotationCell.js",
+      "sha256": "7772c4ed3233377da09d8975634a8e1b4a7f23a31a57e6cd7c298b9e8a8d5646"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/annotations/editor/index.js",
+      "sha256": "fc862f9765ed26d1cf4ca9d995fa63da81459adf2755f4fea0184f43fe77787a"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/annotations/index.js",
+      "sha256": "8b7dfb9d2b2508cee7c43420bff45f36a3f278764aaf2b992af04fe7ef0768d7"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/cell-selection/CellSelection.js",
+      "sha256": "9125bf64d517fcb51c51202e701b820fafab878938e4355b570111846d5d917d"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/cell-selection/CellSelectionUtil.js",
+      "sha256": "bd6366d8ed2123bfc8f3e569da55bb92d47a8977ae081f978a15605e98f33f3d"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/cell-selection/index.js",
+      "sha256": "6f314da862941197508587f268f8475948abda9ae3a5dbeb0cf699bd27eee20e"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/column-resize/ColumnResizeProvider.js",
+      "sha256": "38719d0fd50270dda1dd0816a476b72ce527fb032a122b47b9e2d2ea1e9ded18"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/column-resize/components/ResizeColumn.js",
+      "sha256": "1bbe36d590f4e94196308b358cd91fcf95e538971cf7cd5248eecf5b69c38bba"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/column-resize/index.js",
+      "sha256": "01fac9cacdcb5f8df17b0ed5c5a1f6bd85bbdfba11e909e5ff25260fe394d24c"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/context-menu/ContextMenu.js",
+      "sha256": "a3a30066224addfeaeaa8ea38fe234d9f7e3c973f9a1a9dbbb6dd66fb9798c44"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/context-menu/ContextMenuCloseBehavior.js",
+      "sha256": "978bad01144c08b7d575abf1b5602245fa78782fa4a09f8ac30276220abd6534"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/context-menu/ContextMenuKeyboard.js",
+      "sha256": "0a78eeba6db390032cd8e000acb2b073a7ac1c3a5df00ebe85e015d31c9c984e"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/context-menu/index.js",
+      "sha256": "8593b5b1622af3f7a3298cb6d5fd21f7bcb1e98058c06aa3f5cac399fbc44c40"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/copy-cut-paste/CopyCutPaste.js",
+      "sha256": "296aee1e51c0590de2e244ade02354b79c402fd76e4fbff2dd578101d8bbae85"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/copy-cut-paste/DescriptorUtil.js",
+      "sha256": "6e51c6836573d228935d714df85b13325f068bb571437cee9d003b27555ed682"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/copy-cut-paste/cmd/CutHandler.js",
+      "sha256": "6b4bdb7b32ce3ed30d558e0019e453034fc92902a4da1e6884e558812f28f9d3"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/copy-cut-paste/cmd/PasteHandler.js",
+      "sha256": "21ce1ecceceab417a6e487e911be537ac1090298547d2d5a1cf1087730e402fb"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/copy-cut-paste/index.js",
+      "sha256": "3df4812594b8c8717eb72344dfa5e552381c194c4085a0e8669665c94c4b417f"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/copy-cut-paste/key-bindings/CopyCutPasteKeyBindings.js",
+      "sha256": "94f384126b278de5c9ea8c5e0f7569c9a8776ec53d1c490fa2a3e42b0b82aca7"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/copy-cut-paste/key-bindings/index.js",
+      "sha256": "126df942a069af4e5a88757ec147ae0fb904cac731b0456b0ff9f9d8187a6069"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/create-inputs/CreateInputsProvider.js",
+      "sha256": "74e0d0d47622abd161c89404e9f278929be6a7146d37c170d387e77fc6c741ee"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/create-inputs/components/CreateInputCell.js",
+      "sha256": "028a4571642c6f31095631ef1baaf6f087a8bd9607944e303698f086fb7877dd"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/create-inputs/components/CreateInputHeaderCell.js",
+      "sha256": "d6ec035cb88f06b92380c0b680bc3f142c98dbb8c47e7c787294e1ec92fbb8bc"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/create-inputs/index.js",
+      "sha256": "e91dfbca0465ccbefb847d828040f60e3f7f0285b970992f22a740e2ca900e48"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/decision-rule-indices/DecisionRuleIndices.js",
+      "sha256": "a3d3524208611848a595c5515f89784b7afc51f4a1bb69ff50668a6a5a696676"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/decision-rule-indices/components/DecisionRuleIndexCellComponent.js",
+      "sha256": "100655e7b31c16040b8535f04f2d9b44adedd92679aa4610256a86dd900babd5"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/decision-rule-indices/index.js",
+      "sha256": "a2b8d123e0d97c903f98dc3696820e1b2576765f383c46b50c7b3693a6fd44a5"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/decision-rules/DecisionRules.js",
+      "sha256": "9bb1b6b7a277a10d297d369a086baa3fa7ffdaeb05f5203a8cfc3127178fdbe7"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/decision-rules/DecisionRulesEditor.js",
+      "sha256": "2be7dc18426e73338c09a63d8326bee3b3e014ca5046d5cb699478c4900250f8"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/decision-rules/components/DecisionRulesBodyComponent.js",
+      "sha256": "d6f1799c44659a4c1d0167897492950e8e377443336fc99432514c5fafdfe11f"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/decision-rules/components/DecisionRulesCellComponent.js",
+      "sha256": "a74c7032c41c57f17ec4545fde0aafaff34ee5c33a9c212668bb238d9178bd29"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/decision-rules/components/DecisionRulesCellEditorComponent.js",
+      "sha256": "dbd7f13d479e222069edbbb1eec04ed31609715ea5b487be86637bd8f80ab5d8"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/decision-rules/components/DecisionRulesRowComponent.js",
+      "sha256": "a78d6ffb00c81c000c0caf6d479ebbeb23cfebeefd89413b6bbb26a37b077d50"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/decision-rules/editor.js",
+      "sha256": "e94edf23871dddb919d6c2e2e382d7d6e4545f05319bad3a2232364fe234a013"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/decision-rules/index.js",
+      "sha256": "3e62d34d1d6407e50d8f5270e3282467a6f703d1ccc2c06a75e3fca6b49e09e4"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/decision-table-head/DecisionTableHeadProvider.js",
+      "sha256": "bdcf9b6c1bff68f7e75511ef0be75993ea931baab5e5736955cfe903217350ad"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/decision-table-head/components/DecisionTableHead.js",
+      "sha256": "8bdc2acb7dbddcea5222641ebf9ef1f51d90b5c3ae429b029fd633c4b9bf35b3"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/decision-table-head/editor/InputEditingProvider.js",
+      "sha256": "7a0a27f73056e00d71637d43c1812758bf508cd2044b317b7caf4e3e10a4c52f"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/decision-table-head/editor/OutputEditingProvider.js",
+      "sha256": "7f19734e7404c4094dfda35a78186989a6f687da82f8402945dcff666225071e"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/decision-table-head/editor/components/InputCell.js",
+      "sha256": "4b141a526249df7736129d0ceaafe9645d1e7dc82fc8a915acd963f65af0f21c"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/decision-table-head/editor/components/InputCellContextMenu.js",
+      "sha256": "12a6fdb52c3078aacdde73affc233a12a4a22c52a9250706bae42f7e1b0b6346"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/decision-table-head/editor/components/InputEditButton.js",
+      "sha256": "a191bc5293b6a15ca856bc23de8a51510fde016612f09ba4fb0a924ed1974436"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/decision-table-head/editor/components/InputEditor.js",
+      "sha256": "aea77ff96a7687f6a77be2720a5fbba21d400b675d040a77214f54eae497810c"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/decision-table-head/editor/components/OutputCell.js",
+      "sha256": "0e0c9b68a3b1c4fe350043da39cb7026925979d4202e831b24dc58fb88b5aa61"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/decision-table-head/editor/components/OutputCellContextMenu.js",
+      "sha256": "3c19036e40c76f44cdde82d9effbcb192e8af7576d9a667e57cba5aa3fd473b8"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/decision-table-head/editor/components/OutputEditButton.js",
+      "sha256": "1f4c7e6a788c3b337209057658efbf491cadb1b2333de800c027c82ddc77e70e"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/decision-table-head/editor/components/OutputEditor.js",
+      "sha256": "52bb77c9f8a0e3bc70796e2d945857a51af760352ffef75f2a7b95e26ab959dd"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/decision-table-head/editor/index.js",
+      "sha256": "d823e0d5c194e08bff16e44c049fee028b1dcc3f22b2358d03136c7d9ebbf15a"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/decision-table-head/index.js",
+      "sha256": "91dafaf06f2b103acf95b922ceab9870d2676c938c7f129e050e6e1128946eb4"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/decision-table-properties/DecisionTableProperties.js",
+      "sha256": "7a647575d119bed1dabce58f4c491f2b2a794a48a982d3f4c049984fb50fdf3d"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/decision-table-properties/DecisionTablePropertiesEditor.js",
+      "sha256": "e7a02880dd81ee763e457ad6f9883f269df657a5a406b77dffb3809324e5fce3"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/decision-table-properties/components/DecisionTablePropertiesComponent.js",
+      "sha256": "502f9a31fa175e064e9da2772e65e1c3a843fba0f9947b0c66181c6c0cd398cb"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/decision-table-properties/components/DecisionTablePropertiesEditorComponent.js",
+      "sha256": "ae93323124ce0b41e980df6b317f311e008d29e2a574d9166feb463ab4ea6e3c"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/decision-table-properties/editor.js",
+      "sha256": "c1192ee3dfdc5aa29fa3292c98acacc235833b60b54d19bca3b66b6ed9158263"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/decision-table-properties/index.js",
+      "sha256": "cfd9ca97eb9e46aabe0347355fcd40f35a3c77621d21036ceb707648bd08e1b3"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/description/Description.js",
+      "sha256": "c30ff6ade7004a2f30d8b9600fe642d1c233cdc944171b8f0529d9dbda07c979"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/description/components/DescriptionEditor.js",
+      "sha256": "7cbd267d653420f912072cc51b2e27d2c83b4e796c0430e282713fa84e66b584"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/description/index.js",
+      "sha256": "5f296f52c8a9e37bd9a02ce57182de41257ad85953ecbd82b1cb9c298f56c3d9"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/drag-and-drop/DragAndDrop.js",
+      "sha256": "69b7aa934cf7c4f233858a10485231cd3691c9b46108ceb22c53e55796761e45"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/drag-and-drop/index.js",
+      "sha256": "77382888ef83e143dc613aa8d12c6839a89eb2fd342aa61d7dd3b97e5c55773b"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/editor-actions/DecisionTableEditorActions.js",
+      "sha256": "2c18f8cf271b8476b6236e09fdfa0dc97163373d0ff84ab5821fc939a918f74d"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/editor-actions/index.js",
+      "sha256": "80e41523fdb58ab3a5a32745bf9a4ae71641e00af78ae13008bf7e0594b617e3"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/expression-language/ExpressionLanguage.js",
+      "sha256": "ab09be91c73115d713eb92eae91d8ab20ed20de2e9bd1dfa175f71a0c59b5ce2"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/expression-language/index.js",
+      "sha256": "99dd3aa61074ab49c79ad0eaaa7616f678f86d59dae82fc59ce825b61ad1339b"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/hit-policy/HitPolicies.js",
+      "sha256": "9569cb39cc060e65ff63773a447b1f2af80b4ff484c238a58ae2f0536da7dfcf"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/hit-policy/HitPolicyProvider.js",
+      "sha256": "e217aa74b6d4244d275f8b152dfe419eb5b087f786b5db77e0c68a2a632edc7c"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/hit-policy/components/HitPolicy.js",
+      "sha256": "d28ebe76802137131b823b217de62a9e0df9a01e247109f8bec1b461c6bd2fe7"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/hit-policy/editor/HitPolicyEditingProvider.js",
+      "sha256": "8f33dc82812509fce1bb1df3c7fbecfce899ee48b011f2548a6dc2ecf6840948"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/hit-policy/editor/components/EditableHitPolicy.js",
+      "sha256": "7c06cecd7c99d592f66125fc74b136695209253510da7a0dc06241cfe421a141"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/hit-policy/editor/index.js",
+      "sha256": "26fdfb81800d831500baf39ba8ae2ce80e2eafa0fb7ab8b547ad6a2381064da3"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/hit-policy/index.js",
+      "sha256": "bad8479d0e56f64c714251f35e8f980c18740ed0ef193f2022df4edbf9432746"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/keyboard/Keyboard.js",
+      "sha256": "cc902dbba7f5ee551d0d24db947a46750e3e42c8b7096722e609785cda0609dc"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/keyboard/KeyboardUtil.js",
+      "sha256": "50100a27ef0e2bdadd03f1595e9acab535631b556ab481a04cd1e8aa1acfe003"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/keyboard/index.js",
+      "sha256": "f25e8c0cda4afa89b0598fe4abec326369ccd9695302c789218d26edff1c0396"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/modeling/DmnFactory.js",
+      "sha256": "106a1da00512a39da09204ed6ae65928c9455522a8071e8934de983e0ebf3eea"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/modeling/DmnUpdater.js",
+      "sha256": "73b7b88ccd086d28078530d9f0717fe6c371621f0d8d490519062bc6b22c577c"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/modeling/ElementFactory.js",
+      "sha256": "0f7d38a5341b9b5ce5c68a12f4584451ca50aa7b8d3fba4062aa5b61b2087cd0"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/modeling/Modeling.js",
+      "sha256": "5b2561f23bfcd5913dd0bffe76a7341dfb563ff4a32b0fd361f3d80fc98b3bd2"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/modeling/behavior/IdClaimBehavior.js",
+      "sha256": "20f4bbd103cfe6a1c5de376b0fd8ae4dfb95f2ffac036f5121c386b6f2bcf5be"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/modeling/behavior/IdUnclaimBehavior.js",
+      "sha256": "e88e9d0ee969a5f798121129d029823a8d176975c96f24efe93bce26060ee19b"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/modeling/behavior/index.js",
+      "sha256": "94f1259eddb8ed8951bec32cdcc263fe5ac59a2cd47e731debc188e1825589c9"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/modeling/cmd/IdClaimHandler.js",
+      "sha256": "1a2c7afe840339b646954bc901cf0d6a4301313ae2e5eb503af1ddf8e7c24009"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/modeling/cmd/UpdateAllowedValuesHandler.js",
+      "sha256": "ef2c66f9995f3ab492635869cd893ccbe7533836637796c918dd0f491f7db911"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/modeling/index.js",
+      "sha256": "472362e208d85d15d61a8520cce5a5d4d66cdef68c2028c225f1460dd7481b2a"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/powered-by/PoweredBy.js",
+      "sha256": "2f01cd426e4cbc9621260f583a0172add12b04568d63c881da4231d404b6761f"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/powered-by/index.js",
+      "sha256": "d41b0c61fc066c02204adcc020bf8215195a1adbbb225913a7d221aacc23bc7b"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/rules/DecisionTableModelingRules.js",
+      "sha256": "0434a25e68574854565df145150d3d2dda7b7fa0d175f9b4bbf1dcf0d5d5c8cf"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/rules/index.js",
+      "sha256": "9d35136c4dc1c46b4cea1544ea840c7c66d6a982e81aa4e92f35e98f3999006e"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/simple-boolean-edit/SimpleBooleanEdit.js",
+      "sha256": "c972ca4d36d7a1782708f0ff63086cbffa341111dab605afb577d1426ff81ec5"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/simple-boolean-edit/Utils.js",
+      "sha256": "21976d934ddad42353b05abbb072ca36e46687c75ca1b91e3981de4c2bebbf3c"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/simple-boolean-edit/components/BooleanEdit.js",
+      "sha256": "8a395331265c3c5a3477de9ca8cbfbfbe0e84c516d778cd3c8fd448752779245"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/simple-boolean-edit/index.js",
+      "sha256": "e1a3a1b918d90c5b65c22daeffbeeedf10fca12d66f5380216a85073ce24a33a"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/simple-date-edit/SimpleDateEdit.js",
+      "sha256": "0ca88e084c2995fa16f0a159f738805f79288d3fa114246482c6506665c5b1af"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/simple-date-edit/Utils.js",
+      "sha256": "c1bdae99276d276e388602fd9314ffe744fba73930bbf239e8d134421c9df1a2"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/simple-date-edit/components/InputDateEdit.js",
+      "sha256": "1503723fdfb8d0ecc59fdaf4cf312ab2f5944a7029afb42b6605ee4d2e3ba479"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/simple-date-edit/components/OutputDateEdit.js",
+      "sha256": "00578c678027bcd7957f6224113cdbb30c736451907ed4d222a020886354907f"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/simple-date-edit/index.js",
+      "sha256": "461bd02b6ccc750abbc95881e6ecfae1eab13a903622445900dd45940d2cfa87"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/simple-date-time-edit/SimpleDateTimeEdit.js",
+      "sha256": "0973b9cee5dd18ccd1fb04d41db889fc3dd3ab12275f857dc69a63961367184d"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/simple-date-time-edit/Utils.js",
+      "sha256": "77205a9eda1606eb45f788aed82aae8254375cccc19dc9a9f4279a3e2fe7ef47"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/simple-date-time-edit/components/InputDateTimeEdit.js",
+      "sha256": "2aba3e9757e58ece1d262f6e217b02024a4316db4bc77a079792cf12536edadc"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/simple-date-time-edit/components/OutputDateTimeEdit.js",
+      "sha256": "fafa2a481deb45cd7682926a263743a54db7ad8463186953535cfcd5c6bf5320"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/simple-date-time-edit/index.js",
+      "sha256": "1918b44f6707bd63eee538e9e839815308754722229547b9ee13dbfbb7abaa92"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/simple-duration-edit/SimpleDurationEdit.js",
+      "sha256": "29e917ebdcd2e7ac6484e9adf6b1ef923ae07d0419a0d4438b8bb793f5c58494"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/simple-duration-edit/Utils.js",
+      "sha256": "6e516309eb569b1c456e6d558276c007df124476f7147488980bbae24592b353"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/simple-duration-edit/components/DurationInput.js",
+      "sha256": "218ecd5d31ee050360c92f3d661418b8a922e2158368a44fff0cf2a7f54b9f60"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/simple-duration-edit/components/InputDurationEdit.js",
+      "sha256": "c90d8c5e8bd221bf48f2a2444b1292dc625dfd84e2421fb17993ef295ff02b58"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/simple-duration-edit/components/OutputDurationEdit.js",
+      "sha256": "7a33784b42d7bd7b7b0c989d39bd65b9a5c02d203fc98bd4bb9b971617b66e7d"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/simple-duration-edit/index.js",
+      "sha256": "1630957301eebae3afe8d7372a3031a1915c9e9fff285da42af59dc15889a69f"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/simple-mode/SimpleMode.js",
+      "sha256": "d0104b83cfc6f876452839733ecd9b173054763cd97544c1a53add8259948c92"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/simple-mode/components/SimpleModeButtonComponent.js",
+      "sha256": "a14ff6f9144785450de6fcf6f02776f985ca9b04ccfde0f60387c52e3803c660"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/simple-mode/index.js",
+      "sha256": "b529e3343eeff6c3c17d85ede64c64b7672c313addfd5dea03048d59da8971c5"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/simple-number-edit/SimpleNumberEdit.js",
+      "sha256": "f7137f1fbfc293692f206ed8afb0f4cb285ea731ba0ba2226c347515ec4c9f54"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/simple-number-edit/Utils.js",
+      "sha256": "fe12f5c9b0e78b3418156db6fa88215bc14fdd5c9d2f8a8c2b6e12dbf02d02e4"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/simple-number-edit/components/InputNumberEdit.js",
+      "sha256": "f1988fe2fafda8c70a8f0bc34f00a867721ba68367448ad3d84c54e34c3b7fbb"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/simple-number-edit/components/OutputNumberEdit.js",
+      "sha256": "757ff340eb1479dc7775f9de03b27e38082a07ec0804095a61f6922cf98395c6"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/simple-number-edit/index.js",
+      "sha256": "945290d2ca2317631a0682399fbf804b62e5123c89a498043ec620e6b7c01678"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/simple-string-edit/SimpleStringEdit.js",
+      "sha256": "c4c9801c59416f98220bdbc5bf2140d8ed13a97890278bb5c1dd05e91413b6ed"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/simple-string-edit/Utils.js",
+      "sha256": "f7978bd62d8142eb53202faae872fd0ac537514dadc56abf0e10fd9d8f1a0631"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/simple-string-edit/components/SimpleStringEditContextMenuComponent.js",
+      "sha256": "193976d60bfc40b77a38b17ddb590836f1ec2fb438e627d496cebbe8b2919192"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/simple-string-edit/index.js",
+      "sha256": "29764ad1192e98b8cb1378c5c5d38160d89da0dcea82435924684a307bf90630"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/simple-time-edit/SimpleTimeEdit.js",
+      "sha256": "405f8bcb8604d12ae759569799e43e31048eb642dfcc3fa13bfe77a77bd34790"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/simple-time-edit/Utils.js",
+      "sha256": "5f597af649c35a73f54475c30803c8a4d059aad7297717e1571cd64c60153fa0"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/simple-time-edit/components/InputTimeEdit.js",
+      "sha256": "ee43d7414b0f0b9854e20491f3ca40089e07358bf04b23b9d5b053cb9b66f5d0"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/simple-time-edit/components/OutputTimeEdit.js",
+      "sha256": "0dc69d04d7bd6a52d2dd2cd9c6810a6094d680a34cdd0766f9ad47ef5096905a"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/simple-time-edit/index.js",
+      "sha256": "0b1f85263006bc3fa19715de0e19363a926a5c574a0da64cee4d718f8aab3a70"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/type-ref/TypeRefEditingProvider.js",
+      "sha256": "9707906c80a9345f1423f0eabf92246637214c2327c23cdee757b51f2a9a78af"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/type-ref/components/TypeRefCellContextMenu.js",
+      "sha256": "f8de11ccc663cb0d52391d8064f6ed65ab8171b7789d5bf8bd18c662e1aea6b2"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/type-ref/index.js",
+      "sha256": "1c1709375ee4a757949e0874bfa9277437a83c205cd6dfc7d89c6f94080a6763"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/view-drd/ViewDrd.js",
+      "sha256": "860b6bd62aa9d3451c52ea5356dee97e7dd287cb2fea66e3fbf21827938aca59"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/view-drd/components/ViewDrdComponent.js",
+      "sha256": "deb4c5803d76ce89c94951ed064738d734afe6ac69d4cfb62a826572e4a34831"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/features/view-drd/index.js",
+      "sha256": "8cf26cc140e7f8f345c5f70d010aee5d42ccec21e04991ee027ffa8da86bc1a4"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/import/Importer.js",
+      "sha256": "9c10d15c1899cb5c1bc8801091d8d3cc3d1e7759ab1752b1e38de6b7cba0242a"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/import/TableImporter.js",
+      "sha256": "1ba9e8032b65af1b0637275806ba48973aa7addf46f7bc94f9322975a7b4f5a8"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/import/TableTreeWalker.js",
+      "sha256": "dba72e1073ee7b9bd79966704cf418176a6b25c7e5445322f6b46b778c429432"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/import/Util.js",
+      "sha256": "ae8268f2d34c58c3422213ac738cf03efa67de138992f512049de986b41d6c3e"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/import/index.js",
+      "sha256": "2c1e66e6988a4eade7d3c0341f0b3bb0246b551a499976810820472eec938b98"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/index.js",
+      "sha256": "ba6c8be78a62eacd3a89c5a9bcd8ccd3d8f4983503c93a658b409556a0329a25"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/src/util/DomUtil.js",
+      "sha256": "d6b3b0a8a66c38c92b0e0d4445c96d1a4ea4a2aaf12d5b9c4b4312a1533606a9"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/TestHelper.js",
+      "sha256": "f6fd6cd5facc41d7dd4e711d195fb7726a54f846cfe90549fecfb54844e51a0d"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/coverageBundle.js",
+      "sha256": "b51a64c6ae3ea3013189d85699eb2c2bbd58c9d15090ff558fff1221c8bdba53"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/globals.js",
+      "sha256": "f0bf86940d2a86cd36b7b93cc27de4ef8b0dcf33c3b5332ee37fca8b22836c04"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/helper/DecisionTableEditor.js",
+      "sha256": "063dd64fa1a22bea875934d56685648578c016db5100bf728dc36aad65b9bdf8"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/helper/DecisionTableViewer.js",
+      "sha256": "897997eb22a91b1075a156fd7dccf565479374c61593eaa853e0c14f5de462f1"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/helper/index.js",
+      "sha256": "ac450b76db17443ad1e72386204a61f2f761474734921f3884578162d27e86b5"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/EditorSpec.js",
+      "sha256": "42ed658ddf65190499c28a88787b01f9b349aabe6a2a3100b78bb9e05121a1ca"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/PerformanceSpec.js",
+      "sha256": "0bcf185a544fb38201faa399b10dfc9608786aa3b8f5801f5671fc3a46eedd9e"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/ViewerSpec.js",
+      "sha256": "5d796e76d384f64c410e0d3b4d0e502f5b028588c6bdbd7246857c519fc6c6ee"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/complex.dmn",
+      "sha256": "9655467005cf940587fa0d9ab368bb57d194714d528892bc27a7bb71ba2be02c"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/expression-language.dmn",
+      "sha256": "e16af62f71736fb2f254021be17875d5958a8aef1ca9b8ddee9d45a9db62fbf1"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/add-input-output/AddInputOutputSpec.js",
+      "sha256": "35030f946bb401dbb04949282bde1db76866d14f8f07ad13cc5f3bd3146b0f40"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/add-rule/AddRuleSpec.js",
+      "sha256": "0f57b19bc68728b3c867175b4ed44d895cb8e970d32dcbf01a53d5664a50fff9"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/allowed-values/AllowedValues.dmn",
+      "sha256": "e5ff64b8be17f217934c48423af428981ea7eca34b793e930c5cc02cab320434"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/allowed-values/AllowedValuesEditingSpec.js",
+      "sha256": "64315d5ef2b7d02881da2e32a734037e58404e1ee1c603ae90afded85f74f22a"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/allowed-values/UtilsSpec.js",
+      "sha256": "ae39f1fc4bd0c70f221685792178c8b35f1bc4901d34cb88693b74f6683a9fbe"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/annotations/AnnotationsEditorSpec.js",
+      "sha256": "e9ce50c42b799d9d939c20a93a62339107490e05d3847ce25cc1b4a3ca972ce0"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/annotations/AnnotationsSpec.js",
+      "sha256": "df98eecce2ead9d286f87cd8841cfd0b95c8e5686580c314e780aa8e869dcb00"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/cell-selection/CellSelectionSpec.js",
+      "sha256": "23fbb392011fa20f646f78731fd212f54507737184309128b4b8c7662b2bde88"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/cell-selection/cell-selection.dmn",
+      "sha256": "7ab88c92778784923ea2a2a9c40b4050feba62aba9dc11ab6ceae51c201a732e"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/column-resize/ColumnResizeSpec.js",
+      "sha256": "d9842958ed845bc01c8c80240bcc05e13c7a9413567322a4ad268dcef4b31410"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/context-menu/ContextMenuCloseBehaviorSpec.js",
+      "sha256": "be396ec21d9ba86ca1aac72ddd6317ac283af27c2a3c8af96ef5f826d29165d0"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/context-menu/ContextMenuKeyboardSpec.js",
+      "sha256": "5e762d391a3ba44e72817e36c2f8aaad9797af834719e40cd7967c3f17311f87"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/context-menu/ContextMenuSpec.js",
+      "sha256": "0a77b31a26beaf48634179b4084d212b17ff01f2372675529aefc625ae56c6cd"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/copy-cut-paste/CopyCutPasteKeyBindingsSpec.js",
+      "sha256": "87c288a43395cf16f53a5a93201ae1c56dfc414eb42c88ed69f6753f866b574f"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/copy-cut-paste/CopyCutPasteSpec.js",
+      "sha256": "1c6b1555e3b220dbd97bc989bf1a86d9bfcd82c9746ef98132b0e7304e7a16c0"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/copy-cut-paste/DescriptorUtilSpec.js",
+      "sha256": "66eb05e986dfebec6e719bf78d09bbe1399ac2e5b61161135389fde48cfa395e"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/copy-cut-paste/copy-cut-paste-key-bindings.dmn",
+      "sha256": "291f15a61c593b3f22bd7ca9012af705f19b5b6c96467acb2d23febbecac2c72"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/copy-cut-paste/copy-cut-paste.dmn",
+      "sha256": "7ab88c92778784923ea2a2a9c40b4050feba62aba9dc11ab6ceae51c201a732e"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/create-inputs/CreateInputsSpec.js",
+      "sha256": "fc4535fa03c3ccbca1adc41337ce7133129015e1a5e5d199de39fc6928ff51e3"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/create-inputs/no-inputs.dmn",
+      "sha256": "49d3c96f1b7b738d969f83e85eed2126c1a571f39985e076d4acba5c0194fad3"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/decision-rule-indices/DecisionRuleIndicesSpec.js",
+      "sha256": "b875a541bc01f1ad0df4e769ac146cea78ea468243ba461f7da4dfaf073e941f"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/decision-rules/DecisionRulesEditorSpec.js",
+      "sha256": "c35cbeccee0013442f8d3625f1cca59033e8c50d8587690f0e6b417100a50ec3"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/decision-rules/DecisionRulesSpec.js",
+      "sha256": "84f8048a9868f390c39cccf0ab45aac1f7025167dd6cb61bff458ba6eae30863"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/decision-rules/empty-rule.dmn",
+      "sha256": "a69dcd774566c488336f893ace6bbd6c3c63d75cf35eb6548e8a85e3adbc43ce"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/decision-table-head/DecisionTableHeadSpec.js",
+      "sha256": "2283e0d33f38ed6b8bd7eca08768c67711ea8975be4e3442cf006eff9e8b9938"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/decision-table-head/editor/DecisionTableHeadEditor.dmn",
+      "sha256": "df8a07095f6a066cb9a4949de656948c539be91a422a12b26ce6c73a9b057bae"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/decision-table-head/editor/DecisionTableHeadEditorSpec.js",
+      "sha256": "78b01432468f2a551a77264d485216608e56d96da50ce1acc93025d0ea760598"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/decision-table-head/editor/input/InputEditor.dmn",
+      "sha256": "096d7d861f2f238fb9c58c085ce632939f993f80e6027ef6f3b5e45e1da0781b"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/decision-table-head/editor/input/InputEditorCellSpec.js",
+      "sha256": "0b737b9d59dbfbb83a7210a4f8fc07241ba2aeff4f8afa634975b754d6e86d04"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/decision-table-head/editor/input/InputEditorSpec.js",
+      "sha256": "2ad9dbbe83c4c5fa9ced1df1899c6b1665fee9379f27a83ca17e20a81a4025ff"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/decision-table-head/editor/output/OutputEditor.dmn",
+      "sha256": "8a4db887e4de78a15c5611cef7380ffd36277614c959bff6d03e7a8d206f3d23"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/decision-table-head/editor/output/OutputEditorCellSpec.js",
+      "sha256": "cdd613d3c4a6cef613294b7760534995e99bad7cee058c9ecf40cde94e29a285"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/decision-table-head/editor/output/OutputEditorSpec.js",
+      "sha256": "8d46bffe828ef315bc7d1640e6cf2e0cfee746c7e9f787c39a724755874569b9"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/decision-table-head/missing-type-ref.dmn",
+      "sha256": "8d36cd6224503038f6fdca0b24739f5723a58b553e96b430b124f7bb1208522a"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/decision-table-properties/DecisionTablePropertiesEditorSpec.js",
+      "sha256": "17ba8a11c04ca3a865cef9236b106a8930bd33d6112ceea0b1fc18049683b48f"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/decision-table-properties/DecisionTablePropertiesSpec.js",
+      "sha256": "f4f6f1666b7cbadfdc70b351357b1561bc332252011aab1e5d83372db97bc6d8"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/description/DescriptionSpec.js",
+      "sha256": "bfc6f92898e1740558e4c35ac0d45b8ec184505b9b7ec1dca3c4089a3df6641d"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/description/description.dmn",
+      "sha256": "278c0ae76ed58acadfba76698fbb5c1a85e75c0531574c4b14a11828f9dceeab"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/drag-and-drop/DragAndDropSpec.js",
+      "sha256": "25b9729709ded92f3515647f939f8996d358b2fcf8b4c147264cc922d16ed35d"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/drag-and-drop/drag-and-drop.dmn",
+      "sha256": "291f15a61c593b3f22bd7ca9012af705f19b5b6c96467acb2d23febbecac2c72"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/editor-actions/EditorActionsSpec.js",
+      "sha256": "adb32a6bc7429300eea7b104277925c9bbf6f6b6833b36eeba7358c6251bd211"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/expression-language/ExpressionLanguageSpec.js",
+      "sha256": "6ec472e7b08c8489daf0f5fb869f354508118f0ef24ef1a9f9d6e9f75b5e8b7e"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/hit-policy/HitPolicyEditingSpec.js",
+      "sha256": "9b653753308d74bccba0f4aa2ab2b45434aa94e26d3961def2bbfd86b895a502"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/hit-policy/HitPolicySpec.js",
+      "sha256": "41601033cf084e8f302b49d1012a5bb4f0ffceb38c15f63adf7d163da6def47e"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/keyboard/KeyboardSpec.js",
+      "sha256": "5bc1ec7a9986b60676cfe370c5221a26104f34575ee0f9533da4cba68640a3d2"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/keyboard/diagram.dmn",
+      "sha256": "291f15a61c593b3f22bd7ca9012af705f19b5b6c96467acb2d23febbecac2c72"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/modeling/ModelingSpec.js",
+      "sha256": "48399f4f7c8fa081351d5961aefe08ab1b77584c990c16648410491f99280eeb"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/modeling/UpdatePropertiesSpec.js",
+      "sha256": "25efb8b2c836c0934d2cdd2000e5cc7812c364367dbc0712ea1520120a392f3e"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/modeling/behavior/IdChangeBehaviorSpec.js",
+      "sha256": "0c3bd68f6072acb8b0de72d3afa1dbddce151e80a53b1122502b71b4c08a4bbb"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/modeling/behavior/IdClaimBehaviorSpec.js",
+      "sha256": "799f3854a5f75712cc576610e83e2041ab067d8244f382a2b3d4ca9e65274192"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/modeling/behavior/IdUnclaimBehaviorSpec.js",
+      "sha256": "f40781e81fc2e7ef6d5c950688e0e79059e0200d27999c03fe077fb105f2724e"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/modeling/behavior/NameChangeBehaviorSpec.js",
+      "sha256": "dd2fbe31991fbd02997b13b71bbda79be57fdc62c02ea110ccc6d0683d602de0"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/modeling/behavior/id-claim-unclaim.dmn",
+      "sha256": "dff97c85dbf6b25f975dfc36cfede52f042a1255055f2b8eecc1324855b9e61b"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/modeling/behavior/name-change-behavior.dmn",
+      "sha256": "108e249f31500ddd5bf72b84ecb797f4322073c89f40c7e7acf407ab14744421"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/modeling/behavior/two-decision-tables.dmn",
+      "sha256": "2b8a89f53d05094c2ad9da0c0e0b18aae63d6c066fdff5f612f3be7544483b62"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/modeling/modeling.dmn",
+      "sha256": "035a810cd2b9dff5987ee46ddab285c8dee26e733bb8b9babae3bb8ee796dd15"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/rules/DecisionTableModelingRulesSpec.js",
+      "sha256": "9ecbb2028e5c9b9f257eb17b7d56d3c1cc4437fef0b400b1cb7fc18eb535411b"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/rules/rules.dmn",
+      "sha256": "dff97c85dbf6b25f975dfc36cfede52f042a1255055f2b8eecc1324855b9e61b"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/simple-boolean-edit/SimpleBooleanEditSpec.js",
+      "sha256": "7048da8e9d645ca37d1c262911fdf9f7993ec125a68b5b9df0e7f62a53401bec"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/simple-boolean-edit/UtilsSpec.js",
+      "sha256": "ee1c706a2e0b289911fcaeca5a5434f7f4f76fead16e234ce6fc4b6ab78ccac4"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/simple-boolean-edit/simple-boolean-edit.dmn",
+      "sha256": "e3dbcbcb2a7180eff80d4f85f2f6c886c845d7fff00d28f36caef7669b86892b"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/simple-date-edit/SimpleDateEditSpec.js",
+      "sha256": "966d692eb207377889c30b9d88cffb739e445067849b20b0497038582c6ab70a"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/simple-date-edit/UtilsSpec.js",
+      "sha256": "739cf33d65db29302a584747d8ca2278d49992622b9154b85e4964c3ae90383c"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/simple-date-edit/simple-date-edit.dmn",
+      "sha256": "39ccdb13d212e786714bf299a040c2bf872685b64a276e4a8d9a7d2b301c16bf"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/simple-date-time-edit/SimpleDateTimeEditSpec.js",
+      "sha256": "dd00d50edf013021e4d12ec5726c94f6bd655eeec1f05032b99a300fd97b8643"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/simple-date-time-edit/UtilsSpec.js",
+      "sha256": "cf994dce8ff7c29062cd0f477b861c17f155fe234073d7c7ec35e7cfd2e5eb49"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/simple-date-time-edit/simple-date-time-edit.dmn",
+      "sha256": "1a203586fef6b39fd9268d124486fcc1d720df118f54f3aedd5f4691da332e8f"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/simple-duration-edit/SimpleDurationEditSpec.js",
+      "sha256": "8b87f33609aa17102d4f939d9647b2d2343b5fb9eb8227d737c7567b4935b816"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/simple-duration-edit/UtilsSpec.js",
+      "sha256": "60af8faf4fc7c9abfcf0e0c691fb45a35a0dbbce476c5cfd3c292e5caba08ca2"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/simple-duration-edit/simple-duration-edit.dmn",
+      "sha256": "fc0b8324a26fdf1dbccd4d5f0555dbe8e2a5fb0f54ce9df74e7ac3891455d303"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/simple-mode/FooProvider.js",
+      "sha256": "1902dc70493ad8bef77a577b2c153cedf223c90054c06e24278cab165e77348c"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/simple-mode/SimpleModeSpec.js",
+      "sha256": "e20e4a1fe5fed456ee6b4011b1127168ad3b6d6b1b6c14682f257aab7ed64985"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/simple-mode/simple-mode.dmn",
+      "sha256": "f6161ad4e8080ca9edfb0b7b3464a85f77a9e14970a139ac5195cb15b98856c0"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/simple-number-edit/SimpleNumberEditSpec.js",
+      "sha256": "55ad0df44eedb7a856976c65fba15bb891ec80cece81b3d47f7d7b4051d88823"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/simple-number-edit/UtilsSpec.js",
+      "sha256": "a903ec3f274d0fa9784054d3aafe3a4d75f7c0dbdc8b98fecabef68676e0c81f"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/simple-number-edit/simple-number-edit.dmn",
+      "sha256": "bbfde0ebf5827002c4071153381ebf70b48a0720d0188fd0d74258637b8163c9"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/simple-string-edit/SimpleStringEditSpec.js",
+      "sha256": "d859e5cbbfbf35ee9f05400628b907312ae7407de4a8edf9b8e7527d37eb9942"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/simple-string-edit/UtilsSpec.js",
+      "sha256": "92abdf8dee84842080fad42b4b63dbec45367d6b8b24dcc6dae6de1c3a612438"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/simple-string-edit/simple-string-edit.dmn",
+      "sha256": "02608a74da32802440bc7d4e0c328db99e1b44d400e5a648fdfc983c40853a6c"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/simple-time-edit/SimpleTimeEditSpec.js",
+      "sha256": "61a7efa5a417508cafc13859e54207310b2fbc0bffa297b95582733e36ac92ab"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/simple-time-edit/UtilsSpec.js",
+      "sha256": "8e19134cd3d082afbccc9be0606a098fb5dee5ed75980f2cacbcea42596bfcbf"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/simple-time-edit/simple-time-edit.dmn",
+      "sha256": "69fbf250df6320df015c7f24e255716197efcb9bdfd7a4926774ff477d97caae"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/type-ref/TypeRef.dmn",
+      "sha256": "cbe4fe885191c2c69ae9340be29fa8f6f003b1bc7d0d2b74a1bc2382c008d581"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/type-ref/TypeRefEditorCellSpec.js",
+      "sha256": "6d981da0a3e71bbff66ca9edcb579fb7183d868466387b6ef2cdf92dda0267d7"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/view-drd/MockViewer.js",
+      "sha256": "769f8d23cd4b35688740fb7da92ff8b9a6175d8f902be45c851907ce7657b82f"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/features/view-drd/ViewDrdSpec.js",
+      "sha256": "f3b1f2ea5f33866a4fe54e42557993dbdbfb1cfcc0ab9108e75eed07deb7a9ee"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/import/ImportSpec.js",
+      "sha256": "82b46a27d5ecaa6a8f969b1874af7436da231c898520c24f802a0fe9f6777a9c"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/import/no-decision-table.dmn",
+      "sha256": "6d2b06534ad2dcbcd523d6939ac05b3d079d53498391b80bcde287ef7626705c"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/import/no-input.dmn",
+      "sha256": "3064d78478dcbd48932d709b36e7334b6a92719e7f356242e99b56122832b90a"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/import/no-output.dmn",
+      "sha256": "69105d29b4570b08a2b42a3a0e463a511e36a766f9c2bad854a1f761a9b6a8e9"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/import/simple.dmn",
+      "sha256": "66cfd3dcea6566ae178a7152a29aafc6d2bf6863e5622c5a67ca50ba9f4d0cde"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/no-inputs.dmn",
+      "sha256": "49d3c96f1b7b738d969f83e85eed2126c1a571f39985e076d4acba5c0194fad3"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/one-rule-one-input-one-output.dmn",
+      "sha256": "d6909fa24b2276aa812801de8ca5953d9ebb87247ec913ddd6e1206c8e5bfd0f"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/performance.dmn",
+      "sha256": "e17060dcff652a32548281aca9a31c5dab2f7318b5d142c8f005c631f4679e90"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/simple.dmn",
+      "sha256": "dff97c85dbf6b25f975dfc36cfede52f042a1255055f2b8eecc1324855b9e61b"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/spec/two-decisions.dmn",
+      "sha256": "c8b3540bc98494a3acaa980cf02b7dbe60aca3d38866451720f557a5c4252d86"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/testBundle.js",
+      "sha256": "208472f69ee6c8689d031116e18c1758a9971537cd78d2a72ccfdb7fc2f96703"
+    },
+    {
+      "path": "packages/dmn-js-decision-table/test/util/KeyEvents.js",
+      "sha256": "e8225569520e3925c3239c460dc94ec90f38e133aaf74c99cbffaba9b324b634"
+    },
+    {
+      "path": "packages/dmn-js-literal-expression/.babelrc",
+      "sha256": "c439df3f8115c92c649b97454c13c17344320b22d8796966c878cbbe7e4b5099"
+    },
+    {
+      "path": "packages/dmn-js-literal-expression/.gitignore",
+      "sha256": "76b5a357391276b282a516f54f48ef3c207f46d8192dc58c208d5183d38415f8"
+    },
+    {
+      "path": "packages/dmn-js-literal-expression/LICENSE",
+      "sha256": "0a0a9e85ba6a802fbc6e79c422b36f0e9528926c9022d29036f87e9fe101587b"
+    },
+    {
+      "path": "packages/dmn-js-literal-expression/README.md",
+      "sha256": "c7ec97294e0e1cd04d384bc45fc51db6564c8e13c5ef85dbe58f40961d31329b"
+    },
+    {
+      "path": "packages/dmn-js-literal-expression/assets/css/dmn-js-literal-expression.css",
+      "sha256": "919489fc282661a35c975ea119c5e8a560fa1f0fd04d7b522a1dd7c896c051ae"
+    },
+    {
+      "path": "packages/dmn-js-literal-expression/karma.conf.js",
+      "sha256": "7497d0f404af57219a0edeb522db8868b00ad42e9a4578d10aaa12d4bb3d4370"
+    },
+    {
+      "path": "packages/dmn-js-literal-expression/package.json",
+      "sha256": "57238fa59e3a9026d105978fe74ee7861c588f987922aa9e6742a12500dfed12"
+    },
+    {
+      "path": "packages/dmn-js-literal-expression/src/Editor.js",
+      "sha256": "90a3b2f70ded7fd1cd246f5f1adcc6c830aaadd6c4f2852173026c9d5e3c191e"
+    },
+    {
+      "path": "packages/dmn-js-literal-expression/src/Viewer.js",
+      "sha256": "edaa99264dbed3e34e503559d284f9c7ec443e85118a56313b20e8851a871b1c"
+    },
+    {
+      "path": "packages/dmn-js-literal-expression/src/core/ElementRegistry.js",
+      "sha256": "7a4699158a977202e93f5d8b701f1905d17e009197f99baf148f4c31fcbfa18f"
+    },
+    {
+      "path": "packages/dmn-js-literal-expression/src/core/index.js",
+      "sha256": "1368d855a72c8670e26f638da05eb0671eb76a4e34abb7257d956c69018221bf"
+    },
+    {
+      "path": "packages/dmn-js-literal-expression/src/features/decision-properties/DecisionProperties.js",
+      "sha256": "11f17179e9644935795d92e4c17e4ad6e045d8bcfbb00b353a55933e691c2fc8"
+    },
+    {
+      "path": "packages/dmn-js-literal-expression/src/features/decision-properties/DecisionPropertiesEditor.js",
+      "sha256": "534bd485206f4e5ea49283fb776107e4fafe3557787587cda51ec0fe3b3673ae"
+    },
+    {
+      "path": "packages/dmn-js-literal-expression/src/features/decision-properties/components/DecisionPropertiesComponent.js",
+      "sha256": "b325223e4571a753f77112051d0c8457ce7420753c771c8a3b14985417dda36f"
+    },
+    {
+      "path": "packages/dmn-js-literal-expression/src/features/decision-properties/components/DecisionPropertiesEditorComponent.js",
+      "sha256": "da7a05b2cec0fbe80a4f4d5a1fb460d3554271ac337e04cff0faa4748107799d"
+    },
+    {
+      "path": "packages/dmn-js-literal-expression/src/features/decision-properties/editor.js",
+      "sha256": "defc0e512290a5ab55817c446e205a967f858fd9e05d751bb7f54be6fb10a15a"
+    },
+    {
+      "path": "packages/dmn-js-literal-expression/src/features/decision-properties/index.js",
+      "sha256": "709c378352a07b5cf6110e0d9b21fab1fae0e7a8432d88fea7066a0ed25995ed"
+    },
+    {
+      "path": "packages/dmn-js-literal-expression/src/features/editor-actions/EditorActions.js",
+      "sha256": "4d09238c98e0270ed808ce9c804925941fcbe65f7b612b9012f1210cee215cb3"
+    },
+    {
+      "path": "packages/dmn-js-literal-expression/src/features/editor-actions/index.js",
+      "sha256": "33583ff6dbba4e8d1ba3acdd3abb4eda777ceb9b136b43a6929a27e61e233dfa"
+    },
+    {
+      "path": "packages/dmn-js-literal-expression/src/features/keyboard/Keyboard.js",
+      "sha256": "5ef54e69443b2e971ad2dc2044b1db586b3165ff63a9d299a2b0ebdf9f8597d7"
+    },
+    {
+      "path": "packages/dmn-js-literal-expression/src/features/keyboard/KeyboardUtil.js",
+      "sha256": "50100a27ef0e2bdadd03f1595e9acab535631b556ab481a04cd1e8aa1acfe003"
+    },
+    {
+      "path": "packages/dmn-js-literal-expression/src/features/keyboard/index.js",
+      "sha256": "f18b3dfc77312b35f889bacc31246a5884cfd5c7d5e49a820c34c8914da592be"
+    },
+    {
+      "path": "packages/dmn-js-literal-expression/src/features/literal-expression-properties/LiteralExpressionProperties.js",
+      "sha256": "bd628de9a99d8cbfb5f1e70c4c57940e09dd1c25de76dc7e7cd6e6abc49ca77b"
+    },
+    {
+      "path": "packages/dmn-js-literal-expression/src/features/literal-expression-properties/LiteralExpressionPropertiesEditor.js",
+      "sha256": "6a4b2da78f3f7211921f52a30770ad5544b80389a5d95b5dc081736aa8e1d81b"
+    },
+    {
+      "path": "packages/dmn-js-literal-expression/src/features/literal-expression-properties/components/LiteralExpressionPropertiesComponent.js",
+      "sha256": "762f912f09ba94da87332dfeac671f4c2e41ffffff9277cc330514670f629299"
+    },
+    {
+      "path": "packages/dmn-js-literal-expression/src/features/literal-expression-properties/components/LiteralExpressionPropertiesEditorComponent.js",
+      "sha256": "d0b8893a8f858136ac48c437d237165b66085f91eddbdb5de15d4241121944de"
+    },
+    {
+      "path": "packages/dmn-js-literal-expression/src/features/literal-expression-properties/editor.js",
+      "sha256": "6a5601fb340c36814065b8273bbf45c00dfe7d9439c35b963082c834e1701500"
+    },
+    {
+      "path": "packages/dmn-js-literal-expression/src/features/literal-expression-properties/index.js",
+      "sha256": "4a370a754e7ef91380cf7a5d0a7a1b942c170817ac309cf02bf49f5839cc3c47"
+    },
+    {
+      "path": "packages/dmn-js-literal-expression/src/features/modeling/Modeling.js",
+      "sha256": "a7ffc60ffb2ca2caa9055aa7423c38a7c16d955f9e2d407287370917ccea2860"
+    },
+    {
+      "path": "packages/dmn-js-literal-expression/src/features/modeling/index.js",
+      "sha256": "ffc46eb43db07eaf0e90d27a9179040ed340fd086a0b86b418a373591537f167"
+    },
+    {
+      "path": "packages/dmn-js-literal-expression/src/features/powered-by/PoweredBy.js",
+      "sha256": "1761a8d21d2aa71271485df086db78b4da95a1b92d046b983b7981fc70fb28b2"
+    },
+    {
+      "path": "packages/dmn-js-literal-expression/src/features/powered-by/index.js",
+      "sha256": "d41b0c61fc066c02204adcc020bf8215195a1adbbb225913a7d221aacc23bc7b"
+    },
+    {
+      "path": "packages/dmn-js-literal-expression/src/features/textarea/Textarea.js",
+      "sha256": "61f31e39b9af0d1048e3fc02d30f9cf1f8da976eb260fc46b1604fec6417d70e"
+    },
+    {
+      "path": "packages/dmn-js-literal-expression/src/features/textarea/TextareaEditor.js",
+      "sha256": "05107dfaeb968a29ff89a7e61d9f1ee0d04d8505632a3fa96c837bf0dfeb89f7"
+    },
+    {
+      "path": "packages/dmn-js-literal-expression/src/features/textarea/components/TextareaComponent.js",
+      "sha256": "3e3f27f068032387bfbd387b78fed3ffe5b23e7a3b9351b59de615a353b9da5c"
+    },
+    {
+      "path": "packages/dmn-js-literal-expression/src/features/textarea/components/TextareaEditorComponent.js",
+      "sha256": "2072eb054321436b03ffd4fdcaff69f74c8404378bc61d57c8bdeb984b1e74ed"
+    },
+    {
+      "path": "packages/dmn-js-literal-expression/src/features/textarea/editor.js",
+      "sha256": "8645c6b473621b78351fa22cc2a1bd93e116dac94177a95c6951ebbb91618954"
+    },
+    {
+      "path": "packages/dmn-js-literal-expression/src/features/textarea/index.js",
+      "sha256": "1b7d9d4cc91d564d7fbb4490a15839227c746f2ea5901e3fc4185e82ecb61b90"
+    },
+    {
+      "path": "packages/dmn-js-literal-expression/src/features/view-drd/ViewDrd.js",
+      "sha256": "f49b3d5b645794915abf2d30b114bc7ac0b86d445f02ecb6b871d406985073b4"
+    },
+    {
+      "path": "packages/dmn-js-literal-expression/src/features/view-drd/components/ViewDrdComponent.js",
+      "sha256": "eefb0d1497fb2504d2255fb3a64351472266c7ed8ebcaf206ed553899de5447f"
+    },
+    {
+      "path": "packages/dmn-js-literal-expression/src/features/view-drd/index.js",
+      "sha256": "8cf26cc140e7f8f345c5f70d010aee5d42ccec21e04991ee027ffa8da86bc1a4"
+    },
+    {
+      "path": "packages/dmn-js-literal-expression/src/index.js",
+      "sha256": "ba6c8be78a62eacd3a89c5a9bcd8ccd3d8f4983503c93a658b409556a0329a25"
+    },
+    {
+      "path": "packages/dmn-js-literal-expression/test/TestHelper.js",
+      "sha256": "54f60a8321e31ae5f48a3d1f9ac2db1acb87d722e73db606d2bea3fb40637b7b"
+    },
+    {
+      "path": "packages/dmn-js-literal-expression/test/coverageBundle.js",
+      "sha256": "b51a64c6ae3ea3013189d85699eb2c2bbd58c9d15090ff558fff1221c8bdba53"
+    },
+    {
+      "path": "packages/dmn-js-literal-expression/test/globals.js",
+      "sha256": "f0bf86940d2a86cd36b7b93cc27de4ef8b0dcf33c3b5332ee37fca8b22836c04"
+    },
+    {
+      "path": "packages/dmn-js-literal-expression/test/helper/LiteralExpressionEditor.js",
+      "sha256": "902558ada16e006ef787ff9efd930b968bc8917a284b2b622c5bb6d2e4b55c7b"
+    },
+    {
+      "path": "packages/dmn-js-literal-expression/test/helper/LiteralExpressionViewer.js",
+      "sha256": "355e34f83842b81419577c22922aabb3999cc983e032b944c669a00fd8a8febd"
+    },
+    {
+      "path": "packages/dmn-js-literal-expression/test/helper/index.js",
+      "sha256": "eda9c5574ff4451359be6b19bdac8e7b477d4fad25d7faec7cbbf1c787e37f67"
+    },
+    {
+      "path": "packages/dmn-js-literal-expression/test/spec/EditorSpec.js",
+      "sha256": "a8a449fbafaa01cce33ed7600aab50be520e88d2547ed47190c59e4ac59f5434"
+    },
+    {
+      "path": "packages/dmn-js-literal-expression/test/spec/ViewerSpec.js",
+      "sha256": "2e2b24a9b4d8c04230dafb7c10d15e6d24afea5059446bf54de94d3f463a9691"
+    },
+    {
+      "path": "packages/dmn-js-literal-expression/test/spec/core/ElementRegistrySpec.js",
+      "sha256": "72fe21cfdecb8a9a01b9e337a066b178388d21b058615412263a3d1984df685a"
+    },
+    {
+      "path": "packages/dmn-js-literal-expression/test/spec/empty-literal-expression.dmn",
+      "sha256": "3ba914e296eb7448ca79af85fd761a088262670e9486ff9708ca79a912fa1d06"
+    },
+    {
+      "path": "packages/dmn-js-literal-expression/test/spec/expression-language.dmn",
+      "sha256": "f73532eecbbd5bd8f7f8a335518852ed16b64857b0ba05361eb5f24bc67a4d66"
+    },
+    {
+      "path": "packages/dmn-js-literal-expression/test/spec/features/decision-properties/DecisionPropertiesEditorSpec.js",
+      "sha256": "d3d147880a54e691002fa80b7ca03088464dbeb0621dc36a09f381ba7bfc54d4"
+    },
+    {
+      "path": "packages/dmn-js-literal-expression/test/spec/features/decision-properties/DecisionPropertiesSpec.js",
+      "sha256": "76697d80bfaaf1ba683bb9c778513e491243f13c3ca3847ec092c5af99a9e5b5"
+    },
+    {
+      "path": "packages/dmn-js-literal-expression/test/spec/features/literal-expression-properties/LiteralExpressionEditorProperties.no-type-ref.dmn",
+      "sha256": "d740e9e4838bd3789b0b2fe44f3b97b99ce677dc701f0abd560b635037ad899e"
+    },
+    {
+      "path": "packages/dmn-js-literal-expression/test/spec/features/literal-expression-properties/LiteralExpressionEditorProperties.no-variable.dmn",
+      "sha256": "0853a799ece42fc77761da8688a520a0c86e8ffc625b625920ae62296dd1f2c0"
+    },
+    {
+      "path": "packages/dmn-js-literal-expression/test/spec/features/literal-expression-properties/LiteralExpressionEditorPropertiesSpec.js",
+      "sha256": "9d0848f5e81975aea2d33f859eb68cd4f70b7f66b07d023a44b84ac4f6b145db"
+    },
+    {
+      "path": "packages/dmn-js-literal-expression/test/spec/features/literal-expression-properties/LiteralExpressionPropertiesSpec.js",
+      "sha256": "5ce64ff2cf79d742a9f294c820b65b46ced5a2094328c6dccb3dc2b59a580473"
+    },
+    {
+      "path": "packages/dmn-js-literal-expression/test/spec/features/modeling/ModelingSpec.js",
+      "sha256": "a4b944e72571b45aaa8fb8290d72a12ccb9881e19b5e2f85b3cde05ad3cedb1e"
+    },
+    {
+      "path": "packages/dmn-js-literal-expression/test/spec/features/modeling/behavior/NameChangeBehaviorSpec.js",
+      "sha256": "92cc3e9cd8bf6014f308b6654a6da28be0593ac9fdac751a7c2393f015592218"
+    },
+    {
+      "path": "packages/dmn-js-literal-expression/test/spec/features/textarea/TextareaEditorSpec.js",
+      "sha256": "c17bf86f250c317b522164926843487e39a9f87450d916d3a101ae44f0ac0bee"
+    },
+    {
+      "path": "packages/dmn-js-literal-expression/test/spec/features/textarea/TextareaSpec.js",
+      "sha256": "315092b4d261a44105758f45b0e2eed8128d8a59422053f56c52480fe10b6ac9"
+    },
+    {
+      "path": "packages/dmn-js-literal-expression/test/spec/features/view-drd/MockViewer.js",
+      "sha256": "8f93a15f6c5b7886cc5113745d5f0172f5cce461caf41b494e72dbb9311e0988"
+    },
+    {
+      "path": "packages/dmn-js-literal-expression/test/spec/features/view-drd/ViewDrdSpec.js",
+      "sha256": "18485178d81999f4ca5f3c224c07bfaddb208b005e94b9c9667ccf8825ac234f"
+    },
+    {
+      "path": "packages/dmn-js-literal-expression/test/spec/literal-expression.dmn",
+      "sha256": "bea1380457acb7a5914f956339d91359dd148e554ae35670bb4556c2a98dbf72"
+    },
+    {
+      "path": "packages/dmn-js-literal-expression/test/testBundle.js",
+      "sha256": "c5158e4c62e5bf1d82c64de752ac9032e9f9c2b35c0d792c8c1194c897a5e289"
+    },
+    {
+      "path": "packages/dmn-js-shared/.babelrc",
+      "sha256": "c439df3f8115c92c649b97454c13c17344320b22d8796966c878cbbe7e4b5099"
+    },
+    {
+      "path": "packages/dmn-js-shared/.gitignore",
+      "sha256": "76b5a357391276b282a516f54f48ef3c207f46d8192dc58c208d5183d38415f8"
+    },
+    {
+      "path": "packages/dmn-js-shared/LICENSE",
+      "sha256": "0a0a9e85ba6a802fbc6e79c422b36f0e9528926c9022d29036f87e9fe101587b"
+    },
+    {
+      "path": "packages/dmn-js-shared/README.md",
+      "sha256": "21a7d0e05a280cec957207c26e7f1b9d489310ed52975e23aabbd9eac0bfe77d"
+    },
+    {
+      "path": "packages/dmn-js-shared/assets/css/dmn-js-shared.css",
+      "sha256": "a795acd75e1a6ecfb9d929883fe4193c303b2b3e9cc237a36523522212763940"
+    },
+    {
+      "path": "packages/dmn-js-shared/karma.base.js",
+      "sha256": "007e8e42576eb3b514a17cc56bf66bb51c9947cf27a028d9b6627180246bf8b8"
+    },
+    {
+      "path": "packages/dmn-js-shared/karma.conf.js",
+      "sha256": "8b01cebdbe0987de505b3038457e8d53189bbfa89695e40fb33ec4dc5d2a01e6"
+    },
+    {
+      "path": "packages/dmn-js-shared/package.json",
+      "sha256": "f97f24e40707ec0029d7fb9bc33314b5f14ea26165f250eef75dd2823805801e"
+    },
+    {
+      "path": "packages/dmn-js-shared/src/base/EditingManager.js",
+      "sha256": "4531ca3e60d10ea30d9749d9d3931113231d298d6319084c606cbd5671f480bc"
+    },
+    {
+      "path": "packages/dmn-js-shared/src/base/Manager.js",
+      "sha256": "8a8845a3162ca39ac2cbb8339d80f79bc963eb026b0417870422cc45eb912988"
+    },
+    {
+      "path": "packages/dmn-js-shared/src/base/View.js",
+      "sha256": "c8686d86f5635c79ffb39717ea787a058588fe02e7d888deeeef163c59aafda3"
+    },
+    {
+      "path": "packages/dmn-js-shared/src/base/viewer/Viewer.js",
+      "sha256": "9d547631382fa8c4996432e621dd5bdf43f4350754d69c0e4143e28de27e7423"
+    },
+    {
+      "path": "packages/dmn-js-shared/src/base/viewer/core/ChangeSupport.js",
+      "sha256": "63ec311b84663c02c9009cc595827c5babd1991b72dd0243518944b0cbc7ef16"
+    },
+    {
+      "path": "packages/dmn-js-shared/src/base/viewer/core/Components.js",
+      "sha256": "fe80e9ea9fe1d6ded691847a5108af9b0d35140bb6d958773ab5a1cfc29d05b9"
+    },
+    {
+      "path": "packages/dmn-js-shared/src/base/viewer/core/Renderer.js",
+      "sha256": "9557372c04a56c61ff4ce0e086f1ae5f76fec71427741cf50a13cbbc87a4a500"
+    },
+    {
+      "path": "packages/dmn-js-shared/src/base/viewer/core/components/ViewerComponent.js",
+      "sha256": "25632ea2848503b78009bc6659886d1b6eb94067610ad5009715de8b6631422f"
+    },
+    {
+      "path": "packages/dmn-js-shared/src/base/viewer/core/index.js",
+      "sha256": "c34e6f46d944234700f7021aa0a2703085efc628ea23e38c20ff8de8614d2a98"
+    },
+    {
+      "path": "packages/dmn-js-shared/src/components/Button.js",
+      "sha256": "277ba63a5827285f201883d70b7096cffa88dfeb8aa6c7fda37fcc9c24dcb3d8"
+    },
+    {
+      "path": "packages/dmn-js-shared/src/components/ContentEditable.js",
+      "sha256": "bc65993d59ae69e1067fd6d2b036951698906d09bacb3df6a57a18e49c921d6a"
+    },
+    {
+      "path": "packages/dmn-js-shared/src/components/EditableComponent.js",
+      "sha256": "1f465517aeb62f2bab3ba4c191d9c49a01b3730afccb514d17dab82dd7929e8a"
+    },
+    {
+      "path": "packages/dmn-js-shared/src/components/Input.js",
+      "sha256": "8c450d98ce3b53a90a38d6761763c14069bf9ecdb7a1869a9f929542a8c38449"
+    },
+    {
+      "path": "packages/dmn-js-shared/src/components/InputSelect.js",
+      "sha256": "9d310ea46ff57bdd6067041766d68f7c5a6536331ce48caa3bf1c7ca615cfa29"
+    },
+    {
+      "path": "packages/dmn-js-shared/src/components/List.js",
+      "sha256": "c0463419fe735d8993e0080a494e00589cda669ad6e1a898d6f038195cfa8bea"
+    },
+    {
+      "path": "packages/dmn-js-shared/src/components/LiteralExpression.js",
+      "sha256": "df40f12bd873d5565b26a323f14a250df010e5a35c99df90d88c12bc09675224"
+    },
+    {
+      "path": "packages/dmn-js-shared/src/components/Select.js",
+      "sha256": "170439bd9f825f3b4a7d61444d62e98493743e045186b7babbb7419738f7a664"
+    },
+    {
+      "path": "packages/dmn-js-shared/src/components/ValidatedInput.js",
+      "sha256": "326b262a6f55907d0b6cca7af172edb4c3c0d65ec23e846254d4a00cbc15938c"
+    },
+    {
+      "path": "packages/dmn-js-shared/src/components/mixins/ComponentWithSlots.js",
+      "sha256": "d159473e0e21babe4bdb1c261e81cf8b642fab9e141726d5d0de311dac4e256f"
+    },
+    {
+      "path": "packages/dmn-js-shared/src/components/mixins/index.js",
+      "sha256": "08663af09ffb53a503670a6219167d902dd20a1e111423685afd54ef679a82bd"
+    },
+    {
+      "path": "packages/dmn-js-shared/src/features/data-types/DataTypes.js",
+      "sha256": "6555e0b56b536abeceafb090329f7159ac24824c4574b0e04d89071487387b70"
+    },
+    {
+      "path": "packages/dmn-js-shared/src/features/data-types/DefaultDataTypesProvider.js",
+      "sha256": "fa181faac011497b34c7a543591c4cbd42583cf5e64e8fe0430b8bcf35b7b264"
+    },
+    {
+      "path": "packages/dmn-js-shared/src/features/data-types/ModelDataTypesProvider.js",
+      "sha256": "44eeb6bfb7d6174aa90c86b20526cda92085f51de307e6e8ee4b99e638813fcd"
+    },
+    {
+      "path": "packages/dmn-js-shared/src/features/data-types/index.js",
+      "sha256": "9228453ba0c3aec2935f7d58636a00d45cba3fff56bbba7bc4dc60853656ae58"
+    },
+    {
+      "path": "packages/dmn-js-shared/src/features/debounce-input/debounceInput.js",
+      "sha256": "900c8b7fc1d6e4800ad473222cb0032deaa4482498688862e7964f689bb7be93"
+    },
+    {
+      "path": "packages/dmn-js-shared/src/features/debounce-input/index.js",
+      "sha256": "26b43bb7074b8ed78edc78395a0d47794e078005aa1286f3ed7286c42f137961"
+    },
+    {
+      "path": "packages/dmn-js-shared/src/features/expression-languages/ExpressionLanguages.js",
+      "sha256": "b61604db1cebdf0035943ca8155acb456f875b1956ed746cea735c5eebcf823d"
+    },
+    {
+      "path": "packages/dmn-js-shared/src/features/expression-languages/index.js",
+      "sha256": "2620285f93d2eb2d59327c2ba78ab0549b62e723c7049f001091bdca26950768"
+    },
+    {
+      "path": "packages/dmn-js-shared/src/features/feel-language-context/FeelLanguageContext.js",
+      "sha256": "1604445e3b6ab6926ce4edba903cb52ce4f8ca6bdd4ed9d0ab3dd061583bf559"
+    },
+    {
+      "path": "packages/dmn-js-shared/src/features/feel-language-context/index.js",
+      "sha256": "cc367298d186d3024de9ae60a3b72925539dbdbfb301e3d3e5ded01ea769c137"
+    },
+    {
+      "path": "packages/dmn-js-shared/src/features/modeling/behavior/IdChangeBehavior.js",
+      "sha256": "2eb65b57ed25bb0c04bd293f15aed5c9350125713ae7ae3ac1e34815da86b4b1"
+    },
+    {
+      "path": "packages/dmn-js-shared/src/features/modeling/behavior/NameChangeBehavior.js",
+      "sha256": "146fd8347f8e32accba8a58e88b00f2ac5c19b0c95c4959bd72ad6b35fde382e"
+    },
+    {
+      "path": "packages/dmn-js-shared/src/features/modeling/cmd/UpdatePropertiesHandler.js",
+      "sha256": "8b0761590d41e789b9f49430d46bb742a67e16a89ff34d500bc2ca76a1ed8824"
+    },
+    {
+      "path": "packages/dmn-js-shared/src/util/CompatibilityUtils.js",
+      "sha256": "b7ad250128411e9b1b676daada4b03474e04c70a44dcee843bfd724aab61141f"
+    },
+    {
+      "path": "packages/dmn-js-shared/src/util/DiUtil.js",
+      "sha256": "f757f65a78aca719a39af1244fe509f51314e51a502eeafbad7c70bb478ff557"
+    },
+    {
+      "path": "packages/dmn-js-shared/src/util/IdsUtil.js",
+      "sha256": "4de235302ff2b5766d4d51fde897ce70312ebb1c9c3624978b7321794a01aca4"
+    },
+    {
+      "path": "packages/dmn-js-shared/src/util/ModelUtil.js",
+      "sha256": "f8e1c50846d8f85ffed592e072b6a1704ecb7d82cf600863225ac2e8d15b42f6"
+    },
+    {
+      "path": "packages/dmn-js-shared/src/util/PoweredByUtil.js",
+      "sha256": "c361bfa3d292662b1fff48aba502e554b2326a224306e718d65af6c4486cd3ff"
+    },
+    {
+      "path": "packages/dmn-js-shared/src/util/TypeRefUtil.js",
+      "sha256": "c1ba41561b8a325c53856d2c19924adfc2d589377c983d9956091f9771fd21ee"
+    },
+    {
+      "path": "packages/dmn-js-shared/test/coverageBundle.js",
+      "sha256": "b51a64c6ae3ea3013189d85699eb2c2bbd58c9d15090ff558fff1221c8bdba53"
+    },
+    {
+      "path": "packages/dmn-js-shared/test/globals.js",
+      "sha256": "f0bf86940d2a86cd36b7b93cc27de4ef8b0dcf33c3b5332ee37fca8b22836c04"
+    },
+    {
+      "path": "packages/dmn-js-shared/test/spec/base/EditingManagerSpec.js",
+      "sha256": "42ffdd515d5fe486540aa40658cadc558c4da95dbd563bd1e6f9197889d5afc6"
+    },
+    {
+      "path": "packages/dmn-js-shared/test/spec/base/ManagerSpec.js",
+      "sha256": "9d9f160ea87fd3b0ef1b7fab0a941857f96a9206f042bdca0352a9c1cac8f314"
+    },
+    {
+      "path": "packages/dmn-js-shared/test/spec/base/TestView.js",
+      "sha256": "a5e2eb92aa35eb02ec8877cdae7f1781b02551a82743ea9e123874d6c34799f8"
+    },
+    {
+      "path": "packages/dmn-js-shared/test/spec/base/diagram.dmn",
+      "sha256": "d4f930c44cacf194e944fc5fbe92f89553b6baf61f7668fb1736b01bd5f9e4bc"
+    },
+    {
+      "path": "packages/dmn-js-shared/test/spec/base/dmn-11.dmn",
+      "sha256": "138e6cb9625692cae7a3fdcfe4d45ed31d9c831cef12b6f9fcc3b3181d2a690f"
+    },
+    {
+      "path": "packages/dmn-js-shared/test/spec/base/dmn-12.dmn",
+      "sha256": "5ee2e3f7ba83da54e790dafd8df71da5e44b663e7e947d5cb72c51ae7ca93c76"
+    },
+    {
+      "path": "packages/dmn-js-shared/test/spec/base/drd-only.dmn",
+      "sha256": "e38057c9d9fe450b31630f50bfb8eeeaea70f00ad6634a4b92e1a1118619c50d"
+    },
+    {
+      "path": "packages/dmn-js-shared/test/spec/base/one-decision.dmn",
+      "sha256": "90bd19ff5f41ea7cf7284471a700bcd1dcadec383631a00753ed0d6ab29109d6"
+    },
+    {
+      "path": "packages/dmn-js-shared/test/spec/base/viewer/TestHelper.js",
+      "sha256": "eae3eb3da5277f7d4813c22bfaa9361d46449f23d22cbd5e9fca195c1ea11292"
+    },
+    {
+      "path": "packages/dmn-js-shared/test/spec/base/viewer/ViewerSpec.js",
+      "sha256": "57e1194f25e5735984efe9d7c02fe41995b5aa08dc179d330cb30a25483cf768"
+    },
+    {
+      "path": "packages/dmn-js-shared/test/spec/base/viewer/core/ChangeSupportSpec.js",
+      "sha256": "9d3ea2cd39fdefda43509d21dcd6ab4abf0b7c7837025eff58540fa43a2ec6a5"
+    },
+    {
+      "path": "packages/dmn-js-shared/test/spec/base/viewer/core/ComponentsSpec.js",
+      "sha256": "141d2304eeb50223546c7e03ba68a02c935e2722d9946016afa93d85e3766ca8"
+    },
+    {
+      "path": "packages/dmn-js-shared/test/spec/base/viewer/core/RendererSpec.js",
+      "sha256": "c0bbe4dc32b2c9fe61a0c702740c316bd9703a867b47cb2280a32c1833dd7f30"
+    },
+    {
+      "path": "packages/dmn-js-shared/test/spec/base/viewer/core/components/ViewerComponentSpec.js",
+      "sha256": "5641ed25495b7a3b25f5a779ad9025b544fa43ebfc1978ae0e5dd8aa0c865299"
+    },
+    {
+      "path": "packages/dmn-js-shared/test/spec/components/ContentEditableSpec.js",
+      "sha256": "70bff717120c5d83b0358cc68e275187714b6ddcc41914faaeacd3f8832654a9"
+    },
+    {
+      "path": "packages/dmn-js-shared/test/spec/components/DiContainer.js",
+      "sha256": "b4ffa247e9fc121962d8549181f1dd4fcb4ac51cfd5f2801eb1faed931f1ffc8"
+    },
+    {
+      "path": "packages/dmn-js-shared/test/spec/components/EditableComponentSpec.js",
+      "sha256": "39d453ff44a7a0fa9e15689acd95382c138183b10e16caa60a4c49896184c171"
+    },
+    {
+      "path": "packages/dmn-js-shared/test/spec/components/InputSelectSpec.js",
+      "sha256": "1726464f1be7af6854a918a17b8375034fc628c552336df441ec997a0ee7ac02"
+    },
+    {
+      "path": "packages/dmn-js-shared/test/spec/components/InputSpec.js",
+      "sha256": "82945681f4f6e26c9b3768bbd9dae65a89c82d8406554d58a4bca802632ed20f"
+    },
+    {
+      "path": "packages/dmn-js-shared/test/spec/components/ListSpec.js",
+      "sha256": "1ea6819e0b05a012cab2b26f74b936229ad7c5ad87057b1c192c5e3618aaac7a"
+    },
+    {
+      "path": "packages/dmn-js-shared/test/spec/components/LiteralExpressionSpec.js",
+      "sha256": "9c109b64b8bb82bfc1a171171412be9c697c1ceb456fb1e0ddf185b97d97f097"
+    },
+    {
+      "path": "packages/dmn-js-shared/test/spec/components/SelectSpec.js",
+      "sha256": "217536960cc6d9cd574c5db684fea1943d290cff183396fd024c7429f7943492"
+    },
+    {
+      "path": "packages/dmn-js-shared/test/spec/components/ValidatedInputSpec.js",
+      "sha256": "0052efd5c17fdfaee7b952ecd1472112a21bf382edca787baa2c63cce7d78f86"
+    },
+    {
+      "path": "packages/dmn-js-shared/test/spec/features/data-types/DataTypesSpec.js",
+      "sha256": "749ba69ef0aa7d79e7d0b10297d92c441ec75bb871fe21f4f851d220a6368c78"
+    },
+    {
+      "path": "packages/dmn-js-shared/test/spec/features/expression-languages/ExpressionLanguagesSpec.js",
+      "sha256": "0c2c995efb288667657307c51c55dcb5c601fb7e6fe37821bccbbf1cf09dcf93"
+    },
+    {
+      "path": "packages/dmn-js-shared/test/spec/util/ModelUtilSpec.js",
+      "sha256": "a7a123c9a9e2307fb06607cb51598c8d44df35e4fd5dfb2ae449097344455809"
+    },
+    {
+      "path": "packages/dmn-js-shared/test/spec/util/TypeRefUtilSpec.js",
+      "sha256": "9369f5086b000038f1a0996973d429c71d7bfcb12409a63deb62c390d2209377"
+    },
+    {
+      "path": "packages/dmn-js-shared/test/testBundle.js",
+      "sha256": "208472f69ee6c8689d031116e18c1758a9971537cd78d2a72ccfdb7fc2f96703"
+    },
+    {
+      "path": "packages/dmn-js-shared/test/util/EditorUtil.js",
+      "sha256": "a5961864f9a70a75af3cdce3edcb59de6605292c1ee816ecfe2b9e1fc4b219f2"
+    },
+    {
+      "path": "packages/dmn-js-shared/test/util/EventUtil.js",
+      "sha256": "e6142548a1ede67e7ecebc27246a9434ea599c2384e220958e4e2e5162fc6d4c"
+    },
+    {
+      "path": "packages/dmn-js-shared/test/util/InjectorUtil.js",
+      "sha256": "49c94d037b596d1649d149ddd336ecc1990b81dab29eabd3074891da0a33a173"
+    },
+    {
+      "path": "packages/dmn-js-shared/test/util/TranslateUtil.js",
+      "sha256": "9389d0c2d18b2ab5418654ecfb378c3de3fa55e5b4942297a6e90862d512bc5d"
+    },
+    {
+      "path": "packages/dmn-js/.babelrc",
+      "sha256": "b9edcef93e9ff210caaaa672bcf13daa45097c08ca3abcc8869fdb25c4d20e7d"
+    },
+    {
+      "path": "packages/dmn-js/.gitignore",
+      "sha256": "76b5a357391276b282a516f54f48ef3c207f46d8192dc58c208d5183d38415f8"
+    },
+    {
+      "path": "packages/dmn-js/CHANGELOG.md",
+      "sha256": "6bfddb547301efd9915e2340cc836020987f68138858958e675b361e49d778b2"
+    },
+    {
+      "path": "packages/dmn-js/LICENSE",
+      "sha256": "0a0a9e85ba6a802fbc6e79c422b36f0e9528926c9022d29036f87e9fe101587b"
+    },
+    {
+      "path": "packages/dmn-js/README.md",
+      "sha256": "9e9368fada80a2d9e0085d27d106a9d6b573d933a759de0b50d808f85c5954d0"
+    },
+    {
+      "path": "packages/dmn-js/karma.conf.js",
+      "sha256": "7497d0f404af57219a0edeb522db8868b00ad42e9a4578d10aaa12d4bb3d4370"
+    },
+    {
+      "path": "packages/dmn-js/package.json",
+      "sha256": "0ccef79229d0920adf2684f7e01ae02524ee0fb33d2a07644f013bac93064211"
+    },
+    {
+      "path": "packages/dmn-js/resources/banner-min.txt",
+      "sha256": "60d8c7b603deb89bfaf1f1916067c751f8de74c9aac8f5c25b562f63935187d7"
+    },
+    {
+      "path": "packages/dmn-js/resources/banner.txt",
+      "sha256": "f5f5a65cff9b4734ef2f2074dd65cfee25b30bbcb517b72065e99808f68c5795"
+    },
+    {
+      "path": "packages/dmn-js/rollup.config.js",
+      "sha256": "e19044682418895ecf402dc4579eb71b58a0d785f63db6c417c4f4be6423dd9e"
+    },
+    {
+      "path": "packages/dmn-js/src/Modeler.js",
+      "sha256": "f7f92c17718541d038110f4a1845afbce2dcc0ebd9b51e31ae9a24d3a8ff6e69"
+    },
+    {
+      "path": "packages/dmn-js/src/NavigatedViewer.js",
+      "sha256": "1c87a95bcaab986c3434dfde2a5327f625a6928cba3ad8614836631b4fd36df7"
+    },
+    {
+      "path": "packages/dmn-js/src/Viewer.js",
+      "sha256": "60837f178b4aeb0ae4260b2e3c0cf4bf2b7cdd255c8283f8b445a82c1c6d24f1"
+    },
+    {
+      "path": "packages/dmn-js/src/index.js",
+      "sha256": "ba6c8be78a62eacd3a89c5a9bcd8ccd3d8f4983503c93a658b409556a0329a25"
+    },
+    {
+      "path": "packages/dmn-js/tasks/build-distro.mjs",
+      "sha256": "2aacb14745db0e5a8fd5b5c238bf2777f4aeae1fd4f88fa38794fe452b0b4567"
+    },
+    {
+      "path": "packages/dmn-js/tasks/test-distro.mjs",
+      "sha256": "c1d31d6b66cf8cb8812bc5569002216f6778e8365230386be7031f058e61f1d4"
+    },
+    {
+      "path": "packages/dmn-js/test/coverageBundle.js",
+      "sha256": "f18b94a715403c1e0a77e5dc1454c5c3dcfbfc8ab200ab073af90ecdefbebb56"
+    },
+    {
+      "path": "packages/dmn-js/test/distro/diagram.dmn",
+      "sha256": "450d840287366f7b3055b3aeb8f89b1c85676881e2eed1b630418429ee6fb682"
+    },
+    {
+      "path": "packages/dmn-js/test/distro/dmn-modeler.js",
+      "sha256": "d6e4529d5e3bd24756f43efeea15f7d4ce53f9495e55f2862e417d4dacdbbb23"
+    },
+    {
+      "path": "packages/dmn-js/test/distro/dmn-navigated-viewer.js",
+      "sha256": "b7cef3889f760ea34db7326f8a31ffe84b08caf75b82204e7946b10e803de8a0"
+    },
+    {
+      "path": "packages/dmn-js/test/distro/dmn-viewer.js",
+      "sha256": "bf655698af653cb4db314843029edc31d8c82c5270416124ab1ba6a57d663e75"
+    },
+    {
+      "path": "packages/dmn-js/test/distro/helper.js",
+      "sha256": "77f531855453b680e11cda6fa011bc651535c1d8bb7aa48da2b0b20b8e098320"
+    },
+    {
+      "path": "packages/dmn-js/test/distro/karma.conf.js",
+      "sha256": "bddaa1005db5f33f1a50f572c1689a74147ca7d80fffbdf25ed2cf0d414b873a"
+    },
+    {
+      "path": "packages/dmn-js/test/globals.js",
+      "sha256": "f0bf86940d2a86cd36b7b93cc27de4ef8b0dcf33c3b5332ee37fca8b22836c04"
+    },
+    {
+      "path": "packages/dmn-js/test/helper/index.js",
+      "sha256": "40cabfbb6a7723378ae8d35df4777047093b9f2bd17ceea4ee00c359fd6f94e6"
+    },
+    {
+      "path": "packages/dmn-js/test/spec/ModelerSpec.js",
+      "sha256": "4cadd0950cc827be14a16f3d609060897f7d7b55acb4f10871f10ddbc41804da"
+    },
+    {
+      "path": "packages/dmn-js/test/spec/NavigatedViewerSpec.js",
+      "sha256": "1de553096b6d66a809c894474189c5b69359913241bde751af1952e1a89e340c"
+    },
+    {
+      "path": "packages/dmn-js/test/spec/TabbingSpec.js",
+      "sha256": "c12cb91b29b78a4a37715dd62f74ff6bdd2120cfb1d60c794d5a9162502397be"
+    },
+    {
+      "path": "packages/dmn-js/test/spec/ViewerSpec.js",
+      "sha256": "bb8c9d2fdcc01e82f261cdae74c108c105ca9276feeb981b31cd14c9b60e598f"
+    },
+    {
+      "path": "packages/dmn-js/test/spec/diagram.dmn",
+      "sha256": "fb82eb09e680a0d3bdd8fecbec255f4f4e9cf9e353b9784d38104ff564807f4e"
+    },
+    {
+      "path": "packages/dmn-js/test/spec/dmn-11.dmn",
+      "sha256": "138e6cb9625692cae7a3fdcfe4d45ed31d9c831cef12b6f9fcc3b3181d2a690f"
+    },
+    {
+      "path": "packages/dmn-js/test/spec/drd-only.dmn",
+      "sha256": "37f5e14ad9a8af4961a7d239659b1256b38c375a4f69422bcf855699358a9007"
+    },
+    {
+      "path": "packages/dmn-js/test/spec/no-di.dmn",
+      "sha256": "a21a787f5483340aff89921ca887b5ce4586d744aee023abd3d0064db59d324a"
+    },
+    {
+      "path": "packages/dmn-js/test/spec/no-displayable-contents.dmn",
+      "sha256": "47722c1f9b382c7cd1ac9ee24ee07ab4fb5fb9e90c5d8f0110fd341525f7cbeb"
+    },
+    {
+      "path": "packages/dmn-js/test/spec/performance.dmn",
+      "sha256": "e17060dcff652a32548281aca9a31c5dab2f7318b5d142c8f005c631f4679e90"
+    },
+    {
+      "path": "packages/dmn-js/test/testBundle.js",
+      "sha256": "c5158e4c62e5bf1d82c64de752ac9032e9f9c2b35c0d792c8c1194c897a5e289"
+    }
+  ],
+  "runtime": "Official dmn-js-decision-table18.0.2 and shared18.0.1 match fixed source package versions. Select official decisionTable provider only; no DRD/literal/boxed substitute or fake decision execution. Lockfile pins actual installed range dependencies.",
+  "dependencies": [
+    {
+      "name": "@bpmn-io/cm-theme",
+      "version": "0.2.2",
+      "license": "MIT",
+      "path": "node_modules/@bpmn-io/cm-theme",
+      "files": [
+        "node_modules/@bpmn-io/cm-theme/LICENSE"
+      ],
+      "scope": "positive-emitted npm runtime",
+      "licenseSHA256": [
+        "ca21f10f37fe5248a2a9e951781225f481cac872a297adb38f4158759da00006"
+      ],
+      "packageJSONSHA256": "909677ee3dde1f804adfecc4830bb97020faeec0be44c61ebd4b609571bdc9b5"
+    },
+    {
+      "name": "@bpmn-io/dmn-variable-resolver",
+      "version": "0.7.1",
+      "license": "MIT",
+      "path": "node_modules/@bpmn-io/dmn-variable-resolver",
+      "files": [
+        "node_modules/@bpmn-io/dmn-variable-resolver/LICENSE"
+      ],
+      "scope": "positive-emitted npm runtime",
+      "licenseSHA256": [
+        "5212b7c0fecc811f998b9c5a94f04de047d1b16955a0f09bfbd8277441a15877"
+      ],
+      "packageJSONSHA256": "28f0cd02a3413b36f67257610a6cc2f04a35f6bf3f12e65b8b497ed16083e445"
+    },
+    {
+      "name": "@bpmn-io/feel-analyzer",
+      "version": "0.5.1",
+      "license": "MIT",
+      "path": "node_modules/@bpmn-io/feel-analyzer",
+      "files": [
+        "node_modules/@bpmn-io/feel-analyzer/LICENSE"
+      ],
+      "scope": "positive-emitted npm runtime",
+      "licenseSHA256": [
+        "37cafb7368dd057bfd6a9b541da463601899f9434ed4fe3301e4c783eb57a95f"
+      ],
+      "packageJSONSHA256": "d82ae53835aef1c669d1fcba9fe2d9bb3ebbaf4f0213219978fc5ccb0e7eaebc"
+    },
+    {
+      "name": "@bpmn-io/feel-editor",
+      "version": "2.8.1",
+      "license": "MIT",
+      "path": "node_modules/@bpmn-io/feel-editor",
+      "files": [
+        "node_modules/@bpmn-io/feel-editor/LICENSE"
+      ],
+      "scope": "positive-emitted npm runtime",
+      "licenseSHA256": [
+        "40fd0764875e10fc580be3f16d861ffd544a1bb9995654f36d5f8bdb4ddb5648"
+      ],
+      "packageJSONSHA256": "122b6448acde9561cad3bb8e6b7086c94bd1b1cd2355161891dfa72bed00a9e2"
+    },
+    {
+      "name": "@bpmn-io/feel-lint",
+      "version": "3.2.0",
+      "license": "MIT",
+      "path": "node_modules/@bpmn-io/feel-lint",
+      "files": [
+        "node_modules/@bpmn-io/feel-lint/LICENSE"
+      ],
+      "scope": "positive-emitted npm runtime",
+      "licenseSHA256": [
+        "f0283f09e318a0258fb31e6878a1373bee46909fc4347065bbe709b472d6c2ad"
+      ],
+      "packageJSONSHA256": "52b7743c403a27fb389c342816da8a4355c053b7cb6a1b5d523665b70b6bc4f1"
+    },
+    {
+      "name": "@bpmn-io/lang-feel",
+      "version": "4.0.2",
+      "license": "MIT",
+      "path": "node_modules/@bpmn-io/lang-feel",
+      "files": [
+        "node_modules/@bpmn-io/lang-feel/LICENSE"
+      ],
+      "scope": "positive-emitted npm runtime",
+      "licenseSHA256": [
+        "d25ed19cfe61b40a870bbcd85a7df2bc833ef24cce37ed8da828279a9a559d0b"
+      ],
+      "packageJSONSHA256": "e8e4bfb8603dcdec0c536ab729afe37bb3812ddcc768cabd2a14bc8b3c2e246e"
+    },
+    {
+      "name": "@bpmn-io/lezer-feel",
+      "version": "3.0.1",
+      "license": "MIT",
+      "path": "node_modules/@bpmn-io/lezer-feel",
+      "files": [
+        "node_modules/@bpmn-io/lezer-feel/LICENSE"
+      ],
+      "scope": "positive-emitted npm runtime",
+      "licenseSHA256": [
+        "1c2354815e46cd9e25db44f8f154b827c613eac431089ac0e8ce6207dbc8db89"
+      ],
+      "packageJSONSHA256": "3a6d55f89727effa82708782512e1937488207bf0e26f8d919529c17555dee0f"
+    },
+    {
+      "name": "@bpmn-io/semver-compat",
+      "version": "0.1.0",
+      "license": "MIT",
+      "path": "node_modules/@bpmn-io/semver-compat",
+      "files": [
+        "license-evidence/semver-compat-MIT-supplement.txt"
+      ],
+      "declarationEvidence": {
+        "npmRegistrySHA256": "ad26115b2d9dffa6d329ea4c6b2f20f81962d690602e68e10bee28585bb19b0c",
+        "officialGitHead": "35f0ee992818e1170c551df87cb57c074e77d807",
+        "fixedPackageSHA256": "e1633787bf856c24c32bfecf13c848e03bb984f67ce95518cad535e5ecfe7579",
+        "qualification": "Official MIT declaration; standard MIT supplement, not falsely attributed upstream LICENSE."
+      },
+      "scope": "positive-emitted npm runtime",
+      "licenseSHA256": [
+        "9b3699f25cb93807dc1c96b531e00a606147e12d142976144ac0831c5c50d56c"
+      ],
+      "packageJSONSHA256": "e1633787bf856c24c32bfecf13c848e03bb984f67ce95518cad535e5ecfe7579"
+    },
+    {
+      "name": "@camunda/feel-builtins",
+      "version": "1.5.0",
+      "license": "MIT",
+      "path": "node_modules/@camunda/feel-builtins",
+      "files": [
+        "node_modules/@camunda/feel-builtins/LICENSE"
+      ],
+      "scope": "positive-emitted npm runtime",
+      "licenseSHA256": [
+        "3dfc0bf47158a9b487fe251d78e38a91ff626446e73ddc2157cc565917f882f1"
+      ],
+      "packageJSONSHA256": "80a5767cdb2152f24b9241ebab99db5fc439f394d082555b7e7b3f275ba4623a"
+    },
+    {
+      "name": "@codemirror/autocomplete",
+      "version": "6.20.4",
+      "license": "MIT",
+      "path": "node_modules/@codemirror/autocomplete",
+      "files": [
+        "node_modules/@codemirror/autocomplete/LICENSE"
+      ],
+      "scope": "positive-emitted npm runtime",
+      "licenseSHA256": [
+        "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07"
+      ],
+      "packageJSONSHA256": "6d7fa54e616d69e142ff46b413641688b72b41e944b1aa392ddb2a03957a18b3"
+    },
+    {
+      "name": "@codemirror/commands",
+      "version": "6.11.1",
+      "license": "MIT",
+      "path": "node_modules/@codemirror/commands",
+      "files": [
+        "node_modules/@codemirror/commands/LICENSE"
+      ],
+      "scope": "positive-emitted npm runtime",
+      "licenseSHA256": [
+        "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07"
+      ],
+      "packageJSONSHA256": "89c6b42b55084ca449b6956ee6409bcae615a70fdce04b990a1e38bbbc3ad883"
+    },
+    {
+      "name": "@codemirror/language",
+      "version": "6.13.1",
+      "license": "MIT",
+      "path": "node_modules/@codemirror/language",
+      "files": [
+        "node_modules/@codemirror/language/LICENSE"
+      ],
+      "scope": "positive-emitted npm runtime",
+      "licenseSHA256": [
+        "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07"
+      ],
+      "packageJSONSHA256": "213da785d0246774f4c9dc0527a97e8756119fb2e6c4de6d30575bc221f7dd9b"
+    },
+    {
+      "name": "@codemirror/lint",
+      "version": "6.9.7",
+      "license": "MIT",
+      "path": "node_modules/@codemirror/lint",
+      "files": [
+        "node_modules/@codemirror/lint/LICENSE"
+      ],
+      "scope": "positive-emitted npm runtime",
+      "licenseSHA256": [
+        "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07"
+      ],
+      "packageJSONSHA256": "c85ba7a1530b1a70616cc5ce35bfed4b8d73993d2499efe584e1a977148f72bd"
+    },
+    {
+      "name": "@codemirror/state",
+      "version": "6.7.6",
+      "license": "MIT",
+      "path": "node_modules/@codemirror/state",
+      "files": [
+        "node_modules/@codemirror/state/LICENSE"
+      ],
+      "scope": "positive-emitted npm runtime",
+      "licenseSHA256": [
+        "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07"
+      ],
+      "packageJSONSHA256": "0d5d4cb502ac5ece9c5c76104fd72b30b4a5b16eeaf7a5d6f0a8abbf295c10c3"
+    },
+    {
+      "name": "@codemirror/view",
+      "version": "6.43.15",
+      "license": "MIT",
+      "path": "node_modules/@codemirror/view",
+      "files": [
+        "node_modules/@codemirror/view/LICENSE"
+      ],
+      "scope": "positive-emitted npm runtime",
+      "licenseSHA256": [
+        "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07"
+      ],
+      "packageJSONSHA256": "25ffcd6d7ca21bea40f672586e3bd81d026413a99f7828d537ddb51741afe94a"
+    },
+    {
+      "name": "@lezer/common",
+      "version": "1.5.5",
+      "license": "MIT",
+      "path": "node_modules/@lezer/common",
+      "files": [
+        "node_modules/@lezer/common/LICENSE"
+      ],
+      "scope": "positive-emitted npm runtime",
+      "licenseSHA256": [
+        "568902fb66eaf1f11750e966b33fd7b5d7c618e65af09f35ef843635bcf5f1ba"
+      ],
+      "packageJSONSHA256": "5018f15f64b384023f6be21b69db566b3befac047a1d129827666fbe786d13b9"
+    },
+    {
+      "name": "@lezer/highlight",
+      "version": "1.2.5",
+      "license": "MIT",
+      "path": "node_modules/@lezer/highlight",
+      "files": [
+        "node_modules/@lezer/highlight/LICENSE"
+      ],
+      "scope": "positive-emitted npm runtime",
+      "licenseSHA256": [
+        "568902fb66eaf1f11750e966b33fd7b5d7c618e65af09f35ef843635bcf5f1ba"
+      ],
+      "packageJSONSHA256": "e50eb1fc5c2831ab58274ce2ea6cac989a0c80cc84f9fbabcb4100eee4327710"
+    },
+    {
+      "name": "@lezer/lr",
+      "version": "1.4.12",
+      "license": "MIT",
+      "path": "node_modules/@lezer/lr",
+      "files": [
+        "node_modules/@lezer/lr/LICENSE"
+      ],
+      "scope": "positive-emitted npm runtime",
+      "licenseSHA256": [
+        "568902fb66eaf1f11750e966b33fd7b5d7c618e65af09f35ef843635bcf5f1ba"
+      ],
+      "packageJSONSHA256": "e7ae72a09f5942c1a8466056b607a118a70e175098b619a0c660ff6329e414a8"
+    },
+    {
+      "name": "@marijn/find-cluster-break",
+      "version": "1.0.4",
+      "license": "MIT",
+      "path": "node_modules/@marijn/find-cluster-break",
+      "files": [
+        "node_modules/@marijn/find-cluster-break/LICENSE"
+      ],
+      "scope": "positive-emitted npm runtime",
+      "licenseSHA256": [
+        "9360b00fdd091f05c783b568bdd46c679c41b72415599252de98949462ea1acb"
+      ],
+      "packageJSONSHA256": "5ee922ec8f5586c2104e070ad9b60c1c18f32bfc3dad48634f93d3bbbdcd182b"
+    },
+    {
+      "name": "crelt",
+      "version": "1.0.7",
+      "license": "MIT",
+      "path": "node_modules/crelt",
+      "files": [
+        "node_modules/crelt/LICENSE"
+      ],
+      "scope": "positive-emitted npm runtime",
+      "licenseSHA256": [
+        "23852ebf6aef7fadffc92514b3c5df163a8651f2c3ed0dbb494cb49d93bd5de5"
+      ],
+      "packageJSONSHA256": "9e85a4699c12ad932528bc2321986e8f991c1f9b074551a04e3814d72c1cc44a"
+    },
+    {
+      "name": "css.escape",
+      "version": "1.5.1",
+      "license": "MIT",
+      "path": "node_modules/css.escape",
+      "files": [
+        "node_modules/css.escape/LICENSE-MIT.txt"
+      ],
+      "scope": "positive-emitted npm runtime",
+      "licenseSHA256": [
+        "483acb265f182907d1caf6cff9c16c96f31325ed23792832cc5d8b12d5f88c8a"
+      ],
+      "packageJSONSHA256": "77766896bc04668e5777b54038a30ba198cc1eb317c1675e29781d67499e6055"
+    },
+    {
+      "name": "diagram-js",
+      "version": "15.28.1",
+      "license": "MIT",
+      "path": "node_modules/diagram-js",
+      "files": [
+        "node_modules/diagram-js/LICENSE"
+      ],
+      "scope": "positive-emitted npm runtime",
+      "licenseSHA256": [
+        "39e5358fd556ba6cb3b7eb1ff69ff43766e2f29c4e1d67e43cab08ad74016632"
+      ],
+      "packageJSONSHA256": "c5bcf71cb321b7f766184e10bf6ea9a08bdc4caa6ff3dcd52eafeac85144ed17"
+    },
+    {
+      "name": "didi",
+      "version": "11.0.1",
+      "license": "MIT",
+      "path": "node_modules/didi",
+      "files": [
+        "node_modules/didi/LICENSE"
+      ],
+      "scope": "positive-emitted npm runtime",
+      "licenseSHA256": [
+        "d5146508218decaf27da594596f1356219e8d565ed10185892c2ab087f94a39f"
+      ],
+      "packageJSONSHA256": "bbf4d097cc49964a274fd42656e8cf7eccb3eb75971ef64b5780d3b0d5fc2746"
+    },
+    {
+      "name": "dmn-js-decision-table",
+      "version": "18.0.2",
+      "license": "SEE LICENSE IN LICENSE",
+      "path": "node_modules/dmn-js-decision-table",
+      "files": [
+        "node_modules/dmn-js-decision-table/LICENSE"
+      ],
+      "scope": "positive-emitted npm runtime",
+      "licenseSHA256": [
+        "0a0a9e85ba6a802fbc6e79c422b36f0e9528926c9022d29036f87e9fe101587b"
+      ],
+      "packageJSONSHA256": "2060264d4157680dcce7cc961228ccf0825971330320e9d02293ba268fc3c40e"
+    },
+    {
+      "name": "dmn-js-shared",
+      "version": "18.0.1",
+      "license": "SEE LICENSE IN LICENSE",
+      "path": "node_modules/dmn-js-shared",
+      "files": [
+        "node_modules/dmn-js-shared/LICENSE"
+      ],
+      "scope": "positive-emitted npm runtime",
+      "licenseSHA256": [
+        "0a0a9e85ba6a802fbc6e79c422b36f0e9528926c9022d29036f87e9fe101587b"
+      ],
+      "packageJSONSHA256": "f97f24e40707ec0029d7fb9bc33314b5f14ea26165f250eef75dd2823805801e"
+    },
+    {
+      "name": "dmn-moddle",
+      "version": "12.2.1",
+      "license": "MIT",
+      "path": "node_modules/dmn-moddle",
+      "files": [
+        "node_modules/dmn-moddle/LICENSE"
+      ],
+      "scope": "positive-emitted npm runtime",
+      "licenseSHA256": [
+        "294d7be66b9f34bf0762cfcab238764e491ea19c04d448b8e32e45aec040196b"
+      ],
+      "packageJSONSHA256": "a7984164fa35d4b8a00bc0a5dbf71cd16022e7d4e7fcee9f91d3f28ac573dbeb"
+    },
+    {
+      "name": "domify",
+      "version": "3.0.0",
+      "license": "MIT",
+      "path": "node_modules/domify",
+      "files": [
+        "node_modules/domify/license"
+      ],
+      "scope": "positive-emitted npm runtime",
+      "licenseSHA256": [
+        "68e112c272f0a1988f4014518abaaacdcfa9ced6830d734acfb6a28ff9172e3e"
+      ],
+      "packageJSONSHA256": "688017d85425db7a6d903384d1be96bfa96af0e6bc637a2c68652d1ea89d4c04"
+    },
+    {
+      "name": "escape-html",
+      "version": "1.0.3",
+      "license": "MIT",
+      "path": "node_modules/escape-html",
+      "files": [
+        "node_modules/escape-html/LICENSE"
+      ],
+      "scope": "positive-emitted npm runtime",
+      "licenseSHA256": [
+        "255aa557a1f55224ce522f311629c0bf20854740a67955cefd798fbd1d3d1ded"
+      ],
+      "packageJSONSHA256": "bd320a3e9d23249f5f7d3ce72f2fa426e28a6b2704bd2b281d0c92806a1f5223"
+    },
+    {
+      "name": "ids",
+      "version": "3.0.2",
+      "license": "MIT",
+      "path": "node_modules/ids",
+      "files": [
+        "node_modules/ids/LICENSE"
+      ],
+      "scope": "positive-emitted npm runtime",
+      "licenseSHA256": [
+        "3082b548bd9c98364ebbed1cbd40bfe1721c7edf2376f26f25fb06c729cc077a"
+      ],
+      "packageJSONSHA256": "fe10642225121371ea5144b8c13c0ce3e7b6a91ae9e8e69a2a3d9bf6797bdb5d"
+    },
+    {
+      "name": "inferno",
+      "version": "5.6.3",
+      "license": "MIT",
+      "path": "node_modules/inferno",
+      "files": [
+        "node_modules/inferno/LICENSE.md"
+      ],
+      "scope": "positive-emitted npm runtime",
+      "licenseSHA256": [
+        "52cb064f08fe7b155858b2a7f3f4806bece1c864bde27e96dafafc9f4d7a04d4"
+      ],
+      "packageJSONSHA256": "df501b113f25c4e963394ab35e92476a280045e97dd6e058d156d075020ed460"
+    },
+    {
+      "name": "inherits-browser",
+      "version": "0.1.0",
+      "license": "ISC",
+      "path": "node_modules/inherits-browser",
+      "files": [
+        "node_modules/inherits-browser/LICENSE"
+      ],
+      "scope": "positive-emitted npm runtime",
+      "licenseSHA256": [
+        "5e46d1c918308e68ec3b9ca9d421f41248485eaed9fb8f10b80cb89c8574a7fb"
+      ],
+      "packageJSONSHA256": "a4968ea5ccb498b33b38df7031328855897e1af13b50920e552d6af9909fbf60"
+    },
+    {
+      "name": "min-dash",
+      "version": "5.1.0",
+      "license": "MIT",
+      "path": "node_modules/min-dash",
+      "files": [
+        "node_modules/min-dash/LICENSE"
+      ],
+      "scope": "positive-emitted npm runtime",
+      "licenseSHA256": [
+        "21b28e21af7e43fbdc4a77d166146024baacc509cf9c8c4986fb0248724fdd30"
+      ],
+      "packageJSONSHA256": "a0fc061cb3b3e6c6daf842b8b523a4b261124e56c9ea0979bd10429ad22428e8"
+    },
+    {
+      "name": "min-dom",
+      "version": "5.3.0",
+      "license": "MIT",
+      "path": "node_modules/min-dom",
+      "files": [
+        "node_modules/min-dom/LICENSE"
+      ],
+      "scope": "positive-emitted npm runtime",
+      "licenseSHA256": [
+        "ee9092be4d5377d9aa640656edb7ee2a42991664b95c53a5e4a6abf071e27669"
+      ],
+      "packageJSONSHA256": "07f94857031d6532f98b8401d780ae47b58734a6fb532291e9a42d66fde89d6f"
+    },
+    {
+      "name": "mitt",
+      "version": "3.0.1",
+      "license": "MIT",
+      "path": "node_modules/mitt",
+      "files": [
+        "node_modules/mitt/LICENSE"
+      ],
+      "scope": "positive-emitted npm runtime",
+      "licenseSHA256": [
+        "1cab22f196264195a4caec8ca5630170fdde76ee8f43346e47021d087332d3b0"
+      ],
+      "packageJSONSHA256": "99966ad2891dfe56614f039f5d03ada4bda6dba810952272ae57359abb527b91"
+    },
+    {
+      "name": "moddle",
+      "version": "8.2.1",
+      "license": "MIT",
+      "path": "node_modules/moddle",
+      "files": [
+        "node_modules/moddle/LICENSE"
+      ],
+      "scope": "positive-emitted npm runtime",
+      "licenseSHA256": [
+        "39e5358fd556ba6cb3b7eb1ff69ff43766e2f29c4e1d67e43cab08ad74016632"
+      ],
+      "packageJSONSHA256": "02b4a41f15b70f55847acd0c45fc0e2add19cfa1353040925d63a290b5d6d3b1"
+    },
+    {
+      "name": "moddle-xml",
+      "version": "12.3.2",
+      "license": "MIT",
+      "path": "node_modules/moddle-xml",
+      "files": [
+        "node_modules/moddle-xml/LICENSE"
+      ],
+      "scope": "positive-emitted npm runtime",
+      "licenseSHA256": [
+        "39e5358fd556ba6cb3b7eb1ff69ff43766e2f29c4e1d67e43cab08ad74016632"
+      ],
+      "packageJSONSHA256": "fbb5668aee11a3f7e03011125d93a5e08126b8857ef39d3a5f9e81e28ce9287e"
+    },
+    {
+      "name": "saxen",
+      "version": "11.2.0",
+      "license": "MIT",
+      "path": "node_modules/saxen",
+      "files": [
+        "node_modules/saxen/LICENSE"
+      ],
+      "scope": "positive-emitted npm runtime",
+      "licenseSHA256": [
+        "dbda1f03cbd146adb0da20657a72432d83eae3134dffacdfeff6db4c5e32207a"
+      ],
+      "packageJSONSHA256": "35cf60bb50770ce08c3c712654b722a2e6131e14503566953c02c6bb7d7b0189"
+    },
+    {
+      "name": "selection-ranges",
+      "version": "4.1.1",
+      "license": "MIT",
+      "path": "node_modules/selection-ranges",
+      "files": [
+        "node_modules/selection-ranges/LICENSE"
+      ],
+      "scope": "positive-emitted npm runtime",
+      "licenseSHA256": [
+        "cec493a00c0a6bf26a4c05ea868dd8d628aa01b12bbd320b3032bd2b1e91d7b3"
+      ],
+      "packageJSONSHA256": "b9a3b046018a5e0cd5c8ea066c64256077e10f7a9998eb5a4d30567ae7b4fdcd"
+    },
+    {
+      "name": "selection-update",
+      "version": "1.1.1",
+      "license": "MIT",
+      "path": "node_modules/selection-update",
+      "files": [
+        "node_modules/selection-update/LICENSE"
+      ],
+      "scope": "positive-emitted npm runtime",
+      "licenseSHA256": [
+        "6b1ef51e9188ecf7b17b5fcab49c36d5ba94f7b02b7dd2d0ab5d4d9038209d62"
+      ],
+      "packageJSONSHA256": "caa32cf5852f891c1e13a2ec4b7888571642a71ae15d7fb6b7e4bf40ebd1a1d5"
+    },
+    {
+      "name": "style-mod",
+      "version": "4.1.4",
+      "license": "MIT",
+      "path": "node_modules/style-mod",
+      "files": [
+        "node_modules/style-mod/LICENSE"
+      ],
+      "scope": "positive-emitted npm runtime",
+      "licenseSHA256": [
+        "cb4474e26547397169061d3586c00022cda5330a1b64fa13e872319f3b63aff1"
+      ],
+      "packageJSONSHA256": "0aa5f5995a953bc3f1d02164a5ec0e58d13bf9f7d362c44bf0526e667439f842"
+    },
+    {
+      "name": "table-js",
+      "version": "9.4.0",
+      "license": "MIT",
+      "path": "node_modules/table-js",
+      "files": [
+        "node_modules/table-js/LICENSE"
+      ],
+      "scope": "positive-emitted npm runtime",
+      "licenseSHA256": [
+        "21b28e21af7e43fbdc4a77d166146024baacc509cf9c8c4986fb0248724fdd30"
+      ],
+      "packageJSONSHA256": "cd78f244730dcb6bfa223c5edb41764f9cbeabe44e443e0d95c988c2b1bc3d81"
+    },
+    {
+      "name": "w3c-keyname",
+      "version": "2.2.8",
+      "license": "MIT",
+      "path": "node_modules/w3c-keyname",
+      "files": [
+        "node_modules/w3c-keyname/LICENSE"
+      ],
+      "scope": "positive-emitted npm runtime",
+      "licenseSHA256": [
+        "869c30f368eb08735e779027b9f4bc9fea2f39624351856aebe42741f0bc0884"
+      ],
+      "packageJSONSHA256": "0396c646f74d52c1b0851074ecdb5cabf540af595ceb5e5a5136df2bf3c2f83b"
+    }
+  ],
+  "embeddedDependency": {
+    "name": "semver",
+    "version": "7.7.4",
+    "license": "ISC",
+    "fixedUpstreamLockSHA256": "0ff578baab00226f982bff40d1f3bf7aa63066417d7daaa407117f5b184a18e1",
+    "licenseSHA256": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b"
+  },
+  "font": {
+    "name": "dmn-font",
+    "version": "0.6.2",
+    "license": "OFL-1.1",
+    "originalSVG": "4bd3a7546d27598054171a664a0717d23d2cc1dcf34f0d2ce5f28d1f712aa7fa",
+    "bundledSVG": "4bd3a7546d27598054171a664a0717d23d2cc1dcf34f0d2ce5f28d1f712aa7fa",
+    "conversion": "40 original glyph paths mapped to CSS masks as ordinary UTF8 SVG text, viewBox and original font coordinates retained; no binary/base64 font, original attribution retained.",
+    "glyphProof": {
+      "fontSHA256": "4bd3a7546d27598054171a664a0717d23d2cc1dcf34f0d2ce5f28d1f712aa7fa",
+      "license": "OFL-1.1; original glyph paths retained; outline conversion retains OFL, no binary font encoding",
+      "glyphs": [
+        {
+          "class": "dmn-icon-up",
+          "unicode": "e800",
+          "originalPath": "M564 280q16-16 16-41t-16-41q-38-38-78 0l-196 188-196-188q-40-38-78 0-16 16-16 41t16 41l234 224q16 16 40 16t40-16z",
+          "viewBox": "0 0 580 1000"
+        },
+        {
+          "class": "dmn-icon-down",
+          "unicode": "e801",
+          "originalPath": "M564 422l-234-224q-18-18-40-18t-40 18l-234 224q-16 16-16 41t16 41q38 38 78 0l196-188 196 188q40 38 78 0 16-16 16-41t-16-41z",
+          "viewBox": "0 0 580 1000"
+        },
+        {
+          "class": "dmn-icon-clear",
+          "unicode": "e802",
+          "originalPath": "M452 194q18-18 18-43t-18-43q-18-16-43-16t-43 16l-132 152-132-152q-18-16-43-16t-43 16q-16 18-16 43t16 43l138 156-138 158q-16 18-16 43t16 43q18 16 43 16t43-16l132-152 132 152q18 16 43 16t43-16q18-18 18-43t-18-43l-138-158z",
+          "viewBox": "0 0 470 1000"
+        },
+        {
+          "class": "dmn-icon-plus",
+          "unicode": "e803",
+          "originalPath": "M550 400q30 0 30-50t-30-50l-210 0 0-210q0-30-50-30t-50 30l0 210-210 0q-30 0-30 50t30 50l210 0 0 210q0 30 50 30t50-30l0-210 210 0z",
+          "viewBox": "0 0 580 1000"
+        },
+        {
+          "class": "dmn-icon-minus",
+          "unicode": "e804",
+          "originalPath": "M550 400q30 0 30-50t-30-50l-520 0q-30 0-30 50t30 50l520 0z",
+          "viewBox": "0 0 580 1000"
+        },
+        {
+          "class": "dmn-icon-info",
+          "unicode": "e805",
+          "originalPath": "M352 850q48 0 74-27t26-69q0-50-39-88t-95-38q-48 0-74 26t-24 72q0 46 35 85t97 39z m-206-1000q-100 0-54 178l60 254q14 56 0 56-12 0-54-18t-72-38l-26 44q90 78 189 126t151 48q78 0 36-162l-70-266q-16-64 6-64 44 0 118 60l30-40q-84-86-175-132t-139-46z",
+          "viewBox": "0 0 460 1000"
+        },
+        {
+          "class": "dmn-icon-left",
+          "unicode": "e806",
+          "originalPath": "M242 626q14 16 39 16t41-16q38-36 0-80l-186-196 186-194q38-44 0-80-16-16-40-16t-40 16l-226 236q-16 16-16 38 0 24 16 40 206 214 226 236z",
+          "viewBox": "0 0 341 1000"
+        },
+        {
+          "class": "dmn-icon-decision",
+          "unicode": "e807",
+          "originalPath": "M16 663l0-25 0-601 968 0 0 626-968 0z m51-51l866 0 0-524-866 0 0 524z",
+          "viewBox": "0 0 1000 1000"
+        },
+        {
+          "class": "dmn-icon-right",
+          "unicode": "e808",
+          "originalPath": "M98 626l226-236q16-16 16-40 0-22-16-38l-226-236q-16-16-40-16t-40 16q-36 36 0 80l186 194-186 196q-36 44 0 80 16 16 41 16t39-16z",
+          "viewBox": "0 0 340 1000"
+        },
+        {
+          "class": "dmn-icon-input",
+          "unicode": "e809",
+          "originalPath": "M661 350q0-14-11-25l-303-304q-11-10-26-10t-25 10-10 25v161h-250q-15 0-25 11t-11 25v214q0 15 11 25t25 11h250v161q0 14 10 25t25 10 26-10l303-304q11-10 11-25z m196 196v-392q0-67-47-114t-114-47h-178q-7 0-13 5t-5 13q0 2-1 11t0 15 2 13 5 11 12 3h178q37 0 64 27t26 63v392q0 37-26 64t-64 26h-174t-6 0-6 2-5 3-4 5-1 8q0 2-1 11t0 15 2 13 5 11 12 3h178q67 0 114-47t47-114z",
+          "viewBox": "0 0 857.1 1000"
+        },
+        {
+          "class": "dmn-icon-output",
+          "unicode": "e80a",
+          "originalPath": "M357 46q0-2 1-11t0-14-2-14-5-11-12-3h-178q-67 0-114 47t-47 114v392q0 67 47 114t114 47h178q8 0 13-5t5-13q0-2 1-11t0-15-2-13-5-11-12-3h-178q-37 0-63-26t-27-64v-392q0-37 27-63t63-27h174t6 0 7-2 4-3 4-5 1-8z m518 304q0-14-11-25l-303-304q-11-10-25-10t-25 10-11 25v161h-250q-14 0-25 11t-11 25v214q0 15 11 25t25 11h250v161q0 14 11 25t25 10 25-10l303-304q11-10 11-25z",
+          "viewBox": "0 0 928.6 1000"
+        },
+        {
+          "class": "dmn-icon-copy",
+          "unicode": "e80b",
+          "originalPath": "M970 480q38-10 30-46l-150-556q-4-16-18-23t-30-3l-406 110q-16 4-24 18t-4 28l24 92-180-48q-40-10-50 26l-160 602q-10 36 28 48l454 122q16 4 30-3t18-23l66-244z m-888 190l144-542 392 106-144 540z m702-742l132 492-298 82 76-282q10-34-28-46l-196-52-26-102z",
+          "viewBox": "0 0 1001 1000"
+        },
+        {
+          "class": "dmn-icon-keyboard",
+          "unicode": "e80c",
+          "originalPath": "M930 650q28 0 49-21t21-49l0-460q0-30-21-50t-49-20l-860 0q-28 0-49 20t-21 50l0 460q0 28 21 49t49 21l860 0z m-380-100l0-100 100 0 0 100-100 0z m150-150l-100 0 0-100 100 0 0 100z m-300 150l0-100 100 0 0 100-100 0z m150-150l-100 0 0-100 100 0 0 100z m-300 150l0-100 100 0 0 100-100 0z m150-150l-100 0 0-100 100 0 0 100z m-300 150l0-100 100 0 0 100-100 0z m150-150l-100 0 0-100 100 0 0 100z m-50-250l0 100-100 0 0-100 100 0z m550 0l0 100-500 0 0-100 500 0z m150 0l0 100-100 0 0-100 100 0z m-150 150l100 0 0 100-100 0 0-100z m150 150l0 100-200 0 0-100 200 0z",
+          "viewBox": "0 0 1000 1000"
+        },
+        {
+          "class": "dmn-icon-undo",
+          "unicode": "e80d",
+          "originalPath": "M532 736q170 0 289-120t119-290-119-290-289-120q-142 0-252 88l70 74q84-60 182-60 126 0 216 90t90 218-90 218-216 90q-124 0-214-87t-92-211l142 0-184-204-184 204 124 0q2 166 122 283t286 117z",
+          "viewBox": "0 0 940 1000"
+        },
+        {
+          "class": "dmn-icon-redo",
+          "unicode": "e80e",
+          "originalPath": "M408 760q168 0 287-116t123-282l122 0-184-206-184 206 144 0q-4 124-94 210t-214 86q-126 0-216-90t-90-218q0-126 90-216t216-90q104 0 182 60l70-76q-110-88-252-88-168 0-288 120t-120 290 120 290 288 120z",
+          "viewBox": "0 0 940 1000"
+        },
+        {
+          "class": "dmn-icon-menu",
+          "unicode": "e80f",
+          "originalPath": "M110 460q46 0 78-32t32-78q0-44-32-77t-78-33-78 33-32 77q0 46 32 78t78 32z m350 0q46 0 78-32t32-78q0-44-33-77t-77-33-77 33-33 77q0 46 32 78t78 32z m350 0q46 0 78-32t32-78q0-44-32-77t-78-33-78 33-32 77q0 46 32 78t78 32z",
+          "viewBox": "0 0 920 1000"
+        },
+        {
+          "class": "dmn-icon-setting",
+          "unicode": "e810",
+          "originalPath": "M760 350q0-72 80-122-12-40-34-82-70 18-136-44-54-58-34-136-40-20-84-36-46 82-132 82t-132-82q-44 16-84 36 20 80-34 136-54 54-136 34-14 26-34 82 82 52 82 132 0 72-82 124 20 56 34 82 74-18 136 44 54 56 34 136 42 22 84 34 46-80 132-80t132 80q42-12 84-34-20-78 34-136 66-62 136-44 22-42 34-82-80-50-80-124z m-340-182q76 0 129 53t53 129-53 130-129 54-129-54-53-130 53-129 129-53z",
+          "viewBox": "0 0 840 1000"
+        },
+        {
+          "class": "dmn-icon-wrench",
+          "unicode": "e811",
+          "originalPath": "M214 29q0 14-10 25t-25 10-25-10-11-25 11-25 25-11 25 11 10 25z m360 234l-381-381q-21-20-50-20-29 0-51 20l-59 61q-21 20-21 50 0 29 21 51l380 380q22-55 64-97t97-64z m354 243q0-22-13-59-27-75-92-122t-144-46q-104 0-177 73t-73 177 73 176 177 74q32 0 67-10t60-26q9-6 9-15t-9-16l-163-94v-125l108-60q2 2 44 27t75 45 40 20q8 0 13-5t5-14z",
+          "viewBox": "0 0 928.6 1000"
+        },
+        {
+          "class": "dmn-icon-eraser",
+          "unicode": "e812",
+          "originalPath": "M500 64l188 215h-429l-188-215h429z m565 601q9-19 6-40t-17-36l-500-572q-22-24-54-24h-429q-21 0-38 11t-27 31q-8 19-5 40t17 36l500 572q21 24 53 24h429q21 0 39-11t26-31z",
+          "viewBox": "0 0 1071.4 1000"
+        },
+        {
+          "class": "dmn-icon-attention",
+          "unicode": "e813",
+          "originalPath": "M957-24q10-16 0-34-10-16-30-16l-892 0q-18 0-28 16-13 18-2 34l446 782q8 18 30 18t30-18z m-420 50l0 100-110 0 0-100 110 0z m0 174l0 300-110 0 0-300 110 0z",
+          "viewBox": "0 0 962 1000"
+        },
+        {
+          "class": "dmn-icon-resize-big",
+          "unicode": "e814",
+          "originalPath": "M839 55l72 72 0-224-223 0 72 72-184 185 79 79z m-749 591l-72-72 0 223 223 0-72-72 184-184-79-79z m670 79l-72 72 223 0 0-223-72 72-184-184-79 79z m-407-565l-184-185 72-72-223 0 0 224 72-72 184 184z",
+          "viewBox": "0 0 928 1000"
+        },
+        {
+          "class": "dmn-icon-resize-small",
+          "unicode": "e815",
+          "originalPath": "M648 88l-72-72 0 223 223 0-72-72 184-185-79-79z m-448 447l-182 183 79 79 183-182 73 70-1-222-222-1z m-182-553l184 185-72 72 223 0 0-223-72 72-184-185z m782 480l-224 0 0 225 73-72 183 182 79-79-183-183z",
+          "viewBox": "0 0 928 1000"
+        },
+        {
+          "class": "dmn-icon-file-code",
+          "unicode": "e816",
+          "originalPath": "M819 638q16-16 27-42t11-50v-642q0-23-15-38t-38-16h-750q-23 0-38 16t-16 38v892q0 23 16 38t38 16h500q22 0 49-11t42-27z m-248 136v-210h210q-5 17-12 23l-175 175q-6 7-23 12z m215-853v572h-232q-23 0-38 16t-16 37v233h-429v-858h715z m-518 500q4 7 12 7t13-3l28-21q7-5 7-12t-3-13l-102-136 102-136q4-6 3-13t-7-12l-28-21q-6-4-13-4t-12 7l-126 168q-8 11 0 22z m447-167q8-11 0-22l-126-168q-4-6-11-7t-14 4l-28 21q-6 5-7 12t3 13l102 136-102 136q-4 6-3 13t7 12l28 21q6 4 14 3t11-7z m-346-258q-7 1-11 8t-3 13l77 464q1 7 7 11t14 3l35-5q7-2 11-8t3-13l-77-464q-1-7-7-11t-13-3z",
+          "viewBox": "0 0 857.1 1000"
+        },
+        {
+          "class": "dmn-icon-business-knowledge",
+          "unicode": "e817",
+          "originalPath": "M202 594l-191-225 0-10 1-252 794 0 183 226 0 261-787 0z m25-54l708 0 0-188-155-192-714 0-1 189 162 191z",
+          "viewBox": "0 0 1000 1000"
+        },
+        {
+          "class": "dmn-icon-knowledge-source",
+          "unicode": "e818",
+          "originalPath": "M13 672l0-24 0-536 10-7c147-97 273-87 378-50 106 38 194 99 274 110l1 0 1 0c109 20 173-14 278-57l32-14 0 384 0 192-974 2z m47-48l880-2 0-144 0-313c-88 37-163 67-272 46-97-13-185-77-283-111-95-34-195-45-325 38l0 486z",
+          "viewBox": "0 0 1000 1000"
+        },
+        {
+          "class": "dmn-icon-input-data",
+          "unicode": "e819",
+          "originalPath": "M203 594c-57 0-107-29-142-74-35-44-56-104-56-170 0-66 21-126 56-170 35-44 85-74 142-74l594 0c57 0 107 30 142 74 35 44 56 104 56 170 0 66-21 126-56 170-35 45-85 74-142 74l-594 0z m0-55l594 0c38 0 73-19 99-53 27-33 44-82 44-136 0-54-17-102-44-136-26-34-61-53-99-53l-594 0c-38 0-73 19-99 53-27 34-44 82-44 136 0 54 17 103 44 136 26 34 61 53 99 53z",
+          "viewBox": "0 0 1000 1000"
+        },
+        {
+          "class": "dmn-icon-text-annotation",
+          "unicode": "e81a",
+          "originalPath": "M677 795l0-25 0-411 0-412 0-24 24 0 224 0 25 0 0 49-25 0-199 0 0 387 0 386 199 0 25 0 0 50-25 0-224 0-24 0z m-81-386l-75-60 60-75 75 60-60 75z m-151-119l-75-60 60-75 75 59-60 76z m-150-120l-76-59 60-76 75 60-59 75z m-151-119l-76-60 60-75 76 59-60 76z",
+          "viewBox": "0 0 1000 1000"
+        },
+        {
+          "class": "dmn-icon-connection",
+          "unicode": "e81b",
+          "originalPath": "M911 749c0 0-285-146-431-214 31-28 60-59 90-89-147-149-295-299-443-448 11-11 22-21 33-31 148 149 295 299 443 448 30-29 60-60 90-90 77 153 218 424 218 424z",
+          "viewBox": "0 0 1000 1000"
+        },
+        {
+          "class": "dmn-icon-connection-multi",
+          "unicode": "e81c",
+          "originalPath": "M916 798l-410-109 64-95-486-327 25-38 486 328 62-92 259 333 0 0z m0-328l-411-109 151-224 260 333 0 0z m-409-245l-63-43 25-37 63 42-25 38z m-126-85l-62-42 25-38 62 43-25 37z m-133-90l-63-43 25-37 63 43-25 37z m-126-85l-38-26 25-37 38 26-25 37z",
+          "viewBox": "0 0 1000 1000"
+        },
+        {
+          "class": "dmn-icon-drag",
+          "unicode": "e81d",
+          "originalPath": "M563 100l187 0 0-188-187 0z m0 313l187 0 0-188-187 0z m-313-313l188 0 0-188-188 0z m0 313l188 0 0-188-188 0z m313 312l187 0 0-187-187 0z m-313 0l188 0 0-187-188 0z",
+          "viewBox": "0 0 1000 1000"
+        },
+        {
+          "class": "dmn-icon-lasso-tool",
+          "unicode": "e81e",
+          "originalPath": "M303 798l0-218 103 0 0 218-103 0z m-248-246l0-103 218 0 0 103-218 0z m379 0l0-103 219 0 0 103-219 0z m349-30l0-40 123 0 0-117 40 0 0 157-163 0z m-480-104l0-218 103 0 0 218-103 0z m603-159l0-77 40 0 0 77-40 0z m0-190l0-116-119 0 0-40 159 0 0 156-40 0z m-570-1l0-157 159 0 0 40-119 0 0 117-40 0z m264-117l0-40 82 0 0 40-82 0z",
+          "viewBox": "0 0 1000 1000"
+        },
+        {
+          "class": "dmn-icon-screw-wrench",
+          "unicode": "e81f",
+          "originalPath": "M756 704c-55 0-108-22-147-61-39-39-61-92-61-147 0-55 22-108 61-147 39-39 92-61 147-61 91 0 171 59 198 146l-149-40-116 77 62 124 79 21 78 21c-39 42-94 67-152 67z m-247-278l-461-316c-14-42 32-111 80-114l451 310c-36 31-61 73-70 120z",
+          "viewBox": "0 0 1000 1000"
+        },
+        {
+          "class": "dmn-icon-trash",
+          "unicode": "e820",
+          "originalPath": "M429 743c-58-4-70 11-71-52l0-9-172-56c-20-5-20-29 0-30l624 0c19 0 19 25 0 30l-168 55 0 10c0 62-7 48-71 52l-71 0z m-215-204c-14 0-25-12-24-26l50-555c1-12 11-22 24-22l457 0c13 0 23 9 25 22l64 554c2 15-9 27-24 27l-143 0-143 0z m27-49l259 0 259 0-59-505-414 0z m120-73c-1 0-2 0-3 0-16-1-28-15-25-31l44-320c2-15 16-26 31-24 15 2 25 17 22 32l-44 319c-2 13-12 23-25 24z m280 0c-13 0-25-10-27-24l-44-319c-3-15 7-30 22-32 16-2 29 9 31 24l44 320c3 16-9 30-26 31z",
+          "viewBox": "0 0 1000 1000"
+        },
+        {
+          "class": "dmn-icon-bpmn-io",
+          "unicode": "e821",
+          "originalPath": "M674 41h-348v-191h348z m-348 809v-714h176c114 0 171 57 171 166v58c0 76-23 133-81 157 48 24 67 71 67 143v28c0 105-48 162-162 162z m114-100h57c43 0 57-24 57-76v-38c0-57-23-76-66-76h-48z m-5-300h53c47 0 71-19 71-86v-62c0-52-19-71-57-71h-67z",
+          "viewBox": "0 0 1000 1000"
+        },
+        {
+          "class": "dmn-icon-decision-table",
+          "unicode": "e822",
+          "originalPath": "M37 677l0-327 0-71 0-46 0-210 216 0 47 0 663 0 0 327 0 327-926 0z m46-219l170 0 0-179-170 0 0 71 0 108z m217 0l617 0 0-108 0-71-617 0 0 179z m-217-225l170 0 0-164-170 0 0 164z m217 0l617 0 0-164-617 0 0 164z",
+          "viewBox": "0 0 1000 1000"
+        },
+        {
+          "class": "dmn-icon-literal-expression",
+          "unicode": "e823",
+          "originalPath": "M383 834c-52 0-99-12-134-41-34-28-54-73-54-131 0-32-2-160-2-193 0-30-22-66-97-66l-20 0 0-99 20 0c74 0 97-43 97-66 0-32 2-159 2-189 0-63 20-109 55-139 35-29 82-40 133-40l45 0 0 104-41 0c-29 0-46 8-57 21-12 13-18 34-18 63 0 29-1 138-1 168l0 0c0 42-16 76-39 101-11 11-24 20-37 27 13 7 25 16 36 27 24 23 40 57 40 99l0 0c0 31 1 147 1 174 0 28 6 47 16 58 11 11 28 18 59 18l41 0 0 104-45 0z m195 0l0-104 41 0c31 0 47-7 58-18 10-11 16-30 16-58 0-27 1-143 1-174 0-42 16-75 39-99 11-11 23-20 36-27-13-7-25-16-36-27-24-24-39-59-39-101 0-31-1-139-1-167 0-30-7-51-18-64-11-13-28-21-56-21l-41 0 0-103 44 0c51 0 98 11 132 40 35 29 55 76 55 138 0 31 2 157 2 189 0 8 3 19 10 29 6 6 12 12 17 18 15 11 37 19 69 19l20 0 0 99-20 0c-74 0-96 36-96 66 0 33-2 162-2 193 0 58-20 103-54 131-34 29-81 41-133 41l-44 0z m266-504c0 0 0 0 1 0 0 0-1-1-1-1l0 1z",
+          "viewBox": "0 0 1000 1000"
+        },
+        {
+          "class": "dmn-icon-edit",
+          "unicode": "e824",
+          "originalPath": "M203-7l50 51-131 131-51-51v-60h72v-71h60z m291 518q0 12-12 12-5 0-9-4l-303-302q-4-4-4-10 0-12 13-12 5 0 9 4l303 302q3 4 3 10z m-30 107l232-232-464-465h-232v233z m381-54q0-29-20-50l-93-93-232 233 93 92q20 21 50 21 29 0 51-21l131-131q20-22 20-51z",
+          "viewBox": "0 0 857.1 1000"
+        },
+        {
+          "class": "dmn-icon-cut",
+          "unicode": "e825",
+          "originalPath": "M536 350q14 0 25-11t10-25-10-25-25-10-25 10-11 25 11 25 25 11z m167-36l283-222q16-11 14-31-3-20-19-28l-72-36q-7-4-16-4-10 0-17 4l-385 216-62-36q-4-3-7-3 8-28 6-54-4-43-31-83t-74-69q-74-47-154-47-76 0-124 44-51 47-44 116 4 42 31 82t73 69q74 47 155 47 46 0 84-18 5 8 13 13l68 40-68 41q-8 5-13 12-38-17-84-17-81 0-155 47-46 30-73 69t-31 82q-3 33 8 63t36 52q47 44 124 44 80 0 154-47 46-29 74-68t31-83q2-27-6-54 3-1 7-3l62-37 385 216q7 5 17 5 9 0 16-4l72-36q16-9 19-28 2-20-14-32z m-380 145q26 24 12 61t-59 65q-52 33-107 33-42 0-63-20-26-24-12-60t59-66q51-33 107-33 41 0 63 20z m-47-415q45 28 59 65t-12 60q-22 20-63 20-56 0-107-33-45-28-59-65t12-60q21-20 63-20 55 0 107 33z m99 342l54-33v7q0 20 18 31l8 4-44 26-15-14q-1-2-5-6t-7-7q-1-1-2-2t-2-1z m125-125l54-18 410 321-71 36-429-240v-64l-89-53 5-5q1-1 4-3 2-2 6-7t6-6l15-15z m393-232l71 35-290 228-99-77q-1-2-7-4z",
+          "viewBox": "0 0 1000 1000"
+        },
+        {
+          "class": "dmn-icon-hand-tool",
+          "unicode": "e8c1",
+          "originalPath": "M498 750c-19 0-36-11-45-26-8-15-12-33-14-53-5-40-1-88-1-131 0-22 0-45 0-67-6 14-11 28-15 39l0 0 0 0c-16 40-30 81-50 111-10 15-21 27-36 34-16 8-34 7-52 0l0-1 0 0c-18-8-28-24-32-41-3-17 0-35 4-54 9-39 26-84 38-128 10-35 19-70 27-100-12 11-24 23-38 35-23 20-49 38-75 48-27 10-57 11-80-9l0 0 0 0c-18-17-27-37-24-57 2-20 13-38 27-56 29-36 74-75 118-128 49-58 102-152 140-201l5-7 332 0 3 12c7 21 14 62 26 114 11 51 27 112 47 165 28 71 56 138 68 191 6 26 9 49 4 70-5 20-22 37-45 41-20 4-39-5-52-19-14-13-24-31-33-52-8-15-14-33-21-50 0 29 0 36 0 75-1 43 2 92-1 131-2 19-5 37-12 51-7 14-22 26-40 25-17 1-32-7-41-19-10-13-16-28-20-44-9-34-13-74-19-107-3-16-6-32-9-47-2 16-4 33-6 51-4 40-6 88-15 128-4 19-9 37-19 51-9 15-25 26-43 25l1 0c0 0-1 0-2 0z m0-33c0 0 1 0 1 0l1 0 0 0c6 0 9-2 14-10 5-8 10-23 14-40 8-36 11-83 15-125 9-90 22-156 22-156l33 1c0 0 13 75 26 149 6 35 11 75 18 104 4 14 9 26 14 32 5 6 7 7 14 7l1 0 1 0c6 0 5 0 9-7 4-7 7-21 8-39 3-35 1-83 1-128 0-84 1-160 1-160l32-7c19 41 35 91 52 128 9 19 18 34 27 43 8 8 14 10 22 9l0 0 0 0c13-2 16-6 19-17 2-10 1-30-5-54-11-47-39-114-66-186-22-56-37-118-49-170-10-42-17-79-22-99l-289 0c-35 47-86 136-136 196-46 55-92 95-117 127-13 16-20 29-21 38-1 10 1 17 14 29 11 10 25 10 45 3 20-8 44-24 65-43 44-37 80-82 80-82l29 15c0 0-21 87-43 167-13 47-30 92-38 126-4 17-5 32-3 41 1 9 4 13 12 17 11 5 17 4 23 1 7-3 15-11 23-23 16-24 31-64 46-104l0 0c16-42 47-117 47-117l32 6c0 0 3 83 2 151-1 44-4 92 0 128 2 17 6 31 10 39 5 8 8 10 16 10z",
+          "viewBox": "0 0 1000 1000"
+        },
+        {
+          "class": "dmn-icon-paste",
+          "unicode": "f0ea",
+          "originalPath": "M429-79h500v358h-233q-22 0-37 15t-16 38v232h-214v-643z m142 804v36q0 7-5 12t-12 6h-393q-7 0-13-6t-5-12v-36q0-7 5-13t13-5h393q7 0 12 5t5 13z m143-375h167l-167 167v-167z m286-71v-375q0-23-16-38t-38-16h-535q-23 0-38 16t-16 38v89h-303q-23 0-38 16t-16 37v750q0 23 16 38t38 16h607q22 0 38-16t15-38v-183q12-7 20-15l228-228q16-15 27-42t11-49z",
+          "viewBox": "0 0 1000 1000"
+        }
+      ]
+    }
+  },
+  "fixture": {
+    "path": "packages/dmn-js-decision-table/test/spec/features/rules/rules.dmn",
+    "sha256": "dff97c85dbf6b25f975dfc36cfede52f042a1255055f2b8eecc1324855b9e61b",
+    "scope": "Original complete Check Order 4-rule fixture, 2 input/2 output columns; fictional demonstration, not real customer data."
+  },
+  "watermark": {
+    "sourceSHA256": "c361bfa3d292662b1fff48aba502e554b2326a224306e718d65af6c4486cd3ff",
+    "emittedOriginalFileSHA256": "56c00f0d9c3f11f3c9c504969dfe038ebbd76c3f42f0b67f915ee829ec3e0c13",
+    "scope": "Unmodified original SVG/link/lightbox code and absolute bottom/right placement; no generic anchor blocker or overlapping host controls."
+  },
+  "adaptations": [
+    "Selected original decision-table editor provider; no external imports, execution, storage or backend.",
+    "Local XML snapshot, reset, original commandStack undo/redo; hidden serializes then destroys, resume opens local snapshot. Undo history does not survive hidden rebuild.",
+    "Clipboard gate inserts text/plain only, bounded 20000 chars per paste; external file/drop imports disabled. FEEL remains editor text, not executed.",
+    "Original system stylesheet, binary font replaced with same actual glyph paths, system text font. No remote font permission.",
+    "Exact LiteralExpression lifecycle patch below prevents programmatic setValue creating new editing commands during undo/redo, and destroys original CodeMirror on unmount. No parser/modeling algorithm changes.",
+    "Dedicated iframe lifetime tracks exact listener/timer/interval/RAF registrations; neutralizes original DOM event properties before detach; async generation guards."
+  ],
+  "lifecyclePatch": "--- official/LiteralExpression.js\n+++ adapted/LiteralExpression.js\n@@ -70,6 +70,7 @@\n     }\n   }\n   componentDidUpdate(prevProps) {\n+    if (this._disposed) return;\n     const {\n       value\n     } = this.props;\n@@ -77,7 +78,8 @@\n       this.setState({\n         value\n       }, () => {\n-        this.editor.setValue(value);\n+        this._syncing = true;\n+        try { this.editor.setValue(value); } finally { this._syncing = false; }\n       });\n     }\n     if (!deepEqual(prevProps.variables, this.props.variables)) {\n@@ -85,11 +87,13 @@\n     }\n   }\n   componentWillUnmount() {\n+    this._disposed = true;\n     this.node.removeEventListener('mousedown', this.handleMouseEvent);\n \n     // `capture: true` is needed to precede FEEL editor default handling\n     this.node.removeEventListener('keydown', this.handleKeyDownCapture, true);\n     this.node.removeEventListener('keydown', this.handleKeyDown);\n+    this.editor?._cmEditor?.destroy();\n   }\n   handleMouseEvent = event => {\n     event.stopPropagation();\n@@ -121,6 +125,7 @@\n     }\n   };\n   handleChange = value => {\n+    if (this._disposed || this._syncing) return;\n     const {\n       onInput\n     } = this.props;\n@@ -132,6 +137,7 @@\n     }\n   };\n   handleBlur = () => {\n+    if (this._disposed) return;\n     const {\n       onBlur,\n       onChange\n"
+}
