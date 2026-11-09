@@ -1,0 +1,13 @@
+{
+  "nativeVisual": false,
+  "host": "actual570 adapter, composePreview and createPreviewLoader/default cache",
+  "tests": {
+    "test-normal.log": "PASS actual570 normal; real CodeMirror edits/config, real Mermaid SVG updates/errors, panzoom, reset, hidden retention, stale controls/callbacks, resource cleanup; geometry fixtures, not pixels\n",
+    "test-direct.log": "PASS actual570 direct; real CodeMirror edits/config, real Mermaid SVG updates/errors, panzoom, reset, hidden retention, stale controls/callbacks, resource cleanup; geometry fixtures, not pixels\n",
+    "test-early.log": "PASS actual570 early-exit; early/failure lifecycle cleanup; geometry fixtures, not pixels\n",
+    "test-missing.log": "PASS actual570 missing-root; early/failure lifecycle cleanup; geometry fixtures, not pixels\n",
+    "test-queued.log": "PASS actual570 queued-exit; early/failure lifecycle cleanup; geometry fixtures, not pixels\n",
+    "test-svg.log": "PASS actual570 svg-failure; early/failure lifecycle cleanup; geometry fixtures, not pixels\n",
+    "test-loader.log": "{\n  \"result\": \"PASS actual570 adaptCandidate/createPreviewLoader all-or-nothing/retry/remount cache reuse\",\n  \"scripts\": [\n    \"runtime-part-1.js\",\n    \"runtime-part-2.js\",\n    \"runtime-part-3.js\",\n    \"runtime.js\"\n  ],\n  \"utf16RuntimeHTMLCSSBytes\": 4412070,\n  \"budgetBytes\": 8388608,\n  \"cacheStats\": {\n    \"entries\": 6,\n    \"bytes\": 4412070\n  },\n  \"fetches\": 18\n}\n"
+  }
+}
