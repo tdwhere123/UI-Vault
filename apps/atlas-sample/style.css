@@ -14,11 +14,19 @@ main{padding-top:32px}.page-heading{margin-bottom:23px}.browse-meta{margin-top:1
 
 /* Missing posters use one bounded, sandboxed live document. Click opens full interaction. */
 .card-live iframe{position:absolute;left:0;top:0;width:680px;height:440px;border:0;transform:scale(var(--preview-scale,.5));transform-origin:top left;pointer-events:none;background:white;visibility:hidden}
-.card-live[data-preview-state="ready"] iframe{visibility:visible}
-.card-live[data-preview-state="ready"] .poster-pending{visibility:hidden}
+.card-live[data-preview-state="unverified"] iframe{visibility:visible}
+.card-live[data-preview-state="unverified"] .poster-pending{visibility:hidden}
 .card-live-label{position:absolute;top:9px;left:9px;font-size:10px;padding:4px 7px;border-radius:5px;background:#ffffffe8;color:#60704e;pointer-events:none}
 .card-live[data-preview-state="loading"] .poster-pending::after{content:'正在加载…'}
 .card-live[data-preview-state="error"] .poster-pending::after{content:'加载未完成，打开详情重试';color:#956548}
 
 /* Compact, wrapping page jump controls stay usable on narrow screens. */
 #pagination{flex-wrap:wrap;gap:12px 18px}#pagination .page-controls,#pagination .page-jump-form{display:flex;align-items:center;justify-content:center;gap:8px}#pagination .page-status{font-variant-numeric:tabular-nums;white-space:nowrap}#pagination input{width:76px;min-width:0;height:38px;background:#fff;border:1px solid var(--line);border-radius:8px;padding:7px;text-align:center;font-variant-numeric:tabular-nums}#pagination .page-error{flex-basis:100%;text-align:center;color:#a33c32}#pagination .page-error:empty{display:none}#pagination input[aria-invalid=true]{border-color:#a33c32}@media(max-width:480px){#pagination{gap:12px}#pagination .page-status{flex-basis:100%;text-align:center}#pagination .page-controls{gap:6px}#pagination button{min-height:40px;padding:8px 11px}#pagination input{font-size:16px;min-height:40px}}
+
+/* Health diagnostics are not visual/functional acceptance. */
+#detail-loading[data-state="unverified"]{bottom:8px;right:8px;max-width:calc(100% - 16px);padding:5px 8px;font-size:10px;pointer-events:none;background:#ffffffe8}
+.card-live[data-preview-state="unverified"] .card-live-label{font-size:0}
+.card-live[data-preview-state="unverified"] .card-live-label::after{content:"文档已载入";font-size:10px}
+
+.card-live[data-preview-state="unverified"][data-preview-signal="diagnostic-timeout"] .card-live-label::after{content:"未收到启动信息"}
+.card-live[data-preview-state="unverified"][data-preview-signal="resource-warning"] .card-live-label::after{content:"部分资源未载入"}
