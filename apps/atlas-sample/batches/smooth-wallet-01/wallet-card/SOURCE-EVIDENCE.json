@@ -1,0 +1,82 @@
+{
+  "repository": "https://github.com/educlopez/smoothui",
+  "revision": "c45420a8523ec60a92f7724a2418ab83edaa1425",
+  "originalPath": "packages/smoothui/components/wallet-card/index.tsx",
+  "runtimePackages": [
+    {
+      "name": "class-variance-authority",
+      "version": "0.7.1",
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "clsx",
+      "version": "2.1.1",
+      "license": "MIT"
+    },
+    {
+      "name": "framer-motion",
+      "version": "12.43.0",
+      "license": "MIT"
+    },
+    {
+      "name": "lucide-react",
+      "version": "0.545.0",
+      "license": "ISC"
+    },
+    {
+      "name": "motion",
+      "version": "12.23.24",
+      "license": "MIT"
+    },
+    {
+      "name": "motion-dom",
+      "version": "12.43.0",
+      "license": "MIT"
+    },
+    {
+      "name": "motion-utils",
+      "version": "12.39.0",
+      "license": "MIT"
+    },
+    {
+      "name": "react",
+      "version": "19.3.1",
+      "license": "MIT"
+    },
+    {
+      "name": "react-dom",
+      "version": "19.3.1",
+      "license": "MIT"
+    },
+    {
+      "name": "scheduler",
+      "version": "0.28.0",
+      "license": "MIT"
+    },
+    {
+      "name": "tailwind-merge",
+      "version": "3.3.1",
+      "license": "MIT"
+    }
+  ],
+  "cssGenerator": {
+    "name": "tailwindcss",
+    "version": "4.3.0"
+  },
+  "sourceHashes": {
+    "index.tsx": "07214495b0cdea5f61b879fe4c545d2e131c7f10478341094e5991ace054f00d",
+    "LICENSE": "9877f4310c0549e5ce26affe52ba97c4e60325472bdcdd308a92fccd90f119cc"
+  },
+  "originalSourceHashes": {
+    "index.tsx": "e21a826c59ab6e3000eae42871dc29a47153cf825c2541fe9fb3a9330bb61916",
+    "smooth-button/smooth-button.base.tsx": "fc15f2ba0420b34446e60eab09d35bd24206b7bb73037c74f85445674038bcf0",
+    "smooth-button/index.tsx": "38b2a35b54ef51a5e9f572e1d932160af3e60035e5bc863691d19f85c6ebb6d6",
+    "smooth-button/smooth-button.radix.tsx": "9ae239ddd423922ea390250983c9d142ef0623746400c880e675efc37e68c192"
+  },
+  "notes": [
+    "Wallet original raw matches archive except trailing newline; original markup/motion retained. Only pointercancel calls existing pointerleave home handler.",
+    "Host has fictional balances/member names/last4; generic network option only, no photos or financial operations.",
+    "Blur/hidden remount for stopping in-flight animation; pagehide unmount.",
+    "Local node_modules symlink uses previously locked SmoothUI dependencies; actual versions listed, not assumed equal motion/framer-motion releases."
+  ]
+}
