@@ -2,7 +2,7 @@
 
 网站：<https://tdwhere123.github.io/UI-Vault/>
 
-当前有 **537 条可直接打开预览（241 条原始素材＋296 条后续接入预览）**，目标为 **1000 条可查看素材**，还差 **463 条**。另有 **278 条待适配来源记录**，只是工作清单，**不计入1000目标完成数**。图标按系列计数，不按单枚glyph、字重或尺寸凑数，已有重叠暂待统一整理。
+当前有 **543 条可直接打开预览（241 条原始素材＋302 条后续接入预览）**，目标为 **1000 条可查看素材**，还差 **457 条**。另有 **272 条待适配来源记录**，只是工作清单，**不计入1000目标完成数**。图标按系列计数，不按单枚glyph、字重或尺寸凑数，已有重叠暂待统一整理。
 
 ## 当前内容
 
@@ -425,3 +425,9 @@ The active target is **1000 directly viewable entries**, not collected links: **
 Restored **7 existing pending entries**, without adding source-only records: Tufte · 旁注式研究长文, LaTeX.css · 学术书页, SiriWave · 荧光数学波形, Bubbly · 漂浮气泡表面, Meny · 折页背后的目录, OriDomi · 可拖动纸面折叠, Maki · 地图语义图标系列. Each keeps the actual source mechanism and its disclosed adaptation boundary, complete license text and lifecycle tests. Authored local host controls, replacement text, system fonts and static math are identified rather than misrepresented as original services or external data. No new permissions, network services, screenshots or covers.
 
 **537 viewable / 1000 target, 463 remaining**. The **278 source-only records remain pending**, not completed entries. Worklist count remains815. Mapped covers remain470; 67 posterless previews use bounded live cards. Existing records outside the restored IDs, all Grok images/reports and main interface behavior are preserved. DOM/Canvas command tests are not native pixel, touch, typography or performance acceptance.
+
+## Existing-source preview conversion · 543 directly viewable
+
+Restored **6 existing pending entries**, without adding source-only records: Three CSS3D · 元素空间编排, Fluidkit · 液态操作菜单, React Arborist · 可重排预算树, iro.js · 多柄色轮调色台, Momentum · 动量拨盘倒计时, ReactMotion · 弹簧彩球重排. Each keeps the actual source mechanism and its disclosed adaptation boundary, complete license text and lifecycle tests. Authored local host controls, replacement text, system fonts and static math are identified rather than misrepresented as original services or external data. No new permissions, network services, screenshots or covers.
+
+**543 viewable / 1000 target, 457 remaining**. The **272 source-only records remain pending**, not completed entries. Worklist count remains815. Mapped covers remain470; 73 posterless previews use bounded live cards. Existing records outside the restored IDs, all Grok images/reports and main interface behavior are preserved. DOM/Canvas command tests are not native pixel, touch, typography or performance acceptance.
