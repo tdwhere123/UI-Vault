@@ -11,3 +11,11 @@
 main{padding-top:32px}.page-heading{margin-bottom:23px}.browse-meta{margin-top:16px;margin-bottom:20px}@media(max-width:760px){main{padding-top:24px}.page-heading{margin-bottom:20px}.browse-meta{margin-top:14px;margin-bottom:18px}}
 
 .sidebar-footer svg,footer svg{width:12px;height:12px}footer a{display:inline-flex;gap:7px;align-items:center}
+
+/* Missing posters use one bounded, sandboxed live document. Click opens full interaction. */
+.card-live iframe{position:absolute;left:0;top:0;width:680px;height:440px;border:0;transform:scale(var(--preview-scale,.5));transform-origin:top left;pointer-events:none;background:white;visibility:hidden}
+.card-live[data-preview-state="ready"] iframe{visibility:visible}
+.card-live[data-preview-state="ready"] .poster-pending{visibility:hidden}
+.card-live-label{position:absolute;top:9px;left:9px;font-size:10px;padding:4px 7px;border-radius:5px;background:#ffffffe8;color:#60704e;pointer-events:none}
+.card-live[data-preview-state="loading"] .poster-pending::after{content:'正在加载…'}
+.card-live[data-preview-state="error"] .poster-pending::after{content:'加载未完成，打开详情重试';color:#956548}
