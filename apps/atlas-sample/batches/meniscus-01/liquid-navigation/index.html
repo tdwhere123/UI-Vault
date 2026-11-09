@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>MENISCUS — liquid bottom navigation</title>
+  <meta name="description" content="A bottom nav whose surface behaves like liquid: the selected tab is a bead the bar dips beneath, and the trough leans, widens and shallows with the speed of the trip. Drag the bead. Zero dependencies." />
+  <meta name="color-scheme" content="dark" />
+  <meta name="theme-color" content="#1c1526" />
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="stylesheet" href="runtime.css">
+</head>
+<body>
+
+  <!-- ambient wash — its hue is lerped toward the live accent by JS -->
+  <div class="bloom" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <main class="stage">
+
+    <header class="head">
+      <p class="head__brand"><i class="head__dot" aria-hidden="true"></i>Meniscus</p>
+
+      <!-- The panels ARE the headline: one word, swapped on a spring. -->
+      <div class="panels">
+        <section class="panel" id="panel-home" role="tabpanel" aria-labelledby="tab-home" tabindex="0">
+          <h1 class="panel__word">Home</h1>
+          <p class="panel__line">Everything, on one surface.</p>
+        </section>
+        <section class="panel" id="panel-you" role="tabpanel" aria-labelledby="tab-you" tabindex="0" hidden>
+          <h1 class="panel__word">Profile</h1>
+          <p class="panel__line">You, as the app sees you.</p>
+        </section>
+        <section class="panel" id="panel-chat" role="tabpanel" aria-labelledby="tab-chat" tabindex="0" hidden>
+          <h1 class="panel__word">Messages</h1>
+          <p class="panel__line">Three unread. All of them kind.</p>
+        </section>
+        <section class="panel" id="panel-shot" role="tabpanel" aria-labelledby="tab-shot" tabindex="0" hidden>
+          <h1 class="panel__word">Camera</h1>
+          <p class="panel__line">Point it. It already focused.</p>
+        </section>
+        <section class="panel" id="panel-tune" role="tabpanel" aria-labelledby="tab-tune" tabindex="0" hidden>
+          <h1 class="panel__word">Settings</h1>
+          <p class="panel__line">Fewer switches. Better defaults.</p>
+        </section>
+      </div>
+    </header>
+
+    <!-- ==================================================================
+         The component. Everything inside .dock ships.
+
+         .dock__skin is ONE path. The notch is not a stack of pseudo-element
+         curves welded together — it is a parametric trough cut into the top
+         edge, so it can lean, widen and shallow mid-flight the way a real
+         liquid surface does under a moving weight.
+         ================================================================== -->
+    <div class="dock" id="dock">
+      <span class="dock__cast" aria-hidden="true"></span>
+
+      <svg class="dock__skin" id="skin" aria-hidden="true" focusable="false" preserveAspectRatio="none">
+        <defs>
+          <linearGradient id="mnPlate" x1="0" y1="0" x2="0" y2="1">
+            <stop class="dock__plate-hi" offset="0" />
+            <stop class="dock__plate-lo" offset="1" />
+          </linearGradient>
+          <!-- the rim light: it traces the same path, so it draws the socket -->
+          <linearGradient id="mnRim" x1="0" y1="0" x2="0" y2="1">
+            <stop class="dock__rim-hi" offset="0" />
+            <stop class="dock__rim-lo" offset="1" />
+          </linearGradient>
+        </defs>
+        <path class="dock__fill" id="skinFill" />
+      </svg>
+
+      <span class="dock__bead" id="bead" aria-hidden="true"></span>
+
+      <div class="dock__tabs" role="tablist" aria-label="Sections" id="tabs">
+
+        <button class="tab" role="tab" type="button" id="tab-home"
+                aria-controls="panel-home" aria-selected="true" tabindex="0" style="--acc:#c9f24a">
+          <svg class="tab__icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M3.5 10.6 12 3.9l8.5 6.7" />
+            <path d="M5.7 9.2v9.1a1.6 1.6 0 0 0 1.6 1.6h9.4a1.6 1.6 0 0 0 1.6-1.6V9.2" />
+            <path d="M9.9 19.9v-4.8a1.2 1.2 0 0 1 1.2-1.2h1.8a1.2 1.2 0 0 1 1.2 1.2v4.8" />
+          </svg>
+          <span class="tab__label">Home</span>
+        </button>
+
+        <button class="tab" role="tab" type="button" id="tab-you"
+                aria-controls="panel-you" aria-selected="false" tabindex="-1" style="--acc:#ffd23f">
+          <svg class="tab__icon" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="8.5" r="3.7" />
+            <path d="M4.9 20.1a7.35 7.35 0 0 1 14.2 0" />
+          </svg>
+          <span class="tab__label">Profile</span>
+        </button>
+
+        <button class="tab" role="tab" type="button" id="tab-chat"
+                aria-controls="panel-chat" aria-selected="false" tabindex="-1" style="--acc:#ffa02e">
+          <svg class="tab__icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20.3 11.9a7.7 7.7 0 0 1-11.1 6.9l-5 1.4 1.4-4.7A7.7 7.7 0 1 1 20.3 11.9Z" />
+          </svg>
+          <span class="tab__label">Messages</span>
+        </button>
+
+        <button class="tab" role="tab" type="button" id="tab-shot"
+                aria-controls="panel-shot" aria-selected="false" tabindex="-1" style="--acc:#ff6a45">
+          <svg class="tab__icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4.7 8.5h2.8l1.4-2.3h6.2l1.4 2.3h2.8a1.7 1.7 0 0 1 1.7 1.7v7.5a1.7 1.7 0 0 1-1.7 1.7H4.7A1.7 1.7 0 0 1 3 18.2v-7.5a1.7 1.7 0 0 1 1.7-1.7Z" />
+            <circle cx="12" cy="13.9" r="3.3" />
+          </svg>
+          <span class="tab__label">Camera</span>
+        </button>
+
+        <button class="tab" role="tab" type="button" id="tab-tune"
+                aria-controls="panel-tune" aria-selected="false" tabindex="-1" style="--acc:#ff4d7d">
+          <svg class="tab__icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M3.6 7.9h4.1M12.4 7.9h8" />
+            <circle cx="10.1" cy="7.9" r="2.3" />
+            <path d="M3.6 16.1h7.5M15.4 16.1h5" />
+            <circle cx="13.2" cy="16.1" r="2.3" />
+          </svg>
+          <span class="tab__label">Settings</span>
+        </button>
+
+      </div>
+    </div>
+    <!-- ============================ /component ========================= -->
+
+    <p class="hint">Tap a tab — or <em>drag the bead</em> along the bar. <span>Local navigation demo.</span></p>
+
+  </main>
+
+  <script src="runtime.js"></script>
+</body>
+</html>
