@@ -1,0 +1,226 @@
+{
+  "repository": "https://github.com/kaltwrk/motion-core",
+  "revision": "74ad6e66d50cc9b1849a505fcd1b352704920745",
+  "entry": "apps/web/src/routes/docs/fluid-simulation/",
+  "originalSHA256": {
+    "packages/motion-core/src/lib/components/fluid-simulation/component.json": "e2b6e397b710f56b0ed5bf657cf90ee5f4445bad61da027552158b6b592bd63b",
+    "packages/motion-core/src/lib/components/fluid-simulation/FluidSimulation.svelte": "8bce512b80263f21faff2728ffb5cc761d325c98e022eb9d1e90c9c27026ad8f",
+    "packages/motion-core/src/lib/components/fluid-simulation/FluidSimulationScene.svelte": "72ea42c5a225ca3e673ee88896a8e000c8f285fbb9f3753cc9d8061848b2435c",
+    "apps/web/src/routes/docs/fluid-simulation/FluidSimulationDemo.svelte": "1e1563d8c54207972b089f649df43433565f2ff51ae24f8640495dba372fb41c",
+    "LICENSE": "fff0422ca6211471f534a4373a6338f418cd4e0d9cd0e3190e29179da474801c",
+    "packages/motion-core/src/lib/helpers/color.ts": "7941b14a7e4d7305f2d2ec3a55f91c591e309a5e8de4cf3d7e08dee68507630b",
+    "packages/motion-core/src/lib/utils/cn.ts": "0fca478853f3fc4310e40ebff727a53da7ec677938f4e3e0d5ecaa62e936a199",
+    "packages/motion-core/src/lib/helpers/fluid-pointer.ts": "c912fb5ec86ca65c52f66d7e97803bf6ae564915a6623e5ba1c9a505420c8dbe"
+  },
+  "dependencies": [
+    {
+      "name": "clsx",
+      "version": "2.1.1",
+      "license": "MIT",
+      "files": {
+        "license": "9a9edad7baae52622bddf3c15b2ef8a33d2c89f2d25408ad13e8a7481c6b0c97"
+      }
+    },
+    {
+      "name": "esm-env",
+      "version": "1.2.2",
+      "license": "MIT",
+      "files": {
+        "LICENSE": "6df5276ee7531fcc5446f19082c12e77bb6c5f081fd2b6d6cf88180a5ee36acd"
+      }
+    },
+    {
+      "name": "ogl",
+      "version": "1.0.11",
+      "license": "Unlicense",
+      "files": {
+        "README.md": "431694c5ceee21023d54c8d11663e028d2f845f00fa49e59cce25f43944c7479"
+      }
+    },
+    {
+      "name": "svelte",
+      "version": "5.39.6",
+      "license": "MIT",
+      "files": {
+        "LICENSE.md": "06257f4847b13a49a039efb17b944c141e71b12fd8d231b362d86919067d77a3"
+      }
+    },
+    {
+      "name": "tailwind-merge",
+      "version": "3.4.0",
+      "license": "MIT",
+      "files": {
+        "LICENSE.md": "d4c70c7ce38cea8778f0aed3fc0bef0a9dbd27f13bd8b6773cbd6d37941971e5"
+      }
+    }
+  ],
+  "inlineShadersUnchanged": [
+    {
+      "sha256": "bb0bb4f754bbbe14c92cdc752afcb2532079a479f963f3713e9ef6349a74608c",
+      "bytes": 383
+    },
+    {
+      "sha256": "0999b77de3c6fc6982f42bfb54db947fab5c8495badfc15a8ebc04b31e7e1409",
+      "bytes": 799
+    },
+    {
+      "sha256": "905d8045d41818915e57e20421663e2de365cae3513087d9c4c2fa49f0905bfc",
+      "bytes": 398
+    },
+    {
+      "sha256": "8a99d1d5739c06fc2452cfe46399d03ed89c3e588d3bbfb410952f2de20f7562",
+      "bytes": 529
+    },
+    {
+      "sha256": "251b521511c1aa6d4785da0de2e450928b4c6c598a127bb8e19a0214472eac66",
+      "bytes": 500
+    },
+    {
+      "sha256": "501361418f26fc74472ac4b908b95571ed51981527989afe8880f8f9834e458a",
+      "bytes": 396
+    },
+    {
+      "sha256": "7e82db678a396640e41df8964dcda4131d6a508819e510597d1a40f7d8ea08db",
+      "bytes": 146
+    },
+    {
+      "sha256": "bcc9c58534a010293a9e9289a846daf44445526b9981bba5ab1d5afa31cb2883",
+      "bytes": 466
+    }
+  ],
+  "syntaxParser": [
+    {
+      "slug": "fluid-simulation",
+      "index": 0,
+      "sha256": "bb0bb4f754bbbe14c92cdc752afcb2532079a479f963f3713e9ef6349a74608c",
+      "bytes": 383,
+      "syntax": "pass",
+      "limitation": "GLSL ES parser only, not driver compile/link or GPU output"
+    },
+    {
+      "slug": "fluid-simulation",
+      "index": 1,
+      "sha256": "0999b77de3c6fc6982f42bfb54db947fab5c8495badfc15a8ebc04b31e7e1409",
+      "bytes": 799,
+      "syntax": "pass",
+      "limitation": "GLSL ES parser only, not driver compile/link or GPU output"
+    },
+    {
+      "slug": "fluid-simulation",
+      "index": 2,
+      "sha256": "905d8045d41818915e57e20421663e2de365cae3513087d9c4c2fa49f0905bfc",
+      "bytes": 398,
+      "syntax": "pass",
+      "limitation": "GLSL ES parser only, not driver compile/link or GPU output"
+    },
+    {
+      "slug": "fluid-simulation",
+      "index": 3,
+      "sha256": "8a99d1d5739c06fc2452cfe46399d03ed89c3e588d3bbfb410952f2de20f7562",
+      "bytes": 529,
+      "syntax": "pass",
+      "limitation": "GLSL ES parser only, not driver compile/link or GPU output"
+    },
+    {
+      "slug": "fluid-simulation",
+      "index": 4,
+      "sha256": "251b521511c1aa6d4785da0de2e450928b4c6c598a127bb8e19a0214472eac66",
+      "bytes": 500,
+      "syntax": "pass",
+      "limitation": "GLSL ES parser only, not driver compile/link or GPU output"
+    },
+    {
+      "slug": "fluid-simulation",
+      "index": 5,
+      "sha256": "501361418f26fc74472ac4b908b95571ed51981527989afe8880f8f9834e458a",
+      "bytes": 396,
+      "syntax": "pass",
+      "limitation": "GLSL ES parser only, not driver compile/link or GPU output"
+    },
+    {
+      "slug": "fluid-simulation",
+      "index": 6,
+      "sha256": "7e82db678a396640e41df8964dcda4131d6a508819e510597d1a40f7d8ea08db",
+      "bytes": 146,
+      "syntax": "pass",
+      "limitation": "GLSL ES parser only, not driver compile/link or GPU output"
+    },
+    {
+      "slug": "fluid-simulation",
+      "index": 7,
+      "sha256": "bcc9c58534a010293a9e9289a846daf44445526b9981bba5ab1d5afa31cb2883",
+      "bytes": 466,
+      "syntax": "pass",
+      "limitation": "GLSL ES parser only, not driver compile/link or GPU output"
+    }
+  ],
+  "tests": [
+    {
+      "slug": "fluid-simulation",
+      "mode": "reduced",
+      "pass": true,
+      "drawCommands": 68,
+      "shadersSubmitted": 48,
+      "allocated": 140,
+      "deleted": 140,
+      "contextLossRequests": 4,
+      "scope": "Original OGL and original GLSL submitted to stubbed WebGL. No native shader compilation or pixels verified."
+    },
+    {
+      "slug": "fluid-simulation",
+      "mode": "contextlost",
+      "pass": true,
+      "drawCommands": 17,
+      "shadersSubmitted": 12,
+      "allocated": 35,
+      "deleted": 35,
+      "contextLossRequests": 1,
+      "scope": "Original OGL and original GLSL submitted to stubbed WebGL. No native shader compilation or pixels verified."
+    },
+    {
+      "slug": "fluid-simulation",
+      "mode": "normal",
+      "pass": true,
+      "drawCommands": 117,
+      "shadersSubmitted": 48,
+      "allocated": 140,
+      "deleted": 140,
+      "contextLossRequests": 4,
+      "scope": "Original OGL and original GLSL submitted to stubbed WebGL. No native shader compilation or pixels verified."
+    },
+    {
+      "slug": "fluid-simulation",
+      "mode": "fbofail",
+      "pass": true,
+      "drawCommands": 0,
+      "shadersSubmitted": 0,
+      "allocated": 2,
+      "deleted": 2,
+      "contextLossRequests": 1,
+      "scope": "Original OGL and original GLSL submitted to stubbed WebGL. No native shader compilation or pixels verified."
+    },
+    {
+      "slug": "fluid-simulation",
+      "mode": "shaderfail",
+      "pass": true,
+      "drawCommands": 0,
+      "shadersSubmitted": 1,
+      "allocated": 17,
+      "deleted": 17,
+      "contextLossRequests": 1,
+      "scope": "Original OGL and original GLSL submitted to stubbed WebGL. No native shader compilation or pixels verified."
+    }
+  ],
+  "changes": [
+    "Original Demo workspace barrel replaced with exact local component import. No GSAP/MediaPipe imported.",
+    "Original Scene only DPR bounded at2; GLSL literals and geometry/runtime loops retained.",
+    "Shared host owns RAF/timeouts and WebGL resources, checks compile/link status, handles errors/contextlost, hides by unmount/dispose and rebuilds on return.",
+    "Reduced motion schedules one original frame; pause retains last frame and resume/restart rebuilds original default scene.",
+    "No new artistic effects, placeholder canvas, remote texture/media or native screenshot. Utility CSS only implements original wrapper classes, plus explicit host chrome."
+  ],
+  "limitations": [
+    "WebGL methods/compile return values mocked in lifecycle tests; actual shader compilation/GPU pixels not verified.",
+    "No upstream visible parameter panel: official Demo supplies default props. Host Pause/Restart are disclosed added lifecycle controls.",
+    "No physics/clinical/material measurement claim; original aesthetic scene only."
+  ]
+}
