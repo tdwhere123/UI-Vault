@@ -14,16 +14,24 @@
       "runtime-part-2.js",
       "runtime.js"
     ],
-    "utf16RuntimeHTMLCSSBytes": 2960514,
+    "utf16RuntimeHTMLCSSBytes": 2960386,
     "budgetBytes": 8388608,
     "cacheStats": {
       "entries": 5,
-      "bytes": 2960514
+      "bytes": 2960386
     },
     "fetches": 15
   },
-  "sourceRebuild": "PASS: final source pack independently extracted, npm build succeeded with pinned reused build tools, rebuilt production runtime passed full key workflow test (test-rebuilt.mjs). Mangled variable names may differ; original API keys absent.",
+  "sourceRebuild": "PASS final revised source extraction/build/key workflow, test-rebuilt-binding.cjs.mjs",
   "nativeVisual": "not-run",
   "screenshots": "none",
-  "directIndexScripts": "PASS sequential original script list starts real editor; probe.mjs"
+  "bindingCorrection": {
+    "scope": "Preventive semantic correction after575 publication. 20 promoted functions inspected; none self-rebind in current miniPaint. No live core regression reproduced.",
+    "review": {
+      "functions": 20,
+      "selfRebinding": []
+    },
+    "fix": "Anonymous function-expression assignment preserves outer variable reassignment semantics; original function algorithm unchanged.",
+    "tests": "normal/early/default loader and fresh extracted-source rebuild plus rebuilt workflow pass"
+  }
 }
