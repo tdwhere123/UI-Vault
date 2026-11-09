@@ -14672,55 +14672,34 @@
   },
   {
     "id": "looper:radial-phase-field",
-    "title": "径向相位光学点阵",
     "source": "Looper",
     "repository": "https://github.com/spite/looper",
     "revision": "9fc2130c4e087113623c508fefd9d154876bb937",
-    "sourcePath": "loops/18.js",
     "upstream": "https://github.com/spite/looper/blob/9fc2130c4e087113623c508fefd9d154876bb937/loops/18.js",
-    "license": "MIT (selected fixed source verified; complete runtime/asset audit pending)",
-    "behavior": "原Loop18用Canvas2D在同心环计算点位，按径向相位同步偏移与缩放，构成2秒循环光学材质。",
-    "difference": "不靠图像纹理；是相位驱动几何点阵而非现有图像抖色/3D光团。不冒称物理流体或任务状态。",
-    "description": "原Loop18用Canvas2D在同心环计算点位，按径向相位同步偏移与缩放，构成2秒循环光学材质。 不靠图像纹理；是相位驱动几何点阵而非现有图像抖色/3D光团。不冒称物理流体或任务状态。",
-    "gaps": [
-      "选定draw函数和context2d/easings原件，未收整套Looper或构建宿主。",
-      "源固定800px画布/400px样式；未来需真实draw调度、暂停/减动/resize和卸载测试。此项可能低成本Canvas2D适配，但本轮未运行。",
-      "本轮仅固定源及许可文本检查；未安装构建/运行/测试交互或清理，也未验浏览器像素。无封面/截图；所有封面由Grok处理。"
-    ],
-    "category": "视觉与动效",
-    "format": "材质设计族",
-    "kind": "原版视觉场景（仅来源）",
+    "sourcePath": "loops/18.js",
     "licenseEvidence": {
       "url": "https://github.com/spite/looper/blob/9fc2130c4e087113623c508fefd9d154876bb937/LICENSE",
       "sha256": "4ce72b070828119e210322fd2805c55ec71a83a10119e64fa41e2e1d97cac48f",
       "scope": "Complete fixed root license and selected source files read; runtime dependencies not closed"
     },
-    "sourceEvidence": [
-      {
-        "path": "loops/18.js",
-        "sha256": "2e2d73893ea6d83fe1533569af7664c9f1dd3f10d814151c4ef56545cf274124"
-      },
-      {
-        "path": "modules/context2d.js",
-        "sha256": "7743eb88462e8c434f1c0251ac065acbfa61f7401d3f286bff933a42021e15f7"
-      },
-      {
-        "path": "modules/easings.js",
-        "sha256": "d29a83a0f1507c6a75510eb64688bcedd0c35f42893b4958c254134167e3fc29"
-      }
-    ],
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-bulk-524",
-    "sourceScope": "3 selected original source files plus README and complete license; no full runnable archive",
-    "buildStatus": "fixed selected source/license read; no runtime or visual verification",
-    "counts": {
-      "independentFamily": 1,
-      "completedPreviews": 0
-    }
+    "title": "Looper · 径向相位光学点阵",
+    "license": "MIT",
+    "category": "视觉与动效",
+    "kind": "光学动效场景",
+    "format": "材质设计族",
+    "batch": "looper-01",
+    "preview": "batches/looper-01/radial-field/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Fixed original Canvas2D draw bundled; six production lifecycle modes and independent full command comparison passed; native pixels and performance unverified",
+    "description": "原版黑白圆点同心环按相位偏移和缩放，保留800×800画布与2秒循环；本地播放、暂停、重置和手动相位控制。",
+    "behavior": "原算法Canvas2D绘制，隐藏停止、减动静帧、失败停帧、退出清理；控制宿主为本地适配。",
+    "gaps": [
+      "不是截图、流体模拟或Agent真实数据；仅收原Loop18一族，不按相位/配色拆数。",
+      "完整MIT与原作者保留，运行无外部包/字体/图像/网络，不放宽CSP；原draw不改，仅删未用easings导入。",
+      "生产与原件在六时间点全部41773绘图命令一致，每帧13923个arc；Canvas命令桩不等于实际像素、清晰度或性能通过。",
+      "原800px复杂点阵，设备帧率/触摸和真实绘制视觉尚未验；封面仍交Grok。"
+    ]
   },
   {
     "id": "game-icons:attributed-symbol-family",
