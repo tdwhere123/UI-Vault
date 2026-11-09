@@ -10,8 +10,8 @@ test('failed asset calls error, never ready, and explicit retry can recover',asy
  const f=frame();await loader.mount(f,item,{onError:()=>errors++,onReady:()=>ready++});
  assert.equal(errors,1);assert.equal(ready,0);
  fail=false;await loader.mount(f,item,{onError:()=>errors++,onReady:()=>ready++});
- assert.equal(ready,0,'mount resolves before iframe load; caller must await onReady');
- f.onload();assert.equal(ready,1);assert.equal(errors,1);
+ assert.equal(ready,0,'mount does not establish runtime health');
+ f.onload();assert.equal(ready,0,'iframe load alone must not report ready');assert.equal(errors,1);loader.release(f);
 });
 test('stale failing mount does not report an error over a newer navigation',async()=>{
  let reject; const pending=new Promise((_,r)=>{reject=r});let errors=0;
