@@ -1,0 +1,15 @@
+--- adapted-build/registry/bases/radix/dusk/blocks/features/three.tsx
++++ dusk-features-three.adapted.tsx
+@@ -42,10 +42,8 @@
+                         <Card className="aspect-9/12 relative overflow-hidden">
+                             <DownloadIllustration />
+ 
+-                            <video
+-                                autoPlay
+-                                loop
+-                                preload="none"
++                            <img
++                                alt="Static illustrative replacement; original video not included"
+                                 src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAwIiBoZWlnaHQ9IjgwMCIgdmlld0JveD0iMCAwIDEyMDAgODAwIj48ZGVmcz48cmFkaWFsR3JhZGllbnQgaWQ9ImciPjxzdG9wIHN0b3AtY29sb3I9IiM2MzY2ZjEiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMwOTA5MGIiLz48L3JhZGlhbEdyYWRpZW50PjxsaW5lYXJHcmFkaWVudCBpZD0icyI+PHN0b3Agc3RvcC1jb2xvcj0iI2ZmZiIgc3RvcC1vcGFjaXR5PSIuNyIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzYzNjZmMSIgc3RvcC1vcGFjaXR5PSIuMSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMjAwIiBoZWlnaHQ9IjgwMCIgZmlsbD0iIzA5MDkwYiIvPjxlbGxpcHNlIGN4PSI2MDAiIGN5PSI0MjAiIHJ4PSI2MDAiIHJ5PSI1MDAiIGZpbGw9InVybCgjZykiIG9wYWNpdHk9Ii42Ii8+PGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ1cmwoI3MpIiBzdHJva2Utd2lkdGg9IjIiPjxlbGxpcHNlIGN4PSI2MDAiIGN5PSI0MTAiIHJ4PSI4MCIgcnk9IjcwIiB0cmFuc2Zvcm09InJvdGF0ZSgwIDYwMCA0MTApIi8+PGVsbGlwc2UgY3g9IjYwMCIgY3k9IjQxMCIgcng9IjEyNSIgcnk9IjkyIiB0cmFuc2Zvcm09InJvdGF0ZSg1IDYwMCA0MTApIi8+PGVsbGlwc2UgY3g9IjYwMCIgY3k9IjQxMCIgcng9IjE3MCIgcnk9IjExNCIgdHJhbnNmb3JtPSJyb3RhdGUoMTAgNjAwIDQxMCkiLz48ZWxsaXBzZSBjeD0iNjAwIiBjeT0iNDEwIiByeD0iMjE1IiByeT0iMTM2IiB0cmFuc2Zvcm09InJvdGF0ZSgxNSA2MDAgNDEwKSIvPjxlbGxpcHNlIGN4PSI2MDAiIGN5PSI0MTAiIHJ4PSIyNjAiIHJ5PSIxNTgiIHRyYW5zZm9ybT0icm90YXRlKDIwIDYwMCA0MTApIi8+PGVsbGlwc2UgY3g9IjYwMCIgY3k9IjQxMCIgcng9IjMwNSIgcnk9IjE4MCIgdHJhbnNmb3JtPSJyb3RhdGUoMjUgNjAwIDQxMCkiLz48ZWxsaXBzZSBjeD0iNjAwIiBjeT0iNDEwIiByeD0iMzUwIiByeT0iMjAyIiB0cmFuc2Zvcm09InJvdGF0ZSgzMCA2MDAgNDEwKSIvPjxlbGxpcHNlIGN4PSI2MDAiIGN5PSI0MTAiIHJ4PSIzOTUiIHJ5PSIyMjQiIHRyYW5zZm9ybT0icm90YXRlKDM1IDYwMCA0MTApIi8+PGVsbGlwc2UgY3g9IjYwMCIgY3k9IjQxMCIgcng9IjQ0MCIgcnk9IjI0NiIgdHJhbnNmb3JtPSJyb3RhdGUoNDAgNjAwIDQxMCkiLz48ZWxsaXBzZSBjeD0iNjAwIiBjeT0iNDEwIiByeD0iNDg1IiByeT0iMjY4IiB0cmFuc2Zvcm09InJvdGF0ZSg0NSA2MDAgNDEwKSIvPjxlbGxpcHNlIGN4PSI2MDAiIGN5PSI0MTAiIHJ4PSI1MzAiIHJ5PSIyOTAiIHRyYW5zZm9ybT0icm90YXRlKDUwIDYwMCA0MTApIi8+PGVsbGlwc2UgY3g9IjYwMCIgY3k9IjQxMCIgcng9IjU3NSIgcnk9IjMxMiIgdHJhbnNmb3JtPSJyb3RhdGUoNTUgNjAwIDQxMCkiLz48L2c+PC9zdmc+"
+                                 className="absolute inset-0 size-full object-cover"
+                                 width="2700"
