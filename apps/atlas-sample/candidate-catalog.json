@@ -4223,21 +4223,25 @@
   },
   {
     "id": "aicanvas:ai-job-cards",
-    "title": "ai-job-cards",
     "source": "AI Canvas free library",
-    "license": "MIT (free components-workspace explicitly designated by README)",
     "upstream": "https://github.com/aicanvas-me/aicanvas/tree/8164f1e423e4e654dd0828a941ba5cdda69f08fe/components-workspace/ai-job-cards",
     "website": "",
-    "buildStatus": "not installed or built",
-    "batch": "batch-002",
-    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "repository": "https://github.com/aicanvas-me/aicanvas",
+    "revision": "8164f1e423e4e654dd0828a941ba5cdda69f08fe",
+    "title": "职位叠卡轮换与收藏",
+    "description": "原三组九张职位卡、书签及弹簧轮换；明确虚构招聘演示，无品牌关联背书或申请服务。",
+    "behavior": "原三组九张职位卡、书签及弹簧轮换；明确虚构招聘演示，无品牌关联背书或申请服务。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "展示与媒体",
+    "license": "MIT",
+    "batch": "ai-jobs-01",
+    "preview": "batches/ai-jobs-01/job-cards/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
     "gaps": [
-      "Remote ImageKit/Unsplash artwork and fonts not archived or presumed MIT.",
-      "Tailwind v4/React19 and peer dependencies require integration. No site/premium CSS imported.",
-      "Original root scripts inject premium code and change Git hooks. They are retained only as evidence; do not run them. Prepare a separate minimal harness.",
-      "Crypto swap/music/charging are demo UI states, not verified transactions, playback or a real battery monitor. No wallet/API connected.",
-      "No install/build/browser/interaction/mobile validation.",
-      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+      "Original AICanvas AiJobCards full three brand stacks x three job cards, original9 rates/titles/roles, SVG marks, Phosphor bookmark glyphs, card dimensions/colors/spring slots/directional exit/drag thresholds retained as one family. Inline Anthropic/Perplexity/Google marks originate in fixed MIT source; retained for identifying the original example, no affiliation, endorsement, ownership or trademark license claimed. Six logo helper definitions exist in original source, only three stack brands displayed; unused logo variants not counted as extra components. Jobs and hourly rates are fictional illustrative data, not verified vacancies. Persistent Chinese disclaimer, no applications/accounts/network/transaction; original View only stopped propagation, now explicitly disabled. Original bookmarks and Next card buttons remain local, no storage. Fix source cycle timeout+double RAF: hold all handles, cancel at component cleanup and guard callbacks by mounted ref; original normal380ms transition and spring geometry unchanged. Original title/order data unchanged. Reduced-motion uses actual Framer useReducedMotion, zero transition duration and zero cycle wait, MotionConfig reducedMotion=user; normal pointer drag kept, not claimed native test passed. Host hides by unmount and resumes original default stacks/bookmarks; original ResizeObserver/theme MutationObserver disconnect, iframe-owned listeners/RAF/timers/animations bounded and stale callbacks inert. System sans fallback, no external media/font. Tests actual568compose original9cards/3fronts,bookmark,3-cycle wrap,View disabled,hidden during pending cycle/late stale callbacks/old nodes,earlymodule/lateerror and resource ledgers0. Actual568loader cache and release verified. Synthetic timers/RAF/ResizeObserver not native spring timing, pointer gesture, pixels or screen-reader verification. Full emitted dependency licenses retained; original root package dependency ranges and actual cached runtime versions are recorded, not assumed identical. Original upstream geometry and all logo SVG source kept, only lifecycle/reduced-motion/View changes described above."
     ]
   },
   {
@@ -12203,35 +12207,34 @@
   },
   {
     "id": "copilotkit:discourse-evidence-report",
-    "title": "正反论据与引用证据阅读",
     "source": "CopilotKit",
     "repository": "https://github.com/CopilotKit/CopilotKit",
     "revision": "c7815d9ac96f48fb3a64ad8c18e176a870c81763",
-    "sourcePath": "examples/showcases/grok-generative-ui/components/ArgumentMap.tsx",
     "upstream": "https://github.com/CopilotKit/CopilotKit/blob/c7815d9ac96f48fb3a64ad8c18e176a870c81763/examples/showcases/grok-generative-ui/components/ArgumentMap.tsx",
-    "license": "MIT (root verified only; dependencies/assets not closed)",
-    "behavior": "原ArgumentMap分bull/bear两栏，支持量相对条带和渐进入场；ReceiptsTable逐条完整引用帖可滚动。",
-    "difference": "富内容结果型而非交互控件：不假称可拖拽关系图。与MIndElixir/Sankey及普通数据表用途不同。",
-    "gaps": [
-      "纯渲染组件没有点击编辑；论据/支持数是传入数据，不能冒称真证据。原X帖头像/链接/品牌/内容需授权或透明虚构替代，模型与X接口必须隔离。",
-      "完整传递依赖及素材许可未审；默认CSP/无网络、交互和退出清理、浏览器像素均未验。"
-    ],
-    "description": "原ArgumentMap分bull/bear两栏，支持量相对条带和渐进入场；ReceiptsTable逐条完整引用帖可滚动。 富内容结果型而非交互控件：不假称可拖拽关系图。与MIndElixir/Sankey及普通数据表用途不同。",
-    "category": "展示与媒体",
+    "sourcePath": "examples/showcases/grok-generative-ui/components/ArgumentMap.tsx",
     "licenseEvidence": {
       "url": "https://github.com/CopilotKit/CopilotKit/blob/c7815d9ac96f48fb3a64ad8c18e176a870c81763/LICENSE",
       "sha256": "15a0e5343aea872c0573ad72feb6044b336f162d724cc1673c608e6b37ea071b",
       "scope": "Full root MIT read; transitive runtime/media permissions not closed"
     },
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-bulk-522",
-    "sourceScope": "Selected fixed original code and complete root license evidence; no complete runnable/archive or runtime audit",
-    "kind": "原版完整场景（仅来源）",
-    "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted"
+    "difference": "富内容结果型而非交互控件：不假称可拖拽关系图。与MIndElixir/Sankey及普通数据表用途不同。",
+    "title": "论点分布与引用阅读报告",
+    "description": "原双列论点、支持比例和完整引用帖阅读，使用明确虚构设计讨论数据与原首字母头像回退，不搜索或展示真实社交证据。",
+    "behavior": "原双列论点、支持比例和完整引用帖阅读，使用明确虚构设计讨论数据与原首字母头像回退，不搜索或展示真实社交证据。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "Agent与对话",
+    "license": "MIT (CopilotKit, React, ReactDOM, scheduler)",
+    "batch": "discourse-report-01",
+    "preview": "batches/discourse-report-01/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "actual568 compose双列/单列/空数据/引用/hidden/退出通过；视觉未验",
+    "gaps": [
+      "原完整ArgumentMap及ReceiptsTable/XPost展示；不是完整联网Grok应用，不搜索/生成/编辑或点赞。",
+      "数据为明确虚构设计讨论，计数不是证据真实性；原头像使用原首字母回退，不加载外图。",
+      "原字体使用已有系统回退；真实排版、滚动和动画视觉未验。"
+    ]
   },
   {
     "id": "copilotkit:resume-job-match",
@@ -13117,35 +13120,32 @@
   },
   {
     "id": "copilotkit:research-artifact-workspace",
-    "title": "研究任务、产物与来源联动",
     "source": "CopilotKit",
     "repository": "https://github.com/CopilotKit/CopilotKit",
     "revision": "c7815d9ac96f48fb3a64ad8c18e176a870c81763",
-    "sourcePath": "examples/showcases/deep-agents/src/components/Workspace.tsx",
     "upstream": "https://github.com/CopilotKit/CopilotKit/blob/c7815d9ac96f48fb3a64ad8c18e176a870c81763/examples/showcases/deep-agents/src/components/Workspace.tsx",
-    "license": "MIT (root declaration verified; runtime/media not closed)",
-    "behavior": "原研究任务状态、折叠分区、产物文件列表，文件modal Markdown阅读、关闭及下载入口，来源清单。",
-    "difference": "不同上一批章节编辑：这里是多产物/任务和证据清单的交付视图，不再写报告正文。",
-    "gaps": [
-      "文件下载/Markdown链接需明确隔离，完整状态来自Agent外部props；不冒称真实研究结果。下载Blob、全局keydown/模态关闭及退出、传递依赖媒体未验。",
-      "未安装、构建、运行；传递依赖/媒体许可、默认CSP和生命周期、视觉均未验。"
-    ],
-    "description": "原研究任务状态、折叠分区、产物文件列表，文件modal Markdown阅读、关闭及下载入口，来源清单。 不同上一批章节编辑：这里是多产物/任务和证据清单的交付视图，不再写报告正文。",
-    "category": "Agent与对话",
+    "sourcePath": "examples/showcases/deep-agents/src/components/Workspace.tsx",
     "licenseEvidence": {
       "url": "https://github.com/CopilotKit/CopilotKit/blob/c7815d9ac96f48fb3a64ad8c18e176a870c81763/LICENSE",
       "sha256": "15a0e5343aea872c0573ad72feb6044b336f162d724cc1673c608e6b37ea071b",
       "scope": "Complete root MIT text read; transitive runtime/media not closed"
     },
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-bulk-523",
-    "sourceScope": "Selected fixed original code and root license; no runnable/archive or runtime audit",
-    "kind": "原版完整场景（仅来源）",
-    "buildStatus": "fixed source and root license read; not built or run"
+    "difference": "不同上一批章节编辑：这里是多产物/任务和证据清单的交付视图，不再写报告正文。",
+    "title": "研究任务与产物阅读工作区",
+    "description": "原任务、产物、来源分区与Markdown文件查看，使用明确虚构本地研究数据；无代理执行、真实引用、下载或外跳。",
+    "behavior": "原任务、产物、来源分区与Markdown文件查看，使用明确虚构本地研究数据；无代理执行、真实引用、下载或外跳。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "Agent与对话",
+    "license": "MIT AND ISC",
+    "batch": "research-workspace-01",
+    "preview": "batches/research-workspace-01/workspace/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Original CopilotKit Deep Agents Workspace, Section, TodoList, FileList, SourceList and FileViewerModal retained as one complete original component scene. Host supplies explicit fictional ResearchState with three todo states, two local Markdown artifacts and found/scraped/failed example sources, not AI-generated findings or real citations. No agent/research/network/backend. Original section collapse and file click/modal/Markdown/Escape/backdrop/close retained. Download helpers removed and buttons visibly disabled because isolated gallery has no download permission, not fake success. Original source anchor hrefs removed and marked aria-disabled; Markdown external links/images are rendered as noninteractive text by explicit component adapters, no raw-HTML plugin. Original file divs augmented with role/button/tabIndex and Enter/Space to open, transparent accessibility addition not original behavior claim. Original modal overflow cleanup corrected to restore previous inline value instead of unconditionally clearing. Original design CSS/geometry/theme tokens and typography plugin retained; Google font import removed, system sans fallback without font download. Host Chinese disclaimer explains fictional data/no downloads/no source navigation, hidden unmount and visible fresh original local state. Original package React19.2.3/Lucide^0.562/react-markdown^9; this compatibility build uses actual versions below from shared audited caches, not claimed identical npm pins. Full emitted LICENSE/NOTICE preserved plus Lucide Feather MIT; CSS compiler and typography plugin licenses included as compiled-css only. Actual568compose/loader tests original section toggles,Markdown modal text,5repeat open/close,Escape,host Enter access,download/URL gates,hidden/oldnode/overflow cleanup,earlymodule/lateerror; owned listeners/timers/RAF/observers zero, forbidden API calls zero. Native responsive layout, pointer pixels and screen-reader behavior not verified."
+    ]
   },
   {
     "id": "svar:gantt-task-editor",
@@ -18386,42 +18386,46 @@
   },
   {
     "id": "learngitbranching:visual-command-lessons",
-    "title": "命令与分支变化的互动关卡",
     "source": "Learn Git Branching",
     "repository": "https://github.com/pcottle/learnGitBranching",
     "revision": "a0fac58a4a98d2b6ca5cccb8fe1da76c48249a8e",
-    "sourcePath": "index.html",
     "upstream": "https://github.com/pcottle/learnGitBranching/blob/a0fac58a4a98d2b6ca5cccb8fe1da76c48249a8e/index.html",
-    "license": "MIT (complete actual root text; runtime/media not closed)",
-    "behavior": "原关卡界面将模拟命令行、当前提交树、目标图与指导对话串联，输入命令后观察分支/提交迁移并对照目标，支持目标展开与关卡切换。",
-    "difference": "区别普通终端或静态关系图：操作被可视化为版本历史状态转换；是 Git 教学模拟，不执行真实 git 或修改用户仓库，整个教学场景一族。",
-    "styleTags": [
-      "空间教学/状态迁移"
-    ],
-    "gaps": [
-      "原 jQuery/Raphael/React/字体图标、关卡翻译完整依赖及素材许可待审；源码设置全局对象、focus/resize/beforeunload 键盘监听，含 sessionStorage 失败重载，必须限制宿主影响。动画队列/快捷键/中断与退出未测，不能把源码模拟理解为真实 Git 验证。",
-      "仅只读源码筛选；未安装/构建/运行、交互生命周期或浏览器视觉验收。"
-    ],
-    "description": "原关卡界面将模拟命令行、当前提交树、目标图与指导对话串联，输入命令后观察分支/提交迁移并对照目标，支持目标展开与关卡切换。 区别普通终端或静态关系图：操作被可视化为版本历史状态转换；是 Git 教学模拟，不执行真实 git 或修改用户仓库，整个教学场景一族。",
-    "category": "展示与媒体",
+    "sourcePath": "index.html",
     "licenseEvidence": {
       "url": "https://github.com/pcottle/learnGitBranching/blob/a0fac58a4a98d2b6ca5cccb8fe1da76c48249a8e/LICENSE.md",
       "sha256": "2b4a732e77065fa8df773b230e9ef905026c20dead9fcaf5d1b4a13ff5832f3e",
       "scope": "Complete actual root license; transitive code and media permissions not closed"
     },
-    "sourceEvidence": {
-      "localFile": "evidence/pcottle--learnGitBranching--index.html",
-      "sha256": "3ee513e664154231aaf72538aab98bee2ab597497b67f85ad5eea997da8adac8"
-    },
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-style-531",
-    "sourceScope": "Fixed original complete UI/demo source and full root license; not a runnable adaptation or full asset archive",
-    "kind": "原版交互场景（仅来源）",
-    "buildStatus": "fixed source and full root license read; not built/run/visually accepted"
+    "difference": "区别普通终端或静态关系图：操作被可视化为版本历史状态转换；是 Git 教学模拟，不执行真实 git 或修改用户仓库，整个教学场景一族。",
+    "title": "版本分支命令与可视化课程",
+    "description": "原提交图、终端模拟、撤销与完整36关卡，内置英文和简体中文；仅内存教学模拟，不操作真实仓库。",
+    "behavior": "原提交图、终端模拟、撤销与完整36关卡，内置英文和简体中文；仅内存教学模拟，不操作真实仓库。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "展示与媒体",
+    "license": "MIT; BSD-3-Clause; Apache-2.0; CC-BY-3.0",
+    "batch": "learngit-01",
+    "preview": "batches/learngit-01/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "pass",
+    "gaps": [
+      "Complete original local Git tutorial/sandbox, original 36 levels with English and Simplified Chinese original texts bundled; other language data/selection entries removed to meet unchanged host cache budget. Simulates Git only: no actual repository, shell, credential, git hosting or remote network connection. Original Mercurial support included but not exhaustively tested.",
+      "Fixed CommonJS/React17 source bundled with normal npm dependencies; Vite dynamic imports converted by esbuild into local bundled module initialization, not fetched. Dependency versions and installed-lock hash disclosed; 16 nearest positive-emitted package roots, no unreported embedded Eve: Raphael no-deps distribution aliases explicit eve-raphael with its actual Apache-2.0 LICENSE.",
+      "Fixed HTML templates precompiled at build time using original Underscore compiler; runtime templates no longer invoke Function. Translation interpolation limited to named {parameter} substitution without evaluating arbitrary expressions. Static original lesson data is retained.",
+      "Local progress, command history and locale preference only in memory, lost on reopen. Analytics/promotion and external navigation/social sharing removed. Clipboard transmission and certificate image download unavailable; certificates/lesson text are not proof of any real qualification.",
+      "English/Simplified Chinese only: all other locale menu entries and translation data omitted. Actual567 loader and default cache measured below 8 MiB UTF16 budget with cache reuse and retry checks; no host limit changes.",
+      "Original fontawesome font is legacy CC BY 3.0. Fourteen original text SVG glyph outlines converted to SVG CSS masks; four modern icon-only markers use explicit text fallback. No binary font, image, screenshot or media payloads. Original main/rainbow CSS preserved; typography uses available system fallbacks.",
+      "Markdown rendering sanitized with DOMPurify Apache-2.0 option; active HTML/media/form tags removed, unsafe URL attributes rejected. This does not execute arbitrary code. No external uploads, arbitrary script, eval, Function or CSP expansion.",
+      "Hidden page blurs command input and retains original document/model; in-flight finite animations may settle, not claimed to freeze every animation. Final disposal removes runtime listeners/timers/intervals/RAF and original React mounts and SVG paper. Reduced-motion CSS suppresses CSS transition/animation; no claim all original Raphael timeline animations are disabled.",
+      "JSDOM SVG bounding-box/matrix controlled fixtures are only functional tests, not native pixel/layout/IME/drag or visual fidelity QA. Tested original welcome, level map, commit/undo changing original engine and SVG path output, unsafe input, hidden retention, final resource cleanup, early exit and missing root."
+    ],
+    "runtime": {
+      "scripts": [
+        "runtime-part-1.js",
+        "runtime.js"
+      ]
+    }
   },
   {
     "id": "netron:model-structure-explorer",
@@ -19135,42 +19139,33 @@
   },
   {
     "id": "codesurfer:code-walkthrough-deck",
-    "title": "逐步聚焦的代码讲解演示",
     "source": "Code Surfer",
     "repository": "https://github.com/pomber/code-surfer",
     "revision": "948452f7c1c8adaf019e29600d7d158747a91a90",
-    "sourcePath": "sites/docs/decks/demo.mdx",
     "upstream": "https://github.com/pomber/code-surfer/blob/948452f7c1c8adaf019e29600d7d158747a91a90/sites/docs/decks/demo.mdx",
-    "license": "MIT (complete actual root text; runtime/media not closed)",
-    "behavior": "原 MDX 演示用 CodeSurfer/Step/Columns 将代码段、行列焦点、字幕和幻灯步骤连接，切换时保留行对应并平移/缩放聚焦当前解释。",
-    "difference": "区别编辑器、语法高亮或历史文件查看：这是作者安排好的代码演讲节奏与阅读焦点，非执行代码；完整原演示一族，不按主题色或每页拆。",
-    "styleTags": [
-      "代码/讲解叙事"
-    ],
-    "gaps": [
-      "原 mdx-deck、Prism/主题及动画依赖许可未闭合，MDX 必须预编译而非放宽 unsafe-eval。原 surfer.jpg、logo 与字体独立审，代码示例不是功能实现；键盘/滚轮/动画中断与卸载清理、窄屏像素未验。",
-      "仅只读源码筛选；未安装/构建/运行、交互生命周期或浏览器视觉验收。"
-    ],
-    "description": "原 MDX 演示用 CodeSurfer/Step/Columns 将代码段、行列焦点、字幕和幻灯步骤连接，切换时保留行对应并平移/缩放聚焦当前解释。 区别编辑器、语法高亮或历史文件查看：这是作者安排好的代码演讲节奏与阅读焦点，非执行代码；完整原演示一族，不按主题色或每页拆。",
-    "category": "展示与媒体",
+    "sourcePath": "sites/docs/decks/demo.mdx",
     "licenseEvidence": {
       "url": "https://github.com/pomber/code-surfer/blob/948452f7c1c8adaf019e29600d7d158747a91a90/license",
       "sha256": "33a417fdc896ed5bf4f68fa229bf36c8e15aadb105f26b0a11c2da973bf22873",
       "scope": "Complete actual root license; transitive code and media permissions not closed"
     },
-    "sourceEvidence": {
-      "localFile": "evidence/pomber--code-surfer--sites__docs__decks__demo.mdx",
-      "sha256": "c441f013fd98e561ab5103dc6809a3fba83eef42486e5302cabb6b1d08718dbc"
-    },
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-style-532",
-    "sourceScope": "Fixed original complete UI/demo source and full root license; not a runnable adaptation or full asset archive",
-    "kind": "原版交互场景（仅来源）",
-    "buildStatus": "fixed source and full root license read; not built/run/visually accepted"
+    "difference": "区别编辑器、语法高亮或历史文件查看：这是作者安排好的代码演讲节奏与阅读焦点，非执行代码；完整原演示一族，不按主题色或每页拆。",
+    "title": "代码逐步讲解与双栏对照",
+    "description": "原单栏四步及双栏五步完整代码讲解，保留步骤、焦点与原主题；未包含最后四个照片步骤或含图封面。",
+    "behavior": "原单栏四步及双栏五步完整代码讲解，保留步骤、焦点与原主题；未包含最后四个照片步骤或含图封面。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "展示与媒体",
+    "license": "MIT AND BSD-3-Clause",
+    "batch": "codesurfer-01",
+    "preview": "batches/codesurfer-01/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "actual567 compose; original 9-code-step DOM/focus/columns/navigation + lifecycle verified; native pixels unverified",
+    "gaps": [
+      "Original four ImageComponent/photo steps not included; this is complete pure-code selection, not full photo deck.",
+      "Native font measurement, responsive pixel appearance and touch/swipe require visual acceptance."
+    ]
   },
   {
     "id": "cindyjs:julia-orbit-explanation",
