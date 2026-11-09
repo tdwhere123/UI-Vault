@@ -1,0 +1,734 @@
+{
+  "repository": "https://github.com/martiserra99/formity",
+  "revision": "3d4dab433b8c3040f9727ae3e4bba0044e146ce9",
+  "sourceVersion": "react/system 3.0.0 source, not substituted npm Formity",
+  "sources": [
+    {
+      "path": "LICENSE",
+      "sha256": "693cc69a96d6767e34ad28e7db1b3fa810f6870bcbcd52a1ab54a75461fa167f"
+    },
+    {
+      "path": "apps/react/package.json",
+      "sha256": "a8569850c9f5ba24bd6d61191f2e53460e42b079a123ad756fb0bca8877ad740"
+    },
+    {
+      "path": "apps/react/src/app.tsx",
+      "sha256": "921ec55ec3f5486681f69c22acb63e6f24ea9fc6540f91693392bd5c01c566a5"
+    },
+    {
+      "path": "apps/react/src/components/data.tsx",
+      "sha256": "3c5d10e0fd9bd1b8385f008708c252c0aa5d8b4d0980e8a74606a504baf24d86"
+    },
+    {
+      "path": "apps/react/src/components/fields/checkbox-group.tsx",
+      "sha256": "065e3cc1f356b65c926e06b63d5b3789687a3fc1c91da3c675a55bb88e014c8f"
+    },
+    {
+      "path": "apps/react/src/components/fields/listbox.tsx",
+      "sha256": "6f223c54504052f8bcc697a3acf67e8bf030f701bf25e5d65515b9f14fa739b4"
+    },
+    {
+      "path": "apps/react/src/components/fields/radio-group.tsx",
+      "sha256": "392a807c894e46f2feb3b8fb3be9b5274eac9393a1f1a660b805a93b64949a17"
+    },
+    {
+      "path": "apps/react/src/components/fields/text-field.tsx",
+      "sha256": "9ba27f515daa6a18dc1c8bdc7b538d925384b150e40e2bf10e6fb16636f29db6"
+    },
+    {
+      "path": "apps/react/src/components/form.tsx",
+      "sha256": "a2f0825b079e68cd26a907512828e56046b78c2df9a6d25a26b33a88d64f992b"
+    },
+    {
+      "path": "apps/react/src/components/index.ts",
+      "sha256": "5418045851ee6db8ce8bab8b315c6b5fcfe2cb3399158816842b7fca100fc545"
+    },
+    {
+      "path": "apps/react/src/components/layout.tsx",
+      "sha256": "8c22aa2d7b2f43a6c34f5460fdc0847d4865ef9f5d16577f058f8faebbf45ee2"
+    },
+    {
+      "path": "apps/react/src/components/navigation/back-button.tsx",
+      "sha256": "5e39d8891f472e9474e820203781e98e53d2f30d71bfb5076dfc6dc4be7a2a71"
+    },
+    {
+      "path": "apps/react/src/components/navigation/next-button.tsx",
+      "sha256": "c3f041ecf29c978553d0a062ae89d626a92efe0c38f5d0c3ee8d15ff85c9cb09"
+    },
+    {
+      "path": "apps/react/src/components/react-hook-form/listbox.tsx",
+      "sha256": "00cee551a238cb04c221fdf3f218a4715d921968af52df15f422fdb95b8a5693"
+    },
+    {
+      "path": "apps/react/src/components/react-hook-form/multi-select.tsx",
+      "sha256": "3da1b6c354d196f41f2bc9404aef18fc24444e6b9b7a7ed79f02e994143448a3"
+    },
+    {
+      "path": "apps/react/src/components/react-hook-form/number-field.tsx",
+      "sha256": "13a3f8ce1c6e01f0b32acdf25b66f700b9f8a5f149de4ded00f753ffd1156535"
+    },
+    {
+      "path": "apps/react/src/components/react-hook-form/select.tsx",
+      "sha256": "23767fb060251fc8654e3dc1bb7cd94b007b09b37f553995f324bbdc13695281"
+    },
+    {
+      "path": "apps/react/src/components/react-hook-form/text-field.tsx",
+      "sha256": "a45656acb24bee706cd39c2f17944b164719ae02e1bd2c770017dc6aa9d8f933"
+    },
+    {
+      "path": "apps/react/src/components/react-hook-form/yes-no.tsx",
+      "sha256": "24f3271078dac5eb97db8a9f276b8974de60f76d1fa22bdab057564634d60090"
+    },
+    {
+      "path": "apps/react/src/components/user-interface/button.tsx",
+      "sha256": "4021d0d32041032b56810fcb4c9a123c6f67e51e64517844ee0e2becc4686589"
+    },
+    {
+      "path": "apps/react/src/components/user-interface/code.tsx",
+      "sha256": "53bb52a9e0d1dce8e5b612f71116b3e2d10ae184ab1dfa5a2e21703d724a2b53"
+    },
+    {
+      "path": "apps/react/src/components/user-interface/field.tsx",
+      "sha256": "1ae85ac1511ef12824dc92884691f937636fbb25be508adb93c19c7cdfd20cea"
+    },
+    {
+      "path": "apps/react/src/components/user-interface/input.tsx",
+      "sha256": "93fedcde81499658599a780e8868dc6a44f6ad930a22784726844af0b53630c8"
+    },
+    {
+      "path": "apps/react/src/components/user-interface/row.tsx",
+      "sha256": "a82cddb545457e991e773dffd1eb38440241dc66a20cf86d5ed371c8534f15c2"
+    },
+    {
+      "path": "apps/react/src/flow.condition.tsx",
+      "sha256": "a00cccaa77c2e52284142296e018ba1a7ae41bc8ef617e6f993116c0c4527844"
+    },
+    {
+      "path": "apps/react/src/flow.list.tsx",
+      "sha256": "8c138490cd1b91cc8d58c1a80de17f10d5588218818f7b29563f1f9a12c65cf1"
+    },
+    {
+      "path": "apps/react/src/flow.loop.tsx",
+      "sha256": "33ffcff2cbf4abd423f06c8cad0a3f1334f517e197d4af769deaa2d777452eff"
+    },
+    {
+      "path": "apps/react/src/flow.switch.tsx",
+      "sha256": "e2da58d7bc7e032deb76b945ebe50cd114cb001d1020c9ab115ae51f87c0ecee"
+    },
+    {
+      "path": "apps/react/src/flow.tsx",
+      "sha256": "7d3ce04e1e8e8bba73aabeca1261e7102b6b78e0c0cd95a0d2c2ac3123cc5684"
+    },
+    {
+      "path": "apps/react/src/form-controls/form-controls-context.ts",
+      "sha256": "78304b7a8ad7fb992f95a9fb1684c9fbc6d9710a347289fc391604e55721f060"
+    },
+    {
+      "path": "apps/react/src/form-controls/form-controls-value.ts",
+      "sha256": "40309bff6bf6aa321e85f8bd3f9e02c6161863e16433ec3ee8b4a67f509c6a78"
+    },
+    {
+      "path": "apps/react/src/form-controls/form-controls.tsx",
+      "sha256": "9ec6c2e88a5238b3ee24ffb242601ec90772dcce1e3a58f0c2d4d4605b3bce53"
+    },
+    {
+      "path": "apps/react/src/form-controls/index.ts",
+      "sha256": "a52a3d12b072317952294515920cbc3a60f0844a776d75dc23667882b8bc492b"
+    },
+    {
+      "path": "apps/react/src/form-controls/use-form-controls.ts",
+      "sha256": "c612585c6c79f33ebad2766cfb85ef7f9126185a19dd8b6d45ef128b2deb47fa"
+    },
+    {
+      "path": "apps/react/src/main.css",
+      "sha256": "3446f51ae793a368b6227d563de7e322f2282fa8dd40a487925d4660ed87a20c"
+    },
+    {
+      "path": "apps/react/src/main.tsx",
+      "sha256": "44d9f0e763a4d7c116a8be516fb5b283accc3f9a97e05fc622b58fd4803372dd"
+    },
+    {
+      "path": "apps/react/src/multi-step-form.cy.tsx",
+      "sha256": "da9f77686bb3ae7b6f15c5fd943c7a0dacef434e8aad1e2e96e9aa95f0333619"
+    },
+    {
+      "path": "apps/react/src/multi-step-form.tsx",
+      "sha256": "834042256fe62fd20fc30d4d367232ab1ea2e842cfdd8d2f6ec62aeb0b8752cd"
+    },
+    {
+      "path": "apps/react/src/utils.ts",
+      "sha256": "8713b26638260f0ef428e546f3f1b3c9153bcd8e2b8cd5c6f3c4d1f35d35721f"
+    },
+    {
+      "path": "apps/react/src/vite-env.d.ts",
+      "sha256": "65996936fbb042915f7b74a200fcdde7e410f32a669b1ab9597cfaa4b0faddb5"
+    },
+    {
+      "path": "apps/react/tailwind.config.ts",
+      "sha256": "1b680285edb90900758fbe8cef6fd1cb134d369a5b7023d9217cb7faa7282858"
+    },
+    {
+      "path": "packages/react/LICENSE",
+      "sha256": "693cc69a96d6767e34ad28e7db1b3fa810f6870bcbcd52a1ab54a75461fa167f"
+    },
+    {
+      "path": "packages/react/package.json",
+      "sha256": "fe516b775497578d497e3657b475e9f37132a4d6e6a10ff3a4d1f9b307b518a1"
+    },
+    {
+      "path": "packages/react/src/formity.tsx",
+      "sha256": "6b7b5b31567beb0626def673f6795f7a08729f838fc61de4bf9aa672ca94f33b"
+    },
+    {
+      "path": "packages/react/src/index.ts",
+      "sha256": "03118a9d1a899114c2d8c63a7ec42f8f166c6c6b49561eb2168f13263b75b1b0"
+    },
+    {
+      "path": "packages/react/src/use-formity.ts",
+      "sha256": "2efb2e8bdeeea578fa88e6b9d88fee8692b1d68266f8442d7b28e559f454f592"
+    },
+    {
+      "path": "packages/system/LICENSE",
+      "sha256": "693cc69a96d6767e34ad28e7db1b3fa810f6870bcbcd52a1ab54a75461fa167f"
+    },
+    {
+      "path": "packages/system/package.json",
+      "sha256": "1620cb179e821193aa3c3e96f371b76cfe5a84c5313df487a1be67768b9bd23b"
+    },
+    {
+      "path": "packages/system/src/index.ts",
+      "sha256": "97d29a952880fec119156079b22e90dddf864e58deccf1d142c2a0e7affebb7f"
+    },
+    {
+      "path": "packages/system/src/types/flow/plain.ts",
+      "sha256": "cfaa84d2e65b18a212e5464ba8d8849ef5bc80e89b52275b37a565312460ff56"
+    },
+    {
+      "path": "packages/system/src/types/flow/typed.ts",
+      "sha256": "48460938d89e5f76429528f68e3101d4be63615927423407fb3ae0e94c953d94"
+    },
+    {
+      "path": "packages/system/src/types/form-controls.ts",
+      "sha256": "8347d5aaf8687fdea55cbb6c9860dfe8eb292ed2f0039e3a017ba78fae2c926c"
+    },
+    {
+      "path": "packages/system/src/types/handlers/plain.ts",
+      "sha256": "e463d1d2b0c4b662122b08c6ebd0d76039237e474530736433ca931dfd132241"
+    },
+    {
+      "path": "packages/system/src/types/handlers/typed.ts",
+      "sha256": "f3bea38ac6a58c1f3ccf0fbb04d1f43cbdcb600ac9050c0ad8812e901ff766e4"
+    },
+    {
+      "path": "packages/system/src/types/output/return.ts",
+      "sha256": "ef592687bef531ae9d8aa1f3e01c70cb4d02c30ac3ec5614517f1c67c51013c7"
+    },
+    {
+      "path": "packages/system/src/types/output/yield.ts",
+      "sha256": "f1047d3f6edc5c544ba5933bbdf61f86c800a6c1bbc4c9a79b162023d5e5a557"
+    },
+    {
+      "path": "packages/system/src/types/schema.ts",
+      "sha256": "b2533960c6a4db1a03856788cae69e0f75d661dc646bd01b5a89974d1c2c90bd"
+    },
+    {
+      "path": "packages/system/src/types/state/memory.ts",
+      "sha256": "25d2f36ef45e09c0224b42a82d2a654d8ad4fcd6d02f62f2b3eae4c7559e6375"
+    },
+    {
+      "path": "packages/system/src/types/state/point.ts",
+      "sha256": "15fe61d1ce4444323d8fe53b92a5b96340f1d4d88ce266b12b42162a56272d9c"
+    },
+    {
+      "path": "packages/system/src/types/state/position.ts",
+      "sha256": "fb7a9e7dfe5ab4faf3fefc45db1cc8b04c1a8a9a1e426168ac65015b9c31e473"
+    },
+    {
+      "path": "packages/system/src/types/state/state.ts",
+      "sha256": "84937709e9709de3520ab9fb603671c0689225f423481ff42b42d0cf45420f49"
+    },
+    {
+      "path": "packages/system/src/types/struct.ts",
+      "sha256": "881c09eadbdf4c81d9c0e09de551b386487949136f0d809758c17a616748b101"
+    },
+    {
+      "path": "packages/system/src/types/utils.ts",
+      "sha256": "9381e58450643c348fb8613bb5dd8093fa577a539c213bc00df3b32153ee532a"
+    },
+    {
+      "path": "packages/system/src/utils/flow/form.ts",
+      "sha256": "4483d953e6a0669199dab14c6d5fcbe8c8672a0e106df0e1479108606932d5a6"
+    },
+    {
+      "path": "packages/system/src/utils/flow/nest.condition.test.ts",
+      "sha256": "cbde82b3668a86c7e9f58705fea02810dcb353f9277c3fc5fe583fe908d4b145"
+    },
+    {
+      "path": "packages/system/src/utils/flow/nest.condition.ts",
+      "sha256": "b0bbafce66edc3037afad0865b1c42687fadc1b8975e67d11c6f9426d267e17e"
+    },
+    {
+      "path": "packages/system/src/utils/flow/nest.jump.test.ts",
+      "sha256": "5ff3b7ab2f3d927efd2ffade32337db4abfad47a4dc3a5ff946f7e15be7bdb8e"
+    },
+    {
+      "path": "packages/system/src/utils/flow/nest.jump.ts",
+      "sha256": "5df5bb5f945690ffe8e9cefe9b6658d1eefc64cc4ee27f9b4aecf53e77675744"
+    },
+    {
+      "path": "packages/system/src/utils/flow/nest.list.test.ts",
+      "sha256": "661cf24abc7771bfb260dec749ea4cdee01933152a3f15c30d8514c97d37c403"
+    },
+    {
+      "path": "packages/system/src/utils/flow/nest.list.ts",
+      "sha256": "178e991c81194776f796ff1fedbfe32ebba144175f12e4661503a231ee866ed3"
+    },
+    {
+      "path": "packages/system/src/utils/flow/nest.loop.test.ts",
+      "sha256": "8b9a98ae24e4bd10285f07c996239e47b223adc44ac91cf73150962db350053f"
+    },
+    {
+      "path": "packages/system/src/utils/flow/nest.loop.ts",
+      "sha256": "6f8a24675bdadafa33e34bd166ca7af49b3476dba377bf389d6fee3e2da556bf"
+    },
+    {
+      "path": "packages/system/src/utils/flow/nest.module.test.ts",
+      "sha256": "de948d49683957cbf1d37364892b7d6e7083fe562d5eb573c4607cfc455b8467"
+    },
+    {
+      "path": "packages/system/src/utils/flow/nest.module.ts",
+      "sha256": "bb681ee628bc7f1cd5a50eb0f52d7b161d2269d0bfc15c54dbe7f57dc597bb3d"
+    },
+    {
+      "path": "packages/system/src/utils/flow/nest.switch.test.ts",
+      "sha256": "6872c7af1eb66a50d05e50ed30d98800f44caa78e88f3deedb669222a4561e2b"
+    },
+    {
+      "path": "packages/system/src/utils/flow/nest.switch.ts",
+      "sha256": "83df5adcda88ec3e6144e1599c2e5860bb6ab48ec2f5020b1ab10b5ec9d94e50"
+    },
+    {
+      "path": "packages/system/src/utils/flow/nest.test.ts",
+      "sha256": "687891b99c102a45f258cd6b338a173af1c4880465ffad9c48ca8673539b20c0"
+    },
+    {
+      "path": "packages/system/src/utils/flow/nest.ts",
+      "sha256": "ed393adfa6ad4f865978f3920cf15fb92322940e263212c8bbe83a6168fa1dd7"
+    },
+    {
+      "path": "packages/system/src/utils/flow/return.ts",
+      "sha256": "c0a961a037eac9cc37714446e948d27bc4b34cbb7b6216a12cec0ac7c626c502"
+    },
+    {
+      "path": "packages/system/src/utils/flow/variables.ts",
+      "sha256": "4a5c698d07c0b3f1978eba1bf2065a340bd4fab37d23e0aa7b246e251574f1bf"
+    },
+    {
+      "path": "packages/system/src/utils/flow/yield.ts",
+      "sha256": "5cf0490657900d9ee5b14487ca034458e7d313400d5ac37a9844e4ab10b7b8b3"
+    },
+    {
+      "path": "packages/system/src/utils/form.test.ts",
+      "sha256": "e788f7d56fe64ab105abaac20471b5dba9eb7524611b3b365488d9412eff4c27"
+    },
+    {
+      "path": "packages/system/src/utils/form.ts",
+      "sha256": "2cc31bac8820ea54dd67aa0beb37f1b4626216744518d96458a848d025fe7b4a"
+    },
+    {
+      "path": "packages/system/src/utils/index.ts",
+      "sha256": "b0dbd9437d4b3736d115aad0cc599718a6c3f18b9b52629f672a871933b80d50"
+    },
+    {
+      "path": "packages/system/src/utils/memory/form.test.ts",
+      "sha256": "5c66e00b1895e55d36a2c4e72e9ab278bc392586b16e21f8d4f39f9e62047724"
+    },
+    {
+      "path": "packages/system/src/utils/memory/form.ts",
+      "sha256": "917b32dd055a492b9e9328a3befbcd4567815134d6f87239d1b6ebe0ee506e78"
+    },
+    {
+      "path": "packages/system/src/utils/memory/nest.condition.test.ts",
+      "sha256": "6b597606833a9f8e99a07f163102a6de0a6bad99db996dafcf9f80e37742a78d"
+    },
+    {
+      "path": "packages/system/src/utils/memory/nest.condition.ts",
+      "sha256": "c891da6562aa3dd8a93c99c25f4fe1f4d0ea77c75bc5f341fbc7986b233f139f"
+    },
+    {
+      "path": "packages/system/src/utils/memory/nest.jump.test.ts",
+      "sha256": "a7490ccc0efc9b2f4e000c4202aeb124c3c0ff285e04bbf19ce27f3ff82bc480"
+    },
+    {
+      "path": "packages/system/src/utils/memory/nest.jump.ts",
+      "sha256": "70bc5d17ba8b63c1b84933f326ca097aba0c9ce98cc5d958d45ec2ca4745684b"
+    },
+    {
+      "path": "packages/system/src/utils/memory/nest.list.test.ts",
+      "sha256": "6a0538421b38392e4d614294c85e8903a6aee4c35baf07409cdc9ee4798b0f7a"
+    },
+    {
+      "path": "packages/system/src/utils/memory/nest.list.ts",
+      "sha256": "e79498163628510f37c13d10eef0d5a5d3713a612aff4e4661bf500af3f929cb"
+    },
+    {
+      "path": "packages/system/src/utils/memory/nest.loop.test.ts",
+      "sha256": "2104f006d8cc9814342f08542a450bdce43633f1a02d470a2e5f8c856c3a81a2"
+    },
+    {
+      "path": "packages/system/src/utils/memory/nest.loop.ts",
+      "sha256": "ab402c7c21c3d4be7617d87b0b8e9b9e5c0920d23c72e6fd9c36c70cd2bee98b"
+    },
+    {
+      "path": "packages/system/src/utils/memory/nest.module.test.ts",
+      "sha256": "b814d1ea1500bbd16c58ccd4894be2344ad6c12109ff0125b79ed4c947a79af4"
+    },
+    {
+      "path": "packages/system/src/utils/memory/nest.module.ts",
+      "sha256": "b360610686b2dd0cae7e01fdbcc3948543b30a0ec1aa3cd0672c09cc1a516cba"
+    },
+    {
+      "path": "packages/system/src/utils/memory/nest.switch.test.ts",
+      "sha256": "396da7310cad243b3bfb84e1220e5905d8805a0fb07c2d32d0f61b366a958ba5"
+    },
+    {
+      "path": "packages/system/src/utils/memory/nest.switch.ts",
+      "sha256": "e156c39110ed0737dbd4514cfeaadd2dd79c921997f3e7a43afea9c8ebb8fe82"
+    },
+    {
+      "path": "packages/system/src/utils/memory/nest.test.ts",
+      "sha256": "23e0a30af3ad74af5475905ff89714b57b081421bee01af11ffc9952659d68fc"
+    },
+    {
+      "path": "packages/system/src/utils/memory/nest.ts",
+      "sha256": "7bdfdf0f193965b11bab3e4ec79747e4e3dac171cdea737628368907c09b4914"
+    },
+    {
+      "path": "packages/system/src/utils/navigate.test.ts",
+      "sha256": "a59692c268f29344856ccb1dff49fd619d5946bcbb50f565c816782f7371320b"
+    },
+    {
+      "path": "packages/system/src/utils/navigate.ts",
+      "sha256": "330c14e6accd2178f98fabd4d544c97f80a650324a9a10c0243645fa689b4b57"
+    },
+    {
+      "path": "packages/system/src/utils/state.test.ts",
+      "sha256": "430053806ec26e337912c51141df3b823dfe0dd3c3ee13121cad283b8dd5e7f1"
+    },
+    {
+      "path": "packages/system/src/utils/state.ts",
+      "sha256": "d69cc7cc0cc0522140363cb7dddccef0462ab4ba71ba4dba71945cb05bc86f96"
+    }
+  ],
+  "runtimeDependencyCount": 23,
+  "dependencies": [
+    {
+      "name": "@floating-ui/core",
+      "version": "1.8.0",
+      "license": "MIT",
+      "role": "runtime",
+      "notices": [
+        {
+          "file": "LICENSE",
+          "sha256": "0e4c9a9b6c71019cbbea3bdc20b01223110a9035700f9c960c8fcbf78c2325ce"
+        }
+      ]
+    },
+    {
+      "name": "@floating-ui/dom",
+      "version": "1.8.0",
+      "license": "MIT",
+      "role": "runtime",
+      "notices": [
+        {
+          "file": "LICENSE",
+          "sha256": "0e4c9a9b6c71019cbbea3bdc20b01223110a9035700f9c960c8fcbf78c2325ce"
+        }
+      ]
+    },
+    {
+      "name": "@floating-ui/react",
+      "version": "0.26.28",
+      "license": "MIT",
+      "role": "runtime",
+      "notices": [
+        {
+          "file": "LICENSE",
+          "sha256": "0e4c9a9b6c71019cbbea3bdc20b01223110a9035700f9c960c8fcbf78c2325ce"
+        }
+      ]
+    },
+    {
+      "name": "@floating-ui/react-dom",
+      "version": "2.1.9",
+      "license": "MIT",
+      "role": "runtime",
+      "notices": [
+        {
+          "file": "LICENSE",
+          "sha256": "0e4c9a9b6c71019cbbea3bdc20b01223110a9035700f9c960c8fcbf78c2325ce"
+        }
+      ]
+    },
+    {
+      "name": "@floating-ui/utils",
+      "version": "0.2.12",
+      "license": "MIT",
+      "role": "runtime",
+      "notices": [
+        {
+          "file": "LICENSE",
+          "sha256": "0e4c9a9b6c71019cbbea3bdc20b01223110a9035700f9c960c8fcbf78c2325ce"
+        }
+      ]
+    },
+    {
+      "name": "@headlessui/react",
+      "version": "2.1.10",
+      "license": "MIT",
+      "role": "runtime",
+      "notices": [
+        {
+          "file": "LICENSE",
+          "sha256": "c0812e5b3b5848765343baffe9e304233fceae7891ba414a10d679aa7eccc0a6"
+        }
+      ]
+    },
+    {
+      "name": "@heroicons/react",
+      "version": "2.1.5",
+      "license": "MIT",
+      "role": "runtime",
+      "notices": [
+        {
+          "file": "LICENSE",
+          "sha256": "60e0b68c0f35c078eef3a5d29419d0b03ff84ec1df9c3f9d6e39a519a5ae7985"
+        }
+      ]
+    },
+    {
+      "name": "@hookform/resolvers",
+      "version": "3.9.1",
+      "license": "MIT",
+      "role": "runtime",
+      "notices": [
+        {
+          "file": "LICENSE",
+          "sha256": "e8eeb472f0a5889c2c51625b86a3f9b8630680adb9f49a125352e2e426392780"
+        }
+      ]
+    },
+    {
+      "name": "@react-aria/focus",
+      "version": "3.22.1",
+      "license": "Apache-2.0",
+      "role": "runtime",
+      "notices": [
+        {
+          "file": "LICENSE",
+          "sha256": "7dfe6526888bac51759c99f9a51262ba2711a8c12a067f2181609dd9a4066b84"
+        }
+      ]
+    },
+    {
+      "name": "@react-aria/interactions",
+      "version": "3.28.1",
+      "license": "Apache-2.0",
+      "role": "runtime",
+      "notices": [
+        {
+          "file": "LICENSE",
+          "sha256": "7dfe6526888bac51759c99f9a51262ba2711a8c12a067f2181609dd9a4066b84"
+        }
+      ]
+    },
+    {
+      "name": "@tanstack/react-virtual",
+      "version": "3.14.26",
+      "license": "MIT",
+      "role": "runtime",
+      "notices": [
+        {
+          "file": "LICENSE",
+          "sha256": "a405ee70c632bb938acb7ac5f210e814409b3760ea9d2329d8ed8ffcfd11a0e7"
+        }
+      ]
+    },
+    {
+      "name": "@tanstack/virtual-core",
+      "version": "3.19.11",
+      "license": "MIT",
+      "role": "runtime",
+      "notices": [
+        {
+          "file": "LICENSE",
+          "sha256": "a405ee70c632bb938acb7ac5f210e814409b3760ea9d2329d8ed8ffcfd11a0e7"
+        }
+      ]
+    },
+    {
+      "name": "clsx",
+      "version": "2.1.1",
+      "license": "MIT",
+      "role": "runtime",
+      "notices": [
+        {
+          "file": "license",
+          "sha256": "9a9edad7baae52622bddf3c15b2ef8a33d2c89f2d25408ad13e8a7481c6b0c97"
+        }
+      ]
+    },
+    {
+      "name": "prism-react-renderer",
+      "version": "2.4.0",
+      "license": "MIT",
+      "role": "runtime",
+      "notices": [
+        {
+          "file": "LICENSE",
+          "sha256": "f0b13db195ed479e26f203b8d8c69c52a20e87b9d8982474b84d81152e47e382"
+        }
+      ]
+    },
+    {
+      "name": "prismjs",
+      "version": "1.29.0",
+      "license": "MIT",
+      "role": "embedded in prism-react-renderer distribution",
+      "notices": [
+        {
+          "file": "LICENSE",
+          "sha256": "2b947f0901a7ffcf08a89957da9783c0e9c6e72cb6ce8e959f501ab5409e4d2b"
+        }
+      ]
+    },
+    {
+      "name": "react",
+      "version": "18.3.1",
+      "license": "MIT",
+      "role": "runtime",
+      "notices": [
+        {
+          "file": "LICENSE",
+          "sha256": "52412d7bc7ce4157ea628bbaacb8829e0a9cb3c58f57f99176126bc8cf2bfc85"
+        }
+      ]
+    },
+    {
+      "name": "react-aria",
+      "version": "3.53.1",
+      "license": "Apache-2.0",
+      "role": "runtime",
+      "notices": [
+        {
+          "file": "LICENSE",
+          "sha256": "7dfe6526888bac51759c99f9a51262ba2711a8c12a067f2181609dd9a4066b84"
+        }
+      ]
+    },
+    {
+      "name": "react-dom",
+      "version": "18.3.1",
+      "license": "MIT",
+      "role": "runtime",
+      "notices": [
+        {
+          "file": "LICENSE",
+          "sha256": "52412d7bc7ce4157ea628bbaacb8829e0a9cb3c58f57f99176126bc8cf2bfc85"
+        }
+      ]
+    },
+    {
+      "name": "react-hook-form",
+      "version": "7.54.2",
+      "license": "MIT",
+      "role": "runtime",
+      "notices": [
+        {
+          "file": "LICENSE",
+          "sha256": "e8eeb472f0a5889c2c51625b86a3f9b8630680adb9f49a125352e2e426392780"
+        }
+      ]
+    },
+    {
+      "name": "react-stately",
+      "version": "3.51.0",
+      "license": "Apache-2.0",
+      "role": "runtime",
+      "notices": [
+        {
+          "file": "LICENSE",
+          "sha256": "7dfe6526888bac51759c99f9a51262ba2711a8c12a067f2181609dd9a4066b84"
+        }
+      ]
+    },
+    {
+      "name": "scheduler",
+      "version": "0.23.2",
+      "license": "MIT",
+      "role": "runtime",
+      "notices": [
+        {
+          "file": "LICENSE",
+          "sha256": "52412d7bc7ce4157ea628bbaacb8829e0a9cb3c58f57f99176126bc8cf2bfc85"
+        }
+      ]
+    },
+    {
+      "name": "tabbable",
+      "version": "6.5.1",
+      "license": "MIT",
+      "role": "runtime",
+      "notices": [
+        {
+          "file": "LICENSE",
+          "sha256": "8e714750725e75c8b31172ef84c0805f94873f86e3b5cfca8a948553f0778fa1"
+        }
+      ]
+    },
+    {
+      "name": "tailwind-merge",
+      "version": "2.5.4",
+      "license": "MIT",
+      "role": "runtime",
+      "notices": [
+        {
+          "file": "LICENSE.md",
+          "sha256": "d4c70c7ce38cea8778f0aed3fc0bef0a9dbd27f13bd8b6773cbd6d37941971e5"
+        }
+      ]
+    },
+    {
+      "name": "tailwindcss",
+      "version": "3.4.14",
+      "license": "MIT",
+      "role": "CSS generator",
+      "notices": [
+        {
+          "file": "LICENSE",
+          "sha256": "60e0b68c0f35c078eef3a5d29419d0b03ff84ec1df9c3f9d6e39a519a5ae7985"
+        }
+      ]
+    },
+    {
+      "name": "zod",
+      "version": "3.24.1",
+      "license": "MIT",
+      "role": "runtime",
+      "notices": [
+        {
+          "file": "LICENSE",
+          "sha256": "0225e7c0a96845a7477cd44d75d3dc9c999f673454efa84b54e218415055eece"
+        }
+      ]
+    }
+  ],
+  "embeddedPrismEvidence": "prism-react-renderer/dist/index.mjs.map includes prismjs@1.29.0 source; matching original MIT supplied",
+  "adaptations": [
+    "Original root interview flow/components unchanged; only App onYield console.log removed to avoid logging input.",
+    "Original source Formity hooks/system are built directly using aliases. No expry/string expression engine imported; original callbacks drive conditions/loops.",
+    "Official BrowserRouter/other demos omitted; host note and preview lifecycle teardown added.",
+    "Original Tailwind config/theme/plugins/main.css preserved, content paths adjusted; only body/preview root sizing added."
+  ],
+  "sourceArchivePublic": false
+}
