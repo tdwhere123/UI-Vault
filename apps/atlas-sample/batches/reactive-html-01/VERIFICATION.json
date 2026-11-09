@@ -1,0 +1,84 @@
+{
+  "loader": {
+    "result": "PASS actual579 adaptCandidate/createPreviewLoader all-or-nothing/retry/remount cache reuse",
+    "scripts": [
+      "runtime-part-1.js",
+      "runtime-part-2.js",
+      "runtime-part-3.js",
+      "runtime-part-4.js",
+      "runtime.js"
+    ],
+    "utf16RuntimeHTMLCSSBytes": 5515234,
+    "budgetBytes": 8388608,
+    "cacheStats": {
+      "entries": 7,
+      "bytes": 5515234
+    },
+    "fetches": 21
+  },
+  "functional": [
+    {
+      "result": "PASS",
+      "mode": "normal",
+      "cache": "see loader-test",
+      "timers": 0,
+      "connectedListeners": 0,
+      "networkCalls": 0,
+      "geometry": "not native; DOM only"
+    },
+    {
+      "result": "PASS",
+      "mode": "hidden",
+      "cache": "see loader-test",
+      "timers": 0,
+      "connectedListeners": 0,
+      "networkCalls": 0,
+      "geometry": "not native; DOM only"
+    },
+    {
+      "result": "PASS",
+      "mode": "early",
+      "cache": "see loader-test",
+      "timers": 0,
+      "connectedListeners": 0,
+      "networkCalls": 0,
+      "geometry": "not native; DOM only"
+    },
+    {
+      "result": "PASS",
+      "mode": "missing",
+      "cache": "see loader-test",
+      "timers": 0,
+      "connectedListeners": 0,
+      "networkCalls": 0,
+      "geometry": "not native; DOM only"
+    },
+    {
+      "result": "PASS",
+      "mode": "late",
+      "cache": "see loader-test",
+      "timers": 0,
+      "connectedListeners": 0,
+      "networkCalls": 0,
+      "geometry": "not native; DOM only"
+    },
+    {
+      "result": "PASS",
+      "mode": "direct",
+      "cache": "see loader-test",
+      "timers": 0,
+      "connectedListeners": 0,
+      "networkCalls": 0,
+      "geometry": "not native; DOM only"
+    }
+  ],
+  "visualQA": "not-run; JSDOM does not verify native layout or responsive pixels",
+  "independentCspAudit": {
+    "FunctionAttempts": 1,
+    "origin": "ZodObjectJIT capability probe",
+    "result": "denied under default CSP; official non-JIT fallback renders all18 templates and redaction",
+    "noCspRelaxation": true,
+    "evidence": "ui-reactive-html-independent-audit/test-security.mjs normal; test-trace.mjs early",
+    "runtimeUnchanged": true
+  }
+}
