@@ -2,7 +2,7 @@
 
 网站：<https://tdwhere123.github.io/UI-Vault/>
 
-当前共收录 **743 条**：其中 **525 条可打开预览（241 条原始素材＋284 条后续接入预览）**，另有 **218 条仅来源记录**，不计入主图鉴预览数。原始 241 件包括 215 件精选界面、20 件保留基础素材、6 套图标系列。正在向 1000 件优质素材扩充；图标按系列单列，字重、尺寸和单枚 glyph 不凑数。已有图标重叠暂留待统一整理。
+当前共收录 **762 条**：其中 **526 条可打开预览（241 条原始素材＋285 条后续接入预览）**，另有 **236 条仅来源记录**，不计入主图鉴预览数。原始 241 件包括 215 件精选界面、20 件保留基础素材、6 套图标系列。正在向 1000 件优质素材扩充；图标按系列单列，字重、尺寸和单枚 glyph 不凑数。已有图标重叠暂留待统一整理。
 
 ## 当前内容
 
@@ -378,3 +378,13 @@ Restored the existing Plop ink status timeline using fixed original StatusTimeli
 Added **18 source-only families**: generative patterns, luminous wave and ambient bubbles, monochrome retro controls and opt-in expressive typography; animation/sketch/diagram creation, image/vector optimization and musical patterns; chaptered listening/video, geographic-feature editing and three focused reading/knowledge workspaces; one country/region flag icon series. This is not 18 completed previews, and glyphs, themes, layouts or countries are not separate entries. Obnoxious strobe is explicitly excluded from any future demo; other motion requires static defaults, deliberate activation, stopping and reduced-motion handling.
 
 Current totals: **743 collected = 525 previews + 218 source-only records**. 470 mapped covers remain; 55 posterless previews use the existing bounded live-card path. All previous candidates except the restored Plop record, all Grok covers/reports and frontend behavior are preserved. Source records explicitly retain third-party dependency, media/font, service, worker/WASM and permission gaps; root licenses do not authorize those implicitly. Flag symbols are not locale or nationality inference and do not imply official endorsement.
+
+## Organic geometry and distinct stories · 526 previews / 762 collected
+
+Restored existing Fluidkit MorphSurface using original six-spring body/satellite geometry and actual Bezier tension bridges, rather than a rounded crossfade substitute. Glass/flat material, pull/shrink absorption and center/top anchoring control an explicitly authored local note shell. Original geometry/tension/spring math is retained; frame scheduling and reduced/hidden behavior are scoped lifecycle adaptations. Cult's existing same-name component is a single rounded-rectangle feedback form, not this satellite-bridge construction. This source/mechanism comparison is not native side-by-side visual acceptance, and restoring the existing ID adds no source.
+
+Only glass/flat are included. Optional LiquidMetal/PaperShaders/WebGL caustics and refraction/displacement-map generation are excluded, with no image/font or network resources. Seven actual runtime packages retain full MIT texts. Production state/spring/clip-path tests cover reversal, hidden parameter retention, reduced motion, failure and teardown. Native CSS clip/backdrop pixels, browser keyboard activation and device performance remain unverified.
+
+Added **19 source-only families**: paper disclosures, hand-drawn forms/charts, marginal-note essays, retro console and early-web styles; explanatory reading, feedback systems, cooperation stories, flow fields, interactive video and Bayesian stories; low-poly modeling, visual site building, block programming, and three differentiated restaurant/agency/industrial landing pages; one Font Awesome Free icon series. Retro branded/font/GIF material is explicitly not cleared, and source references are not published runtime/media packages. Font Awesome SVG icons use CC-BY-4.0, fonts OFL and non-icon code MIT, not blanket MIT; no Pro or brand assets are included.
+
+Current totals: **762 collected = 526 previews + 236 source-only records**. Mapped covers remain 470 and 56 previews use bounded posterless live cards. All existing entries except the restored Fluidkit source, all Grok covers/reports and the main UI remain preserved.
