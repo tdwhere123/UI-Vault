@@ -1,0 +1,80 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Vivus · Animation types</title><link rel="stylesheet" href="runtime.css"></head><body>
+		<div class="bloc bloc-demo">
+			<div class="content">
+
+				<h2>Animation types</h2>
+				<div>
+					<div class="col3">
+						<svg id="obturateur1" class="obturateur" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+				 width="100%" height="200px" viewBox="0 0 200 200" enable-background="new 0 0 200 200">
+							<circle cx="100" cy="100" r="90"/>
+							<circle cx="100" cy="100" r="85.74"/>
+							<circle cx="100" cy="100" r="72.947"/>
+							<circle cx="100" cy="100" r="39.74"/>
+							<line x1="34.042" y1="131.189" x2="67.047" y2="77.781"/>
+							<line x1="31.306" y1="75.416" x2="92.41" y2="60.987"/>
+							<line x1="68.81" y1="34.042" x2="122.219" y2="67.046"/>
+							<line x1="124.584" y1="31.305" x2="139.013" y2="92.409"/>
+							<line x1="165.957" y1="68.809" x2="132.953" y2="122.219"/>
+							<line x1="168.693" y1="124.584" x2="107.59" y2="139.012"/>
+							<line x1="131.19" y1="165.957" x2="77.781" y2="132.953"/>
+							<line x1="75.417" y1="168.693" x2="60.987" y2="107.59"/>
+						</svg>
+						<div class="col-container">
+							<h3>Delayed</h3>
+							<p>Every path element is drawn at the same time with a small delay at the start. This is currently the default animation.</p>
+							<button>replay</button>
+						</div>
+					</div>
+
+					<div class="col3">
+						<svg id="obturateur2" class="obturateur" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+				 width="100%" height="200px" viewBox="0 0 200 200" enable-background="new 0 0 200 200">
+							<circle cx="100" cy="100" r="90"/>
+							<circle cx="100" cy="100" r="85.74"/>
+							<circle cx="100" cy="100" r="72.947"/>
+							<circle cx="100" cy="100" r="39.74"/>
+							<line x1="34.042" y1="131.189" x2="67.047" y2="77.781"/>
+							<line x1="31.306" y1="75.416" x2="92.41" y2="60.987"/>
+							<line x1="68.81" y1="34.042" x2="122.219" y2="67.046"/>
+							<line x1="124.584" y1="31.305" x2="139.013" y2="92.409"/>
+							<line x1="165.957" y1="68.809" x2="132.953" y2="122.219"/>
+							<line x1="168.693" y1="124.584" x2="107.59" y2="139.012"/>
+							<line x1="131.19" y1="165.957" x2="77.781" y2="132.953"/>
+							<line x1="75.417" y1="168.693" x2="60.987" y2="107.59"/>
+						</svg>
+						<div class="col-container">
+							<h3>Sync</h3>
+							<p>Each line is drawn synchronously. They all start and finish at the same time, hence the name `sync`.</p>
+							<button>replay</button>
+						</div>
+					</div>
+
+					<div class="col3">
+						<svg id="obturateur3" class="obturateur" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+				 width="100%" height="200px" viewBox="0 0 200 200" enable-background="new 0 0 200 200">
+							<circle cx="100" cy="100" r="90"/>
+							<circle cx="100" cy="100" r="85.74"/>
+							<circle cx="100" cy="100" r="72.947"/>
+							<circle cx="100" cy="100" r="39.74"/>
+							<line x1="34.042" y1="131.189" x2="67.047" y2="77.781"/>
+							<line x1="31.306" y1="75.416" x2="92.41" y2="60.987"/>
+							<line x1="68.81" y1="34.042" x2="122.219" y2="67.046"/>
+							<line x1="124.584" y1="31.305" x2="139.013" y2="92.409"/>
+							<line x1="165.957" y1="68.809" x2="132.953" y2="122.219"/>
+							<line x1="168.693" y1="124.584" x2="107.59" y2="139.012"/>
+							<line x1="131.19" y1="165.957" x2="77.781" y2="132.953"/>
+							<line x1="75.417" y1="168.693" x2="60.987" y2="107.59"/>
+						</svg>
+						<div class="col-container">
+							<h3>OneByOne</h3>
+							<p>Each path element is drawn one after the other. This animation gives the best impression of live drawing.</p>
+							<button>replay</button>
+						</div>
+					</div>
+				</div>
+				<div class="clearer"></div>
+			</div>
+		</div>
+
+		<script src="runtime.js"></script></body></html>
