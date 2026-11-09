@@ -172,5 +172,14 @@
     "Each runtime chunk consists of complete statements and independently parses. Top-level function declarations are promoted to equivalent var/function bindings before module execution, then each script is guarded with fail-closed try/catch to clean early module failures and skip later scripts. No eval, binary encoding transport, CSP or sandbox expansion.",
     "Lean actual570 production compose tests cover original brush drawing, pressure toggle, undo/redo, insert/duplicate layers, hidden/resume, old nodes/late callbacks and complete EventTarget/task cleanup. Early Canvas failure is caught. CPU Canvas/JSDOM layout fixture only, no native browser, screenshots, visual/touch/IME or whole-tool-matrix acceptance.",
     "Actual default createPreviewLoader/cache all-or-nothing failure/retry/remount tested under unchanged8MiB budget; correspondence-source downloads are not inserted into runtime cache. No external model, backend or account is simulated."
-  ]
+  ],
+  "post575Correction": {
+    "scope": "Preventive semantic correction after575 publication. 20 promoted functions inspected; none self-rebind in current miniPaint. No live core regression reproduced.",
+    "review": {
+      "functions": 20,
+      "selfRebinding": []
+    },
+    "fix": "Anonymous function-expression assignment preserves outer variable reassignment semantics; original function algorithm unchanged.",
+    "tests": "normal/early/default loader and fresh extracted-source rebuild plus rebuilt workflow pass"
+  }
 }
