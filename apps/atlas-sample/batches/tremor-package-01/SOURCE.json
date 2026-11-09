@@ -1,0 +1,522 @@
+{
+  "repository": "https://github.com/tremorlabs/tremor-blocks",
+  "revision": "b319e8d3d3678a4f60f4802f7e85bc1abc52d598",
+  "entry": "src/content/components/form-layouts/form-layout-05.tsx",
+  "runtimeDependencies": [
+    {
+      "name": "@floating-ui/core",
+      "version": "1.8.0",
+      "license": "MIT",
+      "noticeSource": "exact installed package",
+      "licenseSHA256": "0e4c9a9b6c71019cbbea3bdc20b01223110a9035700f9c960c8fcbf78c2325ce",
+      "scope": "emitted runtime bytes"
+    },
+    {
+      "name": "@floating-ui/dom",
+      "version": "1.8.0",
+      "license": "MIT",
+      "noticeSource": "exact installed package",
+      "licenseSHA256": "0e4c9a9b6c71019cbbea3bdc20b01223110a9035700f9c960c8fcbf78c2325ce",
+      "scope": "emitted runtime bytes"
+    },
+    {
+      "name": "@floating-ui/react-dom",
+      "version": "2.1.9",
+      "license": "MIT",
+      "noticeSource": "exact installed package",
+      "licenseSHA256": "0e4c9a9b6c71019cbbea3bdc20b01223110a9035700f9c960c8fcbf78c2325ce",
+      "scope": "emitted runtime bytes"
+    },
+    {
+      "name": "@floating-ui/utils",
+      "version": "0.2.12",
+      "license": "MIT",
+      "noticeSource": "exact installed package",
+      "licenseSHA256": "0e4c9a9b6c71019cbbea3bdc20b01223110a9035700f9c960c8fcbf78c2325ce",
+      "scope": "emitted runtime bytes"
+    },
+    {
+      "name": "@radix-ui/number",
+      "version": "1.1.0",
+      "license": "MIT",
+      "noticeSource": "Supplemented from official radix-ui/primitives monorepo commit3c5e05fab070dfa68212230e85baf0879269c57d LICENSE (slider1.2.2 npm gitHead), package declares MIT but omits license file.",
+      "licenseSHA256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+      "scope": "emitted runtime bytes"
+    },
+    {
+      "name": "@radix-ui/primitive",
+      "version": "1.1.1",
+      "license": "MIT",
+      "noticeSource": "Supplemented from official radix-ui/primitives monorepo commit3c5e05fab070dfa68212230e85baf0879269c57d LICENSE (slider1.2.2 npm gitHead), package declares MIT but omits license file.",
+      "licenseSHA256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+      "scope": "emitted runtime bytes"
+    },
+    {
+      "name": "@radix-ui/react-arrow",
+      "version": "1.1.1",
+      "license": "MIT",
+      "noticeSource": "Supplemented from official radix-ui/primitives monorepo commit3c5e05fab070dfa68212230e85baf0879269c57d LICENSE (slider1.2.2 npm gitHead), package declares MIT but omits license file.",
+      "licenseSHA256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+      "scope": "emitted runtime bytes"
+    },
+    {
+      "name": "@radix-ui/react-collection",
+      "version": "1.1.1",
+      "license": "MIT",
+      "noticeSource": "Supplemented from official radix-ui/primitives monorepo commit3c5e05fab070dfa68212230e85baf0879269c57d LICENSE (slider1.2.2 npm gitHead), package declares MIT but omits license file.",
+      "licenseSHA256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+      "scope": "emitted runtime bytes"
+    },
+    {
+      "name": "@radix-ui/react-compose-refs",
+      "version": "1.1.1",
+      "license": "MIT",
+      "noticeSource": "Supplemented from official radix-ui/primitives monorepo commit3c5e05fab070dfa68212230e85baf0879269c57d LICENSE (slider1.2.2 npm gitHead), package declares MIT but omits license file.",
+      "licenseSHA256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+      "scope": "emitted runtime bytes"
+    },
+    {
+      "name": "@radix-ui/react-context",
+      "version": "1.1.1",
+      "license": "MIT",
+      "noticeSource": "Supplemented from official radix-ui/primitives monorepo commit3c5e05fab070dfa68212230e85baf0879269c57d LICENSE (slider1.2.2 npm gitHead), package declares MIT but omits license file.",
+      "licenseSHA256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+      "scope": "emitted runtime bytes"
+    },
+    {
+      "name": "@radix-ui/react-direction",
+      "version": "1.1.0",
+      "license": "MIT",
+      "noticeSource": "Supplemented from official radix-ui/primitives monorepo commit3c5e05fab070dfa68212230e85baf0879269c57d LICENSE (slider1.2.2 npm gitHead), package declares MIT but omits license file.",
+      "licenseSHA256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+      "scope": "emitted runtime bytes"
+    },
+    {
+      "name": "@radix-ui/react-dismissable-layer",
+      "version": "1.1.3",
+      "license": "MIT",
+      "noticeSource": "Supplemented from official radix-ui/primitives monorepo commit3c5e05fab070dfa68212230e85baf0879269c57d LICENSE (slider1.2.2 npm gitHead), package declares MIT but omits license file.",
+      "licenseSHA256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+      "scope": "emitted runtime bytes"
+    },
+    {
+      "name": "@radix-ui/react-focus-guards",
+      "version": "1.1.1",
+      "license": "MIT",
+      "noticeSource": "Supplemented from official radix-ui/primitives monorepo commit3c5e05fab070dfa68212230e85baf0879269c57d LICENSE (slider1.2.2 npm gitHead), package declares MIT but omits license file.",
+      "licenseSHA256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+      "scope": "emitted runtime bytes"
+    },
+    {
+      "name": "@radix-ui/react-focus-scope",
+      "version": "1.1.1",
+      "license": "MIT",
+      "noticeSource": "Supplemented from official radix-ui/primitives monorepo commit3c5e05fab070dfa68212230e85baf0879269c57d LICENSE (slider1.2.2 npm gitHead), package declares MIT but omits license file.",
+      "licenseSHA256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+      "scope": "emitted runtime bytes"
+    },
+    {
+      "name": "@radix-ui/react-id",
+      "version": "1.1.0",
+      "license": "MIT",
+      "noticeSource": "Supplemented from official radix-ui/primitives monorepo commit3c5e05fab070dfa68212230e85baf0879269c57d LICENSE (slider1.2.2 npm gitHead), package declares MIT but omits license file.",
+      "licenseSHA256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+      "scope": "emitted runtime bytes"
+    },
+    {
+      "name": "@radix-ui/react-label",
+      "version": "2.1.1",
+      "license": "MIT",
+      "noticeSource": "Supplemented from official radix-ui/primitives monorepo commit3c5e05fab070dfa68212230e85baf0879269c57d LICENSE (slider1.2.2 npm gitHead), package declares MIT but omits license file.",
+      "licenseSHA256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+      "scope": "emitted runtime bytes"
+    },
+    {
+      "name": "@radix-ui/react-popper",
+      "version": "1.2.1",
+      "license": "MIT",
+      "noticeSource": "Supplemented from official radix-ui/primitives monorepo commit3c5e05fab070dfa68212230e85baf0879269c57d LICENSE (slider1.2.2 npm gitHead), package declares MIT but omits license file.",
+      "licenseSHA256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+      "scope": "emitted runtime bytes"
+    },
+    {
+      "name": "@radix-ui/react-portal",
+      "version": "1.1.3",
+      "license": "MIT",
+      "noticeSource": "Supplemented from official radix-ui/primitives monorepo commit3c5e05fab070dfa68212230e85baf0879269c57d LICENSE (slider1.2.2 npm gitHead), package declares MIT but omits license file.",
+      "licenseSHA256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+      "scope": "emitted runtime bytes"
+    },
+    {
+      "name": "@radix-ui/react-presence",
+      "version": "1.1.2",
+      "license": "MIT",
+      "noticeSource": "Supplemented from official radix-ui/primitives monorepo commit3c5e05fab070dfa68212230e85baf0879269c57d LICENSE (slider1.2.2 npm gitHead), package declares MIT but omits license file.",
+      "licenseSHA256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+      "scope": "emitted runtime bytes"
+    },
+    {
+      "name": "@radix-ui/react-primitive",
+      "version": "2.0.1",
+      "license": "MIT",
+      "noticeSource": "Supplemented from official radix-ui/primitives monorepo commit3c5e05fab070dfa68212230e85baf0879269c57d LICENSE (slider1.2.2 npm gitHead), package declares MIT but omits license file.",
+      "licenseSHA256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+      "scope": "emitted runtime bytes"
+    },
+    {
+      "name": "@radix-ui/react-radio-group",
+      "version": "1.2.2",
+      "license": "MIT",
+      "noticeSource": "Supplemented from official radix-ui/primitives monorepo commit3c5e05fab070dfa68212230e85baf0879269c57d LICENSE (slider1.2.2 npm gitHead), package declares MIT but omits license file.",
+      "licenseSHA256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+      "scope": "emitted runtime bytes"
+    },
+    {
+      "name": "@radix-ui/react-roving-focus",
+      "version": "1.1.1",
+      "license": "MIT",
+      "noticeSource": "Supplemented from official radix-ui/primitives monorepo commit3c5e05fab070dfa68212230e85baf0879269c57d LICENSE (slider1.2.2 npm gitHead), package declares MIT but omits license file.",
+      "licenseSHA256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+      "scope": "emitted runtime bytes"
+    },
+    {
+      "name": "@radix-ui/react-select",
+      "version": "2.1.4",
+      "license": "MIT",
+      "noticeSource": "Supplemented from official radix-ui/primitives monorepo commit3c5e05fab070dfa68212230e85baf0879269c57d LICENSE (slider1.2.2 npm gitHead), package declares MIT but omits license file.",
+      "licenseSHA256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+      "scope": "emitted runtime bytes"
+    },
+    {
+      "name": "@radix-ui/react-slot",
+      "version": "1.1.1",
+      "license": "MIT",
+      "noticeSource": "Supplemented from official radix-ui/primitives monorepo commit3c5e05fab070dfa68212230e85baf0879269c57d LICENSE (slider1.2.2 npm gitHead), package declares MIT but omits license file.",
+      "licenseSHA256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+      "scope": "emitted runtime bytes"
+    },
+    {
+      "name": "@radix-ui/react-use-callback-ref",
+      "version": "1.1.0",
+      "license": "MIT",
+      "noticeSource": "Supplemented from official radix-ui/primitives monorepo commit3c5e05fab070dfa68212230e85baf0879269c57d LICENSE (slider1.2.2 npm gitHead), package declares MIT but omits license file.",
+      "licenseSHA256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+      "scope": "emitted runtime bytes"
+    },
+    {
+      "name": "@radix-ui/react-use-controllable-state",
+      "version": "1.1.0",
+      "license": "MIT",
+      "noticeSource": "Supplemented from official radix-ui/primitives monorepo commit3c5e05fab070dfa68212230e85baf0879269c57d LICENSE (slider1.2.2 npm gitHead), package declares MIT but omits license file.",
+      "licenseSHA256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+      "scope": "emitted runtime bytes"
+    },
+    {
+      "name": "@radix-ui/react-use-escape-keydown",
+      "version": "1.1.0",
+      "license": "MIT",
+      "noticeSource": "Supplemented from official radix-ui/primitives monorepo commit3c5e05fab070dfa68212230e85baf0879269c57d LICENSE (slider1.2.2 npm gitHead), package declares MIT but omits license file.",
+      "licenseSHA256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+      "scope": "emitted runtime bytes"
+    },
+    {
+      "name": "@radix-ui/react-use-layout-effect",
+      "version": "1.1.0",
+      "license": "MIT",
+      "noticeSource": "Supplemented from official radix-ui/primitives monorepo commit3c5e05fab070dfa68212230e85baf0879269c57d LICENSE (slider1.2.2 npm gitHead), package declares MIT but omits license file.",
+      "licenseSHA256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+      "scope": "emitted runtime bytes"
+    },
+    {
+      "name": "@radix-ui/react-use-previous",
+      "version": "1.1.0",
+      "license": "MIT",
+      "noticeSource": "Supplemented from official radix-ui/primitives monorepo commit3c5e05fab070dfa68212230e85baf0879269c57d LICENSE (slider1.2.2 npm gitHead), package declares MIT but omits license file.",
+      "licenseSHA256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+      "scope": "emitted runtime bytes"
+    },
+    {
+      "name": "@radix-ui/react-use-size",
+      "version": "1.1.0",
+      "license": "MIT",
+      "noticeSource": "Supplemented from official radix-ui/primitives monorepo commit3c5e05fab070dfa68212230e85baf0879269c57d LICENSE (slider1.2.2 npm gitHead), package declares MIT but omits license file.",
+      "licenseSHA256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+      "scope": "emitted runtime bytes"
+    },
+    {
+      "name": "@radix-ui/react-visually-hidden",
+      "version": "1.1.1",
+      "license": "MIT",
+      "noticeSource": "Supplemented from official radix-ui/primitives monorepo commit3c5e05fab070dfa68212230e85baf0879269c57d LICENSE (slider1.2.2 npm gitHead), package declares MIT but omits license file.",
+      "licenseSHA256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+      "scope": "emitted runtime bytes"
+    },
+    {
+      "name": "@remixicon/react",
+      "version": "4.6.0",
+      "license": "Apache-2.0",
+      "noticeSource": "Supplemented official v4.6.0 commit8bc436bdd329cf342958d8effdd078bfa74354c6/License; npm4.6.0 declares Apache2 but omits file, its gitHead raw404. Imported icon path data match this release exactly; local source proofs distinguish prior five and extra four. Not current restricted license.",
+      "licenseSHA256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "scope": "emitted runtime bytes"
+    },
+    {
+      "name": "aria-hidden",
+      "version": "1.2.6",
+      "license": "MIT",
+      "noticeSource": "exact installed package",
+      "licenseSHA256": "30f0cfddf483d1128e3610205020f2041a6c5e837aa999e0aa82e5576187d4a9",
+      "scope": "emitted runtime bytes"
+    },
+    {
+      "name": "clsx",
+      "version": "2.1.1",
+      "license": "MIT",
+      "noticeSource": "exact installed package",
+      "licenseSHA256": "9a9edad7baae52622bddf3c15b2ef8a33d2c89f2d25408ad13e8a7481c6b0c97",
+      "scope": "emitted runtime bytes"
+    },
+    {
+      "name": "get-nonce",
+      "version": "1.0.1",
+      "license": "MIT",
+      "noticeSource": "exact installed package",
+      "licenseSHA256": "acf3b087b348d2f2e731b9d4131af185aad694c1204ce14a46909483fd42da05",
+      "scope": "emitted runtime bytes"
+    },
+    {
+      "name": "react",
+      "version": "18.3.1",
+      "license": "MIT",
+      "noticeSource": "exact installed package",
+      "licenseSHA256": "52412d7bc7ce4157ea628bbaacb8829e0a9cb3c58f57f99176126bc8cf2bfc85",
+      "scope": "emitted runtime bytes"
+    },
+    {
+      "name": "react-dom",
+      "version": "18.3.1",
+      "license": "MIT",
+      "noticeSource": "exact installed package",
+      "licenseSHA256": "52412d7bc7ce4157ea628bbaacb8829e0a9cb3c58f57f99176126bc8cf2bfc85",
+      "scope": "emitted runtime bytes"
+    },
+    {
+      "name": "react-remove-scroll",
+      "version": "2.7.2",
+      "license": "MIT",
+      "noticeSource": "exact installed package",
+      "licenseSHA256": "30f0cfddf483d1128e3610205020f2041a6c5e837aa999e0aa82e5576187d4a9",
+      "scope": "emitted runtime bytes"
+    },
+    {
+      "name": "react-remove-scroll-bar",
+      "version": "2.3.8",
+      "license": "MIT",
+      "noticeSource": "Package2.3.8 declares MIT but lacks license and its gitHead is unavailable; supplemental official current fixed8ca9ba5ea52de03308fe8ced94f7b159a44d28ff LICENSE, not falsely npm source.",
+      "licenseSHA256": "a79aae0c0f21990d9d963bb3c5a79cdcea9a46f8523ba55c58d7fe776b6ebc84",
+      "scope": "emitted runtime bytes"
+    },
+    {
+      "name": "react-style-singleton",
+      "version": "2.2.3",
+      "license": "MIT",
+      "noticeSource": "exact installed package",
+      "licenseSHA256": "30f0cfddf483d1128e3610205020f2041a6c5e837aa999e0aa82e5576187d4a9",
+      "scope": "emitted runtime bytes"
+    },
+    {
+      "name": "scheduler",
+      "version": "0.23.2",
+      "license": "MIT",
+      "noticeSource": "exact installed package",
+      "licenseSHA256": "52412d7bc7ce4157ea628bbaacb8829e0a9cb3c58f57f99176126bc8cf2bfc85",
+      "scope": "emitted runtime bytes"
+    },
+    {
+      "name": "tailwind-merge",
+      "version": "2.6.0",
+      "license": "MIT",
+      "noticeSource": "exact installed package",
+      "licenseSHA256": "d4c70c7ce38cea8778f0aed3fc0bef0a9dbd27f13bd8b6773cbd6d37941971e5",
+      "scope": "emitted runtime bytes"
+    },
+    {
+      "name": "tailwind-variants",
+      "version": "0.3.0",
+      "license": "MIT",
+      "noticeSource": "exact installed package",
+      "licenseSHA256": "f3f8984c684106a9ffb50c44ff5dd6f2082526d78a820235a6592423d376d650",
+      "scope": "emitted runtime bytes"
+    },
+    {
+      "name": "tslib",
+      "version": "2.9.1",
+      "license": "0BSD",
+      "noticeSource": "exact installed package",
+      "licenseSHA256": "210b19e543130388c68654b7497e967119ce17145f66ab7d85688fbd70f08751",
+      "scope": "emitted runtime bytes"
+    },
+    {
+      "name": "use-callback-ref",
+      "version": "1.3.3",
+      "license": "MIT",
+      "noticeSource": "exact installed package",
+      "licenseSHA256": "30f0cfddf483d1128e3610205020f2041a6c5e837aa999e0aa82e5576187d4a9",
+      "scope": "emitted runtime bytes"
+    },
+    {
+      "name": "use-sidecar",
+      "version": "1.1.3",
+      "license": "MIT",
+      "noticeSource": "exact installed package",
+      "licenseSHA256": "30f0cfddf483d1128e3610205020f2041a6c5e837aa999e0aa82e5576187d4a9",
+      "scope": "emitted runtime bytes"
+    }
+  ],
+  "dependencyScope": "Positive emitted output bytes only; compiler/CSS plugins separately labeled, no install/parse count passed off as runtime.",
+  "sourceFiles": [
+    {
+      "path": "LICENSE.md",
+      "sha256": "3546b8d22c1657e8f6d36ae83e8721f894946337d9966e1d84fbfcdfa1c9ae0b"
+    },
+    {
+      "path": "remix-search-line.svg",
+      "sha256": "e36fd9d602a25425c6c2288005ef5a413eec710f9718bd01dbfd81cb4d6b5c19"
+    },
+    {
+      "path": "radix-LICENSE",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "path": "remix-license-source.txt",
+      "sha256": "d977b3f712031d245a99b7b1e6491713b039a4ea9d677d0cef51250fdc0ed0f3"
+    },
+    {
+      "path": "scroll-bar-LICENSE",
+      "sha256": "a79aae0c0f21990d9d963bb3c5a79cdcea9a46f8523ba55c58d7fe776b6ebc84"
+    },
+    {
+      "path": "remix-license.txt",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "remix-extra-proof.json",
+      "sha256": "12df43044b4bc1ef488d57607dfaa924ef014189f780966d58461058ab7569fd"
+    },
+    {
+      "path": "radix-use-size.mjs",
+      "sha256": "855f00203e2606af971eb16a0ca8b341ed60dbc9550aadd90fe632b17e5f491f"
+    },
+    {
+      "path": "scrollbar-README.md",
+      "sha256": "486442209236ffa3893312e508694699a6b8834d30a2f9c083c1f3379983e4f9"
+    },
+    {
+      "path": "remix-eye-off-fill.svg",
+      "sha256": "228fde17e660eb2813da59e3c5cc8b83a0293f380eab2e0f1275cd53dea6fc5d"
+    },
+    {
+      "path": "remix-loader-2-fill.svg",
+      "sha256": "f4be9edd37ef180d1356b7e71d029716453f5632b4077d390582698b7c00abfa"
+    },
+    {
+      "path": "remix-eye-fill.svg",
+      "sha256": "02b8aa63a50a1d77267e515d546032fb7f64da0b21c3dd91b8afcbdb6cb1ee86"
+    },
+    {
+      "path": "remix-expand-up-down-line.svg",
+      "sha256": "66e31be18383dd173c9970c369ad79e8a3f3e3e6842f7b26fb0a387a62803eea"
+    },
+    {
+      "path": "scroll-bar-license-source.txt",
+      "sha256": "5f49cf9cad428a813cf260e1c3c66309d6b92e59ff60fa9e8264e56f5f2501d7"
+    },
+    {
+      "path": "remix-check-line.svg",
+      "sha256": "b83a64bf881169d5edeaa6134a7ba37192f0ddc80c2e2a890578ae0f2f8f9169"
+    },
+    {
+      "path": "remix-split-cells-horizontal.svg",
+      "sha256": "4246faa98998b42425d740d944aeece0d0055a31ca83806feb07a70979f58d0b"
+    },
+    {
+      "path": "remix-arrow-down-s-line.svg",
+      "sha256": "4b0bf8a45d554ba97d8115ef2713010f196ad49d57eeecb8a42d4839a5ba8f9e"
+    },
+    {
+      "path": "remix-tag.json",
+      "sha256": "d2bca9bb7cf8ee41f7da4c637278aa4516fdf0348deeb664ceb1e04e03d2a03e"
+    },
+    {
+      "path": "remix-path-proof.json",
+      "sha256": "f1ae9766f9f5c54803c784d7ab1092fd255d5e852986d9a55fa2302cab67e6dd"
+    },
+    {
+      "path": "remix-arrow-up-s-line.svg",
+      "sha256": "16a65c8f89983508e145c681e40889825d6f8f45faa30f895a3faed65cb7072e"
+    },
+    {
+      "path": "src/components/Input.tsx",
+      "sha256": "9b4faf8b8f97d093d66a8d4c9cbee8ef247ab0ef3a46f49fdcd21e6384d0abe1"
+    },
+    {
+      "path": "src/components/Label.tsx",
+      "sha256": "d978c28a7aa994e6d3f18abd39b554ab624ad00b89c45aa979eb9250411afdf3"
+    },
+    {
+      "path": "src/components/Divider.tsx",
+      "sha256": "3ba34a71423e65c32f4462f53fd92e9bac7ee80376a4efc85b62af6ad7ef3a64"
+    },
+    {
+      "path": "src/components/RadioCardGroup.tsx",
+      "sha256": "7f7f17e570eb15ae50bf477ef90a3901c930d00714d6f183eab31e0a597c48e4"
+    },
+    {
+      "path": "src/components/Select.tsx",
+      "sha256": "b4744bb543e665271436cac9ef1c4af07f7120aebb6bfe4455242606dcdf5b84"
+    },
+    {
+      "path": "src/components/Button.tsx",
+      "sha256": "c0b89b32c0ffd6d474fc4e617b6a951e1126a3824440c6d9c06a0e34ecdadc50"
+    },
+    {
+      "path": "src/lib/utils.ts",
+      "sha256": "34d1a61c1ea2fa9a25b7837e6f6e112a442b44d78ff5d7f9cbcdfdd75b028113"
+    },
+    {
+      "path": "src/content/components/form-layouts/form-layout-05.tsx",
+      "sha256": "ee708594382f3fc3635423283e728de1556f23b39215ffbaef7a6c65276bfd54"
+    }
+  ],
+  "changes": [
+    "Original3plans,feature lists and form controls retained. Sample prices explicitly non-offer.",
+    "RadioCardGroup controlled onValueChange replaces click-only description update, so original keyboard selection updates both.",
+    "Duplicate description ids fixed; form preventDefault plus local-only status; no-op GoBack disabled.",
+    "Select portal container set to existing host root, keeping original portal/layout while avoiding connected body delegation residue.",
+    "Scoped Radix size observer guard and exact root/global cleanup; hidden unmount error failcloses; hidden return resets defaults.",
+    "Original unclosed JetBrains font-face removed, system font/reduced-motion CSS."
+  ],
+  "remixExtraProof": [
+    {
+      "source": "https://raw.githubusercontent.com/Remix-Design/RemixIcon/8bc436bdd329cf342958d8effdd078bfa74354c6/icons/System/check-line.svg",
+      "pathMatch": true
+    },
+    {
+      "source": "https://raw.githubusercontent.com/Remix-Design/RemixIcon/8bc436bdd329cf342958d8effdd078bfa74354c6/icons/Arrows/arrow-down-s-line.svg",
+      "pathMatch": true
+    },
+    {
+      "source": "https://raw.githubusercontent.com/Remix-Design/RemixIcon/8bc436bdd329cf342958d8effdd078bfa74354c6/icons/Arrows/arrow-up-s-line.svg",
+      "pathMatch": true
+    },
+    {
+      "source": "https://raw.githubusercontent.com/Remix-Design/RemixIcon/8bc436bdd329cf342958d8effdd078bfa74354c6/icons/Arrows/expand-up-down-line.svg",
+      "pathMatch": true
+    }
+  ],
+  "scrollBarLicenseEvidence": {
+    "version": "2.3.8",
+    "npmGitHead": "b3b1287aad81def2e2ae707274b74531b61ddbaf",
+    "licenseURL": "https://raw.githubusercontent.com/theKashey/react-remove-scroll-bar/8ca9ba5ea52de03308fe8ced94f7b159a44d28ff/LICENSE",
+    "boundary": "Package omits LICENSE; npm gitHead raw404. Supplement official later fixed MIT notice, not falsely a package original."
+  }
+}
