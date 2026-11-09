@@ -1,0 +1,71 @@
+--- batches/looseleaf-04/checkout-01.tsx
++++ batches/looseleaf-04/checkout-01.tsx (adapted)
+@@ -81,10 +81,10 @@
+         <Mascot pose="celebrate" size={132} seed="checkout-done" />
+         <div className="grid gap-2">
+           <h2 id={`${formId}-done`} ref={done} tabIndex={-1} className="font-script text-5xl leading-none font-bold outline-none">
+-            Thank you, {placed.name.trim().split(/\s+/)[0]}
++            Demo checkout complete, {placed.name.trim().split(/\s+/)[0]}
+           </h2>
+           <p className="text-lg text-muted-foreground">
+-            Order <span className="ll-num font-bold text-foreground">{placed.number}</span> is paid. The receipt is on its way to {placed.email}.
++            Order <span className="ll-num font-bold text-foreground">{placed.number}</span> is a local preview for {placed.email}.
+           </p>
+         </div>
+         <div className="relative">
+@@ -103,7 +103,7 @@
+               )}
+             </ReceiptLines>
+             <ReceiptTotal circled>{money(placed.totals.total)}</ReceiptTotal>
+-            <ReceiptFooter>paid by card - thank you</ReceiptFooter>
++            <ReceiptFooter>demo receipt - no payment made</ReceiptFooter>
+           </Receipt>
+           <Stamp name="stamp-paid" className="absolute -end-6 -top-4 sm:-end-12" seed="paid" />
+         </div>
+@@ -130,7 +130,7 @@
+             <PageTitle as="h2" id={`${formId}-title`} underline="wavy" seed="checkout-title">
+               Checkout
+             </PageTitle>
+-            <PageDescription>Three short steps and it is on its way. We ask for nothing we do not need.</PageDescription>
++            <PageDescription>Local demo only. Use fictional details; no payment, order or email is sent.</PageDescription>
+           </PageHeader>
+           {failure ? (
+             <Alert variant="destructive">
+--- batches/looseleaf-05/dashboard-analytics.tsx
++++ batches/looseleaf-05/dashboard-analytics.tsx (adapted)
+@@ -45,9 +45,9 @@
+                 </ToggleGroupItem>
+               ))}
+             </ToggleGroup>
+-            <Button variant="outline" onClick={() => downloadCsv(period)}>
++            <Button variant="outline" disabled title="Downloads are unavailable in this isolated preview">
+               <Icon name="download" />
+-              Export CSV
++              CSV unavailable in preview
+             </Button>
+           </div>
+         </div>
+--- previews/application-quantity-inputs.html
++++ previews/application-quantity-inputs.html (adapted)
+@@ -64,6 +64,10 @@
+           &plus;
+         </button>
+       </div>
++    <p style="font:12px system-ui;color:#666;margin:8px">本地步进演示 · 图鉴适配</p>
+     </div>
++    <script>/* UI Vault adapter: native local stepping, not an upstream HyperUI handler. */
++(function(){const input=document.getElementById('Quantity');const buttons=Array.from(input.parentElement.querySelectorAll('button'));if(buttons.length!==2)return;const down=()=>input.stepDown();const up=()=>input.stepUp();buttons[0].addEventListener('click',down);buttons[1].addEventListener('click',up);const stop=()=>{buttons[0].removeEventListener('click',down);buttons[1].removeEventListener('click',up);buttons.forEach(b=>b.disabled=true);window.removeEventListener('pagehide',stop)};window.addEventListener('pagehide',stop,{once:true})})();
++</script>
+   </body>
+ </html>
+--- archive/build/src/blocks/checkout-01/components/checkout-01-summary.tsx
++++ batches/looseleaf-04/checkout-01-summary.adapted.tsx
+@@ -157,7 +157,7 @@
+       </p>
+ 
+       <Button type="submit" form={formId} size="lg" className="w-full" disabled={empty} aria-busy={placing}>
+-        {placing ? "Placing your order…" : `Pay €${money(totals.total)}`}
++        {placing ? "Preparing local preview…" : `Simulate €${money(totals.total)}`}
+       </Button>
+ 
+       <StickyNote color="yellow" fastener="pin" tilt={2} seed="checkout-hint" className="mx-auto mt-3 min-h-0 w-full max-w-56 pb-4">
