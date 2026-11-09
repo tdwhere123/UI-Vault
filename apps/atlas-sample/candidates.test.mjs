@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {Script} from 'node:vm';
 import {adaptCandidate} from './candidate-adapter.mjs';
-import {composePreview} from './preview-runtime.mjs';
+import {composePreview,validateScriptNames,MAX_SCRIPT_BYTES} from './preview-runtime.mjs';
 const read=p=>readFile(new URL(p,import.meta.url),'utf8');
 test('source baseline is preserved; new families have previews or explicit reviewed source-only status',async()=>{
  const a=JSON.parse(await read('candidate-catalog.json')).map(adaptCandidate),b=JSON.parse(await read('items.json'));
@@ -14,7 +14,7 @@ test('source baseline is preserved; new families have previews or explicit revie
 });
 test('every local preview has parseable self-contained runtime assets',async()=>{
  const a=JSON.parse(await read('candidate-catalog.json')).map(adaptCandidate).filter(x=>x.preview);assert(a.length>=22);
- for(const x of a){const [html,css,js]=await Promise.all([read(x.preview),read(x.runtime.css),read(x.runtime.js)]);new Script(js);const composed=composePreview(html,css,js,x.runtime);assert(composed.includes("connect-src 'none'"));assert(!composed.includes('src="runtime.js"'));assert(css.length>0);}
+ for(const x of a){const names=x.runtime.scripts?validateScriptNames(x.runtime.scripts):[x.runtime.scriptSrc],dir=x.runtime.js.slice(0,-x.runtime.scriptSrc.length);const [html,css,parts]=await Promise.all([read(x.preview),read(x.runtime.css),Promise.all(names.map(n=>read(dir+n)))]);for(const text of parts){new Script(text);if(x.runtime.scripts)assert(Buffer.byteLength(text,'utf8')<MAX_SCRIPT_BYTES)}const js=parts.join('\n;\n');new Script(js);const composed=composePreview(html,css,js,x.runtime);assert(composed.includes("connect-src 'none'"));assert(!composed.includes('src="runtime.js"'));assert(css.length>0);}
 });
 
 test('family search preserves supplied glyph names and multilingual labels',()=>{const x=adaptCandidate({id:'test:icons',title:'Icons',keywords:['robot','机器人']});assert(x.keywords.includes('robot'));assert(x.keywords.includes('机器人'));});
