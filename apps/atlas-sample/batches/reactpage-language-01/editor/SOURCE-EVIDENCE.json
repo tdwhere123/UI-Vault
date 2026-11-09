@@ -1,0 +1,1083 @@
+{
+  "repository": "https://github.com/react-page/react-page",
+  "revision": "7a1039347284ce4f654b78b23ed82ccc3502c64c",
+  "catalogSourcePath": "examples/pages/index.tsx",
+  "adaptedSourcePaths": [
+    "examples/pages/examples/languageSwitch.tsx",
+    "examples/plugins/customContentPlugin.tsx"
+  ],
+  "scope": "# 多语言单元内容编辑器\n\n原 ReactPage 5.4.6 languageSwitch 官方示例的文字与自定义单元范围，固定源码 7a1039347284ce4f654b78b23ed82ccc3502c64c；实际两个 ReactPage npm 包 gitHead 对应此版本。不是带媒体主页全套。\n\n保留原英语/德语独立内容、添加/删除单元、Slate 文字编辑器、自定义内容与 Styling 自动表单、移动/缩放/预览模式。宿主只做隔离与明确本地演示。原可选图片插件不纳入；无保存、发布、网络服务，系统剪贴板、外部拖入和链接打开禁用。隐藏卸载并在返回时重置示例，不声称跨隐藏保存。系统字体。\n\n## CSP 与原校验\n原 Ajv.compile 在运行时需要 Function，不能在默认 CSP 使用。构建阶段按原 Ajv 8.20.0 allErrors/useDefaults/uniforms 配置生成独立验证函数；生产仅允许该固定示例实际可达的四种 schema（custom-data/custom-styling/slate-link/slate-anchor）。保存 SHA256 标识，并按完整规范化约束字符串严格匹配，不是运行时计算 SHA256。仅 uniforms UI 注释不参与约束键；原 UI 注释和 JSONSchemaBridge 保留。未知 schema 或非法约束类型拒绝，不开放任意插件/schema。52 个等价检查核原 Ajv 与生成函数的返回值、默认值修改及有序错误记录。\n\n原 languageSwitch 仅删除 image/未使用示例导入，保留原 customContentPlugin；react/jsx-runtime.js 兼容导入别名指向 React 自身 jsx-runtime。React 18.3.1。新增宿主、初始化失败处理和所有隔离资源退出清理。测试状态 API 仅 TEST 构建，生产删除。\n\n## 许可与验证\n85 个实际 emitted 包路径实例（含嵌套版本）逐项列出。Ajv 编译器及生成验证代码另列，Google 图形 Apache-2.0 与包装器 MIT 分开。两枚旧 @icons/material glyph 与官方 MDI 7.4.47 对应 SVG 路径逐字相同、原 metadata 作者 Google；不是凭 wrapper MIT 推断图形许可。五个缺历史 LICENSE 文件的精确发布包按其明确 MIT 元数据附标准条款补充，并显式标明非找回上游原件；两个 ReactDnd 包采用精确 npm gitHead 根许可证。\n\nactual571 compose 的 normal/reduced/early/failure/production 五模式通过，验证原自动表单、语言独立值、Slate 插入删除、模式切换、隐藏重置与旧节点、权限陷阱及退出资源归零。真实 createPreviewLoader 的加载、缓存命中、释放、总 UTF16 预算检查通过。JSDOM Range 几何为受控桩，不代表原生拖拽/缩放、IME/选区编辑或像素验收。没有截图或主库写入。\n",
+  "runtimeDependencies": [
+    {
+      "name": "@babel/runtime",
+      "version": "7.29.13",
+      "packagePath": "node_modules/@babel/runtime",
+      "scope": "emitted",
+      "license": "MIT",
+      "licenseEvidence": "distributed original license files",
+      "packageJsonSHA256": "fd2befc548dbd378c87e5768a0a0d8a6e5bc2c51db8d39e096682b0ba9a1e6c5"
+    },
+    {
+      "name": "@emotion/cache",
+      "version": "11.14.0",
+      "packagePath": "node_modules/@emotion/cache",
+      "scope": "emitted",
+      "license": "MIT",
+      "licenseEvidence": "distributed original license files",
+      "packageJsonSHA256": "83c0082bbc36fffdb448c8c9e2d84f341ba9d647310117f60ecd029f4bdc3581"
+    },
+    {
+      "name": "@emotion/hash",
+      "version": "0.9.2",
+      "packagePath": "node_modules/@emotion/hash",
+      "scope": "emitted",
+      "license": "MIT",
+      "licenseEvidence": "distributed original license files",
+      "packageJsonSHA256": "db163dc1f0ffea5b48996c618e021fed309d0ab1b295096f7a08f0bf0e673525"
+    },
+    {
+      "name": "@emotion/is-prop-valid",
+      "version": "1.4.0",
+      "packagePath": "node_modules/@emotion/is-prop-valid",
+      "scope": "emitted",
+      "license": "MIT",
+      "licenseEvidence": "distributed original license files",
+      "packageJsonSHA256": "438d9cb8913c89b66aa209a63f6f6401e080df4444a09c1f2b97d08953d422ad"
+    },
+    {
+      "name": "@emotion/memoize",
+      "version": "0.9.0",
+      "packagePath": "node_modules/@emotion/memoize",
+      "scope": "emitted",
+      "license": "MIT",
+      "licenseEvidence": "distributed original license files",
+      "packageJsonSHA256": "4cf8cf244fa4a980497617451e97faf1eb80f335f211dce87b997572d4f227e3"
+    },
+    {
+      "name": "@emotion/react",
+      "version": "11.14.0",
+      "packagePath": "node_modules/@emotion/react",
+      "scope": "emitted",
+      "license": "MIT",
+      "licenseEvidence": "distributed original license files",
+      "packageJsonSHA256": "8333c1571eb89fe5a7a52dce7767867e679c81efa58f673120216c15c96b6709"
+    },
+    {
+      "name": "@emotion/serialize",
+      "version": "1.3.3",
+      "packagePath": "node_modules/@emotion/serialize",
+      "scope": "emitted",
+      "license": "MIT",
+      "licenseEvidence": "distributed original license files",
+      "packageJsonSHA256": "6394a6d2a656b0bcd74e0ac6f7a156f2fbead9a4bf52317268d0b9e28c0b2374"
+    },
+    {
+      "name": "@emotion/sheet",
+      "version": "1.4.0",
+      "packagePath": "node_modules/@emotion/sheet",
+      "scope": "emitted",
+      "license": "MIT",
+      "licenseEvidence": "distributed original license files",
+      "packageJsonSHA256": "1d2cd81a5eeb673a289293f7bb21786f74f935be866cd20a72c46c415dfff714"
+    },
+    {
+      "name": "@emotion/styled",
+      "version": "11.14.1",
+      "packagePath": "node_modules/@emotion/styled",
+      "scope": "emitted",
+      "license": "MIT",
+      "licenseEvidence": "distributed original license files",
+      "packageJsonSHA256": "df97c51d11b3a3919d7a2bf356ab1f48537793428159afab3174b6c5eb497fb2"
+    },
+    {
+      "name": "@emotion/unitless",
+      "version": "0.10.0",
+      "packagePath": "node_modules/@emotion/unitless",
+      "scope": "emitted",
+      "license": "MIT",
+      "licenseEvidence": "distributed original license files",
+      "packageJsonSHA256": "1c6d2ccba08a65fd321a52abbe87af320666fc990764e6a7eaa6d4e51d82d358"
+    },
+    {
+      "name": "@emotion/use-insertion-effect-with-fallbacks",
+      "version": "1.2.0",
+      "packagePath": "node_modules/@emotion/use-insertion-effect-with-fallbacks",
+      "scope": "emitted",
+      "license": "MIT",
+      "licenseEvidence": "distributed original license files",
+      "packageJsonSHA256": "fb3924ec4d492f0618e4496250cb39a583c19129c7c6db921486cf595ad05e25"
+    },
+    {
+      "name": "@emotion/utils",
+      "version": "1.4.2",
+      "packagePath": "node_modules/@emotion/utils",
+      "scope": "emitted",
+      "license": "MIT",
+      "licenseEvidence": "distributed original license files",
+      "packageJsonSHA256": "8b4ea7e49b9f2c30ef62ddfb52447291582f4c0be539fa884bb0e760b601d52b"
+    },
+    {
+      "name": "@emotion/weak-memoize",
+      "version": "0.4.0",
+      "packagePath": "node_modules/@emotion/weak-memoize",
+      "scope": "emitted",
+      "license": "MIT",
+      "licenseEvidence": "distributed original license files",
+      "packageJsonSHA256": "484e15a0291f7fe5da82cbb7dfbe60a6b638e8704f175041dfd83677bc01034e"
+    },
+    {
+      "name": "@icons/material",
+      "version": "0.2.4",
+      "packagePath": "node_modules/@icons/material",
+      "scope": "emitted",
+      "license": "MIT",
+      "licenseEvidence": "supplemental standard MIT terms; historical LICENSE file unavailable, NOT an upstream recovered LICENSE or invented copyright notice",
+      "packageJsonSHA256": "4468c8912e221c71f135cc60cddbb2f6a1f54fac7a49d79f763707888b8e46bd"
+    },
+    {
+      "name": "@mui/icons-material",
+      "version": "5.18.0",
+      "packagePath": "node_modules/@mui/icons-material",
+      "scope": "emitted",
+      "license": "MIT",
+      "licenseEvidence": "distributed original license files",
+      "packageJsonSHA256": "e7d8afd67cdb4c6dc59d85915f7d36884ff01ac6eb24ebf1357d724432ed43ca"
+    },
+    {
+      "name": "@mui/material",
+      "version": "5.18.0",
+      "packagePath": "node_modules/@mui/material",
+      "scope": "emitted",
+      "license": "MIT",
+      "licenseEvidence": "distributed original license files",
+      "packageJsonSHA256": "66ea178684286651ae77131e44acdddcee7a6e3aa6bc75f10bebc610fb8b27f5"
+    },
+    {
+      "name": "@mui/private-theming",
+      "version": "5.17.1",
+      "packagePath": "node_modules/@mui/private-theming",
+      "scope": "emitted",
+      "license": "MIT",
+      "licenseEvidence": "distributed original license files",
+      "packageJsonSHA256": "8d778a047290dbb79af06a77e41b9ca7c47a3e8dc2b0f8bc9eab74e361789026"
+    },
+    {
+      "name": "@mui/styled-engine",
+      "version": "5.18.0",
+      "packagePath": "node_modules/@mui/styled-engine",
+      "scope": "emitted",
+      "license": "MIT",
+      "licenseEvidence": "distributed original license files",
+      "packageJsonSHA256": "fb79802b25059e06961b40fb51d625147240067fb9035a3a307ed791464c3a19"
+    },
+    {
+      "name": "@mui/system",
+      "version": "5.18.0",
+      "packagePath": "node_modules/@mui/system",
+      "scope": "emitted",
+      "license": "MIT",
+      "licenseEvidence": "distributed original license files",
+      "packageJsonSHA256": "06b81c43c46cda7a8ffc78ce91e24451ca5eba760f6e1ba50b301cdf19b7b7b2"
+    },
+    {
+      "name": "@mui/utils",
+      "version": "5.17.1",
+      "packagePath": "node_modules/@mui/utils",
+      "scope": "emitted",
+      "license": "MIT",
+      "licenseEvidence": "distributed original license files",
+      "packageJsonSHA256": "524b2706177f61da17c6b6e357fc8215d113965acec6647f5280a408f3713836"
+    },
+    {
+      "name": "@popperjs/core",
+      "version": "2.11.8",
+      "packagePath": "node_modules/@popperjs/core",
+      "scope": "emitted",
+      "license": "MIT",
+      "licenseEvidence": "distributed original license files",
+      "packageJsonSHA256": "88a4f05ff4d145672cdedfb944aae428d81eab4dd7628542234c39ce1fae77f4"
+    },
+    {
+      "name": "@react-dnd/asap",
+      "version": "4.0.1",
+      "packagePath": "node_modules/@react-dnd/asap",
+      "scope": "emitted",
+      "license": "MIT",
+      "licenseEvidence": "distributed original license files",
+      "packageJsonSHA256": "30e46c65903dfb770ffd7c0a01e85c25a46dbb99b551c8cac3d01b58835a6a7c"
+    },
+    {
+      "name": "@react-dnd/invariant",
+      "version": "3.0.1",
+      "packagePath": "node_modules/@react-dnd/invariant",
+      "scope": "emitted",
+      "license": "MIT",
+      "licenseEvidence": "official exact npm gitHead repository root license",
+      "packageJsonSHA256": "f17e6fc1f87333c517547c0004a5b04aac5aabdb5dc9381417b214674c5e720f"
+    },
+    {
+      "name": "@react-dnd/shallowequal",
+      "version": "3.0.1",
+      "packagePath": "node_modules/@react-dnd/shallowequal",
+      "scope": "emitted",
+      "license": "MIT",
+      "licenseEvidence": "official exact npm gitHead repository root license",
+      "packageJsonSHA256": "5dc5841ca7044b59a253bf5ff8e0ea033cf7e1241357c384bf136d8bc940b795"
+    },
+    {
+      "name": "@react-page/editor",
+      "version": "5.4.6",
+      "packagePath": "node_modules/@react-page/editor",
+      "scope": "emitted",
+      "license": "MIT",
+      "licenseEvidence": "distributed original license files",
+      "packageJsonSHA256": "7d539b3680421d34e174fa5c2bb961bd20718d38277c9edfda4a3d8ed9e29a90"
+    },
+    {
+      "name": "@react-page/plugins-slate",
+      "version": "5.4.6",
+      "packagePath": "node_modules/@react-page/plugins-slate",
+      "scope": "emitted",
+      "license": "MIT",
+      "licenseEvidence": "distributed original license files",
+      "packageJsonSHA256": "1c7abdd18cdce89116f280740e7a91f6af78df54cb2a2ab28f8dfb492143d615"
+    },
+    {
+      "name": "slate-react-presentation",
+      "version": "0.1.1",
+      "packagePath": "node_modules/@react-page/plugins-slate/node_modules/slate-react-presentation",
+      "scope": "emitted",
+      "license": "MIT",
+      "licenseEvidence": "supplemental standard MIT terms; historical LICENSE file unavailable, NOT an upstream recovered LICENSE or invented copyright notice",
+      "packageJsonSHA256": "c239bb11ab6d1f402adee4af0fe17b80748ffef46d7c5c740a9a2bfa47d91ecc"
+    },
+    {
+      "name": "@xmldom/xmldom",
+      "version": "0.8.15",
+      "packagePath": "node_modules/@xmldom/xmldom",
+      "scope": "emitted",
+      "license": "MIT",
+      "licenseEvidence": "distributed original license files",
+      "packageJsonSHA256": "35aecb16da42bf3843ed197db638dff79d178fc23783bfae77070fcfa4d0ae94"
+    },
+    {
+      "name": "classnames",
+      "version": "2.5.1",
+      "packagePath": "node_modules/classnames",
+      "scope": "emitted",
+      "license": "MIT",
+      "licenseEvidence": "distributed original license files",
+      "packageJsonSHA256": "d3164167a241350c19ddeaa3d19c8cc3e0044db1e78ef369d17177f0eae793f4"
+    },
+    {
+      "name": "clsx",
+      "version": "2.1.1",
+      "packagePath": "node_modules/clsx",
+      "scope": "emitted",
+      "license": "MIT",
+      "licenseEvidence": "distributed original license files",
+      "packageJsonSHA256": "a5e616b9883177fb47c1fca22b6a4ab42be1c3ed6ffae8595a5c7d88630eeec2"
+    },
+    {
+      "name": "color-name",
+      "version": "1.1.4",
+      "packagePath": "node_modules/color-name",
+      "scope": "emitted",
+      "license": "MIT",
+      "licenseEvidence": "distributed original license files",
+      "packageJsonSHA256": "4a557ea373907e4643badb89ff21b3f4b969d20631086d78eab2e03d05c2efa4"
+    },
+    {
+      "name": "color-parse",
+      "version": "1.4.3",
+      "packagePath": "node_modules/color-parse",
+      "scope": "emitted",
+      "license": "MIT",
+      "licenseEvidence": "distributed original license files",
+      "packageJsonSHA256": "f69071a2716ca6a9d39fbec8947697c1edd243ae44de70313c2c87dc76836557"
+    },
+    {
+      "name": "compute-scroll-into-view",
+      "version": "1.0.20",
+      "packagePath": "node_modules/compute-scroll-into-view",
+      "scope": "emitted",
+      "license": "MIT",
+      "licenseEvidence": "distributed original license files",
+      "packageJsonSHA256": "fccdcd15322651ea0effca8af5f0072bbce92aa33fd351704381cde942a54113"
+    },
+    {
+      "name": "cssom",
+      "version": "0.3.8",
+      "packagePath": "node_modules/cssom",
+      "scope": "emitted",
+      "license": "MIT",
+      "licenseEvidence": "distributed original license files",
+      "packageJsonSHA256": "bbad5d733248d265baf97b9345b352aa3bc2538cac56ede23c9342a05fada088"
+    },
+    {
+      "name": "cssstyle",
+      "version": "2.3.0",
+      "packagePath": "node_modules/cssstyle",
+      "scope": "emitted",
+      "license": "MIT",
+      "licenseEvidence": "distributed original license files",
+      "packageJsonSHA256": "f9fb22fbd3b498b0010dcbec5306528ab261cdab60004ff7f7f5e29ece6884fa"
+    },
+    {
+      "name": "deep-rename-keys",
+      "version": "0.2.1",
+      "packagePath": "node_modules/deep-rename-keys",
+      "scope": "emitted",
+      "license": "MIT",
+      "licenseEvidence": "distributed original license files",
+      "packageJsonSHA256": "c57116ea3ec5e64d556032536764c67ca6e8bfb8454c8a0fafad38dc5b8b3bf9"
+    },
+    {
+      "name": "direction",
+      "version": "1.0.4",
+      "packagePath": "node_modules/direction",
+      "scope": "emitted",
+      "license": "MIT",
+      "licenseEvidence": "distributed original license files",
+      "packageJsonSHA256": "0d5d3b8af6bd18acc490415c3a61ad59db352432c128bb18f84dc06fbcc6cbd3"
+    },
+    {
+      "name": "dnd-core",
+      "version": "15.1.2",
+      "packagePath": "node_modules/dnd-core",
+      "scope": "emitted",
+      "license": "MIT",
+      "licenseEvidence": "distributed original license files",
+      "packageJsonSHA256": "a02df0766dcaa45434093a7941b81407a078e201e9616682d91e17f8fd27c914"
+    },
+    {
+      "name": "fast-deep-equal",
+      "version": "3.1.3",
+      "packagePath": "node_modules/fast-deep-equal",
+      "scope": "emitted",
+      "license": "MIT",
+      "licenseEvidence": "distributed original license files",
+      "packageJsonSHA256": "a5c63940db0260739be9e2ac67f3aac268df4db5770420ee4e34e493152f97d2"
+    },
+    {
+      "name": "hoist-non-react-statics",
+      "version": "3.3.2",
+      "packagePath": "node_modules/hoist-non-react-statics",
+      "scope": "emitted",
+      "license": "BSD-3-Clause",
+      "licenseEvidence": "distributed original license files",
+      "packageJsonSHA256": "9ec927bd187e21a4b3a62e053101963ef8673fc4502282a7755f26a9df8db32e"
+    },
+    {
+      "name": "react-is",
+      "version": "16.13.1",
+      "packagePath": "node_modules/hoist-non-react-statics/node_modules/react-is",
+      "scope": "emitted",
+      "license": "MIT",
+      "licenseEvidence": "distributed original license files",
+      "packageJsonSHA256": "06784c4340af9853928c519791684487b83076b3c84e8de6ba5f240e33700b71"
+    },
+    {
+      "name": "immer",
+      "version": "9.0.21",
+      "packagePath": "node_modules/immer",
+      "scope": "emitted",
+      "license": "MIT",
+      "licenseEvidence": "distributed original license files",
+      "packageJsonSHA256": "b7e13232fe2645be01aed4578d5fe9b532f5443c49a94e3a40782fde1055cda5"
+    },
+    {
+      "name": "invariant",
+      "version": "2.2.4",
+      "packagePath": "node_modules/invariant",
+      "scope": "emitted",
+      "license": "MIT",
+      "licenseEvidence": "distributed original license files",
+      "packageJsonSHA256": "ef0c08d9f91029e247bb570a04903f3a9bd646c1f2128d29e69ee171794cd2a3"
+    },
+    {
+      "name": "is-buffer",
+      "version": "1.1.6",
+      "packagePath": "node_modules/is-buffer",
+      "scope": "emitted",
+      "license": "MIT",
+      "licenseEvidence": "distributed original license files",
+      "packageJsonSHA256": "c3f4ad9709465baf192e2ee4ae1a113addc1843e044eee520c71eb5fd3c9ec85"
+    },
+    {
+      "name": "is-hotkey",
+      "version": "0.2.1",
+      "packagePath": "node_modules/is-hotkey",
+      "scope": "emitted",
+      "license": "MIT",
+      "licenseEvidence": "distributed original license files",
+      "packageJsonSHA256": "f265c6726d6028bb630d04837162643b6e40d79ff95e63611cf6f00fef2a8e6b"
+    },
+    {
+      "name": "is-plain-object",
+      "version": "5.1.0",
+      "packagePath": "node_modules/is-plain-object",
+      "scope": "emitted",
+      "license": "MIT",
+      "licenseEvidence": "distributed original license files",
+      "packageJsonSHA256": "0fe1587ff3b255249a880f58ab02fa29ecb384438adac241724ae28c1434a9ff"
+    },
+    {
+      "name": "kind-of",
+      "version": "3.2.2",
+      "packagePath": "node_modules/kind-of",
+      "scope": "emitted",
+      "license": "MIT",
+      "licenseEvidence": "distributed original license files",
+      "packageJsonSHA256": "4fbd705c00cde2b9b29cf368f9accf1a057065ab8a349f1a5d27e5f10eee36ff"
+    },
+    {
+      "name": "lodash",
+      "version": "4.18.1",
+      "packagePath": "node_modules/lodash",
+      "scope": "emitted",
+      "license": "MIT",
+      "licenseEvidence": "distributed original license files",
+      "packageJsonSHA256": "5ef0a453b679125b155af19e1477f93b577ea826a57e1545f77608d326966e6a"
+    },
+    {
+      "name": "lodash-es",
+      "version": "4.18.1",
+      "packagePath": "node_modules/lodash-es",
+      "scope": "emitted",
+      "license": "MIT",
+      "licenseEvidence": "distributed original license files",
+      "packageJsonSHA256": "83d054ea84cf0efe4db931cf24c4ca9dde533a0e49779d26176be9d43061c903"
+    },
+    {
+      "name": "lodash.flatten",
+      "version": "4.4.0",
+      "packagePath": "node_modules/lodash.flatten",
+      "scope": "emitted",
+      "license": "MIT",
+      "licenseEvidence": "distributed original license files",
+      "packageJsonSHA256": "7fb349402ceccc330e28ce999a35c1bf66e78581af0174db8c88998809e9a2d4"
+    },
+    {
+      "name": "lodash.isempty",
+      "version": "4.4.0",
+      "packagePath": "node_modules/lodash.isempty",
+      "scope": "emitted",
+      "license": "MIT",
+      "licenseEvidence": "distributed original license files",
+      "packageJsonSHA256": "81b43711b41b9ffb7edf065d0a6fdc55ac5c4178364f069c6c5fa26145a9707a"
+    },
+    {
+      "name": "lodash.isobject",
+      "version": "3.0.2",
+      "packagePath": "node_modules/lodash.isobject",
+      "scope": "emitted",
+      "license": "MIT",
+      "licenseEvidence": "distributed original license files",
+      "packageJsonSHA256": "0823b8c721abcb6f135c457dfadcbe625a25ef7cd861b5a14eb521f10f7d8cd1"
+    },
+    {
+      "name": "lodash.throttle",
+      "version": "4.1.1",
+      "packagePath": "node_modules/lodash.throttle",
+      "scope": "emitted",
+      "license": "MIT",
+      "licenseEvidence": "distributed original license files",
+      "packageJsonSHA256": "743d4b6995e0f1976d39bc634a9513cfe32bcff6405f04ce001fddea0a4119a0"
+    },
+    {
+      "name": "material-colors",
+      "version": "1.2.6",
+      "packagePath": "node_modules/material-colors",
+      "scope": "emitted",
+      "license": "ISC",
+      "licenseEvidence": "distributed original license files",
+      "packageJsonSHA256": "70cd75f0f4f64c6e2d19e4c1a11c20d9f68d4dcf16ef3d26d860889c81ee681f"
+    },
+    {
+      "name": "prop-types",
+      "version": "15.8.1",
+      "packagePath": "node_modules/prop-types",
+      "scope": "emitted",
+      "license": "MIT",
+      "licenseEvidence": "distributed original license files",
+      "packageJsonSHA256": "96aa387585c686397a80616d6a563759576e9b9fac1f80d57874aa4ee4730a2c"
+    },
+    {
+      "name": "react",
+      "version": "18.3.1",
+      "packagePath": "node_modules/react",
+      "scope": "emitted",
+      "license": "MIT",
+      "licenseEvidence": "distributed original license files",
+      "packageJsonSHA256": "d4e68a5c96babb20cad1daafea8b78822eae45b341552cf5418d06a5304fa64c"
+    },
+    {
+      "name": "react-color",
+      "version": "2.19.3",
+      "packagePath": "node_modules/react-color",
+      "scope": "emitted",
+      "license": "MIT",
+      "licenseEvidence": "distributed original license files",
+      "packageJsonSHA256": "1afab8af24d0c1e18b1aa96e2c01895e8abb92d4d163570ff2915552ae715dd2"
+    },
+    {
+      "name": "react-dnd",
+      "version": "15.1.2",
+      "packagePath": "node_modules/react-dnd",
+      "scope": "emitted",
+      "license": "MIT",
+      "licenseEvidence": "distributed original license files",
+      "packageJsonSHA256": "448f01054bd7a6321e73e038cea9bb45fba1b48c8d2ca3e2b14d0fb2c55be866"
+    },
+    {
+      "name": "react-dnd-html5-backend",
+      "version": "15.1.3",
+      "packagePath": "node_modules/react-dnd-html5-backend",
+      "scope": "emitted",
+      "license": "MIT",
+      "licenseEvidence": "distributed original license files",
+      "packageJsonSHA256": "7536690b91d32ee85912ef0f39dcfeb2b628fded76ee4dc8da330e9178e3744e"
+    },
+    {
+      "name": "react-dom",
+      "version": "18.3.1",
+      "packagePath": "node_modules/react-dom",
+      "scope": "emitted",
+      "license": "MIT",
+      "licenseEvidence": "distributed original license files",
+      "packageJsonSHA256": "d2f29e31bd48b833e48cd7bbf41f192e8ee4ff8da249fdbe10d4ac4114b8b12e"
+    },
+    {
+      "name": "react-draggable",
+      "version": "4.4.5",
+      "packagePath": "node_modules/react-draggable",
+      "scope": "emitted",
+      "license": "MIT",
+      "licenseEvidence": "distributed original license files",
+      "packageJsonSHA256": "269bc2cb44ce5f9d0136f36b52c2946a9eda980f3a0713df9671b4f08e6479e0"
+    },
+    {
+      "name": "clsx",
+      "version": "1.2.1",
+      "packagePath": "node_modules/react-draggable/node_modules/clsx",
+      "scope": "emitted",
+      "license": "MIT",
+      "licenseEvidence": "distributed original license files",
+      "packageJsonSHA256": "012a8d86467bd179e2402255d1fa56209738e154c6325a456dfb921d10e8608c"
+    },
+    {
+      "name": "react-is",
+      "version": "19.3.1",
+      "packagePath": "node_modules/react-is",
+      "scope": "emitted",
+      "license": "MIT",
+      "licenseEvidence": "distributed original license files",
+      "packageJsonSHA256": "38cc1de3c5eed194e36c99d0aac74e8d3d6d88408921b251e28dce6f14255afc"
+    },
+    {
+      "name": "react-lazy-with-preload",
+      "version": "2.2.1",
+      "packagePath": "node_modules/react-lazy-with-preload",
+      "scope": "emitted",
+      "license": "MIT",
+      "licenseEvidence": "distributed original license files",
+      "packageJsonSHA256": "bb7b2e5b0876d2d73a4fc91b23be57d4356f10cc5374e3a31a1f862f674d7b2a"
+    },
+    {
+      "name": "react-portal",
+      "version": "4.3.0",
+      "packagePath": "node_modules/react-portal",
+      "scope": "emitted",
+      "license": "MIT",
+      "licenseEvidence": "distributed original license files",
+      "packageJsonSHA256": "34673c36644754d5ad5bbac0fabca948b7b1f0b030c03fc629eae2de6ea86626"
+    },
+    {
+      "name": "react-redux",
+      "version": "7.2.9",
+      "packagePath": "node_modules/react-redux",
+      "scope": "emitted",
+      "license": "MIT",
+      "licenseEvidence": "distributed original license files",
+      "packageJsonSHA256": "466128579c27f9646c94d94450527a4ea7025ff10778aae718651d30389d951c"
+    },
+    {
+      "name": "react-is",
+      "version": "17.0.2",
+      "packagePath": "node_modules/react-redux/node_modules/react-is",
+      "scope": "emitted",
+      "license": "MIT",
+      "licenseEvidence": "distributed original license files",
+      "packageJsonSHA256": "96002dcc58acbd31c0e1329c548f4d967ea1446c5658e514de125be7293e5e60"
+    },
+    {
+      "name": "react-transition-group",
+      "version": "4.4.5",
+      "packagePath": "node_modules/react-transition-group",
+      "scope": "emitted",
+      "license": "BSD-3-Clause",
+      "licenseEvidence": "distributed original license files",
+      "packageJsonSHA256": "2c6a5bfbbe8f65366df04ef7ea28a32fe6d8a8e582f3d68afb84ff3d3c86436a"
+    },
+    {
+      "name": "react-use",
+      "version": "17.6.1",
+      "packagePath": "node_modules/react-use",
+      "scope": "emitted",
+      "license": "Unlicense",
+      "licenseEvidence": "distributed original license files",
+      "packageJsonSHA256": "5c329040df88366a62900d1697400a5513333e5c44a3d41f68132a49c06cb1bf"
+    },
+    {
+      "name": "reactcss",
+      "version": "1.2.3",
+      "packagePath": "node_modules/reactcss",
+      "scope": "emitted",
+      "license": "MIT",
+      "licenseEvidence": "distributed original license files",
+      "packageJsonSHA256": "952a8cc0e172d74dd64a0af94ce79342aa9e68caf401b19a9c5414ff729c275d"
+    },
+    {
+      "name": "redux",
+      "version": "4.2.1",
+      "packagePath": "node_modules/redux",
+      "scope": "emitted",
+      "license": "MIT",
+      "licenseEvidence": "distributed original license files",
+      "packageJsonSHA256": "c283383aa08931298b96ab0688e38ca108437708c447a23eb0413aa904d723c8"
+    },
+    {
+      "name": "redux-thunk",
+      "version": "2.4.2",
+      "packagePath": "node_modules/redux-thunk",
+      "scope": "emitted",
+      "license": "MIT",
+      "licenseEvidence": "distributed original license files",
+      "packageJsonSHA256": "28fde4084744b7257decc0a367a2ba7f3c0e94a9c5ac9633c4498f88b1c92f70"
+    },
+    {
+      "name": "redux-undo",
+      "version": "1.1.0",
+      "packagePath": "node_modules/redux-undo",
+      "scope": "emitted",
+      "license": "MIT",
+      "licenseEvidence": "distributed original license files",
+      "packageJsonSHA256": "224f24654677cd208c1b5669eddb5b59b1b78a6174542024432f5d4d839206e1"
+    },
+    {
+      "name": "rename-keys",
+      "version": "1.2.0",
+      "packagePath": "node_modules/rename-keys",
+      "scope": "emitted",
+      "license": "MIT",
+      "licenseEvidence": "distributed original license files",
+      "packageJsonSHA256": "9752af2d022e31d3664a5fd056dc85630b1445bd0c50f1d58c875841c9bcce87"
+    },
+    {
+      "name": "scheduler",
+      "version": "0.23.2",
+      "packagePath": "node_modules/scheduler",
+      "scope": "emitted",
+      "license": "MIT",
+      "licenseEvidence": "distributed original license files",
+      "packageJsonSHA256": "0893643a24576d727174e639586b8833a53f2a7b4a2199a719b9cfcebe9bae88"
+    },
+    {
+      "name": "scroll-into-view-if-needed",
+      "version": "2.2.31",
+      "packagePath": "node_modules/scroll-into-view-if-needed",
+      "scope": "emitted",
+      "license": "MIT",
+      "licenseEvidence": "distributed original license files",
+      "packageJsonSHA256": "ebe58c48dd12f4eb8018e1ef1820bd866bb845b8defff0c98f37bf4bcea807c2"
+    },
+    {
+      "name": "slate",
+      "version": "0.78.0",
+      "packagePath": "node_modules/slate",
+      "scope": "emitted",
+      "license": "MIT",
+      "licenseEvidence": "supplemental standard MIT terms; historical LICENSE file unavailable, NOT an upstream recovered LICENSE or invented copyright notice",
+      "packageJsonSHA256": "a8553a5a971d236439376058531c54075b6b79eb093a4a804023cb2749c3084e"
+    },
+    {
+      "name": "slate-hyperscript",
+      "version": "0.77.0",
+      "packagePath": "node_modules/slate-hyperscript",
+      "scope": "emitted",
+      "license": "MIT",
+      "licenseEvidence": "supplemental standard MIT terms; historical LICENSE file unavailable, NOT an upstream recovered LICENSE or invented copyright notice",
+      "packageJsonSHA256": "158b6003c85bed22def8f507d3e8aa31ab66e898abe2a354a0895de044663e08"
+    },
+    {
+      "name": "slate-react",
+      "version": "0.79.0",
+      "packagePath": "node_modules/slate-react",
+      "scope": "emitted",
+      "license": "MIT",
+      "licenseEvidence": "supplemental standard MIT terms; historical LICENSE file unavailable, NOT an upstream recovered LICENSE or invented copyright notice",
+      "packageJsonSHA256": "c2b3592843129b5a63b4716cd1f38a09c82bcd65d10c304b4fcd7862bd3d6833"
+    },
+    {
+      "name": "is-hotkey",
+      "version": "0.1.8",
+      "packagePath": "node_modules/slate-react/node_modules/is-hotkey",
+      "scope": "emitted",
+      "license": "MIT",
+      "licenseEvidence": "distributed original license files",
+      "packageJsonSHA256": "34673481894cda6dd037d4d7c909fdfbdad47d40a83893b0e58af2d0cc3f5a67"
+    },
+    {
+      "name": "stylis",
+      "version": "4.2.0",
+      "packagePath": "node_modules/stylis",
+      "scope": "emitted",
+      "license": "MIT",
+      "licenseEvidence": "distributed original license files",
+      "packageJsonSHA256": "09aee8cd4445e4a8e85a3189c093fe823b08e76ecb84efb94565feb13e1174fc"
+    },
+    {
+      "name": "tinycolor2",
+      "version": "1.6.0",
+      "packagePath": "node_modules/tinycolor2",
+      "scope": "emitted",
+      "license": "MIT",
+      "licenseEvidence": "distributed original license files",
+      "packageJsonSHA256": "0eee5ba2f0c0dc640abf827db6a355132b945689eb0d3f6d624cc849eab9fbf8"
+    },
+    {
+      "name": "tslib",
+      "version": "2.9.1",
+      "packagePath": "node_modules/tslib",
+      "scope": "emitted",
+      "license": "0BSD",
+      "licenseEvidence": "distributed original license files",
+      "packageJsonSHA256": "7e9ccc6977540dd94f86f98d0ab9ac405cd3507ac5a2c34752498b250718366b"
+    },
+    {
+      "name": "uniforms",
+      "version": "3.10.2",
+      "packagePath": "node_modules/uniforms",
+      "scope": "emitted",
+      "license": "MIT",
+      "licenseEvidence": "distributed original license files",
+      "packageJsonSHA256": "aea285bbd36aefebfe648cafa686f7662fd26f137b2222c1f8fea24f7b996cfb"
+    },
+    {
+      "name": "uniforms-bridge-json-schema",
+      "version": "3.10.2",
+      "packagePath": "node_modules/uniforms-bridge-json-schema",
+      "scope": "emitted",
+      "license": "MIT",
+      "licenseEvidence": "distributed original license files",
+      "packageJsonSHA256": "22e64fe2b506fac4e6e312afa4aab4bca8b5b3d04c3406bdd00822d88c70e4aa"
+    }
+  ],
+  "additionalLicenseScopes": [
+    "Ajv 8.20.0 generated standalone code / compiler",
+    "Google Material glyphs Apache-2.0"
+  ],
+  "originalFiles": [
+    {
+      "path": "LICENSE",
+      "sha256": "869da1d5a8d92a0491fea25406ffbddefbd8f9d597f967018c6e8463cdc0d87d"
+    },
+    {
+      "path": "customContentPlugin.tsx",
+      "sha256": "8aae1fe3f655b39761e9a475e6b11b4075987a04f0d37d020632b90d4d75f1a0"
+    },
+    {
+      "path": "examples/pages/examples/i18n.tsx",
+      "sha256": "d0e4cee8f014100e95d8d115ec7e79fc8073508a3984654c5e60a77fa3ff6e7b"
+    },
+    {
+      "path": "examples/pages/examples/languageSwitch.tsx",
+      "sha256": "2844ced6e24fd6fb253e7cab34f6a6ce4f9c5ea07f9dd71cade13de5aca3ba0d"
+    },
+    {
+      "path": "examples/pages/examples/simple.tsx",
+      "sha256": "a75808cebd34eb03ba3b13e75700dd5e1c0f6bac5f0c33c129e5c67245a6d8ef"
+    },
+    {
+      "path": "examples/sampleContents/demo.tsx",
+      "sha256": "f0428713429fc766821ffc3c8547df46f4ae3b9aeedc38e9fcd07ab24893275e"
+    },
+    {
+      "path": "package.json",
+      "sha256": "e5141e9425069956d0372a94cbff8b77fbe8090a6486ce50bb00f31a17314bd0"
+    },
+    {
+      "path": "packages/editor/package.json",
+      "sha256": "9cee6bea17214d571386d089ae74edb76c7eccf51d59b6230b26c596e86c0cda"
+    }
+  ],
+  "schemaRegistry": [
+    {
+      "name": "custom-data",
+      "id": "schema0",
+      "canonical": "{\"properties\":{\"age\":{\"minimum\":0,\"title\":\"Age in years\",\"type\":\"integer\"},\"firstName\":{\"type\":\"string\"},\"lastName\":{\"type\":\"string\"},\"title\":{\"default\":\"I am a custom plugin with multiple controls, this is my configuration\",\"type\":\"string\"}},\"required\":[\"firstName\",\"lastName\"],\"type\":\"object\"}",
+      "sha256": "6fdd5fd58a29731e843bfc10661071fc8d1a7a0b0dff2c82bebe60ad0d30010a"
+    },
+    {
+      "name": "custom-styling",
+      "id": "schema1",
+      "canonical": "{\"properties\":{\"style\":{\"properties\":{\"padding\":{\"default\":10,\"type\":\"number\"},\"pallete\":{\"properties\":{\"customBackgroundColor\":{\"default\":\"white\",\"type\":\"string\"},\"customTextColor\":{\"default\":\"black\",\"type\":\"string\"},\"variant\":{\"enum\":[\"default\",\"highlight\",\"custom\"],\"type\":\"string\"}},\"type\":\"object\"}},\"required\":[],\"type\":\"object\"}},\"required\":[],\"type\":\"object\"}",
+      "sha256": "f618ddf6f4a4c250404dd920ede80b0e10e28923f4e02cc94b0bee548687ff63"
+    },
+    {
+      "name": "slate-link",
+      "id": "schema2",
+      "canonical": "{\"properties\":{\"href\":{\"type\":\"string\"},\"openInNewWindow\":{\"type\":\"boolean\"}},\"required\":[\"href\"],\"type\":\"object\"}",
+      "sha256": "4dbca44f84601fc772c5bfe49b413b93cbb783e943521e3f735f3c3127fcaf38"
+    },
+    {
+      "name": "slate-anchor",
+      "id": "schema3",
+      "canonical": "{\"properties\":{\"id\":{\"type\":\"string\"}},\"required\":[\"id\"],\"type\":\"object\"}",
+      "sha256": "3797626bd17e346de1adbbe242cd2c4e41a5956ccf7424c65cf45e2bbef10c81"
+    }
+  ],
+  "schemaEquivalence": {
+    "pass": true,
+    "schemas": 4,
+    "checks": 52,
+    "originalAjvVersion": "8.20.0",
+    "allErrors": true,
+    "useDefaults": true,
+    "assertions": [
+      "identical validation booleans",
+      "identical mutated defaults",
+      "identical ordered error records",
+      "unknown constraint schema not registered",
+      "unsupported constraint function rejected"
+    ],
+    "notGeneralSchemaCompiler": true
+  },
+  "glyphEvidence": [
+    {
+      "emittedSource": "node_modules/@icons/material/CheckIcon.js",
+      "sourceSHA256": "84d3bd80ad91d5a57461b748ef08c3a998f4be9ecf8ed635aaa591cf2412de9d",
+      "comparisonSVG": "mdi-package_svg_check.svg",
+      "comparisonSHA256": "5da1ba7a43964bcc1106bc2e07ef7d731565e01c8f47aa14a0dfae93d3c6b4b8",
+      "exactPathMatch": true,
+      "author": "Google",
+      "metadata": [
+        {
+          "id": "F789CE44-7EA3-4E97-88FB-BEC22EB2030C",
+          "baseIconId": "F789CE44-7EA3-4E97-88FB-BEC22EB2030C",
+          "name": "check",
+          "codepoint": "F012C",
+          "aliases": [
+            "tick",
+            "done",
+            "success"
+          ],
+          "tags": [
+            "Form"
+          ],
+          "styles": [],
+          "author": "Google",
+          "version": "1.5.54",
+          "deprecated": false
+        },
+        {
+          "id": "E85F4170-11D3-4757-8247-17EBD07A08D4",
+          "baseIconId": "E85F4170-11D3-4757-8247-17EBD07A08D4",
+          "name": "unfold-more-horizontal",
+          "codepoint": "F054F",
+          "aliases": [
+            "chevron-up-down",
+            "expand-horizontal"
+          ],
+          "tags": [],
+          "styles": [],
+          "author": "Google",
+          "version": "1.5.54",
+          "deprecated": false
+        }
+      ]
+    },
+    {
+      "emittedSource": "node_modules/@icons/material/UnfoldMoreHorizontalIcon.js",
+      "sourceSHA256": "69b678ce8fe312211bca124ea26e8726bba3386f581b0f9d330fafdf9adca907",
+      "comparisonSVG": "mdi-package_svg_unfold-more-horizontal.svg",
+      "comparisonSHA256": "4e03925baaa2b7dfc1a7560d57374659b53b544d5b24fedc6ef34722c3726397",
+      "exactPathMatch": true,
+      "author": "Google",
+      "metadata": [
+        {
+          "id": "F789CE44-7EA3-4E97-88FB-BEC22EB2030C",
+          "baseIconId": "F789CE44-7EA3-4E97-88FB-BEC22EB2030C",
+          "name": "check",
+          "codepoint": "F012C",
+          "aliases": [
+            "tick",
+            "done",
+            "success"
+          ],
+          "tags": [
+            "Form"
+          ],
+          "styles": [],
+          "author": "Google",
+          "version": "1.5.54",
+          "deprecated": false
+        },
+        {
+          "id": "E85F4170-11D3-4757-8247-17EBD07A08D4",
+          "baseIconId": "E85F4170-11D3-4757-8247-17EBD07A08D4",
+          "name": "unfold-more-horizontal",
+          "codepoint": "F054F",
+          "aliases": [
+            "chevron-up-down",
+            "expand-horizontal"
+          ],
+          "tags": [],
+          "styles": [],
+          "author": "Google",
+          "version": "1.5.54",
+          "deprecated": false
+        }
+      ]
+    }
+  ],
+  "licenseRetrieval": [
+    {
+      "name": "slate",
+      "repository": "ianstormtaylor/slate",
+      "revision": "d8da50f7610c4f1e8f1abb79b7f05fda261c98c8",
+      "lastError": "HTTP Error 404: Not Found",
+      "status": "unavailable-use-declared-MIT-supplement"
+    },
+    {
+      "name": "slate-react",
+      "repository": "ianstormtaylor/slate",
+      "revision": "1555ac840233297476a9c1ff310b26602e083133",
+      "lastError": "HTTP Error 404: Not Found",
+      "status": "unavailable-use-declared-MIT-supplement"
+    },
+    {
+      "name": "slate-hyperscript",
+      "repository": "ianstormtaylor/slate",
+      "revision": "5160efeea492fa52c462e0a9f14189b5dc18c48e",
+      "lastError": "HTTP Error 404: Not Found",
+      "status": "unavailable-use-declared-MIT-supplement"
+    },
+    {
+      "name": "@react-dnd/invariant",
+      "repository": "react-dnd/react-dnd",
+      "revision": "c0de26425d467b26879a50296a0c03df933858f4",
+      "url": "https://raw.githubusercontent.com/react-dnd/react-dnd/c0de26425d467b26879a50296a0c03df933858f4/LICENSE",
+      "file": "@react-dnd_invariant-source-LICENSE.txt",
+      "status": "exact-registry-gitHead-root-license"
+    },
+    {
+      "name": "@react-dnd/shallowequal",
+      "repository": "react-dnd/react-dnd",
+      "revision": "c0de26425d467b26879a50296a0c03df933858f4",
+      "url": "https://raw.githubusercontent.com/react-dnd/react-dnd/c0de26425d467b26879a50296a0c03df933858f4/LICENSE",
+      "file": "@react-dnd_shallowequal-source-LICENSE.txt",
+      "status": "exact-registry-gitHead-root-license"
+    },
+    {
+      "name": "@icons/material",
+      "repository": "at-icons/material",
+      "revision": "47a3170f27d1c1061e69b1b68f7dfd8d4d7845f3",
+      "lastError": "HTTP Error 404: Not Found",
+      "status": "unavailable-use-declared-MIT-supplement"
+    }
+  ],
+  "tests": [
+    {
+      "mode": "normal",
+      "pass": true,
+      "actualCompose571": true,
+      "testOnlyStateExposure": true,
+      "scope": "Original UI add custom cell,original autoform required/negative-age noncommit and valid data commit,independent English/German values,Styling padding,original Slate cell insertion/contenteditable/removal,move/resize/preview mode switches;clipboard denial;hidden reset/oldnode/late callbacks;early/late failure cleanup. Not native contenteditable/IME,drag/resize geometry or visual acceptance.",
+      "cleanup": {
+        "listeners": 0,
+        "timers": 0,
+        "raf": 0,
+        "observers": 0
+      },
+      "blockedCalls": 0
+    },
+    {
+      "mode": "reduced",
+      "pass": true,
+      "actualCompose571": true,
+      "testOnlyStateExposure": true,
+      "scope": "Original UI add custom cell,original autoform required/negative-age noncommit and valid data commit,independent English/German values,Styling padding,original Slate cell insertion/contenteditable/removal,move/resize/preview mode switches;clipboard denial;hidden reset/oldnode/late callbacks;early/late failure cleanup. Not native contenteditable/IME,drag/resize geometry or visual acceptance.",
+      "cleanup": {
+        "listeners": 0,
+        "timers": 0,
+        "raf": 0,
+        "observers": 0
+      },
+      "blockedCalls": 0
+    },
+    {
+      "mode": "early",
+      "pass": true,
+      "actualCompose571": true,
+      "testOnlyStateExposure": true,
+      "scope": "Original UI add custom cell,original autoform required/negative-age noncommit and valid data commit,independent English/German values,Styling padding,original Slate cell insertion/contenteditable/removal,move/resize/preview mode switches;clipboard denial;hidden reset/oldnode/late callbacks;early/late failure cleanup. Not native contenteditable/IME,drag/resize geometry or visual acceptance.",
+      "cleanup": {
+        "listeners": 0,
+        "timers": 0,
+        "raf": 0,
+        "observers": 0
+      },
+      "blockedCalls": 0
+    },
+    {
+      "mode": "failure",
+      "pass": true,
+      "actualCompose571": true,
+      "testOnlyStateExposure": true,
+      "scope": "Original UI add custom cell,original autoform required/negative-age noncommit and valid data commit,independent English/German values,Styling padding,original Slate cell insertion/contenteditable/removal,move/resize/preview mode switches;clipboard denial;hidden reset/oldnode/late callbacks;early/late failure cleanup. Not native contenteditable/IME,drag/resize geometry or visual acceptance.",
+      "cleanup": {
+        "listeners": 0,
+        "timers": 0,
+        "raf": 0,
+        "observers": 0
+      },
+      "blockedCalls": 0
+    },
+    {
+      "mode": "production",
+      "pass": true,
+      "actualCompose571": true,
+      "testOnlyStateExposure": false,
+      "scope": "Original UI add custom cell,original autoform required/negative-age noncommit and valid data commit,independent English/German values,Styling padding,original Slate cell insertion/contenteditable/removal,move/resize/preview mode switches;clipboard denial;hidden reset/oldnode/late callbacks;early/late failure cleanup. Not native contenteditable/IME,drag/resize geometry or visual acceptance.",
+      "cleanup": {
+        "listeners": 0,
+        "timers": 0,
+        "raf": 0,
+        "observers": 0
+      },
+      "blockedCalls": 0
+    }
+  ],
+  "loader": [
+    {
+      "slug": "editor",
+      "pass": true,
+      "utf16Bytes": 3438066,
+      "fetches": 3,
+      "actualCreatePreviewLoader571": true,
+      "cacheHit": true,
+      "released": true,
+      "iframeExecution": false
+    }
+  ],
+  "modifiedSources": {
+    "makeUniformsSchema.js": "/* eslint-disable @typescript-eslint/ban-types */\nvar __assign = (this && this.__assign) || function () {\n    __assign = Object.assign || function(t) {\n        for (var s, i = 1, n = arguments.length; i < n; i++) {\n            s = arguments[i];\n            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))\n                t[p] = s[p];\n        }\n        return t;\n    };\n    return __assign.apply(this, arguments);\n};\nvar __rest = (this && this.__rest) || function (s, e) {\n    var t = {};\n    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)\n        t[p] = s[p];\n    if (s != null && typeof Object.getOwnPropertySymbols === \"function\")\n        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {\n            if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))\n                t[p[i]] = s[p[i]];\n        }\n    return t;\n};\nimport * as validators from './generated/validators.js';\nimport registry from './generated/schema-registry.json';\nimport {canonicalSchema}from'./schema-key.js';\nimport { JSONSchemaBridge } from 'uniforms-bridge-json-schema';\n\nfunction createValidator(schema) {\n    const key=canonicalSchema(schema);const entry=registry.find(x=>x.canonical===key);if(!entry)throw Error('Unsupported fixed demonstration schema');const validator=validators[entry.id];\n    // eslint-disable-next-line @typescript-eslint/no-explicit-any\n    return function (model) {\n        var _a;\n        validator(model);\n        if (validator.errors && validator.errors.length) {\n            return ((_a = validator.errors) === null || _a === void 0 ? void 0 : _a.length) ? { details: validator.errors } : null;\n        }\n    };\n}\nfunction makeUniformsSchema(jsonSchema) {\n    var fullSchema = __assign({ type: 'object' }, jsonSchema);\n    var bridge = new JSONSchemaBridge(fullSchema, createValidator(fullSchema));\n    // see https://github.com/react-page/react-page/issues/1187\n    // we remap props.component to props._customComponent to avoid the underlying issue in uniforms\n    //\n    var getPropsOrg = bridge.getProps;\n    bridge.getProps = function (name) {\n        var _a = getPropsOrg.call(this, name), component = _a.component, props = __rest(_a, [\"component\"]);\n        if (component) {\n            return __assign({ _customComponent: component }, props);\n        }\n        return props;\n    };\n    return bridge;\n}\nexport default makeUniformsSchema;\n//# sourceMappingURL=makeUniformsSchema.js.map",
+    "schema-key.js": "// UI-only uniforms annotations remain in the original bridge, not Ajv constraints.\nexport function canonicalSchema(value){function visit(v){if(v===null||typeof v!=='object'){if(['function','undefined','symbol','bigint'].includes(typeof v)||(typeof v==='number'&&!Number.isFinite(v)))throw Error('Unsupported schema value');return v}if(Array.isArray(v))return v.map(visit);if(Object.getPrototypeOf(v)!==Object.prototype&&Object.getPrototypeOf(v)!==null)throw Error('Unsupported schema object');if(Object.getOwnPropertySymbols(v).length)throw Error('Unsupported schema symbols');const out=Object.create(null);for(const k of Object.keys(v).sort()){if(k==='uniforms')continue;out[k]=visit(v[k])}return out}return JSON.stringify(visit(value))}\n",
+    "compile-schemas.mjs": "import fs from'node:fs';import crypto from'node:crypto';import{createRequire}from'node:module';import esbuild from'../ui-coss-chat-local/node_modules/esbuild/lib/main.js';import Ajv from'ajv';import standaloneCode from'ajv/dist/standalone/index.js';import{canonicalSchema}from'./schema-key.js';\nawait esbuild.build({entryPoints:['extract.ts'],bundle:true,platform:'node',format:'cjs',jsx:'automatic',outfile:'generated/extract.cjs',plugins:[{name:'metadata-only',setup(b){b.onResolve({filter:/^@react-page\\/editor$/},()=>({path:'metadata',namespace:'meta'}));b.onLoad({filter:/.*/,namespace:'meta'},()=>({contents:'export const ColorPickerField=()=>null;export const lazyLoad=()=>()=>null;',loader:'js'}))}}]});const require=createRequire(import.meta.url),{schemas}=require('./generated/extract.cjs');const ajv=new Ajv({allErrors:true,useDefaults:true,code:{source:true,esm:true}});ajv.addKeyword('uniforms');const records=[],exports={};for(let i=0;i<schemas.length;i++){const{name,schema}=schemas[i],full={type:'object',...schema},key=canonicalSchema(full),hash=crypto.createHash('sha256').update(key).digest('hex'),id='schema'+i;ajv.addSchema(JSON.parse(JSON.stringify(full,(k,v)=>k==='uniforms'?undefined:v)),id);exports[id]=id;records.push({name,id,canonical:key,sha256:hash})}fs.writeFileSync('generated/validators.js',standaloneCode(ajv,exports));fs.writeFileSync('generated/schema-registry.json',JSON.stringify(records,null,2));console.log(records.map(x=>[x.name,x.sha256]));\n",
+    "src/App.tsx": "import React, { useState } from 'react';\nimport type { Options, Value } from '@react-page/editor';\nimport Editor from '@react-page/editor';\nimport slate from '@react-page/plugins-slate';\n\n\n\nimport customContentPlugin from './customContentPlugin';\n\nconst cellPlugins = [slate(), customContentPlugin];\n\nconst LANGUAGES = [\n  {\n    lang: 'en',\n    label: 'English',\n  },\n  {\n    lang: 'de',\n    label: 'Deutsch',\n  },\n];\n\n// Custom bottom toolbar example with collapse/restore functionality.\nconst languageSwitchExample = () => {\n  const [lang, setLang] = React.useState<string>('en');\n  const [value, setValue] = useState<Value>();\n\n  React.useEffect(()=>{if(__TEST__)(window as any).__RP={value,lang};return()=>{if(__TEST__)delete (window as any).__RP}},[value,lang]);\n  return (\n    <>\n      <select value={lang} onChange={(v) => setLang(v.target.value)}>\n        {LANGUAGES.map((l) => (\n          <option key={l.lang} value={l.lang}>\n            {l.label}\n          </option>\n        ))}\n      </select>\n      <Editor\n        languages={LANGUAGES}\n        cellPlugins={cellPlugins}\n        value={value}\n        onChange={setValue}\n        lang={lang}\n        onChangeLang={(l) => {\n          setLang(l);\n        }}\n      />\n    </>\n  );\n};\n\nexport default languageSwitchExample;\n",
+    "main.tsx": "import React from \"react\";import {createRoot}from\"react-dom/client\";import{flushSync}from\"react-dom\";import App from \"./src/App\";import\"@react-page/editor/lib/index.css\";import\"@react-page/plugins-slate/lib/index.css\";import\"./host.css\";\nlet root:any=null,closed=false;const mount=document.getElementById('content');function dispose(){if(closed)return;closed=true;try{root?.unmount()}catch{}finally{root=null;cleanupOwned();mount?.replaceChildren()}}function fail(){dispose();document.body.textContent='本地单元编辑示例暂不可用。';document.body.setAttribute('role','alert')}failure=fail;\nfunction render(){if(closed)return;if(!mount)throw Error('Missing scene');root??=createRoot(mount,{onUncaughtError:fail});flushSync(()=>root.render(document.hidden?null:<App/>))}function on(t:any,k:string,f:any){t.addEventListener(k,(e:any)=>{if(!closed)try{f(e)}catch{fail()}})}try{for(const k of ['copy','cut','paste'])document.addEventListener(k,e=>{e.preventDefault();e.stopImmediatePropagation()},true);document.addEventListener('drop',e=>{const t=(e as DragEvent).dataTransfer;if(t&&(t.files?.length||Array.from(t.types||[]).some(x=>['Files','text/html','text/uri-list','text/plain'].includes(x)))){e.preventDefault();e.stopImmediatePropagation()}},true);document.addEventListener('click',e=>{if((e.target as Element)?.closest?.('a[href]')){e.preventDefault();e.stopImmediatePropagation()}},true);on(window,'error',(e:any)=>{e.preventDefault();fail()});on(document,'visibilitychange',()=>{document.body.toggleAttribute('data-hidden',document.hidden);if(document.hidden){render();pauseOwned()}else{resumeOwned();render()}});on(window,'pagehide',dispose);on(window,'atlas:dispose',dispose);render();if(document.hidden)pauseOwned()}catch{fail()}\n",
+    "build.mjs": "import fs from'node:fs';import path from'node:path';import esbuild from'../ui-coss-chat-local/node_modules/esbuild/lib/main.js';const r=await esbuild.build({entryPoints:['main.tsx'],bundle:true,format:'iife',jsx:'automatic',minify:true,charset:'utf8',define:{'process.env.NODE_ENV':'\"production\"','__TEST__':process.env.TEST?'true':'false'},outfile:process.env.TEST?'runtime.test.js':'delivery/editor/runtime.js',metafile:true,alias:{'react/jsx-runtime.js':'react/jsx-runtime'},plugins:[{name:'original-static-schema',setup(b){b.onResolve({filter:/makeUniformsSchema$/},a=>a.importer.includes('node_modules/@react-page/')?{path:path.resolve('makeUniformsSchema.js')}:null)}}],legalComments:'eof',banner:{js:fs.readFileSync('prelude.js','utf8')},footer:{js:`}catch(e){cleanupOwned();document.body.textContent='本地单元编辑示例暂不可用。';document.body.setAttribute('role','alert')}})();`}});fs.writeFileSync('meta.json',JSON.stringify(r.metafile,null,2));\n"
+  }
+}
