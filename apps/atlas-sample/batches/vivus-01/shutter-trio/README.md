@@ -1,0 +1,5 @@
+# Vivus · Original shutter trio
+
+Original index.html Animation types three shutter SVG circles/lines and text/CSS, and byte-exact dist/vivus.js (including Pathformer) retained. This restores one existing family, not three. Original delayed/sync/oneByOne duration150, path conversion, length mapping and timing algorithms run. Host removes inline click attributes, uses manual start and native buttons, shows finished drawing initially; click/replay runs original reset/play. Hidden stops and resumes only active drawings; reduced motion finishes immediately; atlas:dispose/pagehide destroys instances, cancels owned RAF and removes listeners. CSS retains original rules and adds narrow-screen stacking/focus indicator. No camera brand, imported SVG, image, font, backend, or network. No eval or CSP extension. SVG source is text, not a screenshot. JSDOM getTotalLength=100 and 200px bounds are controlled stubs; actual native SVG path length, rendering and pixels have not been verified.
+
+Source https://github.com/maxwellito/vivus/tree/06b7adb5d543b6b1d0d93fa83dea137b1f8644a5
