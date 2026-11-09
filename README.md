@@ -2,7 +2,7 @@
 
 网站：<https://tdwhere123.github.io/UI-Vault/>
 
-当前共收录 **815 条**：其中 **529 条可打开预览（241 条原始素材＋288 条后续接入预览）**，另有 **286 条仅来源记录**，不计入主图鉴预览数。原始 241 件包括 215 件精选界面、20 件保留基础素材、6 套图标系列。正在向 1000 件优质素材扩充；图标按系列单列，字重、尺寸和单枚 glyph 不凑数。已有图标重叠暂留待统一整理。
+当前有 **530 条可直接打开预览（241 条原始素材＋289 条后续接入预览）**，目标为 **1000 条可查看素材**，还差 **470 条**。另有 **285 条待适配来源记录**，只是工作清单，**不计入1000目标完成数**。原始241件包括215件精选界面、20件保留基础素材、6套图标系列。图标按系列计数，不按单枚glyph、字重或尺寸凑数，已有重叠暂待统一整理。
 
 ## 当前内容
 
@@ -412,3 +412,10 @@ Restored the existing Poline item with its original full picker page, web compon
 Added **17 source-only families**: kinetic countdown, image palette extraction, multi-handle color editing, SVG filter-stage inspection and node-based filter editing; geographic narratives, inline audio, file-history time travel, code walkthroughs, Julia-orbit explanations and astronomical navigation; resume editing, public document-workbench entry paths, image-generation canvas, gallery and architectural narratives; one Mono Icons series. A whole workflow or icon family counts once, not each glyph, parameter or preset.
 
 Current totals: **815 collected = 529 previews + 286 source-only records**. Mapped covers remain 470; 59 posterless previews use bounded live cards. All existing records except the restored Poline item, all Grok covers/reports and the main UI are preserved. MPL/AGPL source obligations, third-party media and model rights remain explicit. Stirling's selected public editor/core entry paths do not authorize its excluded proprietary engine/processor or transitive services. Stellarium's original geolocation/network paths are noted as unexecuted, not silently enabled.
+
+## Hand-drawn forms · 530 directly viewable
+
+Restored the existing DoodleCSS item from its original complete Form specimen. Native fields, checks, radio groups, multiple selections and reset retain the original hand-drawn border-image mechanism. Seven original SVG text assets are embedded reversibly as UTF-8 percent-encoded CSS resources, not generated covers or binary wrappers. Added feedback and validation are explicitly local-only; password and file controls are disabled, with no submission, persistence, network, credentials or clipboard access. Original label errors and duplicate IDs are corrected. Full MIT attribution is retained and fonts use local fallback. DOM/error/hidden/exit checks do not constitute native SVG border, date-widget, font or pixel acceptance.
+
+
+The active target is **1000 directly viewable entries**, not collected links: **530 previews, 470 remaining**. The other **285 source-only records are pending work** and do not count as completion. New source research from this round remains private until runnable adaptation is useful; it is not being added to inflate progress. Priority is now parallel adaptation of existing sources, with license/media/runtime closure and real behavior tests. Mapped covers remain470, posterless previews60; existing records except DoodleCSS and all Grok covers/reports/main UI are preserved.
