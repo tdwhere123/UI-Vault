@@ -2,7 +2,7 @@
 
 网站：<https://tdwhere123.github.io/UI-Vault/>
 
-当前共收录 **680 条**：其中 **523 条可打开预览（241 条原始素材＋282 条后续接入预览）**，另有 **157 条仅来源记录**，不计入主图鉴预览数。原始 241 件包括 215 件精选界面、20 件保留基础素材、6 套图标系列。正在向 1000 件优质素材扩充；图标按系列单列，字重、尺寸和单枚 glyph 不凑数。已有图标重叠暂留待统一整理。
+当前共收录 **706 条**：其中 **523 条可打开预览（241 条原始素材＋282 条后续接入预览）**，另有 **183 条仅来源记录**，不计入主图鉴预览数。原始 241 件包括 215 件精选界面、20 件保留基础素材、6 套图标系列。正在向 1000 件优质素材扩充；图标按系列单列，字重、尺寸和单枚 glyph 不凑数。已有图标重叠暂留待统一整理。
 
 ## 当前内容
 
@@ -354,3 +354,11 @@ One existing Looper Loop18 source is restored as a real local Canvas2D preview, 
 Original fixed draw body, 800×800 canvas and two-second phase algorithm are unchanged; only an unused easing import is removed. Play/pause/reset/manual phase and lifecycle host are explicitly authored adaptation. Complete original MIT is retained and there are no runtime packages, image/font assets or network imports. Hidden/reduced/early exit/initial or later failure/context loss/old nodes are covered by production and independent tests. Six time samples match all 41,773 drawing commands against the original, with 13,923 arcs per frame. This command-level Canvas mock is not native pixel or device performance acceptance. Failures stop and report unavailable, never substitute a successful-looking static image.
 
 The frontend no longer repeats a generic visual-QA warning, per user presentation preference; this documentation and audit metadata retain the actual unverified pixel/performance boundary.
+
+## Distinct visual languages · 523 previews / 706 collected
+
+Added **26 source-only families** chosen for distinctive style rather than ordinary dashboards: ink/hand-drawn controls and characters; organic liquid navigation and morphing surfaces; glass/tactile controls; pixel/Aero/medieval/retro desktop languages; editorial, academic, paper and handwritten storytelling; command-driven and drivable portfolio worlds; optical typography, physical scenes and sound instruments. Whole scenes, mood sets and design systems are counted once, not each color/state/command.
+
+Current totals: **706 collected = 523 previews + 183 source-only records**. This batch adds no completed runtime or screenshot. The 470 mapped covers and 53 posterless live previews remain, and all previous candidate objects and frontend behavior are preserved.
+
+Actual fixed source and licenses are recorded for each candidate. Root licenses do not cover personal portfolio content, brands, fonts, 3D models, sounds or system imagery by default. Two newly inspected Codrops repositories have actual MIT root texts, but GSAP/plugins and fonts still require separate closure before runtime redistribution; they are not a blanket Codrops license decision. RPGUI is Zlib, TinySynth Apache-2.0, not all MIT. Audio/MIDI/device permissions, remote iframe/data/analytics and authentication/payment actions have not been invoked. Private evidence paths are not presented as hosted archives. Full gaps and overlap notes are retained per record.
