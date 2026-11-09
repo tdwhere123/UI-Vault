@@ -1,0 +1,58 @@
+{
+  "repository": "https://github.com/ncase/nutshell",
+  "revision": "d91469e1b2c9be8294d30542bf50f317953a9d01",
+  "version": "v1.0.8",
+  "sourcePath": "nutshell.js",
+  "officialContentPath": "index.html",
+  "license": "CC0-1.0 AND Apache-2.0",
+  "originalFiles": [
+    {
+      "path": "Apache-2.0.txt",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "DOMPurify-LICENSE",
+      "sha256": "8b6902e953e2eb2876412a4ba75291758b77e88e220962e3423af4d080db1a59"
+    },
+    {
+      "path": "DOMPurify-package.json",
+      "sha256": "98fff445bfa245cf88676bf078004f1af85e139ceeed9b3c71f693cb95d1b729"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "5537d4d10b76b81b6e8dfd8b644480a4b1efa332fbb0cdb61126c5be781ef7b4"
+    },
+    {
+      "path": "index.html",
+      "sha256": "11777faf7e8a251faaac1a704ba2766f64796b928c448a8352e40b641484900d"
+    },
+    {
+      "path": "nutshell.js",
+      "sha256": "e7085b9bfe29aa03cec00ec27a998be43fc8f5efd77877a8a5ba46f817abef8f"
+    }
+  ],
+  "runtimeDependencies": [
+    {
+      "name": "DOMPurify",
+      "version": "2.3.6",
+      "embeddedOriginalUnmodified": true,
+      "sha256": "6be6657aa6cc063c3c7b4e9ae0020a34b24195878cf1310247759f0ea1dbe40c",
+      "license": "Apache-2.0 OR MPL-2.0",
+      "selectedLicense": "Apache-2.0",
+      "licenseURL": "https://raw.githubusercontent.com/cure53/DOMPurify/2.3.6/LICENSE",
+      "noticeCheck": "https://raw.githubusercontent.com/cure53/DOMPurify/2.3.6/NOTICE returned404"
+    }
+  ],
+  "sourceAdaptations": [
+    "Original Nutshell bubble/section parsing/punctuation/followup/height-animation logic retained, not details replacement. Official text excerpts only, original media and remote sections excluded; title and selection host authored.",
+    "Force original local start branch instead of top-window/postMessage transport; fixed synthetic local URL provides valid opaque-srcdoc fragment resolution and is never fetched.",
+    "Replace remote resolver with current-document cache only. Remove fetch/Wikipedia/YouTube/CORS iframe transports and postMessage body transmitter. Disable heading and bubble embed modal and remove embedded PNG icon.",
+    "Remove optional before/after Markdown parser and embedded unversioned Marked; these annotations explicitly unsupported, fixture does not use them.",
+    "Keep original DOMPurify2.3.6 untouched exclusively for fixed trusted fixtures. No HTML/URL inputs; not a secure general-purpose editor/sanitizer offer.",
+    "Lifecycle-owned timers pause while hidden and flush on return; original DOM/reading state remains. Guard async section completions and event handlers on exit, catch actual asynchronous rendering failures.",
+    "Fix old close animation resetting newly reopened link mode; idempotent close/open, retire closed child listeners and neutralize retired links. Close-all recounts actual open nodes rather than overwriting newer state.",
+    "Keyboard Space activates actual original expandable; native anchor Enter remains. On exit clear owned timers/listeners/root and strip old anchor href. Reduced-motion CSS disables transitions, does not pretend native rendering tested."
+  ],
+  "contentScope": "Only fixed trusted inline essay excerpts; no user-supplied HTML, URL, remote embedding or AI",
+  "browserVisualQA": "not-run"
+}
