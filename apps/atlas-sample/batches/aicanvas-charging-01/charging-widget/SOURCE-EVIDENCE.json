@@ -1,0 +1,78 @@
+{
+  "repository": "https://github.com/aicanvas-me/aicanvas",
+  "revision": "8164f1e423e4e654dd0828a941ba5cdda69f08fe",
+  "originalEntry": "components-workspace/charging-widget/index.tsx",
+  "originalFilesSHA256": {
+    "spec.md": "ffee02c62908c46ec09c1c6dab2fc6041e00dc069d6a7fd7501ce7066cdb3c1f",
+    "index.tsx": "ff1ae70a3f08c503a94d03bdcb431ed3e5b8447ca4036ca4662c63e0f6399a12",
+    "prompts.ts": "6c0997d10d8c1db4b4e9828f7d5ef21d179fea90c95bc4adc7df363ec4938649",
+    "LICENSE": "75c85790506bae0a1a8ab322e3a4cda906ed8fed8803d398e91bae0a8c592659"
+  },
+  "dependencies": [
+    {
+      "name": "framer-motion",
+      "version": "12.43.0",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE.md": "5ff46083b88563822b0560dd6221ab89d2f74bc97a52d4c97a75020fd62c6f32"
+      }
+    },
+    {
+      "name": "motion-dom",
+      "version": "12.43.0",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE.md": "1bf0dc3f7727723e5a032ed12164a47cf92c05204cb1a3485f123c24e2833ed1"
+      }
+    },
+    {
+      "name": "motion-utils",
+      "version": "12.39.0",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE.md": "1bf0dc3f7727723e5a032ed12164a47cf92c05204cb1a3485f123c24e2833ed1"
+      }
+    },
+    {
+      "name": "react",
+      "version": "19.1.0",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+      }
+    },
+    {
+      "name": "react-dom",
+      "version": "19.1.0",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+      }
+    },
+    {
+      "name": "scheduler",
+      "version": "0.26.0",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+      }
+    },
+    {
+      "name": "tailwindcss",
+      "version": "4.1.18",
+      "license": "MIT",
+      "scope": "compiled-css",
+      "licenseSHA256": {
+        "LICENSE": "60e0b68c0f35c078eef3a5d29419d0b03ff84ec1df9c3f9d6e39a519a5ae7985"
+      }
+    }
+  ],
+  "adaptation": "Original complete ChargingWidget: original two SVG sine-wave paths, step2 sampled x0\u2013200, fillY and amplitude equations, phase offsets, original ring/bolt/glow/colors and SVG text retained. Original Motion value animates0 to78 over4seconds easeInOut, pauses1second, repeats. This is simulated visual progress only, never battery/device API data; persistent visible warning. Original component had uncanceled animation and timeout; adaptation stores/stops controller, cancels pause timeout and settles cancellation Promise.race. Hidden unmounts original widget and returns to start of new loop on reveal; no continuing hidden progress. Reduced-motion sets original78 target and draws one original-formula SVG wave, no ongoing RAF. Host supports replay, failure status, partial initialization cleanup and owned listener/RAF/timer/observer cleanup with stale callback identities. Wave tick includes alive/error guard; layout/theme observer and original percent subscription clean on unmount. Single original component per isolated iframe, original fixed clip/filter IDs cannot collide with another mount. Original Manrope font name retains system sans-serif fallback without downloading fonts. No media, credentials, network, storage or other permissions. Installed React19.1 differs from source workspace React19.2.4 and is a disclosed compatibility adaptation. Actual FramerMotion12.43.0 satisfies the original ^12.38.0 range; actual emitted versions and exact licenses are recorded in SOURCE-EVIDENCE.json. Original geometry/timing unchanged, lifecycle and reduced props added. Tests use actual545compose and real Motion library under controlled clock, verify counted78/pause/restart,100hidden cycles, reduced static, observer cleanup, old canceled RAF delivery, animation/pause exits and earlymodule/late SVG failure. DOM SVG command strings and controlled clock are not native pixel or font acceptance.",
+  "visualVerified": false
+}
