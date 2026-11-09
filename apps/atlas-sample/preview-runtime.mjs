@@ -1,25 +1,52 @@
 /** Bounded runtime text cache; failed requests never poison a later retry. */
 export function createTextCache(fetcher=globalThis.fetch,{maxBytes=8*1024*1024,maxEntries=20}={}){
  const cache=new Map();let bytes=0;
- function trim(){for(const [key,entry] of cache){if(bytes<=maxBytes&&cache.size<=maxEntries)break;if(entry.bytes!==null){cache.delete(key);bytes-=entry.bytes}}}
- return {async get(url){let entry=cache.get(url);if(entry){cache.delete(url);cache.set(url,entry);return entry.promise}entry={bytes:null,promise:null};entry.promise=Promise.resolve().then(()=>fetcher(url)).then(r=>{if(!r.ok)throw Error('预览资源加载失败');return r.text()}).then(value=>{if(cache.get(url)===entry){entry.bytes=value.length*2;bytes+=entry.bytes;trim()}return value}).catch(error=>{if(cache.get(url)===entry)cache.delete(url);throw error});cache.set(url,entry);trim();return entry.promise},clear(){cache.clear();bytes=0},stats(){return {entries:cache.size,bytes}}};
+ const abortError=()=>Object.assign(Error('预览请求已取消'),{name:'AbortError'});
+ function drop(key,entry){if(cache.get(key)!==entry)return;cache.delete(key);bytes-=entry.bytes??0;}
+ function trim(){for(const [key,entry] of cache){if(bytes<=maxBytes&&cache.size<=maxEntries)break;if(entry.bytes!==null)drop(key,entry)}}
+ return {get(url,{signal}={}){
+  if(signal?.aborted)return Promise.reject(abortError());
+  let entry=cache.get(url);
+  if(!entry){
+   trim();if(cache.size>=maxEntries){const oldest=[...cache].find(([,e])=>e.bytes!==null);if(oldest)drop(...oldest);else return Promise.reject(Error('预览请求过多，请重试'));}
+   entry={bytes:null,users:0,controller:new AbortController(),promise:null};cache.set(url,entry);
+   entry.promise=Promise.resolve().then(()=>{if(entry.controller.signal.aborted)throw abortError();return fetcher(url,{signal:entry.controller.signal})}).then(r=>{if(!r.ok)throw Error('预览资源加载失败');return r.text()}).then(value=>{if(cache.get(url)===entry){entry.bytes=value.length*2;bytes+=entry.bytes;trim()}return value}).catch(error=>{drop(url,entry);throw error});
+  }else{cache.delete(url);cache.set(url,entry)}
+  entry.users++;
+  return new Promise((resolve,reject)=>{let done=false;const finish=(fn,value)=>{if(done)return;done=true;signal?.removeEventListener('abort',cancel);entry.users--;if(entry.bytes===null&&entry.users===0){drop(url,entry);entry.controller.abort()}fn(value)};const cancel=()=>finish(reject,abortError());signal?.addEventListener('abort',cancel,{once:true});entry.promise.then(value=>finish(resolve,value),error=>finish(reject,error));});
+ },clear(){for(const entry of cache.values())entry.controller.abort();cache.clear();bytes=0},stats(){return {entries:cache.size,bytes}}};
+}
+export const MAX_RUNTIME_SCRIPTS=16,MAX_SCRIPT_BYTES=700*1024;
+/** Ordered plain UTF-8 JS files, never URLs/paths/encoded filenames. */
+export function validateScriptNames(names){
+ if(!Array.isArray(names)||names.length<1||names.length>MAX_RUNTIME_SCRIPTS||new Set(names).size!==names.length||Array.from(names).some(n=>typeof n!=='string'||n.length>96||! /^[A-Za-z0-9][A-Za-z0-9_-]*\.js$/.test(n)))throw Error('预览分片定义不合法');
+ return names.slice();
+}
+function runtimeScripts(runtime){
+ if(runtime.scripts===undefined)return null;
+ const names=validateScriptNames(runtime.scripts);
+ if(names.at(-1)!==runtime.scriptSrc||typeof runtime.js!=='string'||!(runtime.js===runtime.scriptSrc||runtime.js.endsWith('/'+runtime.scriptSrc)))throw Error('预览入口分片不匹配');
+ const dir=runtime.js.slice(0,-runtime.scriptSrc.length);if(!/^(?:[A-Za-z0-9_-]+\/)*$/.test(dir))throw Error('预览分片目录不合法');
+ return {names,urls:names.map(name=>dir+name)};
 }
 export function runtimeFor(item){return item.runtime??(item.featured?{key:'featured-v1',css:'featured/featured.css',js:'featured/featured.js',cssHref:'featured.css',scriptSrc:'featured.js'}:null)}
 export function composePreview(html,css,js,runtime){
- const cssTag=`<link rel="stylesheet" href="${runtime.cssHref}">`,jsTag=`<script src="${runtime.scriptSrc}"></script>`;
- if(!html.includes(cssTag)||!html.includes(jsTag))throw Error('预览入口与运行资源定义不匹配');
+ const cssTag=`<link rel="stylesheet" href="${runtime.cssHref}">`,chunks=runtimeScripts(runtime),names=chunks?.names??[runtime.scriptSrc],tags=names.map(name=>`<script src="${name}"></script>`);
+ if(!html.includes(cssTag)||tags.some(tag=>!html.includes(tag)))throw Error('预览入口与运行资源定义不匹配');
+ if(chunks){let last=-1;for(const tag of tags){const index=html.indexOf(tag);if(index<=last||html.indexOf(tag,index+tag.length)!==-1)throw Error('预览分片顺序或重复不匹配');last=index}if((html.match(/<script\b/gi)||[]).length!==tags.length)throw Error('预览存在未声明脚本');}
  const safeCss=css.replace(/<\/style/gi,'<\\/style'),safeJs=js.replace(/<\/script/gi,'<\\/script');
- return html.replace(cssTag,()=>'<style>'+safeCss+'</style>').replace(jsTag,()=>'<script>'+safeJs+'</script>').replace('<head>',`<head><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; font-src data:; img-src data: blob:; ${runtime.allowLocalMedia===true?'media-src blob:; ':''}connect-src 'none'; form-action 'none'">`);
+ let composed=html;for(const tag of tags.slice(1))composed=composed.replace(tag,'');composed=composed.replace(cssTag,()=>'<style>'+safeCss+'</style>').replace(tags[0],()=>'<script>'+safeJs+'</script>');
+ return composed.replace('<head>',`<head><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; font-src data:; img-src data: blob:; ${runtime.allowLocalMedia===true?'media-src blob:; ':''}connect-src 'none'; form-action 'none'">`);
 }
 /** Generation tokens prevent stale async completions from reviving released frames. */
 export function createPreviewLoader({cache=createTextCache(),connected=frame=>frame.isConnected}={}){
- const versions=new WeakMap();
- function release(frame){versions.set(frame,(versions.get(frame)??0)+1);frame.onload=null;frame.removeAttribute('srcdoc');frame.removeAttribute('src');frame.src='about:blank';frame.dataset.preview=''}
+ const versions=new WeakMap(),controllers=new WeakMap();
+ function release(frame){controllers.get(frame)?.abort();controllers.delete(frame);versions.set(frame,(versions.get(frame)??0)+1);frame.onload=null;frame.removeAttribute('srcdoc');frame.removeAttribute('src');frame.src='about:blank';frame.dataset.preview=''}
  async function mount(frame,item,{onReady=()=>{},onError=()=>{}}={}){
-  release(frame);const version=versions.get(frame);frame.dataset.preview=item.preview;
+  release(frame);const version=versions.get(frame),controller=new AbortController();controllers.set(frame,controller);frame.dataset.preview=item.preview;
   const current=()=>versions.get(frame)===version&&connected(frame);
   const loaded=()=>{if(current())onReady()};
-  try{const runtime=runtimeFor(item);if(!runtime){frame.onload=loaded;frame.src=item.preview;return}const [css,js,html]=await Promise.all([cache.get(runtime.css),cache.get(runtime.js),cache.get(item.preview)]);if(current()){const document=composePreview(html,css,js,runtime);frame.onload=loaded;frame.srcdoc=document}}catch(error){if(current()){onError(error);frame.srcdoc='<p style="font:14px system-ui;padding:20px">预览未加载，打开详情重试。</p>'}}
+  try{const runtime=runtimeFor(item);if(!runtime){frame.onload=loaded;frame.src=item.preview;return}const chunks=runtimeScripts(runtime),urls=chunks?.urls??[runtime.js],get=url=>cache.get(url,{signal:controller.signal});const [css,texts,html]=await Promise.all([get(runtime.css),Promise.all(urls.map(get)),get(item.preview)]);if(chunks&&texts.some(text=>new TextEncoder().encode(text).byteLength>=MAX_SCRIPT_BYTES))throw Error('预览分片过大');const js=texts.join('\n;\n');if(current()){const document=composePreview(html,css,js,runtime);frame.onload=loaded;frame.srcdoc=document}}catch(error){controller.abort();if(current()){onError(error);frame.srcdoc='<p style="font:14px system-ui;padding:20px">预览未加载，打开详情重试。</p>'}}
  }
  return {mount,release,cache};
 }
