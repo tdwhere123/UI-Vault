@@ -4186,21 +4186,25 @@
   },
   {
     "id": "aicanvas:charging-widget",
-    "title": "charging-widget",
     "source": "AI Canvas free library",
-    "license": "MIT (free components-workspace explicitly designated by README)",
     "upstream": "https://github.com/aicanvas-me/aicanvas/tree/8164f1e423e4e654dd0828a941ba5cdda69f08fe/components-workspace/charging-widget",
     "website": "",
-    "buildStatus": "not installed or built",
-    "batch": "batch-002",
-    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "repository": "https://github.com/aicanvas-me/aicanvas",
+    "revision": "8164f1e423e4e654dd0828a941ba5cdda69f08fe",
+    "title": "双液波模拟充电进度",
+    "description": "原双波图形、渐进百分比与循环动效；纯本地模拟进度，不读取设备电池，支持隐藏暂停与减动静态展示。",
+    "behavior": "原双波图形、渐进百分比与循环动效；纯本地模拟进度，不读取设备电池，支持隐藏暂停与减动静态展示。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "数据与状态",
+    "license": "MIT",
+    "batch": "aicanvas-charging-01",
+    "preview": "batches/aicanvas-charging-01/charging-widget/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime mechanisms and lifecycle tests passed; browser visual QA not run",
     "gaps": [
-      "Remote ImageKit/Unsplash artwork and fonts not archived or presumed MIT.",
-      "Tailwind v4/React19 and peer dependencies require integration. No site/premium CSS imported.",
-      "Original root scripts inject premium code and change Git hooks. They are retained only as evidence; do not run them. Prepare a separate minimal harness.",
-      "Crypto swap/music/charging are demo UI states, not verified transactions, playback or a real battery monitor. No wallet/API connected.",
-      "No install/build/browser/interaction/mobile validation.",
-      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+      "Original complete ChargingWidget: original two SVG sine-wave paths, step2 sampled x0–200, fillY and amplitude equations, phase offsets, original ring/bolt/glow/colors and SVG text retained. Original Motion value animates0 to78 over4seconds easeInOut, pauses1second, repeats. This is simulated visual progress only, never battery/device API data; persistent visible warning. Original component had uncanceled animation and timeout; adaptation stores/stops controller, cancels pause timeout and settles cancellation Promise.race. Hidden unmounts original widget and returns to start of new loop on reveal; no continuing hidden progress. Reduced-motion sets original78 target and draws one original-formula SVG wave, no ongoing RAF. Host supports replay, failure status, partial initialization cleanup and owned listener/RAF/timer/observer cleanup with stale callback identities. Wave tick includes alive/error guard; layout/theme observer and original percent subscription clean on unmount. Single original component per isolated iframe, original fixed clip/filter IDs cannot collide with another mount. Original Manrope font name retains system sans-serif fallback without downloading fonts. No media, credentials, network, storage or other permissions. Installed React19.1 differs from source workspace React19.2.4 and is a disclosed compatibility adaptation. Actual FramerMotion12.43.0 satisfies the original ^12.38.0 range; actual emitted versions and exact licenses are recorded in SOURCE-EVIDENCE.json. Original geometry/timing unchanged, lifecycle and reduced props added. Tests use actual545compose and real Motion library under controlled clock, verify counted78/pause/restart,100hidden cycles, reduced static, observer cleanup, old canceled RAF delivery, animation/pause exits and earlymodule/late SVG failure. DOM SVG command strings and controlled clock are not native pixel or font acceptance."
     ]
   },
   {
@@ -12101,7 +12105,7 @@
     "category": "Agent与对话",
     "licenseEvidence": {
       "url": "https://github.com/CopilotKit/CopilotKit/blob/c7815d9ac96f48fb3a64ad8c18e176a870c81763/LICENSE",
-      "sha256": "22b0a2c7cc91403500445f60369d3077ceb86e66b01138483e179728f5da65c4",
+      "sha256": "15a0e5343aea872c0573ad72feb6044b336f162d724cc1673c608e6b37ea071b",
       "scope": "Full root MIT read; transitive runtime/media permissions not closed"
     },
     "previewStatus": "source-only",
@@ -12116,35 +12120,32 @@
   },
   {
     "id": "copilotkit:trip-intake-itinerary",
-    "title": "旅行需求收集与逐日富行程",
     "source": "CopilotKit",
     "repository": "https://github.com/CopilotKit/CopilotKit",
     "revision": "c7815d9ac96f48fb3a64ad8c18e176a870c81763",
-    "sourcePath": "examples/showcases/a2a-travel/components/forms/TripRequirementsForm.tsx",
     "upstream": "https://github.com/CopilotKit/CopilotKit/blob/c7815d9ac96f48fb3a64ad8c18e176a870c81763/examples/showcases/a2a-travel/components/forms/TripRequirementsForm.tsx",
-    "license": "MIT (root verified only; dependencies/assets not closed)",
-    "behavior": "真实城市必填、1–7天/1–15人范围、预算档选择，respond回传并显示已提交；搭配原ItineraryCard按天展示行程。",
-    "difference": "不是普通问卷拆项：收集参数+结构化按天结果构成一族，与已有FullCalendar时间编辑不同。",
-    "gaps": [
-      "respond未提供仍显示Submitted且无异步失败回退；parseInt空值NaN可能绕过范围判断；Agent/真实规划不在本地实现。表单与行程原件不等于已有离线串联。",
-      "完整传递依赖及素材许可未审；默认CSP/无网络、交互和退出清理、浏览器像素均未验。"
-    ],
-    "description": "真实城市必填、1–7天/1–15人范围、预算档选择，respond回传并显示已提交；搭配原ItineraryCard按天展示行程。 不是普通问卷拆项：收集参数+结构化按天结果构成一族，与已有FullCalendar时间编辑不同。",
-    "category": "输入与选择",
+    "sourcePath": "examples/showcases/a2a-travel/components/forms/TripRequirementsForm.tsx",
     "licenseEvidence": {
       "url": "https://github.com/CopilotKit/CopilotKit/blob/c7815d9ac96f48fb3a64ad8c18e176a870c81763/LICENSE",
-      "sha256": "22b0a2c7cc91403500445f60369d3077ceb86e66b01138483e179728f5da65c4",
+      "sha256": "15a0e5343aea872c0573ad72feb6044b336f162d724cc1673c608e6b37ea071b",
       "scope": "Full root MIT read; transitive runtime/media permissions not closed"
     },
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-bulk-522",
-    "sourceScope": "Selected fixed original code and complete root license evidence; no complete runnable/archive or runtime audit",
-    "kind": "原版完整场景（仅来源）",
-    "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted"
+    "difference": "不是普通问卷拆项：收集参数+结构化按天结果构成一族，与已有FullCalendar时间编辑不同。",
+    "title": "旅行需求与逐日行程",
+    "description": "原需求表单与逐日行程、三餐卡片，使用明确虚构的本地演示数据；不提供真实规划、预订或付款。",
+    "behavior": "原需求表单与逐日行程、三餐卡片，使用明确虚构的本地演示数据；不提供真实规划、预订或付款。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "输入与选择",
+    "license": "MIT",
+    "batch": "copilot-trip-01",
+    "preview": "batches/copilot-trip-01/trip-intake/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime mechanisms and lifecycle tests passed; browser visual QA not run",
+    "gaps": [
+      "Original TripRequirementsForm plus complete ItineraryCard/TimeSlotSection/MealItem retained. Original city-required, days1–7,people1–15,Economy/Comfort/Premium and submitted state, original scrollable day/time-slot/meal rendering. Host respond synchronously builds bounded fictional day and matching restaurantData fixtures, all days show breakfast/lunch/dinner rather than false waiting. Persistent warning: fictional local demo, no AI planning, real venues, reservations/payment or backend; do not enter personal information. Original Planning label describes only local state, not active service. Host fixture uses invented garden/gallery/promenade and clearly fictional meals, not upstream recommendations. Original ItineraryCard byte-exact; form modifications only explicit finite-integer guard, local respond sync failure text before setting submitted, input accessible names and80character city bound. No external async response or user-supplied HTML accepted. Host reset keyed remount; hidden keeps submitted/form state mounted and blocks click/input/change/keydown, resumes unchanged. Exit unmounts and removes owned listener/RAF/timer/observer work; canceled scheduling identities guarded. Early module and render failure fall back visibly. CSS compiles original classes with Tailwind4, system font replaces unbundled Plus Jakarta Sans; Original elevation shadows recovered from fixed tailwind.config.ts mapping and globals.css values, translated into Tailwind4 theme. Original animate-fade-in-up token has no definition in these fixed app styles/config; layout also imports @copilotkit/react-ui/styles.css not needed by these pure React components. That optional animation is not reproduced or claimed absent upstream; no SDK stylesheet or font fetched at runtime. No remote fonts/media/storage/clipboard/geolocation. Actual545compose tests100full cycles,7days15people,all budgets,requiredcity,hidden preservation,old handlers andearlymodule/late render errors; separate actual-component probe verifies out-of-range/fractional/infinite input args and sync respond error. JSDOM controlled events/scheduling are not native range keyboard,scroll layout or pixel acceptance. Reduced-motion CSS disables transitions. Source-level545 full catalog/items/candidate scan found only existing exact source ID, no additional preview."
+    ]
   },
   {
     "id": "copilotkit:discourse-evidence-report",
@@ -12165,7 +12166,7 @@
     "category": "展示与媒体",
     "licenseEvidence": {
       "url": "https://github.com/CopilotKit/CopilotKit/blob/c7815d9ac96f48fb3a64ad8c18e176a870c81763/LICENSE",
-      "sha256": "22b0a2c7cc91403500445f60369d3077ceb86e66b01138483e179728f5da65c4",
+      "sha256": "15a0e5343aea872c0573ad72feb6044b336f162d724cc1673c608e6b37ea071b",
       "scope": "Full root MIT read; transitive runtime/media permissions not closed"
     },
     "previewStatus": "source-only",
@@ -12197,7 +12198,7 @@
     "category": "输入与选择",
     "licenseEvidence": {
       "url": "https://github.com/CopilotKit/CopilotKit/blob/c7815d9ac96f48fb3a64ad8c18e176a870c81763/LICENSE",
-      "sha256": "22b0a2c7cc91403500445f60369d3077ceb86e66b01138483e179728f5da65c4",
+      "sha256": "15a0e5343aea872c0573ad72feb6044b336f162d724cc1673c608e6b37ea071b",
       "scope": "Full root MIT read; transitive runtime/media permissions not closed"
     },
     "previewStatus": "source-only",
@@ -12229,7 +12230,7 @@
     "category": "展示与媒体",
     "licenseEvidence": {
       "url": "https://github.com/CopilotKit/CopilotKit/blob/c7815d9ac96f48fb3a64ad8c18e176a870c81763/LICENSE",
-      "sha256": "22b0a2c7cc91403500445f60369d3077ceb86e66b01138483e179728f5da65c4",
+      "sha256": "15a0e5343aea872c0573ad72feb6044b336f162d724cc1673c608e6b37ea071b",
       "scope": "Full root MIT read; transitive runtime/media permissions not closed"
     },
     "previewStatus": "source-only",
@@ -12261,7 +12262,7 @@
     "category": "Agent与对话",
     "licenseEvidence": {
       "url": "https://github.com/CopilotKit/CopilotKit/blob/c7815d9ac96f48fb3a64ad8c18e176a870c81763/LICENSE",
-      "sha256": "22b0a2c7cc91403500445f60369d3077ceb86e66b01138483e179728f5da65c4",
+      "sha256": "15a0e5343aea872c0573ad72feb6044b336f162d724cc1673c608e6b37ea071b",
       "scope": "Full root MIT read; transitive runtime/media permissions not closed"
     },
     "previewStatus": "source-only",
@@ -12945,7 +12946,7 @@
     "sourcePath": "examples/showcases/oracle-agent-memory/frontend/src/components/FlightOptions.tsx",
     "licenseEvidence": {
       "url": "https://github.com/CopilotKit/CopilotKit/blob/c7815d9ac96f48fb3a64ad8c18e176a870c81763/LICENSE",
-      "sha256": "22b0a2c7cc91403500445f60369d3077ceb86e66b01138483e179728f5da65c4",
+      "sha256": "15a0e5343aea872c0573ad72feb6044b336f162d724cc1673c608e6b37ea071b",
       "scope": "Complete root MIT text read; transitive runtime/media not closed"
     },
     "difference": "与既有旅行需求/行程不同，是丰富选择结果到票券式完成回执，不拆各卡。",
@@ -12984,7 +12985,7 @@
     "category": "Agent与对话",
     "licenseEvidence": {
       "url": "https://github.com/CopilotKit/CopilotKit/blob/c7815d9ac96f48fb3a64ad8c18e176a870c81763/LICENSE",
-      "sha256": "22b0a2c7cc91403500445f60369d3077ceb86e66b01138483e179728f5da65c4",
+      "sha256": "15a0e5343aea872c0573ad72feb6044b336f162d724cc1673c608e6b37ea071b",
       "scope": "Complete root MIT text read; transitive runtime/media not closed"
     },
     "previewStatus": "source-only",
@@ -13016,7 +13017,7 @@
     "category": "Agent与对话",
     "licenseEvidence": {
       "url": "https://github.com/CopilotKit/CopilotKit/blob/c7815d9ac96f48fb3a64ad8c18e176a870c81763/LICENSE",
-      "sha256": "22b0a2c7cc91403500445f60369d3077ceb86e66b01138483e179728f5da65c4",
+      "sha256": "15a0e5343aea872c0573ad72feb6044b336f162d724cc1673c608e6b37ea071b",
       "scope": "Complete root MIT text read; transitive runtime/media not closed"
     },
     "previewStatus": "source-only",
@@ -13048,7 +13049,7 @@
     "category": "Agent与对话",
     "licenseEvidence": {
       "url": "https://github.com/CopilotKit/CopilotKit/blob/c7815d9ac96f48fb3a64ad8c18e176a870c81763/LICENSE",
-      "sha256": "22b0a2c7cc91403500445f60369d3077ceb86e66b01138483e179728f5da65c4",
+      "sha256": "15a0e5343aea872c0573ad72feb6044b336f162d724cc1673c608e6b37ea071b",
       "scope": "Complete root MIT text read; transitive runtime/media not closed"
     },
     "previewStatus": "source-only",
@@ -13080,7 +13081,7 @@
     "category": "Agent与对话",
     "licenseEvidence": {
       "url": "https://github.com/CopilotKit/CopilotKit/blob/c7815d9ac96f48fb3a64ad8c18e176a870c81763/LICENSE",
-      "sha256": "22b0a2c7cc91403500445f60369d3077ceb86e66b01138483e179728f5da65c4",
+      "sha256": "15a0e5343aea872c0573ad72feb6044b336f162d724cc1673c608e6b37ea071b",
       "scope": "Complete root MIT text read; transitive runtime/media not closed"
     },
     "previewStatus": "source-only",
@@ -13657,36 +13658,35 @@
   },
   {
     "id": "tremor-blocks:workspace-package-application",
-    "title": "工作区套餐选择与申请表单",
     "source": "Tremor Blocks",
     "repository": "https://github.com/tremorlabs/tremor-blocks",
     "revision": "b319e8d3d3678a4f60f4802f7e85bc1abc52d598",
-    "sourcePath": "src/content/components/form-layouts/form-layout-05.tsx",
     "upstream": "https://github.com/tremorlabs/tremor-blocks/blob/b319e8d3d3678a4f60f4802f7e85bc1abc52d598/src/content/components/form-layouts/form-layout-05.tsx",
-    "license": "MIT (root verified only; dependencies/assets not closed)",
-    "behavior": "原姓名/工作邮箱/公司规模表单，三档RadioCard套餐与对应功能清单联动、原必填属性和邮箱输入；完整分栏申请场景。",
-    "difference": "不是普通登录表单或单个价格卡；申请字段与套餐说明在同一原版复合场景，三个套餐仅计一族。",
-    "gaps": [
-      "Apply/Go back无本地提交回执，原form未preventDefault；不是注册或购买。套餐文案是原fixture且含Lorem，onClick更新说明与键盘Radio变更同步尚未测；重复ID/描述关联需复核。",
-      "完整运行依赖/图标/素材许可未闭合；只收录固定原源码，不含完整可运行归档。未构建、未运行、未测默认CSP/退出清理、未做浏览器视觉验收。"
-    ],
-    "description": "原姓名/工作邮箱/公司规模表单，三档RadioCard套餐与对应功能清单联动、原必填属性和邮箱输入；完整分栏申请场景。 不是普通登录表单或单个价格卡；申请字段与套餐说明在同一原版复合场景，三个套餐仅计一族。",
-    "category": "输入与选择",
+    "sourcePath": "src/content/components/form-layouts/form-layout-05.tsx",
     "licenseEvidence": {
       "url": "https://github.com/tremorlabs/tremor-blocks/blob/b319e8d3d3678a4f60f4802f7e85bc1abc52d598/LICENSE.md",
       "sha256": "3546b8d22c1657e8f6d36ae83e8721f894946337d9966e1d84fbfcdfa1c9ae0b",
       "scope": "Full root MIT read; transitive runtime/media permissions not closed"
     },
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-bulk-523",
-    "sourceScope": "Selected fixed original code and complete root license evidence; no complete runnable/archive or runtime audit",
-    "kind": "原版完整场景（仅来源）",
-    "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted",
-    "sourceSha256": "ee708594382f3fc3635423283e728de1556f23b39215ffbaef7a6c65276bfd54"
+    "difference": "不是普通登录表单或单个价格卡；申请字段与套餐说明在同一原版复合场景，三个套餐仅计一族。",
+    "title": "工作区套餐申请表",
+    "description": "原三档套餐、特点联动、公司规模选择和完整表单；仅本地示例，不发送申请、不注册或购买。",
+    "behavior": "原三档套餐、特点联动、公司规模选择和完整表单；仅本地示例，不发送申请、不注册或购买。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "输入与选择",
+    "license": "MIT; Apache-2.0; 0BSD",
+    "batch": "tremor-package-01",
+    "preview": "batches/tremor-package-01/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original form/RadioCard/Select DOM keyboard,100cycle+100remount,actual544compose/failure/lifecycle verified; visual QA not run.",
+    "gaps": [
+      "Browser visual/native keyboard/geometry/CSP enforcement not verified.",
+      "Local sample plans and prices; no actual offer, submission, registration or billing.",
+      "Hidden resets defaults; detached React-local event handlers disclosed, not all-listener-zero claim.",
+      "Unclosed JetBrains font removed; system fallback."
+    ]
   },
   {
     "id": "tremor-blocks:audit-evidence-reader",
@@ -13724,36 +13724,36 @@
   },
   {
     "id": "tremor-blocks:portfolio-performance-report",
-    "title": "多资产走势与收益明细报告",
     "source": "Tremor Blocks",
     "repository": "https://github.com/tremorlabs/tremor-blocks",
     "revision": "b319e8d3d3678a4f60f4802f7e85bc1abc52d598",
-    "sourcePath": "src/content/components/chart-compositions/chart-composition-01.tsx",
     "upstream": "https://github.com/tremorlabs/tremor-blocks/blob/b319e8d3d3678a4f60f4802f7e85bc1abc52d598/src/content/components/chart-compositions/chart-composition-01.tsx",
-    "license": "MIT (root verified only; dependencies/assets not closed)",
-    "behavior": "原多序列LineChart、汇总数值和收益明细表组合，移动端与桌面端原响应式展示；数据为固定数组。",
-    "difference": "不同于单独chart primitive或表格换皮：保留原趋势+多维资金明细组合报告，不按序列/断点拆项。",
-    "gaps": [
-      "原onValueChange为空回调，不能宣称图表选点联动下表；不是实时行情/投资建议/交易。LineChart底层Recharts等导入链、媒体/字体/CSP/资源与传递许可未完整审查。",
-      "完整运行依赖/图标/素材许可未闭合；只收录固定原源码，不含完整可运行归档。未构建、未运行、未测默认CSP/退出清理、未做浏览器视觉验收。"
-    ],
-    "description": "原多序列LineChart、汇总数值和收益明细表组合，移动端与桌面端原响应式展示；数据为固定数组。 不同于单独chart primitive或表格换皮：保留原趋势+多维资金明细组合报告，不按序列/断点拆项。",
-    "category": "展示与媒体",
+    "sourcePath": "src/content/components/chart-compositions/chart-composition-01.tsx",
     "licenseEvidence": {
       "url": "https://github.com/tremorlabs/tremor-blocks/blob/b319e8d3d3678a4f60f4802f7e85bc1abc52d598/LICENSE.md",
       "sha256": "3546b8d22c1657e8f6d36ae83e8721f894946337d9966e1d84fbfcdfa1c9ae0b",
       "scope": "Full root MIT read; transitive runtime/media permissions not closed"
     },
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-bulk-523",
-    "sourceScope": "Selected fixed original code and complete root license evidence; no complete runnable/archive or runtime audit",
-    "kind": "原版完整场景（仅来源）",
-    "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted",
-    "sourceSha256": "507e9a80c69330184f8ec1407f6e367df71c32891f2f18b108a199d807b74cea"
+    "difference": "不同于单独chart primitive或表格换皮：保留原趋势+多维资金明细组合报告，不按序列/断点拆项。",
+    "title": "多资产走势与明细报告",
+    "description": "原三序列走势、图例强调、提示与固定明细表；上游金融示例数据，不是实时行情或投资建议，不虚构表格联动。",
+    "behavior": "原三序列走势、图例强调、提示与固定明细表；上游金融示例数据，不是实时行情或投资建议，不虚构表格联动。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "数据与状态",
+    "license": "MIT; ISC; Apache-2.0",
+    "batch": "tremor-portfolio-01",
+    "preview": "batches/tremor-portfolio-01/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "pass",
+    "gaps": [
+      "Browser pixels/responsive layout not visually verified; desktop and mobile nodes coexist in JSDOM, not proof both rendered layouts are visually correct.",
+      "All 57 daily records, totals, financial names and static table are upstream fixtures, not real-time market data or investment advice.",
+      "Original onValueChange is a no-op; legend selection emphasizes curves but never filters/recalculates table.",
+      "Original enableLegendSlider remains false. Supplemental non-public test scene tests the same LineChart slider cleanup; it is not a claimed visible feature.",
+      "Unretrieved JetBrains font face removed; system fallback. Recharts 2.15.0 is upstream-era deprecated version retained, not upgraded to incompatible v3."
+    ]
   },
   {
     "id": "langflow:flow-and-playground-workspace",
