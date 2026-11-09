@@ -1,0 +1,639 @@
+{
+  "repository": "https://github.com/silverbulletmd/silverbullet",
+  "revision": "e91de8698f711cc2c87d35264ce5610ebf36598f",
+  "sourcePath": "client/editor_ui.tsx",
+  "scope": "Original TopBar + TreeView + original text-document editor branch; local fixture, not complete MainUI/Space Lua",
+  "originals": [
+    {
+      "path": "LICENSE.md",
+      "sha256": "ccf525a3b5c9ac8d843e118932036e6517d4d603f9ff3e474522b632c3996c65",
+      "url": "https://github.com/silverbulletmd/silverbullet/blob/e91de8698f711cc2c87d35264ce5610ebf36598f/LICENSE.md"
+    },
+    {
+      "path": "client/codemirror/editing/android_input.ts",
+      "sha256": "efffe9e1403870d60092e0e6a268bb1e54e5573b59af8569448d9e4d99186a0d",
+      "url": "https://github.com/silverbulletmd/silverbullet/blob/e91de8698f711cc2c87d35264ce5610ebf36598f/client/codemirror/editing/android_input.ts"
+    },
+    {
+      "path": "client/codemirror/editing/ios_completion.ts",
+      "sha256": "4a4ca0bd49c1f8055f0fe04466f54664019aa090719facff198dcfde74a2d749",
+      "url": "https://github.com/silverbulletmd/silverbullet/blob/e91de8698f711cc2c87d35264ce5610ebf36598f/client/codemirror/editing/ios_completion.ts"
+    },
+    {
+      "path": "client/codemirror/editor_state.ts",
+      "sha256": "f3ff3f8afd238d1540781e44d5ef4201ac352e7ea89427175e79e4873749bdc2",
+      "url": "https://github.com/silverbulletmd/silverbullet/blob/e91de8698f711cc2c87d35264ce5610ebf36598f/client/codemirror/editor_state.ts"
+    },
+    {
+      "path": "client/components/top_bar.tsx",
+      "sha256": "da5a06648227c8f910590f509fd8ba91053459b272483713f958f50c874861db",
+      "url": "https://github.com/silverbulletmd/silverbullet/blob/e91de8698f711cc2c87d35264ce5610ebf36598f/client/components/top_bar.tsx"
+    },
+    {
+      "path": "client/editor_ui.tsx",
+      "sha256": "daadfe920bce30175e86eba7152f354957adbe5935062a6e93c0757d2eaa2fa0",
+      "url": "https://github.com/silverbulletmd/silverbullet/blob/e91de8698f711cc2c87d35264ce5610ebf36598f/client/editor_ui.tsx"
+    },
+    {
+      "path": "client/lib/command_filters.ts",
+      "sha256": "185c87807af326c2e62663fc55742faddd9b4601fbe40da67312f8084a0a722c",
+      "url": "https://github.com/silverbulletmd/silverbullet/blob/e91de8698f711cc2c87d35264ce5610ebf36598f/client/lib/command_filters.ts"
+    },
+    {
+      "path": "client/lib/feather_icons.ts",
+      "sha256": "de6539a2c8ce485f1171088ff9d781df4b2ec1648c1db4f141c35b765b9e74f2",
+      "url": "https://github.com/silverbulletmd/silverbullet/blob/e91de8698f711cc2c87d35264ce5610ebf36598f/client/lib/feather_icons.ts"
+    },
+    {
+      "path": "client/lib/icon.ts",
+      "sha256": "3739dcf73c194456be81286623686997aa80ea0d752ed1468d07c637386664fc",
+      "url": "https://github.com/silverbulletmd/silverbullet/blob/e91de8698f711cc2c87d35264ce5610ebf36598f/client/lib/icon.ts"
+    },
+    {
+      "path": "client/lib/keyboard_viewport.ts",
+      "sha256": "0160438cc1e02bc486b4addee5cd443c90f9c67ae2898cadb7650e0cdfa83096",
+      "url": "https://github.com/silverbulletmd/silverbullet/blob/e91de8698f711cc2c87d35264ce5610ebf36598f/client/lib/keyboard_viewport.ts"
+    },
+    {
+      "path": "client/lib/mobile.ts",
+      "sha256": "4a47cf9ad9c99e5f98ff1293a9dc7ad23e08439144cf77bb999505f48f973b58",
+      "url": "https://github.com/silverbulletmd/silverbullet/blob/e91de8698f711cc2c87d35264ce5610ebf36598f/client/lib/mobile.ts"
+    },
+    {
+      "path": "client/markdown_parser/customtags.ts",
+      "sha256": "68643154982cbe25790b7006293471dc7203bf9c9cb020f52f4dbaf104b21cb8",
+      "url": "https://github.com/silverbulletmd/silverbullet/blob/e91de8698f711cc2c87d35264ce5610ebf36598f/client/markdown_parser/customtags.ts"
+    },
+    {
+      "path": "client/style.ts",
+      "sha256": "f9dec9d1205f01a207e180ac65a95339a2d28348655ec981f30b69bf37d9ddec",
+      "url": "https://github.com/silverbulletmd/silverbullet/blob/e91de8698f711cc2c87d35264ce5610ebf36598f/client/style.ts"
+    },
+    {
+      "path": "client/styles/_dock_menu.scss",
+      "sha256": "bbb93085e2256188d7ef82ee5cdd1234d33cc7e6443ae6cb32a11ec158c8212c",
+      "url": "https://github.com/silverbulletmd/silverbullet/blob/e91de8698f711cc2c87d35264ce5610ebf36598f/client/styles/_dock_menu.scss"
+    },
+    {
+      "path": "client/styles/_fonts.scss",
+      "sha256": "e71ed799bcc8f402600c2b042ee9dc96096055b92904ee375dec9a52106851f5",
+      "url": "https://github.com/silverbulletmd/silverbullet/blob/e91de8698f711cc2c87d35264ce5610ebf36598f/client/styles/_fonts.scss"
+    },
+    {
+      "path": "client/styles/_keyboard_bar.scss",
+      "sha256": "2cf449b96cb50377976ddb1ce9fe563d5840197a6a890534c63cf7bae544f05c",
+      "url": "https://github.com/silverbulletmd/silverbullet/blob/e91de8698f711cc2c87d35264ce5610ebf36598f/client/styles/_keyboard_bar.scss"
+    },
+    {
+      "path": "client/styles/_markdown_body.scss",
+      "sha256": "b462dd9270ea6945cb8927d64bdd4f2829f5487cf0f6c1f1351e37c5f940c801",
+      "url": "https://github.com/silverbulletmd/silverbullet/blob/e91de8698f711cc2c87d35264ce5610ebf36598f/client/styles/_markdown_body.scss"
+    },
+    {
+      "path": "client/styles/_navigator.scss",
+      "sha256": "be4601f8239d657ca15504ad90095b69326f184934665acc294ad29bd67e8a5f",
+      "url": "https://github.com/silverbulletmd/silverbullet/blob/e91de8698f711cc2c87d35264ce5610ebf36598f/client/styles/_navigator.scss"
+    },
+    {
+      "path": "client/styles/_page_widget.scss",
+      "sha256": "4ebea9361e99aeb7cbd85e482f6c0ba86cff3265d1aef18c6505e5382e488e7b",
+      "url": "https://github.com/silverbulletmd/silverbullet/blob/e91de8698f711cc2c87d35264ce5610ebf36598f/client/styles/_page_widget.scss"
+    },
+    {
+      "path": "client/styles/_panel_view.scss",
+      "sha256": "cf1d04b6caacac04a55fd418d3c37c31627f26f34785e63bd7014c978dca63e3",
+      "url": "https://github.com/silverbulletmd/silverbullet/blob/e91de8698f711cc2c87d35264ce5610ebf36598f/client/styles/_panel_view.scss"
+    },
+    {
+      "path": "client/styles/_profile_menu.scss",
+      "sha256": "8fad4b7debbff3d19f3e1bb1f8877bbfde534bf86b1b570eaa64d78aa7c4a049",
+      "url": "https://github.com/silverbulletmd/silverbullet/blob/e91de8698f711cc2c87d35264ce5610ebf36598f/client/styles/_profile_menu.scss"
+    },
+    {
+      "path": "client/styles/_revision_preview.scss",
+      "sha256": "91b6031e285b01a2c6e5e0906c3a8ef51d943e4cd2558d8bf00e430ae3167404",
+      "url": "https://github.com/silverbulletmd/silverbullet/blob/e91de8698f711cc2c87d35264ce5610ebf36598f/client/styles/_revision_preview.scss"
+    },
+    {
+      "path": "client/styles/_standalone.scss",
+      "sha256": "6421670b617844e64bd688b60d9d3c83bc063c5b50723e1db6ec7429cc0113c7",
+      "url": "https://github.com/silverbulletmd/silverbullet/blob/e91de8698f711cc2c87d35264ce5610ebf36598f/client/styles/_standalone.scss"
+    },
+    {
+      "path": "client/styles/_tokens.scss",
+      "sha256": "252ada393132aff64e05fbce370ac4d462ac0f4c3d894341d6865cb5294cc64b",
+      "url": "https://github.com/silverbulletmd/silverbullet/blob/e91de8698f711cc2c87d35264ce5610ebf36598f/client/styles/_tokens.scss"
+    },
+    {
+      "path": "client/styles/_view_content.scss",
+      "sha256": "fdeeb3b8e6c1916074f43d0a88d6fc2814947fa5f4f7781cec15a727e1626656",
+      "url": "https://github.com/silverbulletmd/silverbullet/blob/e91de8698f711cc2c87d35264ce5610ebf36598f/client/styles/_view_content.scss"
+    },
+    {
+      "path": "client/styles/_widget_inputs.scss",
+      "sha256": "f6a07aefd034a5a04bdc1e51e3d364a283ae9e78deb0e7591d655f9bf058659c",
+      "url": "https://github.com/silverbulletmd/silverbullet/blob/e91de8698f711cc2c87d35264ce5610ebf36598f/client/styles/_widget_inputs.scss"
+    },
+    {
+      "path": "client/styles/_workbench.scss",
+      "sha256": "0b0d30779ccfb7b77a68c1ed16535b1588fac961a8e5d7ecfec0536b5fec756b",
+      "url": "https://github.com/silverbulletmd/silverbullet/blob/e91de8698f711cc2c87d35264ce5610ebf36598f/client/styles/_workbench.scss"
+    },
+    {
+      "path": "client/styles/_workbench_code.scss",
+      "sha256": "99f44fab6efd75b936b98ca8df9fc516ed7970aac5536601e5ad4b72550ccba8",
+      "url": "https://github.com/silverbulletmd/silverbullet/blob/e91de8698f711cc2c87d35264ce5610ebf36598f/client/styles/_workbench_code.scss"
+    },
+    {
+      "path": "client/styles/_workbench_configuration.scss",
+      "sha256": "a9ad9deb508b5df739b2b44c9a115a80ac2137dcfb44b227e0a595f0437fc821",
+      "url": "https://github.com/silverbulletmd/silverbullet/blob/e91de8698f711cc2c87d35264ce5610ebf36598f/client/styles/_workbench_configuration.scss"
+    },
+    {
+      "path": "client/styles/_workbench_data.scss",
+      "sha256": "6ab1c39c58417795ad4119f822078c4a152ae400734cf90c1a17bb29225d4287",
+      "url": "https://github.com/silverbulletmd/silverbullet/blob/e91de8698f711cc2c87d35264ce5610ebf36598f/client/styles/_workbench_data.scss"
+    },
+    {
+      "path": "client/styles/_workbench_libraries.scss",
+      "sha256": "dd41176b55382f545ada2aaf4cfc30f4e8daac13f573c4a341096af76346677b",
+      "url": "https://github.com/silverbulletmd/silverbullet/blob/e91de8698f711cc2c87d35264ce5610ebf36598f/client/styles/_workbench_libraries.scss"
+    },
+    {
+      "path": "client/styles/_workbench_overview.scss",
+      "sha256": "4484550db569336c7cdc92b4fd58d46af2a67a90e5c853364dcbf5811df404cf",
+      "url": "https://github.com/silverbulletmd/silverbullet/blob/e91de8698f711cc2c87d35264ce5610ebf36598f/client/styles/_workbench_overview.scss"
+    },
+    {
+      "path": "client/styles/_workbench_query.scss",
+      "sha256": "43fe156bda6449db9efbd5d1dea89190dfe7b039a99bc4f66be0c07791e855ff",
+      "url": "https://github.com/silverbulletmd/silverbullet/blob/e91de8698f711cc2c87d35264ce5610ebf36598f/client/styles/_workbench_query.scss"
+    },
+    {
+      "path": "client/styles/_workbench_rows.scss",
+      "sha256": "1f6d319ac160f65e8ddd3cfd5450a5b6d4e7b1db228b45dc4162a4019b56ba52",
+      "url": "https://github.com/silverbulletmd/silverbullet/blob/e91de8698f711cc2c87d35264ce5610ebf36598f/client/styles/_workbench_rows.scss"
+    },
+    {
+      "path": "client/styles/app.scss",
+      "sha256": "6c211fdb8a2a7d17ad485b7ffa9b1413d7e829a200cac21ac77f0129a28c258d",
+      "url": "https://github.com/silverbulletmd/silverbullet/blob/e91de8698f711cc2c87d35264ce5610ebf36598f/client/styles/app.scss"
+    },
+    {
+      "path": "client/styles/colors.scss",
+      "sha256": "f148dcebee5c32fe158e129404983b181be02e62c61bb78ae01ab19e15f0a2d3",
+      "url": "https://github.com/silverbulletmd/silverbullet/blob/e91de8698f711cc2c87d35264ce5610ebf36598f/client/styles/colors.scss"
+    },
+    {
+      "path": "client/styles/components.scss",
+      "sha256": "eacdab5f3d415efef1ae91500dd24df629436de845f6122c882375b7329af996",
+      "url": "https://github.com/silverbulletmd/silverbullet/blob/e91de8698f711cc2c87d35264ce5610ebf36598f/client/styles/components.scss"
+    },
+    {
+      "path": "client/styles/components_bundle.scss",
+      "sha256": "80d3501429106649a1c6220fa5b22bc1144598c74a0f6624fed1b724705c586e",
+      "url": "https://github.com/silverbulletmd/silverbullet/blob/e91de8698f711cc2c87d35264ce5610ebf36598f/client/styles/components_bundle.scss"
+    },
+    {
+      "path": "client/styles/editor.scss",
+      "sha256": "61f013cf0194a21a6c55f6b5fd025237e795075efd07abc72b90e6d408cd0162",
+      "url": "https://github.com/silverbulletmd/silverbullet/blob/e91de8698f711cc2c87d35264ce5610ebf36598f/client/styles/editor.scss"
+    },
+    {
+      "path": "client/styles/main.scss",
+      "sha256": "a4b410fe91cc8d1817211bc46734be046da29192beea608f1e265e44789901be",
+      "url": "https://github.com/silverbulletmd/silverbullet/blob/e91de8698f711cc2c87d35264ce5610ebf36598f/client/styles/main.scss"
+    },
+    {
+      "path": "client/styles/management.scss",
+      "sha256": "14514ceb41a63128622d41dd7553c1d566d150fb967388ce367701f4c827ab31",
+      "url": "https://github.com/silverbulletmd/silverbullet/blob/e91de8698f711cc2c87d35264ce5610ebf36598f/client/styles/management.scss"
+    },
+    {
+      "path": "client/styles/modals.scss",
+      "sha256": "11d0d4732192579049304cf8b4ead6e32cde9ede8f07b5ad7783d7d487c8f3b0",
+      "url": "https://github.com/silverbulletmd/silverbullet/blob/e91de8698f711cc2c87d35264ce5610ebf36598f/client/styles/modals.scss"
+    },
+    {
+      "path": "client/styles/theme.scss",
+      "sha256": "4a2b7deef00984fe96e73e9c5ff8ffb89619408b17dea311dc70512faae8552d",
+      "url": "https://github.com/silverbulletmd/silverbullet/blob/e91de8698f711cc2c87d35264ce5610ebf36598f/client/styles/theme.scss"
+    },
+    {
+      "path": "client/styles/top.scss",
+      "sha256": "56cdcd4ec3c07a3403a41536bdec83ee2fccdfbd82dce0ef8c603d92d5ded772",
+      "url": "https://github.com/silverbulletmd/silverbullet/blob/e91de8698f711cc2c87d35264ce5610ebf36598f/client/styles/top.scss"
+    },
+    {
+      "path": "client/styles/xray.scss",
+      "sha256": "08397e365e1ee82b21abadf5a91924811b86a0979b1804de3aeaa0317681c8d0",
+      "url": "https://github.com/silverbulletmd/silverbullet/blob/e91de8698f711cc2c87d35264ce5610ebf36598f/client/styles/xray.scss"
+    },
+    {
+      "path": "package.json",
+      "sha256": "0384f80ae73d5974786d5e7ce8a1e399d0808e28e33dd41cb3f276f3c7b9c0ab",
+      "url": "https://github.com/silverbulletmd/silverbullet/blob/e91de8698f711cc2c87d35264ce5610ebf36598f/package.json"
+    },
+    {
+      "path": "plug-api/ui/chips.tsx",
+      "sha256": "35f5a0d0289496cec9ad40184c712a7582a1fb902786622a33cbf6a83ca7ac2a",
+      "url": "https://github.com/silverbulletmd/silverbullet/blob/e91de8698f711cc2c87d35264ce5610ebf36598f/plug-api/ui/chips.tsx"
+    },
+    {
+      "path": "plug-api/ui/cx.ts",
+      "sha256": "f6088538968b276e0efec2b62be047eaeed7c917eb49d5b55eb2cce6a05e7dee",
+      "url": "https://github.com/silverbulletmd/silverbullet/blob/e91de8698f711cc2c87d35264ce5610ebf36598f/plug-api/ui/cx.ts"
+    },
+    {
+      "path": "plug-api/ui/description.ts",
+      "sha256": "c689e32175691ac4f9fc4b25de36efffb74eefcf957d0d2fe6ba6e3a3a28d9da",
+      "url": "https://github.com/silverbulletmd/silverbullet/blob/e91de8698f711cc2c87d35264ce5610ebf36598f/plug-api/ui/description.ts"
+    },
+    {
+      "path": "plug-api/ui/highlight.tsx",
+      "sha256": "2f7ec47e4f532dd096d965738fc8c146c80b06ab1ba39f9437f543561555b827",
+      "url": "https://github.com/silverbulletmd/silverbullet/blob/e91de8698f711cc2c87d35264ce5610ebf36598f/plug-api/ui/highlight.tsx"
+    },
+    {
+      "path": "plug-api/ui/hover.ts",
+      "sha256": "28efe46407c5bd036d71087b742543c73cb11cb977402b302169321ac82b06df",
+      "url": "https://github.com/silverbulletmd/silverbullet/blob/e91de8698f711cc2c87d35264ce5610ebf36598f/plug-api/ui/hover.ts"
+    },
+    {
+      "path": "plug-api/ui/icon.tsx",
+      "sha256": "e0aff560c305d8012608c6fc0f9c8e526f0173d7c7a45052fd2c276456f4fe50",
+      "url": "https://github.com/silverbulletmd/silverbullet/blob/e91de8698f711cc2c87d35264ce5610ebf36598f/plug-api/ui/icon.tsx"
+    },
+    {
+      "path": "plug-api/ui/input.tsx",
+      "sha256": "2c8a01367e2a665f139d65fd92816142669d766dcdc640d30a72530f86023f81",
+      "url": "https://github.com/silverbulletmd/silverbullet/blob/e91de8698f711cc2c87d35264ce5610ebf36598f/plug-api/ui/input.tsx"
+    },
+    {
+      "path": "plug-api/ui/row_actions.tsx",
+      "sha256": "38d2b9db6a1c3319837ec26f1cbaf9ce56e772e937b32b99146ebd2339afa930",
+      "url": "https://github.com/silverbulletmd/silverbullet/blob/e91de8698f711cc2c87d35264ce5610ebf36598f/plug-api/ui/row_actions.tsx"
+    },
+    {
+      "path": "plug-api/ui/row_text.tsx",
+      "sha256": "b4251f6b761e4f5d3d6b486947512e2fb69c56f22021bf722e41ca1e78125d6a",
+      "url": "https://github.com/silverbulletmd/silverbullet/blob/e91de8698f711cc2c87d35264ce5610ebf36598f/plug-api/ui/row_text.tsx"
+    },
+    {
+      "path": "plug-api/ui/scroll.ts",
+      "sha256": "603a6c7ec7ed247ea1baa116a42ecf3cb8d98d1a85806dbb2ac0353f4a1002b8",
+      "url": "https://github.com/silverbulletmd/silverbullet/blob/e91de8698f711cc2c87d35264ce5610ebf36598f/plug-api/ui/scroll.ts"
+    },
+    {
+      "path": "plug-api/ui/tree_model.ts",
+      "sha256": "50ded668ce044aba6a80b1c3803f453ed601d7fc8fff979e0002cdb271fe6794",
+      "url": "https://github.com/silverbulletmd/silverbullet/blob/e91de8698f711cc2c87d35264ce5610ebf36598f/plug-api/ui/tree_model.ts"
+    },
+    {
+      "path": "plug-api/ui/tree_view.tsx",
+      "sha256": "6be2dae3ab28680e7927781cb942473861f80c153514ad877b4bd67fce5d548c",
+      "url": "https://github.com/silverbulletmd/silverbullet/blob/e91de8698f711cc2c87d35264ce5610ebf36598f/plug-api/ui/tree_view.tsx"
+    }
+  ],
+  "runtimeDependencies": [
+    {
+      "name": "@codemirror/autocomplete",
+      "version": "6.20.3",
+      "license": "MIT",
+      "scope": "emitted",
+      "licenses": [
+        {
+          "file": "LICENSE",
+          "sha256": "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07"
+        }
+      ]
+    },
+    {
+      "name": "@codemirror/commands",
+      "version": "6.11.1",
+      "license": "MIT",
+      "scope": "emitted",
+      "licenses": [
+        {
+          "file": "LICENSE",
+          "sha256": "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07"
+        }
+      ]
+    },
+    {
+      "name": "@codemirror/lang-css",
+      "version": "6.3.1",
+      "license": "MIT",
+      "scope": "emitted",
+      "licenses": [
+        {
+          "file": "LICENSE",
+          "sha256": "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07"
+        }
+      ]
+    },
+    {
+      "name": "@codemirror/lang-html",
+      "version": "6.4.12",
+      "license": "MIT",
+      "scope": "emitted",
+      "licenses": [
+        {
+          "file": "LICENSE",
+          "sha256": "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07"
+        }
+      ]
+    },
+    {
+      "name": "@codemirror/lang-javascript",
+      "version": "6.2.5",
+      "license": "MIT",
+      "scope": "emitted",
+      "licenses": [
+        {
+          "file": "LICENSE",
+          "sha256": "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07"
+        }
+      ]
+    },
+    {
+      "name": "@codemirror/lang-markdown",
+      "version": "6.5.2",
+      "license": "MIT",
+      "scope": "emitted",
+      "licenses": [
+        {
+          "file": "LICENSE",
+          "sha256": "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07"
+        }
+      ]
+    },
+    {
+      "name": "@codemirror/language",
+      "version": "6.12.4",
+      "license": "MIT",
+      "scope": "emitted",
+      "licenses": [
+        {
+          "file": "LICENSE",
+          "sha256": "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07"
+        }
+      ]
+    },
+    {
+      "name": "@codemirror/state",
+      "version": "6.7.6",
+      "license": "MIT",
+      "scope": "emitted",
+      "licenses": [
+        {
+          "file": "LICENSE",
+          "sha256": "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07"
+        }
+      ]
+    },
+    {
+      "name": "@codemirror/view",
+      "version": "6.43.13",
+      "license": "MIT",
+      "scope": "emitted",
+      "licenses": [
+        {
+          "file": "LICENSE",
+          "sha256": "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07"
+        }
+      ]
+    },
+    {
+      "name": "@lezer/common",
+      "version": "1.5.5",
+      "license": "MIT",
+      "scope": "emitted",
+      "licenses": [
+        {
+          "file": "LICENSE",
+          "sha256": "568902fb66eaf1f11750e966b33fd7b5d7c618e65af09f35ef843635bcf5f1ba"
+        }
+      ]
+    },
+    {
+      "name": "@lezer/css",
+      "version": "1.3.9",
+      "license": "MIT",
+      "scope": "emitted",
+      "licenses": [
+        {
+          "file": "LICENSE",
+          "sha256": "568902fb66eaf1f11750e966b33fd7b5d7c618e65af09f35ef843635bcf5f1ba"
+        }
+      ]
+    },
+    {
+      "name": "@lezer/highlight",
+      "version": "1.2.4",
+      "license": "MIT",
+      "scope": "emitted",
+      "licenses": [
+        {
+          "file": "LICENSE",
+          "sha256": "568902fb66eaf1f11750e966b33fd7b5d7c618e65af09f35ef843635bcf5f1ba"
+        }
+      ]
+    },
+    {
+      "name": "@lezer/html",
+      "version": "1.3.13",
+      "license": "MIT",
+      "scope": "emitted",
+      "licenses": [
+        {
+          "file": "LICENSE",
+          "sha256": "568902fb66eaf1f11750e966b33fd7b5d7c618e65af09f35ef843635bcf5f1ba"
+        }
+      ]
+    },
+    {
+      "name": "@lezer/javascript",
+      "version": "1.5.6",
+      "license": "MIT",
+      "scope": "emitted",
+      "licenses": [
+        {
+          "file": "LICENSE",
+          "sha256": "568902fb66eaf1f11750e966b33fd7b5d7c618e65af09f35ef843635bcf5f1ba"
+        }
+      ]
+    },
+    {
+      "name": "@lezer/lr",
+      "version": "1.4.12",
+      "license": "MIT",
+      "scope": "emitted",
+      "licenses": [
+        {
+          "file": "LICENSE",
+          "sha256": "568902fb66eaf1f11750e966b33fd7b5d7c618e65af09f35ef843635bcf5f1ba"
+        }
+      ]
+    },
+    {
+      "name": "@lezer/markdown",
+      "version": "1.8.1",
+      "license": "MIT",
+      "scope": "emitted",
+      "licenses": [
+        {
+          "file": "LICENSE",
+          "sha256": "54bd812a6d334e0c438b78a43cea74b67e882739fd3450115ddc7c52be5706c1"
+        }
+      ]
+    },
+    {
+      "name": "@marijn/find-cluster-break",
+      "version": "1.0.4",
+      "license": "MIT",
+      "scope": "emitted",
+      "licenses": [
+        {
+          "file": "LICENSE",
+          "sha256": "9360b00fdd091f05c783b568bdd46c679c41b72415599252de98949462ea1acb"
+        }
+      ]
+    },
+    {
+      "name": "preact",
+      "version": "10.29.8",
+      "license": "MIT",
+      "scope": "emitted",
+      "licenses": [
+        {
+          "file": "LICENSE",
+          "sha256": "1fe6958409c8c257a70c587a18b6f7f412b179b456630790d30b2ec9a8e4b7d4"
+        }
+      ]
+    },
+    {
+      "name": "preact-feather",
+      "version": "4.3.0",
+      "license": "MIT",
+      "scope": "emitted",
+      "licenses": [
+        {
+          "file": "LICENSE",
+          "sha256": "af506a8f2af062cc94f0410a6ab1d80dd0154bed7c1cad8a598fe4d1028bfb72"
+        }
+      ]
+    },
+    {
+      "name": "style-mod",
+      "version": "4.1.4",
+      "license": "MIT",
+      "scope": "emitted",
+      "licenses": [
+        {
+          "file": "LICENSE",
+          "sha256": "cb4474e26547397169061d3586c00022cda5330a1b64fa13e872319f3b63aff1"
+        }
+      ]
+    },
+    {
+      "name": "w3c-keyname",
+      "version": "2.2.8",
+      "license": "MIT",
+      "scope": "emitted",
+      "licenses": [
+        {
+          "file": "LICENSE",
+          "sha256": "869c30f368eb08735e779027b9f4bc9fea2f39624351856aebe42741f0bc0884"
+        }
+      ]
+    }
+  ],
+  "gitBlobVerification": {
+    "fixedRevision": "e91de8698f711cc2c87d35264ce5610ebf36598f",
+    "gitBlobMatched": 58,
+    "pass": true
+  },
+  "adaptation": "# 本地文档导航与编辑\n\n恢复原候选 silverbullet:document-navigation-workspace。固定 SilverBullet e91de8698f711cc2c87d35264ce5610ebf36598f（package 2.12.1）。这是原组件与原文本编辑分支的本地子流程，不是完整 MainUI、服务端或 Space Lua 知识插件运行。宿主三份虚构 Markdown 文档保存在当前预览内存；编辑、切换目录、文件重命名、撤销/重做真实可用，不同步/持久保存/运行插件。\n\n原 TopBar/PageNameEditor、TreeView/buildTree、原主题/editor/top/navigator SCSS 完整使用。TreeView 自身折叠/选择是真实原逻辑，宿主把选择接到三份文档；禁止文件拖入/外部拖出，非真实文件管理器。原图片、字体、账号、网络、全部 MainUI 辅助窗口及空间插件未启用。没有把空后端状态冒称功能完成。\n\n原 editor_state.ts 按真实 text-document 分支提取：共享 theme/indent/history/dropCursor/closeBrackets/键盘输入处理、文本 language/autocomplete/folding，以及原 update handler/command binding 函数。保原保存回调，只把 Client.save 接到内存 Map；删除未启用的 page/live-preview/Space Lua、Vim和只读插件依赖，固定可编辑文本模式。Markdown 语言来自原依赖的官方 CodeMirror，不是自造 textarea，也不声称完整 SilverBullet wiki-link 实时装饰。原用户插件命令列表为空；宿主撤销/重做按钮调用原 CM commands。原图形不引入 Material 包（配置无 Material icons），Feather/preact-feather 与 CSS 原文字 SVG 保留并附 MIT 署名。\n\n字体删除原二进制 font-face，仅系统字体回退，原字号/主题 tokens 保留；外框两栏是固定宿主，不冒称原整站布局。原零宽状态下 TopBar 使用自身 observer。隐藏卸载视图并暂停资源，保内存文档/当前路径；恢复重建原控件，退出逐资源尽力释放。\n\n## 验证\n实际571兼容 composePreview，normal/reduced/early/missing/failure/production 六分支：原 CM transaction 修改保存到本地文档、原目录行点击切换、原名称 Input Enter 重命名，隐藏恢复文本，早期/缺根/晚期失败与退出全部资源清理、禁止 API 调用为0；真实 createPreviewLoader 缓存/释放通过。JSDOM布局/observer为测试桩，不是原生像素、触屏或输入法验收。\n\n所有实际发出 npm 依赖版本与许可证逐项列于 SOURCE/NOTICES。原package固定版本与本次按照其依赖范围安装到的patch版本分别记录，不假称完整原锁版本。完整源头固定 URL/hash、适配源码 hash可审；不提供假源码 ZIP，不加载外部素材或服务。\n",
+  "modifiedSourceHashes": {
+    "main.tsx": "829ede934dbb36730c45b5d96894eff4eab922d16e9f8dc175abf9b765bd85d9",
+    "prelude.js": "520d33e240eadb192a465a77216cffbf7123a735876dd139e97b0e242bfad458",
+    "src/client/codemirror/editor_state.ts": "a0c5035248bb9c3584a8bc02c560fa939cf93327605e2fd882ba1c34d74dbd00",
+    "src/client/components/top_bar.tsx": "6da119c1b5ff04994f55c46a86052c17ca88dfc7aeb1898b7587ee719ea26deb",
+    "build.mjs": "e8fa11235869d081fad23dec18318ae18ab9cf0822b237a2c5171f79a1d325cd"
+  },
+  "tests": {
+    "test-reduced.json": {
+      "pass": true,
+      "mode": "reduced",
+      "actualCompose571": true,
+      "originalComponents": true,
+      "localEditing": true,
+      "hiddenPreserves": true,
+      "cleanupZero": true,
+      "nativeVisual": false
+    },
+    "test-early.json": {
+      "pass": true,
+      "mode": "early",
+      "actualCompose571": true,
+      "originalComponents": true,
+      "localEditing": true,
+      "hiddenPreserves": true,
+      "cleanupZero": true,
+      "nativeVisual": false
+    },
+    "test-production.json": {
+      "pass": true,
+      "mode": "production",
+      "actualCompose571": true,
+      "originalComponents": true,
+      "localEditing": true,
+      "hiddenPreserves": true,
+      "cleanupZero": true,
+      "nativeVisual": false
+    },
+    "test-normal.json": {
+      "pass": true,
+      "mode": "normal",
+      "actualCompose571": true,
+      "originalComponents": true,
+      "localEditing": true,
+      "hiddenPreserves": true,
+      "cleanupZero": true,
+      "nativeVisual": false
+    },
+    "test-failure.json": {
+      "pass": true,
+      "mode": "failure",
+      "actualCompose571": true,
+      "originalComponents": true,
+      "localEditing": true,
+      "hiddenPreserves": true,
+      "cleanupZero": true,
+      "nativeVisual": false
+    },
+    "test-missing.json": {
+      "pass": true,
+      "mode": "missing",
+      "actualCompose571": true,
+      "originalComponents": true,
+      "localEditing": true,
+      "hiddenPreserves": true,
+      "cleanupZero": true,
+      "nativeVisual": false
+    },
+    "test-loader-results.json": [
+      {
+        "slug": ".",
+        "pass": true,
+        "utf16Bytes": 1823152,
+        "fetches": 3,
+        "actualCreatePreviewLoader571": true,
+        "cacheHit": true,
+        "released": true,
+        "iframeExecution": false
+      }
+    ]
+  }
+}
