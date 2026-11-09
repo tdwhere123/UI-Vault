@@ -1,0 +1,753 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="runtime.css"></head><body><p>原版 Aero 控件精选示例，不是完整桌面系统。窗口按钮仅展示；图标换为 Lucide，未加载 Windows 字体或原照片背景。</p><main><section class="component">
+  <h4 id="glass-frame-color">Glass frame & Color</h4>
+  <div>
+    <blockquote>
+      The glass window frames are a striking new aspect of the Microsoft Windows aesthetic,
+      aiming to be both attractive and lightweight. These translucent frames give windows
+      an open, less intrusive appearance, helping users focus on content and functionality
+      rather than the interface surrounding it.
+
+      <footer>
+        &mdash; <a
+          href="https://docs.microsoft.com/en-us/windows/win32/uxguide/win-window-frames#glass-window-frames">Microsoft
+          Windows User Experience - Glass window frames</a>
+      </footer>
+    </blockquote>
+
+    <p>
+      You can produce this "striking aspect" of the window with a <code>glass</code> class.
+      The window frame then becomes translucent, the background is blurred behind the window.
+    </p>
+
+    <div class="example">
+      <div class="background">
+        <div class="window glass active" style="max-width: 100%">
+          <div class="title-bar">
+            <div class="title-bar-text">A glass window frame</div>
+            <div class="title-bar-controls">
+              <button aria-label="Minimize"></button>
+              <button aria-label="Close"></button>
+            </div>
+          </div>
+          <div class="window-body has-space">
+            <p>The background behind is blurred.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p>
+      If you want to override the default color of the window, you can redefine the 
+      <code>--w7-w-bg</code> variable as an inline value of the <code>style</code> attribute.
+    </p>
+
+    <div class="example">
+      <div class="window active" style="max-width: 100%; margin: 0 1.5em; --w7-w-bg: #805ba5;">
+        <div class="title-bar">
+          <div class="title-bar-text">A violet window frame</div>
+          <div class="title-bar-controls">
+            <button aria-label="Minimize"></button>
+            <button aria-label="Close"></button>
+          </div>
+        </div>
+        <div class="window-body has-space">
+          <p>You can change the window color just as simple.</p>
+        </div>
+      </div>
+
+      <div class="background">
+        <div class="window glass active" style="max-width: 100%; --w7-w-bg: #805ba5;">
+          <div class="title-bar">
+            <div class="title-bar-text">A glass violet window frame</div>
+            <div class="title-bar-controls">
+              <button aria-label="Minimize"></button>
+              <button aria-label="Close"></button>
+            </div>
+          </div>
+          <div class="window-body has-space">
+            <p>And even the glass window frame as well.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p>
+      To make the aero effect stick to the window when scrolling, or changing the viewport size, change the <code>background-attachment</code> property of the <code>.title-bar</code> to <code>local</code> or <code>scroll</code> (default is <code>fixed</code>), depending on your requirements.
+    </p>
+    <div class="example">
+      <div class="background">
+        <div class="window glass active" style="max-width: 100%">
+          <div class="title-bar" style="background-attachment: local;">
+            <div class="title-bar-text">A glass window frame with local background-attachment</div>
+            <div class="title-bar-controls">
+              <button aria-label="Minimize"></button>
+              <button aria-label="Close"></button>
+            </div>
+          </div>
+          <div class="window-body has-space">
+            <p>The aero effect is now staying in place with the scroll position.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+<section class="component">
+  <h4 id="title-bar">Title Bar</h4>
+  <div>
+    <blockquote>
+      At the top edge of the window, inside its border, is the title bar
+      (also reffered to as the caption or caption bar), which extends across
+      the width of the window. The title bar identifies the contents of the
+      window.
+
+      <footer>
+        &mdash; Microsoft Windows User Experience p. 118
+      </footer>
+    </blockquote>
+
+    <blockquote>
+      Include command buttons associated with the common commands of the
+      primary window in the title bar. These buttons act as shortcuts to specific
+      window commands.
+
+      <footer>
+        &mdash; Microsoft Windows User Experience p. 122
+      </footer>
+    </blockquote>
+
+    <p>
+      You can build a complete title bar by making use of three classes,
+      <code>title-bar</code>, <code>title-bar-text</code>, and <code>title-bar-controls</code>.
+    </p>
+
+    <div class="example">
+      <div class="title-bar">
+        <div class="title-bar-text">A Title Bar</div>
+        <div class="title-bar-controls">
+          <button aria-label="Close"></button>
+        </div>
+      </div>
+    </div>
+
+    <p>
+      We make use of <code>aria-label</code> to render the Close button, to let
+      assistive technologies know the intent of this button. You may also use
+      "Minimize", "Maximize", "Restore" and "Help" like so:
+    </p>
+
+    <div class="example">
+      <div class="title-bar">
+        <div class="title-bar-text">A Title Bar</div>
+        <div class="title-bar-controls">
+          <button aria-label="Minimize"></button>
+          <button aria-label="Maximize"></button>
+          <button aria-label="Close"></button>
+        </div>
+      </div>
+
+      <br>
+
+      <div class="title-bar">
+        <div class="title-bar-text">A maximized Title Bar</div>
+        <div class="title-bar-controls">
+          <button aria-label="Minimize"></button>
+          <button aria-label="Restore"></button>
+          <button aria-label="Close"></button>
+        </div>
+      </div>
+
+      <br>
+
+      <div class="title-bar">
+        <div class="title-bar-text">A help Title Bar</div>
+        <div class="title-bar-controls">
+          <button aria-label="Help"></button>
+          <button aria-label="Close"></button>
+        </div>
+      </div>
+    </div>
+
+    <p>
+      Alternatively, you can use the <code>is-close</code>, <code>is-minimize</code>,
+      <code>is-maximize</code>, <code>is-restore</code>, <code>is-help</code> classes to target the respective
+      controls for your styling preference.
+    </p>
+
+    <p>
+      To give our title bar a home, we wrap it in a <code>window</code> container.
+      This provides a drop shadow to it. We can freely resize the window by specifying
+      a width in the container style.
+    </p>
+
+    <div class="example">
+      <div class="window" style="max-width: 300px">
+        <div class="title-bar">
+          <div class="title-bar-text">A complete window</div>
+          <div class="title-bar-controls">
+            <button aria-label="Help"></button>
+            <button aria-label="Minimize"></button>
+            <button aria-label="Maximize"></button>
+            <button aria-label="Close"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p>
+      Place an <code>active</code> class either on the <code>window</code> container or
+      the title bar itself to enable the active styles for the controls.
+    </p>
+
+    <div class="example">
+      <div class="window active" style="max-width: 300px">
+        <div class="title-bar">
+          <div class="title-bar-text">A complete window</div>
+          <div class="title-bar-controls">
+            <button aria-label="Help"></button>
+            <button aria-label="Minimize"></button>
+            <button aria-label="Maximize" disabled></button>
+            <button aria-label="Close"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="component">
+  <h4 id="status-bar">Status Bar</h4>
+  <div>
+    <blockquote>
+      A status bar is a special area within a window, typically the bottom, that displays information
+      about the current state of what is being viewed in the window or any other contextual information, such as
+      keyboard
+      state.
+
+      <footer>
+        &mdash; Microsoft Windows User Experience p. 146
+      </footer>
+    </blockquote>
+
+    <p>
+      You can render a status bar with the <code>status-bar</code> class,
+      and <code>status-bar-field</code> for every child text element.
+    </p>
+
+    <div class="example">
+      <div class="window" style="max-width: 320px">
+        <div class="title-bar">
+          <div class="title-bar-text">A Window With A Status Bar</div>
+        </div>
+        <div class="window-body has-space">
+          <p> There are just so many possibilities:</p>
+          <ul>
+            <li>A Task Manager</li>
+            <li>A Notepad</li>
+            <li>Or even a File Explorer!</li>
+          </ul>
+        </div>
+        <div class="status-bar">
+          <p class="status-bar-field">Press F1 for help</p>
+          <p class="status-bar-field">Slide 1</p>
+          <p class="status-bar-field">CPU Usage: 14%</p>
+        </div>
+      </div>
+    </div>
+</section>
+<section class="component">
+  <h3 id="tabs">Tabs</h3>
+  <div>
+    <blockquote>
+      <em>Tabs</em> provide a way to present related information on separate labeled pages.
+      <footer>&mdash; <a href="https://docs.microsoft.com/en-us/windows/win32/uxguide/ctrl-tabs">Microsoft Windows
+          User Experience - Tabs</a></footer>
+    </blockquote>
+
+    <div class="example">
+      <section class="tabs" style="max-width: 500px">
+        <menu role="tablist" aria-label="Sample Tabs">
+          <button role="tab" aria-controls="e9-tab-A" aria-selected="true">Instruction</button>
+          <button role="tab" aria-controls="e9-tab-B">Example</button>
+          <button role="tab" aria-controls="e9-tab-C">More instruction</button>
+          <button role="tab" aria-controls="e9-tab-D" disabled>Disabled Tab</button>
+        </menu>
+        <!-- the tab content -->
+        <article role="tabpanel" id="e9-tab-A">
+          <h3>Creating tabs</h3>
+          <p>
+            To create a tab, use a <code>menu</code> element with <code>role="tablist"</code>.
+            Then for the tab titles, use a <code>button</code> with <code>role="tab"</code>, and set the <code>aria-controls</code> attribute to
+            the corresponding id of the element with <code>role="tabpanel"</code>.
+          </p>
+          <p>
+            Read more at <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/Tab_Role"
+              target="_blank">MDN Web docs - ARIA: tab role</a>
+          </p>
+        </article>
+        <article role="tabpanel" id="e9-tab-B" hidden>
+          <h3>More...</h3>
+          <p>This tab contains a GroupBox</p>
+          <fieldset>
+            <legend>Today's mood</legend>
+            <div>
+              <input id="e9-radio1" type="radio" name="fieldset-example2">
+              <label for="e9-radio1">Claire Saffitz</label>
+            </div>
+            <div>
+              <input id="e9-radio2" type="radio" name="fieldset-example2">
+              <label for="e9-radio2">Brad Leone</label>
+            </div>
+            <div>
+              <input id="e9-radio3" type="radio" name="fieldset-example2">
+              <label for="e9-radio3">Chris Morocco</label>
+            </div>
+            <div>
+              <input id="e9-radio4" type="radio" name="fieldset-example2">
+              <label for="e9-radio4">Carla Lalli Music</label>
+            </div>
+          </fieldset>
+        </article>
+        <article role="tabpanel" id="e9-tab-C" hidden>
+          <h3>Disabling tabs</h3>
+          <p>Simply add a <code>disabled</code> attribute on the tab.</p>
+          <h3>Justified tabs</h3>
+          <p>Add the <code>justified</code> class to the <code>tablist</code> menu to make the tabs, well, justified.</p>
+        </article>
+        <article role="tabpanel" id="e9-tab-D" hidden>
+          <h3>Disabled Tab</h3>
+          <p>This tab is disabled, so you should not be able to read this.</p>
+        </article>
+      </section>
+    </div>
+
+    <p>A simplified template is as below:</p>
+
+    <div class="example">
+      <section class="tabs">
+        <menu role="tablist" aria-label="Tabs Template">
+          <button role="tab" aria-controls="e10-tab-A" aria-selected="true">Tab A</button>
+          <button role="tab" aria-controls="e10-tab-B">Tab B</button>
+          <button role="tab" aria-controls="e10-tab-C">Tab C</button>
+          <button role="tab" aria-controls="e10-tab-D" disabled>Tab D</button>
+        </menu>
+        <article role="tabpanel" id="e10-tab-A">Tab A is active</article>
+        <article role="tabpanel" id="e10-tab-B" hidden>Tab B is active</article>
+        <article role="tabpanel" id="e10-tab-C" hidden>Tab C is active</article>
+        <article role="tabpanel" id="e10-tab-D" hidden>Tab D is inactive</article>
+      </section>
+    </div>
+  </div>
+</section>
+<section class="component">
+  <h3 id="button">Button</h3>
+  <div>
+    <blockquote>
+      A <em>command button</em>, also referred to as a push button, is a control
+      that causes the application to perform some action when the user clicks it.
+
+      <footer>&mdash; Microsoft Windows User Experience p. 160</footer>
+    </blockquote>
+
+    <p>
+      A standard button measures 75px wide and 23px tall with 12px of horizontal padding by default.
+      They are styled with 2 shades of gray as a vertical gradient.
+    </p>
+
+    <div class="example"><button>Click me</button></div>
+
+    <p>
+      When buttons are clicked, the gray gradient is shifted to corresponding sky blues.
+      The following button is simulated to be in the pressed (active) state.
+    </p>
+
+    <div class="example"><button[[ class="active" ]]>I am being pressed</button></div>
+
+    <p>
+      Disabled buttons have solid background and lighter border.
+    </p>
+
+    <div class="example"><button disabled>I cannot be clicked</button></div>
+
+    <p>
+      Button focus is communicated with a dotted border, set 4px within the contents of the button.
+      The following example is simulated to be focused.
+    </p>
+
+    <div class="example"><button[[ class="focused" ]]>I am focused</button></div>
+
+    <p>
+      A default button (in Windows, hitting the Enter key in a dialog context triggers the button)
+      has a greenish-blue border and a light blue gradient shade.
+    </p>
+
+    <div class="example"><button class="default">I am the one!</button></div>
+
+    <p>
+      The button styles are also applied to the file input element. Due to the complex setup, the
+      styles of the standard button's states (hover, active, focus etc.) cannot be applied to the file input button.
+    </p>
+
+    <div class="example"><input type="file" /></div>
+
+    <p>
+      You can use the below workaround to apply the complete button styles to a file input element. In this
+      setup, the file input is hidden and a label with the <code>role="button"</code> attribute is used
+      to trigger the file selection dialog. The <code>tabindex="0"</code> attribute ensures the button is keyboard accessible.
+      Some JavaScript is required if you want the label to trigger when it is focused and activated with the keyboard.
+    </p>
+
+    <div class="example">
+    <label role="button" tabindex="0"><input type="file" /> Choose file</label>
+    <label role="button" tabindex="0" class="default"><input type="file" /> Browse...</label>
+    </div>
+  </div>
+</section>
+<section class="component">
+  <h3 id="checkbox">CheckBox</h3>
+  <div>
+    <blockquote>
+      A <em>check box</em> represents an independent or non-exclusive choice.
+      <footer>&mdash; Microsoft Windows User Experience p. 167</footer>
+    </blockquote>
+
+    <p>
+      Checkboxes are represented with a sunken panel, populated with a "check" icon when
+      selected, next to a label indicating the choice.
+    </p>
+
+    <p>
+      Note: You <strong>must</strong> include a corresponding label <strong>after</strong>
+      your checkbox, using the <code>&lt;label&gt;</code> element with a <code>for</code> attribute
+      pointed at the <code>id</code> of your input. This ensures the checkbox is easy to use with
+      assistive technologies, on top of ensuring a good user experience for all (navigating with the tab key,
+      being able to click the entire label to select the box).
+    </p>
+
+    <div class="example">
+      <input type="checkbox" id="e18-example5">
+      <label for="e18-example5">This is a checkbox</label>
+    </div>
+
+    <p>
+      Checkboxes can be selected and disabled with the standard <code>checked</code> and <code>disabled</code>
+      attributes.
+    </p>
+
+    <div class="example">
+      <div class="group">
+        <div>
+          <input checked type="checkbox" id="e19-example6">
+          <label for="e19-example6">I am checked</label>
+        </div>
+        <div>
+          <input disabled type="checkbox" id="e19-example7">
+          <label for="e19-example7">I am inactive</label>
+        </div>
+        <div>
+          <input checked disabled type="checkbox" id="e19-example8">
+          <label for="e19-example8">I am inactive but still checked</label>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="component">
+  <h3 id="radio">OptionButton</h3>
+  <div>
+    <blockquote>
+      An <em>option button</em>, also referred to as a radio button, represents a single
+      choice within a limited set of mutually exclusive choices. That is, the user can choose only
+      one set of options.
+
+      <footer>&mdash; Microsoft Windows User Experience p. 164</footer>
+    </blockquote>
+
+    <p>
+      Option buttons can be used via the <code>radio</code> type on an input element.
+    </p>
+
+    <p>
+      Option buttons can be grouped by specifying a shared <code>name</code> attribute on each
+      input.
+    </p>
+
+    <div class="example">
+      <div style="display: flex; flex-direction: column; gap: 6px">
+        <div>
+          <input id="e20-radio9" type="radio" name="first-example">
+          <label for="e20-radio9">Yes</label>
+        </div>
+        <div>
+          <input id="e20-radio10" type="radio" name="first-example">
+          <label for="e20-radio10">No</label>
+        </div>
+      </div>
+    </div>
+
+    <p>
+      Option buttons can also be <code>checked</code> and <code>disabled</code> with their corresponding
+      HTML attributes.
+    </p>
+
+    <div class="example">
+      <div style="display: flex; flex-direction: column; gap: 6px">
+        <div>
+          <input id="e21-radio11" type="radio" name="second-example">
+          <label for="e21-radio11">Peanut butter should be smooth</label>
+        </div>
+        <div>
+          <input checked disabled id="e21-radio12" type="radio" name="second-example">
+          <label for="e21-radio12">I understand why people like crunchy peanut butter</label>
+        </div>
+        <div>
+          <input disabled id="e21-radio13" type="radio" name="second-example">
+          <label for="e21-radio13">Crunchy peanut butter is good</label>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="component">
+  <h3 id="groupbox">GroupBox</h3>
+  <div>
+    <blockquote>
+      A <em>group box</em> is a special control you can use to organize a set of
+      controls. A group box is a rectangular frame with an optional label that surrounds
+      a set of controls.
+
+      <footer>&mdash; Microsoft Windows User Experience p. 189</footer>
+    </blockquote>
+
+    <p>
+      A group box can be used by wrapping your elements with the <code>fieldset</code> tag.
+      It contains a sunken outer border and a raised inner border, resembling an engraved box
+      around your controls.
+    </p>
+
+    <div class="example">
+      <fieldset>
+        <div>Select one:</div>
+        <div>
+          <input id="e22-radio14" type="radio" name="fieldset-example">
+          <label for="e22-radio14">Diners</label>
+        </div>
+        <div>
+          <input id="e22-radio15" type="radio" name="fieldset-example">
+          <label for="e22-radio15">Drive-Ins</label>
+        </div>
+        <div>
+          <input id="e22-radio16" type="radio" name="fieldset-example">
+          <label for="e22-radio16">Dives</label>
+        </div>
+      </fieldset>
+    </div>
+
+    <p>
+      You can provide your group with a label by placing a <code>legend</code> element
+      within the <code>fieldset</code>.
+    </p>
+
+    <div class="example">
+      <fieldset>
+        <legend>Today's mood</legend>
+        <div>
+          <input id="e23-radio17" type="radio" name="fieldset-example2">
+          <label for="e23-radio17">Claire Saffitz</label>
+        </div>
+        <div>
+          <input id="e23-radio18" type="radio" name="fieldset-example2">
+          <label for="e23-radio18">Brad Leone</label>
+        </div>
+        <div>
+          <input id="e23-radio19" type="radio" name="fieldset-example2">
+          <label for="e23-radio19">Chris Morocco</label>
+        </div>
+        <div>
+          <input id="e23-radio20" type="radio" name="fieldset-example2">
+          <label for="e23-radio20">Carla Lalli Music</label>
+        </div>
+      </fieldset>
+    </div>
+
+    <p>
+      There is a handy <code>group</code> utility class provided out of the box which can be used
+      to group elements without the need for a <code>fieldset</code>, and ensure a consistent
+      spacing between them.
+    </p>
+
+    <div class="example">
+      <div class="group">
+        <div>
+          <input checked type="checkbox" id="e24-example21">
+          <label for="e24-example21">I am checked</label>
+        </div>
+        <div>
+          <input disabled type="checkbox" id="e24-example22">
+          <label for="e24-example22">I am inactive</label>
+        </div>
+        <div>
+          <input checked disabled type="checkbox" id="e24-example23">
+          <label for="e24-example23">I am inactive but still checked</label>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="component">
+  <h3 id="collapse">Collapse</h3>
+  <div>
+    <blockquote>
+      Users can show or hide additional information including data, options, or commands.
+
+      <footer>
+        &mdash; <a href="https://docs.microsoft.com/en-us/windows/win32/uxguide/ctrl-progressive-disclosure-controls">
+          Microsoft Windows User Experience - Progressive Disclosure</a>
+      </footer>
+    </blockquote>
+
+    <p>
+      A collapsible section can be created using the elements <code>details</code> and
+      <code>summary</code>.
+    </p>
+
+    <div class="example">
+      <details>
+        <summary>Expand me to see something interesting</summary>
+        <p>🎉 Tadah!</p>
+      </details>
+    </div>
+
+    <p>Add an <code>open</code> attribute to expand the content by default.</p>
+
+    <div class="example">
+      <details open>
+        <summary>I open myself willingly</summary>
+        <ul>
+          <li>This is my family</li>
+          <li>This is my house</li>
+          <li>This is my car</li>
+        </ul>
+      </details>
+    </div>
+  </div>
+</section>
+<section class="component">
+  <h3 id="tree-view">TreeView</h3>
+  <div>
+    <blockquote>
+      A <em>tree view control</em> is a special list box control
+      that displays a set of objects as an indented outline based
+      on their logical hierarchical relationship.
+
+      <footer>
+        &mdash; Microsoft Windows User Experience p. 178
+      </footer>
+    </blockquote>
+
+    <p>
+      To render a tree view, use an <code>ul</code> element with the
+      <code>tree-view</code> class. The children of this list (<code>li</code>
+      elements), can contain whatever you'd like.
+    </p>
+
+    <div class="example">
+      <ul class="tree-view has-container">
+        <li>We can put</li>
+        <li><strong style="color: purple">✨ Whatever ✨</strong></li>
+        <li>We want in here</li>
+      </ul>
+    </div>
+
+    <p>
+      To make this a tree, we can nest further <code>ul</code> elements
+      (no class needed on these). This will provide them with indentation
+      to illustrate the hierarchical relations of the tree.
+    </p>
+    <p>
+      To create collapsible sections, wrap child lists inside <code>details</code> elements.
+    </p>
+
+    <div class="example">
+      <ul class="tree-view has-container">
+        <li>Table of Contents</li>
+        <li>What is web development?</li>
+        <li>
+          CSS
+          <ul>
+            <li>Selectors</li>
+            <li>Specificity</li>
+            <li>Properties</li>
+          </ul>
+        </li>
+        <li>
+          <details open>
+            <summary>JavaScript</summary>
+            <ul>
+              <li>Avoid at all costs</li>
+              <li>
+                <details>
+                  <summary>Unless</summary>
+                  <ul>
+                    <li>Avoid</li>
+                    <li>
+                      <details>
+                        <summary>At</summary>
+                        <ul>
+                          <li>Avoid</li>
+                          <li>At</li>
+                          <li>All</li>
+                          <li>Cost</li>
+                        </ul>
+                      </details>
+                    </li>
+                    <li>All</li>
+                    <li>Cost</li>
+                  </ul>
+                </details>
+              </li>
+            </ul>
+          </details>
+        </li>
+        <li>HTML</li>
+        <li>Special Thanks</li>
+      </ul>
+    </div>
+
+    <p>
+      The <code>has-connector</code> class may be used to render a dotted border to illustrate
+      the structure more clearly, and the <code>has-collapse-button</code> class to change
+      the expand/collapse carets to buttons.
+    </p>
+
+    <div class="example">
+      <ul class="tree-view has-collapse-button has-connector has-container">
+        <details open>
+          <summary>JavaScript</summary>
+          <ul>
+            <li>Avoid at all costs</li>
+            <li>
+              <details>
+                <summary>Unless</summary>
+                <ul>
+                  <li>Avoid</li>
+                  <li>
+                    <details>
+                      <summary>At</summary>
+                      <ul>
+                        <li>Avoid</li>
+                        <li>At</li>
+                        <li>All</li>
+                        <li>Cost</li>
+                      </ul>
+                    </details>
+                  </li>
+                  <li>All</li>
+                  <li>Cost</li>
+                </ul>
+              </details>
+            </li>
+          </ul>
+        </details>
+      </ul>
+    </div>
+  </div>
+</section></main><script src="runtime.js"></script></body></html>
