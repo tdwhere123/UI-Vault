@@ -1,0 +1,11 @@
+--- archived/genie-effect.tsx
++++ adapted/genie-effect.tsx
+@@ -1084,7 +1084,7 @@
+         onReady(canvases);
+       } catch (err) {
+         console.error("Genie snapshot failed:", err);
+-        if (!cancelled) onReady([]);
++        if(!cancelled){try{let e=document.getElementById("root");if(e&&!e.querySelector("[data-genie-snapshot-error]")){let t=document.createElement("p");t.setAttribute("data-genie-snapshot-error","");t.setAttribute("role","alert");t.textContent="Window preview unavailable: the original window snapshots could not be prepared. Reload to retry.";e.prepend(t)}}catch{}}
+       }
+     };
+ 
