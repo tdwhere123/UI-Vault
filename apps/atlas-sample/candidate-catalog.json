@@ -15366,42 +15366,38 @@
   },
   {
     "id": "mattertools:physical-scene-inspector",
-    "title": "可抓取物体的物理场景检查台",
     "source": "Matter Tools",
     "repository": "https://github.com/liabru/matter-tools",
     "revision": "a7a20e1de3c8a819a9a924f5cf56aa5c0beafe15",
-    "sourcePath": "docs/demo/demo.js",
     "upstream": "https://github.com/liabru/matter-tools/blob/a7a20e1de3c8a819a9a924f5cf56aa5c0beafe15/docs/demo/demo.js",
-    "license": "MIT (complete actual root text; runtime/media not closed)",
-    "behavior": "原Demo工具栏打开Inspector/GUI、重置与全屏；原example生成圆角多边形堆叠和MouseConstraint可抓取，Inspector提供对象选择与场景操作。",
-    "difference": "不是已有布料/Rapier单物理材料参数：完整场景检查工具与可编辑物体空间；Basic/Basic2实际同一init，只计一族。",
-    "styleTags": [
-      "空间/物理材质"
-    ],
-    "gaps": [
-      "docs加载打包依赖；Matter.js、dat.gui/jQuery类工具及resurrect等传递许可须核。场景序列化/文件加载、全屏、鼠标键盘、RAF/物理runner和Inspector清理未验。物理不等同GPU/像素验收。",
-      "仅只读源码筛选；未安装/构建/运行、交互生命周期或浏览器视觉验收。"
-    ],
-    "description": "原Demo工具栏打开Inspector/GUI、重置与全屏；原example生成圆角多边形堆叠和MouseConstraint可抓取，Inspector提供对象选择与场景操作。 不是已有布料/Rapier单物理材料参数：完整场景检查工具与可编辑物体空间；Basic/Basic2实际同一init，只计一族。",
-    "category": "视觉与动效",
+    "sourcePath": "docs/demo/demo.js",
     "licenseEvidence": {
       "url": "https://github.com/liabru/matter-tools/blob/a7a20e1de3c8a819a9a924f5cf56aa5c0beafe15/LICENSE",
       "sha256": "b41d2c76a6a6da86f2d681ce526a5335c8d3f5a1d2bfa4a52a325364d1fa8cfe",
       "scope": "Complete actual root license; transitive code and media permissions not closed"
     },
-    "sourceEvidence": {
-      "localFile": "evidence/liabru--matter-tools--docs__demo__demo.js",
-      "sha256": "56831b0f2d9bf263d57965e520d6b613a74c961cff7ebd6738174598c8ca551b"
-    },
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-style-526",
-    "sourceScope": "Fixed original complete UI/demo source and full root license; not a runnable adaptation or full asset archive",
-    "kind": "原版审美场景（仅来源）",
-    "buildStatus": "fixed source and full root license read; not built/run/visually accepted"
+    "difference": "不是已有布料/Rapier单物理材料参数：完整场景检查工具与可编辑物体空间；Basic/Basic2实际同一init，只计一族。",
+    "title": "物理场景编辑与检查",
+    "description": "原刚体场景、添加物体、选择、暂停及内存快照；保留原物理求解器，不提供文件导入导出。",
+    "behavior": "原刚体场景、添加物体、选择、暂停及内存快照；保留原物理求解器，不提供文件导入导出。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "视觉与动效",
+    "license": "MIT AND Apache-2.0 AND Unlicense",
+    "batch": "mattertools-01",
+    "preview": "batches/mattertools-01/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "actual558 compose; original GUI/Inspector state and physics Canvas commands verified with stubs; native pixels unverified",
+    "gaps": [
+      "No native visual/pointer/Canvas raster acceptance. Disabled file IO, external links, fullscreen and persistent storage are intentional."
+    ],
+    "originalCandidateSource": {
+      "source": "Matter Tools",
+      "sourcePath": "docs/demo/demo.js",
+      "upstream": "https://github.com/liabru/matter-tools/blob/a7a20e1de3c8a819a9a924f5cf56aa5c0beafe15/docs/demo/demo.js",
+      "revision": "a7a20e1de3c8a819a9a924f5cf56aa5c0beafe15"
+    }
   },
   {
     "id": "brunosimon:driveable-portfolio-world",
@@ -16164,36 +16160,34 @@
   },
   {
     "id": "chirpy:longform-knowledge-site",
-    "title": "侧栏与响应式目录长文知识站",
     "source": "Chirpy",
     "repository": "https://github.com/cotes2020/jekyll-theme-chirpy",
     "revision": "ae1057257b3927d6474deb549bdfafa71244e080",
-    "sourcePath": "_layouts/post.html",
     "upstream": "https://github.com/cotes2020/jekyll-theme-chirpy/blob/ae1057257b3927d6474deb549bdfafa71244e080/_layouts/post.html",
-    "license": "MIT (root verified only; dependencies/assets not closed)",
-    "behavior": "原固定身份侧栏、置顶文章首页、文章元信息、分类标签、相关/前后篇；桌面目录与移动目录dialog按断点切换，完整长文阅读结构。",
-    "difference": "与Paper窄栏极简阅读不同，Chirpy是侧栏+正文+目录面板的知识站布局，移动目录独立弹层；整站仅一项，未按归档/文章拆条。",
-    "gaps": [
-      "Jekyll Liquid与站点内容/配置不可直接运行；TOC依赖Tocbot及原移动/桌面模块，评论/分析/分享/搜索配置可联网。字体/FontAwesome图标、头像、主题传递许可与资源未闭合；未测dialog焦点或清理。",
-      "仅固定原件来源；未安装/构建/运行/截图/发布，CSP、媒体字体版权、完整运行许可、交互清理及浏览器视觉均未验。"
-    ],
-    "description": "原固定身份侧栏、置顶文章首页、文章元信息、分类标签、相关/前后篇；桌面目录与移动目录dialog按断点切换，完整长文阅读结构。 与Paper窄栏极简阅读不同，Chirpy是侧栏+正文+目录面板的知识站布局，移动目录独立弹层；整站仅一项，未按归档/文章拆条。",
-    "category": "展示与媒体",
+    "sourcePath": "_layouts/post.html",
     "licenseEvidence": {
       "url": "https://github.com/cotes2020/jekyll-theme-chirpy/blob/ae1057257b3927d6474deb549bdfafa71244e080/LICENSE",
       "sha256": "348395dc79bade6ede7cdb4c3b6ed089fc144e5a0148fee5857bc0394a180321",
       "scope": "Complete root MIT read; dependency/media/font permissions not closed"
     },
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-style-527",
-    "sourceScope": "Selected fixed original code and complete root license evidence; not a complete runnable archive or runtime audit",
-    "kind": "原版完整场景（仅来源）",
-    "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted",
-    "sourceSha256": "1fb016f23173c41745146a2da460301f44ca49ebbb56aa75b01135c4d2462203"
+    "difference": "与Paper窄栏极简阅读不同，Chirpy是侧栏+正文+目录面板的知识站布局，移动目录独立弹层；整站仅一项，未按归档/文章拆条。",
+    "title": "长文知识阅读与分级目录",
+    "description": "原完整文章经真实静态站点生成器构建，保留原侧栏与多级目录；仅本地单篇阅读，无搜索或分享服务。",
+    "behavior": "原完整文章经真实静态站点生成器构建，保留原侧栏与多级目录；仅本地单篇阅读，无搜索或分享服务。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "展示与媒体",
+    "license": "MIT (code/styles); CC-BY-4.0 (original article and FontAwesome SVG)",
+    "batch": "chirpy-reader-01",
+    "preview": "batches/chirpy-reader-01/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "actual560 compose、原完整正文及关键交互/退出/失败验证通过；视觉未验",
+    "gaps": [
+      "单篇完整原文章/模板，不是整个站点。评论、搜索、分享、复制、站点导航无后台；相关控件禁用。",
+      "原可选头像为空、远程字体明确系统回退，FontAwesome7图标采用官方SVG几何代替字体表示。",
+      "真实浏览器视觉、dialog焦点、几何滚动位置未验；JSDOM状态检查不代表视觉验收。"
+    ]
   },
   {
     "id": "flag-icons:country-symbol-family",
@@ -22137,6 +22131,90 @@
     "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
     "gaps": [
       "Original full Meta AstryX non-media-led forms. Only original preview image URL replaced using exact fixed official CLI replaceDemoMedia/stripTemplateAssetRefs and original PLACEHOLDER_IMAGE, not custom artwork, photo or cover screenshot. Official docsite artwork is not included; neutral image clearly disclosed in foreground. All other original page code and validation retained. form-wizard-vertical is five-step publishing draft profile/book/distribution/payout-agreements/final-review; Stripe button only toggles original local state, no service or binding agreement. Original final Submit only validates, no success/publication invented. Cover replacement FileInput only local metadata, no upload. form-two-column is local inquiry form with required-name/email/details feedback, not message sending. Fixed source0.7.12 and installed core/theme0.7.11 compatibility disclosed. Shared bounded Theme/LayerProvider host; hidden unmount resets fields, exit/early/late cleanup. Original account/business labels use fictional input only; no credentials, payments, exports or external navigation. Full runtime licenses. JSDOM DOM state and actual compose/loader tests, no native image decode/pixel/drag acceptance."
+    ]
+  },
+  {
+    "id": "astryx:login-sso",
+    "source": "Meta AstryX",
+    "repository": "https://github.com/meta/astryx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/cli/assets/templates/pages/login-sso/page.tsx",
+    "sourcePath": "packages/cli/assets/templates/pages/login-sso/page.tsx",
+    "licenseEvidence": {
+      "url": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/LICENSE",
+      "sha256": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473",
+      "scope": "Complete fixed original MIT; actual runtime dependency notices supplied in preview assets."
+    },
+    "title": "企业登录分支演示",
+    "description": "原域名校验与登录分支、确认返回及模拟失败；不得输入真实凭证，不进行认证。 辅助图片按固定官方复制语义替换为原中性占位。",
+    "behavior": "原域名校验与登录分支、确认返回及模拟失败；不得输入真实凭证，不进行认证。 辅助图片按固定官方复制语义替换为原中性占位。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "输入与选择",
+    "license": "MIT AND ISC AND BSD-3-Clause",
+    "batch": "astryx-flow-fallback-01",
+    "preview": "batches/astryx-flow-fallback-01/login-sso/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Complete original Meta AstryX local interaction pages, not real authentication or commerce. Exact official CLI stripTemplateAssetRefs/replaceDemoMedia with original neutral PLACEHOLDER_IMAGE replaces only original root-relative fixtures (login-sso1,checkout-wizard3); no photo/artwork delivery claimed. login-sso original email-domain routing, SSO-confirm or password-fallback, back navigation and simulated password failure. Original SSO Continue only sets loading, not a successful connection; user may Go back. checkout-wizard original four-step cart/promo/derived totals, shipping validation, delivery and payment-format checks, original local completion fixture. No network, credentials, actual payment/order/address submission. Use fictional sample input ONLY, never real cards/passwords/personal information. Fixed source0.7.12 and compatible core/theme0.7.11 runtime documented. Original page code unchanged apart from exact official media replacements and explicit autoComplete=off on every TextInput to discourage credential/card autofill; browser-specific password manager enforcement is not certified; shared bounded host owns resources and blocks navigation/submits, hidden unmount resets. Full emitted licenses. Synthetic DOM and actual compose/loader testing, native layout/image decode not verified."
+    ]
+  },
+  {
+    "id": "astryx:checkout-wizard",
+    "source": "Meta AstryX",
+    "repository": "https://github.com/meta/astryx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/cli/assets/templates/pages/checkout-wizard/page.tsx",
+    "sourcePath": "packages/cli/assets/templates/pages/checkout-wizard/page.tsx",
+    "licenseEvidence": {
+      "url": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/LICENSE",
+      "sha256": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473",
+      "scope": "Complete fixed original MIT; actual runtime dependency notices supplied in preview assets."
+    },
+    "title": "购物结账分步校验",
+    "description": "原数量折扣、配送与支付格式校验及本地完成状态；仅虚构测试数据，不下单或支付。 辅助图片按固定官方复制语义替换为原中性占位。",
+    "behavior": "原数量折扣、配送与支付格式校验及本地完成状态；仅虚构测试数据，不下单或支付。 辅助图片按固定官方复制语义替换为原中性占位。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "输入与选择",
+    "license": "MIT AND ISC AND BSD-3-Clause",
+    "batch": "astryx-flow-fallback-01",
+    "preview": "batches/astryx-flow-fallback-01/checkout-wizard/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Complete original Meta AstryX local interaction pages, not real authentication or commerce. Exact official CLI stripTemplateAssetRefs/replaceDemoMedia with original neutral PLACEHOLDER_IMAGE replaces only original root-relative fixtures (login-sso1,checkout-wizard3); no photo/artwork delivery claimed. login-sso original email-domain routing, SSO-confirm or password-fallback, back navigation and simulated password failure. Original SSO Continue only sets loading, not a successful connection; user may Go back. checkout-wizard original four-step cart/promo/derived totals, shipping validation, delivery and payment-format checks, original local completion fixture. No network, credentials, actual payment/order/address submission. Use fictional sample input ONLY, never real cards/passwords/personal information. Fixed source0.7.12 and compatible core/theme0.7.11 runtime documented. Original page code unchanged apart from exact official media replacements and explicit autoComplete=off on every TextInput to discourage credential/card autofill; browser-specific password manager enforcement is not certified; shared bounded host owns resources and blocks navigation/submits, hidden unmount resets. Full emitted licenses. Synthetic DOM and actual compose/loader testing, native layout/image decode not verified."
+    ]
+  },
+  {
+    "id": "astryx:detail-page",
+    "source": "Meta AstryX",
+    "repository": "https://github.com/meta/astryx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/cli/assets/templates/pages/detail-page/page.tsx",
+    "sourcePath": "packages/cli/assets/templates/pages/detail-page/page.tsx",
+    "licenseEvidence": {
+      "url": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/LICENSE",
+      "sha256": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473",
+      "scope": "Complete fixed original MIT; actual runtime dependency notices supplied in preview assets."
+    },
+    "title": "订单详情与活动侧栏",
+    "description": "原订单明细、活动侧栏及折叠区域；虚构数据，退款、发货和发票不执行实际操作。 辅助图片按固定官方复制语义替换为原中性占位。",
+    "behavior": "原订单明细、活动侧栏及折叠区域；虚构数据，退款、发货和发票不执行实际操作。 辅助图片按固定官方复制语义替换为原中性占位。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "数据与状态",
+    "license": "MIT AND ISC AND BSD-3-Clause",
+    "batch": "astryx-order-detail-01",
+    "preview": "batches/astryx-order-detail-01/detail-page/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Complete original fixed Meta AstryX order-detail page, not a product gallery or live order system. Original items/invoice/activity and customer/fraud notes retained; five auxiliary thumbnails replaced by exact official CLI neutral PLACEHOLDER_IMAGE. All other original page bytes retained. Original desktop side-panel hide/show, narrow full-screen details dialog, collapsible Notes/Customer/Fraud and tab selected-state are real. Tabs only update selection: body remains all three sections. Original Edit/Restock/Fulfill/CreateLabel/Refund/SendInvoice/Filters buttons have no business handlers; no action, payment, risk assessment or fulfillment occurs. Data/users/payment status are fixed fictional original fixtures; frontend explicitly says so. Same original core and shared compatible0.7.11 runtime for fixedsource0.7.12, Theme/LayerProvider/StyleX and bounded host. Hidden unmount/reset, exit/error resource cleanup. Full emitted license texts. Actual compose/loader and synthetic original UI state tested; native layout/dialog/pixel not validated."
     ]
   }
 ]
