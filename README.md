@@ -2,7 +2,7 @@
 
 网站：<https://tdwhere123.github.io/UI-Vault/>
 
-当前有 **556 条可直接打开预览（241 条原始素材＋315 条后续接入预览）**，目标为 **1000 条可查看素材**，还差 **444 条**。另有 **259 条待适配来源记录**，只是工作清单，**不计入1000目标完成数**。图标按系列计数，不按单枚glyph、字重或尺寸凑数，已有重叠暂待统一整理。
+当前有 **558 条可直接打开预览（241 条原始素材＋317 条后续接入预览）**，目标为 **1000 条可查看素材**，还差 **442 条**。另有 **257 条待适配来源记录**，只是工作清单，**不计入1000目标完成数**。图标按系列计数，不按单枚glyph、字重或尺寸凑数，已有重叠暂待统一整理。
 
 ## 当前内容
 
@@ -449,3 +449,9 @@ Restored **6 existing pending entries**, without adding source-only records: Cha
 Restored **2 existing pending entries**, without adding source-only records: UI Layouts · 本地图片附件输入, UI Layouts · 终端启动序列. Each keeps the actual source mechanism and its disclosed adaptation boundary, complete license text and lifecycle tests. Authored local host controls, replacement text, system fonts and static math are identified rather than misrepresented as original services or external data. No new permissions, network services, screenshots or covers.
 
 **556 viewable / 1000 target, 444 remaining**. The **259 source-only records remain pending**, not completed entries. Worklist count remains815. Mapped covers remain470; 86 posterless previews use bounded live cards. Existing records outside the restored IDs, all Grok images/reports and main interface behavior are preserved. DOM/Canvas command tests are not native pixel, touch, typography or performance acceptance.
+
+## Existing-source preview conversion · 558 directly viewable
+
+Restored **2 existing pending entries**, without adding source-only records: Eva · 490 原始双风格图标, Akar · 454 原始图标系列. Each keeps the actual source mechanism and its disclosed adaptation boundary, complete license text and lifecycle tests. Authored local host controls, replacement text, system fonts and static math are identified rather than misrepresented as original services or external data. No new permissions, network services, screenshots or covers.
+
+**558 viewable / 1000 target, 442 remaining**. The **257 source-only records remain pending**, not completed entries. Worklist count remains815. Mapped covers remain470; 88 posterless previews use bounded live cards. Existing records outside the restored IDs, all Grok images/reports and main interface behavior are preserved. DOM/Canvas command tests are not native pixel, touch, typography or performance acceptance.
