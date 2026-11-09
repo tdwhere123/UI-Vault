@@ -1,0 +1,38 @@
+{
+  "tests": {
+    "labelsAndOriginalRequiredValidation": true,
+    "cycles100": {
+      "last10Listeners": [
+        151,
+        151,
+        151,
+        151,
+        151,
+        151,
+        151,
+        151,
+        151,
+        151
+      ],
+      "hiddenReset": true,
+      "oldSubmitInert": true
+    },
+    "exitAndOldCallback": true,
+    "early": true,
+    "partial": true,
+    "late": true,
+    "pagehide": true,
+    "external": true,
+    "reduced": true,
+    "actual547Compose": true,
+    "browserVisualQA": "not-run"
+  },
+  "runtimeSha256": "1e7adf03d4dd1caf27334658ceeab9c3e8b048ecf2be0b1f8feab348e949ec8b",
+  "knownGaps": [
+    "No message is sent, queued, emailed or saved; successful native required-field validation only displays a local “未发送” receipt.",
+    "Original contact names/address/email/phone/hours are upstream mock text, not user contacts or an invitation to communicate. No anchors or external requests.",
+    "Original email input type is text; only email/subject required presence is validated. No email-format validation claimed.",
+    "Original CSS title mentions Outfit; no font file fetched, system/Mantine fallback used.",
+    "JSDOM field focus/label/validity tests are not a native keyboard Tab/Enter or responsive/pixel visual pass."
+  ]
+}
