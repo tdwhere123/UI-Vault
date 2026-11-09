@@ -1,0 +1,188 @@
+/* Doodle CSS
+ * https://github.com/chr15m/DoodleCSS
+ */
+
+.doodle * {
+  box-sizing: border-box;
+}
+
+.doodle {
+  background-color: #FDF7F1;
+  color: #3c3c3c;
+}
+
+.doodle input, .doodle textarea, .doodle table, .doodle img {
+  max-width: 100%;
+}
+
+.doodle fieldset * {
+  max-width: calc(100vw - 100px);
+}
+
+.doodle table {
+  overflow: scroll;
+}
+
+.doodle a {
+  color: #1c1c1c;
+  font-weight: bold;
+}
+
+.doodle ul li {
+  list-style-type: "* ";
+}
+
+.doodle label {
+  padding: 0.25em 0px;
+  display: inline-block;
+}
+
+.doodle fieldset, .doodle textarea {
+  border-style: solid;
+  border-width: 10px 10px 10px 10px;
+  border-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22263.1%22%20height%3D%22140.1%22%20viewBox%3D%220%200%20246.7%20131.3%22%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22%233c3c3c%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%223%22%3E%3Cpath%20d%3D%22M2.1%2021.6c-.2%2012.5%202%2025%20.9%2037.4q-.5%2012.3.1%2024.4c0%2012.7-.7%2024.4.1%2037.1%203.3%205.8%2010.1%207.6%2016%208.2%204.6%200%209.1-.7%2013.7%200%206.8.8%2014%201.4%2020.8.7%208.3-.5%2013.7-.1%2022%200l7.2-.5%22%2F%3E%3Cpath%20d%3D%22M82.1%20129c14.3-.7%2028.6-.3%2043-.4%2014-.8%2028.2%201%2042.2-.6%2013.3-1%2026.7.2%2040.1-.5%207.2-.7%2014.4.2%2021.6-.4%206.8-.5%2011.8-.2%2013.2-6q.3-7.3%201.2-14.5m0-.2q.5-10.5%201.4-21c.7-10.6-.4-21.2-.7-31.8q-1.1-20.2-1-40.6c1.7-7.4-4.3-12.8-11.5-11l-24.5%201.5c-6%20.9-12-.1-18%20.3-6.5-.4-13.1-1.6-19.6%200-10.7.5-21.3-1-32-.5-8.6.1-17.1%201-25.7%200h-5m-.2.1c-8.3-.1-16.6%200-24.9-1.3-11.5-.8-23%201.4-34.6%201.4q-12.2.3-24.4-.5c-6-.3-12-1.2-18-1.1-3.8%201.8-3%206.9-3%2010.4q0%204.5.4%208.8%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") 10 10 10 10 stretch stretch;
+}
+
+.doodle .border, .doodle-border {
+  border-style: solid;
+  border-width: 10px 10px 10px 10px;
+  border-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22120.1%22%20height%3D%2261.3%22%20viewBox%3D%220%200%20112.6%2057.5%22%3E%3Cpath%20fill%3D%22none%22%20stroke%3D%22%233c3c3c%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%223%22%20d%3D%22M15.5%202h16.7c5%20.2%2012.7%201%2019.1.7%204.3.5%208.6-.3%2013%20.3%206.1%200%2012.3-1%2018.4-.7%205.9.4%2010.1.5%2017.6.4%207.4-.5%2010.7%200%2010.2%207.3q-.3%209-.1%2016c0%208.7%201.3%2025-.6%2027.6-3%203.8-10%201-14.3%201.2-4-.2-9.6%201-13.5%200-5-.7-8.3.7-13.2.3-5%200-9.7-.8-14.5.3a64%2064%200%200%201-19.2-.5c-5.9-.9-10%200-15.9-.1-4.7%200-15%201.8-16.6%200S2.2%2043%202.2%2039.1c-.4-9.2-.5-15.6.1-24.8.1-1.6-1.1-8.4%200-10.2C4.7.5%2011.6%202.5%2015.5%202%22%2F%3E%3C%2Fsvg%3E") 10 10 10 10 stretch stretch;
+}
+
+.doodle button, .doodle input, .doodle select, .doodle input[type="file"]::file-selector-button {
+  border-style: solid;
+  border-width: 10px 10px 10px 10px;
+  border-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22120.1%22%20height%3D%2261.3%22%20viewBox%3D%220%200%20112.6%2057.5%22%3E%3Cpath%20fill%3D%22none%22%20stroke%3D%22%233c3c3c%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%223%22%20d%3D%22M15.5%202h16.7c5%20.2%2012.7%201%2019.1.7%204.3.5%208.6-.3%2013%20.3%206.1%200%2012.3-1%2018.4-.7%205.9.4%2010.1.5%2017.6.4%207.4-.5%2010.7%200%2010.2%207.3q-.3%209-.1%2016c0%208.7%201.3%2025-.6%2027.6-3%203.8-10%201-14.3%201.2-4-.2-9.6%201-13.5%200-5-.7-8.3.7-13.2.3-5%200-9.7-.8-14.5.3a64%2064%200%200%201-19.2-.5c-5.9-.9-10%200-15.9-.1-4.7%200-15%201.8-16.6%200S2.2%2043%202.2%2039.1c-.4-9.2-.5-15.6.1-24.8.1-1.6-1.1-8.4%200-10.2C4.7.5%2011.6%202.5%2015.5%202%22%2F%3E%3C%2Fsvg%3E") 10 10 10 10 stretch stretch;
+}
+
+.doodle button {
+  text-align: center;
+}
+
+.doodle input[type="color"] {
+  min-height: 1.5em;    
+}
+
+.doodle hr {
+  border-style: solid;
+  border-width: 0px 3px 6px 3px;
+  border-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22642.1%22%20height%3D%225.4%22%20viewBox%3D%220%200%20642.1%205.4%22%3E%3Cpath%20fill%3D%22none%22%20stroke%3D%22%233c3c3c%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%223%22%20d%3D%22M1.7%202.7q7.5-.2%2034%20.4a1197%201197%200%200%200%2058.9.5l24.2.1a1168%201168%200%200%200%2045-.6q6%200%2017.3-.6%2011.5-.4%2016-.4t13%20.7%2029.1.2%2030.3-.1%2031.8.3a3411%203411%200%200%200%2069.6-.7q10-.3%2024.2-.1t52.1%200h54.5q16.5%200%2038.5-.4t33.7-.4%2029.9.7a416%20416%200%200%200%2036.6.2%22%2F%3E%3C%2Fsvg%3E") 0 3 6 3 stretch stretch;
+}
+
+.doodle blockquote {
+  border-left-style: solid;
+  border-width: 0px 6px 3px 6px;
+  border-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%225.1%22%20height%3D%22641.8%22%20viewBox%3D%220%200%205.1%20641.8%22%3E%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23bbb%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%223%22%20d%3D%22M2.6%20640.2q-.2-7.6.4-34a1197%201197%200%200%200%20.5-58.9l.1-24.2a1168%201168%200%200%200-.6-45q0-6-.6-17.3-.4-11.4-.4-16t.7-13q.6-8.4.2-29.1t-.1-30.3.3-31.8a3411%203411%200%200%200-.7-69.6q-.3-10-.1-24.2t0-52.1v-54.5q0-16.5-.4-38.5L1.5%2068q0-11.6.7-29.9a416%20416%200%200%200%20.2-36.6%22%2F%3E%3C%2Fsvg%3E") 0 6 3 6 stretch stretch;
+  padding-left: 0.5em;
+  border-right-width: 0px;
+}
+
+.doodle pre {
+  overflow: auto;
+}
+
+.doodle table {
+  border-collapse: collapse;
+  overflow: auto;
+  display: block;
+}
+
+.doodle table thead {
+  border-bottom: 3px solid #bbb;
+}
+
+.doodle table caption {
+  border-bottom-style: solid;
+  border-width: 0px 3px 6px 3px;
+  border-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22642.1%22%20height%3D%225.4%22%20viewBox%3D%220%200%20642.1%205.4%22%3E%3Cpath%20fill%3D%22none%22%20stroke%3D%22%233c3c3c%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%223%22%20d%3D%22M1.7%202.7q7.5-.2%2034%20.4a1197%201197%200%200%200%2058.9.5l24.2.1a1168%201168%200%200%200%2045-.6q6%200%2017.3-.6%2011.5-.4%2016-.4t13%20.7%2029.1.2%2030.3-.1%2031.8.3a3411%203411%200%200%200%2069.6-.7q10-.3%2024.2-.1t52.1%200h54.5q16.5%200%2038.5-.4t33.7-.4%2029.9.7a416%20416%200%200%200%2036.6.2%22%2F%3E%3C%2Fsvg%3E") 0 3 6 3 stretch stretch;
+}
+
+.doodle table td {
+  vertical-align: top;
+}
+
+.doodle img {
+  border-radius: 3px;
+  border-style: solid;
+  border-width: 3px 3px 3px 3px;
+  border-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22120.1%22%20height%3D%2261.3%22%20viewBox%3D%220%200%20112.6%2057.5%22%3E%3Cpath%20fill%3D%22none%22%20stroke%3D%22%233c3c3c%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%223%22%20d%3D%22M15.5%202h16.7c5%20.2%2012.7%201%2019.1.7%204.3.5%208.6-.3%2013%20.3%206.1%200%2012.3-1%2018.4-.7%205.9.4%2010.1.5%2017.6.4%207.4-.5%2010.7%200%2010.2%207.3q-.3%209-.1%2016c0%208.7%201.3%2025-.6%2027.6-3%203.8-10%201-14.3%201.2-4-.2-9.6%201-13.5%200-5-.7-8.3.7-13.2.3-5%200-9.7-.8-14.5.3a64%2064%200%200%201-19.2-.5c-5.9-.9-10%200-15.9-.1-4.7%200-15%201.8-16.6%200S2.2%2043%202.2%2039.1c-.4-9.2-.5-15.6.1-24.8.1-1.6-1.1-8.4%200-10.2C4.7.5%2011.6%202.5%2015.5%202%22%2F%3E%3C%2Fsvg%3E") 3 3 3 3 stretch stretch;
+}
+
+.doodle select {
+  -webkit-appearance: none;
+  appearance: none;
+  padding-right: 1.5em;
+  background: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2218.5%22%20height%3D%2212.5%22%20viewBox%3D%220%200%2017.4%2011.7%22%3E%3Cpath%20fill%3D%22none%22%20stroke%3D%22%233c3c3c%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%223%22%20d%3D%22M2%202.7Q3%203%205.3%206.2a17%2017%200%200%200%203%203.8q.8.4%201.6.2.7-.3%201.6-1.5L14%205.8l2-2.3q.5-.7.2-.7h-.7%22%2F%3E%3C%2Fsvg%3E") no-repeat right transparent;
+  background-position-x: calc(100% - 10px);
+}
+
+.doodle select[multiple] {
+  background: none;
+  padding: 0px;
+}
+
+.doodle button, .doodle textarea, .doodle input, .doodle select {
+  background-color: unset;
+  font-family: 'Short Stack', cursive;
+  font-size: 1em;
+  color: #3c3c3c;
+}
+
+.doodle button:disabled {
+  color: grey;
+}
+
+.doodle input[type="checkbox"] {
+  border-width: 6px 6px 6px 6px;
+  border-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2260.5%22%20height%3D%2262.1%22%20viewBox%3D%220%200%2056.7%2058.2%22%3E%3Cpath%20fill%3D%22none%22%20stroke%3D%22%233c3c3c%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%223%22%20d%3D%22M4.9%201.9c2.9-.5%205.4.1%208.2.1H22c6%20.3%2012.6.9%2018.7.3C44.8%202%2051.2.7%2054.3%203.9c1.4%202.8-.9%207.3%200%2010.4%201.2%206.6.3%2013.3%201%2020%200%204-1.2%208-.7%2012.2%200%202.5%201.3%208.2-1.7%209.3a45%2045%200%200%201-17%20.1q-11.4-.7-22.7.5c-2.8-.2-7.3.6-9.7-1.2a23%2023%200%200%201-1.8-11.6l.3-24c.4-5.6.2-6%200-11.6-.3-4%201.9-6.2%202.8-6%22%2F%3E%3C%2Fsvg%3E") 6 6 6 6 stretch stretch;
+}
+
+.doodle input[type="radio"] {
+  border-width: 16px 16px 16px 16px;
+  border-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2239.9%22%20height%3D%2239.9%22%20viewBox%3D%220%200%2039.9%2039.9%22%3E%3Cpath%20fill%3D%22none%22%20stroke%3D%22%233c3c3c%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%223%22%20d%3D%22M12.2%201.8c-2%20.7-6.4%202.9-7.4%204.9-2.4%204-2.4%207.4-2.8%2012.8%200%204.7%200%208.2%202.7%2012.1%203.1%204.6%208.8%206.6%2014.1%206.8a19%2019%200%200%200%2012.3-2.6c2.1-1.3%204.2-3.1%205-5.7%201.2-3.7%201.4-5.7%201.8-9.6a23%2023%200%200%200-3.1-12%2020%2020%200%200%200-6.5-5.3c-3.1-1.6-7-1.2-10.4-1.4-2.9-.3-7.4-.2-9.8%201.9%22%2F%3E%3C%2Fsvg%3E") 16 16 16 16 stretch stretch;
+}
+
+.doodle input[type="checkbox"], .doodle input[type="radio"] {
+  -webkit-appearance: none;
+  appearance: none;
+  outline: 0;
+  background: transparent;
+  width: 1.5em;
+  height: 1.5em;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.doodle input[type="checkbox"]:after, .doodle input[type="radio"]:after {
+  font-size: 1.25em;
+  content: " ";
+  margin-bottom: -0.25em;
+}
+
+.doodle input[type="checkbox"]:disabled:after, .doodle input[type="radio"]:disabled:after {
+  content: "-";
+  color: grey;
+}
+
+.doodle input[type="checkbox"]:checked:after, .doodle input[type="radio"]:checked:after {
+  content: "*";
+}
+
+.doodle input[type="file"]::file-selector-button {
+  font-family: inherit;
+  font-size: 0.8em;
+  font-size: 1em;
+  background-color: unset;
+  color: #3c3c3c;
+}
+
+.doodle button:focus-visible, .doodle textarea:focus-visible, .doodle input:focus-visible, .doodle select:focus-visible {
+  outline-offset: -8px;
+  outline: 2px dashed #3c3c3c;
+  /* outline: transparent;
+  filter: drop-shadow(0 0 3px #4d90fe) brightness(1.1) saturate(1.2); */
+}
+
+/* Original example body scale/fallback, local host only. */
+body{max-width:800px;margin:auto;padding:1em;font-family:'Short Stack',cursive;font-size:2em}h2{margin-top:2em}.notice,output{font-size:.65em;line-height:1.5}output{display:block;margin-top:1em;white-space:pre-wrap}header{padding-bottom:1em}@media(max-width:600px){body{font-size:1.25em}}@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}html[data-hidden=true] *{animation:none!important;transition:none!important}
