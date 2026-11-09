@@ -1,0 +1,88 @@
+{
+  "id": "astryx:table-inbox",
+  "path": "apps/atlas-sample/thumbnails/astryx--table-inbox.webp",
+  "status": "render_capture_processed",
+  "screenshot_status": "captured_render_confirmed",
+  "compression_status": "passed",
+  "viewport": {
+    "width": null,
+    "height": null,
+    "status": "unknown"
+  },
+  "actions": [
+    "Default synthetic inbox view; no compose/archive/delete action. Two external template image requests blocked by iframe CSP, fallback remains visible."
+  ],
+  "render_state": "partial_assets_blocked | CSP 阻断 2 张模板图但 fallback/收件箱主体完整；页面类整 iframe contain",
+  "interaction_acceptance": "not_tested",
+  "failure_reason": null,
+  "source_screenshot_sha256": "580207571ccad486ff55e0047aadfcd8a8d583712f11fcc6a7f5bbbdaa8f4daf",
+  "source_dimensions": [
+    1538,
+    579
+  ],
+  "requested_rect": [
+    0,
+    0,
+    1538,
+    579
+  ],
+  "fitted_crop_box": [
+    0,
+    0,
+    1538,
+    579
+  ],
+  "resize": [
+    680,
+    440
+  ],
+  "fit": "contain",
+  "placement": {
+    "content_size": [
+      680,
+      256
+    ],
+    "offset": [
+      0,
+      92
+    ],
+    "background_rgb": [
+      251,
+      251,
+      250
+    ]
+  },
+  "detail_url": "https://tdwhere123.github.io/UI-Vault/#/item/astryx%3Atable-inbox",
+  "baseline": "77ada4cd095d383cf1e9c774f7cc1518da9b1b55",
+  "resource_verification": [
+    {
+      "url": "https://tdwhere123.github.io/UI-Vault/batches/astryx-next-01/table-inbox/index.html",
+      "repository_path": "apps/atlas-sample/batches/astryx-next-01/table-inbox/index.html",
+      "public_sha256": "6e24039b24fe033e6b41a9a1f7c69932a15d2b923afb6ae5a10c2f7fb9261e2d",
+      "local_sha256": "6e24039b24fe033e6b41a9a1f7c69932a15d2b923afb6ae5a10c2f7fb9261e2d",
+      "bytes": 240,
+      "match": true
+    },
+    {
+      "url": "https://tdwhere123.github.io/UI-Vault/batches/astryx-next-01/table-inbox/runtime.css",
+      "repository_path": "apps/atlas-sample/batches/astryx-next-01/table-inbox/runtime.css",
+      "public_sha256": "26ed43b816835f2ed26fb4b5dd02c251c77f5f6dae1b5c69dff2118b18f90c10",
+      "local_sha256": "26ed43b816835f2ed26fb4b5dd02c251c77f5f6dae1b5c69dff2118b18f90c10",
+      "bytes": 205121,
+      "match": true
+    },
+    {
+      "url": "https://tdwhere123.github.io/UI-Vault/batches/astryx-next-01/table-inbox/runtime.js",
+      "repository_path": "apps/atlas-sample/batches/astryx-next-01/table-inbox/runtime.js",
+      "public_sha256": "8537f1c453ab08135e24102baccad52b8ffc5787e79063fce0a38d5151fd42a4",
+      "local_sha256": "8537f1c453ab08135e24102baccad52b8ffc5787e79063fce0a38d5151fd42a4",
+      "bytes": 1116744,
+      "match": true
+    }
+  ],
+  "cover_visual_review": "passed",
+  "webp_quality": 86,
+  "bytes": 16732,
+  "sha256": "9ac7d21c35587ed4bc923ace385c4a41a8205ab9d7efc150dfaf6fd46a6d9a63",
+  "processor_note": "CSP 阻断 2 张模板图；保留可见 fallback，收件箱主体完整；页面类整 iframe contain；不声称外链图完整"
+}

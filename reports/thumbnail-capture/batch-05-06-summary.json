@@ -1,0 +1,645 @@
+{
+  "batch": "05-06",
+  "revision": "parent-accepted-37-plus-signature-static",
+  "items_in_batch": 40,
+  "accepted_static_covers": 37,
+  "signature_recapture_accepted": 1,
+  "component_failures": 2,
+  "needs_recapture": 1,
+  "failed_ids": [
+    "astryx:library",
+    "smoothui:pixel-brush-canvas"
+  ],
+  "needs_recapture_ids": [
+    "blode:omni-color-picker"
+  ],
+  "notes": {
+    "astryx:table-inbox": "CSP 2 图 fallback 限制保留；主体完整静态封面",
+    "aicanvas:peel-corner-reveal": "仅初始卷角代表态；不声称揭开动作成功",
+    "cuicui:react-signature": "补拍合成波浪；visual_review=passed",
+    "recaptures_not_replaced": [
+      "assistant-elements:agent-card",
+      "cult:family-drawer"
+    ]
+  },
+  "cover_visual_review": "passed for 37 batch + signature",
+  "interaction_acceptance": "not_tested",
+  "crop_policy": "默认整 iframe contain；slide-deck 紧裁保留；其余无把握不机械 crop",
+  "resource_verification": "40/40 + signature assets match baseline public",
+  "baseline": "77ada4cd095d383cf1e9c774f7cc1518da9b1b55",
+  "bytes_range": [
+    1654,
+    16732
+  ],
+  "cumulative_partition": {
+    "universe": 271,
+    "success_passed": 119,
+    "failed": 3,
+    "needs_recapture": 3,
+    "unprocessed": 146,
+    "incomplete_total_not_success": 152,
+    "equation": "119 success + 3 failed + 3 needs_recapture + 146 unprocessed = 271",
+    "failed_ids": [
+      "astryx:library",
+      "smoothui:pixel-brush-canvas",
+      "vis-timeline:local-task-planner"
+    ],
+    "needs_recapture_ids": [
+      "blode:dnd-grid",
+      "blode:omni-color-picker",
+      "smoothui:image-metadata-preview"
+    ],
+    "batch_05_06_accepted_covers": 37,
+    "signature_recapture_accepted": 1,
+    "prior_tip_before_this_commit": "25f9fb9f5e2ab43eaac1e9a9541c8ed144f770ce",
+    "timezone": "Asia/Taipei (UTC+8)",
+    "generated_at_local": "2026-11-09 08:33:40"
+  },
+  "prior_batch_04_05_sha": "25f9fb9f5e2ab43eaac1e9a9541c8ed144f770ce",
+  "items": [
+    {
+      "id": "smoothui:interactive-image-selector",
+      "path": "apps/atlas-sample/thumbnails/smoothui--interactive-image-selector.webp",
+      "bytes": 6354,
+      "sha256": "5b7b05aa374877d9d8dfd8dcff4d5f7cd8896b7add5521b00b3d8542db921995",
+      "fit": "contain",
+      "requested_rect": [
+        0,
+        0,
+        1538,
+        579
+      ],
+      "cover_visual_review": "passed",
+      "processor_note": "整 iframe contain"
+    },
+    {
+      "id": "spatialboard:whiteboard",
+      "path": "apps/atlas-sample/thumbnails/spatialboard--whiteboard.webp",
+      "bytes": 12602,
+      "sha256": "6195ec9d2f081637375310b8b6b8c33f93bbffb31397ac48ba12aa0a5185b733",
+      "fit": "contain",
+      "requested_rect": [
+        0,
+        0,
+        1538,
+        579
+      ],
+      "cover_visual_review": "passed",
+      "processor_note": "整 iframe contain"
+    },
+    {
+      "id": "tambo:graph",
+      "path": "apps/atlas-sample/thumbnails/tambo--graph.webp",
+      "bytes": 4874,
+      "sha256": "e05fd9be471bfbdad29411134c7d2e39831669052b0c4ec6a444593df761cc7d",
+      "fit": "contain",
+      "requested_rect": [
+        0,
+        0,
+        1538,
+        579
+      ],
+      "cover_visual_review": "passed",
+      "processor_note": "整 iframe contain"
+    },
+    {
+      "id": "aicanvas:paper-wall",
+      "path": "apps/atlas-sample/thumbnails/aicanvas--paper-wall.webp",
+      "bytes": 4734,
+      "sha256": "386ec0de59da0b354b1281b87f8de440de5c21967a22187b3860feaef759247e",
+      "fit": "contain",
+      "requested_rect": [
+        0,
+        0,
+        1538,
+        579
+      ],
+      "cover_visual_review": "passed",
+      "processor_note": "紧裁无把握，保留整 iframe contain"
+    },
+    {
+      "id": "cult:fluted-glass",
+      "path": "apps/atlas-sample/thumbnails/cult--fluted-glass.webp",
+      "bytes": 6962,
+      "sha256": "e9378d890f77f66ffeeb42f4076cee2ff1cd227f656f5d82bc8e57e33196ab97",
+      "fit": "contain",
+      "requested_rect": [
+        0,
+        0,
+        1538,
+        579
+      ],
+      "cover_visual_review": "passed",
+      "processor_note": "独立小卡但紧裁无把握，保留整 iframe contain"
+    },
+    {
+      "id": "elevenlabs:waveform",
+      "path": "apps/atlas-sample/thumbnails/elevenlabs--waveform.webp",
+      "bytes": 5208,
+      "sha256": "7e84254629961d5f5d50886d98e61badce76e020dfaaca619f2928730db8abb4",
+      "fit": "contain",
+      "requested_rect": [
+        0,
+        0,
+        1538,
+        579
+      ],
+      "cover_visual_review": "passed",
+      "processor_note": "独立小卡但紧裁无把握，保留整 iframe contain"
+    },
+    {
+      "id": "kibo:editor",
+      "path": "apps/atlas-sample/thumbnails/kibo--editor.webp",
+      "bytes": 5476,
+      "sha256": "ba2d9b5aa59061638b2da9ec800752e9700529501f608bc7199835ab8f32bf3c",
+      "fit": "contain",
+      "requested_rect": [
+        0,
+        0,
+        1538,
+        579
+      ],
+      "cover_visual_review": "passed",
+      "processor_note": "整 iframe contain"
+    },
+    {
+      "id": "astryx:ide",
+      "path": "apps/atlas-sample/thumbnails/astryx--ide.webp",
+      "bytes": 13132,
+      "sha256": "f756dcb5073825acab92aa022ce715de6c9ea1b690d069782f7fead6ac894f3a",
+      "fit": "contain",
+      "requested_rect": [
+        0,
+        0,
+        1538,
+        579
+      ],
+      "cover_visual_review": "passed",
+      "processor_note": "整 iframe contain"
+    },
+    {
+      "id": "promptkit:jsx-preview",
+      "path": "apps/atlas-sample/thumbnails/promptkit--jsx-preview.webp",
+      "bytes": 7370,
+      "sha256": "f9384f4b7d619503a0891f7729e36a6bacb43c86ea43cbeadbaa3278cfea18fb",
+      "fit": "contain",
+      "requested_rect": [
+        0,
+        0,
+        1538,
+        579
+      ],
+      "cover_visual_review": "passed",
+      "processor_note": "整 iframe contain"
+    },
+    {
+      "id": "reactflow:nested-groups",
+      "path": "apps/atlas-sample/thumbnails/reactflow--nested-groups.webp",
+      "bytes": 7094,
+      "sha256": "94c5be524926f1726bc1c50a469ab46e230a1a7b0ba4d6ce5ce74ec8b1fc4c6c",
+      "fit": "contain",
+      "requested_rect": [
+        0,
+        0,
+        1538,
+        579
+      ],
+      "cover_visual_review": "passed",
+      "processor_note": "整 iframe contain"
+    },
+    {
+      "id": "smoothui:orbital-image-wheel",
+      "path": "apps/atlas-sample/thumbnails/smoothui--orbital-image-wheel.webp",
+      "bytes": 5596,
+      "sha256": "6f4fbadbb8d059f1fb654d2b6f60896fb3eb1c0fd12daac7498b35a6c6bd76c3",
+      "fit": "contain",
+      "requested_rect": [
+        0,
+        0,
+        1538,
+        579
+      ],
+      "cover_visual_review": "passed",
+      "processor_note": "整 iframe contain"
+    },
+    {
+      "id": "assistant-elements:approval-card",
+      "path": "apps/atlas-sample/thumbnails/assistant-elements--approval-card.webp",
+      "bytes": 3606,
+      "sha256": "4ba1ff6c0bcaedae18f59ba620270240aeee23f1d3c3c8802239ebd6a2dcea6d",
+      "fit": "contain",
+      "requested_rect": [
+        0,
+        0,
+        1538,
+        579
+      ],
+      "cover_visual_review": "passed",
+      "processor_note": "紧裁无把握，保留整 iframe contain"
+    },
+    {
+      "id": "aicanvas:peel-corner-reveal",
+      "path": "apps/atlas-sample/thumbnails/aicanvas--peel-corner-reveal.webp",
+      "bytes": 4670,
+      "sha256": "a80d86292d2b0dae168da47d04534277a4be09be4469e36a0037d7948a568e6c",
+      "fit": "contain",
+      "requested_rect": [
+        0,
+        0,
+        1538,
+        579
+      ],
+      "cover_visual_review": "passed",
+      "processor_note": "仅初始卷角代表态（绿色折角可见）；不声称揭开/peel 动作成功；静态封面"
+    },
+    {
+      "id": "astryx:messaging-shell",
+      "path": "apps/atlas-sample/thumbnails/astryx--messaging-shell.webp",
+      "bytes": 14144,
+      "sha256": "284729f384ae2b2c2fe1b4df7de7375adcd382ec46cff5b3db46950376fe22dc",
+      "fit": "contain",
+      "requested_rect": [
+        0,
+        0,
+        1538,
+        579
+      ],
+      "cover_visual_review": "passed",
+      "processor_note": "整 iframe contain"
+    },
+    {
+      "id": "cult:intro-disclosure",
+      "path": "apps/atlas-sample/thumbnails/cult--intro-disclosure.webp",
+      "bytes": 7716,
+      "sha256": "396be3ba668e29380b214a164f5d2f7710a2984464304c4c24e9ccc286e88fa7",
+      "fit": "contain",
+      "requested_rect": [
+        0,
+        0,
+        1538,
+        579
+      ],
+      "cover_visual_review": "passed",
+      "processor_note": "整 iframe contain"
+    },
+    {
+      "id": "kibo:gantt",
+      "path": "apps/atlas-sample/thumbnails/kibo--gantt.webp",
+      "bytes": 8990,
+      "sha256": "a9f34b597f070b9c3a5eb1f3fc6dd95c8a76009ab1a75d632f2abcc2a92c5893",
+      "fit": "contain",
+      "requested_rect": [
+        0,
+        0,
+        1538,
+        579
+      ],
+      "cover_visual_review": "passed",
+      "processor_note": "整 iframe contain"
+    },
+    {
+      "id": "blode:timed-undo",
+      "path": "apps/atlas-sample/thumbnails/blode--timed-undo.webp",
+      "bytes": 2944,
+      "sha256": "6a90030486b12d49d1715b72761ca66a949ab7c7195a6b2bab14d63a86018711",
+      "fit": "contain",
+      "requested_rect": [
+        0,
+        0,
+        1538,
+        579
+      ],
+      "cover_visual_review": "passed",
+      "processor_note": "独立小卡但紧裁无把握，保留整 iframe contain"
+    },
+    {
+      "id": "astryx:kanban-board",
+      "path": "apps/atlas-sample/thumbnails/astryx--kanban-board.webp",
+      "bytes": 14436,
+      "sha256": "f9c37ca852a02387cb48f6283739eb705ddd38fdab6f52b060b9cea714a00e6f",
+      "fit": "contain",
+      "requested_rect": [
+        0,
+        0,
+        1538,
+        579
+      ],
+      "cover_visual_review": "passed",
+      "processor_note": "整 iframe contain"
+    },
+    {
+      "id": "promptkit:loader",
+      "path": "apps/atlas-sample/thumbnails/promptkit--loader.webp",
+      "bytes": 4110,
+      "sha256": "e5f2fd74bdcd2362403fc1cf7ad5096d7b4481607efdf06d1826f0250ba94170",
+      "fit": "contain",
+      "requested_rect": [
+        0,
+        0,
+        1538,
+        579
+      ],
+      "cover_visual_review": "passed",
+      "processor_note": "独立小卡但紧裁无把握，保留整 iframe contain"
+    },
+    {
+      "id": "smoothui:pinned-list",
+      "path": "apps/atlas-sample/thumbnails/smoothui--pinned-list.webp",
+      "bytes": 8628,
+      "sha256": "aadffe8f4f924aae81bea944eed0136888651101284b1c9f20d59dc1a1c639f3",
+      "fit": "contain",
+      "requested_rect": [
+        0,
+        0,
+        1538,
+        579
+      ],
+      "cover_visual_review": "passed",
+      "processor_note": "整 iframe contain"
+    },
+    {
+      "id": "assistant-elements:artifact-card",
+      "path": "apps/atlas-sample/thumbnails/assistant-elements--artifact-card.webp",
+      "bytes": 2810,
+      "sha256": "dca91b63e0541eac91aa4d2d7597f20254c005039f12d19d34240e4a16b6536a",
+      "fit": "contain",
+      "requested_rect": [
+        0,
+        0,
+        1538,
+        579
+      ],
+      "cover_visual_review": "passed",
+      "processor_note": "独立小卡但紧裁无把握，保留整 iframe contain"
+    },
+    {
+      "id": "aicanvas:radial-toolbar",
+      "path": "apps/atlas-sample/thumbnails/aicanvas--radial-toolbar.webp",
+      "bytes": 1654,
+      "sha256": "2f1450dd54b420ace18ad7a74e0b4b9da283a7f1f0fc8fda0e4a827d478741a5",
+      "fit": "contain",
+      "requested_rect": [
+        0,
+        0,
+        1538,
+        579
+      ],
+      "cover_visual_review": "passed",
+      "processor_note": "紧裁无把握，保留整 iframe contain"
+    },
+    {
+      "id": "astryx:settings-dialog",
+      "path": "apps/atlas-sample/thumbnails/astryx--settings-dialog.webp",
+      "bytes": 7598,
+      "sha256": "5b4b57b05d5722a2da5a2df144f84415febd2bb96f063adb11f0063938341213",
+      "fit": "contain",
+      "requested_rect": [
+        0,
+        0,
+        1538,
+        579
+      ],
+      "cover_visual_review": "passed",
+      "processor_note": "整 iframe contain"
+    },
+    {
+      "id": "cult:onboarding",
+      "path": "apps/atlas-sample/thumbnails/cult--onboarding.webp",
+      "bytes": 6470,
+      "sha256": "2aa01ce67d85df6811a1f6d8760cc10cc05d9885e5a3ee42a9ff6ec7fe92d9e9",
+      "fit": "contain",
+      "requested_rect": [
+        0,
+        0,
+        1538,
+        579
+      ],
+      "cover_visual_review": "passed",
+      "processor_note": "整 iframe contain"
+    },
+    {
+      "id": "kibo:image-crop",
+      "path": "apps/atlas-sample/thumbnails/kibo--image-crop.webp",
+      "bytes": 5328,
+      "sha256": "50fd03042749bf32bb038245656e1e488e5840901b6f075e4fd15624e7331e99",
+      "fit": "contain",
+      "requested_rect": [
+        0,
+        0,
+        1538,
+        579
+      ],
+      "cover_visual_review": "passed",
+      "processor_note": "独立小卡但紧裁无把握，保留整 iframe contain"
+    },
+    {
+      "id": "promptkit:response-stream",
+      "path": "apps/atlas-sample/thumbnails/promptkit--response-stream.webp",
+      "bytes": 6366,
+      "sha256": "d5b6b0f2e476c23ec05fbd8418c40360c6af5ebcec71b52a38f63ef75417a886",
+      "fit": "contain",
+      "requested_rect": [
+        0,
+        0,
+        1538,
+        579
+      ],
+      "cover_visual_review": "passed",
+      "processor_note": "整 iframe contain"
+    },
+    {
+      "id": "assistant-elements:background-inbox",
+      "path": "apps/atlas-sample/thumbnails/assistant-elements--background-inbox.webp",
+      "bytes": 4862,
+      "sha256": "f7814b7b6d04bf5a7840717b86b06758df5e33fb3095b006965df7cb6b7aa395",
+      "fit": "contain",
+      "requested_rect": [
+        0,
+        0,
+        1538,
+        579
+      ],
+      "cover_visual_review": "passed",
+      "processor_note": "整 iframe contain"
+    },
+    {
+      "id": "aicanvas:runway-loader",
+      "path": "apps/atlas-sample/thumbnails/aicanvas--runway-loader.webp",
+      "bytes": 2894,
+      "sha256": "9d597921a1086cae72d0d3e66878a04751a0a229998253b619ffd05d36c5478f",
+      "fit": "contain",
+      "requested_rect": [
+        0,
+        0,
+        1538,
+        579
+      ],
+      "cover_visual_review": "passed",
+      "processor_note": "独立小卡但紧裁无把握，保留整 iframe contain"
+    },
+    {
+      "id": "astryx:table-filter",
+      "path": "apps/atlas-sample/thumbnails/astryx--table-filter.webp",
+      "bytes": 15472,
+      "sha256": "69d961ef9d583dfaf2a066bb1e66e4667474f7f11b96f9e78203ddc264a62a38",
+      "fit": "contain",
+      "requested_rect": [
+        0,
+        0,
+        1538,
+        579
+      ],
+      "cover_visual_review": "passed",
+      "processor_note": "整 iframe contain"
+    },
+    {
+      "id": "cult:prompt-library",
+      "path": "apps/atlas-sample/thumbnails/cult--prompt-library.webp",
+      "bytes": 6950,
+      "sha256": "705be0677e7dbd8ff8af0b6181a9ff61d1789081e5388830bdc534d9bac4a2d9",
+      "fit": "contain",
+      "requested_rect": [
+        0,
+        0,
+        1538,
+        579
+      ],
+      "cover_visual_review": "passed",
+      "processor_note": "整 iframe contain"
+    },
+    {
+      "id": "kibo:table",
+      "path": "apps/atlas-sample/thumbnails/kibo--table.webp",
+      "bytes": 13996,
+      "sha256": "75a801a5a0a9dc6f421b4e67091e4807f9f03b927d90ea4095ae06c95bff60dc",
+      "fit": "contain",
+      "requested_rect": [
+        0,
+        0,
+        1538,
+        579
+      ],
+      "cover_visual_review": "passed",
+      "processor_note": "整 iframe contain"
+    },
+    {
+      "id": "promptkit:source",
+      "path": "apps/atlas-sample/thumbnails/promptkit--source.webp",
+      "bytes": 6224,
+      "sha256": "992c458421e5fbeda02a56b0f898dbe1d9790078b37048190f0e9fbb94aa7bfb",
+      "fit": "contain",
+      "requested_rect": [
+        0,
+        0,
+        1538,
+        579
+      ],
+      "cover_visual_review": "passed",
+      "processor_note": "独立小卡但紧裁无把握，保留整 iframe contain"
+    },
+    {
+      "id": "smoothui:scrubber",
+      "path": "apps/atlas-sample/thumbnails/smoothui--scrubber.webp",
+      "bytes": 3070,
+      "sha256": "8d7a8b8fadb77c019d7ed87d9bd0743eb2116ece001802baf7ddd3a21afd5d94",
+      "fit": "contain",
+      "requested_rect": [
+        0,
+        0,
+        1538,
+        579
+      ],
+      "cover_visual_review": "passed",
+      "processor_note": "独立小卡但紧裁无把握，保留整 iframe contain"
+    },
+    {
+      "id": "assistant-elements:chart",
+      "path": "apps/atlas-sample/thumbnails/assistant-elements--chart.webp",
+      "bytes": 3032,
+      "sha256": "75dfdace89d6b579685945af8502be004057cd3da457cfd20acc644643c5ffb2",
+      "fit": "contain",
+      "requested_rect": [
+        0,
+        0,
+        1538,
+        579
+      ],
+      "cover_visual_review": "passed",
+      "processor_note": "独立小卡但紧裁无把握，保留整 iframe contain"
+    },
+    {
+      "id": "aicanvas:slide-deck",
+      "path": "apps/atlas-sample/thumbnails/aicanvas--slide-deck.webp",
+      "bytes": 7920,
+      "sha256": "0997d335fb63a3ac8a5530049f28916a56f4aae5c111e10ce7645d0fc13d3b4b",
+      "fit": "contain",
+      "requested_rect": [
+        624,
+        145,
+        290,
+        316
+      ],
+      "cover_visual_review": "passed",
+      "processor_note": "独立小卡紧裁主体（去外围空白，未切控件）"
+    },
+    {
+      "id": "astryx:table-inbox",
+      "path": "apps/atlas-sample/thumbnails/astryx--table-inbox.webp",
+      "bytes": 16732,
+      "sha256": "9ac7d21c35587ed4bc923ace385c4a41a8205ab9d7efc150dfaf6fd46a6d9a63",
+      "fit": "contain",
+      "requested_rect": [
+        0,
+        0,
+        1538,
+        579
+      ],
+      "cover_visual_review": "passed",
+      "processor_note": "CSP 阻断 2 张模板图；保留可见 fallback，收件箱主体完整；页面类整 iframe contain；不声称外链图完整"
+    },
+    {
+      "id": "kibo:tree",
+      "path": "apps/atlas-sample/thumbnails/kibo--tree.webp",
+      "bytes": 3814,
+      "sha256": "5f4459bff58ff8666ec94a8a6191759e3c338da9d0edec0e0a7ef151212014f7",
+      "fit": "contain",
+      "requested_rect": [
+        0,
+        0,
+        1538,
+        579
+      ],
+      "cover_visual_review": "passed",
+      "processor_note": "整 iframe contain"
+    },
+    {
+      "id": "cuicui:react-signature",
+      "path": "apps/atlas-sample/thumbnails/cuicui--react-signature.webp",
+      "bytes": 3490,
+      "sha256": "080b585d6c9111cf079757e5b17150e6a7df283eb307e7660179a14442b3b645",
+      "fit": "contain",
+      "requested_rect": [
+        0,
+        0,
+        1538,
+        579
+      ],
+      "cover_visual_review": "passed",
+      "processor_note": "补拍合成波浪笔迹；静态封面；interaction not_tested"
+    }
+  ],
+  "tests": {
+    "tool": "10/10 OK",
+    "build": "37/37 pass",
+    "export": "after commit"
+  },
+  "diff_allowlist": "仅 thumbnails/*.webp + records/*.json + batch-05-06-summary.json + partition-271.json",
+  "git": {
+    "branch": "thumbnails/real-preview-20261109-aheng",
+    "no_force": true,
+    "no_rebase": true,
+    "no_main": true
+  },
+  "timezone": "Asia/Taipei (UTC+8)",
+  "generated_at_local": "2026-11-09 08:34:03"
+}
