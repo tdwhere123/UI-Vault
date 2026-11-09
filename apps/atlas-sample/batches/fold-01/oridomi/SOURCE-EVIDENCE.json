@@ -1,0 +1,25 @@
+{
+  "repository": "https://github.com/dmotz/oriDomi",
+  "revision": "f90830504d6843dfdf5b72d873c01cd716538485",
+  "upstreamSource": {
+    "path": "oridomi.js",
+    "url": "https://github.com/dmotz/oriDomi/blob/f90830504d6843dfdf5b72d873c01cd716538485/oridomi.js",
+    "sha256": "e65e8e17803f95c5cd5873676d7bffae3646a94c22121dd27db58209a2edde09"
+  },
+  "license": {
+    "path": "LICENSE",
+    "url": "https://github.com/dmotz/oriDomi/blob/f90830504d6843dfdf5b72d873c01cd716538485/LICENSE",
+    "sha256": "8588b3379ce3245f3753bd31e463bd334b9b7301a3e796450ac723ca42093e5e"
+  },
+  "adaptations": [
+    "保留原 clone/mask/panel/shader、角度与透视公式、accordion/stairs/reveal 和原拖动算法，不用截图/手画几何替代。",
+    "所有原 setTimeout/defer 与原事件注册改为库作用域登记；代次取消防止旧回调继续；不改 window 全局调度器。",
+    "原 destroy 依赖异步 freeze/unfold/CSS transition，本适配改同步关闭触摸、取消自身任务/监听、恢复 clone 内容；避免隐藏/退出时永久等待动画。",
+    "原图片/字体/标志不载入；原创纯 HTML/CSS 纸面与颜色纹理透明替代。折页效果来自原引擎，非素材伪装。",
+    "hidden/touchcancel 销毁重建，pagehide 删除原注入style；reduced 使用 speed=0 并禁拖动，按钮仍实际调用原折叠方法。"
+  ],
+  "runtimeDependencies": [],
+  "binaryEmbedded": false,
+  "visualQA": "not-run",
+  "sourceOnlyRestoration": "oridomi:folded-dom-scenes"
+}
