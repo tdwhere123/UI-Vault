@@ -1,0 +1,85 @@
+{
+  "repository": "https://github.com/ui-layouts/uilayouts",
+  "revision": "88d827d7ec342917ca06f6894e5add65fabbe5d8",
+  "originalPath": "apps/ui-layout/registry/components/motion-number/number-flow-trading.tsx",
+  "license": "MIT",
+  "originalFilesSHA256": {
+    "Feather-MIT.txt": "308028e93fcf84972523cdf6e616f73168546b4953895f516d01287f16fe7bee",
+    "number-flow-trading.tsx": "f0399e9fc343b56c4a36e9e91627c0e58df64aa08e075654c135b4feb6d18e22",
+    "LICENSE": "25d698c61ceea4d42107ef85ef37d4449f1169ca24c7ee288db434688071e1e3"
+  },
+  "runtimeDependencies": [
+    {
+      "name": "@number-flow/react",
+      "version": "0.5.10",
+      "license": "MIT"
+    },
+    {
+      "name": "clsx",
+      "version": "2.1.1",
+      "license": "MIT"
+    },
+    {
+      "name": "esm-env",
+      "version": "1.2.2",
+      "license": "MIT"
+    },
+    {
+      "name": "framer-motion",
+      "version": "12.43.0",
+      "license": "MIT"
+    },
+    {
+      "name": "lucide-react",
+      "version": "0.468.0",
+      "license": "ISC"
+    },
+    {
+      "name": "motion",
+      "version": "12.23.24",
+      "license": "MIT"
+    },
+    {
+      "name": "motion-dom",
+      "version": "12.43.0",
+      "license": "MIT"
+    },
+    {
+      "name": "motion-utils",
+      "version": "12.39.0",
+      "license": "MIT"
+    },
+    {
+      "name": "number-flow",
+      "version": "0.5.8",
+      "license": "MIT"
+    },
+    {
+      "name": "react",
+      "version": "19.1.0",
+      "license": "MIT"
+    },
+    {
+      "name": "react-dom",
+      "version": "19.1.0",
+      "license": "MIT"
+    },
+    {
+      "name": "scheduler",
+      "version": "0.26.0",
+      "license": "MIT"
+    },
+    {
+      "name": "tailwind-merge",
+      "version": "3.3.1",
+      "license": "MIT"
+    },
+    {
+      "name": "tailwindcss",
+      "version": "3.4.17",
+      "license": "MIT"
+    }
+  ],
+  "adaptation": "Original UILayout NumberFlowTrading and PriceWithDiff retained: three fixed price/diff pairs, original Shuffle SVG, USD/percentage formatting, red/emerald pills, Motion arrow rotation and NumberFlow digit implementation. Local fixtures only: not live financial data, advice, accounts or transactions. Original import cn is resolved to clsx/tailwind-merge; original state initializer/onIndex reporting minimally adapted so hidden unmount can restore index. Host adds a dark canvas and fixture label, preserves original utility classes via Tailwind compilation. Animation ownership removes finish/cancel records without replacing library onfinish; a controlled EventTarget WAAPI probe covers 1000 completed/canceled objects and pending hide/exit cancellation, not native rendering. Repeated visible events keep the existing root. Hidden unmount cancels WAAPI, pauses owned RAF; visible remount restores index; reduced uses original library preference and MotionConfig. Isolated iframe listener/timeout/RAF/animation ownership is cleaned on pagehide/atlas:dispose/failure, including partial initialization. All source graphics are original text SVG; no images, fonts, network, clipboard or backend. Actual original component state and NumberFlow data/digit DOM execute under unsupported-animation fallback in JSDOM; no claim of native WAAPI or pixel acceptance. Native animated layout remains unverified. Source inline Shuffle icon has no separate attribution in the original file and is retained under upstream MIT; Lucide arrow includes ISC and Feather MIT attribution.",
+  "visualVerified": false
+}
