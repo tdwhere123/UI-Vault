@@ -2,7 +2,7 @@
 
 网站：<https://tdwhere123.github.io/UI-Vault/>
 
-当前共收录 **654 条**：其中 **522 条可打开预览（241 条原始素材＋281 条后续接入预览）**，另有 **132 条仅来源记录**，不计入主图鉴预览数。原始 241 件包括 215 件精选界面、20 件保留基础素材、6 套图标系列。正在向 1000 件优质素材扩充；图标按系列单列，字重、尺寸和单枚 glyph 不凑数。已有图标重叠暂留待统一整理。
+当前共收录 **680 条**：其中 **522 条可打开预览（241 条原始素材＋281 条后续接入预览）**，另有 **158 条仅来源记录**，不计入主图鉴预览数。原始 241 件包括 215 件精选界面、20 件保留基础素材、6 套图标系列。正在向 1000 件优质素材扩充；图标按系列单列，字重、尺寸和单枚 glyph 不凑数。已有图标重叠暂留待统一整理。
 
 ## 当前内容
 
@@ -338,3 +338,11 @@ Added **28 source-only entries** after fixed-source and applicable license revie
 The batch covers original document revision/streaming tools, rich email/report scenes, animated presentation and cell-layout editors, Agent rich results/workspaces, and six distinct new icon series, plus the selected original application scenes recorded in the catalog. Each icon family is one source record, not each glyph/size/weight. Concepts may overlap prior sources; differences and original placeholder/backend actions are disclosed, not marketed as entirely new functionality.
 
 Source licenses do not settle all runtime, font, media, trademark or service obligations. React Mosaic provides an original Apache declaration, with standard full terms kept separately in research rather than falsely called the original root file. Restricted Square UI, current css.gg and Unicons sources were excluded. No restricted source is republished. No new runtime, image, sandbox permission or frontend warning label was added. Covers remain with Grok, and existing icon consolidation remains deferred.
+
+## Bulk source round 524 · 522 previews / 680 collected
+
+Added **26 source-only families**, including **2 icon series**. Current totals are **680 collected: 522 previews and 158 source-only records**. No new source record claims a runnable preview, complete hosted archive or accepted pixels. Existing 470 mapped covers, 52 posterless live-card entries, 14 main icon entry points and all frontend behavior remain unchanged.
+
+The batch emphasizes distinct original application and media/space workflows rather than component color variants. Fixed source paths, canonical repositories, actual root licenses and meaningful differences are recorded per candidate. Transitive code, media, fonts, commercial/enterprise imports, copyleft obligations and external service dependencies remain explicit adoption work, not covered by a root MIT or AGPL label. Public source records with known enterprise imports are conditional references only; no restricted enterprise implementation is copied or run. All screenshots remain with Grok.
+
+The Vanta record is specifically the NET spatial line field, not approval of all effects; the FOG shader's separate source attribution chain is unresolved and excluded. Audio examples are source code only, not redistribution of their recordings or microphone access. Agent/chat/diagram/document services are not connected, executed, signed, submitted or represented as functional local previews.
