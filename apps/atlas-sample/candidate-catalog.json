@@ -11860,34 +11860,30 @@
   },
   {
     "id": "cossui:event-type-ordering",
-    "title": "Coss UI · 原版目录排序、撤销与显隐",
     "source": "Coss UI",
-    "revision": "fe6ffa81f434a4afe1c01564c13bb237564c42e2",
-    "sourceFile": "apps/examples/calcom/app/(dashboard)/event-types/event-types-list.tsx",
     "repository": "https://github.com/cosscom/ui",
-    "license": "MIT root code; dependency and brand/media scopes not fully audited",
-    "description": "原事件类型条目与Badge、dnd-kit排序/Undo、显隐状态；不是完整预约或创建产品。",
-    "buildStatus": "source-only; exact source/root license read; not installed/built/run",
-    "gaps": [
-      "原Preview/Copy/Edit菜单与新增类型submit未接实际功能，不能宣称完整增删/复制/预约。",
-      "workspace Base UI/React/Dnd-kit/Tailwind/Lucide实际包与完整LICENSE/NOTICE待闭合。",
-      "Next路由、Geist字体、品牌/profile素材需本地限定；原MIT不授予Cal.com商标权。",
-      "拖动取消、连续Undo/显隐、loading/toast/hidden/退出清理未运行验证。"
-    ],
+    "revision": "fe6ffa81f434a4afe1c01564c13bb237564c42e2",
     "upstream": "https://github.com/cosscom/ui/blob/fe6ffa81f434a4afe1c01564c13bb237564c42e2/apps/examples/calcom/app/(dashboard)/event-types/event-types-list.tsx",
-    "kind": "目录排序与撤销示例（未适配）",
-    "category": "导航与组织",
     "licenseEvidence": {
       "url": "https://github.com/cosscom/ui/blob/fe6ffa81f434a4afe1c01564c13bb237564c42e2/LICENSE",
       "sha256": "de22ec57b0822d87d5d67d5c7d12b4c0060cd6404a78f2555fbf15497540be23",
       "scope": "Root original code only; runtime dependency/media licenses not closed"
     },
-    "batch": "source-review-next-515",
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0
+    "title": "事件目录排序与撤销",
+    "description": "原五行事件目录、键盘排序、撤销与显隐切换；本地示例不访问预约路由，原无实现操作已禁用。",
+    "behavior": "原五行事件目录、键盘排序、撤销与显隐切换；本地示例不访问预约路由，原无实现操作已禁用。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "导航与组织",
+    "license": "MIT AND ISC AND Apache-2.0",
+    "batch": "coss-events-01",
+    "preview": "batches/coss-events-01/events/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Original Coss Calcom EventTypesList complete five fixture rows, EventTypeActions, ListItem, SortableList, mock data, original UI components and root theme retained. Original DndKit Mouse/Touch/Keyboard sensors, sortable collision/arrayMove, drag overlay/release double-RAF, reorder toast with Undo, visibility switches retained; original provider Debug default disables artificial delay. Entire original list component byte-identical. Host mounts original ToastProvider/DebugProvider. Original Preview/Copy/Edit/Duplicate/Embed/Share/Delete menu actions have no handlers; explicitly disabled rather than inventing execution, and original Next Link booking routes rendered as aria-disabled anchors without href. Original file/component geometry and full Tailwind classes retained; no Coss or Cal.com business backend. Source lists fake paid consultation and sample names, not actual availability or prices; persistent Chinese disclaimer says no booking/payment. No profile image imported or fetched, no external font: system sans/mono. Official workspace declares BaseUI1.9/Motion14; Motion is not emitted by this family. Actual emitted versions below, shared cached dependencies and new DndKit10 sortable use original supported APIs. Hide unmounts list and resumes original defaults, deliberately resets order/hidden changes; error/exit unmount and owned scheduler/observer/listener cleanup, stale callbacks inert. Original native pointer/touch geometry, responsive CSS and pixels not verified. Tests run production unmodified IIFE through actual565compose; synthetic800x100 row geometry and PointerEvent test shim exercise real KeyboardSensor/arrayMove, reordered titles, Undo, Escape cancellation, switch state, disabled noops, hidden/reset/old nodes, early module failure and late error. All owned resource ledgers zero. Not a replacement scheduling app or entire Cal.com clone."
+    ]
   },
   {
     "id": "react-arborist:budget-hierarchy",
@@ -15479,42 +15475,34 @@
   },
   {
     "id": "tinysynth:sound-design-console",
-    "title": "复古合成器键盘与音色编辑台",
     "source": "WebAudio TinySynth",
     "repository": "https://github.com/g200kg/webaudio-tinysynth",
     "revision": "3d75aee4b3f43cbd932265e7d60201fd5b770397",
-    "sourcePath": "soundedit.html",
     "upstream": "https://github.com/g200kg/webaudio-tinysynth/blob/3d75aee4b3f43cbd932265e7d60201fd5b770397/soundedit.html",
-    "license": "Apache-2.0 (complete actual root text; runtime/media not closed)",
-    "behavior": "原键盘、音色选择、八度、通道、质量与振荡/包络参数编辑，128音色列表，按下试音与释放note-off；声音设计面板非静态图片。",
-    "difference": "区别已收React Piano：完整音色参数设计与合成器仪器工作流，不是另一个键盘配色。",
-    "styleTags": [
-      "复古仪器/声音创作"
-    ],
-    "gaps": [
-      "初始化InitMidi自动requestMIDIAccess，未来必须改为禁用或明确授权手动入口，研究未运行/未申请权限。外部webaudio-controls/custom-elements/Google字体、MIDI文件、控件图皮/声音及依赖/ApacheNOTICE未全审；音频用户手势、停止allnotes/AudioContext和退出清理待闭合。",
-      "仅只读源码筛选；未安装/构建/运行、交互生命周期或浏览器视觉验收。"
-    ],
-    "description": "原键盘、音色选择、八度、通道、质量与振荡/包络参数编辑，128音色列表，按下试音与释放note-off；声音设计面板非静态图片。 区别已收React Piano：完整音色参数设计与合成器仪器工作流，不是另一个键盘配色。",
-    "category": "展示与媒体",
+    "sourcePath": "soundedit.html",
     "licenseEvidence": {
       "url": "https://github.com/g200kg/webaudio-tinysynth/blob/3d75aee4b3f43cbd932265e7d60201fd5b770397/LICENSE",
       "sha256": "c6596eb7be8581c18be736c846fb9173b69eccf6ef94c5135893ec56bd92ba08",
       "scope": "Complete actual root license; transitive code and media permissions not closed"
     },
-    "sourceEvidence": {
-      "localFile": "evidence/g200kg--webaudio-tinysynth--soundedit.html",
-      "sha256": "7ed5bd0e9d3b4e6711ab47bc69fd3f7d2cf774e5ee8c9b231c7286721a457e9b"
-    },
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-style-526",
-    "sourceScope": "Fixed original complete UI/demo source and full root license; not a runnable adaptation or full asset archive",
-    "kind": "原版审美场景（仅来源）",
-    "buildStatus": "fixed source and full root license read; not built/run/visually accepted"
+    "difference": "区别已收React Piano：完整音色参数设计与合成器仪器工作流，不是另一个键盘配色。",
+    "title": "合成音色与振荡器控制台",
+    "description": "原128音色、四振荡器编辑及键盘试音；仅本地声音设计，不加载预置MIDI或申请硬件权限。",
+    "behavior": "原128音色、四振荡器编辑及键盘试音；仅本地声音设计，不加载预置MIDI或申请硬件权限。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "展示与媒体",
+    "license": "Apache-2.0 (engine and WebAudio Controls)",
+    "batch": "tinysynth-01",
+    "preview": "batches/tinysynth-01/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "actual564 compose原音色/参数/声部调度及退出测试通过；真实声音与视觉未验",
+    "gaps": [
+      "仅原音色设计控制台；未预载ws.mid、不导入MIDI文件或接外部硬件，不称完整MIDI播放器。",
+      "Google字体使用原系统回退；控件原矢量皮肤改百分号序列化。",
+      "音频/Canvas边界桩验证状态与调度，不代表真实声音质量/像素/触控已验。"
+    ]
   },
   {
     "id": "maki:cartographic-poi-family",
@@ -18204,40 +18192,39 @@
   },
   {
     "id": "tonejs:envelope-visual-scene",
-    "title": "音色包络与有机图形联动",
     "source": "Tone.js",
     "repository": "https://github.com/Tonejs/Tone.js",
     "revision": "105c04cc00289caf49684ac5c7621bce8a042c4c",
-    "sourcePath": "examples/funkyShape.html",
     "upstream": "https://github.com/Tonejs/Tone.js/blob/105c04cc00289caf49684ac5c7621bce8a042c4c/examples/funkyShape.html",
-    "website": "https://tonejs.github.io/examples/funkyShape",
-    "license": "MIT (root text verified; runtime/assets not closed)",
-    "behavior": "官方完整示例将鼓点、低音与蜂鸣包络映射为波纹、漂移圆与方形，展示音形同步。",
-    "difference": "固定完整示例场景；同源参数/预设不拆计数，非已运行验收。",
-    "description": "官方完整示例将鼓点、低音与蜂鸣包络映射为波纹、漂移圆与方形，展示音形同步。",
-    "gaps": [
-      "固定完整HTML含p5绘制与Tone音序代码；依赖tone-ui.js和p5 1.0.0 CDN，Tone组件加载/构建链及各自许可需本地闭合。",
-      "只允许主动播放，默认静音；不自动启动AudioContext、不申请麦克风，音量上限与一键停止必须保留。",
-      "音符/波形是演示合成，不是Agent实时听觉或用户音频分析；动态几何减动、离屏暂停、Tone Transport与p5销毁待验。",
-      "固定源码及完整根许可已存证；未构建、未运行、未截图，completedPreviewCount=0。"
-    ],
-    "category": "展示与媒体",
+    "sourcePath": "examples/funkyShape.html",
     "licenseEvidence": {
       "url": "https://github.com/Tonejs/Tone.js/blob/105c04cc00289caf49684ac5c7621bce8a042c4c/LICENSE.md",
       "sha256": "c2f9e2f9fd21639e8f8976e56b7df01d6efcc3b003dfd43ca59d4b10616efce7",
       "scope": "Complete original root license retained; runtime/media separate"
     },
-    "sourceSha256": "a7cae018d8b53ee7b86825ca268a7316da98ff33234bc21a01e68a7f35ba56cc",
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-style-531",
-    "sourceScope": "Selected fixed original source and root license; full read-only repo clone retained privately",
-    "kind": "原版风格组件族（仅来源）",
-    "buildStatus": "Fixed source inspected; not built or visually accepted",
-    "additionalSourceEvidence": []
+    "difference": "固定完整示例场景；同源参数/预设不拆计数，非已运行验收。",
+    "website": "https://tonejs.github.io/examples/funkyShape",
+    "title": "音频包络与几何律动",
+    "description": "原本地合成鼓贝斯、音频节点参数与包络驱动图形；首次静音，点击播放启动，无采样音频或网络。",
+    "behavior": "原本地合成鼓贝斯、音频节点参数与包络驱动图形；首次静音，点击播放启动，无采样音频或网络。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "展示与媒体",
+    "license": "MIT AND LGPL-2.1 AND Apache-2.0 AND BSD-3-Clause AND 0BSD; p5 embedded SGI/Zlib/BSD notices retained",
+    "batch": "tone-envelope-01",
+    "preview": "batches/tone-envelope-01/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "actual565 compose; original synthesis/PCM and Canvas command tests; native sound/pixels unverified",
+    "gaps": [
+      "Native audio device and browser raster/pointer unverified. Legacy p5 Grunt full-source build not executed; published source restoration and relink verified."
+    ],
+    "runtime": {
+      "scripts": [
+        "runtime-p5.js",
+        "runtime.js"
+      ]
+    }
   },
   {
     "id": "pizzicato:audio-effect-playground",
