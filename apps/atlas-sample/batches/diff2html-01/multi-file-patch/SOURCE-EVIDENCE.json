@@ -1,0 +1,271 @@
+{
+  "repository": "https://github.com/rtfpessoa/diff2html",
+  "revision": "72331ff5d13a8d4d1f11256a7b554dd0d69d7014",
+  "sourceVersionField": "3.0.0-beta.1",
+  "npmDiff2HtmlUsed": false,
+  "sources": [
+    {
+      "path": "LICENSE.md",
+      "sha256": "e4fe619d8e4e898dd0d88a0b8b6bb8aa09a16f892a0d1d533be9b886aeae21e9"
+    },
+    {
+      "path": "package.json",
+      "sha256": "5cd810f803c9a0849ed8de06ffa28073668c02a18fe66542cd6d8dba42f2c230"
+    },
+    {
+      "path": "scripts/hulk.ts",
+      "sha256": "a0c63bb8787508e1b8158679d7d32bc4a098e2b939f45c354b7571b23ca1cbee"
+    },
+    {
+      "path": "src/diff-parser.ts",
+      "sha256": "964eb6ae6a1872a9badbe4b94cc1db087b8d86cecfa25340f0ce7c9ec4c9a0dc"
+    },
+    {
+      "path": "src/diff2html.ts",
+      "sha256": "98fd04e248483c0c1d783fe579934799d2eeb0455f60dcff075a0030d5209868"
+    },
+    {
+      "path": "src/file-list-renderer.ts",
+      "sha256": "6163ebfec4519d790f2a188f609a584f51e9926bf893fddb4e4b9819b0bbad51"
+    },
+    {
+      "path": "src/hoganjs-utils.ts",
+      "sha256": "9dae3ca6173fd2751835d4f429a6aa41624ae603b9cc7e230863cc1e8afec6f0"
+    },
+    {
+      "path": "src/line-by-line-renderer.ts",
+      "sha256": "37679050890251d2fa983966aae5eea5f87e6189f75b670f62e21b769c0e092e"
+    },
+    {
+      "path": "src/rematch.ts",
+      "sha256": "eae063493c39f980aadbee68bc4f469ac112edaf83d43742fd5efcd9d9743788"
+    },
+    {
+      "path": "src/render-utils.ts",
+      "sha256": "d09d1d9332599c68e49a2dacfeb660cb6a334fc9027eaeb0cb789ce102174962"
+    },
+    {
+      "path": "src/side-by-side-renderer.ts",
+      "sha256": "1018eefda103d19a58651aa3a7ac63192d86ec0b22dd3ddf6d791ef846e18778"
+    },
+    {
+      "path": "src/templates/file-summary-line.mustache",
+      "sha256": "13aa2cbb20c858e2d8a2e35aed361dc39f3d68fb4b5a28c9455351d4dafec1a1"
+    },
+    {
+      "path": "src/templates/file-summary-wrapper.mustache",
+      "sha256": "bad297fd5bd83c69416fc9fa9d17ababbae4a42cd9375f9b6ba01e13b864bc1a"
+    },
+    {
+      "path": "src/templates/generic-block-header.mustache",
+      "sha256": "117e5b8a7200a5d3086d0b5b8744f6ca97ad8f503368395937b7db2c755dd66e"
+    },
+    {
+      "path": "src/templates/generic-empty-diff.mustache",
+      "sha256": "148387058466aa18ff3154c54844732919dea06c9f8b9daf583c6b927f633570"
+    },
+    {
+      "path": "src/templates/generic-file-path.mustache",
+      "sha256": "011465040aaee15834e889c794c55a86512e484404ef705984840c4e09eabbd1"
+    },
+    {
+      "path": "src/templates/generic-line.mustache",
+      "sha256": "3a1475178b4038459958b3ab0d815da4e1de0bd91132e74ec07a32ab64823ae3"
+    },
+    {
+      "path": "src/templates/generic-wrapper.mustache",
+      "sha256": "c879d80eb696b2d8a2892f5a6aff29db7319634c513cfc2d1ae536e35ee4543d"
+    },
+    {
+      "path": "src/templates/icon-file-added.mustache",
+      "sha256": "0561f3c63219bb03c4137253d8d7a5d2f65338e5550555d2d053ba980e9bc870"
+    },
+    {
+      "path": "src/templates/icon-file-changed.mustache",
+      "sha256": "ed1ce4f3220d23f8b8b9643ba46020b3de6b52b781dc55feb4831afc654be69a"
+    },
+    {
+      "path": "src/templates/icon-file-deleted.mustache",
+      "sha256": "b0887f1b1a309cb988284996717e08faef8f7abeef540fe8b98d97cc783257ef"
+    },
+    {
+      "path": "src/templates/icon-file-renamed.mustache",
+      "sha256": "a69073c50fd2cc0fcd7404516799ab4f374eaf49e629ae63db025f92be3c7139"
+    },
+    {
+      "path": "src/templates/icon-file.mustache",
+      "sha256": "ce63b6cec3228a56f94fb78aa1b78bca4ba72ae6741c49b2cd28c442334fa9e6"
+    },
+    {
+      "path": "src/templates/line-by-line-file-diff.mustache",
+      "sha256": "abbda9150774677c2437d689ed39cbf47f0aafcb7ee6813399c3fa0d71f08c50"
+    },
+    {
+      "path": "src/templates/line-by-line-numbers.mustache",
+      "sha256": "7f2dfab5676393168b31ce9125891441bc2cf922a5bc6e4ab4d031dc2bfc944c"
+    },
+    {
+      "path": "src/templates/side-by-side-file-diff.mustache",
+      "sha256": "f3d3f82dbd9f2124e912ba3902efdd81fd5b200c975c13f50a46e19d3b70a538"
+    },
+    {
+      "path": "src/templates/tag-file-added.mustache",
+      "sha256": "8cfa8f35fb618455572284b934bac7c8c26fd8786b3801e84fe023287489c4ab"
+    },
+    {
+      "path": "src/templates/tag-file-changed.mustache",
+      "sha256": "d5d36b2fa9184926a219547dcf54ecc9b1a1595408043900193aef72084632ab"
+    },
+    {
+      "path": "src/templates/tag-file-deleted.mustache",
+      "sha256": "f538517d5a595c9065c04c51ffb3af90a9d160ddd37b4c65b3bce4d025aa3149"
+    },
+    {
+      "path": "src/templates/tag-file-renamed.mustache",
+      "sha256": "128eaaa6d3908f732bb1e9c28148c6df9dfae4c24093287348d2682101940274"
+    },
+    {
+      "path": "src/types.ts",
+      "sha256": "a5292509e45a9cf85dddcfde8f6d5e4bc88c00fe4620fbb3c3b7cf25ecaf42e2"
+    },
+    {
+      "path": "src/ui/css/diff2html.css",
+      "sha256": "3e7c76d485f1051e2d15f1a2c8d5f937796d76a5513e5b3ac2a0bece9bd4b839"
+    },
+    {
+      "path": "src/ui/js/diff2html-ui-base.ts",
+      "sha256": "5ad24b25e4d78bf41c369d7a0d4ed774b790839f87a76ba3bdbe10fd2f669d9d"
+    },
+    {
+      "path": "src/ui/js/diff2html-ui-slim.ts",
+      "sha256": "79fac018bb7d98683829999dfaf36c5991d201f0ed9e7f9ae4d19520ad766531"
+    },
+    {
+      "path": "src/ui/js/diff2html-ui.ts",
+      "sha256": "7bf610a3917a0554e57da0abec08940607196976ccbfb33d902457171291c4fa"
+    },
+    {
+      "path": "src/ui/js/highlight.js-helpers.ts",
+      "sha256": "597316c0c902f52c8552ae2992fed8e008fd5bbbc483370e848b98259d0d4fd0"
+    },
+    {
+      "path": "src/ui/js/highlight.js-slim.ts",
+      "sha256": "274406efdc2eadec940290dbdfd851dc50ce0eaae18e2b7462ecb098393c1c67"
+    },
+    {
+      "path": "src/utils.ts",
+      "sha256": "e2e09b267c32a097dfcdde4565cb7d4590cc5730502c0f5082e3bbec0d72ab7e"
+    },
+    {
+      "path": "website/main.css",
+      "sha256": "bd5f7773ca928672f2dbf81b28a70f3f39a673ed08f361dda0dcad8a419dde07"
+    },
+    {
+      "path": "website/templates/pages/demo/content.handlebars",
+      "sha256": "fbcd8a8350d1a310ddba2d4f1264614b179802f998a4eb4d21ea84ce9700bbaa"
+    },
+    {
+      "path": "website/templates/pages/demo/demo.css",
+      "sha256": "985b7fd56f25fc277ac5434167982f7f6869415c926876f943e18b3dff22f44f"
+    },
+    {
+      "path": "website/templates/pages/demo/demo.ts",
+      "sha256": "46efad13e5b3b45255477cc40383e278df59c1e78ce924e22fa3e1747dc730ba"
+    },
+    {
+      "path": "website/templates/pages/demo/github-highlights.css",
+      "sha256": "61a4bf372cd6d0a0c9d06293218623734068cc43e8ed933cefeacbaffe39778e"
+    }
+  ],
+  "runtimeDependencies": [
+    {
+      "name": "@profoundlogic/hogan",
+      "version": "3.0.4",
+      "license": "Apache-2.0",
+      "licenseFiles": [
+        {
+          "path": "node_modules/@profoundlogic/hogan/LICENSE",
+          "sha256": "0cec06e0e55fbc3dc5cee4fca9b607f66cb8f4e4dbcf3b3c013594dd156732e9"
+        }
+      ]
+    },
+    {
+      "name": "bulma",
+      "version": "1.0.4",
+      "license": "MIT",
+      "licenseFiles": [
+        {
+          "path": "node_modules/bulma/LICENSE",
+          "sha256": "fbe7d8ec18b72eded15d79ca73da5eef9e8e258f5f1aff83e4e993e69752279c"
+        }
+      ]
+    },
+    {
+      "name": "diff",
+      "version": "8.0.3",
+      "license": "BSD-3-Clause",
+      "licenseFiles": [
+        {
+          "path": "node_modules/diff/LICENSE",
+          "sha256": "eda81a415869e67809f6a9f3fd6056062cb83a462118e07eec5e92b2e0c40ce9"
+        }
+      ]
+    },
+    {
+      "name": "highlight.js",
+      "version": "11.11.1",
+      "license": "BSD-3-Clause",
+      "licenseFiles": [
+        {
+          "path": "node_modules/highlight.js/LICENSE",
+          "sha256": "6c081431591d9df696c82dc598fe1423765b8a299b200ed00b281afd0f64c490"
+        }
+      ]
+    }
+  ],
+  "octicons": {
+    "revision": "62c672732695b6429678bcd321520c41af109475",
+    "svgLicense": "MIT",
+    "licenseSHA256": "1cacc79d63b38724210accc569e7a07c8644a799477c5591025cfa9868d557e4",
+    "pathComparison": {
+      "file-added": {
+        "reference": "diff-added",
+        "normalizedEqual": true,
+        "original": "M13 1H1C0.45 1 0 1.45 0 2v12c0 0.55 0.45 1 1 1h12c0.55 0 1-0.45 1-1V2c0-0.55-0.45-1-1-1z m0 13H1V2h12v12zM6 9H3V7h3V4h2v3h3v2H8v3H6V9z",
+        "referencePath": "M13 1H1c-.55 0-1 .45-1 1v12c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V2c0-.55-.45-1-1-1zm0 13H1V2h12v12zM6 9H3V7h3V4h2v3h3v2H8v3H6V9z"
+      },
+      "file-changed": {
+        "reference": "diff-modified",
+        "normalizedEqual": true,
+        "original": "M13 1H1C0.45 1 0 1.45 0 2v12c0 0.55 0.45 1 1 1h12c0.55 0 1-0.45 1-1V2c0-0.55-0.45-1-1-1z m0 13H1V2h12v12zM4 8c0-1.66 1.34-3 3-3s3 1.34 3 3-1.34 3-3 3-3-1.34-3-3z",
+        "referencePath": "M13 1H1c-.55 0-1 .45-1 1v12c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V2c0-.55-.45-1-1-1zm0 13H1V2h12v12zM4 8c0-1.66 1.34-3 3-3s3 1.34 3 3-1.34 3-3 3-3-1.34-3-3z"
+      },
+      "file-deleted": {
+        "reference": "diff-removed",
+        "normalizedEqual": true,
+        "original": "M13 1H1C0.45 1 0 1.45 0 2v12c0 0.55 0.45 1 1 1h12c0.55 0 1-0.45 1-1V2c0-0.55-0.45-1-1-1z m0 13H1V2h12v12zM11 9H3V7h8v2z",
+        "referencePath": "M13 1H1c-.55 0-1 .45-1 1v12c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V2c0-.55-.45-1-1-1zm0 13H1V2h12v12zm-2-5H3V7h8v2z"
+      },
+      "file-renamed": {
+        "reference": "diff-renamed",
+        "normalizedEqual": true,
+        "original": "M6 9H3V7h3V4l5 4-5 4V9z m8-7v12c0 0.55-0.45 1-1 1H1c-0.55 0-1-0.45-1-1V2c0-0.55 0.45-1 1-1h12c0.55 0 1 0.45 1 1z m-1 0H1v12h12V2z",
+        "referencePath": "M6 9H3V7h3V4l5 4-5 4V9zm8-7v12c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h12c.55 0 1 .45 1 1zm-1 0H1v12h12V2z"
+      },
+      "file": {
+        "reference": "file",
+        "normalizedEqual": true,
+        "original": "M6 5H2v-1h4v1zM2 8h7v-1H2v1z m0 2h7v-1H2v1z m0 2h7v-1H2v1z m10-7.5v9.5c0 0.55-0.45 1-1 1H1c-0.55 0-1-0.45-1-1V2c0-0.55 0.45-1 1-1h7.5l3.5 3.5z m-1 0.5L8 2H1v12h10V5z",
+        "referencePath": "M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"
+      }
+    },
+    "verification": "All five original paths equal official old Octicon paths after svgpath 2.6.0 abs/unshort/round(6) normalization; original bytes retained. svgpath is verification-only, not runtime."
+  },
+  "adaptations": [
+    "Original demo options markup retained, network URL/load/help removed; local authored multi-file patch instead.",
+    "Original UI base class adds listener ledger/destroy; rendering/highlighting/diff algorithms unchanged.",
+    "Original Hogan wrapper rejects runtime custom/raw templates; exact 19 templates compiled at build time, browser uses runtime-only Template with no compiler.",
+    "Bulma 1.0.4 official stylesheet supplies demo layout; original demo.css/github-highlights.css and renderer CSS retained; original host heading added."
+  ],
+  "publicSourceArchive": false
+}
