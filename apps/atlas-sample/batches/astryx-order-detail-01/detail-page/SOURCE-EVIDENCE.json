@@ -1,0 +1,167 @@
+{
+  "repository": "https://github.com/meta/astryx",
+  "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+  "originalEntry": "packages/cli/assets/templates/pages/detail-page/page.tsx",
+  "originalSHA256": "4e735d813c0b0045d3e5afad502e016a10c4cd39e146e4ec062517fc3eec5d03",
+  "sourceWorkspaceVersion": "0.7.12",
+  "dedup": {
+    "priorWorkItemSHA256": "7f9072de4f69329ccf249b0c62e754b82d611ca388a30c4807c2746a361ad015",
+    "currentOrderDetailSHA256": "4e735d813c0b0045d3e5afad502e016a10c4cd39e146e4ec062517fc3eec5d03",
+    "distinction": "Original order-centric complete page with line-item quantities/prices, computed subtotal/discount/tax/invoice, fulfillment and activity data plus customer/fraud side notes. Existing work-item-detail is task/project work-item information, not invoice/order composition. Shared panels/tabs/primitives not counted separately. This is one full original page, no new fundamental component category; no-op business buttons not functional operations."
+  },
+  "officialTransformPath": "packages/cli/foundation/discovery/template-adapter.mjs",
+  "officialPolicyPath": "packages/cli/assets/docs/tree/template-images-media.doc.mjs",
+  "transformVerification": {
+    "pass": true,
+    "officialURLReplacements": 5,
+    "allOtherSourceBytesRetained": true,
+    "originalHelperSHA256": "e9ba8c15cab8bd451b729adf4f2ce7a1e7026d126b2a3c1b51977e0193ca418c"
+  },
+  "officialTransform": [
+    {
+      "slug": "detail-page",
+      "replacements": 5,
+      "algorithm": "Exact original pure transform/helper slices, unrelated CLI discovery imports excluded; original source saved separately"
+    }
+  ],
+  "officialTransformSourceSHA256": "e9ba8c15cab8bd451b729adf4f2ce7a1e7026d126b2a3c1b51977e0193ca418c",
+  "adaptedPageSHA256": "f115cfb5f8f080d66d2f95d5187df8b4ba3d20fdfed6e00ed63ad5d31a6d25ed",
+  "dependencies": [
+    {
+      "name": "@astryxdesign/core",
+      "version": "0.7.11",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-astryx-recovery/preview/node_modules/@astryxdesign/core",
+      "licenseFilesSHA256": {
+        "LICENSE": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473"
+      },
+      "supplement": "Actual core0.7.11 package declaresMIT but omitsfullLICENSE. Same-project fixed upstream fullMIT reused from existing reviewed AstryX batch; template repository0.7.12 vs installedruntime0.7.11 compatibility expressly disclosed."
+    },
+    {
+      "name": "@astryxdesign/theme-neutral",
+      "version": "0.7.11",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-astryx-recovery/preview/node_modules/@astryxdesign/theme-neutral",
+      "licenseFilesSHA256": {
+        "LICENSE": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473"
+      },
+      "supplement": null
+    },
+    {
+      "name": "@formatjs/fast-memoize",
+      "version": "3.1.7",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-astryx-recovery/preview/node_modules/@formatjs/fast-memoize",
+      "licenseFilesSHA256": {
+        "LICENSE.md": "b1cc980e28e9e48f377db191578a9361494ca7117185b69dd66cabaf5b460fb7"
+      },
+      "supplement": null
+    },
+    {
+      "name": "@formatjs/icu-messageformat-parser",
+      "version": "3.5.18",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-astryx-recovery/preview/node_modules/@formatjs/icu-messageformat-parser",
+      "licenseFilesSHA256": {
+        "LICENSE.md": "b1cc980e28e9e48f377db191578a9361494ca7117185b69dd66cabaf5b460fb7"
+      },
+      "supplement": null
+    },
+    {
+      "name": "@formatjs/icu-skeleton-parser",
+      "version": "2.1.11",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-astryx-recovery/preview/node_modules/@formatjs/icu-skeleton-parser",
+      "licenseFilesSHA256": {
+        "LICENSE.md": "b1cc980e28e9e48f377db191578a9361494ca7117185b69dd66cabaf5b460fb7"
+      },
+      "supplement": null
+    },
+    {
+      "name": "@heroicons/react",
+      "version": "2.2.0",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-astryx-recovery/preview/node_modules/@heroicons/react",
+      "licenseFilesSHA256": {
+        "LICENSE": "60e0b68c0f35c078eef3a5d29419d0b03ff84ec1df9c3f9d6e39a519a5ae7985"
+      },
+      "supplement": null
+    },
+    {
+      "name": "@stylexjs/stylex",
+      "version": "0.19.0",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-astryx-recovery/preview/node_modules/@stylexjs/stylex",
+      "licenseFilesSHA256": {
+        "stylex-LICENSE": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+      },
+      "supplement": "Actual0.19.0 package declaresMIT but omitsfullLICENSE. Previously reviewed official StyleX rootMIT supplement reused from existing AstryX license cache, not claimed file shipped inside npm."
+    },
+    {
+      "name": "intl-messageformat",
+      "version": "11.2.15",
+      "license": "BSD-3-Clause",
+      "scope": "emitted-runtime",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-astryx-recovery/preview/node_modules/intl-messageformat",
+      "licenseFilesSHA256": {
+        "LICENSE.md": "cc4143615b27c66eafbe913f132a9e41ac14c1e2ec6b2df24dafeaa97f028850"
+      },
+      "supplement": null
+    },
+    {
+      "name": "lucide-react",
+      "version": "1.18.0",
+      "license": "ISC",
+      "scope": "emitted-runtime",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-astryx-recovery/preview/node_modules/lucide-react",
+      "licenseFilesSHA256": {
+        "LICENSE": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57"
+      },
+      "supplement": null
+    },
+    {
+      "name": "react",
+      "version": "19.3.1",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-astryx-recovery/preview/node_modules/react",
+      "licenseFilesSHA256": {
+        "LICENSE": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+      },
+      "supplement": null
+    },
+    {
+      "name": "react-dom",
+      "version": "19.3.1",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-astryx-recovery/preview/node_modules/react-dom",
+      "licenseFilesSHA256": {
+        "LICENSE": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+      },
+      "supplement": null
+    },
+    {
+      "name": "scheduler",
+      "version": "0.28.0",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-astryx-recovery/preview/node_modules/scheduler",
+      "licenseFilesSHA256": {
+        "LICENSE": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+      },
+      "supplement": null
+    }
+  ],
+  "adaptation": "Complete original fixed Meta AstryX order-detail page, not a product gallery or live order system. Original items/invoice/activity and customer/fraud notes retained; five auxiliary thumbnails replaced by exact official CLI neutral PLACEHOLDER_IMAGE. All other original page bytes retained. Original desktop side-panel hide/show, narrow full-screen details dialog, collapsible Notes/Customer/Fraud and tab selected-state are real. Tabs only update selection: body remains all three sections. Original Edit/Restock/Fulfill/CreateLabel/Refund/SendInvoice/Filters buttons have no business handlers; no action, payment, risk assessment or fulfillment occurs. Data/users/payment status are fixed fictional original fixtures; frontend explicitly says so. Same original core and shared compatible0.7.11 runtime for fixedsource0.7.12, Theme/LayerProvider/StyleX and bounded host. Hidden unmount/reset, exit/error resource cleanup. Full emitted license texts. Actual compose/loader and synthetic original UI state tested; native layout/dialog/pixel not validated.",
+  "visualVerified": false,
+  "sharedBuild": "Vite/StyleX sameinstalled dependencies, independent per-page IIFE; no all-template runtime",
+  "runtimeOutlinePatch": null
+}
