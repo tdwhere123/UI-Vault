@@ -1,0 +1,60 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Poline Picker</title><link rel="stylesheet" href="runtime.css"></head><body>
+    <div class="container">
+      <h1>Poline Picker</h1><p class="instructions">Original interactive example · OKLch/Lch use the original HSL-based approximation, not colorimetric conversion.</p>
+      <p class="instructions">
+        Experience the magic of "<strong>poline</strong>" for yourself, dear
+        color explorer. Drag existing anchor points to adjust colors.
+        <strong>Drag the outer ring</strong> of an anchor point to adjust its
+        saturation. Press <span class="key">P</span> to add a new point at
+        cursor position, and press <span class="key">⌫</span> to remove the last
+        selected anchor point. Try using the <span class="key">←</span> and
+        <span class="key">→</span> keys to change the hue of all colors. Hold
+        <span class="key">Shift</span> while adjusting saturation for finer
+        control.
+      </p>
+
+      <div class="controls">
+        <label>
+          <span class="t">Steps</span>
+          <i><input type="range" min="1" max="15" value="5" id="steps" /></i>
+        </label>
+        <label>
+          <span class="t">Invert Lightness</span>
+          <i><input type="checkbox" id="invertedLightness" /></i>
+        </label>
+        <label>
+          <span class="t">Closed Loop</span>
+          <i><input type="checkbox" id="closedLoop" /></i>
+        </label>
+        <label class="hide">
+          <span class="t">Allow Add Points</span>
+          <i><input type="checkbox" id="allowAddPoints" /></i>
+        </label>
+        <label>
+          <span><span class="t">Position fn X</span> (Hue / Light)</span>
+          <i><select id="positionFunctionX"></select></i>
+        </label>
+        <label>
+          <span><span class="t">Position fn Y</span> (Hue / Light)</span>
+          <i><select id="positionFunctionY"></select></i>
+        </label>
+        <label>
+          <span><span class="t">Position fn Z</span> (Saturation)</span>
+          <i><select id="positionFunctionZ"></select></i>
+        </label>
+        <button id="randomize">Randomize Anchors</button>
+      </div>
+
+      <poline-picker interactive tabindex="0" aria-label="Poline palette wheel"></poline-picker>
+
+      <article aria-label="Color Swatches">
+        <h2>HSL</h2>
+        <div id="colors"></div>
+        <h2>OKLch · approximate</h2>
+        <div id="colors-oklch"></div>
+        <h2>Lch · approximate</h2>
+        <div id="colors-lch"></div>
+      </article>
+    </div>
+
+    <script src="runtime.js"></script></body></html>
