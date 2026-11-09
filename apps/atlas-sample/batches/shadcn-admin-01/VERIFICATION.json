@@ -1,0 +1,36 @@
+{
+  "tests": {
+    "chatsSearchSelectMobileBack": true,
+    "newChatSelectionReceiptReset": true,
+    "profileValidationArrayAndReceipt": true,
+    "accountValidationDateLanguage": true,
+    "appearanceMemoryTheme": true,
+    "notificationsValidation": true,
+    "displayValidation": true,
+    "scopedConfigAndSearch": true,
+    "pendingRouteDisposeNoRevival": true,
+    "directHTMLSequentialChunks": true,
+    "interChunkDisposeNoMount": true,
+    "actual548Compose": true,
+    "browserVisualQA": "not-run"
+  },
+  "scripts": {
+    "runtime-part-01.js": {
+      "bytes": 664791,
+      "sha256": "a2d7e17680c7982ec89c9f583ef4b77969c9c64e6c4a1166b307a71e6804265d"
+    },
+    "runtime.js": {
+      "bytes": 460665,
+      "sha256": "a90ecdf24b8a00400dd9cb09ab28819f46b2846a3bbdae32afa36c0643e825a2"
+    }
+  },
+  "knownGaps": [
+    "Browser visual layout, desktop/mobile pixel appearance and native keyboard default traversal not verified; JSDOM geometry/scroll stubs are explicit.",
+    "All conversations, contact profiles and account defaults are upstream fixtures, not live messages/accounts.",
+    "No actual message sending, attachment upload, voice/video call, account save, team creation, billing or sign-out; unsupported original controls disabled.",
+    "Original NewChat only collects selected users and displays showSubmittedData; no conversation is created.",
+    "Original form validators and fields retained; settings receipts are local only. Appearance changes iframe theme/font choice only, with no cookie/storage persistence.",
+    "All avatar images disabled; original AvatarFallback reused. NewChat bare img replaced by same-source AvatarFallback/initials. Fonts are system fallback, no remote Inter/Manrope fetched.",
+    "Only /chats and /settings plus its four named subpages are registered in memory history; original global navigation dataset is filtered to these local routes."
+  ]
+}
