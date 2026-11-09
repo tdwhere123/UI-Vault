@@ -1,0 +1,97 @@
+{
+  "repository": "https://github.com/timqian/chart.xkcd",
+  "revision": "9a6913fbd64d0327882d11d0cd4d00eeca0d3c36",
+  "originalPaths": [
+    "examples/index.js",
+    "examples/example.html",
+    "src/Line.js",
+    "src/components/Tooltip.js",
+    "src/utils/addFilter.js"
+  ],
+  "originalFilesSHA256": {
+    "example.html": "731194c2d6e4eb746d131e88e74ba47c78a2c34ee20df66736bb06db53d273b6",
+    "package.json": "42dd30a16e1bd8e2950c2b4dc97cc0e51a1db19882af5728b94d20bd27421c40",
+    "index.js": "c74b6e46e969b000837c47998fac2d56de9e748e8c41b4357556a66261546847",
+    "LICENSE": "35e14b59e62634be50f65371ca4041bde968562151be4d6039e42a3a6872a8bd",
+    "src/XY.js": "504fb69ae5809a5778bc1719658a0c013cc11f15ca5904ad05d45a5fbc0f6d28",
+    "src/Radar.js": "457e6b7500d002be52d0188534986ae9700a326a3320ff6b7a0374796ffbf9a2",
+    "src/config.js": "cbba7862c7735695ca7224da42a45be9fda3740451c600c4d0851cbf5f888720",
+    "src/Combined.js": "4ddec52692e29bacca7ea4d8d2f27a0ec1e5dbbda04929ee8c6024d6d614cf47",
+    "src/Pie.js": "efbc27c0b3c50ddac14540f64266dbbc858a674aaff98494c8e521aa99931409",
+    "src/StackedBar.js": "3ad483643703720dc14f2944f37baa164b62a7b642850244603f12c9a89a2d15",
+    "src/index.js": "499e3502b1d45e0e852653cbf13964d122543e38bea99ac958ce0ebc36bc337e",
+    "src/Bar.js": "0dc87a3d5ee4d58c8a62b696673256dc9c0322c5099fd6fd3a645cebc093d24a",
+    "src/Line.js": "9ea6a1893f515d521950922755518d3a9aad4bb2338e352ab1fb6e3db358cbd7",
+    "src/utils/addFilter.js": "9891b8ee196d27fffc195d5342709c8cb8d1cf288973b5bb522834e543e99f45",
+    "src/utils/addLegend.js": "1da1dbf9e9f0bdfc0bd7a92af9394faaa1608814a38fbd2e913cd78ec0c29b4d",
+    "src/utils/colors.js": "f0d1850622b8cd904922ac2a77c7ea91b8e32123ad70f69996f7cc97c8d0edcc",
+    "src/utils/addAxis.js": "7b766f56afbcfe26cd88ce6e04d89c13d2ea7d7e643b33a0f5a670a0ee18231b",
+    "src/utils/addFont.js": "5ac292f622301cb4583e8b3d5582441e9c5db8a633d1da49891438244b9e4fe6",
+    "src/utils/addLabels.js": "1a40f29a46d1141a82243361da7d8ec945442a0a77ca2e9ddf045c04d3fa14f8",
+    "src/components/Tooltip.js": "b54ca3eb337d48d319ad63740bf66ae71c0f5e66e47c67334d9cd2770ea4f8d2"
+  },
+  "runtimeDependencies": [
+    {
+      "name": "d3-array",
+      "version": "2.12.1",
+      "license": "BSD-3-Clause",
+      "scope": "emitted-runtime"
+    },
+    {
+      "name": "d3-axis",
+      "version": "1.0.12",
+      "license": "BSD-3-Clause",
+      "scope": "emitted-runtime"
+    },
+    {
+      "name": "d3-color",
+      "version": "2.0.0",
+      "license": "BSD-3-Clause",
+      "scope": "emitted-runtime"
+    },
+    {
+      "name": "d3-format",
+      "version": "2.0.0",
+      "license": "BSD-3-Clause",
+      "scope": "emitted-runtime"
+    },
+    {
+      "name": "d3-interpolate",
+      "version": "2.0.1",
+      "license": "BSD-3-Clause",
+      "scope": "emitted-runtime"
+    },
+    {
+      "name": "d3-path",
+      "version": "1.0.9",
+      "license": "BSD-3-Clause",
+      "scope": "emitted-runtime"
+    },
+    {
+      "name": "d3-scale",
+      "version": "3.3.0",
+      "license": "BSD-3-Clause",
+      "scope": "emitted-runtime"
+    },
+    {
+      "name": "d3-selection",
+      "version": "1.4.1",
+      "license": "BSD-3-Clause",
+      "scope": "emitted-runtime"
+    },
+    {
+      "name": "d3-shape",
+      "version": "1.3.7",
+      "license": "BSD-3-Clause",
+      "scope": "emitted-runtime"
+    },
+    {
+      "name": "internmap",
+      "version": "1.0.1",
+      "license": "ISC",
+      "scope": "parsed-tree-shaken"
+    }
+  ],
+  "adaptation": "Original complete examples/index.js Line scene: Monthly income of an indie developer, Plan/Reality ten-month values, original monotoneX paths, axes, labels, handdrawn filter, legend and mouse tooltip. Original source engine preserved except two explicit adaptations: utils/addFont.js replaced by no-op to omit unconditional embedded base64 WOFF; addLegend imports an owned timeout adapter so its original 10ms deferred geometry work is canceled on hidden/exit and caught on failure. Original supported fontFamily option uses system-ui; HTML Google ZCOOL stylesheet omitted. Original xkcd glyph typography is NOT reproduced. No binary/font encoding is published. Root source contains original font helper privately only for provenance, never bundled or offered as public asset. Other changes are a bounded host: positive-width defer, responsive max-width, hidden clears transient hover chart then visible restores same fixed data, resize rebuild, error status and exact disposal of D3 handlers and legend timeout. This original chart has no drawing animation; reduced motion has same static behavior. It is a fixed illustrative fixture, not user financial information or live data. Source entry selects Line directly, so dayjs is not an actual runtime dependency; 10 parsed packages are enumerated from esbuild inputs: 9 D3 packages emit runtime bytes; internmap is parsed but entirely tree-shaken according to outputs.inputs, with ISC text conservatively retained (10 license texts, not 10 emitted runtime packages). Tests run real D3 path/tooltip code with 400px width and synthetic getBBox/getComputedTextLength/mouse coordinates, not native geometry, visual filter, pixel or accessibility acceptance. No keyboard tooltip support is claimed.",
+  "visualVerified": false
+}
