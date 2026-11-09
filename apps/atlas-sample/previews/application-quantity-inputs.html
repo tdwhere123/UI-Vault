@@ -64,6 +64,10 @@
           &plus;
         </button>
       </div>
+    <p style="font:12px system-ui;color:#666;margin:8px">本地步进演示 · 图鉴适配</p>
     </div>
+    <script>/* UI Vault adapter: native local stepping, not an upstream HyperUI handler. */
+(function(){const input=document.getElementById('Quantity');const buttons=Array.from(input.parentElement.querySelectorAll('button'));if(buttons.length!==2)return;const down=()=>input.stepDown();const up=()=>input.stepUp();buttons[0].addEventListener('click',down);buttons[1].addEventListener('click',up);const stop=()=>{buttons[0].removeEventListener('click',down);buttons[1].removeEventListener('click',up);buttons.forEach(b=>b.disabled=true);window.removeEventListener('pagehide',stop)};window.addEventListener('pagehide',stop,{once:true})})();
+</script>
   </body>
 </html>
