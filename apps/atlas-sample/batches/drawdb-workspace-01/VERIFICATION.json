@@ -1,0 +1,36 @@
+{
+  "productionCompose": "actual575 PASS",
+  "tests": [
+    "test.cjs",
+    "test-early.cjs early",
+    "loader-test.mjs",
+    "test-rebuilt.cjs"
+  ],
+  "core": [
+    "official 5table5FK fixture",
+    "original addtable/undo/redo",
+    "original pointer port creates FK then undo",
+    "FK name edit/HTML text safety/undo",
+    "hidden fixture reset/oldnode",
+    "complete listener/task/observer finalcleanup",
+    "early module failure cleanup"
+  ],
+  "loader": {
+    "result": "PASS actual575 adaptCandidate/createPreviewLoader all-or-nothing/retry/remount cache reuse",
+    "scripts": [
+      "runtime-part-1.js",
+      "runtime-part-2.js",
+      "runtime.js"
+    ],
+    "utf16RuntimeHTMLCSSBytes": 3614146,
+    "budgetBytes": 8388608,
+    "cacheStats": {
+      "entries": 5,
+      "bytes": 3614146
+    },
+    "fetches": 15
+  },
+  "sourceRebuild": "Fresh extraction plus normal npm install/build and rebuilt workflow PASS",
+  "nativeVisual": "not-run",
+  "geometry": "controlled JSDOM/SVG fixtures, no native geometry claim"
+}
