@@ -17243,40 +17243,35 @@
   },
   {
     "id": "doodlecss:handdrawn-form-sheet",
-    "title": "随手画表单纸页",
     "source": "DoodleCSS",
     "repository": "https://github.com/chr15m/DoodleCSS",
     "revision": "b49ca7604aa2deb71fd9f9458ced277001d51b10",
-    "sourcePath": "index.html",
     "upstream": "https://github.com/chr15m/DoodleCSS/blob/b49ca7604aa2deb71fd9f9458ced277001d51b10/index.html",
-    "website": "https://chr15m.github.io/DoodleCSS/",
-    "license": "MIT (root text verified; runtime/assets not closed)",
-    "behavior": "原站完整示例中的手绘输入、选择和复选框，像随手画出的调查纸页。",
-    "difference": "完整固定示例场景，非单独引擎；同一来源控件/配色/预设不拆数。",
-    "description": "原站完整示例中的手绘输入、选择和复选框，像随手画出的调查纸页。",
-    "gaps": [
-      "依赖doodle.css及border/button/checkbox/caret等SVG边框，不可仅取HTML而丢失实际手绘几何。",
-      "原页面远程加载Short Stack字体且含Ko-fi/Patreon/GitHub赞助品牌标记；只保留表单示例，字体许可单独核，品牌赞助区不搬。",
-      "示例含submit/reset按钮和form；必须保持本地fixture不向外提交，所有输入仅演示非账号收集。焦点/错误/disabled状态与窄屏待验。",
-      "固定源码及完整根许可已存证；未构建、未运行、未截图，completedPreviewCount=0。"
-    ],
-    "category": "输入与选择",
+    "sourcePath": "index.html",
     "licenseEvidence": {
       "url": "https://github.com/chr15m/DoodleCSS/blob/b49ca7604aa2deb71fd9f9458ced277001d51b10/LICENSE",
       "sha256": "1b3fef4cbeea17cc0e03ef374cd0b425d71670ec19d5972879e5bba880af8247",
-      "scope": "Complete original root license retained; runtime/media separate"
+      "scope": "Complete actual MIT root; original Form/CSS/seven SVG text assets and small local-only host, no external runtime dependencies"
     },
-    "sourceSha256": "8b088fcd59c98a1391bdc9ab70db5bc23fe4c84974821eda3839c08bf2685b91",
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-style-529",
-    "sourceScope": "Selected fixed original source and root license; full read-only repo clone retained privately",
-    "kind": "原版风格组件族（仅来源）",
-    "buildStatus": "Fixed source inspected; not built or visually accepted",
-    "adaptationPriority": "preferred"
+    "difference": "完整固定示例场景，非单独引擎；同一来源控件/配色/预设不拆数。",
+    "title": "DoodleCSS · 手绘表单纸",
+    "license": "MIT",
+    "category": "输入与选择",
+    "kind": "原生手绘表单场景",
+    "format": "完整交互场景",
+    "batch": "doodle-01",
+    "preview": "batches/doodle-01/form-sheet/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original form specimen and original handdrawn SVG/CSS border mechanism; native DOM controls and local validation/reset lifecycle tested, native border rendering and widgets unverified",
+    "description": "在原版手绘边框表单中输入、勾选与选择，检查本地字段并一键复位；保留原生控件和铅笔线条质感。",
+    "behavior": "原DoodleCSS表单与7个手绘SVG边框；原生选择/单选/多选/重置，适配层提供明确本地校验和按钮反馈，不连接后台。",
+    "gaps": [
+      "完整场景取自固定原index.html的Form区，原CSS与7个原SVG路径保留；SVG以可逆UTF-8百分号编码嵌入CSS，属于组件源码边框而非截图/封面或二进制封装。",
+      "原表单无业务handler，新增仅本地字段校验/反馈，不提交或保存；密码和文件字段禁用，不收凭据或文件，不连接账号、网络或剪贴板。",
+      "修正原label拼写与重复checkbox ID；字体未下载，使用本地cursive回退。保留原生控件行为，不宣称与上游字体和所有平台widget像素一致。",
+      "普通、减动规则、字段错误/修正、重置、隐藏保持、交互异常和早期异常退出均作DOM测试；不是原生SVG边框、触屏、日期控件、字体或像素验收，封面交Grok。"
+    ]
   },
   {
     "id": "tuftecss:margin-note-essay",
