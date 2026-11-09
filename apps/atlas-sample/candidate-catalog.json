@@ -3942,21 +3942,26 @@
   },
   {
     "id": "motioncore:glitter-cloth",
-    "title": "glitter-cloth",
     "source": "Motion Core",
-    "license": "MIT",
     "upstream": "https://github.com/kaltwrk/motion-core/tree/74ad6e66d50cc9b1849a505fcd1b352704920745/packages/motion-core/src/lib/components/glitter-cloth",
     "website": "",
-    "buildStatus": "not installed or built",
-    "batch": "batch-002",
-    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "revision": "74ad6e66d50cc9b1849a505fcd1b352704920745",
+    "title": "闪光布料材质",
+    "description": "原着色器材质与几何参数，不是物理布料模拟；依赖浏览器图形能力，不支持时明确提示。",
+    "behavior": "原着色器材质与几何参数，不是物理布料模拟；依赖浏览器图形能力，不支持时明确提示。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "视觉与动效",
+    "license": "MIT; Unlicense",
+    "batch": "motioncore-glitter-01",
+    "preview": "batches/motioncore-glitter-01/glitter-cloth/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "actual549 composition and original OGL lifecycle verified under stub GL; GPU pixels not-run",
     "gaps": [
-      "Official demos import workspace motion-core barrel; recreate selected exports or adapt imports before building. Full-library barrel intentionally not claimed closed.",
-      "Root package/lock and Svelte styles/helpers preserved; monorepo installation not tested.",
-      "WebGL/OGL shaders require real GPU/interaction checks; static source collection does not establish animation or performance.",
-      "Demo remote image/media references not downloaded. water-ripple brush PNG missing and must be supplied under verified rights or replaced with an original brush.",
-      "Package lists MediaPipe among peers, but selected source scan found no getUserMedia/requestPermission calls. No camera or device permissions used.",
-      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+      "WebGL methods/compile return values mocked in lifecycle tests; actual shader compilation/GPU pixels not verified.",
+      "No upstream visible parameter panel: official Demo supplies default props. Host Pause/Restart are disclosed added lifecycle controls.",
+      "No physics/clinical/material measurement claim; original aesthetic scene only."
     ]
   },
   {
@@ -12761,67 +12766,90 @@
   },
   {
     "id": "plate:document-revisions",
-    "title": "编辑文档快照与逐版恢复",
     "source": "Plate",
     "repository": "https://github.com/udecode/plate",
     "revision": "cbd8db29140e3ae56ab54f6c6c40bdf6ad2b9f58",
-    "sourcePath": "apps/www/src/registry/examples/version-history-demo.tsx",
     "upstream": "https://github.com/udecode/plate/blob/cbd8db29140e3ae56ab54f6c6c40bdf6ad2b9f58/apps/www/src/registry/examples/version-history-demo.tsx",
-    "license": "MIT (source license verified; runtime dependencies/assets not closed)",
-    "behavior": "原编辑器保存内存快照，列表恢复历史版本，最近两次保存做异步结构差异比较并呈现错误态。",
-    "difference": "区别于代码Diff阅读器与通用检查点卡：原文档编辑、保存、恢复和结构比较形成完整循环。",
-    "gaps": [
-      "platejs/diff与编辑器包传递许可/导入链未闭合；源码含AbortController取消比较，不等于运行清理已验证；没有持久化或远端版本。",
-      "完整依赖与媒体权利、默认隔离预览、交互清理和实际视觉均未验；未上传或声称存在完整运行包。"
-    ],
-    "description": "原编辑器保存内存快照，列表恢复历史版本，最近两次保存做异步结构差异比较并呈现错误态。 区别于代码Diff阅读器与通用检查点卡：原文档编辑、保存、恢复和结构比较形成完整循环。",
-    "category": "输入与选择",
+    "sourcePath": "apps/www/src/registry/examples/version-history-demo.tsx",
     "licenseEvidence": {
       "url": "https://github.com/udecode/plate/blob/cbd8db29140e3ae56ab54f6c6c40bdf6ad2b9f58/LICENSE",
       "sha256": "8b649e3569682298f50ed2048210e8f528034feb56f5d43a9977a7d60b0f7065",
       "scope": "Full root MIT read; Plate apps/www and React Email demo local MIT also read where applicable. Runtime and media licenses not closed."
     },
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-bulk-523",
-    "sourceScope": "Selected fixed original source and complete applicable source license; not full runtime/archive",
-    "kind": "原版完整场景（仅来源）",
-    "buildStatus": "fixed original source read; not built, run or visually accepted"
+    "difference": "区别于代码Diff阅读器与通用检查点卡：原文档编辑、保存、恢复和结构比较形成完整循环。",
+    "title": "文档版本与差异比较",
+    "description": "原可编辑文档、保存快照、异步差异比较与恢复；全部本地演示，不提供云保存或协作服务。",
+    "behavior": "原可编辑文档、保存快照、异步差异比较与恢复；全部本地演示，不提供云保存或协作服务。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "输入与选择",
+    "license": "Apache-2.0; BSD-2-Clause; MIT",
+    "batch": "plate-revisions-01",
+    "preview": "batches/plate-revisions-01/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "pass",
+    "gaps": [
+      "No native pixels, IME/composition, real layout, screen-reader or CSS visual QA; tests use controlled JSDOM geometry.",
+      "Local demonstration only. No cloud persistence, collaboration, AI or booking/service API. Hidden resets current local scene.",
+      "Original root/app licenses and all actual npm/build notices retained; precise qualifications for packages without standalone LICENSE in SOURCE.",
+      "Original snapshot mechanism bounded to latest 20; previous retained snapshots can be restored. Comparison is real fixed-source asynchronous diff, not a text replacement imitation."
+    ],
+    "runtime": {
+      "scripts": [
+        "runtime-part-01.js",
+        "runtime-part-02.js",
+        "runtime-part-03.js",
+        "runtime.js"
+      ]
+    }
   },
   {
     "id": "plate:structured-stream-replay",
-    "title": "结构化Markdown逐块回放工作台",
     "source": "Plate",
     "repository": "https://github.com/udecode/plate",
     "revision": "cbd8db29140e3ae56ab54f6c6c40bdf6ad2b9f58",
-    "sourcePath": "apps/www/src/registry/examples/markdown-streaming-demo.tsx",
     "upstream": "https://github.com/udecode/plate/blob/cbd8db29140e3ae56ab54f6c6c40bdf6ad2b9f58/apps/www/src/registry/examples/markdown-streaming-demo.tsx",
-    "license": "MIT (source license verified; runtime dependencies/assets not closed)",
-    "behavior": "原始token/自定义文本双栏流式预览，可暂停继续、停止严格解析、逐块定位与重置；可编辑输出和静态输出切换。",
-    "difference": "不同于普通打字机：保留不完整表格、列、链接和列表的部分解析/最终解析，以及chunk时序控制；全部场景只计一族。",
-    "gaps": [
-      "定时器与AbortController逻辑已读未运行；大量编辑器插件、DND/媒体/数学等依赖未审闭；样例远程图片和链接必须隔离，实际模型不在本地实现。",
-      "完整依赖与媒体权利、默认隔离预览、交互清理和实际视觉均未验；未上传或声称存在完整运行包。"
-    ],
-    "description": "原始token/自定义文本双栏流式预览，可暂停继续、停止严格解析、逐块定位与重置；可编辑输出和静态输出切换。 不同于普通打字机：保留不完整表格、列、链接和列表的部分解析/最终解析，以及chunk时序控制；全部场景只计一族。",
-    "category": "展示与媒体",
+    "sourcePath": "apps/www/src/registry/examples/markdown-streaming-demo.tsx",
     "licenseEvidence": {
       "url": "https://github.com/udecode/plate/blob/cbd8db29140e3ae56ab54f6c6c40bdf6ad2b9f58/LICENSE",
       "sha256": "8b649e3569682298f50ed2048210e8f528034feb56f5d43a9977a7d60b0f7065",
       "scope": "Full root MIT read; Plate apps/www and React Email demo local MIT also read where applicable. Runtime and media licenses not closed."
     },
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-bulk-523",
-    "sourceScope": "Selected fixed original source and complete applicable source license; not full runtime/archive",
-    "kind": "原版完整场景（仅来源）",
-    "buildStatus": "fixed original source read; not built, run or visually accepted"
+    "difference": "不同于普通打字机：保留不完整表格、列、链接和列表的部分解析/最终解析，以及chunk时序控制；全部场景只计一族。",
+    "title": "结构化内容流式回放",
+    "description": "原七十段结构内容的播放、暂停、停止、重置与跳转；使用固定演示片段，不调用人工智能服务。",
+    "behavior": "原七十段结构内容的播放、暂停、停止、重置与跳转；使用固定演示片段，不调用人工智能服务。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "展示与媒体",
+    "license": "0BSD; Apache-2.0; BSD-2-Clause; BSD-3-Clause; ISC; MIT",
+    "batch": "plate-stream-01",
+    "preview": "batches/plate-stream-01/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "pass",
+    "gaps": [
+      "No native pixels, IME/composition, real layout, screen-reader or CSS visual QA; tests use controlled JSDOM geometry.",
+      "Local demonstration only. No cloud persistence, collaboration, AI or booking/service API. Hidden resets current local scene.",
+      "Original root/app licenses and all actual npm/build notices retained; precise qualifications for packages without standalone LICENSE in SOURCE.",
+      "Default original columns fixture and local controls tested; optional remote image/embed scenarios cannot fetch resources under unchanged CSP and are not claimed working media previews.",
+      "Font faces excluded from text-only delivery; mathematical font metrics/typography and optional date/media controls not verified.",
+      "Incomplete prefixes can show the original schema-validation warning (e.g. columnGroup needs at least two children) until further chunks arrive; not concealed as successful parse."
+    ],
+    "runtime": {
+      "scripts": [
+        "runtime-part-01.js",
+        "runtime-part-02.js",
+        "runtime-part-03.js",
+        "runtime-part-04.js",
+        "runtime-part-05.js",
+        "runtime-part-06.js",
+        "runtime-part-07.js",
+        "runtime-part-08.js",
+        "runtime.js"
+      ]
+    }
   },
   {
     "id": "react-email:protocol-product-digest",
@@ -13216,8 +13244,8 @@
     "title": "基础界面图标系列",
     "description": "完整固定目录三百三十二枚原图，支持搜索与分页；图标按整个系列一条收录。",
     "behavior": "完整固定目录三百三十二枚原图，支持搜索与分页；图标按整个系列一条收录。",
-    "kind": "原版图标系列",
-    "format": "完整交互场景",
+    "kind": "图标系列",
+    "format": "图标家族",
     "category": "图标系列",
     "license": "MIT",
     "batch": "icon-series-next-01",
@@ -13251,8 +13279,8 @@
     "title": "线框与实心图标系列",
     "description": "完整两种风格一千六百七十一枚原图，支持线框与实心切换；风格变体不计新条目。",
     "behavior": "完整两种风格一千六百七十一枚原图，支持线框与实心切换；风格变体不计新条目。",
-    "kind": "原版图标系列",
-    "format": "完整交互场景",
+    "kind": "图标系列",
+    "format": "图标家族",
     "category": "图标系列",
     "license": "MIT",
     "batch": "icon-series-next-01",
@@ -14969,39 +14997,35 @@
   },
   {
     "id": "98css:desktop-control-showcase",
-    "title": "复古桌面控件",
     "source": "98.css",
     "repository": "https://github.com/jdan/98.css",
     "revision": "b1d7a907371bbe523d6f64e3af97f714fdbd6d6a",
-    "sourcePath": "docs/index.html.ejs",
     "upstream": "https://github.com/jdan/98.css/blob/b1d7a907371bbe523d6f64e3af97f714fdbd6d6a/docs/index.html.ejs",
-    "website": "https://jdan.github.io/98.css",
-    "license": "MIT (root source text verified; runtime/assets not closed)",
-    "behavior": "忠实复古桌面的窗口、按钮和表单控制。",
-    "difference": "原CSS展示；需要交互时只使用实际浏览器原生控件，不虚构窗口管理。",
-    "description": "忠实复古桌面的窗口、按钮和表单控制。 原CSS展示；需要交互时只使用实际浏览器原生控件，不虚构窗口管理。",
-    "gaps": [
-      "固定docs/index.html.ejs为模板，需EJS构建及style.css/icon依赖，不是已生成可运行HTML。",
-      "fonts/src/ms-sans-serif与ms-sans-serif-bold各有独立license.txt/readme，字体来源、转换后WOFF再分发许可未闭合；根MIT不能覆盖系统字体权利。",
-      "系统风格图标/品牌素材需独立核来源与权利；CSS本身不提供窗口拖拽/最小化管理，不能宣称已有这些行为。",
-      "未构建、未运行、未浏览器视觉验收；当前completedPreviewCount=0，publicationReady=false。"
-    ],
-    "category": "视觉与动效",
+    "sourcePath": "docs/index.html.ejs",
     "licenseEvidence": {
       "url": "https://github.com/jdan/98.css/blob/b1d7a907371bbe523d6f64e3af97f714fdbd6d6a/LICENSE",
       "sha256": "8933005629892c51d896f7591b5e79c39a17617ce678231e4c3aa7d412d2682f",
       "scope": "Complete original root text read; not full runtime/media closure"
     },
-    "sourceSha256": "71d4ec54836b12f432f6d3948810f0c43d958aca9e180dc56a4fc47e2243219e",
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-style-526",
-    "sourceScope": "Selected fixed original source and root license; no full runnable archive",
-    "kind": "原版场景或组件族（仅来源）",
-    "buildStatus": "Fixed original source read; not built, run or visually accepted"
+    "difference": "原CSS展示；需要交互时只使用实际浏览器原生控件，不虚构窗口管理。",
+    "website": "https://jdan.github.io/98.css",
+    "title": "复古桌面控件图鉴",
+    "description": "原完整三十七组控件示例，保留输入、选择、折叠与表格行选择；系统字体回退，不模拟操作系统或窗口管理器。",
+    "behavior": "原完整三十七组控件示例，保留输入、选择、折叠与表格行选择；系统字体回退，不模拟操作系统或窗口管理器。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "视觉与动效",
+    "license": "MIT",
+    "batch": "98css-controls-01",
+    "preview": "batches/98css-controls-01/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "passed",
+    "gaps": [
+      "系统字体回退；无分发 Windows 字体",
+      "原 Tab/窗口按钮无应用逻辑",
+      "外部链接禁用；视觉未验"
+    ]
   },
   {
     "id": "7css:aero-glass-showcase",
@@ -15711,39 +15735,35 @@
   },
   {
     "id": "nescss:pixel-message-balloons",
-    "title": "像素消息气泡",
     "source": "NES.css",
     "repository": "https://github.com/nostalgic-css/NES.css",
     "revision": "b1cc9944aae3274461c747d7ad1cab31df45e78c",
-    "sourcePath": "story/balloons/balloons.template.js",
     "upstream": "https://github.com/nostalgic-css/NES.css/blob/b1cc9944aae3274461c747d7ad1cab31df45e78c/story/balloons/balloons.template.js",
-    "website": "https://nostalgic-css.github.io/NES.css/",
-    "license": "MIT (root text verified; runtime/assets not closed)",
-    "behavior": "通过像素边框与方向尾角显示对话消息。",
-    "difference": "与8bitcn任务日志不同的像素消息表现；左右、深浅变体只计一族。",
-    "description": "通过像素边框与方向尾角显示对话消息。 与8bitcn任务日志不同的像素消息表现；左右、深浅变体只计一族。",
-    "gaps": [
-      "需闭合实际NES CSS、Storybook模板helpers与文档所用字体；Press Start 2P等字体需独立保留OFL，不能只靠根MIT。",
-      "消息气泡本身是静态内容容器，不包含流式生成、发送或AI行为；增加示例交互须标注适配而非上游自带。",
-      "不要带入Nintendo角色、品牌像素sprites或logo；根许可不证明商标/角色图样可自由商用。",
-      "固定源码/根许可仅为来源证据；未构建、未运行、未截图验收，completedPreviewCount=0。"
-    ],
-    "category": "Agent与对话",
+    "sourcePath": "story/balloons/balloons.template.js",
     "licenseEvidence": {
       "url": "https://github.com/nostalgic-css/NES.css/blob/b1cc9944aae3274461c747d7ad1cab31df45e78c/LICENSE",
       "sha256": "f6cbd76bbd748a03e35a9f7cb28b14a8bd000ad774a2d2609c8c3996948733a6",
       "scope": "Complete original root license retained; runtime/media separate"
     },
-    "sourceSha256": "896f30ed27ded90b3a83451daf24700a5b435afdc4483aa673a75c8b899b6a0c",
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-style-527",
-    "sourceScope": "Selected fixed original source and root license; no full runnable archive",
-    "kind": "原版风格组件族（仅来源）",
-    "buildStatus": "Fixed source inspected; not built or visually accepted"
+    "difference": "与8bitcn任务日志不同的像素消息表现；左右、深浅变体只计一族。",
+    "website": "https://nostalgic-css.github.io/NES.css/",
+    "title": "像素风格消息气泡",
+    "description": "原官方像素气泡示例与六种状态，支持方向及暗色切换；同一系列只计一条，系统等宽字体回退。",
+    "behavior": "原官方像素气泡示例与六种状态，支持方向及暗色切换；同一系列只计一条，系统等宽字体回退。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "Agent与对话",
+    "license": "MIT",
+    "batch": "nes-balloons-01",
+    "preview": "batches/nes-balloons-01/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "pass",
+    "gaps": [
+      "System monospace font replaces Press Start 2P; original font file is not redistributed or loaded.",
+      "Original Storybook balloon demonstration only, not a conversation application. The knobs are native host checkbox/select controls, not the full Storybook runtime.",
+      "Browser pixels, font metrics and CSS border-image rendering not visually verified."
+    ]
   },
   {
     "id": "bootstra386:dos-component-language",
@@ -19017,8 +19037,8 @@
     "title": "轻量轮廓图标系列",
     "description": "完整固定目录一百八十枚原图，支持搜索、尺寸与颜色；按整个系列一条收录。",
     "behavior": "完整固定目录一百八十枚原图，支持搜索、尺寸与颜色；按整个系列一条收录。",
-    "kind": "原版图标系列",
-    "format": "完整交互场景",
+    "kind": "图标系列",
+    "format": "图标家族",
     "category": "图标系列",
     "license": "MIT",
     "batch": "icon-series-next-01",
@@ -19626,5 +19646,341 @@
     "kind": "原版完整场景（仅来源）",
     "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted",
     "sourceSha256": "6726a3d52ebb0c159634f9d11dd2f9c1be91c613693b3be7b7edf8c020d1b994"
+  },
+  {
+    "id": "astryx:contact-form",
+    "source": "Meta AstryX",
+    "repository": "https://github.com/meta/astryx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/cli/assets/templates/pages/contact-form/page.tsx",
+    "sourcePath": "packages/cli/assets/templates/pages/contact-form/page.tsx",
+    "licenseEvidence": {
+      "url": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/LICENSE",
+      "sha256": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473",
+      "scope": "Complete fixed original MIT; actual runtime dependency notices supplied in preview assets."
+    },
+    "title": "联系申请表单",
+    "description": "原完整联系表单与必填校验；仅本地模板演示，不发送申请或联络任何人。",
+    "behavior": "原完整联系表单与必填校验；仅本地模板演示，不发送申请或联络任何人。",
+    "kind": "完整应用模板",
+    "format": "完整页面",
+    "category": "输入与选择",
+    "license": "MIT AND ISC AND BSD-3-Clause",
+    "batch": "astryx-expansion-01",
+    "preview": "batches/astryx-expansion-01/contact-form/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Original fixed Meta AstryX full contact-form page retained, not an independently redrawn shell. Theme/LayerProvider/reset/neutral theme compiled with the same shared StyleX/Vite setup as prior15templates. Each page independent detail-only IIFE, no all-template bundle. Source workspace0.7.12 uses installedcore/theme/build0.7.11 compatibility runtime; exact emitted versions below. Original glyphs/fixtures are source-derived, not live accounts or results. System fonts, no binary/font/photo replacements. Host local-demo notice, form navigation blocked, externallinks blocked, hidden unmount resets ephemeral local page state andvisible fresh mounts,exit/error cleanup tracks owned observers/listeners/frames/timers. No messages/accountchanges/subscriptions/backends. Documentation only: original clipboard prompt button visibly disabled, CodeBlock hasCopyButton=false via original supportedprop; history.pushState omitted in both page and the exact installedcore0.7.11 Outline module via a single-line build transform for opaque iframe; original scroll/outline active selection and focus retained. Original runtime module copy retained locally for comparison. Other original local controls unchanged; noop controls not represented as business actions. Shared actual548compose DOM tests plus each page key behavior/exit; JSDOM CSS parser cannot parse compiled StyleX stylesheet andthat exact parsing warning is recorded separately, no native CSS/layout/pixel acceptance claim. Rendered dependency licenses include victory-vendor bundled D3 license texts conservatively. Prior core/StyleX missing-file MIT supplements retained and transparently identified; no claim npm contained them."
+    ]
+  },
+  {
+    "id": "astryx:documentation-technical",
+    "source": "Meta AstryX",
+    "repository": "https://github.com/meta/astryx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/cli/assets/templates/pages/documentation-technical/page.tsx",
+    "sourcePath": "packages/cli/assets/templates/pages/documentation-technical/page.tsx",
+    "licenseEvidence": {
+      "url": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/LICENSE",
+      "sha256": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473",
+      "scope": "Complete fixed original MIT; actual runtime dependency notices supplied in preview assets."
+    },
+    "title": "技术文档导航",
+    "description": "原技术文档、目录定位与焦点滚动；复制与浏览记录写入已透明关闭，不扩展隔离权限。",
+    "behavior": "原技术文档、目录定位与焦点滚动；复制与浏览记录写入已透明关闭，不扩展隔离权限。",
+    "kind": "完整应用模板",
+    "format": "完整页面",
+    "category": "展示与媒体",
+    "license": "MIT AND ISC AND BSD-3-Clause",
+    "batch": "astryx-expansion-01",
+    "preview": "batches/astryx-expansion-01/documentation-technical/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Original fixed Meta AstryX full documentation-technical page retained, not an independently redrawn shell. Theme/LayerProvider/reset/neutral theme compiled with the same shared StyleX/Vite setup as prior15templates. Each page independent detail-only IIFE, no all-template bundle. Source workspace0.7.12 uses installedcore/theme/build0.7.11 compatibility runtime; exact emitted versions below. Original glyphs/fixtures are source-derived, not live accounts or results. System fonts, no binary/font/photo replacements. Host local-demo notice, form navigation blocked, externallinks blocked, hidden unmount resets ephemeral local page state andvisible fresh mounts,exit/error cleanup tracks owned observers/listeners/frames/timers. No messages/accountchanges/subscriptions/backends. Documentation only: original clipboard prompt button visibly disabled, CodeBlock hasCopyButton=false via original supportedprop; history.pushState omitted in both page and the exact installedcore0.7.11 Outline module via a single-line build transform for opaque iframe; original scroll/outline active selection and focus retained. Original runtime module copy retained locally for comparison. Other original local controls unchanged; noop controls not represented as business actions. Shared actual548compose DOM tests plus each page key behavior/exit; JSDOM CSS parser cannot parse compiled StyleX stylesheet andthat exact parsing warning is recorded separately, no native CSS/layout/pixel acceptance claim. Rendered dependency licenses include victory-vendor bundled D3 license texts conservatively. Prior core/StyleX missing-file MIT supplements retained and transparently identified; no claim npm contained them."
+    ]
+  },
+  {
+    "id": "astryx:settings-sidebar",
+    "source": "Meta AstryX",
+    "repository": "https://github.com/meta/astryx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/cli/assets/templates/pages/settings-sidebar/page.tsx",
+    "sourcePath": "packages/cli/assets/templates/pages/settings-sidebar/page.tsx",
+    "licenseEvidence": {
+      "url": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/LICENSE",
+      "sha256": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473",
+      "scope": "Complete fixed original MIT; actual runtime dependency notices supplied in preview assets."
+    },
+    "title": "侧栏个人设置",
+    "description": "原侧栏设置页与本地隐私开关；仅演示状态，不更改真实账户配置。",
+    "behavior": "原侧栏设置页与本地隐私开关；仅演示状态，不更改真实账户配置。",
+    "kind": "完整应用模板",
+    "format": "完整页面",
+    "category": "输入与选择",
+    "license": "MIT AND ISC AND BSD-3-Clause",
+    "batch": "astryx-expansion-01",
+    "preview": "batches/astryx-expansion-01/settings-sidebar/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Original fixed Meta AstryX full settings-sidebar page retained, not an independently redrawn shell. Theme/LayerProvider/reset/neutral theme compiled with the same shared StyleX/Vite setup as prior15templates. Each page independent detail-only IIFE, no all-template bundle. Source workspace0.7.12 uses installedcore/theme/build0.7.11 compatibility runtime; exact emitted versions below. Original glyphs/fixtures are source-derived, not live accounts or results. System fonts, no binary/font/photo replacements. Host local-demo notice, form navigation blocked, externallinks blocked, hidden unmount resets ephemeral local page state andvisible fresh mounts,exit/error cleanup tracks owned observers/listeners/frames/timers. No messages/accountchanges/subscriptions/backends. Documentation only: original clipboard prompt button visibly disabled, CodeBlock hasCopyButton=false via original supportedprop; history.pushState omitted in both page and the exact installedcore0.7.11 Outline module via a single-line build transform for opaque iframe; original scroll/outline active selection and focus retained. Original runtime module copy retained locally for comparison. Other original local controls unchanged; noop controls not represented as business actions. Shared actual548compose DOM tests plus each page key behavior/exit; JSDOM CSS parser cannot parse compiled StyleX stylesheet andthat exact parsing warning is recorded separately, no native CSS/layout/pixel acceptance claim. Rendered dependency licenses include victory-vendor bundled D3 license texts conservatively. Prior core/StyleX missing-file MIT supplements retained and transparently identified; no claim npm contained them."
+    ]
+  },
+  {
+    "id": "astryx:dashboard-scorecard",
+    "source": "Meta AstryX",
+    "repository": "https://github.com/meta/astryx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/cli/assets/templates/pages/dashboard-scorecard/page.tsx",
+    "sourcePath": "packages/cli/assets/templates/pages/dashboard-scorecard/page.tsx",
+    "licenseEvidence": {
+      "url": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/LICENSE",
+      "sha256": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473",
+      "scope": "Complete fixed original MIT; actual runtime dependency notices supplied in preview assets."
+    },
+    "title": "指标计分看板",
+    "description": "原指标卡与周月季度数据切换；固定演示数据，不读取实时业务或账户。",
+    "behavior": "原指标卡与周月季度数据切换；固定演示数据，不读取实时业务或账户。",
+    "kind": "完整应用模板",
+    "format": "完整页面",
+    "category": "数据与状态",
+    "license": "MIT AND ISC AND BSD-3-Clause",
+    "batch": "astryx-expansion-01",
+    "preview": "batches/astryx-expansion-01/dashboard-scorecard/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Original fixed Meta AstryX full dashboard-scorecard page retained, not an independently redrawn shell. Theme/LayerProvider/reset/neutral theme compiled with the same shared StyleX/Vite setup as prior15templates. Each page independent detail-only IIFE, no all-template bundle. Source workspace0.7.12 uses installedcore/theme/build0.7.11 compatibility runtime; exact emitted versions below. Original glyphs/fixtures are source-derived, not live accounts or results. System fonts, no binary/font/photo replacements. Host local-demo notice, form navigation blocked, externallinks blocked, hidden unmount resets ephemeral local page state andvisible fresh mounts,exit/error cleanup tracks owned observers/listeners/frames/timers. No messages/accountchanges/subscriptions/backends. Documentation only: original clipboard prompt button visibly disabled, CodeBlock hasCopyButton=false via original supportedprop; history.pushState omitted in both page and the exact installedcore0.7.11 Outline module via a single-line build transform for opaque iframe; original scroll/outline active selection and focus retained. Original runtime module copy retained locally for comparison. Other original local controls unchanged; noop controls not represented as business actions. Shared actual548compose DOM tests plus each page key behavior/exit; JSDOM CSS parser cannot parse compiled StyleX stylesheet andthat exact parsing warning is recorded separately, no native CSS/layout/pixel acceptance claim. Rendered dependency licenses include victory-vendor bundled D3 license texts conservatively. Prior core/StyleX missing-file MIT supplements retained and transparently identified; no claim npm contained them."
+    ]
+  },
+  {
+    "id": "astryx:table-grouped",
+    "source": "Meta AstryX",
+    "repository": "https://github.com/meta/astryx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/cli/assets/templates/pages/table-grouped/page.tsx",
+    "sourcePath": "packages/cli/assets/templates/pages/table-grouped/page.tsx",
+    "licenseEvidence": {
+      "url": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/LICENSE",
+      "sha256": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473",
+      "scope": "Complete fixed original MIT; actual runtime dependency notices supplied in preview assets."
+    },
+    "title": "分组数据表格",
+    "description": "原分组表格与折叠展开状态；固定示例记录，不连接外部数据服务。",
+    "behavior": "原分组表格与折叠展开状态；固定示例记录，不连接外部数据服务。",
+    "kind": "完整应用模板",
+    "format": "完整页面",
+    "category": "数据与状态",
+    "license": "MIT AND ISC AND BSD-3-Clause",
+    "batch": "astryx-expansion-01",
+    "preview": "batches/astryx-expansion-01/table-grouped/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Original fixed Meta AstryX full table-grouped page retained, not an independently redrawn shell. Theme/LayerProvider/reset/neutral theme compiled with the same shared StyleX/Vite setup as prior15templates. Each page independent detail-only IIFE, no all-template bundle. Source workspace0.7.12 uses installedcore/theme/build0.7.11 compatibility runtime; exact emitted versions below. Original glyphs/fixtures are source-derived, not live accounts or results. System fonts, no binary/font/photo replacements. Host local-demo notice, form navigation blocked, externallinks blocked, hidden unmount resets ephemeral local page state andvisible fresh mounts,exit/error cleanup tracks owned observers/listeners/frames/timers. No messages/accountchanges/subscriptions/backends. Documentation only: original clipboard prompt button visibly disabled, CodeBlock hasCopyButton=false via original supportedprop; history.pushState omitted in both page and the exact installedcore0.7.11 Outline module via a single-line build transform for opaque iframe; original scroll/outline active selection and focus retained. Original runtime module copy retained locally for comparison. Other original local controls unchanged; noop controls not represented as business actions. Shared actual548compose DOM tests plus each page key behavior/exit; JSDOM CSS parser cannot parse compiled StyleX stylesheet andthat exact parsing warning is recorded separately, no native CSS/layout/pixel acceptance claim. Rendered dependency licenses include victory-vendor bundled D3 license texts conservatively. Prior core/StyleX missing-file MIT supplements retained and transparently identified; no claim npm contained them."
+    ]
+  },
+  {
+    "id": "astryx:form-wizard",
+    "source": "Meta AstryX",
+    "repository": "https://github.com/meta/astryx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/cli/assets/templates/pages/form-wizard/page.tsx",
+    "sourcePath": "packages/cli/assets/templates/pages/form-wizard/page.tsx",
+    "licenseEvidence": {
+      "url": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/LICENSE",
+      "sha256": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473",
+      "scope": "Complete fixed original MIT; actual runtime dependency notices supplied in preview assets."
+    },
+    "title": "多步骤表单向导",
+    "description": "原步骤导航与前进返回流程；仅本地界面，不进行注册、发送或业务提交。",
+    "behavior": "原步骤导航与前进返回流程；仅本地界面，不进行注册、发送或业务提交。",
+    "kind": "完整应用模板",
+    "format": "完整页面",
+    "category": "输入与选择",
+    "license": "MIT AND ISC AND BSD-3-Clause",
+    "batch": "astryx-expansion-01",
+    "preview": "batches/astryx-expansion-01/form-wizard/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Original fixed Meta AstryX full form-wizard page retained, not an independently redrawn shell. Theme/LayerProvider/reset/neutral theme compiled with the same shared StyleX/Vite setup as prior15templates. Each page independent detail-only IIFE, no all-template bundle. Source workspace0.7.12 uses installedcore/theme/build0.7.11 compatibility runtime; exact emitted versions below. Original glyphs/fixtures are source-derived, not live accounts or results. System fonts, no binary/font/photo replacements. Host local-demo notice, form navigation blocked, externallinks blocked, hidden unmount resets ephemeral local page state andvisible fresh mounts,exit/error cleanup tracks owned observers/listeners/frames/timers. No messages/accountchanges/subscriptions/backends. Documentation only: original clipboard prompt button visibly disabled, CodeBlock hasCopyButton=false via original supportedprop; history.pushState omitted in both page and the exact installedcore0.7.11 Outline module via a single-line build transform for opaque iframe; original scroll/outline active selection and focus retained. Original runtime module copy retained locally for comparison. Other original local controls unchanged; noop controls not represented as business actions. Shared actual548compose DOM tests plus each page key behavior/exit; JSDOM CSS parser cannot parse compiled StyleX stylesheet andthat exact parsing warning is recorded separately, no native CSS/layout/pixel acceptance claim. Rendered dependency licenses include victory-vendor bundled D3 license texts conservatively. Prior core/StyleX missing-file MIT supplements retained and transparently identified; no claim npm contained them."
+    ]
+  },
+  {
+    "id": "astryx-core:button",
+    "source": "Meta AstryX",
+    "repository": "https://github.com/meta/astryx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/core/src/Button/Button.doc.mjs",
+    "sourcePath": "packages/core/src/Button/Button.doc.mjs",
+    "licenseEvidence": {
+      "url": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/LICENSE",
+      "sha256": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473",
+      "scope": "Complete fixed original MIT; actual runtime dependency notices supplied in preview assets."
+    },
+    "title": "按钮组件",
+    "description": "原官方按钮示例与可用状态；不赋予示例按钮不存在的业务操作。",
+    "behavior": "原官方按钮示例与可用状态；不赋予示例按钮不存在的业务操作。",
+    "kind": "组件",
+    "format": "独立组件",
+    "category": "输入与选择",
+    "license": "MIT AND ISC AND BSD-3-Clause",
+    "batch": "astryx-core-01",
+    "preview": "batches/astryx-core-01/button/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Original Meta AstryX official component documentation examples, not a screenshot or redrawn component. One functional family per entry; subsidiary parts/states not counted separately. The fixed repository workspace is0.7.12; actual installed core/theme/build0.7.11 compatibility runtime is disclosed. Original example JSX preserved; only required imports, default export and host wrapper supplied. Popover selects the complete Recent files example, Drawer selects complete Basic example with original local open state; undefined illustrative alternative examples are not claimed implemented. Button original actions have no business handler, Card sample amounts are static, Calendar is the original Persian month navigation hook example rather than a booking tool. Theme/StyleX/LayerProvider/reset shared setup with per-family independent IIFE. Original system-font fallback; no remote assets/services, backend, storage, clipboard or user-account action. Hidden unmount resets transient component state; reveal mounts fresh. Exit/error releases owned resources. Actual550 compose tests execute original component code under JSDOM; native dialog showModal/close are API stubs, native Escape/top-layer/focus geometry and CSS pixel appearance are NOT visually verified. Original Drawer cancel handler is tested via cancel event. Compiled StyleX CSS JSDOM parser warnings are separately recorded; no native CSS acceptance claim. Root MIT plus exact emitted-package licenses are included; prior reviewed core/StyleX missing-file supplements are labelled as supplements, not npm-shipped files."
+    ]
+  },
+  {
+    "id": "astryx-core:card",
+    "source": "Meta AstryX",
+    "repository": "https://github.com/meta/astryx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/core/src/Card/Card.doc.mjs",
+    "sourcePath": "packages/core/src/Card/Card.doc.mjs",
+    "licenseEvidence": {
+      "url": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/LICENSE",
+      "sha256": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473",
+      "scope": "Complete fixed original MIT; actual runtime dependency notices supplied in preview assets."
+    },
+    "title": "卡片组件",
+    "description": "原官方卡片内容和样式；数值为静态示例，不读取真实账户。",
+    "behavior": "原官方卡片内容和样式；数值为静态示例，不读取真实账户。",
+    "kind": "组件",
+    "format": "独立组件",
+    "category": "展示与媒体",
+    "license": "MIT AND ISC AND BSD-3-Clause",
+    "batch": "astryx-core-01",
+    "preview": "batches/astryx-core-01/card/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Original Meta AstryX official component documentation examples, not a screenshot or redrawn component. One functional family per entry; subsidiary parts/states not counted separately. The fixed repository workspace is0.7.12; actual installed core/theme/build0.7.11 compatibility runtime is disclosed. Original example JSX preserved; only required imports, default export and host wrapper supplied. Popover selects the complete Recent files example, Drawer selects complete Basic example with original local open state; undefined illustrative alternative examples are not claimed implemented. Button original actions have no business handler, Card sample amounts are static, Calendar is the original Persian month navigation hook example rather than a booking tool. Theme/StyleX/LayerProvider/reset shared setup with per-family independent IIFE. Original system-font fallback; no remote assets/services, backend, storage, clipboard or user-account action. Hidden unmount resets transient component state; reveal mounts fresh. Exit/error releases owned resources. Actual550 compose tests execute original component code under JSDOM; native dialog showModal/close are API stubs, native Escape/top-layer/focus geometry and CSS pixel appearance are NOT visually verified. Original Drawer cancel handler is tested via cancel event. Compiled StyleX CSS JSDOM parser warnings are separately recorded; no native CSS acceptance claim. Root MIT plus exact emitted-package licenses are included; prior reviewed core/StyleX missing-file supplements are labelled as supplements, not npm-shipped files."
+    ]
+  },
+  {
+    "id": "astryx-core:segmented-control",
+    "source": "Meta AstryX",
+    "repository": "https://github.com/meta/astryx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/core/src/SegmentedControl/SegmentedControl.doc.mjs",
+    "sourcePath": "packages/core/src/SegmentedControl/SegmentedControl.doc.mjs",
+    "licenseEvidence": {
+      "url": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/LICENSE",
+      "sha256": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473",
+      "scope": "Complete fixed original MIT; actual runtime dependency notices supplied in preview assets."
+    },
+    "title": "分段选择器",
+    "description": "原官方分段选择与选中状态；各状态合为一个组件族。",
+    "behavior": "原官方分段选择与选中状态；各状态合为一个组件族。",
+    "kind": "组件",
+    "format": "独立组件",
+    "category": "输入与选择",
+    "license": "MIT AND ISC AND BSD-3-Clause",
+    "batch": "astryx-core-01",
+    "preview": "batches/astryx-core-01/segmented-control/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Original Meta AstryX official component documentation examples, not a screenshot or redrawn component. One functional family per entry; subsidiary parts/states not counted separately. The fixed repository workspace is0.7.12; actual installed core/theme/build0.7.11 compatibility runtime is disclosed. Original example JSX preserved; only required imports, default export and host wrapper supplied. Popover selects the complete Recent files example, Drawer selects complete Basic example with original local open state; undefined illustrative alternative examples are not claimed implemented. Button original actions have no business handler, Card sample amounts are static, Calendar is the original Persian month navigation hook example rather than a booking tool. Theme/StyleX/LayerProvider/reset shared setup with per-family independent IIFE. Original system-font fallback; no remote assets/services, backend, storage, clipboard or user-account action. Hidden unmount resets transient component state; reveal mounts fresh. Exit/error releases owned resources. Actual550 compose tests execute original component code under JSDOM; native dialog showModal/close are API stubs, native Escape/top-layer/focus geometry and CSS pixel appearance are NOT visually verified. Original Drawer cancel handler is tested via cancel event. Compiled StyleX CSS JSDOM parser warnings are separately recorded; no native CSS acceptance claim. Root MIT plus exact emitted-package licenses are included; prior reviewed core/StyleX missing-file supplements are labelled as supplements, not npm-shipped files."
+    ]
+  },
+  {
+    "id": "astryx-core:calendar",
+    "source": "Meta AstryX",
+    "repository": "https://github.com/meta/astryx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/core/src/Calendar/Calendar.doc.mjs",
+    "sourcePath": "packages/core/src/Calendar/Calendar.doc.mjs",
+    "licenseEvidence": {
+      "url": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/LICENSE",
+      "sha256": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473",
+      "scope": "Complete fixed original MIT; actual runtime dependency notices supplied in preview assets."
+    },
+    "title": "波斯历日历",
+    "description": "原官方波斯历月份导航示例；展示日历组件，不提供预订服务。",
+    "behavior": "原官方波斯历月份导航示例；展示日历组件，不提供预订服务。",
+    "kind": "组件",
+    "format": "独立组件",
+    "category": "数据与状态",
+    "license": "MIT AND ISC AND BSD-3-Clause",
+    "batch": "astryx-core-01",
+    "preview": "batches/astryx-core-01/calendar/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Original Meta AstryX official component documentation examples, not a screenshot or redrawn component. One functional family per entry; subsidiary parts/states not counted separately. The fixed repository workspace is0.7.12; actual installed core/theme/build0.7.11 compatibility runtime is disclosed. Original example JSX preserved; only required imports, default export and host wrapper supplied. Popover selects the complete Recent files example, Drawer selects complete Basic example with original local open state; undefined illustrative alternative examples are not claimed implemented. Button original actions have no business handler, Card sample amounts are static, Calendar is the original Persian month navigation hook example rather than a booking tool. Theme/StyleX/LayerProvider/reset shared setup with per-family independent IIFE. Original system-font fallback; no remote assets/services, backend, storage, clipboard or user-account action. Hidden unmount resets transient component state; reveal mounts fresh. Exit/error releases owned resources. Actual550 compose tests execute original component code under JSDOM; native dialog showModal/close are API stubs, native Escape/top-layer/focus geometry and CSS pixel appearance are NOT visually verified. Original Drawer cancel handler is tested via cancel event. Compiled StyleX CSS JSDOM parser warnings are separately recorded; no native CSS acceptance claim. Root MIT plus exact emitted-package licenses are included; prior reviewed core/StyleX missing-file supplements are labelled as supplements, not npm-shipped files."
+    ]
+  },
+  {
+    "id": "astryx-core:popover",
+    "source": "Meta AstryX",
+    "repository": "https://github.com/meta/astryx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/core/src/Popover/Popover.doc.mjs",
+    "sourcePath": "packages/core/src/Popover/Popover.doc.mjs",
+    "licenseEvidence": {
+      "url": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/LICENSE",
+      "sha256": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473",
+      "scope": "Complete fixed original MIT; actual runtime dependency notices supplied in preview assets."
+    },
+    "title": "最近文件浮层",
+    "description": "原官方最近文件浮层示例与开关交互；演示文件不连接本地磁盘或云账户。",
+    "behavior": "原官方最近文件浮层示例与开关交互；演示文件不连接本地磁盘或云账户。",
+    "kind": "组件",
+    "format": "独立组件",
+    "category": "导航与组织",
+    "license": "MIT AND ISC AND BSD-3-Clause",
+    "batch": "astryx-core-01",
+    "preview": "batches/astryx-core-01/popover/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Original Meta AstryX official component documentation examples, not a screenshot or redrawn component. One functional family per entry; subsidiary parts/states not counted separately. The fixed repository workspace is0.7.12; actual installed core/theme/build0.7.11 compatibility runtime is disclosed. Original example JSX preserved; only required imports, default export and host wrapper supplied. Popover selects the complete Recent files example, Drawer selects complete Basic example with original local open state; undefined illustrative alternative examples are not claimed implemented. Button original actions have no business handler, Card sample amounts are static, Calendar is the original Persian month navigation hook example rather than a booking tool. Theme/StyleX/LayerProvider/reset shared setup with per-family independent IIFE. Original system-font fallback; no remote assets/services, backend, storage, clipboard or user-account action. Hidden unmount resets transient component state; reveal mounts fresh. Exit/error releases owned resources. Actual550 compose tests execute original component code under JSDOM; native dialog showModal/close are API stubs, native Escape/top-layer/focus geometry and CSS pixel appearance are NOT visually verified. Original Drawer cancel handler is tested via cancel event. Compiled StyleX CSS JSDOM parser warnings are separately recorded; no native CSS acceptance claim. Root MIT plus exact emitted-package licenses are included; prior reviewed core/StyleX missing-file supplements are labelled as supplements, not npm-shipped files."
+    ]
+  },
+  {
+    "id": "astryx-core:drawer",
+    "source": "Meta AstryX",
+    "repository": "https://github.com/meta/astryx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/core/src/Drawer/Drawer.doc.mjs",
+    "sourcePath": "packages/core/src/Drawer/Drawer.doc.mjs",
+    "licenseEvidence": {
+      "url": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/LICENSE",
+      "sha256": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473",
+      "scope": "Complete fixed original MIT; actual runtime dependency notices supplied in preview assets."
+    },
+    "title": "侧边抽屉组件",
+    "description": "原官方抽屉开关与关闭状态；不把抽屉子部件或状态拆成多条。",
+    "behavior": "原官方抽屉开关与关闭状态；不把抽屉子部件或状态拆成多条。",
+    "kind": "组件",
+    "format": "独立组件",
+    "category": "导航与组织",
+    "license": "MIT AND ISC AND BSD-3-Clause",
+    "batch": "astryx-core-01",
+    "preview": "batches/astryx-core-01/drawer/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Original Meta AstryX official component documentation examples, not a screenshot or redrawn component. One functional family per entry; subsidiary parts/states not counted separately. The fixed repository workspace is0.7.12; actual installed core/theme/build0.7.11 compatibility runtime is disclosed. Original example JSX preserved; only required imports, default export and host wrapper supplied. Popover selects the complete Recent files example, Drawer selects complete Basic example with original local open state; undefined illustrative alternative examples are not claimed implemented. Button original actions have no business handler, Card sample amounts are static, Calendar is the original Persian month navigation hook example rather than a booking tool. Theme/StyleX/LayerProvider/reset shared setup with per-family independent IIFE. Original system-font fallback; no remote assets/services, backend, storage, clipboard or user-account action. Hidden unmount resets transient component state; reveal mounts fresh. Exit/error releases owned resources. Actual550 compose tests execute original component code under JSDOM; native dialog showModal/close are API stubs, native Escape/top-layer/focus geometry and CSS pixel appearance are NOT visually verified. Original Drawer cancel handler is tested via cancel event. Compiled StyleX CSS JSDOM parser warnings are separately recorded; no native CSS acceptance claim. Root MIT plus exact emitted-package licenses are included; prior reviewed core/StyleX missing-file supplements are labelled as supplements, not npm-shipped files."
+    ]
   }
 ]
