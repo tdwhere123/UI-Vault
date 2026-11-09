@@ -14862,39 +14862,35 @@
   },
   {
     "id": "skeuos:tactile-controls",
-    "title": "拟物材质控制台",
     "source": "skeuos-css",
     "repository": "https://github.com/daniruiz/skeuos-css",
     "revision": "3fbbb735ae6d36280bcd466ddb15e73b6183eadc",
-    "sourcePath": "index.html",
     "upstream": "https://github.com/daniruiz/skeuos-css/blob/3fbbb735ae6d36280bcd466ddb15e73b6183eadc/index.html",
-    "website": "https://drasite.com/skeuos-css",
-    "license": "MIT (root source text verified; runtime/assets not closed)",
-    "behavior": "高光、凹槽、浮起按钮和纸面等触感控件。",
-    "difference": "纯CSS材质语言，不冒称有复杂状态逻辑；整套原示例计一族。",
-    "description": "高光、凹槽、浮起按钮和纸面等触感控件。 纯CSS材质语言，不冒称有复杂状态逻辑；整套原示例计一族。",
-    "gaps": [
-      "原index.html主要为CSS材质样式展示，必须取齐css/skeuos.css；不包含完整应用状态或窗口管理逻辑。",
-      "按钮/表单只可声称实际原生行为，不能以材质视觉推断拖拽或复杂交互；颜色变体不重复计数。",
-      "原展示中的动画、窄屏布局、对比度及prefers-reduced-motion未验；引入图片/字体前需单独核权利。",
-      "未构建、未运行、未浏览器视觉验收；当前completedPreviewCount=0，publicationReady=false。"
-    ],
-    "category": "视觉与动效",
+    "sourcePath": "index.html",
     "licenseEvidence": {
       "url": "https://github.com/daniruiz/skeuos-css/blob/3fbbb735ae6d36280bcd466ddb15e73b6183eadc/LICENSE",
       "sha256": "b98074574e9ad69bb7d8e18961233f4e78616026903bd2970a7f34504814c77d",
       "scope": "Complete original root text read; not full runtime/media closure"
     },
-    "sourceSha256": "5a32a6e99f4a78463350d0c6ee1f9efe28dc0dd248d4db284b320ecdf9c98437",
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-style-526",
-    "sourceScope": "Selected fixed original source and root license; no full runnable archive",
-    "kind": "原版场景或组件族（仅来源）",
-    "buildStatus": "Fixed original source read; not built, run or visually accepted"
+    "difference": "纯CSS材质语言，不冒称有复杂状态逻辑；整套原示例计一族。",
+    "website": "https://drasite.com/skeuos-css",
+    "title": "触感阴影控件",
+    "description": "原完整触感控件展示：纸面阴影、色板、原生输入与开关；按钮仅样式演示，无后台操作。",
+    "behavior": "原完整触感控件展示：纸面阴影、色板、原生输入与开关；按钮仅样式演示，无后台操作。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "输入与选择",
+    "license": "MIT",
+    "batch": "skeuos-01",
+    "preview": "batches/skeuos-01/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "pass",
+    "gaps": [
+      "Google Roboto import removed; system sans-serif fallback, no font redistributed.",
+      "Original save/enter/exit/send buttons are appearance demos and have no business handlers; no service is implemented.",
+      "Native control values and DOM state tested; actual shadows, palette animation and font metrics not visually verified."
+    ]
   },
   {
     "id": "sketchbook:datepicker",
@@ -15997,42 +15993,34 @@
   },
   {
     "id": "wavedrom:timing-diagram-editor",
-    "title": "数字时序叙事编辑器",
     "source": "WaveDrom Editor",
     "repository": "https://github.com/wavedrom/wavedrom.github.io",
     "revision": "375378efff2116ab2a03cdc3575d8ca73d49a429",
-    "sourcePath": "editor.html",
     "upstream": "https://github.com/wavedrom/wavedrom.github.io/blob/375378efff2116ab2a03cdc3575d8ca73d49a429/editor.html",
-    "license": "MIT (complete actual root text; runtime/media not closed)",
-    "behavior": "原 CodeMirror 文本与数字时序 SVG 对照编辑器，示例有时钟、数据、请求/应答轨道，菜单支持旋转编辑布局、比例、文件导入及 SVG/PNG 导出。",
-    "difference": "区别一般折线图、音频波形与流程图：离散信号波形、时间间隙和数据段说明构成协议/Agent 状态时序的独立视觉语法。",
-    "styleTags": [
-      "技术手稿/时序叙事"
-    ],
-    "gaps": [
-      "原 init/editor 使用 localStorage、window 全局事件、文件选择/下载与 NW.js 分支；Google Analytics、远程字体必须关闭。解析器是否 eval/Function、CodeMirror/皮肤/PNG 图标许可未闭合；不得为原导出开启 CSP 或包装二进制，未运行任何导出。",
-      "仅只读源码筛选；未安装/构建/运行、交互生命周期或浏览器视觉验收。"
-    ],
-    "description": "原 CodeMirror 文本与数字时序 SVG 对照编辑器，示例有时钟、数据、请求/应答轨道，菜单支持旋转编辑布局、比例、文件导入及 SVG/PNG 导出。 区别一般折线图、音频波形与流程图：离散信号波形、时间间隙和数据段说明构成协议/Agent 状态时序的独立视觉语法。",
-    "category": "数据与状态",
+    "sourcePath": "editor.html",
     "licenseEvidence": {
       "url": "https://github.com/wavedrom/wavedrom.github.io/blob/375378efff2116ab2a03cdc3575d8ca73d49a429/LICENSE",
       "sha256": "68f6442e5967ddb6a75ec8a4570215cac8cc415ea293c05cf857843c73fa5a57",
       "scope": "Complete actual root license; transitive code and media permissions not closed"
     },
-    "sourceEvidence": {
-      "localFile": "evidence/wavedrom--wavedrom.github.io--editor.html",
-      "sha256": "d6b7e61449e8ffb79f618976fcb6c3e9299fcd8adf7fef3dedb44e09155dfb05"
-    },
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-style-527",
-    "sourceScope": "Fixed original complete UI/demo source and full root license; not a runnable adaptation or full asset archive",
-    "kind": "原版交互场景（仅来源）",
-    "buildStatus": "fixed source and full root license read; not built/run/visually accepted"
+    "difference": "区别一般折线图、音频波形与流程图：离散信号波形、时间间隙和数据段说明构成协议/Agent 状态时序的独立视觉语法。",
+    "title": "时序协议编辑器",
+    "description": "原 CodeMirror 与时序 SVG 对照编辑，支持本地安全 JSON5、旋转及比例。",
+    "behavior": "原 CodeMirror 与时序 SVG 对照编辑，支持本地安全 JSON5、旋转及比例。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "数据与状态",
+    "license": "MIT",
+    "batch": "wavedrom-editor-01",
+    "preview": "batches/wavedrom-editor-01/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "pass",
+    "gaps": [
+      "Controlled JSDOM SVG getBBox/DOM geometry, not native font metrics or visual pixel verification.",
+      "Original default timing signal editor retained; advanced custom SVG/HTML labels and non-signal reg/assign DSL are deliberately not supported by the safe JSON5 input gate.",
+      "Local view only; no file import/export, URL sharing, storage, network or service worker. Raster menu icons omitted in favor of explicit text buttons; system monospace font."
+    ]
   },
   {
     "id": "svgedit:vector-illustration-studio",
@@ -16439,77 +16427,68 @@
   },
   {
     "id": "systemcss:monochrome-control-language",
-    "title": "单色早期Mac控件语言",
     "source": "system.css",
     "repository": "https://github.com/sakofchit/system.css",
     "revision": "c95b95428021361eaa411ccb08fa3b1050cc606d",
-    "sourcePath": "style.css",
     "upstream": "https://github.com/sakofchit/system.css/blob/c95b95428021361eaa411ccb08fa3b1050cc606d/style.css",
-    "website": "https://sakofchit.github.io/system.css/",
-    "license": "MIT (root text verified; runtime/assets not closed)",
-    "behavior": "细线、点阵阴影与单色菜单构成早期Mac风格，作为Exodus复古主题候选。",
-    "difference": "同一引擎的预设/配色仅一族；源码级新来源，尚非已验收预览。",
-    "description": "细线、点阵阴影与单色菜单构成早期Mac风格，作为Exodus复古主题候选。",
-    "gaps": [
-      "源码注明部分radio/checkbox计算取自98.css；需保留派生来源MIT声明，不因根LICENSE而抹去上游归属。",
-      "字体ChicagoFLF、Monaco、ChiKareGo2、FindersKeepers与icon SVG单独权利未闭合；默认不发布原字体/图标，替换需披露。",
-      "纯CSS无窗口拖动/最大化或真实桌面应用；docs为EJS且需docs.css，不能冒称下载style.css即可重现整个展示。",
-      "相比已收98/7.css是不同单色视觉而非新功能族；是否足够差异由适配审查，避免重复表单逻辑计数。",
-      "固定源码及完整根许可已存证；未构建、未运行、未截图，completedPreviewCount=0。"
-    ],
-    "category": "视觉与动效",
+    "sourcePath": "style.css",
     "licenseEvidence": {
       "url": "https://github.com/sakofchit/system.css/blob/c95b95428021361eaa411ccb08fa3b1050cc606d/LICENSE",
       "sha256": "0433a8c105e9d410ca3fb7f205aafe8f1be27e0438cf3bd1447907f738ebc6b0",
       "scope": "Complete original root license retained; runtime/media separate"
     },
-    "sourceSha256": "ad1245ba7f49b3565e2d011e0a799aa04b6a5fcfdd0af000ec2c2f6a83ce28ac",
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-style-528",
-    "sourceScope": "Selected fixed original source and root license; full read-only repo clone retained privately",
-    "kind": "原版风格组件族（仅来源）",
-    "buildStatus": "Fixed source inspected; not built or visually accepted"
+    "difference": "同一引擎的预设/配色仅一族；源码级新来源，尚非已验收预览。",
+    "website": "https://sakofchit.github.io/system.css/",
+    "title": "黑白桌面控件",
+    "description": "完整官方 25 组黑白控件示例，保原生交互，不提交表单，不造窗口管理器。",
+    "behavior": "完整官方 25 组黑白控件示例，保原生交互，不提交表单，不造窗口管理器。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "输入与选择",
+    "license": "MIT",
+    "batch": "system-controls-01",
+    "preview": "batches/system-controls-01/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "passed",
+    "gaps": [
+      "原字体不分发，系统Arial回退",
+      "原窗口按钮无逻辑",
+      "原缺失disabled checkmark的未用CSS规则移除",
+      "外部链接禁用；视觉未验"
+    ]
   },
   {
     "id": "obnoxious:expressive-text-motion",
-    "title": "夸张文字情绪动效",
     "source": "obnoxious.css",
     "repository": "https://github.com/tholman/obnoxious.css",
     "revision": "efccba04b49c092412048bf19e5d0f6db5955d6b",
-    "sourcePath": "obnoxious.css",
     "upstream": "https://github.com/tholman/obnoxious.css/blob/efccba04b49c092412048bf19e5d0f6db5955d6b/obnoxious.css",
-    "website": "https://tholman.com/obnoxious/",
-    "license": "MIT (root text verified; runtime/assets not closed)",
-    "behavior": "强烈摇晃、字形切换与夸张变换，用作可选择的消息表情演示，不用于常态界面。",
-    "difference": "同一引擎的预设/配色仅一族；源码级新来源，尚非已验收预览。",
-    "description": "强烈摇晃、字形切换与夸张变换，用作可选择的消息表情演示，不用于常态界面。",
-    "gaps": [
-      "源码strobe在6秒动画内反复opacity 0/1并放大至scale(10.9)，另含intensifies逐步放大抖动及多圈旋转；strobe应排除不演示，其余默认静态，仅明确触发并可立即停止。",
-      "低优先级可选来源：不适合默认生产聊天；强运动可能造成不适，禁止自动播放，须主动点击、停止按钮及reduced-motion。",
-      "fontalicious依赖系统字体名称，实际字形跨平台不一致；不可打包系统商业字体，demo字体/媒体另行闭合。",
-      "纯CSS效果，没有发送、状态机或语义内容；不同动画、颜色、字体不拆成多个来源计数。",
-      "固定源码及完整根许可已存证；未构建、未运行、未截图，completedPreviewCount=0。"
-    ],
-    "category": "视觉与动效",
+    "sourcePath": "obnoxious.css",
     "licenseEvidence": {
       "url": "https://github.com/tholman/obnoxious.css/blob/efccba04b49c092412048bf19e5d0f6db5955d6b/license.md",
       "sha256": "83f2e381726913a93e40e0edf8a50a7b7024e61fb43b31e79ce25b78fcdc4893",
       "scope": "Complete original root license retained; runtime/media separate"
     },
-    "sourceSha256": "16200c420e03b64fe5cbcc06417b6342c81da5d36f8495cf2076b893e9796988",
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-style-528",
-    "sourceScope": "Selected fixed original source and root license; full read-only repo clone retained privately",
-    "kind": "原版风格组件族（仅来源）",
-    "buildStatus": "Fixed source inspected; not built or visually accepted"
+    "difference": "同一引擎的预设/配色仅一族；源码级新来源，尚非已验收预览。",
+    "website": "https://tholman.com/obnoxious/",
+    "title": "夸张文字动效",
+    "description": "原标题动效演示，保留四种非频闪效果；默认静态，可停止，尊重减少动态偏好。",
+    "behavior": "原标题动效演示，保留四种非频闪效果；默认静态，可停止，尊重减少动态偏好。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "视觉与动效",
+    "license": "MIT",
+    "batch": "obnoxious-01",
+    "preview": "batches/obnoxious-01/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "pass",
+    "gaps": [
+      "Strobe is deliberately excluded from runtime CSS and options. Four original effects remain, not a claim of the unmodified five-mode demo.",
+      "Google Montserrat font removed; system Arial fallback. All external attribution/share links disabled, no Twitter widget.",
+      "Original effect keyframes retained from fixed distributed CSS, but actual motion pixels and native browser visual appearance unverified."
+    ]
   },
   {
     "id": "wick:animation-authoring-studio",
@@ -20569,6 +20548,286 @@
     "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
     "gaps": [
       "Original Meta AstryX visual components used through their documented API with explicitly host-authored minimal local controlled fixtures. Not an official complete application or backend. Each independent functional family has one entry; states/parts are not separate entries. NumberInput quantity0–10, Radio local mode, Selector local status, Slider intensity0–100, Switch boolean preference, TextInput/TextArea plain local sample text, TimeInput local time, Pagination95 sample items, ProgressBar manual simulated progress. Original core components/geometry/styles unchanged, only host values/handlers/output and labels supplied. Source documentation fixed repository0.7.12 with installedcore/theme/build0.7.11 compatibility runtime explicitly disclosed. Per-entry independent IIFE via shared StyleX/theme/LayerProvider and system font fallback. No network, persistent storage, real accounts, service submission, clipboard or media. Hidden unmount resets fixture state and visible remounts; exit/error cleans owned resources. Actual550compose and loader/cache/release plus each original key state behavior tested under JSDOM, shared early/late/reduced test rather than duplicate matrices. Native pointer drag, locale IME, focus geometry and CSS pixels are not verified. Exact StyleX CSS parser warning recorded separately. Root MIT and all actual emitted dependency full licenses retained; prior official core/StyleX missing-file supplements clearly labelled."
+    ]
+  },
+  {
+    "id": "astryx-core:badge",
+    "source": "Meta AstryX",
+    "repository": "https://github.com/meta/astryx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/core/src/Badge/Badge.doc.mjs",
+    "sourcePath": "packages/core/src/Badge/Badge.doc.mjs",
+    "licenseEvidence": {
+      "url": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/LICENSE",
+      "sha256": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473",
+      "scope": "Complete fixed original MIT; actual runtime dependency notices supplied in preview assets."
+    },
+    "title": "标签徽章",
+    "description": "原视觉组件与明确的本地属性示例；静态展示及状态不拆成多条，不提供后台业务。",
+    "behavior": "原视觉组件与明确的本地属性示例；静态展示及状态不拆成多条，不提供后台业务。",
+    "kind": "组件",
+    "format": "独立组件",
+    "category": "数据与状态",
+    "license": "MIT AND ISC AND BSD-3-Clause",
+    "batch": "astryx-display-01",
+    "preview": "batches/astryx-display-01/badge/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Original Meta AstryX display/typography/status components, each through documented API with an explicitly host-authored local fixture. Not an upstream complete application or backend. Badge and StatusDot states, inline Code sample, Blockquote attribution, Divider label, EmptyState text, Kbd key-string, Skeleton/content toggle and Spinner size remain together in one entry per original family. Breadcrumbs uses original items with local selection callbacks, no real navigation. Host toggle controls demonstrate props, not extra original business behavior. Kbd does not register system shortcuts; code is displayed not executed; spinner/skeleton do not indicate an actual background job; status dots are not monitoring service health. Original core geometry and styles unchanged. Fixed documentation source workspace0.7.12 with actual core/theme/build0.7.11 compatibility runtime disclosed. Shared original neutral theme/StyleX/LayerProvider, independent per-entry IIFE and system fonts. No media, clipboard, network, user accounts or persistence. Hidden unmount/visible remount resets fixture state; reduced-motion CSS stops animations; exit/error cleans owned resources. Actual550compose and loader/cache/release plus per-entry rendering/state test, shared early/late/reduced tests under JSDOM; native CSS geometry/animation pixels unverified and exact StyleX parser warning separately recorded. Full rootMIT plus emitted dependency licenses; prior core/StyleX missing-file supplements explicitly labelled."
+    ]
+  },
+  {
+    "id": "astryx-core:blockquote",
+    "source": "Meta AstryX",
+    "repository": "https://github.com/meta/astryx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/core/src/Blockquote/Blockquote.doc.mjs",
+    "sourcePath": "packages/core/src/Blockquote/Blockquote.doc.mjs",
+    "licenseEvidence": {
+      "url": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/LICENSE",
+      "sha256": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473",
+      "scope": "Complete fixed original MIT; actual runtime dependency notices supplied in preview assets."
+    },
+    "title": "引用段落",
+    "description": "原视觉组件与明确的本地属性示例；静态展示及状态不拆成多条，不提供后台业务。",
+    "behavior": "原视觉组件与明确的本地属性示例；静态展示及状态不拆成多条，不提供后台业务。",
+    "kind": "组件",
+    "format": "独立组件",
+    "category": "数据与状态",
+    "license": "MIT AND ISC AND BSD-3-Clause",
+    "batch": "astryx-display-01",
+    "preview": "batches/astryx-display-01/blockquote/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Original Meta AstryX display/typography/status components, each through documented API with an explicitly host-authored local fixture. Not an upstream complete application or backend. Badge and StatusDot states, inline Code sample, Blockquote attribution, Divider label, EmptyState text, Kbd key-string, Skeleton/content toggle and Spinner size remain together in one entry per original family. Breadcrumbs uses original items with local selection callbacks, no real navigation. Host toggle controls demonstrate props, not extra original business behavior. Kbd does not register system shortcuts; code is displayed not executed; spinner/skeleton do not indicate an actual background job; status dots are not monitoring service health. Original core geometry and styles unchanged. Fixed documentation source workspace0.7.12 with actual core/theme/build0.7.11 compatibility runtime disclosed. Shared original neutral theme/StyleX/LayerProvider, independent per-entry IIFE and system fonts. No media, clipboard, network, user accounts or persistence. Hidden unmount/visible remount resets fixture state; reduced-motion CSS stops animations; exit/error cleans owned resources. Actual550compose and loader/cache/release plus per-entry rendering/state test, shared early/late/reduced tests under JSDOM; native CSS geometry/animation pixels unverified and exact StyleX parser warning separately recorded. Full rootMIT plus emitted dependency licenses; prior core/StyleX missing-file supplements explicitly labelled."
+    ]
+  },
+  {
+    "id": "astryx-core:breadcrumbs",
+    "source": "Meta AstryX",
+    "repository": "https://github.com/meta/astryx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/core/src/Breadcrumbs/Breadcrumbs.doc.mjs",
+    "sourcePath": "packages/core/src/Breadcrumbs/Breadcrumbs.doc.mjs",
+    "licenseEvidence": {
+      "url": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/LICENSE",
+      "sha256": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473",
+      "scope": "Complete fixed original MIT; actual runtime dependency notices supplied in preview assets."
+    },
+    "title": "面包屑导航",
+    "description": "原视觉组件与明确的本地属性示例；静态展示及状态不拆成多条，不提供后台业务。",
+    "behavior": "原视觉组件与明确的本地属性示例；静态展示及状态不拆成多条，不提供后台业务。",
+    "kind": "组件",
+    "format": "独立组件",
+    "category": "数据与状态",
+    "license": "MIT AND ISC AND BSD-3-Clause",
+    "batch": "astryx-display-01",
+    "preview": "batches/astryx-display-01/breadcrumbs/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Original Meta AstryX display/typography/status components, each through documented API with an explicitly host-authored local fixture. Not an upstream complete application or backend. Badge and StatusDot states, inline Code sample, Blockquote attribution, Divider label, EmptyState text, Kbd key-string, Skeleton/content toggle and Spinner size remain together in one entry per original family. Breadcrumbs uses original items with local selection callbacks, no real navigation. Host toggle controls demonstrate props, not extra original business behavior. Kbd does not register system shortcuts; code is displayed not executed; spinner/skeleton do not indicate an actual background job; status dots are not monitoring service health. Original core geometry and styles unchanged. Fixed documentation source workspace0.7.12 with actual core/theme/build0.7.11 compatibility runtime disclosed. Shared original neutral theme/StyleX/LayerProvider, independent per-entry IIFE and system fonts. No media, clipboard, network, user accounts or persistence. Hidden unmount/visible remount resets fixture state; reduced-motion CSS stops animations; exit/error cleans owned resources. Actual550compose and loader/cache/release plus per-entry rendering/state test, shared early/late/reduced tests under JSDOM; native CSS geometry/animation pixels unverified and exact StyleX parser warning separately recorded. Full rootMIT plus emitted dependency licenses; prior core/StyleX missing-file supplements explicitly labelled."
+    ]
+  },
+  {
+    "id": "astryx-core:code",
+    "source": "Meta AstryX",
+    "repository": "https://github.com/meta/astryx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/core/src/Code/Code.doc.mjs",
+    "sourcePath": "packages/core/src/Code/Code.doc.mjs",
+    "licenseEvidence": {
+      "url": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/LICENSE",
+      "sha256": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473",
+      "scope": "Complete fixed original MIT; actual runtime dependency notices supplied in preview assets."
+    },
+    "title": "行内代码",
+    "description": "原视觉组件与明确的本地属性示例；静态展示及状态不拆成多条，不提供后台业务。",
+    "behavior": "原视觉组件与明确的本地属性示例；静态展示及状态不拆成多条，不提供后台业务。",
+    "kind": "组件",
+    "format": "独立组件",
+    "category": "数据与状态",
+    "license": "MIT AND ISC AND BSD-3-Clause",
+    "batch": "astryx-display-01",
+    "preview": "batches/astryx-display-01/code/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Original Meta AstryX display/typography/status components, each through documented API with an explicitly host-authored local fixture. Not an upstream complete application or backend. Badge and StatusDot states, inline Code sample, Blockquote attribution, Divider label, EmptyState text, Kbd key-string, Skeleton/content toggle and Spinner size remain together in one entry per original family. Breadcrumbs uses original items with local selection callbacks, no real navigation. Host toggle controls demonstrate props, not extra original business behavior. Kbd does not register system shortcuts; code is displayed not executed; spinner/skeleton do not indicate an actual background job; status dots are not monitoring service health. Original core geometry and styles unchanged. Fixed documentation source workspace0.7.12 with actual core/theme/build0.7.11 compatibility runtime disclosed. Shared original neutral theme/StyleX/LayerProvider, independent per-entry IIFE and system fonts. No media, clipboard, network, user accounts or persistence. Hidden unmount/visible remount resets fixture state; reduced-motion CSS stops animations; exit/error cleans owned resources. Actual550compose and loader/cache/release plus per-entry rendering/state test, shared early/late/reduced tests under JSDOM; native CSS geometry/animation pixels unverified and exact StyleX parser warning separately recorded. Full rootMIT plus emitted dependency licenses; prior core/StyleX missing-file supplements explicitly labelled."
+    ]
+  },
+  {
+    "id": "astryx-core:divider",
+    "source": "Meta AstryX",
+    "repository": "https://github.com/meta/astryx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/core/src/Divider/Divider.doc.mjs",
+    "sourcePath": "packages/core/src/Divider/Divider.doc.mjs",
+    "licenseEvidence": {
+      "url": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/LICENSE",
+      "sha256": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473",
+      "scope": "Complete fixed original MIT; actual runtime dependency notices supplied in preview assets."
+    },
+    "title": "分隔线",
+    "description": "原视觉组件与明确的本地属性示例；静态展示及状态不拆成多条，不提供后台业务。",
+    "behavior": "原视觉组件与明确的本地属性示例；静态展示及状态不拆成多条，不提供后台业务。",
+    "kind": "组件",
+    "format": "独立组件",
+    "category": "数据与状态",
+    "license": "MIT AND ISC AND BSD-3-Clause",
+    "batch": "astryx-display-01",
+    "preview": "batches/astryx-display-01/divider/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Original Meta AstryX display/typography/status components, each through documented API with an explicitly host-authored local fixture. Not an upstream complete application or backend. Badge and StatusDot states, inline Code sample, Blockquote attribution, Divider label, EmptyState text, Kbd key-string, Skeleton/content toggle and Spinner size remain together in one entry per original family. Breadcrumbs uses original items with local selection callbacks, no real navigation. Host toggle controls demonstrate props, not extra original business behavior. Kbd does not register system shortcuts; code is displayed not executed; spinner/skeleton do not indicate an actual background job; status dots are not monitoring service health. Original core geometry and styles unchanged. Fixed documentation source workspace0.7.12 with actual core/theme/build0.7.11 compatibility runtime disclosed. Shared original neutral theme/StyleX/LayerProvider, independent per-entry IIFE and system fonts. No media, clipboard, network, user accounts or persistence. Hidden unmount/visible remount resets fixture state; reduced-motion CSS stops animations; exit/error cleans owned resources. Actual550compose and loader/cache/release plus per-entry rendering/state test, shared early/late/reduced tests under JSDOM; native CSS geometry/animation pixels unverified and exact StyleX parser warning separately recorded. Full rootMIT plus emitted dependency licenses; prior core/StyleX missing-file supplements explicitly labelled."
+    ]
+  },
+  {
+    "id": "astryx-core:empty-state",
+    "source": "Meta AstryX",
+    "repository": "https://github.com/meta/astryx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/core/src/EmptyState/EmptyState.doc.mjs",
+    "sourcePath": "packages/core/src/EmptyState/EmptyState.doc.mjs",
+    "licenseEvidence": {
+      "url": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/LICENSE",
+      "sha256": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473",
+      "scope": "Complete fixed original MIT; actual runtime dependency notices supplied in preview assets."
+    },
+    "title": "空内容状态",
+    "description": "原视觉组件与明确的本地属性示例；静态展示及状态不拆成多条，不提供后台业务。",
+    "behavior": "原视觉组件与明确的本地属性示例；静态展示及状态不拆成多条，不提供后台业务。",
+    "kind": "组件",
+    "format": "独立组件",
+    "category": "数据与状态",
+    "license": "MIT AND ISC AND BSD-3-Clause",
+    "batch": "astryx-display-01",
+    "preview": "batches/astryx-display-01/empty-state/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Original Meta AstryX display/typography/status components, each through documented API with an explicitly host-authored local fixture. Not an upstream complete application or backend. Badge and StatusDot states, inline Code sample, Blockquote attribution, Divider label, EmptyState text, Kbd key-string, Skeleton/content toggle and Spinner size remain together in one entry per original family. Breadcrumbs uses original items with local selection callbacks, no real navigation. Host toggle controls demonstrate props, not extra original business behavior. Kbd does not register system shortcuts; code is displayed not executed; spinner/skeleton do not indicate an actual background job; status dots are not monitoring service health. Original core geometry and styles unchanged. Fixed documentation source workspace0.7.12 with actual core/theme/build0.7.11 compatibility runtime disclosed. Shared original neutral theme/StyleX/LayerProvider, independent per-entry IIFE and system fonts. No media, clipboard, network, user accounts or persistence. Hidden unmount/visible remount resets fixture state; reduced-motion CSS stops animations; exit/error cleans owned resources. Actual550compose and loader/cache/release plus per-entry rendering/state test, shared early/late/reduced tests under JSDOM; native CSS geometry/animation pixels unverified and exact StyleX parser warning separately recorded. Full rootMIT plus emitted dependency licenses; prior core/StyleX missing-file supplements explicitly labelled."
+    ]
+  },
+  {
+    "id": "astryx-core:kbd",
+    "source": "Meta AstryX",
+    "repository": "https://github.com/meta/astryx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/core/src/Kbd/Kbd.doc.mjs",
+    "sourcePath": "packages/core/src/Kbd/Kbd.doc.mjs",
+    "licenseEvidence": {
+      "url": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/LICENSE",
+      "sha256": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473",
+      "scope": "Complete fixed original MIT; actual runtime dependency notices supplied in preview assets."
+    },
+    "title": "快捷键提示",
+    "description": "原视觉组件与明确的本地属性示例；静态展示及状态不拆成多条，不提供后台业务。",
+    "behavior": "原视觉组件与明确的本地属性示例；静态展示及状态不拆成多条，不提供后台业务。",
+    "kind": "组件",
+    "format": "独立组件",
+    "category": "数据与状态",
+    "license": "MIT AND ISC AND BSD-3-Clause",
+    "batch": "astryx-display-01",
+    "preview": "batches/astryx-display-01/kbd/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Original Meta AstryX display/typography/status components, each through documented API with an explicitly host-authored local fixture. Not an upstream complete application or backend. Badge and StatusDot states, inline Code sample, Blockquote attribution, Divider label, EmptyState text, Kbd key-string, Skeleton/content toggle and Spinner size remain together in one entry per original family. Breadcrumbs uses original items with local selection callbacks, no real navigation. Host toggle controls demonstrate props, not extra original business behavior. Kbd does not register system shortcuts; code is displayed not executed; spinner/skeleton do not indicate an actual background job; status dots are not monitoring service health. Original core geometry and styles unchanged. Fixed documentation source workspace0.7.12 with actual core/theme/build0.7.11 compatibility runtime disclosed. Shared original neutral theme/StyleX/LayerProvider, independent per-entry IIFE and system fonts. No media, clipboard, network, user accounts or persistence. Hidden unmount/visible remount resets fixture state; reduced-motion CSS stops animations; exit/error cleans owned resources. Actual550compose and loader/cache/release plus per-entry rendering/state test, shared early/late/reduced tests under JSDOM; native CSS geometry/animation pixels unverified and exact StyleX parser warning separately recorded. Full rootMIT plus emitted dependency licenses; prior core/StyleX missing-file supplements explicitly labelled."
+    ]
+  },
+  {
+    "id": "astryx-core:skeleton",
+    "source": "Meta AstryX",
+    "repository": "https://github.com/meta/astryx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/core/src/Skeleton/Skeleton.doc.mjs",
+    "sourcePath": "packages/core/src/Skeleton/Skeleton.doc.mjs",
+    "licenseEvidence": {
+      "url": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/LICENSE",
+      "sha256": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473",
+      "scope": "Complete fixed original MIT; actual runtime dependency notices supplied in preview assets."
+    },
+    "title": "加载骨架",
+    "description": "原视觉组件与明确的本地属性示例；静态展示及状态不拆成多条，不提供后台业务。",
+    "behavior": "原视觉组件与明确的本地属性示例；静态展示及状态不拆成多条，不提供后台业务。",
+    "kind": "组件",
+    "format": "独立组件",
+    "category": "数据与状态",
+    "license": "MIT AND ISC AND BSD-3-Clause",
+    "batch": "astryx-display-01",
+    "preview": "batches/astryx-display-01/skeleton/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Original Meta AstryX display/typography/status components, each through documented API with an explicitly host-authored local fixture. Not an upstream complete application or backend. Badge and StatusDot states, inline Code sample, Blockquote attribution, Divider label, EmptyState text, Kbd key-string, Skeleton/content toggle and Spinner size remain together in one entry per original family. Breadcrumbs uses original items with local selection callbacks, no real navigation. Host toggle controls demonstrate props, not extra original business behavior. Kbd does not register system shortcuts; code is displayed not executed; spinner/skeleton do not indicate an actual background job; status dots are not monitoring service health. Original core geometry and styles unchanged. Fixed documentation source workspace0.7.12 with actual core/theme/build0.7.11 compatibility runtime disclosed. Shared original neutral theme/StyleX/LayerProvider, independent per-entry IIFE and system fonts. No media, clipboard, network, user accounts or persistence. Hidden unmount/visible remount resets fixture state; reduced-motion CSS stops animations; exit/error cleans owned resources. Actual550compose and loader/cache/release plus per-entry rendering/state test, shared early/late/reduced tests under JSDOM; native CSS geometry/animation pixels unverified and exact StyleX parser warning separately recorded. Full rootMIT plus emitted dependency licenses; prior core/StyleX missing-file supplements explicitly labelled."
+    ]
+  },
+  {
+    "id": "astryx-core:spinner",
+    "source": "Meta AstryX",
+    "repository": "https://github.com/meta/astryx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/core/src/Spinner/Spinner.doc.mjs",
+    "sourcePath": "packages/core/src/Spinner/Spinner.doc.mjs",
+    "licenseEvidence": {
+      "url": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/LICENSE",
+      "sha256": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473",
+      "scope": "Complete fixed original MIT; actual runtime dependency notices supplied in preview assets."
+    },
+    "title": "加载指示器",
+    "description": "原视觉组件与明确的本地属性示例；静态展示及状态不拆成多条，不提供后台业务。",
+    "behavior": "原视觉组件与明确的本地属性示例；静态展示及状态不拆成多条，不提供后台业务。",
+    "kind": "组件",
+    "format": "独立组件",
+    "category": "数据与状态",
+    "license": "MIT AND ISC AND BSD-3-Clause",
+    "batch": "astryx-display-01",
+    "preview": "batches/astryx-display-01/spinner/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Original Meta AstryX display/typography/status components, each through documented API with an explicitly host-authored local fixture. Not an upstream complete application or backend. Badge and StatusDot states, inline Code sample, Blockquote attribution, Divider label, EmptyState text, Kbd key-string, Skeleton/content toggle and Spinner size remain together in one entry per original family. Breadcrumbs uses original items with local selection callbacks, no real navigation. Host toggle controls demonstrate props, not extra original business behavior. Kbd does not register system shortcuts; code is displayed not executed; spinner/skeleton do not indicate an actual background job; status dots are not monitoring service health. Original core geometry and styles unchanged. Fixed documentation source workspace0.7.12 with actual core/theme/build0.7.11 compatibility runtime disclosed. Shared original neutral theme/StyleX/LayerProvider, independent per-entry IIFE and system fonts. No media, clipboard, network, user accounts or persistence. Hidden unmount/visible remount resets fixture state; reduced-motion CSS stops animations; exit/error cleans owned resources. Actual550compose and loader/cache/release plus per-entry rendering/state test, shared early/late/reduced tests under JSDOM; native CSS geometry/animation pixels unverified and exact StyleX parser warning separately recorded. Full rootMIT plus emitted dependency licenses; prior core/StyleX missing-file supplements explicitly labelled."
+    ]
+  },
+  {
+    "id": "astryx-core:status-dot",
+    "source": "Meta AstryX",
+    "repository": "https://github.com/meta/astryx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/core/src/StatusDot/StatusDot.doc.mjs",
+    "sourcePath": "packages/core/src/StatusDot/StatusDot.doc.mjs",
+    "licenseEvidence": {
+      "url": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/LICENSE",
+      "sha256": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473",
+      "scope": "Complete fixed original MIT; actual runtime dependency notices supplied in preview assets."
+    },
+    "title": "状态圆点",
+    "description": "原视觉组件与明确的本地属性示例；静态展示及状态不拆成多条，不提供后台业务。",
+    "behavior": "原视觉组件与明确的本地属性示例；静态展示及状态不拆成多条，不提供后台业务。",
+    "kind": "组件",
+    "format": "独立组件",
+    "category": "数据与状态",
+    "license": "MIT AND ISC AND BSD-3-Clause",
+    "batch": "astryx-display-01",
+    "preview": "batches/astryx-display-01/status-dot/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Original Meta AstryX display/typography/status components, each through documented API with an explicitly host-authored local fixture. Not an upstream complete application or backend. Badge and StatusDot states, inline Code sample, Blockquote attribution, Divider label, EmptyState text, Kbd key-string, Skeleton/content toggle and Spinner size remain together in one entry per original family. Breadcrumbs uses original items with local selection callbacks, no real navigation. Host toggle controls demonstrate props, not extra original business behavior. Kbd does not register system shortcuts; code is displayed not executed; spinner/skeleton do not indicate an actual background job; status dots are not monitoring service health. Original core geometry and styles unchanged. Fixed documentation source workspace0.7.12 with actual core/theme/build0.7.11 compatibility runtime disclosed. Shared original neutral theme/StyleX/LayerProvider, independent per-entry IIFE and system fonts. No media, clipboard, network, user accounts or persistence. Hidden unmount/visible remount resets fixture state; reduced-motion CSS stops animations; exit/error cleans owned resources. Actual550compose and loader/cache/release plus per-entry rendering/state test, shared early/late/reduced tests under JSDOM; native CSS geometry/animation pixels unverified and exact StyleX parser warning separately recorded. Full rootMIT plus emitted dependency licenses; prior core/StyleX missing-file supplements explicitly labelled."
     ]
   }
 ]
