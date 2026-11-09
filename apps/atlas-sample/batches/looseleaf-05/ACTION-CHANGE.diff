@@ -1,0 +1,45 @@
+--- build/src/docs/examples/peel-corner/03-voucher.tsx
++++ adapted/build/src/docs/examples/peel-corner/03-voucher.tsx
+@@ -13,7 +13,7 @@
+ 
+ export default function Example() {
+   const [open, setOpen] = React.useState(false)
+-  const [copied, setCopied] = React.useState(false)
++  const [copied, setCopied] = React.useState<boolean | string>(false)
+   return (
+     <div className="flex flex-col items-center gap-3">
+       <PeelCorner peeled={open} onPeeledChange={setOpen} className="w-80" label="Reveal the voucher code">
+@@ -28,11 +28,16 @@
+               size="xs"
+               variant="outline"
+               onClick={async () => {
+-                await navigator.clipboard?.writeText("FREE-10")
+-                setCopied(true)
++                try {
++                  if (!navigator.clipboard?.writeText) throw new Error("Clipboard unavailable")
++                  await navigator.clipboard.writeText("FREE-10")
++                  setCopied(true)
++                } catch {
++                  setCopied("Copy unavailable")
++                }
+               }}
+             >
+-              {copied ? "Copied" : "Copy code"}
++              {copied === true ? "Copied" : typeof copied === "string" ? copied : "Copy code"}
+             </Button>
+           </div>
+         </PeelCornerUnder>
+--- build/src/blocks/newsletter-01/components/newsletter-01-form.tsx
++++ adapted/build/src/blocks/newsletter-01/components/newsletter-01-form.tsx
+@@ -30,9 +30,9 @@
+   if (status === "done") {
+     return (
+       <div ref={doneRef} tabIndex={-1} role="status" className="rounded-none outline-none">
+-        <p className="font-script text-3xl leading-none font-bold text-ink">You&rsquo;re on the list.</p>
++        <p className="font-script text-3xl leading-none font-bold text-ink">Local demo complete.</p>
+         <p className="mt-2 text-lg/7 text-ink-soft">
+-          We sent a note to <strong className="font-bold text-ink">{email}</strong>. Click the link inside to confirm, and the first letter lands on Sunday.
++          Preview for <strong className="font-bold text-ink">{email}</strong>. No email was sent and no subscription was created.
+         </p>
+         <Button type="button" variant="link" size="sm" onClick={onReset} className="-ms-3 mt-1">
+           Use a different address
