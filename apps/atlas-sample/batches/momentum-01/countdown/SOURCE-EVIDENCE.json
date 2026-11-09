@@ -1,0 +1,23 @@
+{
+  "repository": "https://github.com/lmgonzalves/momentum-slider",
+  "revision": "b7b8a22ee759532b4fdc36340d49ac003a4fed61",
+  "originalFilesSHA256": {
+    "countdown-timer.js": "ab0ad4658861da9633c1f87d6c071885861c23ac6b88fd22c99f574739ff0a56",
+    "normalize-LICENSE.md": "8781bc9996713938f6baea8a10c8426f9ae06778e562fafe5353669ae6c05f07",
+    "package.json": "2a77fc1816b9565c361c624c9d333e3f8344a2c042fc228d6e444b2c57a3c070",
+    "index.html": "63630fa542444ced44db9522fc9e9e3f43cf9805ecec64998131faf846d53eca",
+    "normalize.css": "bb8be62d81ad27ded2110b72b0bda74b5993b289c576764c0644212add764a92",
+    "countdown-timer.css": "96a189d52f8bfe3b59d2c267846d7b720b6ed23a7b732472bea5597c8d46b810",
+    "momentum-slider.js": "7bf8fe1cbe2ccf1aafd1d3553c0f40fa8bbac0ac980073e7bf537ff368d21d6c",
+    "LICENSE": "ca8091cca512daf6b57061bb6d3afc241bb23398739d6eaf24c0a08006674c09"
+  },
+  "runtimeDependencies": [
+    {
+      "name": "normalize.css",
+      "version": "3.0.3",
+      "license": "MIT"
+    }
+  ],
+  "adaptation": "Original full countdown demo and Momentum Slider engine preserved: 1–60 selection, loop duplicates, scale/opacity and deceleration, start/tick/progress/stop. Host adds keyboard arrows/Home/End, pause while hidden preserving integer seconds; interrupted slide settles through original animateTarget to its current intended whole index (active drag uses nearest step) on visible/blur/reduced; reduced immediate original animation step, positive-size initialization and listener/RAF/interval ownership. Countdown is foreground local demonstration, not a reliable background reminder. Google Roboto Mono request omitted; original monospace fallback retained. Geometry/clock stubs test real original callbacks, not native wall-clock or pixel rendering.",
+  "visualVerified": false
+}
