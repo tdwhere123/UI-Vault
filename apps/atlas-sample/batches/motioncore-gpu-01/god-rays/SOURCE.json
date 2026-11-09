@@ -1,0 +1,142 @@
+{
+  "repository": "https://github.com/kaltwrk/motion-core",
+  "revision": "74ad6e66d50cc9b1849a505fcd1b352704920745",
+  "entry": "apps/web/src/routes/docs/god-rays/",
+  "originalSHA256": {
+    "packages/motion-core/src/lib/components/god-rays/GodRays.svelte": "45d6b36d8b7c20f1efc23830c2110d2778b91acdad9c3543ad4806cc3663d03c",
+    "packages/motion-core/src/lib/components/god-rays/GodRaysScene.svelte": "b100b0e3e18f70b345ed98884bbf3cb64a88b87b3c717047f102229c977e100a",
+    "packages/motion-core/src/lib/components/god-rays/component.json": "cca869f6e9000cef8241af6c9ab8692e9ee679e0113cd39aae3f1f829a0ecdf4",
+    "apps/web/src/routes/docs/god-rays/GodRaysDemo.svelte": "7e773b74592c79097e6b647dfa6a855661277f029413de33864807a93f17725c",
+    "LICENSE": "fff0422ca6211471f534a4373a6338f418cd4e0d9cd0e3190e29179da474801c",
+    "packages/motion-core/src/lib/helpers/color.ts": "7941b14a7e4d7305f2d2ec3a55f91c591e309a5e8de4cf3d7e08dee68507630b",
+    "packages/motion-core/src/lib/utils/cn.ts": "0fca478853f3fc4310e40ebff727a53da7ec677938f4e3e0d5ecaa62e936a199"
+  },
+  "dependencies": [
+    {
+      "name": "clsx",
+      "version": "2.1.1",
+      "license": "MIT",
+      "files": {
+        "license": "9a9edad7baae52622bddf3c15b2ef8a33d2c89f2d25408ad13e8a7481c6b0c97"
+      }
+    },
+    {
+      "name": "esm-env",
+      "version": "1.2.2",
+      "license": "MIT",
+      "files": {
+        "LICENSE": "6df5276ee7531fcc5446f19082c12e77bb6c5f081fd2b6d6cf88180a5ee36acd"
+      }
+    },
+    {
+      "name": "ogl",
+      "version": "1.0.11",
+      "license": "Unlicense",
+      "files": {
+        "README.md": "431694c5ceee21023d54c8d11663e028d2f845f00fa49e59cce25f43944c7479"
+      }
+    },
+    {
+      "name": "svelte",
+      "version": "5.39.6",
+      "license": "MIT",
+      "files": {
+        "LICENSE.md": "06257f4847b13a49a039efb17b944c141e71b12fd8d231b362d86919067d77a3"
+      }
+    },
+    {
+      "name": "tailwind-merge",
+      "version": "3.4.0",
+      "license": "MIT",
+      "files": {
+        "LICENSE.md": "d4c70c7ce38cea8778f0aed3fc0bef0a9dbd27f13bd8b6773cbd6d37941971e5"
+      }
+    }
+  ],
+  "inlineShadersUnchanged": [
+    {
+      "sha256": "7e82db678a396640e41df8964dcda4131d6a508819e510597d1a40f7d8ea08db",
+      "bytes": 146
+    },
+    {
+      "sha256": "5578e28fbe4b347afcb997076cd068e2c38d952ca0dee3c8f4ef733fa7d1e44d",
+      "bytes": 4360
+    }
+  ],
+  "syntaxParser": [
+    {
+      "slug": "god-rays",
+      "index": 0,
+      "sha256": "7e82db678a396640e41df8964dcda4131d6a508819e510597d1a40f7d8ea08db",
+      "bytes": 146,
+      "syntax": "pass",
+      "limitation": "GLSL ES parser only, not driver compile/link or GPU output"
+    },
+    {
+      "slug": "god-rays",
+      "index": 1,
+      "sha256": "5578e28fbe4b347afcb997076cd068e2c38d952ca0dee3c8f4ef733fa7d1e44d",
+      "bytes": 4360,
+      "syntax": "pass",
+      "limitation": "GLSL ES parser only, not driver compile/link or GPU output"
+    }
+  ],
+  "tests": [
+    {
+      "slug": "god-rays",
+      "mode": "shaderfail",
+      "pass": true,
+      "drawCommands": 0,
+      "shadersSubmitted": 1,
+      "allocated": 5,
+      "deleted": 5,
+      "contextLossRequests": 1,
+      "scope": "Original OGL and original GLSL submitted to stubbed WebGL. No native shader compilation or pixels verified."
+    },
+    {
+      "slug": "god-rays",
+      "mode": "reduced",
+      "pass": true,
+      "drawCommands": 4,
+      "shadersSubmitted": 8,
+      "allocated": 24,
+      "deleted": 24,
+      "contextLossRequests": 4,
+      "scope": "Original OGL and original GLSL submitted to stubbed WebGL. No native shader compilation or pixels verified."
+    },
+    {
+      "slug": "god-rays",
+      "mode": "contextlost",
+      "pass": true,
+      "drawCommands": 1,
+      "shadersSubmitted": 2,
+      "allocated": 6,
+      "deleted": 6,
+      "contextLossRequests": 1,
+      "scope": "Original OGL and original GLSL submitted to stubbed WebGL. No native shader compilation or pixels verified."
+    },
+    {
+      "slug": "god-rays",
+      "mode": "normal",
+      "pass": true,
+      "drawCommands": 4,
+      "shadersSubmitted": 8,
+      "allocated": 24,
+      "deleted": 24,
+      "contextLossRequests": 4,
+      "scope": "Original OGL and original GLSL submitted to stubbed WebGL. No native shader compilation or pixels verified."
+    }
+  ],
+  "changes": [
+    "Original Demo workspace barrel replaced with exact local component import. No GSAP/MediaPipe imported.",
+    "Original Scene only DPR bounded at2; GLSL literals and geometry/runtime loops retained.",
+    "Shared host owns RAF/timeouts and WebGL resources, checks compile/link status, handles errors/contextlost, hides by unmount/dispose and rebuilds on return.",
+    "Reduced motion schedules one original frame; pause retains last frame and resume/restart rebuilds original default scene.",
+    "No new artistic effects, placeholder canvas, remote texture/media or native screenshot. Utility CSS only implements original wrapper classes, plus explicit host chrome."
+  ],
+  "limitations": [
+    "WebGL methods/compile return values mocked in lifecycle tests; actual shader compilation/GPU pixels not verified.",
+    "No upstream visible parameter panel: official Demo supplies default props. Host Pause/Restart are disclosed added lifecycle controls.",
+    "No physics/clinical/material measurement claim; original aesthetic scene only."
+  ]
+}
