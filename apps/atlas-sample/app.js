@@ -13,12 +13,12 @@ const collected=await fetch('candidate-catalog.json').then(r=>{if(!r.ok)throw Er
 items.push(...collected.filter(x=>!items.some(y=>y.id===x.id)));
 items=applyCuration(items,curationRules);
 const inventory=getInventoryCounts(items);
-$('inventory-summary').textContent=`${inventory.featured} 件精选界面\n${inventory.iconSeries} 套完整图标系列`;
+$('inventory-summary').textContent=`${inventory.featured} 件界面预览\n${inventory.iconSeries} 套图标系列`;
 const priority=['solidglass:agent-workspace','looseleaf:chat-app','magicui:warp','kokonut:page-flip','kokonut:receipt-printer','kokonut:ai-inline-edit','ai-elements:chain-of-thought','kokonut:ai-agent-lanes','ai-elements:artifact','ai-elements:tool','ai-elements:confirmation','kokonut:ai-diff-review'];
 const rank=x=>{const n=priority.indexOf(x.id);return n<0?priority.length:n};
 const ordered=[...items].sort((a,b)=>rank(a)-rank(b)||Number(!!b.featured)-Number(!!a.featured));
 const purposes=[['Agent与对话','bot'],['输入与选择','sliders-horizontal'],['导航与组织','folder'],['数据与状态','chart-no-axes-combined'],['展示与媒体','image'],['产品与营销','panels-top-left'],['视觉与动效','wand-sparkles']];
-const captions={'待复核':'保留原素材与交互入口，按具体证据继续复核。','已审页面':'具有完整原页面主体的已分类内容；未分类素材仍在全部收藏。','已审组件':'明确范围的原组件与组件场景，不等同完整应用。','交互实验':'合成、动态或模拟状态实验，范围见详情。','精选':'真实预览 · 原始源码 · 许可可查','':'按用途、风格与来源，探索完整收藏。','基础组件':'那些简单、清楚、可以直接使用的基础构件。','图标系列':'完整图标家族，本地搜索、原生变体与 SVG 原件。','Agent与对话':'对话、推理、工具调用与人机协作。','输入与选择':'让每一次输入与选择，都有清楚的反馈。','导航与组织':'为复杂内容建立秩序与方向。','数据与状态':'把数据、过程与系统状态，变得直观。','展示与媒体':'卡片、图片与值得停留的内容呈现。','产品与营销':'有完整构图与信息层级的产品页面。','Agent工作流':'对话、工具、资料、状态与协作，也有光晕和空间画布。','视觉与动效':'用运动、材质与空间，为界面留下记忆。'};
+const captions={'待复核':'保留原素材与交互入口，按具体证据继续复核。','已审页面':'具有完整原页面主体的已分类内容；未分类素材仍在全部收藏。','已审组件':'明确范围的原组件与组件场景，不等同完整应用。','交互实验':'合成、动态或模拟状态实验，范围见详情。','精选':'按用途查看已接入的界面；具体范围与待复核项单独列出。','':'按用途、风格与来源，探索完整收藏。','基础组件':'那些简单、清楚、可以直接使用的基础构件。','图标系列':'图标家族与注明范围的选集，本地浏览与 SVG 原件。','Agent与对话':'对话、推理、工具调用与人机协作。','输入与选择':'让每一次输入与选择，都有清楚的反馈。','导航与组织':'为复杂内容建立秩序与方向。','数据与状态':'把数据、过程与系统状态，变得直观。','展示与媒体':'卡片、图片与值得停留的内容呈现。','产品与营销':'有完整构图与信息层级的产品页面。','Agent工作流':'对话、工具、资料、状态与协作，也有光晕和空间画布。','视觉与动效':'用运动、材质与空间，为界面留下记忆。'};
 let category='精选',tag='',page=1,active=null,request=0,savedScroll=0,returnFocus=null,detailShowingPreview=true,detailsPromise,codeController,searchTimer;
 const loader=createPreviewLoader();
 // One live list document at a time; existing screenshots never start runtimes.
@@ -31,14 +31,14 @@ function clearCardPreviews(){cardPool.clear();cardResize?.disconnect()}
 function el(t,text,cls){const e=document.createElement(t);if(text!==undefined)e.textContent=text;if(cls)e.className=cls;return e}
 function menu(open){document.body.classList.toggle('menu-open',open);$('scrim').hidden=!open;$('menu-toggle').setAttribute('aria-expanded',String(open));if(!open)$('menu-toggle').focus({preventScroll:true})}
 $('menu-toggle').onclick=()=>menu(!document.body.classList.contains('menu-open'));$('scrim').onclick=()=>menu(false);
-function navButton(c,icon,target){const b=el('button');b.dataset.category=c;b.append(svgIcon(icon),el('span',displayLabel(c)||'全部素材'),el('span',String(filterItems(items,{category:c}).length),'nav-count'));b.onclick=()=>{category=c;page=1;menu(false);if(active){savedScroll=0;returnFocus=null;location.hash=''}render()};$(target).append(b)}
+function navButton(c,icon,target){const b=el('button');b.dataset.category=c;b.append(svgIcon(icon),el('span',c==='精选'?'界面预览':displayLabel(c)||'全部素材'),el('span',String(filterItems(items,{category:c}).length),'nav-count'));b.onclick=()=>{category=c;page=1;menu(false);if(active){savedScroll=0;returnFocus=null;location.hash=''}render()};$(target).append(b)}
 for(const [c,i] of [['精选','sparkles'],['','layout-grid'],['Agent工作流','bot'],['图标系列','shapes'],['基础组件','panels-top-left'],['待复核','search'],['已审页面','panels-top-left'],['已审组件','layout-grid'],['交互实验','wand-sparkles']])navButton(c,i,'collections');for(const [c,i]of purposes)navButton(c,i,'categories');
 for(const s of [...new Set(items.map(x=>x.source))].sort())$('source').append(el('option',s));
 for(const s of [...new Set(items.map(x=>x.format))].filter(Boolean)){const option=el('option',displayLabel(s));option.value=s;$('kind').append(option)}
 const tags=['','有机光晕','圆润','空间感','纸张手绘','光效','几何空间','玻璃质感','物理交互'];
 for(const t of tags.filter(t=>!t||items.some(x=>x.styleTags?.includes(t)))){const b=el('button',t||'所有风格');b.dataset.tag=t;b.onclick=()=>{tag=t;render()};$('style-tags').append(b)}
 function render({resetPage=true}={}){if(resetPage)page=1;const selected=filterItems(ordered,{query:$('search').value,category,format:$('kind').value,source:$('source').value,tag});const data=paginateItems(selected,page);page=data.page;
-$('heading').textContent=category==='精选'?'精选界面':displayLabel(category)||'全部素材';$('heading-description').textContent=captions[category]||captions[''];$('collection-number').textContent=String(selected.length).padStart(2,'0');$('count').textContent=`${selected.length} 份素材`;
+$('heading').textContent=category==='精选'?'界面预览':displayLabel(category)||'全部素材';$('heading-description').textContent=captions[category]||captions[''];$('collection-number').textContent=String(selected.length).padStart(2,'0');$('count').textContent=`${selected.length} 份素材`;
 for(const b of document.querySelectorAll('nav [data-category]')){b.classList.toggle('active',b.dataset.category===category);b.setAttribute('aria-current',b.dataset.category===category?'page':'false')}
 for(const b of $('style-tags').children){b.classList.toggle('active',b.dataset.tag===tag);b.setAttribute('aria-pressed',String(b.dataset.tag===tag))}
 const n=Number(!!$('source').value)+Number(!!$('kind').value)+Number(!!tag);$('filter-count').textContent=n?String(n):'';
