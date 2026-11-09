@@ -2,7 +2,7 @@
 
 网站：<https://tdwhere123.github.io/UI-Vault/>
 
-当前有 **530 条可直接打开预览（241 条原始素材＋289 条后续接入预览）**，目标为 **1000 条可查看素材**，还差 **470 条**。另有 **285 条待适配来源记录**，只是工作清单，**不计入1000目标完成数**。原始241件包括215件精选界面、20件保留基础素材、6套图标系列。图标按系列计数，不按单枚glyph、字重或尺寸凑数，已有重叠暂待统一整理。
+当前有 **537 条可直接打开预览（241 条原始素材＋296 条后续接入预览）**，目标为 **1000 条可查看素材**，还差 **463 条**。另有 **278 条待适配来源记录**，只是工作清单，**不计入1000目标完成数**。图标按系列计数，不按单枚glyph、字重或尺寸凑数，已有重叠暂待统一整理。
 
 ## 当前内容
 
@@ -419,3 +419,9 @@ Restored the existing DoodleCSS item from its original complete Form specimen. N
 
 
 The active target is **1000 directly viewable entries**, not collected links: **530 previews, 470 remaining**. The other **285 source-only records are pending work** and do not count as completion. New source research from this round remains private until runnable adaptation is useful; it is not being added to inflate progress. Priority is now parallel adaptation of existing sources, with license/media/runtime closure and real behavior tests. Mapped covers remain470, posterless previews60; existing records except DoodleCSS and all Grok covers/reports/main UI are preserved.
+
+## Existing-source preview conversion · 537 directly viewable
+
+Restored **7 existing pending entries**, without adding source-only records: Tufte · 旁注式研究长文, LaTeX.css · 学术书页, SiriWave · 荧光数学波形, Bubbly · 漂浮气泡表面, Meny · 折页背后的目录, OriDomi · 可拖动纸面折叠, Maki · 地图语义图标系列. Each keeps the actual source mechanism and its disclosed adaptation boundary, complete license text and lifecycle tests. Authored local host controls, replacement text, system fonts and static math are identified rather than misrepresented as original services or external data. No new permissions, network services, screenshots or covers.
+
+**537 viewable / 1000 target, 463 remaining**. The **278 source-only records remain pending**, not completed entries. Worklist count remains815. Mapped covers remain470; 67 posterless previews use bounded live cards. Existing records outside the restored IDs, all Grok images/reports and main interface behavior are preserved. DOM/Canvas command tests are not native pixel, touch, typography or performance acceptance.
