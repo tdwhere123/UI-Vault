@@ -12343,34 +12343,30 @@
   },
   {
     "id": "shadcn-examples:mail-workspace",
-    "title": "shadcn/ui · 三栏邮件阅读工作区",
     "source": "shadcn/ui",
-    "license": "MIT",
+    "repository": "https://github.com/shadcn-ui/ui",
     "revision": "c8c4027b6b192822ea2952b225ee4760cddedf0d",
     "upstream": "https://github.com/shadcn-ui/ui/tree/c8c4027b6b192822ea2952b225ee4760cddedf0d/apps/www/app/(app)/examples/mail",
-    "category": "Agent与对话",
-    "description": "原版可缩放三栏收件箱、选中邮件正文、全部/未读切换与悬浮操作区；完整界面设计来源，非可发送邮箱。",
-    "gaps": [
-      "仅来源，未构建或预览。",
-      "原Search输入未绑定筛选；归档/删除/回复等按钮无真实邮件操作，Send明确preventDefault，不能称后端功能。",
-      "原布局持久化读写cookie，未来沙箱适配需改内存；Radix/Jotai/Next等运行依赖许可尚未全审。",
-      "选用官方shadcn@2.3.0标签对应历史commit；当前HEAD已不包含该示例，不假称最新。"
-    ],
-    "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted",
-    "repository": "https://github.com/shadcn-ui/ui",
     "licenseEvidence": {
       "url": "https://github.com/shadcn-ui/ui/blob/c8c4027b6b192822ea2952b225ee4760cddedf0d/LICENSE.md",
       "sha256": "1564074e13439397221ffd522e2e504d56561994a23d371aa5e3ad43e4f5423f",
       "scope": "Complete root MIT only; runtime dependencies/media not audited"
     },
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-bulk-522",
-    "sourceScope": "Selected fixed original code and complete root license evidence; no complete runnable/archive or runtime audit",
-    "kind": "原版完整场景（仅来源）"
+    "title": "三栏邮件工作台",
+    "description": "原三栏邮件、未读切换、账户选择和可调分栏；固定演示邮件，草稿只在本地，不连接账户或发送邮件，原搜索框没有过滤逻辑。",
+    "behavior": "原三栏邮件、未读切换、账户选择和可调分栏；固定演示邮件，草稿只在本地，不连接账户或发送邮件，原搜索框没有过滤逻辑。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "Agent与对话",
+    "license": "MIT AND ISC AND Apache-2.0 AND 0BSD",
+    "batch": "shadcn-mail-01",
+    "preview": "batches/shadcn-mail-01/mail-workspace/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime mechanisms and lifecycle tests passed; browser visual QA not run",
+    "gaps": [
+      "Original complete Mail three-pane workspace, original accounts/messages/Nav/MailList/MailDisplay/AccountSwitcher retained. True local selected-mail reader, All/Unread Tabs, account selection, menus/calendar, thread mute switch, draft textarea and resizable panes; original Search has no filter implementation, folders/actions and Send have no backend behavior, explicitly disclosed. No connected mailbox, account login, remote images or sending. Original AvatarImage has no src and keeps original initials fallback. Original Next page cookie reads omitted and original layout/collapse cookie writes removed; memory only. NextLink becomes inert local anchor. Host capture prevents all form navigation. Original narrow-screen screenshot replaced by scrollable full desktop workspace with960px minimum, not claimed responsive mobile redesign. Original sample names/messages/accountlabels are upstream fictional example fixtures, not real user correspondence. System font replaces unbundled Geist, original Tailwind3 config/colors/SCSS-equivalent globals plus UI classes compiled. Unused global document decoration remains harmless. Actual current Radix/React compatibility versions enumerated; original date-fns2.30/DayPicker8.10.1/ResizablePanels2.1.9 APIs kept. Root Jotai selection survives hidden unmount while draft/menu/calendar transient state resets, local theme persists. Shared host ensures early/late failure/exit cleanup, no network/storage/clipboard/service permissions. Tests actual547compose cover selection/read,All/Unread,local mute/draft/no-submit,resize keyboard changes actual aria-valuenow,account option selection,hidden/oldnode/earlymodule/late rendering failure andfull cleanup. ResizeObserver/geometry are DOM stubs, native drag/pixel/IME andphysical keyboard behavior not claimed. Reused exact missing-Radix npm/gitHead MIT and bar2.3.8 supplemental official MIT evidence from prior audited CMDK same installed path/version/hash; licenses anddisclosure in SOURCE. Original brand account icons kept as sample identifiers without endorsement."
+    ]
   },
   {
     "id": "shadcn-examples:music-library",
@@ -12617,36 +12613,44 @@
   },
   {
     "id": "milkdown:crepe-document-workspace",
-    "title": "Milkdown Crepe · 原块文档编辑",
     "source": "Milkdown Crepe",
     "repository": "https://github.com/Milkdown/milkdown",
     "revision": "0655111f3bb8393e959ce3f3d107c83edce29c3a",
     "upstream": "https://github.com/Milkdown/milkdown/blob/0655111f3bb8393e959ce3f3d107c83edce29c3a/storybook/stories/crepe/crepe.stories.ts",
-    "website": "https://github.com/Milkdown/milkdown",
-    "license": "MIT root; runtime dependency and media closure not audited",
-    "category": "输入与选择",
-    "kind": "完整原版工作区（未适配）",
-    "description": "原经典主题块文档编辑、格式/块菜单、代码块与Markdown联动；选用默认AI关闭的Empty/正文故事，全部主题只计一族。",
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted",
-    "sourceScope": "Selected fixed original code and complete root license evidence; no complete runnable/archive or runtime audit",
     "licenseEvidence": {
       "url": "https://github.com/Milkdown/milkdown/blob/0655111f3bb8393e959ce3f3d107c83edce29c3a/LICENSE",
       "sha256": "a9d856fd85b6598d7e894ce064a35921f2fb9bb4d903b905dd8d7b639e05422f",
       "scope": "Complete root license; no transitive runtime/media license closure"
     },
+    "website": "https://github.com/Milkdown/milkdown",
+    "title": "富文档编辑工作台",
+    "description": "原完整本地文档编辑器与实时标记文本；演示内容为本地创作，不连接人工智能、云保存或外部上传。",
+    "behavior": "原完整本地文档编辑器与实时标记文本；演示内容为本地创作，不连接人工智能、云保存或外部上传。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "输入与选择",
+    "license": "MIT AND Apache-2.0",
+    "batch": "milkdown-crepe-01",
+    "preview": "batches/milkdown-crepe-01/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "pass",
     "gaps": [
-      "与Kibo/BlockNote等富文本编辑有重叠，仅保留原Crepe编辑与Markdown联动的完整场景参考，不拆主题/基础节点计数。",
-      "官方story默认enableAI=false；另有BYOK OpenAI/Anthropic分支，未运行/调用，不采集或索要密钥。",
-      "setup含Wiki长文、外链与图片，不能按根MIT推定内容/媒体授权；未来须用明确本地原创正文并处理上传/链接/字体。",
-      "ProseMirror、CodeMirror、UI及可选AI依赖完整LICENSE/NOTICE未审；原Selection/输入/异步create-destroy/退出和默认CSP未验。",
-      "全部封面与截图另行处理，本次只收集文本来源；没有预览或假公开源码ZIP。"
+      "JSDOM controlled geometry/observer fixtures; no native pixel, IME, drag selection or narrow-layout QA.",
+      "Local text editing and live Markdown only: no cloud persistence, sharing, collaboration, AI or credentials. Original Empty story is populated with a small UI-Vault-authored demo, not upstream lyrics/Wikipedia content.",
+      "System fonts replace unavailable font files. KaTeX typography uses fallback without bundled math fonts; precise mathematical layout not verified.",
+      "File uploads/drop disabled; remote image URL resolving blocked; paste accepts plaintext only up to 50000 characters. No rich HTML paste or remote-image claim.",
+      "Hidden destroys editor then restores local Markdown; final exit clears it. Full language parsers are bundled locally."
     ],
-    "batch": "source-bulk-522"
+    "runtime": {
+      "scripts": [
+        "runtime-part-01.js",
+        "runtime-part-02.js",
+        "runtime-part-03.js",
+        "runtime-part-04.js",
+        "runtime.js"
+      ]
+    }
   },
   {
     "id": "sandpack:code-preview-workbench",
@@ -13130,35 +13134,34 @@
   },
   {
     "id": "react-mosaic:tabbed-workspace",
-    "title": "可分割与分组标签的工作区",
     "source": "React Mosaic",
     "repository": "https://github.com/nomcopter/react-mosaic",
     "revision": "a189cd943d6d602672bc111163157697b8befd41",
-    "sourcePath": "apps/website/src/components/Demo/index.tsx",
     "upstream": "https://github.com/nomcopter/react-mosaic/blob/a189cd943d6d602672bc111163157697b8befd41/apps/website/src/components/Demo/index.tsx",
-    "license": "Apache-2.0 (root declaration verified; runtime/media not closed)",
-    "behavior": "原n-ary split/tab嵌套布局、窗口添加/分割、自动平衡、标题编辑、主题选择；ExampleWindow原演示填充内容。",
-    "difference": "不同WinBox浮动窗口：可停靠树式多窗与标签组织；演示内部表格不另计，且不宣称业务编辑功能。",
-    "gaps": [
-      "根文件只有Apache声明与链接，完整标准条款另存Apache-2.0-supplement.txt且明确非根原件。Blueprint/图标/DnD等依赖notices/资源未审；原虚构员工表不是真资料，拖拽/空树/多窗退出未验。",
-      "未安装、构建、运行；传递依赖/媒体许可、默认CSP和生命周期、视觉均未验。"
-    ],
-    "description": "原n-ary split/tab嵌套布局、窗口添加/分割、自动平衡、标题编辑、主题选择；ExampleWindow原演示填充内容。 不同WinBox浮动窗口：可停靠树式多窗与标签组织；演示内部表格不另计，且不宣称业务编辑功能。",
-    "category": "导航与组织",
+    "sourcePath": "apps/website/src/components/Demo/index.tsx",
     "licenseEvidence": {
       "url": "https://github.com/nomcopter/react-mosaic/blob/a189cd943d6d602672bc111163157697b8befd41/LICENSE",
       "sha256": "0b3cad824c861fc48106c8f7a5c5a1cde67f9a86468c38d80dcb00cd543bc052",
       "scope": "Original root Apache-2.0 declaration read; full standard terms saved separately, not claimed as upstream root text; runtime/media not closed"
     },
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-bulk-523",
-    "sourceScope": "Selected fixed original code and root license; no runnable/archive or runtime audit",
-    "kind": "原版完整场景（仅来源）",
-    "buildStatus": "fixed source and root license read; not built or run"
+    "difference": "不同WinBox浮动窗口：可停靠树式多窗与标签组织；演示内部表格不另计，且不宣称业务编辑功能。",
+    "title": "多窗口标签工作台",
+    "description": "原六窗示例、标签编辑、增删拆分与布局调整；固定演示表格，无远程终端或持久化服务。",
+    "behavior": "原六窗示例、标签编辑、增删拆分与布局调整；固定演示表格，无远程终端或持久化服务。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "导航与组织",
+    "license": "Apache-2.0; MIT; 0BSD",
+    "batch": "react-mosaic-01",
+    "preview": "batches/react-mosaic-01/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "actual547 compose/key original interactions and failure/exit verified",
+    "gaps": [
+      "Visual/native drag/drop/touch not verified; original mechanics retained.",
+      "Original GitHub PNG badge omitted; icon font represented by same original SVG paths.",
+      "Demo fixtures reset on hidden; no backend or persistence."
+    ]
   },
   {
     "id": "cmdk:raycast-command-menu",
@@ -14381,36 +14384,34 @@
   },
   {
     "id": "mantine-ui:responsive-mega-navigation",
-    "title": "桌面巨型菜单与移动全屏导航",
     "source": "Mantine UI",
     "repository": "https://github.com/mantinedev/ui.mantine.dev",
     "revision": "963b955c5cef4bcc6008d40a0431e46ef771c254",
-    "sourcePath": "lib/HeaderMegaMenu/HeaderMegaMenu.tsx",
     "upstream": "https://github.com/mantinedev/ui.mantine.dev/blob/963b955c5cef4bcc6008d40a0431e46ef771c254/lib/HeaderMegaMenu/HeaderMegaMenu.tsx",
-    "license": "MIT (root verified only; dependencies/assets not closed)",
-    "behavior": "原桌面HoverCard双列功能菜单与底部CTA；移动Burger控制全屏Drawer、Features嵌套Collapse，原关闭与开关状态。",
-    "difference": "一族跨断点完整导航结构，不以桌面/移动或菜单项拆条；不同于普通孤立下拉或侧边栏。",
-    "gaps": [
-      "链接均#且CTA无业务回调；原mock含Pokémon描述，需替本地原创文本。ScrollArea高度calc字符串少闭括号；MantineLogo品牌、Tabler、portal焦点/关闭及资源许可未验。",
-      "仅固定原源码收录；未构建/运行/截图，默认CSP、外部资源、完整依赖及素材许可、交互清理和视觉均未验。"
-    ],
-    "description": "原桌面HoverCard双列功能菜单与底部CTA；移动Burger控制全屏Drawer、Features嵌套Collapse，原关闭与开关状态。 一族跨断点完整导航结构，不以桌面/移动或菜单项拆条；不同于普通孤立下拉或侧边栏。",
-    "category": "导航与组织",
+    "sourcePath": "lib/HeaderMegaMenu/HeaderMegaMenu.tsx",
     "licenseEvidence": {
       "url": "https://github.com/mantinedev/ui.mantine.dev/blob/963b955c5cef4bcc6008d40a0431e46ef771c254/LICENCE",
       "sha256": "e184e978b1c031612c5486d2b9aee7d127f2f741f141bd9a957e90dc0fa90620",
       "scope": "Complete root MIT read; dependencies and assets not audited"
     },
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-bulk-524",
-    "sourceScope": "Selected fixed original code and complete root license evidence; no complete runnable/archive or runtime audit",
-    "kind": "原版完整场景（仅来源）",
-    "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted",
-    "sourceSha256": "532e5a637f847d47c1cbef020330558b6f82f9c9ed45e956ed6677cda0aed00f"
+    "difference": "一族跨断点完整导航结构，不以桌面/移动或菜单项拆条；不同于普通孤立下拉或侧边栏。",
+    "title": "响应式大型导航菜单",
+    "description": "原桌面悬停菜单、移动抽屉与折叠导航；仅本地界面演示，原占位导航不打开外部页面，登录按钮不连接服务。",
+    "behavior": "原桌面悬停菜单、移动抽屉与折叠导航；仅本地界面演示，原占位导航不打开外部页面，登录按钮不连接服务。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "导航与组织",
+    "license": "MIT; 0BSD",
+    "batch": "mantine-header-01",
+    "preview": "batches/mantine-header-01/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "pass",
+    "gaps": [
+      "Browser hover geometry, narrow/wide visual layout, native focus traversal and CSS transitions are not visually verified.",
+      "Menu links and actions are upstream placeholders, not functional routes, login or registration.",
+      "HoverCard desktop and Drawer mobile CSS branches retain original responsive behavior; JSDOM sees both DOM branches without proving breakpoint pixels."
+    ]
   },
   {
     "id": "flowbite-admin:pricing-comparison-faq-page",
