@@ -1,0 +1,88 @@
+{
+  "repository": "https://github.com/educlopez/smoothui",
+  "revision": "c45420a8523ec60a92f7724a2418ab83edaa1425",
+  "originalComponent": "packages/smoothui/components/dither-chart/index.tsx",
+  "originalDemo": "apps/docs/examples/dither-chart.tsx",
+  "originalFilesSHA256": {
+    "LICENSE": "9877f4310c0549e5ce26affe52ba97c4e60325472bdcdd308a92fccd90f119cc",
+    "cn.ts": "4acbc7165a8d54738ff62b51414e772c08fe78434e524e6d8770180d3ba2925f",
+    "dither-chart.tsx": "17b8ac47e8a4067b13a1c375af6d4556ee4d825c2588d56e5f2fe06a06c508fd",
+    "dither-chart-demo.tsx": "5f465c5975bd7feb2221d91cec5c3bd2aa3d68ca679a1152996e9a2a253a5481"
+  },
+  "dependencies": [
+    {
+      "name": "clsx",
+      "version": "2.1.1",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "license": "9a9edad7baae52622bddf3c15b2ef8a33d2c89f2d25408ad13e8a7481c6b0c97"
+      }
+    },
+    {
+      "name": "framer-motion",
+      "version": "12.43.0",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE.md": "5ff46083b88563822b0560dd6221ab89d2f74bc97a52d4c97a75020fd62c6f32"
+      }
+    },
+    {
+      "name": "motion-dom",
+      "version": "12.43.0",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE.md": "1bf0dc3f7727723e5a032ed12164a47cf92c05204cb1a3485f123c24e2833ed1"
+      }
+    },
+    {
+      "name": "react",
+      "version": "19.1.0",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+      }
+    },
+    {
+      "name": "react-dom",
+      "version": "19.1.0",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+      }
+    },
+    {
+      "name": "scheduler",
+      "version": "0.26.0",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+      }
+    },
+    {
+      "name": "tailwind-merge",
+      "version": "3.3.1",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE.md": "d4c70c7ce38cea8778f0aed3fc0bef0a9dbd27f13bd8b6773cbd6d37941971e5"
+      }
+    },
+    {
+      "name": "tailwindcss",
+      "version": "3.4.17",
+      "license": "MIT",
+      "scope": "compiled-css",
+      "licenseSHA256": {
+        "LICENSE": "60e0b68c0f35c078eef3a5d29419d0b03ff84ec1df9c3f9d6e39a519a5ae7985"
+      }
+    }
+  ],
+  "adaptation": "Original default LineDemo, not eight new chart entries. Original TRAFFIC Visitors/Signups values and two lines, low-resolution buffer, Bayer ordered-alpha dithering and nearest-neighbor drawImage retained. The synthetic buffer test confirms original algorithm preserves RGB and thresholds alpha into0/255; it does not claim to rasterize original chart paths. Original900ms draw-in and IntersectionObserver stop/resume retained, reduced draws complete static frame. Original SmoothUI component and complete official default demo retained. Original cn and Motion useReducedMotion run, import aliases resolved locally. Compatibility bundle uses React19.1.0 and actual emitted Motion packages listed below rather than installing the original workspace React19.2 minimum; used APIs passed this bounded test, not a claim of identical workspace environment. All Canvas drawing production code remains original, not a test renderer. Minimal explicit changes: original silent null Canvas2D returns now throw into honest unavailable state; host owns RAF/timeouts/listeners/observers and cancels on hide/exit/failure/contextlost, ignores disconnected observer callbacks; RAF callback requires current job identity and native schedule generation, cleared timeout callbacks require membership before dispatch, so canceled work cannot revive after reveal; zero-size host defers mount and resize can recover. Hidden unmount clears ephemeral canvas and starts original scene fresh on reveal. No screenshot, font download, external media, network, microphone, credentials or backend. Native browser blocked in this environment; command/buffer tests are not native raster/pixel acceptance. actual542compose executes production bundle. Tests use controlled clocks/geometry, recording Canvas commands and synthetic RGBA input for dithering. Original graphics are not claimed visually validated.",
+  "visualVerified": false
+}
