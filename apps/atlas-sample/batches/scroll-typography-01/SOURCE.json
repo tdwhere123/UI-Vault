@@ -1,0 +1,71 @@
+{
+  "id": "codrops:scroll-typography-scenes",
+  "repository": "https://github.com/codrops/OnScrollTypographyAnimations",
+  "revision": "af28d61d1f8d3d117f5d1e9b09d5209e20a1a212",
+  "sourcePath": "src/index.html",
+  "runtimePackages": [
+    {
+      "name": "splitting",
+      "version": "1.0.6",
+      "license": "MIT",
+      "licenseSha256": "0f6835e5c375d903edd1b85a34f68528683538f97493fc3fe3f7516569bf2a90"
+    },
+    {
+      "name": "tiny-emitter",
+      "version": "2.1.0",
+      "license": "MIT",
+      "licenseSha256": "aada4c7da6a5be46beadf9d4f40d7dba9e222e57180d46289b2bb9112e65daae"
+    },
+    {
+      "name": "virtual-scroll",
+      "version": "2.2.1",
+      "license": "MIT",
+      "licenseSha256": "4adb26e303347617f69f9234fd51f6d168c152caee43f4da2453205f3e2556ba"
+    },
+    {
+      "name": "@studio-freight/lenis",
+      "version": "0.2.28",
+      "license": "MIT",
+      "officialREADMEsha256": "38d8d3cbf6c8a39224d305e88447c8e27bde2469c69f459c453a0d8b450ee354",
+      "licenseText": "Supplemental standard MIT based on official README explicit MIT declaration; not original LICENSE file"
+    },
+    {
+      "name": "gsap",
+      "version": "3.15.0",
+      "license": "LicenseRef-GSAP-Standard",
+      "originalRequestedRange": "^3.11.4",
+      "operativeLicenseSha256": "2aed2482dc8ddfa04ca14e3c83e37b03b796ff241df6464a9faad2428ea96072"
+    }
+  ],
+  "originalFiles": {
+    "src/index.html": {
+      "sha256": "d6114fae04a8b2c6a715fb611d5585b168dfb5ef4ed7e72f8e65ee2d0dfb95bf"
+    },
+    "src/js/index.js": {
+      "sha256": "678e297c7fee67a1ef3bf788c4d5761e3cf7ec63dfc38c181c695a868d267fb0"
+    },
+    "src/js/utils.js": {
+      "sha256": "c70fddccf8c001d40fd44a224eead6929766573d6b32eda2e4b70c98fc025820"
+    },
+    "src/css/base.css": {
+      "sha256": "2423260e77101b09b7130499dfea5dbc6cd4c591865a3b9d9e87f447630d9a45"
+    },
+    "LICENSE": {
+      "sha256": "85131f2bb7714dc895ff5d7d68db65acc5ad0e5dfd72162869fc8d63dec06056"
+    }
+  },
+  "adaptedFiles": {
+    "src/base.css": "2423260e77101b09b7130499dfea5dbc6cd4c591865a3b9d9e87f447630d9a45",
+    "src/content.html": "84005a96f2b2b5bab05738cac41ac2de70f1d3d750eba39dd866e60c37075cd6",
+    "src/scene.js": "391206594ff379bad25973a75445865d222bba9bc2ca966a320c3db8ecfc1d58",
+    "src/main.js": "7f62c905cce8dd2c7cda69049f3084eac6a3e08056a135931035025088b9c898"
+  },
+  "scope": "Complete Set 1 original 15 typography effects, one family. Set 2 omitted. Original textual content retained as design text, not scientific claims.",
+  "changes": [
+    "Remote Typekit/WebFont preload removed; original CSS font stack falls back to installed system serif/sans fonts. Typography/metrics differ substantially from original licensed webfonts.",
+    "Original scroll() choreography retained verbatim; Splitting and Lenis original code retained. Initialization now sync local, wrapped owned lifecycle.",
+    "Remote analytics/sponsor scripts and external/frame navigation removed. Original content, gradients and geometric transforms retained.",
+    "Hidden unmount/reopen recreates original scene; reduced initial preference displays split text without GSAP/Lenis animation. Preference changes require reopening.",
+    "Dispose attempts every Lenis/GSAP cleanup even on error; visible abnormal cleanup state. No native pixel/scroll visual validation."
+  ]
+}
