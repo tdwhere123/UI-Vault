@@ -1,5 +1,5 @@
 /** Evidence-scoped, reversible overlays. Never edits catalogue records in place. */
-export const POLICY_VERSION = 'quality-scope-20261109-batch2';
+export const POLICY_VERSION = 'quality-scope-20261109-full-range';
 export function validateRules(rules) {
   const seen = new Set();
   for (const r of rules) {
@@ -26,11 +26,13 @@ export function applyCuration(records, rules) {
         state: rule.recommendation === 'review' ? 'needs-review' : 'scoped-reference',
         layer: rule.layer,
         scopeLabel: rule.scopeLabel,
+        deliveredScope: typeof rule.deliveredScope==='string'&&rule.deliveredScope.trim()?rule.deliveredScope:rule.scopeLabel,
         fullApplication: false,
         nativeVerified: false,
         evidence: [...rule.evidence],
         reason: rule.reason,
-        ...(rule.evidenceStatus ? {evidenceStatus: rule.evidenceStatus, historicalCapture: structuredClone(rule.historicalCapture)} : {}),
+        ...(rule.evidenceStatus ? {evidenceStatus: rule.evidenceStatus} : {}),
+        ...(rule.historicalCapture ? {historicalCapture: structuredClone(rule.historicalCapture)} : {}),
       },
     };
   });
@@ -59,3 +61,6 @@ export function findRecord(records, id) {return records.find(r => r.id === id);}
 // Measured large list compositions: detail stays fully available. Not a quality/failure flag.
 export const detailOnlyListPreviewIds = new Set(['plate:structured-stream-replay','healthicons:clinical-research-symbol-family']);
 export function shouldAutoPreviewCard(item) {return Boolean(item.preview) && !detailOnlyListPreviewIds.has(item.id);}
+
+/** Preserve source metadata/search, but display the reviewed reference scope. */
+export const referenceDescription=item=>item.curation?.deliveredScope||item.description;
