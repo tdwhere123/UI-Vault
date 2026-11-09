@@ -14829,39 +14829,34 @@
   },
   {
     "id": "plop:ink-status-timeline",
-    "title": "手绘墨线状态时间轴",
     "source": "plop-ui",
     "repository": "https://github.com/Snorlark/plop-ui",
     "revision": "63dcae0935c3a4fc224d24b841c5a53546968c92",
-    "sourcePath": "packages/react/src/StatusTimeline/StatusTimeline.tsx",
     "upstream": "https://github.com/Snorlark/plop-ui/blob/63dcae0935c3a4fc224d24b841c5a53546968c92/packages/react/src/StatusTimeline/StatusTimeline.tsx",
-    "website": "https://plopui.com",
-    "license": "MIT (root source text verified; runtime/assets not closed)",
-    "behavior": "以钴蓝墨线、偏斜贴纸和状态动作展示任务进度。",
-    "difference": "手绘纸面和任务状态结合，不再是方框仪表盘。",
-    "description": "以钴蓝墨线、偏斜贴纸和状态动作展示任务进度。 手绘纸面和任务状态结合，不再是方框仪表盘。",
-    "gaps": [
-      "当前只固定StatusTimeline入口；Lettering、seededTilt、CSS modules、PlopProvider与tokens依赖尚未完整归档/构建。",
-      "原组件由current等props驱动，是状态展示而非真实Agent执行器；步骤推进、横纵响应布局、reduced-motion与卸载行为未验。",
-      "若保留Sketchpop字体需核packages/fonts的OFL许可并携带声明；声音/震动不是本次授权功能，演示默认关闭。",
-      "未构建、未运行、未浏览器视觉验收；当前completedPreviewCount=0，publicationReady=false。"
-    ],
-    "category": "数据与状态",
+    "sourcePath": "packages/react/src/StatusTimeline/StatusTimeline.tsx",
     "licenseEvidence": {
       "url": "https://github.com/Snorlark/plop-ui/blob/63dcae0935c3a4fc224d24b841c5a53546968c92/LICENSE",
       "sha256": "5be4b757a2a2fcf7c7403c22810bbc904a1e9d64ea4a003c2175b32a8b618a19",
       "scope": "Complete original root text read; not full runtime/media closure"
     },
-    "sourceSha256": "c047aa2625bd1fab9d75800493cfb75c821dcb48171a3ca63da7c4e5a7fe3767",
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-style-526",
-    "sourceScope": "Selected fixed original source and root license; no full runnable archive",
-    "kind": "原版场景或组件族（仅来源）",
-    "buildStatus": "Fixed original source read; not built, run or visually accepted"
+    "title": "Plop UI · 手绘状态时间线",
+    "license": "MIT",
+    "category": "数据与状态",
+    "kind": "手绘进度场景",
+    "format": "完整交互场景",
+    "batch": "plop-01",
+    "preview": "batches/plop-01/ink-timeline/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Fixed original StatusTimeline/Lettering/Sticker Button/token generator bundled; DOM state/lifecycle tests; native CSS pixels and keyboard activation not verified",
+    "description": "原版纸墨手绘时间线，字母轻微错位、贴纸按压与不规则边框；四步推进、重置及横纵布局切换。",
+    "behavior": "原Next step封顶与Start over状态转换；保留原组件、SVG过滤器及token CSS，隐藏保留当前步骤与布局，退出清理。",
+    "gaps": [
+      "本地四步展示，不连接真实Agent、物流或项目数据；仅一族，不拆每步或布局。",
+      "原Sketchpop/Patrick Hand字体不随包，使用原本地fallback；纸墨纹理为原生成器的SVG文本，不是截图或二进制包装。",
+      "完整原MIT及React/react-dom/scheduler实际运行MIT附带；关闭声效和震动，无外网/存储/权限，不扩大CSP。",
+      "DOM验证状态、按压、隐藏恢复、减动、异常及旧节点清理，不等于原生Space触发click、CSS滤镜/容器查询/字体光栅像素或性能已验；封面由Grok处理。"
+    ]
   },
   {
     "id": "plop:buddy-cast",
@@ -16483,5 +16478,684 @@
     "kind": "原版完整场景（仅来源）",
     "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted",
     "sourceSha256": "1fb016f23173c41745146a2da460301f44ca49ebbb56aa75b01135c4d2462203"
+  },
+  {
+    "id": "flag-icons:country-symbol-family",
+    "title": "Flag Icons · 国家与地区旗帜系列",
+    "source": "flag-icons",
+    "repository": "https://github.com/lipis/flag-icons",
+    "revision": "ac7e0eb3259eb62aa6100c435607e2fe03896a97",
+    "sourcePath": "flags/4x3/fr.svg",
+    "upstream": "https://github.com/lipis/flag-icons/blob/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/fr.svg",
+    "license": "MIT (actual complete root text; full symbol/asset audit pending)",
+    "visualStyle": "原4:3矢量旗帜，以清晰色块和图形保留标识比例；方形裁切不是新系列。",
+    "behavior": "静态SVG与按地区代码选用的CSS样式，不含搜索器、地理定位或实时数据；适合Exodus行程和地点记录的辅助标签。",
+    "difference": "整个flag-icons设计资产族只计一条，不按国家、地区、比例或颜色增加数量；国家符号不是语言或个人身份的替代。",
+    "description": "原国家与地区旗帜SVG系列，用于行程和地点记录辅助标签；系列只记一条，地区和比例不拆数。",
+    "gaps": [
+      "本轮只固定读取4个4:3SVG样本、实际CSS和根MIT全文，不声称全部旗帜都已下载、审图或可检索预览。",
+      "CSS通过相对URL加载整个flags目录，既有隔离CSP不能原样用这些外部资源；需逐项验证同源文本SVG接入与内部use引用，不能包装二进制规避限制。",
+      "根MIT保留作者归属，但不能替代各地对官方旗帜/国家符号的使用规定；不把符号当作官方背书、主权结论或用户语言/国籍推断。",
+      "尚未适配系列浏览、辅助文本/可访问名称、布局与全量SVG安全审计；无封面或截图，不对未知旗帜媒体权利作总括许可。"
+    ],
+    "category": "图标系列",
+    "format": "图标家族",
+    "kind": "图标系列",
+    "counts": {
+      "independentFamily": 1,
+      "completedPreviews": 0
+    },
+    "licenseEvidence": {
+      "url": "https://github.com/lipis/flag-icons/blob/ac7e0eb3259eb62aa6100c435607e2fe03896a97/LICENSE",
+      "sha256": "8f1195d55a2fd315a07d812328470ca9ba2abb78c8d317ff19619d5125e00cea",
+      "scope": "Actual complete MIT root read; sample SVG/CSS evidence only, not all-symbol rights audit"
+    },
+    "sourceEvidence": [
+      {
+        "path": "flags/4x3/cn.svg",
+        "sha256": "981da9bdf82d48e31691f20578cefcb26cf7d0bd95e4ebd5c0df00bdfe988c1a"
+      },
+      {
+        "path": "flags/4x3/fr.svg",
+        "sha256": "a526851c372e3372b1596be71af355ea72b1650bbc4c06e6e2c226900d3de6cc"
+      },
+      {
+        "path": "flags/4x3/jp.svg",
+        "sha256": "bfea80baf9989383dc4bf7ca594ed95be0df0ff125bfc88d0bfa878eb0198022"
+      },
+      {
+        "path": "flags/4x3/us.svg",
+        "sha256": "e7be4240cf57987926673708f09233be1ab6bdf35acc7b86bd32a263f197a2a7"
+      }
+    ],
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-528",
+    "sourceScope": "Four fixed SVG samples, actual CSS and complete root license; no complete runnable/archive",
+    "buildStatus": "Fixed source read; no runtime or visual verification"
+  },
+  {
+    "id": "css-doodle:generative-pattern-surface",
+    "title": "生成式几何纹样表面",
+    "source": "css-doodle",
+    "repository": "https://github.com/css-doodle/css-doodle",
+    "revision": "0df625e7be6a15d56d12788123286b98d0a18935",
+    "sourcePath": "src/component/index.js",
+    "upstream": "https://github.com/css-doodle/css-doodle/blob/0df625e7be6a15d56d12788123286b98d0a18935/src/component/index.js",
+    "website": "https://css-doodle.com/new/",
+    "license": "MIT (root text verified; runtime/assets not closed)",
+    "behavior": "用CSS规则、网格和随机函数组合叶片、圆弧与纹样，可作为Exodus消息附件或空态背景。",
+    "difference": "同一引擎的预设/配色仅一族；源码级新来源，尚非已验收预览。",
+    "description": "用CSS规则、网格和随机函数组合叶片、圆弧与纹样，可作为Exodus消息附件或空态背景。",
+    "gaps": [
+      "这是生成式绘图引擎而非成品聊天组件；须固定README示例规则和种子，不能把用户社区作品自动视为根MIT。",
+      "入口依赖parser/generator/component模块；仓含Google字体加载、shader及SVG能力，适配限定本地CSS几何，不载入外部字体/图片或任意用户代码。",
+      "限制grid数量、动画和DOM开销；mount/unmount清理、reduced-motion、对比度与布局尺寸尚未运行验证。",
+      "固定源码及完整根许可已存证；未构建、未运行、未截图，completedPreviewCount=0。"
+    ],
+    "category": "视觉与动效",
+    "licenseEvidence": {
+      "url": "https://github.com/css-doodle/css-doodle/blob/0df625e7be6a15d56d12788123286b98d0a18935/LICENSE",
+      "sha256": "6a3bfd2b5099860379fa3d20f457f984f894c9bfd3d360e16ad8a961ea51c399",
+      "scope": "Complete original root license retained; runtime/media separate"
+    },
+    "sourceSha256": "c4583e22396123442e1e9ca1f83586119c255906e7dea9c4d2646763308bb87f",
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-528",
+    "sourceScope": "Selected fixed original source and root license; full read-only repo clone retained privately",
+    "kind": "原版风格组件族（仅来源）",
+    "buildStatus": "Fixed source inspected; not built or visually accepted"
+  },
+  {
+    "id": "siriwave:fluorescent-voice-wave",
+    "title": "荧光流动语音波形",
+    "source": "siriwave",
+    "repository": "https://github.com/kopiro/siriwave",
+    "revision": "744cb00235b7900733efff25dc73b4d1ab77c92d",
+    "sourcePath": "src/index.ts",
+    "upstream": "https://github.com/kopiro/siriwave/blob/744cb00235b7900733efff25dc73b4d1ab77c92d/src/index.ts",
+    "website": "https://kopiro.github.io/siriwave/",
+    "license": "MIT (root text verified; runtime/assets not closed)",
+    "behavior": "Canvas多层荧光曲线，以本地振幅控制呈现语音助手活动。",
+    "difference": "同一引擎的预设/配色仅一族；源码级新来源，尚非已验收预览。",
+    "description": "Canvas多层荧光曲线，以本地振幅控制呈现语音助手活动。",
+    "gaps": [
+      "原实现为数学曲线，不自带语音识别或真实音频分析；本地状态必须标模拟，不能声称麦克风已监听。",
+      "需一起携带classic-curve.ts与ios9-curve.ts；源码有stop/dispose和setAmplitude，适配应调用销毁并限制DPR/帧率及离屏运行。",
+      "README的iOS13气泡仍work in progress，不收为完成态；Apple/Siri名称只用于来源归属，不使用品牌logo或暗示授权。",
+      "固定源码及完整根许可已存证；未构建、未运行、未截图，completedPreviewCount=0。"
+    ],
+    "category": "Agent与对话",
+    "licenseEvidence": {
+      "url": "https://github.com/kopiro/siriwave/blob/744cb00235b7900733efff25dc73b4d1ab77c92d/LICENSE",
+      "sha256": "2895598c988e615210dac52580a35ec00e007cf3995ab7178644cc1bc47d6a39",
+      "scope": "Complete original root license retained; runtime/media separate"
+    },
+    "sourceSha256": "e3fcd85a6da3103be8c0525d99dfbdfb9a535a5129e2a83f86a6406284fa12eb",
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-528",
+    "sourceScope": "Selected fixed original source and root license; full read-only repo clone retained privately",
+    "kind": "原版风格组件族（仅来源）",
+    "buildStatus": "Fixed source inspected; not built or visually accepted"
+  },
+  {
+    "id": "bubbly:ambient-bubble-surface",
+    "title": "轻盈气泡氛围表面",
+    "source": "bubbly-bg",
+    "repository": "https://github.com/tipsy/bubbly-bg",
+    "revision": "8783742f0940f76e374240526b90a7ea5296f521",
+    "sourcePath": "src/bubbly-bg.js",
+    "upstream": "https://github.com/tipsy/bubbly-bg/blob/8783742f0940f76e374240526b90a7ea5296f521/src/bubbly-bg.js",
+    "website": "https://tipsy.github.io/bubbly-bg/",
+    "license": "Apache-2.0 (root text verified; runtime/assets not closed)",
+    "behavior": "纯Canvas圆泡缓慢漂移与叠色，适合温和的Agent待机氛围。",
+    "difference": "同一引擎的预设/配色仅一族；源码级新来源，尚非已验收预览。",
+    "description": "纯Canvas圆泡缓慢漂移与叠色，适合温和的Agent待机氛围。",
+    "gaps": [
+      "默认向body注入fixed画布，必须传入组件自己的canvas，不改变整站背景或遮挡按钮。",
+      "源码父节点移除时停止继续绘制，但cancelAnimationFrame收到函数而非request ID；无独立明确dispose API，需验证/修复清理并标修改。",
+      "animate=false仍绘制单帧，可用于reduced-motion；尺寸/DPR/resize、空context、随机种子及离屏暂停未验。",
+      "Apache-2.0完整许可保留；若修改需标注修改与保留适用NOTICE。本次仅源码效果，无实时Agent逻辑。",
+      "固定源码及完整根许可已存证；未构建、未运行、未截图，completedPreviewCount=0。"
+    ],
+    "category": "视觉与动效",
+    "licenseEvidence": {
+      "url": "https://github.com/tipsy/bubbly-bg/blob/8783742f0940f76e374240526b90a7ea5296f521/LICENSE",
+      "sha256": "2f097968fc7aac645e2a07dc85c46a31bde4496fc5d9139736c976d983d718bf",
+      "scope": "Complete original root license retained; runtime/media separate"
+    },
+    "sourceSha256": "87ebe3022a9c22a425c158d9ac406b3efec7f50434dfa96aa26d1c5637cc7ef0",
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-528",
+    "sourceScope": "Selected fixed original source and root license; full read-only repo clone retained privately",
+    "kind": "原版风格组件族（仅来源）",
+    "buildStatus": "Fixed source inspected; not built or visually accepted"
+  },
+  {
+    "id": "systemcss:monochrome-control-language",
+    "title": "单色早期Mac控件语言",
+    "source": "system.css",
+    "repository": "https://github.com/sakofchit/system.css",
+    "revision": "c95b95428021361eaa411ccb08fa3b1050cc606d",
+    "sourcePath": "style.css",
+    "upstream": "https://github.com/sakofchit/system.css/blob/c95b95428021361eaa411ccb08fa3b1050cc606d/style.css",
+    "website": "https://sakofchit.github.io/system.css/",
+    "license": "MIT (root text verified; runtime/assets not closed)",
+    "behavior": "细线、点阵阴影与单色菜单构成早期Mac风格，作为Exodus复古主题候选。",
+    "difference": "同一引擎的预设/配色仅一族；源码级新来源，尚非已验收预览。",
+    "description": "细线、点阵阴影与单色菜单构成早期Mac风格，作为Exodus复古主题候选。",
+    "gaps": [
+      "源码注明部分radio/checkbox计算取自98.css；需保留派生来源MIT声明，不因根LICENSE而抹去上游归属。",
+      "字体ChicagoFLF、Monaco、ChiKareGo2、FindersKeepers与icon SVG单独权利未闭合；默认不发布原字体/图标，替换需披露。",
+      "纯CSS无窗口拖动/最大化或真实桌面应用；docs为EJS且需docs.css，不能冒称下载style.css即可重现整个展示。",
+      "相比已收98/7.css是不同单色视觉而非新功能族；是否足够差异由适配审查，避免重复表单逻辑计数。",
+      "固定源码及完整根许可已存证；未构建、未运行、未截图，completedPreviewCount=0。"
+    ],
+    "category": "视觉与动效",
+    "licenseEvidence": {
+      "url": "https://github.com/sakofchit/system.css/blob/c95b95428021361eaa411ccb08fa3b1050cc606d/LICENSE",
+      "sha256": "0433a8c105e9d410ca3fb7f205aafe8f1be27e0438cf3bd1447907f738ebc6b0",
+      "scope": "Complete original root license retained; runtime/media separate"
+    },
+    "sourceSha256": "ad1245ba7f49b3565e2d011e0a799aa04b6a5fcfdd0af000ec2c2f6a83ce28ac",
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-528",
+    "sourceScope": "Selected fixed original source and root license; full read-only repo clone retained privately",
+    "kind": "原版风格组件族（仅来源）",
+    "buildStatus": "Fixed source inspected; not built or visually accepted"
+  },
+  {
+    "id": "obnoxious:expressive-text-motion",
+    "title": "夸张文字情绪动效",
+    "source": "obnoxious.css",
+    "repository": "https://github.com/tholman/obnoxious.css",
+    "revision": "efccba04b49c092412048bf19e5d0f6db5955d6b",
+    "sourcePath": "obnoxious.css",
+    "upstream": "https://github.com/tholman/obnoxious.css/blob/efccba04b49c092412048bf19e5d0f6db5955d6b/obnoxious.css",
+    "website": "https://tholman.com/obnoxious/",
+    "license": "MIT (root text verified; runtime/assets not closed)",
+    "behavior": "强烈摇晃、字形切换与夸张变换，用作可选择的消息表情演示，不用于常态界面。",
+    "difference": "同一引擎的预设/配色仅一族；源码级新来源，尚非已验收预览。",
+    "description": "强烈摇晃、字形切换与夸张变换，用作可选择的消息表情演示，不用于常态界面。",
+    "gaps": [
+      "源码strobe在6秒动画内反复opacity 0/1并放大至scale(10.9)，另含intensifies逐步放大抖动及多圈旋转；strobe应排除不演示，其余默认静态，仅明确触发并可立即停止。",
+      "低优先级可选来源：不适合默认生产聊天；强运动可能造成不适，禁止自动播放，须主动点击、停止按钮及reduced-motion。",
+      "fontalicious依赖系统字体名称，实际字形跨平台不一致；不可打包系统商业字体，demo字体/媒体另行闭合。",
+      "纯CSS效果，没有发送、状态机或语义内容；不同动画、颜色、字体不拆成多个来源计数。",
+      "固定源码及完整根许可已存证；未构建、未运行、未截图，completedPreviewCount=0。"
+    ],
+    "category": "视觉与动效",
+    "licenseEvidence": {
+      "url": "https://github.com/tholman/obnoxious.css/blob/efccba04b49c092412048bf19e5d0f6db5955d6b/license.md",
+      "sha256": "83f2e381726913a93e40e0edf8a50a7b7024e61fb43b31e79ce25b78fcdc4893",
+      "scope": "Complete original root license retained; runtime/media separate"
+    },
+    "sourceSha256": "16200c420e03b64fe5cbcc06417b6342c81da5d36f8495cf2076b893e9796988",
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-528",
+    "sourceScope": "Selected fixed original source and root license; full read-only repo clone retained privately",
+    "kind": "原版风格组件族（仅来源）",
+    "buildStatus": "Fixed source inspected; not built or visually accepted"
+  },
+  {
+    "id": "wick:animation-authoring-studio",
+    "title": "分层逐帧动画与交互短片",
+    "source": "Wick Editor",
+    "repository": "https://github.com/Wicklets/wick-editor",
+    "revision": "f34f0d9512d7165e74c1910ea1aba9173ab8dec2",
+    "sourcePath": "src/Editor/Editor.jsx",
+    "upstream": "https://github.com/Wicklets/wick-editor/blob/f34f0d9512d7165e74c1910ea1aba9173ab8dec2/src/Editor/Editor.jsx",
+    "license": "GPL-3.0-or-later (source file grant) (complete actual root text; runtime/media not closed)",
+    "behavior": "原完整动画编辑器将绘画 Canvas、资产库、属性与可拖声音时间轴组合；时间轴支持帧拆分/复制/补空帧/图层隐藏锁定及 tween 操作。",
+    "difference": "区别已有矢量画板与普通任务时间线：面向动画帧、层与声音的创作流程，整个工作室一族，不按工具拆。",
+    "styleTags": [
+      "动画/时间材料"
+    ],
+    "gaps": [
+      "GPL 根全文及源码 or-later 声明已读，后续公开运行适配须提供对应源与修改/构建材料，尚未履行。原引擎全局 Wick、脚本执行、纸张/音频依赖、PNG 工具图标和大量字体/内置音效需独立核；不能扩 CSP 或包装二进制。Timeline 未见卸载钩子，旧 project 回调/音频/帧循环清理需实测。",
+      "仅只读源码筛选；未安装/构建/运行、交互生命周期或浏览器视觉验收。"
+    ],
+    "description": "原完整动画编辑器将绘画 Canvas、资产库、属性与可拖声音时间轴组合；时间轴支持帧拆分/复制/补空帧/图层隐藏锁定及 tween 操作。 区别已有矢量画板与普通任务时间线：面向动画帧、层与声音的创作流程，整个工作室一族，不按工具拆。",
+    "category": "展示与媒体",
+    "licenseEvidence": {
+      "url": "https://github.com/Wicklets/wick-editor/blob/f34f0d9512d7165e74c1910ea1aba9173ab8dec2/LICENSE.md",
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+      "scope": "Complete actual root license; transitive code and media permissions not closed"
+    },
+    "sourceEvidence": {
+      "localFile": "evidence/Wicklets--wick-editor--src__Editor__Editor.jsx",
+      "sha256": "aad944c4e30e2f4d26d31f35e08bcd4b5a34de4af3229d6a799250be0d40e7e2"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-528",
+    "sourceScope": "Fixed original complete UI/demo source and full root license; not a runnable adaptation or full asset archive",
+    "kind": "原版交互场景（仅来源）",
+    "buildStatus": "fixed source and full root license read; not built/run/visually accepted"
+  },
+  {
+    "id": "p5web:creative-sketch-editor",
+    "title": "代码与生成画布创意速写",
+    "source": "p5.js Web Editor",
+    "repository": "https://github.com/processing/p5.js-web-editor",
+    "revision": "c8bc3f1d56070941acd1fe96b4c22fe308afee9e",
+    "sourcePath": "client/modules/IDE/pages/IDEView.jsx",
+    "upstream": "https://github.com/processing/p5.js-web-editor/blob/c8bc3f1d56070941acd1fe96b4c22fe308afee9e/client/modules/IDE/pages/IDEView.jsx",
+    "license": "LGPL-2.1 (complete actual root text; runtime/media not closed)",
+    "behavior": "原速写 IDE 含代码/文件导航、运行/停止、控制台及独立预览画布；PreviewFrame 用 ResizeObserver 同步尺寸并注册预览消息分发。",
+    "difference": "区别 Sandpack 通用应用预览：原面向生成艺术、绘图速写与即时画布的完整界面；不是仅 p5 引擎，也不将每个 sketch 算新 UI。",
+    "styleTags": [
+      "创意编码/画布"
+    ],
+    "gaps": [
+      "根 LGPL2.1 非 MIT，完整对应源/修改和依赖条款仍待闭合。原预览取 PREVIEW_URL 且 sandbox/allow 明列相机、麦克风、MIDI、USB、payment 等权限，不能照搬或扩当前沙箱；执行任意速写不具离线安全边界。账户/文件服务、字体媒体、postMessage 与运行中断都未验证。",
+      "仅只读源码筛选；未安装/构建/运行、交互生命周期或浏览器视觉验收。"
+    ],
+    "description": "原速写 IDE 含代码/文件导航、运行/停止、控制台及独立预览画布；PreviewFrame 用 ResizeObserver 同步尺寸并注册预览消息分发。 区别 Sandpack 通用应用预览：原面向生成艺术、绘图速写与即时画布的完整界面；不是仅 p5 引擎，也不将每个 sketch 算新 UI。",
+    "category": "展示与媒体",
+    "licenseEvidence": {
+      "url": "https://github.com/processing/p5.js-web-editor/blob/c8bc3f1d56070941acd1fe96b4c22fe308afee9e/LICENSE",
+      "sha256": "807246adbfc2e15bdd5760ef5e9d6b01c1cf8bbda2efe4c9b56474dc9f689535",
+      "scope": "Complete actual root license; transitive code and media permissions not closed"
+    },
+    "sourceEvidence": {
+      "localFile": "evidence/processing--p5.js-web-editor--client__modules__IDE__pages__IDEView.jsx",
+      "sha256": "9a3b5d1456629f80015fdcb9f59f318e72cf8510a01a6096517fbc01a7759270"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-528",
+    "sourceScope": "Fixed original complete UI/demo source and full root license; not a runnable adaptation or full asset archive",
+    "kind": "原版交互场景（仅来源）",
+    "buildStatus": "fixed source and full root license read; not built/run/visually accepted"
+  },
+  {
+    "id": "penrose:constraint-diagram-workspace",
+    "title": "声明式约束与图形编排",
+    "source": "Penrose",
+    "repository": "https://github.com/penrose/penrose",
+    "revision": "d46d92b7b39c6ef6539a38e8a8f7472ebb5d0502",
+    "sourcePath": "packages/editor/src/App.tsx",
+    "upstream": "https://github.com/penrose/penrose/blob/d46d92b7b39c6ef6539a38e8a8f7472ebb5d0502/packages/editor/src/App.tsx",
+    "license": "MIT (complete actual root text; runtime/media not closed)",
+    "behavior": "原编辑器同时组织 substance/style/domain 程序、图形预览与示例浏览；DiagramPanel 可编译、重新采样、优化约束布局并支持配置下的图形拖动交互。",
+    "difference": "区别手绘或节点图编辑器：以三种声明式语言表达语义和视觉约束，产生可调整 SVG；原工作区完整保留为一个族。",
+    "styleTags": [
+      "语义图形/约束空间"
+    ],
+    "gaps": [
+      "优化器 worker/polling、Monaco、FlexLayout/Recoil、SVG/数学与字体完整依赖许可未审；源码含 Firebase auth/saved workspace 和 URL 入口需隔离。默认 CSP 不允许直接引 worker，不能将未运行优化宣称真效果；晚到优化、拖动与退出未测。",
+      "仅只读源码筛选；未安装/构建/运行、交互生命周期或浏览器视觉验收。"
+    ],
+    "description": "原编辑器同时组织 substance/style/domain 程序、图形预览与示例浏览；DiagramPanel 可编译、重新采样、优化约束布局并支持配置下的图形拖动交互。 区别手绘或节点图编辑器：以三种声明式语言表达语义和视觉约束，产生可调整 SVG；原工作区完整保留为一个族。",
+    "category": "数据与状态",
+    "licenseEvidence": {
+      "url": "https://github.com/penrose/penrose/blob/d46d92b7b39c6ef6539a38e8a8f7472ebb5d0502/LICENSE",
+      "sha256": "afb11426e09da40a1ae4f8fa17ddcc6b6a52d14df04c29bc5bcd06eb8730624d",
+      "scope": "Complete actual root license; transitive code and media permissions not closed"
+    },
+    "sourceEvidence": {
+      "localFile": "evidence/penrose--penrose--packages__editor__src__App.tsx",
+      "sha256": "70c74131f9cabd52b82608f6058314d792d5bda2cc0e3bc6eb5121b08986b422"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-528",
+    "sourceScope": "Fixed original complete UI/demo source and full root license; not a runnable adaptation or full asset archive",
+    "kind": "原版交互场景（仅来源）",
+    "buildStatus": "fixed source and full root license read; not built/run/visually accepted"
+  },
+  {
+    "id": "squoosh:dual-image-compression",
+    "title": "双画面对照的图像压缩实验室",
+    "source": "Squoosh",
+    "repository": "https://github.com/GoogleChromeLabs/squoosh",
+    "revision": "e8d35e0fb66eb16eff6fe8fc773eabcbb7128de3",
+    "sourcePath": "src/client/lazy-app/Compress/index.tsx",
+    "upstream": "https://github.com/GoogleChromeLabs/squoosh/blob/e8d35e0fb66eb16eff6fe8fc773eabcbb7128de3/src/client/lazy-app/Compress/index.tsx",
+    "license": "Apache-2.0 (complete actual root text; runtime/media not closed)",
+    "behavior": "原两侧图像输出、压缩选项/格式、尺寸调整及体积结果联动，使用独立侧任务和 AbortController；比较显示允许观察画质与输出设置差异。",
+    "difference": "区别普通上传卡/图片生成：位图处理的同步比较与参数到质量/字节反馈完整流程，不声称生成模型。",
+    "styleTags": [
+      "图像对照/反馈"
+    ],
+    "gaps": [
+      "原 WorkerBridge 和 WASM 编解码器不能直接在默认 CSP 运行，不允许编码二进制或扩 worker 权限。codecs 各自 LICENSE.codec 与依赖尚未全文审，根 Apache 不代表所有 codec 同许可；样本媒体、拖入文件/下载和清理/真实画质未验。",
+      "仅只读源码筛选；未安装/构建/运行、交互生命周期或浏览器视觉验收。"
+    ],
+    "description": "原两侧图像输出、压缩选项/格式、尺寸调整及体积结果联动，使用独立侧任务和 AbortController；比较显示允许观察画质与输出设置差异。 区别普通上传卡/图片生成：位图处理的同步比较与参数到质量/字节反馈完整流程，不声称生成模型。",
+    "category": "展示与媒体",
+    "licenseEvidence": {
+      "url": "https://github.com/GoogleChromeLabs/squoosh/blob/e8d35e0fb66eb16eff6fe8fc773eabcbb7128de3/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "scope": "Complete actual root license; transitive code and media permissions not closed"
+    },
+    "sourceEvidence": {
+      "localFile": "evidence/GoogleChromeLabs--squoosh--src__client__lazy-app__Compress__index.tsx",
+      "sha256": "d7ee7cdc4c2acf1c6ad09e44131f25dad544620940b6d363d03a5cc203bb686f"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-528",
+    "sourceScope": "Fixed original complete UI/demo source and full root license; not a runnable adaptation or full asset archive",
+    "kind": "原版交互场景（仅来源）",
+    "buildStatus": "fixed source and full root license read; not built/run/visually accepted"
+  },
+  {
+    "id": "svgomg:vector-optimization-inspector",
+    "title": "矢量优化与源码对照检查",
+    "source": "SVGOMG",
+    "repository": "https://github.com/jakearchibald/svgomg",
+    "revision": "f925656d40a507c512bf95ee14ad16445a4ad3ed",
+    "sourcePath": "src/js/page/main-controller.js",
+    "upstream": "https://github.com/jakearchibald/svgomg/blob/f925656d40a507c512bf95ee14ad16445a4ad3ed/src/js/page/main-controller.js",
+    "license": "MIT (complete actual root text; runtime/media not closed)",
+    "behavior": "原 Material 风格优化界面把 SVG 图形/代码切换、平移缩放、优化开关、精度设置与体积结果串联，并以任务编号丢弃旧压缩结果。",
+    "difference": "与 Squoosh 同为优化但输入及操作独立：这里是可读 SVG 结构/属性变换和代码检查，不是位图有损压缩；整套一族，不按 SVGO 插件拆。",
+    "styleTags": [
+      "矢量源码/Material"
+    ],
+    "gaps": [
+      "原构造立即注册 serviceWorker 并访问 IndexedDB，SVGO/Prism/gzip worker 均需离线安全适配，不能扩 CSP。原 SVG 输入可能含主动内容/外链，必须审核清洗；全局 copy/paste/keydown 匿名监听、下载/剪贴板与晚到任务清理未闭合。依赖及 logo/字体许可未审。",
+      "仅只读源码筛选；未安装/构建/运行、交互生命周期或浏览器视觉验收。"
+    ],
+    "description": "原 Material 风格优化界面把 SVG 图形/代码切换、平移缩放、优化开关、精度设置与体积结果串联，并以任务编号丢弃旧压缩结果。 与 Squoosh 同为优化但输入及操作独立：这里是可读 SVG 结构/属性变换和代码检查，不是位图有损压缩；整套一族，不按 SVGO 插件拆。",
+    "category": "展示与媒体",
+    "licenseEvidence": {
+      "url": "https://github.com/jakearchibald/svgomg/blob/f925656d40a507c512bf95ee14ad16445a4ad3ed/LICENSE.md",
+      "sha256": "fc238e99233704853d397eb25d538edfd5f2ddb2ad86d903bb33af99753897bb",
+      "scope": "Complete actual root license; transitive code and media permissions not closed"
+    },
+    "sourceEvidence": {
+      "localFile": "evidence/jakearchibald--svgomg--src__js__page__main-controller.js",
+      "sha256": "9cbb7573dae8c58514bc17259f2d772b1c0c8826d335addf64352296075b520a"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-528",
+    "sourceScope": "Fixed original complete UI/demo source and full root license; not a runnable adaptation or full asset archive",
+    "kind": "原版交互场景（仅来源）",
+    "buildStatus": "fixed source and full root license read; not built/run/visually accepted"
+  },
+  {
+    "id": "beepbox:pattern-song-composer",
+    "title": "像素格点乐曲编排台",
+    "source": "BeepBox",
+    "repository": "https://github.com/johnnesky/beepbox",
+    "revision": "355e510099d230d066d95074c16d748d59fe054c",
+    "sourcePath": "editor/SongEditor.ts",
+    "upstream": "https://github.com/johnnesky/beepbox/blob/355e510099d230d066d95074c16d748d59fe054c/editor/SongEditor.ts",
+    "license": "MIT (complete actual root text; runtime/media not closed)",
+    "behavior": "原乐曲编辑器连接音高/时值 PatternEditor、分轨 TrackEditor、循环段与音色/节奏选项，支持格点音符绘制及合成试听。",
+    "difference": "区别已有 Tinysynth 音色控制台：中心是多小节、多声部 pattern/乐曲结构编排，像素谱面与时间网格完整一族。",
+    "styleTags": [
+      "复古/音符编排"
+    ],
+    "gaps": [
+      "SongEditor.ts:691 直接调用 serviceWorker.register('/service_worker.js', {scope:'/'})，适配必须移除或隔离该注册，不能让图库预览注册根作用域 Service Worker。MidiInput 存在 requestMIDIAccess 及状态/focus 监听，必须禁用或明确授权，不因来源收集而请求。WebAudio 需用户手势与 all-notes-off/AudioContext 清理；URL歌曲/本地保存、导出和嵌入音乐归属/全部依赖未审。没有听觉/像素验收，也不把虚构乐曲当真实创作。",
+      "仅只读源码筛选；未安装/构建/运行、交互生命周期或浏览器视觉验收。"
+    ],
+    "description": "原乐曲编辑器连接音高/时值 PatternEditor、分轨 TrackEditor、循环段与音色/节奏选项，支持格点音符绘制及合成试听。 区别已有 Tinysynth 音色控制台：中心是多小节、多声部 pattern/乐曲结构编排，像素谱面与时间网格完整一族。",
+    "category": "展示与媒体",
+    "licenseEvidence": {
+      "url": "https://github.com/johnnesky/beepbox/blob/355e510099d230d066d95074c16d748d59fe054c/LICENSE.md",
+      "sha256": "11bda08d0a35daa31dea162bce1aeaae999938fe7bddabd9709602c28af998ef",
+      "scope": "Complete actual root license; transitive code and media permissions not closed"
+    },
+    "sourceEvidence": {
+      "localFile": "evidence/johnnesky--beepbox--editor__SongEditor.ts",
+      "sha256": "d902de9c2185b682fea6feb44a2b6acbd31ae6bc1edda70741c4f9db52ceb06a"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-528",
+    "sourceScope": "Fixed original complete UI/demo source and full root license; not a runnable adaptation or full asset archive",
+    "kind": "原版交互场景（仅来源）",
+    "buildStatus": "fixed source and full root license read; not built/run/visually accepted"
+  },
+  {
+    "id": "audiobookshelf:chapter-listening-reader",
+    "title": "Audiobookshelf · 章节式听书阅读场景",
+    "source": "Audiobookshelf",
+    "repository": "https://github.com/advplyr/audiobookshelf",
+    "revision": "49c0ef6c07f3b53562bc0471f0bcfb76949490fd",
+    "sourcePath": "client/pages/item/_id/index.vue",
+    "upstream": "https://github.com/advplyr/audiobookshelf/blob/49c0ef6c07f3b53562bc0471f0bcfb76949490fd/client/pages/item/_id/index.vue",
+    "license": "GPL-3.0 (root verified; runtime/media not cleared)",
+    "visualStyle": "书封与大标题、简介和章节列表，搭配居中圆形播放控制及倍速菜单的听书界面。",
+    "behavior": "原详情页加载书目/章节/书签，书签触发seek或开始播放确认；播放控制实际emit前后章节与跳秒，倍速与用户设置联动。",
+    "difference": "侧重长内容章节与书签阅读而非Jellyfin影视详情；与已有播放器有播放语义重叠，但原完整听书组织不同，不拆章节/播客变体。",
+    "gaps": [
+      "GPLv3完整正文保留，未来改版运行须对应源公开；书封/书籍/音频/Material Symbols字体不由根GPL自动授权。",
+      "原axios书库API、用户token下载URL、RSS下载/分享及服务器播放状态未隔离；未登录、播放、抓取或下载任何书籍。",
+      "服务端大量vendored依赖各有LICENSE，未做完整传递审计；仅选前端公共原件。",
+      "仅来源：未构建/运行/像素验收，所有传递依赖/媒体字体/CSP与重复操作/退出清理尚未闭合，无预览或完整源码ZIP。"
+    ],
+    "description": "书封与大标题、简介和章节列表，搭配居中圆形播放控制及倍速菜单的听书界面。 原详情页加载书目/章节/书签，书签触发seek或开始播放确认；播放控制实际emit前后章节与跳秒，倍速与用户设置联动。",
+    "category": "展示与媒体",
+    "licenseEvidence": {
+      "url": "https://github.com/advplyr/audiobookshelf/blob/49c0ef6c07f3b53562bc0471f0bcfb76949490fd/LICENSE",
+      "sha256": "67bc57299ed0387354c5d421e1dd052c568457f6e834ba3be6b979827a0161b7",
+      "scope": "Complete actual root license read; original selected code only; embedded assets/runtime not cleared"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-528",
+    "sourceScope": "Selected fixed original source and complete root license evidence; not full runnable/archive",
+    "kind": "原版完整场景（仅来源）",
+    "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted"
+  },
+  {
+    "id": "openstreetmap-id:geographic-feature-editor",
+    "title": "OpenStreetMap iD · 地理对象空间编辑场景",
+    "source": "OpenStreetMap iD",
+    "repository": "https://github.com/openstreetmap/iD",
+    "revision": "5b813986887dcfcd358dd95652a5d1a824cd7599",
+    "sourcePath": "modules/ui/inspector.js",
+    "upstream": "https://github.com/openstreetmap/iD/blob/5b813986887dcfcd358dd95652a5d1a824cd7599/modules/ui/inspector.js",
+    "license": "ISC (code root verified; map data/assets/dependencies not cleared)",
+    "visualStyle": "地图占满主视野，叠置工具与检查器，侧栏在要素预设与属性编辑两窗之间滑动，突出空间对象而非表格。",
+    "behavior": "原Inspector连接预设选择与entity editor；sidebar组织要素搜索/检查器，draw-line调用原draw-way处理绘线，map渲染和缩放选择由原模块驱动。",
+    "difference": "区别节点流程/画布涂鸦：地图坐标与要素预设/属性联动的真实编辑产品；整地图编辑场景一条，不拆点线面。",
+    "gaps": [
+      "ISC根代码许可不自动覆盖OpenStreetMap ODbL地理数据、影像瓦片/供应商条款及Font Awesome等图标。",
+      "原地图服务/认证/上传地图变更、地理定位与背景影像均未隔离，不访问地图账号、不提交任何要素编辑。",
+      "D3/地图投影/索引/预设与完整字体图标依赖、几何交互和退出监听未运行审计。",
+      "仅来源：未构建/运行/像素验收，所有传递依赖/媒体字体/CSP与重复操作/退出清理尚未闭合，无预览或完整源码ZIP。"
+    ],
+    "description": "地图占满主视野，叠置工具与检查器，侧栏在要素预设与属性编辑两窗之间滑动，突出空间对象而非表格。 原Inspector连接预设选择与entity editor；sidebar组织要素搜索/检查器，draw-line调用原draw-way处理绘线，map渲染和缩放选择由原模块驱动。",
+    "category": "输入与选择",
+    "licenseEvidence": {
+      "url": "https://github.com/openstreetmap/iD/blob/5b813986887dcfcd358dd95652a5d1a824cd7599/LICENSE.md",
+      "sha256": "529e9838cff9f38b288ad2bd4123858c279975045b09d099319fd6ed1efb17c7",
+      "scope": "Complete actual root license read; original selected code only; embedded assets/runtime not cleared"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-528",
+    "sourceScope": "Selected fixed original source and complete root license evidence; not full runnable/archive",
+    "kind": "原版完整场景（仅来源）",
+    "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted"
+  },
+  {
+    "id": "freetube:chaptered-video-watch",
+    "title": "FreeTube · 剧院式章节观看场景",
+    "source": "FreeTube",
+    "repository": "https://github.com/FreeTubeApp/FreeTube",
+    "revision": "79047ac394903c6180c90e18a40a997913155b02",
+    "sourcePath": "src/renderer/views/Watch/Watch.vue",
+    "upstream": "https://github.com/FreeTubeApp/FreeTube/blob/79047ac394903c6180c90e18a40a997913155b02/src/renderer/views/Watch/Watch.vue",
+    "license": "AGPL-3.0-or-later (root/readme verified; runtime/media not cleared)",
+    "visualStyle": "大幅视频主舞台与可切换剧院布局、章节缩略条/当前章节高亮、说明与侧栏组成内容观看页。",
+    "behavior": "原Watch连接Shaka播放事件、剧院切换、当前章节更新及timestamp seek；章节列表支持键盘上下/Enter/Space选择并随可见性滚动到当前章节。",
+    "difference": "与Jellyfin媒体详情和Webamp皮肤播放器有播放语义交集，但这里是原视频观看+章节导航完整版式，不把单个播放器按钮或布局状态另计。",
+    "gaps": [
+      "根AGPLv3及README or-later声明保留；运行发布需要对应源码义务，YouTube媒体/封面/商标不属于此代码许可。",
+      "真实Local/Invidious API、Shaka manifest/字幕/故事板、Electron IPC与历史/订阅存储未隔离；无联网抓取/播放/下载。",
+      "Shaka、Font Awesome、Vue/可见性observer等运行依赖及字体/样式尚未全审；不宣称离线播放器可用。",
+      "仅来源：未构建/运行/像素验收，所有传递依赖/媒体字体/CSP与重复操作/退出清理尚未闭合，无预览或完整源码ZIP。"
+    ],
+    "description": "大幅视频主舞台与可切换剧院布局、章节缩略条/当前章节高亮、说明与侧栏组成内容观看页。 原Watch连接Shaka播放事件、剧院切换、当前章节更新及timestamp seek；章节列表支持键盘上下/Enter/Space选择并随可见性滚动到当前章节。",
+    "category": "展示与媒体",
+    "licenseEvidence": {
+      "url": "https://github.com/FreeTubeApp/FreeTube/blob/79047ac394903c6180c90e18a40a997913155b02/LICENSE",
+      "sha256": "8486a10c4393cee1c25392769ddd3b2d6c242d6ec7928e1414efff7dfb2f07ef",
+      "scope": "Complete actual root license read; original selected code only; embedded assets/runtime not cleared"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-528",
+    "sourceScope": "Selected fixed original source and complete root license evidence; not full runnable/archive",
+    "kind": "原版完整场景（仅来源）",
+    "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted"
+  },
+  {
+    "id": "miniflux:feed-reading-workspace",
+    "title": "克制排版订阅收件与文章阅读",
+    "source": "Miniflux",
+    "repository": "https://github.com/miniflux/v2",
+    "revision": "9447aaeceb98ebdf7c4528b3e96dc5b44b35af5b",
+    "sourcePath": "internal/template/templates/views/entry.html",
+    "upstream": "https://github.com/miniflux/v2/blob/9447aaeceb98ebdf7c4528b3e96dc5b44b35af5b/internal/template/templates/views/entry.html",
+    "license": "Apache-2.0 (root verified only; dependencies/assets not closed)",
+    "behavior": "原未读收件列表与全文阅读页、前后篇、阅读状态/收藏、标签与原文入口，保留原紧凑语义排版及键盘处理；含附件媒体控件定义但不执行。",
+    "difference": "不同于静态博客：以订阅条目的未读/已读状态和快速逐篇消化为核心；审美是克制正文排版，不宣称艺术化或新颖空间效果。",
+    "gaps": [
+      "Go模板依赖用户/条目/路由与后端状态；原抓取、刷新、保存、附件媒体与分享不可作为离线真实功能。全部传递依赖、原内容媒体权限、CSP及键盘退出清理未审；不是完整可运行包。",
+      "仅固定原件来源；未安装/构建/运行/截图/发布，CSP、媒体字体版权、完整运行许可、交互清理及浏览器视觉均未验。"
+    ],
+    "description": "原未读收件列表与全文阅读页、前后篇、阅读状态/收藏、标签与原文入口，保留原紧凑语义排版及键盘处理；含附件媒体控件定义但不执行。 不同于静态博客：以订阅条目的未读/已读状态和快速逐篇消化为核心；审美是克制正文排版，不宣称艺术化或新颖空间效果。",
+    "category": "展示与媒体",
+    "licenseEvidence": {
+      "url": "https://github.com/miniflux/v2/blob/9447aaeceb98ebdf7c4528b3e96dc5b44b35af5b/LICENSE",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+      "scope": "Complete root license read; dependency/media/font permissions not closed"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-528",
+    "sourceScope": "Selected fixed original code and complete root license evidence; not a complete runnable archive or runtime audit",
+    "kind": "原版完整场景（仅来源）",
+    "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted",
+    "sourceSha256": "c9bb39cc6d7ea2259017e1a3629076e34e8fcc03ab8c103d3eea9ac879b5f75a"
+  },
+  {
+    "id": "wallabag:saved-article-reading",
+    "title": "侧栏工具与批注稍后读文章页",
+    "source": "wallabag",
+    "repository": "https://github.com/wallabag/wallabag",
+    "revision": "34c43c18cc9eceb070244db74dd6ad8e4f5011bb",
+    "sourcePath": "templates/Entry/entry.html.twig",
+    "upstream": "https://github.com/wallabag/wallabag/blob/34c43c18cc9eceb070244db74dd6ad8e4f5011bb/templates/Entry/entry.html.twig",
+    "license": "MIT (root verified only; dependencies/assets not closed)",
+    "behavior": "原长文阅读区与侧栏工具、归档/收藏、标签、亮暗/自动主题，正文挂接原注释控制器；列表入口与阅读页组成一族。",
+    "difference": "区别RSS自动订阅收件：面向用户保存文章的精读/注释/归档；区别Recogito独立批注，保留完整原文章阅读与工具布局，不单算标签卡。",
+    "gaps": [
+      "Symfony/Twig后端路由、CSRF与annotations服务必需；保存/删除/分享/导出是实际外部动作，当前未执行也未做本地替代。Material图标字体、MathJax/highlight及媒体/传递许可未闭合；服务端注释接口不等于离线批注已可用。",
+      "仅固定原件来源；未安装/构建/运行/截图/发布，CSP、媒体字体版权、完整运行许可、交互清理及浏览器视觉均未验。"
+    ],
+    "description": "原长文阅读区与侧栏工具、归档/收藏、标签、亮暗/自动主题，正文挂接原注释控制器；列表入口与阅读页组成一族。 区别RSS自动订阅收件：面向用户保存文章的精读/注释/归档；区别Recogito独立批注，保留完整原文章阅读与工具布局，不单算标签卡。",
+    "category": "展示与媒体",
+    "licenseEvidence": {
+      "url": "https://github.com/wallabag/wallabag/blob/34c43c18cc9eceb070244db74dd6ad8e4f5011bb/COPYING.md",
+      "sha256": "9927812ed1d034e6b6ed0c71160b2bf33ececf980947806ddf73993013669496",
+      "scope": "Complete root license read; dependency/media/font permissions not closed"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-528",
+    "sourceScope": "Selected fixed original code and complete root license evidence; not a complete runnable archive or runtime audit",
+    "kind": "原版完整场景（仅来源）",
+    "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted",
+    "sourceSha256": "225ab2f5cbc2081bfe704f0f69f8f7767fd5039f1846d2024fda1abcd91f7300"
+  },
+  {
+    "id": "silverbullet:document-navigation-workspace",
+    "title": "Markdown知识文档与停靠导航工作区",
+    "source": "SilverBullet",
+    "repository": "https://github.com/silverbulletmd/silverbullet",
+    "revision": "e91de8698f711cc2c87d35264ce5610ebf36598f",
+    "sourcePath": "client/editor_ui.tsx",
+    "upstream": "https://github.com/silverbulletmd/silverbullet/blob/e91de8698f711cc2c87d35264ce5610ebf36598f/client/editor_ui.tsx",
+    "license": "MIT (root verified only; dependencies/assets not closed)",
+    "behavior": "原编辑器工作区、文档导航根容器与document view组合，提供停靠面板/树行和文档内容视图、行摘要与动作入口；保留原Preact和客户端syscalls设计。",
+    "difference": "区别Quartz只读发布花园：是原交互知识编辑工作区和导航面板，不是静态列表模板；多个树/表视图不拆条。",
+    "gaps": [
+      "依赖Client/datastore/editor syscalls、CodeMirror、Space Lua/插件和数据加载；不是独立无后端编辑器。存储/同步/网络、可执行插件及脚本/CSP安全、Inter字体/图标及完整运行许可未审，未执行任意查询或用户代码。",
+      "仅固定原件来源；未安装/构建/运行/截图/发布，CSP、媒体字体版权、完整运行许可、交互清理及浏览器视觉均未验。"
+    ],
+    "description": "原编辑器工作区、文档导航根容器与document view组合，提供停靠面板/树行和文档内容视图、行摘要与动作入口；保留原Preact和客户端syscalls设计。 区别Quartz只读发布花园：是原交互知识编辑工作区和导航面板，不是静态列表模板；多个树/表视图不拆条。",
+    "category": "导航与组织",
+    "licenseEvidence": {
+      "url": "https://github.com/silverbulletmd/silverbullet/blob/e91de8698f711cc2c87d35264ce5610ebf36598f/LICENSE.md",
+      "sha256": "ccf525a3b5c9ac8d843e118932036e6517d4d603f9ff3e474522b632c3996c65",
+      "scope": "Complete root license read; dependency/media/font permissions not closed"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-528",
+    "sourceScope": "Selected fixed original code and complete root license evidence; not a complete runnable archive or runtime audit",
+    "kind": "原版完整场景（仅来源）",
+    "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted",
+    "sourceSha256": "daadfe920bce30175e86eba7152f354957adbe5935062a6e93c0757d2eaa2fa0"
   }
 ]
