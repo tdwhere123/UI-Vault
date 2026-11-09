@@ -1,0 +1,15 @@
+{
+  "repository": "https://github.com/maxwellito/vivus",
+  "revision": "06b7adb5d543b6b1d0d93fa83dea137b1f8644a5",
+  "version": "0.4.6",
+  "license": "MIT",
+  "runtimeDependencies": [],
+  "originalFilesSHA256": {
+    "package.json": "c240c533c2812dae5c5b95b204556ba8d6c5af2ce82f1ee4a37b766fa3b4ec4c",
+    "index.html": "c0e7e2d6793c8e8dc3aa3c5149ebb045ecf45d2f59861f1f6451d6b5809da1ea",
+    "vivus.js": "5f8664dd8e8d201cd10792136f12aeab64a8e19fdf39e68dacc151fcef4a2234",
+    "LICENSE": "35ee652cf6f12f4d897a3b11064c2e47a398243b8538cea9789201e65f979af0"
+  },
+  "adaptation": "Original index.html Animation types three shutter SVG circles/lines and text/CSS, and byte-exact dist/vivus.js (including Pathformer) retained. This restores one existing family, not three. Original delayed/sync/oneByOne duration150, path conversion, length mapping and timing algorithms run. Host removes inline click attributes, uses manual start and native buttons, shows finished drawing initially; click/replay runs original reset/play. Hidden stops and resumes only active drawings; reduced motion finishes immediately; atlas:dispose/pagehide destroys instances, cancels owned RAF and removes listeners. CSS retains original rules and adds narrow-screen stacking/focus indicator. No camera brand, imported SVG, image, font, backend, or network. No eval or CSP extension. SVG source is text, not a screenshot. JSDOM getTotalLength=100 and 200px bounds are controlled stubs; actual native SVG path length, rendering and pixels have not been verified.",
+  "visualVerified": false
+}
