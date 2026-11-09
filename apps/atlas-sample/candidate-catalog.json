@@ -11745,37 +11745,45 @@
   },
   {
     "id": "minipaint:original-layered-paint-workspace",
-    "title": "miniPaint · 原版多图层绘画工作区",
     "source": "minipaint",
     "repository": "https://github.com/viliusle/miniPaint",
     "revision": "a79733eb803fc97084ef0ee4faa96b031e69e1c0",
-    "declaredVersion": "4.14.3",
     "upstream": "https://github.com/viliusle/miniPaint/blob/a79733eb803fc97084ef0ee4faa96b031e69e1c0/src/js/main.js",
-    "license": "MIT (original project code; runtime dependency audit pending)",
-    "description": "原工具栏、画笔、图层堆叠/透明度/合并与撤销体系；可用于消息中的分层视觉草案。仅源码收集，尚无离线预览。",
-    "previewStatus": "source-only",
-    "buildStatus": "not installed or built; selected original source files collected",
-    "sourceScope": "Selected exact source + full root license + package metadata + commit/tree evidence; NOT full repository/archive or closed runtime",
-    "batch": "source-review-514",
-    "gaps": [
-      "完整应用原有URL打开、剪贴板、导入导出、打印与字体加载；必须选择明确闭合本地子集并逐入口门控",
-      "gif.js/pica/resizer可能涉及worker/WASM/资源；当前CSP不能增加worker或eval，需核实现，不应宣称已兼容",
-      "package.json含git来源hermite-resize和多项范围依赖，必须锁定实际版本；dist bundled许可证摘录不是全部依赖全文",
-      "SVG图标可文本收集，但字体/照片/其他二进制不可包装；未下载预览GIF或封面",
-      "尚未安装/运行/像素验收；原层合成/历史需真实canvas验证，不以静态截图替代",
-      "仅精确选定源码与根许可已核；未安装/构建/完成全依赖审核，不计入可查看图鉴。",
-      "本地来源证据不冒称完整仓库ZIP已公开；封面交Grok处理，暂无真实本地预览。"
-    ],
-    "website": "https://github.com/viliusle/miniPaint",
-    "completedPreviewCount": 0,
     "licenseEvidence": {
       "url": "https://github.com/viliusle/miniPaint/blob/a79733eb803fc97084ef0ee4faa96b031e69e1c0/MIT-LICENSE.txt",
       "sha256": "92a21f763974d0a691f7738ed8aae674b74ef077ff6341844ad7fadf36999be8",
       "scope": "Original project source only; full runtime dependency/media review pending"
     },
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false
+    "website": "https://github.com/viliusle/miniPaint",
+    "title": "本地画笔与图层编辑",
+    "description": "原画笔、压力开关、图层和撤销重做工作区；默认平滑及有限数学函数为公开独立适配，不连接文件、云端或持久保存，附完整对应源码。",
+    "behavior": "原画笔、压力开关、图层和撤销重做工作区；默认平滑及有限数学函数为公开独立适配，不连接文件、云端或持久保存，附完整对应源码。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "输入与选择",
+    "license": "GPL-3.0-only combined preview; MIT; ISC; Apache-2.0; BSD-3-Clause components",
+    "batch": "minipaint-workspace-01",
+    "preview": "batches/minipaint-workspace-01/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "pass",
+    "gaps": [
+      "Original miniPaint local painting, layer model, tool/dialog UI and undo/redo are retained. Blank initial canvas is drawable. No upload, download/export, clipboard import, cloud/media search or persistent storage; in-memory work is lost on close. Original file/help services are not started.",
+      "Original default brush pressure=false uses an explicitly authored midpoint-quadratic smoothing helper instead of the unclosed StackOverflow-derived smoothing helper. Stroke appearance can differ. Original input sampling, layer/history pipeline and pressure=true variable-width drawing remain original. Standard viewport affine math, color conversions and throttle helpers are independently replaced; removed ambiguous helper bodies are NOT redistributed.",
+      "Original bitmap icons/background assets and external fonts are not shipped. System text/symbols replace functional icons and image elements; CSS image URLs are removed. Original UI structure and tooltips remain, but original icon/font/visual fidelity is not claimed.",
+      "Combined isolated preview is GPL-3.0-only due to actual AlertifyJS 1.14.0 GPL3 dependency; this does not relicense all UI-Vault. Original miniPaint MIT and other component notices remain applicable. Full editable corresponding source is supplied as natural UTF8 JSON parts plus extractor/build files. Standard MIT supplemental text for explicitly MIT-declared Quantize is transparently marked, not represented as an original standalone LICENSE.",
+      "Pica uses original JS resize/unsharp math only; WebWorker/WASM backend registration disabled. Hermite original single-thread resize retained with unused Worker-Blob creation removed. Original glfx WebGL effects remain but depend on real browser WebGL; CPU fixture does not validate them. WebFont requests are replaced by inactive callbacks with system fonts.",
+      "Each runtime chunk consists of complete statements and independently parses. Top-level function declarations are promoted to equivalent var/function bindings before module execution, then each script is guarded with fail-closed try/catch to clean early module failures and skip later scripts. No eval, binary encoding transport, CSP or sandbox expansion.",
+      "Lean actual570 production compose tests cover original brush drawing, pressure toggle, undo/redo, insert/duplicate layers, hidden/resume, old nodes/late callbacks and complete EventTarget/task cleanup. Early Canvas failure is caught. CPU Canvas/JSDOM layout fixture only, no native browser, screenshots, visual/touch/IME or whole-tool-matrix acceptance.",
+      "Actual default createPreviewLoader/cache all-or-nothing failure/retry/remount tested under unchanged8MiB budget; correspondence-source downloads are not inserted into runtime cache. No external model, backend or account is simulated."
+    ],
+    "runtime": {
+      "scripts": [
+        "runtime-part-1.js",
+        "runtime-part-2.js",
+        "runtime.js"
+      ]
+    }
   },
   {
     "id": "cossui:group-chat-demo",
@@ -14193,37 +14201,32 @@
   },
   {
     "id": "bruno:request-response-workspace",
-    "title": "Bruno · 请求参数与响应检视工作区",
     "source": "Bruno",
     "repository": "https://github.com/usebruno/bruno",
     "revision": "1982a7b1bfa865194292bd08d0fa9e090ae89b4a",
-    "sourcePath": "packages/bruno-app/src/components/RequestTabPanel/index.js",
     "upstream": "https://github.com/usebruno/bruno/blob/1982a7b1bfa865194292bd08d0fa9e090ae89b4a/packages/bruno-app/src/components/RequestTabPanel/index.js",
-    "license": "MIT (root verified only; dependencies/assets not closed)",
-    "behavior": "原可调整请求/响应双面板，参数/头部/正文/鉴权/断言等页签、启用项数量、响应结果和请求取消状态组成完整接口工作区。",
-    "difference": "不同于RapiDoc文档阅读和单纯代码框，真实请求构造/返回检视产品UI；HTTP/GraphQL等不拆成协议换皮条目。",
-    "gaps": [
-      "原sendRequest/cancelRequest通过Redux及桌面宿主执行真实网络；本轮只读原件，没有运行请求、凭据或脚本。",
-      "鉴权配置/脚本tests/文件body/环境变量/IPC依赖未隔离，未来浏览器适配不能直接运行桌面源码或放宽eval网络。",
-      "仅来源：完整传递依赖/媒体字体许可、无网络CSP、状态/重复/中断清理与像素尚未运行审计；没有离线运行包或完整源码ZIP。"
-    ],
-    "description": "原可调整请求/响应双面板，参数/头部/正文/鉴权/断言等页签、启用项数量、响应结果和请求取消状态组成完整接口工作区。 不同于RapiDoc文档阅读和单纯代码框，真实请求构造/返回检视产品UI；HTTP/GraphQL等不拆成协议换皮条目。",
-    "category": "数据与状态",
+    "sourcePath": "packages/bruno-app/src/components/RequestTabPanel/index.js",
     "licenseEvidence": {
       "url": "https://github.com/usebruno/bruno/blob/1982a7b1bfa865194292bd08d0fa9e090ae89b4a/license.md",
       "sha256": "8891070a847e5047bf77d38d88d7dfbab1beab41e37c802b9f5b23f2bbb9c7be",
       "scope": "Complete actual root license read; selected original source only, runtime/assets not cleared."
     },
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-bulk-524",
-    "sourceScope": "Selected fixed original public source and complete root license evidence; not a complete runnable/archive or runtime audit",
-    "kind": "原版完整场景（仅来源）",
-    "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted",
-    "collectionPriority": "原版场景来源参考"
+    "difference": "不同于RapiDoc文档阅读和单纯代码框，真实请求构造/返回检视产品UI；HTTP/GraphQL等不拆成协议换皮条目。",
+    "title": "请求参数编辑与文字响应",
+    "description": "原参数、请求头、批量编辑和代码编辑器，支持本地参数与正文修改；右侧为固定样例响应，不发送请求、执行测试或保存文件。",
+    "behavior": "原参数、请求头、批量编辑和代码编辑器，支持本地参数与正文修改；右侧为固定样例响应，不发送请求、执行测试或保存文件。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "输入与选择",
+    "license": "MIT AND BSD-3-Clause AND Unlicense",
+    "batch": "bruno-workspace-01",
+    "preview": "batches/bruno-workspace-01/workspace/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "# 请求编辑与文字响应\n\n固定 usebruno/bruno@1982a7b1bfa865194292bd08d0fa9e090ae89b4a 的 HTTP 本地子流程，恢复既有条目，不是完整桌面 Bruno。保原 QueryParams、RequestHeaders、RequestBody 纯文字分支、EditableTable/虚拟行、原 MultiLineEditor/SingleLineEditor/CodeEditor（CodeMirror5）、BulkEditor、TextPreview 与各 StyledWrapper。宿主只提供一个本地 collection/request、选定页签与双栏，复用原 ResponsePane 标签样式和原 light theme/global CSS，不称原 RequestTabPanel 所有布局/协议都接入。\n\n真实可用：参数与 Header 名值/描述、启用开关、删除、新行及 Bulk Edit，原表格排序/重排机制保留；参数编辑经原 reducer 更新本地 URL；文字 Body 经原 CodeMirror 回调更新本地请求，切页签保留编辑。右侧只显示明确固定文字响应，不来自请求，不能真实发送、执行脚本/断言/测试、保存或连接服务。\n\n## 源码抽取与界限\n原 collections 的 setQueryParams/moveQueryParam/updatePathParam/setRequestHeaders/moveRequestHeader/updateRequestBody/updateItemSettings 七函数保持逻辑；原 query serializer、splitOnFirst、uuid、formatSize 直接摘录。单层固定 collection 的查找器、tabs 宽度/焦点状态是明确宿主适配，不宣称整个桌面 Redux。Host fixture 是虚构数据。\n\n原编辑器视觉/编辑回调/搜索和折叠代码保留。未启用变量、AI补全/变量操作、外链打开与持久化连接点以显式空能力适配；示例没有变量，brunovariables 模式委托原 CodeMirror 当前文字模式。原 localStorage 视图存储被隔离禁用，usePersistedState 仅组件内存。JSON/JS/GraphQL模式不开放，相关lint/GraphQL初始化与原lint PNG CSS删除；不把禁用lint声称校验成功。原Header继承逻辑对本地无文件夹fixture返回空祖先，默认header说明仍是原展示，不实际发送。\n\nReact19.0.0，CM5.65.2；其余实际版本逐项列出。原最新版组件与公开发行兼容依赖版本明确保留，不把整个仓库当已构建。原CodeEditor的GraphQL作者头、BrunoMIT、Tabler原SVG MIT及全部实际依赖版权/条款在NOTICES。know-your-http-well直接导入同包headers.json替代无关AMD入口，保原数据。原styles/global及Tailwind3.4.1编译，所有字体只系统fallback；无字体下载/图片/二进制包装，CSS无url资源。\n\n宿主拦系统copy/cut/paste/drop与链接打开，保存/发送action明示不可用不伪成功。隐藏卸载，恢复重置本地fixture；退出或早晚失败释放监听、RAF、interval、timeout、observer和动画。没有后台、Electron/IPC、凭据或网络依赖。\n\n## 验证范围\nactual571 compose normal/reduced/early/failure/production 五模式通过；原CM setValue经原onChange/reducer更新参数URL/Header/Body，checkbox启用过滤、Bulk增加参数及原表格删除、页签保值、隐藏重置/旧回调、早期模块和晚期失败/退出账本归零；禁止API调用0。真实loader加载/缓存重挂/释放在现有8MiB预算内。几何/ResizeObserver采用受控JSDOM桩使原react-virtuoso正常计算行，未改生产虚拟表算法；不等同原生键盘输入/拖拽/像素验收。原MaskedEditor本身有重复类方法，编译器警告已记录，未为测试改写算法。\n\n重建使用已保存 src/adapters/main/build.mjs + package-lock；prepare.py是早期抽取脚本记录，不应用它覆盖最终适配文件。原完整源码/修改差异保存在工作区，不提供假源码ZIP。\n"
+    ]
   },
   {
     "id": "formbricks:survey-composition-workspace",
@@ -16718,36 +16721,34 @@
   },
   {
     "id": "miniflux:feed-reading-workspace",
-    "title": "克制排版订阅收件与文章阅读",
     "source": "Miniflux",
     "repository": "https://github.com/miniflux/v2",
     "revision": "9447aaeceb98ebdf7c4528b3e96dc5b44b35af5b",
-    "sourcePath": "internal/template/templates/views/entry.html",
     "upstream": "https://github.com/miniflux/v2/blob/9447aaeceb98ebdf7c4528b3e96dc5b44b35af5b/internal/template/templates/views/entry.html",
-    "license": "Apache-2.0 (root verified only; dependencies/assets not closed)",
-    "behavior": "原未读收件列表与全文阅读页、前后篇、阅读状态/收藏、标签与原文入口，保留原紧凑语义排版及键盘处理；含附件媒体控件定义但不执行。",
-    "difference": "不同于静态博客：以订阅条目的未读/已读状态和快速逐篇消化为核心；审美是克制正文排版，不宣称艺术化或新颖空间效果。",
-    "gaps": [
-      "Go模板依赖用户/条目/路由与后端状态；原抓取、刷新、保存、附件媒体与分享不可作为离线真实功能。全部传递依赖、原内容媒体权限、CSP及键盘退出清理未审；不是完整可运行包。",
-      "仅固定原件来源；未安装/构建/运行/截图/发布，CSP、媒体字体版权、完整运行许可、交互清理及浏览器视觉均未验。"
-    ],
-    "description": "原未读收件列表与全文阅读页、前后篇、阅读状态/收藏、标签与原文入口，保留原紧凑语义排版及键盘处理；含附件媒体控件定义但不执行。 不同于静态博客：以订阅条目的未读/已读状态和快速逐篇消化为核心；审美是克制正文排版，不宣称艺术化或新颖空间效果。",
-    "category": "展示与媒体",
+    "sourcePath": "internal/template/templates/views/entry.html",
     "licenseEvidence": {
       "url": "https://github.com/miniflux/v2/blob/9447aaeceb98ebdf7c4528b3e96dc5b44b35af5b/LICENSE",
       "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
       "scope": "Complete root license read; dependency/media/font permissions not closed"
     },
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-style-528",
-    "sourceScope": "Selected fixed original code and complete root license evidence; not a complete runnable archive or runtime audit",
-    "kind": "原版完整场景（仅来源）",
-    "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted",
-    "sourceSha256": "c9bb39cc6d7ea2259017e1a3629076e34e8fcc03ab8c103d3eea9ac879b5f75a"
+    "difference": "不同于静态博客：以订阅条目的未读/已读状态和快速逐篇消化为核心；审美是克制正文排版，不宣称艺术化或新颖空间效果。",
+    "title": "订阅列表与全文阅读",
+    "description": "原订阅列表、全文、标签展开与键盘导航；虚构本地文章，已读和收藏仅保存在当前内存，不连接抓取、同步或账户服务。",
+    "behavior": "原订阅列表、全文、标签展开与键盘导航；虚构本地文章，已读和收藏仅保存在当前内存，不连接抓取、同步或账户服务。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "展示与媒体",
+    "license": "Apache-2.0; MIT (Tabler SVG)",
+    "batch": "miniflux-reader-01",
+    "preview": "batches/miniflux-reader-01/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "真实Go模板生成、actual571 compose关键行为/退出通过，视觉未验",
+    "gaps": [
+      "真实原模板的本地阅读子流程，不是完整Miniflux服务；原创虚构文章、原无图标/空附件分支。",
+      "已读收藏仅当前内存，抓取/同步/分享/账号/设置等未接入且控件禁用。",
+      "原CSS现代语法在JSDOM不具备完整布局解析；真实浏览器视觉未验。"
+    ]
   },
   {
     "id": "wallabag:saved-article-reading",
