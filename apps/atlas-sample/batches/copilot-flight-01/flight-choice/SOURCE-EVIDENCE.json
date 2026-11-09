@@ -1,0 +1,52 @@
+{
+  "repository": "https://github.com/CopilotKit/CopilotKit",
+  "revision": "c7815d9ac96f48fb3a64ad8c18e176a870c81763",
+  "originalEntry": "examples/showcases/oracle-agent-memory/frontend/src/components/FlightOptions.tsx",
+  "originalFilesSHA256": {
+    "BoardingPass.tsx": "cae734103452b63638f4f193d65c7d5f229fa85ddbcdb605dabf266535bc4c65",
+    "BookingConfirmCard.tsx": "bf642b8a6caa88673e01dcbdc8fa3ae7d988e65301f1a586638ed9588875758d",
+    "flights.ts": "2e900cac4d98ac880ac00e3ed50ac4be8147c3b6b32d3da156e2685858b69d4f",
+    "FlightOptions.tsx": "c4990a2434091207326c1eab40b3058c9514cbb9cf99f5802567699cef852905",
+    "LICENSE": "15a0e5343aea872c0573ad72feb6044b336f162d724cc1673c608e6b37ea071b"
+  },
+  "dependencies": [
+    {
+      "name": "react",
+      "version": "19.1.0",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+      }
+    },
+    {
+      "name": "react-dom",
+      "version": "19.1.0",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+      }
+    },
+    {
+      "name": "scheduler",
+      "version": "0.26.0",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+      }
+    },
+    {
+      "name": "tailwindcss",
+      "version": "4.1.18",
+      "license": "MIT",
+      "scope": "compiled-css",
+      "licenseSHA256": {
+        "LICENSE": "60e0b68c0f35c078eef3a5d29419d0b03ff84ec1df9c3f9d6e39a519a5ae7985"
+      }
+    }
+  ],
+  "adaptation": "Original FlightOptions/FlightCard, BookingConfirmCard and BoardingPass retained with original selection\u2192confirmation\u2192cancel or local setBooked(true) behavior. Original formatTime/stopsLabel retained. This is NOT a booking integration: two host-created obviously fictional Example Air/Sample Airways AAA\u2192BBB DEMO flights, arbitrary2030 dates and fixture prices. No real flight, reservation, payment, passenger account, confirmation code or valid boarding pass exists. Persistent visible warning explicitly explains original Confirm & book / CONFIRMED labels only mutate local demo state. Original cards/inline SVG/classes preserved. Changes to originals: local import aliases, scrollIntoView effect skipped while document.hidden; no geometry or business callback replacement. Host adds Restart local demo (keyed remount), error status and resource ownership. Hidden keeps current local selection/pass state mounted but hidden, capture-blocks clicks, pauses owned work; reveal resumes. Exit unmounts and cleans listeners/RAF/timers/observers; canceled callback identities are checked. Default fixture is bounded2items, no arbitrary JSON input or parseFlights/rememberFlights/cache API is invoked; no unbounded cache population. Local demo fixtures are host-authored, not upstream flight data or real provider results. Date display preserves original locale/timezone formatting. Tailwind4 compiles original classes, system font only. Tests actual543compose,100confirm/cancel/reset cycles, oldconfirm async after reset, hidden-click block/state restore, earlymodule and actual scrollIntoView failure. No network/storage/clipboard/location/credentials/backend. JSDOM scroll and scheduling stubs are not native pixel acceptance. Original reusable components have no ongoing animation; reduced CSS disables transitions.",
+  "visualVerified": false
+}
