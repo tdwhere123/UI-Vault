@@ -1,0 +1,19 @@
+{
+  "actualCompose": "ui-vault-547",
+  "nativeVisualQA": false,
+  "testLogs": {
+    "test-normal.log": "ready true Local edits only. No saving, collaboration, AI or network. []\nmarkdown # Local document\n\nEdited safe \\<script>alert(1)\\</script> text\n\n* Select text for formatting\n* Type / for the original block menu\n* Edit this list or add a table\n\n```javascript\nconst local = true\n```\n\nfinal [] 0 0 []\n",
+    "test-direct.log": "ready true Local edits only. No saving, collaboration, AI or network. []\nmarkdown # Local document\n\nEdited safe \\<script>alert(1)\\</script> text\n\n* Select text for formatting\n* Type / for the original block menu\n* Edit this list or add a table\n\n```javascript\nconst local = true\n```\n\nfinal [] 0 0 []\n",
+    "test-missingroot.log": "missingroot PASS\n",
+    "test-earlydispose.log": "earlydispose PASS\n",
+    "test-early.log": "early PASS\n",
+    "test-initialhidden.log": "initialhidden PASS\n"
+  },
+  "limitations": [
+    "JSDOM controlled geometry/observer fixtures; no native pixel, IME, drag selection or narrow-layout QA.",
+    "Local text editing and live Markdown only: no cloud persistence, sharing, collaboration, AI or credentials. Original Empty story is populated with a small UI-Vault-authored demo, not upstream lyrics/Wikipedia content.",
+    "System fonts replace unavailable font files. KaTeX typography uses fallback without bundled math fonts; precise mathematical layout not verified.",
+    "File uploads/drop disabled; remote image URL resolving blocked; paste accepts plaintext only up to 50000 characters. No rich HTML paste or remote-image claim.",
+    "Hidden destroys editor then restores local Markdown; final exit clears it. Full language parsers are bundled locally."
+  ]
+}
