@@ -1,0 +1,78 @@
+{
+  "tests": [
+    {
+      "mode": "normal",
+      "pass": true,
+      "calls": {
+        "network": 0,
+        "midi": 0,
+        "contexts": 1,
+        "close": 1,
+        "start": 7,
+        "stop": 7
+      },
+      "ownedListenersAfterExit": 0,
+      "allScheduledAfterExit": 0
+    },
+    {
+      "mode": "unsupported",
+      "pass": true,
+      "calls": {
+        "network": 0,
+        "midi": 0,
+        "contexts": 0,
+        "close": 0,
+        "start": 0,
+        "stop": 0
+      },
+      "ownedListenersAfterExit": 0,
+      "allScheduledAfterExit": 0
+    },
+    {
+      "mode": "early-exit",
+      "pass": true,
+      "calls": {
+        "network": 0,
+        "midi": 0,
+        "contexts": 0,
+        "close": 0,
+        "start": 0,
+        "stop": 0
+      },
+      "ownedListenersAfterExit": 0,
+      "allScheduledAfterExit": 0
+    },
+    {
+      "mode": "pending-exit",
+      "pass": true,
+      "calls": {
+        "network": 0,
+        "midi": 0,
+        "contexts": 1,
+        "close": 1,
+        "start": 3,
+        "stop": 3
+      },
+      "ownedListenersAfterExit": 0,
+      "allScheduledAfterExit": 0
+    },
+    {
+      "mode": "audio-failure",
+      "pass": true,
+      "calls": {
+        "network": 0,
+        "midi": 0,
+        "contexts": 1,
+        "close": 1,
+        "start": 0,
+        "stop": 0
+      },
+      "ownedListenersAfterExit": 0,
+      "allScheduledAfterExit": 0
+    }
+  ],
+  "actual564Compose": true,
+  "browserVisualQA": "not-run",
+  "audioOutputQA": "not-run",
+  "limitations": "Web Audio nodes/Canvas2D are instrumented boundary stubs; real engine program/edit/voice scheduling and cleanup run. No claim of real rendered pixels, sound quality or physical audio device validation."
+}
