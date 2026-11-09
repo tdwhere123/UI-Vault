@@ -290,3 +290,13 @@ The gallery now contains **517 preview entries** (241 original + 276 added), wit
 New source-only research includes **BlockNote's block-document/comments workspace** (selected MPL-2.0 core/react/mantine, explicitly excluding GPL/commercial XL packages), **Coss event-type ordering/undo/visibility** (not a complete booking/create product), and **React Arborist's controlled budget hierarchy** (a functional reserve with plain styling, not an aesthetic priority). Their fixed source and complete applicable root licenses were read; no runtime/remote collaboration, financial account, image or complete dependency audit is implied. The official BlockNote collaboration auth endpoint was read in source but not contacted or run. These candidates remain outside the runnable count.
 
 All real browser visual acceptance remains pending where marked. Static covers, lazy detail previews and current sandbox/CSP are unchanged; all cover work remains with Grok.
+
+## Original wallet interaction · 518 previews
+
+The gallery now contains **518 preview entries** (241 original +277 added), with364 candidate records and87 source-only records excluded. One existing SmoothUI wallet-card family is restored, not three entries for its three fictional accounts. Existing13 icon entry points and all covers remain untouched.
+
+Original depth/material, text-SVG grain, spring-driven sheen, balance masking, keyboard account selection/focus and member overflow remain. All balances, last-four digits and members are fictional local fixtures; no account connection, real card input or payment action exists. The generic network shape is used instead of brand marks. Only pointer-cancel reset is patched in the original component. Normal/reduced/production tests and lifecycle interruption checks pass with mocked geometry, not native pixel acceptance. Full11 runtime-package and Tailwind notices preserve MIT/ISC/Apache-2.0 obligations.
+
+New source-only candidates are DMN-js decision-rule tables (custom bpmn.io license with mandatory visible watermark, not plain MIT) and Diff2Html multi-file patch reading (root MIT; runtime/embedded icon closure unfinished). Their exact source and full root licenses are reviewed; no remote parsing, complete dependency audit or runnable preview is claimed. They do not count toward518.
+
+All cover work remains with Grok; existing icon overlaps remain deferred. Real browser visual acceptance is still pending where marked.
