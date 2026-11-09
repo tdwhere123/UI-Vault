@@ -1,0 +1,28 @@
+{
+  "repository": "https://github.com/hakimel/Meny",
+  "revision": "32ed575f5c922ec0677ec4eee7b28362b24c62a7",
+  "upstreamSource": {
+    "path": "js/meny.js",
+    "url": "https://github.com/hakimel/Meny/blob/32ed575f5c922ec0677ec4eee7b28362b24c62a7/js/meny.js",
+    "sha256": "6a11919b0670fced88a80e921793d4aee431489c72f6fa38bd7ba9feb166cf3b"
+  },
+  "license": {
+    "path": "LICENSE",
+    "url": "https://github.com/hakimel/Meny/blob/32ed575f5c922ec0677ec4eee7b28362b24c62a7/LICENSE",
+    "sha256": "c72a69127f240fda058eb511381f91ae541c8a9ef099c4d77d630a52d6bed6c7"
+  },
+  "adaptations": [
+    "原 menuAngle/contentsAngle 改局部变量以避免隐式全局。",
+    "保留原四方向变换、遮罩、边缘/触摸算法；只跟踪自身 bindEvent/once，旧 transitionend 回调以最新为准，销毁时停 fallback 动画并解绑 pending touchmove。",
+    "宿主正文与章节为本地原创，原 demo 配色/样式保留，原内嵌 PNG 纹理改 CSS 条纹；移除 Google 字体、社交控件、图像及任意 URL iframe。",
+    "hidden 时销毁、回显重建并保留当前篇章；touchcancel 重建；reduced 仅按钮导航且原 transitionDuration=0s。"
+  ],
+  "runtimeDependencies": [],
+  "binaryEmbedded": false,
+  "visualQA": "not-run",
+  "sourceOnlyRestoration": "meny:folded-page-navigation",
+  "originalDemoCSS": {
+    "path": "css/demo.css",
+    "sha256": "f58d7c52b04161aacdae3481613c996b43ba05d53b27f26b91bbe39701868cd6"
+  }
+}
