@@ -17212,40 +17212,34 @@
   },
   {
     "id": "papercss:paper-disclosure-notes",
-    "title": "纸笔折叠注释场景",
     "source": "papercss",
     "repository": "https://github.com/papercss/papercss",
     "revision": "b341c1606fca5b3880307d779414f43a5ccbc9b6",
-    "sourcePath": "docs/content/docs/components/collapsible.md",
     "upstream": "https://github.com/papercss/papercss/blob/b341c1606fca5b3880307d779414f43a5ccbc9b6/docs/content/docs/components/collapsible.md",
-    "website": "https://www.getpapercss.com/docs/components/collapsible/",
-    "license": "ISC (root text verified; runtime/assets not closed)",
-    "behavior": "手绘边缘与纸面展开的完整四段折叠示例，可用于Agent过程说明和引用。",
-    "difference": "完整固定示例场景，非单独引擎；同一来源控件/配色/预设不拆数。",
-    "description": "手绘边缘与纸面展开的完整四段折叠示例，可用于Agent过程说明和引用。",
-    "gaps": [
-      "固定Markdown包含实际完整HTML与重复代码块；适配只取显示示例，不重复渲染代码片段。需同SHA dist CSS。",
-      "用checkbox/label控制展开，不是details；键盘焦点、展开状态朗读与多实例ID隔离需验，不能宣称完整无障碍。",
-      "全局配置默认远程加载Neucha与Patrick Hand SC；须独立字体许可与本地化或披露替换。根许可实际ISC，不要错标MIT。",
-      "固定源码及完整根许可已存证；未构建、未运行、未截图，completedPreviewCount=0。"
-    ],
-    "category": "导航与组织",
+    "sourcePath": "docs/content/docs/components/collapsible.md",
     "licenseEvidence": {
       "url": "https://github.com/papercss/papercss/blob/b341c1606fca5b3880307d779414f43a5ccbc9b6/LICENSE.md",
       "sha256": "6288cfdee11dd2c455749c3e6603fcf8a6da2ecf92e01ff92ac575a77074208c",
       "scope": "Complete original root license retained; runtime/media separate"
     },
-    "sourceSha256": "dad2a364d99adacd2fc2219cf9c1cce779fdf1f55601573f72bb6e1cb621fda6",
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-style-529",
-    "sourceScope": "Selected fixed original source and root license; full read-only repo clone retained privately",
-    "kind": "原版风格组件族（仅来源）",
-    "buildStatus": "Fixed source inspected; not built or visually accepted",
-    "adaptationPriority": "preferred"
+    "title": "PaperCSS · 纸面折叠注释",
+    "license": "ISC AND MIT",
+    "category": "导航与组织",
+    "kind": "手绘折叠阅读场景",
+    "format": "完整交互场景",
+    "batch": "paper-01",
+    "preview": "batches/paper-01/paper-notes/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original four-part example and full dist CSS bundled, Google font import omitted; native checkbox and keyboard/ARIA adapter lifecycle tests; CSS pixels and assistive technology unverified",
+    "description": "保留原四段纸面折叠示例，可独立展开多段；手绘不规则边框、原checkbox开合，支持键盘与第二组独立示例。",
+    "behavior": "原checked选择器控制内容展开；适配Enter/Space及ARIA同步、独立ID、全部收起，隐藏保留状态，退出移除宿主监听。",
+    "gaps": [
+      "保留上游First/Second/Third/Fourth和原Bacon占位文本，不冒充真实任务结果；第二组/全部收起是本地展示壳增强，状态不拆计数。",
+      "与Plop步骤时间线不同，此项是独立多段阅读披露，仍属手绘风格；源码/功能区别不等于native像素并排验收。",
+      "原PaperCSS根ISC，dist内嵌normalize.css7.0.0另MIT，完整两许可附带；无运行JS第三方包，不能把全部CSS只说ISC。",
+      "删除远程Google字体import并沿用原sans-serif fallback，原CSS和文本SVG保留；DOM开合/键盘适配/多实例/隐藏/失败/清理通过，不等于CSS高度过渡、字体像素或完整辅助技术验收；封面仍由Grok处理。"
+    ]
   },
   {
     "id": "doodlecss:handdrawn-form-sheet",
@@ -17878,5 +17872,723 @@
     "kind": "原版完整场景（仅来源）",
     "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted",
     "sourceSha256": "f47a806e23d92769f70a6dad99f44e03d2ac9aeb198f2cf4ddd3e856d7942c92"
+  },
+  {
+    "id": "twemoji:color-emoji-family",
+    "title": "Twemoji · 彩色表情符号系列",
+    "source": "Twemoji (jdecked community continuation)",
+    "repository": "https://github.com/jdecked/twemoji",
+    "revision": "b6b55fef1e8636b540a6d016a4729ca8cdf2e60b",
+    "sourcePath": "assets/svg/1f916.svg",
+    "upstream": "https://github.com/jdecked/twemoji/blob/b6b55fef1e8636b540a6d016a4729ca8cdf2e60b/assets/svg/1f916.svg",
+    "license": "Graphics CC-BY-4.0; code MIT (both complete actual files read)",
+    "visualStyle": "36px原生画布的平涂彩色表情，圆润色块与少量内阴影，区别OpenMoji描边风格。",
+    "behavior": "四个原SVG样本覆盖机器人、气泡、脑和附件，用于Exodus消息反应与富内容标记；静态图形不自带表情选择器或发送功能。",
+    "difference": "整个Twemoji设计系列一条，不按Unicode码位、肤色、组合或字号拆数；现有Emoji Mart是选择交互不是同一套美术来源，不把它们合成新增多个入口。",
+    "description": "Twemoji平涂彩色表情符号系列，适合消息反应和富内容标签；整套美术风格只记一条，不按单枚表情计数。",
+    "gaps": [
+      "实际LICENSE-GRAPHICS为完整CC BY4，代码另MIT，不能把SVG称MIT；公开改编须保留Twemoji项目及原作者/版权、许可链接和修改说明，不暗示Twitter或维护者背书。",
+      "仅固定读取4SVG样本与双LICENSE/README，未收完整Unicode族/组合及目录映射，也未适配搜索/可访问名称或复制，不声称全系列可查看。",
+      "本轮不运行原DOM解析器、不接CDN、不读取或改写用户消息；若未来采用解析代码需核网络默认路径、安全输入与清理边界。",
+      "与OpenMoji用途相近但美术体系不同；尚未做原生像素并排验收、全量SVG安全和跨尺寸排版验证，无字体/PNG二进制或封面。"
+    ],
+    "category": "图标系列",
+    "format": "图标家族",
+    "kind": "图标系列",
+    "counts": {
+      "independentFamily": 1,
+      "completedPreviews": 0
+    },
+    "licenseEvidence": {
+      "url": "https://github.com/jdecked/twemoji/blob/b6b55fef1e8636b540a6d016a4729ca8cdf2e60b/LICENSE-GRAPHICS",
+      "sha256": "8ae9438818c26e4873b91d8c6ad620526c011e27e125677f13031eda903f007c",
+      "scope": "Actual complete CC-BY-4.0 graphics and MIT code license read; four fixed SVG samples only"
+    },
+    "sourceEvidence": [
+      {
+        "path": "assets/svg/1f4ac.svg",
+        "sha256": "3cd2e0204c15fc63a774987307640088a7125ff99ac5748776ffabc0531ee466"
+      },
+      {
+        "path": "assets/svg/1f4ce.svg",
+        "sha256": "9f2588001d33bbd832b3ceeb48dbe2ae15101d47a433bd40fbebaa7e8eac3a62"
+      },
+      {
+        "path": "assets/svg/1f916.svg",
+        "sha256": "20e5f9466f9c909d9cdf67a83af252df198ba686c57cfc0271afab9d48cee699"
+      },
+      {
+        "path": "assets/svg/1f9e0.svg",
+        "sha256": "74941007c155caffc21e0cf1da9935688adc5a13b49704a69d1c8b682ae81293"
+      }
+    ],
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-530",
+    "sourceScope": "Four fixed SVG samples, two complete original licenses and README, not complete runnable/archive",
+    "buildStatus": "Fixed original source read; not built, run or visually accepted"
+  },
+  {
+    "id": "atropos:layered-forest-scene",
+    "title": "多层森林视差卡片",
+    "source": "atropos",
+    "repository": "https://github.com/nolimits4web/atropos",
+    "revision": "eb4b4c5682117a53f60fccd459f64d06a99e9445",
+    "sourcePath": "playground/core/index.html",
+    "upstream": "https://github.com/nolimits4web/atropos/blob/eb4b4c5682117a53f60fccd459f64d06a99e9445/playground/core/index.html",
+    "website": "https://atroposjs.com/",
+    "license": "MIT (root text verified; runtime/assets not closed)",
+    "behavior": "官方完整Core示例将远山与前中后树层分离，鼠标移动时获得有厚度的场景卡片。",
+    "difference": "固定完整原始示例入口及相关脚本，一族不拆多个预设；尚未完成运行或视觉验收。",
+    "description": "官方完整Core示例将远山与前中后树层分离，鼠标移动时获得有厚度的场景卡片。",
+    "gaps": [
+      "真实入口依赖main.css、i/下六层SVG以及build/esm/atropos.esm和build/atropos.css；需构建同SHA，不可把源码HTML当独立运行包。",
+      "场景SVG/Atropos logo独立素材归属未逐项审计；根MIT不等于商标授权，去logo或替换素材须明确说明。",
+      "示例alwaysActive=true；适配必须限制在详情卡片、离屏停止，销毁事件并提供触屏/键盘静态替代与减动。没有真实空间导航或任务行为。",
+      "固定源码及完整根许可已存证；未构建、未运行、未截图，completedPreviewCount=0。"
+    ],
+    "category": "视觉与动效",
+    "licenseEvidence": {
+      "url": "https://github.com/nolimits4web/atropos/blob/eb4b4c5682117a53f60fccd459f64d06a99e9445/LICENSE",
+      "sha256": "656822e2e6e228bf653a73a4592d5f7424fca76216305f37372fc611c7de9cca",
+      "scope": "Complete original root license retained; runtime/media separate"
+    },
+    "sourceSha256": "8a9bedef735066ae6d3a7406e225860b9ec7324493fb1272fe3d46bbbcce1798",
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-530",
+    "sourceScope": "Selected fixed original source and root license; full read-only repo clone retained privately",
+    "kind": "原版风格组件族（仅来源）",
+    "buildStatus": "Fixed source inspected; not built or visually accepted",
+    "additionalSourceEvidence": [
+      {
+        "sourcePath": "playground/core/main.css",
+        "url": "https://github.com/nolimits4web/atropos/blob/eb4b4c5682117a53f60fccd459f64d06a99e9445/playground/core/main.css",
+        "sha256": "3d447f4aab0eb6a578346eefbd30dfc4435c91ce7617877bac76ee182721bac0"
+      }
+    ]
+  },
+  {
+    "id": "vivus:drawn-camera-scene",
+    "title": "线描相机与绘制控制",
+    "source": "vivus",
+    "repository": "https://github.com/maxwellito/vivus",
+    "revision": "06b7adb5d543b6b1d0d93fa83dea137b1f8644a5",
+    "sourcePath": "index.html",
+    "upstream": "https://github.com/maxwellito/vivus/blob/06b7adb5d543b6b1d0d93fa83dea137b1f8644a5/index.html",
+    "website": "https://maxwellito.github.io/vivus/",
+    "license": "MIT (root text verified; runtime/assets not closed)",
+    "behavior": "官方完整页面内联SVG及脚本呈现相机线描、逐段描边与可调绘制时序。",
+    "difference": "固定完整原始示例入口及相关脚本，一族不拆多个预设；尚未完成运行或视觉验收。",
+    "description": "官方完整页面内联SVG及脚本呈现相机线描、逐段描边与可调绘制时序。",
+    "gaps": [
+      "不是单引擎：固定页含polaroid/obturateur等真实SVG及Vivus实例；多个timing预设仅一族，不能逐样式计数。",
+      "需同SHA dist/vivus.js，页面字体及图形来源独立核查；品牌相机外观/标记不视为代码MIT自动授权。",
+      "hi-there示例autostart且其他实例会在可见时绘制；默认静态或用户触发，提供reduced-motion与停止/重绘，不假装实时笔迹输入。",
+      "SVG长路径成本、重复ID、resize及辅助文本尚未验证，允许读屏读取完整说明而非每条路径。",
+      "固定源码及完整根许可已存证；未构建、未运行、未截图，completedPreviewCount=0。"
+    ],
+    "category": "视觉与动效",
+    "licenseEvidence": {
+      "url": "https://github.com/maxwellito/vivus/blob/06b7adb5d543b6b1d0d93fa83dea137b1f8644a5/LICENSE",
+      "sha256": "35ee652cf6f12f4d897a3b11064c2e47a398243b8538cea9789201e65f979af0",
+      "scope": "Complete original root license retained; runtime/media separate"
+    },
+    "sourceSha256": "c0e7e2d6793c8e8dc3aa3c5149ebb045ecf45d2f59861f1f6451d6b5809da1ea",
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-530",
+    "sourceScope": "Selected fixed original source and root license; full read-only repo clone retained privately",
+    "kind": "原版风格组件族（仅来源）",
+    "buildStatus": "Fixed source inspected; not built or visually accepted",
+    "additionalSourceEvidence": []
+  },
+  {
+    "id": "codrops:gooey-cursor-field",
+    "title": "有机粘连光标场景",
+    "source": "GooeyCursor",
+    "repository": "https://github.com/codrops/GooeyCursor",
+    "revision": "ca463d0ac4953cc1d22790968fb0e06d7b789d63",
+    "sourcePath": "index.html",
+    "upstream": "https://github.com/codrops/GooeyCursor/blob/ca463d0ac4953cc1d22790968fb0e06d7b789d63/index.html",
+    "website": "https://tympanus.net/Development/GooeyCursor/",
+    "license": "MIT (root text verified; runtime/assets not closed)",
+    "behavior": "SVG滤镜与网格单元形成粘连有机光标，点击激活波纹扩散。",
+    "difference": "固定完整原始示例入口及相关脚本，一族不拆多个预设；尚未完成运行或视觉验收。",
+    "description": "SVG滤镜与网格单元形成粘连有机光标，点击激活波纹扩散。",
+    "gaps": [
+      "完整index入口依赖css/base.css、js/index.js、cursor.js、utils及gsap.min.js；GSAP自身分发许可需独立保留，不能由根MIT替代。",
+      "页面Typekit ftj8drh字体授权/离线分发未闭；README称图片由Midjourney生成，但不据此保证第三方素材权利；本轮限定index1，不搬其他有图变体。",
+      "原window click会让全网格进行opacity波；需作用域化监听、限制对比和频率，保留系统光标与点击语义，触屏提供静态退化。",
+      "每帧绘制和事件释放、减动及GPU滤镜性能未验；8种预设只一族，不把光标效果当真实Agent操作。",
+      "固定源码及完整根许可已存证；未构建、未运行、未截图，completedPreviewCount=0。"
+    ],
+    "category": "视觉与动效",
+    "licenseEvidence": {
+      "url": "https://github.com/codrops/GooeyCursor/blob/ca463d0ac4953cc1d22790968fb0e06d7b789d63/LICENSE",
+      "sha256": "85131f2bb7714dc895ff5d7d68db65acc5ad0e5dfd72162869fc8d63dec06056",
+      "scope": "Complete original root license retained; runtime/media separate"
+    },
+    "sourceSha256": "af567b68a240edcfcda3ee2837795600478911c4a571be5f76c82e45062644e4",
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-530",
+    "sourceScope": "Selected fixed original source and root license; full read-only repo clone retained privately",
+    "kind": "原版风格组件族（仅来源）",
+    "buildStatus": "Fixed source inspected; not built or visually accepted",
+    "additionalSourceEvidence": [
+      {
+        "sourcePath": "js/index.js",
+        "url": "https://github.com/codrops/GooeyCursor/blob/ca463d0ac4953cc1d22790968fb0e06d7b789d63/js/index.js",
+        "sha256": "7076ecc0ca3476c2a7dfe3b56f980cf6b233c754b69b896b12d2f1bc36c11ccd"
+      },
+      {
+        "sourcePath": "js/cursor.js",
+        "url": "https://github.com/codrops/GooeyCursor/blob/ca463d0ac4953cc1d22790968fb0e06d7b789d63/js/cursor.js",
+        "sha256": "34e4fa2592a88e6689f9035c134435c196bac24a971553b6bf01e3f4f1232a38"
+      }
+    ]
+  },
+  {
+    "id": "codrops:scroll-typography-scenes",
+    "title": "滚动诗句字形编排",
+    "source": "OnScrollTypographyAnimations",
+    "repository": "https://github.com/codrops/OnScrollTypographyAnimations",
+    "revision": "af28d61d1f8d3d117f5d1e9b09d5209e20a1a212",
+    "sourcePath": "src/index.html",
+    "upstream": "https://github.com/codrops/OnScrollTypographyAnimations/blob/af28d61d1f8d3d117f5d1e9b09d5209e20a1a212/src/index.html",
+    "website": "https://tympanus.net/Development/OnScrollTypographyAnimations/",
+    "license": "MIT (root text verified; runtime/assets not closed)",
+    "behavior": "完整诗句页面将字形拆分、透视与滚动编排结合，而非传统方框内容卡。",
+    "difference": "固定完整原始示例入口及相关脚本，一族不拆多个预设；尚未完成运行或视觉验收。",
+    "description": "完整诗句页面将字形拆分、透视与滚动编排结合，而非传统方框内容卡。",
+    "gaps": [
+      "需src/js/index.js、CSS、utils及打包；实际使用GSAP+ScrollTrigger、@studio-freight/lenis和Splitting，各自许可证/版本需闭合。",
+      "index加载Typekit cvn8slu、Google WebFont与Codrops analytics.js；移除遥测，字体授权另核且替换须说明，不应整站照搬执行。",
+      "拆字/包裹节点会影响中文、组合emoji和读屏，长消息不默认逐字；流式追加、销毁、还原原文及reduced-motion待验。",
+      "与已收ScrollTextMotion属不同源码，但同为滚动排版，适配前仍需视觉/行为去重，不按每种data-effect拆计数。",
+      "固定源码及完整根许可已存证；未构建、未运行、未截图，completedPreviewCount=0。"
+    ],
+    "category": "视觉与动效",
+    "licenseEvidence": {
+      "url": "https://github.com/codrops/OnScrollTypographyAnimations/blob/af28d61d1f8d3d117f5d1e9b09d5209e20a1a212/LICENSE",
+      "sha256": "85131f2bb7714dc895ff5d7d68db65acc5ad0e5dfd72162869fc8d63dec06056",
+      "scope": "Complete original root license retained; runtime/media separate"
+    },
+    "sourceSha256": "d6114fae04a8b2c6a715fb611d5585b168dfb5ef4ed7e72f8e65ee2d0dfb95bf",
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-530",
+    "sourceScope": "Selected fixed original source and root license; full read-only repo clone retained privately",
+    "kind": "原版风格组件族（仅来源）",
+    "buildStatus": "Fixed source inspected; not built or visually accepted",
+    "additionalSourceEvidence": [
+      {
+        "sourcePath": "src/js/index.js",
+        "url": "https://github.com/codrops/OnScrollTypographyAnimations/blob/af28d61d1f8d3d117f5d1e9b09d5209e20a1a212/src/js/index.js",
+        "sha256": "678e297c7fee67a1ef3bf788c4d5761e3cf7ec63dfc38c181c695a868d267fb0"
+      }
+    ]
+  },
+  {
+    "id": "codrops:scroll-layout-composition",
+    "title": "滚动重组画廊构图",
+    "source": "ScrollBasedLayoutAnimations",
+    "repository": "https://github.com/codrops/ScrollBasedLayoutAnimations",
+    "revision": "729029a0f2c31e7c39e15d5c6433a0f4f2bac498",
+    "sourcePath": "index.html",
+    "upstream": "https://github.com/codrops/ScrollBasedLayoutAnimations/blob/729029a0f2c31e7c39e15d5c6433a0f4f2bac498/index.html",
+    "website": "https://tympanus.net/Development/ScrollBasedLayoutAnimations/",
+    "license": "MIT (root text verified; runtime/assets not closed)",
+    "behavior": "完整图片布局页随滚动在疏密、叠层与聚合构图间重组，适合多附件展示探索。",
+    "difference": "固定完整原始示例入口及相关脚本，一族不拆多个预设；尚未完成运行或视觉验收。",
+    "description": "完整图片布局页随滚动在疏密、叠层与聚合构图间重组，适合多附件展示探索。",
+    "gaps": [
+      "实际依赖js/index.js/utils、GSAP、Flip、ScrollTrigger、Lenis及CSS；插件独立许可未闭，根MIT不能替代。",
+      "源码将Lenis接入gsap ticker并改lagSmoothing(0)；卸载需移除ticker/销毁Lenis/ScrollTrigger，避免污染宿主滚动与全局GSAP配置。",
+      "原图来自Midjourney与一张Karsten Winegeart Unsplash照片，Layout02又含Nano Banana/Paper生成素材；本轮只选index1，逐素材权利尚未闭合。",
+      "动态重排会触发位移不适及阅读顺序变化；减动应稳定布局，提供键盘可访问附件列表。赞助脚本在源码中注释，不得启用。",
+      "同一完整布局示例只一族，不按画廊、照片、配色或第二页拆数；布局变换并非拖拽排序或真实文件管理。",
+      "固定源码及完整根许可已存证；未构建、未运行、未截图，completedPreviewCount=0。"
+    ],
+    "category": "视觉与动效",
+    "licenseEvidence": {
+      "url": "https://github.com/codrops/ScrollBasedLayoutAnimations/blob/729029a0f2c31e7c39e15d5c6433a0f4f2bac498/LICENSE",
+      "sha256": "85131f2bb7714dc895ff5d7d68db65acc5ad0e5dfd72162869fc8d63dec06056",
+      "scope": "Complete original root license retained; runtime/media separate"
+    },
+    "sourceSha256": "574e58ae77b2b9cc0aadecc92a364cce2a31761e987b8ab3d858addf27caddc2",
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-530",
+    "sourceScope": "Selected fixed original source and root license; full read-only repo clone retained privately",
+    "kind": "原版风格组件族（仅来源）",
+    "buildStatus": "Fixed source inspected; not built or visually accepted",
+    "additionalSourceEvidence": [
+      {
+        "sourcePath": "js/index.js",
+        "url": "https://github.com/codrops/ScrollBasedLayoutAnimations/blob/729029a0f2c31e7c39e15d5c6433a0f4f2bac498/js/index.js",
+        "sha256": "bdedbbcfa6a43f5f1b53d4153dcbadc07b76f69d267d51df060605e5ae91d2c2"
+      }
+    ]
+  },
+  {
+    "id": "twine:branching-story-map",
+    "title": "非线性故事段落编排",
+    "source": "Twine",
+    "repository": "https://github.com/klembot/twinejs",
+    "revision": "2c3b80144ba6f1fe9d8a4e5e11a2349ba55fc310",
+    "sourcePath": "src/routes/story-edit/story-edit-route.tsx",
+    "upstream": "https://github.com/klembot/twinejs/blob/2c3b80144ba6f1fe9d8a4e5e11a2349ba55fc310/src/routes/story-edit/story-edit-route.tsx",
+    "license": "GPL-3.0 (complete actual root text; runtime/media not closed)",
+    "behavior": "原 StoryEditRoute 将段落地图、框选拖移、缩放、模糊查找、编辑对话框和撤销状态串联，故事连线来自段落间链接。",
+    "difference": "区别既有普通流程图/知识图谱：节点是可编辑且能作为起点测试的故事段落，整套非线性叙事创作一族，不拆每种故事格式。",
+    "styleTags": [
+      "叙事/故事空间"
+    ],
+    "gaps": [
+      "GPL 对应源/修改与构建公开义务未履行；捆绑 Snowman/SugarCube 等 story-format 各自许可需另审。故事播放可能执行用户 HTML/脚本，不可照搬到默认 CSP；本地存储、导出/下载、外链及拖动/销毁未验。",
+      "仅只读源码筛选；未安装/构建/运行、交互生命周期或浏览器视觉验收。"
+    ],
+    "description": "原 StoryEditRoute 将段落地图、框选拖移、缩放、模糊查找、编辑对话框和撤销状态串联，故事连线来自段落间链接。 区别既有普通流程图/知识图谱：节点是可编辑且能作为起点测试的故事段落，整套非线性叙事创作一族，不拆每种故事格式。",
+    "category": "展示与媒体",
+    "licenseEvidence": {
+      "url": "https://github.com/klembot/twinejs/blob/2c3b80144ba6f1fe9d8a4e5e11a2349ba55fc310/LICENSE",
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+      "scope": "Complete actual root license; transitive code and media permissions not closed"
+    },
+    "sourceEvidence": {
+      "localFile": "evidence/klembot--twinejs--src__routes__story-edit__story-edit-route.tsx",
+      "sha256": "7936b26dc4630de61c0479724dad4770da78aeeb4f3c3150547a737b01091540"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-530",
+    "sourceScope": "Fixed original complete UI/demo source and full root license; not a runnable adaptation or full asset archive",
+    "kind": "原版交互场景（仅来源）",
+    "buildStatus": "fixed source and full root license read; not built/run/visually accepted"
+  },
+  {
+    "id": "hubs:spatial-room-collaboration",
+    "title": "共享空间中的对象与在场协作",
+    "source": "Hubs",
+    "repository": "https://github.com/Hubs-Foundation/hubs",
+    "revision": "986d07a758e9d1184cb355385c6460391bd238d0",
+    "sourcePath": "src/react-components/ui-root.js",
+    "upstream": "https://github.com/Hubs-Foundation/hubs/blob/986d07a758e9d1184cb355385c6460391bd238d0/src/react-components/ui-root.js",
+    "license": "MPL-2.0 (complete actual root text; runtime/media not closed)",
+    "behavior": "原房间 UI 组织进入房间/设备设置、在场人员、聊天、场景对象选择与对象操作，围绕真实三维场景提供协作控制，不只是独立侧栏。",
+    "difference": "区别地图或桌面窗口：用户与媒体对象在共同三维空间中协作；只整体空间体验一族，不按每个菜单计数。",
+    "styleTags": [
+      "协作/三维空间"
+    ],
+    "gaps": [
+      "MPL 根许可完整，修改后对应源公开与全部依赖/模型/贴图/字体许可仍待闭合；A-Frame/Three/WebRTC/服务器状态非本地简单组件。原媒体设备枚举、麦克风/摄像头、分享与远端资源路径必须显式禁用或按任务授权，不可扩大沙箱。没有真实多人/GPU/权限测试，不能声称离线可用。",
+      "仅只读源码筛选；未安装/构建/运行、交互生命周期或浏览器视觉验收。"
+    ],
+    "description": "原房间 UI 组织进入房间/设备设置、在场人员、聊天、场景对象选择与对象操作，围绕真实三维场景提供协作控制，不只是独立侧栏。 区别地图或桌面窗口：用户与媒体对象在共同三维空间中协作；只整体空间体验一族，不按每个菜单计数。",
+    "category": "展示与媒体",
+    "licenseEvidence": {
+      "url": "https://github.com/Hubs-Foundation/hubs/blob/986d07a758e9d1184cb355385c6460391bd238d0/LICENSE",
+      "sha256": "fab3dd6bdab226f1c08630b1dd917e11fcb4ec5e1e020e2c16f83a0a13863e85",
+      "scope": "Complete actual root license; transitive code and media permissions not closed"
+    },
+    "sourceEvidence": {
+      "localFile": "evidence/Hubs-Foundation--hubs--src__react-components__ui-root.js",
+      "sha256": "9ec3d069f6dfd299bec3d0c8f000a866d1c360750ecf8404df7bbb1dc2e39fe7"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-530",
+    "sourceScope": "Fixed original complete UI/demo source and full root license; not a runnable adaptation or full asset archive",
+    "kind": "原版交互场景（仅来源）",
+    "buildStatus": "fixed source and full root license read; not built/run/visually accepted"
+  },
+  {
+    "id": "sandspiel:material-paint-simulation",
+    "title": "材料颗粒绘画与涌现沙盒",
+    "source": "Sandspiel",
+    "repository": "https://github.com/MaxBittker/sandspiel",
+    "revision": "9936e06b07a583aedfba9589c0cead2917f405fb",
+    "sourcePath": "js/components/ui.js",
+    "upstream": "https://github.com/MaxBittker/sandspiel/blob/9936e06b07a583aedfba9589c0cead2917f405fb/js/components/ui.js",
+    "license": "MIT (complete actual root text; runtime/media not closed)",
+    "behavior": "原材料选择与笔刷绘画界面连接颗粒物理世界，支持不同材料铺画、暂停/恢复、清理与撤销；paint.js 处理笔刷落点。",
+    "difference": "区别布料或单一粒子背景：以材料作画并观察相互作用，原创作画布和模拟一体，不按每种材料拆数。",
+    "styleTags": [
+      "颗粒/材料创作"
+    ],
+    "gaps": [
+      "原直接导入 sandtable WASM、WebGL 流体及 Rust 引擎，不可二进制包装或默认 CSP 放宽；源码及依赖/license/素材需完整审。UI 含 Firebase 登录监听、上传/投票/浏览社区和图片状态加载，必须与本地虚构沙盒隔离；原定时器/RAF/GL/旧节点清理未测。",
+      "仅只读源码筛选；未安装/构建/运行、交互生命周期或浏览器视觉验收。"
+    ],
+    "description": "原材料选择与笔刷绘画界面连接颗粒物理世界，支持不同材料铺画、暂停/恢复、清理与撤销；paint.js 处理笔刷落点。 区别布料或单一粒子背景：以材料作画并观察相互作用，原创作画布和模拟一体，不按每种材料拆数。",
+    "category": "展示与媒体",
+    "licenseEvidence": {
+      "url": "https://github.com/MaxBittker/sandspiel/blob/9936e06b07a583aedfba9589c0cead2917f405fb/LICENSE",
+      "sha256": "ab9478d91e76f13a998bce8e0f87806b36900692c4f4ae6578965a7114252e88",
+      "scope": "Complete actual root license; transitive code and media permissions not closed"
+    },
+    "sourceEvidence": {
+      "localFile": "evidence/MaxBittker--sandspiel--js__components__ui.js",
+      "sha256": "d8bf83e4c5243098962ad94852edecccb7cd78afb41cbbebbae9cd5fdbb6fc45"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-530",
+    "sourceScope": "Fixed original complete UI/demo source and full root license; not a runnable adaptation or full asset archive",
+    "kind": "原版交互场景（仅来源）",
+    "buildStatus": "fixed source and full root license read; not built/run/visually accepted"
+  },
+  {
+    "id": "orgroam:backlink-knowledge-space",
+    "title": "回链知识的空间漫游",
+    "source": "Org-roam-ui",
+    "repository": "https://github.com/org-roam/org-roam-ui",
+    "revision": "2894dcbf56d2eca8d3cae2b1ae183f51724b5db6",
+    "sourcePath": "pages/index.tsx",
+    "upstream": "https://github.com/org-roam/org-roam-ui/blob/2894dcbf56d2eca8d3cae2b1ae183f51724b5db6/pages/index.tsx",
+    "license": "GPL-3.0 (complete actual root text; runtime/media not closed)",
+    "behavior": "原知识图界面从笔记与回链组织节点，支持局部/全局邻域、图节点选择/聚焦、过滤与侧栏笔记回链，能跟随 Emacs 当前笔记。",
+    "difference": "与 MindElixir/Markmap 有图形交集，但此处原双向笔记链接与来源内容漫游/编辑器跟随是核心，而非自由画思维图。",
+    "styleTags": [
+      "知识/回链空间"
+    ],
+    "gaps": [
+      "源码直接 ReconnectingWebSocket 到 ws://localhost:35903，需用授权虚构笔记数据替代并关闭连接，不访问真实笔记。GPL 对应源公开、Next/Chakra/force-graph 依赖与笔记 HTML/图片权限未闭合；存储、节点跳转命令、模拟力与退出清理未验。",
+      "仅只读源码筛选；未安装/构建/运行、交互生命周期或浏览器视觉验收。"
+    ],
+    "description": "原知识图界面从笔记与回链组织节点，支持局部/全局邻域、图节点选择/聚焦、过滤与侧栏笔记回链，能跟随 Emacs 当前笔记。 与 MindElixir/Markmap 有图形交集，但此处原双向笔记链接与来源内容漫游/编辑器跟随是核心，而非自由画思维图。",
+    "category": "数据与状态",
+    "licenseEvidence": {
+      "url": "https://github.com/org-roam/org-roam-ui/blob/2894dcbf56d2eca8d3cae2b1ae183f51724b5db6/LICENSE",
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+      "scope": "Complete actual root license; transitive code and media permissions not closed"
+    },
+    "sourceEvidence": {
+      "localFile": "evidence/org-roam--org-roam-ui--pages__index.tsx",
+      "sha256": "744171bad6a8117468845c441c1854f255d30b31128d14f9cce34ddf849d2f76"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-530",
+    "sourceScope": "Fixed original complete UI/demo source and full root license; not a runnable adaptation or full asset archive",
+    "kind": "原版交互场景（仅来源）",
+    "buildStatus": "fixed source and full root license read; not built/run/visually accepted"
+  },
+  {
+    "id": "poline:spatial-palette-picker",
+    "title": "空间锚点驱动的色彩编排",
+    "source": "Poline",
+    "repository": "https://github.com/meodai/poline",
+    "revision": "c0bf44b06d549eb7bd5ecc1ac84cd3c58eb296cc",
+    "sourcePath": "dist/picker.html",
+    "upstream": "https://github.com/meodai/poline/blob/c0bf44b06d549eb7bd5ecc1ac84cd3c58eb296cc/dist/picker.html",
+    "license": "MIT (complete actual root text; runtime/media not closed)",
+    "behavior": "原 Poline Picker 页面以可拖色轮锚点、饱和度环与色彩路径生成调色板，选项和色块响应同一模型，src/webcomponent.ts 保留原交互实现。",
+    "difference": "区别单一 hex/RGB 输入：通过空间锚点关系与插值路径组织一组色彩，整体交互一族，不按色板变体计数；不是另造引擎外壳。",
+    "styleTags": [
+      "色彩/空间材料"
+    ],
+    "gaps": [
+      "原 Google Aboreto/Work Sans 字体需离线许可/替换，导出或复制入口与外链需核；当前根 MIT 不代表所有页面图像/标志和依赖已审。虽有 disconnectedCallback，拖动中取消、重复挂载与键盘/触控/真实像素未测。",
+      "仅只读源码筛选；未安装/构建/运行、交互生命周期或浏览器视觉验收。"
+    ],
+    "description": "原 Poline Picker 页面以可拖色轮锚点、饱和度环与色彩路径生成调色板，选项和色块响应同一模型，src/webcomponent.ts 保留原交互实现。 区别单一 hex/RGB 输入：通过空间锚点关系与插值路径组织一组色彩，整体交互一族，不按色板变体计数；不是另造引擎外壳。",
+    "category": "展示与媒体",
+    "licenseEvidence": {
+      "url": "https://github.com/meodai/poline/blob/c0bf44b06d549eb7bd5ecc1ac84cd3c58eb296cc/LICENSE",
+      "sha256": "a7ad25d24bf0987585fdd42e392b395d81151e5ca4d0bf87c44e345105d8da2c",
+      "scope": "Complete actual root license; transitive code and media permissions not closed"
+    },
+    "sourceEvidence": {
+      "localFile": "evidence/meodai--poline--dist__picker.html",
+      "sha256": "e5941c4885f2348ee40a79e6b5255a4a3e9d19708d4a23dbc529bfc38ea5f79d"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-530",
+    "sourceScope": "Fixed original complete UI/demo source and full root license; not a runnable adaptation or full asset archive",
+    "kind": "原版交互场景（仅来源）",
+    "buildStatus": "fixed source and full root license read; not built/run/visually accepted"
+  },
+  {
+    "id": "hanziwriter:stroke-practice-scene",
+    "title": "汉字笔画演示与书写练习",
+    "source": "Hanzi Writer",
+    "repository": "https://github.com/chanind/hanzi-writer",
+    "revision": "83a762374e2344f2fb8cceca4a2ac5dfeca386f5",
+    "sourcePath": "demo/index.html",
+    "upstream": "https://github.com/chanind/hanzi-writer/blob/83a762374e2344f2fb8cceca4a2ac5dfeca386f5/demo/index.html",
+    "license": "MIT (code only; character data separate) (complete actual root text; runtime/media not closed)",
+    "behavior": "原 demo 可更换汉字、显示/隐藏字形与轮廓、逐笔动画并进入笔顺练习；正确/错误笔画回调返回用户轨迹。",
+    "difference": "区别静态图标或文字动画：内容是可接受用户笔画的汉字练习场景，完整一族，不按每个字计数。",
+    "styleTags": [
+      "书写/内容交互"
+    ],
+    "gaps": [
+      "字形与笔顺数据源自 Make Me a Hanzi/Arphic，README 明示 Arphic Public License，不能用根 MIT 覆盖，数据许可全文与实际字符包还待闭合。原页面加载 polyfill.io 外脚本必须删除/本地替代；动态字库加载、重换字销毁/晚到回调、练习命中与移动端未验，不能宣称离线可用。",
+      "仅只读源码筛选；未安装/构建/运行、交互生命周期或浏览器视觉验收。"
+    ],
+    "description": "原 demo 可更换汉字、显示/隐藏字形与轮廓、逐笔动画并进入笔顺练习；正确/错误笔画回调返回用户轨迹。 区别静态图标或文字动画：内容是可接受用户笔画的汉字练习场景，完整一族，不按每个字计数。",
+    "category": "展示与媒体",
+    "licenseEvidence": {
+      "url": "https://github.com/chanind/hanzi-writer/blob/83a762374e2344f2fb8cceca4a2ac5dfeca386f5/LICENSE",
+      "sha256": "7735d83cdf892c8db41c27103b42c89b4b63149770c1e08ae13cbbebb81da637",
+      "scope": "Complete actual root license; transitive code and media permissions not closed"
+    },
+    "sourceEvidence": {
+      "localFile": "evidence/chanind--hanzi-writer--demo__index.html",
+      "sha256": "fefd50eac7047a344c8f6f2708c0f33b1b2e72dbea82b9d819cb1e3eda44f36a"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-530",
+    "sourceScope": "Fixed original complete UI/demo source and full root license; not a runnable adaptation or full asset archive",
+    "kind": "原版交互场景（仅来源）",
+    "buildStatus": "fixed source and full root license read; not built/run/visually accepted"
+  },
+  {
+    "id": "zulip:topic-organized-collaboration",
+    "title": "Zulip · 话题分层协作消息场景",
+    "source": "Zulip",
+    "repository": "https://github.com/zulip/zulip",
+    "revision": "f0f02bcb08cb99ea161baec9a6c2edd008217dda",
+    "sourcePath": "web/templates/message_group.hbs",
+    "upstream": "https://github.com/zulip/zulip/blob/f0f02bcb08cb99ea161baec9a6c2edd008217dda/web/templates/message_group.hbs",
+    "license": "Apache-2.0 (root + NOTICE; embedded third-party licenses not closed)",
+    "visualStyle": "左侧频道/话题层级与中央按收件范围分组的消息流；紧凑内容阅读、高亮当前主题，而非孤立聊天气泡。",
+    "behavior": "原message_group按recipient_row和single_message组织群组，message_list_view维护可视消息列表，narrow_state维护当前过滤范围；侧栏定义分组导航。",
+    "difference": "区别已有单线聊天输入：频道下主题式异步协作与消息过滤组合成完整消息产品场景；频道/主题/私聊不拆不同条目。",
+    "gaps": [
+      "根Apache2、NOTICE与docs/THIRDPARTY完整保留；后者列第三方许可，不把所有嵌入代码/字体/图标都判为Apache。",
+      "原消息发送、订阅/已读状态、搜索/服务器事件与账号依赖真实Zulip后端，未登录、读取用户消息或发送任何内容。",
+      "只收原公共模板与列表/范围状态代码，非完整可运行服务器；内容清洗、附件、键盘监听、异步消息及清理未运行验证。",
+      "仅来源：未构建/运行/像素验收，所有传递依赖/媒体字体/CSP与重复操作/退出清理尚未闭合，无预览或完整源码ZIP。"
+    ],
+    "description": "左侧频道/话题层级与中央按收件范围分组的消息流；紧凑内容阅读、高亮当前主题，而非孤立聊天气泡。 原message_group按recipient_row和single_message组织群组，message_list_view维护可视消息列表，narrow_state维护当前过滤范围；侧栏定义分组导航。",
+    "category": "Agent与对话",
+    "licenseEvidence": {
+      "url": "https://github.com/zulip/zulip/blob/f0f02bcb08cb99ea161baec9a6c2edd008217dda/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "scope": "Complete actual root license read; original selected code only; embedded assets/runtime not cleared"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-530",
+    "sourceScope": "Selected fixed original source and complete root license evidence; not full runnable/archive",
+    "kind": "原版完整场景（仅来源）",
+    "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted"
+  },
+  {
+    "id": "jitsi:meeting-stage-and-rooms",
+    "title": "Jitsi Meet · 协作会议舞台场景",
+    "source": "Jitsi Meet",
+    "repository": "https://github.com/jitsi/jitsi-meet",
+    "revision": "cc7058813b00f33f322f587e1805528424bb5a48",
+    "sourcePath": "react/features/conference/components/web/Conference.tsx",
+    "upstream": "https://github.com/jitsi/jitsi-meet/blob/cc7058813b00f33f322f587e1805528424bb5a48/react/features/conference/components/web/Conference.tsx",
+    "license": "Apache-2.0 (root includes historical MIT notice; dependencies/media not cleared)",
+    "visualStyle": "主发言人舞台、参与者胶片/网格、底部会议动作与可折叠分组房间侧栏，完整实时协作布局。",
+    "behavior": "原Conference编排LargeVideo/Filmstrip/Toolbox/Chat/ParticipantsPane与lobby/prejoin，CollapsibleRoom处理房间展开和成员动作，AutoAssignButton打开自动分配对话。",
+    "difference": "区别播放器或普通聊天室：多参与者实时协作空间的舞台/房间关系；只计一个原会议场景，不分网格和发言人模式。",
+    "gaps": [
+      "完整Apache2正文末尾附原MIT/ESTOS/BlueJimp历史通知，保留整份而非截取Apache；lib-jitsi-meet、设备/音视频及图标字体依赖未全审。",
+      "原XMPP/WebRTC信令、摄像头/麦克风/屏幕共享、邀请/上传和会议服务未隔离；不加入会议、不请求设备权限、不外发音视频。",
+      "仅来源，无真实通话或本地假参与者预览，连接失败/设备退出/observer/录像及清理未测试。",
+      "仅来源：未构建/运行/像素验收，所有传递依赖/媒体字体/CSP与重复操作/退出清理尚未闭合，无预览或完整源码ZIP。"
+    ],
+    "description": "主发言人舞台、参与者胶片/网格、底部会议动作与可折叠分组房间侧栏，完整实时协作布局。 原Conference编排LargeVideo/Filmstrip/Toolbox/Chat/ParticipantsPane与lobby/prejoin，CollapsibleRoom处理房间展开和成员动作，AutoAssignButton打开自动分配对话。",
+    "category": "Agent与对话",
+    "licenseEvidence": {
+      "url": "https://github.com/jitsi/jitsi-meet/blob/cc7058813b00f33f322f587e1805528424bb5a48/LICENSE",
+      "sha256": "eae52e200cd80d1e6550ca59deb1388f687dc8c3220254dad219c7faa4cfd719",
+      "scope": "Complete actual root license read; original selected code only; embedded assets/runtime not cleared"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-530",
+    "sourceScope": "Selected fixed original source and complete root license evidence; not full runnable/archive",
+    "kind": "原版完整场景（仅来源）",
+    "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted"
+  },
+  {
+    "id": "maputnik:cartographic-style-studio",
+    "title": "Maputnik · 地图图层样式设计场景",
+    "source": "Maputnik",
+    "repository": "https://github.com/maplibre/maputnik",
+    "revision": "1adc23448b98521d2fefca5d6e803ebc3c525187",
+    "sourcePath": "src/components/App.tsx",
+    "upstream": "https://github.com/maplibre/maputnik/blob/1adc23448b98521d2fefca5d6e803ebc3c525187/src/components/App.tsx",
+    "license": "MIT (root verified; map/font/assets/runtime not cleared)",
+    "visualStyle": "地图为主画布，左侧可重排图层与属性编辑区，颜色/符号/缩放条件联动形成制图样式工作室。",
+    "behavior": "原App包含图层复制/删除/可见性/ID与属性修改，LayerList组织图层，LayerEditor依据样式spec显示编辑字段；原MapLibre视窗接收样式变化。",
+    "difference": "区别iD地理对象编辑和Kepler数据分析：编辑地图视觉样式而非地物/数据集；不把每种地图配色/图层类型算新条目。",
+    "gaps": [
+      "canonical已从maputnik/editor 301迁移maplibre/maputnik；按新canonical固定SHA重取LICENSE/README/源码并匹配Git树，不使用旧repo作为最终来源。",
+      "MIT根仅覆盖代码；地图数据、外部瓦片、glyph字体、sprite和底图条款需独立核查，未下载或包装地图资源。",
+      "App真实fetchSources/updateFonts/updateIcons及accessToken模板、local storage和MapLibre worker/WebGL依赖未隔离，当前CSP不得扩权；无运行/瓦片网络/真实token调用。",
+      "仅来源：未构建/运行/像素验收，所有传递依赖/媒体字体/CSP与重复操作/退出清理尚未闭合，无预览或完整源码ZIP。"
+    ],
+    "description": "地图为主画布，左侧可重排图层与属性编辑区，颜色/符号/缩放条件联动形成制图样式工作室。 原App包含图层复制/删除/可见性/ID与属性修改，LayerList组织图层，LayerEditor依据样式spec显示编辑字段；原MapLibre视窗接收样式变化。",
+    "category": "视觉与动效",
+    "licenseEvidence": {
+      "url": "https://github.com/maplibre/maputnik/blob/1adc23448b98521d2fefca5d6e803ebc3c525187/LICENSE",
+      "sha256": "1a155f965254b65d1aa9f44a618e2258f2c0cd6b85c096b0e72cb8ca3eb507ce",
+      "scope": "Complete actual root license read; original selected code only; embedded assets/runtime not cleared"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-530",
+    "sourceScope": "Selected fixed original source and complete root license evidence; not full runnable/archive",
+    "kind": "原版完整场景（仅来源）",
+    "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted"
+  },
+  {
+    "id": "formwork-sumi:ink-studio-page",
+    "title": "和纸水墨艺术工作室整页",
+    "source": "Formwork SUMI",
+    "repository": "https://github.com/shellcat-com/formwork-sumi",
+    "revision": "4ca15e6b1c41c6a24e943da8206daff40701d516",
+    "sourcePath": "index.html",
+    "upstream": "https://github.com/shellcat-com/formwork-sumi/blob/4ca15e6b1c41c6a24e943da8206daff40701d516/index.html",
+    "license": "MIT (root verified only; dependencies/assets not closed)",
+    "behavior": "原暖纸色与日文字体艺术页，包含作品/留白叙事；raw WebGL的fbm水墨扩散着色器随时间和指针改变墨团，原滚动reveal保持艺术工作室编排。",
+    "difference": "不是水墨滤镜独立小组件：原完整艺术品牌页及作品说明；与纸面博客排版不同，和其余两个模板几何/渲染技术/叙事结构均不同。",
+    "gaps": [
+      "实际艺术品牌与作品说明是模板虚构文案，不是真实作品交易。Google Fonts及GSAP3.12.5/ScrollTrigger CDN默认联网，GSAP授权未闭合；shader噪声算法独立来源未核，根MIT不覆盖未知派生。无WebGL时仅CSS fallback，GPU/清理/隐藏页行为未测试。",
+      "仅固定原件来源；未安装/构建/运行/截图/发布，CSP、媒体字体版权、完整运行许可、交互清理及浏览器视觉均未验。"
+    ],
+    "description": "原暖纸色与日文字体艺术页，包含作品/留白叙事；raw WebGL的fbm水墨扩散着色器随时间和指针改变墨团，原滚动reveal保持艺术工作室编排。 不是水墨滤镜独立小组件：原完整艺术品牌页及作品说明；与纸面博客排版不同，和其余两个模板几何/渲染技术/叙事结构均不同。",
+    "category": "产品与营销",
+    "licenseEvidence": {
+      "url": "https://github.com/shellcat-com/formwork-sumi/blob/4ca15e6b1c41c6a24e943da8206daff40701d516/LICENSE",
+      "sha256": "c73eb61b4be11a3f64e2e75eba91073b7256c72673f363ba2bf0f7cc0e8e3c43",
+      "scope": "Complete root license read; dependency/media/font permissions not closed"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-530",
+    "sourceScope": "Selected fixed original code and complete root license evidence; not a complete runnable archive or runtime audit",
+    "kind": "原版完整场景（仅来源）",
+    "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted",
+    "sourceSha256": "e37e4dcb7a91fea4e38f59fbdd909d7506f0849d8691ddddd4f9f39eac85526c",
+    "collectionPriority": "条件来源参考：GSAP/算法/字体运行再分发尚未闭合"
+  },
+  {
+    "id": "formwork-contour:expedition-brand-page",
+    "title": "动态等高线户外勘测品牌整页",
+    "source": "Formwork CONTOUR",
+    "repository": "https://github.com/shellcat-com/formwork-contour",
+    "revision": "54f5b5fd13da74dab3b3625e178bc618a1594d7f",
+    "sourcePath": "index.html",
+    "upstream": "https://github.com/shellcat-com/formwork-contour/blob/54f5b5fd13da74dab3b3625e178bc618a1594d7f/index.html",
+    "license": "MIT (root verified only; dependencies/assets not closed)",
+    "behavior": "原户外勘测叙事包含大标题、Canvas动态等高线、六条路线资料、装备目录及通讯订阅区；原value-noise场绘制高程环，滚动进度/数字和指针反馈。",
+    "difference": "完整地图式品牌叙事而非普通商品卡；路线与装备仅作为同一整页内容，不按六路线拆项；不同于现有地图编辑器。",
+    "gaps": [
+      "路线/装备为模板演示，不提供地理导航或安全路线建议。订阅form onsubmit=false无发送；Google Fonts/GSAP CDN与噪声算法来源、其他素材/传递许可待审；RAF/监听/隐藏页及CSP未验。",
+      "仅固定原件来源；未安装/构建/运行/截图/发布，CSP、媒体字体版权、完整运行许可、交互清理及浏览器视觉均未验。"
+    ],
+    "description": "原户外勘测叙事包含大标题、Canvas动态等高线、六条路线资料、装备目录及通讯订阅区；原value-noise场绘制高程环，滚动进度/数字和指针反馈。 完整地图式品牌叙事而非普通商品卡；路线与装备仅作为同一整页内容，不按六路线拆项；不同于现有地图编辑器。",
+    "category": "产品与营销",
+    "licenseEvidence": {
+      "url": "https://github.com/shellcat-com/formwork-contour/blob/54f5b5fd13da74dab3b3625e178bc618a1594d7f/LICENSE",
+      "sha256": "c73eb61b4be11a3f64e2e75eba91073b7256c72673f363ba2bf0f7cc0e8e3c43",
+      "scope": "Complete root license read; dependency/media/font permissions not closed"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-530",
+    "sourceScope": "Selected fixed original code and complete root license evidence; not a complete runnable archive or runtime audit",
+    "kind": "原版完整场景（仅来源）",
+    "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted",
+    "sourceSha256": "1f1b5986724c80ba9f5213a1b1321127a44433f096053ce836a15299e2d1b97e",
+    "collectionPriority": "条件来源参考：GSAP/算法/字体运行再分发尚未闭合"
+  },
+  {
+    "id": "formwork-heliodon:industrial-object-page",
+    "title": "金属雕塑与工业设计工作室整页",
+    "source": "Formwork HELIODON",
+    "repository": "https://github.com/shellcat-com/formwork-heliodon",
+    "revision": "8232b414be905a5aaf0c37101e9d6f9403d6eeab",
+    "sourcePath": "index.html",
+    "upstream": "https://github.com/shellcat-com/formwork-heliodon/blob/8232b414be905a5aaf0c37101e9d6f9403d6eeab/index.html",
+    "license": "MIT (root verified only; dependencies/assets not closed)",
+    "behavior": "原工业设计品牌页将Three TorusKnot金属物件、RoomEnvironment反射与产品参数/工作室材料工艺叙事组合；滚动与指针驱动转动，原reduced-motion分支静态渲染。",
+    "difference": "更正初筛称谓：不是灯具模型，实际为程序生成的钛金属结状雕塑概念；完整产品品牌页一族，不把材质/角度拆条，与ScrewFast常规图片展示不同。",
+    "gaps": [
+      "Three与RoomEnvironment经importmap CDN加载，GSAP3.12.5/ScrollTrigger与字体也外部；根MIT不覆盖全部依赖再分发权限。原失效仅加fallback类，缺GL资源dispose及RAF/监听退出清理；未证明像素、反射或GPU兼容，产品参数为虚构营销示例。",
+      "仅固定原件来源；未安装/构建/运行/截图/发布，CSP、媒体字体版权、完整运行许可、交互清理及浏览器视觉均未验。"
+    ],
+    "description": "原工业设计品牌页将Three TorusKnot金属物件、RoomEnvironment反射与产品参数/工作室材料工艺叙事组合；滚动与指针驱动转动，原reduced-motion分支静态渲染。 更正初筛称谓：不是灯具模型，实际为程序生成的钛金属结状雕塑概念；完整产品品牌页一族，不把材质/角度拆条，与ScrewFast常规图片展示不同。",
+    "category": "产品与营销",
+    "licenseEvidence": {
+      "url": "https://github.com/shellcat-com/formwork-heliodon/blob/8232b414be905a5aaf0c37101e9d6f9403d6eeab/LICENSE",
+      "sha256": "c73eb61b4be11a3f64e2e75eba91073b7256c72673f363ba2bf0f7cc0e8e3c43",
+      "scope": "Complete root license read; dependency/media/font permissions not closed"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-530",
+    "sourceScope": "Selected fixed original code and complete root license evidence; not a complete runnable archive or runtime audit",
+    "kind": "原版完整场景（仅来源）",
+    "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted",
+    "sourceSha256": "250d95a2d3ccdafc9f9a7ca1da367e7aaf240b3c6ee847e9a0d65bc78ac5e192",
+    "collectionPriority": "条件来源参考：GSAP/算法/字体运行再分发尚未闭合"
   }
 ]
