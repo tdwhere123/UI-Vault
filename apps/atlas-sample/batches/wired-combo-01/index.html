@@ -1,0 +1,22 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Wired · original combo example</title><link rel="stylesheet" href="runtime.css"></head><body><header><h1>Hand-drawn choices</h1><p>Original Wired Elements combo example. Local selection only; no data is sent.</p></header><main id="demo"></main><template id="original">
+  <wired-combo selected="two">
+    <wired-item value="one">Number one</wired-item>
+    <wired-item value="two">Number two</wired-item>
+    <wired-item value="three">Number three</wired-item>
+    <wired-item value="four">Number four</wired-item>
+  </wired-combo>
+  <wired-combo selected="one" disabled>
+    <wired-item value="one">Disabled</wired-item>
+    <wired-item value="two">Number two</wired-item>
+  </wired-combo>
+  <wired-combo>
+    <wired-item value="one">Disabled</wired-item>
+    <wired-item value="two">Number two</wired-item>
+  </wired-combo>
+
+  <div>
+    <button>Check</button>
+  </div>
+<output aria-live="polite">Check shows the three local selections.</output>
+
+  </template><footer>Three original combos, one scene. Check now displays the values instead of logging to the console.</footer><script src="runtime.js"></script></body></html>
