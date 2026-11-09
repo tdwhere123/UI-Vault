@@ -293,10 +293,18 @@ All real browser visual acceptance remains pending where marked. Static covers, 
 
 ## Original wallet interaction · 518 previews
 
-The gallery now contains **518 preview entries** (241 original +277 added), with364 candidate records and87 source-only records excluded. One existing SmoothUI wallet-card family is restored, not three entries for its three fictional accounts. Existing13 icon entry points and all covers remain untouched.
+The gallery now contains **518 preview entries** (241 original +277 added), with 364 candidate records and 87 source-only records excluded. One existing SmoothUI wallet-card family is restored, not three entries for its three fictional accounts. Existing 13 icon entry points and all covers remain untouched.
 
-Original depth/material, text-SVG grain, spring-driven sheen, balance masking, keyboard account selection/focus and member overflow remain. All balances, last-four digits and members are fictional local fixtures; no account connection, real card input or payment action exists. The generic network shape is used instead of brand marks. Only pointer-cancel reset is patched in the original component. Normal/reduced/production tests and lifecycle interruption checks pass with mocked geometry, not native pixel acceptance. Full11 runtime-package and Tailwind notices preserve MIT/ISC/Apache-2.0 obligations.
+Original depth/material, text-SVG grain, spring-driven sheen, balance masking, keyboard account selection/focus and member overflow remain. All balances, last-four digits and members are fictional local fixtures; no account connection, real card input or payment action exists. The generic network shape is used instead of brand marks. Only pointer-cancel reset is patched in the original component. Normal/reduced/production tests and lifecycle interruption checks pass with mocked geometry, not native pixel acceptance. Full 11 runtime-package and Tailwind notices preserve MIT/ISC/Apache-2.0 obligations.
 
-New source-only candidates are DMN-js decision-rule tables (custom bpmn.io license with mandatory visible watermark, not plain MIT) and Diff2Html multi-file patch reading (root MIT; runtime/embedded icon closure unfinished). Their exact source and full root licenses are reviewed; no remote parsing, complete dependency audit or runnable preview is claimed. They do not count toward518.
+New source-only candidates are DMN-js decision-rule tables (custom bpmn.io license with mandatory visible watermark, not plain MIT) and Diff2Html multi-file patch reading (root MIT; runtime/embedded icon closure unfinished). Their exact source and full root licenses are reviewed; no remote parsing, complete dependency audit or runnable preview is claimed. They do not count toward 518.
 
 All cover work remains with Grok; existing icon overlaps remain deferred. Real browser visual acceptance is still pending where marked.
+
+## Fluent professional color icons · 519 previews
+
+The gallery contains **519 preview entries** (241 original + 278 added), with 365 candidates and 87 source-only records excluded. Fluent UI System Icons Color contributes one selected series: 100 original 24px base icons, not 100 UI entries, not the complete collection and not Fluent Emoji. There are now 14 icon entry points representing 12 distinct design series; two older overlaps remain intentionally deferred.
+
+Fixed Microsoft source assets retain their complete MIT license and upstream NOTICE. All 100 SVGs were independently re-fetched at the exact commit and matched byte-for-byte. Each original UTF-8 SVG is displayed in an isolated image data URI, preserving its gradients/filter and internal IDs without changing geometry or colors. This is original text-vector content, not a screenshot or binary packaging. All 416 local references resolve within their original SVG; no script, foreignObject, external image/resource or href is present.
+
+Search, three explicitly curated categories, five pages, details and readonly source use a dependency-free authored browser shell. All 100 grid/detail source values decode to the exact original text; repeated state changes and detached old nodes after exit were checked. These DOM/source checks do not establish native image decoding, gradients/filter rendering or pixel acceptance. All covers remain with Grok, and existing icon entries remain unchanged.
