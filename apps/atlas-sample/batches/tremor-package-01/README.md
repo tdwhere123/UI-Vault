@@ -1,0 +1,20 @@
+# Tremor · original workspace package application
+
+Fixed `tremorlabs/tremor-blocks` revision b319e8d3d3678a4f60f4802f7e85bc1abc52d598, original `src/content/components/form-layouts/form-layout-05.tsx`. One existing `tremor-blocks:workspace-package-application`, no new plan variants counted.
+
+Preserves the original complete Starter/Premium/Enterprise RadioCards, sample request limits/prices and features, name/email/company inputs, four-size Select, framing and original component styles. Visible text explains local-only fictional/sample plans, not an actual offer or application. Submit prevents navigation and only reports no application was sent; no registration, billing or backend. Original no-op GoBack disabled. Native required/email constraints retained; no claim server validation.
+
+Minimal source corrections: group onValueChange controls both selected RadioCard and feature details (original click-only handler missed keyboard selection); description IDs made unique; no external font-face; system-font fallback/reduced-motion CSS. Original Radix/Tremor components remain. Select portal is placed inside the existing host root, avoiding a second React delegated-listener root on body while preserving original Select rendering. Local useSize safety patch disconnects partial observers and ignores stale callbacks. Full changes and originals retained locally.
+
+Lifecycle: hidden unmount resets form defaults on return. A real hidden-unmount exception enters terminal failure cleanup; visibility cannot revive it. Final pagehide/atlas:dispose removes exact owned root/global handlers, observers, portal/body scroll effects and timers.100hide/remount tests prove root delegate add calls and selectionchange registration calls do not grow. No broad iframe listener deletion.
+
+Detached bookkeeping boundary: React attaches invalid handlers to INPUT/SELECT, scroll handlers to DIV viewport nodes, and delegated handlers to Radix's unmounted DocumentFragment (react-select dist/index.mjs creates an offscreen fragment for closed content). The all-target test ledger intentionally retains these old objects; its count grows as100new popup viewports are created. Connected/global counts remain stable during repeated operation and zero at exit. Host production collections only retain the single root's exact handlers/selection listener and clear them on final exit, not a history of old popup nodes. Old retained target events are dispatched after disposal without reviving UI/resources. This is source/lifecycle evidence, not a heap-GC proof or an all-listener-zero claim. Per-target counts and representative registration stacks are in VERIFICATION.json.
+
+Verification commands:
+`node ui-tremor-next-local/package/build.mjs`
+`node ui-tremor-next-local/package/test.mjs`
+`python ui-tremor-next-local/package/pack.py`
+
+Actual544compose/currentCSP; original keyboard ArrowRight Radio selection with feature changes, Select ArrowDown/open/Enter selection/Escape,100plan+Select cycles plus100hide/remount cycles, validation and prevented submit, unique IDs, early/late actual DOM errors, ROconstructor/partialobserve failure, hidden-unmount failure, old node callbacks and open-popup exit. All connected/global listener, observer, timer/RAF and body pointer-lock state restored. JSDOM geometry/scroll mocks do not prove native mouse dragging, keyboard default activation, browser pixels or real CSP enforcement. No screenshots/covers; visual QA not run.
+
+Licenses: root MIT, complete actual emitted dependency notices (MIT/Apache2/0BSD), separate CSS/build notices. Remix4.6.0 historical Apache2 is supplemented from fixed official v4.6.0 source, with matching icon geometry; not latest restricted license. Radix npm omissions supplemented from fixed monorepo license. react-remove-scroll-bar2.3.8 npm gitHead is unavailable and package omits LICENSE; official fixed later repository MIT supplied transparently, not attributed to npm origin. Exact versions/source evidence in SOURCE.json. Seven public text files, local source/build/test not falsely promised as public ZIP.
