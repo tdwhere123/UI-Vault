@@ -2,7 +2,7 @@
 
 网站：<https://tdwhere123.github.io/UI-Vault/>
 
-当前有 **558 条可直接打开预览（241 条原始素材＋317 条后续接入预览）**，目标为 **1000 条可查看素材**，还差 **442 条**。另有 **257 条待适配来源记录**，只是工作清单，**不计入1000目标完成数**。图标按系列计数，不按单枚glyph、字重或尺寸凑数，已有重叠暂待统一整理。
+当前有 **561 条可直接打开预览（241 条原始素材＋320 条后续接入预览）**，目标为 **1000 条可查看素材**，还差 **439 条**。另有 **254 条待适配来源记录**，只是工作清单，**不计入1000目标完成数**。图标按系列计数，不按单枚glyph、字重或尺寸凑数，已有重叠暂待统一整理。
 
 ## 当前内容
 
@@ -455,3 +455,13 @@ Restored **2 existing pending entries**, without adding source-only records: UI 
 Restored **2 existing pending entries**, without adding source-only records: Eva · 490 原始双风格图标, Akar · 454 原始图标系列. Each keeps the actual source mechanism and its disclosed adaptation boundary, complete license text and lifecycle tests. Authored local host controls, replacement text, system fonts and static math are identified rather than misrepresented as original services or external data. No new permissions, network services, screenshots or covers.
 
 **558 viewable / 1000 target, 442 remaining**. The **257 source-only records remain pending**, not completed entries. Worklist count remains815. Mapped covers remain470; 88 posterless previews use bounded live cards. Existing records outside the restored IDs, all Grok images/reports and main interface behavior are preserved. DOM/Canvas command tests are not native pixel, touch, typography or performance acceptance.
+
+## Existing-source preview conversion · 561 directly viewable
+
+Restored **3 existing pending entries**, without adding source-only records: SeeingSVG · 滤镜阶段检查器, Cult · 流体渲染插画, Cult · 三卡 API 插画. Each keeps the actual source mechanism and its disclosed adaptation boundary, complete license text and lifecycle tests. Authored local host controls, replacement text, system fonts and static math are identified rather than misrepresented as original services or external data. No new permissions, network services, screenshots or covers.
+
+**561 viewable / 1000 target, 439 remaining**. The **254 source-only records remain pending**, not completed entries. Worklist count remains815. Mapped covers remain470; 91 posterless previews use bounded live cards. Existing records outside the restored IDs, all Grok images/reports and main interface behavior are preserved. DOM/Canvas command tests are not native pixel, touch, typography or performance acceptance.
+
+### Large original text sources
+
+The preview host now supports optional ordered, same-directory UTF-8 JavaScript source chunks (at most16 files, each below700KiB), with strict path/tag validation and atomic composition. Missing or invalid parts show an error instead of a partial preview. Shared pending requests use per-consumer cancellation, with bounded cache entries and byte budget. Existing single-file previews remain compatible, CSP and iframe permissions are unchanged. This infrastructure does not count as an extra UI entry; Healthicons is not counted until its actual source and integration pass.
