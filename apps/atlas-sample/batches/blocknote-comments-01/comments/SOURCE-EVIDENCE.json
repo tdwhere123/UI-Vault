@@ -1,0 +1,631 @@
+{
+  "repository": "https://github.com/TypeCellOS/BlockNote",
+  "revision": "262fb815a25e892b7a6e4d06b63df19a9ae5d6a8",
+  "sourcePath": "examples/07-collaboration/05-comments/src/App.tsx",
+  "runtimeRelease": "75595c3702959a80e1d8e421411b96132ca29957",
+  "runtimeReleaseTag": "v0.57.0",
+  "sourceAvailabilityEvidence": {
+    "release-tag.json": {
+      "node_id": "TA_kwDOG7pjVdoAKDA0YTM5MDc3NGI1NmJiYWNjZTM1MGQ4MjQ2MTJjMjAyMTBkMTdlNTg",
+      "sha": "04a390774b56bbacce350d824612c20210d17e58",
+      "url": "https://api.github.com/repos/TypeCellOS/BlockNote/git/tags/04a390774b56bbacce350d824612c20210d17e58",
+      "tagger": {
+        "name": "Nick the Sick",
+        "email": "computers@nickthesick.com",
+        "date": "2026-10-30T16:13:52Z"
+      },
+      "object": {
+        "sha": "75595c3702959a80e1d8e421411b96132ca29957",
+        "type": "commit",
+        "url": "https://api.github.com/repos/TypeCellOS/BlockNote/git/commits/75595c3702959a80e1d8e421411b96132ca29957"
+      },
+      "tag": "v0.57.0",
+      "message": "v0.57.0\n-----BEGIN SSH SIGNATURE-----\nU1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAguSIHbQ6fYPNNbYTrrH90e+puPk\nIN9P+pxWWPsx3a4cgAAAADZ2l0AAAAAAAAAAZzaGE1MTIAAABTAAAAC3NzaC1lZDI1NTE5\nAAAAQPOibfCDFYATqXyxpeydv5keQmMQMvrHUUs6joy1V4FX0HO7JcbNJDGAXjREx5ruZG\nEY4uMZb4Rson+d4RLT6AI=\n-----END SSH SIGNATURE-----\n",
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN SSH SIGNATURE-----\nU1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAguSIHbQ6fYPNNbYTrrH90e+puPk\nIN9P+pxWWPsx3a4cgAAAADZ2l0AAAAAAAAAAZzaGE1MTIAAABTAAAAC3NzaC1lZDI1NTE5\nAAAAQPOibfCDFYATqXyxpeydv5keQmMQMvrHUUs6joy1V4FX0HO7JcbNJDGAXjREx5ruZG\nEY4uMZb4Rson+d4RLT6AI=\n-----END SSH SIGNATURE-----\n",
+        "payload": "object 75595c3702959a80e1d8e421411b96132ca29957\ntype commit\ntag v0.57.0\ntagger Nick the Sick <computers@nickthesick.com> 1793376832 +0100\n\nv0.57.0\n",
+        "verified_at": "2026-10-30T16:17:17Z"
+      }
+    },
+    "release-source-comparison.json": [
+      {
+        "package": "react",
+        "matching": 191,
+        "different": []
+      },
+      {
+        "package": "mantine",
+        "matching": 38,
+        "different": []
+      }
+    ]
+  },
+  "localSourceSHA256": {
+    "main.tsx": "8acdc3e8d648a797712f1894c1bee09b934b4929c3a0889dda07c210b530f4cf",
+    "host.css": "7c660ff4d4076a70eebc673fb6589b3bd1eb706fa8c6ddaffa591a6d28f9c58f",
+    "prelude.js": "c5cbe72d8831649703390b007acb9b2721ab6d5c1b74eaa6b8474a9c49c93235",
+    "build.mjs": "374e3401218df63dc06ef2c35014ea8d7f785a541a7c2a1b66bf23f451cea04d",
+    "package.json": "000c0c28d0cf6b7f51b3873667174d3d212e5e154e1acfde3176e05565667cbd",
+    "src/App.tsx": "bf987463d3a637e9fe79e2fb9bb18f1a8d4bfee27144331538faa8f7490ae1a2",
+    "src/SettingsSelect.tsx": "d1846cf97c7ec9827d771ada62472ad64ca2cbbabfc5a5a974394c0874450595",
+    "src/style.css": "4242fb4b895cb8fba9599c0b9e098ac2d99c915986081554c6d8e85cd8dadbe0",
+    "src/userdata.ts": "f8d7d339d2289df4818a57e8cfeae26d3a78ae7a883376ca4585e7dcfbb8b825"
+  },
+  "runtimeDependencies": [
+    {
+      "name": "@blocknote/core",
+      "version": "0.57.0",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-blocknote-local/node_modules/@blocknote/core",
+      "license": "MPL-2.0",
+      "scope": "emitted-runtime-or-css",
+      "texts": {
+        "NOTICE.txt": "6cc8822b906087ce5d9595617819cbb044da9774a12d9b03ff405158305edc2d",
+        "LICENSE": "4b89d4518bd135ab4ee154a7bce722246b57a98c3d7efc1a09409898160c2bd1"
+      }
+    },
+    {
+      "name": "@blocknote/mantine",
+      "version": "0.57.0",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-blocknote-local/node_modules/@blocknote/mantine",
+      "license": "MPL-2.0",
+      "scope": "emitted-runtime-or-css",
+      "texts": {
+        "LICENSE": "4b89d4518bd135ab4ee154a7bce722246b57a98c3d7efc1a09409898160c2bd1"
+      }
+    },
+    {
+      "name": "@blocknote/react",
+      "version": "0.57.0",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-blocknote-local/node_modules/@blocknote/react",
+      "license": "MPL-2.0",
+      "scope": "emitted-runtime-or-css",
+      "texts": {
+        "LICENSE": "4b89d4518bd135ab4ee154a7bce722246b57a98c3d7efc1a09409898160c2bd1"
+      }
+    },
+    {
+      "name": "@floating-ui/core",
+      "version": "1.8.0",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-blocknote-local/node_modules/@floating-ui/core",
+      "license": "MIT",
+      "scope": "emitted-runtime-or-css",
+      "texts": {
+        "LICENSE": "0e4c9a9b6c71019cbbea3bdc20b01223110a9035700f9c960c8fcbf78c2325ce"
+      }
+    },
+    {
+      "name": "@floating-ui/dom",
+      "version": "1.8.0",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-blocknote-local/node_modules/@floating-ui/dom",
+      "license": "MIT",
+      "scope": "emitted-runtime-or-css",
+      "texts": {
+        "LICENSE": "0e4c9a9b6c71019cbbea3bdc20b01223110a9035700f9c960c8fcbf78c2325ce"
+      }
+    },
+    {
+      "name": "@floating-ui/react",
+      "version": "0.27.20",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-blocknote-local/node_modules/@floating-ui/react",
+      "license": "MIT",
+      "scope": "emitted-runtime-or-css",
+      "texts": {
+        "LICENSE": "0e4c9a9b6c71019cbbea3bdc20b01223110a9035700f9c960c8fcbf78c2325ce"
+      }
+    },
+    {
+      "name": "@floating-ui/react-dom",
+      "version": "2.1.9",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-blocknote-local/node_modules/@floating-ui/react-dom",
+      "license": "MIT",
+      "scope": "emitted-runtime-or-css",
+      "texts": {
+        "LICENSE": "0e4c9a9b6c71019cbbea3bdc20b01223110a9035700f9c960c8fcbf78c2325ce"
+      }
+    },
+    {
+      "name": "@floating-ui/utils",
+      "version": "0.2.12",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-blocknote-local/node_modules/@floating-ui/utils",
+      "license": "MIT",
+      "scope": "emitted-runtime-or-css",
+      "texts": {
+        "LICENSE": "0e4c9a9b6c71019cbbea3bdc20b01223110a9035700f9c960c8fcbf78c2325ce"
+      }
+    },
+    {
+      "name": "@handlewithcare/prosemirror-inputrules",
+      "version": "0.1.4",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-blocknote-local/node_modules/@handlewithcare/prosemirror-inputrules",
+      "license": "MIT",
+      "scope": "emitted-runtime-or-css",
+      "texts": {
+        "LICENSE": "a3b78b4ac5933fd3a58f0f124d579117e6bf3bd7d96779d35bae8b05ea81e187"
+      }
+    },
+    {
+      "name": "@mantine/core",
+      "version": "9.8.0",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-blocknote-local/node_modules/@mantine/core",
+      "license": "MIT",
+      "scope": "emitted-runtime-or-css",
+      "texts": {
+        "LICENSE": "61c765e625bc25d55143f14de7554685c52f21d9e671d3d204304691a163d06a"
+      }
+    },
+    {
+      "name": "@mantine/hooks",
+      "version": "9.8.0",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-blocknote-local/node_modules/@mantine/hooks",
+      "license": "MIT",
+      "scope": "emitted-runtime-or-css",
+      "texts": {
+        "LICENSE": "61c765e625bc25d55143f14de7554685c52f21d9e671d3d204304691a163d06a"
+      }
+    },
+    {
+      "name": "@tiptap/core",
+      "version": "3.33.0",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-blocknote-local/node_modules/@tiptap/core",
+      "license": "MIT",
+      "scope": "emitted-runtime-or-css",
+      "texts": {
+        "LICENSE.md": "c96e5ecb55ac593157ad1d21d1f44a611187f494a0f04c235a1ae692c88d6ba9"
+      }
+    },
+    {
+      "name": "@tiptap/extension-bold",
+      "version": "3.33.0",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-blocknote-local/node_modules/@tiptap/extension-bold",
+      "license": "MIT",
+      "scope": "emitted-runtime-or-css",
+      "texts": {
+        "LICENSE.md": "c96e5ecb55ac593157ad1d21d1f44a611187f494a0f04c235a1ae692c88d6ba9"
+      }
+    },
+    {
+      "name": "@tiptap/extension-code",
+      "version": "3.33.0",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-blocknote-local/node_modules/@tiptap/extension-code",
+      "license": "MIT",
+      "scope": "emitted-runtime-or-css",
+      "texts": {
+        "LICENSE.md": "c96e5ecb55ac593157ad1d21d1f44a611187f494a0f04c235a1ae692c88d6ba9"
+      }
+    },
+    {
+      "name": "@tiptap/extension-italic",
+      "version": "3.33.0",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-blocknote-local/node_modules/@tiptap/extension-italic",
+      "license": "MIT",
+      "scope": "emitted-runtime-or-css",
+      "texts": {
+        "LICENSE.md": "c96e5ecb55ac593157ad1d21d1f44a611187f494a0f04c235a1ae692c88d6ba9"
+      }
+    },
+    {
+      "name": "@tiptap/extension-strike",
+      "version": "3.33.0",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-blocknote-local/node_modules/@tiptap/extension-strike",
+      "license": "MIT",
+      "scope": "emitted-runtime-or-css",
+      "texts": {
+        "LICENSE.md": "c96e5ecb55ac593157ad1d21d1f44a611187f494a0f04c235a1ae692c88d6ba9"
+      }
+    },
+    {
+      "name": "@tiptap/extension-text",
+      "version": "3.33.0",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-blocknote-local/node_modules/@tiptap/extension-text",
+      "license": "MIT",
+      "scope": "emitted-runtime-or-css",
+      "texts": {
+        "LICENSE.md": "c96e5ecb55ac593157ad1d21d1f44a611187f494a0f04c235a1ae692c88d6ba9"
+      }
+    },
+    {
+      "name": "@tiptap/extension-underline",
+      "version": "3.33.0",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-blocknote-local/node_modules/@tiptap/extension-underline",
+      "license": "MIT",
+      "scope": "emitted-runtime-or-css",
+      "texts": {
+        "LICENSE.md": "c96e5ecb55ac593157ad1d21d1f44a611187f494a0f04c235a1ae692c88d6ba9"
+      }
+    },
+    {
+      "name": "@tiptap/extensions",
+      "version": "3.33.0",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-blocknote-local/node_modules/@tiptap/extensions",
+      "license": "MIT",
+      "scope": "emitted-runtime-or-css",
+      "texts": {
+        "LICENSE.md": "c96e5ecb55ac593157ad1d21d1f44a611187f494a0f04c235a1ae692c88d6ba9"
+      }
+    },
+    {
+      "name": "@tiptap/react",
+      "version": "3.33.0",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-blocknote-local/node_modules/@tiptap/react",
+      "license": "MIT",
+      "scope": "emitted-runtime-or-css",
+      "texts": {
+        "LICENSE.md": "c96e5ecb55ac593157ad1d21d1f44a611187f494a0f04c235a1ae692c88d6ba9"
+      }
+    },
+    {
+      "name": "clsx",
+      "version": "2.1.1",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-blocknote-local/node_modules/clsx",
+      "license": "MIT",
+      "scope": "emitted-runtime-or-css",
+      "texts": {
+        "license": "9a9edad7baae52622bddf3c15b2ef8a33d2c89f2d25408ad13e8a7481c6b0c97"
+      }
+    },
+    {
+      "name": "fast-deep-equal",
+      "version": "3.1.3",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-blocknote-local/node_modules/fast-deep-equal",
+      "license": "MIT",
+      "scope": "emitted-runtime-or-css",
+      "texts": {
+        "LICENSE": "7bf9b2de73a6b356761c948d0e9eeb4be6c1270bd04c79cd489c1e400ffdfc1a"
+      }
+    },
+    {
+      "name": "frimousse",
+      "version": "0.4.0",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-blocknote-local/node_modules/frimousse",
+      "license": "MIT",
+      "scope": "emitted-runtime-or-css",
+      "texts": {
+        "LICENSE": "ea04001b6df7775068d078c0035b4600d23cfcd8d6d5888d57c8417e02b9af6f"
+      }
+    },
+    {
+      "name": "lib0",
+      "version": "1.0.0-rc.36",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-blocknote-local/node_modules/lib0",
+      "license": "MIT",
+      "scope": "emitted-runtime-or-css",
+      "texts": {
+        "LICENSE": "5446db1e43fe52faf3faab7e9959fe3762ac11bdc61c0945934c498affd52d73"
+      }
+    },
+    {
+      "name": "orderedmap",
+      "version": "2.1.1",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-blocknote-local/node_modules/orderedmap",
+      "license": "MIT",
+      "scope": "emitted-runtime-or-css",
+      "texts": {
+        "LICENSE": "869c30f368eb08735e779027b9f4bc9fea2f39624351856aebe42741f0bc0884"
+      }
+    },
+    {
+      "name": "prosemirror-commands",
+      "version": "1.7.2",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-blocknote-local/node_modules/prosemirror-commands",
+      "license": "MIT",
+      "scope": "emitted-runtime-or-css",
+      "texts": {
+        "LICENSE": "ef0b452ced6304db2ce78ca66de1fc7b97bab05bc1750c95df359ed3fe1d65c8"
+      }
+    },
+    {
+      "name": "prosemirror-gapcursor",
+      "version": "1.4.1",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-blocknote-local/node_modules/prosemirror-gapcursor",
+      "license": "MIT",
+      "scope": "emitted-runtime-or-css",
+      "texts": {
+        "LICENSE": "ef0b452ced6304db2ce78ca66de1fc7b97bab05bc1750c95df359ed3fe1d65c8"
+      }
+    },
+    {
+      "name": "prosemirror-highlight",
+      "version": "0.15.3",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-blocknote-local/node_modules/prosemirror-highlight",
+      "license": "MIT",
+      "scope": "emitted-runtime-or-css",
+      "texts": {
+        "LICENSE": "784abd61b4f27de35bb3d20a3eed771fc216622759b47dd0884a87d0c6f8bfcc"
+      }
+    },
+    {
+      "name": "prosemirror-history",
+      "version": "1.5.1",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-blocknote-local/node_modules/prosemirror-history",
+      "license": "MIT",
+      "scope": "emitted-runtime-or-css",
+      "texts": {
+        "LICENSE": "ef0b452ced6304db2ce78ca66de1fc7b97bab05bc1750c95df359ed3fe1d65c8"
+      }
+    },
+    {
+      "name": "prosemirror-keymap",
+      "version": "1.2.3",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-blocknote-local/node_modules/prosemirror-keymap",
+      "license": "MIT",
+      "scope": "emitted-runtime-or-css",
+      "texts": {
+        "LICENSE": "ef0b452ced6304db2ce78ca66de1fc7b97bab05bc1750c95df359ed3fe1d65c8"
+      }
+    },
+    {
+      "name": "prosemirror-model",
+      "version": "1.25.13",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-blocknote-local/node_modules/prosemirror-model",
+      "license": "MIT",
+      "scope": "emitted-runtime-or-css",
+      "texts": {
+        "LICENSE": "ef0b452ced6304db2ce78ca66de1fc7b97bab05bc1750c95df359ed3fe1d65c8"
+      }
+    },
+    {
+      "name": "prosemirror-schema-list",
+      "version": "1.6.0",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-blocknote-local/node_modules/prosemirror-schema-list",
+      "license": "MIT",
+      "scope": "emitted-runtime-or-css",
+      "texts": {
+        "LICENSE": "ef0b452ced6304db2ce78ca66de1fc7b97bab05bc1750c95df359ed3fe1d65c8"
+      }
+    },
+    {
+      "name": "prosemirror-state",
+      "version": "1.4.4",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-blocknote-local/node_modules/prosemirror-state",
+      "license": "MIT",
+      "scope": "emitted-runtime-or-css",
+      "texts": {
+        "LICENSE": "ef0b452ced6304db2ce78ca66de1fc7b97bab05bc1750c95df359ed3fe1d65c8"
+      }
+    },
+    {
+      "name": "prosemirror-tables",
+      "version": "1.8.5",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-blocknote-local/node_modules/prosemirror-tables",
+      "license": "MIT",
+      "scope": "emitted-runtime-or-css",
+      "texts": {
+        "LICENSE": "d1d2046ebbe6362f9ad8fd4d62e9074f2553f289c0e1de895a650f10ba5f4239"
+      }
+    },
+    {
+      "name": "prosemirror-transform",
+      "version": "1.12.5",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-blocknote-local/node_modules/prosemirror-transform",
+      "license": "MIT",
+      "scope": "emitted-runtime-or-css",
+      "texts": {
+        "LICENSE": "ef0b452ced6304db2ce78ca66de1fc7b97bab05bc1750c95df359ed3fe1d65c8"
+      }
+    },
+    {
+      "name": "prosemirror-view",
+      "version": "1.42.9",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-blocknote-local/node_modules/prosemirror-view",
+      "license": "MIT",
+      "scope": "emitted-runtime-or-css",
+      "texts": {
+        "LICENSE": "ef0b452ced6304db2ce78ca66de1fc7b97bab05bc1750c95df359ed3fe1d65c8"
+      }
+    },
+    {
+      "name": "react",
+      "version": "19.2.3",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-blocknote-local/node_modules/react",
+      "license": "MIT",
+      "scope": "emitted-runtime-or-css",
+      "texts": {
+        "LICENSE": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+      }
+    },
+    {
+      "name": "react-dom",
+      "version": "19.2.3",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-blocknote-local/node_modules/react-dom",
+      "license": "MIT",
+      "scope": "emitted-runtime-or-css",
+      "texts": {
+        "LICENSE": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+      }
+    },
+    {
+      "name": "rope-sequence",
+      "version": "1.3.4",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-blocknote-local/node_modules/rope-sequence",
+      "license": "MIT",
+      "scope": "emitted-runtime-or-css",
+      "texts": {
+        "LICENSE": "530424aebdd0e73f53238d1f89df250057bc8d8ce090cf5954197fadce5bf226"
+      }
+    },
+    {
+      "name": "scheduler",
+      "version": "0.27.0",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-blocknote-local/node_modules/scheduler",
+      "license": "MIT",
+      "scope": "emitted-runtime-or-css",
+      "texts": {
+        "LICENSE": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+      }
+    },
+    {
+      "name": "tabbable",
+      "version": "6.5.1",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-blocknote-local/node_modules/tabbable",
+      "license": "MIT",
+      "scope": "emitted-runtime-or-css",
+      "texts": {
+        "LICENSE": "8e714750725e75c8b31172ef84c0805f94873f86e3b5cfca8a948553f0778fa1"
+      }
+    },
+    {
+      "name": "use-sync-external-store",
+      "version": "1.6.0",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-blocknote-local/node_modules/use-sync-external-store",
+      "license": "MIT",
+      "scope": "emitted-runtime-or-css",
+      "texts": {
+        "LICENSE": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+      }
+    },
+    {
+      "name": "w3c-keyname",
+      "version": "2.2.8",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-blocknote-local/node_modules/w3c-keyname",
+      "license": "MIT",
+      "scope": "emitted-runtime-or-css",
+      "texts": {
+        "LICENSE": "869c30f368eb08735e779027b9f4bc9fea2f39624351856aebe42741f0bc0884"
+      }
+    },
+    {
+      "name": "y-prosemirror",
+      "version": "1.3.7",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-blocknote-local/node_modules/y-prosemirror",
+      "license": "MIT",
+      "scope": "emitted-runtime-or-css",
+      "texts": {
+        "LICENSE": "5446db1e43fe52faf3faab7e9959fe3762ac11bdc61c0945934c498affd52d73"
+      }
+    },
+    {
+      "name": "lib0",
+      "version": "0.2.119",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-blocknote-local/node_modules/y-prosemirror/node_modules/lib0",
+      "license": "MIT",
+      "scope": "emitted-runtime-or-css",
+      "texts": {
+        "LICENSE": "5446db1e43fe52faf3faab7e9959fe3762ac11bdc61c0945934c498affd52d73"
+      }
+    },
+    {
+      "name": "yjs",
+      "version": "13.6.33",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-blocknote-local/node_modules/yjs",
+      "license": "MIT",
+      "scope": "emitted-runtime-or-css",
+      "texts": {
+        "LICENSE": "341baa53605ed85d6f95782322854cca56c655ebc7fd4712649b8e7afc6020ff"
+      }
+    },
+    {
+      "name": "lib0",
+      "version": "0.2.119",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-blocknote-local/node_modules/yjs/node_modules/lib0",
+      "license": "MIT",
+      "scope": "emitted-runtime-or-css",
+      "texts": {
+        "LICENSE": "5446db1e43fe52faf3faab7e9959fe3762ac11bdc61c0945934c498affd52d73"
+      }
+    }
+  ],
+  "iconEvidence": {
+    "version": "react-icons5.5.0",
+    "familyRevisions": "# React Icons 5.5.0 exact family license evidence\nRead actual npm5.5.0 package LICENSE/manifest/README (tarball normal download, no code run). Package LICENSE explicitly defers glyph rights to upstream; root MIT does not cover every family.\nRead official v5.5.0 packages/react-icons/VERSIONS and src/icons/index.ts. latter fixes exact Git revisions for ai/fa/hi/md/ri/tb; go/lu use npm packages resolved by VERSIONS, not guessed contemporary releases.\nFull upstream license texts ai/fa/hi/md/ri/tb saved from exact source revisions. go package LICENSE is actual @primer/octicons18.3.0; lu LICENSE actual lucide-static0.462.0. Metadata and source declarations retained. Official CreativeCommons legalcode.txt fetch returned403; no CC-BY-4.0.txt saved. Use already-held verified full CC-BY4 text or official accessible evidence, do not claim that failed URL was read. FA original license explains SVG/JS icons are CC-BY4, not MIT or fontOFL. Preserve FontAwesome authorship/URL and note SVG to React transform. Lucide ISC explicitly credits Feather MIT portions, so include the already-held complete Feather/Cole Bemis MIT as well.\nExact Git source revisions:\nai ant-design/ant-design-icons 6f00108512f880149afe0904fb4a1cf776612aa0 LICENSE\nfa FortAwesome/Font-Awesome afecf2af5d897b763e5e8e28d46aad2f710ccad6 LICENSE.txt\nhi tailwindlabs/heroicons b6de5792d3d53ff81c71b1b8283463aad622e0e3 LICENSE\nmd google/material-design-icons ef43291c4d6ebbada3f46e1f584c39bc8f6861b2 LICENSE\nri Remix-Design/RemixIcon c1c01303b97f81bce88374220e08c3d80c9f241a License (actual Apache2, not current changed licensing)\ntb tabler/tabler-icons 01eb08a9bc8075f5bd6828ac30b0a3a038a9ef46 LICENSE\nAll fetched from raw.githubusercontent.com/<repo>/<revision>/<path> via connected GitHub read. fa/md/ri saved with exactly one final newline via patch writer; same legal text, don't claim original upstream byte-hash if trailing newline differs.\nNo full glyph-family verification or native pixels claimed; implementer should match actual emitted icons and attribute only relevant families. Source BlockNote imports include ai/fa/go/lu/md/ri/tb; hi conservatively included because reported by worker.\n\nCC-BY-4.0.txt now supplied from previously verified local ui-fontawesome-local/delivery/LICENSE.txt full CC legal-text supplement (starts Attribution 4.0 International). Existing upstream evidence URL retained; today403 not retried/bypassed. OldFontAwesome7.3.1 material attribution line is deliberately NOT copied as attribution for5.15.4. Use5.15.4 exact provenance above.\n",
+    "licenseTextHashes": {
+      "hi-LICENSE.txt": "75523ddd65d9620bea09f84e89d0c373b4205a3708b8a1e9f9598a5438a3e641",
+      "fa-LICENSE.txt": "e779748dfe75e84f974df3c7bc07f842011a100159158b0f1f49b2f2a5a515cb",
+      "md-LICENSE.txt": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "ri-LICENSE.txt": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "CC-BY-4.0.txt": "55bfbc1759943f7d19acfc68e35644b7fbe10cd8d39ab3551ce5ecff5dda9979",
+      "ai-LICENSE.txt": "5d367fb0a07340571542eb4ee8eb1add62d37b71bad6786a57c2e9a86bf76c70",
+      "tb-LICENSE.txt": "d5a3f948ae5cb95bfc4d2f767ef2bf6a778815b0ddb2d1c48037744cf636518e",
+      "go-package__LICENSE": "4f886642f9e8d99eeadd484acdac011c3fde8a338faf52f5ca1408c13b9a9b63",
+      "lu-package__LICENSE": "1e7290b35280a048667bbf0ebabac1c7fd52a75300e8b2946ac165715997f2bc",
+      "package__LICENSE": "a0c1e5484fb4c79e2a683834253864e640e1ca57cb57b807bd5bddb72bbbf74f"
+    }
+  },
+  "adaptation": "Original fixed BlockNote comments example, SettingsSelect and user-role choices adapted to a local-only Y.Doc. Actual BlockNote core/react/mantine0.57.0; original withCollaboration(fragment) runs without optional awareness/provider; original YjsThreadStore/CommentsExtension handle threads and role permissions locally. No Y-Sweet, backend, remote users or collaboration connection. Sample heading/paragraph seeded once by host, no real personal document. Avatar URLs removed; original avatar fallback used. Original text/comment controls retained. Supported text block schema includes paragraph,heading,bullet/number/check lists,quote,table; media/code embedding omitted, clipboard/drop and external-link opening blocked at host capture. Theme uses official Mantine in-memory colorSchemeManager and light theme; lib0 uses original in-memory fallback without probing storage, original toggle persistence redirected to local Map. No fonts or binary assets loaded. Only original English emoji search dictionary retained;23 unused search-language loaders omitted without changing glyph/data/lookup algorithms for English. Comments confirmBeforeDiscard=false avoids browser confirm; no dialog permission. Hide unmounts editor and destroys local doc; returning resets fictional sample. Full owned listener/timer/RAF/observer cleanup and oldnode tests pass. Actual original editor and CommentsExtension tested via test-only API (removed in production), including visible thread,reply,resolve/unresolve,role switch retaining document+threads. Production menu/hidden/teardown also tested. Range geometry is a test stub, not native selection/pixels acceptance. Four logic modes plus production and actual571compose/loader/cache/release pass. Runtime source version differs from fixed example revision; official v0.57.0 tag75595c… is exact published release: all191npmReact source and38Mantine source files match tag Git blobs, core package version/dependencies match. npm core gitHead37614… is stale v0.1.0-alpha.2 and react gitHead also stale; NOT used as corresponding source. Complete local modifications are publicly linked SOURCE-PATCHES.json; unchanged preferred source precise links also included. No XL/GPL/commercial modules.",
+  "nativeVisualVerified": false,
+  "tests": [
+    {
+      "mode": "normal",
+      "pass": true,
+      "actualCompose571": true,
+      "testOnlyAPI": true,
+      "scope": "Original editor transactions,original CommentsExtension createThread and visible original thread/reply/resolve/unresolve,original role menu switches to commenter and preserves Y.Doc text/threads;hidden reset and oldnodes;early module/lateError cleanup. Range geometry stub only,not native contenteditable/pointer/visual validation",
+      "cleanup": {
+        "listeners": 0,
+        "timers": 0,
+        "raf": 0,
+        "observers": 0
+      },
+      "blockedCalls": 0
+    },
+    {
+      "mode": "reduced",
+      "pass": true,
+      "actualCompose571": true,
+      "testOnlyAPI": true,
+      "scope": "Original editor transactions,original CommentsExtension createThread and visible original thread/reply/resolve/unresolve,original role menu switches to commenter and preserves Y.Doc text/threads;hidden reset and oldnodes;early module/lateError cleanup. Range geometry stub only,not native contenteditable/pointer/visual validation",
+      "cleanup": {
+        "listeners": 0,
+        "timers": 0,
+        "raf": 0,
+        "observers": 0
+      },
+      "blockedCalls": 0
+    },
+    {
+      "mode": "early",
+      "pass": true,
+      "actualCompose571": true,
+      "testOnlyAPI": true,
+      "scope": "Original editor transactions,original CommentsExtension createThread and visible original thread/reply/resolve/unresolve,original role menu switches to commenter and preserves Y.Doc text/threads;hidden reset and oldnodes;early module/lateError cleanup. Range geometry stub only,not native contenteditable/pointer/visual validation",
+      "cleanup": {
+        "listeners": 0,
+        "timers": 0,
+        "raf": 0,
+        "observers": 0
+      },
+      "blockedCalls": 0
+    },
+    {
+      "mode": "failure",
+      "pass": true,
+      "actualCompose571": true,
+      "testOnlyAPI": true,
+      "scope": "Original editor transactions,original CommentsExtension createThread and visible original thread/reply/resolve/unresolve,original role menu switches to commenter and preserves Y.Doc text/threads;hidden reset and oldnodes;early module/lateError cleanup. Range geometry stub only,not native contenteditable/pointer/visual validation",
+      "cleanup": {
+        "listeners": 0,
+        "timers": 0,
+        "raf": 0,
+        "observers": 0
+      },
+      "blockedCalls": 0
+    },
+    {
+      "mode": "production",
+      "pass": true,
+      "actualCompose571": true,
+      "testOnlyAPI": false,
+      "scope": "Original editor transactions,original CommentsExtension createThread and visible original thread/reply/resolve/unresolve,original role menu switches to commenter and preserves Y.Doc text/threads;hidden reset and oldnodes;early module/lateError cleanup. Range geometry stub only,not native contenteditable/pointer/visual validation",
+      "cleanup": {
+        "listeners": 0,
+        "timers": 0,
+        "raf": 0,
+        "observers": 0
+      },
+      "blockedCalls": 0
+    }
+  ],
+  "loader": [
+    {
+      "slug": "comments",
+      "pass": true,
+      "utf16Bytes": 3528092,
+      "fetches": 3,
+      "actualCreatePreviewLoader571": true,
+      "cacheHit": true,
+      "released": true,
+      "iframeExecution": false
+    }
+  ]
+}
