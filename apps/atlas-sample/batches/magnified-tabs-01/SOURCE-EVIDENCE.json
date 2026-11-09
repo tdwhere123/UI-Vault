@@ -1,0 +1,536 @@
+{
+  "repository": "https://github.com/ui-layouts/uilayouts",
+  "revision": "88d827d7ec342917ca06f6894e5add65fabbe5d8",
+  "originals": [
+    {
+      "path": "apps/ui-layout/registry/components/tabs/magnified-tabs.tsx",
+      "sha256": "18e367d5a915fcfa7b8d121df0195ef7455d6c34da8077b74d95ce8badff05e3",
+      "gitBlob": "2703299e5c0994af0aa000e37a0b0e0b2840709f"
+    },
+    {
+      "path": "apps/ui-layout/components/ui/magnified-doc.tsx",
+      "sha256": "b1a6832a4a7296d10633b566405d63dbd422fd34081978dc407912ec2452d303",
+      "gitBlob": "bc061aa116a7e76d6bdc7a7ee48aa044d76a8760"
+    },
+    {
+      "path": "apps/ui-layout/components/website/constant.tsx",
+      "sha256": "bcb6bb1095f92be81869c1b86e2e52bdb5a3d7ed6a6575b77f9820c0b11d2ae0",
+      "gitBlob": "31b177c6a54378a54c62a003317449b268e011fc"
+    },
+    {
+      "path": "apps/ui-layout/assets/preview/Preview.tsx",
+      "sha256": "7d71066b82df47ae8c538864c04ac1faca0a04cafb7d44698e9962e81cda3189",
+      "gitBlob": "34a0b8fe9b4f8c1133b541b579df273bc7a9742f"
+    },
+    {
+      "path": "apps/ui-layout/assets/icons/Icons.tsx",
+      "sha256": "b1d7b8b9ae93dbb0935bbcd43f55d87c51a029946ac4b46d739ff04612bbb681",
+      "gitBlob": "7cd201add9dc3a965f34fa2253cbeb1ff0a21777"
+    },
+    {
+      "path": "apps/ui-layout/lib/utils.ts",
+      "sha256": "e5cfefb5de4d4e1f22ec85ef7229f06154fbad3a19cdcf64cb19b5b738e9f996",
+      "gitBlob": "ce251d5fb99c4b6c70da2e7c66422f56a54054dd"
+    },
+    {
+      "path": "apps/ui-layout/app/globals.css",
+      "sha256": "8eb641289a096f6f1a12ae4192c56251eca333e20c1ca7b1ee73d97effab66f6",
+      "gitBlob": "c3e0e4d778f0cd8cb61f8f2dfcd5015732280637"
+    },
+    {
+      "path": "apps/ui-layout/app/token.css",
+      "sha256": "4e9e15377d038c13a5e464eaea3bfdf9c48593dde220b6bc5d38ec9fbecb4981",
+      "gitBlob": "3bf6e3f8de2a7ceebc02d3c974138f8816b6b10a"
+    }
+  ],
+  "assets": [
+    {
+      "file": "carousel.svg",
+      "sha256": "7d692feb3c8774e6fc0e71bb3cdad10b2c5e3cc776a9d82ab16ff3e60f62c35e",
+      "path": "apps/ui-layout/assets/preview/carousel.svg",
+      "gitBlob": "d7bca52b6d37b219d96313e3c69c18e6536759b0",
+      "scope": "original-main-preview"
+    },
+    {
+      "file": "icon-layout-grid.svg",
+      "sha256": "a29b58eb53b093ee7dff25161228b74c206a097b3498e32933ca1834f3120ed2",
+      "scope": "Tabler1.119.0 functional icon replacement",
+      "source": "icons/layout-grid.svg"
+    },
+    {
+      "file": "faqs.svg",
+      "sha256": "0b7db6cc80e6bf04837cce412009e8e963848d9f5b5bcaeeccca1160720438c6",
+      "path": "apps/ui-layout/assets/preview/faqs.svg",
+      "gitBlob": "6ab0e42bc3c62ad0b50104712356d71057fa9b5a",
+      "scope": "original-main-preview"
+    },
+    {
+      "file": "image_mousetrail.svg",
+      "sha256": "80f1b585ee222facf5bd69351ed6fd9690783efce2e7a535fe5fc86ae5d23e7a",
+      "path": "apps/ui-layout/assets/preview/image_mousetrail.svg",
+      "gitBlob": "6e0b23db2aaebe734e3916e09575d03db115c866",
+      "scope": "original-main-preview"
+    },
+    {
+      "file": "icon-circle.svg",
+      "sha256": "3abc786892e86a33096747e38e0b7fefb3422daf51902e169713907da0978cb5",
+      "scope": "Tabler1.119.0 functional icon replacement",
+      "source": "icons/circle.svg"
+    },
+    {
+      "file": "tabs.svg",
+      "sha256": "ec1986ab56843540d89b625e982cd631ba17d021b2afdd454b07cee70e8eb946",
+      "path": "apps/ui-layout/assets/preview/tabs.svg",
+      "gitBlob": "30e9c617b2c3c6e83118074147b72eeac798a5a9",
+      "scope": "original-main-preview"
+    },
+    {
+      "file": "icon-star.svg",
+      "sha256": "d5853b0b390e84c17f661e7e98ca1424726e1f0e2727f3bcab107b2d79643456",
+      "scope": "Tabler1.119.0 functional icon replacement",
+      "source": "icons/star.svg"
+    },
+    {
+      "file": "icon-layout.svg",
+      "sha256": "35335dd449292333fafb69ed210fa1aa97372866c35111f20488554ee68985bc",
+      "scope": "Tabler1.119.0 functional icon replacement",
+      "source": "icons/layout.svg"
+    },
+    {
+      "file": "icon-triangle.svg",
+      "sha256": "34401e3ebb29866cad7661555fa449ecc5b7af7bd5e751a741eda6f10ca6f60c",
+      "scope": "Tabler1.119.0 functional icon replacement",
+      "source": "icons/triangle.svg"
+    },
+    {
+      "file": "icon-photo.svg",
+      "sha256": "0ec47f4fff92b83b98a7119052eb030bf6df3ede8bc95b70644192cc41b9959a",
+      "scope": "Tabler1.119.0 functional icon replacement",
+      "source": "icons/photo.svg"
+    },
+    {
+      "file": "icon-square.svg",
+      "sha256": "726abe32cd53742a05ad6f71c244b112de871f3a972fda166bf2d3d7ca6f10ac",
+      "scope": "Tabler1.119.0 functional icon replacement",
+      "source": "icons/square.svg"
+    },
+    {
+      "file": "image_masking.svg",
+      "sha256": "47547750b5889f78c0003c8a0724207b257c652cd4c316325b5ff2f1394a44cf",
+      "path": "apps/ui-layout/assets/preview/image_masking.svg",
+      "gitBlob": "1e85a8f91847993372eb939f35705ff6c9ac8d63",
+      "scope": "original-main-preview"
+    },
+    {
+      "file": "grid.svg",
+      "sha256": "dec5db6fd293838c91e366001d888213d186bc83bc78e072dec10a5442a980b8",
+      "path": "apps/ui-layout/assets/preview/grid.svg",
+      "gitBlob": "003f8d34b8bf36c5694ec6258d0b47e1a437226c",
+      "scope": "original-main-preview"
+    },
+    {
+      "file": "sticky.svg",
+      "sha256": "df6998e3ddb8e507181803cbe8073ebb78ae16649b1cffff63deb2c4dd2c4762",
+      "path": "apps/ui-layout/assets/preview/sticky.svg",
+      "gitBlob": "0313cbbe387467bfb214ec180129d033f7038577",
+      "scope": "original-main-preview"
+    },
+    {
+      "file": "gallerynew.svg",
+      "sha256": "9024520044a325e2ed408487f399785703ba42969a8fae2f40a50b3d785d54e3",
+      "path": "apps/ui-layout/assets/preview/gallerynew.svg",
+      "gitBlob": "667e45781da876e9757a2c8c6017c6dc1853e907",
+      "scope": "original-main-preview"
+    },
+    {
+      "file": "icon-stack.svg",
+      "sha256": "227698c69310f80d78551959d34256027bf2254766a835a5f718280af6fa0d95",
+      "scope": "Tabler1.119.0 functional icon replacement",
+      "source": "icons/stack.svg"
+    }
+  ],
+  "runtimeDependencies": [
+    {
+      "name": "@floating-ui/core",
+      "version": "1.8.0",
+      "license": "MIT",
+      "scope": "emitted",
+      "licenses": {
+        "LICENSE": "0e4c9a9b6c71019cbbea3bdc20b01223110a9035700f9c960c8fcbf78c2325ce"
+      }
+    },
+    {
+      "name": "@floating-ui/dom",
+      "version": "1.8.0",
+      "license": "MIT",
+      "scope": "emitted",
+      "licenses": {
+        "LICENSE": "0e4c9a9b6c71019cbbea3bdc20b01223110a9035700f9c960c8fcbf78c2325ce"
+      }
+    },
+    {
+      "name": "@floating-ui/react-dom",
+      "version": "2.1.9",
+      "license": "MIT",
+      "scope": "emitted",
+      "licenses": {
+        "LICENSE": "0e4c9a9b6c71019cbbea3bdc20b01223110a9035700f9c960c8fcbf78c2325ce"
+      }
+    },
+    {
+      "name": "@floating-ui/utils",
+      "version": "0.2.12",
+      "license": "MIT",
+      "scope": "emitted",
+      "licenses": {
+        "LICENSE": "0e4c9a9b6c71019cbbea3bdc20b01223110a9035700f9c960c8fcbf78c2325ce"
+      }
+    },
+    {
+      "name": "@radix-ui/primitive",
+      "version": "1.1.3",
+      "license": "MIT",
+      "scope": "emitted",
+      "licenses": {
+        "LICENSE": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      }
+    },
+    {
+      "name": "@radix-ui/react-arrow",
+      "version": "1.1.7",
+      "license": "MIT",
+      "scope": "emitted",
+      "licenses": {
+        "LICENSE": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      }
+    },
+    {
+      "name": "@radix-ui/react-compose-refs",
+      "version": "1.1.2",
+      "license": "MIT",
+      "scope": "emitted",
+      "licenses": {
+        "radix-primitives-LICENSE": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      },
+      "note": "Exact installed npm metadata declares MIT and links official Radix primitives repo; package omits full file. Official root MIT supplemental text provided, not asserted exact release-file provenance for every package.",
+      "metadataSHA256": "4373969b0a688de99b33ed5c24cf91d707f638573f24fbd2dd2ad2c441c9b34c",
+      "supplementURL": "https://github.com/radix-ui/primitives/blob/fcef0668a5c827e5a4baac405474d75680f9a4eb/LICENSE"
+    },
+    {
+      "name": "@radix-ui/react-context",
+      "version": "1.1.2",
+      "license": "MIT",
+      "scope": "emitted",
+      "licenses": {
+        "radix-primitives-LICENSE": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      },
+      "note": "Exact installed npm metadata declares MIT and links official Radix primitives repo; package omits full file. Official root MIT supplemental text provided, not asserted exact release-file provenance for every package.",
+      "metadataSHA256": "70bee29bb1a5a8cc5fca28805bc5a4b9ddbe56ec7c914a28163b3e8bfe6edcb7",
+      "supplementURL": "https://github.com/radix-ui/primitives/blob/fcef0668a5c827e5a4baac405474d75680f9a4eb/LICENSE"
+    },
+    {
+      "name": "@radix-ui/react-dismissable-layer",
+      "version": "1.1.11",
+      "license": "MIT",
+      "scope": "emitted",
+      "licenses": {
+        "LICENSE": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      }
+    },
+    {
+      "name": "@radix-ui/react-id",
+      "version": "1.1.1",
+      "license": "MIT",
+      "scope": "emitted",
+      "licenses": {
+        "radix-primitives-LICENSE": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      },
+      "note": "Exact installed npm metadata declares MIT and links official Radix primitives repo; package omits full file. Official root MIT supplemental text provided, not asserted exact release-file provenance for every package.",
+      "metadataSHA256": "7f478427006dd8e521ac26a963bd63de2237b5cc4cb592ca936881a68eccb365",
+      "supplementURL": "https://github.com/radix-ui/primitives/blob/fcef0668a5c827e5a4baac405474d75680f9a4eb/LICENSE"
+    },
+    {
+      "name": "@radix-ui/react-popper",
+      "version": "1.2.8",
+      "license": "MIT",
+      "scope": "emitted",
+      "licenses": {
+        "LICENSE": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      }
+    },
+    {
+      "name": "@radix-ui/react-portal",
+      "version": "1.1.9",
+      "license": "MIT",
+      "scope": "emitted",
+      "licenses": {
+        "LICENSE": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      }
+    },
+    {
+      "name": "@radix-ui/react-presence",
+      "version": "1.1.5",
+      "license": "MIT",
+      "scope": "emitted",
+      "licenses": {
+        "LICENSE": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      }
+    },
+    {
+      "name": "@radix-ui/react-primitive",
+      "version": "2.1.3",
+      "license": "MIT",
+      "scope": "emitted",
+      "licenses": {
+        "LICENSE": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      }
+    },
+    {
+      "name": "@radix-ui/react-slot",
+      "version": "1.2.3",
+      "license": "MIT",
+      "scope": "emitted",
+      "licenses": {
+        "LICENSE": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      }
+    },
+    {
+      "name": "@radix-ui/react-tooltip",
+      "version": "1.2.8",
+      "license": "MIT",
+      "scope": "emitted",
+      "licenses": {
+        "LICENSE": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      }
+    },
+    {
+      "name": "@radix-ui/react-use-callback-ref",
+      "version": "1.1.1",
+      "license": "MIT",
+      "scope": "emitted",
+      "licenses": {
+        "radix-primitives-LICENSE": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      },
+      "note": "Exact installed npm metadata declares MIT and links official Radix primitives repo; package omits full file. Official root MIT supplemental text provided, not asserted exact release-file provenance for every package.",
+      "metadataSHA256": "5440709ff10a782eed7151b71e5ad1d0e76de5c14e38502b45d22de8a3400ea4",
+      "supplementURL": "https://github.com/radix-ui/primitives/blob/fcef0668a5c827e5a4baac405474d75680f9a4eb/LICENSE"
+    },
+    {
+      "name": "@radix-ui/react-use-controllable-state",
+      "version": "1.2.2",
+      "license": "MIT",
+      "scope": "emitted",
+      "licenses": {
+        "LICENSE": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      }
+    },
+    {
+      "name": "@radix-ui/react-use-escape-keydown",
+      "version": "1.1.1",
+      "license": "MIT",
+      "scope": "emitted",
+      "licenses": {
+        "radix-primitives-LICENSE": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      },
+      "note": "Exact installed npm metadata declares MIT and links official Radix primitives repo; package omits full file. Official root MIT supplemental text provided, not asserted exact release-file provenance for every package.",
+      "metadataSHA256": "a1706f4010a2ed8309b0c109d2b884cf13aa02d27765b27ba755e7eb2a495d35",
+      "supplementURL": "https://github.com/radix-ui/primitives/blob/fcef0668a5c827e5a4baac405474d75680f9a4eb/LICENSE"
+    },
+    {
+      "name": "@radix-ui/react-use-layout-effect",
+      "version": "1.1.1",
+      "license": "MIT",
+      "scope": "emitted",
+      "licenses": {
+        "radix-primitives-LICENSE": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      },
+      "note": "Exact installed npm metadata declares MIT and links official Radix primitives repo; package omits full file. Official root MIT supplemental text provided, not asserted exact release-file provenance for every package.",
+      "metadataSHA256": "b18e430ab5bbaf53945f55b495838dd71582f4203193747a939e2a7593f76744",
+      "supplementURL": "https://github.com/radix-ui/primitives/blob/fcef0668a5c827e5a4baac405474d75680f9a4eb/LICENSE"
+    },
+    {
+      "name": "@radix-ui/react-use-size",
+      "version": "1.1.1",
+      "license": "MIT",
+      "scope": "emitted",
+      "licenses": {
+        "radix-primitives-LICENSE": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      },
+      "note": "Exact installed npm metadata declares MIT and links official Radix primitives repo; package omits full file. Official root MIT supplemental text provided, not asserted exact release-file provenance for every package.",
+      "metadataSHA256": "eb31b5e5e1220a8c0a1657937e24d9f639d73521bce8e9ec9522f28c46b989e0",
+      "supplementURL": "https://github.com/radix-ui/primitives/blob/fcef0668a5c827e5a4baac405474d75680f9a4eb/LICENSE"
+    },
+    {
+      "name": "@radix-ui/react-visually-hidden",
+      "version": "1.2.3",
+      "license": "MIT",
+      "scope": "emitted",
+      "licenses": {
+        "LICENSE": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      }
+    },
+    {
+      "name": "clsx",
+      "version": "2.1.1",
+      "license": "MIT",
+      "scope": "emitted",
+      "licenses": {
+        "license": "9a9edad7baae52622bddf3c15b2ef8a33d2c89f2d25408ad13e8a7481c6b0c97"
+      }
+    },
+    {
+      "name": "framer-motion",
+      "version": "12.43.0",
+      "license": "MIT",
+      "scope": "emitted",
+      "licenses": {
+        "LICENSE.md": "5ff46083b88563822b0560dd6221ab89d2f74bc97a52d4c97a75020fd62c6f32"
+      }
+    },
+    {
+      "name": "motion-dom",
+      "version": "12.43.0",
+      "license": "MIT",
+      "scope": "emitted",
+      "licenses": {
+        "LICENSE.md": "1bf0dc3f7727723e5a032ed12164a47cf92c05204cb1a3485f123c24e2833ed1"
+      }
+    },
+    {
+      "name": "motion-utils",
+      "version": "12.39.0",
+      "license": "MIT",
+      "scope": "emitted",
+      "licenses": {
+        "LICENSE.md": "1bf0dc3f7727723e5a032ed12164a47cf92c05204cb1a3485f123c24e2833ed1"
+      }
+    },
+    {
+      "name": "react",
+      "version": "19.3.1",
+      "license": "MIT",
+      "scope": "emitted",
+      "licenses": {
+        "LICENSE": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+      }
+    },
+    {
+      "name": "react-dom",
+      "version": "19.3.1",
+      "license": "MIT",
+      "scope": "emitted",
+      "licenses": {
+        "LICENSE": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+      }
+    },
+    {
+      "name": "scheduler",
+      "version": "0.28.0",
+      "license": "MIT",
+      "scope": "emitted",
+      "licenses": {
+        "LICENSE": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+      }
+    },
+    {
+      "name": "tailwind-merge",
+      "version": "3.3.1",
+      "license": "MIT",
+      "scope": "emitted",
+      "licenses": {
+        "LICENSE.md": "d4c70c7ce38cea8778f0aed3fc0bef0a9dbd27f13bd8b6773cbd6d37941971e5"
+      }
+    },
+    {
+      "name": "tailwindcss",
+      "version": "4.3.0",
+      "scope": "compiled-css"
+    },
+    {
+      "name": "motion",
+      "version": "12.23.24",
+      "scope": "parsed-reexport"
+    }
+  ],
+  "adaptation": "# 放大式原矢量导航\n\n恢复原uilayout:magnified-tabs。固定原8主预览实际为仓内纯SVG矢量，不是照片或截图：carousel/tabs/faqs/grid/image_masking/image_mousetrail/sticky/gallerynew。完整原字节固定Gitblob及XML白名单核验，无image/base64/外部资源；以正常文本SVG data URI供原img样式使用，不是包装二进制。图形表达上游组件概念示意，不宣称运行各图所示业务。\n\n原主图过渡、前后方向、8选项选择、距离放大映射[-100,0,100]→[40,55,40]、mass0.1/stiffness150/damping12弹簧及原Radix Tooltip保留。NextImage换原生img，不改变原SVG；原8个PNG dock功能图标透明替为已核Tabler1.119.0原SVG（layout/layout-grid/star/square/circle/photo/stack/triangle），非原PNG或截图。原2个外站点击去除，不伪称跳转。坐标pageX改clientX与getBoundingClientRect统一；原button补aria-label/pressed，键盘原生按钮可激活。\n\n原globals.css/token.css保留主题，编译范围限本组件；未使用的Typography构建插件省略，非换Eldora主题。系统字体回退、宿主说明/上下留白明确为适配。cn保原clsx/twMerge，去无关工具。原布局与图形不重画。减动静态40px图标且首帧不做进入；隐藏卸载、恢复第0项、退出清理，原陈旧回调/节点不复活。\n\n六模式actual571兼容compose：8选项及主图真实选择/方向返回、原弹簧在确定几何桩下从40放大超过50、hidden恢复/旧节点/早期缺根和晚期失败、全部资源0且禁止API0；实际createPreviewLoader缓存/卸载。JSDOM/几何桩不是原生hover/触摸/像素验收。\n\n30实际emitted包全文、motion入口与Tailwind构建许可另列，TablerMIT附齐。部分Radix精确npm包缺LICENSE，依据该实际metadata MIT附官方根完整MIT补充，明确不伪造各版本原LICENSE。安装依赖采用已有共享实际版本，SOURCE逐项列出，不声称同上游锁。\n\n另tools-workspace-tabs唯一主内容是4幅850px Unsplash照片，不能以占位接入；GeoBootstrap核心纹理依赖GIF，此包不把它们算完成。\n",
+  "tests": {
+    "test-reduced.json": {
+      "pass": true,
+      "mode": "reduced",
+      "actualCompose571": true,
+      "eightOriginalVectorPreviews": true,
+      "realSelection": true,
+      "hiddenResets": true,
+      "cleanupZero": true,
+      "nativeGeometry": false,
+      "nativeVisual": false
+    },
+    "test-early.json": {
+      "pass": true,
+      "mode": "early",
+      "actualCompose571": true,
+      "eightOriginalVectorPreviews": true,
+      "realSelection": true,
+      "hiddenResets": true,
+      "cleanupZero": true,
+      "nativeGeometry": false,
+      "nativeVisual": false
+    },
+    "test-production.json": {
+      "pass": true,
+      "mode": "production",
+      "actualCompose571": true,
+      "eightOriginalVectorPreviews": true,
+      "realSelection": true,
+      "hiddenResets": true,
+      "cleanupZero": true,
+      "nativeGeometry": false,
+      "nativeVisual": false
+    },
+    "test-normal.json": {
+      "pass": true,
+      "mode": "normal",
+      "actualCompose571": true,
+      "eightOriginalVectorPreviews": true,
+      "realSelection": true,
+      "hiddenResets": true,
+      "cleanupZero": true,
+      "nativeGeometry": false,
+      "nativeVisual": false
+    },
+    "test-failure.json": {
+      "pass": true,
+      "mode": "failure",
+      "actualCompose571": true,
+      "eightOriginalVectorPreviews": true,
+      "realSelection": true,
+      "hiddenResets": true,
+      "cleanupZero": true,
+      "nativeGeometry": false,
+      "nativeVisual": false
+    },
+    "test-missing.json": {
+      "pass": true,
+      "mode": "missing",
+      "actualCompose571": true,
+      "eightOriginalVectorPreviews": true,
+      "realSelection": true,
+      "hiddenResets": true,
+      "cleanupZero": true,
+      "nativeGeometry": false,
+      "nativeVisual": false
+    },
+    "test-loader-results.json": [
+      {
+        "slug": ".",
+        "pass": true,
+        "utf16Bytes": 943628,
+        "fetches": 3,
+        "actualCreatePreviewLoader571": true,
+        "cacheHit": true,
+        "released": true,
+        "iframeExecution": false
+      }
+    ]
+  }
+}
