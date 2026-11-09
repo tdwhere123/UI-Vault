@@ -15523,42 +15523,35 @@
   },
   {
     "id": "latexcss:scholarly-article",
-    "title": "学术书页、边注与定理排版",
     "source": "LaTeX.css",
     "repository": "https://github.com/vincentdoerig/latex-css",
     "revision": "1fbe1d74f8ca33595a1d50c677810033da40aa52",
-    "sourcePath": "index.html",
     "upstream": "https://github.com/vincentdoerig/latex-css/blob/1fbe1d74f8ca33595a1d50c677810033da40aa52/index.html",
-    "license": "MIT (complete actual root text; runtime/media not closed)",
-    "behavior": "原完整长文演示含标题层级、摘要、数学/定理、表格、图片题注、脚注/边注、目录锚点；真实字体风格与暗色切换。",
-    "difference": "区别普通博客/编辑器：出版式学术正文与页边信息关系，整体阅读体验一族，不按段落拆。",
-    "styleTags": [
-      "书籍/叙事排版"
-    ],
-    "gaps": [
-      "Latin Modern/Libertinus字体文件需独立核许可且不能二进制包装；MathJax外部CDN/Prism及文中示例媒体需本地闭合。布局/边注窄屏/公式CSP未验，不宣称浏览器排版通过。",
-      "仅只读源码筛选；未安装/构建/运行、交互生命周期或浏览器视觉验收。"
-    ],
-    "description": "原完整长文演示含标题层级、摘要、数学/定理、表格、图片题注、脚注/边注、目录锚点；真实字体风格与暗色切换。 区别普通博客/编辑器：出版式学术正文与页边信息关系，整体阅读体验一族，不按段落拆。",
-    "category": "展示与媒体",
+    "sourcePath": "index.html",
     "licenseEvidence": {
       "url": "https://github.com/vincentdoerig/latex-css/blob/1fbe1d74f8ca33595a1d50c677810033da40aa52/LICENSE",
       "sha256": "b9ef17a4514183989f879ad1f4736a94f8a3a1a26f01b29bb06bb9c86a88ede9",
       "scope": "Complete actual root license; transitive code and media permissions not closed"
     },
-    "sourceEvidence": {
-      "localFile": "evidence/vincentdoerig--latex-css--index.html",
-      "sha256": "0be27693109600302cfda04352aaca8ac7105df5d2ee45fd8b711f4f938dcede"
-    },
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-style-526",
-    "sourceScope": "Fixed original complete UI/demo source and full root license; not a runnable adaptation or full asset archive",
-    "kind": "原版审美场景（仅来源）",
-    "buildStatus": "fixed source and full root license read; not built/run/visually accepted"
+    "difference": "区别普通博客/编辑器：出版式学术正文与页边信息关系，整体阅读体验一族，不按段落拆。",
+    "title": "LaTeX.css · 学术书页",
+    "description": "原学术长文结构，目录定位、脚注返回、边注开合与暗色/系统字体切换；数学示例为静态文字而非公式引擎。",
+    "behavior": "原学术长文结构，目录定位、脚注返回、边注开合与暗色/系统字体切换；数学示例为静态文字而非公式引擎。",
+    "kind": "学术长文场景",
+    "format": "完整交互场景",
+    "category": "展示与媒体",
+    "license": "MIT",
+    "batch": "latex-01",
+    "preview": "batches/latex-01/article/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Offline text assembly, three DOM rounds and five initialization/interaction/early-exit failure cases passed; browser visual QA not run",
+    "gaps": [
+      "Browser visual QA not run; narrow-screen sidenote geometry and actual scroll/layout unverified.",
+      "Original binary fonts replaced by labelled system Georgia/Times stacks.",
+      "No formula engine or syntax highlighter: examples are static HTML/Unicode and plain code.",
+      "Remote photo replaced by labelled original local SVG; outbound example links inert."
+    ]
   },
   {
     "id": "rpgui:medieval-control-room",
@@ -15679,42 +15672,35 @@
   },
   {
     "id": "meny:folded-page-navigation",
-    "title": "立体折页侧栏与内容透视导航",
     "source": "Meny",
     "repository": "https://github.com/hakimel/Meny",
     "revision": "32ed575f5c922ec0677ec4eee7b28362b24c62a7",
-    "sourcePath": "index.html",
     "upstream": "https://github.com/hakimel/Meny/blob/32ed575f5c922ec0677ec4eee7b28362b24c62a7/index.html",
-    "license": "MIT (complete actual root text; runtime/media not closed)",
-    "behavior": "原CSS3D内容透视翻折与侧边导航，鼠标接近边缘或触摸swipe开合，四边定位，JS有open/close/destroy。",
-    "difference": "不同普通抽屉/WinBox/导览：整页与菜单的立体折页空间关系，不按四种方向算四个。",
-    "styleTags": [
-      "纸张空间/导航"
-    ],
-    "gaps": [
-      "原demo会按query u嵌入任意iframe，且有Twitter脚本/Facebookiframe/Google字体/GitHub ribbon外图；未来必须删这些外部能力并明确差异，不能放宽CSP。旧浏览器事件与destroy恢复样式/触摸取消未验。",
-      "仅只读源码筛选；未安装/构建/运行、交互生命周期或浏览器视觉验收。"
-    ],
-    "description": "原CSS3D内容透视翻折与侧边导航，鼠标接近边缘或触摸swipe开合，四边定位，JS有open/close/destroy。 不同普通抽屉/WinBox/导览：整页与菜单的立体折页空间关系，不按四种方向算四个。",
-    "category": "导航与组织",
+    "sourcePath": "index.html",
     "licenseEvidence": {
       "url": "https://github.com/hakimel/Meny/blob/32ed575f5c922ec0677ec4eee7b28362b24c62a7/LICENSE",
       "sha256": "bd34ddce59f73350c781067fb937a56419de91d23dd4df351de7b08d2274e01a",
       "scope": "Complete actual root license; transitive code and media permissions not closed"
     },
-    "sourceEvidence": {
-      "localFile": "evidence/hakimel--Meny--index.html",
-      "sha256": "011fce3ec51a0f40eebcd26a97644e863afa3e543b2d7c232251b88d812c1e21"
-    },
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-style-526",
-    "sourceScope": "Fixed original complete UI/demo source and full root license; not a runnable adaptation or full asset archive",
-    "kind": "原版审美场景（仅来源）",
-    "buildStatus": "fixed source and full root license read; not built/run/visually accepted"
+    "difference": "不同普通抽屉/WinBox/导览：整页与菜单的立体折页空间关系，不按四种方向算四个。",
+    "title": "Meny · 折页背后的目录",
+    "description": "原CSS3D页面旋转/位移揭开背后目录，四边切换、章节定位和焦点返回；非远程iframe菜单。",
+    "behavior": "原CSS3D页面旋转/位移揭开背后目录，四边切换、章节定位和焦点返回；非远程iframe菜单。",
+    "kind": "原版CSS3D交互场景",
+    "format": "完整交互场景",
+    "category": "导航与组织",
+    "license": "MIT",
+    "batch": "fold-01",
+    "preview": "batches/fold-01/meny/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime mechanisms and lifecycle tests passed; browser visual QA not run",
+    "gaps": [
+      "原媒体替换为明确本地原创文字/CSS素材，保留原CSS3D机制；不载外链或任意远程iframe。",
+      "隐藏时卸载并重建；OriDomi折法会重置，不声称保持中断折叠角度。",
+      "补充原库事件/定时器/部分初始化失败清理；OriDomi退出同步销毁，不依赖unfold transition完成。",
+      "真实鼠标路径、DOM变换与生命周期通过逻辑测试；原生CSS3D像素、触屏和性能尚未验收。"
+    ]
   },
   {
     "id": "tinysynth:sound-design-console",
@@ -15757,100 +15743,67 @@
   },
   {
     "id": "maki:cartographic-poi-family",
-    "title": "Maki · 15px地图兴趣点符号系列",
     "source": "Mapbox Maki",
     "repository": "https://github.com/mapbox/maki",
     "revision": "28e2a3602e4bde033a1dd388e86e9c117b425e34",
-    "sourcePath": "icons/airport.svg",
     "upstream": "https://github.com/mapbox/maki/blob/28e2a3602e4bde033a1dd388e86e9c117b425e34/icons/airport.svg",
-    "license": "CC0-1.0 (complete root text read; no trademark/patent grant)",
-    "visualStyle": "15px像素对齐的紧凑黑色剪影，专为地图兴趣点而非通用线性工具栏设计。",
-    "behavior": "原始SVG地点语义图形，抽样机场、咖啡馆、医院、定位标记、公园；静态图标本身没有点击或地图行为。",
-    "difference": "完整设计系列只记一条，不按地点glyph、尺寸或颜色拆数；可用于Exodus行程、地点来源和空间记录标签。",
-    "description": "15px像素对齐的地图兴趣点剪影系列，可用于行程、地点来源与空间记录标签；不内含地图或地理定位功能。",
-    "gaps": [
-      "本轮固定读取5个原SVG样本、完整CC0和README，不声称收全所有图标或已实现搜索/复制预览。",
-      "根CC0明确不授予商标/专利或第三人权利；当前未连接地图服务、不获取用户位置，不能将其宣传为Mapbox服务授权。",
-      "后续系列浏览需核全量SVG、安全清洗、可访问名称及15px原生尺寸清晰度，当前无截图/字体/二进制归档，也未构建和浏览器验收。"
-    ],
-    "category": "图标系列",
-    "format": "图标家族",
-    "counts": {
-      "independentFamily": 1,
-      "completedPreviews": 0
-    },
-    "sourceEvidence": [
-      {
-        "path": "icons/airport.svg",
-        "sha256": "751133450c6346b804f3ce8d4d07ecc3d691692ced42c890323dd8b4b510bcd0"
-      },
-      {
-        "path": "icons/cafe.svg",
-        "sha256": "183ec9cbbf2fe0edd61672b9e83e1134e6a2b0511c89f3c334c3115bda0d29ea"
-      },
-      {
-        "path": "icons/hospital.svg",
-        "sha256": "00b76d183cdec4df12488c49835938a808b28e04606017a38d8da22834480209"
-      },
-      {
-        "path": "icons/marker.svg",
-        "sha256": "5350899297309f6864c3c34f532c320d9e9ceafe5fbee48bf337d40fc9ac217c"
-      },
-      {
-        "path": "icons/park.svg",
-        "sha256": "9f25e71f59ea90b3ffd974005cb94b704911526832dd157776e36f18ccc9085a"
-      }
-    ],
+    "sourcePath": "icons/airport.svg",
     "licenseEvidence": {
       "url": "https://github.com/mapbox/maki/blob/28e2a3602e4bde033a1dd388e86e9c117b425e34/LICENSE.txt",
       "sha256": "36ffd9dc085d529a7e60e1276d73ae5a030b020313e6c5408593a6ae2af39673",
       "scope": "Complete original CC0-1.0 read and five source SVG samples checked; no trademark/patent/service license"
     },
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-style-527",
-    "sourceScope": "Five fixed original SVG samples and complete root license evidence, not full runnable/archive",
+    "difference": "完整设计系列只记一条，不按地点glyph、尺寸或颜色拆数；可用于Exodus行程、地点来源和空间记录标签。",
+    "title": "Maki · 地图语义图标系列",
+    "description": "固定版本全部215个原SVG，按名称搜索、分页、选择放大并调整显示尺寸/颜色；整个系列只计一条，不按图标数量累加。",
+    "behavior": "固定版本全部215个原SVG，按名称搜索、分页、选择放大并调整显示尺寸/颜色；整个系列只计一条，不按图标数量累加。",
     "kind": "图标系列",
-    "buildStatus": "Fixed original SVG source read; not built, run or visually accepted"
+    "format": "图标系列",
+    "category": "图标系列",
+    "license": "CC0-1.0 AND MIT",
+    "batch": "maki-01",
+    "preview": "batches/maki-01/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "All original Git blob/SHA256/XML fidelity and 14 DOM/lifecycle checks passed; browser pixel review not run",
+    "gaps": [
+      "范围为固定revision的完整icons/*.svg目录215个，不代表未来版本；原图标逐字保留，浏览器宿主为新编写。",
+      "原图标CC0与宿主MIT完整条款保留；CC0不提供商标、专利或第三人权利保证，不表示地图或官方服务背书。",
+      "每页30个原图标，100轮操作固定10个应用监听，退出清零；不访问定位、剪贴板、网络或外部字体。",
+      "已完成完整源哈希、XML安全/保真、真实图鉴composePreview以及搜索/隐藏/失败/退出测试；原生像素、触屏与实际色彩显示仍未验收。"
+    ]
   },
   {
     "id": "oridomi:folded-dom-scenes",
-    "title": "折纸式DOM内容交互",
     "source": "oriDomi",
     "repository": "https://github.com/dmotz/oriDomi",
     "revision": "f90830504d6843dfdf5b72d873c01cd716538485",
-    "sourcePath": "demo/demo.js",
     "upstream": "https://github.com/dmotz/oriDomi/blob/f90830504d6843dfdf5b72d873c01cd716538485/demo/demo.js",
-    "website": "https://oxism.com/oriDomi",
-    "license": "MIT (root text verified; runtime/assets not closed)",
-    "behavior": "将实际DOM切成折面，通过折角与拖动形成手风琴纸折展示。",
-    "difference": "不是纸张背景或视频；保留折面几何及原演示操作，同一引擎效果作为一族。",
-    "description": "将实际DOM切成折面，通过折角与拖动形成手风琴纸折展示。 不是纸张背景或视频；保留折面几何及原演示操作，同一引擎效果作为一族。",
-    "gaps": [
-      "需闭合oridomi.js、demo CSS/DOM、图片和字体；老式CoffeeScript/JS项目尚未验证现代浏览器触摸、resize与销毁。",
-      "原示例图片/地图内容不自动受根MIT覆盖；若替换素材必须披露，不能把重新写的CSS翻页称原版。",
-      "仅折DOM的前端效果，不是纸张力学模拟；键盘替代、可访问性与reduced-motion待设计验证。",
-      "固定源码/根许可仅为来源证据；未构建、未运行、未截图验收，completedPreviewCount=0。"
-    ],
-    "category": "视觉与动效",
+    "sourcePath": "demo/demo.js",
     "licenseEvidence": {
       "url": "https://github.com/dmotz/oriDomi/blob/f90830504d6843dfdf5b72d873c01cd716538485/LICENSE",
       "sha256": "8588b3379ce3245f3753bd31e463bd334b9b7301a3e796450ac723ca42093e5e",
       "scope": "Complete original root license retained; runtime/media separate"
     },
-    "sourceSha256": "e1a8ceca47b594d90c1c587ab4acaa2c87651fb813e883025e6545af8127d849",
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-style-527",
-    "sourceScope": "Selected fixed original source and root license; no full runnable archive",
-    "kind": "原版风格组件族（仅来源）",
-    "buildStatus": "Fixed source inspected; not built or visually accepted"
+    "difference": "不是纸张背景或视频；保留折面几何及原演示操作，同一引擎效果作为一族。",
+    "title": "OriDomi · 可拖动纸面折叠",
+    "description": "原DOM克隆分片、阴影与旋转形成可拖纸面折叠；保留真实鼠标角度变化，不以静态折面图片替代。",
+    "behavior": "原DOM克隆分片、阴影与旋转形成可拖纸面折叠；保留真实鼠标角度变化，不以静态折面图片替代。",
+    "kind": "原版CSS3D交互场景",
+    "format": "完整交互场景",
+    "category": "视觉与动效",
+    "license": "MIT",
+    "batch": "fold-01",
+    "preview": "batches/fold-01/oridomi/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime mechanisms and lifecycle tests passed; browser visual QA not run",
+    "gaps": [
+      "原媒体替换为明确本地原创文字/CSS素材，保留原CSS3D机制；不载外链或任意远程iframe。",
+      "隐藏时卸载并重建；OriDomi折法会重置，不声称保持中断折叠角度。",
+      "补充原库事件/定时器/部分初始化失败清理；OriDomi退出同步销毁，不依赖unfold transition完成。",
+      "真实鼠标路径、DOM变换与生命周期通过逻辑测试；原生CSS3D像素、触屏和性能尚未验收。"
+    ]
   },
   {
     "id": "paperlab:physical-paper-presets",
@@ -16569,76 +16522,69 @@
   },
   {
     "id": "siriwave:fluorescent-voice-wave",
-    "title": "荧光流动语音波形",
     "source": "siriwave",
     "repository": "https://github.com/kopiro/siriwave",
     "revision": "744cb00235b7900733efff25dc73b4d1ab77c92d",
-    "sourcePath": "src/index.ts",
     "upstream": "https://github.com/kopiro/siriwave/blob/744cb00235b7900733efff25dc73b4d1ab77c92d/src/index.ts",
-    "website": "https://kopiro.github.io/siriwave/",
-    "license": "MIT (root text verified; runtime/assets not closed)",
-    "behavior": "Canvas多层荧光曲线，以本地振幅控制呈现语音助手活动。",
-    "difference": "同一引擎的预设/配色仅一族；源码级新来源，尚非已验收预览。",
-    "description": "Canvas多层荧光曲线，以本地振幅控制呈现语音助手活动。",
-    "gaps": [
-      "原实现为数学曲线，不自带语音识别或真实音频分析；本地状态必须标模拟，不能声称麦克风已监听。",
-      "需一起携带classic-curve.ts与ios9-curve.ts；源码有stop/dispose和setAmplitude，适配应调用销毁并限制DPR/帧率及离屏运行。",
-      "README的iOS13气泡仍work in progress，不收为完成态；Apple/Siri名称只用于来源归属，不使用品牌logo或暗示授权。",
-      "固定源码及完整根许可已存证；未构建、未运行、未截图，completedPreviewCount=0。"
-    ],
-    "category": "Agent与对话",
+    "sourcePath": "src/index.ts",
     "licenseEvidence": {
       "url": "https://github.com/kopiro/siriwave/blob/744cb00235b7900733efff25dc73b4d1ab77c92d/LICENSE",
       "sha256": "2895598c988e615210dac52580a35ec00e007cf3995ab7178644cc1bc47d6a39",
       "scope": "Complete original root license retained; runtime/media separate"
     },
-    "sourceSha256": "e3fcd85a6da3103be8c0525d99dfbdfb9a535a5129e2a83f86a6406284fa12eb",
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-style-528",
-    "sourceScope": "Selected fixed original source and root license; full read-only repo clone retained privately",
-    "kind": "原版风格组件族（仅来源）",
-    "buildStatus": "Fixed source inspected; not built or visually accepted"
+    "difference": "同一引擎的预设/配色仅一族；源码级新来源，尚非已验收预览。",
+    "title": "SiriWave · 荧光数学波形",
+    "description": "原iOS9多层荧光曲线，振幅/速度与暂停重启驱动原绘制算法；纯数学演示，不读取麦克风或模拟真实语音识别。",
+    "behavior": "原iOS9多层荧光曲线，振幅/速度与暂停重启驱动原绘制算法；纯数学演示，不读取麦克风或模拟真实语音识别。",
+    "kind": "原版Canvas动态场景",
+    "format": "完整交互场景",
+    "category": "Agent与对话",
+    "license": "MIT",
+    "batch": "siriwave-01",
+    "preview": "batches/siriwave-01/voice-wave/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime mechanisms and lifecycle tests passed; browser visual QA not run",
+    "gaps": [
+      "本地数学/装饰演示，非真实音频或Agent数据",
+      "Canvas命令桩非像素/性能验收",
+      "私有Canvas，DPR1，无麦克风或网络权限",
+      "新增暂停/重启与参数控件为隔离宿主，不冒充原完整文档站；字体、图片、麦克风、真实数据均未加载。",
+      "原算法继续绘制，后台/零尺寸/减动无持续RAF；Canvas命令测试不等于原生像素、帧率或高DPR验收。"
+    ]
   },
   {
     "id": "bubbly:ambient-bubble-surface",
-    "title": "轻盈气泡氛围表面",
     "source": "bubbly-bg",
     "repository": "https://github.com/tipsy/bubbly-bg",
     "revision": "8783742f0940f76e374240526b90a7ea5296f521",
-    "sourcePath": "src/bubbly-bg.js",
     "upstream": "https://github.com/tipsy/bubbly-bg/blob/8783742f0940f76e374240526b90a7ea5296f521/src/bubbly-bg.js",
-    "website": "https://tipsy.github.io/bubbly-bg/",
-    "license": "Apache-2.0 (root text verified; runtime/assets not closed)",
-    "behavior": "纯Canvas圆泡缓慢漂移与叠色，适合温和的Agent待机氛围。",
-    "difference": "同一引擎的预设/配色仅一族；源码级新来源，尚非已验收预览。",
-    "description": "纯Canvas圆泡缓慢漂移与叠色，适合温和的Agent待机氛围。",
-    "gaps": [
-      "默认向body注入fixed画布，必须传入组件自己的canvas，不改变整站背景或遮挡按钮。",
-      "源码父节点移除时停止继续绘制，但cancelAnimationFrame收到函数而非request ID；无独立明确dispose API，需验证/修复清理并标修改。",
-      "animate=false仍绘制单帧，可用于reduced-motion；尺寸/DPR/resize、空context、随机种子及离屏暂停未验。",
-      "Apache-2.0完整许可保留；若修改需标注修改与保留适用NOTICE。本次仅源码效果，无实时Agent逻辑。",
-      "固定源码及完整根许可已存证；未构建、未运行、未截图，completedPreviewCount=0。"
-    ],
-    "category": "视觉与动效",
+    "sourcePath": "src/bubbly-bg.js",
     "licenseEvidence": {
       "url": "https://github.com/tipsy/bubbly-bg/blob/8783742f0940f76e374240526b90a7ea5296f521/LICENSE",
       "sha256": "2f097968fc7aac645e2a07dc85c46a31bde4496fc5d9139736c976d983d718bf",
       "scope": "Complete original root license retained; runtime/media separate"
     },
-    "sourceSha256": "87ebe3022a9c22a425c158d9ac406b3efec7f50434dfa96aa26d1c5637cc7ef0",
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-style-528",
-    "sourceScope": "Selected fixed original source and root license; full read-only repo clone retained privately",
-    "kind": "原版风格组件族（仅来源）",
-    "buildStatus": "Fixed source inspected; not built or visually accepted"
+    "difference": "同一引擎的预设/配色仅一族；源码级新来源，尚非已验收预览。",
+    "title": "Bubbly · 漂浮气泡表面",
+    "description": "原圆泡运动、叠色和边界回绕，暂停保留粒子，重启重新生成；本地Canvas装饰场景，无网络或音频。",
+    "behavior": "原圆泡运动、叠色和边界回绕，暂停保留粒子，重启重新生成；本地Canvas装饰场景，无网络或音频。",
+    "kind": "原版Canvas动态场景",
+    "format": "完整交互场景",
+    "category": "视觉与动效",
+    "license": "Apache-2.0",
+    "batch": "bubbly-01",
+    "preview": "batches/bubbly-01/bubble-surface/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime mechanisms and lifecycle tests passed; browser visual QA not run",
+    "gaps": [
+      "本地数学/装饰演示，非真实音频或Agent数据",
+      "Canvas命令桩非像素/性能验收",
+      "私有Canvas，DPR1，无麦克风或网络权限",
+      "新增暂停/重启与参数控件为隔离宿主，不冒充原完整文档站；字体、图片、麦克风、真实数据均未加载。",
+      "原算法继续绘制，后台/零尺寸/减动无持续RAF；Canvas命令测试不等于原生像素、帧率或高DPR验收。"
+    ]
   },
   {
     "id": "systemcss:monochrome-control-language",
@@ -17275,40 +17221,34 @@
   },
   {
     "id": "tuftecss:margin-note-essay",
-    "title": "旁注式精细长文排版",
     "source": "tufte-css",
     "repository": "https://github.com/edwardtufte/tufte-css",
     "revision": "b5d7b7bbe5ce9c4c50fcfad4f19ee3646cfd7ae1",
-    "sourcePath": "index.html",
     "upstream": "https://github.com/edwardtufte/tufte-css/blob/b5d7b7bbe5ce9c4c50fcfad4f19ee3646cfd7ae1/index.html",
-    "website": "https://edwardtufte.github.io/tufte-css/",
-    "license": "MIT (root text verified; runtime/assets not closed)",
-    "behavior": "完整文章把边注、脚注、图表与正文紧密连接，适合Exodus长回复与研究说明。",
-    "difference": "完整固定示例场景，非单独引擎；同一来源控件/配色/预设不拆数。",
-    "description": "完整文章把边注、脚注、图表与正文紧密连接，适合Exodus长回复与研究说明。",
-    "gaps": [
-      "完整示例文章而非只有CSS引擎；适配保留旁注、窄屏切换及图文关系，不按段落/字体拆计数。",
-      "依赖tufte.css和ET Book字体文件；根MIT之外字体与文中图像/历史插图来源权利未逐项闭合，发布前需保留正确声明或披露替换。",
-      "窄屏边注由label/checkbox切换，需ID唯一、键盘/屏幕阅读器验证；不等于真实来源检索或动态引用管理。",
-      "固定源码及完整根许可已存证；未构建、未运行、未截图，completedPreviewCount=0。"
-    ],
-    "category": "展示与媒体",
+    "sourcePath": "index.html",
     "licenseEvidence": {
       "url": "https://github.com/edwardtufte/tufte-css/blob/b5d7b7bbe5ce9c4c50fcfad4f19ee3646cfd7ae1/LICENSE",
       "sha256": "d294f2ac36f471639ce17b077558bf24ded8790a27834ac4c8ec376e93c5e27b",
       "scope": "Complete original root license retained; runtime/media separate"
     },
-    "sourceSha256": "5096d0c54d572f157c25643a7bc8ab4bbe7ce1479184d11348b221f3fa3f1764",
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-style-529",
-    "sourceScope": "Selected fixed original source and root license; full read-only repo clone retained privately",
-    "kind": "原版风格组件族（仅来源）",
-    "buildStatus": "Fixed source inspected; not built or visually accepted",
-    "adaptationPriority": "preferred"
+    "difference": "完整固定示例场景，非单独引擎；同一来源控件/配色/预设不拆数。",
+    "title": "Tufte · 旁注式研究长文",
+    "description": "原Tufte文章、题记、旁注与全宽图机制，配原创中文研究示例；窄屏边注可展开，保持阅读上下文。",
+    "behavior": "原Tufte文章、题记、旁注与全宽图机制，配原创中文研究示例；窄屏边注可展开，保持阅读上下文。",
+    "kind": "旁注排版场景",
+    "format": "完整交互场景",
+    "category": "展示与媒体",
+    "license": "MIT",
+    "batch": "tufte-01",
+    "preview": "batches/tufte-01/article/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Offline text assembly, original Git blob/CSS retention and repeated DOM/failure/exit tests passed; visual QA not run",
+    "gaps": [
+      "浏览器视觉未验，窄屏边注几何/中文字体/折行/SVG像素与读屏行为未验。",
+      "ET Book二进制字体明确替换为系统Palatino/Georgia栈；正文与图表均为原创fixture，非真实研究。",
+      "保留原CSS机制而非完整原文或媒体复刻；本轮无外部引用检索/动态数据。"
+    ]
   },
   {
     "id": "chartxkcd:handdrawn-data-story",
