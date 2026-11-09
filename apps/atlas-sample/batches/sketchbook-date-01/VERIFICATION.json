@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "results": [
+    "normal passed",
+    "early passed",
+    "early-module-error passed",
+    "late-resize-error passed",
+    "render-error passed",
+    "observe-error passed",
+    "missing-host-error passed"
+  ],
+  "clock": {
+    "hour": 12,
+    "minute": 0,
+    "timeZone": "system"
+  },
+  "scope": "Actual baseline535 composePreview, real original DOM controls; deterministic test-only local Feb15 2028 clock. Leapday/year crossing, selected value/clear/today, Escape+focus, outside click, repeated open, hidden reset, early/dispose, stale ResizeObserver, early module bootstrap, constructor/render, partial observe initialization and callback failure. Global listener ledger empty.",
+  "gaps": [
+    "No roving Arrow calendar navigation in original. Native Enter/Space activation and physical tab order not browser-verified; JS DOM click not mislabeled native keyboard.",
+    "Original inline × is not keyboard focusable; popover Clear button is available.",
+    "ResizeObserver test fixture not actual layout or filter pixels."
+  ]
+}
