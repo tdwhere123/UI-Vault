@@ -1,0 +1,20 @@
+{
+  "pass": true,
+  "checks": [
+    "Selected 100 only, 24 per page",
+    "All five pages: 100 original SVG UTF8 image src decoded byte-identical to raw originals and readonly text; SVG image context isolates IDs",
+    "Explicit curated category filtering",
+    "Name search and repeated page/reset",
+    "Hostile query text does not create image resources; reset works",
+    "Zero external resource/network/storage/eval/Worker attempts; exit listeners/timers zero"
+  ],
+  "inspectedOriginalSVGs": 100,
+  "allowedOriginalDataSVGAssignments": 2850,
+  "errors": [],
+  "blocked": [],
+  "externalResources": [],
+  "remainingGlobalListeners": 0,
+  "remainingTimers": 0,
+  "visualVerified": false,
+  "limitation": "Original SVG image data URI decode and XML source validation only; gradients/filters/pixels not rendered or visually verified."
+}
