@@ -1,0 +1,1289 @@
+{
+  "repository": "https://github.com/mantinedev/ui.mantine.dev",
+  "revision": "963b955c5cef4bcc6008d40a0431e46ef771c254",
+  "upstreamLicense": "MIT",
+  "distributionLicense": "MIT; 0BSD",
+  "upstream": [
+    {
+      "path": "upstream/HeaderMegaMenu.module.css",
+      "sha256": "ef8cd60afc4f40703e59b622636f2f598795a2e652c5c7bfcadf87545bffb37a",
+      "text": ".header {\n  height: 60px;\n  padding-left: var(--mantine-spacing-md);\n  padding-right: var(--mantine-spacing-md);\n  border-bottom: 1px solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));\n}\n\n.link {\n  display: flex;\n  align-items: center;\n  height: 100%;\n  padding-left: var(--mantine-spacing-md);\n  padding-right: var(--mantine-spacing-md);\n  text-decoration: none;\n  color: light-dark(var(--mantine-color-black), var(--mantine-color-white));\n  font-weight: 500;\n  font-size: var(--mantine-font-size-sm);\n\n  @media (max-width: $mantine-breakpoint-sm) {\n    height: 42px;\n    width: 100%;\n  }\n\n  @mixin hover {\n    background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-6));\n  }\n}\n\n.subLink {\n  width: 100%;\n  padding: var(--mantine-spacing-xs) var(--mantine-spacing-md);\n  border-radius: var(--mantine-radius-md);\n\n  @mixin hover {\n    background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-7));\n  }\n}\n\n.dropdownFooter {\n  background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-7));\n  margin: calc(var(--mantine-spacing-md) * -1);\n  margin-top: var(--mantine-spacing-sm);\n  padding: var(--mantine-spacing-md) calc(var(--mantine-spacing-md) * 2);\n  padding-bottom: var(--mantine-spacing-xl);\n  border-top: 1px solid light-dark(var(--mantine-color-gray-1), var(--mantine-color-dark-5));\n}\n"
+    },
+    {
+      "path": "upstream/HeaderMegaMenu.story.tsx",
+      "sha256": "8d03603c839d513bc2ef11dcc4ddee015142ff4141391fb7187446c091305175",
+      "text": "import { StoryWrapper } from '../../components/StoryWrapper/StoryWrapper';\nimport attributes from './attributes.json';\nimport { HeaderMegaMenu } from './HeaderMegaMenu';\n\nexport default { title: 'HeaderMegaMenu' };\n\nexport function Usage() {\n  return <StoryWrapper attributes={attributes} component={HeaderMegaMenu} />;\n}\n"
+    },
+    {
+      "path": "upstream/HeaderMegaMenu.test.tsx",
+      "sha256": "f74005fbb2c2cfef630579021763f1c3788acb1861c1bcb9fe130dbde010aa98",
+      "text": "import { axe, render } from '@/test-utils';\nimport attributes from './attributes.json';\nimport { HeaderMegaMenu } from './HeaderMegaMenu';\n\ndescribe('HeaderMegaMenu', () => {\n  axe([<HeaderMegaMenu key=\"1\" {...(attributes as any)} />]);\n\n  it('renders correctly', () => {\n    render(<HeaderMegaMenu {...(attributes as any)} />);\n  });\n});\n"
+    },
+    {
+      "path": "upstream/HeaderMegaMenu.tsx",
+      "sha256": "532e5a637f847d47c1cbef020330558b6f82f9c9ed45e956ed6677cda0aed00f",
+      "text": "import {\n  IconBook,\n  IconChartPie3,\n  IconChevronDown,\n  IconCode,\n  IconCoin,\n  IconFingerprint,\n  IconNotification,\n} from '@tabler/icons-react';\nimport {\n  Anchor,\n  Box,\n  Burger,\n  Button,\n  Center,\n  Collapse,\n  Divider,\n  Drawer,\n  Group,\n  HoverCard,\n  ScrollArea,\n  SimpleGrid,\n  Text,\n  ThemeIcon,\n  UnstyledButton,\n  useMantineTheme,\n} from '@mantine/core';\nimport { useDisclosure } from '@mantine/hooks';\nimport { MantineLogo } from '@mantinex/mantine-logo';\nimport classes from './HeaderMegaMenu.module.css';\n\nconst mockdata = [\n  {\n    icon: IconCode,\n    title: 'Open source',\n    description: 'This Pokémon’s cry is very loud and distracting',\n  },\n  {\n    icon: IconCoin,\n    title: 'Free for everyone',\n    description: 'The fluid of Smeargle’s tail secretions changes',\n  },\n  {\n    icon: IconBook,\n    title: 'Documentation',\n    description: 'Yanma is capable of seeing 360 degrees without',\n  },\n  {\n    icon: IconFingerprint,\n    title: 'Security',\n    description: 'The shell’s rounded shape and the grooves on its.',\n  },\n  {\n    icon: IconChartPie3,\n    title: 'Analytics',\n    description: 'This Pokémon uses its flying ability to quickly chase',\n  },\n  {\n    icon: IconNotification,\n    title: 'Notifications',\n    description: 'Combusken battles with the intensely hot flames it spews',\n  },\n];\n\nexport function HeaderMegaMenu() {\n  const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] = useDisclosure(false);\n  const [linksOpened, { toggle: toggleLinks }] = useDisclosure(false);\n  const theme = useMantineTheme();\n\n  const links = mockdata.map((item) => (\n    <UnstyledButton className={classes.subLink} key={item.title}>\n      <Group wrap=\"nowrap\" align=\"flex-start\">\n        <ThemeIcon size={34} variant=\"default\" radius=\"md\">\n          <item.icon size={22} color={theme.colors.blue[6]} />\n        </ThemeIcon>\n        <div>\n          <Text size=\"sm\" fw={500}>\n            {item.title}\n          </Text>\n          <Text size=\"xs\" c=\"dimmed\">\n            {item.description}\n          </Text>\n        </div>\n      </Group>\n    </UnstyledButton>\n  ));\n\n  return (\n    <Box pb={120}>\n      <header className={classes.header}>\n        <Group justify=\"space-between\" h=\"100%\">\n          <MantineLogo size={30} />\n\n          <Group h=\"100%\" gap={0} visibleFrom=\"sm\">\n            <a href=\"#\" className={classes.link}>\n              Home\n            </a>\n            <HoverCard width={600} position=\"bottom\" radius=\"md\" shadow=\"md\" withinPortal>\n              <HoverCard.Target>\n                <a href=\"#\" className={classes.link}>\n                  <Center inline>\n                    <Box component=\"span\" mr={5}>\n                      Features\n                    </Box>\n                    <IconChevronDown size={16} color={theme.colors.blue[6]} />\n                  </Center>\n                </a>\n              </HoverCard.Target>\n\n              <HoverCard.Dropdown style={{ overflow: 'hidden' }}>\n                <Group justify=\"space-between\" px=\"md\">\n                  <Text fw={500}>Features</Text>\n                  <Anchor href=\"#\" fz=\"xs\">\n                    View all\n                  </Anchor>\n                </Group>\n\n                <Divider my=\"sm\" />\n\n                <SimpleGrid cols={2} spacing={0}>\n                  {links}\n                </SimpleGrid>\n\n                <div className={classes.dropdownFooter}>\n                  <Group justify=\"space-between\">\n                    <div>\n                      <Text fw={500} fz=\"sm\">\n                        Get started\n                      </Text>\n                      <Text size=\"xs\" c=\"dimmed\">\n                        Their food sources have decreased, and their numbers\n                      </Text>\n                    </div>\n                    <Button variant=\"default\">Get started</Button>\n                  </Group>\n                </div>\n              </HoverCard.Dropdown>\n            </HoverCard>\n            <a href=\"#\" className={classes.link}>\n              Learn\n            </a>\n            <a href=\"#\" className={classes.link}>\n              Academy\n            </a>\n          </Group>\n\n          <Group visibleFrom=\"sm\">\n            <Button variant=\"default\">Log in</Button>\n            <Button>Sign up</Button>\n          </Group>\n\n          <Burger\n            opened={drawerOpened}\n            onClick={toggleDrawer}\n            hiddenFrom=\"sm\"\n            aria-label=\"Toggle navigation\"\n          />\n        </Group>\n      </header>\n\n      <Drawer\n        opened={drawerOpened}\n        onClose={closeDrawer}\n        size=\"100%\"\n        padding=\"md\"\n        title=\"Navigation\"\n        hiddenFrom=\"sm\"\n        zIndex={1000000}\n      >\n        <ScrollArea h=\"calc(100vh - 80px\" mx=\"-md\">\n          <Divider my=\"sm\" />\n\n          <a href=\"#\" className={classes.link}>\n            Home\n          </a>\n          <UnstyledButton className={classes.link} onClick={toggleLinks}>\n            <Center inline>\n              <Box component=\"span\" mr={5}>\n                Features\n              </Box>\n              <IconChevronDown size={16} color={theme.colors.blue[6]} />\n            </Center>\n          </UnstyledButton>\n          <Collapse expanded={linksOpened}>{links}</Collapse>\n          <a href=\"#\" className={classes.link}>\n            Learn\n          </a>\n          <a href=\"#\" className={classes.link}>\n            Academy\n          </a>\n\n          <Divider my=\"sm\" />\n\n          <Group justify=\"center\" grow pb=\"xl\" px=\"md\">\n            <Button variant=\"default\">Log in</Button>\n            <Button>Sign up</Button>\n          </Group>\n        </ScrollArea>\n      </Drawer>\n    </Box>\n  );\n}\n"
+    },
+    {
+      "path": "upstream/LICENCE",
+      "sha256": "e184e978b1c031612c5486d2b9aee7d127f2f741f141bd9a957e90dc0fa90620",
+      "text": "MIT License\n\nCopyright (c) 2022 Vitaly Rtischev\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n"
+    },
+    {
+      "path": "upstream/attributes.json",
+      "sha256": "95ac01acc5b7f60548036d0648cec915491a0c2e7f25fe430a32182b2e5b76f4",
+      "text": "{\n  \"title\": \"Header with mega menu\",\n  \"category\": \"headers\",\n  \"responsive\": true,\n  \"changelog\": \"september-2022\",\n  \"canvas\": {\n    \"center\": false\n  }\n}\n"
+    }
+  ],
+  "adaptation": [
+    {
+      "path": "src/HeaderMegaMenu.module.css",
+      "sha256": "ef8cd60afc4f40703e59b622636f2f598795a2e652c5c7bfcadf87545bffb37a",
+      "text": ".header {\n  height: 60px;\n  padding-left: var(--mantine-spacing-md);\n  padding-right: var(--mantine-spacing-md);\n  border-bottom: 1px solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));\n}\n\n.link {\n  display: flex;\n  align-items: center;\n  height: 100%;\n  padding-left: var(--mantine-spacing-md);\n  padding-right: var(--mantine-spacing-md);\n  text-decoration: none;\n  color: light-dark(var(--mantine-color-black), var(--mantine-color-white));\n  font-weight: 500;\n  font-size: var(--mantine-font-size-sm);\n\n  @media (max-width: $mantine-breakpoint-sm) {\n    height: 42px;\n    width: 100%;\n  }\n\n  @mixin hover {\n    background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-6));\n  }\n}\n\n.subLink {\n  width: 100%;\n  padding: var(--mantine-spacing-xs) var(--mantine-spacing-md);\n  border-radius: var(--mantine-radius-md);\n\n  @mixin hover {\n    background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-7));\n  }\n}\n\n.dropdownFooter {\n  background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-7));\n  margin: calc(var(--mantine-spacing-md) * -1);\n  margin-top: var(--mantine-spacing-sm);\n  padding: var(--mantine-spacing-md) calc(var(--mantine-spacing-md) * 2);\n  padding-bottom: var(--mantine-spacing-xl);\n  border-top: 1px solid light-dark(var(--mantine-color-gray-1), var(--mantine-color-dark-5));\n}\n"
+    },
+    {
+      "path": "src/HeaderMegaMenu.tsx",
+      "sha256": "67685d27bd137a7df6b8c5f1963039844146d61ff33207de24b518e92873a1da",
+      "text": "import {\n  IconBook,\n  IconChartPie3,\n  IconChevronDown,\n  IconCode,\n  IconCoin,\n  IconFingerprint,\n  IconNotification,\n} from '@tabler/icons-react';\nimport {\n  Anchor,\n  Box,\n  Burger,\n  Button,\n  Center,\n  Collapse,\n  Divider,\n  Drawer,\n  Group,\n  HoverCard,\n  ScrollArea,\n  SimpleGrid,\n  Text,\n  ThemeIcon,\n  UnstyledButton,\n  useMantineTheme,\n} from '@mantine/core';\nimport { useDisclosure } from '@mantine/hooks';\nimport { MantineLogo } from '@mantinex/mantine-logo';\nimport classes from './HeaderMegaMenu.module.css';\n\nconst mockdata = [\n  {\n    icon: IconCode,\n    title: 'Open source',\n    description: 'This Pokémon’s cry is very loud and distracting',\n  },\n  {\n    icon: IconCoin,\n    title: 'Free for everyone',\n    description: 'The fluid of Smeargle’s tail secretions changes',\n  },\n  {\n    icon: IconBook,\n    title: 'Documentation',\n    description: 'Yanma is capable of seeing 360 degrees without',\n  },\n  {\n    icon: IconFingerprint,\n    title: 'Security',\n    description: 'The shell’s rounded shape and the grooves on its.',\n  },\n  {\n    icon: IconChartPie3,\n    title: 'Analytics',\n    description: 'This Pokémon uses its flying ability to quickly chase',\n  },\n  {\n    icon: IconNotification,\n    title: 'Notifications',\n    description: 'Combusken battles with the intensely hot flames it spews',\n  },\n];\n\nexport function HeaderMegaMenu() {\n  const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] = useDisclosure(false);\n  const [linksOpened, { toggle: toggleLinks }] = useDisclosure(false);\n  const theme = useMantineTheme();\n\n  const links = mockdata.map((item) => (\n    <UnstyledButton className={classes.subLink} key={item.title}>\n      <Group wrap=\"nowrap\" align=\"flex-start\">\n        <ThemeIcon size={34} variant=\"default\" radius=\"md\">\n          <item.icon size={22} color={theme.colors.blue[6]} />\n        </ThemeIcon>\n        <div>\n          <Text size=\"sm\" fw={500}>\n            {item.title}\n          </Text>\n          <Text size=\"xs\" c=\"dimmed\">\n            {item.description}\n          </Text>\n        </div>\n      </Group>\n    </UnstyledButton>\n  ));\n\n  return (\n    <Box pb={120} onClick={(e) => { if ((e.target as HTMLElement).closest('a[href=\"#\"]')) e.preventDefault(); }}>\n      <header className={classes.header}>\n        <Group justify=\"space-between\" h=\"100%\">\n          <MantineLogo size={30} />\n\n          <Group h=\"100%\" gap={0} visibleFrom=\"sm\">\n            <a href=\"#\" className={classes.link}>\n              Home\n            </a>\n            <HoverCard width={600} position=\"bottom\" radius=\"md\" shadow=\"md\" withinPortal>\n              <HoverCard.Target>\n                <a href=\"#\" className={classes.link}>\n                  <Center inline>\n                    <Box component=\"span\" mr={5}>\n                      Features\n                    </Box>\n                    <IconChevronDown size={16} color={theme.colors.blue[6]} />\n                  </Center>\n                </a>\n              </HoverCard.Target>\n\n              <HoverCard.Dropdown style={{ overflow: 'hidden' }}>\n                <Group justify=\"space-between\" px=\"md\">\n                  <Text fw={500}>Features</Text>\n                  <Anchor href=\"#\" fz=\"xs\">\n                    View all\n                  </Anchor>\n                </Group>\n\n                <Divider my=\"sm\" />\n\n                <SimpleGrid cols={2} spacing={0}>\n                  {links}\n                </SimpleGrid>\n\n                <div className={classes.dropdownFooter}>\n                  <Group justify=\"space-between\">\n                    <div>\n                      <Text fw={500} fz=\"sm\">\n                        Get started\n                      </Text>\n                      <Text size=\"xs\" c=\"dimmed\">\n                        Their food sources have decreased, and their numbers\n                      </Text>\n                    </div>\n                    <Button variant=\"default\" disabled>Get started</Button>\n                  </Group>\n                </div>\n              </HoverCard.Dropdown>\n            </HoverCard>\n            <a href=\"#\" className={classes.link}>\n              Learn\n            </a>\n            <a href=\"#\" className={classes.link}>\n              Academy\n            </a>\n          </Group>\n\n          <Group visibleFrom=\"sm\">\n            <Button variant=\"default\" disabled>Log in</Button>\n            <Button disabled>Sign up</Button>\n          </Group>\n\n          <Burger\n            opened={drawerOpened}\n            onClick={toggleDrawer}\n            hiddenFrom=\"sm\"\n            aria-label=\"Toggle navigation\"\n          />\n        </Group>\n      </header>\n\n      <Drawer\n        opened={drawerOpened}\n        onClose={closeDrawer}\n        size=\"100%\"\n        padding=\"md\"\n        title=\"Navigation\"\n        hiddenFrom=\"sm\"\n        zIndex={1000000}\n      >\n        <ScrollArea h=\"calc(100vh - 80px)\" mx=\"-md\">\n          <Divider my=\"sm\" />\n\n          <a href=\"#\" className={classes.link}>\n            Home\n          </a>\n          <UnstyledButton className={classes.link} onClick={toggleLinks}>\n            <Center inline>\n              <Box component=\"span\" mr={5}>\n                Features\n              </Box>\n              <IconChevronDown size={16} color={theme.colors.blue[6]} />\n            </Center>\n          </UnstyledButton>\n          <Collapse expanded={linksOpened}>{links}</Collapse>\n          <a href=\"#\" className={classes.link}>\n            Learn\n          </a>\n          <a href=\"#\" className={classes.link}>\n            Academy\n          </a>\n\n          <Divider my=\"sm\" />\n\n          <Group justify=\"center\" grow pb=\"xl\" px=\"md\">\n            <Button variant=\"default\" disabled>Log in</Button>\n            <Button disabled>Sign up</Button>\n          </Group>\n        </ScrollArea>\n      </Drawer>\n    </Box>\n  );\n}\n"
+    },
+    {
+      "path": "src/main.tsx",
+      "sha256": "55106bc4d4f24a85f20749cb6286b3e0daa5b2442ce6c17567984fa5ceb470ba",
+      "text": "import React,{Component}from'react';import{createRoot}from'react-dom/client';import{flushSync}from'react-dom';import{MantineProvider}from'@mantine/core';import{HeaderMegaMenu}from'./HeaderMegaMenu';\ndeclare const registerCleanup:(fn:()=>void)=>void;declare const fatal:(e:unknown)=>void;declare const pauseTasks:()=>void;declare const resumeTasks:()=>void;\nclass Boundary extends Component<React.PropsWithChildren,{failed:boolean}>{state={failed:false};static getDerivedStateFromError(){return{failed:true}}componentDidCatch(e:unknown){fatal(e)}render(){return this.state.failed?null:this.props.children}}\nlet root:ReturnType<typeof createRoot>|undefined;let disposed=false;const scheme={get:()=> 'light' as const,set:()=>{},subscribe:()=>{},unsubscribe:()=>{},clear:()=>{}};\nfunction visible(){if(disposed)return;try{if(!document.hidden)resumeTasks();flushSync(()=>root?.render(document.hidden?null:<Boundary><MantineProvider forceColorScheme=\"light\" colorSchemeManager={scheme} theme={{fontFamily:'system-ui, sans-serif'}}><section className=\"shell\"><p className=\"notice\">原导航交互演示：悬停 Features，窄屏展开菜单。链接是原占位，不跳转页面；不提供登录或注册。</p><HeaderMegaMenu/></section></MantineProvider></Boundary>));document.documentElement.toggleAttribute('data-hidden',document.hidden);if(document.hidden)pauseTasks()}catch(e){fatal(e)}}\nregisterCleanup(()=>{if(disposed)return;disposed=true;document.removeEventListener('visibilitychange',visible);queueMicrotask(()=>{try{root?.unmount()}catch{}root=undefined})});\ntry{root=createRoot(document.getElementById('root')!,{onUncaughtError:fatal,onCaughtError:fatal});document.addEventListener('visibilitychange',visible);visible()}catch(e){fatal(e)}\n"
+    },
+    {
+      "path": "bootstrap.js",
+      "sha256": "ce61b244a014851815e670da55664d7d0588157724d54774257c5378effb32df",
+      "text": "(function(){\nlet stopped=false,failed=false,teardown=()=>{},own=[];const timers=new Map(),frames=new Map(),intervals=new Map();let serial=1,paused=document.hidden;\nconst proto=EventTarget.prototype,add=proto.addEventListener,remove=proto.removeEventListener;\nconst set=window.setTimeout.bind(window),clear=window.clearTimeout.bind(window),raf=window.requestAnimationFrame.bind(window),caf=window.cancelAnimationFrame.bind(window);\nconst mediaRestore=new Set(),observers=new Set(),originalObservers={};const originalMatchMedia=window.matchMedia;\nconst nativeInterval=window.setInterval,nativeClearInterval=window.clearInterval;\nconst basePointer=document.body.style.pointerEvents,baseOverflow=document.body.style.overflow;\nfunction registerCleanup(fn){teardown=fn}\nfunction trackedAdd(type,fn,options){if(!fn)return add.call(this,type,fn,options);const capture=typeof options==='boolean'?options:!!options?.capture;if(!own.some(x=>x.target===this&&x.type===type&&x.fn===fn&&x.capture===capture))own.push({target:this,type,fn,options,capture});return add.call(this,type,fn,options)}\nfunction trackedRemove(type,fn,options){const capture=typeof options==='boolean'?options:!!options?.capture;own=own.filter(x=>!(x.target===this&&x.type===type&&x.fn===fn&&x.capture===capture));return remove.call(this,type,fn,options)}\nfunction cancelTasks(){intervals.clear();for(const task of timers.values())clear(task.handle);timers.clear();for(const task of frames.values())caf(task.handle);frames.clear()}\nfunction release(){cancelTasks();for(const restore of mediaRestore)restore();mediaRestore.clear();window.matchMedia=originalMatchMedia;for(const observer of observers)observer.disconnect();for(const name in originalObservers)window[name]=originalObservers[name];for(const x of own.splice(0))remove.call(x.target,x.type,x.fn,x.options);proto.addEventListener=add;proto.removeEventListener=remove;window.setInterval=nativeInterval;window.clearInterval=nativeClearInterval;window.setTimeout=set;window.clearTimeout=clear;window.requestAnimationFrame=raf;window.cancelAnimationFrame=caf;document.body.style.pointerEvents=basePointer;document.body.style.overflow=baseOverflow;document.querySelectorAll('[data-radix-focus-guard]').forEach(n=>n.remove());}\nfunction exit(){if(stopped)return;stopped=true;try{teardown()}catch{}queueMicrotask(release)}\nfunction fatal(error){if(failed)return;failed=true;exit();queueMicrotask(()=>{try{const p=document.createElement('p');p.setAttribute('role','alert');p.textContent='预览已停止，请关闭后重新打开。';document.body.append(p)}catch{}})}\ntry{\nfor(const name of ['ResizeObserver','IntersectionObserver','MutationObserver']){const Original=window[name];if(!Original)continue;originalObservers[name]=Original;window[name]=class extends Original{constructor(...args){super(...args);observers.add(this)}disconnect(){super.disconnect();observers.delete(this)}}}\nwindow.matchMedia=function(...args){const m=originalMatchMedia.apply(window,args);if(m.addListener&&m.removeListener){const a=m.addListener,r=m.removeListener,callbacks=new Set();const restore=()=>{for(const fn of callbacks)r.call(m,fn);m.addListener=a;m.removeListener=r};m.addListener=function(fn){callbacks.add(fn);mediaRestore.add(restore);return a.call(m,fn)};m.removeListener=function(fn){callbacks.delete(fn);if(!callbacks.size)mediaRestore.delete(restore);return r.call(m,fn)}}return m};\nproto.addEventListener=trackedAdd;proto.removeEventListener=trackedRemove;\nfunction scheduleTimer(id,task){task.started=performance.now();task.handle=set(()=>{timers.delete(id);if(stopped)return;try{task.fn(...task.args)}catch(e){fatal(e)}},task.remaining)}\nfunction scheduleFrame(id,task){task.handle=raf(time=>{frames.delete(id);if(stopped)return;try{task.fn(time)}catch(e){fatal(e)}})}\nwindow.setTimeout=(fn,ms=0,...args)=>{if(stopped)return 0;const id=serial++,task={fn,args,remaining:ms,handle:0,started:0};timers.set(id,task);if(!paused)scheduleTimer(id,task);return id};window.clearTimeout=id=>{const task=timers.get(id);if(task)clear(task.handle);timers.delete(id)};\nwindow.requestAnimationFrame=fn=>{if(stopped)return 0;const id=serial++,task={fn,handle:0};frames.set(id,task);if(!paused)scheduleFrame(id,task);return id};window.cancelAnimationFrame=id=>{const task=frames.get(id);if(task)caf(task.handle);frames.delete(id)};\nfunction pauseTasks(){if(paused)return;paused=true;for(const task of timers.values()){clear(task.handle);task.remaining=Math.max(0,task.remaining-(performance.now()-task.started))}for(const task of frames.values())caf(task.handle)}\nfunction resumeTasks(){if(!paused||stopped)return;paused=false;for(const [id,task] of timers)scheduleTimer(id,task);for(const [id,task] of frames)scheduleFrame(id,task)}\nwindow.setInterval=(fn,ms=0,...args)=>{if(stopped)return 0;const id=serial++;const tick=()=>{if(!intervals.has(id)||stopped)return;try{fn(...args)}catch(e){fatal(e);return}if(intervals.has(id))intervals.set(id,window.setTimeout(tick,ms))};intervals.set(id,window.setTimeout(tick,ms));return id};window.clearInterval=id=>{const handle=intervals.get(id);if(handle!==undefined)window.clearTimeout(handle);intervals.delete(id)};\nwindow.addEventListener('pagehide',exit);window.addEventListener('atlas:dispose',exit);window.addEventListener('error',e=>{e.preventDefault();fatal(e.error)});window.addEventListener('unhandledrejection',e=>{e.preventDefault();fatal(e.reason)});\nconst retiredNodeObserver=new MutationObserver(()=>{if(stopped)return;const retired=own.filter(x=>x.target instanceof Node&&!x.target.isConnected);for(const x of retired)remove.call(x.target,x.type,x.fn,x.options);own=own.filter(x=>!retired.includes(x))});retiredNodeObserver.observe(document.body,{childList:true,subtree:true});\n/* MODULE_START */\n"
+    },
+    {
+      "path": "build.mjs",
+      "sha256": "599c00731c5bf2a0939d859007b6fd1f3ddf02a24bed93fb16fa09c1898cbce9",
+      "text": "import fs from'node:fs';import path from'node:path';import esbuild from'../../ui-smooth-chat-adapt/node_modules/esbuild/lib/main.js';import postcss from'postcss';import preset from'postcss-preset-mantine';import vars from'postcss-simple-vars';import modules from'postcss-modules';\nconst b=new URL('.',import.meta.url).pathname;const css=[];const mapping={};const result=await esbuild.build({entryPoints:[b+'src/main.tsx'],outfile:b+'delivery/runtime.js',bundle:true,format:'iife',jsx:'automatic',minify:true,target:'es2020',define:{'process.env.NODE_ENV':'\"production\"'},banner:{js:fs.readFileSync(b+'bootstrap.js','utf8')},footer:{js:'}catch(e){fatal(e)}})();'},metafile:true,legalComments:'eof',plugins:[{name:'compiled-mantine-css-modules',setup(build){build.onLoad({filter:/\\.module\\.css$/},async(args)=>{let tokens;const processed=await postcss([vars({variables:{'mantine-breakpoint-xs':'36em','mantine-breakpoint-sm':'48em','mantine-breakpoint-md':'62em','mantine-breakpoint-lg':'75em','mantine-breakpoint-xl':'88em'}}),preset(),modules({generateScopedName:'header_[name]_[local]',getJSON(_,json){tokens=json}})]).process(fs.readFileSync(args.path,'utf8'),{from:args.path});css.push({path:args.path,css:processed.css});mapping[args.path]=tokens;return {contents:'export default '+JSON.stringify(tokens),loader:'js'}})}}]});\nfs.writeFileSync(b+'delivery/runtime.css',fs.readFileSync(b+'node_modules/@mantine/core/styles.css','utf8')+'\\n'+fs.readFileSync(b+'node_modules/@mantinex/mantine-logo/styles.css','utf8')+'\\n'+css.sort((a,c)=>a.path.localeCompare(c.path)).map(x=>x.css).join('\\n')+'\\n'+fs.readFileSync(b+'styles.css','utf8'));fs.writeFileSync(b+'metafile.json',JSON.stringify(result.metafile,null,2));fs.writeFileSync(b+'css-build.json',JSON.stringify({modules:mapping,breakpoints:{sm:'48em'},core:'@mantine/core/styles.css',plugins:['postcss-simple-vars','postcss-preset-mantine','postcss-modules']},null,2));\n"
+    },
+    {
+      "path": "styles.css",
+      "sha256": "8377ea8a4d3c2022de3c9aef135463ad4d5487ebe9da55bc06bc1b489dd603ab",
+      "text": "body{margin:0;padding:24px;background:#f8f9fa}.shell{max-width:1050px;margin:auto}.notice,.local-receipt{font-size:12px;line-height:1.7;color:#495057}.notice{margin:0 0 20px}.local-receipt{margin-top:12px}html[data-hidden] *{animation:none!important;transition:none!important}@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}\n"
+    },
+    {
+      "path": "test.mjs",
+      "sha256": "f6fb71651e35b0299274f52032b2b29ada083467c45455dfe553e6cc1d6e750d",
+      "text": "import fs from'node:fs';import assert from'node:assert/strict';import{JSDOM,VirtualConsole}from'../../alaya-pr112/node_modules/.pnpm/jsdom@24.1.3_supports-color@7.2.0/node_modules/jsdom/lib/api.js';import{composePreview}from'../../ui-vault-547/apps/atlas-sample/preview-runtime.mjs';\nconst b=new URL('.',import.meta.url).pathname,read=n=>fs.readFileSync(b+'delivery/'+n,'utf8'),sleep=ms=>new Promise(r=>setTimeout(r,ms));const result={};\nasync function boot(mode){const observerActive=new Set(),legacyMedia=new Set();const ledger=[],tasks=new Set(),rafTasks=new Set(),errors=[];let hidden=false,externalHits=0,external;const vc=new VirtualConsole();vc.on('jsdomError',e=>{if(!e.message.includes('Could not parse CSS'))errors.push(e.message)});let js=read('runtime.js');if(mode==='early')js=js.replace('/* MODULE_START */','throw Error(\"early\");');const dom=new JSDOM(composePreview(read('index.html'),read('runtime.css'),js,{cssHref:'runtime.css',scriptSrc:'runtime.js'}),{runScripts:'dangerously',pretendToBeVisual:true,virtualConsole:vc,beforeParse(w){const matches=w.Element.prototype.matches;w.Element.prototype.matches=function(selector){if([':modal',':popover-open',':fullscreen'].includes(selector))return false;return matches.call(this,selector)};Object.defineProperty(w.document,'hidden',{get:()=>hidden});w.ResizeObserver=class{observe(){observerActive.add(this)}unobserve(){}disconnect(){observerActive.delete(this)}};const OriginalMO=w.MutationObserver;w.MutationObserver=class extends OriginalMO{observe(...args){observerActive.add(this);return super.observe(...args)}disconnect(){observerActive.delete(this);return super.disconnect()}};w.matchMedia=()=>{const m=new w.EventTarget();m.matches=mode==='reduced';m.media='';m.addListener=fn=>legacyMedia.add(fn);m.removeListener=fn=>legacyMedia.delete(fn);return m};w.PointerEvent=w.MouseEvent;const add=w.EventTarget.prototype.addEventListener,remove=w.EventTarget.prototype.removeEventListener;w.EventTarget.prototype.addEventListener=function(type,fn,opts){if(!ledger.some(x=>x.target===this&&x.type===type&&x.fn===fn))ledger.push({target:this,type,fn,opts,stack:new Error().stack});const result=add.call(this,type,fn,opts);if(mode==='partial'&&type==='pointermove')throw Error('partial React root listener init');return result};w.EventTarget.prototype.removeEventListener=function(type,fn,opts){const i=ledger.findIndex(x=>x.target===this&&x.type===type&&x.fn===fn);if(i>=0)ledger.splice(i,1);return remove.call(this,type,fn,opts)};const set=w.setTimeout.bind(w),clear=w.clearTimeout.bind(w),raf=w.requestAnimationFrame.bind(w),caf=w.cancelAnimationFrame.bind(w);w.setTimeout=(fn,ms,...args)=>{let id=set(()=>{tasks.delete(id);fn(...args)},ms);tasks.add(id);return id};w.clearTimeout=id=>{tasks.delete(id);clear(id)};w.requestAnimationFrame=fn=>{let id=raf(t=>{rafTasks.delete(id);fn(t)});rafTasks.add(id);return id};w.cancelAnimationFrame=id=>{rafTasks.delete(id);caf(id)};w.fetch=()=>{throw Error('network')};w.open=()=>{throw Error('popup')};w.eval=()=>{throw Error('eval')};if(mode==='external'){external=()=>externalHits++;w.document.addEventListener('selectionchange',external)};;}});await sleep(60);const w=dom.window,d=w.document,click=e=>{assert(e,'click target');e.dispatchEvent(new w.MouseEvent('click',{bubbles:true}))};const owned=()=>ledger.filter(x=>!x.stack.includes('nwsapi')&&!['load','DOMContentLoaded'].includes(x.type));return{dom,w,d,click,ledger,tasks,rafTasks,errors,owned,observerActive,legacyMedia,externalHits:()=>externalHits,external,hide:async v=>{hidden=v;d.dispatchEvent(new w.Event('visibilitychange'));await sleep(50)}}}\n\n\n\nlet t=await boot();const {d,w,click}=t;assert(d.querySelector('header'));const desktop=[...d.querySelectorAll('a')].find(x=>x.textContent.includes('Features'));desktop.dispatchEvent(new w.MouseEvent('mouseenter',{bubbles:false}));await sleep(300);assert([...d.querySelectorAll('button')].some(x=>x.textContent.includes('Open source')));result.hoverOpensOriginalSixLinks=true;desktop.dispatchEvent(new w.MouseEvent('mouseleave',{bubbles:false,relatedTarget:d.body}));await sleep(350);\nconst burger=d.querySelector('button[aria-label=\"Toggle navigation\"]');click(burger);await sleep(350);let dialog=d.querySelector('[role=dialog]');assert(dialog);const feature=[...dialog.querySelectorAll('button')].find(x=>x.textContent.trim()==='Features');click(feature);await sleep(250);assert(dialog.textContent.includes('Open source'));assert(dialog.textContent.includes('Notifications'));result.drawerAndCollapse=true;dialog.dispatchEvent(new w.KeyboardEvent('keydown',{key:'Escape',bubbles:true}));await sleep(350);assert(!d.querySelector('[role=dialog]'));result.escapeCloses=true;\nconst anchor=d.querySelector('a[href=\"#\"]'),event=new w.MouseEvent('click',{bubbles:true,cancelable:true});anchor.dispatchEvent(event);assert(event.defaultPrevented);assert([...d.querySelectorAll('button')].filter(x=>/Log in|Sign up/.test(x.textContent)).every(x=>x.disabled));result.noFakeRoutesOrAuth=true;\nclick(burger);await sleep(300);await t.hide(true);assert(!d.querySelector('[role=dialog]'));await t.hide(false);burger.click();await sleep(30);assert(!d.querySelector('[role=dialog]'));result.hiddenOldTriggerInert=true;const fresh=d.querySelector('button[aria-label=\"Toggle navigation\"]');click(fresh);await sleep(300);w.dispatchEvent(new w.Event('atlas:dispose'));await sleep(100);fresh.click();assert(!d.querySelector('[role=dialog]'));assert.equal(t.owned().length,0);assert.equal(t.observerActive.size,0);assert.equal(t.tasks.size+t.rafTasks.size,0);assert.equal(t.legacyMedia.size,0);assert.deepEqual(t.errors,[]);result.exitWhileDrawerOpen=true;t.dom.window.close();result.actual547Compose=true;result.browserVisualQA='not-run';result.sharedFramework='Contact frozen framework reused; per-component critical interactions and disposal only, not repeated 100-cycle/full failure matrix';console.log(JSON.stringify(result,null,2));\n"
+    },
+    {
+      "path": "package.json",
+      "sha256": "41b91381dc331c560c20bc15ec0b5f8b3e23bb27c8974d206a023524d8d66707",
+      "text": "{\n  \"private\": true,\n  \"type\": \"module\",\n  \"dependencies\": {\n    \"react\": \"19.3.1\",\n    \"react-dom\": \"19.3.1\",\n    \"@mantine/core\": \"9.7.3\",\n    \"@mantine/hooks\": \"9.7.3\",\n    \"@tabler/icons-react\": \"3.36.1\",\n    \"@mantinex/mantine-logo\": \"2.0.0\"\n  },\n  \"devDependencies\": {\n    \"postcss\": \"8.5.6\",\n    \"postcss-preset-mantine\": \"1.18.0\",\n    \"postcss-simple-vars\": \"7.0.1\",\n    \"postcss-modules\": \"6.0.1\"\n  }\n}"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "e8109bb8ce1f858de1671eb7db7ac46b86f86a9b1579f17687b225532a07b103",
+      "text": "{\n  \"name\": \"header\",\n  \"lockfileVersion\": 3,\n  \"requires\": true,\n  \"packages\": {\n    \"\": {\n      \"dependencies\": {\n        \"@mantine/core\": \"9.7.3\",\n        \"@mantine/hooks\": \"9.7.3\",\n        \"@mantinex/mantine-logo\": \"2.0.0\",\n        \"@tabler/icons-react\": \"3.36.1\",\n        \"react\": \"19.3.1\",\n        \"react-dom\": \"19.3.1\"\n      },\n      \"devDependencies\": {\n        \"postcss\": \"8.5.6\",\n        \"postcss-modules\": \"6.0.1\",\n        \"postcss-preset-mantine\": \"1.18.0\",\n        \"postcss-simple-vars\": \"7.0.1\"\n      }\n    },\n    \"node_modules/@floating-ui/core\": {\n      \"version\": \"1.8.0\",\n      \"resolved\": \"https://registry.npmjs.org/@floating-ui/core/-/core-1.8.0.tgz\",\n      \"integrity\": \"sha512-0CIZ5itps/8x7BG8dEIhs53BvCUH2PCoogtakwRTut+Arm58sJooJ0AuZhLw2HJYIR5cMLNPBSS728sPho2khQ==\",\n      \"license\": \"MIT\",\n      \"dependencies\": {\n        \"@floating-ui/utils\": \"^0.2.12\"\n      }\n    },\n    \"node_modules/@floating-ui/dom\": {\n      \"version\": \"1.8.0\",\n      \"resolved\": \"https://registry.npmjs.org/@floating-ui/dom/-/dom-1.8.0.tgz\",\n      \"integrity\": \"sha512-yXSrzeHZBTZadLOlfyhCkJHNeLJnHRnRInwdZ40L7ZiaAtrBwoYlsDrX3v5zB1Utk7CLfzcOVnVVWoXEky7Ceg==\",\n      \"license\": \"MIT\",\n      \"dependencies\": {\n        \"@floating-ui/core\": \"^1.8.0\",\n        \"@floating-ui/utils\": \"^0.2.12\"\n      }\n    },\n    \"node_modules/@floating-ui/react\": {\n      \"version\": \"0.27.20\",\n      \"resolved\": \"https://registry.npmjs.org/@floating-ui/react/-/react-0.27.20.tgz\",\n      \"integrity\": \"sha512-CMqMy7OaXl9W0eq1Uy7L7i2Y/anPvHmFmESd2CEw0t5YvZhcVCeo4MBevAmswRllX7Y2dEidA4ozGPunLSTQpw==\",\n      \"license\": \"MIT\",\n      \"dependencies\": {\n        \"@floating-ui/react-dom\": \"^2.1.9\",\n        \"@floating-ui/utils\": \"^0.2.12\",\n        \"tabbable\": \"^6.0.0\"\n      },\n      \"peerDependencies\": {\n        \"react\": \">=17.0.0\",\n        \"react-dom\": \">=17.0.0\"\n      }\n    },\n    \"node_modules/@floating-ui/react-dom\": {\n      \"version\": \"2.1.9\",\n      \"resolved\": \"https://registry.npmjs.org/@floating-ui/react-dom/-/react-dom-2.1.9.tgz\",\n      \"integrity\": \"sha512-JDjEFGCpImxDCA7JJKviA0M9+RtmJdj0m/NVU5IMgBK+AmZouAQQ7/+2GLH0GXXY0YMw9oXPB8hKdbPYg5QLYg==\",\n      \"license\": \"MIT\",\n      \"dependencies\": {\n        \"@floating-ui/dom\": \"^1.8.0\"\n      },\n      \"peerDependencies\": {\n        \"react\": \">=16.8.0\",\n        \"react-dom\": \">=16.8.0\"\n      }\n    },\n    \"node_modules/@floating-ui/utils\": {\n      \"version\": \"0.2.12\",\n      \"resolved\": \"https://registry.npmjs.org/@floating-ui/utils/-/utils-0.2.12.tgz\",\n      \"integrity\": \"sha512-HpCo8tmWzLVad5s2d19EhAz5zqrrQ6s69qd6moPMQvkOuSwDT1YgRfWSVuc4ennqrgv3OHppiOGMQ7oC13yIww==\",\n      \"license\": \"MIT\"\n    },\n    \"node_modules/@mantine/core\": {\n      \"version\": \"9.7.3\",\n      \"resolved\": \"https://registry.npmjs.org/@mantine/core/-/core-9.7.3.tgz\",\n      \"integrity\": \"sha512-wYJ9Bd82a7HqwJ+hubFqUIocBGMuw6txzdPnnleHvv1h0NlnkESevK/WHTRh4FtOw33B5N2ADT34s3x1/8d8jg==\",\n      \"license\": \"MIT\",\n      \"dependencies\": {\n        \"@floating-ui/react\": \"^0.27.20\",\n        \"clsx\": \"^2.1.1\",\n        \"react-number-format\": \"^5.4.5\",\n        \"react-remove-scroll\": \"^2.7.2\",\n        \"type-fest\": \"^5.10.0\"\n      },\n      \"peerDependencies\": {\n        \"@mantine/hooks\": \"9.7.3\",\n        \"react\": \"^19.2.0\",\n        \"react-dom\": \"^19.2.0\"\n      }\n    },\n    \"node_modules/@mantine/hooks\": {\n      \"version\": \"9.7.3\",\n      \"resolved\": \"https://registry.npmjs.org/@mantine/hooks/-/hooks-9.7.3.tgz\",\n      \"integrity\": \"sha512-GMHoMS1qul1dBLIHd/N9ef2Pr8UKYYHfuM+g2ej3gYqU0kH4sTiR9FNHksoTQi0PzATRoaNlUYjjMe9rbDRw5A==\",\n      \"license\": \"MIT\",\n      \"peerDependencies\": {\n        \"react\": \"^19.2.0\"\n      }\n    },\n    \"node_modules/@mantinex/mantine-logo\": {\n      \"version\": \"2.0.0\",\n      \"resolved\": \"https://registry.npmjs.org/@mantinex/mantine-logo/-/mantine-logo-2.0.0.tgz\",\n      \"integrity\": \"sha512-HfO0twXEMoGftJGTVaixwI7ABUmyBafT/AQQM1MWKw4Q4ZwjMURKBxhz5JFGhc4MHysKRo2E3jaAtXuHydyfcA==\",\n      \"license\": \"MIT\",\n      \"peerDependencies\": {\n        \"@mantine/core\": \">=7.0.0\",\n        \"@mantine/hooks\": \">=7.0.0\",\n        \"react\": \"^18.x || ^19.x\",\n        \"react-dom\": \"^18.x || ^19.x\"\n      }\n    },\n    \"node_modules/@tabler/icons\": {\n      \"version\": \"3.51.0\",\n      \"resolved\": \"https://registry.npmjs.org/@tabler/icons/-/icons-3.51.0.tgz\",\n      \"integrity\": \"sha512-0pinvPZz7YeX+OSfxuEAbnEPWbocVXW5iU8h5lh41pYG8sZuQfpWECC980lxOT0clGIcNGn8xsBr+zKaRGdA/g==\",\n      \"license\": \"MIT\",\n      \"funding\": {\n        \"type\": \"github\",\n        \"url\": \"https://github.com/sponsors/codecalm\"\n      }\n    },\n    \"node_modules/@tabler/icons-react\": {\n      \"version\": \"3.36.1\",\n      \"resolved\": \"https://registry.npmjs.org/@tabler/icons-react/-/icons-react-3.36.1.tgz\",\n      \"integrity\": \"sha512-/8nOXeNeMoze9xY/QyEKG65wuvRhkT3q9aytaur6Gj8bYU2A98YVJyLc9MRmc5nVvpy+bRlrrwK/Ykr8WGyUWg==\",\n      \"license\": \"MIT\",\n      \"dependencies\": {\n        \"@tabler/icons\": \"\"\n      },\n      \"funding\": {\n        \"type\": \"github\",\n        \"url\": \"https://github.com/sponsors/codecalm\"\n      },\n      \"peerDependencies\": {\n        \"react\": \">= 16\"\n      }\n    },\n    \"node_modules/camelcase-css\": {\n      \"version\": \"2.0.1\",\n      \"resolved\": \"https://registry.npmjs.org/camelcase-css/-/camelcase-css-2.0.1.tgz\",\n      \"integrity\": \"sha512-QOSvevhslijgYwRx6Rv7zKdMF8lbRmx+uQGx2+vDc+KI/eBnsy9kit5aj23AgGu3pa4t9AgwbnXWqS+iOY+2aA==\",\n      \"dev\": true,\n      \"license\": \"MIT\",\n      \"engines\": {\n        \"node\": \">= 6\"\n      }\n    },\n    \"node_modules/clsx\": {\n      \"version\": \"2.1.1\",\n      \"resolved\": \"https://registry.npmjs.org/clsx/-/clsx-2.1.1.tgz\",\n      \"integrity\": \"sha512-eYm0QWBtUrBWZWG0d386OGAw16Z995PiOVo2B7bjWSbHedGl5e0ZWaq65kOGgUSNesEIDkB9ISbTg/JK9dhCZA==\",\n      \"license\": \"MIT\",\n      \"engines\": {\n        \"node\": \">=6\"\n      }\n    },\n    \"node_modules/detect-node-es\": {\n      \"version\": \"1.1.0\",\n      \"resolved\": \"https://registry.npmjs.org/detect-node-es/-/detect-node-es-1.1.0.tgz\",\n      \"integrity\": \"sha512-ypdmJU/TbBby2Dxibuv7ZLW3Bs1QEmM7nHjEANfohJLvE0XVujisn1qPJcZxg+qDucsr+bP6fLD1rPS3AhJ7EQ==\",\n      \"license\": \"MIT\"\n    },\n    \"node_modules/fdir\": {\n      \"version\": \"6.5.0\",\n      \"resolved\": \"https://registry.npmjs.org/fdir/-/fdir-6.5.0.tgz\",\n      \"integrity\": \"sha512-tIbYtZbucOs0BRGqPJkshJUYdL+SDH7dVM8gjy+ERp3WAUjLEFJE+02kanyHtwjWOnwrKYBiwAmM0p4kLJAnXg==\",\n      \"dev\": true,\n      \"license\": \"MIT\",\n      \"engines\": {\n        \"node\": \">=12.0.0\"\n      },\n      \"peerDependencies\": {\n        \"picomatch\": \"^3 || ^4\"\n      },\n      \"peerDependenciesMeta\": {\n        \"picomatch\": {\n          \"optional\": true\n        }\n      }\n    },\n    \"node_modules/generic-names\": {\n      \"version\": \"4.0.0\",\n      \"resolved\": \"https://registry.npmjs.org/generic-names/-/generic-names-4.0.0.tgz\",\n      \"integrity\": \"sha512-ySFolZQfw9FoDb3ed9d80Cm9f0+r7qj+HJkWjeD9RBfpxEVTlVhol+gvaQB/78WbwYfbnNh8nWHHBSlg072y6A==\",\n      \"dev\": true,\n      \"license\": \"MIT\",\n      \"dependencies\": {\n        \"loader-utils\": \"^3.2.0\"\n      }\n    },\n    \"node_modules/get-nonce\": {\n      \"version\": \"1.0.1\",\n      \"resolved\": \"https://registry.npmjs.org/get-nonce/-/get-nonce-1.0.1.tgz\",\n      \"integrity\": \"sha512-FJhYRoDaiatfEkUK8HKlicmu/3SGFD51q3itKDGoSTysQJBnfOcxU5GxnhE1E6soB76MbT0MBtnKJuXyAx+96Q==\",\n      \"license\": \"MIT\",\n      \"engines\": {\n        \"node\": \">=6\"\n      }\n    },\n    \"node_modules/icss-utils\": {\n      \"version\": \"5.1.0\",\n      \"resolved\": \"https://registry.npmjs.org/icss-utils/-/icss-utils-5.1.0.tgz\",\n      \"integrity\": \"sha512-soFhflCVWLfRNOPU3iv5Z9VUdT44xFRbzjLsEzSr5AQmgqPMTHdU3PMT1Cf1ssx8fLNJDA1juftYl+PUcv3MqA==\",\n      \"dev\": true,\n      \"license\": \"ISC\",\n      \"engines\": {\n        \"node\": \"^10 || ^12 || >= 14\"\n      },\n      \"peerDependencies\": {\n        \"postcss\": \"^8.1.0\"\n      }\n    },\n    \"node_modules/loader-utils\": {\n      \"version\": \"3.3.1\",\n      \"resolved\": \"https://registry.npmjs.org/loader-utils/-/loader-utils-3.3.1.tgz\",\n      \"integrity\": \"sha512-FMJTLMXfCLMLfJxcX9PFqX5qD88Z5MRGaZCVzfuqeZSPsyiBzs+pahDQjbIWz2QIzPZz0NX9Zy4FX3lmK6YHIg==\",\n      \"dev\": true,\n      \"license\": \"MIT\",\n      \"engines\": {\n        \"node\": \">= 12.13.0\"\n      }\n    },\n    \"node_modules/lodash.camelcase\": {\n      \"version\": \"4.3.0\",\n      \"resolved\": \"https://registry.npmjs.org/lodash.camelcase/-/lodash.camelcase-4.3.0.tgz\",\n      \"integrity\": \"sha512-TwuEnCnxbc3rAvhf/LbG7tJUDzhqXyFnv3dtzLOPgCG/hODL7WFnsbwktkD7yUV0RrreP/l1PALq/YSg6VvjlA==\",\n      \"dev\": true,\n      \"license\": \"MIT\"\n    },\n    \"node_modules/nanoid\": {\n      \"version\": \"3.3.20\",\n      \"resolved\": \"https://registry.npmjs.org/nanoid/-/nanoid-3.3.20.tgz\",\n      \"integrity\": \"sha512-uKdg2G3GNCKQn9byYOpxbGqrT2fGO5KRt5J/8b3pok8rT6qxGWF6hxMyJiEYtAf+FVyYuD9hRaDqX5uPFYJ4ZQ==\",\n      \"dev\": true,\n      \"funding\": [\n        {\n          \"type\": \"github\",\n          \"url\": \"https://github.com/sponsors/ai\"\n        }\n      ],\n      \"license\": \"MIT\",\n      \"bin\": {\n        \"nanoid\": \"bin/nanoid.cjs\"\n      },\n      \"engines\": {\n        \"node\": \"^10 || ^12 || ^13.7 || ^14 || >=15.0.1\"\n      }\n    },\n    \"node_modules/picocolors\": {\n      \"version\": \"1.1.1\",\n      \"resolved\": \"https://registry.npmjs.org/picocolors/-/picocolors-1.1.1.tgz\",\n      \"integrity\": \"sha512-xceH2snhtb5M9liqDsmEw56le376mTZkEX/jEb/RxNFyegNul7eNslCXP9FDj/Lcu0X8KEyMceP2ntpaHrDEVA==\",\n      \"dev\": true,\n      \"license\": \"ISC\"\n    },\n    \"node_modules/picomatch\": {\n      \"version\": \"4.0.7\",\n      \"resolved\": \"https://registry.npmjs.org/picomatch/-/picomatch-4.0.7.tgz\",\n      \"integrity\": \"sha512-qcJu88Q2IWqJsDD529JKMdwGm/dvInW4HvQnRwiH9JtihJvzGOscDtHE3x1pBKeUOTysQ8kVmLnJ2kJu7yhcGA==\",\n      \"dev\": true,\n      \"license\": \"MIT\",\n      \"engines\": {\n        \"node\": \">=12\"\n      },\n      \"funding\": {\n        \"url\": \"https://github.com/sponsors/jonschlinkert\"\n      }\n    },\n    \"node_modules/postcss\": {\n      \"version\": \"8.5.6\",\n      \"resolved\": \"https://registry.npmjs.org/postcss/-/postcss-8.5.6.tgz\",\n      \"integrity\": \"sha512-3Ybi1tAuwAP9s0r1UQ2J4n5Y0G05bJkpUIO0/bI9MhwmD70S5aTWbXGBwxHrelT+XM1k6dM0pk+SwNkpTRN7Pg==\",\n      \"dev\": true,\n      \"funding\": [\n        {\n          \"type\": \"opencollective\",\n          \"url\": \"https://opencollective.com/postcss/\"\n        },\n        {\n          \"type\": \"tidelift\",\n          \"url\": \"https://tidelift.com/funding/github/npm/postcss\"\n        },\n        {\n          \"type\": \"github\",\n          \"url\": \"https://github.com/sponsors/ai\"\n        }\n      ],\n      \"license\": \"MIT\",\n      \"dependencies\": {\n        \"nanoid\": \"^3.3.11\",\n        \"picocolors\": \"^1.1.1\",\n        \"source-map-js\": \"^1.2.1\"\n      },\n      \"engines\": {\n        \"node\": \"^10 || ^12 || >=14\"\n      }\n    },\n    \"node_modules/postcss-js\": {\n      \"version\": \"4.1.0\",\n      \"resolved\": \"https://registry.npmjs.org/postcss-js/-/postcss-js-4.1.0.tgz\",\n      \"integrity\": \"sha512-oIAOTqgIo7q2EOwbhb8UalYePMvYoIeRY2YKntdpFQXNosSu3vLrniGgmH9OKs/qAkfoj5oB3le/7mINW1LCfw==\",\n      \"dev\": true,\n      \"funding\": [\n        {\n          \"type\": \"opencollective\",\n          \"url\": \"https://opencollective.com/postcss/\"\n        },\n        {\n          \"type\": \"github\",\n          \"url\": \"https://github.com/sponsors/ai\"\n        }\n      ],\n      \"license\": \"MIT\",\n      \"dependencies\": {\n        \"camelcase-css\": \"^2.0.1\"\n      },\n      \"engines\": {\n        \"node\": \"^12 || ^14 || >= 16\"\n      },\n      \"peerDependencies\": {\n        \"postcss\": \"^8.4.21\"\n      }\n    },\n    \"node_modules/postcss-mixins\": {\n      \"version\": \"12.1.2\",\n      \"resolved\": \"https://registry.npmjs.org/postcss-mixins/-/postcss-mixins-12.1.2.tgz\",\n      \"integrity\": \"sha512-90pSxmZVfbX9e5xCv7tI5RV1mnjdf16y89CJKbf/hD7GyOz1FCxcYMl8ZYA8Hc56dbApTKKmU9HfvgfWdCxlwg==\",\n      \"dev\": true,\n      \"funding\": [\n        {\n          \"type\": \"opencollective\",\n          \"url\": \"https://opencollective.com/postcss/\"\n        },\n        {\n          \"type\": \"github\",\n          \"url\": \"https://github.com/sponsors/ai\"\n        }\n      ],\n      \"license\": \"MIT\",\n      \"dependencies\": {\n        \"postcss-js\": \"^4.0.1\",\n        \"postcss-simple-vars\": \"^7.0.1\",\n        \"sugarss\": \"^5.0.0\",\n        \"tinyglobby\": \"^0.2.14\"\n      },\n      \"engines\": {\n        \"node\": \"^20.0 || ^22.0 || >=24.0\"\n      },\n      \"peerDependencies\": {\n        \"postcss\": \"^8.2.14\"\n      }\n    },\n    \"node_modules/postcss-modules\": {\n      \"version\": \"6.0.1\",\n      \"resolved\": \"https://registry.npmjs.org/postcss-modules/-/postcss-modules-6.0.1.tgz\",\n      \"integrity\": \"sha512-zyo2sAkVvuZFFy0gc2+4O+xar5dYlaVy/ebO24KT0ftk/iJevSNyPyQellsBLlnccwh7f6V6Y4GvuKRYToNgpQ==\",\n      \"dev\": true,\n      \"license\": \"MIT\",\n      \"dependencies\": {\n        \"generic-names\": \"^4.0.0\",\n        \"icss-utils\": \"^5.1.0\",\n        \"lodash.camelcase\": \"^4.3.0\",\n        \"postcss-modules-extract-imports\": \"^3.1.0\",\n        \"postcss-modules-local-by-default\": \"^4.0.5\",\n        \"postcss-modules-scope\": \"^3.2.0\",\n        \"postcss-modules-values\": \"^4.0.0\",\n        \"string-hash\": \"^1.1.3\"\n      },\n      \"peerDependencies\": {\n        \"postcss\": \"^8.0.0\"\n      }\n    },\n    \"node_modules/postcss-modules-extract-imports\": {\n      \"version\": \"3.1.0\",\n      \"resolved\": \"https://registry.npmjs.org/postcss-modules-extract-imports/-/postcss-modules-extract-imports-3.1.0.tgz\",\n      \"integrity\": \"sha512-k3kNe0aNFQDAZGbin48pL2VNidTF0w4/eASDsxlyspobzU3wZQLOGj7L9gfRe0Jo9/4uud09DsjFNH7winGv8Q==\",\n      \"dev\": true,\n      \"license\": \"ISC\",\n      \"engines\": {\n        \"node\": \"^10 || ^12 || >= 14\"\n      },\n      \"peerDependencies\": {\n        \"postcss\": \"^8.1.0\"\n      }\n    },\n    \"node_modules/postcss-modules-local-by-default\": {\n      \"version\": \"4.2.0\",\n      \"resolved\": \"https://registry.npmjs.org/postcss-modules-local-by-default/-/postcss-modules-local-by-default-4.2.0.tgz\",\n      \"integrity\": \"sha512-5kcJm/zk+GJDSfw+V/42fJ5fhjL5YbFDl8nVdXkJPLLW+Vf9mTD5Xe0wqIaDnLuL2U6cDNpTr+UQ+v2HWIBhzw==\",\n      \"dev\": true,\n      \"license\": \"MIT\",\n      \"dependencies\": {\n        \"icss-utils\": \"^5.0.0\",\n        \"postcss-selector-parser\": \"^7.0.0\",\n        \"postcss-value-parser\": \"^4.1.0\"\n      },\n      \"engines\": {\n        \"node\": \"^10 || ^12 || >= 14\"\n      },\n      \"peerDependencies\": {\n        \"postcss\": \"^8.1.0\"\n      }\n    },\n    \"node_modules/postcss-modules-scope\": {\n      \"version\": \"3.2.1\",\n      \"resolved\": \"https://registry.npmjs.org/postcss-modules-scope/-/postcss-modules-scope-3.2.1.tgz\",\n      \"integrity\": \"sha512-m9jZstCVaqGjTAuny8MdgE88scJnCiQSlSrOWcTQgM2t32UBe+MUmFSO5t7VMSfAf/FJKImAxBav8ooCHJXCJA==\",\n      \"dev\": true,\n      \"license\": \"ISC\",\n      \"dependencies\": {\n        \"postcss-selector-parser\": \"^7.0.0\"\n      },\n      \"engines\": {\n        \"node\": \"^10 || ^12 || >= 14\"\n      },\n      \"peerDependencies\": {\n        \"postcss\": \"^8.1.0\"\n      }\n    },\n    \"node_modules/postcss-modules-values\": {\n      \"version\": \"4.0.0\",\n      \"resolved\": \"https://registry.npmjs.org/postcss-modules-values/-/postcss-modules-values-4.0.0.tgz\",\n      \"integrity\": \"sha512-RDxHkAiEGI78gS2ofyvCsu7iycRv7oqw5xMWn9iMoR0N/7mf9D50ecQqUo5BZ9Zh2vH4bCUR/ktCqbB9m8vJjQ==\",\n      \"dev\": true,\n      \"license\": \"ISC\",\n      \"dependencies\": {\n        \"icss-utils\": \"^5.0.0\"\n      },\n      \"engines\": {\n        \"node\": \"^10 || ^12 || >= 14\"\n      },\n      \"peerDependencies\": {\n        \"postcss\": \"^8.1.0\"\n      }\n    },\n    \"node_modules/postcss-nested\": {\n      \"version\": \"7.0.2\",\n      \"resolved\": \"https://registry.npmjs.org/postcss-nested/-/postcss-nested-7.0.2.tgz\",\n      \"integrity\": \"sha512-5osppouFc0VR9/VYzYxO03VaDa3e8F23Kfd6/9qcZTUI8P58GIYlArOET2Wq0ywSl2o2PjELhYOFI4W7l5QHKw==\",\n      \"dev\": true,\n      \"funding\": [\n        {\n          \"type\": \"opencollective\",\n          \"url\": \"https://opencollective.com/postcss/\"\n        },\n        {\n          \"type\": \"github\",\n          \"url\": \"https://github.com/sponsors/ai\"\n        }\n      ],\n      \"license\": \"MIT\",\n      \"dependencies\": {\n        \"postcss-selector-parser\": \"^7.0.0\"\n      },\n      \"engines\": {\n        \"node\": \">=18.0\"\n      },\n      \"peerDependencies\": {\n        \"postcss\": \"^8.2.14\"\n      }\n    },\n    \"node_modules/postcss-preset-mantine\": {\n      \"version\": \"1.18.0\",\n      \"resolved\": \"https://registry.npmjs.org/postcss-preset-mantine/-/postcss-preset-mantine-1.18.0.tgz\",\n      \"integrity\": \"sha512-sP6/s1oC7cOtBdl4mw/IRKmKvYTuzpRrH/vT6v9enMU/EQEQ31eQnHcWtFghOXLH87AAthjL/Q75rLmin1oZoA==\",\n      \"dev\": true,\n      \"license\": \"MIT\",\n      \"dependencies\": {\n        \"postcss-mixins\": \"^12.0.0\",\n        \"postcss-nested\": \"^7.0.2\"\n      },\n      \"peerDependencies\": {\n        \"postcss\": \">=8.0.0\"\n      }\n    },\n    \"node_modules/postcss-selector-parser\": {\n      \"version\": \"7.2.0\",\n      \"resolved\": \"https://registry.npmjs.org/postcss-selector-parser/-/postcss-selector-parser-7.2.0.tgz\",\n      \"integrity\": \"sha512-Khh/tERVBn0I1499dvBSHY0pWJloMJWUxDsOBM0CCDPAcVZ10Jl2L1qy1f19uEX22spa8Mv7DCdEQJc0cGwBhQ==\",\n      \"dev\": true,\n      \"license\": \"MIT\",\n      \"dependencies\": {\n        \"util-deprecate\": \"^1.0.2\"\n      },\n      \"engines\": {\n        \"node\": \">=4\"\n      }\n    },\n    \"node_modules/postcss-simple-vars\": {\n      \"version\": \"7.0.1\",\n      \"resolved\": \"https://registry.npmjs.org/postcss-simple-vars/-/postcss-simple-vars-7.0.1.tgz\",\n      \"integrity\": \"sha512-5GLLXaS8qmzHMOjVxqkk1TZPf1jMqesiI7qLhnlyERalG0sMbHIbJqrcnrpmZdKCLglHnRHoEBB61RtGTsj++A==\",\n      \"dev\": true,\n      \"license\": \"MIT\",\n      \"engines\": {\n        \"node\": \">=14.0\"\n      },\n      \"funding\": {\n        \"type\": \"opencollective\",\n        \"url\": \"https://opencollective.com/postcss/\"\n      },\n      \"peerDependencies\": {\n        \"postcss\": \"^8.2.1\"\n      }\n    },\n    \"node_modules/postcss-value-parser\": {\n      \"version\": \"4.2.0\",\n      \"resolved\": \"https://registry.npmjs.org/postcss-value-parser/-/postcss-value-parser-4.2.0.tgz\",\n      \"integrity\": \"sha512-1NNCs6uurfkVbeXG4S8JFT9t19m45ICnif8zWLd5oPSZ50QnwMfK+H3jv408d4jw/7Bttv5axS5IiHoLaVNHeQ==\",\n      \"dev\": true,\n      \"license\": \"MIT\"\n    },\n    \"node_modules/react\": {\n      \"version\": \"19.3.1\",\n      \"resolved\": \"https://registry.npmjs.org/react/-/react-19.3.1.tgz\",\n      \"integrity\": \"sha512-QNhWdt7nrgVWWQG58QuGsAR3jv3Hbe4mb4vz7w2csnHavciZJgda1CPNaldF6eVxv90ud3jUXpKlHL69gO38yw==\",\n      \"license\": \"MIT\",\n      \"engines\": {\n        \"node\": \">=0.10.0\"\n      }\n    },\n    \"node_modules/react-dom\": {\n      \"version\": \"19.3.1\",\n      \"resolved\": \"https://registry.npmjs.org/react-dom/-/react-dom-19.3.1.tgz\",\n      \"integrity\": \"sha512-Y0bARz53lhEC1NMCASs0/j+faB/zqt3R8hpvg1e8+61ZVJ4UL0UdC4cBbXfZMcIuhrfgeILTLe+ZeBCavQPtKQ==\",\n      \"license\": \"MIT\",\n      \"dependencies\": {\n        \"scheduler\": \"^0.28.0\"\n      },\n      \"peerDependencies\": {\n        \"react\": \"^19.3.1\"\n      }\n    },\n    \"node_modules/react-number-format\": {\n      \"version\": \"5.4.5\",\n      \"resolved\": \"https://registry.npmjs.org/react-number-format/-/react-number-format-5.4.5.tgz\",\n      \"integrity\": \"sha512-y8O2yHHj3w0aE9XO8d2BCcUOOdQTRSVq+WIuMlLVucAm5XNjJAy+BoOJiuQMldVYVOKTMyvVNfnbl2Oqp+YxGw==\",\n      \"license\": \"MIT\",\n      \"peerDependencies\": {\n        \"react\": \"^0.14 || ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0 || ^19.0.0\",\n        \"react-dom\": \"^0.14 || ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0 || ^19.0.0\"\n      }\n    },\n    \"node_modules/react-remove-scroll\": {\n      \"version\": \"2.7.2\",\n      \"resolved\": \"https://registry.npmjs.org/react-remove-scroll/-/react-remove-scroll-2.7.2.tgz\",\n      \"integrity\": \"sha512-Iqb9NjCCTt6Hf+vOdNIZGdTiH1QSqr27H/Ek9sv/a97gfueI/5h1s3yRi1nngzMUaOOToin5dI1dXKdXiF+u0Q==\",\n      \"license\": \"MIT\",\n      \"dependencies\": {\n        \"react-remove-scroll-bar\": \"^2.3.7\",\n        \"react-style-singleton\": \"^2.2.3\",\n        \"tslib\": \"^2.1.0\",\n        \"use-callback-ref\": \"^1.3.3\",\n        \"use-sidecar\": \"^1.1.3\"\n      },\n      \"engines\": {\n        \"node\": \">=10\"\n      },\n      \"peerDependencies\": {\n        \"@types/react\": \"*\",\n        \"react\": \"^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0 || ^19.0.0-rc\"\n      },\n      \"peerDependenciesMeta\": {\n        \"@types/react\": {\n          \"optional\": true\n        }\n      }\n    },\n    \"node_modules/react-remove-scroll-bar\": {\n      \"version\": \"2.3.8\",\n      \"resolved\": \"https://registry.npmjs.org/react-remove-scroll-bar/-/react-remove-scroll-bar-2.3.8.tgz\",\n      \"integrity\": \"sha512-9r+yi9+mgU33AKcj6IbT9oRCO78WriSj6t/cF8DWBZJ9aOGPOTEDvdUDz1FwKim7QXWwmHqtdHnRJfhAxEG46Q==\",\n      \"license\": \"MIT\",\n      \"dependencies\": {\n        \"react-style-singleton\": \"^2.2.2\",\n        \"tslib\": \"^2.0.0\"\n      },\n      \"engines\": {\n        \"node\": \">=10\"\n      },\n      \"peerDependencies\": {\n        \"@types/react\": \"*\",\n        \"react\": \"^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0\"\n      },\n      \"peerDependenciesMeta\": {\n        \"@types/react\": {\n          \"optional\": true\n        }\n      }\n    },\n    \"node_modules/react-style-singleton\": {\n      \"version\": \"2.2.3\",\n      \"resolved\": \"https://registry.npmjs.org/react-style-singleton/-/react-style-singleton-2.2.3.tgz\",\n      \"integrity\": \"sha512-b6jSvxvVnyptAiLjbkWLE/lOnR4lfTtDAl+eUC7RZy+QQWc6wRzIV2CE6xBuMmDxc2qIihtDCZD5NPOFl7fRBQ==\",\n      \"license\": \"MIT\",\n      \"dependencies\": {\n        \"get-nonce\": \"^1.0.0\",\n        \"tslib\": \"^2.0.0\"\n      },\n      \"engines\": {\n        \"node\": \">=10\"\n      },\n      \"peerDependencies\": {\n        \"@types/react\": \"*\",\n        \"react\": \"^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0 || ^19.0.0-rc\"\n      },\n      \"peerDependenciesMeta\": {\n        \"@types/react\": {\n          \"optional\": true\n        }\n      }\n    },\n    \"node_modules/scheduler\": {\n      \"version\": \"0.28.0\",\n      \"resolved\": \"https://registry.npmjs.org/scheduler/-/scheduler-0.28.0.tgz\",\n      \"integrity\": \"sha512-juorfCmIkIw8tT+p5BXSm6PJjQF/ycEYmKyzURCIt/RaZIhL+PulbQ9Yu2z1HdOJDdqDTlxA1+xKBmHXJsczAw==\",\n      \"license\": \"MIT\"\n    },\n    \"node_modules/source-map-js\": {\n      \"version\": \"1.2.2\",\n      \"resolved\": \"https://registry.npmjs.org/source-map-js/-/source-map-js-1.2.2.tgz\",\n      \"integrity\": \"sha512-KGj/8Y43x35aZVDtt+J4mK1hoLGHULMYfSkODJNQjNDC3oW1PqPoxMwo0pLUsWM/UEGzON/NxeHywEfNXNP3Vw==\",\n      \"dev\": true,\n      \"license\": \"BSD-3-Clause\",\n      \"engines\": {\n        \"node\": \">=0.10.0\"\n      }\n    },\n    \"node_modules/string-hash\": {\n      \"version\": \"1.1.3\",\n      \"resolved\": \"https://registry.npmjs.org/string-hash/-/string-hash-1.1.3.tgz\",\n      \"integrity\": \"sha512-kJUvRUFK49aub+a7T1nNE66EJbZBMnBgoC1UbCZ5n6bsZKBRga4KgBRTMn/pFkeCZSYtNeSyMxPDM0AXWELk2A==\",\n      \"dev\": true,\n      \"license\": \"CC0-1.0\"\n    },\n    \"node_modules/sugarss\": {\n      \"version\": \"5.0.2\",\n      \"resolved\": \"https://registry.npmjs.org/sugarss/-/sugarss-5.0.2.tgz\",\n      \"integrity\": \"sha512-30Zt7tXECUXZbVRmmo/2+90UMl/mD8gBrNeRozE/6Gp2uEktD01m/hVFRrTsgg7Ca2ZmW68HX40aZ23byUiwdg==\",\n      \"dev\": true,\n      \"funding\": [\n        {\n          \"type\": \"opencollective\",\n          \"url\": \"https://opencollective.com/postcss/\"\n        },\n        {\n          \"type\": \"github\",\n          \"url\": \"https://github.com/sponsors/ai\"\n        }\n      ],\n      \"license\": \"MIT\",\n      \"engines\": {\n        \"node\": \">=18.0\"\n      },\n      \"peerDependencies\": {\n        \"postcss\": \"^8.3.3\"\n      }\n    },\n    \"node_modules/tabbable\": {\n      \"version\": \"6.5.1\",\n      \"resolved\": \"https://registry.npmjs.org/tabbable/-/tabbable-6.5.1.tgz\",\n      \"integrity\": \"sha512-dMCuwDUY6Noz3zVKLefBC4wq+aJV20yc7vWmM7uTNGwtQSFF5kX7OUIUsxuVajz/bdt5Xqdah3/0NLjth+cM5A==\",\n      \"license\": \"MIT\"\n    },\n    \"node_modules/tagged-tag\": {\n      \"version\": \"1.0.0\",\n      \"resolved\": \"https://registry.npmjs.org/tagged-tag/-/tagged-tag-1.0.0.tgz\",\n      \"integrity\": \"sha512-yEFYrVhod+hdNyx7g5Bnkkb0G6si8HJurOoOEgC8B/O0uXLHlaey/65KRv6cuWBNhBgHKAROVpc7QyYqE5gFng==\",\n      \"license\": \"MIT\",\n      \"engines\": {\n        \"node\": \">=20\"\n      },\n      \"funding\": {\n        \"url\": \"https://github.com/sponsors/sindresorhus\"\n      }\n    },\n    \"node_modules/tinyglobby\": {\n      \"version\": \"0.2.17\",\n      \"resolved\": \"https://registry.npmjs.org/tinyglobby/-/tinyglobby-0.2.17.tgz\",\n      \"integrity\": \"sha512-wXR/dYpcqKmfWpEdZjiKJOwCNFndD0DMnrW/cYjVGttEkBfVgcLFHoNrlj47mjOVic9yyNu65alsgF4NQyTa2g==\",\n      \"dev\": true,\n      \"license\": \"MIT\",\n      \"dependencies\": {\n        \"fdir\": \"^6.5.0\",\n        \"picomatch\": \"^4.0.4\"\n      },\n      \"engines\": {\n        \"node\": \">=12.0.0\"\n      },\n      \"funding\": {\n        \"url\": \"https://github.com/sponsors/SuperchupuDev\"\n      }\n    },\n    \"node_modules/tslib\": {\n      \"version\": \"2.9.1\",\n      \"resolved\": \"https://registry.npmjs.org/tslib/-/tslib-2.9.1.tgz\",\n      \"integrity\": \"sha512-a4Ux9VKuIMHsOS7ENbEq6hK2ZGYIT27Rtl0E4eD9KqwxhKiQeMZE/9xb3IdYwWaSOyIBQLExhQgXDTYoiCxnWA==\",\n      \"license\": \"0BSD\"\n    },\n    \"node_modules/type-fest\": {\n      \"version\": \"5.10.0\",\n      \"resolved\": \"https://registry.npmjs.org/type-fest/-/type-fest-5.10.0.tgz\",\n      \"integrity\": \"sha512-NoSdpq/WEiAg5sjmBkmV/hfxv6HJH4NqPNrqjtSO5CwRmpsDfaf4begxW34KdJykH/l1yHtwBWQkCRdoXO8mPA==\",\n      \"license\": \"(MIT OR CC0-1.0)\",\n      \"dependencies\": {\n        \"tagged-tag\": \"^1.0.0\"\n      },\n      \"engines\": {\n        \"node\": \">=20\"\n      },\n      \"funding\": {\n        \"url\": \"https://github.com/sponsors/sindresorhus\"\n      }\n    },\n    \"node_modules/use-callback-ref\": {\n      \"version\": \"1.3.3\",\n      \"resolved\": \"https://registry.npmjs.org/use-callback-ref/-/use-callback-ref-1.3.3.tgz\",\n      \"integrity\": \"sha512-jQL3lRnocaFtu3V00JToYz/4QkNWswxijDaCVNZRiRTO3HQDLsdu1ZtmIUvV4yPp+rvWm5j0y0TG/S61cuijTg==\",\n      \"license\": \"MIT\",\n      \"dependencies\": {\n        \"tslib\": \"^2.0.0\"\n      },\n      \"engines\": {\n        \"node\": \">=10\"\n      },\n      \"peerDependencies\": {\n        \"@types/react\": \"*\",\n        \"react\": \"^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0 || ^19.0.0-rc\"\n      },\n      \"peerDependenciesMeta\": {\n        \"@types/react\": {\n          \"optional\": true\n        }\n      }\n    },\n    \"node_modules/use-sidecar\": {\n      \"version\": \"1.1.3\",\n      \"resolved\": \"https://registry.npmjs.org/use-sidecar/-/use-sidecar-1.1.3.tgz\",\n      \"integrity\": \"sha512-Fedw0aZvkhynoPYlA5WXrMCAMm+nSWdZt6lzJQ7Ok8S6Q+VsHmHpRWndVRJ8Be0ZbkfPc5LRYH+5XrzXcEeLRQ==\",\n      \"license\": \"MIT\",\n      \"dependencies\": {\n        \"detect-node-es\": \"^1.1.0\",\n        \"tslib\": \"^2.0.0\"\n      },\n      \"engines\": {\n        \"node\": \">=10\"\n      },\n      \"peerDependencies\": {\n        \"@types/react\": \"*\",\n        \"react\": \"^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0 || ^19.0.0-rc\"\n      },\n      \"peerDependenciesMeta\": {\n        \"@types/react\": {\n          \"optional\": true\n        }\n      }\n    },\n    \"node_modules/util-deprecate\": {\n      \"version\": \"1.0.2\",\n      \"resolved\": \"https://registry.npmjs.org/util-deprecate/-/util-deprecate-1.0.2.tgz\",\n      \"integrity\": \"sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==\",\n      \"dev\": true,\n      \"license\": \"MIT\"\n    }\n  }\n}\n"
+    }
+  ],
+  "dependencyNoticeScope": [
+    {
+      "name": "@floating-ui/core",
+      "version": "1.8.0",
+      "license": "MIT",
+      "scope": "parsed JS; exact output bytes separately recorded",
+      "notices": [
+        {
+          "path": "ui-mantine-forms-local/header/node_modules/@floating-ui/core/LICENSE",
+          "sha256": "0e4c9a9b6c71019cbbea3bdc20b01223110a9035700f9c960c8fcbf78c2325ce"
+        }
+      ]
+    },
+    {
+      "name": "@floating-ui/dom",
+      "version": "1.8.0",
+      "license": "MIT",
+      "scope": "parsed JS; exact output bytes separately recorded",
+      "notices": [
+        {
+          "path": "ui-mantine-forms-local/header/node_modules/@floating-ui/dom/LICENSE",
+          "sha256": "0e4c9a9b6c71019cbbea3bdc20b01223110a9035700f9c960c8fcbf78c2325ce"
+        }
+      ]
+    },
+    {
+      "name": "@floating-ui/react",
+      "version": "0.27.20",
+      "license": "MIT",
+      "scope": "parsed JS; exact output bytes separately recorded",
+      "notices": [
+        {
+          "path": "ui-mantine-forms-local/header/node_modules/@floating-ui/react/LICENSE",
+          "sha256": "0e4c9a9b6c71019cbbea3bdc20b01223110a9035700f9c960c8fcbf78c2325ce"
+        }
+      ]
+    },
+    {
+      "name": "@floating-ui/react-dom",
+      "version": "2.1.9",
+      "license": "MIT",
+      "scope": "parsed JS; exact output bytes separately recorded",
+      "notices": [
+        {
+          "path": "ui-mantine-forms-local/header/node_modules/@floating-ui/react-dom/LICENSE",
+          "sha256": "0e4c9a9b6c71019cbbea3bdc20b01223110a9035700f9c960c8fcbf78c2325ce"
+        }
+      ]
+    },
+    {
+      "name": "@floating-ui/utils",
+      "version": "0.2.12",
+      "license": "MIT",
+      "scope": "parsed JS; exact output bytes separately recorded",
+      "notices": [
+        {
+          "path": "ui-mantine-forms-local/header/node_modules/@floating-ui/utils/LICENSE",
+          "sha256": "0e4c9a9b6c71019cbbea3bdc20b01223110a9035700f9c960c8fcbf78c2325ce"
+        }
+      ]
+    },
+    {
+      "name": "@mantine/core",
+      "version": "9.7.3",
+      "license": "MIT",
+      "scope": "parsed JS; exact output bytes separately recorded",
+      "notices": [
+        {
+          "path": "ui-mantine-forms-local/header/node_modules/@mantine/core/LICENSE",
+          "sha256": "61c765e625bc25d55143f14de7554685c52f21d9e671d3d204304691a163d06a"
+        }
+      ]
+    },
+    {
+      "name": "@mantine/hooks",
+      "version": "9.7.3",
+      "license": "MIT",
+      "scope": "parsed JS; exact output bytes separately recorded",
+      "notices": [
+        {
+          "path": "ui-mantine-forms-local/header/node_modules/@mantine/hooks/LICENSE",
+          "sha256": "61c765e625bc25d55143f14de7554685c52f21d9e671d3d204304691a163d06a"
+        }
+      ]
+    },
+    {
+      "name": "@mantinex/mantine-logo",
+      "version": "2.0.0",
+      "license": "MIT",
+      "scope": "parsed JS; exact output bytes separately recorded",
+      "notices": [
+        {
+          "path": "ui-mantine-forms-local/header/evidence/logo-LICENSE",
+          "sha256": "61c765e625bc25d55143f14de7554685c52f21d9e671d3d204304691a163d06a"
+        }
+      ]
+    },
+    {
+      "name": "@tabler/icons-react",
+      "version": "3.36.1",
+      "license": "MIT",
+      "scope": "parsed JS; exact output bytes separately recorded",
+      "notices": [
+        {
+          "path": "ui-mantine-forms-local/header/node_modules/@tabler/icons-react/LICENSE",
+          "sha256": "5a3b65e1ad6a081759fde376fe14e2cd88552a9ebea89a8168f34eab1e96109f"
+        }
+      ]
+    },
+    {
+      "name": "clsx",
+      "version": "2.1.1",
+      "license": "MIT",
+      "scope": "parsed JS; exact output bytes separately recorded",
+      "notices": [
+        {
+          "path": "ui-mantine-forms-local/header/node_modules/clsx/license",
+          "sha256": "9a9edad7baae52622bddf3c15b2ef8a33d2c89f2d25408ad13e8a7481c6b0c97"
+        }
+      ]
+    },
+    {
+      "name": "detect-node-es",
+      "version": "1.1.0",
+      "license": "MIT",
+      "scope": "parsed JS; exact output bytes separately recorded",
+      "notices": [
+        {
+          "path": "ui-mantine-forms-local/header/node_modules/detect-node-es/LICENSE",
+          "sha256": "54b32293ea560d22cd9b62af9b2cda1a030d910a48c6601d227c5ff2338d95f8"
+        }
+      ]
+    },
+    {
+      "name": "get-nonce",
+      "version": "1.0.1",
+      "license": "MIT",
+      "scope": "parsed JS; exact output bytes separately recorded",
+      "notices": [
+        {
+          "path": "ui-mantine-forms-local/header/node_modules/get-nonce/LICENSE",
+          "sha256": "acf3b087b348d2f2e731b9d4131af185aad694c1204ce14a46909483fd42da05"
+        }
+      ]
+    },
+    {
+      "name": "react",
+      "version": "19.3.1",
+      "license": "MIT",
+      "scope": "parsed JS; exact output bytes separately recorded",
+      "notices": [
+        {
+          "path": "ui-mantine-forms-local/header/node_modules/react/LICENSE",
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+        }
+      ]
+    },
+    {
+      "name": "react-dom",
+      "version": "19.3.1",
+      "license": "MIT",
+      "scope": "parsed JS; exact output bytes separately recorded",
+      "notices": [
+        {
+          "path": "ui-mantine-forms-local/header/node_modules/react-dom/LICENSE",
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+        }
+      ]
+    },
+    {
+      "name": "react-number-format",
+      "version": "5.4.5",
+      "license": "MIT",
+      "scope": "parsed JS; exact output bytes separately recorded",
+      "notices": [
+        {
+          "path": "ui-mantine-forms-local/header/node_modules/react-number-format/LICENSE",
+          "sha256": "55aaf8cf3f0c02371907f2c6fdd8bb366647fd6d4be0cfcc403e62613597cab8"
+        }
+      ]
+    },
+    {
+      "name": "react-remove-scroll",
+      "version": "2.7.2",
+      "license": "MIT",
+      "scope": "parsed JS; exact output bytes separately recorded",
+      "notices": [
+        {
+          "path": "ui-mantine-forms-local/header/node_modules/react-remove-scroll/LICENSE",
+          "sha256": "30f0cfddf483d1128e3610205020f2041a6c5e837aa999e0aa82e5576187d4a9"
+        }
+      ]
+    },
+    {
+      "name": "react-remove-scroll-bar",
+      "version": "2.3.8",
+      "license": "MIT",
+      "scope": "parsed JS; exact output bytes separately recorded",
+      "notices": [
+        {
+          "path": "ui-mantine-forms-local/header/evidence/react-remove-scroll-bar-LICENSE",
+          "sha256": "a79aae0c0f21990d9d963bb3c5a79cdcea9a46f8523ba55c58d7fe776b6ebc84"
+        }
+      ]
+    },
+    {
+      "name": "react-style-singleton",
+      "version": "2.2.3",
+      "license": "MIT",
+      "scope": "parsed JS; exact output bytes separately recorded",
+      "notices": [
+        {
+          "path": "ui-mantine-forms-local/header/node_modules/react-style-singleton/LICENSE",
+          "sha256": "30f0cfddf483d1128e3610205020f2041a6c5e837aa999e0aa82e5576187d4a9"
+        }
+      ]
+    },
+    {
+      "name": "scheduler",
+      "version": "0.28.0",
+      "license": "MIT",
+      "scope": "parsed JS; exact output bytes separately recorded",
+      "notices": [
+        {
+          "path": "ui-mantine-forms-local/header/node_modules/scheduler/LICENSE",
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+        }
+      ]
+    },
+    {
+      "name": "tabbable",
+      "version": "6.5.1",
+      "license": "MIT",
+      "scope": "parsed JS; exact output bytes separately recorded",
+      "notices": [
+        {
+          "path": "ui-mantine-forms-local/header/node_modules/tabbable/LICENSE",
+          "sha256": "8e714750725e75c8b31172ef84c0805f94873f86e3b5cfca8a948553f0778fa1"
+        }
+      ]
+    },
+    {
+      "name": "tslib",
+      "version": "2.9.1",
+      "license": "0BSD",
+      "scope": "parsed JS; exact output bytes separately recorded",
+      "notices": [
+        {
+          "path": "ui-mantine-forms-local/header/node_modules/tslib/LICENSE.txt",
+          "sha256": "210b19e543130388c68654b7497e967119ce17145f66ab7d85688fbd70f08751"
+        }
+      ]
+    },
+    {
+      "name": "use-callback-ref",
+      "version": "1.3.3",
+      "license": "MIT",
+      "scope": "parsed JS; exact output bytes separately recorded",
+      "notices": [
+        {
+          "path": "ui-mantine-forms-local/header/node_modules/use-callback-ref/LICENSE",
+          "sha256": "30f0cfddf483d1128e3610205020f2041a6c5e837aa999e0aa82e5576187d4a9"
+        }
+      ]
+    },
+    {
+      "name": "use-sidecar",
+      "version": "1.1.3",
+      "license": "MIT",
+      "scope": "parsed JS; exact output bytes separately recorded",
+      "notices": [
+        {
+          "path": "ui-mantine-forms-local/header/node_modules/use-sidecar/LICENSE",
+          "sha256": "30f0cfddf483d1128e3610205020f2041a6c5e837aa999e0aa82e5576187d4a9"
+        }
+      ]
+    }
+  ],
+  "dependencyDiffFromContact": [
+    {
+      "name": "@mantinex/mantine-logo",
+      "before": null,
+      "after": "2.0.0"
+    }
+  ],
+  "outputInputs": {
+    "ui-mantine-forms-local/header/node_modules/react/cjs/react.production.js": {
+      "bytesInOutput": 7969
+    },
+    "ui-mantine-forms-local/header/node_modules/react/index.js": {
+      "bytesInOutput": 50
+    },
+    "ui-mantine-forms-local/header/node_modules/scheduler/cjs/scheduler.production.js": {
+      "bytesInOutput": 3662
+    },
+    "ui-mantine-forms-local/header/node_modules/scheduler/index.js": {
+      "bytesInOutput": 51
+    },
+    "ui-mantine-forms-local/header/node_modules/react-dom/cjs/react-dom.production.js": {
+      "bytesInOutput": 3665
+    },
+    "ui-mantine-forms-local/header/node_modules/react-dom/index.js": {
+      "bytesInOutput": 253
+    },
+    "ui-mantine-forms-local/header/node_modules/react-dom/cjs/react-dom-client.production.js": {
+      "bytesInOutput": 205727
+    },
+    "ui-mantine-forms-local/header/node_modules/react-dom/client.js": {
+      "bytesInOutput": 253
+    },
+    "ui-mantine-forms-local/header/node_modules/react/cjs/react-jsx-runtime.production.js": {
+      "bytesInOutput": 364
+    },
+    "ui-mantine-forms-local/header/node_modules/react/jsx-runtime.js": {
+      "bytesInOutput": 50
+    },
+    "ui-mantine-forms-local/header/src/main.tsx": {
+      "bytesInOutput": 1446
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/utils/keys/keys.mjs": {
+      "bytesInOutput": 37
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/utils/deep-merge/deep-merge.mjs": {
+      "bytesInOutput": 195
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/utils/camel-to-kebab-case/camel-to-kebab-case.mjs": {
+      "bytesInOutput": 67
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/utils/units-converters/px.mjs": {
+      "bytesInOutput": 401
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/utils/units-converters/rem.mjs": {
+      "bytesInOutput": 616
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/utils/filter-props/filter-props.mjs": {
+      "bytesInOutput": 86
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/utils/is-number-like/is-number-like.mjs": {
+      "bytesInOutput": 366
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/utils/is-element/is-element.mjs": {
+      "bytesInOutput": 111
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/utils/create-safe-context/create-safe-context.mjs": {
+      "bytesInOutput": 140
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/utils/get-default-z-index/get-default-z-index.mjs": {
+      "bytesInOutput": 88
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/utils/noop/noop.mjs": {
+      "bytesInOutput": 14
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/utils/close-on-escape/close-on-escape.mjs": {
+      "bytesInOutput": 130
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/utils/get-size/get-size.mjs": {
+      "bytesInOutput": 372
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/utils/create-event-handler/create-event-handler.mjs": {
+      "bytesInOutput": 43
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/utils/get-breakpoint-value/get-breakpoint-value.mjs": {
+      "bytesInOutput": 46
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/utils/get-sorted-breakpoints/get-sorted-breakpoints.mjs": {
+      "bytesInOutput": 90
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/utils/get-base-value/get-base-value.mjs": {
+      "bytesInOutput": 78
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/hooks/esm/utils/random-id/random-id.mjs": {
+      "bytesInOutput": 80
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/hooks/esm/utils/use-callback-ref/use-callback-ref.mjs": {
+      "bytesInOutput": 147
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/hooks/esm/use-debounced-callback/use-debounced-callback.mjs": {
+      "bytesInOutput": 1296
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/hooks/esm/use-click-outside/use-click-outside.mjs": {
+      "bytesInOutput": 531
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/hooks/esm/use-media-query/use-media-query.mjs": {
+      "bytesInOutput": 508
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/hooks/esm/use-isomorphic-effect/use-isomorphic-effect.mjs": {
+      "bytesInOutput": 71
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/hooks/esm/use-did-update/use-did-update.mjs": {
+      "bytesInOutput": 340
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/hooks/esm/use-focus-return/use-focus-return.mjs": {
+      "bytesInOutput": 576
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/hooks/esm/use-focus-trap/tabbable.mjs": {
+      "bytesInOutput": 1123
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/hooks/esm/use-focus-trap/scope-tab.mjs": {
+      "bytesInOutput": 1139
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/hooks/esm/use-focus-trap/use-focus-trap.mjs": {
+      "bytesInOutput": 1051
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/hooks/esm/use-id/use-id.mjs": {
+      "bytesInOutput": 204
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/hooks/esm/use-window-event/use-window-event.mjs": {
+      "bytesInOutput": 163
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/hooks/esm/use-merged-ref/use-merged-ref.mjs": {
+      "bytesInOutput": 375
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/hooks/esm/use-uncontrolled/use-uncontrolled.mjs": {
+      "bytesInOutput": 193
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/hooks/esm/use-reduced-motion/use-reduced-motion.mjs": {
+      "bytesInOutput": 67
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/hooks/esm/use-disclosure/use-disclosure.mjs": {
+      "bytesInOutput": 285
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/hooks/esm/use-long-press/use-long-press.mjs": {
+      "bytesInOutput": 1346
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/hooks/esm/use-collapse/use-collapse.mjs": {
+      "bytesInOutput": 1726
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/hooks/esm/use-collapse/use-horizontal-collapse.mjs": {
+      "bytesInOutput": 1668
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/utils/get-ref-prop/get-ref-prop.mjs": {
+      "bytesInOutput": 141
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/utils/get-single-element-child/get-single-element-child.mjs": {
+      "bytesInOutput": 101
+    },
+    "ui-mantine-forms-local/header/node_modules/clsx/dist/clsx.mjs": {
+      "bytesInOutput": 372
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/styles-api/use-styles/get-class-name/resolve-class-names/resolve-class-names.mjs": {
+      "bytesInOutput": 261
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/styles-api/use-styles/get-style/resolve-styles/resolve-styles.mjs": {
+      "bytesInOutput": 179
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/MantineProvider/color-scheme-managers/is-mantine-color-scheme.mjs": {
+      "bytesInOutput": 58
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/MantineProvider/color-scheme-managers/local-storage-manager.mjs": {
+      "bytesInOutput": 579
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/MantineProvider/color-functions/get-primary-shade/get-primary-shade.mjs": {
+      "bytesInOutput": 123
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/MantineProvider/color-functions/to-rgba/to-rgba.mjs": {
+      "bytesInOutput": 1158
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/MantineProvider/color-functions/luminance/luminance.mjs": {
+      "bytesInOutput": 366
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/MantineProvider/color-functions/parse-theme-color/parse-theme-color.mjs": {
+      "bytesInOutput": 1168
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/MantineProvider/color-functions/get-theme-color/get-theme-color.mjs": {
+      "bytesInOutput": 102
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/MantineProvider/MantineCssVariables/virtual-color/virtual-color.mjs": {
+      "bytesInOutput": 74
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/MantineProvider/color-functions/darken/darken.mjs": {
+      "bytesInOutput": 191
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/MantineProvider/color-functions/get-gradient/get-gradient.mjs": {
+      "bytesInOutput": 215
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/MantineProvider/color-functions/rgba/rgba.mjs": {
+      "bytesInOutput": 342
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/MantineProvider/color-functions/default-variant-colors-resolver/default-variant-colors-resolver.mjs": {
+      "bytesInOutput": 3499
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/MantineProvider/color-functions/get-contrast-color/get-contrast-color.mjs": {
+      "bytesInOutput": 490
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/MantineProvider/Mantine.context.mjs": {
+      "bytesInOutput": 565
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/MantineProvider/use-mantine-color-scheme/use-provider-color-scheme.mjs": {
+      "bytesInOutput": 997
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/MantineProvider/default-colors.mjs": {
+      "bytesInOutput": 1516
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/MantineProvider/default-theme.mjs": {
+      "bytesInOutput": 1929
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/MantineProvider/merge-mantine-theme/merge-mantine-theme.mjs": {
+      "bytesInOutput": 786
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/MantineProvider/MantineThemeProvider/MantineThemeProvider.mjs": {
+      "bytesInOutput": 446
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/MantineProvider/convert-css-variables/css-variables-object-to-string.mjs": {
+      "bytesInOutput": 77
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/MantineProvider/convert-css-variables/convert-css-variables.mjs": {
+      "bytesInOutput": 319
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/MantineProvider/MantineCssVariables/get-css-color-variables.mjs": {
+      "bytesInOutput": 2114
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/MantineProvider/MantineCssVariables/default-css-variables-resolver.mjs": {
+      "bytesInOutput": 4562
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/MantineProvider/MantineClasses/MantineClasses.mjs": {
+      "bytesInOutput": 466
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/MantineProvider/MantineCssVariables/get-merged-variables.mjs": {
+      "bytesInOutput": 75
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/MantineProvider/MantineCssVariables/remove-default-variables.mjs": {
+      "bytesInOutput": 319
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/MantineProvider/MantineCssVariables/MantineCssVariables.mjs": {
+      "bytesInOutput": 487
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/MantineProvider/use-respect-reduce-motion/use-respect-reduce-motion.mjs": {
+      "bytesInOutput": 128
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/MantineProvider/MantineProvider.mjs": {
+      "bytesInOutput": 1430
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/MantineProvider/use-props/use-props.mjs": {
+      "bytesInOutput": 205
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/styles-api/use-resolved-styles-api/use-resolved-styles-api.mjs": {
+      "bytesInOutput": 252
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/styles-api/use-styles/get-class-name/get-global-class-names/get-global-class-names.mjs": {
+      "bytesInOutput": 235
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/utils/shallow-equal/shallow-equal.mjs": {
+      "bytesInOutput": 445
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/styles-api/use-styles/get-class-name/get-options-class-names/get-options-class-names.mjs": {
+      "bytesInOutput": 143
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/styles-api/use-styles/get-class-name/get-resolved-class-names/get-resolved-class-names.mjs": {
+      "bytesInOutput": 124
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/styles-api/use-styles/get-class-name/get-root-class-name/get-root-class-name.mjs": {
+      "bytesInOutput": 75
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/styles-api/use-styles/get-class-name/get-selector-class-name/get-selector-class-name.mjs": {
+      "bytesInOutput": 68
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/styles-api/use-styles/get-class-name/get-static-class-names/get-static-class-names.mjs": {
+      "bytesInOutput": 119
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/styles-api/use-styles/get-class-name/get-variant-class-name/get-variant-class-name.mjs": {
+      "bytesInOutput": 110
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/styles-api/use-styles/get-class-name/get-class-name.mjs": {
+      "bytesInOutput": 662
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/styles-api/use-styles/get-style/resolve-style/resolve-style.mjs": {
+      "bytesInOutput": 141
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/styles-api/use-styles/get-style/get-style.mjs": {
+      "bytesInOutput": 326
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/styles-api/use-styles/get-style/resolve-vars/merge-vars.mjs": {
+      "bytesInOutput": 105
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/styles-api/use-styles/use-transformed-styles.mjs": {
+      "bytesInOutput": 255
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/styles-api/use-styles/use-styles.mjs": {
+      "bytesInOutput": 1451
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/InlineStyles/css-object-to-string/css-object-to-string.mjs": {
+      "bytesInOutput": 93
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/InlineStyles/styles-to-string/styles-to-string.mjs": {
+      "bytesInOutput": 287
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/InlineStyles/InlineStyles.mjs": {
+      "bytesInOutput": 386
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/InlineStyles/hash-styles.mjs": {
+      "bytesInOutput": 246
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/Box/style-props/extract-style-props/extract-style-props.mjs": {
+      "bytesInOutput": 837
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/Box/style-props/style-props-data.mjs": {
+      "bytesInOutput": 2342
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/Box/style-props/resolvers/color-resolver/color-resolver.mjs": {
+      "bytesInOutput": 322
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/Box/style-props/resolvers/border-resolver/border-resolver.mjs": {
+      "bytesInOutput": 220
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/Box/style-props/resolvers/font-family-resolver/font-family-resolver.mjs": {
+      "bytesInOutput": 287
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/Box/style-props/resolvers/font-size-resolver/font-size-resolver.mjs": {
+      "bytesInOutput": 249
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/Box/style-props/resolvers/identity-resolver/identity-resolver.mjs": {
+      "bytesInOutput": 24
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/Box/style-props/resolvers/line-height-resolver/line-height-resolver.mjs": {
+      "bytesInOutput": 207
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/Box/style-props/resolvers/radius-resolver/radius-resolver.mjs": {
+      "bytesInOutput": 137
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/Box/style-props/resolvers/size-resolver/size-resolver.mjs": {
+      "bytesInOutput": 48
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/Box/style-props/resolvers/spacing-resolver/spacing-resolver.mjs": {
+      "bytesInOutput": 231
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/Box/style-props/resolvers/index.mjs": {
+      "bytesInOutput": 122
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/Box/style-props/parse-style-props/sort-media-queries.mjs": {
+      "bytesInOutput": 212
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/Box/style-props/parse-style-props/parse-style-props.mjs": {
+      "bytesInOutput": 900
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/Box/use-random-classname/use-random-classname.mjs": {
+      "bytesInOutput": 85
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/Box/get-style-object/get-style-object.mjs": {
+      "bytesInOutput": 118
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/factory/create-polymorphic-component.mjs": {
+      "bytesInOutput": 34
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/factory/factory.mjs": {
+      "bytesInOutput": 206
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/factory/polymorphic-factory.mjs": {
+      "bytesInOutput": 183
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/Box/get-box-mod/get-box-mod.mjs": {
+      "bytesInOutput": 375
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/Box/get-box-style/get-box-style.mjs": {
+      "bytesInOutput": 216
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/Box/Box.mjs": {
+      "bytesInOutput": 894
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/core/DirectionProvider/DirectionProvider.mjs": {
+      "bytesInOutput": 147
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/Collapse/Collapse.mjs": {
+      "bytesInOutput": 1292
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/ScrollArea/ScrollArea.context.mjs": {
+      "bytesInOutput": 65
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/ScrollArea/use-resize-observer.mjs": {
+      "bytesInOutput": 255
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/ScrollArea/ScrollAreaCorner/ScrollAreaCorner.mjs": {
+      "bytesInOutput": 492
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/ScrollArea/ScrollAreaRoot/ScrollAreaRoot.mjs": {
+      "bytesInOutput": 956
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/ScrollArea/utils/get-thumb-ratio.mjs": {
+      "bytesInOutput": 54
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/ScrollArea/utils/get-thumb-size.mjs": {
+      "bytesInOutput": 143
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/ScrollArea/utils/linear-scale.mjs": {
+      "bytesInOutput": 122
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/ScrollArea/utils/get-thumb-offset-from-scroll.mjs": {
+      "bytesInOutput": 250
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/ScrollArea/utils/get-scroll-position-from-pointer.mjs": {
+      "bytesInOutput": 203
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/ScrollArea/utils/is-scrolling-within-scrollbar-bounds.mjs": {
+      "bytesInOutput": 33
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/ScrollArea/utils/to-int.mjs": {
+      "bytesInOutput": 41
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/ScrollArea/utils/compose-event-handlers.mjs": {
+      "bytesInOutput": 109
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/ScrollArea/ScrollAreaScrollbar/Scrollbar.context.mjs": {
+      "bytesInOutput": 59
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/ScrollArea/ScrollAreaScrollbar/Scrollbar.mjs": {
+      "bytesInOutput": 1420
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/ScrollArea/ScrollAreaScrollbar/ScrollbarX.mjs": {
+      "bytesInOutput": 831
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/ScrollArea/ScrollAreaScrollbar/ScrollbarY.mjs": {
+      "bytesInOutput": 845
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/ScrollArea/ScrollAreaScrollbar/ScrollAreaScrollbarVisible.mjs": {
+      "bytesInOutput": 1239
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/ScrollArea/ScrollAreaScrollbar/ScrollAreaScrollbarAuto.mjs": {
+      "bytesInOutput": 440
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/ScrollArea/ScrollAreaScrollbar/ScrollAreaScrollbarHover.mjs": {
+      "bytesInOutput": 605
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/ScrollArea/ScrollAreaScrollbar/ScrollAreaScrollbarScroll.mjs": {
+      "bytesInOutput": 754
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/ScrollArea/ScrollAreaScrollbar/ScrollAreaScrollbar.mjs": {
+      "bytesInOutput": 490
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/ScrollArea/utils/add-unlinked-scroll-listener.mjs": {
+      "bytesInOutput": 255
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/ScrollArea/ScrollAreaThumb/ScrollAreaThumb.mjs": {
+      "bytesInOutput": 983
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/ScrollArea/ScrollAreaViewport/ScrollAreaViewport.mjs": {
+      "bytesInOutput": 624
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/ScrollArea/ScrollArea.module.mjs": {
+      "bytesInOutput": 158
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/ScrollArea/ScrollArea.mjs": {
+      "bytesInOutput": 4403
+    },
+    "ui-mantine-forms-local/header/node_modules/@floating-ui/react/dist/floating-ui.react.mjs": {
+      "bytesInOutput": 18161
+    },
+    "ui-mantine-forms-local/header/node_modules/@floating-ui/utils/dist/floating-ui.utils.dom.mjs": {
+      "bytesInOutput": 2306
+    },
+    "ui-mantine-forms-local/header/node_modules/@floating-ui/react/dist/floating-ui.react.utils.mjs": {
+      "bytesInOutput": 2087
+    },
+    "ui-mantine-forms-local/header/node_modules/@floating-ui/utils/dist/floating-ui.utils.mjs": {
+      "bytesInOutput": 1582
+    },
+    "ui-mantine-forms-local/header/node_modules/@floating-ui/core/dist/floating-ui.core.mjs": {
+      "bytesInOutput": 9423
+    },
+    "ui-mantine-forms-local/header/node_modules/@floating-ui/dom/dist/floating-ui.dom.mjs": {
+      "bytesInOutput": 7154
+    },
+    "ui-mantine-forms-local/header/node_modules/@floating-ui/react-dom/dist/floating-ui.react-dom.mjs": {
+      "bytesInOutput": 3276
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/UnstyledButton/UnstyledButton.module.mjs": {
+      "bytesInOutput": 27
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/UnstyledButton/UnstyledButton.mjs": {
+      "bytesInOutput": 473
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/VisuallyHidden/VisuallyHidden.module.mjs": {
+      "bytesInOutput": 27
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/VisuallyHidden/VisuallyHidden.mjs": {
+      "bytesInOutput": 373
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/Paper/Paper.module.mjs": {
+      "bytesInOutput": 27
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/Paper/Paper.mjs": {
+      "bytesInOutput": 555
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/utils/Floating/FloatingArrow/get-arrow-position-styles.mjs": {
+      "bytesInOutput": 2589
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/utils/Floating/FloatingArrow/FloatingArrow.mjs": {
+      "bytesInOutput": 372
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/utils/Floating/get-floating-position/get-floating-position.mjs": {
+      "bytesInOutput": 166
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/Overlay/Overlay.module.mjs": {
+      "bytesInOutput": 27
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/Overlay/Overlay.mjs": {
+      "bytesInOutput": 814
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/Portal/Portal.mjs": {
+      "bytesInOutput": 1226
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/Portal/OptionalPortal.mjs": {
+      "bytesInOutput": 195
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/Transition/transitions.mjs": {
+      "bytesInOutput": 3132
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/Transition/get-transition-styles/get-transition-styles.mjs": {
+      "bytesInOutput": 456
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/Transition/use-transition.mjs": {
+      "bytesInOutput": 1151
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/Transition/Transition.mjs": {
+      "bytesInOutput": 1132
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/Popover/Popover.context.mjs": {
+      "bytesInOutput": 61
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/utils/Floating/use-context-menu-handlers.mjs": {
+      "bytesInOutput": 1263
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/Popover/PopoverContextMenu/PopoverContextMenu.mjs": {
+      "bytesInOutput": 539
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/FocusTrap/FocusTrap.mjs": {
+      "bytesInOutput": 357
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/Popover/Popover.module.mjs": {
+      "bytesInOutput": 71
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/Popover/PopoverDropdown/PopoverDropdown.mjs": {
+      "bytesInOutput": 1757
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/Popover/PopoverTarget/PopoverTarget.mjs": {
+      "bytesInOutput": 753
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/Popover/use-popover.mjs": {
+      "bytesInOutput": 2567
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/Popover/Popover.mjs": {
+      "bytesInOutput": 3758
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/Loader/Loader.module.mjs": {
+      "bytesInOutput": 240
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/Loader/loaders/Bars.mjs": {
+      "bytesInOutput": 271
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/Loader/loaders/Dots.mjs": {
+      "bytesInOutput": 271
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/Loader/loaders/Oval.mjs": {
+      "bytesInOutput": 145
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/Loader/Loader.mjs": {
+      "bytesInOutput": 689
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/CloseButton/CloseIcon.mjs": {
+      "bytesInOutput": 871
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/CloseButton/CloseButton.module.mjs": {
+      "bytesInOutput": 55
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/CloseButton/CloseButton.mjs": {
+      "bytesInOutput": 769
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/Group/filter-falsy-children/filter-falsy-children.mjs": {
+      "bytesInOutput": 77
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/Group/Group.module.mjs": {
+      "bytesInOutput": 27
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/Group/Group.mjs": {
+      "bytesInOutput": 903
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/ModalBase/ModalBase.context.mjs": {
+      "bytesInOutput": 59
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/ModalBase/use-lock-scroll.mjs": {
+      "bytesInOutput": 287
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/ModalBase/use-modal.mjs": {
+      "bytesInOutput": 588
+    },
+    "ui-mantine-forms-local/header/node_modules/tslib/tslib.es6.mjs": {
+      "bytesInOutput": 747
+    },
+    "ui-mantine-forms-local/header/node_modules/react-remove-scroll/dist/es2015/Combination.js": {
+      "bytesInOutput": 145
+    },
+    "ui-mantine-forms-local/header/node_modules/react-remove-scroll/dist/es2015/UI.js": {
+      "bytesInOutput": 977
+    },
+    "ui-mantine-forms-local/header/node_modules/react-remove-scroll-bar/dist/es2015/constants.js": {
+      "bytesInOutput": 129
+    },
+    "ui-mantine-forms-local/header/node_modules/use-callback-ref/dist/es2015/assignRef.js": {
+      "bytesInOutput": 69
+    },
+    "ui-mantine-forms-local/header/node_modules/use-callback-ref/dist/es2015/useRef.js": {
+      "bytesInOutput": 229
+    },
+    "ui-mantine-forms-local/header/node_modules/use-callback-ref/dist/es2015/useMergeRef.js": {
+      "bytesInOutput": 372
+    },
+    "ui-mantine-forms-local/header/node_modules/use-callback-ref/dist/es2015/index.js": {
+      "bytesInOutput": 0
+    },
+    "ui-mantine-forms-local/header/node_modules/use-sidecar/dist/es2015/medium.js": {
+      "bytesInOutput": 847
+    },
+    "ui-mantine-forms-local/header/node_modules/use-sidecar/dist/es2015/index.js": {
+      "bytesInOutput": 0
+    },
+    "ui-mantine-forms-local/header/node_modules/use-sidecar/dist/es2015/exports.js": {
+      "bytesInOutput": 323
+    },
+    "ui-mantine-forms-local/header/node_modules/react-remove-scroll/dist/es2015/medium.js": {
+      "bytesInOutput": 12
+    },
+    "ui-mantine-forms-local/header/node_modules/react-remove-scroll/dist/es2015/SideEffect.js": {
+      "bytesInOutput": 3330
+    },
+    "ui-mantine-forms-local/header/node_modules/react-remove-scroll-bar/dist/es2015/component.js": {
+      "bytesInOutput": 1583
+    },
+    "ui-mantine-forms-local/header/node_modules/react-style-singleton/dist/es2015/hook.js": {
+      "bytesInOutput": 138
+    },
+    "ui-mantine-forms-local/header/node_modules/get-nonce/dist/es2015/index.js": {
+      "bytesInOutput": 99
+    },
+    "ui-mantine-forms-local/header/node_modules/react-style-singleton/dist/es2015/singleton.js": {
+      "bytesInOutput": 509
+    },
+    "ui-mantine-forms-local/header/node_modules/react-style-singleton/dist/es2015/component.js": {
+      "bytesInOutput": 100
+    },
+    "ui-mantine-forms-local/header/node_modules/react-style-singleton/dist/es2015/index.js": {
+      "bytesInOutput": 0
+    },
+    "ui-mantine-forms-local/header/node_modules/react-remove-scroll-bar/dist/es2015/utils.js": {
+      "bytesInOutput": 517
+    },
+    "ui-mantine-forms-local/header/node_modules/react-remove-scroll/dist/es2015/aggresiveCapture.js": {
+      "bytesInOutput": 228
+    },
+    "ui-mantine-forms-local/header/node_modules/react-remove-scroll/dist/es2015/handleScroll.js": {
+      "bytesInOutput": 1242
+    },
+    "ui-mantine-forms-local/header/node_modules/react-remove-scroll/dist/es2015/sidecar.js": {
+      "bytesInOutput": 17
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/ModalBase/ModalBase.mjs": {
+      "bytesInOutput": 1215
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/ModalBase/use-modal-body-id.mjs": {
+      "bytesInOutput": 134
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/ModalBase/ModalBase.module.mjs": {
+      "bytesInOutput": 125
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/ModalBase/ModalBaseBody.mjs": {
+      "bytesInOutput": 183
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/ModalBase/ModalBaseCloseButton.mjs": {
+      "bytesInOutput": 242
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/ModalBase/ModalBaseContent.mjs": {
+      "bytesInOutput": 847
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/ModalBase/ModalBaseHeader.mjs": {
+      "bytesInOutput": 194
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/ModalBase/use-modal-transition.mjs": {
+      "bytesInOutput": 128
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/ModalBase/ModalBaseOverlay.mjs": {
+      "bytesInOutput": 371
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/ModalBase/use-modal-title-id.mjs": {
+      "bytesInOutput": 137
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/ModalBase/ModalBaseTitle.mjs": {
+      "bytesInOutput": 200
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/ModalBase/NativeScrollArea.mjs": {
+      "bytesInOutput": 85
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/Text/Text.module.mjs": {
+      "bytesInOutput": 27
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/Text/Text.mjs": {
+      "bytesInOutput": 940
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/Anchor/Anchor.module.mjs": {
+      "bytesInOutput": 27
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/Anchor/Anchor.mjs": {
+      "bytesInOutput": 303
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/Burger/Burger.module.mjs": {
+      "bytesInOutput": 47
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/Burger/Burger.mjs": {
+      "bytesInOutput": 830
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/Button/Button.module.mjs": {
+      "bytesInOutput": 150
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/Button/ButtonGroup/ButtonGroup.mjs": {
+      "bytesInOutput": 595
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/Button/ButtonGroupSection/ButtonGroupSection.mjs": {
+      "bytesInOutput": 994
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/Button/Button.mjs": {
+      "bytesInOutput": 2097
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/Center/Center.module.mjs": {
+      "bytesInOutput": 27
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/Center/Center.mjs": {
+      "bytesInOutput": 374
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/Divider/Divider.module.mjs": {
+      "bytesInOutput": 46
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/Divider/Divider.mjs": {
+      "bytesInOutput": 766
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/Drawer/Drawer.context.mjs": {
+      "bytesInOutput": 56
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/Drawer/Drawer.module.mjs": {
+      "bytesInOutput": 86
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/Drawer/DrawerBody.mjs": {
+      "bytesInOutput": 267
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/Drawer/DrawerCloseButton.mjs": {
+      "bytesInOutput": 282
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/Drawer/DrawerContent.mjs": {
+      "bytesInOutput": 549
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/Drawer/DrawerHeader.mjs": {
+      "bytesInOutput": 273
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/Drawer/DrawerOverlay.mjs": {
+      "bytesInOutput": 276
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/Drawer/DrawerRoot.mjs": {
+      "bytesInOutput": 1432
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/Drawer/DrawerStack.mjs": {
+      "bytesInOutput": 532
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/Drawer/DrawerTitle.mjs": {
+      "bytesInOutput": 270
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/Drawer/Drawer.mjs": {
+      "bytesInOutput": 1130
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/HoverCard/HoverCard.context.mjs": {
+      "bytesInOutput": 63
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/HoverCard/HoverCardDropdown/HoverCardDropdown.mjs": {
+      "bytesInOutput": 422
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/HoverCard/HoverCardGroup/HoverCardGroup.mjs": {
+      "bytesInOutput": 352
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/HoverCard/HoverCardTarget/HoverCardTarget.mjs": {
+      "bytesInOutput": 738
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/HoverCard/use-hover-card.mjs": {
+      "bytesInOutput": 1767
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/HoverCard/HoverCard.mjs": {
+      "bytesInOutput": 1139
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/SimpleGrid/SimpleGridVariables.mjs": {
+      "bytesInOutput": 1738
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/SimpleGrid/SimpleGrid.module.mjs": {
+      "bytesInOutput": 50
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/SimpleGrid/SimpleGrid.mjs": {
+      "bytesInOutput": 825
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/ThemeIcon/ThemeIcon.module.mjs": {
+      "bytesInOutput": 27
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantine/core/esm/components/ThemeIcon/ThemeIcon.mjs": {
+      "bytesInOutput": 760
+    },
+    "ui-mantine-forms-local/header/node_modules/@tabler/icons-react/dist/esm/createReactComponent.mjs": {
+      "bytesInOutput": 478
+    },
+    "ui-mantine-forms-local/header/node_modules/@tabler/icons-react/dist/esm/defaultAttributes.mjs": {
+      "bytesInOutput": 303
+    },
+    "ui-mantine-forms-local/header/node_modules/@tabler/icons-react/dist/esm/icons/IconBook.mjs": {
+      "bytesInOutput": 277
+    },
+    "ui-mantine-forms-local/header/node_modules/@tabler/icons-react/dist/esm/icons/IconChartPie3.mjs": {
+      "bytesInOutput": 199
+    },
+    "ui-mantine-forms-local/header/node_modules/@tabler/icons-react/dist/esm/icons/IconChevronDown.mjs": {
+      "bytesInOutput": 99
+    },
+    "ui-mantine-forms-local/header/node_modules/@tabler/icons-react/dist/esm/icons/IconCode.mjs": {
+      "bytesInOutput": 165
+    },
+    "ui-mantine-forms-local/header/node_modules/@tabler/icons-react/dist/esm/icons/IconCoin.mjs": {
+      "bytesInOutput": 250
+    },
+    "ui-mantine-forms-local/header/node_modules/@tabler/icons-react/dist/esm/icons/IconFingerprint.mjs": {
+      "bytesInOutput": 371
+    },
+    "ui-mantine-forms-local/header/node_modules/@tabler/icons-react/dist/esm/icons/IconNotification.mjs": {
+      "bytesInOutput": 208
+    },
+    "ui-mantine-forms-local/header/node_modules/@tabler/icons-react/dist/esm/tabler-icons-react.mjs": {
+      "bytesInOutput": 0
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantinex/mantine-logo/esm/MantineLogo/MantineLogo.mjs": {
+      "bytesInOutput": 105
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantinex/mantine-logo/esm/MantineLogo/MantineLogoRounded.mjs": {
+      "bytesInOutput": 1442
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantinex/mantine-logo/esm/MantineLogo/use-mantine-logo-colors.mjs": {
+      "bytesInOutput": 166
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantinex/mantine-logo/esm/MantineLogo/MantineLogoText.mjs": {
+      "bytesInOutput": 7449
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantinex/mantine-logo/esm/MantineLogo/MantineLogo.module.css.mjs": {
+      "bytesInOutput": 54
+    },
+    "ui-mantine-forms-local/header/node_modules/@mantinex/mantine-logo/esm/index.mjs": {
+      "bytesInOutput": 0
+    },
+    "ui-mantine-forms-local/header/src/HeaderMegaMenu.module.css": {
+      "bytesInOutput": 203
+    },
+    "ui-mantine-forms-local/header/src/HeaderMegaMenu.tsx": {
+      "bytesInOutput": 3591
+    }
+  },
+  "cssBuild": {
+    "modules": {
+      "/workspace/scratch/15f43349f656/ui-mantine-forms-local/header/src/HeaderMegaMenu.module.css": {
+        "header": "header_HeaderMegaMenu-module_header",
+        "link": "header_HeaderMegaMenu-module_link",
+        "subLink": "header_HeaderMegaMenu-module_subLink",
+        "dropdownFooter": "header_HeaderMegaMenu-module_dropdownFooter"
+      }
+    },
+    "breakpoints": {
+      "sm": "48em"
+    },
+    "core": "@mantine/core/styles.css",
+    "plugins": [
+      "postcss-simple-vars",
+      "postcss-preset-mantine",
+      "postcss-modules"
+    ]
+  },
+  "evidence": [
+    {
+      "path": "evidence/logo-LICENSE",
+      "sha256": "61c765e625bc25d55143f14de7554685c52f21d9e671d3d204304691a163d06a",
+      "text": "MIT License\n\nCopyright (c) 2021 Vitaly Rtishchev\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n"
+    },
+    {
+      "path": "evidence/logo-license-url.txt",
+      "sha256": "967d548a38281f8c91e4b4dfc7b1f5c4f0ab3fd7f8ba0962d5a450214459ddc7",
+      "text": "https://raw.githubusercontent.com/mantinedev/mantine/345808e2a258142b12c0b9b145e7c982f4c34d1e/LICENSE"
+    },
+    {
+      "path": "evidence/logo-npm.json",
+      "sha256": "d9c58d2ed11bf9ea8e9a59c0717f953b5aff70153372e35c6089de01a3ec5e10",
+      "text": "{\n  \"bugs\": {\n    \"url\": \"https://github.com/mantinedev/mantine/issues\"\n  },\n  \"dist\": {\n    \"shasum\": \"6bc63b440c3649c18a7398fd21680555e1a86397\",\n    \"tarball\": \"https://registry.npmjs.org/@mantinex/mantine-logo/-/mantine-logo-2.0.0.tgz\",\n    \"fileCount\": 34,\n    \"integrity\": \"sha512-HfO0twXEMoGftJGTVaixwI7ABUmyBafT/AQQM1MWKw4Q4ZwjMURKBxhz5JFGhc4MHysKRo2E3jaAtXuHydyfcA==\",\n    \"signatures\": [\n      {\n        \"sig\": \"MEQCIAE/xB2gCxlFH0xQWV9BXWKpAvuwRNNUfIL6OJpgMClRAiArGUKZuWUISIuXrRDnl7UtGNJzlztatvMOKO0rEjRjyQ==\",\n        \"keyid\": \"SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U\"\n      }\n    ],\n    \"unpackedSize\": 154669\n  },\n  \"main\": \"./cjs/index.cjs\",\n  \"name\": \"@mantinex/mantine-logo\",\n  \"types\": \"./lib/index.d.ts\",\n  \"author\": {\n    \"name\": \"Vitaly Rtishchev\",\n    \"email\": \"rtivital@gmail.com\"\n  },\n  \"module\": \"./esm/index.mjs\",\n  \"exports\": {\n    \".\": {\n      \"import\": {\n        \"types\": \"./lib/index.d.mts\",\n        \"default\": \"./esm/index.mjs\"\n      },\n      \"require\": {\n        \"types\": \"./lib/index.d.ts\",\n        \"default\": \"./cjs/index.cjs\"\n      }\n    },\n    \"./styles.css\": \"./styles.css\",\n    \"./styles.layer.css\": \"./styles.layer.css\"\n  },\n  \"gitHead\": \"345808e2a258142b12c0b9b145e7c982f4c34d1e\",\n  \"license\": \"MIT\",\n  \"_npmUser\": {\n    \"name\": \"rtivital\",\n    \"email\": \"rtivital@gmail.com\"\n  },\n  \"homepage\": \"https://mantine.dev/\",\n  \"keywords\": [\n    \"react\",\n    \"ui\"\n  ],\n  \"repository\": {\n    \"url\": \"git+https://github.com/mantinedev/mantine.git\",\n    \"type\": \"git\",\n    \"directory\": \"packages/@mantinex/mantine-logo\"\n  },\n  \"_npmVersion\": \"10.9.0\",\n  \"description\": \"Mantine logo as react component\",\n  \"directories\": {},\n  \"maintainers\": [\n    {\n      \"name\": \"rtivital\",\n      \"email\": \"rtivital@gmail.com\"\n    }\n  ],\n  \"sideEffects\": [\n    \"*.css\"\n  ],\n  \"_nodeVersion\": \"22.11.0\",\n  \"_hasShrinkwrap\": false,\n  \"devDependencies\": {\n    \"react\": \"19.0.0\",\n    \"react-dom\": \"19.0.0\",\n    \"@mantine/core\": \"workspace:*\",\n    \"@mantine/hooks\": \"workspace:*\",\n    \"@mantine-tests/core\": \"workspace:*\"\n  },\n  \"peerDependencies\": {\n    \"react\": \"^18.x || ^19.x\",\n    \"react-dom\": \"^18.x || ^19.x\",\n    \"@mantine/core\": \">=7.0.0\",\n    \"@mantine/hooks\": \">=7.0.0\"\n  },\n  \"_npmOperationalInternal\": {\n    \"tmp\": \"tmp/mantine-logo_2.0.0_1745988070474_0.9385042901366205\",\n    \"host\": \"s3://npm-registry-packages-npm-production\"\n  },\n  \"_id\": \"@mantinex/mantine-logo@2.0.0\",\n  \"version\": \"2.0.0\"\n}"
+    },
+    {
+      "path": "evidence/react-remove-scroll-bar-LICENSE",
+      "sha256": "a79aae0c0f21990d9d963bb3c5a79cdcea9a46f8523ba55c58d7fe776b6ebc84",
+      "text": "MIT License\n\nCopyright (c) 2025 Anton Korzunov <thekashey@gmail.com>\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n"
+    }
+  ],
+  "changes": [
+    "Original # anchors prevent navigation; unchanged no-route destination. Original Get started/Log in/Sign up have no handlers and are visibly disabled.",
+    "Original malformed calc(100vh - 80px missing final parenthesis corrected.",
+    "Original Header CSS module compiled via identical Contact PostCSS pipeline; full core and MantineLogo CSS included. System font; no font downloads.",
+    "Original MantineLogo geometry/colors and Tabler icons kept. MIT does not confer trademark/endorsement rights.",
+    "Contact isolation/bootstrap, memory-only MantineProvider and hidden unmount reused unchanged; no new global storage/network capabilities."
+  ],
+  "gaps": [
+    "Browser hover geometry, narrow/wide visual layout, native focus traversal and CSS transitions are not visually verified.",
+    "Menu links and actions are upstream placeholders, not functional routes, login or registration.",
+    "HoverCard desktop and Drawer mobile CSS branches retain original responsive behavior; JSDOM sees both DOM branches without proving breakpoint pixels."
+  ]
+}
