@@ -1,0 +1,233 @@
+{
+  "repository": "https://github.com/nolly-studio/cult-ui",
+  "revision": "d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+  "entry": "apps/www/registry/default/example/hero-liquid-metal-demo.tsx",
+  "originals": [
+    {
+      "file": "hero-liquid-metal.tsx",
+      "sha256": "033de91d470efd75712e5be890f01eca6020f344ee75d09f53b45a6e3380712d",
+      "gitBlobCalculated": "80dfe57a9742ceb339b658ee790fc730cc936933",
+      "text": "\"use client\"\n\nimport * as React from \"react\"\nimport type { SVGProps } from \"react\"\nimport { LiquidMetal } from \"@paper-design/shaders-react\"\n\nimport { cn } from \"@/lib/utils\"\nimport { Badge } from \"@/components/ui/badge\"\nimport { Button } from \"@/components/ui/button\"\n\nconst MemoizedLiquidMetal = React.memo(LiquidMetal)\n\ntype LiquidMetalProps = React.ComponentProps<typeof LiquidMetal>\ntype LiquidMetalIcon = React.ComponentType<SVGProps<SVGSVGElement>>\n\nexport interface HeroLiquidMetalTechItem {\n  name: string\n  version?: string\n  icon?: LiquidMetalIcon\n}\n\nexport interface HeroLiquidMetalCTAProps {\n  label: React.ReactNode\n  href: string\n  target?: React.HTMLAttributeAnchorTarget\n  rel?: string\n  onClick?: React.MouseEventHandler<HTMLAnchorElement>\n  className?: string\n  buttonClassName?: string\n}\n\n/** LiquidMetal shader props that can be passed at the root for convenience */\nexport type HeroLiquidMetalShaderOverrides = Partial<\n  Pick<\n    LiquidMetalProps,\n    | \"width\"\n    | \"height\"\n    | \"image\"\n    | \"colorBack\"\n    | \"colorTint\"\n    | \"shape\"\n    | \"repetition\"\n    | \"softness\"\n    | \"shiftRed\"\n    | \"shiftBlue\"\n    | \"distortion\"\n    | \"contour\"\n    | \"angle\"\n    | \"speed\"\n    | \"frame\"\n    | \"scale\"\n    | \"rotation\"\n    | \"offsetX\"\n    | \"offsetY\"\n    | \"fit\"\n    | \"originX\"\n    | \"originY\"\n    | \"minPixelRatio\"\n    | \"maxPixelCount\"\n  >\n>\n\nexport interface HeroLiquidMetalRootProps\n  extends Omit<React.ComponentPropsWithoutRef<\"section\">, \"title\">,\n    HeroLiquidMetalShaderOverrides {\n  srTitle?: string\n  title?: React.ReactNode\n  subtitle?: React.ReactNode\n  description?: React.ReactNode\n  showCta?: boolean\n  ctaProps?: Partial<HeroLiquidMetalCTAProps>\n  renderCta?: (defaultCta: React.ReactNode) => React.ReactNode\n  showBadges?: boolean\n  techStack?: HeroLiquidMetalTechItem[]\n  renderBadge?: (\n    tech: HeroLiquidMetalTechItem,\n    index: number,\n    defaultBadge: React.ReactNode\n  ) => React.ReactNode\n  desktopShaderProps?: Partial<LiquidMetalProps>\n  mobileShaderProps?: Partial<LiquidMetalProps>\n}\n\nexport interface HeroLiquidMetalHeadingProps\n  extends Omit<React.ComponentPropsWithoutRef<\"div\">, \"title\"> {\n  title?: React.ReactNode\n  subtitle?: React.ReactNode\n  headingClassName?: string\n}\n\nexport interface HeroLiquidMetalDescriptionProps\n  extends React.ComponentPropsWithoutRef<\"div\"> {\n  description?: React.ReactNode\n  descriptionClassName?: string\n}\n\nexport interface HeroLiquidMetalActionsProps\n  extends React.ComponentPropsWithoutRef<\"div\"> {\n  showCta?: boolean\n  ctaProps?: Partial<HeroLiquidMetalCTAProps>\n  renderCta?: (defaultCta: React.ReactNode) => React.ReactNode\n}\n\nexport interface HeroLiquidMetalBadgesProps\n  extends React.ComponentPropsWithoutRef<\"div\"> {\n  showBadges?: boolean\n  techStack?: HeroLiquidMetalTechItem[]\n  renderBadge?: (\n    tech: HeroLiquidMetalTechItem,\n    index: number,\n    defaultBadge: React.ReactNode\n  ) => React.ReactNode\n}\n\nexport interface HeroLiquidMetalVisualProps\n  extends React.ComponentPropsWithoutRef<\"div\"> {\n  desktopShaderProps?: Partial<LiquidMetalProps>\n  desktopClassName?: string\n}\n\nexport interface HeroLiquidMetalMobileVisualProps\n  extends React.ComponentPropsWithoutRef<\"div\"> {\n  mobileShaderProps?: Partial<LiquidMetalProps>\n}\n\nexport interface HeroLiquidMetalProps extends HeroLiquidMetalRootProps {\n  containerClassName?: string\n  contentClassName?: string\n  headingWrapClassName?: string\n  headingClassName?: string\n  descriptionWrapClassName?: string\n  descriptionClassName?: string\n  ctaWrapClassName?: string\n  badgesWrapClassName?: string\n  visualClassName?: string\n  mobileVisualClassName?: string\n}\n\ninterface HeroLiquidMetalContextValue {\n  srTitle: string\n  title: React.ReactNode\n  subtitle: React.ReactNode\n  description: React.ReactNode\n  showCta: boolean\n  mergedCtaProps: HeroLiquidMetalCTAProps\n  renderCta?: (defaultCta: React.ReactNode) => React.ReactNode\n  showBadges: boolean\n  techStack: HeroLiquidMetalTechItem[]\n  renderBadge?: HeroLiquidMetalBadgesProps[\"renderBadge\"]\n  mergedDesktopShaderProps: Partial<LiquidMetalProps>\n  mergedMobileShaderProps: Partial<LiquidMetalProps>\n}\n\nconst defaultDesktopShaderProps: Partial<LiquidMetalProps> = {\n  width: 1280,\n  height: 720,\n  image: \"/cult-icon.svg\",\n  colorBack: \"#ffffff00\",\n  colorTint: \"#2c5d72\",\n  shape: undefined,\n  repetition: 6,\n  softness: 0.8,\n  shiftRed: 1,\n  shiftBlue: -1,\n  distortion: 0.4,\n  contour: 0.4,\n  angle: 0,\n  speed: 1,\n  scale: 0.6,\n  fit: \"contain\",\n}\n\nconst defaultMobileShaderProps: Partial<LiquidMetalProps> = {\n  image: \"/cult-icon.svg\",\n  colorBack: \"#ffffff00\",\n  colorTint: \"#2c5d72\",\n  shape: undefined,\n  repetition: 6,\n  softness: 0.8,\n  shiftRed: 1,\n  shiftBlue: -1,\n  distortion: 0.4,\n  contour: 0.4,\n  angle: 0,\n  speed: 1,\n  scale: 0.68,\n  fit: \"contain\",\n  style: { height: \"100%\", width: \"100%\" },\n}\n\nconst defaultCtaProps: HeroLiquidMetalCTAProps = {\n  label: \"Check it out today\",\n  href: \"https://aisdkagents.com\",\n  target: \"_blank\",\n  rel: \"noopener noreferrer\",\n}\n\nconst defaultDescription = (\n  <>\n    Full-stack vercel ai sdk patterns for workflows, tool calling, and agent\n    orchestration. Built with{\" \"}\n    <span className=\"font-medium tracking-tight\">ai sdk v6</span> and{\" \"}\n    <span className=\"font-medium tracking-tight\">shadcn/ui</span>.\n    <span className=\"hidden sm:inline\"> Headless, themable, practical.</span>\n  </>\n)\n\nconst defaultTechStack: HeroLiquidMetalTechItem[] = [\n  {\n    name: \"Next.js\",\n    version: \"v16\",\n    icon: NextjsIcon,\n  },\n  {\n    name: \"AI SDK\",\n    version: \"v6\",\n    icon: AISDKIcon,\n  },\n]\n\nconst HeroLiquidMetalContext = React.createContext<\n  HeroLiquidMetalContextValue | undefined\n>(undefined)\n\nfunction useHeroLiquidMetalContext() {\n  const context = React.useContext(HeroLiquidMetalContext)\n  if (!context) {\n    throw new Error(\n      \"HeroLiquidMetal components must be used within HeroLiquidMetalRoot\"\n    )\n  }\n  return context\n}\n\nexport function useHeroLiquidMetal() {\n  return useHeroLiquidMetalContext()\n}\n\nexport const HeroLiquidMetalRoot = React.forwardRef<\n  HTMLElement,\n  HeroLiquidMetalRootProps\n>(({ className, children, srTitle = \"AI SDK Agents\", title = <span className=\"\">\n      AI SDK Agents\n    </span>, subtitle = \"Copy and Paste\", description = defaultDescription, showCta = true, ctaProps, renderCta, showBadges = true, techStack = defaultTechStack, renderBadge, desktopShaderProps, mobileShaderProps, width, height, image, colorBack, colorTint, shape, repetition, softness, shiftRed, shiftBlue, distortion, contour, angle, speed, frame, scale, rotation, offsetX, offsetY, fit, originX, originY, minPixelRatio, maxPixelCount, ...props }, ref) => {\n  const mergedCtaProps = React.useMemo(\n    () => ({\n      ...defaultCtaProps,\n      ...ctaProps,\n    }),\n    [ctaProps]\n  )\n\n  const shaderOverrides = React.useMemo((): Partial<LiquidMetalProps> => {\n    const overrides: Partial<LiquidMetalProps> = {}\n    if (width !== undefined) overrides.width = width\n    if (height !== undefined) overrides.height = height\n    if (image !== undefined) overrides.image = image\n    if (colorBack !== undefined) overrides.colorBack = colorBack\n    if (colorTint !== undefined) overrides.colorTint = colorTint\n    if (shape !== undefined) overrides.shape = shape\n    if (repetition !== undefined) overrides.repetition = repetition\n    if (softness !== undefined) overrides.softness = softness\n    if (shiftRed !== undefined) overrides.shiftRed = shiftRed\n    if (shiftBlue !== undefined) overrides.shiftBlue = shiftBlue\n    if (distortion !== undefined) overrides.distortion = distortion\n    if (contour !== undefined) overrides.contour = contour\n    if (angle !== undefined) overrides.angle = angle\n    if (speed !== undefined) overrides.speed = speed\n    if (frame !== undefined) overrides.frame = frame\n    if (scale !== undefined) overrides.scale = scale\n    if (rotation !== undefined) overrides.rotation = rotation\n    if (offsetX !== undefined) overrides.offsetX = offsetX\n    if (offsetY !== undefined) overrides.offsetY = offsetY\n    if (fit !== undefined) overrides.fit = fit\n    if (originX !== undefined) overrides.originX = originX\n    if (originY !== undefined) overrides.originY = originY\n    if (minPixelRatio !== undefined) overrides.minPixelRatio = minPixelRatio\n    if (maxPixelCount !== undefined) overrides.maxPixelCount = maxPixelCount\n    return overrides\n  }, [\n    width,\n    height,\n    image,\n    colorBack,\n    colorTint,\n    shape,\n    repetition,\n    softness,\n    shiftRed,\n    shiftBlue,\n    distortion,\n    contour,\n    angle,\n    speed,\n    frame,\n    scale,\n    rotation,\n    offsetX,\n    offsetY,\n    fit,\n    originX,\n    originY,\n    minPixelRatio,\n    maxPixelCount,\n  ])\n\n  const mergedDesktopShaderProps = React.useMemo(\n    () => ({\n      ...defaultDesktopShaderProps,\n      ...shaderOverrides,\n      ...desktopShaderProps,\n    }),\n    [shaderOverrides, desktopShaderProps]\n  )\n\n  const mergedMobileShaderProps = React.useMemo(\n    () => ({\n      ...defaultMobileShaderProps,\n      ...shaderOverrides,\n      ...mobileShaderProps,\n      style: {\n        ...(defaultMobileShaderProps.style as React.CSSProperties),\n        ...(mobileShaderProps?.style as React.CSSProperties | undefined),\n      },\n    }),\n    [shaderOverrides, mobileShaderProps]\n  )\n\n  const contextValue = React.useMemo<HeroLiquidMetalContextValue>(\n    () => ({\n      srTitle,\n      title,\n      subtitle,\n      description,\n      showCta,\n      mergedCtaProps,\n      renderCta,\n      showBadges,\n      techStack,\n      renderBadge,\n      mergedDesktopShaderProps,\n      mergedMobileShaderProps,\n    }),\n    [\n      srTitle,\n      title,\n      subtitle,\n      description,\n      showCta,\n      mergedCtaProps,\n      renderCta,\n      showBadges,\n      techStack,\n      renderBadge,\n      mergedDesktopShaderProps,\n      mergedMobileShaderProps,\n    ]\n  )\n\n  return (\n    <HeroLiquidMetalContext.Provider value={contextValue}>\n      <section\n        className={cn(\"relative h-full w-full overflow-hidden\", className)}\n        data-slot=\"hero-liquid-metal-root\"\n        ref={ref}\n        {...props}\n      >\n        <h1 className=\"sr-only\">{srTitle}</h1>\n        {children}\n      </section>\n    </HeroLiquidMetalContext.Provider>\n  )\n})\nHeroLiquidMetalRoot.displayName = \"HeroLiquidMetalRoot\"\n\nexport function HeroLiquidMetalContainer({\n  className,\n  ...props\n}: React.ComponentPropsWithoutRef<\"div\">) {\n  return (\n    <div\n      className={cn(\n        \"relative z-10 container grid gap-6 pb-16 sm:gap-8 sm:pb-20 lg:grid-cols-[1fr_minmax(300px,500px)] lg:items-center lg:gap-12 lg:pb-24 xl:grid-cols-[1fr_1fr]\",\n        className\n      )}\n      data-slot=\"hero-liquid-metal-container\"\n      {...props}\n    />\n  )\n}\n\nexport function HeroLiquidMetalContent({\n  className,\n  ...props\n}: React.ComponentPropsWithoutRef<\"div\">) {\n  return (\n    <div\n      className={cn(\n        \"flex flex-col justify-center gap-4 text-balance sm:gap-5 sm:px-4 md:px-8 lg:gap-6 lg:pr-0 lg:pl-4 xl:pl-8 2xl:pl-0\",\n        className\n      )}\n      data-slot=\"hero-liquid-metal-content\"\n      {...props}\n    />\n  )\n}\n\nexport function HeroLiquidMetalHeading({\n  className,\n  title,\n  subtitle,\n  headingClassName,\n  children,\n  ...props\n}: HeroLiquidMetalHeadingProps) {\n  const context = useHeroLiquidMetalContext()\n  const resolvedTitle = title ?? context.title\n  const resolvedSubtitle = subtitle ?? context.subtitle\n\n  return (\n    <div\n      className={cn(\"pt-4 text-center sm:pt-6 lg:pt-0 lg:text-left\", className)}\n      data-slot=\"hero-liquid-metal-heading-wrap\"\n      {...props}\n    >\n      {children ?? (\n        <div className=\"relative\">\n          <h2\n            className={cn(\n              \"relative mb-0 text-3xl font-medium tracking-[-0.04em] text-balance sm:text-4xl md:text-5xl lg:tracking-[-0.06em] xl:text-6xl 2xl:text-7xl\",\n              headingClassName\n            )}\n            data-slot=\"hero-liquid-metal-heading\"\n          >\n            {resolvedTitle} <br />\n            {resolvedSubtitle}\n          </h2>\n        </div>\n      )}\n    </div>\n  )\n}\n\nexport function HeroLiquidMetalDescription({\n  className,\n  description,\n  descriptionClassName,\n  children,\n  ...props\n}: HeroLiquidMetalDescriptionProps) {\n  const context = useHeroLiquidMetalContext()\n  const resolvedDescription = description ?? context.description\n\n  return (\n    <div\n      className={cn(\n        \"mx-auto max-w-xl pb-2 text-center sm:pb-4 lg:mx-0 lg:max-w-none lg:pb-0 lg:text-left\",\n        className\n      )}\n      data-slot=\"hero-liquid-metal-description-wrap\"\n      {...props}\n    >\n      {children ?? (\n        <p\n          className={cn(\n            \"text-foreground/70 md:text-foreground/80 mt-0 mb-0 font-sans text-sm sm:text-base lg:text-lg xl:text-xl\",\n            descriptionClassName\n          )}\n          data-slot=\"hero-liquid-metal-description\"\n        >\n          {resolvedDescription}\n        </p>\n      )}\n    </div>\n  )\n}\n\nexport function HeroLiquidMetalActions({\n  className,\n  showCta,\n  ctaProps,\n  renderCta,\n  children,\n  ...props\n}: HeroLiquidMetalActionsProps) {\n  const context = useHeroLiquidMetalContext()\n  const shouldShowCta = showCta ?? context.showCta\n  const resolvedCtaProps = { ...context.mergedCtaProps, ...ctaProps }\n  const resolvedRenderCta = renderCta ?? context.renderCta\n\n  if (!shouldShowCta) {\n    return null\n  }\n\n  const defaultCta = <HeroLiquidMetalCTA {...resolvedCtaProps} />\n\n  return (\n    <div\n      className={cn(\"flex justify-center lg:justify-start\", className)}\n      data-slot=\"hero-liquid-metal-cta-wrap\"\n      {...props}\n    >\n      {children ??\n        (resolvedRenderCta ? resolvedRenderCta(defaultCta) : defaultCta)}\n    </div>\n  )\n}\n\nexport function HeroLiquidMetalCTA({\n  label,\n  href,\n  target,\n  rel,\n  onClick,\n  className,\n  buttonClassName,\n}: HeroLiquidMetalCTAProps) {\n  return (\n    <div\n      className={cn(\n        \"flex items-center justify-center gap-4 pb-4 md:pb-0\",\n        className\n      )}\n      data-slot=\"hero-liquid-metal-cta\"\n    >\n      <Button asChild className={cn(\"\", buttonClassName)} size=\"lg\">\n        <a href={href} onClick={onClick} rel={rel} target={target}>\n          {label}\n        </a>\n      </Button>\n    </div>\n  )\n}\n\nexport function HeroLiquidMetalBadges({\n  className,\n  showBadges,\n  techStack,\n  renderBadge,\n  ...props\n}: HeroLiquidMetalBadgesProps) {\n  const context = useHeroLiquidMetalContext()\n  const shouldShowBadges = showBadges ?? context.showBadges\n  const resolvedTechStack = techStack ?? context.techStack\n  const resolvedRenderBadge = renderBadge ?? context.renderBadge\n\n  if (!shouldShowBadges) {\n    return null\n  }\n\n  return (\n    <div\n      className={cn(\n        \"flex flex-wrap items-center justify-center gap-2.5\",\n        className\n      )}\n      data-slot=\"hero-liquid-metal-badges\"\n      {...props}\n    >\n      {resolvedTechStack.map((tech, index) => {\n        const Icon = tech.icon\n        const defaultBadge = (\n          <Badge\n            className={cn(\n              \"group relative px-3.5 py-1.5 font-medium transition-all duration-150\",\n              \"border-border/50 bg-card text-card-foreground border\",\n              \"shadow-[0_1px_3px_rgba(0,0,0,0.08)] dark:shadow-[0_1px_3px_rgba(0,0,0,0.3)]\",\n              \"hover:-translate-y-px hover:shadow-[0_2px_8px_rgba(0,0,0,0.12)] dark:hover:shadow-[0_2px_8px_rgba(0,0,0,0.4)]\"\n            )}\n            data-slot=\"hero-liquid-metal-badge\"\n            key={tech.name}\n            variant=\"outline\"\n          >\n            {Icon ? <Icon className=\"mr-1 size-3.5 opacity-80\" /> : null}\n            <span className=\"font-semibold tracking-tight\">{tech.name}</span>\n            {tech.version ? (\n              <span className=\"font-mono text-xs opacity-50\">\n                {tech.version}\n              </span>\n            ) : null}\n          </Badge>\n        )\n\n        if (resolvedRenderBadge) {\n          return (\n            <React.Fragment key={tech.name}>\n              {resolvedRenderBadge(tech, index, defaultBadge)}\n            </React.Fragment>\n          )\n        }\n\n        return defaultBadge\n      })}\n    </div>\n  )\n}\n\nexport function HeroLiquidMetalVisual({\n  className,\n  desktopClassName,\n  desktopShaderProps,\n  ...props\n}: HeroLiquidMetalVisualProps) {\n  const context = useHeroLiquidMetalContext()\n  const resolvedDesktopShaderProps = {\n    ...context.mergedDesktopShaderProps,\n    ...desktopShaderProps,\n  }\n\n  return (\n    <div\n      className={cn(\n        \"relative hidden h-[350px] lg:block lg:h-[400px] xl:h-[500px]\",\n        className\n      )}\n      data-slot=\"hero-liquid-metal-visual\"\n      {...props}\n    >\n      <div\n        className={cn(\n          \"absolute inset-0 flex items-center justify-center overflow-hidden rounded-full\",\n          desktopClassName\n        )}\n        data-slot=\"hero-liquid-metal-desktop\"\n      >\n        <MemoizedLiquidMetal\n          {...resolvedDesktopShaderProps}\n          image={\n            resolvedDesktopShaderProps.image ??\n            (defaultDesktopShaderProps.image as string)\n          }\n        />\n      </div>\n    </div>\n  )\n}\n\nexport function HeroLiquidMetalMobileVisual({\n  className,\n  mobileShaderProps,\n  ...props\n}: HeroLiquidMetalMobileVisualProps) {\n  const context = useHeroLiquidMetalContext()\n  const resolvedMobileShaderProps = {\n    ...context.mergedMobileShaderProps,\n    ...mobileShaderProps,\n    style: {\n      ...(context.mergedMobileShaderProps.style as React.CSSProperties),\n      ...(mobileShaderProps?.style as React.CSSProperties | undefined),\n    },\n  }\n\n  return (\n    <div\n      className={cn(\n        \"pointer-events-none absolute inset-x-0 -bottom-24 -z-10 h-[360px] overflow-hidden lg:hidden\",\n        className\n      )}\n      data-slot=\"hero-liquid-metal-mobile\"\n      {...props}\n    >\n      <div className=\"from-background via-background/95 absolute inset-x-0 top-0 z-10 h-56 bg-gradient-to-b to-transparent\" />\n      <MemoizedLiquidMetal\n        {...resolvedMobileShaderProps}\n        image={\n          resolvedMobileShaderProps.image ??\n          (defaultMobileShaderProps.image as string)\n        }\n      />\n    </div>\n  )\n}\n\nexport function HeroLiquidMetal({\n  containerClassName,\n  contentClassName,\n  headingWrapClassName,\n  headingClassName,\n  descriptionWrapClassName,\n  descriptionClassName,\n  ctaWrapClassName,\n  badgesWrapClassName,\n  visualClassName,\n  mobileVisualClassName,\n  ...props\n}: HeroLiquidMetalProps) {\n  return (\n    <HeroLiquidMetalRoot {...props}>\n      <HeroLiquidMetalContainer className={containerClassName}>\n        <HeroLiquidMetalContent className={contentClassName}>\n          <HeroLiquidMetalHeading\n            className={headingWrapClassName}\n            headingClassName={headingClassName}\n          />\n          <HeroLiquidMetalDescription\n            className={descriptionWrapClassName}\n            descriptionClassName={descriptionClassName}\n          />\n          <HeroLiquidMetalActions className={ctaWrapClassName} />\n          <div\n            className={cn(\n              \"hidden justify-center lg:flex lg:justify-start\",\n              badgesWrapClassName\n            )}\n            data-slot=\"hero-liquid-metal-badges-wrap\"\n          >\n            <HeroLiquidMetalBadges />\n          </div>\n        </HeroLiquidMetalContent>\n        <HeroLiquidMetalVisual className={visualClassName} />\n      </HeroLiquidMetalContainer>\n      <HeroLiquidMetalMobileVisual className={mobileVisualClassName} />\n    </HeroLiquidMetalRoot>\n  )\n}\n\nexport function AISDKIcon(props: SVGProps<SVGSVGElement>) {\n  return (\n    <svg\n      color=\"currentcolor\"\n      data-testid=\"geist-icon\"\n      height=\"1em\"\n      strokeLinejoin=\"round\"\n      viewBox=\"0 0 16 16\"\n      width=\"1em\"\n      {...props}\n    >\n      <title>AI SDK</title>\n      <path\n        d=\"M2.5.5V0h1v.5a2 2 0 002 2H6v1h-.5a2 2 0 00-2 2V6h-1v-.5a2 2 0 00-2-2H0v-1h.5a2 2 0 002-2zM14.5 4.5V5h-1v-.5a1 1 0 00-1-1H12v-1h.5a1 1 0 001-1V1h1v.5a1 1 0 001 1h.5v1h-.5a1 1 0 00-1 1zM8.407 4.93L8.5 4h1l.093.93a5 5 0 004.478 4.477L15 9.5v1l-.93.093a5 5 0 00-4.477 4.478L9.5 16h-1l-.093-.93a5 5 0 00-4.478-4.477L3 10.5v-1l.93-.093A5 5 0 008.406 4.93z\"\n        fill=\"currentColor\"\n      />\n    </svg>\n  )\n}\n\nexport function NextjsIcon(props: SVGProps<SVGSVGElement>) {\n  const id = React.useId()\n  const maskId = `${id}-mask`\n  const paint0Id = `${id}-paint0`\n  const paint1Id = `${id}-paint1`\n\n  return (\n    <svg\n      fill=\"none\"\n      height=\"1em\"\n      viewBox=\"0 0 180 180\"\n      width=\"1em\"\n      xmlns=\"http://www.w3.org/2000/svg\"\n      {...props}\n    >\n      <title>Next.js</title>\n      <mask\n        height={180}\n        id={maskId}\n        maskUnits=\"userSpaceOnUse\"\n        style={{\n          maskType: \"alpha\",\n        }}\n        width={180}\n        x={0}\n        y={0}\n      >\n        <circle cx={90} cy={90} fill=\"black\" r={90} />\n      </mask>\n      <g mask={`url(#${maskId})`}>\n        <circle\n          cx={90}\n          cy={90}\n          fill=\"black\"\n          r={87}\n          stroke=\"white\"\n          strokeWidth={6}\n        />\n        <path\n          d=\"M149.508 157.52L69.142 54H54V125.97H66.1136V69.3836L139.999 164.845C143.333 162.614 146.509 160.165 149.508 157.52Z\"\n          fill={`url(#${paint0Id})`}\n        />\n        <rect\n          fill={`url(#${paint1Id})`}\n          height={72}\n          width={12}\n          x={115}\n          y={54}\n        />\n      </g>\n      <defs>\n        <linearGradient\n          gradientUnits=\"userSpaceOnUse\"\n          id={paint0Id}\n          x1={109}\n          x2={144.5}\n          y1={116.5}\n          y2={160.5}\n        >\n          <stop stopColor=\"white\" />\n          <stop offset={1} stopColor=\"white\" stopOpacity={0} />\n        </linearGradient>\n        <linearGradient\n          gradientUnits=\"userSpaceOnUse\"\n          id={paint1Id}\n          x1={121}\n          x2={120.799}\n          y1={54}\n          y2={106.875}\n        >\n          <stop stopColor=\"white\" />\n          <stop offset={1} stopColor=\"white\" stopOpacity={0} />\n        </linearGradient>\n      </defs>\n    </svg>\n  )\n}\n\nexport default HeroLiquidMetal\n\n"
+    },
+    {
+      "file": "hero-liquid-metal-demo.tsx",
+      "sha256": "5ddc92a1fac56753e266e102252c19d6cccfce677cc7f2cd079e35301503cdfc",
+      "gitBlobCalculated": "847edcc9e45ee2fb2a7ec0f78c379eee3f631993",
+      "text": "\"use client\"\n\nimport {\n  AISDKIcon,\n  HeroLiquidMetal,\n  HeroLiquidMetalActions,\n  HeroLiquidMetalBadges,\n  HeroLiquidMetalContainer,\n  HeroLiquidMetalContent,\n  HeroLiquidMetalDescription,\n  HeroLiquidMetalHeading,\n  HeroLiquidMetalMobileVisual,\n  HeroLiquidMetalRoot,\n  HeroLiquidMetalVisual,\n  NextjsIcon,\n} from \"../ui/hero-liquid-metal\"\n\nexport default function HeroLiquidMetalDemo() {\n  return (\n    <div className=\"space-y-16\">\n      <div className=\"space-y-4\">\n        <h3 className=\"flex items-center justify-center text-lg font-medium\">\n          Default\n        </h3>\n        <HeroLiquidMetal />\n      </div>\n\n      <div className=\"space-y-4\">\n        <h3 className=\"flex items-center justify-center text-lg font-medium\">\n          Root-level shader props\n        </h3>\n        <HeroLiquidMetal\n          width={1280}\n          height={720}\n          image=\"https://shaders.paper.design/images/logos/diamond.svg\"\n          colorBack=\"#ffffff00\"\n          colorTint=\"#2c5d72\"\n          shape={undefined}\n          repetition={6}\n          softness={0.8}\n          shiftRed={1}\n          shiftBlue={-1}\n          distortion={0.4}\n          contour={0.4}\n          angle={0}\n          speed={1}\n          scale={0.6}\n          fit=\"contain\"\n        />\n      </div>\n\n      <div className=\"space-y-4\">\n        <h3 className=\"flex items-center justify-center text-lg font-medium\">\n          Configured via props\n        </h3>\n        <HeroLiquidMetalRoot\n          ctaProps={{\n            href: \"#\",\n            label: \"Try NewCopy for marketing\",\n          }}\n          description=\"Human-in-the-loop marketing copy software that helps teams draft, review, and ship high-converting campaigns with confidence.\"\n          desktopShaderProps={{\n            scale: 0.8,\n            speed: 0.7,\n            repetition: 7,\n            softness: 0.9,\n            distortion: 0.3,\n            colorTint: \"#4f46e5\",\n          }}\n          image=\"https://shaders.paper.design/images/logos/diamond.svg\"\n          mobileShaderProps={{\n            speed: 0.65,\n            scale: 0.78,\n            colorTint: \"#0ea5e9\",\n          }}\n          srTitle=\"Composable hero\"\n          subtitle=\"Marketing\"\n          techStack={[\n            { name: \"Next.js\", version: \"v16\" },\n            { name: \"AI SDK\", version: \"v6\" },\n            { name: \"Tailwind\", version: \"v4\" },\n          ]}\n          title=\"Cursor for\"\n        >\n          <HeroLiquidMetalContainer>\n            <HeroLiquidMetalContent>\n              <HeroLiquidMetalHeading />\n              <HeroLiquidMetalDescription />\n              <HeroLiquidMetalActions />\n              <div\n                className=\"hidden justify-center lg:flex lg:justify-start\"\n                data-slot=\"hero-liquid-metal-badges-wrap\"\n              >\n                <HeroLiquidMetalBadges\n                  techStack={[\n                    { name: \"Next.js\", version: \"v16\", icon: NextjsIcon },\n                    { name: \"AI SDK\", version: \"v6\", icon: AISDKIcon },\n                  ]}\n                />\n              </div>\n            </HeroLiquidMetalContent>\n            <HeroLiquidMetalVisual />\n          </HeroLiquidMetalContainer>\n          <HeroLiquidMetalMobileVisual />\n        </HeroLiquidMetalRoot>\n      </div>\n    </div>\n  )\n}\n\n"
+    },
+    {
+      "file": "button.tsx",
+      "sha256": "e71b5513052f5b8b2d5b552c0e42c9489687d9717382d3ebfb13b3766957b3cc",
+      "gitBlobCalculated": "c0bc8dd4899fdab4d92bfdfbe4bd7d6ef3ec2a3c",
+      "text": "import { cva, type VariantProps } from \"class-variance-authority\";\nimport { Slot } from \"radix-ui\";\nimport * as React from \"react\";\n\nimport { cn } from \"@/lib/utils\";\n\nconst buttonVariants = cva(\n  \"focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive dark:aria-invalid:border-destructive/50 group/button inline-flex shrink-0 items-center justify-center rounded-lg border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:ring-3 disabled:pointer-events-none disabled:opacity-50 aria-invalid:ring-3 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4\",\n  {\n    variants: {\n      variant: {\n        default: \"bg-primary text-primary-foreground [a]:hover:bg-primary/80\",\n        outline:\n          \"border-border bg-background hover:bg-muted hover:text-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 aria-expanded:bg-muted aria-expanded:text-foreground\",\n        secondary:\n          \"bg-secondary text-secondary-foreground hover:bg-secondary/80 aria-expanded:bg-secondary aria-expanded:text-secondary-foreground\",\n        ghost:\n          \"hover:bg-muted hover:text-foreground dark:hover:bg-muted/50 aria-expanded:bg-muted aria-expanded:text-foreground\",\n        destructive:\n          \"bg-destructive/10 hover:bg-destructive/20 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/20 text-destructive focus-visible:border-destructive/40 dark:hover:bg-destructive/30\",\n        link: \"text-primary underline-offset-4 hover:underline\",\n      },\n      size: {\n        default:\n          \"h-8 gap-1.5 px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2\",\n        xs: \"h-6 gap-1 rounded-[min(var(--radius-md),10px)] px-2 text-xs in-data-[slot=button-group]:rounded-lg has-data-[icon=inline-end]:pr-1.5 has-data-[icon=inline-start]:pl-1.5 [&_svg:not([class*='size-'])]:size-3\",\n        sm: \"h-7 gap-1 rounded-[min(var(--radius-md),12px)] px-2.5 text-[0.8rem] in-data-[slot=button-group]:rounded-lg has-data-[icon=inline-end]:pr-1.5 has-data-[icon=inline-start]:pl-1.5 [&_svg:not([class*='size-'])]:size-3.5\",\n        lg: \"h-9 gap-1.5 px-2.5 has-data-[icon=inline-end]:pr-3 has-data-[icon=inline-start]:pl-3\",\n        icon: \"size-8\",\n        \"icon-xs\":\n          \"size-6 rounded-[min(var(--radius-md),10px)] in-data-[slot=button-group]:rounded-lg [&_svg:not([class*='size-'])]:size-3\",\n        \"icon-sm\":\n          \"size-7 rounded-[min(var(--radius-md),12px)] in-data-[slot=button-group]:rounded-lg\",\n        \"icon-lg\": \"size-9\",\n      },\n    },\n    defaultVariants: {\n      variant: \"default\",\n      size: \"default\",\n    },\n  }\n);\n\nfunction Button({\n  className,\n  variant = \"default\",\n  size = \"default\",\n  asChild = false,\n  ...props\n}: React.ComponentProps<\"button\"> &\n  VariantProps<typeof buttonVariants> & {\n    asChild?: boolean;\n  }) {\n  const Comp = asChild ? Slot.Root : \"button\";\n\n  return (\n    <Comp\n      data-slot=\"button\"\n      data-variant={variant}\n      data-size={size}\n      className={cn(buttonVariants({ variant, size, className }))}\n      {...props}\n    />\n  );\n}\n\nexport type ButtonProps = React.ComponentProps<typeof Button>;\nexport { Button, buttonVariants };\n"
+    },
+    {
+      "file": "badge.tsx",
+      "sha256": "07f5870d5369c4b4bc24b9a36487112c9305e08a8078cf7192134e45c9f580aa",
+      "gitBlobCalculated": "3b8a76f31f5edfffab54348f41687080af2332da",
+      "text": "import { cva, type VariantProps } from \"class-variance-authority\";\nimport * as React from \"react\";\n\nimport { cn } from \"@/lib/utils\";\n\nconst badgeVariants = cva(\n  \"focus:ring-ring inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:ring-2 focus:ring-offset-2 focus:outline-none\",\n  {\n    variants: {\n      variant: {\n        default:\n          \"bg-primary text-primary-foreground hover:bg-primary/80 border-transparent shadow\",\n        secondary:\n          \"bg-secondary text-secondary-foreground hover:bg-secondary/80 border-transparent\",\n        destructive:\n          \"bg-destructive text-destructive-foreground hover:bg-destructive/80 border-transparent shadow\",\n        outline: \"text-foreground\",\n        ghost:\n          \"border-transparent hover:bg-muted hover:text-muted-foreground dark:hover:bg-muted/50\",\n        link: \"border-transparent text-primary underline-offset-4 hover:underline\",\n      },\n    },\n    defaultVariants: {\n      variant: \"default\",\n    },\n  }\n);\n\nexport interface BadgeProps\n  extends\n    React.HTMLAttributes<HTMLDivElement>,\n    VariantProps<typeof badgeVariants> {}\n\nfunction Badge({ className, variant, ...props }: BadgeProps) {\n  return (\n    <div className={cn(badgeVariants({ variant }), className)} {...props} />\n  );\n}\n\nexport { Badge, badgeVariants };\n"
+    },
+    {
+      "file": "LICENSE",
+      "sha256": "78045e58dfd5f039ad350ad293da2ad9a2c0362b82dadb069b1c10be382ddac7",
+      "gitBlobCalculated": "4420c7b454948b901a339b59590c87e856db9eac",
+      "text": "MIT License\n\nCopyright (c) 2023 Jordan-Gilliam\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n"
+    }
+  ],
+  "assets": [
+    {
+      "name": "cult-icon.svg",
+      "sha256": "b66d55cacb846b96ede2809d2b9a7e486b52d25660840a746f04c57f93df1439",
+      "originalSVG": "<svg width=\"260\" height=\"478\" viewBox=\"0 0 260 478\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M130 216.896C106.106 216.896 86.6667 197.457 86.6667 173.563C86.6667 149.669 106.106 130.23 130 130.23C153.894 130.23 173.333 149.669 173.333 173.563C173.333 197.457 153.894 216.896 130 216.896ZM130 390.69C153.894 390.69 173.333 410.129 173.333 434.023C173.333 457.917 153.894 477.356 130 477.356C106.106 477.356 86.6667 457.917 86.6667 434.023C86.6667 410.129 106.106 390.69 130 390.69ZM216.667 86.6667C192.772 86.6667 173.333 67.2277 173.333 43.3333C173.333 19.439 192.772 0 216.667 0C240.561 0 260 19.439 260 43.3333C260 67.2277 240.561 86.6667 216.667 86.6667ZM216.667 260.459C240.561 260.459 260 279.898 260 303.793C260 327.687 240.561 347.126 216.667 347.126C192.772 347.126 173.333 327.687 173.333 303.793C173.333 279.898 192.772 260.459 216.667 260.459ZM43.3333 86.6667C19.439 86.6667 0 67.2277 0 43.3333C0 19.439 19.439 0 43.3333 0C67.2277 0 86.6667 19.439 86.6667 43.3333C86.6667 67.2277 67.2277 86.6667 43.3333 86.6667ZM43.3333 260.459C67.2277 260.459 86.6667 279.898 86.6667 303.793C86.6667 327.687 67.2277 347.126 43.3333 347.126C19.439 347.126 0 327.687 0 303.793C0 279.898 19.439 260.459 43.3333 260.459Z\" fill=\"black\"/>\n</svg>\n"
+    },
+    {
+      "name": "diamond.svg",
+      "sha256": "483b9e388f61026cdcde3f640637eced2a4ff9f13b09a2cdbaf7f65ca4dc54e5",
+      "originalSVG": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1000 1000\" width=\"1000\" height=\"1000\">\n    <polygon points=\"500,126 874,500 500,874 126,500\" fill=\"#000\"/>\n</svg>\n"
+    }
+  ],
+  "assetSources": {
+    "cult": "https://raw.githubusercontent.com/nolly-studio/cult-ui/d71b1428b811c2779d46ea41b7ef8c9f9c9991c2/apps/www/public/cult-icon.svg",
+    "paper": "https://github.com/paper-design/shaders/blob/3f29ea8391addaea459b22caf5e1e8ccabfbd4ee/docs/public/images/logos/diamond.svg",
+    "paperLiveMatchesFixed": true,
+    "paperGitTreeVerification": [
+      {
+        "file": "paper-LICENSE",
+        "source": "LICENSE",
+        "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+        "gitBlob": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+        "matchesFixedGitTree": true
+      },
+      {
+        "file": "paper-NOTICE",
+        "source": "NOTICE",
+        "sha256": "c3155d6a359d9841d63f7feb4938d2c99bb4ef681fa20be1eb4bfa71307f746b",
+        "gitBlob": "6bb1b73ec7aef447ad4777c70d9e6609bace6f6c",
+        "matchesFixedGitTree": true
+      },
+      {
+        "file": "diamond.svg",
+        "source": "docs/public/images/logos/diamond.svg",
+        "sha256": "483b9e388f61026cdcde3f640637eced2a4ff9f13b09a2cdbaf7f65ca4dc54e5",
+        "gitBlob": "cace8a9794e1ced344ee6c0b60892f0f939989bc",
+        "matchesFixedGitTree": true
+      }
+    ]
+  },
+  "dependencies": [
+    {
+      "name": "@paper-design/shaders",
+      "version": "0.0.72",
+      "scope": "emitted-js",
+      "licenseDeclaration": "SEE LICENSE IN https://github.com/paper-design/shaders/blob/main/LICENSE",
+      "licenseEvidence": [
+        {
+          "name": "LICENSE",
+          "sha256": "b3aa773a4313b7ee6d6efe2c585057a88c6546a3cdb8488567491b4b91aabc4d"
+        }
+      ],
+      "note": "Actual package bundled license text."
+    },
+    {
+      "name": "@paper-design/shaders-react",
+      "version": "0.0.72",
+      "scope": "emitted-js",
+      "licenseDeclaration": "SEE LICENSE IN https://github.com/paper-design/shaders/blob/main/LICENSE",
+      "licenseEvidence": [
+        {
+          "name": "LICENSE",
+          "sha256": "b3aa773a4313b7ee6d6efe2c585057a88c6546a3cdb8488567491b4b91aabc4d"
+        }
+      ],
+      "note": "Actual package bundled license text."
+    },
+    {
+      "name": "@radix-ui/react-compose-refs",
+      "version": "1.1.2",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "licenseEvidence": [
+        {
+          "name": "RADIX-LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+        }
+      ],
+      "note": "Exact version1.1.2 missing package LICENSE; official npm gitHead fcef0668a5c827e5a4baac405474d75680f9a4eb full MIT reused from reviewed evidence."
+    },
+    {
+      "name": "@radix-ui/react-slot",
+      "version": "1.2.3",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "licenseEvidence": [
+        {
+          "name": "LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+        }
+      ],
+      "note": "Actual package bundled license text."
+    },
+    {
+      "name": "class-variance-authority",
+      "version": "0.7.1",
+      "scope": "emitted-js",
+      "licenseDeclaration": "Apache-2.0",
+      "licenseEvidence": [
+        {
+          "name": "LICENSE",
+          "sha256": "0ccbf956cffc8dcf515809433cb5242ee67c94513d46e48c261d68d0880de406"
+        }
+      ],
+      "note": "Actual package bundled license text."
+    },
+    {
+      "name": "clsx",
+      "version": "2.1.1",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "licenseEvidence": [
+        {
+          "name": "license",
+          "sha256": "9a9edad7baae52622bddf3c15b2ef8a33d2c89f2d25408ad13e8a7481c6b0c97"
+        }
+      ],
+      "note": "Actual package bundled license text."
+    },
+    {
+      "name": "react",
+      "version": "19.1.0",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "licenseEvidence": [
+        {
+          "name": "LICENSE",
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+        }
+      ],
+      "note": "Actual package bundled license text."
+    },
+    {
+      "name": "react-dom",
+      "version": "19.1.0",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "licenseEvidence": [
+        {
+          "name": "LICENSE",
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+        }
+      ],
+      "note": "Actual package bundled license text."
+    },
+    {
+      "name": "scheduler",
+      "version": "0.26.0",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "licenseEvidence": [
+        {
+          "name": "LICENSE",
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+        }
+      ],
+      "note": "Actual package bundled license text."
+    },
+    {
+      "name": "tailwind-merge",
+      "version": "3.3.1",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "licenseEvidence": [
+        {
+          "name": "LICENSE.md",
+          "sha256": "d4c70c7ce38cea8778f0aed3fc0bef0a9dbd27f13bd8b6773cbd6d37941971e5"
+        }
+      ],
+      "note": "Actual package bundled license text."
+    },
+    {
+      "name": "tailwindcss",
+      "version": "4.3.0",
+      "scope": "compiled-css",
+      "licenseDeclaration": "MIT",
+      "licenseEvidence": [
+        {
+          "name": "LICENSE",
+          "sha256": "60e0b68c0f35c078eef3a5d29419d0b03ff84ec1df9c3f9d6e39a519a5ae7985"
+        }
+      ],
+      "note": "Actual package bundled license text."
+    }
+  ],
+  "modifications": [
+    "Original full three-part demo and layout/marketing copy retained. Only image URL references/import aliases changed in Cult sources.",
+    "Two original text SVGs safely percent-encoded locally, not binary encoding; no remote image fetch. XML whitelist svg/path/polygon, no href/style/script/image/foreignObject.",
+    "Paper0.0.72 original heatmap blur and liquid-metal Poisson preprocessing and full GLSL retained; transient native Canvas PNG blobs generated locally, never uploaded or packaged.",
+    "Lifecycle additions: local-image URL guard, listener/image/objectURL release, async alive/error guards and missing-src cancellation after liquid preprocessing await; original heatmap/liquid generated blob URL revoked on cleanup.",
+    "Original internal one-pixel binary GIF replaced by equivalent transparent1px SVG during processing only, not a replacement core effect.",
+    "WebGL2 preflight/compile/link/context loss/draw failure stop explicitly with no substitute visual; hidden unmount/remount, reduced motion forces speed0 but renders static shader.",
+    "Original CTA links retained as source/navigation labels, clicks prevented with local explanatory status; no actual AI service/remote navigation.",
+    "System fonts and existing approved light theme CSS tokens; no webfonts."
+  ],
+  "scope": "Source hashes and complete source evidence, not an assertion of full upstream git tree verification. Public runtime/docs/notices only; full build workspace remains local, no downloadable source ZIP promised."
+}
