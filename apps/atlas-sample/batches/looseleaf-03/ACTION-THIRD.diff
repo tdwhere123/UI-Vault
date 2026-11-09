@@ -1,0 +1,11 @@
+--- batches/looseleaf-03/inbox.tsx (historical)
++++ batches/looseleaf-03/inbox.tsx (current)
+@@ -152,7 +152,7 @@
+               onStar={(starred) => patch(open.id, { starred })}
+               onReply={(text) => {
+                 patch(open.id, { replies: [...open.replies, text] })
+-                setMessage(`Reply sent to ${open.from.split(" ")[0]}.`)
++                setMessage(`Local reply preview for ${open.from.split(" ")[0]}; no email sent.`)
+               }}
+             />
+           ) : (
