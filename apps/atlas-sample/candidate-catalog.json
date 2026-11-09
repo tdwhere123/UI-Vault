@@ -11744,35 +11744,33 @@
   },
   {
     "id": "react-arborist:budget-hierarchy",
-    "title": "React Arborist · 原版受控分层汇总树",
     "source": "React Arborist",
-    "revision": "b44e01af4907cab7cf0738288e25d09acdd0c4d0",
-    "sourceFile": "modules/showcase/pages/budget.tsx",
     "repository": "https://github.com/jameskerr/react-arborist",
-    "license": "MIT root code; runtime dependency licenses not fully audited",
-    "description": "原层级重排与递归分组汇总，保留示例CSS；虚构本地预算，不连接金融账户。",
-    "buildStatus": "source-only; source/CSS/root license read; not installed/built/run",
-    "gaps": [
-      "原CSS较朴素，功能有独立价值但非审美优先精品。",
-      "workspace版本及React DnD/虚拟列表完整依赖和NOTICE未闭合。",
-      "拖拽同级索引/跨层/父子防循环、取消与退出/监听清理尚未实测。",
-      "Next Link需本地门控；系统emoji跨平台不同，无像素验收。"
-    ],
+    "revision": "b44e01af4907cab7cf0738288e25d09acdd0c4d0",
     "upstream": "https://github.com/jameskerr/react-arborist/blob/b44e01af4907cab7cf0738288e25d09acdd0c4d0/modules/showcase/pages/budget.tsx",
-    "kind": "完整交互场景",
-    "category": "导航与组织",
     "licenseEvidence": {
       "url": "https://github.com/jameskerr/react-arborist/blob/b44e01af4907cab7cf0738288e25d09acdd0c4d0/LICENSE",
       "sha256": "f281a624deb13a6e71660ba1ee05d0d1d4377779d3c459ad3a236950de3d73c8",
       "scope": "Root original code only; runtime dependency/media licenses not closed"
     },
-    "batch": "source-review-next-515",
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "curationPriority": "functional reserve; not visual priority"
+    "title": "React Arborist · 可重排预算树",
+    "description": "原受控分层预算：拖动支出与分组实时汇总，另有键盘移动辅助；本地示例不连接账户。",
+    "behavior": "原受控分层预算：拖动支出与分组实时汇总，另有键盘移动辅助；本地示例不连接账户。",
+    "kind": "原版层级编辑场景",
+    "format": "完整交互场景",
+    "category": "导航与组织",
+    "license": "MIT",
+    "batch": "arborist-budget-01",
+    "preview": "batches/arborist-budget-01/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Build, original DOM DnD, guards, cleanup and composePreview tests passed; visual QA not run",
+    "gaps": [
+      "Browser visual QA/native pointer geometry not run; synthetic DOM DnD uses rectangle and DataTransfer fixtures.",
+      "Hidden/unhidden resets budget to original data; no persistence.",
+      "Keyboard move/cancel/reset are explicitly local adapter additions; original Tree and CSS retained.",
+      "Fixed demo and npm runtime gitHead differ; exact 4.0.1 source/lock and compatibility tests documented."
+    ]
   },
   {
     "id": "blocknote:document-comments-workspace",
@@ -14927,39 +14925,34 @@
   },
   {
     "id": "fluidkit:liquid-menu",
-    "title": "倾倒式液态菜单",
     "source": "fluidkit",
     "repository": "https://github.com/runvendo/fluidkit",
     "revision": "b1e6e6109e14c31ed43a99e2a373f4727c867ecb",
-    "sourcePath": "playground/showcase/pages/LiquidMenu.tsx",
     "upstream": "https://github.com/runvendo/fluidkit/blob/b1e6e6109e14c31ed43a99e2a373f4727c867ecb/playground/showcase/pages/LiquidMenu.tsx",
-    "website": "https://runvendo.github.io/fluidkit/",
-    "license": "MIT (root source text verified; runtime/assets not closed)",
-    "behavior": "菜单从触发器液态展开，兼顾键盘操作。",
-    "difference": "动态几何形态改变，不只是圆角或模糊滤镜。",
-    "description": "菜单从触发器液态展开，兼顾键盘操作。 动态几何形态改变，不只是圆角或模糊滤镜。",
-    "gaps": [
-      "官方页依赖LiquidButton/LiquidMenu、Motion及playground kit；未完成完整依赖归档和运行构建。",
-      "需核菜单展开几何、方向/对齐、焦点返回、Escape与方向键、outside-click和卸载清理，不仅验证菜单可显示。",
-      "只拟本地菜单动作，不触发真实外部操作；不引入尚未审计的可选LiquidMetal/Paper Shaders。",
-      "未构建、未运行、未浏览器视觉验收；当前completedPreviewCount=0，publicationReady=false。"
-    ],
-    "category": "导航与组织",
+    "sourcePath": "playground/showcase/pages/LiquidMenu.tsx",
     "licenseEvidence": {
       "url": "https://github.com/runvendo/fluidkit/blob/b1e6e6109e14c31ed43a99e2a373f4727c867ecb/LICENSE",
       "sha256": "4dff54095ca763629b98ad21dfc08b525c4e69afa9010bdd2e989bccd4bd49ff",
       "scope": "Complete original root text read; not full runtime/media closure"
     },
-    "sourceSha256": "69e1bba32f725084f32362132e974ca0408feef24842af57ca77cd62d9282f55",
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-style-526",
-    "sourceScope": "Selected fixed original source and root license; no full runnable archive",
-    "kind": "原版场景或组件族（仅来源）",
-    "buildStatus": "Fixed original source read; not built, run or visually accepted"
+    "difference": "动态几何形态改变，不只是圆角或模糊滤镜。",
+    "title": "Fluidkit · 液态操作菜单",
+    "description": "原液态菜单与完整参数页：流体展开、方向对齐、边缘避让、键盘选择和本地动作反馈。",
+    "behavior": "原液态菜单与完整参数页：流体展开、方向对齐、边缘避让、键盘选择和本地动作反馈。",
+    "kind": "原版流体交互场景",
+    "format": "完整交互场景",
+    "category": "导航与组织",
+    "license": "MIT",
+    "batch": "fluid-menu-01",
+    "preview": "batches/fluid-menu-01/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "production IIFE and actual composePreview DOM/keyboard/position/failure/cleanup tests passed; visual not run",
+    "gaps": [
+      "实际CSS clip/backdrop合成、触控、窄屏和屏幕阅读器视觉待验；DOM几何为mock。",
+      "hidden恢复重置原参数与selected状态，不持久保存。",
+      "菜单Rename/Duplicate/Delete仅原demo本地selected反馈，不操作文件；copy禁用。"
+    ]
   },
   {
     "id": "meniscus:liquid-navigation",
@@ -18652,100 +18645,62 @@
   },
   {
     "id": "reactmotion:spring-ball-reorder",
-    "title": "弹簧彩球拖拽重排",
     "source": "react-motion",
     "repository": "https://github.com/chenglou/react-motion",
     "revision": "9e3ce95bacaa9a1b259f969870a21c727232cc68",
-    "sourcePath": "demos/demo2-draggable-balls/Demo.jsx",
     "upstream": "https://github.com/chenglou/react-motion/blob/9e3ce95bacaa9a1b259f969870a21c727232cc68/demos/demo2-draggable-balls/Demo.jsx",
-    "website": "https://chenglou.github.io/react-motion/demos/demo2-draggable-balls/",
-    "license": "MIT (root text verified; runtime/assets not closed)",
-    "behavior": "官方完整11彩球场景，在拖动时弹性让位并重新排序，比方框列表更具触感。",
-    "difference": "固定完整示例场景；同源参数/预设不拆计数，非已运行验收。",
-    "description": "官方完整11彩球场景，在拖动时弹性让位并重新排序，比方框列表更具触感。",
-    "gaps": [
-      "真实Demo.jsx包含布局、拖拽与重排，需index.jsx/index.html样式、react-motion源码及lodash.range；旧React编译栈适配需锁兼容版本。",
-      "原componentDidMount在window挂touch/mouse监听，未见componentWillUnmount清理；需限制容器、清理监听，避免全站touchmove.preventDefault。",
-      "键盘排序、读屏顺序、触摸滚动冲突与减动需要补验；只是本地排序，不代表持久保存或多Agent调度。",
-      "仅此彩球场景，不收同仓头像照片/水波/画廊为新增源，避免版权和同引擎膨胀。",
-      "固定源码及完整根许可已存证；未构建、未运行、未截图，completedPreviewCount=0。"
-    ],
-    "category": "视觉与动效",
+    "sourcePath": "demos/demo2-draggable-balls/Demo.jsx",
     "licenseEvidence": {
       "url": "https://github.com/chenglou/react-motion/blob/9e3ce95bacaa9a1b259f969870a21c727232cc68/LICENSE",
       "sha256": "b6668b94bd2da751d4441d406a86488f8f0f66a2af63bb48e9684d39ea68069b",
       "scope": "Complete original root license retained; runtime/media separate"
     },
-    "sourceSha256": "c3b7ab9deb16b4b07191538833a2d6382341f977d21e442848ad0866a1784b6d",
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-style-531",
-    "sourceScope": "Selected fixed original source and root license; full read-only repo clone retained privately",
-    "kind": "原版风格组件族（仅来源）",
-    "buildStatus": "Fixed source inspected; not built or visually accepted",
-    "additionalSourceEvidence": [
-      {
-        "sourcePath": "demos/demo2-draggable-balls/index.html",
-        "url": "https://github.com/chenglou/react-motion/blob/9e3ce95bacaa9a1b259f969870a21c727232cc68/demos/demo2-draggable-balls/index.html",
-        "sha256": "daff3f6a29a2dc7fd092143681a6ce2e309187ec8b431ebcb47ddd7db2dcb4b1"
-      },
-      {
-        "sourcePath": "demos/demo2-draggable-balls/index.jsx",
-        "url": "https://github.com/chenglou/react-motion/blob/9e3ce95bacaa9a1b259f969870a21c727232cc68/demos/demo2-draggable-balls/index.jsx",
-        "sha256": "067bc75dd2d09cb8d82f8de736c528453137314ad5553a2b5228801d8ecbd002"
-      }
+    "difference": "固定完整示例场景；同源参数/预设不拆计数，非已运行验收。",
+    "title": "ReactMotion · 弹簧彩球重排",
+    "description": "原11球网格拖拽重排与真实弹簧求解，隐藏保留顺序、重置回初始，减动时直接落位。",
+    "behavior": "原11球网格拖拽重排与真实弹簧求解，隐藏保留顺序、重置回初始，减动时直接落位。",
+    "kind": "原版弹簧交互场景",
+    "format": "完整交互场景",
+    "category": "视觉与动效",
+    "license": "MIT",
+    "batch": "reactmotion-01",
+    "preview": "batches/reactmotion-01/spring-balls/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime mechanisms and lifecycle tests passed; browser visual QA not run",
+    "gaps": [
+      "Original demo2 11-ball grid, colors, reinsertion logic and original ReactMotion spring solver preserved. Babel only strips Flow. React 16.14 compatibility runtime. Host adds reset, blur/touchcancel release, unmount cleanup, snapshot order preservation while hidden, immediate numeric targets for reduced motion, caught render/host/module-initialization failures; iframe-owned scheduler timeout cancellation on all exits including early module failure. No keyboard reorder is claimed. DOM mouse events use original handlers; controlled RAF timestamps are not native touch or pixel trajectory verification."
     ]
   },
   {
     "id": "threejs:spatial-element-table",
-    "title": "周期表空间编排",
     "source": "three.js",
     "repository": "https://github.com/mrdoob/three.js",
     "revision": "739478bc5ac18509be78095ed8f2fa4403b8207e",
-    "sourcePath": "examples/css3d_periodictable.html",
     "upstream": "https://github.com/mrdoob/three.js/blob/739478bc5ac18509be78095ed8f2fa4403b8207e/examples/css3d_periodictable.html",
-    "website": "https://threejs.org/examples/css3d_periodictable.html",
-    "license": "MIT (root text verified; runtime/assets not closed)",
-    "behavior": "完整官方CSS3D例子可把元素卡片排成表格、球面、螺旋和立体网格，拖转浏览。",
-    "difference": "固定完整示例场景；同源参数/预设不拆计数，非已运行验收。",
-    "description": "完整官方CSS3D例子可把元素卡片排成表格、球面、螺旋和立体网格，拖转浏览。",
-    "gaps": [
-      "HTML完整含元素数据与布局交互，依赖Three、tween.module、TrackballControls、CSS3DRenderer及main.css；必须同SHA构建，不使用未锁CDN。",
-      "CSS3D DOM而非WebGL模型，不应称真实化学模拟；所有布局合计一族，元素118条不算118组件。",
-      "原viewport禁缩放、控件主要鼠标拖转；需恢复缩放和可读列表/键盘替代、减动、焦点顺序与手机性能验证。",
-      "需核清tween等独立许可及事件/动画销毁，示例系统Helvetica只引用名称，不得额外打包商业字体。",
-      "固定源码及完整根许可已存证；未构建、未运行、未截图，completedPreviewCount=0。"
-    ],
-    "category": "视觉与动效",
+    "sourcePath": "examples/css3d_periodictable.html",
     "licenseEvidence": {
       "url": "https://github.com/mrdoob/three.js/blob/739478bc5ac18509be78095ed8f2fa4403b8207e/LICENSE",
       "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
       "scope": "Complete original root license retained; runtime/media separate"
     },
-    "sourceSha256": "504a0577e2a874405d87cebf930d250978a8a28f5bcbaa897dec375d8b684951",
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-style-531",
-    "sourceScope": "Selected fixed original source and root license; full read-only repo clone retained privately",
-    "kind": "原版风格组件族（仅来源）",
-    "buildStatus": "Fixed source inspected; not built or visually accepted",
-    "additionalSourceEvidence": [
-      {
-        "sourcePath": "examples/jsm/controls/TrackballControls.js",
-        "url": "https://github.com/mrdoob/three.js/blob/739478bc5ac18509be78095ed8f2fa4403b8207e/examples/jsm/controls/TrackballControls.js",
-        "sha256": "cce95baddf589c16fea901b70f2038eca4557357937e1b03f8c76fe7ffe7457f"
-      },
-      {
-        "sourcePath": "examples/jsm/renderers/CSS3DRenderer.js",
-        "url": "https://github.com/mrdoob/three.js/blob/739478bc5ac18509be78095ed8f2fa4403b8207e/examples/jsm/renderers/CSS3DRenderer.js",
-        "sha256": "cd1f6bfaff0e2efa8a95b8cca6e96b0eea957d6a6057d875de8bab720b49057b"
-      }
+    "difference": "固定完整示例场景；同源参数/预设不拆计数，非已运行验收。",
+    "title": "Three CSS3D · 元素空间编排",
+    "description": "原118元素在周期表、球面、螺旋与立体网格间真实变换，可旋转缩放并查看完整可读列表。",
+    "behavior": "原118元素在周期表、球面、螺旋与立体网格间真实变换，可旋转缩放并查看完整可读列表。",
+    "kind": "原版空间交互场景",
+    "format": "完整交互场景",
+    "category": "视觉与动效",
+    "license": "MIT",
+    "batch": "three-css3d-01",
+    "preview": "batches/three-css3d-01/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime mechanisms and lifecycle tests passed; browser visual QA not run",
+    "gaps": [
+      "原118条元素数据与四种CSS3D布局为单个原场景；数据未校订，不是化学模拟。",
+      "保留同SHA原Trackball、CSS3D和Tween机制；后台清理与恢复重置视角，保持当前布局。",
+      "九个DOM分支及实际图鉴组合检查通过，未做原生像素、触控和性能验收。"
     ]
   },
   {
@@ -19308,46 +19263,31 @@
   },
   {
     "id": "momentum:kinetic-countdown",
-    "title": "惯性拨数倒计时",
     "source": "momentum-slider",
     "repository": "https://github.com/lmgonzalves/momentum-slider",
     "revision": "b7b8a22ee759532b4fdc36340d49ac003a4fed61",
-    "sourcePath": "countdown-timer/index.html",
     "upstream": "https://github.com/lmgonzalves/momentum-slider/blob/b7b8a22ee759532b4fdc36340d49ac003a4fed61/countdown-timer/index.html",
-    "website": "https://lmgonzalves.github.io/momentum-slider/countdown-timer/",
-    "license": "MIT (root text verified; runtime/assets not closed)",
-    "behavior": "完整官方小场景先惯性拨选1至60秒，再切换倒计时、进度与停止状态。",
-    "difference": "完整固定原始场景入口与补充脚本，不按预设/参数/颜色拆数；尚未运行验收。",
-    "description": "完整官方小场景先惯性拨选1至60秒，再切换倒计时、进度与停止状态。",
-    "gaps": [
-      "需js/countdown-timer.js、momentum-slider.js、normalize/countdown CSS，不是只展示滑块引擎；真实setInterval计时但并非后台可靠提醒。",
-      "源码写documentElement的--progress，需限定容器并在卸载clearInterval、销毁拖动事件；多实例、页面后台节流与恢复待验。",
-      "Roboto Mono远程Google字体需独立OFL与本地化；键盘拨数、读屏状态、触屏滚动冲突与减动待验。",
-      "不把1–60数值或同仓portfolio-carousel另计条目，选择无照片场景避免不必要素材风险。",
-      "固定源码及完整根许可已存证；未构建、未运行、未截图，completedPreviewCount=0。"
-    ],
-    "category": "视觉与动效",
+    "sourcePath": "countdown-timer/index.html",
     "licenseEvidence": {
       "url": "https://github.com/lmgonzalves/momentum-slider/blob/b7b8a22ee759532b4fdc36340d49ac003a4fed61/LICENSE",
       "sha256": "ca8091cca512daf6b57061bb6d3afc241bb23398739d6eaf24c0a08006674c09",
       "scope": "Complete original root license retained; runtime/media separate"
     },
-    "sourceSha256": "63630fa542444ced44db9522fc9e9e3f43cf9805ecec64998131faf846d53eca",
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-style-532",
-    "sourceScope": "Selected fixed original source and root license; full read-only repo clone retained privately",
-    "kind": "原版风格组件族（仅来源）",
-    "buildStatus": "Fixed source inspected; not built or visually accepted",
-    "additionalSourceEvidence": [
-      {
-        "sourcePath": "js/countdown-timer.js",
-        "url": "https://github.com/lmgonzalves/momentum-slider/blob/b7b8a22ee759532b4fdc36340d49ac003a4fed61/js/countdown-timer.js",
-        "sha256": "ab0ad4658861da9633c1f87d6c071885861c23ac6b88fd22c99f574739ff0a56"
-      }
+    "difference": "完整固定原始场景入口与补充脚本，不按预设/参数/颜色拆数；尚未运行验收。",
+    "title": "Momentum · 动量拨盘倒计时",
+    "description": "原1至60秒动量拨盘、缩放渐隐与倒计时进度环；真实开始/停止，隐藏时暂停，不是后台提醒服务。",
+    "behavior": "原1至60秒动量拨盘、缩放渐隐与倒计时进度环；真实开始/停止，隐藏时暂停，不是后台提醒服务。",
+    "kind": "原版动量交互场景",
+    "format": "完整交互场景",
+    "category": "视觉与动效",
+    "license": "MIT",
+    "batch": "momentum-01",
+    "preview": "batches/momentum-01/countdown/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime mechanisms and lifecycle tests passed; browser visual QA not run",
+    "gaps": [
+      "Original full countdown demo and Momentum Slider engine preserved: 1–60 selection, loop duplicates, scale/opacity and deceleration, start/tick/progress/stop. Host adds keyboard arrows/Home/End, pause while hidden preserving integer seconds; interrupted slide settles through original animateTarget to its current intended whole index (active drag uses nearest step) on visible/blur/reduced; reduced immediate original animation step, positive-size initialization and listener/RAF/interval ownership. Countdown is foreground local demonstration, not a reliable background reminder. Google Roboto Mono request omitted; original monospace fallback retained. Geometry/clock stubs test real original callbacks, not native wall-clock or pixel rendering."
     ]
   },
   {
@@ -19390,46 +19330,33 @@
   },
   {
     "id": "iro:multi-handle-color-wheel",
-    "title": "多柄色轮调色台",
     "source": "iro.js",
     "repository": "https://github.com/jaames/iro.js",
     "revision": "9f0ae6c8dc22fd819885731966357f06fa0b4943",
-    "sourcePath": "demo/index.html",
     "upstream": "https://github.com/jaames/iro.js/blob/9f0ae6c8dc22fd819885731966357f06fa0b4943/demo/index.html",
-    "website": "https://iro.js.org/",
-    "license": "MPL-2.0 (root text verified; runtime/assets not closed)",
-    "behavior": "完整官方demo把多颜色手柄、色轮和通道滑杆组合，支持直接操纵颜色。",
-    "difference": "完整固定原始场景入口与补充脚本，不按预设/参数/颜色拆数；尚未运行验收。",
-    "description": "完整官方demo把多颜色手柄、色轮和通道滑杆组合，支持直接操纵颜色。",
-    "gaps": [
-      "根实际Mozilla Public License 2.0，不是MIT；修改受覆盖文件与分发需满足源码提供/声明义务，独立记录依赖许可。",
-      "HTML的base=/page、绝对/iro.js和/demo.js需修复为同revision构建与路径；demo.js是完整配置，不能只拿空div作预览。",
-      "demo含多个方向色轮作为功能测试，只选一个组合场景不按轮数/颜色/通道拆计数；与Poline曲线配色生成不同但须视觉筛选。",
-      "键盘可达性、选中颜色文本、透明棋盘对比及中文输入格式需验；不自动写系统剪贴板或修改宿主主题。",
-      "固定源码及完整根许可已存证；未构建、未运行、未截图，completedPreviewCount=0。"
-    ],
-    "category": "视觉与动效",
+    "sourcePath": "demo/index.html",
     "licenseEvidence": {
       "url": "https://github.com/jaames/iro.js/blob/9f0ae6c8dc22fd819885731966357f06fa0b4943/LICENSE.txt",
       "sha256": "4b89d4518bd135ab4ee154a7bce722246b57a98c3d7efc1a09409898160c2bd1",
       "scope": "Complete original root license retained; runtime/media separate"
     },
-    "sourceSha256": "966621724facaf9880aae6c7db7c1be4537b748ad146cae5a5f59e138a5cb831",
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-style-532",
-    "sourceScope": "Selected fixed original source and root license; full read-only repo clone retained privately",
-    "kind": "原版风格组件族（仅来源）",
-    "buildStatus": "Fixed source inspected; not built or visually accepted",
-    "additionalSourceEvidence": [
-      {
-        "sourcePath": "demo/demo.js",
-        "url": "https://github.com/jaames/iro.js/blob/9f0ae6c8dc22fd819885731966357f06fa0b4943/demo/demo.js",
-        "sha256": "2d5575e7dc03f6519dfe8431387259cd7691344d065a976f2b89d22f48b124de"
-      }
+    "difference": "完整固定原始场景入口与补充脚本，不按预设/参数/颜色拆数；尚未运行验收。",
+    "title": "iro.js · 多柄色轮调色台",
+    "description": "原多柄色轮、色域盒和通道滑杆同步调色，支持真实拖动及键盘HEX输入；完整MPL源码随附。",
+    "behavior": "原多柄色轮、色域盒和通道滑杆同步调色，支持真实拖动及键盘HEX输入；完整MPL源码随附。",
+    "kind": "原版调色交互场景",
+    "format": "完整交互场景",
+    "category": "视觉与动效",
+    "license": "MPL-2.0 AND MIT",
+    "batch": "iro-01",
+    "preview": "batches/iro-01/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime mechanisms and lifecycle tests passed; browser visual QA not run",
+    "gaps": [
+      "完整原多柄色轮与通道布局一族计数；同一组三色同步，不是智能生成配色。",
+      "MPL2受覆盖首选源码及修改差异与构建文件完整公开；宿主独立MIT。",
+      "隐藏销毁并保留三色与选中柄；实际交互、失败与图鉴接入测试通过，原生触控和像素待验。"
     ]
   },
   {
