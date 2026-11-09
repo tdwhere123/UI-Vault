@@ -1,0 +1,109 @@
+{
+  "repository": "https://github.com/tensorflow/playground",
+  "revision": "02469bd3751764b20486015d4202b792af5362a6",
+  "entry": "src/playground.ts",
+  "layout": "index.html",
+  "rootLicenseSHA256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+  "originalSourceHashes": {
+    "src/linechart.ts": "3ce780d9b9d3c8360ff340e43490a7eae093d003dede01f7bc1946d4b225381c",
+    "src/seedrandom.d.ts": "dfd8cdb5463bbe2386a583db1d80c7e518236ce42bb3be1f4e1ef6d983135b4b",
+    "src/state.ts": "ea761ac3e05c60570bb4c2203588e8a0614534c95a73b9ed4e67c372c0a01b66",
+    "src/nn.ts": "eca97b4c0ca3787aa7d516fb8a560107f70f4809d036af1fb2db49b4bb27c9db",
+    "src/dataset.ts": "fe6a7bf6eea34d548497b70857e69d09ae77ccdba8922e0a3b58c9085dd0f182",
+    "src/heatmap.ts": "54380527bfd9962b47a32577426e40902cf2a1ea8203b855bc43f5b83f7ffac5",
+    "src/playground.ts": "5d5c4b2c4e6329d1d656a295c86a213dbcb8e2bd01bd5f7377e453698e9f55a2"
+  },
+  "originalHTMLSHA256": "5ec908134061ff8563630bd99e8b1543b780b655bcd723f1d8172f97c8e53da2",
+  "originalCSSSHA256": "8cedd4362e81a572a42ad5c6b0d5eb373541d0fc26a63b64d5db32821b719c2c",
+  "actualInputs": {
+    "mdl-local.js": {
+      "sha256": "a0011eaacff550a64c70a8a1859f543a31d2bd1af29abbe38edcf44add7a74c2",
+      "bytes": 144075
+    },
+    "seedrandom-local.js": {
+      "sha256": "2ea6da9627e219df304734521257319e51ae6733c006714912e8bfc5144b2e16",
+      "bytes": 8474
+    },
+    "src/nn.ts": {
+      "sha256": "eca97b4c0ca3787aa7d516fb8a560107f70f4809d036af1fb2db49b4bb27c9db",
+      "bytes": 13048
+    },
+    "d3-local.js": {
+      "sha256": "149f2557040dd55a77315017e8a0e76513c200483504f7bb2151e641ad6a459c",
+      "bytes": 337642
+    },
+    "src/heatmap.ts": {
+      "sha256": "7f4e7925cebb355457ffcbb1f496fdb315c1ca1a1e0ccb228e3692b17b3b1ed6",
+      "bytes": 7324
+    },
+    "src/dataset.ts": {
+      "sha256": "fe6a7bf6eea34d548497b70857e69d09ae77ccdba8922e0a3b58c9085dd0f182",
+      "bytes": 7077
+    },
+    "src/state.ts": {
+      "sha256": "671c4e4fd7977fb24fa1aed52928fbdc6b9ea568323fd082623d2c3a9c33fa36",
+      "bytes": 8320
+    },
+    "src/linechart.ts": {
+      "sha256": "3ce780d9b9d3c8360ff340e43490a7eae093d003dede01f7bc1946d4b225381c",
+      "bytes": 3242
+    },
+    "src/playground.ts": {
+      "sha256": "c1ccc716a848791082862e4702f6a58b2e847640ed31a05c983193592577caca",
+      "bytes": 34031
+    },
+    "main.js": {
+      "sha256": "261fb72b06569bcf115a0e00ed215190a500b1ab86a7b756b0aa58a5bd25cb18",
+      "bytes": 872
+    }
+  },
+  "dependencies": {
+    "d3": "3.5.17 BSD-3-Clause",
+    "material-design-lite": "1.3.0 Apache-2.0",
+    "seedrandom": "2.4.4 MIT"
+  },
+  "versionEvidence": "All three exact runtime versions match the fixed upstream package-lock.json.",
+  "mathUnchanged": {
+    "nn.ts": true,
+    "dataset.ts": true
+  },
+  "tests": [
+    {
+      "mode": "normal",
+      "puts": 268,
+      "errors": [],
+      "resources": 0,
+      "scope": "actual563 compose; original NN math, D3/MDL real; Canvas buffer commands stub, no native pixels"
+    },
+    {
+      "mode": "reduced",
+      "puts": 268,
+      "errors": [],
+      "resources": 0,
+      "scope": "actual563 compose; original NN math, D3/MDL real; Canvas buffer commands stub, no native pixels"
+    },
+    {
+      "mode": "early",
+      "puts": 14,
+      "errors": [],
+      "resources": 0,
+      "scope": "actual563 compose; original NN math, D3/MDL real; Canvas buffer commands stub, no native pixels"
+    },
+    {
+      "mode": "unsupported",
+      "puts": 0,
+      "errors": [],
+      "resources": 0,
+      "scope": "actual563 compose; original NN math, D3/MDL real; Canvas buffer commands stub, no native pixels"
+    },
+    {
+      "mode": "failure",
+      "puts": 268,
+      "errors": [],
+      "resources": 0,
+      "scope": "actual563 compose; original NN math, D3/MDL real; Canvas buffer commands stub, no native pixels"
+    }
+  ],
+  "browserVisualQA": "not-run",
+  "adaptationSummary": "See README; source root/model intact. No old MDL RAF fallback, no seedrandom indirect eval, no D3 CSV runtime compiler, no external asset/analytics/URL sharing."
+}
