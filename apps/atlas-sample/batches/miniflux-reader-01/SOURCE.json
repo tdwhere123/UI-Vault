@@ -1,0 +1,326 @@
+{
+  "repository": "https://github.com/miniflux/v2",
+  "revision": "9447aaeceb98ebdf7c4528b3e96dc5b44b35af5b",
+  "entry": "internal/template/templates/views/entry.html",
+  "sourceFiles": [
+    {
+      "path": "LICENSE",
+      "gitBlob": "f433b1a53f5b830a205fd2df78e2b34974656c7b",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+    },
+    {
+      "path": "internal/locale/translations/en_US.json",
+      "gitBlob": "036bac0f95246475e7b6761fed002094ba24033e",
+      "sha256": "4dd8760904cf0febed518dce00c22313cc3de62faf5946197d1f2ade3e4cdacf"
+    },
+    {
+      "path": "internal/locale/translations/zh_CN.json",
+      "gitBlob": "18997c9df67488ee67e2ebffb119428bf06aee0a",
+      "sha256": "068cadd2e461d89d1ff0a0e176c9b5098c077b476f6b8d7dbd8cc0391da5f99b"
+    },
+    {
+      "path": "internal/template/functions.go",
+      "gitBlob": "03bfb2137aaeb4d7f5fc5887bb7b68a2da657533",
+      "sha256": "dad56369a10ebeb1b1e44b625e5215fd2890c9b2980c04094f7497f9aa458066"
+    },
+    {
+      "path": "internal/template/functions_test.go",
+      "gitBlob": "f31f1b166e2a42f347eac5ed4d74045da8f65f66",
+      "sha256": "2e24172f19efcb949c3ca86e7c66352a1140caf6079e68d529eb6047fb4c9cb1"
+    },
+    {
+      "path": "internal/template/templates/common/feed_list.html",
+      "gitBlob": "2797f8745759f17f531a5accdf9631d9c5bc8a7c",
+      "sha256": "a4d2baffc0de20c8aade710fca57b450cef6808259aba565aac1005472ead5cb"
+    },
+    {
+      "path": "internal/template/templates/common/feed_menu.html",
+      "gitBlob": "bb40b18b7e443a71e1104bf631e87da49448929c",
+      "sha256": "ef5a234aa128bce342ef3f966272dcb54070927b7fa8abd09b0b6eaad9be3b74"
+    },
+    {
+      "path": "internal/template/templates/common/item_meta.html",
+      "gitBlob": "fbe8554fc50895e029f3325aa5c1d6e8f636598b",
+      "sha256": "a500a5de0f029d08579f98d131a1660097f18acd10d812e19ad070904edd57bc"
+    },
+    {
+      "path": "internal/template/templates/common/layout.html",
+      "gitBlob": "029fd422c817995ed49cff184e3c048ea2902c55",
+      "sha256": "8f1512679e649f1effd8795f73c6b3c7efc604682bb6f4f740dc2ad464fdcbc7"
+    },
+    {
+      "path": "internal/template/templates/common/pagination.html",
+      "gitBlob": "254f3380f1e5d1e9eef505449a6badf50616dafb",
+      "sha256": "43b7022d6df50fffb2375d7a035aace9500ba64e22b3da7c4fa54c4112a14b59"
+    },
+    {
+      "path": "internal/template/templates/common/settings_menu.html",
+      "gitBlob": "adcc45b879cfd84c26236bdbc0784b60602d00c3",
+      "sha256": "9eeedc7f8261d04b4d60c3ad193674c0abc734eb788fd48896d90cbb2ae83396"
+    },
+    {
+      "path": "internal/template/templates/views/about.html",
+      "gitBlob": "c64c89fed38509aa5013ccda2364c7c753505a14",
+      "sha256": "c2969d29cd3bdb8438fdeb9e434e2b48f795da6e0d5bfafd377bf138dd5272e9"
+    },
+    {
+      "path": "internal/template/templates/views/add_subscription.html",
+      "gitBlob": "d930beef58bb8c26383871074fb6983fb32d97a5",
+      "sha256": "33676553c9d2a6b6e0824846526bdb9ee61aeb5c42992d4757586e4d74e7f607"
+    },
+    {
+      "path": "internal/template/templates/views/api_keys.html",
+      "gitBlob": "27c5d7ddd270ed87912e19eff4ce80882953ff4a",
+      "sha256": "43fc3a4b25fd7f0c98892837911a2919d8269303a30fb5a4254adf534ff8b68c"
+    },
+    {
+      "path": "internal/template/templates/views/authentication.html",
+      "gitBlob": "ab271f91232ba71dc94943b2af1392abe5352139",
+      "sha256": "6c373b95216c404f21195425b6978356e6b2d74d537cea2ebb5b1caea2b597f0"
+    },
+    {
+      "path": "internal/template/templates/views/categories.html",
+      "gitBlob": "37beb6200cf82abd915cbfcfe8ba157bf1b44972",
+      "sha256": "07b2de1c9e8ece25fc177aaa9c0747f4654caf621ffb5c9d9cf89110253c2a90"
+    },
+    {
+      "path": "internal/template/templates/views/category_entries.html",
+      "gitBlob": "946aa487ff8563ac1b1cd399d4b054aea99fb865",
+      "sha256": "23a127cee6840cd7bc57c7a431ee8adf0180ecf4e4a2d092bdd72b9c0d80a831"
+    },
+    {
+      "path": "internal/template/templates/views/category_feeds.html",
+      "gitBlob": "0ef92706a1b4498e88db8c507cc4fb916fac2a14",
+      "sha256": "074b5957ac899b821500842007e47fbabe3f77b349ac0b6518c3ecb968fd71fa"
+    },
+    {
+      "path": "internal/template/templates/views/choose_subscription.html",
+      "gitBlob": "5ccd1c3ec7de9347048f4bf8ca0e5246d6b6ce08",
+      "sha256": "1dfc68a8b1d4c51e422a637048873da2e47f61f79b86ab493bcf58235c03ce09"
+    },
+    {
+      "path": "internal/template/templates/views/create_api_key.html",
+      "gitBlob": "1f6702f05417237430b0630d7fdaac666420498d",
+      "sha256": "80d1f27d210b19843c2619fe6a73df867c25607604552095c2554c489657b672"
+    },
+    {
+      "path": "internal/template/templates/views/create_category.html",
+      "gitBlob": "ef9407e1f97b32c5fa7c8d090798f515da70a58b",
+      "sha256": "ba8e3b0fb84ee96b5ed027d88989c3be06db8157ad6343c5e99a145f5cf9a79b"
+    },
+    {
+      "path": "internal/template/templates/views/create_user.html",
+      "gitBlob": "8e2ad38ec1ec19de3d772cfc50cdb6a2391e78d5",
+      "sha256": "4dfc77992cd8515c72eb38598055a49247b7c7e36c94d28f89c08521ece66dfa"
+    },
+    {
+      "path": "internal/template/templates/views/edit_category.html",
+      "gitBlob": "a9e03247a02aa873efd01e05a9948735b6409697",
+      "sha256": "59d415b9c7114de0f41cb8e752660fd5b18fca0652364e92375b2d1beb42433f"
+    },
+    {
+      "path": "internal/template/templates/views/edit_feed.html",
+      "gitBlob": "a264237e867f4c736fa2bce56f63593468961075",
+      "sha256": "f7e0c44f9d03752b21ae118dc4f279ea79cef3f4d015cb8b0bf53014a1c74091"
+    },
+    {
+      "path": "internal/template/templates/views/edit_user.html",
+      "gitBlob": "3c63f95b71c865b42fcb883d2285b810104ccf5c",
+      "sha256": "353900504c98fe2db7b50dba0b3b1fca4768924a998ae92ca89f0521ec11fd9a"
+    },
+    {
+      "path": "internal/template/templates/views/entry.html",
+      "gitBlob": "ac715dd2ea1cddabbc6dcf3c3a4673bf148b1768",
+      "sha256": "c9bb39cc6d7ea2259017e1a3629076e34e8fcc03ab8c103d3eea9ac879b5f75a"
+    },
+    {
+      "path": "internal/template/templates/views/feed_entries.html",
+      "gitBlob": "0592eccf635c7880cffdd3e55299e05eaf539e88",
+      "sha256": "2aed29deca5f83b7d1e3b643bd330cf42ebc42334656d1f22f994efc450d0dce"
+    },
+    {
+      "path": "internal/template/templates/views/feeds.html",
+      "gitBlob": "296f6198b733e8bbce35e88c75b89808aa47790d",
+      "sha256": "313eb8c1f8c4db6a25e6f44c280b205939fe76a7060bb4ab974cc74ecf4ee5b5"
+    },
+    {
+      "path": "internal/template/templates/views/history_entries.html",
+      "gitBlob": "2e00f8688c73febfde2fa40fa5212a939812b1bd",
+      "sha256": "ea4c989a40402967480df7acba394c78776df4cb17db9bd5f63e6d7cbdf2ace6"
+    },
+    {
+      "path": "internal/template/templates/views/import.html",
+      "gitBlob": "12c2410693fd511209339372cf81f9bcc38fe158",
+      "sha256": "1eef0b80d6dfda8930e384530bf163387c2fe3a79a99da9f41383bee16888f56"
+    },
+    {
+      "path": "internal/template/templates/views/integrations.html",
+      "gitBlob": "1424add589ea00e9dede2947e567b91b6d395520",
+      "sha256": "32be6ac7aba74274026728e13aad9fd59d3598fe2fe23e276468271f651060c6"
+    },
+    {
+      "path": "internal/template/templates/views/login.html",
+      "gitBlob": "0f19323e69f52dfd7022e7206b690be33d80552d",
+      "sha256": "da5888906587ec5bbf44dd4726db2d24394a4ce66325d204e3d0beb81f51bfa4"
+    },
+    {
+      "path": "internal/template/templates/views/offline.html",
+      "gitBlob": "4f3727f2f5cfcd2848cec4946ea134622bf72d10",
+      "sha256": "6540bdec6bd8076e5a7956fce7adac0ec4679d5122dcfbe62857572bd1fdbd71"
+    },
+    {
+      "path": "internal/template/templates/views/search.html",
+      "gitBlob": "a4abf50a064a20fdfae7c2ce8dd5a77b3ed1177f",
+      "sha256": "5fee83dbfe9e590fdbcd89eedfe44d40e85537f6a37d78d5c587a1096c57a56c"
+    },
+    {
+      "path": "internal/template/templates/views/sessions.html",
+      "gitBlob": "0927a645197cae9b1b188675ffac02f952590df4",
+      "sha256": "ff09b528a26adb182029c617e36721857466c9815fecbb96674b7714b3de8ec4"
+    },
+    {
+      "path": "internal/template/templates/views/settings.html",
+      "gitBlob": "1797a6e1a2a9527f1e549f454e6904e23c42d049",
+      "sha256": "e072c532909425c441a6adf98ecdcd6c4023a5367aab6cc2876657390a8f4a98"
+    },
+    {
+      "path": "internal/template/templates/views/shared_entries.html",
+      "gitBlob": "a6d8295c592b0f72b2998d7af408154a26eed0f5",
+      "sha256": "dc18739d570c3174044a9f5c9c0b88c8de178e24003d1f10afadf53853ee0fef"
+    },
+    {
+      "path": "internal/template/templates/views/starred_entries.html",
+      "gitBlob": "030df5b1729d34762020f47775b71053e81323ea",
+      "sha256": "5618d01e9467e809bec0f2dadf16ae364138cbbea15f6867c7e503d39a0496b0"
+    },
+    {
+      "path": "internal/template/templates/views/tag_entries.html",
+      "gitBlob": "32cfc6b5cfea3580e9d9277c0a408cffa71a86bb",
+      "sha256": "5371d5ec1d06809657d7a0563fc74285d0ebdea79d3bead87b1281eda6029566"
+    },
+    {
+      "path": "internal/template/templates/views/unread_entries.html",
+      "gitBlob": "dc30d0e375aad5c6eb4afda8fcf648a20c0f3d37",
+      "sha256": "12031333b6505ba4ddb387d36593b219cc033c2a5211ccfd0e118acd95ecf3b1"
+    },
+    {
+      "path": "internal/template/templates/views/users.html",
+      "gitBlob": "5d24444fd4f4708dbd53cff2639ec0c6bc98df1b",
+      "sha256": "90e07aee6461c57e87d91a959dae021935a5ffe2a380f85425b5ba73c885beaa"
+    },
+    {
+      "path": "internal/template/templates/views/webauthn_rename.html",
+      "gitBlob": "35e6b52f3600981fee17e562820dcf8560f90372",
+      "sha256": "5f9f25faf2e2d3788be34b83be51cfaff3b0cf6ae1b800a1881ab07ed9f94bbb"
+    },
+    {
+      "path": "internal/ui/static/bin/sprite.svg",
+      "gitBlob": "28d64e8cb893d91bd76ae0c3617a7d21a1b7145d",
+      "sha256": "084675c075732912cee64b40c40d29fac95f1a5d3dfce7fc1e35891cba1b74fe"
+    },
+    {
+      "path": "internal/ui/static/css/common.css",
+      "gitBlob": "45d38102153e2e91f3893da50cb8bf99904b8745",
+      "sha256": "13f53cc52d28444412d28f08a1ac55a5a31360c711e976118fa9422d4a1dd65e"
+    },
+    {
+      "path": "internal/ui/static/css/dark.css",
+      "gitBlob": "deb0f94ffd450aaed00625281f4e5488940ce1b4",
+      "sha256": "211c7affa0423a71887c72b5c487ab40c3b0ebf56cc2a2c46b1fe3376fe2542c"
+    },
+    {
+      "path": "internal/ui/static/css/light.css",
+      "gitBlob": "c61c18202547ce227ea1b2474d2facbafd59da4a",
+      "sha256": "764d6cf9b5e51f8a61c0cc5742ff6f9de382e5572b5644c49ff68431fc3ca055"
+    },
+    {
+      "path": "internal/ui/static/css/sans_serif.css",
+      "gitBlob": "19184b633a919ec003c34cf28ad566442c66920f",
+      "sha256": "ee84f9c3b2eed7be821053a780c1d55bf05eeac3e4ff4e66e304864f2e578c0d"
+    },
+    {
+      "path": "internal/ui/static/css/serif.css",
+      "gitBlob": "011a07e723509fd968bc24639862a610a3046982",
+      "sha256": "084fee36bb70b7f3243247d034b351adccf8867c0a9a54f482d050172c42cb96"
+    },
+    {
+      "path": "internal/ui/static/css/system.css",
+      "gitBlob": "9e0ba67a71d0fb873e5a4350342d614297ee5d64",
+      "sha256": "a1d9dd78c0889d8b0871d072f59da74bb1425e2a86e3ff155fb4a8dd81333f4a"
+    },
+    {
+      "path": "internal/ui/static/js/.eslintrc.json",
+      "gitBlob": "fc0a7626f137c6626f31ea521d10b91abf057d2b",
+      "sha256": "444ebc8237b0771cf3a6b6dff67c0dfecdf5ecd1770af0b8d5dadd3193dc4f7b"
+    },
+    {
+      "path": "internal/ui/static/js/app.js",
+      "gitBlob": "61914cb38d26085f3aa8745cbaabc0b799a3c504",
+      "sha256": "62ae1d04d314538cece07daac60008546ae60f840dc7e1cf955e157e497eb3e4"
+    },
+    {
+      "path": "internal/ui/static/js/keyboard_handler.js",
+      "gitBlob": "f4e89f9c1172a49e95af7933bbd6ea99233d78ac",
+      "sha256": "13d575646e4383ca4c87c25def08beae42bff7a061d6294ec5533782e9e10f4d"
+    },
+    {
+      "path": "internal/ui/static/js/service_worker.js",
+      "gitBlob": "37cce257a22d7c5355d690d201829a0621c24d8f",
+      "sha256": "c7a018af7363eab41193c6b918c4b000cb73a94f0bd0f1318b5bb08062a75166"
+    },
+    {
+      "path": "internal/ui/static/js/touch_handler.js",
+      "gitBlob": "9b6cfac74042b2e265de4afa6eb5b25ced8de278",
+      "sha256": "4e2f28725b2904ad8a63f7b2c838e5709a27f0e4c893f45d22564c8a9514fd0b"
+    },
+    {
+      "path": "internal/ui/static/js/webauthn_handler.js",
+      "gitBlob": "21c2af6653ae8da1dde77d4136e495bf39ef8210",
+      "sha256": "1e7e5d4850cca515e09096d118b665bf737ea189f3c133158aee5bbd85134b1d"
+    }
+  ],
+  "originalCore": {
+    "internal/template/templates/common/layout.html": "{{ define \"base\" }}\n<!DOCTYPE html>\n<html lang=\"{{ replace .language \"_\" \"-\"}}\">\n<head>\n    <meta charset=\"utf-8\">\n    <title>{{template \"title\" .}} - Miniflux</title>\n\n    <meta name=\"apple-mobile-web-app-title\" content=\"Miniflux\">\n    <meta name=\"googlebot\" content=\"notranslate\">\n    <meta name=\"mobile-web-app-capable\" content=\"yes\">\n    <meta name=\"referrer\" content=\"no-referrer\">\n    <meta name=\"robots\" content=\"noindex,nofollow\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, viewport-fit=cover\">\n    <meta name=\"theme-color\" content=\"{{ theme_color .theme \"light\" }}\" media=\"(prefers-color-scheme: light)\">\n    <meta name=\"theme-color\" content=\"{{ theme_color .theme \"dark\" }}\" media=\"(prefers-color-scheme: dark)\">\n\n    <link rel=\"manifest\" href=\"{{ routePath \"/manifest.json\" }}\" crossorigin=\"use-credentials\">\n\n    <link rel=\"apple-touch-icon\" href=\"{{ iconPath \"icon-180.png\" }}\">\n    <link rel=\"icon\" href=\"{{ iconPath \"icon.svg\" }}\">\n\n    {{ $cspNonce := nonce }}\n    {{ csp .user $cspNonce | safeHTML }}\n    <link rel=\"stylesheet\" nonce=\"{{ $cspNonce }}\" type=\"text/css\" href=\"{{ routePath \"/stylesheets/%s/%s.css\" .theme_checksum .theme }}\">\n    <script nonce=\"{{ $cspNonce }}\" src=\"{{ routePath \"/js/%s/%s.js\" .app_js_checksum \"app\" }}\" type=\"module\"></script>\n    {{ if .user -}}\n        {{ if .user.Stylesheet -}}\n        <style nonce=\"{{ $cspNonce }}\">{{ .user.Stylesheet | safeCSS }}</style>\n        {{ end -}}\n        {{ if .user.CustomJS -}}\n        <script type=\"module\" nonce=\"{{ $cspNonce }}\">{{ .user.CustomJS | safeJS }}</script>\n        {{ end -}}\n    {{ end -}}\n</head>\n<body\n    data-service-worker-url=\"{{ routePath \"/js/%s/%s.js\" .sw_js_checksum \"service-worker\" }}\"\n    {{ if .csrf }}data-csrf-token=\"{{ .csrf }}\"{{ end }}\n    data-add-subscription-url=\"{{ routePath \"/subscribe\" }}\"\n    data-entries-status-url=\"{{ routePath \"/entry/status\" }}\"\n    data-refresh-all-feeds-url=\"{{ routePath \"/feeds/refresh\" }}\"\n    {{ if .webAuthnEnabled }}\n    data-webauthn-register-begin-url=\"{{ routePath \"/webauthn/register/begin\" }}\"\n    data-webauthn-register-finish-url=\"{{ routePath \"/webauthn/register/finish\" }}\"\n    data-webauthn-login-begin-url=\"{{ routePath \"/webauthn/login/begin\" }}\"\n    data-webauthn-login-finish-url=\"{{ routePath \"/webauthn/login/finish\" }}\"\n    data-webauthn-delete-all-url=\"{{ routePath \"/webauthn/deleteall\" }}\"\n    {{ end }}\n    {{ if .user }}\n        {{ if not .user.KeyboardShortcuts }}data-disable-keyboard-shortcuts=\"true\"{{ end }}\n        data-mark-as-read-on-view=\"{{ if .user.MarkReadOnView }}true{{ else }}false{{ end }}\"\n    {{ end }}>\n\n    {{ if .user }}\n    <a class=\"skip-to-content-link\" href=\"#main\">{{ t \"skip_to_content\" }}</a>\n    <header class=\"header\">\n        <nav>\n            <div class=\"logo\" data-toggle-button-label=\"{{ t \"menu.title\" }}\">\n                <a aria-label=\"{{ t \"menu.home_page\" }}\" href=\"{{ routePath (printf \"/%s\" .user.DefaultHomePage) }}\">\n                    Mini<span>flux</span>\n                </a>\n                {{ icon \"chevron-down\"}}\n            </div>\n            <ul id=\"header-menu\">\n                <li {{ if eq .menu \"unread\" }}class=\"active\"{{ end }} title=\"{{ t \"tooltip.keyboard_shortcuts\" \"g u\" }}\">\n                    <a href=\"{{ routePath \"/unread\" }}\"\n                        data-page=\"unread\"\n                        {{ if gt .countUnread 0 }}\n                        aria-label=\"{{ t \"menu.unread\" }}, {{ plural \"page.unread_entry_count\" .countUnread .countUnread }}\"\n                        {{ end }}\n                    >\n                        {{ icon \"entries\" }}{{ t \"menu.unread\" }}\n                        {{ if gt .countUnread 0 }}\n                        <span class=\"unread-counter-wrapper\" aria-hidden=\"true\">(<span class=\"unread-counter\">{{ .countUnread }}</span>)</span>\n                        {{ end }}\n                    </a>\n                </li>\n                <li {{ if eq .menu \"starred\" }}class=\"active\"{{ end }} title=\"{{ t \"tooltip.keyboard_shortcuts\" \"g b\" }}\">\n                    <a href=\"{{ routePath \"/starred\" }}\" data-page=\"starred\">{{ icon \"star\" }}{{ t \"menu.starred\" }}</a>\n                </li>\n                <li {{ if eq .menu \"history\" }}class=\"active\"{{ end }} title=\"{{ t \"tooltip.keyboard_shortcuts\" \"g h\" }}\">\n                    <a href=\"{{ routePath \"/history\" }}\" data-page=\"history\">{{ icon \"history\" }}{{ t \"menu.history\" }}</a>\n                </li>\n                <li {{ if eq .menu \"feeds\" }}class=\"active\"{{ end }} title=\"{{ t \"tooltip.keyboard_shortcuts\" \"g f\" }}\">\n                    <a href=\"{{ routePath \"/feeds\" }}\" data-page=\"feeds\">{{ icon \"feeds\" }}{{ t \"menu.feeds\" }}\n                      {{ if gt .countErrorFeeds 0 }}\n                          <span class=\"error-feeds-counter-wrapper\">(<span class=\"error-feeds-counter\">{{ .countErrorFeeds }}</span>)</span>\n                      {{ end }}\n                    </a>\n                    <a href=\"{{ routePath \"/subscribe\" }}\" title=\"{{ t \"tooltip.keyboard_shortcuts\" \"+\" }}\" aria-label=\"{{ t \"menu.add_feed\" }}\">\n                        (+)\n                    </a>\n                </li>\n                <li {{ if eq .menu \"categories\" }}class=\"active\"{{ end }} title=\"{{ t \"tooltip.keyboard_shortcuts\" \"g c\" }}\">\n                    <a href=\"{{ routePath \"/categories\" }}\" data-page=\"categories\">{{ icon \"categories\" }}{{ t \"menu.categories\" }}</a>\n                </li>\n                <li {{ if eq .menu \"search\" }}class=\"active\"{{ end }} title=\"{{ t \"tooltip.keyboard_shortcuts\" \"/\" }}\">\n                    <a href=\"{{ routePath \"/search\" }}\" data-page=\"search\">{{ icon \"search\" }}{{ t \"menu.search\" }}</a>\n                </li>\n                <li {{ if eq .menu \"settings\" }}class=\"active\"{{ end }} title=\"{{ t \"tooltip.keyboard_shortcuts\" \"g s\" }}\">\n                    <a href=\"{{ routePath \"/settings\" }}\" data-page=\"settings\">{{ icon \"settings\" }}{{ t \"menu.settings\" }}</a>\n                </li>\n                {{ if not hasAuthProxy }}\n                    <li>\n                        <form action=\"{{ routePath \"/logout\" }}\" method=\"post\" class=\"logout-form\">\n                            <input type=\"hidden\" name=\"csrf\" value=\"{{ .csrf }}\">\n                            <button type=\"submit\" class=\"logout-button\" title=\"{{ t \"tooltip.logged_user\" .user.Username }}\">{{ icon \"logout\" }}{{ t \"menu.logout\" }}</button>\n                        </form>\n                    </li>\n                {{ end }}\n            </ul>\n        </nav>\n    </header>\n    {{ end }}\n    {{ if .flashSuccessMessage }}\n        <div role=\"alert\" class=\"flash-message alert alert-success\">{{ .flashSuccessMessage }}</div>\n    {{ end }}\n    {{ if .flashErrorMessage }}\n        <div role=\"alert\" class=\"flash-error-message alert alert-error\">{{ .flashErrorMessage }}</div>\n    {{ end }}\n\n    {{template \"page_header\" .}}\n\n    <main id=\"main\">\n        {{template \"content\" .}}\n    </main>\n    <dialog id=\"keyboard-shortcuts-modal\" closedby=\"any\">\n        <form method=\"dialog\">\n            <button class=\"btn-close-modal\" aria-label=\"Close\" autofocus>x</button>\n        </form>\n        <h3 tabindex=\"-1\" id=\"dialog-title\">{{ t \"page.keyboard_shortcuts.title\" }}</h3>\n\n        <div class=\"keyboard-shortcuts\">\n            <p>{{ t \"page.keyboard_shortcuts.subtitle.sections\" }}</p>\n            <ul>\n                <li>{{ t \"page.keyboard_shortcuts.go_to_unread\" }} = <strong>g + u</strong></li>\n                <li>{{ t \"page.keyboard_shortcuts.go_to_starred\" }} = <strong>g + b</strong></li>\n                <li>{{ t \"page.keyboard_shortcuts.go_to_history\" }} = <strong>g + h</strong></li>\n                <li>{{ t \"page.keyboard_shortcuts.go_to_feeds\" }} = <strong>g + f</strong></li>\n                <li>{{ t \"page.keyboard_shortcuts.go_to_categories\" }} = <strong>g + c</strong></li>\n                <li>{{ t \"page.keyboard_shortcuts.go_to_settings\" }} = <strong>g + s</strong></li>\n                <li>{{ t \"page.keyboard_shortcuts.show_keyboard_shortcuts\" }} = <strong>?</strong></li>\n                <li>{{ t \"menu.add_feed\" }} = <strong>+</strong></li>\n            </ul>\n\n            <p>{{ t \"page.keyboard_shortcuts.subtitle.items\" }}</p>\n            <ul>\n                <li>{{ t \"page.keyboard_shortcuts.go_to_previous_item\" }} = <strong>p</strong>, <strong>k</strong>, <strong>&#x23F4;</strong></li>\n                <li>{{ t \"page.keyboard_shortcuts.go_to_next_item\" }} = <strong>n</strong>, <strong>j</strong>, <strong>&#x23F5;</strong></li>\n                <li>{{ t \"page.keyboard_shortcuts.go_to_feed\" }} = <strong>F</strong></li>\n                <li>{{ t \"page.keyboard_shortcuts.go_to_top_item\" }} = <strong>g + g</strong></li>\n                <li>{{ t \"page.keyboard_shortcuts.go_to_bottom_item\" }} = <strong>G</strong></li>\n            </ul>\n\n            <p>{{ t \"page.keyboard_shortcuts.subtitle.pages\" }}</p>\n            <ul>\n                <li>{{ t \"page.keyboard_shortcuts.go_to_previous_page\" }} = <strong>h</strong></li>\n                <li>{{ t \"page.keyboard_shortcuts.go_to_next_page\" }} = <strong>l</strong></li>\n            </ul>\n\n            <p>{{ t \"page.keyboard_shortcuts.subtitle.actions\" }}</p>\n            <ul>\n                <li>{{ t \"page.keyboard_shortcuts.open_item\" }} = <strong>o</strong>, <strong>Enter</strong></li>\n                <li>{{ t \"page.keyboard_shortcuts.open_original\" }} = <strong>v</strong></li>\n                <li>{{ t \"page.keyboard_shortcuts.open_original_same_window\" }} = <strong>V</strong></li>\n                <li>{{ t \"page.keyboard_shortcuts.open_comments\" }} = <strong>c</strong></li>\n                <li>{{ t \"page.keyboard_shortcuts.open_comments_same_window\" }} = <strong>C</strong></li>\n                <li>{{ t \"page.keyboard_shortcuts.toggle_read_status_next\" }} = <strong>m</strong></li>\n                <li>{{ t \"page.keyboard_shortcuts.toggle_read_status_prev\" }} = <strong>M</strong></li>\n                <li>{{ t \"page.keyboard_shortcuts.mark_page_as_read\" }} = <strong>A</strong></li>\n                <li>{{ t \"page.keyboard_shortcuts.download_content\" }} = <strong>d</strong></li>\n                <li>{{ t \"page.keyboard_shortcuts.toggle_star_status\" }} = <strong>f</strong></li>\n                <li>{{ t \"page.keyboard_shortcuts.save_article\" }} = <strong>s</strong></li>\n                <li>{{ t \"page.keyboard_shortcuts.toggle_entry_attachments\" }} = <strong>a</strong></li>\n                <li>{{ t \"page.keyboard_shortcuts.scroll_item_to_top\" }} = <strong>z + t</strong></li>\n                <li>{{ t \"page.keyboard_shortcuts.refresh_all_feeds\" }} = <strong>R</strong></li>\n                <li>{{ t \"page.keyboard_shortcuts.remove_feed\" }} = <strong>#</strong></li>\n                <li>{{ t \"page.keyboard_shortcuts.go_to_search\" }} = <strong>/</strong></li>\n                <li>{{ t \"page.keyboard_shortcuts.close_modal\" }} = <strong>Esc</strong></li>\n            </ul>\n        </div>\n    </dialog>\n\n    <template id=\"icon-read\">{{ icon \"read\" }}</template>\n    <template id=\"icon-unread\">{{ icon \"unread\" }}</template>\n    <template id=\"icon-star\">{{ icon \"star\" }}</template>\n    <template id=\"icon-unstar\">{{ icon \"unstar\" }}</template>\n    <template id=\"icon-save\">{{ icon \"save\" }}</template>\n</body>\n</html>\n{{ end }}\n",
+    "internal/template/templates/views/entry.html": "{{ define \"title\"}}{{ .entry.Title }}{{ end }}\n\n{{ define \"entry_pagination\" }}\n<div class=\"pagination\">\n    <div class=\"pagination-prev {{ if not .prevEntry }}disabled{{end}}\">\n        {{ if .prevEntry }}\n            <a href=\"{{ .prevEntryRoute }}{{ queryString (dict \"q\" .searchQuery \"unread\" .searchUnreadOnly) }}\" title=\"{{ .prevEntry.Title }}\" data-page=\"previous\" rel=\"prev\">{{ t \"pagination.previous\" }}</a>\n        {{ else }}\n            {{ t \"pagination.previous\" }}\n        {{ end }}\n    </div>\n\n    <a href=\"#\" class=\"elevator\">{{ icon \"up\" }}{{ t \"page.footer.elevator\" }}</a>\n\n    <div class=\"pagination-next {{ if not .nextEntry }}disabled{{end}}\">\n        {{ if .nextEntry }}\n            <a href=\"{{ .nextEntryRoute }}{{ queryString (dict \"q\" .searchQuery \"unread\" .searchUnreadOnly) }}\" title=\"{{ .nextEntry.Title }}\" data-page=\"next\" rel=\"next\">{{ t \"pagination.next\" }}</a>\n        {{ else }}\n            {{ t \"pagination.next\" }}\n        {{ end }}\n    </div>\n</div>\n{{ end }}\n\n{{ define \"enclosure_media_controls\" }}\n<div class=\"media-controls\">\n    <div class=\"media-seek-control\">\n        <div class=\"media-control-label\">{{ t \"enclosure_media_controls.seek\" }} </div>\n        <button class=\"page-button\" data-enclosure-id=\"{{.ID}}\" data-enclosure-action=\"seek\" data-action-value=\"-30\" title=\"{{ t \"enclosure_media_controls.seek.title\" \"-30\" }}\" ><span class=\"icon-label\" >-30s</span></button>\n        <button class=\"page-button\" data-enclosure-id=\"{{.ID}}\" data-enclosure-action=\"seek\" data-action-value=\"-10\" title=\"{{ t \"enclosure_media_controls.seek.title\" \"-10\" }}\" ><span class=\"icon-label\" >-10s</span></button>\n        <button class=\"page-button\" data-enclosure-id=\"{{.ID}}\" data-enclosure-action=\"seek\" data-action-value=\"+10\" title=\"{{ t \"enclosure_media_controls.seek.title\" \"+10\" }}\" ><span class=\"icon-label\" >+10s</span></button>\n        <button class=\"page-button\" data-enclosure-id=\"{{.ID}}\" data-enclosure-action=\"seek\" data-action-value=\"+30\" title=\"{{ t \"enclosure_media_controls.seek.title\" \"+30\" }}\" ><span class=\"icon-label\" >+30s</span></button>\n    </div>\n    <div class=\"media-speed-control\">\n\n        <div class=\"media-control-label\">{{ t \"enclosure_media_controls.speed\" }} (<span class=\"speed-indicator\" data-enclosure-id=\"{{.ID}}\">1.00x</span>)</div> <!-- Need JS to display the current speed unfortunately -->\n        <button class=\"page-button\" data-enclosure-id=\"{{.ID}}\" data-enclosure-action=\"speed\" data-action-value=\"-0.25\" title=\"{{ t \"enclosure_media_controls.speed.slower.title\" \"0.25\" }}\"><span class=\"icon-label\" >{{ t \"enclosure_media_controls.speed.slower\" }}</span></button>\n        <button class=\"page-button\" data-enclosure-id=\"{{.ID}}\" data-enclosure-action=\"speed-reset\" data-action-value=\"1\" title=\"{{ t \"enclosure_media_controls.speed.reset.title\"}}\"><span class=\"icon-label\" >{{ t \"enclosure_media_controls.speed.reset\" }}</span></button>\n        <button class=\"page-button\" data-enclosure-id=\"{{.ID}}\" data-enclosure-action=\"speed\" data-action-value=\"+0.25\" title=\"{{ t \"enclosure_media_controls.speed.faster.title\" \"0.25\" }}\"><span class=\"icon-label\" >{{ t \"enclosure_media_controls.speed.faster\" }}</span></button>\n    </div>\n</div>\n{{ end }}\n\n{{ define \"page_header\"}}\n<section class=\"entry\" data-id=\"{{ .entry.ID }}\" aria-labelledby=\"page-header-title\">\n    <header class=\"entry-header\">\n        <h1 id=\"page-header-title\" dir=\"auto\" {{ with or .entry.Language .entry.Feed.Language }}lang=\"{{ . }}\"{{ end }}>\n            <a href=\"{{ .entry.URL | untrustedURL }}\" {{ if $.user.OpenExternalLinksInNewTab }}target=\"_blank\"{{ else }}rel=\"noopener\"{{ end }}>{{ .entry.Title }}</a>\n        </h1>\n        {{ if .user }}\n        <div class=\"entry-actions\">\n            <ul>\n                <li>\n                    <button\n                        class=\"page-button\"\n                        title=\"{{ t \"entry.status.title\" }}\"\n                        data-toggle-status=\"true\"\n                        data-label-loading=\"{{ t \"entry.state.saving\" }}\"\n                        data-label-unread=\"{{ t \"entry.status.mark_as_unread\" }}\"\n                        data-label-read=\"{{ t \"entry.status.mark_as_read\" }}\"\n                        data-toast-unread=\"{{ t \"entry.status.toast.unread\" }}\"\n                        data-toast-read=\"{{ t \"entry.status.toast.read\" }}\"\n                        data-value=\"{{ if eq .entry.Status \"read\" }}read{{ else }}unread{{ end }}\"\n                        >{{ if eq .entry.Status \"unread\" }}{{ icon \"read\" }}{{ else }}{{ icon \"unread\" }}{{ end }}<span class=\"icon-label\">{{ if eq .entry.Status \"unread\" }}{{ t \"entry.status.mark_as_read\" }}{{ else }}{{ t \"entry.status.mark_as_unread\" }}{{ end }}</span></button>\n                </li>\n                <li>\n                    <button\n                        class=\"page-button\"\n                        data-toggle-starred=\"true\"\n                        data-star-url=\"{{ routePath \"/entry/star/%d\" .entry.ID }}\"\n                        data-label-loading=\"{{ t \"entry.state.saving\" }}\"\n                        data-label-star=\"{{ t \"entry.starred.toggle.on\" }}\"\n                        data-label-unstar=\"{{ t \"entry.starred.toggle.off\" }}\"\n                        data-toast-star=\"{{ t \"entry.starred.toast.on\" }}\"\n                        data-toast-unstar=\"{{ t \"entry.starred.toast.off\" }}\"\n                        data-value=\"{{ if .entry.Starred }}star{{ else }}unstar{{ end }}\"\n                        >{{ if .entry.Starred }}{{ icon \"unstar\" }}{{ else }}{{ icon \"star\" }}{{ end }}<span class=\"icon-label\">{{ if .entry.Starred }}{{ t \"entry.starred.toggle.off\" }}{{ else }}{{ t \"entry.starred.toggle.on\" }}{{ end }}</span></button>\n                </li>\n                {{ if .hasSaveEntry }}\n                <li>\n                    <button\n                        class=\"page-button\"\n                        title=\"{{ t \"entry.save.title\" }}\"\n                        data-save-entry=\"true\"\n                        data-save-url=\"{{ routePath \"/entry/save/%d\" .entry.ID }}\"\n                        data-label-loading=\"{{ t \"entry.state.saving\" }}\"\n                        data-label-done=\"{{ t \"entry.save.completed\" }}\"\n                        data-toast-done=\"{{ t \"entry.save.toast.completed\" }}\"\n                        >{{ icon \"save\" }}<span class=\"icon-label\">{{ t \"entry.save.label\" }}</span></button>\n                </li>\n                {{ end }}\n                {{ if .entry.ShareCode }}\n                <li>\n                    <a href=\"{{ routePath \"/share/%s\" .entry.ShareCode }}\"\n                        title=\"{{ t \"entry.shared_entry.title\" }}\"\n                        data-share-status=\"shared\"\n                        {{ if $.user.OpenExternalLinksInNewTab }}target=\"_blank\"{{ end }}>{{ icon \"share\" }}<span class=\"icon-label\">{{ t \"entry.shared_entry.label\" }}</span></a>\n                </li>\n                <li>\n                    <button\n                        class=\"page-button\"\n                        data-confirm=\"true\"\n                        data-url=\"{{ routePath \"/entry/unshare/%d\" .entry.ID }}\"\n                        data-label-question=\"{{ t \"confirm.question\" }}\"\n                        data-label-yes=\"{{ t \"confirm.yes\" }}\"\n                        data-label-no=\"{{ t \"confirm.no\" }}\"\n                        data-label-loading=\"{{ t \"confirm.loading\" }}\">{{ icon \"delete\" }}<span class=\"icon-label\">{{ t \"entry.unshare.label\" }}</span></button>\n                </li>\n                {{ else }}\n                <li>\n                    <form method=\"post\" action=\"{{ routePath \"/entry/share/%d\" .entry.ID }}\">\n                        <input type=\"hidden\" name=\"csrf\" value=\"{{ .csrf }}\">\n                        <button type=\"submit\" class=\"page-button\">\n                            {{ icon \"share\" }}<span class=\"icon-label\">{{ t \"entry.share.label\" }}</span>\n                        </button>\n                    </form>\n                </li>\n                {{ end }}\n                <li>\n                    <button\n                        class=\"page-button\"\n                        title=\"{{ t \"entry.scraper.title\" }}\"\n                        data-fetch-content-entry=\"true\"\n                        data-fetch-content-url=\"{{ routePath \"/entry/download/%d\" .entry.ID }}\"\n                        data-label-loading=\"{{ t \"entry.state.loading\" }}\"\n                        >{{ icon \"scraper\" }}<span class=\"icon-label\">{{ t \"entry.scraper.label\" }}</span></button>\n                </li>\n                {{ if .entry.CommentsURL }}\n                <li>\n                    <a href=\"{{ .entry.CommentsURL }}\"\n                        class=\"page-link\"\n                        title=\"{{ t \"entry.comments.title\" }}\"\n                        {{ if $.user.OpenExternalLinksInNewTab }}target=\"_blank\"{{ else }}rel=\"noopener\"{{ end }}\n                        data-comments-link=\"true\"\n                        >{{ icon \"comment\" }}<span class=\"icon-label\">{{ t \"entry.comments.label\" }}</span></a>\n                </li>\n                {{ end }}\n            </ul>\n        </div>\n        {{ end }}\n        <div class=\"entry-meta\" dir=\"auto\">\n            <span class=\"entry-website\">\n                {{ if ne .entry.Feed.Icon.IconID 0 }}\n                <img src=\"{{ routePath \"/feed-icon/%s\" .entry.Feed.Icon.ExternalIconID }}\" width=\"16\" height=\"16\" loading=\"lazy\" alt=\"{{ .entry.Feed.Title }}\">\n                {{ end }}\n                {{ if .user }}\n                <a href=\"{{ routePath \"/feed/%d/entries\" .entry.Feed.ID }}\">{{ .entry.Feed.Title }}</a>\n                {{ else }}\n                <a href=\"{{ .entry.Feed.SiteURL }}\">{{ .entry.Feed.Title }}</a>\n                {{ end }}\n            </span>\n            {{ if .entry.Author }}\n            <span class=\"entry-author\">\n                {{ if isEmail .entry.Author }}\n                - <a href=\"mailto:{{ .entry.Author }}\">{{ .entry.Author }}</a>\n                {{ else }}\n                – <em>{{ .entry.Author }}</em>\n                {{ end }}\n            </span>\n            {{ end }}\n            {{ if .user }}\n            <span class=\"category\">\n                <a href=\"{{ routePath \"/category/%d/entries\" .entry.Feed.Category.ID }}\">{{ .entry.Feed.Category.Title }}</a>\n            </span>\n            {{ end }}\n        </div>\n        {{ if .entry.Tags }}\n        <div class=\"entry-tags\">\n            {{ t \"entry.tags.label\" }}\n            {{ $allTags := .entry.Tags }}\n            {{ $numTags := len $allTags }}\n            {{ $tagsLimit := 5 }}\n            {{ $numerOfAdditionalTags := subtract $numTags $tagsLimit }}\n\n            <ul class=\"entry-tags-list\">\n                {{ range $i, $tagName := $allTags }}\n                    {{ if lt $i $tagsLimit }}\n                        {{ if $.user }}\n                            <li><a href=\"{{ routePath \"/tags/%s/entries/all\" (urlEncode $tagName) }}\"><strong>{{ $tagName }}</strong></a></li>\n                        {{ else }}\n                            <li><strong>{{ $tagName }}</strong></li>\n                        {{ end }}\n                    {{ end }}\n                {{ end }}\n            </ul>\n\n            {{ if gt $numTags $tagsLimit }}\n                <details class=\"entry-additional-tags\">\n                    <summary>\n                        {{ plural \"entry.tags.more_tags_label\" $numerOfAdditionalTags $numerOfAdditionalTags }}\n                    </summary>\n                    <ul class=\"entry-tags-list\">\n                    {{ range $idx, $tagName := $allTags }}\n                        {{ if ge $idx $tagsLimit }}\n                            {{ if $.user }}\n                                <li><a href=\"{{ routePath \"/tags/%s/entries/all\" (urlEncode $tagName) }}\"><strong>{{ $tagName }}</strong></a></li>\n                            {{ else }}\n                                <li><strong>{{ $tagName }}</strong></li>\n                            {{ end }}\n                        {{ end }}\n                    {{ end }}\n                    </ul>\n                </details>\n            {{ end }}\n        </div>\n        {{ end }}\n        <div class=\"entry-external-link\">\n            <a\n                href=\"{{ .entry.URL | untrustedURL }}\"\n                {{ if $.user.OpenExternalLinksInNewTab }}target=\"_blank\"{{ else }}rel=\"noopener\"{{ end }}\n                data-original-link=\"{{ $.user.MarkReadOnView }}\">{{ .entry.URL }}</span></a>\n        </div>\n        <div class=\"entry-date\">\n            {{ if .user }}\n            <time datetime=\"{{ isodate .entry.Date }}\" title=\"{{ isodate .entry.Date }}\">{{ elapsed $.user.Timezone .entry.Date }}</time>\n            {{ else }}\n            <time datetime=\"{{ isodate .entry.Date }}\" title=\"{{ isodate .entry.Date }}\">{{ elapsed \"UTC\" .entry.Date }}</time>\n            {{ end }}\n            {{ if and .user.ShowReadingTime (gt .entry.ReadingTime 0) }}\n            &centerdot;\n            <span class=\"entry-reading-time\">\n                {{ plural \"entry.estimated_reading_time\" .entry.ReadingTime .entry.ReadingTime }}\n            </span>\n            {{ end }}\n        </div>\n    </header>\n</section>\n{{ end }}\n\n\n{{ define \"content\"}}\n{{ if gt (len .entry.Content) 120 }}\n{{ if .user }}\n<div class=\"pagination-entry-top\">\n    {{ template \"entry_pagination\" . }}\n</div>\n{{ end }}\n{{ end }}\n<article class=\"entry-content {{ if ne $.user.GestureNav \"none\" }}gesture-nav-{{ $.user.GestureNav }}{{ end }}\" dir=\"auto\" {{ with or .entry.Language .entry.Feed.Language }}lang=\"{{ . }}\"{{ end }}>\n    {{ if not .entry.Feed.NoMediaPlayer }}\n        {{ $mediaPlayerEnclosure := .entry.Enclosures.FindMediaPlayerEnclosure }}\n\n        {{ if $mediaPlayerEnclosure }}\n            {{ with $mediaPlayerEnclosure }}\n                {{ if .IsAudio }}\n                    <div class=\"enclosure-audio\" >\n                        <audio controls preload=\"metadata\"\n                            {{ if $.user }}data-last-position=\"{{ .MediaProgression }}\"{{ end }}\n                            {{ if $.user.MediaPlaybackRate }}data-playback-rate=\"{{ $.user.MediaPlaybackRate }}\"{{ end }}\n                            {{ if $.user.MarkReadOnMediaPlayerCompletion }}data-mark-read-on-completion=\"0.9\"{{ end }}\n                            {{ if $.user }}data-save-url=\"{{ routePath \"/entry/enclosure/%d/save-progression\" .ID }}\"{{ end }}\n                            data-enclosure-id=\"{{ .ID }}\"\n                            >\n                            {{ if (and $.user (mustBeProxyfied \"audio\")) }}\n                            <source src=\"{{ proxyURL .URL }}\" type=\"{{ .Html5MimeType }}\">\n                            {{ else }}\n                            <source src=\"{{ .URL | untrustedURL }}\" type=\"{{ .Html5MimeType }}\">\n                            {{ end }}\n                        </audio>\n                        {{ template \"enclosure_media_controls\" . }}\n                    </div>\n                {{ else if .IsVideo }}\n                    <div class=\"enclosure-video\">\n                        <video controls preload=\"metadata\"\n                            {{ if $.user }}data-last-position=\"{{ .MediaProgression }}\"{{ end }}\n                            {{ if $.user.MediaPlaybackRate }}data-playback-rate=\"{{ $.user.MediaPlaybackRate }}\"{{ end }}\n                            {{ if $.user.MarkReadOnMediaPlayerCompletion }}data-mark-read-on-completion=\"0.9\"{{ end }}\n                            {{ if $.user }}data-save-url=\"{{ routePath \"/entry/enclosure/%d/save-progression\" .ID }}\"{{ end }}\n                            data-enclosure-id=\"{{ .ID }}\"\n                            >\n                            {{ if (and $.user (mustBeProxyfied \"video\")) }}\n                            <source src=\"{{ proxyURL .URL }}\" type=\"{{ .Html5MimeType }}\">\n                            {{ else }}\n                            <source src=\"{{ .URL | untrustedURL }}\" type=\"{{ .Html5MimeType }}\">\n                            {{ end }}\n                        </video>\n                        {{ template \"enclosure_media_controls\" . }}\n                    </div>\n                {{ end }}\n            {{ end }}\n        {{ end }}\n    {{ end }}\n\n    {{ if .user }}\n        {{ safeHTML (proxyFilter .entry.Content) }}\n    {{ else }}\n        {{ safeHTML .entry.Content }}\n    {{ end }}\n</article>\n{{ if .entry.Enclosures }}\n<details class=\"entry-enclosures\">\n    <summary>{{ t \"page.entry.attachments\" }} ({{ len .entry.Enclosures }})</summary>\n    {{ range .entry.Enclosures }}\n    {{ if ne .URL \"\" }}\n    <div class=\"entry-enclosure\">\n        {{ if .IsImage }}\n        <div class=\"enclosure-image\">\n            {{ if (and $.user (mustBeProxyfied \"image\")) }}\n            <img src=\"{{ proxyURL .URL }}\" title=\"{{ .URL }} ({{ .MimeType }})\" loading=\"lazy\" alt=\"{{ .URL }} ({{ .MimeType }})\">\n            {{ else }}\n            <img src=\"{{ .URL | untrustedURL }}\" title=\"{{ .URL }} ({{ .MimeType }})\" loading=\"lazy\" alt=\"{{ .URL }} ({{ .MimeType }})\">\n            {{ end }}\n        </div>\n        {{ end }}\n\n        <div class=\"entry-enclosure-download\">\n            <a href=\"{{ .URL | untrustedURL }}\" title=\"{{ t \"action.download\" }}{{ if gt .Size 0 }} - {{ formatFileSize .Size }}{{ end }}\" {{ if $.user.OpenExternalLinksInNewTab }}target=\"_blank\"{{ else }}rel=\"noopener\"{{ end }}>{{ .URL }}</a>\n            <small>{{ if gt .Size 0 }} - <strong>{{ formatFileSize .Size }}</strong>{{ end }}</small>\n        </div>\n    </div>\n    {{ end }}\n    {{ end }}\n</details>\n{{ end }}\n\n{{ if .user }}\n<div class=\"pagination-entry-bottom\">\n    {{ template \"entry_pagination\" . }}\n</div>\n{{ end }}\n{{ end }}\n",
+    "internal/template/templates/views/unread_entries.html": "{{ define \"title\"}}{{ t \"page.unread.title\" }} {{ if gt .countUnread 0 }}({{ .countUnread }}){{ end }} {{ end }}\n\n{{ define \"page_header\"}}\n<section class=\"page-header\" aria-labelledby=\"page-header-title page-header-title-count\">\n    <h1 id=\"page-header-title\">\n        {{ t \"page.unread.title\" }}\n        <span aria-hidden=\"true\">(<span class=\"unread-counter\">{{ .countUnread }}</span>)</span>\n    </h1>\n    <span id=\"page-header-title-count\" class=\"sr-only\">{{ plural \"page.unread_entry_count\" .countUnread .countUnread }}</span>\n    {{ if .entries }}\n    <nav aria-label=\"{{ t \"page.unread.title\" }} {{ t \"menu.title\" }}\">\n        <ul>\n            <li>\n                <button\n                    class=\"page-button\"\n                    data-action=\"markPageAsRead\"\n                    data-show-only-unread=\"1\"\n                    data-label-question=\"{{ t \"confirm.question\" }}\"\n                    data-label-yes=\"{{ t \"confirm.yes\" }}\"\n                    data-label-no=\"{{ t \"confirm.no\" }}\"\n                    data-label-loading=\"{{ t \"confirm.loading\" }}\">{{ icon \"mark-page-as-read\" }}{{ t \"menu.mark_page_as_read\" }}</button>\n            </li>\n            <li>\n                <button\n                    class=\"page-button\"\n                    data-confirm=\"true\"\n                    data-url=\"{{ routePath \"/mark-all-as-read\" }}\"\n                    data-redirect-url=\"{{ routePath \"/unread\" }}\"\n                    data-label-question=\"{{ t \"confirm.question\" }}\"\n                    data-label-yes=\"{{ t \"confirm.yes\" }}\"\n                    data-label-no=\"{{ t \"confirm.no\" }}\"\n                    data-label-loading=\"{{ t \"confirm.loading\" }}\">{{ icon \"mark-all-as-read\" }}{{ t \"menu.mark_all_as_read\" }}</button>\n            </li>\n        </ul>\n    </nav>\n    {{ end }}\n</section>\n{{ end }}\n\n{{ define \"content\"}}\n{{ if not .entries }}\n    <p role=\"alert\" class=\"alert\">{{ t \"alert.no_unread_entry\" }}</p>\n{{ else }}\n    <div class=\"pagination-top\">\n        {{ template \"pagination\" .pagination -}}\n    </div>\n    <div class=\"items hide-read-items\">\n        {{ range .entries -}}\n        <article\n            class=\"item entry-item {{ if $.user.EntrySwipe }}entry-swipe{{ end }} item-status-{{ .Status }}\"\n            data-id=\"{{ .ID }}\"\n            aria-labelledby=\"entry-title-{{ .ID }}\"\n            tabindex=\"-1\"\n        >\n            <header class=\"item-header\" dir=\"auto\">\n                <h2 id=\"entry-title-{{ .ID }}\" class=\"item-title\" {{ with or .Language .Feed.Language }}lang=\"{{ . }}\"{{ end }}>\n                    <a href=\"{{ routePath \"/unread/entry/%d\" .ID }}\" {{ if and $.user.AlwaysOpenExternalLinks $.user.OpenExternalLinksInNewTab }}target=\"_blank\"{{ end }}>\n                        {{ if ne .Feed.Icon.IconID 0 -}}\n                        <img src=\"{{ routePath \"/feed-icon/%s\" .Feed.Icon.ExternalIconID }}\" width=\"16\" height=\"16\" loading=\"lazy\" alt=\"\">\n                        {{ end -}}\n                        {{ .Title }}\n                    </a>\n                </h2>\n                <span class=\"category\">\n                    <a href=\"{{ routePath \"/category/%d/entries\" .Feed.Category.ID }}\">\n                        {{ .Feed.Category.Title }}\n                    </a>\n                </span>\n            </header>\n            {{ template \"item_meta\" dict \"user\" $.user \"entry\" . \"hasSaveEntry\" $.hasSaveEntry -}}\n        </article>\n        {{ end }}\n    </div>\n    <section class=\"page-footer\">\n        {{ if .entries }}\n        <ul>\n            <li>\n                <button\n                    class=\"page-button\"\n                    data-action=\"markPageAsRead\"\n                    data-label-question=\"{{ t \"confirm.question\" }}\"\n                    data-label-yes=\"{{ t \"confirm.yes\" }}\"\n                    data-label-no=\"{{ t \"confirm.no\" }}\"\n                    data-label-loading=\"{{ t \"confirm.loading\" }}\"\n                >\n                    {{ icon \"mark-page-as-read\" }}{{ t \"menu.mark_page_as_read\" }}\n                </button>\n            </li>\n        </ul>\n        {{ end }}\n    </section>\n    <div class=\"pagination-bottom\">\n        {{ template \"pagination\" .pagination }}\n    </div>\n{{ end }}\n\n{{ end }}\n",
+    "internal/template/templates/views/starred_entries.html": "{{ define \"title\"}}{{ t \"page.starred.title\" }} ({{ .total }}){{ end }}\n\n{{ define \"page_header\"}}\n<section class=\"page-header\" aria-labelledby=\"page-header-title page-header-title-count\">\n    <h1 id=\"page-header-title\" dir=\"auto\">\n        {{ t \"page.starred.title\" }}\n        <span aria-hidden=\"true\"> ({{ .total }})</span>\n    </h1>\n    <span id=\"page-header-title-count\" class=\"sr-only\">{{ plural \"page.starred_entry_count\" .total .total }}</span>\n</section>\n{{ end }}\n\n{{ define \"content\"}}\n{{ if not .entries }}\n    <p role=\"alert\" class=\"alert alert-info\">{{ t \"alert.no_starred\" }}</p>\n{{ else }}\n    <div class=\"pagination-top\">\n        {{ template \"pagination\" .pagination }}\n    </div>\n    <div class=\"items\">\n        {{ range .entries }}\n        <article\n            class=\"item entry-item {{ if $.user.EntrySwipe }}entry-swipe{{ end }} item-status-{{ .Status }}\"\n            data-id=\"{{ .ID }}\"\n            aria-labelledby=\"entry-title-{{ .ID }}\"\n            tabindex=\"-1\"\n        >\n            <header class=\"item-header\" dir=\"auto\">\n                <h2 id=\"entry-title-{{ .ID }}\" class=\"item-title\" {{ with or .Language .Feed.Language }}lang=\"{{ . }}\"{{ end }}>\n                    <a href=\"{{ routePath \"/starred/entry/%d\" .ID }}\" {{ if and $.user.AlwaysOpenExternalLinks $.user.OpenExternalLinksInNewTab }}target=\"_blank\"{{ end }}>\n                        {{ if ne .Feed.Icon.IconID 0 }}\n                        <img src=\"{{ routePath \"/feed-icon/%s\" .Feed.Icon.ExternalIconID }}\" width=\"16\" height=\"16\" loading=\"lazy\" alt=\"\">\n                        {{ end }}\n                        {{ .Title }}\n                    </a>\n                </h2>\n                <span class=\"category\">\n                    <a href=\"{{ routePath \"/category/%d/entries\" .Feed.Category.ID }}\">\n                        {{ .Feed.Category.Title }}\n                    </a>\n                </span>\n            </header>\n            {{ template \"item_meta\" dict \"user\" $.user \"entry\" . \"hasSaveEntry\" $.hasSaveEntry }}\n        </article>\n        {{ end }}\n    </div>\n    <div class=\"pagination-bottom\">\n        {{ template \"pagination\" .pagination }}\n    </div>\n{{ end }}\n\n{{ end }}\n",
+    "internal/template/templates/views/history_entries.html": "{{ define \"title\"}}{{ t \"page.history.title\" }} ({{ .total }}){{ end }}\n\n{{ define \"page_header\"}}\n<section class=\"page-header\" aria-labelledby=\"page-header-title page-header-title-count\">\n    <h1 id=\"page-header-title\">\n        {{ t \"page.history.title\" }}\n        <span aria-hidden=\"true\">({{ .total }})</span>\n    </h1>\n    <span id=\"page-header-title-count\" class=\"sr-only\">{{ plural \"page.read_entry_count\" .total .total }}</span>\n    <nav aria-label=\"{{ t \"page.history.title\" }} {{ t \"menu.title\" }}\">\n        <ul>\n            {{ if .entries }}\n            <li>\n                <button\n                    class=\"page-button\"\n                    data-confirm=\"true\"\n                    data-url=\"{{ routePath \"/history/flush\" }}\"\n                    data-label-question=\"{{ t \"confirm.question\" }}\"\n                    data-label-yes=\"{{ t \"confirm.yes\" }}\"\n                    data-label-no=\"{{ t \"confirm.no\" }}\"\n                    data-label-loading=\"{{ t \"confirm.loading\" }}\">{{ icon \"delete\" }}{{ t \"menu.flush_history\" }}</button>\n            </li>\n            {{ end }}\n            <li>\n                <a class=\"page-link\" href=\"{{ routePath \"/shares\" }}\">{{ icon \"share\" }}{{ t \"menu.shared_entries\" }}</a>\n            </li>\n        </ul>\n    </nav>\n</section>\n{{ end }}\n\n{{ define \"content\"}}\n{{ if not .entries }}\n    <p role=\"alert\" class=\"alert alert-info\">{{ t \"alert.no_history\" }}</p>\n{{ else }}\n    <div class=\"pagination-top\">\n        {{ template \"pagination\" .pagination }}\n    </div>\n    <div class=\"items\">\n        {{ range .entries }}\n        <article\n            class=\"item entry-item {{ if $.user.EntrySwipe }}entry-swipe{{ end }} item-status-{{ .Status }}\"\n            data-id=\"{{ .ID }}\"\n            aria-labelledby=\"entry-title-{{ .ID }}\"\n            tabindex=\"-1\"\n        >\n            <header class=\"item-header\" dir=\"auto\">\n                <h2 id=\"entry-title-{{ .ID }}\" class=\"item-title\" {{ with or .Language .Feed.Language }}lang=\"{{ . }}\"{{ end }}>\n                    <a href=\"{{ routePath \"/history/entry/%d\" .ID }}\" {{ if and $.user.AlwaysOpenExternalLinks $.user.OpenExternalLinksInNewTab }}target=\"_blank\"{{ end }}>\n                        {{ if ne .Feed.Icon.IconID 0 }}\n                        <img src=\"{{ routePath \"/feed-icon/%s\" .Feed.Icon.ExternalIconID }}\" width=\"16\" height=\"16\" loading=\"lazy\" alt=\"\">\n                        {{ end }}\n                        {{ .Title }}\n                    </a>\n                </h2>\n                <span class=\"category\">\n                    <a href=\"{{ routePath \"/category/%d/entries\" .Feed.Category.ID }}\">\n                        {{ .Feed.Category.Title }}\n                    </a>\n                </span>\n            </header>\n            {{ template \"item_meta\" dict \"user\" $.user \"entry\" . \"hasSaveEntry\" $.hasSaveEntry  }}\n        </article>\n        {{ end }}\n    </div>\n    <div class=\"pagination-bottom\">\n        {{ template \"pagination\" .pagination }}\n    </div>\n{{ end }}\n\n{{ end }}\n",
+    "internal/template/templates/common/item_meta.html": "{{ define \"item_meta\" -}}\n<div class=\"item-meta\">\n    <ul class=\"item-meta-info\">\n        <li class=\"item-meta-info-title\">\n            <a href=\"{{ routePath \"/feed/%d/entries\" .entry.Feed.ID }}\" title=\"{{ .entry.Feed.SiteURL }}\" data-feed-link=\"true\">{{ truncate .entry.Feed.Title 35 }}</a>\n        </li>\n        <li class=\"item-meta-info-timestamp\">\n            <time datetime=\"{{ isodate .entry.Date }}\" title=\"{{ isodate .entry.Date }}\">{{ elapsed .user.Timezone .entry.Date }}</time>\n        </li>\n        {{ if and .user.ShowReadingTime (gt .entry.ReadingTime 0) -}}\n        <li class=\"item-meta-info-reading-time\">\n            <span>{{ plural \"entry.estimated_reading_time\" .entry.ReadingTime .entry.ReadingTime }}</span>\n        </li>\n        {{ end -}}\n    </ul>\n    <ul class=\"item-meta-icons\">\n        <li class=\"item-meta-icons-read\">\n            <button\n                aria-describedby=\"entry-title-{{ .entry.ID }}\"\n                title=\"{{ t \"entry.status.title\" }}\"\n                data-toggle-status=\"true\"\n                data-label-loading=\"{{ t \"entry.state.saving\" }}\"\n                data-label-read=\"{{ t \"entry.status.mark_as_read\" }}\"\n                data-label-unread=\"{{ t \"entry.status.mark_as_unread\" }}\"\n                data-value=\"{{ if eq .entry.Status \"read\" }}read{{ else }}unread{{ end }}\"\n                >{{ if eq .entry.Status \"read\" }}{{ icon \"unread\" }}{{ else }}{{ icon \"read\" }}{{ end }}<span class=\"icon-label\">{{ if eq .entry.Status \"read\" }}{{ t \"entry.status.mark_as_unread\" }}{{ else }}{{ t \"entry.status.mark_as_read\" }}{{ end }}</span></button>\n        </li>\n        <li class=\"item-meta-icons-star\">\n            <button\n                aria-describedby=\"entry-title-{{ .entry.ID }}\"\n                data-toggle-starred=\"true\"\n                data-star-url=\"{{ routePath \"/entry/star/%d\" .entry.ID }}\"\n                data-label-loading=\"{{ t \"entry.state.saving\" }}\"\n                data-label-star=\"{{ t \"entry.starred.toggle.on\" }}\"\n                data-label-unstar=\"{{ t \"entry.starred.toggle.off\" }}\"\n                data-value=\"{{ if .entry.Starred }}star{{ else }}unstar{{ end }}\"\n                >{{ if .entry.Starred }}{{ icon \"unstar\" }}{{ else }}{{ icon \"star\" }}{{ end }}<span class=\"icon-label\">{{ if .entry.Starred }}{{ t \"entry.starred.toggle.off\" }}{{ else }}{{ t \"entry.starred.toggle.on\" }}{{ end }}</span></button>\n        </li>\n        {{ if .entry.ShareCode }}\n            <li class=\"item-meta-icons-share\">\n                <a href=\"{{ routePath \"/share/%s\" .entry.ShareCode }}\"\n                    aria-describedby=\"entry-title-{{ .entry.ID }}\"\n                    title=\"{{ t \"entry.shared_entry.title\" }}\"\n                    {{ if $.user.OpenExternalLinksInNewTab }}target=\"_blank\"{{ end }}>{{ icon \"share\" }}<span class=\"icon-label\">{{ t \"entry.shared_entry.label\" }}</span></a>\n            </li>\n            <li class=\"item-meta-icons-delete\">\n                <button\n                    aria-describedby=\"entry-title-{{ .entry.ID }}\"\n                    data-confirm=\"true\"\n                    data-url=\"{{ routePath \"/entry/unshare/%d\" .entry.ID }}\"\n                    data-label-question=\"{{ t \"confirm.question\" }}\"\n                    data-label-yes=\"{{ t \"confirm.yes\" }}\"\n                    data-label-no=\"{{ t \"confirm.no\" }}\"\n                    data-label-loading=\"{{ t \"confirm.loading\" }}\">{{ icon \"delete\" }}<span class=\"icon-label\">{{ t \"entry.unshare.label\" }}</span></button>\n            </li>\n        {{ end -}}\n        {{ if .hasSaveEntry }}\n            <li>\n                <button\n                    aria-describedby=\"entry-title-{{ .entry.ID }}\"\n                    title=\"{{ t \"entry.save.title\" }}\"\n                    data-save-entry=\"true\"\n                    data-save-url=\"{{ routePath \"/entry/save/%d\" .entry.ID }}\"\n                    data-label-loading=\"{{ t \"entry.state.saving\" }}\"\n                    data-label-done=\"{{ t \"entry.save.completed\" }}\"\n                    >{{ icon \"save\" }}<span class=\"icon-label\">{{ t \"entry.save.label\" }}</span></button>\n            </li>\n        {{ end -}}\n        <li class=\"item-meta-icons-external-url\">\n            <a href=\"{{ .entry.URL | untrustedURL }}\"\n                aria-describedby=\"entry-title-{{ .entry.ID }}\"\n                {{ if $.user.OpenExternalLinksInNewTab }}target=\"_blank\"{{ else }}rel=\"noopener\"{{ end }}\n                data-original-link=\"{{ .user.MarkReadOnView }}\">{{ icon \"external-link\" }}<span class=\"icon-label\">{{ t \"entry.external_link.label\" }}</span></a>\n        </li>\n        {{ if .entry.CommentsURL }}\n            <li class=\"item-meta-icons-comments\">\n                <a href=\"{{ .entry.CommentsURL }}\"\n                    aria-describedby=\"entry-title-{{ .entry.ID }}\"\n                    title=\"{{ t \"entry.comments.title\" }}\"\n                    {{ if $.user.OpenExternalLinksInNewTab }}target=\"_blank\"{{ else }}rel=\"noopener\"{{ end }}\n                    data-comments-link=\"true\">{{ icon \"comment\" }}<span class=\"icon-label\">{{ t \"entry.comments.label\" }}</span></a>\n            </li>\n        {{ end -}}\n    </ul>\n</div>\n{{ end }}\n",
+    "internal/ui/static/js/keyboard_handler.js": "class KeyboardHandler {\n    constructor() {\n        this.queue = [];\n        this.shortcuts = new Map();\n        this.triggers = new Set();\n    }\n\n    on(combination, callback) {\n        const keys = combination.split(\" \");\n        this.shortcuts.set(combination, { keys, callback });\n        this.triggers.add(keys[0]);\n    }\n\n    listen() {\n        document.onkeydown = (event) => {\n            const key = KeyboardHandler.getKey(event);\n            if (this.isEventIgnored(event, key) || KeyboardHandler.isModifierKeyDown(event)) {\n                return;\n            }\n\n            if (key !== \"Enter\") {\n                event.preventDefault();\n            }\n\n            this.queue.push(key);\n\n            for (const [combination, { keys, callback }] of this.shortcuts.entries()) {\n                if (keys.every((value, index) => value === this.queue[index])) {\n                    this.queue = [];\n                    callback(event);\n                    return;\n                }\n\n                if (keys.length === 1 && key === keys[0]) {\n                    this.queue = [];\n                    callback(event);\n                    return;\n                }\n            }\n\n            if (this.queue.length >= 2) {\n                this.queue = [];\n            }\n        };\n    }\n\n    isEventIgnored(event, key) {\n        return event.target.tagName === \"INPUT\" ||\n            event.target.tagName === \"TEXTAREA\" ||\n            (this.queue.length < 1 && !this.triggers.has(key));\n    }\n\n    static isModifierKeyDown(event) {\n        return event.getModifierState(\"Control\") || event.getModifierState(\"Alt\") || event.getModifierState(\"Meta\");\n    }\n\n    static getKey(event) {\n        switch (event.key) {\n        case 'Esc': return 'Escape';\n        case 'Up': return 'ArrowUp';\n        case 'Down': return 'ArrowDown';\n        case 'Left': return 'ArrowLeft';\n        case 'Right': return 'ArrowRight';\n        default: return event.key;\n        }\n    }\n}\n"
+  },
+  "changes": [
+    "Original Go html/template really renders layout.html, unread_entries.html, starred_entries.html, history_entries.html, entry.html, item_meta.html and pagination.html using three fictional original Chinese articles. No manually redrawn templates or service required.",
+    "Go1.25.4 official archive installed only in private toolchain, SHA256 checked against official go.dev release JSON. Local renderer defines deterministic fixture formatting/translation/URL helpers; Go engine preserves original conditions and layout. This renderer is build-time only, not a browser dependency.",
+    "Original Chinese locale, system.css/common.css, complete original Tabler SVG sprite retained. icon helper changes external sprite URL to same-document #id for offline SVG use; all SVG elements/attributes safety checked. No packaged binary/fonts/media.",
+    "Original KeyboardHandler and 11 unchanged app.js selection/state/icon/scroll helpers retained; service calls and original bootstrap/ServiceWorker/storage/WebAuthn are not bundled. Explicit local controller maps navigation and read/star state to memory, never fake POST/sync success.",
+    "Static original list/history/starred pages rendered with fixture, then local DOM filtering mirrors current memory; original full entry text and additional-tags details preserved. Empty list pages use original empty branches. Feed icons ID0 and enclosure array empty are native optional branches, not removed core image placeholders.",
+    "Service-only buttons rendered by original template remain disabled with explanation; corresponding forms have no action and are prevented. External/feed/category/search/settings paths are visibly disabled, no fake full site. Original keyboard help dialog excluded because most listed backend shortcuts are not offered.",
+    "Runtime view navigation uses generated original body markup. Build strips resource links/scripts/meta service plumbing before bundling. Exit and rerender remove old anchor hrefs/disable controls; document.onkeydown restored, original keyboard queue cleared, hidden shortcuts suspended.",
+    "Original modern nested CSS/@view-transition retained. JSDOM exact CSS-parser diagnostic is excluded in behavior tests, not JavaScript errors; esbuild separately parses full CSS. Real pixels and browser CSS/layout not visually verified."
+  ],
+  "toolchain": {
+    "filename": "go1.25.4.linux-amd64.tar.gz",
+    "os": "linux",
+    "arch": "amd64",
+    "version": "go1.25.4",
+    "sha256": "9fa5ffeda4170de60f67f3aa0f824e426421ba724c21e133c1e35d6159ca1bec",
+    "size": 59766394,
+    "kind": "archive"
+  },
+  "renderCommand": "GOCACHE=\"$PWD/go-cache\" GOTOOLCHAIN=local toolchain/go/bin/go run render.go",
+  "buildHashes": {
+    "render.go": "fed7ee865453924e270b22cfb11aa5de70c2270081cbe9335746c305a1574d38",
+    "rendered.json": "4fac84a3059479c43a9d21db92d61a663208fa3d8a92bcfb02ab80ec7a4d7a24",
+    "prepare.mjs": "223180789cecbc5ab7993f2176e603e2d2aa1fd62022023c9ca7ab6590801cb5",
+    "build.mjs": "31554677d3535ef37687a4286e1a0f3a0717c94e5cb684439c3a2f3d4b1425cb",
+    "src/main.js": "5a3dbfbc3b610c0abda61016d0a3cca49ef9de6d3b166a517cfa38921e14125a",
+    "src/original-helpers.js": "f1da22957a33aedf87749c75b8f924bbc068a08d57e4b4c62c7908cc46245051",
+    "src/keyboard.js": "b214a0ba001ddb348014f9aea8e003faefb305a68bdf323038ed662f65c433c6"
+  },
+  "runtimeDependencies": "No npm runtime package. Original Miniflux Apache-2.0 JS helpers and Tabler MIT SVG only. Go/esbuild/JSDOM are local build/test tools, not published runtime.",
+  "tablerMIT": {
+    "source": "official @tabler/icons 3.35.0 package LICENSE; copied unchanged",
+    "sha256": "5a3b65e1ad6a081759fde376fe14e2cd88552a9ebea89a8168f34eab1e96109f"
+  },
+  "publication": "7 runtime/docs/license files; complete build/source/tests local, no uploaded archive claimed."
+}
