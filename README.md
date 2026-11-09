@@ -2,7 +2,7 @@
 
 网站：<https://tdwhere123.github.io/UI-Vault/>
 
-当前有 **571 条可直接打开预览（241 条原始素材＋330 条后续接入预览）**，目标为 **1000 条可查看素材**，还差 **429 条**。另有 **244 条待适配来源记录**，只是工作清单，**不计入1000目标完成数**。图标按系列计数，不按单枚glyph、字重或尺寸凑数，已有重叠暂待统一整理。
+当前有 **575 条可直接打开预览（241 条原始素材＋334 条后续接入预览）**，目标为 **1000 条可查看素材**，还差 **425 条**。另有 **240 条待适配来源记录**，只是工作清单，**不计入1000目标完成数**。图标按系列计数，不按单枚glyph、字重或尺寸凑数，已有重叠暂待统一整理。
 
 ## 当前内容
 
@@ -495,3 +495,11 @@ Restored **2 existing pending entries**, without adding source-only records: 抖
 Restored **3 existing pending entries**, without adding source-only records: 虚构航班选择与确认, 审计证据阅读器, 分区容量配置. Each keeps the actual source mechanism and its disclosed adaptation boundary, complete license text and lifecycle tests. Authored local host controls, replacement text, system fonts and static math are identified rather than misrepresented as original services or external data. No new permissions, network services, screenshots or covers.
 
 **571 viewable / 1000 target, 429 remaining**. The **244 source-only records remain pending**, not completed entries. Worklist count remains815. Mapped covers remain470; 101 posterless previews use bounded live cards. Existing records outside the restored IDs, all Grok images/reports and main interface behavior are preserved. DOM/Canvas command tests are not native pixel, touch, typography or performance acceptance.
+
+## Existing-source preview conversion · 575 directly viewable
+
+Restored **4 existing pending entries**, without adding source-only records: 旅行需求与逐日行程, 工作区套餐申请表, 多资产走势与明细报告, 双液波模拟充电进度. Each keeps the actual source mechanism and its disclosed adaptation boundary, complete license text and lifecycle tests. Authored local host controls, replacement text, system fonts and static math are identified rather than misrepresented as original services or external data. No new permissions, network services, screenshots or covers.
+
+**575 viewable / 1000 target, 425 remaining**. The **240 source-only records remain pending**, not completed entries. Worklist count remains815. Mapped covers remain470; 105 posterless previews use bounded live cards. Existing records outside the restored IDs, all Grok images/reports and main interface behavior are preserved. DOM/Canvas command tests are not native pixel, touch, typography or performance acceptance.
+
+Metadata correction: eleven CopilotKit license-evidence hashes now identify the exact fixed upstream LICENSE bytes (the prior stored evidence had one additional final newline). License text and permissions are unchanged; this correction adds no entries.
