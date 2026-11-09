@@ -1,0 +1,54 @@
+{
+  "repository": "https://github.com/CopilotKit/CopilotKit",
+  "revision": "c7815d9ac96f48fb3a64ad8c18e176a870c81763",
+  "originalEntry": "examples/showcases/a2a-travel/components/forms/TripRequirementsForm.tsx",
+  "originalFilesSHA256": {
+    "ItineraryCard.tsx": "397ac9853142df5ee2992707184e9ba1371e1031074704478de095eac4cfbe55",
+    "globals.css": "fa7b726989193a11a47087c1d4d6baf98d414996e52714f1682a305cd661b552",
+    "TripRequirementsForm.tsx": "25b55cb389d66b83012aa2dee2e92565b851e0483e9d86b7300c1da55d0f68bc",
+    "app-layout.tsx": "db64ebdb1ac585d142ae27253975e7c9dc04d4009b40c0d125f331b10c6d4bb5",
+    "typography.css": "ea27ed174f1b95925660901a7a5191eb31025a1faaa43b7b308d1ea44c157d5d",
+    "tailwind.config.ts": "a4e0cc6f114192fafb3d142f72851e50bf380b1a7a16e327617b94c14e103abc",
+    "LICENSE": "15a0e5343aea872c0573ad72feb6044b336f162d724cc1673c608e6b37ea071b"
+  },
+  "dependencies": [
+    {
+      "name": "react",
+      "version": "19.1.0",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+      }
+    },
+    {
+      "name": "react-dom",
+      "version": "19.1.0",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+      }
+    },
+    {
+      "name": "scheduler",
+      "version": "0.26.0",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+      }
+    },
+    {
+      "name": "tailwindcss",
+      "version": "4.1.18",
+      "license": "MIT",
+      "scope": "compiled-css",
+      "licenseSHA256": {
+        "LICENSE": "60e0b68c0f35c078eef3a5d29419d0b03ff84ec1df9c3f9d6e39a519a5ae7985"
+      }
+    }
+  ],
+  "adaptation": "Original TripRequirementsForm plus complete ItineraryCard/TimeSlotSection/MealItem retained. Original city-required, days1\u20137,people1\u201315,Economy/Comfort/Premium and submitted state, original scrollable day/time-slot/meal rendering. Host respond synchronously builds bounded fictional day and matching restaurantData fixtures, all days show breakfast/lunch/dinner rather than false waiting. Persistent warning: fictional local demo, no AI planning, real venues, reservations/payment or backend; do not enter personal information. Original Planning label describes only local state, not active service. Host fixture uses invented garden/gallery/promenade and clearly fictional meals, not upstream recommendations. Original ItineraryCard byte-exact; form modifications only explicit finite-integer guard, local respond sync failure text before setting submitted, input accessible names and80character city bound. No external async response or user-supplied HTML accepted. Host reset keyed remount; hidden keeps submitted/form state mounted and blocks click/input/change/keydown, resumes unchanged. Exit unmounts and removes owned listener/RAF/timer/observer work; canceled scheduling identities guarded. Early module and render failure fall back visibly. CSS compiles original classes with Tailwind4, system font replaces unbundled Plus Jakarta Sans; Original elevation shadows recovered from fixed tailwind.config.ts mapping and globals.css values, translated into Tailwind4 theme. Original animate-fade-in-up token has no definition in these fixed app styles/config; layout also imports @copilotkit/react-ui/styles.css not needed by these pure React components. That optional animation is not reproduced or claimed absent upstream; no SDK stylesheet or font fetched at runtime. No remote fonts/media/storage/clipboard/geolocation. Actual545compose tests100full cycles,7days15people,all budgets,requiredcity,hidden preservation,old handlers andearlymodule/late render errors; separate actual-component probe verifies out-of-range/fractional/infinite input args and sync respond error. JSDOM controlled events/scheduling are not native range keyboard,scroll layout or pixel acceptance. Reduced-motion CSS disables transitions. Source-level545 full catalog/items/candidate scan found only existing exact source ID, no additional preview.",
+  "visualVerified": false
+}
