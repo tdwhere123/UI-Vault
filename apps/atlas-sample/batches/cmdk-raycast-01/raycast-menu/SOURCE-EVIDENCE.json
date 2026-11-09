@@ -1,0 +1,1012 @@
+{
+  "repository": "https://github.com/dip/cmdk",
+  "revision": "dd2250ed608443e8f32bafc5fa2d1d07a3746aa3",
+  "originalEntry": "website/components/cmdk/raycast.tsx",
+  "originalFilesSHA256": {
+    "react-remove-scroll-bar-supplement-LICENSE": "a79aae0c0f21990d9d963bb3c5a79cdcea9a46f8523ba55c58d7fe776b6ebc84",
+    "LICENSE.md": "b5acfd21b3b61508365224c40ec1b03ec71091248baaf989d4be916551e7d532",
+    "globals.scss": "5b94aac1743d493fa5d48396dcb4cd67d458b6cc63c76027489fa05d0e5a59fa",
+    "@radix-ui--react-id-1.1.1-registry.json": "742d8093c9e3e95a97a3316b3deb560999385ccf284bd76da89d146b924aaefb",
+    "website-package.json": "1e1138735fd15c1247567c72ca70716291f5d9297f2a555c44b2f2b1a40ef6ed",
+    "@radix-ui--react-context-1.1.2-registry.json": "6fd61b601379b5524b15412f969e15ee0f417adb1309066f7d08e0de1a604991",
+    "@radix-ui--react-compose-refs-1.1.2-registry.json": "a2446f7b24a5ea03f100d759c2daefe2379e4178e5415e860289272e28934e1a",
+    "@radix-ui--react-use-size-1.1.1-registry.json": "f04bb6982b6f50a527edc9276e8dc5efe0658ff8870f979548a9dbc40d66d8b0",
+    "radix-fcef0668a5c827e5a4baac405474d75680f9a4eb-LICENSE": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+    "icons.module.scss": "1f078eb78d04f9d578752e8e5db500940a99cf74371212ca3947ec6e2caab238",
+    "@radix-ui--react-use-callback-ref-1.1.1-registry.json": "0a546529f2c55f3ab884ab2be3bdb6fbd3c3d8ce34a5551662f5da484603731c",
+    "@radix-ui--react-use-layout-effect-1.1.1-registry.json": "680e00911e47a18faae7cf93c18675483730ed86a56d89c586764617d3ef904d",
+    "scrollbar-dist-comparison.json": "e8f38874aeddff48b9a873bd3a1ac65726a4f23c08308bec7b1efb70926f37a2",
+    "raycast.scss": "b99da00f4fa017f8bc4bed1bb4e00879a4c61c4a13399ba0eeb0664478b50290",
+    "@radix-ui--react-use-escape-keydown-1.1.1-registry.json": "c95cb6d978674c6b5f2fb21773f52a0875bcc89d7ba0b88251ad99d0c1d36593",
+    "raycast.tsx": "162ff4d6f2912a56c8325470409449b4267c3298b389351f7bd687cfc260543d",
+    "icons.tsx": "3acced20384702a58d55b9f39747f6ceea735445300f9c521a705900d41f3a26",
+    "react-remove-scroll-bar-2.3.8-registry.json": "826c618ece09367334160c1ab3a272fd54f8f12e3b0a45f75b0f2660d285855a"
+  },
+  "dependencies": [
+    {
+      "name": "@floating-ui/core",
+      "version": "1.8.0",
+      "installedPackagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/@floating-ui/core",
+      "supplement": null,
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "0e4c9a9b6c71019cbbea3bdc20b01223110a9035700f9c960c8fcbf78c2325ce"
+      }
+    },
+    {
+      "name": "@floating-ui/dom",
+      "version": "1.8.0",
+      "installedPackagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/@floating-ui/dom",
+      "supplement": null,
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "0e4c9a9b6c71019cbbea3bdc20b01223110a9035700f9c960c8fcbf78c2325ce"
+      }
+    },
+    {
+      "name": "@floating-ui/react-dom",
+      "version": "2.1.9",
+      "installedPackagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/@floating-ui/react-dom",
+      "supplement": null,
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "0e4c9a9b6c71019cbbea3bdc20b01223110a9035700f9c960c8fcbf78c2325ce"
+      }
+    },
+    {
+      "name": "@floating-ui/utils",
+      "version": "0.2.12",
+      "installedPackagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/@floating-ui/utils",
+      "supplement": null,
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "0e4c9a9b6c71019cbbea3bdc20b01223110a9035700f9c960c8fcbf78c2325ce"
+      }
+    },
+    {
+      "name": "@radix-ui/primitive",
+      "version": "1.2.0",
+      "installedPackagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/@radix-ui/primitive",
+      "supplement": null,
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      }
+    },
+    {
+      "name": "@radix-ui/react-arrow",
+      "version": "1.1.7",
+      "installedPackagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/@radix-ui/react-arrow",
+      "supplement": null,
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      }
+    },
+    {
+      "name": "@radix-ui/react-compose-refs",
+      "version": "1.1.2",
+      "installedPackagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/@radix-ui/react-arrow/node_modules/@radix-ui/react-compose-refs",
+      "supplement": {
+        "name": "@radix-ui/react-compose-refs",
+        "version": "1.1.2",
+        "packagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/@radix-ui/react-arrow/node_modules/@radix-ui/react-compose-refs",
+        "registryFile": "@radix-ui--react-compose-refs-1.1.2-registry.json",
+        "gitHead": "fcef0668a5c827e5a4baac405474d75680f9a4eb",
+        "licenseFile": "radix-fcef0668a5c827e5a4baac405474d75680f9a4eb-LICENSE",
+        "licenseSource": "https://raw.githubusercontent.com/radix-ui/primitives/fcef0668a5c827e5a4baac405474d75680f9a4eb/LICENSE",
+        "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      },
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "radix-fcef0668a5c827e5a4baac405474d75680f9a4eb-LICENSE": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      }
+    },
+    {
+      "name": "@radix-ui/react-primitive",
+      "version": "2.1.3",
+      "installedPackagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/@radix-ui/react-arrow/node_modules/@radix-ui/react-primitive",
+      "supplement": null,
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      }
+    },
+    {
+      "name": "@radix-ui/react-slot",
+      "version": "1.2.3",
+      "installedPackagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/@radix-ui/react-arrow/node_modules/@radix-ui/react-slot",
+      "supplement": null,
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      }
+    },
+    {
+      "name": "@radix-ui/react-compose-refs",
+      "version": "1.1.5",
+      "installedPackagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/@radix-ui/react-compose-refs",
+      "supplement": null,
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      }
+    },
+    {
+      "name": "@radix-ui/react-context",
+      "version": "1.3.0",
+      "installedPackagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/@radix-ui/react-context",
+      "supplement": null,
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      }
+    },
+    {
+      "name": "@radix-ui/react-dialog",
+      "version": "1.3.1",
+      "installedPackagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/@radix-ui/react-dialog",
+      "supplement": null,
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      }
+    },
+    {
+      "name": "@radix-ui/react-dismissable-layer",
+      "version": "1.2.1",
+      "installedPackagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/@radix-ui/react-dismissable-layer",
+      "supplement": null,
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      }
+    },
+    {
+      "name": "@radix-ui/react-focus-guards",
+      "version": "1.2.0",
+      "installedPackagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/@radix-ui/react-focus-guards",
+      "supplement": null,
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      }
+    },
+    {
+      "name": "@radix-ui/react-focus-scope",
+      "version": "1.3.1",
+      "installedPackagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/@radix-ui/react-focus-scope",
+      "supplement": null,
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      }
+    },
+    {
+      "name": "@radix-ui/react-id",
+      "version": "1.1.4",
+      "installedPackagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/@radix-ui/react-id",
+      "supplement": null,
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      }
+    },
+    {
+      "name": "@radix-ui/react-popover",
+      "version": "1.1.15",
+      "installedPackagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/@radix-ui/react-popover",
+      "supplement": null,
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      }
+    },
+    {
+      "name": "@radix-ui/primitive",
+      "version": "1.1.3",
+      "installedPackagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/@radix-ui/react-popover/node_modules/@radix-ui/primitive",
+      "supplement": null,
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      }
+    },
+    {
+      "name": "@radix-ui/react-compose-refs",
+      "version": "1.1.2",
+      "installedPackagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/@radix-ui/react-popover/node_modules/@radix-ui/react-compose-refs",
+      "supplement": {
+        "name": "@radix-ui/react-compose-refs",
+        "version": "1.1.2",
+        "packagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/@radix-ui/react-popover/node_modules/@radix-ui/react-compose-refs",
+        "registryFile": "@radix-ui--react-compose-refs-1.1.2-registry.json",
+        "gitHead": "fcef0668a5c827e5a4baac405474d75680f9a4eb",
+        "licenseFile": "radix-fcef0668a5c827e5a4baac405474d75680f9a4eb-LICENSE",
+        "licenseSource": "https://raw.githubusercontent.com/radix-ui/primitives/fcef0668a5c827e5a4baac405474d75680f9a4eb/LICENSE",
+        "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      },
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "radix-fcef0668a5c827e5a4baac405474d75680f9a4eb-LICENSE": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      }
+    },
+    {
+      "name": "@radix-ui/react-context",
+      "version": "1.1.2",
+      "installedPackagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/@radix-ui/react-popover/node_modules/@radix-ui/react-context",
+      "supplement": {
+        "name": "@radix-ui/react-context",
+        "version": "1.1.2",
+        "packagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/@radix-ui/react-popover/node_modules/@radix-ui/react-context",
+        "registryFile": "@radix-ui--react-context-1.1.2-registry.json",
+        "gitHead": "fcef0668a5c827e5a4baac405474d75680f9a4eb",
+        "licenseFile": "radix-fcef0668a5c827e5a4baac405474d75680f9a4eb-LICENSE",
+        "licenseSource": "https://raw.githubusercontent.com/radix-ui/primitives/fcef0668a5c827e5a4baac405474d75680f9a4eb/LICENSE",
+        "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      },
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "radix-fcef0668a5c827e5a4baac405474d75680f9a4eb-LICENSE": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      }
+    },
+    {
+      "name": "@radix-ui/react-dismissable-layer",
+      "version": "1.1.11",
+      "installedPackagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/@radix-ui/react-popover/node_modules/@radix-ui/react-dismissable-layer",
+      "supplement": null,
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      }
+    },
+    {
+      "name": "@radix-ui/react-focus-guards",
+      "version": "1.1.3",
+      "installedPackagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/@radix-ui/react-popover/node_modules/@radix-ui/react-focus-guards",
+      "supplement": null,
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      }
+    },
+    {
+      "name": "@radix-ui/react-focus-scope",
+      "version": "1.1.7",
+      "installedPackagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/@radix-ui/react-popover/node_modules/@radix-ui/react-focus-scope",
+      "supplement": null,
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      }
+    },
+    {
+      "name": "@radix-ui/react-id",
+      "version": "1.1.1",
+      "installedPackagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/@radix-ui/react-popover/node_modules/@radix-ui/react-id",
+      "supplement": {
+        "name": "@radix-ui/react-id",
+        "version": "1.1.1",
+        "packagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/@radix-ui/react-popover/node_modules/@radix-ui/react-id",
+        "registryFile": "@radix-ui--react-id-1.1.1-registry.json",
+        "gitHead": "fcef0668a5c827e5a4baac405474d75680f9a4eb",
+        "licenseFile": "radix-fcef0668a5c827e5a4baac405474d75680f9a4eb-LICENSE",
+        "licenseSource": "https://raw.githubusercontent.com/radix-ui/primitives/fcef0668a5c827e5a4baac405474d75680f9a4eb/LICENSE",
+        "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      },
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "radix-fcef0668a5c827e5a4baac405474d75680f9a4eb-LICENSE": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      }
+    },
+    {
+      "name": "@radix-ui/react-portal",
+      "version": "1.1.9",
+      "installedPackagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/@radix-ui/react-popover/node_modules/@radix-ui/react-portal",
+      "supplement": null,
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      }
+    },
+    {
+      "name": "@radix-ui/react-presence",
+      "version": "1.1.5",
+      "installedPackagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/@radix-ui/react-popover/node_modules/@radix-ui/react-presence",
+      "supplement": null,
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      }
+    },
+    {
+      "name": "@radix-ui/react-primitive",
+      "version": "2.1.3",
+      "installedPackagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/@radix-ui/react-popover/node_modules/@radix-ui/react-primitive",
+      "supplement": null,
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      }
+    },
+    {
+      "name": "@radix-ui/react-slot",
+      "version": "1.2.3",
+      "installedPackagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/@radix-ui/react-popover/node_modules/@radix-ui/react-slot",
+      "supplement": null,
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      }
+    },
+    {
+      "name": "@radix-ui/react-use-callback-ref",
+      "version": "1.1.1",
+      "installedPackagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/@radix-ui/react-popover/node_modules/@radix-ui/react-use-callback-ref",
+      "supplement": {
+        "name": "@radix-ui/react-use-callback-ref",
+        "version": "1.1.1",
+        "packagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/@radix-ui/react-popover/node_modules/@radix-ui/react-use-callback-ref",
+        "registryFile": "@radix-ui--react-use-callback-ref-1.1.1-registry.json",
+        "gitHead": "fcef0668a5c827e5a4baac405474d75680f9a4eb",
+        "licenseFile": "radix-fcef0668a5c827e5a4baac405474d75680f9a4eb-LICENSE",
+        "licenseSource": "https://raw.githubusercontent.com/radix-ui/primitives/fcef0668a5c827e5a4baac405474d75680f9a4eb/LICENSE",
+        "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      },
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "radix-fcef0668a5c827e5a4baac405474d75680f9a4eb-LICENSE": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      }
+    },
+    {
+      "name": "@radix-ui/react-use-controllable-state",
+      "version": "1.2.2",
+      "installedPackagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/@radix-ui/react-popover/node_modules/@radix-ui/react-use-controllable-state",
+      "supplement": null,
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      }
+    },
+    {
+      "name": "@radix-ui/react-use-layout-effect",
+      "version": "1.1.1",
+      "installedPackagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/@radix-ui/react-popover/node_modules/@radix-ui/react-use-layout-effect",
+      "supplement": {
+        "name": "@radix-ui/react-use-layout-effect",
+        "version": "1.1.1",
+        "packagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/@radix-ui/react-popover/node_modules/@radix-ui/react-use-layout-effect",
+        "registryFile": "@radix-ui--react-use-layout-effect-1.1.1-registry.json",
+        "gitHead": "fcef0668a5c827e5a4baac405474d75680f9a4eb",
+        "licenseFile": "radix-fcef0668a5c827e5a4baac405474d75680f9a4eb-LICENSE",
+        "licenseSource": "https://raw.githubusercontent.com/radix-ui/primitives/fcef0668a5c827e5a4baac405474d75680f9a4eb/LICENSE",
+        "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      },
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "radix-fcef0668a5c827e5a4baac405474d75680f9a4eb-LICENSE": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      }
+    },
+    {
+      "name": "@radix-ui/react-popper",
+      "version": "1.2.8",
+      "installedPackagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/@radix-ui/react-popper",
+      "supplement": null,
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      }
+    },
+    {
+      "name": "@radix-ui/react-compose-refs",
+      "version": "1.1.2",
+      "installedPackagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/@radix-ui/react-popper/node_modules/@radix-ui/react-compose-refs",
+      "supplement": {
+        "name": "@radix-ui/react-compose-refs",
+        "version": "1.1.2",
+        "packagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/@radix-ui/react-popper/node_modules/@radix-ui/react-compose-refs",
+        "registryFile": "@radix-ui--react-compose-refs-1.1.2-registry.json",
+        "gitHead": "fcef0668a5c827e5a4baac405474d75680f9a4eb",
+        "licenseFile": "radix-fcef0668a5c827e5a4baac405474d75680f9a4eb-LICENSE",
+        "licenseSource": "https://raw.githubusercontent.com/radix-ui/primitives/fcef0668a5c827e5a4baac405474d75680f9a4eb/LICENSE",
+        "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      },
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "radix-fcef0668a5c827e5a4baac405474d75680f9a4eb-LICENSE": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      }
+    },
+    {
+      "name": "@radix-ui/react-context",
+      "version": "1.1.2",
+      "installedPackagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/@radix-ui/react-popper/node_modules/@radix-ui/react-context",
+      "supplement": {
+        "name": "@radix-ui/react-context",
+        "version": "1.1.2",
+        "packagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/@radix-ui/react-popper/node_modules/@radix-ui/react-context",
+        "registryFile": "@radix-ui--react-context-1.1.2-registry.json",
+        "gitHead": "fcef0668a5c827e5a4baac405474d75680f9a4eb",
+        "licenseFile": "radix-fcef0668a5c827e5a4baac405474d75680f9a4eb-LICENSE",
+        "licenseSource": "https://raw.githubusercontent.com/radix-ui/primitives/fcef0668a5c827e5a4baac405474d75680f9a4eb/LICENSE",
+        "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      },
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "radix-fcef0668a5c827e5a4baac405474d75680f9a4eb-LICENSE": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      }
+    },
+    {
+      "name": "@radix-ui/react-primitive",
+      "version": "2.1.3",
+      "installedPackagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/@radix-ui/react-popper/node_modules/@radix-ui/react-primitive",
+      "supplement": null,
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      }
+    },
+    {
+      "name": "@radix-ui/react-slot",
+      "version": "1.2.3",
+      "installedPackagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/@radix-ui/react-popper/node_modules/@radix-ui/react-slot",
+      "supplement": null,
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      }
+    },
+    {
+      "name": "@radix-ui/react-use-callback-ref",
+      "version": "1.1.1",
+      "installedPackagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/@radix-ui/react-popper/node_modules/@radix-ui/react-use-callback-ref",
+      "supplement": {
+        "name": "@radix-ui/react-use-callback-ref",
+        "version": "1.1.1",
+        "packagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/@radix-ui/react-popper/node_modules/@radix-ui/react-use-callback-ref",
+        "registryFile": "@radix-ui--react-use-callback-ref-1.1.1-registry.json",
+        "gitHead": "fcef0668a5c827e5a4baac405474d75680f9a4eb",
+        "licenseFile": "radix-fcef0668a5c827e5a4baac405474d75680f9a4eb-LICENSE",
+        "licenseSource": "https://raw.githubusercontent.com/radix-ui/primitives/fcef0668a5c827e5a4baac405474d75680f9a4eb/LICENSE",
+        "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      },
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "radix-fcef0668a5c827e5a4baac405474d75680f9a4eb-LICENSE": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      }
+    },
+    {
+      "name": "@radix-ui/react-use-layout-effect",
+      "version": "1.1.1",
+      "installedPackagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/@radix-ui/react-popper/node_modules/@radix-ui/react-use-layout-effect",
+      "supplement": {
+        "name": "@radix-ui/react-use-layout-effect",
+        "version": "1.1.1",
+        "packagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/@radix-ui/react-popper/node_modules/@radix-ui/react-use-layout-effect",
+        "registryFile": "@radix-ui--react-use-layout-effect-1.1.1-registry.json",
+        "gitHead": "fcef0668a5c827e5a4baac405474d75680f9a4eb",
+        "licenseFile": "radix-fcef0668a5c827e5a4baac405474d75680f9a4eb-LICENSE",
+        "licenseSource": "https://raw.githubusercontent.com/radix-ui/primitives/fcef0668a5c827e5a4baac405474d75680f9a4eb/LICENSE",
+        "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      },
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "radix-fcef0668a5c827e5a4baac405474d75680f9a4eb-LICENSE": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      }
+    },
+    {
+      "name": "@radix-ui/react-portal",
+      "version": "1.2.0",
+      "installedPackagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/@radix-ui/react-portal",
+      "supplement": null,
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      }
+    },
+    {
+      "name": "@radix-ui/react-presence",
+      "version": "1.1.11",
+      "installedPackagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/@radix-ui/react-presence",
+      "supplement": null,
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      }
+    },
+    {
+      "name": "@radix-ui/react-primitive",
+      "version": "2.2.0",
+      "installedPackagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/@radix-ui/react-primitive",
+      "supplement": null,
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      }
+    },
+    {
+      "name": "@radix-ui/react-slot",
+      "version": "1.5.0",
+      "installedPackagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/@radix-ui/react-slot",
+      "supplement": null,
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      }
+    },
+    {
+      "name": "@radix-ui/react-use-callback-ref",
+      "version": "1.1.5",
+      "installedPackagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/@radix-ui/react-use-callback-ref",
+      "supplement": null,
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      }
+    },
+    {
+      "name": "@radix-ui/react-use-controllable-state",
+      "version": "1.3.0",
+      "installedPackagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/@radix-ui/react-use-controllable-state",
+      "supplement": null,
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      }
+    },
+    {
+      "name": "@radix-ui/react-use-effect-event",
+      "version": "0.0.5",
+      "installedPackagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/@radix-ui/react-use-effect-event",
+      "supplement": null,
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      }
+    },
+    {
+      "name": "@radix-ui/react-use-escape-keydown",
+      "version": "1.1.1",
+      "installedPackagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/@radix-ui/react-use-escape-keydown",
+      "supplement": {
+        "name": "@radix-ui/react-use-escape-keydown",
+        "version": "1.1.1",
+        "packagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/@radix-ui/react-use-escape-keydown",
+        "registryFile": "@radix-ui--react-use-escape-keydown-1.1.1-registry.json",
+        "gitHead": "fcef0668a5c827e5a4baac405474d75680f9a4eb",
+        "licenseFile": "radix-fcef0668a5c827e5a4baac405474d75680f9a4eb-LICENSE",
+        "licenseSource": "https://raw.githubusercontent.com/radix-ui/primitives/fcef0668a5c827e5a4baac405474d75680f9a4eb/LICENSE",
+        "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      },
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "radix-fcef0668a5c827e5a4baac405474d75680f9a4eb-LICENSE": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      }
+    },
+    {
+      "name": "@radix-ui/react-use-callback-ref",
+      "version": "1.1.1",
+      "installedPackagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/@radix-ui/react-use-escape-keydown/node_modules/@radix-ui/react-use-callback-ref",
+      "supplement": {
+        "name": "@radix-ui/react-use-callback-ref",
+        "version": "1.1.1",
+        "packagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/@radix-ui/react-use-escape-keydown/node_modules/@radix-ui/react-use-callback-ref",
+        "registryFile": "@radix-ui--react-use-callback-ref-1.1.1-registry.json",
+        "gitHead": "fcef0668a5c827e5a4baac405474d75680f9a4eb",
+        "licenseFile": "radix-fcef0668a5c827e5a4baac405474d75680f9a4eb-LICENSE",
+        "licenseSource": "https://raw.githubusercontent.com/radix-ui/primitives/fcef0668a5c827e5a4baac405474d75680f9a4eb/LICENSE",
+        "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      },
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "radix-fcef0668a5c827e5a4baac405474d75680f9a4eb-LICENSE": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      }
+    },
+    {
+      "name": "@radix-ui/react-use-layout-effect",
+      "version": "1.1.4",
+      "installedPackagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/@radix-ui/react-use-layout-effect",
+      "supplement": null,
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      }
+    },
+    {
+      "name": "@radix-ui/react-use-size",
+      "version": "1.1.1",
+      "installedPackagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/@radix-ui/react-use-size",
+      "supplement": {
+        "name": "@radix-ui/react-use-size",
+        "version": "1.1.1",
+        "packagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/@radix-ui/react-use-size",
+        "registryFile": "@radix-ui--react-use-size-1.1.1-registry.json",
+        "gitHead": "fcef0668a5c827e5a4baac405474d75680f9a4eb",
+        "licenseFile": "radix-fcef0668a5c827e5a4baac405474d75680f9a4eb-LICENSE",
+        "licenseSource": "https://raw.githubusercontent.com/radix-ui/primitives/fcef0668a5c827e5a4baac405474d75680f9a4eb/LICENSE",
+        "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      },
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "radix-fcef0668a5c827e5a4baac405474d75680f9a4eb-LICENSE": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      }
+    },
+    {
+      "name": "@radix-ui/react-use-layout-effect",
+      "version": "1.1.1",
+      "installedPackagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/@radix-ui/react-use-size/node_modules/@radix-ui/react-use-layout-effect",
+      "supplement": {
+        "name": "@radix-ui/react-use-layout-effect",
+        "version": "1.1.1",
+        "packagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/@radix-ui/react-use-size/node_modules/@radix-ui/react-use-layout-effect",
+        "registryFile": "@radix-ui--react-use-layout-effect-1.1.1-registry.json",
+        "gitHead": "fcef0668a5c827e5a4baac405474d75680f9a4eb",
+        "licenseFile": "radix-fcef0668a5c827e5a4baac405474d75680f9a4eb-LICENSE",
+        "licenseSource": "https://raw.githubusercontent.com/radix-ui/primitives/fcef0668a5c827e5a4baac405474d75680f9a4eb/LICENSE",
+        "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      },
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "radix-fcef0668a5c827e5a4baac405474d75680f9a4eb-LICENSE": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      }
+    },
+    {
+      "name": "aria-hidden",
+      "version": "1.2.6",
+      "installedPackagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/aria-hidden",
+      "supplement": null,
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "30f0cfddf483d1128e3610205020f2041a6c5e837aa999e0aa82e5576187d4a9"
+      }
+    },
+    {
+      "name": "cmdk",
+      "version": "1.1.1",
+      "installedPackagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/cmdk",
+      "supplement": null,
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE.md": "b5acfd21b3b61508365224c40ec1b03ec71091248baaf989d4be916551e7d532"
+      }
+    },
+    {
+      "name": "get-nonce",
+      "version": "1.0.1",
+      "installedPackagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/get-nonce",
+      "supplement": null,
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "acf3b087b348d2f2e731b9d4131af185aad694c1204ce14a46909483fd42da05"
+      }
+    },
+    {
+      "name": "react",
+      "version": "19.3.1",
+      "installedPackagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/react",
+      "supplement": null,
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+      }
+    },
+    {
+      "name": "react-dom",
+      "version": "19.3.1",
+      "installedPackagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/react-dom",
+      "supplement": null,
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+      }
+    },
+    {
+      "name": "react-remove-scroll",
+      "version": "2.7.2",
+      "installedPackagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/react-remove-scroll",
+      "supplement": null,
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "30f0cfddf483d1128e3610205020f2041a6c5e837aa999e0aa82e5576187d4a9"
+      }
+    },
+    {
+      "name": "react-remove-scroll-bar",
+      "version": "2.3.8",
+      "installedPackagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/react-remove-scroll-bar",
+      "supplement": {
+        "name": "react-remove-scroll-bar",
+        "version": "2.3.8",
+        "packagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/react-remove-scroll-bar",
+        "registryFile": "react-remove-scroll-bar-2.3.8-registry.json",
+        "gitHead": "b3b1287aad81def2e2ae707274b74531b61ddbaf",
+        "licenseFile": "react-remove-scroll-bar-supplement-LICENSE",
+        "licenseSource": "https://raw.githubusercontent.com/theKashey/react-remove-scroll-bar/8ca9ba5ea52de03308fe8ced94f7b159a44d28ff/LICENSE",
+        "sha256": "a79aae0c0f21990d9d963bb3c5a79cdcea9a46f8523ba55c58d7fe776b6ebc84",
+        "disclosure": "Actual2.3.8 npm declaresMIT but omitsLICENSE. Fixed official same-project supplement labels2.3.7, not exact2.3.8 sourceLICENSE. All24 actual2.3.8 dist files match prior official2.3.7 hash evidence copied and reverified here."
+      },
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "react-remove-scroll-bar-supplement-LICENSE": "a79aae0c0f21990d9d963bb3c5a79cdcea9a46f8523ba55c58d7fe776b6ebc84"
+      }
+    },
+    {
+      "name": "react-style-singleton",
+      "version": "2.2.3",
+      "installedPackagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/react-style-singleton",
+      "supplement": null,
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "30f0cfddf483d1128e3610205020f2041a6c5e837aa999e0aa82e5576187d4a9"
+      }
+    },
+    {
+      "name": "scheduler",
+      "version": "0.28.0",
+      "installedPackagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/scheduler",
+      "supplement": null,
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+      }
+    },
+    {
+      "name": "tslib",
+      "version": "2.9.1",
+      "installedPackagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/tslib",
+      "supplement": null,
+      "license": "0BSD",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "CopyrightNotice.txt": "da16ddb65f8ca390998fb99223d0112498b56b45784d00afd77ff8ce1ac4de8b",
+        "LICENSE.txt": "210b19e543130388c68654b7497e967119ce17145f66ab7d85688fbd70f08751"
+      }
+    },
+    {
+      "name": "use-callback-ref",
+      "version": "1.3.3",
+      "installedPackagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/use-callback-ref",
+      "supplement": null,
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "30f0cfddf483d1128e3610205020f2041a6c5e837aa999e0aa82e5576187d4a9"
+      }
+    },
+    {
+      "name": "use-sidecar",
+      "version": "1.1.3",
+      "installedPackagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/use-sidecar",
+      "supplement": null,
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "30f0cfddf483d1128e3610205020f2041a6c5e837aa999e0aa82e5576187d4a9"
+      }
+    },
+    {
+      "name": "sass",
+      "version": "1.77.8",
+      "installedPackagePath": "/workspace/scratch/15f43349f656/ui-recogito-adapt/node_modules/sass",
+      "supplement": null,
+      "license": "MIT",
+      "scope": "compiled-css",
+      "licenseSHA256": {
+        "LICENSE": "c128e51e7cf068fc98f558e3d21c1fe35bf50bb2a373fd22a6dff8c14494e2ff"
+      }
+    }
+  ],
+  "adaptation": "Original complete RaycastCMDK and original Item/SubCommand/SubItem retained, original8apps/commands, keyword filtering/empty state, keyboard selection, Meta+K Actions popover, action filtering, Escape and original focus restoration. Original Item onSelect is noop; Open Application button has no handler; subcommands have no system effects. Persistent visible disclaimer explicitly says no apps/clipboard/Finder/accounts are accessed and brands are identifiers, not endorsement. Original5brand glyph exports plus Logo wrapper/inline glyphs retained byte-for-byte except local module import and CSS-module class mapping; root MIT applies to collected source, no trademark ownership or sponsor claim. Original raycast.scss and full globals color/shadow tokens compiled, original icon double-layer blur CSS preserved; fixed font-face Inter resource removed, system-sans fallback with typo --apple-system corrected. Source next-themes resolvedTheme replaced explicit host-local theme prop, toggle memory only; no persistence/system-theme access. Hidden unmounts and clears original search/popover selection, visible mounts original fresh default; local theme is retained. Host error/cleanup boundary and owned listener/RAF/timer/observer guards; old callbacks inert after cleanup. Default isolated iframe and CSS retained, no permissions/network/storage/clipboard/backend. Original fixed app declares React18.2/RadixPopover^0.1.6 while this compatibility bundle uses versions enumerated below including cmdk1.1.1,React19.3.1,Popover1.1.15. Sass compiler only compiled-css evidence, no runtime Sass. Missing nested Radix LICENSE files supplemented by exact official npm version gitHead fcef0668a5c827e5a4baac405474d75680f9a4eb and same-revision root MIT, registry evidence retained. react-remove-scroll-bar2.3.8 declares MIT but omits full file; supplied official root MIT at8ca9ba5ea52de03308fe8ced94f7b159a44d28ff is explicitly a same-project2.3.7 supplement, not exact2.3.8 LICENSE. Its24 actual dist files match prior official2.3.7 evidence, reverified here. Tests actual547compose,100real Actions open-close cycles, keywords/empty/keyboard/Enter inert action/submenu filter/Escape focus/localtheme/hidden/oldnodes/earlymodule andlate scrollfailure. JSDOM ResizeObserver/layout stubs and explicit synthetic animationend for original CSS slideOut completion are not native CSS animation, geometry or pixel acceptance; no production shortcut to force exit. Reduced CSS disables transitions/animations, not source geometry.",
+  "visualVerified": false,
+  "licenseSupplementEvidence": [
+    {
+      "name": "@radix-ui/react-compose-refs",
+      "version": "1.1.2",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/@radix-ui/react-arrow/node_modules/@radix-ui/react-compose-refs",
+      "registryFile": "@radix-ui--react-compose-refs-1.1.2-registry.json",
+      "gitHead": "fcef0668a5c827e5a4baac405474d75680f9a4eb",
+      "licenseFile": "radix-fcef0668a5c827e5a4baac405474d75680f9a4eb-LICENSE",
+      "licenseSource": "https://raw.githubusercontent.com/radix-ui/primitives/fcef0668a5c827e5a4baac405474d75680f9a4eb/LICENSE",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "name": "@radix-ui/react-compose-refs",
+      "version": "1.1.2",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/@radix-ui/react-popover/node_modules/@radix-ui/react-compose-refs",
+      "registryFile": "@radix-ui--react-compose-refs-1.1.2-registry.json",
+      "gitHead": "fcef0668a5c827e5a4baac405474d75680f9a4eb",
+      "licenseFile": "radix-fcef0668a5c827e5a4baac405474d75680f9a4eb-LICENSE",
+      "licenseSource": "https://raw.githubusercontent.com/radix-ui/primitives/fcef0668a5c827e5a4baac405474d75680f9a4eb/LICENSE",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "name": "@radix-ui/react-context",
+      "version": "1.1.2",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/@radix-ui/react-popover/node_modules/@radix-ui/react-context",
+      "registryFile": "@radix-ui--react-context-1.1.2-registry.json",
+      "gitHead": "fcef0668a5c827e5a4baac405474d75680f9a4eb",
+      "licenseFile": "radix-fcef0668a5c827e5a4baac405474d75680f9a4eb-LICENSE",
+      "licenseSource": "https://raw.githubusercontent.com/radix-ui/primitives/fcef0668a5c827e5a4baac405474d75680f9a4eb/LICENSE",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "name": "@radix-ui/react-id",
+      "version": "1.1.1",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/@radix-ui/react-popover/node_modules/@radix-ui/react-id",
+      "registryFile": "@radix-ui--react-id-1.1.1-registry.json",
+      "gitHead": "fcef0668a5c827e5a4baac405474d75680f9a4eb",
+      "licenseFile": "radix-fcef0668a5c827e5a4baac405474d75680f9a4eb-LICENSE",
+      "licenseSource": "https://raw.githubusercontent.com/radix-ui/primitives/fcef0668a5c827e5a4baac405474d75680f9a4eb/LICENSE",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "name": "@radix-ui/react-use-callback-ref",
+      "version": "1.1.1",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/@radix-ui/react-popover/node_modules/@radix-ui/react-use-callback-ref",
+      "registryFile": "@radix-ui--react-use-callback-ref-1.1.1-registry.json",
+      "gitHead": "fcef0668a5c827e5a4baac405474d75680f9a4eb",
+      "licenseFile": "radix-fcef0668a5c827e5a4baac405474d75680f9a4eb-LICENSE",
+      "licenseSource": "https://raw.githubusercontent.com/radix-ui/primitives/fcef0668a5c827e5a4baac405474d75680f9a4eb/LICENSE",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "name": "@radix-ui/react-use-layout-effect",
+      "version": "1.1.1",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/@radix-ui/react-popover/node_modules/@radix-ui/react-use-layout-effect",
+      "registryFile": "@radix-ui--react-use-layout-effect-1.1.1-registry.json",
+      "gitHead": "fcef0668a5c827e5a4baac405474d75680f9a4eb",
+      "licenseFile": "radix-fcef0668a5c827e5a4baac405474d75680f9a4eb-LICENSE",
+      "licenseSource": "https://raw.githubusercontent.com/radix-ui/primitives/fcef0668a5c827e5a4baac405474d75680f9a4eb/LICENSE",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "name": "@radix-ui/react-compose-refs",
+      "version": "1.1.2",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/@radix-ui/react-popper/node_modules/@radix-ui/react-compose-refs",
+      "registryFile": "@radix-ui--react-compose-refs-1.1.2-registry.json",
+      "gitHead": "fcef0668a5c827e5a4baac405474d75680f9a4eb",
+      "licenseFile": "radix-fcef0668a5c827e5a4baac405474d75680f9a4eb-LICENSE",
+      "licenseSource": "https://raw.githubusercontent.com/radix-ui/primitives/fcef0668a5c827e5a4baac405474d75680f9a4eb/LICENSE",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "name": "@radix-ui/react-context",
+      "version": "1.1.2",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/@radix-ui/react-popper/node_modules/@radix-ui/react-context",
+      "registryFile": "@radix-ui--react-context-1.1.2-registry.json",
+      "gitHead": "fcef0668a5c827e5a4baac405474d75680f9a4eb",
+      "licenseFile": "radix-fcef0668a5c827e5a4baac405474d75680f9a4eb-LICENSE",
+      "licenseSource": "https://raw.githubusercontent.com/radix-ui/primitives/fcef0668a5c827e5a4baac405474d75680f9a4eb/LICENSE",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "name": "@radix-ui/react-use-callback-ref",
+      "version": "1.1.1",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/@radix-ui/react-popper/node_modules/@radix-ui/react-use-callback-ref",
+      "registryFile": "@radix-ui--react-use-callback-ref-1.1.1-registry.json",
+      "gitHead": "fcef0668a5c827e5a4baac405474d75680f9a4eb",
+      "licenseFile": "radix-fcef0668a5c827e5a4baac405474d75680f9a4eb-LICENSE",
+      "licenseSource": "https://raw.githubusercontent.com/radix-ui/primitives/fcef0668a5c827e5a4baac405474d75680f9a4eb/LICENSE",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "name": "@radix-ui/react-use-layout-effect",
+      "version": "1.1.1",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/@radix-ui/react-popper/node_modules/@radix-ui/react-use-layout-effect",
+      "registryFile": "@radix-ui--react-use-layout-effect-1.1.1-registry.json",
+      "gitHead": "fcef0668a5c827e5a4baac405474d75680f9a4eb",
+      "licenseFile": "radix-fcef0668a5c827e5a4baac405474d75680f9a4eb-LICENSE",
+      "licenseSource": "https://raw.githubusercontent.com/radix-ui/primitives/fcef0668a5c827e5a4baac405474d75680f9a4eb/LICENSE",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "name": "@radix-ui/react-use-escape-keydown",
+      "version": "1.1.1",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/@radix-ui/react-use-escape-keydown",
+      "registryFile": "@radix-ui--react-use-escape-keydown-1.1.1-registry.json",
+      "gitHead": "fcef0668a5c827e5a4baac405474d75680f9a4eb",
+      "licenseFile": "radix-fcef0668a5c827e5a4baac405474d75680f9a4eb-LICENSE",
+      "licenseSource": "https://raw.githubusercontent.com/radix-ui/primitives/fcef0668a5c827e5a4baac405474d75680f9a4eb/LICENSE",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "name": "@radix-ui/react-use-callback-ref",
+      "version": "1.1.1",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/@radix-ui/react-use-escape-keydown/node_modules/@radix-ui/react-use-callback-ref",
+      "registryFile": "@radix-ui--react-use-callback-ref-1.1.1-registry.json",
+      "gitHead": "fcef0668a5c827e5a4baac405474d75680f9a4eb",
+      "licenseFile": "radix-fcef0668a5c827e5a4baac405474d75680f9a4eb-LICENSE",
+      "licenseSource": "https://raw.githubusercontent.com/radix-ui/primitives/fcef0668a5c827e5a4baac405474d75680f9a4eb/LICENSE",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "name": "@radix-ui/react-use-size",
+      "version": "1.1.1",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/@radix-ui/react-use-size",
+      "registryFile": "@radix-ui--react-use-size-1.1.1-registry.json",
+      "gitHead": "fcef0668a5c827e5a4baac405474d75680f9a4eb",
+      "licenseFile": "radix-fcef0668a5c827e5a4baac405474d75680f9a4eb-LICENSE",
+      "licenseSource": "https://raw.githubusercontent.com/radix-ui/primitives/fcef0668a5c827e5a4baac405474d75680f9a4eb/LICENSE",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "name": "@radix-ui/react-use-layout-effect",
+      "version": "1.1.1",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/@radix-ui/react-use-size/node_modules/@radix-ui/react-use-layout-effect",
+      "registryFile": "@radix-ui--react-use-layout-effect-1.1.1-registry.json",
+      "gitHead": "fcef0668a5c827e5a4baac405474d75680f9a4eb",
+      "licenseFile": "radix-fcef0668a5c827e5a4baac405474d75680f9a4eb-LICENSE",
+      "licenseSource": "https://raw.githubusercontent.com/radix-ui/primitives/fcef0668a5c827e5a4baac405474d75680f9a4eb/LICENSE",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    },
+    {
+      "name": "react-remove-scroll-bar",
+      "version": "2.3.8",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-kibo-adapt/node_modules/react-remove-scroll-bar",
+      "registryFile": "react-remove-scroll-bar-2.3.8-registry.json",
+      "gitHead": "b3b1287aad81def2e2ae707274b74531b61ddbaf",
+      "licenseFile": "react-remove-scroll-bar-supplement-LICENSE",
+      "licenseSource": "https://raw.githubusercontent.com/theKashey/react-remove-scroll-bar/8ca9ba5ea52de03308fe8ced94f7b159a44d28ff/LICENSE",
+      "sha256": "a79aae0c0f21990d9d963bb3c5a79cdcea9a46f8523ba55c58d7fe776b6ebc84",
+      "disclosure": "Actual2.3.8 npm declaresMIT but omitsLICENSE. Fixed official same-project supplement labels2.3.7, not exact2.3.8 sourceLICENSE. All24 actual2.3.8 dist files match prior official2.3.7 hash evidence copied and reverified here."
+    }
+  ]
+}
