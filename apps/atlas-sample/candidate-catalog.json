@@ -12238,35 +12238,32 @@
   },
   {
     "id": "copilotkit:resume-job-match",
-    "title": "简历提交与匹配职位富结果",
     "source": "CopilotKit",
     "repository": "https://github.com/CopilotKit/CopilotKit",
     "revision": "c7815d9ac96f48fb3a64ad8c18e176a870c81763",
-    "sourcePath": "examples/showcases/deep-agents-job-search/src/components/ResumeUpload.tsx",
     "upstream": "https://github.com/CopilotKit/CopilotKit/blob/c7815d9ac96f48fb3a64ad8c18e176a870c81763/examples/showcases/deep-agents-job-search/src/components/ResumeUpload.tsx",
-    "license": "MIT (root verified only; dependencies/assets not closed)",
-    "behavior": "原选择PDF/TXT、类型拒绝/加载/成功/错误状态；JobsResults输出标题公司/地点和职位链接。",
-    "difference": "与SmoothUI单个岗位详情不同：用户资料输入→异步处理反馈→多职位结果场景；不是人事筛选决策引擎。",
-    "gaps": [
-      "原POST /api/upload-resume依赖服务，不能在图鉴收真实个人简历。需本地合成文本fixture，不编造实际解析/匹配；外链、错误晚到、依赖和素材未审。",
-      "完整传递依赖及素材许可未审；默认CSP/无网络、交互和退出清理、浏览器像素均未验。"
-    ],
-    "description": "原选择PDF/TXT、类型拒绝/加载/成功/错误状态；JobsResults输出标题公司/地点和职位链接。 与SmoothUI单个岗位详情不同：用户资料输入→异步处理反馈→多职位结果场景；不是人事筛选决策引擎。",
-    "category": "输入与选择",
+    "sourcePath": "examples/showcases/deep-agents-job-search/src/components/ResumeUpload.tsx",
     "licenseEvidence": {
       "url": "https://github.com/CopilotKit/CopilotKit/blob/c7815d9ac96f48fb3a64ad8c18e176a870c81763/LICENSE",
       "sha256": "15a0e5343aea872c0573ad72feb6044b336f162d724cc1673c608e6b37ea071b",
       "scope": "Full root MIT read; transitive runtime/media permissions not closed"
     },
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-bulk-522",
-    "sourceScope": "Selected fixed original code and complete root license evidence; no complete runnable/archive or runtime audit",
-    "kind": "原版完整场景（仅来源）",
-    "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted"
+    "difference": "与SmoothUI单个岗位详情不同：用户资料输入→异步处理反馈→多职位结果场景；不是人事筛选决策引擎。",
+    "title": "简历样例校验与职位结果",
+    "description": "原简历表单与职位结果组件，以内置虚构样例展示校验、失败重试与本地结果；不读取真实简历、不上传或进行招聘判断。",
+    "behavior": "原简历表单与职位结果组件，以内置虚构样例展示校验、失败重试与本地结果；不读取真实简历、不上传或进行招聘判断。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "Agent与对话",
+    "license": "MIT AND ISC",
+    "batch": "resume-local-01",
+    "preview": "batches/resume-local-01/resume/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Original CopilotKit Deep Agents Job Search ResumeUpload and complete JobsResults table retained, one upload/result demonstration family. Host supplies only internally-created fictional File fixtures and two fixed fictional job rows; no real resume picker, upload, parsing, AI skill inference, hiring decision or remote employer link. File picker explicitly disabled. Added demoFile/processDemo props route internally created files through ORIGINAL handleFileChange MIME whitelist; replaced original FormData+fetch with local300ms Promise that either returns an explicit fake result or rejects for testing. No file bytes are read, no real personal information collected. Original loading/error/success/reset/button styling and Good match column retained, persistent Chinese disclaimer says uploaded and matching labels describe only local demonstration states. JobsResults only loses href capability. Capture form before await fixes original event.currentTarget async lifetime; mounted/generation guards prevent old resolve/reject from setting state after new fixture/hide/exit, pending host timer cancelled and Promise rejected on teardown. Original source globalsCSS compiled, system fonts, no media. Host file-invalid/reset/failure controls are declared fixture UI, not original backend features. Actual package versions recorded; fixed original source is not claimed matching all npm versions. Tests actual569compose with original format rejection,disabled real picker,local failed submit/retry,success/two result rows,clear,hidden during pending Promise/stale callback/oldnodes,earlymodule/lateerror. Four modes and loader pass; all owned listeners/timers/RAF/observers0 and forbidden network/storage/clipboard/eval calls0. Native file selection deliberately unavailable, no native pixel validation. Source modifications fully preserved in ADAPTATION.diff."
+    ]
   },
   {
     "id": "copilotkit:presentation-coauthor",
@@ -13024,35 +13021,32 @@
   },
   {
     "id": "copilotkit:connected-tool-results",
-    "title": "工具连接需求与邮件新闻结果",
     "source": "CopilotKit",
     "repository": "https://github.com/CopilotKit/CopilotKit",
     "revision": "c7815d9ac96f48fb3a64ad8c18e176a870c81763",
-    "sourcePath": "examples/showcases/arcade-tools/components/tool-cards.tsx",
     "upstream": "https://github.com/CopilotKit/CopilotKit/blob/c7815d9ac96f48fb3a64ad8c18e176a870c81763/examples/showcases/arcade-tools/components/tool-cards.tsx",
-    "license": "MIT (root declaration verified; runtime/media not closed)",
-    "behavior": "原授权需求/加载/错误/邮件列表与发送结果/新闻结果渲染，parseResult容错，外部URL只接受http(s)。",
-    "difference": "不是再收审批按钮：同一次工具运行的连接要求与不同富结果呈现一族。",
-    "gaps": [
-      "多数为props驱动渲染，授权按钮是真外链非本地OAuth；邮件发送只是结果卡不是已实现本地发送。内联图形形似Lucide/Feather须补具体归属，根MIT不能替代其潜在许可；账号与外链全需隔离。",
-      "未安装、构建、运行；传递依赖/媒体许可、默认CSP和生命周期、视觉均未验。"
-    ],
-    "description": "原授权需求/加载/错误/邮件列表与发送结果/新闻结果渲染，parseResult容错，外部URL只接受http(s)。 不是再收审批按钮：同一次工具运行的连接要求与不同富结果呈现一族。",
-    "category": "Agent与对话",
+    "sourcePath": "examples/showcases/arcade-tools/components/tool-cards.tsx",
     "licenseEvidence": {
       "url": "https://github.com/CopilotKit/CopilotKit/blob/c7815d9ac96f48fb3a64ad8c18e176a870c81763/LICENSE",
       "sha256": "15a0e5343aea872c0573ad72feb6044b336f162d724cc1673c608e6b37ea071b",
       "scope": "Complete root MIT text read; transitive runtime/media not closed"
     },
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-bulk-523",
-    "sourceScope": "Selected fixed original code and root license; no runnable/archive or runtime audit",
-    "kind": "原版完整场景（仅来源）",
-    "buildStatus": "fixed source and root license read; not built or run"
+    "difference": "不是再收审批按钮：同一次工具运行的连接要求与不同富结果呈现一族。",
+    "title": "工具执行结果富卡片",
+    "description": "原七类工具结果卡、列表和空状态，以明确虚构本地数据展示；不连接账户、发送邮件或查询新闻。",
+    "behavior": "原七类工具结果卡、列表和空状态，以明确虚构本地数据展示；不连接账户、发送邮件或查询新闻。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "Agent与对话",
+    "license": "MIT AND ISC",
+    "batch": "tool-results-01",
+    "preview": "batches/tool-results-01/results/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Original fixed Arcade Tools complete tool-cards.tsx: seven exported result displays (authorization,email sent,email list,news,error,generic status,loading) retained, one family not seven sources. Original extraction/parser and8email/6news caps,empty text,SVG glyph paths/colors/layout classes unchanged; host renders explicitly fictional props with two controls for empty/nonempty and running/done demonstration. Not an OAuth client, email sender/inbox reader or news tool. Original Email sent/Done/provider names are result labels only; persistent Chinese disclaimer says no service executed or connected. Original safeHttpUrl still parses its input; both resulting anchor href attributes removed, aria-disabled added, so no external action despite original Connect wording. Inline lock/check/inbox/newspaper/alert/arrow geometries belong to familiar Feather/Lucide design family; preserve original root MIT and conservatively include complete Feather MIT and Lucide ISC attribution, without asserting independent trademark rights or a new icon design. No original glyph paths redrawn. System font, no images/fonts/CDN. Original static cards and CSS loading pulse retained; hidden unmount and reduced CSS disable/pause decorative animation, full host-owned listener/timer/RAF cleanup. Original package React19.2.4, this compatible runtime React19.3.1 enumerated below. Actual569compose normal/reduced/earlymodule/lateerror tests verify original bounded lists,empty results,local props changes,all anchors without href,hidden remount/oldnodes and all owned resource ledgers0; actualloader cache/release pass. Native pixels/CSS animation appearance not verified. No main repository changes or screenshots."
+    ]
   },
   {
     "id": "copilotkit:multi-agent-live-canvas",
