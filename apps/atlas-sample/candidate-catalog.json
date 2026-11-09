@@ -14528,55 +14528,36 @@
   },
   {
     "id": "proton:gravity-well-trails",
-    "title": "十六引力井彩色轨迹场",
     "source": "Proton",
     "repository": "https://github.com/drawcall/Proton",
     "revision": "b4fdef5e5416d70a788978bec0fb4a1be26514b4",
-    "sourcePath": "example/behaviour/gravitywell/linebug.html",
     "upstream": "https://github.com/drawcall/Proton/blob/b4fdef5e5416d70a788978bec0fb4a1be26514b4/example/behaviour/gravitywell/linebug.html",
-    "license": "MIT (selected fixed source verified; complete runtime/asset audit pending)",
-    "behavior": "原Canvas2D例一次发射300粒子，16环形引力井+中央斥力形成细线轨迹；按下拖动改变吸引点。",
-    "difference": "有力场与跨帧轨迹积累，区别普通confetti或指针图片拖尾；是视觉实验非Agent分析数据。",
-    "description": "原Canvas2D例一次发射300粒子，16环形引力井+中央斥力形成细线轨迹；按下拖动改变吸引点。 有力场与跨帧轨迹积累，区别普通confetti或指针图片拖尾；是视觉实验非Agent分析数据。",
-    "gaps": [
-      "原HTML加载localhost:3001的Proton build及stats/rAF辅助库，不能直接作为离线预览。",
-      "需真正引擎闭包与第三方许可、指针取消/失焦恢复、resize、300粒子和退出RAF释放测试，不能把原长期tick算清理通过。",
-      "本轮仅固定源及许可文本检查；未安装构建/运行/测试交互或清理，也未验浏览器像素。无封面/截图；所有封面由Grok处理。"
-    ],
-    "category": "视觉与动效",
-    "format": "材质设计族",
-    "kind": "原版视觉场景（仅来源）",
+    "sourcePath": "example/behaviour/gravitywell/linebug.html",
     "licenseEvidence": {
       "url": "https://github.com/drawcall/Proton/blob/b4fdef5e5416d70a788978bec0fb4a1be26514b4/LICENSE",
       "sha256": "8c84c176332fce44c4267bbd48fe9311bfb4a4d3dd9050df0216622d114ca49a",
       "scope": "Complete fixed root license and selected source files read; runtime dependencies not closed"
     },
-    "sourceEvidence": [
-      {
-        "path": "example/behaviour/gravitywell/linebug.html",
-        "sha256": "1e4552f9f4ba45875d1e082cd0bcd7526947813b29baa9d16db452cdc9005c63"
-      },
-      {
-        "path": "src/behaviour/GravityWell.js",
-        "sha256": "556f48ae6fc34b3a27b0ca5d4bf30a0eff2db7fd18f53ec2ea07fb8b1545fecd"
-      },
-      {
-        "path": "src/behaviour/Attraction.js",
-        "sha256": "c037566b498eda9940f9c84069c46bb9b2ba90b3a1eb09fa63a70fb2f45469e6"
-      }
-    ],
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-bulk-524",
-    "sourceScope": "3 selected original source files plus README and complete license; no full runnable archive",
-    "buildStatus": "fixed selected source/license read; no runtime or visual verification",
-    "counts": {
-      "independentFamily": 1,
-      "completedPreviews": 0
-    }
+    "difference": "有力场与跨帧轨迹积累，区别普通confetti或指针图片拖尾；是视觉实验非Agent分析数据。",
+    "title": "十六引力井彩色轨迹场",
+    "description": "原三百粒子围绕十六引力井生成彩色轨迹，按住拖动调整吸引点。",
+    "behavior": "原三百粒子围绕十六引力井生成彩色轨迹，按住拖动调整吸引点。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "视觉与动效",
+    "license": "MIT",
+    "batch": "proton-gravity-01",
+    "preview": "batches/proton-gravity-01/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original fixed runtime built; actual554 compose six focused modes passed",
+    "gaps": [
+      "Original emitter,16 GravityWell ring,central Repulsion,300 particles,colors and CustomRenderer drawing retained; built fixed ES modules,not redrawn particle substitute.",
+      "Stats FPS overlay and legacy rAF polyfill omitted; native rAF used. Original mousedown/layer coordinates normalized to pointer events and bounding rectangle; pointercancel/window-up/blur release included.",
+      "Hidden/zero-size pause,reduced motion single original frame,early/late failure and exit destroy(false) cleanup;canvas bounded1800x1200. Resize preserves original fixed force-center geometry behavior,not an adaptive reinterpretation.",
+      "JSDOM Canvas2D command recording proves actual engine300 particle draws and lifecycle,not native color blending or pixel acceptance. No media/fonts/network/backend.",
+      "Integration Euler math cites RosettaCode as algorithm reference; unchanged original module retains that comment. EventDispatcher CreateJS reference supplemental notice included."
+    ]
   },
   {
     "id": "looper:radial-phase-field",
@@ -16277,61 +16258,45 @@
   },
   {
     "id": "flag-icons:country-symbol-family",
-    "title": "Flag Icons · 国家与地区旗帜系列",
     "source": "flag-icons",
     "repository": "https://github.com/lipis/flag-icons",
     "revision": "ac7e0eb3259eb62aa6100c435607e2fe03896a97",
-    "sourcePath": "flags/4x3/fr.svg",
     "upstream": "https://github.com/lipis/flag-icons/blob/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/fr.svg",
-    "license": "MIT (actual complete root text; full symbol/asset audit pending)",
-    "visualStyle": "原4:3矢量旗帜，以清晰色块和图形保留标识比例；方形裁切不是新系列。",
-    "behavior": "静态SVG与按地区代码选用的CSS样式，不含搜索器、地理定位或实时数据；适合Exodus行程和地点记录的辅助标签。",
-    "difference": "整个flag-icons设计资产族只计一条，不按国家、地区、比例或颜色增加数量；国家符号不是语言或个人身份的替代。",
-    "description": "原国家与地区旗帜SVG系列，用于行程和地点记录辅助标签；系列只记一条，地区和比例不拆数。",
-    "gaps": [
-      "本轮只固定读取4个4:3SVG样本、实际CSS和根MIT全文，不声称全部旗帜都已下载、审图或可检索预览。",
-      "CSS通过相对URL加载整个flags目录，既有隔离CSP不能原样用这些外部资源；需逐项验证同源文本SVG接入与内部use引用，不能包装二进制规避限制。",
-      "根MIT保留作者归属，但不能替代各地对官方旗帜/国家符号的使用规定；不把符号当作官方背书、主权结论或用户语言/国籍推断。",
-      "尚未适配系列浏览、辅助文本/可访问名称、布局与全量SVG安全审计；无封面或截图，不对未知旗帜媒体权利作总括许可。"
-    ],
-    "category": "图标系列",
-    "format": "图标家族",
-    "kind": "图标系列",
-    "counts": {
-      "independentFamily": 1,
-      "completedPreviews": 0
-    },
+    "sourcePath": "flags/4x3/fr.svg",
     "licenseEvidence": {
       "url": "https://github.com/lipis/flag-icons/blob/ac7e0eb3259eb62aa6100c435607e2fe03896a97/LICENSE",
       "sha256": "8f1195d55a2fd315a07d812328470ca9ba2abb78c8d317ff19619d5125e00cea",
       "scope": "Actual complete MIT root read; sample SVG/CSS evidence only, not all-symbol rights audit"
     },
-    "sourceEvidence": [
-      {
-        "path": "flags/4x3/cn.svg",
-        "sha256": "981da9bdf82d48e31691f20578cefcb26cf7d0bd95e4ebd5c0df00bdfe988c1a"
-      },
-      {
-        "path": "flags/4x3/fr.svg",
-        "sha256": "a526851c372e3372b1596be71af355ea72b1650bbc4c06e6e2c226900d3de6cc"
-      },
-      {
-        "path": "flags/4x3/jp.svg",
-        "sha256": "bfea80baf9989383dc4bf7ca594ed95be0df0ff125bfc88d0bfa878eb0198022"
-      },
-      {
-        "path": "flags/4x3/us.svg",
-        "sha256": "e7be4240cf57987926673708f09233be1ab6bdf35acc7b86bd32a263f197a2a7"
-      }
+    "difference": "整个flag-icons设计资产族只计一条，不按国家、地区、比例或颜色增加数量；国家符号不是语言或个人身份的替代。",
+    "title": "国家与地区旗帜图标系列",
+    "description": "271代码×两比例共542原始SVG，搜索分页及原文详情；同族一条。",
+    "behavior": "271代码×两比例共542原始SVG，搜索分页及原文详情；同族一条。",
+    "kind": "图标系列",
+    "format": "图标家族",
+    "category": "图标系列",
+    "license": "MIT",
+    "batch": "flag-icons-01",
+    "preview": "batches/flag-icons-01/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "passed",
+    "gaps": [
+      "旗帜及名称不代表主权或官方立场，遵守当地使用规范",
+      "视觉未验；DOM/XML不等于像素验收"
     ],
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-style-528",
-    "sourceScope": "Four fixed SVG samples, actual CSS and complete root license; no complete runnable/archive",
-    "buildStatus": "Fixed source read; no runtime or visual verification"
+    "runtime": {
+      "scripts": [
+        "flags-01.js",
+        "flags-02.js",
+        "flags-03.js",
+        "flags-04.js",
+        "flags-05.js",
+        "flags-06.js",
+        "flags-07.js",
+        "runtime.js"
+      ]
+    }
   },
   {
     "id": "css-doodle:generative-pattern-surface",
@@ -16937,61 +16902,45 @@
   },
   {
     "id": "fontawesome-free:interface-symbol-family",
-    "title": "Font Awesome Free · 实心界面符号系列",
     "source": "Font Awesome Free",
     "repository": "https://github.com/FortAwesome/Font-Awesome",
     "revision": "14c65a3747d0f3b751f15831fc719236aea8729d",
-    "sourcePath": "svgs/solid/brain.svg",
     "upstream": "https://github.com/FortAwesome/Font-Awesome/blob/14c65a3747d0f3b751f15831fc719236aea8729d/svgs/solid/brain.svg",
-    "license": "Icons CC-BY-4.0; fonts OFL-1.1; non-icon code MIT (actual complete root file read)",
-    "visualStyle": "原Free实心剪影符号，用厚实圆角和负空间呈现脑、消息、机器人与流程节点。",
-    "behavior": "当前只读四个原SVG样本，静态图形不含动画或点击行为；适合Exodus工具/消息/Agent导航标签。",
-    "difference": "Font Awesome Free整个来源系列只计一条，不按实心/轮廓、字号、单glyph或状态拆数；不含Pro付费素材，不把别的包引用几枚FA图标当已收完整族。",
-    "description": "Font Awesome Free原实心界面符号系列，适合工具、消息、Agent和流程标签；整族只计一条，非Pro内容。",
-    "gaps": [
-      "根完整LICENSE.txt明确SVG/图标JS是CC BY4，不是MIT；后续公开浏览需保留Fonticons归属/许可链接及修改说明，四样本已有原注释但全系列归属/CC完整条款闭合尚待完成。",
-      "字体另OFL并有Reserved Font Name，非图标代码才MIT；本轮没有字体、运行JS、Pro图形或品牌logo，不将根混合许可简写成全MIT。",
-      "样本message路径下缘超过viewBox，robot有负y天线；独立SVG是否裁切要按原用法检查，不能称任意容器已视觉通过或擅改原图形后冒充原版。",
-      "未适配全量浏览/搜索/复制/辅助名称或实际像素；不调用CDN，暂无预览/截图/完整ZIP，所有品牌标识另有商标用途约束不纳入本选择。"
-    ],
-    "category": "图标系列",
-    "format": "图标家族",
-    "kind": "图标系列",
-    "counts": {
-      "independentFamily": 1,
-      "completedPreviews": 0
-    },
+    "sourcePath": "svgs/solid/brain.svg",
     "licenseEvidence": {
       "url": "https://github.com/FortAwesome/Font-Awesome/blob/14c65a3747d0f3b751f15831fc719236aea8729d/LICENSE.txt",
       "sha256": "20c6f40715a567c97b80f6944beb8bb325835cab47ea7dcab89ee3b8e077eced",
       "scope": "Complete original mixed root license read; icons explicitly CC-BY-4.0; no font/Pro/brand/runtime closure"
     },
-    "sourceEvidence": [
-      {
-        "path": "svgs/solid/brain.svg",
-        "sha256": "39c86818c5f1fe2a4c13da4bb61e888e3fd5afe558a6e901b446a9c53ae56ab2"
-      },
-      {
-        "path": "svgs/solid/diagram-project.svg",
-        "sha256": "35f2d1592a98ec69967ec3fe28d5106e502c3a3dee113db5c466624652f56425"
-      },
-      {
-        "path": "svgs/solid/message.svg",
-        "sha256": "1b3a650b095d53734d5a6d7025b44501f0331ead1629129aa2903bdd5cccc60e"
-      },
-      {
-        "path": "svgs/solid/robot.svg",
-        "sha256": "2d6a77012f020f122e84217e5cec17c68b7ade655613344763f01bd2769965d2"
-      }
+    "difference": "Font Awesome Free整个来源系列只计一条，不按实心/轮廓、字号、单glyph或状态拆数；不含Pro付费素材，不把别的包引用几枚FA图标当已收完整族。",
+    "title": "免费界面图标系列",
+    "description": "完整固定Free实心2001与轮廓273原SVG，同系列一个入口，搜索、分页与原文浏览。",
+    "behavior": "完整固定Free实心2001与轮廓273原SVG，同系列一个入口，搜索、分页与原文浏览。",
+    "kind": "图标系列",
+    "format": "图标家族",
+    "category": "图标系列",
+    "license": "CC-BY-4.0 (SVG); original mixed LICENSE retained, no fonts",
+    "batch": "fontawesome-free-01",
+    "preview": "batches/fontawesome-free-01/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "actual554 compose/direct HTML and original SVG byte/XML checks passed; pixels unverified",
+    "gaps": [
+      "Font Awesome Free solid/regular only; brands, Pro and fonts excluded. Same-name styles/aliases are not new semantic families.",
+      "SVG is CC BY 4.0 with original comments/Fonticons attribution and complete legal code; not all MIT.",
+      "Raw source preserved, including any original out-of-viewBox path geometry; pixels and native visual appearance not verified.",
+      "No remote services, clipboard, export or installation UI."
     ],
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-style-529",
-    "sourceScope": "Four fixed original SVG samples and complete actual root license; no complete runnable/archive",
-    "buildStatus": "Fixed original source/license read; not built, run or visually accepted"
+    "runtime": {
+      "scripts": [
+        "data-01.js",
+        "data-02.js",
+        "data-03.js",
+        "data-04.js",
+        "data-05.js",
+        "runtime.js"
+      ]
+    }
   },
   {
     "id": "papercss:paper-disclosure-notes",
@@ -20835,6 +20784,174 @@
     "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
     "gaps": [
       "Original Meta AstryX display/typography/status components, each through documented API with an explicitly host-authored local fixture. Not an upstream complete application or backend. Badge and StatusDot states, inline Code sample, Blockquote attribution, Divider label, EmptyState text, Kbd key-string, Skeleton/content toggle and Spinner size remain together in one entry per original family. Breadcrumbs uses original items with local selection callbacks, no real navigation. Host toggle controls demonstrate props, not extra original business behavior. Kbd does not register system shortcuts; code is displayed not executed; spinner/skeleton do not indicate an actual background job; status dots are not monitoring service health. Original core geometry and styles unchanged. Fixed documentation source workspace0.7.12 with actual core/theme/build0.7.11 compatibility runtime disclosed. Shared original neutral theme/StyleX/LayerProvider, independent per-entry IIFE and system fonts. No media, clipboard, network, user accounts or persistence. Hidden unmount/visible remount resets fixture state; reduced-motion CSS stops animations; exit/error cleans owned resources. Actual550compose and loader/cache/release plus per-entry rendering/state test, shared early/late/reduced tests under JSDOM; native CSS geometry/animation pixels unverified and exact StyleX parser warning separately recorded. Full rootMIT plus emitted dependency licenses; prior core/StyleX missing-file supplements explicitly labelled."
+    ]
+  },
+  {
+    "id": "astryx:documentation-design",
+    "source": "Meta AstryX",
+    "repository": "https://github.com/meta/astryx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/cli/assets/templates/pages/documentation-design/page.tsx",
+    "sourcePath": "packages/cli/assets/templates/pages/documentation-design/page.tsx",
+    "licenseEvidence": {
+      "url": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/LICENSE",
+      "sha256": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473",
+      "scope": "Complete fixed original MIT; actual runtime dependency notices supplied in preview assets."
+    },
+    "title": "设计系统文档",
+    "description": "原完整页面与本地示例数据，保留原页面结构及本地状态；不提供后台服务。",
+    "behavior": "原完整页面与本地示例数据，保留原页面结构及本地状态；不提供后台服务。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "产品与营销",
+    "license": "MIT AND ISC AND BSD-3-Clause",
+    "batch": "astryx-expansion-02",
+    "preview": "batches/astryx-expansion-02/documentation-design/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Original full Meta AstryX template retained, including original local fixture data and state logic; not an independently rebuilt shell. Fixed source repository workspace0.7.12 uses actual installedcore/theme/build0.7.11 compatibility runtime with exact emitted versions below. Recharts3.9.2 and original Heroicons/Lucide glyph dependencies are licensed. No media/font/image assets needed. Original page data is illustrative, not live alerts, real invoices, actual model benchmarks or real cohort analytics. Original buttons without handlers (such as Export/Download PDF/CLI actions) remain demonstrative controls, no downloads or business action are claimed. Shared neutralTheme/StyleX/LayerProvider per-template independent IIFE. Documentation-design only: original clipboard CodeBlock affordance disabled using supportedhasCopyButton=false; page and exact runtime Outline history.pushState removed for opaque iframe while retaining original scroll/focus/selection. External navigation and form submission blocked by host. Hidden unmount resets ephemeral local state; visible mounts fresh; exit/error releases owned resources. Actual553compose and createPreviewLoader/cache/release plus each page key original behavior tested with JSDOM APIs; chart layout dimensions and native SVG/CSS/pixel rendering are not visually verified. Exact StyleX CSS parse warning separately recorded. Full root and actual emitted runtime licenses included, including victory-vendor bundledD3 texts; prior core/StyleX missing-file official supplements expressly identified. No real AI/backend/service integration."
+    ]
+  },
+  {
+    "id": "astryx:table-collapsible",
+    "source": "Meta AstryX",
+    "repository": "https://github.com/meta/astryx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/cli/assets/templates/pages/table-collapsible/page.tsx",
+    "sourcePath": "packages/cli/assets/templates/pages/table-collapsible/page.tsx",
+    "licenseEvidence": {
+      "url": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/LICENSE",
+      "sha256": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473",
+      "scope": "Complete fixed original MIT; actual runtime dependency notices supplied in preview assets."
+    },
+    "title": "可折叠分组分析表",
+    "description": "原完整页面与本地示例数据，保留原页面结构及本地状态；不提供后台服务。",
+    "behavior": "原完整页面与本地示例数据，保留原页面结构及本地状态；不提供后台服务。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "产品与营销",
+    "license": "MIT AND ISC AND BSD-3-Clause",
+    "batch": "astryx-expansion-02",
+    "preview": "batches/astryx-expansion-02/table-collapsible/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Original full Meta AstryX template retained, including original local fixture data and state logic; not an independently rebuilt shell. Fixed source repository workspace0.7.12 uses actual installedcore/theme/build0.7.11 compatibility runtime with exact emitted versions below. Recharts3.9.2 and original Heroicons/Lucide glyph dependencies are licensed. No media/font/image assets needed. Original page data is illustrative, not live alerts, real invoices, actual model benchmarks or real cohort analytics. Original buttons without handlers (such as Export/Download PDF/CLI actions) remain demonstrative controls, no downloads or business action are claimed. Shared neutralTheme/StyleX/LayerProvider per-template independent IIFE. Documentation-design only: original clipboard CodeBlock affordance disabled using supportedhasCopyButton=false; page and exact runtime Outline history.pushState removed for opaque iframe while retaining original scroll/focus/selection. External navigation and form submission blocked by host. Hidden unmount resets ephemeral local state; visible mounts fresh; exit/error releases owned resources. Actual553compose and createPreviewLoader/cache/release plus each page key original behavior tested with JSDOM APIs; chart layout dimensions and native SVG/CSS/pixel rendering are not visually verified. Exact StyleX CSS parse warning separately recorded. Full root and actual emitted runtime licenses included, including victory-vendor bundledD3 texts; prior core/StyleX missing-file official supplements expressly identified. No real AI/backend/service integration."
+    ]
+  },
+  {
+    "id": "astryx:table-comparison",
+    "source": "Meta AstryX",
+    "repository": "https://github.com/meta/astryx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/cli/assets/templates/pages/table-comparison/page.tsx",
+    "sourcePath": "packages/cli/assets/templates/pages/table-comparison/page.tsx",
+    "licenseEvidence": {
+      "url": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/LICENSE",
+      "sha256": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473",
+      "scope": "Complete fixed original MIT; actual runtime dependency notices supplied in preview assets."
+    },
+    "title": "模型规格比较表",
+    "description": "原完整页面与本地示例数据，保留原页面结构及本地状态；不提供后台服务。",
+    "behavior": "原完整页面与本地示例数据，保留原页面结构及本地状态；不提供后台服务。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "产品与营销",
+    "license": "MIT AND ISC AND BSD-3-Clause",
+    "batch": "astryx-expansion-02",
+    "preview": "batches/astryx-expansion-02/table-comparison/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Original full Meta AstryX template retained, including original local fixture data and state logic; not an independently rebuilt shell. Fixed source repository workspace0.7.12 uses actual installedcore/theme/build0.7.11 compatibility runtime with exact emitted versions below. Recharts3.9.2 and original Heroicons/Lucide glyph dependencies are licensed. No media/font/image assets needed. Original page data is illustrative, not live alerts, real invoices, actual model benchmarks or real cohort analytics. Original buttons without handlers (such as Export/Download PDF/CLI actions) remain demonstrative controls, no downloads or business action are claimed. Shared neutralTheme/StyleX/LayerProvider per-template independent IIFE. Documentation-design only: original clipboard CodeBlock affordance disabled using supportedhasCopyButton=false; page and exact runtime Outline history.pushState removed for opaque iframe while retaining original scroll/focus/selection. External navigation and form submission blocked by host. Hidden unmount resets ephemeral local state; visible mounts fresh; exit/error releases owned resources. Actual553compose and createPreviewLoader/cache/release plus each page key original behavior tested with JSDOM APIs; chart layout dimensions and native SVG/CSS/pixel rendering are not visually verified. Exact StyleX CSS parse warning separately recorded. Full root and actual emitted runtime licenses included, including victory-vendor bundledD3 texts; prior core/StyleX missing-file official supplements expressly identified. No real AI/backend/service integration."
+    ]
+  },
+  {
+    "id": "astryx:table-page",
+    "source": "Meta AstryX",
+    "repository": "https://github.com/meta/astryx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/cli/assets/templates/pages/table-page/page.tsx",
+    "sourcePath": "packages/cli/assets/templates/pages/table-page/page.tsx",
+    "licenseEvidence": {
+      "url": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/LICENSE",
+      "sha256": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473",
+      "scope": "Complete fixed original MIT; actual runtime dependency notices supplied in preview assets."
+    },
+    "title": "账单明细工作区",
+    "description": "原完整页面与本地示例数据，保留原页面结构及本地状态；不提供后台服务。",
+    "behavior": "原完整页面与本地示例数据，保留原页面结构及本地状态；不提供后台服务。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "产品与营销",
+    "license": "MIT AND ISC AND BSD-3-Clause",
+    "batch": "astryx-expansion-02",
+    "preview": "batches/astryx-expansion-02/table-page/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Original full Meta AstryX template retained, including original local fixture data and state logic; not an independently rebuilt shell. Fixed source repository workspace0.7.12 uses actual installedcore/theme/build0.7.11 compatibility runtime with exact emitted versions below. Recharts3.9.2 and original Heroicons/Lucide glyph dependencies are licensed. No media/font/image assets needed. Original page data is illustrative, not live alerts, real invoices, actual model benchmarks or real cohort analytics. Original buttons without handlers (such as Export/Download PDF/CLI actions) remain demonstrative controls, no downloads or business action are claimed. Shared neutralTheme/StyleX/LayerProvider per-template independent IIFE. Documentation-design only: original clipboard CodeBlock affordance disabled using supportedhasCopyButton=false; page and exact runtime Outline history.pushState removed for opaque iframe while retaining original scroll/focus/selection. External navigation and form submission blocked by host. Hidden unmount resets ephemeral local state; visible mounts fresh; exit/error releases owned resources. Actual553compose and createPreviewLoader/cache/release plus each page key original behavior tested with JSDOM APIs; chart layout dimensions and native SVG/CSS/pixel rendering are not visually verified. Exact StyleX CSS parse warning separately recorded. Full root and actual emitted runtime licenses included, including victory-vendor bundledD3 texts; prior core/StyleX missing-file official supplements expressly identified. No real AI/backend/service integration."
+    ]
+  },
+  {
+    "id": "astryx:dashboard-alert-rail",
+    "source": "Meta AstryX",
+    "repository": "https://github.com/meta/astryx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/cli/assets/templates/pages/dashboard-alert-rail/page.tsx",
+    "sourcePath": "packages/cli/assets/templates/pages/dashboard-alert-rail/page.tsx",
+    "licenseEvidence": {
+      "url": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/LICENSE",
+      "sha256": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473",
+      "scope": "Complete fixed original MIT; actual runtime dependency notices supplied in preview assets."
+    },
+    "title": "告警与服务分析",
+    "description": "原完整页面与本地示例数据，保留原页面结构及本地状态；不提供后台服务。",
+    "behavior": "原完整页面与本地示例数据，保留原页面结构及本地状态；不提供后台服务。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "产品与营销",
+    "license": "MIT AND ISC AND BSD-3-Clause",
+    "batch": "astryx-expansion-02",
+    "preview": "batches/astryx-expansion-02/dashboard-alert-rail/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Original full Meta AstryX template retained, including original local fixture data and state logic; not an independently rebuilt shell. Fixed source repository workspace0.7.12 uses actual installedcore/theme/build0.7.11 compatibility runtime with exact emitted versions below. Recharts3.9.2 and original Heroicons/Lucide glyph dependencies are licensed. No media/font/image assets needed. Original page data is illustrative, not live alerts, real invoices, actual model benchmarks or real cohort analytics. Original buttons without handlers (such as Export/Download PDF/CLI actions) remain demonstrative controls, no downloads or business action are claimed. Shared neutralTheme/StyleX/LayerProvider per-template independent IIFE. Documentation-design only: original clipboard CodeBlock affordance disabled using supportedhasCopyButton=false; page and exact runtime Outline history.pushState removed for opaque iframe while retaining original scroll/focus/selection. External navigation and form submission blocked by host. Hidden unmount resets ephemeral local state; visible mounts fresh; exit/error releases owned resources. Actual553compose and createPreviewLoader/cache/release plus each page key original behavior tested with JSDOM APIs; chart layout dimensions and native SVG/CSS/pixel rendering are not visually verified. Exact StyleX CSS parse warning separately recorded. Full root and actual emitted runtime licenses included, including victory-vendor bundledD3 texts; prior core/StyleX missing-file official supplements expressly identified. No real AI/backend/service integration."
+    ]
+  },
+  {
+    "id": "astryx:dashboard-cohort-funnel",
+    "source": "Meta AstryX",
+    "repository": "https://github.com/meta/astryx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/cli/assets/templates/pages/dashboard-cohort-funnel/page.tsx",
+    "sourcePath": "packages/cli/assets/templates/pages/dashboard-cohort-funnel/page.tsx",
+    "licenseEvidence": {
+      "url": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/LICENSE",
+      "sha256": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473",
+      "scope": "Complete fixed original MIT; actual runtime dependency notices supplied in preview assets."
+    },
+    "title": "队列漏斗分析",
+    "description": "原完整页面与本地示例数据，保留原页面结构及本地状态；不提供后台服务。",
+    "behavior": "原完整页面与本地示例数据，保留原页面结构及本地状态；不提供后台服务。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "产品与营销",
+    "license": "MIT AND ISC AND BSD-3-Clause",
+    "batch": "astryx-expansion-02",
+    "preview": "batches/astryx-expansion-02/dashboard-cohort-funnel/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Original full Meta AstryX template retained, including original local fixture data and state logic; not an independently rebuilt shell. Fixed source repository workspace0.7.12 uses actual installedcore/theme/build0.7.11 compatibility runtime with exact emitted versions below. Recharts3.9.2 and original Heroicons/Lucide glyph dependencies are licensed. No media/font/image assets needed. Original page data is illustrative, not live alerts, real invoices, actual model benchmarks or real cohort analytics. Original buttons without handlers (such as Export/Download PDF/CLI actions) remain demonstrative controls, no downloads or business action are claimed. Shared neutralTheme/StyleX/LayerProvider per-template independent IIFE. Documentation-design only: original clipboard CodeBlock affordance disabled using supportedhasCopyButton=false; page and exact runtime Outline history.pushState removed for opaque iframe while retaining original scroll/focus/selection. External navigation and form submission blocked by host. Hidden unmount resets ephemeral local state; visible mounts fresh; exit/error releases owned resources. Actual553compose and createPreviewLoader/cache/release plus each page key original behavior tested with JSDOM APIs; chart layout dimensions and native SVG/CSS/pixel rendering are not visually verified. Exact StyleX CSS parse warning separately recorded. Full root and actual emitted runtime licenses included, including victory-vendor bundledD3 texts; prior core/StyleX missing-file official supplements expressly identified. No real AI/backend/service integration."
     ]
   }
 ]
