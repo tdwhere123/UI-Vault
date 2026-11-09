@@ -964,8 +964,15 @@
     "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
     "gaps": [
       "WebGL if shader library used; unsupported rendering must not be counted as working",
-      "Remote media, commercial brand logos and device trademarks need separate asset review"
-    ]
+      "Remote media, commercial brand logos and device trademarks need separate asset review",
+      "519轮源码复筛：仅键帽外形布局，无真实按键输入或编辑控制状态。"
+    ],
+    "sourceReview": {
+      "revision": "d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+      "sha256": "84b4a17d83467511807b6ba3395cbed8b3e3a84a63d745235e582adc7d5c6c30",
+      "decision": "keep source-only; do not count preview",
+      "note": "仅键帽外形布局，无真实按键输入或编辑控制状态。"
+    }
   },
   {
     "id": "cult:illustration-graph",
@@ -2448,8 +2455,15 @@
       "Official shared data includes remote generated portraits, scenes, app icons and sample product artwork. Asset URLs preserved for reference; binaries not downloaded and image redistribution rights not assumed.",
       "Root documentation CSS imports external fumadocs package styles; original lock retained.",
       "Visual fidelity, animation, mobile behavior, accessibility and interaction correctness not yet tested.",
-      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
-    ]
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。",
+      "519轮源码复筛：有纸页厚度/书脊CSS材质，但仅hover旋转封面，没有翻页/内容阅读交互。本轮不以书名变体计数。"
+    ],
+    "sourceReview": {
+      "revision": "c45420a8523ec60a92f7724a2418ab83edaa1425",
+      "sha256": "d2cf6efbcded07ef1c2bdd9dffefa22aac46901343f0c77bce8b9a208c860aa2",
+      "decision": "keep source-only; do not count preview",
+      "note": "有纸页厚度/书脊CSS材质，但仅hover旋转封面，没有翻页/内容阅读交互。本轮不以书名变体计数。"
+    }
   },
   {
     "id": "smoothui:dither-chart",
@@ -2821,8 +2835,15 @@
       "固定入口与根MIT已核，未构建；Radix/Motion/SmoothButton等实际依赖许可尚待核齐。",
       "内部无img/video，不缺远程照片；官方demo的推广正文不是本轮已核实时事实，未来须替换为明确本地引用。",
       "原span触发器缺键盘可达性，外站跳转和默认品牌图标需处理；不可放宽CSP。",
-      "已有减少运动分支，但关闭exit属性不代表退出动画实际运行；与已有引用浮层去重后才考虑恢复。"
-    ]
+      "已有减少运动分支，但关闭exit属性不代表退出动画实际运行；与已有引用浮层去重后才考虑恢复。",
+      "519轮源码复筛：原Radix富内容popover可开关，但与已收行内citation语义/布局相近；原demo指YouTube宣传链接，无本地媒体内容。"
+    ],
+    "sourceReview": {
+      "revision": "c45420a8523ec60a92f7724a2418ab83edaa1425",
+      "sha256": "d93ed9982b3ca2def564eeacb56dfd5e3d0a162a00d5d1decfbac43a8109f1b6",
+      "decision": "keep source-only; do not count preview",
+      "note": "原Radix富内容popover可开关，但与已收行内citation语义/布局相近；原demo指YouTube宣传链接，无本地媒体内容。"
+    }
   },
   {
     "id": "smoothui:scrubber",
@@ -2913,8 +2934,15 @@
       "Official shared data includes remote generated portraits, scenes, app icons and sample product artwork. Asset URLs preserved for reference; binaries not downloaded and image redistribution rights not assumed.",
       "Root documentation CSS imports external fumadocs package styles; original lock retained.",
       "Visual fidelity, animation, mobile behavior, accessibility and interaction correctness not yet tested.",
-      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
-    ]
+      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。",
+      "519轮源码复筛：真实wheel阈值/拖动/键盘/深度过渡，但现有多个层叠卡组与空间轮播，未找到本轮足够独立用途；官方demo依赖图像素材，不为套原创图充条目。"
+    ],
+    "sourceReview": {
+      "revision": "c45420a8523ec60a92f7724a2418ab83edaa1425",
+      "sha256": "52ba9866722d3dcc2ace63a4c347f2ce37b780260becfb118564b058410494ef",
+      "decision": "keep source-only; do not count preview",
+      "note": "真实wheel阈值/拖动/键盘/深度过渡，但现有多个层叠卡组与空间轮播，未找到本轮足够独立用途；官方demo依赖图像素材，不为套原创图充条目。"
+    }
   },
   {
     "id": "smoothui:vector-editor-toolbar",
@@ -3038,8 +3066,15 @@
       "固定入口与根MIT已核，未构建；完整依赖与样式未验证。",
       "独立MenuRoot有尺寸展开逻辑，但默认demo未连接，实际工具列表未使用，不能按名称宣称功能齐备。",
       "无远程媒体或导出/剪贴板缺口；真实缺口是未连接组件、占位内容与焦点/窄屏适配。",
-      "与已有工具栏重合，不通过自创任务动作把未完成示例充数。"
-    ]
+      "与已有工具栏重合，不通过自创任务动作把未完成示例充数。",
+      "519轮源码复筛：原demo实际两段账户/密码占位及关闭按钮；Developer tools项目列表整个注释。不是已实现动作菜单。"
+    ],
+    "sourceReview": {
+      "revision": "c7db00f2e98753c277f1aec6e316520038f4e0a0",
+      "sha256": "8572fa04da442c8f22415114d0ea470882923836e7d6486cb15d82a036ee832a",
+      "decision": "keep source-only; do not count preview",
+      "note": "原demo实际两段账户/密码占位及关闭按钮；Developer tools项目列表整个注释。不是已实现动作菜单。"
+    }
   },
   {
     "id": "cuicui:half-sided-glassmorphism",
@@ -3107,8 +3142,15 @@
       "固定入口与根MIT已核，未构建，依赖许可尚未全链核验。",
       "Dimensions明确TODO；比例状态未上提，Prompt未受控；Apply仅关闭和toast，没有实际验证或应用。",
       "本项无远程媒体/导出/剪贴板缺口；不得补写功能后冒称原版已完成。",
-      "焦点/Escape/可访问名称与减少运动待验证；与现有设置和变形浮层重合，暂不恢复。"
-    ]
+      "焦点/Escape/可访问名称与减少运动待验证；与现有设置和变形浮层重合，暂不恢复。",
+      "519轮源码复筛：Dimensions TODO无尺寸控件；Apply Changes仅关闭面板及toast成功，Prompt未保存/绑定。不能称真实已应用设置。"
+    ],
+    "sourceReview": {
+      "revision": "c7db00f2e98753c277f1aec6e316520038f4e0a0",
+      "sha256": "7d7fd6f8172cc60e069853cc289679f5d79f47abe87e4c339e6d855a90389cde",
+      "decision": "keep source-only; do not count preview",
+      "note": "Dimensions TODO无尺寸控件；Apply Changes仅关闭面板及toast成功，Prompt未保存/绑定。不能称真实已应用设置。"
+    }
   },
   {
     "id": "cuicui:react-signature",
@@ -4026,21 +4068,45 @@
   },
   {
     "id": "aicanvas:curious-ai",
-    "title": "curious-ai",
-    "source": "AI Canvas free library",
-    "license": "MIT (free components-workspace explicitly designated by README)",
+    "title": "AI Canvas · Curious AI",
+    "source": "AI Canvas",
     "upstream": "https://github.com/aicanvas-me/aicanvas/tree/8164f1e423e4e654dd0828a941ba5cdda69f08fe/components-workspace/curious-ai",
-    "website": "",
-    "buildStatus": "not installed or built",
-    "batch": "batch-002",
-    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "revision": "8164f1e423e4e654dd0828a941ba5cdda69f08fe",
+    "preview": "batches/curious-ai-01/index.html",
+    "category": "视觉与动效",
+    "license": "MIT",
+    "browserVisualQA": "not-run",
+    "description": "原Three程序材质有机球体与发光眼睛，指针眯眼/视线跟随和本地idle状态；WebGL失败明确提示，非AI服务。",
+    "buildStatus": "Production build, original shader fidelity, no-WebGL and test-renderer lifecycle/state tests passed; GPU visual QA not run",
+    "previewStatus": "state-tested; GPU visual-pending",
     "gaps": [
-      "Remote ImageKit/Unsplash artwork and fonts not archived or presumed MIT.",
-      "Tailwind v4/React19 and peer dependencies require integration. No site/premium CSS imported.",
-      "Original root scripts inject premium code and change Git hooks. They are retained only as evidence; do not run them. Prepare a separate minimal harness.",
-      "Crypto swap/music/charging are demo UI states, not verified transactions, playback or a real battery monitor. No wallet/API connected.",
-      "No install/build/browser/interaction/mobile validation.",
-      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+      "GPU shader compilation, pixels, browser geometry and performance not visually verified.",
+      "No WebGL: explicit unsupported notice, not a replacement shader or eye-only successful orb.",
+      "Reduced motion freezes noise/initial automatic blink only; original gaze/rotation and pointer state may remain.",
+      "Original visual character only, not an AI service or backend.",
+      "真实生产包包含Three，测试renderer仅独立测试包；生产无WebGL提示路径实际测试，其他GPU状态使用明确mock，不等于shader编译或像素验收。",
+      "后续render/shader/contextlost/resize失败统一停止并清理，隐藏卸载、恢复重置；触控500ms自然回落已测。",
+      "原VERT/FRAG逐字保留；项目、7运行包与Ashima/Stefan噪声家族完整MIT保留，不冒称噪声参考版本字节相同。",
+      "原reduced-motion非完全静止，仍可有视线/旋转/指针反馈；不连接模型或后台。",
+      "封面交Grok，无截图/图片整合或现有图标合并。"
+    ],
+    "knownGaps": [
+      "GPU shader compilation, pixels, browser geometry and performance not visually verified.",
+      "No WebGL: explicit unsupported notice, not a replacement shader or eye-only successful orb.",
+      "Reduced motion freezes noise/initial automatic blink only; original gaze/rotation and pointer state may remain.",
+      "Original visual character only, not an AI service or backend."
+    ],
+    "repository": "https://github.com/aicanvas-me/aicanvas",
+    "kind": "有机交互角色",
+    "batch": "curious-ai-01",
+    "styleTags": [
+      "有机",
+      "材质",
+      "空间感"
+    ],
+    "purposeTags": [
+      "Agent存在感",
+      "交互反馈"
     ]
   },
   {
@@ -11599,36 +11665,38 @@
   },
   {
     "id": "diff2html:multi-file-patch-reader",
-    "title": "Diff2Html · 原版多文件补丁阅读",
+    "title": "Diff2Html · 原版多文件变更阅读",
     "source": "Diff2Html",
-    "revision": "72331ff5d13a8d4d1f11256a7b554dd0d69d7014",
     "repository": "https://github.com/rtfpessoa/diff2html",
-    "sourceFile": "website/templates/pages/demo/demo.ts",
-    "license": "MIT root code; dependencies and embedded icons not fully audited",
-    "description": "原多文件目录、并排/逐行差异、折叠与同步滚动；不是静态差异卡。",
-    "gaps": [
-      "原demo默认自动获取PR并开放URL拉取；必须禁用远程入口并使用明确本地补丁fixture。",
-      "history/站点main代码与highlight/模板依赖CSP及完整LICENSE/NOTICE待闭合，Octicon独立许可未核。",
-      "已有差异卡存在局部重叠；仅完整多文件补丁导航有新增价值，单文件变体不收。",
-      "源码无同文件destroy API；重复render/退出监听需实际测试，不凭此断言必泄漏。",
-      "无可运行preview或像素验收，不计入主图鉴。"
-    ],
-    "upstream": "https://github.com/rtfpessoa/diff2html/blob/72331ff5d13a8d4d1f11256a7b554dd0d69d7014/website/templates/pages/demo/demo.ts",
-    "buildStatus": "source-only; exact source/root license read; not installed, built or runtime-tested",
-    "kind": "完整交互场景",
+    "revision": "72331ff5d13a8d4d1f11256a7b554dd0d69d7014",
+    "upstream": "https://github.com/rtfpessoa/diff2html/tree/72331ff5d13a8d4d1f11256a7b554dd0d69d7014",
+    "website": "https://diff2html.xyz/",
+    "preview": "batches/diff2html-01/multi-file-patch/index.html",
+    "license": "MIT AND BSD-3-Clause AND Apache-2.0",
     "category": "数据与状态",
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-review-next-517",
-    "sourceScope": "Selected original code and full root license only; not runtime dependency closure",
-    "licenseEvidence": {
-      "url": "https://github.com/rtfpessoa/diff2html/blob/72331ff5d13a8d4d1f11256a7b554dd0d69d7014/LICENSE.md",
-      "sha256": "e4fe619d8e4e898dd0d88a0b8b6bb8aa09a16f892a0d1d533be9b886aeae21e9",
-      "scope": "Complete root license; transitive runtime/assets not fully audited"
-    }
+    "kind": "多文件补丁阅读场景",
+    "styleTags": [
+      "代码",
+      "工具结果"
+    ],
+    "purposeTags": [
+      "Agent协作",
+      "代码审阅"
+    ],
+    "batch": "diff2html-01",
+    "browserVisualQA": "not-run",
+    "previewStatus": "DOM-tested; visual-pending",
+    "buildStatus": "Fixed original TS source and precompiled templates; 8 production interaction/cleanup tests passed with scroll geometry substitutes",
+    "description": "原多文件目录、逐行/并排、折叠、高亮与同步滚动；明确本地三文件补丁，不读真实仓库或应用代码。",
+    "behavior": "六类原配置控件、跨文件阅读/Viewed折叠、同步滚动、空补丁和重置。",
+    "gaps": [
+      "直接构建固定原TS/19个Mustache，package版本字符串3.0.0-beta.1不冒称npm同版本产物。",
+      "只读本地原创补丁，不连接远程PR/URL、不应用/提交/执行代码；无clipboard或下载动作。",
+      "Hogan仅构建期编译，浏览器runtime-only且拒绝自定义模板；不放宽默认CSP。",
+      "完整MIT/BSD-3-Clause/Apache-2.0与Octicons原MIT保留；5原SVG规范化路径对应旧16px原件，不含图标字体。",
+      "DOM测试含真实状态/转义/配置/旧节点释放，scrollIntoView为stub；实际滚动几何、像素/触摸/窄屏未验。",
+      "所有封面交Grok，本次未改图片与现有图标条目。"
+    ]
   },
   {
     "id": "fluent-system-color:exodus-selection",
@@ -11672,6 +11740,46 @@
     "purposeTags": [
       "Agent工作流",
       "图标浏览"
+    ]
+  },
+  {
+    "id": "formity:branching-loop-interview",
+    "source": "Formity",
+    "revision": "3d4dab433b8c3040f9727ae3e4bba0044e146ce9",
+    "upstream": "https://github.com/martiserra99/formity/blob/3d4dab433b8c3040f9727ae3e4bba0044e146ce9/apps/react/src/flow.tsx",
+    "license": "MIT root and workspace packages verified; runtime dependencies not audited",
+    "status": "read-only source-only candidate; not built or run",
+    "priority": "conditional-medium",
+    "overlap": [
+      "assistant-elements:question-flow",
+      "surveyjs:project-decision-survey"
+    ],
+    "independentValue": "Original dark focused interview with selected-item-dependent question loop and back navigation",
+    "title": "Formity · 条件循环访谈",
+    "repository": "https://github.com/martiserra99/formity",
+    "website": "https://github.com/martiserra99/formity",
+    "category": "输入与选择",
+    "kind": "条件循环追问表单",
+    "description": "原深色单焦点访谈，按多选结果逐项追问并回退改分支；与已有问卷重叠，独立价值限定为条件循环。未适配，不是Exodus服务。",
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-review-next-519",
+    "buildStatus": "fixed selected source and complete MIT root/workspace texts read; not installed, built or run",
+    "sourceScope": "16 selected original source/license files; no complete runtime audit",
+    "licenseEvidence": {
+      "url": "https://github.com/martiserra99/formity/blob/3d4dab433b8c3040f9727ae3e4bba0044e146ce9/LICENSE",
+      "sha256": "a45bc9e5cb50f7512121d4a745f3d90cd6c3a97d90467317127262bc0b33784c",
+      "scope": "Root and react/system workspace MIT; transitive runtime dependencies not audited"
+    },
+    "gaps": [
+      "与已有SurveyJS/Elements问答重叠；只有按选择逐项循环追问与回退改变范围具独立价值，优先级中等。",
+      "实际bundle及HeadlessUI/Heroicons/HookForm/Zod/Prism/expry依赖与素材许可未全审，不能推断无eval或网络；默认CSP不放宽。",
+      "根与两个workspace完整MIT保留原webkid版权，未按仓库账户擅改作者。",
+      "原流程本地结果不是Agent调用；未安装/构建/运行，媒体、字体、选择减少后的旧答案/重置/键盘/退出尚未验。",
+      "不搬仓库GIF/截图，不计可预览项；封面交Grok。"
     ]
   }
 ]
