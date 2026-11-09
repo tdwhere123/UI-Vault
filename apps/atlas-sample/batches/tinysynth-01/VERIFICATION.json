@@ -74,5 +74,23 @@
   "actual564Compose": true,
   "browserVisualQA": "not-run",
   "audioOutputQA": "not-run",
-  "limitations": "Web Audio nodes/Canvas2D are instrumented boundary stubs; real engine program/edit/voice scheduling and cleanup run. No claim of real rendered pixels, sound quality or physical audio device validation."
+  "limitations": "Web Audio nodes/Canvas2D are instrumented boundary stubs; real engine program/edit/voice scheduling and cleanup run. No claim of real rendered pixels, sound quality or physical audio device validation.",
+  "logoCorrection": {
+    "description": "Missing author logo img replaced with visible g200kg text inside unchanged author URL; no generated image",
+    "changedRuntime": false,
+    "actual581Compose": true,
+    "targetedRegression": {
+      "pass": true,
+      "test": "actual581 compose; unchanged production JS/CSS; g200kg text and unchanged URL; no missing logo img; original five-mode local regression",
+      "modes": [
+        "normal",
+        "unsupported",
+        "early-exit",
+        "pending-exit",
+        "audio-failure"
+      ],
+      "limitations": "Web Audio/Canvas stubs; no native sound or pixel acceptance"
+    },
+    "nativeVisualQA": "not-run"
+  }
 }
