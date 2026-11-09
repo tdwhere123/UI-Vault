@@ -2974,20 +2974,36 @@
   },
   {
     "id": "smoothui:wallet-card",
-    "title": "交互钱包叠卡",
+    "title": "SmoothUI · 卡片材质与虚构余额遮罩",
     "source": "SmoothUI",
-    "license": "MIT (root code notice; external artwork not included)",
-    "upstream": "https://github.com/educlopez/smoothui/tree/c45420a8523ec60a92f7724a2418ab83edaa1425/packages/smoothui/components/wallet-card",
-    "website": "",
-    "buildStatus": "not installed or built",
-    "batch": "batch-002",
-    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "repository": "https://github.com/educlopez/smoothui",
+    "revision": "c45420a8523ec60a92f7724a2418ab83edaa1425",
+    "upstream": "https://github.com/educlopez/smoothui/blob/c45420a8523ec60a92f7724a2418ab83edaa1425/packages/smoothui/components/wallet-card/index.tsx",
+    "website": "https://smoothui.dev/",
+    "preview": "batches/smooth-wallet-01/wallet-card/index.html",
+    "license": "MIT AND ISC AND Apache-2.0",
+    "category": "展示与媒体",
+    "kind": "交互卡片场景",
+    "styleTags": [
+      "材质",
+      "空间感"
+    ],
+    "purposeTags": [
+      "状态展示",
+      "隐私控制"
+    ],
+    "batch": "smooth-wallet-01",
+    "browserVisualQA": "not-run",
+    "previewStatus": "DOM-tested; visual-pending",
+    "buildStatus": "normal/reduced/production real React/Motion interaction tests passed; geometry mocked, native pixels unverified",
+    "description": "原卡片深度、颗粒材质、指针光泽、余额遮罩、账户键盘选择及成员溢出；全部虚构本地数据，无金融服务。",
+    "behavior": "账户切换和焦点、余额隐显、成员展开、空账户边界及中断清理；三账户仍只一族。",
     "gaps": [
-      "Workspace aliases and shared package dependencies require integration; source closure checked, build not attempted.",
-      "Official shared data includes remote generated portraits, scenes, app icons and sample product artwork. Asset URLs preserved for reference; binaries not downloaded and image redistribution rights not assumed.",
-      "Root documentation CSS imports external fumadocs package styles; original lock retained.",
-      "Visual fidelity, animation, mobile behavior, accessibility and interaction correctness not yet tested.",
-      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+      "原生CSS 3D、纹理/光泽合成、触摸和窄屏像素未视觉验收；测试几何为模拟。",
+      "全部金额、末4位、成员为虚构fixture，不连接真实金融账户、不输入或存储卡号、不支付转账。",
+      "仅使用原generic网络图形和成员首字母，不渲染原品牌分支或远程照片；无金融商标授权推定。",
+      "完整11运行包及Tailwind许可保留，含Lucide ISC/Feather MIT与CVA Apache-2.0；不是全资产MIT。",
+      "blur/hidden重置原本地状态，pagehide卸载；图标合并与封面交Grok另行处理。"
     ]
   },
   {
@@ -11548,5 +11564,70 @@
       "图标浏览"
     ],
     "behavior": "113原基形、339 pencil/pop/print SVG保留原文与CyCraft署名；原类别/名称筛选、24项分页、格子与详情三样式查看及readonly原文。"
+  },
+  {
+    "id": "dmn-js:decision-table-editor",
+    "title": "DMN-js · 原版决策规则表编辑器",
+    "source": "DMN-js",
+    "revision": "9a030255f758869b8bf445a465c75eeacd0dbbec",
+    "repository": "https://github.com/bpmn-io/dmn-js",
+    "sourceFile": "packages/dmn-js-decision-table/src/Editor.js",
+    "license": "Custom bpmn.io license (MIT-style + mandatory visible watermark); not plain MIT",
+    "description": "原输入/输出规则矩阵、命中策略、编辑与上下文菜单；不等于真实决策执行服务。",
+    "gaps": [
+      "必须保留原bpmn.io水印代码与完整可见性，不能按纯MIT移除。",
+      "dmn-font/FEEL及Inferno/table-js/diagram-js完整依赖许可与资源未闭合，不包装字体二进制。",
+      "原剪贴板/keybindings、XML/导出入口需本地门控；编辑/撤销/拖动取消/退出未验证。",
+      "无可运行preview或像素验收，不计入主图鉴。"
+    ],
+    "upstream": "https://github.com/bpmn-io/dmn-js/blob/9a030255f758869b8bf445a465c75eeacd0dbbec/packages/dmn-js-decision-table/src/Editor.js",
+    "buildStatus": "source-only; exact source/root license read; not installed, built or runtime-tested",
+    "kind": "完整交互场景",
+    "category": "数据与状态",
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-review-next-517",
+    "sourceScope": "Selected original code and full root license only; not runtime dependency closure",
+    "licenseEvidence": {
+      "url": "https://github.com/bpmn-io/dmn-js/blob/9a030255f758869b8bf445a465c75eeacd0dbbec/LICENSE",
+      "sha256": "5788cf8bd61481776cee1c943595525499a1355c045e9244f92e6c8092c06770",
+      "scope": "Complete root license; transitive runtime/assets not fully audited"
+    }
+  },
+  {
+    "id": "diff2html:multi-file-patch-reader",
+    "title": "Diff2Html · 原版多文件补丁阅读",
+    "source": "Diff2Html",
+    "revision": "72331ff5d13a8d4d1f11256a7b554dd0d69d7014",
+    "repository": "https://github.com/rtfpessoa/diff2html",
+    "sourceFile": "website/templates/pages/demo/demo.ts",
+    "license": "MIT root code; dependencies and embedded icons not fully audited",
+    "description": "原多文件目录、并排/逐行差异、折叠与同步滚动；不是静态差异卡。",
+    "gaps": [
+      "原demo默认自动获取PR并开放URL拉取；必须禁用远程入口并使用明确本地补丁fixture。",
+      "history/站点main代码与highlight/模板依赖CSP及完整LICENSE/NOTICE待闭合，Octicon独立许可未核。",
+      "已有差异卡存在局部重叠；仅完整多文件补丁导航有新增价值，单文件变体不收。",
+      "源码无同文件destroy API；重复render/退出监听需实际测试，不凭此断言必泄漏。",
+      "无可运行preview或像素验收，不计入主图鉴。"
+    ],
+    "upstream": "https://github.com/rtfpessoa/diff2html/blob/72331ff5d13a8d4d1f11256a7b554dd0d69d7014/website/templates/pages/demo/demo.ts",
+    "buildStatus": "source-only; exact source/root license read; not installed, built or runtime-tested",
+    "kind": "完整交互场景",
+    "category": "数据与状态",
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-review-next-517",
+    "sourceScope": "Selected original code and full root license only; not runtime dependency closure",
+    "licenseEvidence": {
+      "url": "https://github.com/rtfpessoa/diff2html/blob/72331ff5d13a8d4d1f11256a7b554dd0d69d7014/LICENSE.md",
+      "sha256": "e4fe619d8e4e898dd0d88a0b8b6bb8aa09a16f892a0d1d533be9b886aeae21e9",
+      "scope": "Complete root license; transitive runtime/assets not fully audited"
+    }
   }
 ]
