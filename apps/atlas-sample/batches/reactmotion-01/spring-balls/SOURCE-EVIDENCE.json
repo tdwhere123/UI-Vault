@@ -1,0 +1,68 @@
+{
+  "repository": "https://github.com/chenglou/react-motion",
+  "revision": "9e3ce95bacaa9a1b259f969870a21c727232cc68",
+  "originalFilesSHA256": {
+    "package.json": "246154d94fd1b8984bb677b46d5fe65f866f1aacb0da0e8bda5f089ac9a4228d",
+    "index.html": "daff3f6a29a2dc7fd092143681a6ce2e309187ec8b431ebcb47ddd7db2dcb4b1",
+    "Demo.jsx": "c3b7ab9deb16b4b07191538833a2d6382341f977d21e442848ad0866a1784b6d",
+    "AUTHORS": "ab292e9245e0241c7b10ce66ff1365d5b7cf6789adebfd5dceffdb8fe0c9df38",
+    "LICENSE": "b6668b94bd2da751d4441d406a86488f8f0f66a2af63bb48e9684d39ea68069b",
+    "src/Types.js": "bd3546b17c911efa9d9e39192e7904eb30e2799a1ba33edbc7bd707915f3bf86",
+    "src/mapToZero.js": "30cbac3c434fd1974b117d4535b0a7940bc499f34fd5b5bb5b8472c21f0b87cb",
+    "src/stepper.js": "393f1c12c94e8cf89bd0c1cbb438ff38a375cdac35ca402e52be7123113d1d5e",
+    "src/presets.js": "63bfe0586c305f4b84a1764dbdd85687652c659c6234f0fc8cdf066358ce2955",
+    "src/react-motion.js": "07692b29630633d07346a5b4018b037167852063511c03d763cfd8b607ea83a3",
+    "src/Motion.js": "7f09e7cfcbae69ed6ef07c1cf85d6831cdff48331868fc1da8108c4b700aa943",
+    "src/StaggeredMotion.js": "8ac2e9021f620c248971a12875b396adc1f73157e3bab05c76a6d7221a964e79",
+    "src/shouldStopAnimation.js": "8059e716f069de8879889577249640af95767d44f95d764c039688c593d52dee",
+    "src/mergeDiff.js": "c526c1ad7107b510322c4d53a10084bd6445a4d46b4ae9ea31d2e71f4e239e24",
+    "src/spring.js": "51ba541bd5277866e13f9cfe4edc7909e93c9dd4f38703d62920b8b18c8f1f2c",
+    "src/reorderKeys.js": "59993872739f1e10ac1fd56a8a922d0e8bba4b5917c805bc72325d52e0584714",
+    "src/stripStyle.js": "cc6cd73218793af3826ff63a0351160c86e60cc3279bf2f0952b8a3e91371892",
+    "src/TransitionMotion.js": "38add4c250b7f494dcfb081d7e3070fc520df638816de6508c03a526bf086879"
+  },
+  "runtimeDependencies": [
+    {
+      "name": "lodash.range",
+      "version": "3.2.0",
+      "license": "MIT"
+    },
+    {
+      "name": "object-assign",
+      "version": "4.1.1",
+      "license": "MIT"
+    },
+    {
+      "name": "performance-now",
+      "version": "2.1.0",
+      "license": "MIT"
+    },
+    {
+      "name": "prop-types",
+      "version": "15.8.1",
+      "license": "MIT"
+    },
+    {
+      "name": "raf",
+      "version": "3.4.1",
+      "license": "MIT"
+    },
+    {
+      "name": "react",
+      "version": "16.14.0",
+      "license": "MIT"
+    },
+    {
+      "name": "react-dom",
+      "version": "16.14.0",
+      "license": "MIT"
+    },
+    {
+      "name": "scheduler",
+      "version": "0.19.1",
+      "license": "MIT"
+    }
+  ],
+  "adaptation": "Original demo2 11-ball grid, colors, reinsertion logic and original ReactMotion spring solver preserved. Babel only strips Flow. React 16.14 compatibility runtime. Host adds reset, blur/touchcancel release, unmount cleanup, snapshot order preservation while hidden, immediate numeric targets for reduced motion, caught render/host/module-initialization failures; iframe-owned scheduler timeout cancellation on all exits including early module failure. No keyboard reorder is claimed. DOM mouse events use original handlers; controlled RAF timestamps are not native touch or pixel trajectory verification.",
+  "visualVerified": false
+}
