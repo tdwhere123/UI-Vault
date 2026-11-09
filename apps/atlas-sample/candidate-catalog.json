@@ -875,19 +875,27 @@
   },
   {
     "id": "cult:fluid-ai-workloads",
-    "title": "cult:fluid-ai-workloads",
     "source": "Cult UI",
-    "license": "MIT",
     "upstream": "https://github.com/nolly-studio/cult-ui/tree/d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
-    "website": "",
-    "buildStatus": "not built",
-    "batch": "batch-001",
     "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/cult-archive-02/source-archive.zip",
     "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/cult-archive-02/manifest.json",
-    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "website": "",
+    "repository": "https://github.com/nolly-studio/cult-ui",
+    "revision": "d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+    "title": "Cult · 流体 AI 工作负载插画",
+    "description": "原SVG流体工作负载完整展示，保留曲线、层次与装饰标记；静态插画，不是运行中的Agent。",
+    "behavior": "原SVG流体工作负载完整展示，保留曲线、层次与装饰标记；静态插画，不是运行中的Agent。",
+    "kind": "原版静态视觉组件",
+    "format": "完整静态场景",
+    "category": "数据与状态",
+    "license": "MIT",
+    "batch": "cult-static-01",
+    "preview": "batches/cult-static-01/fluid-ai-workloads/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime mechanisms and lifecycle tests passed; browser visual QA not run",
     "gaps": [
-      "WebGL if shader library used; unsupported rendering must not be counted as working",
-      "Remote media, commercial brand logos and device trademarks need separate asset review"
+      "Original Cult UI fluid-ai-workloads component and complete default demo retained. Only import aliases are resolved locally; cn retains original extendTailwindMerge soft-shadow class groups, unrelated siteConfig/absoluteUrl removed. Original SVG path data, gradients, filters, clips, text and keycap content not redrawn. useId comes from original component. Original utility classes compiled with Tailwind3.4.17; host supplies light white-card/border theme and system-ui font, no font asset or CDN. Host mount/unmount/error/resource ownership added; hidden unloads static scene and restores on reveal, repeated visible idempotent. SVG reference IDs remain unique and resolve after repeated mounts. This is a static visual asset, not an interactive chart, running Agent workflow, or text-entry keyboard. Keyboard retains original decorative button focus/pressed CSS, no invented command handlers. Each original full scene is one existing ID; no color variants counted. No icon package emitted in this scene. Normal/reduced/earlymodule/earlySVG/recreation-failure tests use actual536 composePreview; every listener, RAF and timeout cleared. No native pixel acceptance is claimed. Reduced motion disables original keycap transitions in CSS; static SVGs have no continuing animation. No networking, storage, clipboard, backend, images, screenshots or binary packaging."
     ]
   },
   {
@@ -977,43 +985,52 @@
   },
   {
     "id": "cult:apple-keyboard",
-    "title": "cult:apple-keyboard",
     "source": "Cult UI",
-    "license": "MIT",
     "upstream": "https://github.com/nolly-studio/cult-ui/tree/d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
-    "website": "",
-    "buildStatus": "not built",
-    "batch": "batch-001",
     "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/cult-archive-02/source-archive.zip",
     "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/cult-archive-02/manifest.json",
-    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "website": "",
+    "repository": "https://github.com/nolly-studio/cult-ui",
+    "revision": "d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+    "title": "Cult · 键帽陈列",
+    "description": "原键盘完整键帽与Tabler图标展示，保留原造型和装饰按压样式；不模拟文字输入。",
+    "behavior": "原键盘完整键帽与Tabler图标展示，保留原造型和装饰按压样式；不模拟文字输入。",
+    "kind": "原版静态视觉组件",
+    "format": "完整静态场景",
+    "category": "数据与状态",
+    "license": "MIT",
+    "batch": "cult-static-01",
+    "preview": "batches/cult-static-01/apple-keyboard/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime mechanisms and lifecycle tests passed; browser visual QA not run",
     "gaps": [
-      "WebGL if shader library used; unsupported rendering must not be counted as working",
-      "Remote media, commercial brand logos and device trademarks need separate asset review",
-      "519轮源码复筛：仅键帽外形布局，无真实按键输入或编辑控制状态。"
-    ],
-    "sourceReview": {
-      "revision": "d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
-      "sha256": "84b4a17d83467511807b6ba3395cbed8b3e3a84a63d745235e582adc7d5c6c30",
-      "decision": "keep source-only; do not count preview",
-      "note": "仅键帽外形布局，无真实按键输入或编辑控制状态。"
-    }
+      "Original Cult UI apple-keyboard component and complete default demo retained. Only import aliases are resolved locally; cn retains original extendTailwindMerge soft-shadow class groups, unrelated siteConfig/absoluteUrl removed. Original SVG path data, gradients, filters, clips, text and keycap content not redrawn. useId comes from original component. Original utility classes compiled with Tailwind3.4.17; host supplies light white-card/border theme and system-ui font, no font asset or CDN. Host mount/unmount/error/resource ownership added; hidden unloads static scene and restores on reveal, repeated visible idempotent. SVG reference IDs remain unique and resolve after repeated mounts. This is a static visual asset, not an interactive chart, running Agent workflow, or text-entry keyboard. Keyboard retains original decorative button focus/pressed CSS, no invented command handlers. Each original full scene is one existing ID; no color variants counted. Keyboard includes original21 imported Tabler icon components with complete MIT. Normal/reduced/earlymodule/earlySVG/recreation-failure tests use actual536 composePreview; every listener, RAF and timeout cleared. No native pixel acceptance is claimed. Reduced motion disables original keycap transitions in CSS; static SVGs have no continuing animation. No networking, storage, clipboard, backend, images, screenshots or binary packaging."
+    ]
   },
   {
     "id": "cult:illustration-graph",
-    "title": "cult:illustration-graph",
     "source": "Cult UI",
-    "license": "MIT",
     "upstream": "https://github.com/nolly-studio/cult-ui/tree/d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
-    "website": "",
-    "buildStatus": "not built",
-    "batch": "batch-001",
     "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/cult-archive-02/source-archive.zip",
     "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/cult-archive-02/manifest.json",
-    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "website": "",
+    "repository": "https://github.com/nolly-studio/cult-ui",
+    "revision": "d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+    "title": "Cult · 图结构插画",
+    "description": "原SVG图结构插画及默认示例，保留节点、线条和滤镜；静态视觉组件，不虚构交互。",
+    "behavior": "原SVG图结构插画及默认示例，保留节点、线条和滤镜；静态视觉组件，不虚构交互。",
+    "kind": "原版静态视觉组件",
+    "format": "完整静态场景",
+    "category": "数据与状态",
+    "license": "MIT",
+    "batch": "cult-static-01",
+    "preview": "batches/cult-static-01/illustration-graph/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime mechanisms and lifecycle tests passed; browser visual QA not run",
     "gaps": [
-      "WebGL if shader library used; unsupported rendering must not be counted as working",
-      "Remote media, commercial brand logos and device trademarks need separate asset review"
+      "Original Cult UI illustration-graph component and complete default demo retained. Only import aliases are resolved locally; cn retains original extendTailwindMerge soft-shadow class groups, unrelated siteConfig/absoluteUrl removed. Original SVG path data, gradients, filters, clips, text and keycap content not redrawn. useId comes from original component. Original utility classes compiled with Tailwind3.4.17; host supplies light white-card/border theme and system-ui font, no font asset or CDN. Host mount/unmount/error/resource ownership added; hidden unloads static scene and restores on reveal, repeated visible idempotent. SVG reference IDs remain unique and resolve after repeated mounts. This is a static visual asset, not an interactive chart, running Agent workflow, or text-entry keyboard. Keyboard retains original decorative button focus/pressed CSS, no invented command handlers. Each original full scene is one existing ID; no color variants counted. No icon package emitted in this scene. Normal/reduced/earlymodule/earlySVG/recreation-failure tests use actual536 composePreview; every listener, RAF and timeout cleared. No native pixel acceptance is claimed. Reduced motion disables original keycap transitions in CSS; static SVGs have no continuing animation. No networking, storage, clipboard, backend, images, screenshots or binary packaging."
     ]
   },
   {
@@ -13490,73 +13507,34 @@
   },
   {
     "id": "majesticons:official-series",
-    "title": "Majesticons 圆角线面图标系列",
     "source": "Majesticons",
     "repository": "https://github.com/halfmage/majesticons",
     "revision": "c4b63e565fd03be0bdc9da578da1e52efbcd8856",
-    "sourcePath": "line/chat-signal-line.svg",
     "upstream": "https://github.com/halfmage/majesticons/blob/c4b63e565fd03be0bdc9da578da1e52efbcd8856/line/chat-signal-line.svg",
-    "license": "MIT (fixed SVG source and complete root text verified; full series/runtime not closed)",
-    "behavior": "原24px线条/实体图形，信号对话和状态对话等适合Agent工作流状态。",
-    "difference": "与Pixelart同作者但非同一绘制系列，连续圆角/线面而非像素；不按line/solid或状态变体拆条。",
-    "gaps": [
-      "仅固定少量原SVG样本及README/完整根许可；未收全系列、不声称完整源码ZIP或可运行预览。",
-      "与既有系列语义重复；一系列仅一条，不按字重、颜色、尺寸或glyph拆页。",
-      "后续需按用途精选、全量SVG安全检查/实际依赖及附加NOTICE核查、离线检索分页与清理测试；浏览器视觉未验。",
-      "不收字体、品牌标志、PNG、封面或截图；封面统一由Grok处理。"
-    ],
-    "description": "原24px线条/实体图形，信号对话和状态对话等适合Agent工作流状态。 与Pixelart同作者但非同一绘制系列，连续圆角/线面而非像素；不按line/solid或状态变体拆条。",
-    "category": "图标系列",
+    "sourcePath": "line/chat-signal-line.svg",
     "licenseEvidence": {
       "url": "https://github.com/halfmage/majesticons/blob/c4b63e565fd03be0bdc9da578da1e52efbcd8856/LICENSE",
       "sha256": "3384c6c2fd1aaaa1f3be9bfd69a63ba858106d54ea7399f06685fd1e5264eb21",
       "scope": "Full fixed root license read with exact original SVG samples; not a whole-series or future-runtime dependency audit"
     },
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-bulk-523",
-    "sourceScope": "3 original SVG text samples + original README + complete root license; no full asset download or preview",
+    "difference": "与Pixelart同作者但非同一绘制系列，连续圆角/线面而非像素；不按line/solid或状态变体拆条。",
+    "title": "Majesticons · 线条与实心图标",
+    "description": "380基形的线条与实心两风格共760原SVG，支持搜索、风格切换、分页及源码详情；整个系列只计一条。",
+    "behavior": "380基形的线条与实心两风格共760原SVG，支持搜索、风格切换、分页及源码详情；整个系列只计一条。",
     "kind": "图标系列",
-    "buildStatus": "fixed original SVG source and complete root license read; not built, run or visually accepted",
-    "sourceEvidence": [
-      {
-        "path": "line/chat-signal-line.svg",
-        "sha256": "70c761a96150b9234e77720ffe7020eb5da9a8531b5cda9328ef38c3b2d37d30",
-        "viewBox": "0 0 24 24",
-        "elements": [
-          "svg",
-          "path"
-        ]
-      },
-      {
-        "path": "line/chat-status-line.svg",
-        "sha256": "1fea2449c8f7b7d61cc4128368d845c20783d284d5db3b125f3bd18001082ac5",
-        "viewBox": "0 0 24 24",
-        "elements": [
-          "svg",
-          "path",
-          "path",
-          "circle"
-        ]
-      },
-      {
-        "path": "solid/chat-text.svg",
-        "sha256": "f525dd278ad29d5578ccb84de0fc94cdc726ab93a0152cec8f153770124758fa",
-        "viewBox": "0 0 24 24",
-        "elements": [
-          "svg",
-          "path"
-        ]
-      }
-    ],
-    "counts": {
-      "independentFamily": 1,
-      "completedPreviews": 0
-    },
-    "format": "图标家族"
+    "format": "图标系列",
+    "category": "图标系列",
+    "license": "MIT",
+    "batch": "majesticons-01",
+    "preview": "batches/majesticons-01/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Complete source-byte and DOM interaction verification passed; browser visual QA not run.",
+    "gaps": [
+      "Browser visual QA not run: actual SVG image pixels/clip rendering and native keyboard defaults unverified.",
+      "Brand/technology/cryptocurrency-associated names retained; MIT does not imply trademark authorization, endorsement or investment advice.",
+      "Original browsing host, not upstream official application."
+    ]
   },
   {
     "id": "actual:envelope-budget-workspace",
@@ -14784,55 +14762,33 @@
   },
   {
     "id": "bytesize-icons:official-series",
-    "title": "Bytesize 32px极简几何图标系列",
     "source": "Bytesize Icons",
     "repository": "https://github.com/danklammer/bytesize-icons",
     "revision": "210d2f81c340c838053eed4c5a0385fbf2a033e9",
-    "sourcePath": "dist/icons/activity.svg",
     "upstream": "https://github.com/danklammer/bytesize-icons/blob/210d2f81c340c838053eed4c5a0385fbf2a033e9/dist/icons/activity.svg",
-    "license": "MIT (selected fixed source verified; complete runtime/asset audit pending)",
-    "behavior": "原32px网格、少量简洁笔画与可控stroke风格，样本活动/代码/消息，适合轻量内容工具。",
-    "difference": "与已有线性图标语义重叠；区别为原32px极简几何体系，不把stroke宽度/大小计新glyph或新系列。",
-    "description": "原32px网格、少量简洁笔画与可控stroke风格，样本活动/代码/消息，适合轻量内容工具。 与已有线性图标语义重叠；区别为原32px极简几何体系，不把stroke宽度/大小计新glyph或新系列。",
-    "gaps": [
-      "只收三个SVG原件，未完成完整系列检索/分页/许可附带与浏览器展示。",
-      "原README有SVG继承描边样式限制；未来需保留原比例、透明填充和描边策略，不宣称任意尺寸像素已验。",
-      "本轮仅固定源及许可文本检查；未安装构建/运行/测试交互或清理，也未验浏览器像素。无封面/截图；所有封面由Grok处理。"
-    ],
-    "category": "图标系列",
-    "format": "图标家族",
-    "kind": "图标系列",
+    "sourcePath": "dist/icons/activity.svg",
     "licenseEvidence": {
       "url": "https://github.com/danklammer/bytesize-icons/blob/210d2f81c340c838053eed4c5a0385fbf2a033e9/LICENSE.md",
       "sha256": "29b7125ec7139a4b56d454eeddbeed7afc312a8fb97f8eaa2edfbb7f823fb481",
       "scope": "Complete fixed root license and selected source files read; runtime dependencies not closed"
     },
-    "sourceEvidence": [
-      {
-        "path": "dist/icons/activity.svg",
-        "sha256": "ff046e55d3bc8dbd613e234212c1d3c71f52235eef8501d2cce640b28c3d37bd"
-      },
-      {
-        "path": "dist/icons/code.svg",
-        "sha256": "553cfd89081d07c4bf3b2241f5b8b3f14f8891a615a271d9ea382d53da70985b"
-      },
-      {
-        "path": "dist/icons/message.svg",
-        "sha256": "eac01b948395d9900f3ed8def03c07e83616f22fab4620324a2ecaa172f7cb79"
-      }
-    ],
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-bulk-524",
-    "sourceScope": "3 selected original source files plus README and complete license; no full runnable archive",
-    "buildStatus": "fixed selected source/license read; no runtime or visual verification",
-    "counts": {
-      "independentFamily": 1,
-      "completedPreviews": 0
-    }
+    "difference": "与已有线性图标语义重叠；区别为原32px极简几何体系，不把stroke宽度/大小计新glyph或新系列。",
+    "title": "Bytesize · 101 原始图标",
+    "description": "完整101原SVG，搜索分页、选择放大、尺寸与颜色；99描边与2品牌实心图标共一个系列。",
+    "behavior": "完整101原SVG，搜索分页、选择放大、尺寸与颜色；99描边与2品牌实心图标共一个系列。",
+    "kind": "图标系列",
+    "format": "图标系列",
+    "category": "图标系列",
+    "license": "MIT",
+    "batch": "bytesize-01",
+    "preview": "batches/bytesize-01/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime mechanisms and lifecycle tests passed; browser visual QA not run",
+    "gaps": [
+      "原版图标与本地图鉴浏览器；品牌图形版权许可不代表商标授权。",
+      "DOM与原SVG字节已验，未做原生像素验收。"
+    ]
   },
   {
     "id": "plop:ink-status-timeline",
@@ -17245,48 +17201,33 @@
   },
   {
     "id": "chartxkcd:handdrawn-data-story",
-    "title": "手绘数据讲解场景",
     "source": "chart.xkcd",
     "repository": "https://github.com/timqian/chart.xkcd",
     "revision": "9a6913fbd64d0327882d11d0cd4d00eeca0d3c36",
-    "sourcePath": "examples/example.html",
     "upstream": "https://github.com/timqian/chart.xkcd/blob/9a6913fbd64d0327882d11d0cd4d00eeca0d3c36/examples/example.html",
-    "website": "https://timqian.com/chart.xkcd/",
-    "license": "MIT (root text verified; runtime/assets not closed)",
-    "behavior": "固定完整examples页面与index.js用真实示例数据绘制手绘柱/线/组合图，适合聊天内轻量数据说明。",
-    "difference": "完整固定示例场景，非单独引擎；同一来源控件/配色/预设不拆数。",
-    "description": "固定完整examples页面与index.js用真实示例数据绘制手绘柱/线/组合图，适合聊天内轻量数据说明。",
-    "gaps": [
-      "HTML通过module引用examples/index.js，后者import ../src需Vite/打包器；不能把HTML拷贝后称可直接运行。两个入口已固定保存。",
-      "ZCOOL KuaiLe远程Google字体及引擎默认xkcd字体需独立许可/本地化审计；MIT库许可不涵盖xkcd漫画作品，勿附原漫画。",
-      "数据为上游静态示例，不是实时GitHub统计；11块图作为一个数据叙事族，不按颜色/图种膨胀数量。",
-      "需闭合d3等依赖及SVG filter ID隔离、销毁、resize、键盘tooltip和可读数据表；未做功能/可访问性验收。",
-      "固定源码及完整根许可已存证；未构建、未运行、未截图，completedPreviewCount=0。"
-    ],
-    "category": "数据与状态",
+    "sourcePath": "examples/example.html",
     "licenseEvidence": {
       "url": "https://github.com/timqian/chart.xkcd/blob/9a6913fbd64d0327882d11d0cd4d00eeca0d3c36/LICENSE",
       "sha256": "35e14b59e62634be50f65371ca4041bde968562151be4d6039e42a3a6872a8bd",
       "scope": "Complete original root license retained; runtime/media separate"
     },
-    "sourceSha256": "731194c2d6e4eb746d131e88e74ba47c78a2c34ee20df66736bb06db53d273b6",
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-style-529",
-    "sourceScope": "Selected fixed original source and root license; full read-only repo clone retained privately",
-    "kind": "原版风格组件族（仅来源）",
-    "buildStatus": "Fixed source inspected; not built or visually accepted",
-    "additionalSourceEvidence": [
-      {
-        "sourcePath": "examples/index.js",
-        "url": "https://github.com/timqian/chart.xkcd/blob/9a6913fbd64d0327882d11d0cd4d00eeca0d3c36/examples/index.js",
-        "sha256": "c74b6e46e969b000837c47998fac2d56de9e748e8c41b4357556a66261546847"
-      }
-    ],
-    "adaptationPriority": "preferred"
+    "difference": "完整固定示例场景，非单独引擎；同一来源控件/配色/预设不拆数。",
+    "website": "https://timqian.com/chart.xkcd/",
+    "title": "Chart.xkcd · 手绘收入曲线",
+    "description": "原月收入Plan/Reality双曲线、图例与悬停读数；固定示例数据，系统字体替代原嵌入字体。",
+    "behavior": "原月收入Plan/Reality双曲线、图例与悬停读数；固定示例数据，系统字体替代原嵌入字体。",
+    "kind": "原版手绘图表",
+    "format": "完整交互场景",
+    "category": "数据与状态",
+    "license": "MIT AND BSD-3-Clause AND ISC",
+    "batch": "chartxkcd-01",
+    "preview": "batches/chartxkcd-01/income-line/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime mechanisms and lifecycle tests passed; browser visual QA not run",
+    "gaps": [
+      "Original complete examples/index.js Line scene: Monthly income of an indie developer, Plan/Reality ten-month values, original monotoneX paths, axes, labels, handdrawn filter, legend and mouse tooltip. Original source engine preserved except two explicit adaptations: utils/addFont.js replaced by no-op to omit unconditional embedded base64 WOFF; addLegend imports an owned timeout adapter so its original 10ms deferred geometry work is canceled on hidden/exit and caught on failure. Original supported fontFamily option uses system-ui; HTML Google ZCOOL stylesheet omitted. Original xkcd glyph typography is NOT reproduced. No binary/font encoding is published. Root source contains original font helper privately only for provenance, never bundled or offered as public asset. Other changes are a bounded host: positive-width defer, responsive max-width, hidden clears transient hover chart then visible restores same fixed data, resize rebuild, error status and exact disposal of D3 handlers and legend timeout. This original chart has no drawing animation; reduced motion has same static behavior. It is a fixed illustrative fixture, not user financial information or live data. Source entry selects Line directly, so dayjs is not an actual runtime dependency; 10 parsed packages are enumerated from esbuild inputs: 9 D3 packages emit runtime bytes; internmap is parsed but entirely tree-shaken according to outputs.inputs, with ISC text conservatively retained (10 license texts, not 10 emitted runtime packages). Tests run real D3 path/tooltip code with 400px width and synthetic getBBox/getComputedTextLength/mouse coordinates, not native geometry, visual filter, pixel or accessibility acceptance. No keyboard tooltip support is claimed."
+    ]
   },
   {
     "id": "psone:console-control-scene",
