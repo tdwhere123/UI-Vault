@@ -44,7 +44,7 @@ test('catalog raster declarations survive adapter and reach iframe consumer thro
  const page='<head><link rel="stylesheet" href="runtime.css"></head><script src="runtime.js"></script>';
  const cache={get:async path=>path.endsWith('index.html')?page:path.endsWith('.js')?'window.observed=window.__atlasAssets["a.png"];':'img{}'};
  const loader=createPreviewLoader({cache,mediaLoader:(assets,{signal})=>loadMediaAssets(assets,options({...b,signal,fetcher:async()=>{fetched++;return new Response(bytes,{headers:{'content-type':'image/png'}})}}))});
- await loader.mount(f,item);assert.equal(fetched,1);const context={window:{}};runInNewContext(f.srcdoc.match(/<script>([\s\S]*?)<\/script>/)[1],context);assert.equal(context.window.observed,b.made[0]);assert.ok(Object.isFrozen(context.window.__atlasAssets));loader.release(f);assert.deepEqual(b.revoked,b.made);
+ await loader.mount(f,item);assert.equal(fetched,1);const context={window:{}};runInNewContext([...f.srcdoc.matchAll(/<script>([\s\S]*?)<\/script>/g)].at(-1)[1],context);assert.equal(context.window.observed,b.made[0]);assert.ok(Object.isFrozen(context.window.__atlasAssets));loader.release(f);assert.deepEqual(b.revoked,b.made);
  // Invalid catalog entries must not silently turn into undeclared fallback media.
  const bad=adaptCandidate({...raw,runtime:{assets:[{...entry,path:'https://external.test/a.png'}]}});let errors=0;await loader.mount(f,bad,{onError:()=>errors++});assert.equal(errors,1);assert.equal(fetched,1);
 });
