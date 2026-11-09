@@ -1,0 +1,672 @@
+{
+  "repository": "https://github.com/jakearchibald/svgomg",
+  "revision": "f925656d40a507c512bf95ee14ad16445a4ad3ed",
+  "sourcePath": "src/index.html + src/js/page/main-controller.js",
+  "fixedSourceAcquisition": "Official codeload fixed SHA; UTF8 files SHA256 retained, not claimed independent Git-blob verification.",
+  "fixedTextFiles": [
+    {
+      "path": ".editorconfig",
+      "sha256": "360e880d550a1b6904d757c1525f303faa297257109784b931e5f0599f7f74f7"
+    },
+    {
+      "path": ".gitattributes",
+      "sha256": "fd3cf3b51ed60f9094d05c828e3bf075d50e50ef6f820032d5eae690d3536576"
+    },
+    {
+      "path": ".github/dependabot.yml",
+      "sha256": "76956e515bae1ec1d1d471db1cd5617144f9f5e01f8f3c450ab883dd10388ddf"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "sha256": "c4b3cc36dd5ed5ba293c1732c3d6d12b6425989d76c7d36027f0753127a88005"
+    },
+    {
+      "path": ".github/workflows/codeql.yml",
+      "sha256": "6a4417df845ecd2e9750b30bc20de5cefb8493a1c81271300b802ad50dcb945d"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "49de4fcc55a05e56242287bb30e57e20d18233b4d3ed0c3a18b20cc7822f5d9e"
+    },
+    {
+      "path": ".prettierrc",
+      "sha256": "2523c84022f711ac9793535e709a65e34d6fb25e2315614bc817248debe03bb1"
+    },
+    {
+      "path": ".stylelintrc",
+      "sha256": "ef84e33ffcb05e456ec5cc3f54163cb3fea143908da82945d461ee13fd3886ae"
+    },
+    {
+      "path": "LICENSE.md",
+      "sha256": "fc238e99233704853d397eb25d538edfd5f2ddb2ad86d903bb33af99753897bb"
+    },
+    {
+      "path": "README.md",
+      "sha256": "721da79f329a9f6a14430e092ec7edbe5a2d6b39cbd73ba7525a80f18fd746b3"
+    },
+    {
+      "path": "gulpfile.js",
+      "sha256": "ac5b4f38788164eab74cd7d527b2aeb8b4c5da80580204b953f6853572d6c664"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "a0627bc2f0feffcd527e6841b7d51bbef7603bfabbf9c295c3c77320ee928fac"
+    },
+    {
+      "path": "package.json",
+      "sha256": "28f088b2a202cf76436779a519deec0e80204973104642f9c0a3d6d80f543284"
+    },
+    {
+      "path": "src/.well-known/assetlinks.json",
+      "sha256": "51f2d129deb569a767134c1e371b41e184054b7f5d27e49bfb16ad0b317803ce"
+    },
+    {
+      "path": "src/changelog.json",
+      "sha256": "4c086a413f1cdd4c47628c343d41b0209c57dac26cbe966de1890a36b1b00354"
+    },
+    {
+      "path": "src/config.json",
+      "sha256": "54cf1c98fc23df61aacd5365e78712accfac27d551e2f15f860468483bb2c7c3"
+    },
+    {
+      "path": "src/css/_components.scss",
+      "sha256": "cce9c3ab8d2ede2ff9e57f266ef29a2ec48cd3aff856de7295d683818d9e9e98"
+    },
+    {
+      "path": "src/css/_fonts.scss",
+      "sha256": "6ed257283e27df6ac4ef06b366279c33b71ad97eed109d6c4d30b1905d6a7851"
+    },
+    {
+      "path": "src/css/_global.scss",
+      "sha256": "3a56442c8f739971c3006bb3bd94b85979ab72b83b8a084e02be034aa386ca7e"
+    },
+    {
+      "path": "src/css/_main-layout.scss",
+      "sha256": "c8b2ebb32954a04e9ac43fe6a8f90fd407095e1e232df792111ea1cb3e0151fe"
+    },
+    {
+      "path": "src/css/_utils.scss",
+      "sha256": "918fcd8e5cdef0d8592567c77d57eb21f2feea6cc88d50ec5a332b7edaba395b"
+    },
+    {
+      "path": "src/css/all.scss",
+      "sha256": "0a2a9d125f9d29f5e68cfb369dab8ac9c2a29f03341dd58445f2948e39b03d55"
+    },
+    {
+      "path": "src/css/components/_changelog.scss",
+      "sha256": "3950a9b790c33c7d13f84b6ac5bf2f06019506cd91e4d41d14642864d6f71df2"
+    },
+    {
+      "path": "src/css/components/_code-output.scss",
+      "sha256": "c24e84c8c8f6dd6c5e5f57fff4d6abdc12abd9f8ef8299bb2d9563544abddf03"
+    },
+    {
+      "path": "src/css/components/_drop-overlay.scss",
+      "sha256": "842426278bb2f14e10a81acc07da30a261be87db154002aa5e41fba10179498c"
+    },
+    {
+      "path": "src/css/components/_floating-action-button.scss",
+      "sha256": "fadad42fa4f17391687e092dc211c7ee26cac1054999376ba8084b6c68656ae9"
+    },
+    {
+      "path": "src/css/components/_main-menu.scss",
+      "sha256": "cea2e56d5847bf7a33dee7825102207d0e004f9b6f1aeba7cf93dd6276b96a31"
+    },
+    {
+      "path": "src/css/components/_material-slider.scss",
+      "sha256": "aace08eb273781937dc7ff90c961db36ee414fb31832f211c7d95a1c58c21049"
+    },
+    {
+      "path": "src/css/components/_material-switch.scss",
+      "sha256": "42ed3d6f5721feb4aa3f0fa081d665534799fac74619afa1e10a840cb56ce5dd"
+    },
+    {
+      "path": "src/css/components/_material-tabs.scss",
+      "sha256": "e275cd7b65538774631095e64c97c29ac20ef20e52592ac7308d1ef6d4ea0972"
+    },
+    {
+      "path": "src/css/components/_output.scss",
+      "sha256": "f1181e7a656c1ace576b8310ec29dcc402f5aca9535deacae327c53f356a1508"
+    },
+    {
+      "path": "src/css/components/_preloader.scss",
+      "sha256": "5b390c01cf775cf646822cee97ab24d407579a1a79df238b8093608855b1a535"
+    },
+    {
+      "path": "src/css/components/_prism.scss",
+      "sha256": "6d01096e07aa189d5c402f76ab2f77bc8370b37a3b7180ce7f33c876a953727e"
+    },
+    {
+      "path": "src/css/components/_results.scss",
+      "sha256": "9fb662a4a8bf139e4d8d4839c10019cd064de6b9d1ad4786c9710f15f0b0ac05"
+    },
+    {
+      "path": "src/css/components/_ripple.scss",
+      "sha256": "e436373899200a40867a32fea7662470cf55ab7ffe5832ad39de6ce4b092c42f"
+    },
+    {
+      "path": "src/css/components/_settings.scss",
+      "sha256": "c7a4f05853cdf85e886f96552e2b79f29704cca3187cf2ed49f5a82322e4ca83"
+    },
+    {
+      "path": "src/css/components/_spinner.scss",
+      "sha256": "0f1543e102ad9e9f1230d7d4f1b750ab0a296ae26ef05dff9e2d979322cca30f"
+    },
+    {
+      "path": "src/css/components/_svg-output.scss",
+      "sha256": "a7c485c174ff7b74461a11209666adc28904becd022655dbf62a61b483a784bd"
+    },
+    {
+      "path": "src/css/components/_toasts.scss",
+      "sha256": "2e9dfb3390002a022c58685e0af7d1ca341f2facf2ebc1525bba048ba467aaa1"
+    },
+    {
+      "path": "src/css/components/_toolbar.scss",
+      "sha256": "275194718ce53ea11f02db0320e608b0b5fc8ae180337aa649663e616fa25462"
+    },
+    {
+      "path": "src/css/head.scss",
+      "sha256": "8585e47c2bc80902676657b5cf6b30da80c55baa4b3b8f1401aa84c0a0c6b96c"
+    },
+    {
+      "path": "src/imgs/maskable.svg",
+      "sha256": "ef70956a72ff3bbd21fa31fab92d97c88647969d12fa52d96ca6110030a451cf"
+    },
+    {
+      "path": "src/index.html",
+      "sha256": "202535ff92e6c397717210bfca5cd651e6f1b33d9ae0d1cebd69a6466ff810d1"
+    },
+    {
+      "path": "src/js/gzip-worker/index.js",
+      "sha256": "020becc908b9d114364864442a4b11d5003dfb43bf76b5ab37edb84ea7d7962e"
+    },
+    {
+      "path": "src/js/page/gzip.js",
+      "sha256": "8ef470005796eb4bd6747810e653c63c2ba75ab8ff79614b003c65ecadb40f09"
+    },
+    {
+      "path": "src/js/page/index.js",
+      "sha256": "a0ee7d1931b5cd2e757f91b47a1b6b8bf20f1d1609493335605c43047ccebebd"
+    },
+    {
+      "path": "src/js/page/main-controller.js",
+      "sha256": "9cbb7573dae8c58514bc17259f2d772b1c0c8826d335addf64352296075b520a"
+    },
+    {
+      "path": "src/js/page/prism.js",
+      "sha256": "71c8ad8127d296f6f454108ea536e330581680882a7ffcf44c3ae875a4d0f95f"
+    },
+    {
+      "path": "src/js/page/results-cache.js",
+      "sha256": "670a6885ada320a5ccb82318e24c743cf9c164675828def3d28390ec21185d79"
+    },
+    {
+      "path": "src/js/page/svg-file.js",
+      "sha256": "fbe21ebfa4fc6792457d7dff0e5910971e2683d1e326ded2ec86ae30e35349d8"
+    },
+    {
+      "path": "src/js/page/svgo.js",
+      "sha256": "d85cfa884ee69bb6951ee48ab97bffb68f202411080196016c2ba6c6aa180349"
+    },
+    {
+      "path": "src/js/page/ui/bg-fill-button.js",
+      "sha256": "a5432823f26754cb4052ce2c0d4c20818b5d122c7a8a82678163bc07ff72c3c9"
+    },
+    {
+      "path": "src/js/page/ui/changelog.js",
+      "sha256": "b7f37c2eab5af933dfe6d789bde4ea42cd88cf59f4db4a0f3cc611377d314557"
+    },
+    {
+      "path": "src/js/page/ui/code-output.js",
+      "sha256": "bd3986a3a56fe490fbd49fbf2800c8d6345c5da474fdea466f7f1b8eec3632e9"
+    },
+    {
+      "path": "src/js/page/ui/copy-button.js",
+      "sha256": "8fdd73673eec61c0d4a3dfeff3097032640defae3db30934d24229e39a6cd1eb"
+    },
+    {
+      "path": "src/js/page/ui/download-button.js",
+      "sha256": "51117364be1af4908e7dff70df85279b73afbf4497921acebd54d2c50abca5d7"
+    },
+    {
+      "path": "src/js/page/ui/file-drop.js",
+      "sha256": "9d497c60202e8274a90c980430c3fb254b722ff7d6883ac2336ede4d2ae5149a"
+    },
+    {
+      "path": "src/js/page/ui/floating-action-button.js",
+      "sha256": "3c18fcaf02414d79b184adfe404ff5da783ca9dae3936db90accec545ee0d4bd"
+    },
+    {
+      "path": "src/js/page/ui/main-menu.js",
+      "sha256": "cfabc96c875c2184f18f7b7474aa64198af210103ef51652addabc54c6f97ec5"
+    },
+    {
+      "path": "src/js/page/ui/main-ui.js",
+      "sha256": "e447a4f2033352186a8c8ec6d3f4cc44af09193e206a18b79d40a5d8f6cb09e5"
+    },
+    {
+      "path": "src/js/page/ui/material-slider.js",
+      "sha256": "d8761ca4cefedf68d56f0539ff9bfa2157f96b9de268db3308d533529f2d039d"
+    },
+    {
+      "path": "src/js/page/ui/output.js",
+      "sha256": "a80aa57ebbc66ac3e1c31ea11a0d516269a160a586760836d0f085a3566e39ee"
+    },
+    {
+      "path": "src/js/page/ui/pan-zoom.js",
+      "sha256": "0270bc873fc92e6c42682b044fed81dd21ec1231180ccdc99d57d253d69f0335"
+    },
+    {
+      "path": "src/js/page/ui/preloader.js",
+      "sha256": "43d46af9e50abfef63e5b563f057a279d07a749809e8e7b1eb1a06119ce7e84d"
+    },
+    {
+      "path": "src/js/page/ui/results-container.js",
+      "sha256": "13412d0274bb2a5398471bc512df1f1bd2ca6773fe22767c17733d049cfee66e"
+    },
+    {
+      "path": "src/js/page/ui/results.js",
+      "sha256": "6b82a3da31f7d08e6e164ce4edef2f30fcec575d2f44a7dade6d6255724aca9c"
+    },
+    {
+      "path": "src/js/page/ui/ripple.js",
+      "sha256": "f84454fc89966daa8e2efed2b3ff0e34f714bb7192f5edefe65be58fc0738d1f"
+    },
+    {
+      "path": "src/js/page/ui/settings.js",
+      "sha256": "776713de522e3567f955b817fdde0b0c025f1415950a9ab40cef8993a1e63f2f"
+    },
+    {
+      "path": "src/js/page/ui/spinner.js",
+      "sha256": "4b5fe1f51c5eb02cee3110eeb5a8556f8393e351b11f6fed4d4435c7bdf831f4"
+    },
+    {
+      "path": "src/js/page/ui/svg-output.js",
+      "sha256": "91ffeb398987cca9e0c30b15e0e482d4ac976c47ad29799cdeb5a04ac470d9c5"
+    },
+    {
+      "path": "src/js/page/ui/toasts.js",
+      "sha256": "ed0d398d77b072be42beb184b04656d6a9845ffb5e604f86fc4af71cafbb8177"
+    },
+    {
+      "path": "src/js/page/ui/view-toggler.js",
+      "sha256": "18e776f6504ffc3677e377bb3bd44f00fd2a9ae2addacaee31872d0b1779cec1"
+    },
+    {
+      "path": "src/js/page/utils.js",
+      "sha256": "be797701e5d2d5847e18347dba6f6c0274d8ed5595cb11141fa0c09f89070674"
+    },
+    {
+      "path": "src/js/page/worker-messenger.js",
+      "sha256": "63cb5b5ad1f68f50fe490fc10bbf8ecc4e185889ca51bb4e041ac6a2f8ed3b76"
+    },
+    {
+      "path": "src/js/prism-worker/index.js",
+      "sha256": "1b1206549371903b3082cd742c3e67c4a987425f458abaf02b552570ab39f743"
+    },
+    {
+      "path": "src/js/prism-worker/prism-config.js",
+      "sha256": "662d129d6c7a0a11f9ab71342b600c6fe5d5ca27bd6347799fa7b806b1361add"
+    },
+    {
+      "path": "src/js/svgo-worker/index.js",
+      "sha256": "6dc6233c19d6f859fcce91bec40f25ed70b6e35457da970393f3dd38c9ebf650"
+    },
+    {
+      "path": "src/js/sw/index.js",
+      "sha256": "ff5bd6deb91a0a12bb5cdc3d25db66ad9415ff72bf0bed373234e6dca207d902"
+    },
+    {
+      "path": "src/js/utils/storage.js",
+      "sha256": "6b9fd0f4326ab77195afde0cb7418d23982ee203549a29c9463c723b71ee56cf"
+    },
+    {
+      "path": "src/manifest.json",
+      "sha256": "e05dec3a4312caf57e98a8f97faafe75356d93b2671102c330317a32d3015b48"
+    },
+    {
+      "path": "src/partials/icons/contribute.svg",
+      "sha256": "57356a76f7e521adefdab634ba1ab90d05508c84d40b5ed19c5b5a2e33529e3c"
+    },
+    {
+      "path": "src/partials/icons/demo.svg",
+      "sha256": "e34bdbc5db019866ce921af258234f04fa0321581df0f99dc764f7616c1e4de3"
+    },
+    {
+      "path": "src/partials/icons/logo.svg",
+      "sha256": "759cf0adcbd94c0a8b0313fe3d9d4eecf8bcaa218adbc98b07179731217eba67"
+    },
+    {
+      "path": "src/partials/icons/menu.svg",
+      "sha256": "a2269aa2b4a4a2c77f0b914a4b1bcba7ef8979ea1a0474ba0d590939602d73ea"
+    },
+    {
+      "path": "src/partials/icons/open.svg",
+      "sha256": "f05b887f7ab1e0f1e203a5fdb5aaa92f4730c4cc832707c10927e4abfad671e5"
+    },
+    {
+      "path": "src/partials/icons/paste.svg",
+      "sha256": "de7bf8b2a8def6fcd3bdcb10a708a88b4675b7afd3581508585086462ecb4138"
+    },
+    {
+      "path": "src/partials/material-switch.html",
+      "sha256": "a9aba8a2712b3f48264eea1d3d0079f3db0e1c9fd6fe64d02f86773606cc578a"
+    },
+    {
+      "path": "src/test-svgs/car-lite-green.svg",
+      "sha256": "44a1eb6c3df49146570af1c4bb36dcbbf36b844462ac6f8ce28a4263d5b1212f"
+    },
+    {
+      "path": "src/test-svgs/car-lite.svg",
+      "sha256": "9b940dfea98e7b6e19fa692848591e01152f4802f0e9f434b09d098e41e7ebfe"
+    },
+    {
+      "path": "src/test-svgs/car.svg",
+      "sha256": "d024b28bd5eae27f1eb8fae42ce0604bd02606cd8dd07bc18ea4da0e92a66baa"
+    },
+    {
+      "path": "src/test-svgs/fail.svg",
+      "sha256": "e1555cf37872b673dda23b2dbd0da6e1229bf2b67dbc984d238c8f23302f337c"
+    },
+    {
+      "path": "src/test-svgs/flag.svg",
+      "sha256": "1c74aa1c3baab24afb3afe1b46b4cc3c300d65ea13424aadfc7e2ea0ca0d0a8b"
+    },
+    {
+      "path": "src/test-svgs/github.svg",
+      "sha256": "948de2342c8a3d21c37528c6a15e23e8619510feaba927d806f9bd548daaca01"
+    },
+    {
+      "path": "src/test-svgs/save.svg",
+      "sha256": "8803942092d4d613f674ca76fe29a5955e4f4575e20d5302c473437e55561cd5"
+    },
+    {
+      "path": "src/test-svgs/svgo-logo.svg",
+      "sha256": "b2358040a0fe309ad17eca562ad602a61884995d092e97f5796109fc457e4b3c"
+    },
+    {
+      "path": "src/test-svgs/tiger.svg",
+      "sha256": "eab0c137e4298d91b00113c58072b03c097c82a6e3bd8862fce9fc40856e5035"
+    }
+  ],
+  "runtimeDependencies": [
+    {
+      "name": "boolbase",
+      "version": "1.0.0",
+      "license": "ISC",
+      "path": "node_modules/boolbase",
+      "scope": "positive-emitted source runtime",
+      "licenseFiles": [
+        {
+          "path": "license-evidence/boolbase-ISC-supplement.txt",
+          "sha256": "ac751fcefa932c2bb60faca1adb69cee695fe0e6e8c2707fa843815c20eee7ab"
+        }
+      ]
+    },
+    {
+      "name": "css-select",
+      "version": "5.2.2",
+      "license": "BSD-2-Clause",
+      "path": "node_modules/css-select",
+      "scope": "positive-emitted source runtime",
+      "licenseFiles": [
+        {
+          "path": "node_modules/css-select/LICENSE",
+          "sha256": "cb992345949ccd6e8394b2cd6c465f7b897c864f845937dbf64e8997f389e164"
+        }
+      ]
+    },
+    {
+      "name": "css-tree",
+      "version": "3.2.1",
+      "license": "MIT",
+      "path": "node_modules/css-tree",
+      "scope": "positive-emitted source runtime",
+      "licenseFiles": [
+        {
+          "path": "node_modules/css-tree/LICENSE",
+          "sha256": "719a251ceca49c057ea90a1152af6546b767ec88e6d573bb6324454267b32c22"
+        }
+      ]
+    },
+    {
+      "name": "css-what",
+      "version": "6.2.2",
+      "license": "BSD-2-Clause",
+      "path": "node_modules/css-what",
+      "scope": "positive-emitted source runtime",
+      "licenseFiles": [
+        {
+          "path": "node_modules/css-what/LICENSE",
+          "sha256": "cb992345949ccd6e8394b2cd6c465f7b897c864f845937dbf64e8997f389e164"
+        }
+      ]
+    },
+    {
+      "name": "csso",
+      "version": "5.0.5",
+      "license": "MIT",
+      "path": "node_modules/csso",
+      "scope": "positive-emitted source runtime",
+      "licenseFiles": [
+        {
+          "path": "node_modules/csso/LICENSE",
+          "sha256": "911677be838162004a194bc653a2d6854ae5f55ea18270a456e841aa34caae56"
+        }
+      ]
+    },
+    {
+      "name": "css-tree",
+      "version": "2.2.1",
+      "license": "MIT",
+      "path": "node_modules/csso/node_modules/css-tree",
+      "scope": "positive-emitted source runtime",
+      "licenseFiles": [
+        {
+          "path": "node_modules/csso/node_modules/css-tree/LICENSE",
+          "sha256": "be1fdbf86bfd2c72d8bce3b46fb28b24dd5e147b7d299c810c599509ddc0a66e"
+        }
+      ]
+    },
+    {
+      "name": "dom-serializer",
+      "version": "2.0.0",
+      "license": "MIT",
+      "path": "node_modules/dom-serializer",
+      "scope": "positive-emitted source runtime",
+      "licenseFiles": [
+        {
+          "path": "node_modules/dom-serializer/LICENSE",
+          "sha256": "94cfe87de9b178e8fee313a19178e625129e2ce559db32e772e7bd95114ee6ff"
+        }
+      ]
+    },
+    {
+      "name": "domelementtype",
+      "version": "2.3.0",
+      "license": "BSD-2-Clause",
+      "path": "node_modules/domelementtype",
+      "scope": "positive-emitted source runtime",
+      "licenseFiles": [
+        {
+          "path": "node_modules/domelementtype/LICENSE",
+          "sha256": "cb992345949ccd6e8394b2cd6c465f7b897c864f845937dbf64e8997f389e164"
+        }
+      ]
+    },
+    {
+      "name": "domhandler",
+      "version": "5.0.3",
+      "license": "BSD-2-Clause",
+      "path": "node_modules/domhandler",
+      "scope": "positive-emitted source runtime",
+      "licenseFiles": [
+        {
+          "path": "node_modules/domhandler/LICENSE",
+          "sha256": "cb992345949ccd6e8394b2cd6c465f7b897c864f845937dbf64e8997f389e164"
+        }
+      ]
+    },
+    {
+      "name": "domutils",
+      "version": "3.2.2",
+      "license": "BSD-2-Clause",
+      "path": "node_modules/domutils",
+      "scope": "positive-emitted source runtime",
+      "licenseFiles": [
+        {
+          "path": "node_modules/domutils/LICENSE",
+          "sha256": "cb992345949ccd6e8394b2cd6c465f7b897c864f845937dbf64e8997f389e164"
+        }
+      ]
+    },
+    {
+      "name": "entities",
+      "version": "4.5.0",
+      "license": "BSD-2-Clause",
+      "path": "node_modules/entities",
+      "scope": "positive-emitted source runtime",
+      "licenseFiles": [
+        {
+          "path": "node_modules/entities/LICENSE",
+          "sha256": "cb992345949ccd6e8394b2cd6c465f7b897c864f845937dbf64e8997f389e164"
+        }
+      ]
+    },
+    {
+      "name": "nanoevents",
+      "version": "7.0.1",
+      "license": "MIT",
+      "path": "node_modules/nanoevents",
+      "scope": "positive-emitted source runtime",
+      "licenseFiles": [
+        {
+          "path": "node_modules/nanoevents/LICENSE",
+          "sha256": "f20adb7ae92bfb7fde52791839ff1714564b4ea60a4cd031d77208a521592a4e"
+        }
+      ]
+    },
+    {
+      "name": "nth-check",
+      "version": "2.1.1",
+      "license": "BSD-2-Clause",
+      "path": "node_modules/nth-check",
+      "scope": "positive-emitted source runtime",
+      "licenseFiles": [
+        {
+          "path": "node_modules/nth-check/LICENSE",
+          "sha256": "cb992345949ccd6e8394b2cd6c465f7b897c864f845937dbf64e8997f389e164"
+        }
+      ]
+    },
+    {
+      "name": "pako",
+      "version": "2.0.4",
+      "license": "(MIT AND Zlib)",
+      "path": "node_modules/pako",
+      "scope": "positive-emitted source runtime",
+      "licenseFiles": [
+        {
+          "path": "node_modules/pako/LICENSE",
+          "sha256": "a04665b3b2de56c66730c1f720f528175739e4104f79073614aa611da1e85539"
+        }
+      ]
+    },
+    {
+      "name": "prismjs",
+      "version": "1.29.0",
+      "license": "MIT",
+      "path": "node_modules/prismjs",
+      "scope": "positive-emitted source runtime",
+      "licenseFiles": [
+        {
+          "path": "node_modules/prismjs/LICENSE",
+          "sha256": "2b947f0901a7ffcf08a89957da9783c0e9c6e72cb6ce8e959f501ab5409e4d2b"
+        }
+      ]
+    },
+    {
+      "name": "sax",
+      "version": "1.6.1",
+      "license": "BlueOak-1.0.0",
+      "path": "node_modules/sax",
+      "scope": "positive-emitted source runtime",
+      "licenseFiles": [
+        {
+          "path": "node_modules/sax/LICENSE.md",
+          "sha256": "8a1af140fdfbf5afd3df27f7e662f989c5b963a300020dfafce42033cae9e004"
+        }
+      ]
+    },
+    {
+      "name": "source-map-js",
+      "version": "1.2.2",
+      "license": "BSD-3-Clause",
+      "path": "node_modules/source-map-js",
+      "scope": "positive-emitted source runtime",
+      "licenseFiles": [
+        {
+          "path": "node_modules/source-map-js/LICENSE",
+          "sha256": "6cb0631f71c7749763fd3dd1d5bee52dd1070ec17f2edc1710079ad070bd2fbd"
+        }
+      ]
+    },
+    {
+      "name": "svgo",
+      "version": "4.0.0",
+      "license": "MIT",
+      "path": "node_modules/svgo",
+      "scope": "positive-emitted source runtime",
+      "licenseFiles": [
+        {
+          "path": "node_modules/svgo/LICENSE",
+          "sha256": "d2b5640808aeec9c243152ae733cf9cca3a86189ad7817bf50335290dbb31012"
+        }
+      ]
+    }
+  ],
+  "boolbaseLicenseEvidence": {
+    "npmRegistrySHA256": "0f174cb56031a703e8632781d13bea5e213bbbd7bac38bec88ee145987064cc6",
+    "packageSHA256": "ca09c0dccbfc43be6be0ac89e9ffa19b64b30f9c74c64da27f719a7244a25e30",
+    "originalSource": "module.exports = {\n\ttrueFunc: function trueFunc(){\n\t\treturn true;\n\t},\n\tfalseFunc: function falseFunc(){\n\t\treturn false;\n\t}\n};",
+    "qualification": "Official package SPDX ISC, author Felix Boehm; no upstream standalone file/gitHead. Explicit standard ISC supplement without invented copyright, not claimed upstream LICENSE."
+  },
+  "runtimeClosure": "SVGO4.0.0 and Pako2.0.4 built from actual package source entries rather than opaque prebundled browser artifacts, so nested actual dependencies identified by positive emitted bytes. Complete nested licenses included. Original SVGO optimize/extract-dimensions and original pako gzip algorithms unchanged.",
+  "fixture": {
+    "name": "little red racing car",
+    "author": "Onsemeliot",
+    "date": "2013-05-02",
+    "sha256": "9b940dfea98e7b6e19fa692848591e01152f4802f0e9f434b09d098e41e7ebfe",
+    "rights": "Original SVG RDF declares http://creativecommons.org/licenses/publicdomain/, full official redirected dedication text included, not called CC0.",
+    "dedicationURL": "https://creativecommons.org/publicdomain/certification/1.0/us/",
+    "retrievedPageSHA256": "65f54141073541b528db11826a089c53e250613eb2e408ede7b6aa864552df74"
+  },
+  "icons": {
+    "scope": "Original SVGOMG toolbar SVG source retained, apart from excluded external Contribute/GitHub icon. Material icon lineage supplemented Apache2 fulltext.",
+    "officialTag": "google/material-design-icons 3.0.1",
+    "menuSHA256": "caa8cc99e1be32ab478ebbe12f4515de429a57573bd718a80ffad6d37307368b",
+    "pasteSHA256": "6ee126c4f729d61c571d0514a52628c74046f6fcc405fb929e0eadc3673b0a5f",
+    "licenseSHA256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd"
+  },
+  "adaptations": [
+    "Original complete Material controls/settings/plugin toggles/results/menu/code/image/PanZoom preserved.",
+    "Worker messaging replaced by async local same original worker actions; no Worker/SW/IndexedDB/network/CSP extension. Small input cap150k/2500elements; synchronous compression is not native performance-verified.",
+    "SVG iframe replaced with non-executable img of ordinary percent-encoded SVG text; input rejects script, HTML foreignObject, image/external links, active attrs/animation, doctypes/entities and external CSS paint refs. No base64/binary upload.",
+    "Original car fixture unmodified; clipboard SVG paste is local text. File/drop/download/clipboard-copy/external navigation disabled and clearly labeled. Original code view permits selecting text.",
+    "Memory settings only. Hidden aborts pending computations, visible reprocesses current SVG; final tracked EventTarget/timer/interval/RAF cleanup and dead/async generation guards.",
+    "Removed original analytics/redirect/serviceworker/storage/changelog update registration and external Contribute link; binary fonts removed, system fonts.",
+    "Legacy matchMedia addListener converted to addEventListener for exact frame-owned cleanup; no layout/render algorithm replacement."
+  ],
+  "exactSourcePatches": {
+    "svgo-worker/index.js": "--- original/svgo-worker/index.js\n+++ local/svgo-worker/index.js\n@@ -92,16 +92,5 @@\n   },\n };\n \n-self.onmessage = (event) => {\n-  try {\n-    self.postMessage({\n-      id: event.data.id,\n-      result: actions[event.data.action](event.data),\n-    });\n-  } catch (error) {\n-    self.postMessage({\n-      id: event.data.id,\n-      error: error.message,\n-    });\n-  }\n-};\n+\n+export {actions};\n",
+    "utils/storage.js": "--- original/utils/storage.js\n+++ local/utils/storage.js\n@@ -1,56 +1 @@\n-export const idbKeyval = (() => {\n-  let dbInstance;\n-\n-  function getDB() {\n-    if (dbInstance) return dbInstance;\n-\n-    dbInstance = new Promise((resolve, reject) => {\n-      const openreq = indexedDB.open('svgo-keyval', 1);\n-\n-      openreq.onerror = () => {\n-        reject(openreq.error);\n-      };\n-\n-      openreq.onupgradeneeded = () => {\n-        // First time setup: create an empty object store\n-        openreq.result.createObjectStore('keyval');\n-      };\n-\n-      openreq.onsuccess = () => {\n-        resolve(openreq.result);\n-      };\n-    });\n-\n-    return dbInstance;\n-  }\n-\n-  async function withStore(type, callback) {\n-    const db = await getDB();\n-    return new Promise((resolve, reject) => {\n-      const transaction = db.transaction('keyval', type);\n-      transaction.oncomplete = () => resolve();\n-      transaction.onerror = () => reject(transaction.error);\n-      callback(transaction.objectStore('keyval'));\n-    });\n-  }\n-\n-  return {\n-    async get(key) {\n-      let request;\n-      await withStore('readonly', (store) => {\n-        request = store.get(key);\n-      });\n-      return request.result;\n-    },\n-    set(key, value) {\n-      return withStore('readwrite', (store) => {\n-        store.put(value, key);\n-      });\n-    },\n-    delete(key) {\n-      return withStore('readwrite', (store) => {\n-        store.delete(key);\n-      });\n-    },\n-  };\n-})();\n+const store=new Map(); export const idbKeyval={get:async k=>store.get(k),set:async(k,v)=>{store.set(k,v)}};",
+    "page/worker-messenger.js": "--- original/page/worker-messenger.js\n+++ local/page/worker-messenger.js\n@@ -1,81 +1,2 @@\n-export default class WorkerMessenger {\n-  constructor(url) {\n-    this._requestId = 0;\n-    // worker jobs awaiting response { [requestId]: [ resolve, reject ] }\n-    this._pending = {};\n-    this._url = url;\n-    this._worker = null;\n-  }\n-\n-  release() {\n-    this._abortPending();\n-    if (this._worker) {\n-      this._worker.terminate();\n-      this._worker = null;\n-    }\n-  }\n-\n-  requestResponse(message) {\n-    return new Promise((resolve, reject) => {\n-      message.id = ++this._requestId;\n-      this._pending[message.id] = [resolve, reject];\n-\n-      if (!this._worker) this._startWorker();\n-      this._worker.postMessage(message);\n-    });\n-  }\n-\n-  abort() {\n-    if (Object.keys(this._pending).length === 0) return;\n-\n-    this._abortPending();\n-    if (this._worker) this._worker.terminate();\n-    this._startWorker();\n-  }\n-\n-  _abortPending() {\n-    for (const key of Object.keys(this._pending)) {\n-      this._fulfillPending(\n-        key,\n-        null,\n-        new DOMException('AbortError', 'AbortError'),\n-      );\n-    }\n-  }\n-\n-  _startWorker() {\n-    this._worker = new Worker(this._url);\n-    this._worker.onmessage = (event) => this._onMessage(event);\n-  }\n-\n-  _onMessage(event) {\n-    if (!event.data.id) {\n-      console.log('Unexpected message', event);\n-      return;\n-    }\n-\n-    this._fulfillPending(\n-      event.data.id,\n-      event.data.result,\n-      event.data.error && new Error(event.data.error),\n-    );\n-  }\n-\n-  _fulfillPending(id, result, error) {\n-    const resolver = this._pending[id];\n-\n-    if (!resolver) {\n-      console.log('No resolver for', { id, result, error });\n-      return;\n-    }\n-\n-    delete this._pending[id];\n-\n-    if (error) {\n-      resolver[1](error);\n-      return;\n-    }\n-\n-    resolver[0](result);\n-  }\n-}\n+import {actions} from '../svgo-worker/index.js';import Prism from 'prismjs';import{gzip}from'pako/dist/pako_deflate.js';\n+export const messengers=new Set();export default class WorkerMessenger{constructor(url){this._url=url;this.generation=0;messengers.add(this)}release(){this.abort();messengers.delete(this)}abort(){this.generation++}async requestResponse(message){const id=this.generation;await Promise.resolve();if(window.__svgClosed||document.hidden||id!==this.generation)throw new DOMException('AbortError','AbortError');let result;if(this._url.includes('svgo'))result=actions[message.action](message);else if(this._url.includes('prism'))result=Prism.highlight(message.data,Prism.languages.markup,'markup');else result=gzip(message.data).buffer;if(window.__svgClosed||id!==this.generation)throw new DOMException('AbortError','AbortError');return result}}\n",
+    "page/main-controller.js": "--- original/page/main-controller.js\n+++ local/page/main-controller.js\n@@ -65,22 +65,6 @@\n     this._userHasInteracted = false;\n     this._reloading = false;\n \n-    if ('serviceWorker' in navigator) {\n-      navigator.serviceWorker\n-        .register('sw.js', { scope: './' })\n-        .then((registration) => {\n-          registration.addEventListener('updatefound', () =>\n-            this._onUpdateFound(registration),\n-          );\n-        });\n-    }\n-\n-    // tell the user about the latest update\n-    storage.get('last-seen-version').then((lastSeenVersion) => {\n-      if (lastSeenVersion) changelogUi.showLogFrom(lastSeenVersion);\n-      storage.set('last-seen-version', self.version);\n-    });\n-\n     domReady.then(() => {\n       const container = document.querySelector('.app-output');\n       const actionContainer = container.querySelector(\n@@ -131,7 +115,7 @@\n     });\n   }\n \n-  _onGlobalKeyDown(event) {\n+  _onGlobalKeyDown(event) { if(event.key!=='Escape')return;\n     if (event.key === 'o' && (event.ctrlKey || event.metaKey)) {\n       event.preventDefault();\n       this._mainMenuUi.showFilePicker();\n@@ -150,7 +134,7 @@\n     }\n   }\n \n-  _onGlobalCopy(event) {\n+  _onGlobalCopy(event) { return;\n     const selection = window.getSelection();\n     if (!selection.isCollapsed) return;\n \n",
+    "page/ui/results-container.js": "--- original/page/ui/results-container.js\n+++ local/page/ui/results-container.js\n@@ -11,7 +11,7 @@\n       );\n       this._query = matchMedia('(min-width: 640px)');\n \n-      this._query.addListener(() => this._positionResults());\n+      this._query.addEventListener('change', () => this._positionResults());\n       this._positionResults();\n     });\n   }\n",
+    "page/ui/svg-output.js": "--- original/page/ui/svg-output.js\n+++ local/page/ui/svg-output.js\n@@ -7,7 +7,7 @@\n     this.container = strToEl(\n       '<div class=\"svg-output\">' +\n         '<div class=\"svg-container\">' +\n-          '<iframe class=\"svg-frame\" sandbox=\"allow-scripts\" scrolling=\"no\" title=\"Loaded SVG file\"></iframe>' +\n+          '<img class=\"svg-frame\" alt=\"Loaded SVG file\">' +\n         '</div>' +\n       '</div>'\n     );\n@@ -27,7 +27,7 @@\n     // I would rather use blob urls, but they don't work in Firefox\n     // All the internal refs break.\n     // https://bugzilla.mozilla.org/show_bug.cgi?id=1125667\n-    const nextLoad = this._nextLoadPromise();\n+    const nextLoad = Promise.resolve();\n     this._svgFrame.src = `data:image/svg+xml,${encodeURIComponent(text)}`;\n     this._svgFrame.style.width = `${width}px`;\n     this._svgFrame.style.height = `${height}px`;\n",
+    "page/ui/download-button.js": "--- original/page/ui/download-button.js\n+++ local/page/ui/download-button.js\n@@ -20,10 +20,7 @@\n     this.container.append(this._spinner.container);\n   }\n \n-  setDownload(filename, { url }) {\n-    this.container.download = filename;\n-    this.container.href = url;\n-  }\n+  setDownload(){this.container.removeAttribute('href');this.container.setAttribute('aria-disabled','true');this.container.title='Download unavailable in local preview';}\n \n   working() {\n     this._spinner.show(500);\n",
+    "page/ui/code-output.js": "--- original/page/ui/code-output.js\n+++ local/page/ui/code-output.js\n@@ -15,7 +15,7 @@\n   }\n \n   async setSvg({ text }) {\n-    this._codeEl.innerHTML = await prism.highlight(text);\n+    try { const html=await prism.highlight(text);if(!window.__svgClosed)this._codeEl.innerHTML=html; } catch(e){if(e.name!=='AbortError')throw e;}\n   }\n \n   reset() {\n",
+    "page/ui/main-menu.js": "--- original/page/ui/main-menu.js\n+++ local/page/ui/main-menu.js\n@@ -1,3 +1,4 @@\n+import demo from '../../../car.svg';\n import { createNanoEvents } from 'nanoevents';\n import {\n   domReady,\n@@ -125,9 +126,7 @@\n     this._spinner.show();\n \n     try {\n-      const data = await fetch('test-svgs/car-lite.svg').then((response) =>\n-        response.text(),\n-      );\n+      const data = demo;\n       this.emitter.emit('svgDataLoad', {\n         data,\n         filename: 'car-lite.svg',\n",
+    "page/ui/copy-button.js": "--- original/page/ui/copy-button.js\n+++ local/page/ui/copy-button.js\n@@ -13,7 +13,7 @@\n         '</svg>',\n     });\n \n-    this._text = null;\n+    this.container.disabled=true;this.container.setAttribute('aria-disabled','true');this.container.title='Clipboard unavailable in local preview';this._text = null;\n     this._pre = document.createElement('pre');\n   }\n \n@@ -22,25 +22,7 @@\n     this.copyText();\n   }\n \n-  copyText() {\n-    if (!this._text) return false;\n-\n-    this._pre.textContent = this._text;\n-    document.body.append(this._pre);\n-    getSelection().removeAllRanges();\n-\n-    const range = document.createRange();\n-    range.selectNode(this._pre);\n-\n-    window.getSelection().addRange(range);\n-\n-    document.execCommand('copy');\n-    getSelection().removeAllRanges();\n-    this._pre.remove();\n-\n-    return true;\n-  }\n-\n+  copyText(){return false;}\n   setCopyText(text) {\n     this._text = text;\n   }\n"
+  }
+}
