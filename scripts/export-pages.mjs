@@ -24,7 +24,7 @@ export async function exportPages(output,basePath='/UI-Vault/') {
   for(const x of items){if(!/^thumbnails\/[a-zA-Z0-9_-]+\.webp$/.test(x.thumbnail))throw Error('Invalid poster path');await lstat(join(output,x.thumbnail));}
   const candidates=JSON.parse(await readFile(join(output,'candidate-catalog.json'),'utf8'));
   for(const x of candidates)if(x.preview)await lstat(join(output,x.preview));
-  const version={candidates:candidates.length,unverifiedPreviews:candidates.filter(x=>x.preview).length,codeSha:sha,basePath,materials:items.length,posters,listPreviewMode:'static-poster',worktreeDirty};
+  const version={candidates:candidates.length,unverifiedPreviews:candidates.filter(x=>x.preview).length,codeSha:sha,basePath,materials:items.length,posters,listPreviewMode:'poster-or-bounded-live',maxLiveCards:1,worktreeDirty};
   await writeFile(join(output,'version.json'),JSON.stringify(version,null,2)+'\n');
   await writeFile(join(output,'.nojekyll'),'');
   return version;
