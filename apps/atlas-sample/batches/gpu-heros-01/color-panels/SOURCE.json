@@ -1,0 +1,465 @@
+{
+  "id": "cult:hero-color-panel",
+  "repository": "https://github.com/nolly-studio/cult-ui",
+  "revision": "d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+  "sourceEvidence": [
+    {
+      "file": "cult/hero-color-panel.tsx",
+      "url": "https://raw.githubusercontent.com/nolly-studio/cult-ui/d71b1428b811c2779d46ea41b7ef8c9f9c9991c2/apps/www/registry/default/ui/hero-color-panel.tsx",
+      "sha256": "f23eac62f40237536400a40f5dc7a03064173182d16d4d39284ced7c283e9f72"
+    },
+    {
+      "file": "cult/color-panels.tsx",
+      "url": "https://raw.githubusercontent.com/nolly-studio/cult-ui/d71b1428b811c2779d46ea41b7ef8c9f9c9991c2/apps/www/registry/default/example/hero-color-panels-demo.tsx",
+      "sha256": "01169a3adede96e90509ee0f66cba922989bfa4d530d4c30c9ac3e2c070865b5"
+    },
+    {
+      "file": "cult/components/ui/button.tsx",
+      "url": "https://raw.githubusercontent.com/nolly-studio/cult-ui/d71b1428b811c2779d46ea41b7ef8c9f9c9991c2/apps/www/components/ui/button.tsx",
+      "sha256": "e71b5513052f5b8b2d5b552c0e42c9489687d9717382d3ebfb13b3766957b3cc"
+    },
+    {
+      "file": "cult/components/ui/badge.tsx",
+      "url": "https://raw.githubusercontent.com/nolly-studio/cult-ui/d71b1428b811c2779d46ea41b7ef8c9f9c9991c2/apps/www/components/ui/badge.tsx",
+      "sha256": "07f5870d5369c4b4bc24b9a36487112c9305e08a8078cf7192134e45c9f580aa"
+    },
+    {
+      "file": "cult/lib/utils.ts",
+      "url": "https://raw.githubusercontent.com/nolly-studio/cult-ui/d71b1428b811c2779d46ea41b7ef8c9f9c9991c2/apps/www/lib/utils.ts",
+      "sha256": "7cf92ac6e9a70c0c68a993becf674ec7c373653bc5dc3379e366c352e5ee1a41"
+    },
+    {
+      "file": "cult/LICENSE",
+      "url": "https://raw.githubusercontent.com/nolly-studio/cult-ui/d71b1428b811c2779d46ea41b7ef8c9f9c9991c2/LICENSE.md",
+      "sha256": "78045e58dfd5f039ad350ad293da2ad9a2c0362b82dadb069b1c10be382ddac7"
+    }
+  ],
+  "actualEmittedInputs": {
+    "node_modules/scheduler/cjs/scheduler.production.js": 3638,
+    "node_modules/scheduler/index.js": 51,
+    "node_modules/react/cjs/react.production.js": 7622,
+    "node_modules/react/index.js": 51,
+    "node_modules/react-dom/cjs/react-dom.production.js": 3343,
+    "node_modules/react-dom/index.js": 253,
+    "node_modules/react-dom/cjs/react-dom-client.production.js": 169439,
+    "node_modules/react-dom/client.js": 253,
+    "node_modules/react/cjs/react-jsx-runtime.production.js": 364,
+    "node_modules/react/jsx-runtime.js": 51,
+    "node_modules/@paper-design/shaders-react/dist/shader-mount.js": 1425,
+    "node_modules/@paper-design/shaders/dist/vertex-shader.js": 5044,
+    "node_modules/@paper-design/shaders/dist/shader-mount.js": 10835,
+    "node_modules/@paper-design/shaders/dist/shader-sizing.js": 145,
+    "node_modules/@paper-design/shaders/dist/shader-utils.js": 195,
+    "node_modules/@paper-design/shaders/dist/shaders/color-panels.js": 6079,
+    "node_modules/@paper-design/shaders/dist/get-shader-color-from-string.js": 1434,
+    "node_modules/@paper-design/shaders-react/dist/use-merge-refs.js": 392,
+    "node_modules/@paper-design/shaders-react/dist/color-props-are-equal.js": 320,
+    "node_modules/@paper-design/shaders-react/dist/shaders/color-panels.js": 1993,
+    "node_modules/clsx/dist/clsx.mjs": 362,
+    "node_modules/tailwind-merge/dist/bundle-mjs.mjs": 25400,
+    "node_modules/class-variance-authority/dist/index.mjs": 643,
+    "node_modules/@radix-ui/react-slot/dist/index.mjs": 1679,
+    "node_modules/@radix-ui/react-compose-refs/dist/index.mjs": 298
+  },
+  "actualModuleSHA256": {
+    "node_modules/scheduler/cjs/scheduler.production.js": "679adff761d31e9426604f80c0e99be44a3e6f4c6834b0218ecf0312a67c171f",
+    "node_modules/scheduler/index.js": "145965504d60007bc25486ab930b0367867dcd5d579ccd343c148d69349a7cfb",
+    "node_modules/react/cjs/react.production.js": "66fdfbcc9c1c7e1c35f8ccf462ea24ead8fba28172ac9d6cbc13a9d6d650094e",
+    "node_modules/react/index.js": "60caffdecbdc5db3bc4ec4e83df9488345ccb271d07533b9210bf5750918d97e",
+    "node_modules/react-dom/cjs/react-dom.production.js": "990df13c2852940eb124f51f005abdfcd0436700e7bc661ddee202a84ca140cb",
+    "node_modules/react-dom/index.js": "ba1a3e33489f868371561777607e3ee5091df0f7ea3f1a10f789d6b86e4c1505",
+    "node_modules/react-dom/cjs/react-dom-client.production.js": "2f60615d2504361fadca40064af1b64b3657a85e32fdac09ce22b424dab522c5",
+    "node_modules/react-dom/client.js": "00e348ab3d6bc2eef908345d0bc4e008c95bcfecec060dfda5c4967953761396",
+    "node_modules/react/cjs/react-jsx-runtime.production.js": "1e46f15002696985e80c61d47aaa30dabb03c954270a690f5f7dfbbacfa9002b",
+    "node_modules/react/jsx-runtime.js": "b392951a77d0a2e6a6bd017e49d768481ae5b63c4109c6c31f622cf7b2433edc",
+    "node_modules/@paper-design/shaders-react/dist/shader-mount.js": "86d5c9fe16c2ae99bc9528df708d75a2489b224848163afed3d26fbee5be0844",
+    "node_modules/@paper-design/shaders/dist/vertex-shader.js": "cd9856f2e071e0c18794dd9c5a1663c11d72cbc68b0403b555d190f412b3e8db",
+    "node_modules/@paper-design/shaders/dist/shader-mount.js": "94a7c5768fc21c49a9eadc9b31138efe1053210f881ccf5446260960ddfa0dd4",
+    "node_modules/@paper-design/shaders/dist/shader-sizing.js": "db0eb176c9a66c03653770a542adcf4cf8efc07b0929d9e257f49c05d82013fe",
+    "node_modules/@paper-design/shaders/dist/shader-utils.js": "26ba187ff4b02715bd98d8ff409c508efcc3881a1f45ceeb08d00b71b145eb2e",
+    "node_modules/@paper-design/shaders/dist/shaders/color-panels.js": "315399ea6ad8919cc59551eced981b6ff0883adbe55c0945c070ade38e14aa91",
+    "node_modules/@paper-design/shaders/dist/get-shader-color-from-string.js": "9379fcdb28180a4b6232b6fc13d0feef08b4bb8ad6d0044d6608329e84488150",
+    "node_modules/@paper-design/shaders-react/dist/use-merge-refs.js": "68e428e107984debf1bf095f2479001e91564adb106a76ff0c45d810190fb893",
+    "node_modules/@paper-design/shaders-react/dist/color-props-are-equal.js": "1cc418f9912970e80f59b669b8c4997b4296849e3a2fed9b5db9958f70e96015",
+    "node_modules/@paper-design/shaders-react/dist/shaders/color-panels.js": "cc252ae7cbd390430ab335a696f712eeafb757941c022f20abe55f5932b66b0c",
+    "node_modules/clsx/dist/clsx.mjs": "d949e5cdbfebc76a6642b1901095e900fc3f2262d8dc0373aa44850a9bc75522",
+    "node_modules/tailwind-merge/dist/bundle-mjs.mjs": "52646f87a02745bb93a8b267dc928b9f778bd667eb5f4a0dcd33a94e058bd448",
+    "node_modules/class-variance-authority/dist/index.mjs": "3e9deb809896235089fd6719c56631f25bd67878100d5fa771a4864bfbd0e299",
+    "node_modules/@radix-ui/react-slot/dist/index.mjs": "003bed55226494b15b4fb708ab4b50d3b6dda69d8b8c2e04efb88d22a8274662",
+    "node_modules/@radix-ui/react-compose-refs/dist/index.mjs": "dc0dc6528057301bc5f1226f863918252308fb6286655bcccd9f4cd66e34ff48"
+  },
+  "adaptedPaperModuleSHA256": {
+    "paper-react-adapted.js": "fc9552b13115d74438315f28967b282845413cc89628802bc0a4a5d8945b0e6c",
+    "paper-core-adapted.js": "afbb6b747326f705b74d17a3095baf6b0a920f203d364c149d7b12abab5011ec"
+  },
+  "npmLockPackages": {
+    "node_modules/@paper-design/shaders": {
+      "version": "0.0.72",
+      "resolved": "https://registry.npmjs.org/@paper-design/shaders/-/shaders-0.0.72.tgz",
+      "integrity": "sha512-rk2BFuV5ood2DaivbxJC2jQMzaB434isDUzdUQ85Cy0OWnUMuxl8kyGMR74TDPyjo3EvcHIyreNLkJdRG+GfSA==",
+      "license": "SEE LICENSE IN https://github.com/paper-design/shaders/blob/main/LICENSE"
+    },
+    "node_modules/@paper-design/shaders-react": {
+      "version": "0.0.72",
+      "resolved": "https://registry.npmjs.org/@paper-design/shaders-react/-/shaders-react-0.0.72.tgz",
+      "integrity": "sha512-q6KwquL93ZVNcuSM7pqzW0z/VLjnDVb/NSpYyGJBxf7MEHHCXx37E+zw/Px6RZLt3SGCUerIDDCGCMT385oW0w==",
+      "license": "SEE LICENSE IN https://github.com/paper-design/shaders/blob/main/LICENSE",
+      "dependencies": {
+        "@paper-design/shaders": "0.0.72"
+      },
+      "peerDependencies": {
+        "@types/react": "^18 || ^19",
+        "react": "^18 || ^19"
+      },
+      "peerDependenciesMeta": {
+        "@types/react": {
+          "optional": true
+        }
+      }
+    },
+    "node_modules/@radix-ui/react-compose-refs": {
+      "version": "1.1.2",
+      "resolved": "https://registry.npmjs.org/@radix-ui/react-compose-refs/-/react-compose-refs-1.1.2.tgz",
+      "integrity": "sha512-z4eqJvfiNnFMHIIvXP3CY57y2WJs5g2v3X0zm9mEJkrkNv4rDxu+sg9Jh8EkXyeqBkB7SOcboo9dMVqhyrACIg==",
+      "license": "MIT",
+      "peerDependencies": {
+        "@types/react": "*",
+        "react": "^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc"
+      },
+      "peerDependenciesMeta": {
+        "@types/react": {
+          "optional": true
+        }
+      }
+    },
+    "node_modules/@radix-ui/react-slot": {
+      "version": "1.2.3",
+      "resolved": "https://registry.npmjs.org/@radix-ui/react-slot/-/react-slot-1.2.3.tgz",
+      "integrity": "sha512-aeNmHnBxbi2St0au6VBVC7JXFlhLlOnvIIlePNniyUNAClzmtAUEY8/pBiK3iHjufOlwA+c20/8jngo7xcrg8A==",
+      "license": "MIT",
+      "dependencies": {
+        "@radix-ui/react-compose-refs": "1.1.2"
+      },
+      "peerDependencies": {
+        "@types/react": "*",
+        "react": "^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc"
+      },
+      "peerDependenciesMeta": {
+        "@types/react": {
+          "optional": true
+        }
+      }
+    },
+    "node_modules/class-variance-authority": {
+      "version": "0.7.1",
+      "resolved": "https://registry.npmjs.org/class-variance-authority/-/class-variance-authority-0.7.1.tgz",
+      "integrity": "sha512-Ka+9Trutv7G8M6WT6SeiRWz792K5qEqIGEGzXKhAE6xOWAY6pPH8U+9IY3oCMv6kqTmLsv7Xh/2w2RigkePMsg==",
+      "license": "Apache-2.0",
+      "dependencies": {
+        "clsx": "^2.1.1"
+      },
+      "funding": {
+        "url": "https://polar.sh/cva"
+      }
+    },
+    "node_modules/clsx": {
+      "version": "2.1.1",
+      "resolved": "https://registry.npmjs.org/clsx/-/clsx-2.1.1.tgz",
+      "integrity": "sha512-eYm0QWBtUrBWZWG0d386OGAw16Z995PiOVo2B7bjWSbHedGl5e0ZWaq65kOGgUSNesEIDkB9ISbTg/JK9dhCZA==",
+      "license": "MIT",
+      "engines": {
+        "node": ">=6"
+      }
+    },
+    "node_modules/react": {
+      "version": "19.1.0",
+      "resolved": "https://registry.npmjs.org/react/-/react-19.1.0.tgz",
+      "integrity": "sha512-FS+XFBNvn3GTAWq26joslQgWNoFu08F4kl0J4CgdNKADkdSGXQyTCnKteIAJy96Br6YbpEU1LSzV5dYtjMkMDg==",
+      "license": "MIT",
+      "engines": {
+        "node": ">=0.10.0"
+      }
+    },
+    "node_modules/react-dom": {
+      "version": "19.1.0",
+      "resolved": "https://registry.npmjs.org/react-dom/-/react-dom-19.1.0.tgz",
+      "integrity": "sha512-Xs1hdnE+DyKgeHJeJznQmYMIBG3TKIHJJT95Q58nHLSrElKlGQqDTR2HQ9fx5CN/Gk6Vh/kupBTDLU11/nDk/g==",
+      "license": "MIT",
+      "dependencies": {
+        "scheduler": "^0.26.0"
+      },
+      "peerDependencies": {
+        "react": "^19.1.0"
+      }
+    },
+    "node_modules/scheduler": {
+      "version": "0.26.0",
+      "resolved": "https://registry.npmjs.org/scheduler/-/scheduler-0.26.0.tgz",
+      "integrity": "sha512-NlHwttCI/l5gCPR3D1nNXtWABUmBwvZpEQiD4IXSbIDq8BzLIK/7Ir5gTFSGZDUu37K5cMNp0hFtzO38sC7gWA==",
+      "license": "MIT"
+    },
+    "node_modules/tailwind-merge": {
+      "version": "3.3.1",
+      "resolved": "https://registry.npmjs.org/tailwind-merge/-/tailwind-merge-3.3.1.tgz",
+      "integrity": "sha512-gBXpgUm/3rp1lMZZrM/w7D8GKqshif0zAymAhbCyIt8KMe+0v9DQ7cdYLR4FHH/cKpdTXb+A/tKKU3eolfsI+g==",
+      "license": "MIT",
+      "funding": {
+        "type": "github",
+        "url": "https://github.com/sponsors/dcastil"
+      }
+    },
+    "node_modules/tailwindcss": {
+      "version": "4.3.0",
+      "resolved": "https://registry.npmjs.org/tailwindcss/-/tailwindcss-4.3.0.tgz",
+      "integrity": "sha512-y6nxMGB1nMW9R6k96e5gdIFzcfL/gTJRNaqGes1YvkLnPVXzWgbqFF2yLC0T8G774n24cx3Pe8XrKoniCOAH+Q==",
+      "license": "MIT"
+    }
+  },
+  "dependencies": [
+    {
+      "name": "@paper-design/shaders",
+      "version": "0.0.72",
+      "packageLicenseDeclaration": "SEE LICENSE IN https://github.com/paper-design/shaders/blob/main/LICENSE",
+      "scope": "actual emitted JavaScript",
+      "licenseFiles": {
+        "node_modules/@paper-design/shaders/LICENSE": "b3aa773a4313b7ee6d6efe2c585057a88c6546a3cdb8488567491b4b91aabc4d"
+      },
+      "note": "Original installed package license text."
+    },
+    {
+      "name": "@paper-design/shaders-react",
+      "version": "0.0.72",
+      "packageLicenseDeclaration": "SEE LICENSE IN https://github.com/paper-design/shaders/blob/main/LICENSE",
+      "scope": "actual emitted JavaScript",
+      "licenseFiles": {
+        "node_modules/@paper-design/shaders-react/LICENSE": "b3aa773a4313b7ee6d6efe2c585057a88c6546a3cdb8488567491b4b91aabc4d"
+      },
+      "note": "Original installed package license text."
+    },
+    {
+      "name": "@radix-ui/react-compose-refs",
+      "version": "1.1.2",
+      "packageLicenseDeclaration": "MIT",
+      "scope": "actual emitted JavaScript",
+      "licenseFiles": {
+        "legal/RADIX-LICENSE": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      },
+      "note": "Package1.1.2 MIT declaration; full official repository LICENSE fetched at npm gitHead fcef0668a5c827e5a4baac405474d75680f9a4eb (package omitted file)."
+    },
+    {
+      "name": "@radix-ui/react-slot",
+      "version": "1.2.3",
+      "packageLicenseDeclaration": "MIT",
+      "scope": "actual emitted JavaScript",
+      "licenseFiles": {
+        "node_modules/@radix-ui/react-slot/LICENSE": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+      },
+      "note": "Original installed package license text."
+    },
+    {
+      "name": "class-variance-authority",
+      "version": "0.7.1",
+      "packageLicenseDeclaration": "Apache-2.0",
+      "scope": "actual emitted JavaScript",
+      "licenseFiles": {
+        "node_modules/class-variance-authority/LICENSE": "0ccbf956cffc8dcf515809433cb5242ee67c94513d46e48c261d68d0880de406"
+      },
+      "note": "Original installed package license text."
+    },
+    {
+      "name": "clsx",
+      "version": "2.1.1",
+      "packageLicenseDeclaration": "MIT",
+      "scope": "actual emitted JavaScript",
+      "licenseFiles": {
+        "node_modules/clsx/license": "9a9edad7baae52622bddf3c15b2ef8a33d2c89f2d25408ad13e8a7481c6b0c97"
+      },
+      "note": "Original installed package license text."
+    },
+    {
+      "name": "react",
+      "version": "19.1.0",
+      "packageLicenseDeclaration": "MIT",
+      "scope": "actual emitted JavaScript",
+      "licenseFiles": {
+        "node_modules/react/LICENSE": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+      },
+      "note": "Original installed package license text."
+    },
+    {
+      "name": "react-dom",
+      "version": "19.1.0",
+      "packageLicenseDeclaration": "MIT",
+      "scope": "actual emitted JavaScript",
+      "licenseFiles": {
+        "node_modules/react-dom/LICENSE": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+      },
+      "note": "Original installed package license text."
+    },
+    {
+      "name": "scheduler",
+      "version": "0.26.0",
+      "packageLicenseDeclaration": "MIT",
+      "scope": "actual emitted JavaScript",
+      "licenseFiles": {
+        "node_modules/scheduler/LICENSE": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+      },
+      "note": "Original installed package license text."
+    },
+    {
+      "name": "tailwind-merge",
+      "version": "3.3.1",
+      "packageLicenseDeclaration": "MIT",
+      "scope": "actual emitted JavaScript",
+      "licenseFiles": {
+        "node_modules/tailwind-merge/LICENSE.md": "d4c70c7ce38cea8778f0aed3fc0bef0a9dbd27f13bd8b6773cbd6d37941971e5"
+      },
+      "note": "Original installed package license text."
+    },
+    {
+      "name": "tailwindcss",
+      "version": "4.3.0",
+      "packageLicenseDeclaration": "MIT",
+      "scope": "CSS build output",
+      "licenseFiles": {
+        "node_modules/tailwindcss/LICENSE": "60e0b68c0f35c078eef3a5d29419d0b03ff84ec1df9c3f9d6e39a519a5ae7985"
+      },
+      "note": "Original installed package license text."
+    }
+  ],
+  "changes": [
+    "Original complete official Demo and its component, not a new visual skin. Original GLSL retained.",
+    "System-font/light CSS tokens and original Tailwind utility compilation; no external fonts or image assets.",
+    "Shared lifecycle boundary: WebGL compile/link checks, allocation tracking, context-loss failure, partial-init cleanup, visibility unmount/remount, stale RAF/timer guards, missing-root fallback.",
+    "Zero-sized outer preview waits or disposes until sized. No fake fallback effect.",
+    "Original fixtures are aesthetic UI; no actual AI service or account operation.",
+    "Original CTA anchor href changed to local # and target omitted; capture handler prevents local navigation and states demo-only. Icons and marketing copy retained, no brand endorsement.",
+    "Pinned Paper shaders/shaders-react0.0.72 each ship full MIT Copyright2024 Lost Coast Labs(Paper Design). This is evidence for these exact installed modules, not a claim about all current Paper products.",
+    "Paper numeric-only ColorPanels: unused image-uniform loader removed, string/image uniforms explicitly rejected (no emptyPixel binary). Original numeric processing and shader equations retained. Init/update async paths have alive/error guards; reduced motion forces renderer speed0, static uniform/resize renders preserved.",
+    "Actual emitted shader-utils contributes declarePI/colorBandingFix only. Its unreferenced simplexNoise is tree-shaken, not contained in ColorPanels fragment; no Ashima simplex implementation emitted in this scene."
+  ],
+  "shaderSyntax": [
+    {
+      "name": "vertexShader",
+      "bytes": 131,
+      "sha256": "e924d806f2c9cd5a527518cf0f5e72cfce4101bfa2567baa67e9b2c60b9b29b0",
+      "syntax": true
+    },
+    {
+      "name": "fragmentShader",
+      "bytes": 702,
+      "sha256": "9fad43358ac5ed0115d63ecc6eea8d33b3859da987af5af78235d2359091a8a4",
+      "syntax": true
+    },
+    {
+      "name": "Paper ColorPanels fragment",
+      "bytes": 6159,
+      "sha256": "504bb02863cc3a48995617135bd2d82ce78d44096701538d70a0d98db3474aa2",
+      "syntax": true
+    }
+  ],
+  "tests": [
+    {
+      "slug": "color-panels",
+      "mode": "contextlost",
+      "pass": true,
+      "drawCommands": 28,
+      "shadersSubmitted": 8,
+      "allocated": 16,
+      "deleted": 16,
+      "contextLossRequests": 4,
+      "scope": "Original OGL/Paper and original GLSL submitted to stubbed WebGL. No native shader compilation or pixels verified."
+    },
+    {
+      "slug": "color-panels",
+      "mode": "latefail",
+      "pass": true,
+      "drawCommands": 28,
+      "shadersSubmitted": 8,
+      "allocated": 16,
+      "deleted": 16,
+      "contextLossRequests": 4,
+      "scope": "Original OGL/Paper and original GLSL submitted to stubbed WebGL. No native shader compilation or pixels verified."
+    },
+    {
+      "slug": "color-panels",
+      "mode": "missingroot",
+      "pass": true,
+      "drawCommands": 0,
+      "shadersSubmitted": 0,
+      "allocated": 0,
+      "deleted": 0,
+      "contextLossRequests": 0,
+      "scope": "Original OGL/Paper and original GLSL submitted to stubbed WebGL. No native shader compilation or pixels verified."
+    },
+    {
+      "slug": "color-panels",
+      "mode": "normal",
+      "pass": true,
+      "drawCommands": 84,
+      "shadersSubmitted": 24,
+      "allocated": 48,
+      "deleted": 48,
+      "contextLossRequests": 12,
+      "scope": "Original OGL/Paper and original GLSL submitted to stubbed WebGL. No native shader compilation or pixels verified."
+    },
+    {
+      "slug": "color-panels",
+      "mode": "initialhidden",
+      "pass": true,
+      "drawCommands": 84,
+      "shadersSubmitted": 24,
+      "allocated": 48,
+      "deleted": 48,
+      "contextLossRequests": 12,
+      "scope": "Original OGL/Paper and original GLSL submitted to stubbed WebGL. No native shader compilation or pixels verified."
+    },
+    {
+      "slug": "color-panels",
+      "mode": "shaderfail",
+      "pass": true,
+      "drawCommands": 0,
+      "shadersSubmitted": 4,
+      "allocated": 4,
+      "deleted": 4,
+      "contextLossRequests": 4,
+      "scope": "Original OGL/Paper and original GLSL submitted to stubbed WebGL. No native shader compilation or pixels verified."
+    },
+    {
+      "slug": "color-panels",
+      "mode": "earlyexit",
+      "pass": true,
+      "drawCommands": 0,
+      "shadersSubmitted": 0,
+      "allocated": 0,
+      "deleted": 0,
+      "contextLossRequests": 0,
+      "scope": "Original OGL/Paper and original GLSL submitted to stubbed WebGL. No native shader compilation or pixels verified."
+    },
+    {
+      "slug": "color-panels",
+      "mode": "unsupported",
+      "pass": true,
+      "drawCommands": 0,
+      "shadersSubmitted": 0,
+      "allocated": 0,
+      "deleted": 0,
+      "contextLossRequests": 0,
+      "scope": "Original OGL/Paper and original GLSL submitted to stubbed WebGL. No native shader compilation or pixels verified."
+    },
+    {
+      "slug": "color-panels",
+      "mode": "reduced",
+      "pass": true,
+      "drawCommands": 72,
+      "shadersSubmitted": 24,
+      "allocated": 48,
+      "deleted": 48,
+      "contextLossRequests": 12,
+      "scope": "Original OGL/Paper and original GLSL submitted to stubbed WebGL. No native shader compilation or pixels verified."
+    }
+  ],
+  "visualQA": "not-run; JSDOM geometry and WebGL methods/status mocked, no native GPU compilation/pixels",
+  "versions": "React19.1.0 pinned compatible environment, not claimed exact upstream workspace lock; Paper0.0.72 exact package MIT independently verified.",
+  "componentDiff": "--- original/hero-color-panel.tsx\n+++ adapted/hero-color-panel.tsx\n@@ -436,7 +436,7 @@\n       data-slot=\"hero-colorpanels-cta\"\n     >\n       <Button asChild className={cn(buttonClassName)} size=\"lg\">\n-        <a href={href} onClick={onClick} rel={rel} target={target}>\n+        <a href=\"#\" onClick={onClick} aria-description=\"Offline demonstration only; no navigation\">\n           {label}\n         </a>\n       </Button>\n--- original/color-panels.tsx\n+++ adapted/color-panels.tsx\n@@ -13,7 +13,7 @@\n   HeroColorPanelsRoot,\n   HeroColorPanelsVisual,\n   NextjsIcon,\n-} from \"../ui/hero-color-panel\"\n+} from \"./hero-color-panel\"\n \n export default function HeroColorPanelsDemo() {\n   return (\n"
+}
