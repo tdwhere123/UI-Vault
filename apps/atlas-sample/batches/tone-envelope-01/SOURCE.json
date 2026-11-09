@@ -1,0 +1,1314 @@
+{
+  "id": "tonejs:envelope-visual-scene",
+  "repository": "https://github.com/Tonejs/Tone.js",
+  "revision": "105c04cc00289caf49684ac5c7621bce8a042c4c",
+  "sourcePath": "examples/funkyShape.html",
+  "sourceHash": "a7cae018d8b53ee7b86825ca268a7316da98ff33234bc21a01e68a7f35ba56cc",
+  "p5Package": "p5@1.0.0",
+  "p5GitHead": "f503b0b81aa86671e8ea900133985b3d26556dac",
+  "originalP5FullSHA256": "c3bf95f7f8dc8d486cd29555dee6a985841b5e44c966477fdc27ec8a73d1cef3",
+  "originalP5MinSHA256": "3e0d5d8be7c1179dd16e1f68651fc5783d71b05cd32c2f7ade571a7350f489ab",
+  "adaptedP5SHA256": "68e622f9a2a5e8c85539fa81212e0c38b9bd2169e529e0da03b848334c1efd3d",
+  "hostRuntimePackages": [
+    {
+      "name": "@babel/runtime",
+      "version": "7.29.13",
+      "declaredLicense": "MIT",
+      "emitted": [
+        {
+          "module": "node_modules/@babel/runtime/helpers/arrayWithHoles.js",
+          "bytesInOutput": 135
+        },
+        {
+          "module": "node_modules/@babel/runtime/helpers/iterableToArrayLimit.js",
+          "bytesInOutput": 479
+        },
+        {
+          "module": "node_modules/@babel/runtime/helpers/arrayLikeToArray.js",
+          "bytesInOutput": 194
+        },
+        {
+          "module": "node_modules/@babel/runtime/helpers/unsupportedIterableToArray.js",
+          "bytesInOutput": 379
+        },
+        {
+          "module": "node_modules/@babel/runtime/helpers/nonIterableRest.js",
+          "bytesInOutput": 265
+        },
+        {
+          "module": "node_modules/@babel/runtime/helpers/slicedToArray.js",
+          "bytesInOutput": 181
+        },
+        {
+          "module": "node_modules/@babel/runtime/helpers/classCallCheck.js",
+          "bytesInOutput": 186
+        },
+        {
+          "module": "node_modules/@babel/runtime/helpers/typeof.js",
+          "bytesInOutput": 416
+        },
+        {
+          "module": "node_modules/@babel/runtime/helpers/toPrimitive.js",
+          "bytesInOutput": 387
+        },
+        {
+          "module": "node_modules/@babel/runtime/helpers/toPropertyKey.js",
+          "bytesInOutput": 185
+        },
+        {
+          "module": "node_modules/@babel/runtime/helpers/createClass.js",
+          "bytesInOutput": 385
+        }
+      ],
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76"
+        }
+      ]
+    },
+    {
+      "name": "@lit/reactive-element",
+      "version": "2.1.2",
+      "declaredLicense": "BSD-3-Clause",
+      "emitted": [
+        {
+          "module": "node_modules/@lit/reactive-element/decorators/custom-element.js",
+          "bytesInOutput": 108
+        },
+        {
+          "module": "node_modules/@lit/reactive-element/css-tag.js",
+          "bytesInOutput": 1337
+        },
+        {
+          "module": "node_modules/@lit/reactive-element/reactive-element.js",
+          "bytesInOutput": 5905
+        },
+        {
+          "module": "node_modules/@lit/reactive-element/decorators/property.js",
+          "bytesInOutput": 802
+        },
+        {
+          "module": "node_modules/@lit/reactive-element/decorators/state.js",
+          "bytesInOutput": 55
+        },
+        {
+          "module": "node_modules/@lit/reactive-element/decorators/base.js",
+          "bytesInOutput": 121
+        },
+        {
+          "module": "node_modules/@lit/reactive-element/decorators/query.js",
+          "bytesInOutput": 359
+        }
+      ],
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "45d31799d0db956cc3eb5469346abbd9b7025babc5ff29fab10d7095da992ef1"
+        }
+      ]
+    },
+    {
+      "name": "@material/web",
+      "version": "2.5.0",
+      "declaredLicense": "Apache-2.0",
+      "emitted": [
+        {
+          "module": "node_modules/@material/web/icon/internal/icon.js",
+          "bytesInOutput": 235
+        },
+        {
+          "module": "node_modules/@material/web/icon/internal/icon-styles.cssresult.js",
+          "bytesInOutput": 647
+        },
+        {
+          "module": "node_modules/@material/web/icon/icon.js",
+          "bytesInOutput": 67
+        },
+        {
+          "module": "node_modules/@material/web/internal/controller/attachable-controller.js",
+          "bytesInOutput": 1020
+        },
+        {
+          "module": "node_modules/@material/web/focus/internal/focus-ring.js",
+          "bytesInOutput": 1154
+        },
+        {
+          "module": "node_modules/@material/web/focus/internal/focus-ring-styles.cssresult.js",
+          "bytesInOutput": 2635
+        },
+        {
+          "module": "node_modules/@material/web/focus/md-focus-ring.js",
+          "bytesInOutput": 73
+        },
+        {
+          "module": "node_modules/@material/web/internal/motion/animation.js",
+          "bytesInOutput": 272
+        },
+        {
+          "module": "node_modules/@material/web/ripple/internal/ripple.js",
+          "bytesInOutput": 4948
+        },
+        {
+          "module": "node_modules/@material/web/ripple/internal/ripple-styles.cssresult.js",
+          "bytesInOutput": 1007
+        },
+        {
+          "module": "node_modules/@material/web/ripple/ripple.js",
+          "bytesInOutput": 69
+        },
+        {
+          "module": "node_modules/@material/web/internal/aria/aria.js",
+          "bytesInOutput": 707
+        },
+        {
+          "module": "node_modules/@material/web/internal/aria/delegate.js",
+          "bytesInOutput": 1101
+        },
+        {
+          "module": "node_modules/@material/web/internal/controller/is-rtl.js",
+          "bytesInOutput": 95
+        },
+        {
+          "module": "node_modules/@material/web/internal/events/dispatch-hooks.js",
+          "bytesInOutput": 728
+        },
+        {
+          "module": "node_modules/@material/web/labs/behaviors/element-internals.js",
+          "bytesInOutput": 170
+        },
+        {
+          "module": "node_modules/@material/web/labs/behaviors/form-associated.js",
+          "bytesInOutput": 860
+        },
+        {
+          "module": "node_modules/@material/web/labs/behaviors/form-submitter.js",
+          "bytesInOutput": 673
+        },
+        {
+          "module": "node_modules/@material/web/iconbutton/internal/icon-button.js",
+          "bytesInOutput": 3107
+        },
+        {
+          "module": "node_modules/@material/web/iconbutton/internal/shared-styles.cssresult.js",
+          "bytesInOutput": 1893
+        },
+        {
+          "module": "node_modules/@material/web/iconbutton/internal/standard-styles.cssresult.js",
+          "bytesInOutput": 4224
+        },
+        {
+          "module": "node_modules/@material/web/iconbutton/icon-button.js",
+          "bytesInOutput": 144
+        }
+      ],
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "295cdb4364b782931c914f5ca8c47fac87c732fa7e448b788a47aa5b25728212"
+        }
+      ]
+    },
+    {
+      "name": "automation-events",
+      "version": "7.1.19",
+      "declaredLicense": "MIT",
+      "emitted": [
+        {
+          "module": "node_modules/automation-events/build/es5/bundle.js",
+          "bytesInOutput": 5693
+        }
+      ],
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "04238a17c611b988a3ef5934e6c247acd4a344c837f60b223f3d9ffb57aa4dde"
+        }
+      ]
+    },
+    {
+      "name": "highlight.js",
+      "version": "11.12.0",
+      "declaredLicense": "BSD-3-Clause",
+      "emitted": [
+        {
+          "module": "node_modules/highlight.js/lib/core.js",
+          "bytesInOutput": 20891
+        },
+        {
+          "module": "node_modules/highlight.js/es/core.js",
+          "bytesInOutput": 36
+        },
+        {
+          "module": "node_modules/highlight.js/es/languages/javascript.js",
+          "bytesInOutput": 6492
+        }
+      ],
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "6c081431591d9df696c82dc598fe1423765b8a299b200ed00b281afd0f64c490"
+        }
+      ]
+    },
+    {
+      "name": "lit-element",
+      "version": "4.2.2",
+      "declaredLicense": "BSD-3-Clause",
+      "emitted": [
+        {
+          "module": "node_modules/lit-element/lit-element.js",
+          "bytesInOutput": 749
+        }
+      ],
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "45d31799d0db956cc3eb5469346abbd9b7025babc5ff29fab10d7095da992ef1"
+        }
+      ]
+    },
+    {
+      "name": "lit-html",
+      "version": "3.3.3",
+      "declaredLicense": "BSD-3-Clause",
+      "emitted": [
+        {
+          "module": "node_modules/lit-html/lit-html.js",
+          "bytesInOutput": 7200
+        },
+        {
+          "module": "node_modules/lit-html/directive.js",
+          "bytesInOutput": 302
+        },
+        {
+          "module": "node_modules/lit-html/directives/class-map.js",
+          "bytesInOutput": 738
+        },
+        {
+          "module": "node_modules/lit-html/directive-helpers.js",
+          "bytesInOutput": 75
+        },
+        {
+          "module": "node_modules/lit-html/directives/live.js",
+          "bytesInOutput": 577
+        },
+        {
+          "module": "node_modules/lit-html/directives/style-map.js",
+          "bytesInOutput": 832
+        },
+        {
+          "module": "node_modules/lit-html/static.js",
+          "bytesInOutput": 702
+        },
+        {
+          "module": "node_modules/lit-html/directives/unsafe-html.js",
+          "bytesInOutput": 542
+        }
+      ],
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "2b66f9390afde29edfe4314daff93f01fb182e1178053e228120178987e5db75"
+        }
+      ]
+    },
+    {
+      "name": "standardized-audio-context",
+      "version": "25.3.77",
+      "declaredLicense": "MIT",
+      "emitted": [
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/module.js",
+          "bytesInOutput": 2985
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/abort-error.js",
+          "bytesInOutput": 45
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/add-active-input-connection-to-audio-node.js",
+          "bytesInOutput": 69
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/add-audio-node-connections.js",
+          "bytesInOutput": 161
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/add-audio-param-connections.js",
+          "bytesInOutput": 88
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/globals.js",
+          "bytesInOutput": 154
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/helpers/is-constructible.js",
+          "bytesInOutput": 96
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/helpers/split-import-statements.js",
+          "bytesInOutput": 511
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/add-audio-worklet-module.js",
+          "bytesInOutput": 2425
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/helpers/get-value-for-key.js",
+          "bytesInOutput": 120
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/helpers/pick-element-from-set.js",
+          "bytesInOutput": 191
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/helpers/delete-passive-input-connection-to-audio-node.js",
+          "bytesInOutput": 97
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/helpers/get-event-listeners-of-audio-node.js",
+          "bytesInOutput": 19
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/helpers/set-internal-state-to-active.js",
+          "bytesInOutput": 111
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/guards/audio-worklet-node.js",
+          "bytesInOutput": 21
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/helpers/set-internal-state-to-passive.js",
+          "bytesInOutput": 111
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/helpers/set-internal-state-to-passive-when-necessary.js",
+          "bytesInOutput": 54
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/add-connection-to-audio-node.js",
+          "bytesInOutput": 537
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/add-passive-input-connection-to-audio-node.js",
+          "bytesInOutput": 120
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/add-silent-connection.js",
+          "bytesInOutput": 257
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/add-unrendered-audio-worklet-node.js",
+          "bytesInOutput": 31
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/analyser-node-constructor.js",
+          "bytesInOutput": 1450
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/helpers/is-owned-by-context.js",
+          "bytesInOutput": 28
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/analyser-node-renderer-factory.js",
+          "bytesInOutput": 438
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/helpers/test-audio-buffer-copy-channel-methods-out-of-bounds-support.js",
+          "bytesInOutput": 82
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/index-size-error.js",
+          "bytesInOutput": 49
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/helpers/wrap-audio-buffer-get-channel-data-method.js",
+          "bytesInOutput": 115
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/audio-buffer-constructor.js",
+          "bytesInOutput": 607
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/constants.js",
+          "bytesInOutput": 36
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/helpers/is-active-audio-node.js",
+          "bytesInOutput": 20
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/audio-buffer-source-node-constructor.js",
+          "bytesInOutput": 1827
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/audio-buffer-source-node-renderer-factory.js",
+          "bytesInOutput": 609
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/guards/audio-buffer-source-node.js",
+          "bytesInOutput": 29
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/guards/biquad-filter-node.js",
+          "bytesInOutput": 38
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/guards/constant-source-node.js",
+          "bytesInOutput": 23
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/guards/gain-node.js",
+          "bytesInOutput": 41
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/guards/oscillator-node.js",
+          "bytesInOutput": 55
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/guards/stereo-panner-node.js",
+          "bytesInOutput": 20
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/helpers/get-audio-node-connections.js",
+          "bytesInOutput": 19
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/helpers/get-audio-param-connections.js",
+          "bytesInOutput": 19
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/helpers/deactivate-active-audio-node-input-connections.js",
+          "bytesInOutput": 385
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/helpers/deactivate-audio-graph.js",
+          "bytesInOutput": 33
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/helpers/is-valid-latency-hint.js",
+          "bytesInOutput": 114
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/audio-context-constructor.js",
+          "bytesInOutput": 2443
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/audio-destination-node-constructor.js",
+          "bytesInOutput": 741
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/audio-destination-node-renderer-factory.js",
+          "bytesInOutput": 181
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/audio-listener-factory.js",
+          "bytesInOutput": 2293
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/guards/audio-node.js",
+          "bytesInOutput": 24
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/guards/audio-node-output-connection.js",
+          "bytesInOutput": 19
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/helpers/insert-element-in-set.js",
+          "bytesInOutput": 139
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/helpers/add-active-input-connection-to-audio-param.js",
+          "bytesInOutput": 62
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/helpers/add-passive-input-connection-to-audio-param.js",
+          "bytesInOutput": 102
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/guards/native-audio-node-faker.js",
+          "bytesInOutput": 23
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/helpers/connect-native-audio-node-to-native-audio-node.js",
+          "bytesInOutput": 112
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/helpers/delete-active-input-connection.js",
+          "bytesInOutput": 88
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/helpers/delete-active-input-connection-to-audio-param.js",
+          "bytesInOutput": 44
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/helpers/delete-event-listeners-of-audio-node.js",
+          "bytesInOutput": 92
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/helpers/delete-passive-input-connection-to-audio-param.js",
+          "bytesInOutput": 85
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/helpers/disconnect-native-audio-node-from-native-audio-node.js",
+          "bytesInOutput": 76
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/helpers/get-native-audio-node.js",
+          "bytesInOutput": 19
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/helpers/get-native-audio-param.js",
+          "bytesInOutput": 19
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/helpers/is-part-of-a-cycle.js",
+          "bytesInOutput": 20
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/helpers/is-passive-audio-node.js",
+          "bytesInOutput": 21
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/helpers/test-audio-node-disconnect-method-support.js",
+          "bytesInOutput": 486
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/helpers/visit-each-audio-node-once.js",
+          "bytesInOutput": 127
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/guards/native-audio-node.js",
+          "bytesInOutput": 24
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/helpers/wrap-audio-node-disconnect-method.js",
+          "bytesInOutput": 686
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/audio-node-constructor.js",
+          "bytesInOutput": 3084
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/audio-param-factory.js",
+          "bytesInOutput": 2415
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/audio-param-renderer.js",
+          "bytesInOutput": 570
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/read-only-map.js",
+          "bytesInOutput": 319
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/audio-worklet-node-constructor.js",
+          "bytesInOutput": 1056
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/helpers/copy-from-channel.js",
+          "bytesInOutput": 306
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/helpers/copy-to-channel.js",
+          "bytesInOutput": 157
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/helpers/create-nested-arrays.js",
+          "bytesInOutput": 154
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/helpers/get-audio-worklet-processor.js",
+          "bytesInOutput": 54
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/audio-worklet-node-renderer-factory.js",
+          "bytesInOutput": 3878
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/base-audio-context-constructor.js",
+          "bytesInOutput": 1207
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/biquad-filter-node-constructor.js",
+          "bytesInOutput": 901
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/biquad-filter-node-renderer-factory.js",
+          "bytesInOutput": 644
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/cache-test-result.js",
+          "bytesInOutput": 250
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/channel-merger-node-constructor.js",
+          "bytesInOutput": 220
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/channel-merger-node-renderer-factory.js",
+          "bytesInOutput": 354
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/channel-splitter-node-constructor.js",
+          "bytesInOutput": 226
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/channel-splitter-node-renderer-factory.js",
+          "bytesInOutput": 356
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/connect-audio-param.js",
+          "bytesInOutput": 28
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/connect-multiple-outputs.js",
+          "bytesInOutput": 107
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/connected-native-audio-buffer-source-node-factory.js",
+          "bytesInOutput": 270
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/constant-source-node-constructor.js",
+          "bytesInOutput": 1048
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/constant-source-node-renderer-factory.js",
+          "bytesInOutput": 502
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/convert-number-to-unsigned-long.js",
+          "bytesInOutput": 27
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/convolver-node-constructor.js",
+          "bytesInOutput": 908
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/convolver-node-renderer-factory.js",
+          "bytesInOutput": 403
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/create-native-offline-audio-context.js",
+          "bytesInOutput": 177
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/data-clone-error.js",
+          "bytesInOutput": 49
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/helpers/detach-array-buffer.js",
+          "bytesInOutput": 195
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/decode-audio-data.js",
+          "bytesInOutput": 457
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/decrement-cycle-counter.js",
+          "bytesInOutput": 319
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/delay-node-constructor.js",
+          "bytesInOutput": 347
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/delay-node-renderer-factory.js",
+          "bytesInOutput": 444
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/delete-active-input-connection-to-audio-node.js",
+          "bytesInOutput": 51
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/delete-unrendered-audio-worklet-node.js",
+          "bytesInOutput": 34
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/guards/delay-node.js",
+          "bytesInOutput": 26
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/detect-cycles.js",
+          "bytesInOutput": 216
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/disconnect-multiple-outputs.js",
+          "bytesInOutput": 356
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/dynamics-compressor-node-constructor.js",
+          "bytesInOutput": 1397
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/dynamics-compressor-node-renderer-factory.js",
+          "bytesInOutput": 742
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/encoding-error.js",
+          "bytesInOutput": 48
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/evaluate-source.js",
+          "bytesInOutput": 525
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/event-target-constructor.js",
+          "bytesInOutput": 479
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/expose-current-frame-and-current-time.js",
+          "bytesInOutput": 236
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/fetch-source.js",
+          "bytesInOutput": 100
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/gain-node-constructor.js",
+          "bytesInOutput": 274
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/gain-node-renderer-factory.js",
+          "bytesInOutput": 400
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/get-active-audio-worklet-node-inputs.js",
+          "bytesInOutput": 24
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/get-audio-node-renderer.js",
+          "bytesInOutput": 148
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/get-audio-node-tail-time.js",
+          "bytesInOutput": 63
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/get-audio-param-renderer.js",
+          "bytesInOutput": 149
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/get-backup-offline-audio-context.js",
+          "bytesInOutput": 22
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/invalid-state-error.js",
+          "bytesInOutput": 52
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/get-native-context.js",
+          "bytesInOutput": 64
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/get-or-create-backup-offline-audio-context.js",
+          "bytesInOutput": 179
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/get-unrendered-audio-worklet-nodes.js",
+          "bytesInOutput": 117
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/invalid-access-error.js",
+          "bytesInOutput": 53
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/helpers/wrap-iir-filter-node-get-frequency-response-method.js",
+          "bytesInOutput": 153
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/iir-filter-node-constructor.js",
+          "bytesInOutput": 382
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/helpers/filter-buffer.js",
+          "bytesInOutput": 276
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/iir-filter-node-renderer-factory.js",
+          "bytesInOutput": 1223
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/increment-cycle-counter-factory.js",
+          "bytesInOutput": 231
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/is-any-audio-context.js",
+          "bytesInOutput": 52
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/is-any-audio-node.js",
+          "bytesInOutput": 32
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/is-any-audio-param.js",
+          "bytesInOutput": 32
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/is-any-offline-audio-context.js",
+          "bytesInOutput": 52
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/is-native-audio-context.js",
+          "bytesInOutput": 38
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/is-native-audio-node.js",
+          "bytesInOutput": 80
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/is-native-audio-param.js",
+          "bytesInOutput": 82
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/is-native-context.js",
+          "bytesInOutput": 28
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/is-native-offline-audio-context.js",
+          "bytesInOutput": 38
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/is-secure-context.js",
+          "bytesInOutput": 38
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/media-element-audio-source-node-constructor.js",
+          "bytesInOutput": 239
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/media-stream-audio-destination-node-constructor.js",
+          "bytesInOutput": 337
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/media-stream-audio-source-node-constructor.js",
+          "bytesInOutput": 237
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/media-stream-track-audio-source-node-constructor.js",
+          "bytesInOutput": 90
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/minimal-audio-context-constructor.js",
+          "bytesInOutput": 2187
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/minimal-base-audio-context-constructor.js",
+          "bytesInOutput": 671
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/helpers/test-promise-support.js",
+          "bytesInOutput": 221
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/minimal-offline-audio-context-constructor.js",
+          "bytesInOutput": 992
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/monitor-connections.js",
+          "bytesInOutput": 573
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/helpers/assign-native-audio-node-option.js",
+          "bytesInOutput": 60
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/helpers/assign-native-audio-node-options.js",
+          "bytesInOutput": 98
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/helpers/test-analyser-node-get-float-time-domain-data-method-support.js",
+          "bytesInOutput": 54
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/helpers/wrap-analyser-node-get-float-time-domain-data-method.js",
+          "bytesInOutput": 190
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/native-analyser-node-factory.js",
+          "bytesInOutput": 226
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/native-audio-buffer-constructor.js",
+          "bytesInOutput": 75
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/helpers/assign-native-audio-node-audio-param-value.js",
+          "bytesInOutput": 72
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/helpers/wrap-audio-buffer-source-node-start-method-consecutive-calls.js",
+          "bytesInOutput": 103
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/helpers/wrap-audio-scheduled-source-node-start-method-negative-parameters.js",
+          "bytesInOutput": 160
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/helpers/wrap-audio-scheduled-source-node-stop-method-negative-parameters.js",
+          "bytesInOutput": 117
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/native-audio-buffer-source-node-factory.js",
+          "bytesInOutput": 314
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/native-audio-context-constructor.js",
+          "bytesInOutput": 137
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/native-audio-destination-node.js",
+          "bytesInOutput": 742
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/native-audio-worklet-node-constructor.js",
+          "bytesInOutput": 85
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/helpers/test-clonability-of-audio-worklet-node-options.js",
+          "bytesInOutput": 84
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/native-audio-worklet-node-factory.js",
+          "bytesInOutput": 1388
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/helpers/compute-buffer-size.js",
+          "bytesInOutput": 96
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/helpers/clone-audio-worklet-node-options.js",
+          "bytesInOutput": 196
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/helpers/create-audio-worklet-processor-promise.js",
+          "bytesInOutput": 55
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/helpers/create-audio-worklet-processor.js",
+          "bytesInOutput": 110
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/native-audio-worklet-node-faker-factory.js",
+          "bytesInOutput": 6017
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/native-biquad-filter-node.js",
+          "bytesInOutput": 141
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/native-channel-merger-node-factory.js",
+          "bytesInOutput": 134
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/helpers/wrap-channel-splitter-node.js",
+          "bytesInOutput": 328
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/native-channel-splitter-node.js",
+          "bytesInOutput": 88
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/native-constant-source-node-factory.js",
+          "bytesInOutput": 192
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/helpers/intercept-connections.js",
+          "bytesInOutput": 80
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/native-constant-source-node-faker-factory.js",
+          "bytesInOutput": 1160
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/native-convolver-node-factory.js",
+          "bytesInOutput": 391
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/native-delay-node.js",
+          "bytesInOutput": 89
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/native-dynamics-compressor-node-factory.js",
+          "bytesInOutput": 215
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/native-gain-node.js",
+          "bytesInOutput": 69
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/native-iir-filter-node-factory.js",
+          "bytesInOutput": 134
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/native-iir-filter-node-faker-factory.js",
+          "bytesInOutput": 2075
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/native-media-element-audio-source-node.js",
+          "bytesInOutput": 57
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/native-media-stream-audio-destination-node.js",
+          "bytesInOutput": 150
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/native-media-stream-audio-source-node.js",
+          "bytesInOutput": 222
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/native-media-stream-track-audio-source-node-factory.js",
+          "bytesInOutput": 261
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/native-offline-audio-context-constructor.js",
+          "bytesInOutput": 165
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/native-oscillator-node-factory.js",
+          "bytesInOutput": 256
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/native-panner-node-factory.js",
+          "bytesInOutput": 410
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/native-panner-node-faker-factory.js",
+          "bytesInOutput": 4294
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/native-periodic-wave-factory.js",
+          "bytesInOutput": 258
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/native-script-processor-node.js",
+          "bytesInOutput": 49
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/native-stereo-panner-node-factory.js",
+          "bytesInOutput": 270
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/native-stereo-panner-node-faker-factory.js",
+          "bytesInOutput": 4048
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/native-wave-shaper-node-factory.js",
+          "bytesInOutput": 544
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/native-wave-shaper-node-faker-factory.js",
+          "bytesInOutput": 2176
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/not-supported-error.js",
+          "bytesInOutput": 52
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/offline-audio-context-constructor.js",
+          "bytesInOutput": 1184
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/oscillator-node-constructor.js",
+          "bytesInOutput": 1605
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/oscillator-node-renderer-factory.js",
+          "bytesInOutput": 679
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/panner-node-constructor.js",
+          "bytesInOutput": 1994
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/panner-node-renderer-factory.js",
+          "bytesInOutput": 2757
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/periodic-wave-constructor.js",
+          "bytesInOutput": 248
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/render-automation.js",
+          "bytesInOutput": 49
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/render-inputs-of-audio-node.js",
+          "bytesInOutput": 247
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/render-inputs-of-audio-param.js",
+          "bytesInOutput": 160
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/render-native-offline-audio-context.js",
+          "bytesInOutput": 451
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/set-active-audio-worklet-node-inputs.js",
+          "bytesInOutput": 30
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/set-audio-node-tail-time.js",
+          "bytesInOutput": 28
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/start-rendering.js",
+          "bytesInOutput": 222
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/stereo-panner-node-constructor.js",
+          "bytesInOutput": 268
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/stereo-panner-node-renderer-factory.js",
+          "bytesInOutput": 425
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/test-audio-buffer-constructor-support.js",
+          "bytesInOutput": 100
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/test-audio-worklet-processor-post-message-support.js",
+          "bytesInOutput": 597
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/test-offline-audio-context-current-time-support.js",
+          "bytesInOutput": 273
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/unknown-error.js",
+          "bytesInOutput": 47
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/wave-shaper-node-constructor.js",
+          "bytesInOutput": 695
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/wave-shaper-node-renderer-factory.js",
+          "bytesInOutput": 391
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/window.js",
+          "bytesInOutput": 41
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/wrap-audio-buffer-copy-channel-methods.js",
+          "bytesInOutput": 375
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/wrap-audio-buffer-copy-channel-methods-out-of-bounds.js",
+          "bytesInOutput": 231
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/wrap-audio-buffer-source-node-stop-method-nullified-buffer.js",
+          "bytesInOutput": 169
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/factories/wrap-channel-merger-node.js",
+          "bytesInOutput": 348
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/helpers/get-first-sample.js",
+          "bytesInOutput": 96
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/helpers/is-dc-curve.js",
+          "bytesInOutput": 106
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/helpers/overwrite-accessors.js",
+          "bytesInOutput": 183
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/helpers/sanitize-audio-worklet-node-options.js",
+          "bytesInOutput": 195
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/helpers/sanitize-channel-splitter-options.js",
+          "bytesInOutput": 50
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/helpers/sanitize-periodic-wave-options.js",
+          "bytesInOutput": 201
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/helpers/set-value-at-time-until-possible.js",
+          "bytesInOutput": 91
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/helpers/test-audio-buffer-source-node-start-method-consecutive-calls-support.js",
+          "bytesInOutput": 89
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/helpers/test-audio-buffer-source-node-start-method-offset-clamping-support.js",
+          "bytesInOutput": 121
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/helpers/test-audio-buffer-source-node-stop-method-nullified-buffer-support.js",
+          "bytesInOutput": 88
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/helpers/test-audio-scheduled-source-node-start-method-negative-parameters-support.js",
+          "bytesInOutput": 104
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/helpers/test-audio-scheduled-source-node-stop-method-consecutive-calls-support.js",
+          "bytesInOutput": 138
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/helpers/test-audio-scheduled-source-node-stop-method-negative-parameters-support.js",
+          "bytesInOutput": 103
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/helpers/test-audio-worklet-node-options-clonability.js",
+          "bytesInOutput": 102
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/helpers/wrap-audio-buffer-source-node-start-method-offset-clamping.js",
+          "bytesInOutput": 179
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/helpers/wrap-audio-scheduled-source-node-stop-method-consecutive-calls.js",
+          "bytesInOutput": 286
+        },
+        {
+          "module": "node_modules/standardized-audio-context/build/es2019/helpers/wrap-event-listener.js",
+          "bytesInOutput": 153
+        }
+      ],
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "8d1fa516b18bd6ed3fb06ad3f8d95c41d465f3762ccb66d433b12ee08750a382"
+        }
+      ]
+    },
+    {
+      "name": "tslib",
+      "version": "2.8.1",
+      "declaredLicense": "0BSD",
+      "emitted": [
+        {
+          "module": "node_modules/tslib/tslib.es6.mjs",
+          "bytesInOutput": 326
+        }
+      ],
+      "licenseFiles": [
+        {
+          "name": "CopyrightNotice.txt",
+          "sha256": "da16ddb65f8ca390998fb99223d0112498b56b45784d00afd77ff8ce1ac4de8b"
+        },
+        {
+          "name": "LICENSE.txt",
+          "sha256": "210b19e543130388c68654b7497e967119ce17145f66ab7d85688fbd70f08751"
+        }
+      ]
+    }
+  ],
+  "publicPreferredSourceIndex": "PUBLIC-SOURCE.json",
+  "testOnlyEngine": "web-audio-engine 0.13.4; not production",
+  "browserVisualQA": "not-run"
+}
