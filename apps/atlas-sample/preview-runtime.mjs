@@ -31,6 +31,19 @@ function runtimeScripts(runtime){
  return {names,urls:names.map(name=>dir+name)};
 }
 export function runtimeFor(item){return item.runtime??(item.featured?{key:'featured-v1',css:'featured/featured.css',js:'featured/featured.js',cssHref:'featured.css',scriptSrc:'featured.js'}:null)}
+/** Require a real leading head; comments/application text cannot impersonate it. */
+function normalizeHead(html){
+ let rest=html,offset=0,htmlSeen=false,doctypeSeen=false;
+ const tag=/^<(?:"[^"]*"|'[^']*'|[^'">])*>/;
+ for(;;){const space=/^\s*/.exec(rest)[0];offset+=space.length;rest=rest.slice(space.length);
+  if(rest.startsWith('<!--')){const end=rest.indexOf('-->');if(end<0)throw Error('预览文档注释未闭合');offset+=end+3;rest=rest.slice(end+3);continue}
+  const next=tag.exec(rest)?.[0];if(!next)throw Error('预览入口缺少合法 head，已停止运行');
+  if(/^<!doctype\b/i.test(next)&&!doctypeSeen&&!htmlSeen){doctypeSeen=true;offset+=next.length;rest=rest.slice(next.length);continue}
+  if(/^<html(?:\s|>)/i.test(next)&&!htmlSeen){htmlSeen=true;offset+=next.length;rest=rest.slice(next.length);continue}
+  if(/^<head(?:\s|>)/i.test(next))return {html,offset:offset+next.length};
+  throw Error('预览入口缺少合法 head，已停止运行');
+ }
+}
 export function composePreview(html,css,js,runtime,mediaMapping){
  const cssTag=`<link rel="stylesheet" href="${runtime.cssHref}">`,chunks=runtimeScripts(runtime),names=chunks?.names??[runtime.scriptSrc],tags=names.map(name=>`<script src="${name}"></script>`);
  if(!html.includes(cssTag)||tags.some(tag=>!html.includes(tag)))throw Error('预览入口与运行资源定义不匹配');
@@ -38,17 +51,63 @@ export function composePreview(html,css,js,runtime,mediaMapping){
  if(mediaMapping)js='Object.defineProperty(window,"__atlasAssets",{value:Object.freeze('+JSON.stringify(mediaMapping).replace(/</g,'\\u003c')+')});\n'+js;
  const safeCss=css.replace(/<\/style/gi,'<\\/style'),safeJs=js.replace(/<\/script/gi,'<\\/script');
  let composed=html;for(const tag of tags.slice(1))composed=composed.replace(tag,'');composed=composed.replace(cssTag,()=>'<style>'+safeCss+'</style>').replace(tags[0],()=>'<script>'+safeJs+'</script>');
- return composed.replace('<head>',`<head><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; font-src data:; img-src data: blob:; ${runtime.allowLocalMedia===true?'media-src blob:; ':''}connect-src 'none'; form-action 'none'">`);
+ const normalized=normalizeHead(composed);composed=normalized.html;const offset=normalized.offset;
+ // Refuse ambiguous pre-existing policies rather than silently weakening or duplicating one.
+ if(/<meta\b[^>]*http-equiv\s*=\s*["']?Content-Security-Policy\b/i.test(html))throw Error('预览入口已有 CSP，需核对后接入');
+ const policy=`<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; font-src data:; img-src data: blob:; ${runtime.allowLocalMedia===true?'media-src blob:; ':''}connect-src 'none'; form-action 'none'">`;
+ return composed.slice(0,offset)+policy+composed.slice(offset);
 }
-/** Generation tokens prevent stale async completions from reviving released frames. */
-export function createPreviewLoader({cache=createTextCache(),connected=frame=>frame.isConnected,mediaLoader=loadMediaAssets}={}){
- const versions=new WeakMap(),controllers=new WeakMap(),media=new WeakMap();
- function release(frame){media.get(frame)?.dispose();media.delete(frame);controllers.get(frame)?.abort();controllers.delete(frame);versions.set(frame,(versions.get(frame)??0)+1);frame.onload=null;frame.removeAttribute('srcdoc');frame.removeAttribute('src');frame.src='about:blank';frame.dataset.preview=''}
- async function mount(frame,item,{onReady=()=>{},onError=()=>{}}={}){
+/** A start signal is diagnostic only: it is never proof of visual or functional success. */
+const HEALTH_CHANNEL='ui-vault-preview-health-v1';
+function healthNonce(){const values=new Uint32Array(4);if(!globalThis.crypto?.getRandomValues)throw Error('浏览器不支持安全预览诊断');globalThis.crypto.getRandomValues(values);return Array.from(values,x=>x.toString(16).padStart(8,'0')).join('')}
+function healthBootstrap(nonce,generation){
+ const config=JSON.stringify({channel:HEALTH_CHANNEL,nonce,generation}).replace(/</g,'\\u003c');
+ return `<script>(function(config){var failed=false,started=false,warned=false;var send=function(kind,message){try{parent.postMessage({channel:config.channel,nonce:config.nonce,generation:config.generation,kind:kind,message:String(message||'').slice(0,500)},'*')}catch(_){}};window.addEventListener('error',function(event){if(failed)return;if(typeof event.message!=='string'){if(!warned){warned=true;send('warning','预览资源加载出现告警')}return}failed=true;send('error',event.message||'预览脚本执行失败')},true);window.addEventListener('unhandledrejection',function(event){if(failed)return;failed=true;var reason=event.reason;var message='未处理的异步错误';try{if(reason&&typeof reason.message==='string')message=reason.message;else if(typeof reason==='string')message=reason}catch(_){}send('error',message)});var start=function(){if(started||failed)return;started=true;send('started','启动阶段未捕获异常；视觉与交互尚未验证')};if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start,{once:true});else start()})(`+config+`);</script>`;
+}
+/** Source identity + per-mount random capability + generation reject stale/cross-frame messages. */
+export function createPreviewLoader({cache=createTextCache(),connected=frame=>frame.isConnected,mediaLoader=loadMediaAssets,diagnosticTimeoutMs=5000}={}){
+ const versions=new WeakMap(),controllers=new WeakMap(),media=new WeakMap(),health=new WeakMap();
+ function stopHealth(frame){health.get(frame)?.();health.delete(frame)}
+ function release(frame){stopHealth(frame);media.get(frame)?.dispose();media.delete(frame);controllers.get(frame)?.abort();controllers.delete(frame);versions.set(frame,(versions.get(frame)??0)+1);frame.onload=null;frame.removeAttribute('srcdoc');frame.removeAttribute('src');frame.src='about:blank';frame.dataset.preview='';frame.dataset.previewState='idle'}
+ async function mount(frame,item,{onState=()=>{},onReady=()=>{},onError=()=>{}}={}){
   release(frame);const version=versions.get(frame),controller=new AbortController();controllers.set(frame,controller);frame.dataset.preview=item.preview;
-  const current=()=>versions.get(frame)===version&&connected(frame);
-  const loaded=()=>{if(current())onReady()};
-  try{const runtime=runtimeFor(item);if(!runtime){frame.onload=loaded;frame.src=item.preview;return}const chunks=runtimeScripts(runtime),urls=chunks?.urls??[runtime.js],get=url=>cache.get(url,{signal:controller.signal});const [css,texts,html]=await Promise.all([get(runtime.css),Promise.all(urls.map(get)),get(item.preview)]);if(chunks&&texts.some(text=>new TextEncoder().encode(text).byteLength>=MAX_SCRIPT_BYTES))throw Error('预览分片过大');const js=texts.join('\n;\n');let assets;if(runtime.assets){assets=await mediaLoader(runtime.assets,{signal:controller.signal});if(!current()){assets.dispose();return}media.set(frame,assets)}if(current()){const document=composePreview(html,css,js,runtime,assets?.mapping);frame.onload=loaded;frame.srcdoc=document}}catch(error){controller.abort();if(current()){media.get(frame)?.dispose();media.delete(frame)}if(current()){onError(error);frame.srcdoc='<p style="font:14px system-ui;padding:20px">预览未加载，打开详情重试。</p>'}}
+  let failed=false;const current=()=>versions.get(frame)===version&&connected(frame)&&!controller.signal.aborted;
+  const state=(phase,message,signal)=>{if(!current()||failed&&phase!=='error')return;frame.dataset.previewState=phase;onState({phase,message,signal})};
+  const fail=(error,signal)=>{if(!current()||failed)return;failed=true;stopHealth(frame);media.get(frame)?.dispose();media.delete(frame);state('error',signal==='runtime'?'预览运行时报错':'预览资源未能加载',signal);frame.onload=null;frame.removeAttribute('srcdoc');frame.removeAttribute('src');frame.src='about:blank';onError(error);controller.abort()};
+  state('loading','正在加载预览资源与启动诊断…','loading');
+  try{
+   const runtime=runtimeFor(item);
+   if(!runtime){frame.onload=()=>{if(current()&&!failed)state('unverified','文档已载入；没有运行诊断，视觉与交互未验证','load-only')};frame.src=item.preview;return}
+   const chunks=runtimeScripts(runtime),urls=chunks?.urls??[runtime.js],get=url=>cache.get(url,{signal:controller.signal});
+   const [css,texts,html]=await Promise.all([get(runtime.css),Promise.all(urls.map(get)),get(item.preview)]);
+   if(chunks&&texts.some(text=>new TextEncoder().encode(text).byteLength>=MAX_SCRIPT_BYTES))throw Error('预览分片过大');
+   const js=texts.join('\n;\n');let assets;
+   if(runtime.assets){assets=await mediaLoader(runtime.assets,{signal:controller.signal});if(!current()){assets.dispose();return}media.set(frame,assets)}
+   if(!current())return;
+   const nonce=healthNonce(),target=frame.ownerDocument?.defaultView??globalThis.window;
+   const composed=composePreview(html,css,js,runtime,assets?.mapping);
+   let timer=null,started=false,warned=false;
+   const clearTimer=()=>{if(timer!==null){clearTimeout(timer);timer=null}};
+   const receive=event=>{
+    if(!current()||failed||event.source!==frame.contentWindow)return;
+    const data=event.data;
+    if(!data||typeof data!=='object'||data.channel!==HEALTH_CHANNEL||data.nonce!==nonce||data.generation!==version)return;
+    if(data.kind==='error'){
+     const message=typeof data.message==='string'?data.message.slice(0,500).replace(/[\u0000-\u001f]/g,' '):'预览运行时报错';
+     fail(Error(message),'runtime');
+    }else if(data.kind==='warning'&&!warned){warned=true;state('unverified','检测到资源加载告警；运行效果尚未验证','resource-warning')}else if(data.kind==='started'&&!started){started=true;clearTimer();state('unverified',warned?'启动收到资源告警；视觉与交互尚未验证':'启动阶段未捕获异常；视觉与交互尚未验证',warned?'resource-warning':'started');onReady({verified:false,phase:'unverified'})}
+   };
+   target?.addEventListener('message',receive);
+   health.set(frame,()=>{clearTimer();target?.removeEventListener('message',receive)});
+   timer=setTimeout(()=>{timer=null;if(current()&&!failed&&!started)state('unverified','未收到启动诊断；视觉与交互尚未验证','diagnostic-timeout')},diagnosticTimeoutMs);
+   // onload may fire even for a broken document. It intentionally grants no readiness.
+   frame.onload=()=>{};
+   // Inject before all application code, while preserving the existing CSP verbatim.
+   const metaStart=composed.indexOf('<meta http-equiv="Content-Security-Policy"');
+   const headEnd=metaStart<0?-1:composed.indexOf('>',metaStart)+1;
+   if(metaStart<0||headEnd<=0)throw Error('预览入口缺少安全策略');
+   frame.srcdoc=composed.slice(0,headEnd)+healthBootstrap(nonce,version)+composed.slice(headEnd);
+  }catch(error){fail(error,'asset')}
  }
  return {mount,release,cache};
 }
@@ -59,7 +118,7 @@ export function createPreviewPool({loader,Observer=globalThis.IntersectionObserv
   const chosen=new Set(suspended?[]:[...records.values()].filter(r=>r.visible).sort((a,b)=>Number(b.element===preferred)-Number(a.element===preferred)||a.top-b.top||a.order-b.order).slice(0,maxActive));
   // Release first, including when the selected card precedes the old one in DOM order.
   for(const r of records.values())if(!chosen.has(r)&&r.active){r.active=false;loader.release(r.frame);r.element.dataset.previewState='idle'}
-  for(const r of chosen)if(!r.active){r.active=true;r.element.dataset.previewState='loading';loader.mount(r.frame,r.item,{onReady:()=>{if(r.active)r.element.dataset.previewState='ready'},onError:()=>{if(r.active)r.element.dataset.previewState='error'}})}
+  for(const r of chosen)if(!r.active){r.active=true;r.element.dataset.previewState='loading';loader.mount(r.frame,r.item,{onState:state=>{if(r.active){r.element.dataset.previewState=state.phase;r.element.dataset.previewSignal=state.signal}},onReady:()=>{if(r.active)r.element.dataset.previewState='unverified'},onError:()=>{if(r.active)r.element.dataset.previewState='error'}})}
  }
  const observer=Observer?new Observer(entries=>{for(const e of entries){const r=records.get(e.target);if(r){r.visible=e.isIntersecting;r.top=e.boundingClientRect?.top??0}}reconcile()},{rootMargin:'0px',threshold:.05}):null;
  return {register(frame,item,element){const r={frame,item,element,visible:false,active:false,top:0,order:serial++};records.set(element,r);element.dataset.previewState='idle';observer?.observe(element);if(!observer)reconcile()},prefer(element){preferred=records.has(element)?element:null;if(!observer)for(const r of records.values())r.visible=r.element===preferred;reconcile()},suspend(value=true){suspended=value;reconcile()},clear(){preferred=null;observer?.disconnect();for(const r of records.values()){r.active=false;loader.release(r.frame);r.element.dataset.previewState='idle'}records.clear()},stats(){return {registered:records.size,active:[...records.values()].filter(r=>r.active).length,suspended}},destroy(){this.clear();suspended=true}};
