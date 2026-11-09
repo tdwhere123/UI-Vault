@@ -1,13 +1,13 @@
 {
   "universe": 271,
-  "success": 158,
+  "success": 172,
   "success_passed": 119,
-  "success_awaiting_user_review": 39,
+  "success_awaiting_user_review": 53,
   "failed": 3,
   "needs_recapture": 4,
-  "unprocessed": 106,
-  "incomplete_total_not_success": 113,
-  "equation": "158 success (119 passed + 39 awaiting_user_review) + 3 failed + 4 needs_recapture + 106 unprocessed = 271",
+  "unprocessed": 92,
+  "incomplete_total_not_success": 99,
+  "equation": "172 success (119 passed + 53 awaiting_user_review) + 3 failed + 4 needs_recapture + 92 unprocessed = 271",
   "failed_ids": [
     "astryx:library",
     "smoothui:pixel-brush-canvas",
@@ -19,51 +19,93 @@
     "blode:omni-color-picker",
     "smoothui:image-metadata-preview"
   ],
-  "batch_07_08_awaiting": [
-    "aicanvas:task-cards",
-    "assistant-elements:checkpoint-history",
-    "assistant-elements:code-runner",
-    "assistant-elements:command-palette",
-    "assistant-elements:comparison-card",
-    "assistant-elements:composer-attachments",
-    "assistant-elements:computer-use",
-    "assistant-elements:confidence-marker",
-    "assistant-elements:context-breakdown",
-    "assistant-elements:conversation-search",
-    "assistant-elements:cost-meter",
-    "assistant-elements:data-table",
-    "assistant-elements:diagram",
-    "assistant-elements:document-reference",
-    "assistant-elements:draft-restore",
-    "assistant-elements:edit-message",
-    "assistant-elements:feedback-dialog",
-    "assistant-elements:file-tree",
-    "assistant-elements:flow-graph",
-    "assistant-elements:image-gallery",
-    "assistant-elements:job-progress",
-    "assistant-elements:map-answer",
-    "assistant-elements:math-block",
-    "assistant-elements:mcp-server-panel",
-    "assistant-elements:memory-chips",
-    "assistant-elements:message-attachment",
-    "assistant-elements:message-branches",
-    "assistant-elements:message-queue",
-    "assistant-elements:model-picker",
-    "assistant-elements:onboarding",
-    "assistant-elements:option-list",
-    "assistant-elements:permission-grant",
-    "astryx:table-tree",
-    "astryx:work-item-detail",
-    "promptkit:steps",
-    "promptkit:system-message",
-    "promptkit:thinking-bar",
-    "smoothui:switchboard-card",
-    "smoothui:vector-editor-toolbar"
+  "batch_09_10_partial_count": 14,
+  "batch_09_10_results": [
+    {
+      "id": "assistant-elements:prompt-library",
+      "outcome": "success",
+      "bytes": 3986,
+      "sha256": "0dc0a76220d9a5d47cfe7f94f983ab8de88cf5b6f4f038e4dad56f583c3f061e"
+    },
+    {
+      "id": "assistant-elements:question-flow",
+      "outcome": "success",
+      "bytes": 3520,
+      "sha256": "af4c65a640b5dace91a31412136f12366bd645686101ebc4e59d67855e8698cd"
+    },
+    {
+      "id": "assistant-elements:quote-reply",
+      "outcome": "success",
+      "bytes": 3946,
+      "sha256": "552b0ee0e28684dbb54bcbbd0f1d39c1e272937354992d59bc179fad2143d3c8"
+    },
+    {
+      "id": "assistant-elements:reasoning-effort",
+      "outcome": "success",
+      "bytes": 2908,
+      "sha256": "fd5ffa2e01b96336dd7641350328de046d6dbb77a476bdb3abae5b2d3efe93c4"
+    },
+    {
+      "id": "assistant-elements:recommendation-card",
+      "outcome": "success",
+      "bytes": 4076,
+      "sha256": "74af91a80d39970c56fcf139f91586756c87d92284e4605834122fcdc7937d36"
+    },
+    {
+      "id": "assistant-elements:regenerate-menu",
+      "outcome": "success",
+      "bytes": 3844,
+      "sha256": "19b16435de94cf6d284bdfe1c6cc97edc277f2af1c7a6931f5192e67234c2d07"
+    },
+    {
+      "id": "assistant-elements:research-report",
+      "outcome": "success",
+      "bytes": 5732,
+      "sha256": "f7693eb953cd9f5a163841236f1cb222320e8afe203e2a1996e79db154b9cfae"
+    },
+    {
+      "id": "assistant-elements:retrieval-chunks",
+      "outcome": "success",
+      "bytes": 6284,
+      "sha256": "b3a5251b50532f72d7162996b5ebbf03b2250268a3ae8db6cdc5b5803467757e"
+    },
+    {
+      "id": "assistant-elements:reviewable-diff",
+      "outcome": "success",
+      "bytes": 5582,
+      "sha256": "665a77838f3ed801bfa5a7d3d1714eeebb41dbb5aba7b60fa746aa3f0fff5f52"
+    },
+    {
+      "id": "assistant-elements:schedule-card",
+      "outcome": "success",
+      "bytes": 3606,
+      "sha256": "b7d41f3f2fb91551282b84e9a196a970fdd307c705c95385867e463764f5347b"
+    },
+    {
+      "id": "assistant-elements:score-breakdown",
+      "outcome": "success",
+      "bytes": 3384,
+      "sha256": "5efcc90209ac0cb73c14d35304c91953da3ca1c8a651177d48d4a1cd34d9adcc"
+    },
+    {
+      "id": "assistant-elements:settings-panel",
+      "outcome": "success",
+      "bytes": 4648,
+      "sha256": "9340808727924a78b9899a36faba14123bef6581fe33040e3f7219617cef204f"
+    },
+    {
+      "id": "assistant-elements:shared-conversation",
+      "outcome": "success",
+      "bytes": 5416,
+      "sha256": "d8da1253e22e65cf552d51dabb5a2be4904657d7b9dd070ce954aa17b1a0e529"
+    },
+    {
+      "id": "assistant-elements:sources",
+      "outcome": "success",
+      "bytes": 2190,
+      "sha256": "e69bcef67e806487356d439e21c59e6e7b7d4b2d3fe9da24c3ad6b4b53614a20"
+    }
   ],
-  "batch_07_08_needs_recapture": [
-    "aicanvas:stack-tower"
-  ],
-  "no_double_count": true,
   "timezone": "Asia/Taipei (UTC+8)",
-  "generated_at_local": "2026-11-09 08:37:48"
+  "generated_at_local": "2026-11-09 08:38:50"
 }
