@@ -1,0 +1,39 @@
+{
+  "tests": {
+    "legend100": {
+      "last10": [
+        138,
+        138,
+        138,
+        138,
+        138,
+        138,
+        138,
+        138,
+        138,
+        138
+      ],
+      "tableUnchanged": true
+    },
+    "realTooltip": true,
+    "hiddenOldNode": true,
+    "exit": true,
+    "early": true,
+    "partial": true,
+    "late": true,
+    "pagehide": true,
+    "external": true,
+    "supplementalSlider100AndHeldHiddenExit": true,
+    "supplementalMouse100HeldLeave": true,
+    "actual544Compose": true,
+    "geometry": "JSDOM deterministic geometry/ResizeObserver fixture, not pixel or responsive visual QA"
+  },
+  "runtimeSha256": "d1ad60882672dade41864c2b7915f5c1ee14b91ef61f4f3bc3b5b8ef0729f8e1",
+  "knownGaps": [
+    "Browser pixels/responsive layout not visually verified; desktop and mobile nodes coexist in JSDOM, not proof both rendered layouts are visually correct.",
+    "All 57 daily records, totals, financial names and static table are upstream fixtures, not real-time market data or investment advice.",
+    "Original onValueChange is a no-op; legend selection emphasizes curves but never filters/recalculates table.",
+    "Original enableLegendSlider remains false. Supplemental non-public test scene tests the same LineChart slider cleanup; it is not a claimed visible feature.",
+    "Unretrieved JetBrains font face removed; system fallback. Recharts 2.15.0 is upstream-era deprecated version retained, not upgraded to incompatible v3."
+  ]
+}
