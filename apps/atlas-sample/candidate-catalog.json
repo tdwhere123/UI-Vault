@@ -15291,36 +15291,35 @@
   },
   {
     "id": "hugo-paper:paper-reading-site",
-    "title": "亚麻色纸面排版文章站",
     "source": "Hugo Paper",
     "repository": "https://github.com/nanxiaobei/hugo-paper",
     "revision": "f7ed52a1da04aa2c536a9c075354191dc10152f8",
-    "sourcePath": "layouts/_default/single.html",
     "upstream": "https://github.com/nanxiaobei/hugo-paper/blob/f7ed52a1da04aa2c536a9c075354191dc10152f8/layouts/_default/single.html",
-    "license": "MIT (root verified only; dependencies/assets not closed)",
-    "behavior": "原Hugo列表与正文主题：作者/日期、文章排版、标签、前后篇、归档分页，配原移动导航/深浅主题状态。",
-    "difference": "是窄栏留白和亚麻底色的纸面阅读风格，不是拟真折纸/手绘材质；整站列表+阅读仅一族，不把颜色和文章计变体。",
-    "gaps": [
-      "需要Hugo内容与构建环境，非独立HTML；配置可启用Disqus/GraphComment/giscus、Gravatar、KaTeX/Mermaid外部资源。localStorage/theme图标、第三方字体/脚本/示例文章权利未闭合；未收或审全部资源，不能宣称离线完整运行。",
-      "仅固定原件来源；未安装/构建/运行/截图/发布，CSP、媒体字体版权、完整运行许可、交互清理及浏览器视觉均未验。"
-    ],
-    "description": "原Hugo列表与正文主题：作者/日期、文章排版、标签、前后篇、归档分页，配原移动导航/深浅主题状态。 是窄栏留白和亚麻底色的纸面阅读风格，不是拟真折纸/手绘材质；整站列表+阅读仅一族，不把颜色和文章计变体。",
-    "category": "展示与媒体",
+    "sourcePath": "layouts/_default/single.html",
     "licenseEvidence": {
       "url": "https://github.com/nanxiaobei/hugo-paper/blob/f7ed52a1da04aa2c536a9c075354191dc10152f8/LICENSE",
       "sha256": "76deed9f2fa154342300b72c2e4d36876b15639b01035ddc86a1a2d113da6a35",
       "scope": "Complete root MIT read; dependency/media/font permissions not closed"
     },
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-style-526",
-    "sourceScope": "Selected fixed original code and complete root license evidence; not a complete runnable archive or runtime audit",
-    "kind": "原版完整场景（仅来源）",
-    "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted",
-    "sourceSha256": "820650bcc462a787134c7e1571306a770df19c0ed879f42308f0dabd05b25170"
+    "difference": "是窄栏留白和亚麻底色的纸面阅读风格，不是拟真折纸/手绘材质；整站列表+阅读仅一族，不把颜色和文章计变体。",
+    "title": "纸感文章阅读页",
+    "description": "原完整 Emoji Support 文章（lee.so），保原字体说明、三个Unicode表情、CSS代码块及内联样式。原Paper模板生成标题/日期/标签/页头页脚，深浅主题与菜单处理沿用原代码，仅存储改为当前预览内存。原theme.svg采用官方monoDarkIcon选项，非自画图；默认PNG未使用。",
+    "behavior": "原完整 Emoji Support 文章（lee.so），保原字体说明、三个Unicode表情、CSS代码块及内联样式。原Paper模板生成标题/日期/标签/页头页脚，深浅主题与菜单处理沿用原代码，仅存储改为当前预览内存。原theme.svg采用官方monoDarkIcon选项，非自画图；默认PNG未使用。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "展示与媒体",
+    "license": "MIT (Paper/Tailwind CSS); Apache-2.0 build-tool notice",
+    "batch": "hugo-paper-01",
+    "preview": "batches/hugo-paper-01/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Real Hugo build and actual554 original article/state/exit checks passed; visuals unverified",
+    "gaps": [
+      "真实Hugo原模板+原完整文章，导航为禁用链接，不是可浏览全站。",
+      "Hugo0.148.2兼容改动仅Language.Locale→Language.Lang；未改写模板布局。",
+      "主题状态只内存、不持久化；原theme.svg保真，未用PNG规则移除。",
+      "Unicode表情依赖系统字体；未做浏览器像素/视觉验收。"
+    ]
   },
   {
     "id": "latexcss:scholarly-article",
@@ -16151,36 +16150,35 @@
   },
   {
     "id": "hugo-terminal:terminal-editorial-site",
-    "title": "等宽线框复古技术文章站",
     "source": "Hugo Terminal",
     "repository": "https://github.com/panr/hugo-theme-terminal",
     "revision": "8ef994c0e0303861b1204d1248541af06c9bfea6",
-    "sourcePath": "layouts/_default/single.html",
     "upstream": "https://github.com/panr/hugo-theme-terminal/blob/8ef994c0e0303861b1204d1248541af06c9bfea6/layouts/_default/single.html",
-    "license": "MIT (root verified only; dependencies/assets not closed)",
-    "behavior": "原等宽字体、强调色细边框、终端式标题与标签的整站文章阅读；目录、标题锚点、字数/阅读时长、更新时间、多语言菜单和文章分页。",
-    "difference": "与Hugo Paper亚麻留白不同，原线框/等宽技术出版结构；与m4tt72命令导航不同，这里是真正文档阅读而非命令输入，不按配色拆族。",
-    "gaps": [
-      "需要Hugo内容和模板编译；Fira Code字体URL、封面与文章资产、评论partial及完整依赖未审。菜单JS原事件与布局响应未运行；不把CSS主题当已经可预览整站。",
-      "仅固定原件来源；未安装/构建/运行/截图/发布，CSP、媒体字体版权、完整运行许可、交互清理及浏览器视觉均未验。"
-    ],
-    "description": "原等宽字体、强调色细边框、终端式标题与标签的整站文章阅读；目录、标题锚点、字数/阅读时长、更新时间、多语言菜单和文章分页。 与Hugo Paper亚麻留白不同，原线框/等宽技术出版结构；与m4tt72命令导航不同，这里是真正文档阅读而非命令输入，不按配色拆族。",
-    "category": "展示与媒体",
+    "sourcePath": "layouts/_default/single.html",
     "licenseEvidence": {
       "url": "https://github.com/panr/hugo-theme-terminal/blob/8ef994c0e0303861b1204d1248541af06c9bfea6/LICENSE.md",
       "sha256": "1ea89838f4812ab010a68fb0dab180eca3d850004b168edacb835463707258a5",
       "scope": "Complete root MIT read; dependency/media/font permissions not closed"
     },
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-style-527",
-    "sourceScope": "Selected fixed original code and complete root license evidence; not a complete runnable archive or runtime audit",
-    "kind": "原版完整场景（仅来源）",
-    "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted",
-    "sourceSha256": "9bb2a8e924a27b1fc106bdfa66f584689ba7ab1fc1915bb49eddf2f92b99b077"
+    "difference": "与Hugo Paper亚麻留白不同，原线框/等宽技术出版结构；与m4tt72命令导航不同，这里是真正文档阅读而非命令输入，不按配色拆族。",
+    "title": "终端风格作者文章",
+    "description": "原作者Radek的完整About文章，真实Hugo从原Terminal模板生成标题/作者/日期/正文/页头页脚。保原菜单点击、点击页面关闭和resize关闭逻辑；本篇无代码块，没有伪造复制按钮。原文提到Fira Code保持原文，但实际未加载该字体，明确系统等宽回退。",
+    "behavior": "原作者Radek的完整About文章，真实Hugo从原Terminal模板生成标题/作者/日期/正文/页头页脚。保原菜单点击、点击页面关闭和resize关闭逻辑；本篇无代码块，没有伪造复制按钮。原文提到Fira Code保持原文，但实际未加载该字体，明确系统等宽回退。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "展示与媒体",
+    "license": "MIT (Terminal); Apache-2.0 build-tool notice",
+    "batch": "hugo-terminal-01",
+    "preview": "batches/hugo-terminal-01/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Real Hugo build and actual554 original article/state/exit checks passed; visuals unverified",
+    "gaps": [
+      "保原作者About整篇，不是完整全站或自拟占位文章；链接不导航。",
+      "Fira Code未载入，字体声明移除并使用系统等宽回退。",
+      "原菜单逻辑保留；本篇无代码块/剪贴板功能。",
+      "原阅读样式/布局像素未视觉验收。"
+    ]
   },
   {
     "id": "chirpy:longform-knowledge-site",
@@ -21724,6 +21722,286 @@
     "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
     "gaps": [
       "Original Meta AstryX core components, explicit host-authored minimal local documented-API fixtures, not a complete official business application. Text originaltype/heading/color; Icon actualsemanticSVGselection noexternalasset; Link originallocalonClick anddisabledstate, no destination; ScrollableArea originalcontainer with30sampleparagraphs; Outline originalnavigation with2localheadings; Toast originaluseToast throughLayerProvider withmanualshow/dismiss, no browsernotification; Typeahead originalsingleselection andTokenizer originalmultipleselection/removabletokens share synchronouslocal3item SearchSource. No remotequeries/files/accounts/clipboardservice/persistence. No hookcounting: Toast entry renders actual original message viewport, hook is not separate entry. Outline exactinstalledcore0.7.11history.pushState removed by same reviewed one-line buildtransform for opaqueiframe; original scroll/focus/selection retained and originalsourcecopyhash provided. All othercore implementations unchanged. Fixed documentation repository0.7.12 with actualcore/theme/build0.7.11 compatibility runtime disclosed. PerentryindependentIIFE sharedStyleX/theme, systemfont. Hiddenunmount resets state, visibleremount, exit/error ownedresourcecleanup. Actual550compose/loader/cache/release with keybehaviors; ScrollableArea synthetic scrollTop/scroll event verifies handler not native overflowgeometry, Outline scrollIntoView API stub is not nativepixel validation. ExactStyleXparserwarning separatelyrecorded. Fullroot/emittedruntime licenses and priorcore/StyleXmissingfileofficialsupplements disclosed."
+    ]
+  },
+  {
+    "id": "astryx-core:command-palette",
+    "source": "Meta AstryX",
+    "repository": "https://github.com/meta/astryx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/core/src/CommandPalette/CommandPalette.doc.mjs",
+    "sourcePath": "packages/core/src/CommandPalette/CommandPalette.doc.mjs",
+    "licenseEvidence": {
+      "url": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/LICENSE",
+      "sha256": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473",
+      "scope": "Complete fixed original MIT; actual runtime dependency notices supplied in preview assets."
+    },
+    "title": "命令选择面板",
+    "description": "原组件与明确的本地示例，保留原交互与展示；不上传文件、不提供后台业务。",
+    "behavior": "原组件与明确的本地示例，保留原交互与展示；不上传文件、不提供后台业务。",
+    "kind": "组件",
+    "format": "独立组件",
+    "category": "数据与状态",
+    "license": "MIT AND ISC AND BSD-3-Clause",
+    "batch": "astryx-data-01",
+    "preview": "batches/astryx-data-01/command-palette/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Original Meta AstryX core components, explicit minimal hostlocal API fixtures, not upstream completebusinessapplications. CommandPalette original modal/search/select withsynchronouslocal2itemSearchSource, no systemcommands; FileInput originalfilepicker/validation/clear constrained to2textfiles and1024bytes, onlylocalmetadata, no read/upload/persistence; Thumbnail originalno-imagefallback andremove affordance, notphotography orsuccessfulimageload; TreeList originalnestedexpand/collapse/selection; Table originaldata/columns rendering withhostboundedlocaladd/resetrow fixture, notbackendCRUD/sortingclaim. All actualcore components rendered, nothooks counted. Fixedsourcedocs0.7.12 versus actualcore/theme/build0.7.11 compatibility disclosed. Sharedoriginalneutraltheme/StyleX/LayerProvider, perentryindependentIIFE. Hiddenunmount resetslocalstate, visiblefreshmount; exit/error cleansownedresources. Actual550compose/loader/cache/release andkeyinteraction tests underJSDOM. File tests usein-memory Fileobjects/inputfiles injection, notactualOSpickeracceptance. CommandPalettedialogshowModal/close teststubs, notnativetoplayerfocusgeometry/pixels. ExactStyleXCSSparserwarning separatelyrecorded. No network, clipboard, permissions, imageassets orbinarywrapping. RootMIT/actualemitteddependencyfulllicenses inclofficialcore/StyleXmissingfile supplements clearlylabelled."
+    ]
+  },
+  {
+    "id": "astryx-core:file-input",
+    "source": "Meta AstryX",
+    "repository": "https://github.com/meta/astryx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/core/src/FileInput/FileInput.doc.mjs",
+    "sourcePath": "packages/core/src/FileInput/FileInput.doc.mjs",
+    "licenseEvidence": {
+      "url": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/LICENSE",
+      "sha256": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473",
+      "scope": "Complete fixed original MIT; actual runtime dependency notices supplied in preview assets."
+    },
+    "title": "本地文件选择",
+    "description": "原组件与明确的本地示例，保留原交互与展示；不上传文件、不提供后台业务。",
+    "behavior": "原组件与明确的本地示例，保留原交互与展示；不上传文件、不提供后台业务。",
+    "kind": "组件",
+    "format": "独立组件",
+    "category": "数据与状态",
+    "license": "MIT AND ISC AND BSD-3-Clause",
+    "batch": "astryx-data-01",
+    "preview": "batches/astryx-data-01/file-input/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Original Meta AstryX core components, explicit minimal hostlocal API fixtures, not upstream completebusinessapplications. CommandPalette original modal/search/select withsynchronouslocal2itemSearchSource, no systemcommands; FileInput originalfilepicker/validation/clear constrained to2textfiles and1024bytes, onlylocalmetadata, no read/upload/persistence; Thumbnail originalno-imagefallback andremove affordance, notphotography orsuccessfulimageload; TreeList originalnestedexpand/collapse/selection; Table originaldata/columns rendering withhostboundedlocaladd/resetrow fixture, notbackendCRUD/sortingclaim. All actualcore components rendered, nothooks counted. Fixedsourcedocs0.7.12 versus actualcore/theme/build0.7.11 compatibility disclosed. Sharedoriginalneutraltheme/StyleX/LayerProvider, perentryindependentIIFE. Hiddenunmount resetslocalstate, visiblefreshmount; exit/error cleansownedresources. Actual550compose/loader/cache/release andkeyinteraction tests underJSDOM. File tests usein-memory Fileobjects/inputfiles injection, notactualOSpickeracceptance. CommandPalettedialogshowModal/close teststubs, notnativetoplayerfocusgeometry/pixels. ExactStyleXCSSparserwarning separatelyrecorded. No network, clipboard, permissions, imageassets orbinarywrapping. RootMIT/actualemitteddependencyfulllicenses inclofficialcore/StyleXmissingfile supplements clearlylabelled."
+    ]
+  },
+  {
+    "id": "astryx-core:thumbnail",
+    "source": "Meta AstryX",
+    "repository": "https://github.com/meta/astryx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/core/src/Thumbnail/Thumbnail.doc.mjs",
+    "sourcePath": "packages/core/src/Thumbnail/Thumbnail.doc.mjs",
+    "licenseEvidence": {
+      "url": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/LICENSE",
+      "sha256": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473",
+      "scope": "Complete fixed original MIT; actual runtime dependency notices supplied in preview assets."
+    },
+    "title": "缩略图占位组件",
+    "description": "原组件与明确的本地示例，保留原交互与展示；不上传文件、不提供后台业务。",
+    "behavior": "原组件与明确的本地示例，保留原交互与展示；不上传文件、不提供后台业务。",
+    "kind": "组件",
+    "format": "独立组件",
+    "category": "数据与状态",
+    "license": "MIT AND ISC AND BSD-3-Clause",
+    "batch": "astryx-data-01",
+    "preview": "batches/astryx-data-01/thumbnail/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Original Meta AstryX core components, explicit minimal hostlocal API fixtures, not upstream completebusinessapplications. CommandPalette original modal/search/select withsynchronouslocal2itemSearchSource, no systemcommands; FileInput originalfilepicker/validation/clear constrained to2textfiles and1024bytes, onlylocalmetadata, no read/upload/persistence; Thumbnail originalno-imagefallback andremove affordance, notphotography orsuccessfulimageload; TreeList originalnestedexpand/collapse/selection; Table originaldata/columns rendering withhostboundedlocaladd/resetrow fixture, notbackendCRUD/sortingclaim. All actualcore components rendered, nothooks counted. Fixedsourcedocs0.7.12 versus actualcore/theme/build0.7.11 compatibility disclosed. Sharedoriginalneutraltheme/StyleX/LayerProvider, perentryindependentIIFE. Hiddenunmount resetslocalstate, visiblefreshmount; exit/error cleansownedresources. Actual550compose/loader/cache/release andkeyinteraction tests underJSDOM. File tests usein-memory Fileobjects/inputfiles injection, notactualOSpickeracceptance. CommandPalettedialogshowModal/close teststubs, notnativetoplayerfocusgeometry/pixels. ExactStyleXCSSparserwarning separatelyrecorded. No network, clipboard, permissions, imageassets orbinarywrapping. RootMIT/actualemitteddependencyfulllicenses inclofficialcore/StyleXmissingfile supplements clearlylabelled."
+    ]
+  },
+  {
+    "id": "astryx-core:tree-list",
+    "source": "Meta AstryX",
+    "repository": "https://github.com/meta/astryx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/core/src/TreeList/TreeList.doc.mjs",
+    "sourcePath": "packages/core/src/TreeList/TreeList.doc.mjs",
+    "licenseEvidence": {
+      "url": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/LICENSE",
+      "sha256": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473",
+      "scope": "Complete fixed original MIT; actual runtime dependency notices supplied in preview assets."
+    },
+    "title": "树形列表",
+    "description": "原组件与明确的本地示例，保留原交互与展示；不上传文件、不提供后台业务。",
+    "behavior": "原组件与明确的本地示例，保留原交互与展示；不上传文件、不提供后台业务。",
+    "kind": "组件",
+    "format": "独立组件",
+    "category": "数据与状态",
+    "license": "MIT AND ISC AND BSD-3-Clause",
+    "batch": "astryx-data-01",
+    "preview": "batches/astryx-data-01/tree-list/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Original Meta AstryX core components, explicit minimal hostlocal API fixtures, not upstream completebusinessapplications. CommandPalette original modal/search/select withsynchronouslocal2itemSearchSource, no systemcommands; FileInput originalfilepicker/validation/clear constrained to2textfiles and1024bytes, onlylocalmetadata, no read/upload/persistence; Thumbnail originalno-imagefallback andremove affordance, notphotography orsuccessfulimageload; TreeList originalnestedexpand/collapse/selection; Table originaldata/columns rendering withhostboundedlocaladd/resetrow fixture, notbackendCRUD/sortingclaim. All actualcore components rendered, nothooks counted. Fixedsourcedocs0.7.12 versus actualcore/theme/build0.7.11 compatibility disclosed. Sharedoriginalneutraltheme/StyleX/LayerProvider, perentryindependentIIFE. Hiddenunmount resetslocalstate, visiblefreshmount; exit/error cleansownedresources. Actual550compose/loader/cache/release andkeyinteraction tests underJSDOM. File tests usein-memory Fileobjects/inputfiles injection, notactualOSpickeracceptance. CommandPalettedialogshowModal/close teststubs, notnativetoplayerfocusgeometry/pixels. ExactStyleXCSSparserwarning separatelyrecorded. No network, clipboard, permissions, imageassets orbinarywrapping. RootMIT/actualemitteddependencyfulllicenses inclofficialcore/StyleXmissingfile supplements clearlylabelled."
+    ]
+  },
+  {
+    "id": "astryx-core:table",
+    "source": "Meta AstryX",
+    "repository": "https://github.com/meta/astryx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/core/src/Table/Table.doc.mjs",
+    "sourcePath": "packages/core/src/Table/Table.doc.mjs",
+    "licenseEvidence": {
+      "url": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/LICENSE",
+      "sha256": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473",
+      "scope": "Complete fixed original MIT; actual runtime dependency notices supplied in preview assets."
+    },
+    "title": "数据表格",
+    "description": "原组件与明确的本地示例，保留原交互与展示；不上传文件、不提供后台业务。",
+    "behavior": "原组件与明确的本地示例，保留原交互与展示；不上传文件、不提供后台业务。",
+    "kind": "组件",
+    "format": "独立组件",
+    "category": "数据与状态",
+    "license": "MIT AND ISC AND BSD-3-Clause",
+    "batch": "astryx-data-01",
+    "preview": "batches/astryx-data-01/table/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Original Meta AstryX core components, explicit minimal hostlocal API fixtures, not upstream completebusinessapplications. CommandPalette original modal/search/select withsynchronouslocal2itemSearchSource, no systemcommands; FileInput originalfilepicker/validation/clear constrained to2textfiles and1024bytes, onlylocalmetadata, no read/upload/persistence; Thumbnail originalno-imagefallback andremove affordance, notphotography orsuccessfulimageload; TreeList originalnestedexpand/collapse/selection; Table originaldata/columns rendering withhostboundedlocaladd/resetrow fixture, notbackendCRUD/sortingclaim. All actualcore components rendered, nothooks counted. Fixedsourcedocs0.7.12 versus actualcore/theme/build0.7.11 compatibility disclosed. Sharedoriginalneutraltheme/StyleX/LayerProvider, perentryindependentIIFE. Hiddenunmount resetslocalstate, visiblefreshmount; exit/error cleansownedresources. Actual550compose/loader/cache/release andkeyinteraction tests underJSDOM. File tests usein-memory Fileobjects/inputfiles injection, notactualOSpickeracceptance. CommandPalettedialogshowModal/close teststubs, notnativetoplayerfocusgeometry/pixels. ExactStyleXCSSparserwarning separatelyrecorded. No network, clipboard, permissions, imageassets orbinarywrapping. RootMIT/actualemitteddependencyfulllicenses inclofficialcore/StyleXmissingfile supplements clearlylabelled."
+    ]
+  },
+  {
+    "id": "astryx-core:app-shell",
+    "source": "Meta AstryX",
+    "repository": "https://github.com/meta/astryx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/core/src/AppShell/AppShell.doc.mjs",
+    "sourcePath": "packages/core/src/AppShell/AppShell.doc.mjs",
+    "licenseEvidence": {
+      "url": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/LICENSE",
+      "sha256": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473",
+      "scope": "Complete fixed original MIT; actual runtime dependency notices supplied in preview assets."
+    },
+    "title": "应用布局与导航",
+    "description": "原组件与明确本地示例，保留原布局和交互；不将轻包装或状态另计，不提供后台业务。",
+    "behavior": "原组件与明确本地示例，保留原布局和交互；不将轻包装或状态另计，不提供后台业务。",
+    "kind": "组件",
+    "format": "独立组件",
+    "category": "导航与组织",
+    "license": "MIT AND ISC AND BSD-3-Clause",
+    "batch": "astryx-layout-01",
+    "preview": "batches/astryx-layout-01/app-shell/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Original Meta AstryX visual/API components with explicitlyhost-authoredlocalfixtures, not anupstreamcompletebusinessapplication. AppShell+Navigation groupedintooneentry: actualAppShell withSideNav/SideNavItem andTopNav/TopNavItem localcontentselection, no claimallmega/mobilevariantsdemonstrated. Carousel originalhorizontaltext-itemscroll/navigation imperativehandle, noimages; OverflowList originalmeasuredcollapse withDropdownMenu ofhiddenitems andhostvisiblecap; Resizable actualResizeHandle+useResizable withbounded120–400pxpanel/keyboardresize/reset, notahook-onlyentry; Chat actualmessageList/messageBubble/composer withlocalusertextappend, fixedinitialassistanttextexplicitlysample, noAI/replyservice/mic/attachmentupload. Alloriginalcoreimplementationsretained. Fixedsource0.7.12 docs versus actualcore/theme/build0.7.11 compatibility disclosed. PerentryIIFE/sharedneutraltheme/StyleX; hiddenunmount resetslocalstate, visiblefreshmount; exit/error ownedresourcecleanup. Testsactual550compose/load/cache/release andrealDOMhandlers; Carousel scrollBy/scrollTo andclient/scrollwidth usecontrolledtestgeometry, notnativepixel/snapvalidation; OverflowList usesJSDOMfloor/cap/hiddenmenu state notbrowsermeasuredfitacceptance; ResizeHandle keyboard geometry tested notnativepointerdrag; Chat syntheticcontenteditableinput notIMEacceptance. No externalmedia, clipboardservice, persistence/network. Fullroot/emitteddependencylicenses, reviewedcore/StyleXmissing-fileofficialsupplements disclosed. Lightbox isnotincludedorsubstitutedbyemptyframe; pendingassetfixtureseparatelyrecorded."
+    ]
+  },
+  {
+    "id": "astryx-core:carousel",
+    "source": "Meta AstryX",
+    "repository": "https://github.com/meta/astryx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/core/src/Carousel/Carousel.doc.mjs",
+    "sourcePath": "packages/core/src/Carousel/Carousel.doc.mjs",
+    "licenseEvidence": {
+      "url": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/LICENSE",
+      "sha256": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473",
+      "scope": "Complete fixed original MIT; actual runtime dependency notices supplied in preview assets."
+    },
+    "title": "横向内容轮播",
+    "description": "原组件与明确本地示例，保留原布局和交互；不将轻包装或状态另计，不提供后台业务。",
+    "behavior": "原组件与明确本地示例，保留原布局和交互；不将轻包装或状态另计，不提供后台业务。",
+    "kind": "组件",
+    "format": "独立组件",
+    "category": "导航与组织",
+    "license": "MIT AND ISC AND BSD-3-Clause",
+    "batch": "astryx-layout-01",
+    "preview": "batches/astryx-layout-01/carousel/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Original Meta AstryX visual/API components with explicitlyhost-authoredlocalfixtures, not anupstreamcompletebusinessapplication. AppShell+Navigation groupedintooneentry: actualAppShell withSideNav/SideNavItem andTopNav/TopNavItem localcontentselection, no claimallmega/mobilevariantsdemonstrated. Carousel originalhorizontaltext-itemscroll/navigation imperativehandle, noimages; OverflowList originalmeasuredcollapse withDropdownMenu ofhiddenitems andhostvisiblecap; Resizable actualResizeHandle+useResizable withbounded120–400pxpanel/keyboardresize/reset, notahook-onlyentry; Chat actualmessageList/messageBubble/composer withlocalusertextappend, fixedinitialassistanttextexplicitlysample, noAI/replyservice/mic/attachmentupload. Alloriginalcoreimplementationsretained. Fixedsource0.7.12 docs versus actualcore/theme/build0.7.11 compatibility disclosed. PerentryIIFE/sharedneutraltheme/StyleX; hiddenunmount resetslocalstate, visiblefreshmount; exit/error ownedresourcecleanup. Testsactual550compose/load/cache/release andrealDOMhandlers; Carousel scrollBy/scrollTo andclient/scrollwidth usecontrolledtestgeometry, notnativepixel/snapvalidation; OverflowList usesJSDOMfloor/cap/hiddenmenu state notbrowsermeasuredfitacceptance; ResizeHandle keyboard geometry tested notnativepointerdrag; Chat syntheticcontenteditableinput notIMEacceptance. No externalmedia, clipboardservice, persistence/network. Fullroot/emitteddependencylicenses, reviewedcore/StyleXmissing-fileofficialsupplements disclosed. Lightbox isnotincludedorsubstitutedbyemptyframe; pendingassetfixtureseparatelyrecorded."
+    ]
+  },
+  {
+    "id": "astryx-core:overflow-list",
+    "source": "Meta AstryX",
+    "repository": "https://github.com/meta/astryx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/core/src/OverflowList/OverflowList.doc.mjs",
+    "sourcePath": "packages/core/src/OverflowList/OverflowList.doc.mjs",
+    "licenseEvidence": {
+      "url": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/LICENSE",
+      "sha256": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473",
+      "scope": "Complete fixed original MIT; actual runtime dependency notices supplied in preview assets."
+    },
+    "title": "溢出收纳列表",
+    "description": "原组件与明确本地示例，保留原布局和交互；不将轻包装或状态另计，不提供后台业务。",
+    "behavior": "原组件与明确本地示例，保留原布局和交互；不将轻包装或状态另计，不提供后台业务。",
+    "kind": "组件",
+    "format": "独立组件",
+    "category": "导航与组织",
+    "license": "MIT AND ISC AND BSD-3-Clause",
+    "batch": "astryx-layout-01",
+    "preview": "batches/astryx-layout-01/overflow-list/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Original Meta AstryX visual/API components with explicitlyhost-authoredlocalfixtures, not anupstreamcompletebusinessapplication. AppShell+Navigation groupedintooneentry: actualAppShell withSideNav/SideNavItem andTopNav/TopNavItem localcontentselection, no claimallmega/mobilevariantsdemonstrated. Carousel originalhorizontaltext-itemscroll/navigation imperativehandle, noimages; OverflowList originalmeasuredcollapse withDropdownMenu ofhiddenitems andhostvisiblecap; Resizable actualResizeHandle+useResizable withbounded120–400pxpanel/keyboardresize/reset, notahook-onlyentry; Chat actualmessageList/messageBubble/composer withlocalusertextappend, fixedinitialassistanttextexplicitlysample, noAI/replyservice/mic/attachmentupload. Alloriginalcoreimplementationsretained. Fixedsource0.7.12 docs versus actualcore/theme/build0.7.11 compatibility disclosed. PerentryIIFE/sharedneutraltheme/StyleX; hiddenunmount resetslocalstate, visiblefreshmount; exit/error ownedresourcecleanup. Testsactual550compose/load/cache/release andrealDOMhandlers; Carousel scrollBy/scrollTo andclient/scrollwidth usecontrolledtestgeometry, notnativepixel/snapvalidation; OverflowList usesJSDOMfloor/cap/hiddenmenu state notbrowsermeasuredfitacceptance; ResizeHandle keyboard geometry tested notnativepointerdrag; Chat syntheticcontenteditableinput notIMEacceptance. No externalmedia, clipboardservice, persistence/network. Fullroot/emitteddependencylicenses, reviewedcore/StyleXmissing-fileofficialsupplements disclosed. Lightbox isnotincludedorsubstitutedbyemptyframe; pendingassetfixtureseparatelyrecorded."
+    ]
+  },
+  {
+    "id": "astryx-core:resizable",
+    "source": "Meta AstryX",
+    "repository": "https://github.com/meta/astryx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/core/src/Resizable/Resizable.doc.mjs",
+    "sourcePath": "packages/core/src/Resizable/Resizable.doc.mjs",
+    "licenseEvidence": {
+      "url": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/LICENSE",
+      "sha256": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473",
+      "scope": "Complete fixed original MIT; actual runtime dependency notices supplied in preview assets."
+    },
+    "title": "可调整分栏",
+    "description": "原组件与明确本地示例，保留原布局和交互；不将轻包装或状态另计，不提供后台业务。",
+    "behavior": "原组件与明确本地示例，保留原布局和交互；不将轻包装或状态另计，不提供后台业务。",
+    "kind": "组件",
+    "format": "独立组件",
+    "category": "导航与组织",
+    "license": "MIT AND ISC AND BSD-3-Clause",
+    "batch": "astryx-layout-01",
+    "preview": "batches/astryx-layout-01/resizable/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Original Meta AstryX visual/API components with explicitlyhost-authoredlocalfixtures, not anupstreamcompletebusinessapplication. AppShell+Navigation groupedintooneentry: actualAppShell withSideNav/SideNavItem andTopNav/TopNavItem localcontentselection, no claimallmega/mobilevariantsdemonstrated. Carousel originalhorizontaltext-itemscroll/navigation imperativehandle, noimages; OverflowList originalmeasuredcollapse withDropdownMenu ofhiddenitems andhostvisiblecap; Resizable actualResizeHandle+useResizable withbounded120–400pxpanel/keyboardresize/reset, notahook-onlyentry; Chat actualmessageList/messageBubble/composer withlocalusertextappend, fixedinitialassistanttextexplicitlysample, noAI/replyservice/mic/attachmentupload. Alloriginalcoreimplementationsretained. Fixedsource0.7.12 docs versus actualcore/theme/build0.7.11 compatibility disclosed. PerentryIIFE/sharedneutraltheme/StyleX; hiddenunmount resetslocalstate, visiblefreshmount; exit/error ownedresourcecleanup. Testsactual550compose/load/cache/release andrealDOMhandlers; Carousel scrollBy/scrollTo andclient/scrollwidth usecontrolledtestgeometry, notnativepixel/snapvalidation; OverflowList usesJSDOMfloor/cap/hiddenmenu state notbrowsermeasuredfitacceptance; ResizeHandle keyboard geometry tested notnativepointerdrag; Chat syntheticcontenteditableinput notIMEacceptance. No externalmedia, clipboardservice, persistence/network. Fullroot/emitteddependencylicenses, reviewedcore/StyleXmissing-fileofficialsupplements disclosed. Lightbox isnotincludedorsubstitutedbyemptyframe; pendingassetfixtureseparatelyrecorded."
+    ]
+  },
+  {
+    "id": "astryx-core:chat",
+    "source": "Meta AstryX",
+    "repository": "https://github.com/meta/astryx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/core/src/Chat/Chat.doc.mjs",
+    "sourcePath": "packages/core/src/Chat/Chat.doc.mjs",
+    "licenseEvidence": {
+      "url": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/LICENSE",
+      "sha256": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473",
+      "scope": "Complete fixed original MIT; actual runtime dependency notices supplied in preview assets."
+    },
+    "title": "本地消息与输入",
+    "description": "原组件与明确本地示例，保留原布局和交互；不将轻包装或状态另计，不提供后台业务。",
+    "behavior": "原组件与明确本地示例，保留原布局和交互；不将轻包装或状态另计，不提供后台业务。",
+    "kind": "组件",
+    "format": "独立组件",
+    "category": "导航与组织",
+    "license": "MIT AND ISC AND BSD-3-Clause",
+    "batch": "astryx-layout-01",
+    "preview": "batches/astryx-layout-01/chat/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Original Meta AstryX visual/API components with explicitlyhost-authoredlocalfixtures, not anupstreamcompletebusinessapplication. AppShell+Navigation groupedintooneentry: actualAppShell withSideNav/SideNavItem andTopNav/TopNavItem localcontentselection, no claimallmega/mobilevariantsdemonstrated. Carousel originalhorizontaltext-itemscroll/navigation imperativehandle, noimages; OverflowList originalmeasuredcollapse withDropdownMenu ofhiddenitems andhostvisiblecap; Resizable actualResizeHandle+useResizable withbounded120–400pxpanel/keyboardresize/reset, notahook-onlyentry; Chat actualmessageList/messageBubble/composer withlocalusertextappend, fixedinitialassistanttextexplicitlysample, noAI/replyservice/mic/attachmentupload. Alloriginalcoreimplementationsretained. Fixedsource0.7.12 docs versus actualcore/theme/build0.7.11 compatibility disclosed. PerentryIIFE/sharedneutraltheme/StyleX; hiddenunmount resetslocalstate, visiblefreshmount; exit/error ownedresourcecleanup. Testsactual550compose/load/cache/release andrealDOMhandlers; Carousel scrollBy/scrollTo andclient/scrollwidth usecontrolledtestgeometry, notnativepixel/snapvalidation; OverflowList usesJSDOMfloor/cap/hiddenmenu state notbrowsermeasuredfitacceptance; ResizeHandle keyboard geometry tested notnativepointerdrag; Chat syntheticcontenteditableinput notIMEacceptance. No externalmedia, clipboardservice, persistence/network. Fullroot/emitteddependencylicenses, reviewedcore/StyleXmissing-fileofficialsupplements disclosed. Lightbox isnotincludedorsubstitutedbyemptyframe; pendingassetfixtureseparatelyrecorded."
     ]
   }
 ]
