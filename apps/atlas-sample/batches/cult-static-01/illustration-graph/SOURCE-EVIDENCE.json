@@ -1,0 +1,52 @@
+{
+  "repository": "https://github.com/nolly-studio/cult-ui",
+  "revision": "d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+  "originalComponent": "apps/www/registry/default/ui/illustration-graph.tsx",
+  "originalDemo": "apps/www/registry/default/example/illustration-graph-demo.tsx",
+  "originalFilesSHA256": {
+    "LICENSE.md": "78045e58dfd5f039ad350ad293da2ad9a2c0362b82dadb069b1c10be382ddac7",
+    "apps/www/lib/utils.ts": "7cf92ac6e9a70c0c68a993becf674ec7c373653bc5dc3379e366c352e5ee1a41",
+    "apps/www/registry/default/ui/illustration-graph.tsx": "7f66a53014e375bb459468910b58a2b7c0b84830001553cf2c331d0f429bce9b",
+    "apps/www/registry/default/example/illustration-graph-demo.tsx": "bf45832ab03581cc4e5bfaa3917ef11eb092d5adb6f0fa9ded5fc83fdc0a4e46"
+  },
+  "dependencies": [
+    {
+      "name": "clsx",
+      "version": "2.1.1",
+      "license": "MIT",
+      "scope": "emitted-runtime"
+    },
+    {
+      "name": "react",
+      "version": "19.1.0",
+      "license": "MIT",
+      "scope": "emitted-runtime"
+    },
+    {
+      "name": "react-dom",
+      "version": "19.1.0",
+      "license": "MIT",
+      "scope": "emitted-runtime"
+    },
+    {
+      "name": "scheduler",
+      "version": "0.26.0",
+      "license": "MIT",
+      "scope": "emitted-runtime"
+    },
+    {
+      "name": "tailwind-merge",
+      "version": "3.3.1",
+      "license": "MIT",
+      "scope": "emitted-runtime"
+    },
+    {
+      "name": "tailwindcss",
+      "version": "3.4.17",
+      "license": "MIT",
+      "scope": "compiled-css"
+    }
+  ],
+  "adaptation": "Original Cult UI illustration-graph component and complete default demo retained. Only import aliases are resolved locally; cn retains original extendTailwindMerge soft-shadow class groups, unrelated siteConfig/absoluteUrl removed. Original SVG path data, gradients, filters, clips, text and keycap content not redrawn. useId comes from original component. Original utility classes compiled with Tailwind3.4.17; host supplies light white-card/border theme and system-ui font, no font asset or CDN. Host mount/unmount/error/resource ownership added; hidden unloads static scene and restores on reveal, repeated visible idempotent. SVG reference IDs remain unique and resolve after repeated mounts. This is a static visual asset, not an interactive chart, running Agent workflow, or text-entry keyboard. Keyboard retains original decorative button focus/pressed CSS, no invented command handlers. Each original full scene is one existing ID; no color variants counted. No icon package emitted in this scene. Normal/reduced/earlymodule/earlySVG/recreation-failure tests use actual536 composePreview; every listener, RAF and timeout cleared. No native pixel acceptance is claimed. Reduced motion disables original keycap transitions in CSS; static SVGs have no continuing animation. No networking, storage, clipboard, backend, images, screenshots or binary packaging.",
+  "visualVerified": false
+}
