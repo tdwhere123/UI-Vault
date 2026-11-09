@@ -1,0 +1,209 @@
+{
+  "repository": "https://github.com/meta/astryx",
+  "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+  "originalEntry": "packages/cli/assets/templates/pages/checkout-wizard/page.tsx",
+  "originalSHA256": "72fc886261d498700bb6db81c3df62760c93c9264c0487e37166713fc546efde",
+  "sourceWorkspaceVersion": "0.7.12",
+  "dedup": {
+    "sources": [
+      {
+        "slug": "login-sso",
+        "sha256": "c3a1a3a6928766183f0770f79422a2aa08954b4403c655e958cdffc418e0205e"
+      },
+      {
+        "slug": "checkout-wizard",
+        "sha256": "72fc886261d498700bb6db81c3df62760c93c9264c0487e37166713fc546efde"
+      },
+      {
+        "slug": "login-card",
+        "sha256": "e0fac1bc56c3cbc4433a52ca1f66e89e82c9f3f1601f3deb166db7a1b4f58c82"
+      },
+      {
+        "slug": "login-split",
+        "sha256": "45baab104c60555e0cd1d3a139780e5f941b5d9003a4101aeb593b9c7773bd87"
+      },
+      {
+        "slug": "payment-form",
+        "sha256": "f6d4abc43b82a1919e5fcd2b61bacb819ea413a3453c6ab559104bc92da78b3b"
+      }
+    ],
+    "login-sso": "Original email-domain routing to SSO confirmation vs password fallback, back navigation, original failed-password timer. Existing login-card is single password form, not routing. Provider button only local loading; not a real SSO integration.",
+    "checkout-wizard": "Distinct original four-step commerce fixture: cart quantities/removal/promo->validated shipping->delivery options->payment-format validation and original no-payment completion. Compared with existing publishing/report/workspace/CI wizard fields/validation are distinct. Product thumbnails are auxiliary official copy placeholders, not a product-gallery adaptation.",
+    "login-split": "Grouped with login-card login family; split illustration/layout and local success are not counted as another independent authentication flow.",
+    "payment-form": "Not included: five external brand media references have no confirmed redistribution license under Meta root MIT; do not substitute that legal question with placeholder claims."
+  },
+  "officialTransformPath": "packages/cli/foundation/discovery/template-adapter.mjs",
+  "officialPolicyPath": "packages/cli/assets/docs/tree/template-images-media.doc.mjs",
+  "transformVerification": {
+    "pass": true,
+    "originalHelperSHA256": "e9ba8c15cab8bd451b729adf4f2ce7a1e7026d126b2a3c1b51977e0193ca418c",
+    "checks": [
+      {
+        "slug": "login-sso",
+        "officialMediaReplacements": 1,
+        "autoCompleteOffAdditions": 3,
+        "allOtherBytesRetained": true
+      },
+      {
+        "slug": "checkout-wizard",
+        "officialMediaReplacements": 3,
+        "autoCompleteOffAdditions": 12,
+        "allOtherBytesRetained": true
+      }
+    ],
+    "notBinaryEncoding": true,
+    "autofillLimit": "autocomplete off is set on all original TextInput fields; browser/password-manager behavior itself not certified, frontend explicitly forbids real information"
+  },
+  "officialTransform": [
+    {
+      "slug": "login-sso",
+      "replacements": 1,
+      "algorithm": "Exact original pure transform/helper slices, unrelated CLI discovery imports excluded; original source saved separately"
+    },
+    {
+      "slug": "checkout-wizard",
+      "replacements": 3,
+      "algorithm": "Exact original pure transform/helper slices, unrelated CLI discovery imports excluded; original source saved separately"
+    }
+  ],
+  "officialTransformSourceSHA256": "e9ba8c15cab8bd451b729adf4f2ce7a1e7026d126b2a3c1b51977e0193ca418c",
+  "adaptedPageSHA256": "dab7c00c107115b5c77b7d9d098331895044bfb2b962879b1c5799a6d06f1297",
+  "dependencies": [
+    {
+      "name": "@astryxdesign/core",
+      "version": "0.7.11",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-astryx-recovery/preview/node_modules/@astryxdesign/core",
+      "licenseFilesSHA256": {
+        "LICENSE": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473"
+      },
+      "supplement": "Actual core0.7.11 package declaresMIT but omitsfullLICENSE. Same-project fixed upstream fullMIT reused from existing reviewed AstryX batch; template repository0.7.12 vs installedruntime0.7.11 compatibility expressly disclosed."
+    },
+    {
+      "name": "@astryxdesign/theme-neutral",
+      "version": "0.7.11",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-astryx-recovery/preview/node_modules/@astryxdesign/theme-neutral",
+      "licenseFilesSHA256": {
+        "LICENSE": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473"
+      },
+      "supplement": null
+    },
+    {
+      "name": "@formatjs/fast-memoize",
+      "version": "3.1.7",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-astryx-recovery/preview/node_modules/@formatjs/fast-memoize",
+      "licenseFilesSHA256": {
+        "LICENSE.md": "b1cc980e28e9e48f377db191578a9361494ca7117185b69dd66cabaf5b460fb7"
+      },
+      "supplement": null
+    },
+    {
+      "name": "@formatjs/icu-messageformat-parser",
+      "version": "3.5.18",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-astryx-recovery/preview/node_modules/@formatjs/icu-messageformat-parser",
+      "licenseFilesSHA256": {
+        "LICENSE.md": "b1cc980e28e9e48f377db191578a9361494ca7117185b69dd66cabaf5b460fb7"
+      },
+      "supplement": null
+    },
+    {
+      "name": "@formatjs/icu-skeleton-parser",
+      "version": "2.1.11",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-astryx-recovery/preview/node_modules/@formatjs/icu-skeleton-parser",
+      "licenseFilesSHA256": {
+        "LICENSE.md": "b1cc980e28e9e48f377db191578a9361494ca7117185b69dd66cabaf5b460fb7"
+      },
+      "supplement": null
+    },
+    {
+      "name": "@heroicons/react",
+      "version": "2.2.0",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-astryx-recovery/preview/node_modules/@heroicons/react",
+      "licenseFilesSHA256": {
+        "LICENSE": "60e0b68c0f35c078eef3a5d29419d0b03ff84ec1df9c3f9d6e39a519a5ae7985"
+      },
+      "supplement": null
+    },
+    {
+      "name": "@stylexjs/stylex",
+      "version": "0.19.0",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-astryx-recovery/preview/node_modules/@stylexjs/stylex",
+      "licenseFilesSHA256": {
+        "stylex-LICENSE": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+      },
+      "supplement": "Actual0.19.0 package declaresMIT but omitsfullLICENSE. Previously reviewed official StyleX rootMIT supplement reused from existing AstryX license cache, not claimed file shipped inside npm."
+    },
+    {
+      "name": "intl-messageformat",
+      "version": "11.2.15",
+      "license": "BSD-3-Clause",
+      "scope": "emitted-runtime",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-astryx-recovery/preview/node_modules/intl-messageformat",
+      "licenseFilesSHA256": {
+        "LICENSE.md": "cc4143615b27c66eafbe913f132a9e41ac14c1e2ec6b2df24dafeaa97f028850"
+      },
+      "supplement": null
+    },
+    {
+      "name": "lucide-react",
+      "version": "1.18.0",
+      "license": "ISC",
+      "scope": "emitted-runtime",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-astryx-recovery/preview/node_modules/lucide-react",
+      "licenseFilesSHA256": {
+        "LICENSE": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57"
+      },
+      "supplement": null
+    },
+    {
+      "name": "react",
+      "version": "19.3.1",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-astryx-recovery/preview/node_modules/react",
+      "licenseFilesSHA256": {
+        "LICENSE": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+      },
+      "supplement": null
+    },
+    {
+      "name": "react-dom",
+      "version": "19.3.1",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-astryx-recovery/preview/node_modules/react-dom",
+      "licenseFilesSHA256": {
+        "LICENSE": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+      },
+      "supplement": null
+    },
+    {
+      "name": "scheduler",
+      "version": "0.28.0",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-astryx-recovery/preview/node_modules/scheduler",
+      "licenseFilesSHA256": {
+        "LICENSE": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+      },
+      "supplement": null
+    }
+  ],
+  "adaptation": "Complete original Meta AstryX local interaction pages, not real authentication or commerce. Exact official CLI stripTemplateAssetRefs/replaceDemoMedia with original neutral PLACEHOLDER_IMAGE replaces only original root-relative fixtures (login-sso1,checkout-wizard3); no photo/artwork delivery claimed. login-sso original email-domain routing, SSO-confirm or password-fallback, back navigation and simulated password failure. Original SSO Continue only sets loading, not a successful connection; user may Go back. checkout-wizard original four-step cart/promo/derived totals, shipping validation, delivery and payment-format checks, original local completion fixture. No network, credentials, actual payment/order/address submission. Use fictional sample input ONLY, never real cards/passwords/personal information. Fixed source0.7.12 and compatible core/theme0.7.11 runtime documented. Original page code unchanged apart from exact official media replacements and explicit autoComplete=off on every TextInput to discourage credential/card autofill; browser-specific password manager enforcement is not certified; shared bounded host owns resources and blocks navigation/submits, hidden unmount resets. Full emitted licenses. Synthetic DOM and actual compose/loader testing, native layout/image decode not verified.",
+  "visualVerified": false,
+  "sharedBuild": "Vite/StyleX sameinstalled dependencies, independent per-page IIFE; no all-template runtime",
+  "runtimeOutlinePatch": null
+}
