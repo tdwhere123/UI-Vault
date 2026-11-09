@@ -1,0 +1,135 @@
+{
+  "repository": "https://github.com/meta/astryx",
+  "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+  "originalEntry": "packages/core/src/Layout/Layout.doc.mjs",
+  "originalSHA256": "9369b3b98afb3c317e5a577f038b83e9a6bfdf126167a80eae959a0476b2d188",
+  "selectedExample": {
+    "label": "Page with a details panel inside AppShell",
+    "code": "\nfunction OrdersPage() {\n  return (\n    <AppShell\n      sideNav={\n        <SideNav>\n          <SideNavItem label=\"Orders\" isSelected />\n          <SideNavItem label=\"Customers\" />\n          <SideNavItem label=\"Settings\" />\n        </SideNav>\n      }>\n      {/* No padding props needed: the page Layout's regions keep their\n          default inset inside AppShell's full-bleed content area. */}\n      <Layout\n        header={\n          <LayoutHeader hasDivider>\n            <Heading level={1}>Orders</Heading>\n          </LayoutHeader>\n        }\n        end={\n          <LayoutPanel\n            hasDivider\n            width={320}\n            role=\"complementary\"\n            label=\"Order details\">\n            <VStack gap={2}>\n              <Heading level={2}>Order #1042</Heading>\n              <Text type=\"body\" color=\"secondary\">\n                Shipped \u00b7 3 items \u00b7 $184.00\n              </Text>\n            </VStack>\n          </LayoutPanel>\n        }\n        content={\n          <LayoutContent>\n            <Text type=\"body\">\n              Select an order to see its shipping and payment details.\n            </Text>\n          </LayoutContent>\n        }\n      />\n    </AppShell>\n  );\n}\n"
+  },
+  "dependencies": [
+    {
+      "name": "@astryxdesign/core",
+      "version": "0.7.11",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-astryx-recovery/preview/node_modules/@astryxdesign/core",
+      "licenseFilesSHA256": {
+        "LICENSE": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473"
+      },
+      "supplement": "Actual core0.7.11 package declaresMIT but omitsfullLICENSE. Same-project fixed upstream fullMIT reused from existing reviewed AstryX batch; template repository0.7.12 vs installedruntime0.7.11 compatibility expressly disclosed."
+    },
+    {
+      "name": "@astryxdesign/theme-neutral",
+      "version": "0.7.11",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-astryx-recovery/preview/node_modules/@astryxdesign/theme-neutral",
+      "licenseFilesSHA256": {
+        "LICENSE": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473"
+      },
+      "supplement": null
+    },
+    {
+      "name": "@formatjs/fast-memoize",
+      "version": "3.1.7",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-astryx-recovery/preview/node_modules/@formatjs/fast-memoize",
+      "licenseFilesSHA256": {
+        "LICENSE.md": "b1cc980e28e9e48f377db191578a9361494ca7117185b69dd66cabaf5b460fb7"
+      },
+      "supplement": null
+    },
+    {
+      "name": "@formatjs/icu-messageformat-parser",
+      "version": "3.5.18",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-astryx-recovery/preview/node_modules/@formatjs/icu-messageformat-parser",
+      "licenseFilesSHA256": {
+        "LICENSE.md": "b1cc980e28e9e48f377db191578a9361494ca7117185b69dd66cabaf5b460fb7"
+      },
+      "supplement": null
+    },
+    {
+      "name": "@formatjs/icu-skeleton-parser",
+      "version": "2.1.11",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-astryx-recovery/preview/node_modules/@formatjs/icu-skeleton-parser",
+      "licenseFilesSHA256": {
+        "LICENSE.md": "b1cc980e28e9e48f377db191578a9361494ca7117185b69dd66cabaf5b460fb7"
+      },
+      "supplement": null
+    },
+    {
+      "name": "@stylexjs/stylex",
+      "version": "0.19.0",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-astryx-recovery/preview/node_modules/@stylexjs/stylex",
+      "licenseFilesSHA256": {
+        "stylex-LICENSE": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+      },
+      "supplement": "Actual0.19.0 package declaresMIT but omitsfullLICENSE. Previously reviewed official StyleX rootMIT supplement reused from existing AstryX license cache, not claimed file shipped inside npm."
+    },
+    {
+      "name": "intl-messageformat",
+      "version": "11.2.15",
+      "license": "BSD-3-Clause",
+      "scope": "emitted-runtime",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-astryx-recovery/preview/node_modules/intl-messageformat",
+      "licenseFilesSHA256": {
+        "LICENSE.md": "cc4143615b27c66eafbe913f132a9e41ac14c1e2ec6b2df24dafeaa97f028850"
+      },
+      "supplement": null
+    },
+    {
+      "name": "lucide-react",
+      "version": "1.18.0",
+      "license": "ISC",
+      "scope": "emitted-runtime",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-astryx-recovery/preview/node_modules/lucide-react",
+      "licenseFilesSHA256": {
+        "LICENSE": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57"
+      },
+      "supplement": null
+    },
+    {
+      "name": "react",
+      "version": "19.3.1",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-astryx-recovery/preview/node_modules/react",
+      "licenseFilesSHA256": {
+        "LICENSE": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+      },
+      "supplement": null
+    },
+    {
+      "name": "react-dom",
+      "version": "19.3.1",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-astryx-recovery/preview/node_modules/react-dom",
+      "licenseFilesSHA256": {
+        "LICENSE": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+      },
+      "supplement": null
+    },
+    {
+      "name": "scheduler",
+      "version": "0.28.0",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-astryx-recovery/preview/node_modules/scheduler",
+      "licenseFilesSHA256": {
+        "LICENSE": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+      },
+      "supplement": null
+    }
+  ],
+  "adaptation": "Original fixed Meta AstryX documentation examples with original core components. Field and Layout retain complete original functions; Markdown combines original inline example with a disclosed local fixed heading/list fixture; Timer combines original elapsed/clock/inherit snippets in one family. Banner retains original async outcome handler, while its undefined saveSettings is supplied by a disclosed local resolved/rejected fixture plus failure toggle: no real settings are saved. Layout navigation and order details are original static illustrations, not a working order system; Field controls update local state without filtering a server. Documentation workspace0.7.12 with installedcore/theme/build0.7.11 compatibility runtime, exact emitted dependencies below. Same original StyleX/theme/LayerProvider; each entry independent IIFE. Imports/function wrapper/default export are adaptation, no original component redrawing. No external media, network, user storage, accounts, clipboard or backend. Markdown accepts only hardcoded trusted sample strings; not a general untrusted content editor/security claim. Hidden unmounts transient state, visible remounts fresh; Timer restarts elapsed measurement. Exit/error own listener/observer/frame/timer cleanup. Actual550compose and loader/cache/release, original key interactions tested under JSDOM; StyleX CSS parsing unsupported warning recorded separately, no native layout/pixels verified. Root MIT and actual emitted dependency full licenses included; core and StyleX missing-file official supplements expressly labelled, not claimed npm shipped them.",
+  "visualVerified": false
+}
