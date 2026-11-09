@@ -1,0 +1,483 @@
+{
+  "repository": "https://github.com/nomcopter/react-mosaic",
+  "revision": "a189cd943d6d602672bc111163157697b8befd41",
+  "version": "7.2.1",
+  "entry": "apps/website/src/components/Demo/index.tsx",
+  "originalFiles": {
+    "apps/website/src/components/Demo/ExampleWindow.tsx": "fa6a31144f58db5c6269d3962192f854412df59575c7c82fbcdb6bbb62f042fe",
+    "apps/website/src/components/Demo/index.tsx": "26be925e088fb8a254a234e43cfa12526cb2b541aafddaba7ce54a753a68c0cb",
+    "apps/website/src/components/Demo/EditableTabTitle.tsx": "501b0fce91bfb1365785bfb01493e241f8a7b4d3a147f7f44c7f8f9049d06724",
+    "apps/website/src/components/Demo/demo-utils.ts": "da57127e316237cb897b46668c7a9f16e9f976b90dbc43808877a197858b5ec4",
+    "apps/website/src/components/Demo/demo-types.ts": "62a81adef87fb09a6df3117378dca0b8a1e3f0049eeeb5e735e4bbf6bfb9966c",
+    "apps/website/src/components/Demo/demo.css": "4868ec58a6d3cf8ed0c9ebbbb5637b931a19ecf5cf89fbcfeb796f877239d9a2",
+    "apps/website/src/components/Demo/toolbars.tsx": "c872c8e4fea8319ab84a1b7278c733bf11ff7b7a278b4c7e2428502b534bb436",
+    "libs/react-mosaic-component/src/index.ts": "0db505f5c685c8e2d75323ae3c7a1bd1dd2b79042f0ede18e39a31eccbb352aa",
+    "libs/react-mosaic-component/src/lib/internalTypes.ts": "4cec8878dd18596f7770016784b8af7bec88c42164e1eef87055a697b9c251ac",
+    "libs/react-mosaic-component/src/lib/contextHooks.ts": "b9b2ab0bbe31e08df22d4cb1d38644e8f6e4264c910046b6baaa4afead8b9c82",
+    "libs/react-mosaic-component/src/lib/index.spec.ts": "56ceab767c033d8cd7e29de7507154cac9fc83b8b9104bb11c66053dcd14456f",
+    "libs/react-mosaic-component/src/lib/Split.spec.ts": "debc4c0f66f4b4166c3ac48eaec82f14b0d0c514301abb148cad55ca6edab9ba",
+    "libs/react-mosaic-component/src/lib/contextTypes.ts": "189794fd8338f9640991148cd0a592a2224725e4bec817319e191a11484d0bfd",
+    "libs/react-mosaic-component/src/lib/types.ts": "99734533b3dd8c661d523e8a1a6bcc9b1c081217ba53f1dc638b3e730ae79ad7",
+    "libs/react-mosaic-component/src/lib/index.ts": "5c68158bc2fc813690066c983bebfdeb82d1b898bb6a848faccd870e792ae4e0",
+    "libs/react-mosaic-component/src/lib/util/touchGesture.ts": "d56356017195163f1bd61d5279eae5459406cfb0a4e52954170048c8710ae122",
+    "libs/react-mosaic-component/src/lib/util/boundingBox.spec.ts": "81a75c8ad36dbc20a5813ed9f91560437b7b736922d5cdd1092ebd8fd4a7ebc0",
+    "libs/react-mosaic-component/src/lib/util/touchGesture.spec.ts": "2fbce8ce1523d8c603010d0f12761b3e5c305aec1a4a36f434b12ffc2734d701",
+    "libs/react-mosaic-component/src/lib/util/dragSource.ts": "0afd3c079e31da38c92fc6223ac94bebdea55df5fc1b464c74275c9c0bb29e91",
+    "libs/react-mosaic-component/src/lib/util/assertNever.ts": "1981f7b8c84123ecd32f5e5ad40d6128763fda6962cbba73f4b76947f603a266",
+    "libs/react-mosaic-component/src/lib/util/tabStripAutoScroll.spec.ts": "ac1a719a92ded63f8f4a927683bf8e755186deb1b668e91596811eed305b979d",
+    "libs/react-mosaic-component/src/lib/util/tabStripAutoScroll.ts": "735d96dfd6fce910b1e1aa702385bdb8eea4c97517cd5d9531c4fb2bd2c09032",
+    "libs/react-mosaic-component/src/lib/util/mosaicUtilities.ts": "d4f7eb725dd4d5775fd00a50d02f05356b26261afbcbabd445327d173a97678d",
+    "libs/react-mosaic-component/src/lib/util/mosaicUpdates.ts": "f6888a6d51d5938e5f005fbfa21a9d93422936adae1a3f4d8e7041c7b2df5d3e",
+    "libs/react-mosaic-component/src/lib/util/mosaicUpdates.spec.ts": "67bfeffb64441fc5bcc69e37911a2c63c49febd36c79f54687d10903e1cc5068",
+    "libs/react-mosaic-component/src/lib/util/mosaicUpdates.swap.spec.ts": "32dee6477e05314f7b7adc4d3867de0a9b409159ede109f7fe981c92e0825da1",
+    "libs/react-mosaic-component/src/lib/util/dragImage.ts": "881bcdd1d5f2048f52b3a58d554f8237a4896286e121cf70561e256a4e28b8ac",
+    "libs/react-mosaic-component/src/lib/util/BoundingBox.ts": "89533e8c3bf40ffa2ca5c92925cc6309bc589684a79eec777e431434bec12753",
+    "libs/react-mosaic-component/src/lib/util/dragRestore.ts": "926ddcf4ef779cecea3035c419d7e955e876b11a2d5b1fd251e6756dd80a426a",
+    "libs/react-mosaic-component/src/lib/util/dragPreviewRegistry.ts": "0906a888f621545b94c960954159966f361b6879fe7c08e8109fa1730da377b0",
+    "libs/react-mosaic-component/src/lib/util/mosaicUtilities.spec.ts": "17ac9c32a3e622ace47f75d2c86631312c86996fcb7a3ea6e3a444095ff8911c",
+    "libs/react-mosaic-component/src/lib/styles/blueprint-theme.spec.ts": "721b0ea8eb5706ddb1df021e8e382b62cea43e60b9acc61765a79b9295533dbd",
+    "libs/react-mosaic-component/src/lib/styles/tabDropTarget.spec.ts": "272b58a202e03bcd4760423132daded0b1412cea471865db342c69de2d837073",
+    "libs/react-mosaic-component/src/lib/styles/touch.spec.ts": "b6292c3b0c1d932fe91ce11573a7f5ee66abbeb1494b601ba8acbc1b05fd0ac2",
+    "libs/react-mosaic-component/src/lib/Mosaic.dropBehavior.spec.tsx": "0c10417bc89de23be75f3bd442b640fa5c28ab1d2aa813e02d922cda5baf6536",
+    "libs/react-mosaic-component/src/lib/DraggableTab.tsx": "e0fdf8c026786d7d1e56fdb951206e6a6b0853f975a0acb9c8098ba38a5759f3",
+    "libs/react-mosaic-component/src/lib/Mosaic.spec.tsx": "d81b84295987ee1a975817d95abb5f5b2d5d245621ddfdf2fee7d42e482d8f2f",
+    "libs/react-mosaic-component/src/lib/Split.tsx": "eb13c648b6ac403173b87048fab41c389de1c204db266725540050cc191243ba",
+    "libs/react-mosaic-component/src/lib/renderProfiling.spec.tsx": "038dfd7f876b16ac69dfbb1ce68fdb0cd86777a332146a3e069fb9f7339c98ed",
+    "libs/react-mosaic-component/src/lib/Mosaic.dragCancelMeta.spec.tsx": "b681740b3ed55ed896c500706a905ceae074bac74fb9d9dbc5132f601012d944",
+    "libs/react-mosaic-component/src/lib/MosaicWindow.tsx": "1f0493572a1982a398767e33bee2012a178dcefc36e490c3afd0ae13d6666f75",
+    "libs/react-mosaic-component/src/lib/TouchDragPreview.tsx": "a3954f1f9487abd29511df9152f2f5ffbdbe654d32d1527d6652ed8f12911ca9",
+    "libs/react-mosaic-component/src/lib/MosaicZeroState.tsx": "a58abebaba7ab2b7a113cbd5cd28a2e508eabc8d238b0ecf644ab9d48e1167ee",
+    "libs/react-mosaic-component/src/lib/Mosaic.changeMeta.spec.tsx": "45f7cf93a24d28ab13304859664f7bc4be48f5170a0e5760539c95df6c539ccc",
+    "libs/react-mosaic-component/src/lib/contextHooks.spec.tsx": "64a24069904da4a634debf7c2166acb4802e88127917f6de17537aa4ad4ce1c0",
+    "libs/react-mosaic-component/src/lib/Mosaic.touch.spec.tsx": "c41c2c6120a158defd234f824e7ec64478d0026c446a2bfc9f530fd343b375ab",
+    "libs/react-mosaic-component/src/lib/Mosaic.tsx": "053e7fa107e53fda583bbbdb2be7b8bce4470c27746da115b5540931c20e0ac4",
+    "libs/react-mosaic-component/src/lib/MosaicDropTarget.tsx": "0e656b739e4e61984f245c584233f772bdf6798be82f8a847ebe150c899897cf",
+    "libs/react-mosaic-component/src/lib/MosaicRoot.tsx": "785f017fe32b62e230bc689f1e5e503b9789f6ab450281131cb67fdd3f2aae0b",
+    "libs/react-mosaic-component/src/lib/Mosaic.strictMode.spec.tsx": "fd090db023cc7946e3436bf9722b341bade122bc58379d27201b04cce0bbf22c",
+    "libs/react-mosaic-component/src/lib/dragOutOfLayout.spec.tsx": "6242edba5db2b4d4b89d4f61fa047bc986fb42fc55a9b7faffd40bdd2a1a1525",
+    "libs/react-mosaic-component/src/lib/MosaicTabs.tsx": "bf69c181e1efb6132534e0f3b33f87e9aec72ab0134e89e5748ec4204abbca1d",
+    "libs/react-mosaic-component/src/lib/DraggableTab.spec.tsx": "97127d5ddab0971d5798b25379a9001f6c31b221695dfe7bcb212dc02b790fef",
+    "libs/react-mosaic-component/src/lib/RootDropTargets.tsx": "2e964bd66db9347d90b98f7b9afc535a537b6c583db76c5ef229f68948d7c8c3",
+    "libs/react-mosaic-component/src/lib/util/OptionalBlueprint.tsx": "9bda6deab5a63b9ab957511b00673678b6bc283a1916549d32ef4710bb1eb240",
+    "libs/react-mosaic-component/src/lib/buttons/TabDragButton.tsx": "8c88df53a497153444897c43b520e304dc5515cf36b70db38f3b99a2ed3aeaef",
+    "libs/react-mosaic-component/src/lib/buttons/TabSplitButton.tsx": "e22cf1e740c91f15df1b741625a8c952d11bcb9869756946017ea64d92b30d50",
+    "libs/react-mosaic-component/src/lib/buttons/ExpandButton.tsx": "ff5774862fded814d5390d0276cc4aaf1610551894443c39ccd7f7b1d069bd50",
+    "libs/react-mosaic-component/src/lib/buttons/RemoveButton.tsx": "2517511bbbe5b8b35cdd1d7017776eeeb8db95fbb3b2654061eb08e03a78de7e",
+    "libs/react-mosaic-component/src/lib/buttons/SplitButton.tsx": "d20e75d266c739bb6cd7c6fb932980a8d4dd2dd17982118ac4b15de9c4a1251c",
+    "libs/react-mosaic-component/src/lib/buttons/DefaultAddTabButton.tsx": "6fe07f0ba9158da05173fe6d4a19f9a2e2a01148909a1d6f495b3f9d201a2433",
+    "libs/react-mosaic-component/src/lib/buttons/DefaultAddTabButton.spec.tsx": "59857c439ebf302567a812d23924b69417db3b2f858a0fd349bd85440c8361b1",
+    "libs/react-mosaic-component/src/lib/buttons/MosaicButton.tsx": "a991e5bdeb534935706f1ec3ffe05be6f15bcb6804475902d705687476470862",
+    "libs/react-mosaic-component/src/lib/buttons/TabRemoveButton.tsx": "542965c93814670e93c985f4bd393ab4992805b4ab389b62449e33a96ac6fe5c",
+    "libs/react-mosaic-component/src/lib/buttons/Separator.tsx": "a3215098591d071a9f5df6a9f769e3796af3cbe90f4806357f87ef0cfff9b83b",
+    "libs/react-mosaic-component/src/lib/buttons/AddTabButton.tsx": "4a912ceca510999be6b6c85ed0145a324788df73d1a2d8e72d531c21ba926d29",
+    "libs/react-mosaic-component/src/lib/buttons/ReplaceButton.tsx": "201df557546294fd5311669f26daa8eb0fb25dfd378339d289a51c062dd00152",
+    "libs/react-mosaic-component/src/lib/buttons/TabExpandButton.tsx": "a02cf02f5812750c8f3268a92fb1f22fb5731c31854112bdfe0f7848a909b8d2",
+    "libs/react-mosaic-component/src/lib/buttons/defaultToolbarControls.tsx": "caba8b71aa90b64163f388ede3d7e127f43938157eea297caca75741cb97bc1b",
+    "libs/react-mosaic-component/src/lib/styles/index.less": "17c680227aa291e5800d416a6b44d865573131c502e4186a9553747cfde2c638",
+    "libs/react-mosaic-component/src/lib/styles/mosaic-window.less": "b655ebbcf2c265bb467ac47ac2696b642b660aa263d92df41ec36c0d32dca214",
+    "libs/react-mosaic-component/src/lib/styles/mixins.less": "615bc0cb6aeea5e4f2355d51bb1e8fdb4ee3608c815b16cfeb1d827a61ad4acc",
+    "libs/react-mosaic-component/src/lib/styles/mosaic.less": "f37df800aefd915d003e158e6eefc9e126db5a299936bdf626f0cb418dfeb2d8",
+    "libs/react-mosaic-component/src/lib/styles/blueprint-theme.less": "f187e4580e901546280a166f9ec82d50878b697a99cf7754c2679a199f1c8f94",
+    "LICENSE": "2c05de28644f78860c59810615a0994c0d4c7076d351275f7ae28fb6976bf69f",
+    "libs/react-mosaic-component/package.json": "f79321f74be313087756e0fb0e0cb883abc3e6161ebe1ca92d737feec851a0a0"
+  },
+  "archiveSHA256": "495119834871fb61d3982d1a7df0143e4bcfb4816b4158974e21d724dee74309",
+  "dependencies": [
+    {
+      "name": "@blueprintjs/colors",
+      "version": "5.1.16",
+      "license": "Apache-2.0",
+      "origin": "actual installed package",
+      "files": {
+        "LICENSE": "a6cba85bc92e0cff7a450b1d873c0eaa2e9fc96bf472df0247a26bec77bf3ff9"
+      }
+    },
+    {
+      "name": "@blueprintjs/core",
+      "version": "5.19.1",
+      "license": "Apache-2.0",
+      "origin": "actual installed package",
+      "files": {
+        "LICENSE": "a6cba85bc92e0cff7a450b1d873c0eaa2e9fc96bf472df0247a26bec77bf3ff9"
+      }
+    },
+    {
+      "name": "@blueprintjs/icons",
+      "version": "5.23.0",
+      "license": "Apache-2.0",
+      "origin": "actual installed package",
+      "files": {
+        "LICENSE": "a6cba85bc92e0cff7a450b1d873c0eaa2e9fc96bf472df0247a26bec77bf3ff9"
+      }
+    },
+    {
+      "name": "@react-dnd/asap",
+      "version": "5.0.2",
+      "license": "MIT",
+      "origin": "actual installed package",
+      "files": {
+        "LICENSE.md": "39c7589834a86c769cbd03a802bc8a1cfcdd8cf9eabb9ce53b7532db15d0e9d9"
+      }
+    },
+    {
+      "name": "@react-dnd/invariant",
+      "version": "4.0.2",
+      "license": "MIT",
+      "origin": "official react-dnd/react-dnd@641fd36c130e42c3cf08987924151efa1452bca7/LICENSE (npm invariant4.0.2 gitHead; common repository MIT supplement for invariant and shallowequal)",
+      "files": {
+        "react-dnd-LICENSE": "10c8da64ecfa3067cf9231e0ba19b8d7730e7fed3ac5eaa37ccb97c3c5e71336"
+      }
+    },
+    {
+      "name": "@react-dnd/shallowequal",
+      "version": "4.0.2",
+      "license": "MIT",
+      "origin": "official react-dnd/react-dnd@641fd36c130e42c3cf08987924151efa1452bca7/LICENSE (npm invariant4.0.2 gitHead; common repository MIT supplement for invariant and shallowequal)",
+      "files": {
+        "react-dnd-LICENSE": "10c8da64ecfa3067cf9231e0ba19b8d7730e7fed3ac5eaa37ccb97c3c5e71336"
+      }
+    },
+    {
+      "name": "camel-case",
+      "version": "4.1.2",
+      "license": "MIT",
+      "origin": "actual installed package",
+      "files": {
+        "LICENSE": "4eeb3271453a891df609e5a9f4ee79a68307f730c13417a3bfeffa604ac8cf25"
+      }
+    },
+    {
+      "name": "capital-case",
+      "version": "1.0.4",
+      "license": "MIT",
+      "origin": "actual installed package",
+      "files": {
+        "LICENSE": "4eeb3271453a891df609e5a9f4ee79a68307f730c13417a3bfeffa604ac8cf25"
+      }
+    },
+    {
+      "name": "change-case",
+      "version": "4.1.2",
+      "license": "MIT",
+      "origin": "actual installed package",
+      "files": {
+        "LICENSE": "4eeb3271453a891df609e5a9f4ee79a68307f730c13417a3bfeffa604ac8cf25"
+      }
+    },
+    {
+      "name": "classnames",
+      "version": "2.5.1",
+      "license": "MIT",
+      "origin": "actual installed package",
+      "files": {
+        "LICENSE": "0c1c24dcc129cb0c02ee9803cfa7a50061c236a3b59b36a714c27f3ade66d7be"
+      }
+    },
+    {
+      "name": "constant-case",
+      "version": "3.0.4",
+      "license": "MIT",
+      "origin": "actual installed package",
+      "files": {
+        "LICENSE": "4eeb3271453a891df609e5a9f4ee79a68307f730c13417a3bfeffa604ac8cf25"
+      }
+    },
+    {
+      "name": "dnd-core",
+      "version": "16.0.1",
+      "license": "MIT",
+      "origin": "actual installed package",
+      "files": {
+        "LICENSE": "65a1f00f35ea469048896fbfec3c5faed7d3fe7c7e0be2a0478470b59d9e1439"
+      }
+    },
+    {
+      "name": "dnd-multi-backend",
+      "version": "9.0.0",
+      "license": "MIT",
+      "origin": "official LouisBrunner/dnd-multi-backend@26978652a5d707fdd4ce0903acc966f661337b9b/LICENSE (npm dnd-multi-backend9.0.0 gitHead; same-version workspace preset)",
+      "files": {
+        "multi-backend-LICENSE": "4b8cb29bfb6eaab0bf73d1eb61b75fba6eeca044758168a8fd77371e200c3051"
+      }
+    },
+    {
+      "name": "dot-case",
+      "version": "3.0.4",
+      "license": "MIT",
+      "origin": "actual installed package",
+      "files": {
+        "LICENSE": "4eeb3271453a891df609e5a9f4ee79a68307f730c13417a3bfeffa604ac8cf25"
+      }
+    },
+    {
+      "name": "fast-deep-equal",
+      "version": "3.1.3",
+      "license": "MIT",
+      "origin": "actual installed package",
+      "files": {
+        "LICENSE": "7bf9b2de73a6b356761c948d0e9eeb4be6c1270bd04c79cd489c1e400ffdfc1a"
+      }
+    },
+    {
+      "name": "header-case",
+      "version": "2.0.4",
+      "license": "MIT",
+      "origin": "actual installed package",
+      "files": {
+        "LICENSE": "4eeb3271453a891df609e5a9f4ee79a68307f730c13417a3bfeffa604ac8cf25"
+      }
+    },
+    {
+      "name": "immutability-helper",
+      "version": "3.1.1",
+      "license": "MIT",
+      "origin": "actual installed package",
+      "files": {
+        "LICENSE": "cfe3b728a47e370ad31bce130e40df551d78b2317518743dcdb02cf67e3bbb30"
+      }
+    },
+    {
+      "name": "lodash-es",
+      "version": "4.18.1",
+      "license": "MIT",
+      "origin": "actual installed package",
+      "files": {
+        "LICENSE": "f71e8ed126b46346494aad5486874cd8f0aafe95092ed67d2e3cb6110f939abc"
+      }
+    },
+    {
+      "name": "lower-case",
+      "version": "2.0.2",
+      "license": "MIT",
+      "origin": "actual installed package",
+      "files": {
+        "LICENSE": "4eeb3271453a891df609e5a9f4ee79a68307f730c13417a3bfeffa604ac8cf25"
+      }
+    },
+    {
+      "name": "no-case",
+      "version": "3.0.4",
+      "license": "MIT",
+      "origin": "actual installed package",
+      "files": {
+        "LICENSE": "4eeb3271453a891df609e5a9f4ee79a68307f730c13417a3bfeffa604ac8cf25"
+      }
+    },
+    {
+      "name": "normalize.css",
+      "version": "8.0.1",
+      "license": "MIT",
+      "origin": "actual installed package",
+      "files": {
+        "LICENSE.md": "89a9a9ace8be9e79bdc962823479bf980e4a14777ebe51b37e669f658e6f25ef"
+      }
+    },
+    {
+      "name": "param-case",
+      "version": "3.0.4",
+      "license": "MIT",
+      "origin": "actual installed package",
+      "files": {
+        "LICENSE": "4eeb3271453a891df609e5a9f4ee79a68307f730c13417a3bfeffa604ac8cf25"
+      }
+    },
+    {
+      "name": "pascal-case",
+      "version": "3.1.2",
+      "license": "MIT",
+      "origin": "actual installed package",
+      "files": {
+        "LICENSE": "4eeb3271453a891df609e5a9f4ee79a68307f730c13417a3bfeffa604ac8cf25"
+      }
+    },
+    {
+      "name": "path-case",
+      "version": "3.0.4",
+      "license": "MIT",
+      "origin": "actual installed package",
+      "files": {
+        "LICENSE": "4eeb3271453a891df609e5a9f4ee79a68307f730c13417a3bfeffa604ac8cf25"
+      }
+    },
+    {
+      "name": "rdndmb-html5-to-touch",
+      "version": "9.0.0",
+      "license": "MIT",
+      "origin": "official LouisBrunner/dnd-multi-backend@26978652a5d707fdd4ce0903acc966f661337b9b/LICENSE (npm dnd-multi-backend9.0.0 gitHead; same-version workspace preset)",
+      "files": {
+        "multi-backend-LICENSE": "4b8cb29bfb6eaab0bf73d1eb61b75fba6eeca044758168a8fd77371e200c3051"
+      }
+    },
+    {
+      "name": "react",
+      "version": "18.3.1",
+      "license": "MIT",
+      "origin": "actual installed package",
+      "files": {
+        "LICENSE": "52412d7bc7ce4157ea628bbaacb8829e0a9cb3c58f57f99176126bc8cf2bfc85"
+      }
+    },
+    {
+      "name": "react-dnd",
+      "version": "16.0.1",
+      "license": "MIT",
+      "origin": "actual installed package",
+      "files": {
+        "LICENSE": "720a9b51db3dc48d2afd62039f019614179b18d0fe9456bd2c6ea41041e942dd"
+      }
+    },
+    {
+      "name": "react-dnd-html5-backend",
+      "version": "16.0.1",
+      "license": "MIT",
+      "origin": "actual installed package",
+      "files": {
+        "LICENSE": "65a1f00f35ea469048896fbfec3c5faed7d3fe7c7e0be2a0478470b59d9e1439"
+      }
+    },
+    {
+      "name": "react-dnd-touch-backend",
+      "version": "16.0.1",
+      "license": "MIT",
+      "origin": "actual installed package",
+      "files": {
+        "LICENSE": "10c8da64ecfa3067cf9231e0ba19b8d7730e7fed3ac5eaa37ccb97c3c5e71336"
+      }
+    },
+    {
+      "name": "react-dom",
+      "version": "18.3.1",
+      "license": "MIT",
+      "origin": "actual installed package",
+      "files": {
+        "LICENSE": "52412d7bc7ce4157ea628bbaacb8829e0a9cb3c58f57f99176126bc8cf2bfc85"
+      }
+    },
+    {
+      "name": "redux",
+      "version": "4.2.1",
+      "license": "MIT",
+      "origin": "actual installed package",
+      "files": {
+        "LICENSE.md": "f2da73c752c6b87624755edacf927cbd915fa76555d383e74494bad4a5155ab3"
+      }
+    },
+    {
+      "name": "scheduler",
+      "version": "0.23.2",
+      "license": "MIT",
+      "origin": "actual installed package",
+      "files": {
+        "LICENSE": "52412d7bc7ce4157ea628bbaacb8829e0a9cb3c58f57f99176126bc8cf2bfc85"
+      }
+    },
+    {
+      "name": "sentence-case",
+      "version": "3.0.4",
+      "license": "MIT",
+      "origin": "actual installed package",
+      "files": {
+        "LICENSE": "4eeb3271453a891df609e5a9f4ee79a68307f730c13417a3bfeffa604ac8cf25"
+      }
+    },
+    {
+      "name": "snake-case",
+      "version": "3.0.4",
+      "license": "MIT",
+      "origin": "actual installed package",
+      "files": {
+        "LICENSE": "4eeb3271453a891df609e5a9f4ee79a68307f730c13417a3bfeffa604ac8cf25"
+      }
+    },
+    {
+      "name": "tslib",
+      "version": "2.6.3",
+      "license": "0BSD",
+      "origin": "actual installed package",
+      "files": {
+        "CopyrightNotice.txt": "da16ddb65f8ca390998fb99223d0112498b56b45784d00afd77ff8ce1ac4de8b",
+        "LICENSE.txt": "210b19e543130388c68654b7497e967119ce17145f66ab7d85688fbd70f08751"
+      }
+    },
+    {
+      "name": "uuid",
+      "version": "11.1.1",
+      "license": "MIT",
+      "origin": "actual installed package",
+      "files": {
+        "LICENSE.md": "beaa6b04fb82e41dd2ad679e19e27953afb5999b1abbb455b6564e78ebfeb332"
+      }
+    }
+  ],
+  "iconNames": [
+    "add",
+    "add-column-right",
+    "application",
+    "applications",
+    "cross",
+    "exchange",
+    "split-columns",
+    "maximize",
+    "drag-handle-vertical",
+    "more",
+    "grid-view",
+    "double-caret-vertical",
+    "caret-down",
+    "small-cross",
+    "chevron-down",
+    "tick"
+  ],
+  "iconPathsSHA256": {
+    "lib/esm/generated/16px/paths/add.js": "9de300a56176cf42fb6a19406ed70743acca6859e23417af01cb293c65391c3b",
+    "lib/esm/generated/16px/paths/add-column-right.js": "481ff1b265ab61b7c9c244272284b0b1b767197d2b123f667e4ec90d0d4fc2b6",
+    "lib/esm/generated/16px/paths/application.js": "25e023e479949071febbce7919513aab42e608bc4a785a4ca7f434a85fa034ce",
+    "lib/esm/generated/16px/paths/applications.js": "06527ef7c8c374a2fa277bc32d6a98bff644b13a4f9df014b96ad9bcb7b465b2",
+    "lib/esm/generated/16px/paths/cross.js": "a56465a64415f5d1ed2ce91c105339ff0ae3bc4eea5c380b95ba2d6ec778d58f",
+    "lib/esm/generated/16px/paths/exchange.js": "02567f5f4d5cd82db9a5d6af7b6222dc05988a92b58ec1f1db38264fa10b532e",
+    "lib/esm/generated/16px/paths/split-columns.js": "824055281ae1622847b19f08c379d5a955c7cc48a713c6cb42ff14c0eab44bf1",
+    "lib/esm/generated/16px/paths/maximize.js": "3f33720dd2213022a607034af73f3ba64d6b0bf496fd3110b0042488ae58fb85",
+    "lib/esm/generated/16px/paths/drag-handle-vertical.js": "fd733462f129b35dc073301ed1af08e3151dbbe5170fbbb3bb33b0ee830ad1e5",
+    "lib/esm/generated/16px/paths/more.js": "c236c1ac9846cbd680e299f7559f2b33c500c008ceaba1f9b769ce9ae1f7757b",
+    "lib/esm/generated/16px/paths/grid-view.js": "71efc317d2b741abe1426dae19637a0640ad97864f92a96d12356528e0a0cb46",
+    "lib/esm/generated/16px/paths/double-caret-vertical.js": "8e61165a1959f32e17ea0d9d0d8f1af2723567b0c7e313a09911ca9dd2e7496d",
+    "lib/esm/generated/16px/paths/caret-down.js": "ce090f2462c5c52f4592546c29611025c98c7e10449edd3e3034d26d52cb2ec5",
+    "lib/esm/generated/16px/paths/small-cross.js": "93274e774220108e0d0dbcdfac561c5a8572c41092fefce60b6aee727a252ab7",
+    "lib/esm/generated/16px/paths/chevron-down.js": "3e872eb07970fffcb5bddbd288718b45d9813368fd1b2030cf1618234d8290d1",
+    "lib/esm/generated/16px/paths/tick.js": "1e3144eee81e9f5219d57b17bb2945af755dcfb26112b6164066bbd17917c01e",
+    "lib/esm/generated/20px/paths/add.js": "e4f9494a2a5827aa53f4e7813e4b6da862eb193d719825c6cfc623ba20112ad0",
+    "lib/esm/generated/20px/paths/add-column-right.js": "272e46803c57a5ba63a01fd59ade02fc51be00f04db8d585dd6b6e8cbc500391",
+    "lib/esm/generated/20px/paths/application.js": "c526b1d69d042a52f4c23901914d5ca990333bb7df83cf8da539ab1f9c295533",
+    "lib/esm/generated/20px/paths/applications.js": "f88319938c71a7f4b5ba96705dc4037e4fecf43a3bf1c2b8660fb0007fb3186a",
+    "lib/esm/generated/20px/paths/cross.js": "70b727b2180cd0ce9f9f63a244d2a0ce51bd5171b206e78e06abfe503a5dc24c",
+    "lib/esm/generated/20px/paths/exchange.js": "48e8bad2b4963ba1d918c181a0552370b3e69cd6654856654e4bfc2393b04345",
+    "lib/esm/generated/20px/paths/split-columns.js": "298b55da12e6df778abfb122cc8d4393840052f72655e4673aa7729566a2d59a",
+    "lib/esm/generated/20px/paths/maximize.js": "a5e5a528696c70faee5fd9afa49fccdc616f0fab7c94d55410bcffbcf8af948c",
+    "lib/esm/generated/20px/paths/drag-handle-vertical.js": "aa3cfdadb97b1d80a4022de1bd4af25108d7c5761dbdf79b5acb0475c23f1e7c",
+    "lib/esm/generated/20px/paths/more.js": "cf11d0bd05f0a1bdf5d546908695679e9f664d4c08a05b929219b2372bce5131",
+    "lib/esm/generated/20px/paths/grid-view.js": "1ded4fbf91581660313e390b9adc8868ac8eb7f329d6a3275ce9c7652e747177",
+    "lib/esm/generated/20px/paths/double-caret-vertical.js": "b117a193e6072aad7dfd05d651e57a16c0c017b0e041eed2e6eb3e5954ed2989",
+    "lib/esm/generated/20px/paths/caret-down.js": "9b4f535b4125e85d29ab95a9f50ed2ad73992ac68796ac80628540a94300d2c6",
+    "lib/esm/generated/20px/paths/small-cross.js": "d9c041e0c9484f03b03a598f4e69eb15aba001f2ce1ea41939fbe971dfab8151",
+    "lib/esm/generated/20px/paths/chevron-down.js": "c9e17d70ab4c337fb424b626d6e5cafc9048c8aab434797fb13e50f66104e3c9",
+    "lib/esm/generated/20px/paths/tick.js": "100fcba079e7df7597b694d5ccccd3e55094c132fa8f6df333b75158c841d91b"
+  },
+  "changes": [
+    "Only current v7 fixed source is built, no v6 package substitute.",
+    "Original Demo navigation GitHub PNG/link omitted; text version retained. Original six leaves, tables, theme, controls and layout formulas retained.",
+    "Original Add Window used count+1, causing duplicate leaf IDs after deletion; smallest numeric ID above count that is not already used is now selected.",
+    "Blueprint original CSS and geometry retained. Binary icon font not loaded: exact original16px/20px path arrays supplied as UTF8 SVG CSS masks; original Blueprint React icon loaders restricted to16 relevant glyphs in both sizes, no new drawings.",
+    "lodash browser global fallback uses globalThis instead of unreachable Function constructor; no unsafe-eval required.",
+    "Isolated lifecycle ownership wrapper; hidden unmount resets original fixture, dispose clears owned listeners/observers/timers; reduced-motion CSS disables transitions."
+  ],
+  "tests": {
+    "actual547Compose": true,
+    "normal": "tab switch/title edit, Add/Arrange/Close/Add collision regression/Split/Expand, actual split mouse resize with synthetic geometry, close-all zero state/re-add, hidden reset/old button, interrupted resize exit all pass",
+    "tree": "original createSwapUpdates/updateTree real data swap preserves percentages",
+    "failures": [
+      "early module div creation",
+      "late actual table creation"
+    ],
+    "visualQA": "not-run",
+    "nativeDragDrop": "not-run; real original React DnD implementation retained, tree algorithm tested; not claimed native pointer/HTML5 hit-testing acceptance"
+  }
+}
