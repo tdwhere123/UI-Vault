@@ -1,0 +1,107 @@
+{
+  "repository": "https://github.com/chr15m/DoodleCSS",
+  "revision": "b49ca7604aa2deb71fd9f9458ced277001d51b10",
+  "sourcePath": "index.html form section",
+  "cssPath": "doodle.css",
+  "license": "MIT",
+  "originalFiles": [
+    {
+      "path": "LICENSE",
+      "sha256": "1b3fef4cbeea17cc0e03ef374cd0b425d71670ec19d5972879e5bba880af8247"
+    },
+    {
+      "path": "border.svg",
+      "sha256": "6339a653f24c9efb692d129aa3744d6e5e81b59b4b095172b1834205a2158393"
+    },
+    {
+      "path": "bq.svg",
+      "sha256": "677746165995103c1ace3d8cefd6459a7a56f7b11a5abfbccb93414d21b722b7"
+    },
+    {
+      "path": "button.svg",
+      "sha256": "d319b4f2f95261a165bf5eab787ba41ca802fb016007d4d3b6aacd7690c7697b"
+    },
+    {
+      "path": "caret.svg",
+      "sha256": "2d840100df89e409a94c214c90a9b98f9cfa72d5571d4fc76dd8129bbf53928a"
+    },
+    {
+      "path": "checkbox.svg",
+      "sha256": "d18d9b48bccb36ee7169898442dec6b946f5f7b5f3efe4c9f6877cc0067cc5f1"
+    },
+    {
+      "path": "doodle.css",
+      "sha256": "98c70292fa8125496461e4566e74a04b318d2db3d2a9ee7b3431f4ba5445228d"
+    },
+    {
+      "path": "hr.svg",
+      "sha256": "f4b7fe45d379fa9c53774e3929ffa4c5baae95f23175d6d7b3130281443f22b2"
+    },
+    {
+      "path": "index.html",
+      "sha256": "8b088fcd59c98a1391bdc9ab70db5bc23fe4c84974821eda3839c08bf2685b91"
+    },
+    {
+      "path": "package.json",
+      "sha256": "c758d50f4540d8e3c804cc3e5db321cff3c82ed45c6e3b95492608c7fb497e39"
+    },
+    {
+      "path": "radio.svg",
+      "sha256": "d7d04eaf5a0d13a5e14edb10bd429da2232ffbf652a3c265bd03043a2d043d77"
+    }
+  ],
+  "runtimeDependencies": [],
+  "textSVGAssets": [
+    {
+      "path": "caret.svg",
+      "sha256": "2d840100df89e409a94c214c90a9b98f9cfa72d5571d4fc76dd8129bbf53928a",
+      "cssDataURIOriginalByteRoundtrip": true
+    },
+    {
+      "path": "button.svg",
+      "sha256": "d319b4f2f95261a165bf5eab787ba41ca802fb016007d4d3b6aacd7690c7697b",
+      "cssDataURIOriginalByteRoundtrip": true
+    },
+    {
+      "path": "checkbox.svg",
+      "sha256": "d18d9b48bccb36ee7169898442dec6b946f5f7b5f3efe4c9f6877cc0067cc5f1",
+      "cssDataURIOriginalByteRoundtrip": true
+    },
+    {
+      "path": "bq.svg",
+      "sha256": "677746165995103c1ace3d8cefd6459a7a56f7b11a5abfbccb93414d21b722b7",
+      "cssDataURIOriginalByteRoundtrip": true
+    },
+    {
+      "path": "radio.svg",
+      "sha256": "d7d04eaf5a0d13a5e14edb10bd429da2232ffbf652a3c265bd03043a2d043d77",
+      "cssDataURIOriginalByteRoundtrip": true
+    },
+    {
+      "path": "border.svg",
+      "sha256": "6339a653f24c9efb692d129aa3744d6e5e81b59b4b095172b1834205a2158393",
+      "cssDataURIOriginalByteRoundtrip": true
+    },
+    {
+      "path": "hr.svg",
+      "sha256": "f4b7fe45d379fa9c53774e3929ffa4c5baae95f23175d6d7b3130281443f22b2",
+      "cssDataURIOriginalByteRoundtrip": true
+    }
+  ],
+  "sourceAdaptations": [
+    "Use complete original Form HTML section, all original CSS and seven referenced SVG drawings. Original native input/radio/checkbox/select geometry and border-image CSS retained.",
+    "Original SVG bytes are percent-encoded text data URIs to keep CSS assets self-contained under existing img-src data CSP; not screenshots/covers, no base64 or binary packaging. XML reviewed only svg/path/g and no event/href attrs.",
+    "Remove external Short Stack font request, original cursive fallback retained with original example body font sizes/responsive breakpoint.",
+    "Correct original number/search label typos and duplicate check3 id/for. Password and file controls disabled visibly; do not collect credentials or files.",
+    "Original form has no backend or validation logic. Host adds local validity summary without echoing values, reset and harmless button feedback. Submit control becomes button to prevent form navigation; submit handler prevents implicit-submit navigation.",
+    "Form begins inert until all initialization/handlers installed. Startup or output failure disables/removes controls/listeners and renders unavailable. Hidden preserves native field state with CSS transitions off; exit is terminal and retained controls disabled."
+  ],
+  "dedup": {
+    "compared": [
+      "plop:ink-status-timeline",
+      "papercss:paper-disclosure-notes"
+    ],
+    "difference": "Original complete native form sheet uses handdrawn SVG border-image artwork; not Plop status/current-step or PaperCSS checkbox disclosure. Same broad handdrawn style, not claimed new category."
+  },
+  "browserVisualQA": "not-run"
+}
