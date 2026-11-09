@@ -1,0 +1,19 @@
+{
+  "tests": {
+    "hoverOpensOriginalSixLinks": true,
+    "drawerAndCollapse": true,
+    "escapeCloses": true,
+    "noFakeRoutesOrAuth": true,
+    "hiddenOldTriggerInert": true,
+    "exitWhileDrawerOpen": true,
+    "actual547Compose": true,
+    "browserVisualQA": "not-run",
+    "sharedFramework": "Contact frozen framework reused; per-component critical interactions and disposal only, not repeated 100-cycle/full failure matrix"
+  },
+  "runtimeSha256": "6f399885fe0e729722861d4bb802f6c7a25ec782712118707caf61148d779fe7",
+  "gaps": [
+    "Browser hover geometry, narrow/wide visual layout, native focus traversal and CSS transitions are not visually verified.",
+    "Menu links and actions are upstream placeholders, not functional routes, login or registration.",
+    "HoverCard desktop and Drawer mobile CSS branches retain original responsive behavior; JSDOM sees both DOM branches without proving breakpoint pixels."
+  ]
+}
