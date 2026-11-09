@@ -1,0 +1,40 @@
+{
+  "id": "codrops:collaborative-type",
+  "repository": "https://github.com/codrops/TextCharacterAnimations",
+  "revision": "ac0fe97a4e4f786ef5d514d7030b6eb5855da05b",
+  "sourcePath": "js/variations/collaborators.js",
+  "sourceScope": "Original index.html section#v11 with both text blocks and Replay; original shared setUpBlock/setUpVariation logic. Not all 19 variations, Hero, pager or full-page Smoother.",
+  "originalFiles": {
+    "js/variations/collaborators.js": "663fe7ea0f34fe32da9b40c4d1fce978b11f8aa9f308a53760525bb9b2e87376",
+    "js/index.js": "137df33dae8a3377858a48b7820c447de511a33a3defabb456f9dc1d31ecbc88",
+    "index.html": "f01301e298ed9195d66578a42d680b20af25571b1d01640ccdf14a604b16b278",
+    "css/base.css": "cd609f49329c5fd6b2c8040c754d727970bbc9a90a02d9ec9ff104548e8fd2de",
+    "css/variations/collaborators.css": "5a9e3f881d9608cd15440f5298cc9e8566bc87740ef0ccb67bf8fc56e076d5ec",
+    "LICENSE": "3b56d635b76cb0c0fc8ffd303bce06bd44365cf4b99e77e889fc6b259141ec1b"
+  },
+  "localSources": {
+    "src/setup-original.js": "5046722058242a56faeb0c6e036dbc43fdf45d549f862159611765e414100c72",
+    "src/base.css": "48276acfa185cafadf43a45801692ed65333e1a8638bd7c2530f5fa3b52c91ff",
+    "src/content.html": "e93465c2dc021f12d5e095bd8a3f100945b5ab0f523d55729ad13a5be4a4e1a5",
+    "src/collaborators.js": "59723118f4dafa77047818334a7ebf96d8a1c787be2f41e0dc878dbe164419d5",
+    "src/collaborators.css": "5a9e3f881d9608cd15440f5298cc9e8566bc87740ef0ccb67bf8fc56e076d5ec",
+    "src/main.js": "6c85cdf9754b8ad018533ac4720f60a8ec65d3f29d43074dd67d16c31dfff667"
+  },
+  "runtimePackages": [
+    {
+      "name": "gsap",
+      "version": "3.15.0",
+      "license": "LicenseRef-GSAP-Standard",
+      "operativeLicenseSha256": "2aed2482dc8ddfa04ca14e3c83e37b03b796ff241df6464a9faad2428ea96072"
+    }
+  ],
+  "changes": [
+    "Import original GSAP3.15 runtime plugins as local modules; no Flip or ScrollSmoother emitted. Original upstream vendored plugin headers also state3.15.0.",
+    "Preserve original per-letter timing/jitter/word assignment/coordinates/fresh-color/caret blink algorithm. Capture SplitText instances and revert on disposal; null canvas2D explicitly fails rather than synthetic font metrics.",
+    "Preserve shared scroll enter/rearm/block click/replay semantics, scope to one original chapter and retain hidden readable paragraphs.",
+    "Remove font-face and font preload; original font fallback uses local system font, glyph metrics and appearance differ. No font binary shipped.",
+    "Remove decorative full-page grain PNG overlay, without counterfeit texture; original background color/layout/caret CSS retained.",
+    "No realtime collaboration, microphone, model or networking. At most3local script carets per block; one-line ONE WORD uses2active writers, original third unused caret stays hidden.",
+    "Hidden cancel pending fonts promise via generation, kill timeline/trigger/splits and remount on visible; reduced uses original show and disables GSAP ticker/ScrollTrigger."
+  ]
+}
