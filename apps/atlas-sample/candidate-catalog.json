@@ -14974,39 +14974,34 @@
   },
   {
     "id": "meniscus:liquid-navigation",
-    "title": "液面珠状导航",
     "source": "meniscus-liquid-nav",
     "repository": "https://github.com/hasib41/meniscus-liquid-nav",
     "revision": "1ef85a14c98e3b097022d1dc00ae1775ab0374ba",
-    "sourcePath": "app.js",
     "upstream": "https://github.com/hasib41/meniscus-liquid-nav/blob/1ef85a14c98e3b097022d1dc00ae1775ab0374ba/app.js",
-    "website": "https://hasib41.github.io/meniscus-liquid-nav/",
-    "license": "MIT (root source text verified; runtime/assets not closed)",
-    "behavior": "选中珠沿导航液面移动，凹槽随速度倾斜和伸展。",
-    "difference": "零依赖原生SVG与物理几何，选择/键盘行为需实测。",
-    "description": "选中珠沿导航液面移动，凹槽随速度倾斜和伸展。 零依赖原生SVG与物理几何，选择/键盘行为需实测。",
-    "gaps": [
-      "固定app.js不等于完整可运行包；需连同原index.html、style.css及其引用资源闭合。",
-      "原实现含单rAF弹簧、拖动吸附、roving tabindex及Arrow/Home/End处理；键盘/触摸/resize/指针取消及收敛停止未实测。",
-      "导航只切本地示例面板，不能宣传成已接入Exodus任务切换；未核页面卸载时监听器/rAF释放。",
-      "未构建、未运行、未浏览器视觉验收；当前completedPreviewCount=0，publicationReady=false。"
-    ],
-    "category": "导航与组织",
+    "sourcePath": "app.js",
     "licenseEvidence": {
       "url": "https://github.com/hasib41/meniscus-liquid-nav/blob/1ef85a14c98e3b097022d1dc00ae1775ab0374ba/LICENSE",
       "sha256": "c8d9693e0a93487c3719bcf12251799dd6edc1bd5e1099939727add33c482c7e",
       "scope": "Complete original root text read; not full runtime/media closure"
     },
-    "sourceSha256": "d383e05e13ad0e9bd56b5d91bc537d4eee9138f46ee7ac6e61cb547773ccdf63",
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-style-526",
-    "sourceScope": "Selected fixed original source and root license; no full runnable archive",
-    "kind": "原版场景或组件族（仅来源）",
-    "buildStatus": "Fixed original source read; not built, run or visually accepted"
+    "title": "Meniscus · 液面底部导航",
+    "license": "MIT",
+    "category": "导航与组织",
+    "kind": "液态导航场景",
+    "format": "完整交互场景",
+    "batch": "meniscus-01",
+    "preview": "batches/meniscus-01/liquid-navigation/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Fixed original liquid geometry and spring navigation bundled; DOM lifecycle tests passed; native pixels and pointer performance not verified",
+    "description": "单条SVG液面随选中珠子移动而凹陷，保留原弹簧、速度肩部形变和图标升降；点击、拖动与键盘切换五个本地内容页。",
+    "behavior": "原轮廓与弹簧积分；Home/End/方向键循环、拖动最近槽吸附，隐藏/减动停止与退出清理。",
+    "gaps": [
+      "五个面板沿用原演示文案，不连接真实消息、账号或摄像头；只计一套，不拆各tab或色彩。",
+      "原外部字体使用既有system fallback，PNG纹理省略；原内联SVG渐变和几何保留，完整MIT附带，无外部运行包和网络，不扩大CSP。",
+      "JSDOM尺寸/WAAPI/pointer capture采用受控桩，键盘、弹簧、拖动、隐藏/减动/异常/退出逻辑通过不等于原生触摸或像素已验。",
+      "真实设备字体排版、光泽、窄屏触摸及合成性能尚未验；封面仍交Grok。"
+    ]
   },
   {
     "id": "skeuos:tactile-controls",
@@ -15770,5 +15765,723 @@
     "sourceScope": "Fixed original complete UI/demo source and full root license; not a runnable adaptation or full asset archive",
     "kind": "原版审美场景（仅来源）",
     "buildStatus": "fixed source and full root license read; not built/run/visually accepted"
+  },
+  {
+    "id": "maki:cartographic-poi-family",
+    "title": "Maki · 15px地图兴趣点符号系列",
+    "source": "Mapbox Maki",
+    "repository": "https://github.com/mapbox/maki",
+    "revision": "28e2a3602e4bde033a1dd388e86e9c117b425e34",
+    "sourcePath": "icons/airport.svg",
+    "upstream": "https://github.com/mapbox/maki/blob/28e2a3602e4bde033a1dd388e86e9c117b425e34/icons/airport.svg",
+    "license": "CC0-1.0 (complete root text read; no trademark/patent grant)",
+    "visualStyle": "15px像素对齐的紧凑黑色剪影，专为地图兴趣点而非通用线性工具栏设计。",
+    "behavior": "原始SVG地点语义图形，抽样机场、咖啡馆、医院、定位标记、公园；静态图标本身没有点击或地图行为。",
+    "difference": "完整设计系列只记一条，不按地点glyph、尺寸或颜色拆数；可用于Exodus行程、地点来源和空间记录标签。",
+    "description": "15px像素对齐的地图兴趣点剪影系列，可用于行程、地点来源与空间记录标签；不内含地图或地理定位功能。",
+    "gaps": [
+      "本轮固定读取5个原SVG样本、完整CC0和README，不声称收全所有图标或已实现搜索/复制预览。",
+      "根CC0明确不授予商标/专利或第三人权利；当前未连接地图服务、不获取用户位置，不能将其宣传为Mapbox服务授权。",
+      "后续系列浏览需核全量SVG、安全清洗、可访问名称及15px原生尺寸清晰度，当前无截图/字体/二进制归档，也未构建和浏览器验收。"
+    ],
+    "category": "图标系列",
+    "format": "图标家族",
+    "counts": {
+      "independentFamily": 1,
+      "completedPreviews": 0
+    },
+    "sourceEvidence": [
+      {
+        "path": "icons/airport.svg",
+        "sha256": "751133450c6346b804f3ce8d4d07ecc3d691692ced42c890323dd8b4b510bcd0"
+      },
+      {
+        "path": "icons/cafe.svg",
+        "sha256": "183ec9cbbf2fe0edd61672b9e83e1134e6a2b0511c89f3c334c3115bda0d29ea"
+      },
+      {
+        "path": "icons/hospital.svg",
+        "sha256": "00b76d183cdec4df12488c49835938a808b28e04606017a38d8da22834480209"
+      },
+      {
+        "path": "icons/marker.svg",
+        "sha256": "5350899297309f6864c3c34f532c320d9e9ceafe5fbee48bf337d40fc9ac217c"
+      },
+      {
+        "path": "icons/park.svg",
+        "sha256": "9f25e71f59ea90b3ffd974005cb94b704911526832dd157776e36f18ccc9085a"
+      }
+    ],
+    "licenseEvidence": {
+      "url": "https://github.com/mapbox/maki/blob/28e2a3602e4bde033a1dd388e86e9c117b425e34/LICENSE.txt",
+      "sha256": "36ffd9dc085d529a7e60e1276d73ae5a030b020313e6c5408593a6ae2af39673",
+      "scope": "Complete original CC0-1.0 read and five source SVG samples checked; no trademark/patent/service license"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-527",
+    "sourceScope": "Five fixed original SVG samples and complete root license evidence, not full runnable/archive",
+    "kind": "图标系列",
+    "buildStatus": "Fixed original SVG source read; not built, run or visually accepted"
+  },
+  {
+    "id": "oridomi:folded-dom-scenes",
+    "title": "折纸式DOM内容交互",
+    "source": "oriDomi",
+    "repository": "https://github.com/dmotz/oriDomi",
+    "revision": "f90830504d6843dfdf5b72d873c01cd716538485",
+    "sourcePath": "demo/demo.js",
+    "upstream": "https://github.com/dmotz/oriDomi/blob/f90830504d6843dfdf5b72d873c01cd716538485/demo/demo.js",
+    "website": "https://oxism.com/oriDomi",
+    "license": "MIT (root text verified; runtime/assets not closed)",
+    "behavior": "将实际DOM切成折面，通过折角与拖动形成手风琴纸折展示。",
+    "difference": "不是纸张背景或视频；保留折面几何及原演示操作，同一引擎效果作为一族。",
+    "description": "将实际DOM切成折面，通过折角与拖动形成手风琴纸折展示。 不是纸张背景或视频；保留折面几何及原演示操作，同一引擎效果作为一族。",
+    "gaps": [
+      "需闭合oridomi.js、demo CSS/DOM、图片和字体；老式CoffeeScript/JS项目尚未验证现代浏览器触摸、resize与销毁。",
+      "原示例图片/地图内容不自动受根MIT覆盖；若替换素材必须披露，不能把重新写的CSS翻页称原版。",
+      "仅折DOM的前端效果，不是纸张力学模拟；键盘替代、可访问性与reduced-motion待设计验证。",
+      "固定源码/根许可仅为来源证据；未构建、未运行、未截图验收，completedPreviewCount=0。"
+    ],
+    "category": "视觉与动效",
+    "licenseEvidence": {
+      "url": "https://github.com/dmotz/oriDomi/blob/f90830504d6843dfdf5b72d873c01cd716538485/LICENSE",
+      "sha256": "8588b3379ce3245f3753bd31e463bd334b9b7301a3e796450ac723ca42093e5e",
+      "scope": "Complete original root license retained; runtime/media separate"
+    },
+    "sourceSha256": "e1a8ceca47b594d90c1c587ab4acaa2c87651fb813e883025e6545af8127d849",
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-527",
+    "sourceScope": "Selected fixed original source and root license; no full runnable archive",
+    "kind": "原版风格组件族（仅来源）",
+    "buildStatus": "Fixed source inspected; not built or visually accepted"
+  },
+  {
+    "id": "paperlab:physical-paper-presets",
+    "title": "体积纸张展开与卷曲",
+    "source": "Paperlab",
+    "repository": "https://github.com/NourMtir0722/Paperlab",
+    "revision": "41914833cb9ae12b32a8cbbdee4723f5b12158af",
+    "sourcePath": "apps/docs/src/sections/Presets.tsx",
+    "upstream": "https://github.com/NourMtir0722/Paperlab/blob/41914833cb9ae12b32a8cbbdee4723f5b12158af/apps/docs/src/sections/Presets.tsx",
+    "website": "https://paperlab.nawwara.studio/",
+    "license": "Apache-2.0 (root text verified; runtime/assets not closed)",
+    "behavior": "以真实网格变形承载纸面纹理，原预设包含卷轴、揭角、折信等。",
+    "difference": "3D几何弯曲而非平面贴图动画；多个参数预设不各算独立来源。",
+    "description": "以真实网格变形承载纸面纹理，原预设包含卷轴、揭角、折信等。 3D几何弯曲而非平面贴图动画；多个参数预设不各算独立来源。",
+    "gaps": [
+      "需闭合paperlab包、Three、React Three Fiber、GSAP及其各自许可证；根Apache-2.0不替代依赖许可。",
+      "原README明确React19.3与fiber9.7.0 peer范围可能冲突，构建须锁兼容版本；WebGL上下文释放、GPU负载/移动降级未验。",
+      "仅研究Presets入口；纹理、字体和示例图片权利未闭合，不纳入hands webcam、编辑器文件导入或FX火焰模块。",
+      "Apache分发须保留LICENSE/适用NOTICE并标注修改；需再比包内LICENSE与根LICENSE，未完成完整归档。",
+      "固定源码/根许可仅为来源证据；未构建、未运行、未截图验收，completedPreviewCount=0。"
+    ],
+    "category": "视觉与动效",
+    "licenseEvidence": {
+      "url": "https://github.com/NourMtir0722/Paperlab/blob/41914833cb9ae12b32a8cbbdee4723f5b12158af/LICENSE",
+      "sha256": "017dbd7a0c125f04e091ee347e399401371f62c648876c70d5acdee53c05dbfe",
+      "scope": "Complete original root license retained; runtime/media separate"
+    },
+    "sourceSha256": "3b15366ac10f70a442ab4b0f74cbae3fc45e5e1ac26c50914efbdf13263d3c6d",
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-527",
+    "sourceScope": "Selected fixed original source and root license; no full runnable archive",
+    "kind": "原版风格组件族（仅来源）",
+    "buildStatus": "Fixed source inspected; not built or visually accepted"
+  },
+  {
+    "id": "augmented-ui:cut-corner-surfaces",
+    "title": "非矩形切角赛博界面",
+    "source": "augmented-ui",
+    "repository": "https://github.com/propjockey/augmented-ui",
+    "revision": "c39f40a4c68f2836d12e4cb73e34a1c9173381db",
+    "sourcePath": "augmented-ui.css",
+    "upstream": "https://github.com/propjockey/augmented-ui/blob/c39f40a4c68f2836d12e4cb73e34a1c9173381db/augmented-ui.css",
+    "website": "http://augmented-ui.com/",
+    "license": "BSD-2-Clause (root text verified; runtime/assets not closed)",
+    "behavior": "以CSS切角、边框和形状变量构成非矩形科幻界面轮廓。",
+    "difference": "一套几何表面语言，而非把每个角/颜色排列算一条完整UI。",
+    "description": "以CSS切角、边框和形状变量构成非矩形科幻界面轮廓。 一套几何表面语言，而非把每个角/颜色排列算一条完整UI。",
+    "gaps": [
+      "固定仓CSS版本与现在线上v2文档可能不同，不能套用新版API/展示冒称该SHA可运行；需用同revision属性生成最小例。",
+      "纯CSS不提供任务状态、拖动或网络交互；需如实标注表面样式，不把外观称完整Agent控件。",
+      "CSS clip-path兼容、文字遮挡、窄屏/焦点轮廓及高对比模式待验；示例若另取图片/字体须独立核权利。",
+      "固定源码/根许可仅为来源证据；未构建、未运行、未截图验收，completedPreviewCount=0。"
+    ],
+    "category": "视觉与动效",
+    "licenseEvidence": {
+      "url": "https://github.com/propjockey/augmented-ui/blob/c39f40a4c68f2836d12e4cb73e34a1c9173381db/LICENSE",
+      "sha256": "4a5cec470c5bce6cc9298bfe8010764d69628d770103cc4f76d50b22b3489d01",
+      "scope": "Complete original root license retained; runtime/media separate"
+    },
+    "sourceSha256": "a696137b316013cbc7f1f36927c6eab419fc32ec9224e84b08628c5558c45a53",
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-527",
+    "sourceScope": "Selected fixed original source and root license; no full runnable archive",
+    "kind": "原版风格组件族（仅来源）",
+    "buildStatus": "Fixed source inspected; not built or visually accepted"
+  },
+  {
+    "id": "nescss:pixel-message-balloons",
+    "title": "像素消息气泡",
+    "source": "NES.css",
+    "repository": "https://github.com/nostalgic-css/NES.css",
+    "revision": "b1cc9944aae3274461c747d7ad1cab31df45e78c",
+    "sourcePath": "story/balloons/balloons.template.js",
+    "upstream": "https://github.com/nostalgic-css/NES.css/blob/b1cc9944aae3274461c747d7ad1cab31df45e78c/story/balloons/balloons.template.js",
+    "website": "https://nostalgic-css.github.io/NES.css/",
+    "license": "MIT (root text verified; runtime/assets not closed)",
+    "behavior": "通过像素边框与方向尾角显示对话消息。",
+    "difference": "与8bitcn任务日志不同的像素消息表现；左右、深浅变体只计一族。",
+    "description": "通过像素边框与方向尾角显示对话消息。 与8bitcn任务日志不同的像素消息表现；左右、深浅变体只计一族。",
+    "gaps": [
+      "需闭合实际NES CSS、Storybook模板helpers与文档所用字体；Press Start 2P等字体需独立保留OFL，不能只靠根MIT。",
+      "消息气泡本身是静态内容容器，不包含流式生成、发送或AI行为；增加示例交互须标注适配而非上游自带。",
+      "不要带入Nintendo角色、品牌像素sprites或logo；根许可不证明商标/角色图样可自由商用。",
+      "固定源码/根许可仅为来源证据；未构建、未运行、未截图验收，completedPreviewCount=0。"
+    ],
+    "category": "Agent与对话",
+    "licenseEvidence": {
+      "url": "https://github.com/nostalgic-css/NES.css/blob/b1cc9944aae3274461c747d7ad1cab31df45e78c/LICENSE",
+      "sha256": "f6cbd76bbd748a03e35a9f7cb28b14a8bd000ad774a2d2609c8c3996948733a6",
+      "scope": "Complete original root license retained; runtime/media separate"
+    },
+    "sourceSha256": "896f30ed27ded90b3a83451daf24700a5b435afdc4483aa673a75c8b899b6a0c",
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-527",
+    "sourceScope": "Selected fixed original source and root license; no full runnable archive",
+    "kind": "原版风格组件族（仅来源）",
+    "buildStatus": "Fixed source inspected; not built or visually accepted"
+  },
+  {
+    "id": "bootstra386:dos-component-language",
+    "title": "DOS字符式界面组件",
+    "source": "BOOTSTRA.386",
+    "repository": "https://github.com/kristopolous/BOOTSTRA.386",
+    "revision": "3af1895e7212f36566d4d46e867e8c4073528e8f",
+    "sourcePath": "v2.3.1/docs/components.html",
+    "upstream": "https://github.com/kristopolous/BOOTSTRA.386/blob/3af1895e7212f36566d4d46e867e8c4073528e8f/v2.3.1/docs/components.html",
+    "website": "https://bootstra386.com",
+    "license": "Apache-2.0 (root text verified; runtime/assets not closed)",
+    "behavior": "以早期PC字符风格、单色块和像素轮廓重呈现桌面式组件。",
+    "difference": "不同于Windows98/Aero以及RPG；整套DOS风格示例只计一族。",
+    "description": "以早期PC字符风格、单色块和像素轮廓重呈现桌面式组件。 不同于Windows98/Aero以及RPG；整套DOS风格示例只计一族。",
+    "gaps": [
+      "特意固定v2.3.1组件文档而非混用v3/v4：仓不同Bootstrap版本许可证不同，必须按选定依赖逐文件保留声明。",
+      "选定文档使用assets/...相对链接，而仓资源在v2.3.1/assets；独立封装需正确重定位并保留原文件来源，不能直接打开文档便声称资源完整。",
+      "旧jQuery/Bootstrap插件及字体/图标来源尚未完整闭合；旧依赖潜在安全/兼容问题要求离线隔离，不接收任意HTML或外部输入。",
+      "原文档含外链/下载/社交等控件，适配仅保留本地样式与交互样例，不执行真实登录/提交；移动布局与键盘未验。",
+      "固定源码/根许可仅为来源证据；未构建、未运行、未截图验收，completedPreviewCount=0。"
+    ],
+    "category": "视觉与动效",
+    "licenseEvidence": {
+      "url": "https://github.com/kristopolous/BOOTSTRA.386/blob/3af1895e7212f36566d4d46e867e8c4073528e8f/LICENSE",
+      "sha256": "59899c6091b540582ed617e8eeaac4919dc985ccfc35459ee9752b699be5205b",
+      "scope": "Complete original root license retained; runtime/media separate"
+    },
+    "sourceSha256": "689e543d5cca036dc1a48c0216d8a2c2b466af3b82ea833fcfeda0ed8983725c",
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-527",
+    "sourceScope": "Selected fixed original source and root license; no full runnable archive",
+    "kind": "原版风格组件族（仅来源）",
+    "buildStatus": "Fixed source inspected; not built or visually accepted"
+  },
+  {
+    "id": "axiom:carved-toggle",
+    "title": "雕刻体积拨动开关",
+    "source": "axiom-ui-showcase",
+    "repository": "https://github.com/Jayden-Collins/axiom-ui-showcase",
+    "revision": "d6fcf986e650631648435f8fd744fe5229dc0245",
+    "sourcePath": "src/components/Toggle/CarvedToggle.tsx",
+    "upstream": "https://github.com/Jayden-Collins/axiom-ui-showcase/blob/d6fcf986e650631648435f8fd744fe5229dc0245/src/components/Toggle/CarvedToggle.tsx",
+    "website": "https://github.com/Jayden-Collins/axiom-ui-showcase",
+    "license": "MIT (root text verified; runtime/assets not closed)",
+    "behavior": "以GLB雕刻几何、正交相机及弹簧旋转表现实体拨动。",
+    "difference": "真正3D控件而不是CSS阴影或平面开关，不按active颜色拆数。",
+    "description": "以GLB雕刻几何、正交相机及弹簧旋转表现实体拨动。 真正3D控件而不是CSS阴影或平面开关，不按active颜色拆数。",
+    "gaps": [
+      "依赖/models/CarvedToggleRemesh-transformed.glb；模型原作者/再分发证据尚未独立闭合，根MIT不足以完成素材审计。",
+      "依赖React Three Fiber/Drei/Three/React Spring，且Environment preset=city可能远程加载HDR；需本地资源及独立许可闭合后才能离线发布。",
+      "原click handler挂在div，尚无确认的键盘开关语义；focus/Space/Enter、disabled和屏幕阅读器需验证或披露适配。",
+      "官网instrumentation-client.ts初始化PostHog，不能整站直接搬运行；只提取组件，默认不采集遥测。GPU性能、context释放与移动降级未验。",
+      "固定源码/根许可仅为来源证据；未构建、未运行、未截图验收，completedPreviewCount=0。"
+    ],
+    "category": "输入与选择",
+    "licenseEvidence": {
+      "url": "https://github.com/Jayden-Collins/axiom-ui-showcase/blob/d6fcf986e650631648435f8fd744fe5229dc0245/LICENSE.txt",
+      "sha256": "baa50c266bbe7a82465709eb81bddf4a5fb13f9b547cc47d96b11e948fc27097",
+      "scope": "Complete original root license retained; runtime/media separate"
+    },
+    "sourceSha256": "db97c4fc4ee082829170e92b39e6763dfa81a44adb6309e9e165f5d6c3ff5471",
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-527",
+    "sourceScope": "Selected fixed original source and root license; no full runnable archive",
+    "kind": "原版风格组件族（仅来源）",
+    "buildStatus": "Fixed source inspected; not built or visually accepted"
+  },
+  {
+    "id": "asciinema:terminal-session-replay",
+    "title": "终端过程记录与按键回放",
+    "source": "asciinema player",
+    "repository": "https://github.com/asciinema/asciinema-player",
+    "revision": "4d37d8438e10148cc8e278ed1206f0ffe5e049da",
+    "sourcePath": "src/components/Player.js",
+    "upstream": "https://github.com/asciinema/asciinema-player/blob/4d37d8438e10148cc8e278ed1206f0ffe5e049da/src/components/Player.js",
+    "license": "Apache-2.0 (complete actual root text; runtime/media not closed)",
+    "behavior": "原播放器以字符终端重建录制过程，控制条播放/暂停、拖动定位、章节 marker 前后跳转、按键叠层、帮助与全屏快捷键。",
+    "difference": "区别现有 xterm 实时终端：这是可回访执行证据的时间媒体，不是另一个终端壳，也不是执行真实命令。",
+    "styleTags": [
+      "过程媒体/字符回放"
+    ],
+    "gaps": [
+      "Solid、VT/Rust/WASM 构建及依赖全文未闭合；录制可能含私密命令需原创虚构记录。直播/URL输入、全屏与键盘路径、字幕/字体、销毁后计时器未验证，不承诺默认 CSP 可运行。",
+      "仅只读源码筛选；未安装/构建/运行、交互生命周期或浏览器视觉验收。"
+    ],
+    "description": "原播放器以字符终端重建录制过程，控制条播放/暂停、拖动定位、章节 marker 前后跳转、按键叠层、帮助与全屏快捷键。 区别现有 xterm 实时终端：这是可回访执行证据的时间媒体，不是另一个终端壳，也不是执行真实命令。",
+    "category": "展示与媒体",
+    "licenseEvidence": {
+      "url": "https://github.com/asciinema/asciinema-player/blob/4d37d8438e10148cc8e278ed1206f0ffe5e049da/LICENSE",
+      "sha256": "63422284ed65be54ab38d8a94e7518d27e222fbb26c9ae4cd984c63926e91c12",
+      "scope": "Complete actual root license; transitive code and media permissions not closed"
+    },
+    "sourceEvidence": {
+      "localFile": "evidence/asciinema--asciinema-player--src__components__Player.js",
+      "sha256": "13d3786dec818457ad373c4838cd077f2046bad969c9b5a26a87002297331277"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-527",
+    "sourceScope": "Fixed original complete UI/demo source and full root license; not a runnable adaptation or full asset archive",
+    "kind": "原版交互场景（仅来源）",
+    "buildStatus": "fixed source and full root license read; not built/run/visually accepted"
+  },
+  {
+    "id": "epubjs:paginated-highlight-reading",
+    "title": "分页电子书划线与位置回访",
+    "source": "EPUB.js",
+    "repository": "https://github.com/futurepress/epub.js",
+    "revision": "eee359d0790002115a1156a9833c54f4bcd44c1d",
+    "sourcePath": "examples/highlights.html",
+    "upstream": "https://github.com/futurepress/epub.js/blob/eee359d0790002115a1156a9833c54f4bcd44c1d/examples/highlights.html",
+    "license": "BSD-2-Clause (complete actual root text; runtime/media not closed)",
+    "behavior": "原双栏阅读示例支持前后翻页/键盘导航，选中文字建立高亮与 CFI 位置条目；点击位置回到页段，remove 调用注释删除。",
+    "difference": "区别 PDF 原版式/Recogito 文字锚点：EPUB 可重排分页内容与跨页 CFI 定位一族，不是纸页翻转特效。",
+    "styleTags": [
+      "书籍/划线阅读"
+    ],
+    "gaps": [
+      "原 Moby Dick OPF 从 S3 取书、JSZip CDN，书籍/封面/字体版权未核；内嵌 iframe 文档及资源加载是否满足默认 CSP 未核。remove 只删注释未删列表 li，原事件未提供 teardown，异步 getRange 晚到需处理。原小图为编码文本 SVG，不代表允许包装二进制。",
+      "仅只读源码筛选；未安装/构建/运行、交互生命周期或浏览器视觉验收。"
+    ],
+    "description": "原双栏阅读示例支持前后翻页/键盘导航，选中文字建立高亮与 CFI 位置条目；点击位置回到页段，remove 调用注释删除。 区别 PDF 原版式/Recogito 文字锚点：EPUB 可重排分页内容与跨页 CFI 定位一族，不是纸页翻转特效。",
+    "category": "展示与媒体",
+    "licenseEvidence": {
+      "url": "https://github.com/futurepress/epub.js/blob/eee359d0790002115a1156a9833c54f4bcd44c1d/license",
+      "sha256": "8663e726f4194e1a34913b223c2e4745ed06f3ec645a66a41ab70b735070b692",
+      "scope": "Complete actual root license; transitive code and media permissions not closed"
+    },
+    "sourceEvidence": {
+      "localFile": "evidence/futurepress--epub.js--examples__highlights.html",
+      "sha256": "a3ae1bdb4fd2b466585005ec931ffcc9afe7623e323321a4528fa35128b648b0"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-527",
+    "sourceScope": "Fixed original complete UI/demo source and full root license; not a runnable adaptation or full asset archive",
+    "kind": "原版交互场景（仅来源）",
+    "buildStatus": "fixed source and full root license read; not built/run/visually accepted"
+  },
+  {
+    "id": "photoswipe:captioned-zoom-gallery",
+    "title": "摄影图集与空间自适应说明",
+    "source": "PhotoSwipe",
+    "repository": "https://github.com/dimsemenov/PhotoSwipe",
+    "revision": "cd41cb587a460634e4cae53134f3d01d06e284a6",
+    "sourcePath": "demo-docs-website/src/pages/_index-gallery-header.js",
+    "upstream": "https://github.com/dimsemenov/PhotoSwipe/blob/cd41cb587a460634e4cae53134f3d01d06e284a6/demo-docs-website/src/pages/_index-gallery-header.js",
+    "license": "MIT (complete actual root text; runtime/media not closed)",
+    "behavior": "原首页图集提供等比图行、灯箱开启缩放与图片切换；动态说明插件按 viewport 及图像位置分配说明空间，effect 清理调用 lightbox.destroy。",
+    "difference": "有图集/OSD 概念交集，但这里收一套摄影灯箱的图文说明与缩放返回，不按多个 gallery 参数变体计数，也非瓦片深缩放。",
+    "styleTags": [
+      "摄影/浮层图文"
+    ],
+    "gaps": [
+      "全部演示照片来自 CDN，照片/人物和作者归属需逐一核或透明替换；dynamic-caption 插件和 React/Docusaurus 依赖许可未闭合。figcaption dangerouslySetInnerHTML 只可可信内容；原触摸/焦点恢复/退出动画与清理未实测。",
+      "仅只读源码筛选；未安装/构建/运行、交互生命周期或浏览器视觉验收。"
+    ],
+    "description": "原首页图集提供等比图行、灯箱开启缩放与图片切换；动态说明插件按 viewport 及图像位置分配说明空间，effect 清理调用 lightbox.destroy。 有图集/OSD 概念交集，但这里收一套摄影灯箱的图文说明与缩放返回，不按多个 gallery 参数变体计数，也非瓦片深缩放。",
+    "category": "展示与媒体",
+    "licenseEvidence": {
+      "url": "https://github.com/dimsemenov/PhotoSwipe/blob/cd41cb587a460634e4cae53134f3d01d06e284a6/LICENSE",
+      "sha256": "cde09603222c99259f63c7d082fe20ecf855e86b5a4c5bd7ebff1fa93c653bc1",
+      "scope": "Complete actual root license; transitive code and media permissions not closed"
+    },
+    "sourceEvidence": {
+      "localFile": "evidence/dimsemenov--PhotoSwipe--demo-docs-website__src__pages___index-gallery-header.js",
+      "sha256": "36fff9d6947bcad727638b155c17f308cbfe6702083126c754d74ab441d2bde8"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-527",
+    "sourceScope": "Fixed original complete UI/demo source and full root license; not a runnable adaptation or full asset archive",
+    "kind": "原版交互场景（仅来源）",
+    "buildStatus": "fixed source and full root license read; not built/run/visually accepted"
+  },
+  {
+    "id": "jsoncrack:structured-data-atlas",
+    "title": "结构数据树与空间关系图",
+    "source": "JSON Crack",
+    "repository": "https://github.com/AykutSarac/jsoncrack.com",
+    "revision": "a46d0d0adb098e12e577a083e87ead7f61f90098",
+    "sourcePath": "apps/www/src/features/editor/views/GraphView/index.tsx",
+    "upstream": "https://github.com/AykutSarac/jsoncrack.com/blob/a46d0d0adb098e12e577a083e87ead7f61f90098/apps/www/src/features/editor/views/GraphView/index.tsx",
+    "license": "Apache-2.0 (complete actual root text; runtime/media not closed)",
+    "behavior": "原 JSON 编辑器与图/树视图联动，方向/网格/手势配置重建图实例，节点点击打开详情模态框，折叠统计与节点数量上限错误态。",
+    "difference": "区别 ReactFlow 空白节点编辑器及 MindElixir：原结构化数据自动图解、路径折叠和源码编辑一体，不另造引擎外壳。",
+    "styleTags": [
+      "结构信息/空间导航"
+    ],
+    "gaps": [
+      "原 Monaco 0.55.1 从 unpkg 加载并可能需要 worker，sessionStorage 与 Zustand 生命周期需关闭/隔离；默认 CSP 不可直接照搬。packages/jsoncrack-react 和 apps/www 完整 Apache 条款同存，但全部依赖/字体/图标尚未审，外链 ToDiagram 及导入/导出必须核边界。",
+      "仅只读源码筛选；未安装/构建/运行、交互生命周期或浏览器视觉验收。"
+    ],
+    "description": "原 JSON 编辑器与图/树视图联动，方向/网格/手势配置重建图实例，节点点击打开详情模态框，折叠统计与节点数量上限错误态。 区别 ReactFlow 空白节点编辑器及 MindElixir：原结构化数据自动图解、路径折叠和源码编辑一体，不另造引擎外壳。",
+    "category": "数据与状态",
+    "licenseEvidence": {
+      "url": "https://github.com/AykutSarac/jsoncrack.com/blob/a46d0d0adb098e12e577a083e87ead7f61f90098/LICENSE.md",
+      "sha256": "371dd1076c8a30dd126ecccb0c6a90497851a725575beab1b5759eba29fc71c8",
+      "scope": "Complete actual root license; transitive code and media permissions not closed"
+    },
+    "sourceEvidence": {
+      "localFile": "evidence/AykutSarac--jsoncrack.com--apps__www__src__features__editor__views__GraphView__index.tsx",
+      "sha256": "5807f12b18069f3cfbf11219a347b53916e382b7c35f30ca4bb365067635ea63"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-527",
+    "sourceScope": "Fixed original complete UI/demo source and full root license; not a runnable adaptation or full asset archive",
+    "kind": "原版交互场景（仅来源）",
+    "buildStatus": "fixed source and full root license read; not built/run/visually accepted"
+  },
+  {
+    "id": "wavedrom:timing-diagram-editor",
+    "title": "数字时序叙事编辑器",
+    "source": "WaveDrom Editor",
+    "repository": "https://github.com/wavedrom/wavedrom.github.io",
+    "revision": "375378efff2116ab2a03cdc3575d8ca73d49a429",
+    "sourcePath": "editor.html",
+    "upstream": "https://github.com/wavedrom/wavedrom.github.io/blob/375378efff2116ab2a03cdc3575d8ca73d49a429/editor.html",
+    "license": "MIT (complete actual root text; runtime/media not closed)",
+    "behavior": "原 CodeMirror 文本与数字时序 SVG 对照编辑器，示例有时钟、数据、请求/应答轨道，菜单支持旋转编辑布局、比例、文件导入及 SVG/PNG 导出。",
+    "difference": "区别一般折线图、音频波形与流程图：离散信号波形、时间间隙和数据段说明构成协议/Agent 状态时序的独立视觉语法。",
+    "styleTags": [
+      "技术手稿/时序叙事"
+    ],
+    "gaps": [
+      "原 init/editor 使用 localStorage、window 全局事件、文件选择/下载与 NW.js 分支；Google Analytics、远程字体必须关闭。解析器是否 eval/Function、CodeMirror/皮肤/PNG 图标许可未闭合；不得为原导出开启 CSP 或包装二进制，未运行任何导出。",
+      "仅只读源码筛选；未安装/构建/运行、交互生命周期或浏览器视觉验收。"
+    ],
+    "description": "原 CodeMirror 文本与数字时序 SVG 对照编辑器，示例有时钟、数据、请求/应答轨道，菜单支持旋转编辑布局、比例、文件导入及 SVG/PNG 导出。 区别一般折线图、音频波形与流程图：离散信号波形、时间间隙和数据段说明构成协议/Agent 状态时序的独立视觉语法。",
+    "category": "数据与状态",
+    "licenseEvidence": {
+      "url": "https://github.com/wavedrom/wavedrom.github.io/blob/375378efff2116ab2a03cdc3575d8ca73d49a429/LICENSE",
+      "sha256": "68f6442e5967ddb6a75ec8a4570215cac8cc415ea293c05cf857843c73fa5a57",
+      "scope": "Complete actual root license; transitive code and media permissions not closed"
+    },
+    "sourceEvidence": {
+      "localFile": "evidence/wavedrom--wavedrom.github.io--editor.html",
+      "sha256": "d6b7e61449e8ffb79f618976fcb6c3e9299fcd8adf7fef3dedb44e09155dfb05"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-527",
+    "sourceScope": "Fixed original complete UI/demo source and full root license; not a runnable adaptation or full asset archive",
+    "kind": "原版交互场景（仅来源）",
+    "buildStatus": "fixed source and full root license read; not built/run/visually accepted"
+  },
+  {
+    "id": "svgedit:vector-illustration-studio",
+    "title": "矢量插画与渐变材质创作台",
+    "source": "SVG-Edit",
+    "repository": "https://github.com/SVG-Edit/svgedit",
+    "revision": "c44f061d2f9a626d2771cc931298af5a45522d87",
+    "sourcePath": "src/editor/Editor.js",
+    "upstream": "https://github.com/SVG-Edit/svgedit/blob/c44f061d2f9a626d2771cc931298af5a45522d87/src/editor/Editor.js",
+    "license": "MIT (root; embedded mixed licenses unresolved) (complete actual root text; runtime/media not closed)",
+    "behavior": "原矢量编辑器拥有图形绘制、路径/文字编辑、填充描边/渐变、缩放标尺、图层与源码编辑入口，原 EditorStartup 负责完整 UI 初始化。",
+    "difference": "与 Excalidraw/MiniPaint 有创作领域交集，但侧重精确 SVG 路径/渐变/图层编辑，而非手绘白板或像素画；整套仅一族。",
+    "styleTags": [
+      "矢量/渐变材料"
+    ],
+    "gaps": [
+      "licenseInfo.json 明示嵌入 Apache、MIT/GPL 双许可、LGPL SVG-to-PDF 和 X11 等，不能据根 MIT 认定全包完成。AUTHORS 已保存；插件/字体/图片/导出/文件保存、动态 locale/扩展加载与残留监听需逐项闭合。实际绘图和像素完全未验。",
+      "仅只读源码筛选；未安装/构建/运行、交互生命周期或浏览器视觉验收。"
+    ],
+    "description": "原矢量编辑器拥有图形绘制、路径/文字编辑、填充描边/渐变、缩放标尺、图层与源码编辑入口，原 EditorStartup 负责完整 UI 初始化。 与 Excalidraw/MiniPaint 有创作领域交集，但侧重精确 SVG 路径/渐变/图层编辑，而非手绘白板或像素画；整套仅一族。",
+    "category": "展示与媒体",
+    "licenseEvidence": {
+      "url": "https://github.com/SVG-Edit/svgedit/blob/c44f061d2f9a626d2771cc931298af5a45522d87/LICENSE-MIT.txt",
+      "sha256": "0b7a466c51716c30633b6efe54683c1af24b30f1bbc25d3f86f515e4d0081afa",
+      "scope": "Complete actual root license; transitive code and media permissions not closed"
+    },
+    "sourceEvidence": {
+      "localFile": "evidence/SVG-Edit--svgedit--src__editor__Editor.js",
+      "sha256": "fc6c217a3bd15e820800f6aacbdcb2f59541e4f6ce3cc090745c2dd774f7d559"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-527",
+    "sourceScope": "Fixed original complete UI/demo source and full root license; not a runnable adaptation or full asset archive",
+    "kind": "原版交互场景（仅来源）",
+    "buildStatus": "fixed source and full root license read; not built/run/visually accepted"
+  },
+  {
+    "id": "jellyfin:cinematic-item-details",
+    "title": "Jellyfin · 影院式内容详情场景",
+    "source": "Jellyfin Web",
+    "repository": "https://github.com/jellyfin/jellyfin-web",
+    "revision": "2c6342994262d9e767341c44c42771d3429cb0c6",
+    "sourcePath": "src/apps/legacy/controllers/itemDetails/index.html",
+    "upstream": "https://github.com/jellyfin/jellyfin-web/blob/2c6342994262d9e767341c44c42771d3429cb0c6/src/apps/legacy/controllers/itemDetails/index.html",
+    "license": "GPL-2.0 (root verified; runtime/assets not closed)",
+    "visualStyle": "海报/大幅背景、标题元信息、播放动作与剧情/演员/剧集分区构成沉浸式媒体内容页。",
+    "behavior": "原controller按item加载图像/简介、视频音轨字幕选择、展开简介及上下文播放/季集入口；电影/剧集布局作为一个内容详情族。",
+    "difference": "区别卡片画廊/普通列表与播放器按钮：完整富媒体详情编排适合Exodus影视内容结果；不按内容类型拆条。",
+    "gaps": [
+      "根GPLv2全文已读，未来运行/改版须满足对应源代码义务；不拿根代码许可覆盖电影、海报、字幕或商标。",
+      "原ServerConnections/ApiClient、用户播放记录、远程图片及录制/播放action未隔离；本轮无登录/服务请求/实际播放。",
+      "只收公共详情模板/controller与metadata原件，不含电影图片、音视频、完整播放器或离线后端。",
+      "仅来源：未构建/运行/像素验收，所有传递依赖/媒体字体/CSP与重复操作/退出清理尚未闭合，无预览或完整源码ZIP。"
+    ],
+    "description": "海报/大幅背景、标题元信息、播放动作与剧情/演员/剧集分区构成沉浸式媒体内容页。 原controller按item加载图像/简介、视频音轨字幕选择、展开简介及上下文播放/季集入口；电影/剧集布局作为一个内容详情族。",
+    "category": "展示与媒体",
+    "licenseEvidence": {
+      "url": "https://github.com/jellyfin/jellyfin-web/blob/2c6342994262d9e767341c44c42771d3429cb0c6/LICENSE",
+      "sha256": "f371b80469fb235bc500ec29e0e85b682d4a6157a158567d828ff0be544d4f1d",
+      "scope": "Complete actual root license read; original selected code only; embedded assets/runtime not cleared"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-527",
+    "sourceScope": "Selected fixed original source and complete root license evidence; not full runnable/archive",
+    "kind": "原版完整场景（仅来源）",
+    "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted"
+  },
+  {
+    "id": "piskel:pixel-animation-workspace",
+    "title": "Piskel · 像素逐帧创作工作区",
+    "source": "Piskel",
+    "repository": "https://github.com/piskelapp/piskel",
+    "revision": "8624c94c0c23555fb3c75f4cf18eaf39c58e794b",
+    "sourcePath": "src/index.html",
+    "upstream": "https://github.com/piskelapp/piskel/blob/8624c94c0c23555fb3c75f4cf18eaf39c58e794b/src/index.html",
+    "license": "Apache-2.0 (root verified; asset exceptions/runtime not closed)",
+    "visualStyle": "紧凑像素图标工具栏、帧缩略序列、方格画布、图层与循环预览的复古创作界面。",
+    "behavior": "原FramesList可添加/复制/删除/重排帧，LayersList管理图层，Preview按FPS选帧并支持seamless；绘制由原DrawingController管理。",
+    "difference": "区别静态像素Canvas和TOAST图片调整：逐帧动画时序/图层/预览组成完整专业场景；工具与帧不单独计数。",
+    "gaps": [
+      "根Apache2全文保留；misc/icons/noun-project下有独立license文件，图标/字体与旧第三方插件未逐项闭合，不能全资产当Apache。",
+      "原导入/导出/本地存储/弹出预览依赖文件与Canvas宿主；本轮未导入图片、生成GIF、调用下载或浏览器绘制。",
+      "帧/图层操作源码已读，但绘制像素、动画速度、触控与清理未运行测试。",
+      "仅来源：未构建/运行/像素验收，所有传递依赖/媒体字体/CSP与重复操作/退出清理尚未闭合，无预览或完整源码ZIP。"
+    ],
+    "description": "紧凑像素图标工具栏、帧缩略序列、方格画布、图层与循环预览的复古创作界面。 原FramesList可添加/复制/删除/重排帧，LayersList管理图层，Preview按FPS选帧并支持seamless；绘制由原DrawingController管理。",
+    "category": "输入与选择",
+    "licenseEvidence": {
+      "url": "https://github.com/piskelapp/piskel/blob/8624c94c0c23555fb3c75f4cf18eaf39c58e794b/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "scope": "Complete actual root license read; original selected code only; embedded assets/runtime not cleared"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-527",
+    "sourceScope": "Selected fixed original source and complete root license evidence; not full runnable/archive",
+    "kind": "原版完整场景（仅来源）",
+    "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted"
+  },
+  {
+    "id": "webamp:classic-player-workspace",
+    "title": "Webamp · 复古分窗播放器场景",
+    "source": "Webamp",
+    "repository": "https://github.com/captbaritone/webamp",
+    "revision": "7e73a9b602774a5648a5ff32261efec75307e654",
+    "sourcePath": "packages/webamp/js/components/App.tsx",
+    "upstream": "https://github.com/captbaritone/webamp/blob/7e73a9b602774a5648a5ff32261efec75307e654/packages/webamp/js/components/App.tsx",
+    "license": "MIT (root verified; skins/media/embedded licenses not closed)",
+    "visualStyle": "像素级小窗、数码时间与频段滑条、播放列表及经典桌面皮肤，组合成可定位的复古播放器工作区。",
+    "behavior": "原React App编排MainWindow/Equalizer/Playlist/WindowManager；音量平衡/播放状态/均衡器/列表与焦点、窗口大小相关store动作真实存在。",
+    "difference": "不同于已收桌面作品集与单张唱片卡：是原版音乐应用的多窗交互；Main/EQ/Playlist合一族，皮肤不拆变体。",
+    "gaps": [
+      "根MIT为代码授权，不自动覆盖Winamp商标/默认皮肤位图/经典字体/第三方音频；本轮不下载或编码这些媒体。",
+      "Milkdrop/音频引擎/FilePicker/皮肤解析、外部轨道、可视化shader与modern子包其他许可证未全审，不能按MIT宣称完整运行包可分发。",
+      "未连接音频/媒体/上传/播放，浏览器音频权限及清理未测；只保留原公共组件源码。",
+      "仅来源：未构建/运行/像素验收，所有传递依赖/媒体字体/CSP与重复操作/退出清理尚未闭合，无预览或完整源码ZIP。"
+    ],
+    "description": "像素级小窗、数码时间与频段滑条、播放列表及经典桌面皮肤，组合成可定位的复古播放器工作区。 原React App编排MainWindow/Equalizer/Playlist/WindowManager；音量平衡/播放状态/均衡器/列表与焦点、窗口大小相关store动作真实存在。",
+    "category": "展示与媒体",
+    "licenseEvidence": {
+      "url": "https://github.com/captbaritone/webamp/blob/7e73a9b602774a5648a5ff32261efec75307e654/LICENSE.txt",
+      "sha256": "fc7f2696d3e70b5c04659de0a843c1d7defebbb14eb2a07a38808fead88d9279",
+      "scope": "Complete actual root license read; original selected code only; embedded assets/runtime not cleared"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-527",
+    "sourceScope": "Selected fixed original source and complete root license evidence; not full runnable/archive",
+    "kind": "原版完整场景（仅来源）",
+    "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted"
+  },
+  {
+    "id": "quartz-v4:linked-knowledge-garden",
+    "title": "图谱与双向链接数字花园",
+    "source": "Quartz v4",
+    "repository": "https://github.com/jackyzha0/quartz",
+    "revision": "d25a6eabf96751ffca56f8a8139272def7a65041",
+    "sourcePath": "quartz.layout.ts",
+    "upstream": "https://github.com/jackyzha0/quartz/blob/d25a6eabf96751ffca56f8a8139272def7a65041/quartz.layout.ts",
+    "license": "MIT (root verified only; dependencies/assets not closed)",
+    "behavior": "原整站布局组合文档树、搜索、正文、反向链接和局部/全局图谱；原D3力导向及Pixi图谱支持节点导航，FlexSearch查询内容。",
+    "difference": "不是普通文章列表：文档关系、引用回溯与图谱空间阅读组成同一知识场景；不拆Graph/Search/Explorer为多项。",
+    "gaps": [
+      "明确固定v4分支而非当前v5主线。原fetchData/搜索预览fetch依赖生成内容索引和页面；graph-visited用localStorage。Pixi/D3/Tween/FlexSearch及字体资源许可未闭合；源码可见清理注册不等于退出测试通过。",
+      "仅固定原件来源；未安装/构建/运行/截图/发布，CSP、媒体字体版权、完整运行许可、交互清理及浏览器视觉均未验。"
+    ],
+    "description": "原整站布局组合文档树、搜索、正文、反向链接和局部/全局图谱；原D3力导向及Pixi图谱支持节点导航，FlexSearch查询内容。 不是普通文章列表：文档关系、引用回溯与图谱空间阅读组成同一知识场景；不拆Graph/Search/Explorer为多项。",
+    "category": "导航与组织",
+    "licenseEvidence": {
+      "url": "https://github.com/jackyzha0/quartz/blob/d25a6eabf96751ffca56f8a8139272def7a65041/LICENSE.txt",
+      "sha256": "3553b1bda6785a2fdb0ccb5f1c93ea0b7969ae1456d0bb734964ae73ef02a1dc",
+      "scope": "Complete root MIT read; dependency/media/font permissions not closed"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-527",
+    "sourceScope": "Selected fixed original code and complete root license evidence; not a complete runnable archive or runtime audit",
+    "kind": "原版完整场景（仅来源）",
+    "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted",
+    "sourceSha256": "c7ab084d6caba4447974f3e696df3e7fa677ad29ebf857aeb08e39df01dfa871"
+  },
+  {
+    "id": "hugo-terminal:terminal-editorial-site",
+    "title": "等宽线框复古技术文章站",
+    "source": "Hugo Terminal",
+    "repository": "https://github.com/panr/hugo-theme-terminal",
+    "revision": "8ef994c0e0303861b1204d1248541af06c9bfea6",
+    "sourcePath": "layouts/_default/single.html",
+    "upstream": "https://github.com/panr/hugo-theme-terminal/blob/8ef994c0e0303861b1204d1248541af06c9bfea6/layouts/_default/single.html",
+    "license": "MIT (root verified only; dependencies/assets not closed)",
+    "behavior": "原等宽字体、强调色细边框、终端式标题与标签的整站文章阅读；目录、标题锚点、字数/阅读时长、更新时间、多语言菜单和文章分页。",
+    "difference": "与Hugo Paper亚麻留白不同，原线框/等宽技术出版结构；与m4tt72命令导航不同，这里是真正文档阅读而非命令输入，不按配色拆族。",
+    "gaps": [
+      "需要Hugo内容和模板编译；Fira Code字体URL、封面与文章资产、评论partial及完整依赖未审。菜单JS原事件与布局响应未运行；不把CSS主题当已经可预览整站。",
+      "仅固定原件来源；未安装/构建/运行/截图/发布，CSP、媒体字体版权、完整运行许可、交互清理及浏览器视觉均未验。"
+    ],
+    "description": "原等宽字体、强调色细边框、终端式标题与标签的整站文章阅读；目录、标题锚点、字数/阅读时长、更新时间、多语言菜单和文章分页。 与Hugo Paper亚麻留白不同，原线框/等宽技术出版结构；与m4tt72命令导航不同，这里是真正文档阅读而非命令输入，不按配色拆族。",
+    "category": "展示与媒体",
+    "licenseEvidence": {
+      "url": "https://github.com/panr/hugo-theme-terminal/blob/8ef994c0e0303861b1204d1248541af06c9bfea6/LICENSE.md",
+      "sha256": "1ea89838f4812ab010a68fb0dab180eca3d850004b168edacb835463707258a5",
+      "scope": "Complete root MIT read; dependency/media/font permissions not closed"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-527",
+    "sourceScope": "Selected fixed original code and complete root license evidence; not a complete runnable archive or runtime audit",
+    "kind": "原版完整场景（仅来源）",
+    "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted",
+    "sourceSha256": "9bb2a8e924a27b1fc106bdfa66f584689ba7ab1fc1915bb49eddf2f92b99b077"
+  },
+  {
+    "id": "chirpy:longform-knowledge-site",
+    "title": "侧栏与响应式目录长文知识站",
+    "source": "Chirpy",
+    "repository": "https://github.com/cotes2020/jekyll-theme-chirpy",
+    "revision": "ae1057257b3927d6474deb549bdfafa71244e080",
+    "sourcePath": "_layouts/post.html",
+    "upstream": "https://github.com/cotes2020/jekyll-theme-chirpy/blob/ae1057257b3927d6474deb549bdfafa71244e080/_layouts/post.html",
+    "license": "MIT (root verified only; dependencies/assets not closed)",
+    "behavior": "原固定身份侧栏、置顶文章首页、文章元信息、分类标签、相关/前后篇；桌面目录与移动目录dialog按断点切换，完整长文阅读结构。",
+    "difference": "与Paper窄栏极简阅读不同，Chirpy是侧栏+正文+目录面板的知识站布局，移动目录独立弹层；整站仅一项，未按归档/文章拆条。",
+    "gaps": [
+      "Jekyll Liquid与站点内容/配置不可直接运行；TOC依赖Tocbot及原移动/桌面模块，评论/分析/分享/搜索配置可联网。字体/FontAwesome图标、头像、主题传递许可与资源未闭合；未测dialog焦点或清理。",
+      "仅固定原件来源；未安装/构建/运行/截图/发布，CSP、媒体字体版权、完整运行许可、交互清理及浏览器视觉均未验。"
+    ],
+    "description": "原固定身份侧栏、置顶文章首页、文章元信息、分类标签、相关/前后篇；桌面目录与移动目录dialog按断点切换，完整长文阅读结构。 与Paper窄栏极简阅读不同，Chirpy是侧栏+正文+目录面板的知识站布局，移动目录独立弹层；整站仅一项，未按归档/文章拆条。",
+    "category": "展示与媒体",
+    "licenseEvidence": {
+      "url": "https://github.com/cotes2020/jekyll-theme-chirpy/blob/ae1057257b3927d6474deb549bdfafa71244e080/LICENSE",
+      "sha256": "348395dc79bade6ede7cdb4c3b6ed089fc144e5a0148fee5857bc0394a180321",
+      "scope": "Complete root MIT read; dependency/media/font permissions not closed"
+    },
+    "previewStatus": "source-only",
+    "sourceCollectionReady": true,
+    "runtimeRedistributionAuditComplete": false,
+    "publicationReady": false,
+    "completedPreviewCount": 0,
+    "batch": "source-style-527",
+    "sourceScope": "Selected fixed original code and complete root license evidence; not a complete runnable archive or runtime audit",
+    "kind": "原版完整场景（仅来源）",
+    "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted",
+    "sourceSha256": "1fb016f23173c41745146a2da460301f44ca49ebbb56aa75b01135c4d2462203"
   }
 ]
