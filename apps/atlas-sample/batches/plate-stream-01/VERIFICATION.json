@@ -1,0 +1,17 @@
+{
+  "actualCompose": "ui-vault-547",
+  "browserVisualQA": "not-run",
+  "testLog": "PAUSED olumn>⤶␣␣<column␣width=\"33.333333333333336%\">⤶␣␣␣␣2⤶␣␣</column>⤶␣␣<column␣width=\"33.333333333333336%\">⤶␣␣␣␣3⤶␣␣</column>⤶</columnGroup>⤶⤶paragraphEditor OutputPaused: partial previewEditor element \"columnGroup\" at [1] requires at least 2 children.Type something...Markdown Sourceparagraph\n\n<columnGroup>\n  <column width=\"33.333333333333336%\">\n    1\n  </column>\n  <column width=\"33.333333333333336%\">\n    2\n  </column>\n  <column width=\"33.333333333333336%\">\n    3\n  </column>\n</columnGroup>\n\nparagraph\nFINISHED ft every 32 ms, each continuing the previous partial parse. Finishing or stopping parses the draft strictly; reset and other changes cancel the stream without a final parse.Chunks (70/70)paragraph⤶⤶<columnGroup>⤶␣␣<column␣width=\"33.333333333333336%\">⤶␣␣␣␣1⤶␣␣</column>⤶␣␣<column␣width=\"33.333333333333336%\">⤶␣␣␣␣2⤶␣␣</column>⤶␣␣<column␣width=\"33.333333333333336%\">⤶␣␣␣␣3⤶␣␣</column>⤶</columnGroup>⤶⤶paragraphEditor OutputFinished: strict parseparagraph123paragraphMarkdown Sourceparagraph\n\n<columnGroup>\n  <column width=\"33.333333333333336%\">\n    1\n  </column>\n  <column width=\"33.333333333333336%\">\n    2\n  </column>\n  <column width=\"33.333333333333336%\">\n    3\n  </column>\n</columnGroup>\n\nparagraph\nRECOVER Scenario:ColumnsLinksListsList With ImageNested Structure BlockTableChunks:Recorded tokens16 characters64 characters256 charactersDelay:10 ms50 ms100 ms200 msPreview:EditableStaticPreviews publish the first chunk at once, then the latest draft every 32 ms, each continuing the previous partial parse. Finishing or stopping parses the draft strictly;  undefined []\nSAFE custom markdown no executable DOM\nEND [] 0 0 []\n",
+  "boundaryLogs": {
+    "test-stream-missing.log": "missingroot PASS\n",
+    "test-stream-early.log": "earlydispose PASS\n"
+  },
+  "limitations": [
+    "No native pixels, IME/composition, real layout, screen-reader or CSS visual QA; tests use controlled JSDOM geometry.",
+    "Local demonstration only. No cloud persistence, collaboration, AI or booking/service API. Hidden resets current local scene.",
+    "Original root/app licenses and all actual npm/build notices retained; precise qualifications for packages without standalone LICENSE in SOURCE.",
+    "Default original columns fixture and local controls tested; optional remote image/embed scenarios cannot fetch resources under unchanged CSP and are not claimed working media previews.",
+    "Font faces excluded from text-only delivery; mathematical font metrics/typography and optional date/media controls not verified.",
+    "Incomplete prefixes can show the original schema-validation warning (e.g. columnGroup needs at least two children) until further chunks arrive; not concealed as successful parse."
+  ]
+}
