@@ -1,0 +1,245 @@
+
+> ui-vault@0.1.0 build
+> node scripts/prepare-catalog.mjs && npm run check && npm test
+
+Lightweight catalog: 241 entries, 123590 bytes
+
+> ui-vault@0.1.0 check
+> node --check apps/atlas-sample/app.js && node --check scripts/export-pages.mjs
+
+
+> ui-vault@0.1.0 test
+> node --test apps/atlas-sample/*.test.mjs
+
+TAP version 13
+# Subtest: source baseline is preserved and all new families are directly viewable
+ok 1 - source baseline is preserved and all new families are directly viewable
+  ---
+  duration_ms: 41.102348
+  type: 'test'
+  ...
+# Subtest: every local preview has parseable self-contained runtime assets
+ok 2 - every local preview has parseable self-contained runtime assets
+  ---
+  duration_ms: 2200.700388
+  type: 'test'
+  ...
+# Subtest: family search preserves supplied glyph names and multilingual labels
+ok 3 - family search preserves supplied glyph names and multilingual labels
+  ---
+  duration_ms: 0.208933
+  type: 'test'
+  ...
+# Subtest: local audio previews opt in only to blob media while all network stays blocked
+ok 4 - local audio previews opt in only to blob media while all network stays blocked
+  ---
+  duration_ms: 0.100683
+  type: 'test'
+  ...
+# Subtest: list catalog preserves identities without download or runtime payload
+ok 5 - list catalog preserves identities without download or runtime payload
+  ---
+  duration_ms: 2.79936
+  type: 'test'
+  ...
+# Subtest: list rendering uses image posters, never live component frames
+ok 6 - list rendering uses image posters, never live component frames
+  ---
+  duration_ms: 5.829362
+  type: 'test'
+  ...
+# Subtest: available posters are local real-image files with bounded dimensions
+ok 7 - available posters are local real-image files with bounded dimensions
+  ---
+  duration_ms: 38.229725
+  type: 'test'
+  ...
+# Subtest: failed asset calls error, never ready, and explicit retry can recover
+ok 8 - failed asset calls error, never ready, and explicit retry can recover
+  ---
+  duration_ms: 1.300477
+  type: 'test'
+  ...
+# Subtest: stale failing mount does not report an error over a newer navigation
+ok 9 - stale failing mount does not report an error over a newer navigation
+  ---
+  duration_ms: 0.222347
+  type: 'test'
+  ...
+# Subtest: 240 records render only one bounded page, pages clamp after filters
+ok 10 - 240 records render only one bounded page, pages clamp after filters
+  ---
+  duration_ms: 2.679975
+  type: 'test'
+  ...
+# Subtest: cache deduplicates shared loads, evicts under byte budget and retries failures
+ok 11 - cache deduplicates shared loads, evicts under byte budget and retries failures
+  ---
+  duration_ms: 1.386376
+  type: 'test'
+  ...
+# Subtest: per-batch assets are supported and HTML mismatch fails explicitly
+ok 12 - per-batch assets are supported and HTML mismatch fails explicitly
+  ---
+  duration_ms: 0.350967
+  type: 'test'
+  ...
+# Subtest: released and stale async mounts cannot revive an iframe
+ok 13 - released and stale async mounts cannot revive an iframe
+  ---
+  duration_ms: 0.373253
+  type: 'test'
+  ...
+# Subtest: only six of twelve visible cards animate; offscreen and hidden states release documents
+ok 14 - only six of twelve visible cards animate; offscreen and hidden states release documents
+  ---
+  duration_ms: 0.82306
+  type: 'test'
+  ...
+# Subtest: successful ready callbacks cannot mutate a released frame
+ok 15 - successful ready callbacks cannot mutate a released frame
+  ---
+  duration_ms: 0.28877
+  type: 'test'
+  ...
+# Subtest: 240 records render only one bounded page, pages clamp after filters
+ok 16 - 240 records render only one bounded page, pages clamp after filters
+  ---
+  duration_ms: 4.263915
+  type: 'test'
+  ...
+# Subtest: cache deduplicates shared loads, evicts under byte budget and retries failures
+ok 17 - cache deduplicates shared loads, evicts under byte budget and retries failures
+  ---
+  duration_ms: 1.278874
+  type: 'test'
+  ...
+# Subtest: per-batch assets are supported and HTML mismatch fails explicitly
+ok 18 - per-batch assets are supported and HTML mismatch fails explicitly
+  ---
+  duration_ms: 0.35796
+  type: 'test'
+  ...
+# Subtest: released and stale async mounts cannot revive an iframe
+ok 19 - released and stale async mounts cannot revive an iframe
+  ---
+  duration_ms: 0.324398
+  type: 'test'
+  ...
+# Subtest: only six of twelve visible cards animate; offscreen and hidden states release documents
+ok 20 - only six of twelve visible cards animate; offscreen and hidden states release documents
+  ---
+  duration_ms: 0.588318
+  type: 'test'
+  ...
+# Subtest: successful ready callbacks cannot mutate a released frame
+ok 21 - successful ready callbacks cannot mutate a released frame
+  ---
+  duration_ms: 0.247031
+  type: 'test'
+  ...
+# Subtest: all material identities and original entry points are distinct
+ok 22 - all material identities and original entry points are distinct
+  ---
+  duration_ms: 3.54891
+  type: 'test'
+  ...
+# Subtest: every item has real original and preview, local dependencies and upstream license
+ok 23 - every item has real original and preview, local dependencies and upstream license
+  ---
+  duration_ms: 30.840085
+  type: 'test'
+  ...
+# Subtest: preview dependencies are inline for opaque sandbox origins, original HTML is unchanged
+ok 24 - preview dependencies are inline for opaque sandbox origins, original HTML is unchanged
+  ---
+  duration_ms: 73.000915
+  type: 'test'
+  ...
+# Subtest: runtime assets contain no remote font/network import
+ok 25 - runtime assets contain no remote font/network import
+  ---
+  duration_ms: 2.90668
+  type: 'test'
+  ...
+# Subtest: every detail has a reloadable encoded route; malformed/unknown routes resolve to list
+ok 26 - every detail has a reloadable encoded route; malformed/unknown routes resolve to list
+  ---
+  duration_ms: 10.813865
+  type: 'test'
+  ...
+# Subtest: Chinese and English queries search all material metadata, intersecting facets
+ok 27 - Chinese and English queries search all material metadata, intersecting facets
+  ---
+  duration_ms: 3.923359
+  type: 'test'
+  ...
+# Subtest: detail route resolution leaves filtering state and list ordering unchanged
+ok 28 - detail route resolution leaves filtering state and list ordering unchanged
+  ---
+  duration_ms: 1.344874
+  type: 'test'
+  ...
+# Subtest: legacy four featured materials retain their shared runtime and original entry points
+ok 29 - legacy four featured materials retain their shared runtime and original entry points
+  ---
+  duration_ms: 7.945292
+  type: 'test'
+  ...
+# Subtest: featured IIFE remains valid when safely embedded in an opaque srcdoc
+ok 30 - featured IIFE remains valid when safely embedded in an opaque srcdoc
+  ---
+  duration_ms: 33.460938
+  type: 'test'
+  ...
+# Subtest: every added runtime batch has real source, download, preview and matching local assets
+ok 31 - every added runtime batch has real source, download, preview and matching local assets
+  ---
+  duration_ms: 84.437929
+  type: 'test'
+  ...
+# Subtest: every published thumbnail uses a supported sized canvas
+ok 32 - every published thumbnail uses a supported sized canvas
+  ---
+  duration_ms: 0.196603
+  type: 'test'
+  ...
+# Subtest: icon series are separate from featured and basic even with legacy featured flags
+ok 33 - icon series are separate from featured and basic even with legacy featured flags
+  ---
+  duration_ms: 0.391132
+  type: 'test'
+  ...
+# Subtest: large inventories preserve disjoint counts and bounded pagination
+ok 34 - large inventories preserve disjoint counts and bounded pagination
+  ---
+  duration_ms: 3.643431
+  type: 'test'
+  ...
+# Subtest: all 241 redesign baseline entries retain identity and exactly one purpose category
+ok 35 - all 241 redesign baseline entries retain identity and exactly one purpose category
+  ---
+  duration_ms: 8.119985
+  type: 'test'
+  ...
+# Subtest: purpose, source, style, interaction tags and format intersect without mutating state
+ok 36 - purpose, source, style, interaction tags and format intersect without mutating state
+  ---
+  duration_ms: 3.745265
+  type: 'test'
+  ...
+# Subtest: slim catalog records can be searched without detail-only metadata
+ok 37 - slim catalog records can be searched without detail-only metadata
+  ---
+  duration_ms: 0.152947
+  type: 'test'
+  ...
+1..37
+# tests 37
+# suites 0
+# pass 37
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2298.006538
