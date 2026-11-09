@@ -1,0 +1,355 @@
+/* ==========================================================================
+   MENISCUS — liquid bottom navigation
+
+   The bar's top edge is a liquid surface. The selected tab is a bead the
+   surface dips beneath, and the dip is a single parametric socket cut into
+   one SVG path — so it can lean into the direction of travel and stretch
+   with speed, none of which a welded stack of pseudo-element curves can do.
+
+   Layers, bottom-up:
+     1 .dock__cast   a soft ground shadow, hidden under the bar's lower half
+     2 .dock__skin   the socketed path, filled with a lit-plate gradient
+     3 .dock__bead   the accent bead, squashed by its own velocity
+     4 .dock__tabs   icons + labels; each icon rides --t (0…1) into the bead
+
+   The bar is a dark plate, deeper than the room it sits in, so one accent
+   tone now serves everywhere: --acc fills the bead AND writes the label
+   (14.5:1 on the plate at its brightest, 5.9:1 at its darkest). The only
+   inversion left is the icon, which is ink once it is riding the bead.
+   Every value below is measured against the surface it actually lands on.
+
+   A dark plate on a dark room has no silhouette of its own, so the top edge
+   is stroked with a light rim — and because the rim follows the same path,
+   it is the rim that actually draws the meniscus curve.
+
+   Everything that moves is transform / opacity / a custom property.
+   ========================================================================== */
+
+:root {
+  color-scheme: dark;
+
+  /* the room — deep plum, so the bar reads as a lit white plate on it */
+  --page:      #1c1526;
+  --page-hi:   #2b2138;
+  --page-lo:   #110c18;
+
+  /* the bar — an obsidian plate, deliberately deeper than the room behind it
+     (the room reads ~#231c2f here) so the socket has a silhouette to cut. */
+  --bar:       #130f1e;          /* flat fallback: no-JS bar + ground shadow */
+  --bar-hi:    #1b1529;
+  --bar-lo:    #0c0814;
+
+  --icon-off:  #a79eb8;          /* inactive icon on the plate — 7.1:1 */
+  --icon-on:   #1a1420;          /* active icon, sitting on the bead */
+
+  /* type on the room */
+  --text-hi:   #f6f2f8;
+  --text-soft: #bcb3ca;
+  --text-faint:#a8a0b8;
+
+  /* live accent — JS lerps these channels between tab accents as the bead
+     travels, and every layer picks its own alpha from them. */
+  --glow-rgb:  201 242 74;
+  --glow:      rgb(var(--glow-rgb));
+
+  /* geometry — JS is the source of truth and overwrites all four */
+  --dock-r:    18px;
+  --bead-d:    56px;
+  --bead-cy:   0px;
+  --rise:      42px;
+
+  --font-display: 'Bricolage Grotesque', ui-sans-serif, system-ui, sans-serif;
+  --font-ui: 'Instrument Sans', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --ease: cubic-bezier(.22, .61, .28, 1);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body { height: 100%; }
+
+body {
+  margin: 0;
+  background: var(--page);
+  color: var(--text-hi);
+  font-family: var(--font-ui);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+/* --- ambient ------------------------------------------------------------ */
+
+.bloom {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(38% 27% at 50% 68%, rgb(var(--glow-rgb) / .20), transparent 74%),
+    radial-gradient(88% 52% at 50% 4%, #342846, transparent 76%),
+    linear-gradient(180deg, var(--page-hi), var(--page-lo));
+}
+
+/* Overlay, not multiply: on a dark room a multiplied grain just disappears. */
+.grain {
+  position: fixed;
+  inset: -50%;
+  pointer-events: none;
+  z-index: 1;
+  opacity: .16;
+  background-image: none; /* Original PNG grain omitted offline. */
+  background-size: 180px;
+  mix-blend-mode: overlay;
+}
+
+/* --- stage -------------------------------------------------------------- */
+
+.stage {
+  position: relative;
+  z-index: 2;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(34px, 7vh, 74px);
+  padding: clamp(28px, 6vh, 64px) 20px calc(clamp(28px, 7vh, 72px) + env(safe-area-inset-bottom));
+}
+
+/* --- headline (the tabpanels) ------------------------------------------- */
+
+.head {
+  width: 100%;
+  max-width: 640px;
+  text-align: center;
+}
+
+.head__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin: 0 0 clamp(14px, 2.4vh, 26px);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+.head__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--glow);
+  box-shadow: 0 0 0 4px rgb(var(--glow-rgb) / .24);
+}
+
+/* All panels share one grid cell so swapping never reflows the page. */
+.panels { display: grid; }
+.panel {
+  grid-area: 1 / 1;
+  outline: none;
+}
+.panel[hidden] {
+  display: block;      /* [hidden] must not win over the grid stack */
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+.panel:focus-visible {
+  outline: 2px solid var(--text-hi);
+  outline-offset: 10px;
+  border-radius: 6px;
+}
+
+.panel__word {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(52px, 13vw, 116px);
+  line-height: .92;
+  letter-spacing: -.035em;
+  color: var(--text-hi);
+}
+
+.panel__line {
+  margin: clamp(10px, 1.6vh, 18px) 0 0;
+  font-size: clamp(14px, 1.6vw, 17px);
+  font-weight: 400;
+  color: var(--text-soft);
+}
+
+/* ==========================================================================
+   The dock
+   ========================================================================== */
+
+.dock {
+  position: relative;
+  width: min(460px, 100%);
+  height: clamp(72px, 10vh, 84px);
+  flex: none;
+  touch-action: pan-y;                /* vertical scroll stays the page's */
+  -webkit-tap-highlight-color: transparent;
+
+  /* no-JS fallback: a plain rounded bar. The script cuts the real skin. */
+  background: var(--bar);
+  border-radius: var(--dock-r);
+}
+.js .dock { background: none; }
+
+/* A soft ground shadow. It lives entirely under the bar's lower half, so
+   the socket can never expose it. */
+.dock__cast {
+  position: absolute;
+  inset: 46% 7% 6% 7%;
+  border-radius: 999px;
+  background: var(--bar);
+  box-shadow:
+    0 10px 22px -8px rgba(0, 0, 0, .74),
+    0 32px 56px -20px rgba(0, 0, 0, .8);
+}
+
+.dock__skin {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, .5));
+}
+/* A whisper of a gradient reads as a lit plate rather than a flat swatch, and
+   the rim is the plate's only silhouette against the room — bright along the
+   top edge where the light is, gone by the bottom. */
+.dock__fill {
+  fill: url(#mnPlate);
+  stroke: url(#mnRim);
+  stroke-width: 1;
+}
+.dock__plate-hi { stop-color: var(--bar-hi); }
+.dock__plate-lo { stop-color: var(--bar-lo); }
+/* a bright specular highlight along the top edge, falling off down the sides
+   so the plate keeps its weight — this is the light source, not a border. */
+.dock__rim-hi { stop-color: #fff; stop-opacity: .60; }
+.dock__rim-lo { stop-color: #fff; stop-opacity: .06; }
+
+/* --- the bead ----------------------------------------------------------- */
+
+.dock__bead {
+  position: absolute;
+  top: var(--bead-cy);
+  left: 0;
+  width: var(--bead-d);
+  height: var(--bead-d);
+  margin: calc(var(--bead-d) / -2) 0 0 calc(var(--bead-d) / -2);
+  border-radius: 50%;
+  background:
+    linear-gradient(168deg, color-mix(in srgb, var(--glow) 76%, #fff), var(--glow) 62%);
+  /* On a dark plate the bead now straddles two DARK surfaces, so it no longer
+     needs the opaque pale collar that kept it off a near-white bar — it can
+     just emit. The tight ring keeps the edge crisp inside the socket's 6px
+     clearance, the wide bloom spills accent light onto the plate, and the
+     offset shadow under both is what still seats it in the dish. */
+  box-shadow:
+    0 0 0 1px rgb(var(--glow-rgb) / .5),
+    0 0 26px 2px rgb(var(--glow-rgb) / .32),
+    0 10px 18px -7px rgba(0, 0, 0, .68),
+    inset 0 0 0 1px rgba(255, 255, 255, .42),
+    inset 0 -3px 6px -3px rgba(26, 16, 34, .18);
+  will-change: transform;
+  pointer-events: none;
+}
+.dock:not(.is-ready) .dock__bead { opacity: 0; }
+
+/* --- tabs --------------------------------------------------------------- */
+
+.dock__tabs {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  padding-inline: clamp(26px, 10.5%, 54px);
+}
+
+.tab {
+  position: relative;
+  flex: 1;
+  display: block;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  border-radius: 14px;
+  --t: 0;                            /* 0 = at rest · 1 = inside the bead */
+}
+
+.tab:focus-visible {
+  outline: 2px solid var(--acc);
+  outline-offset: -3px;
+}
+
+.tab__icon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 25px;
+  height: 25px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  /* Ink while it sits on the bar, ink-on-accent once it is in the bead. */
+  color: color-mix(in oklab, var(--icon-off) calc((1 - var(--t)) * 100%), var(--icon-on));
+  transform: translate(-50%, -50%) translateY(calc(var(--t) * var(--rise) * -1));
+  will-change: transform;
+}
+
+.tab__label {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 14%;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .06em;
+  color: var(--acc);
+  opacity: 0;
+  transform: translateY(calc((1 - var(--t)) * 7px));
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+/* A label belongs to the chosen tab. While the bead is being dragged every
+   label previews, so you can see what you are about to land on. */
+.tab[aria-selected="true"] .tab__label,
+.dock.is-dragging .tab__label { opacity: var(--t); }
+
+/* --- hint --------------------------------------------------------------- */
+
+.hint {
+  margin: 0;
+  font-size: 13px;
+  color: var(--text-faint);
+}
+.hint em {
+  font-style: normal;
+  color: var(--text-hi);
+  border-bottom: 1px dashed rgba(246, 242, 248, .38);
+}
+
+/* --- narrow ------------------------------------------------------------- */
+
+@media (max-width: 400px) {
+  .tab__icon { width: 23px; height: 23px; }
+  .tab__label { font-size: 10px; }
+}
+
+/* --- reduced motion ----------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+}
+
+.local-status{font:12px system-ui;color:#ccc;text-align:center;max-width:30em;margin:12px auto}.local-status:empty{display:none}
