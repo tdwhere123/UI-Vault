@@ -1,0 +1,94 @@
+{
+  "repository": "https://github.com/ui-layouts/uilayouts",
+  "revision": "88d827d7ec342917ca06f6894e5add65fabbe5d8",
+  "sourceFile": "apps/ui-layout/registry/components/form/file-upload/chat-form.tsx",
+  "sourceSHA256": "1fbe3b7ba3639fe88cd21527061c966f292c0e9c15132be56376d05a68babe72",
+  "fileUploadEvidence": {
+    "url": "https://raw.githubusercontent.com/ui-layouts/uilayouts/88d827d7ec342917ca06f6894e5add65fabbe5d8/apps/ui-layout/components/ui/file-upload.tsx",
+    "sha256": "08b0a70d4d0fc20461861db5368ae35c0e8aab4e9b2c2a28436c6ec0e4262344",
+    "gitBlob": "26b41b649b70cf7d8bfea381110f96ead0db5d90",
+    "matchesArchivedDependency": true,
+    "bytes": 9953
+  },
+  "licenseSHA256": "25d698c61ceea4d42107ef85ef37d4449f1169ca24c7ee288db434688071e1e3",
+  "runtimeDependencies": [
+    {
+      "name": "attr-accept",
+      "version": "2.2.5",
+      "license": "MIT",
+      "licenseSHA256": "d75a1dcd7216692931683668052a2801767bdd0ca19711633098ce87ebade863"
+    },
+    {
+      "name": "clsx",
+      "version": "2.1.1",
+      "license": "MIT",
+      "licenseSHA256": "9a9edad7baae52622bddf3c15b2ef8a33d2c89f2d25408ad13e8a7481c6b0c97"
+    },
+    {
+      "name": "file-selector",
+      "version": "2.1.2",
+      "license": "MIT",
+      "licenseSHA256": "01949dbb7502b2f1a424c53a043892db5e842bf6bb9201efab5d96ffeac15f1e"
+    },
+    {
+      "name": "lucide-react",
+      "version": "0.468.0",
+      "license": "ISC",
+      "licenseSHA256": "1e7290b35280a048667bbf0ebabac1c7fd52a75300e8b2946ac165715997f2bc"
+    },
+    {
+      "name": "prop-types",
+      "version": "15.8.1",
+      "license": "MIT",
+      "licenseSHA256": "f657f99d3fb9647db92628e96007aabb46e5f04f33e49999075aab8e250ca7ce"
+    },
+    {
+      "name": "react",
+      "version": "18.3.1",
+      "license": "MIT",
+      "licenseSHA256": "52412d7bc7ce4157ea628bbaacb8829e0a9cb3c58f57f99176126bc8cf2bfc85"
+    },
+    {
+      "name": "react-dom",
+      "version": "18.3.1",
+      "license": "MIT",
+      "licenseSHA256": "52412d7bc7ce4157ea628bbaacb8829e0a9cb3c58f57f99176126bc8cf2bfc85"
+    },
+    {
+      "name": "react-dropzone",
+      "version": "14.3.8",
+      "license": "MIT",
+      "licenseSHA256": "7b93b62069ec28d00cc7cf3696b5d243ad9887517f8e709dce4811747f0e2dc2"
+    },
+    {
+      "name": "scheduler",
+      "version": "0.23.2",
+      "license": "MIT",
+      "licenseSHA256": "52412d7bc7ce4157ea628bbaacb8829e0a9cb3c58f57f99176126bc8cf2bfc85"
+    },
+    {
+      "name": "tailwind-merge",
+      "version": "3.3.1",
+      "license": "MIT",
+      "licenseSHA256": "d4c70c7ce38cea8778f0aed3fc0bef0a9dbd27f13bd8b6773cbd6d37941971e5"
+    },
+    {
+      "name": "tslib",
+      "version": "2.9.1",
+      "license": "0BSD",
+      "licenseSHA256": "210b19e543130388c68654b7497e967119ce17145f66ab7d85688fbd70f08751"
+    }
+  ],
+  "buildCSS": "Tailwind4.1.18 generated only from original component classes + minimal offline neutral design tokens, focus/reduced/responsive additions.",
+  "originalsLocalOnly": true,
+  "changes": [
+    "Original scene retained, NextImage replaced ordinary local img.",
+    "Original FileUploader uses original react-dropzone; accepted files forwarded into serialized signature-validation queue, rather than stale captured value merging.",
+    "Memoized one object URL per File; removal/image decode failure/hidden/failure/exit revoke. FileReaders abort on unmount; epoch/live guard after asynchronous completion.",
+    "Strict JPEG/PNG MIME and magic prefix + size/count constraints; image decode failures visibly rejected. Not a full file security scanner.",
+    "Local inline rejection message replaces Sonner toast dependency.",
+    "Keyboard capture only recognized keys; actual Space spelling; Tab not trapped.",
+    "Dropzone focus-cancel timer is scoped and cleared on repeated focus/unmount.",
+    "Host early module catch, render boundary and global listener/selectionchange cleanup; hidden resets selection/message."
+  ]
+}
