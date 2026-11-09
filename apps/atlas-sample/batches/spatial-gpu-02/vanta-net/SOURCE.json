@@ -1,0 +1,171 @@
+{
+  "id": "vanta:spatial-network-field",
+  "repository": "https://github.com/tengbao/vanta",
+  "revision": "f8b351906688b56f0fc744e53bde81fc3c56f150",
+  "originals": [
+    {
+      "local": "original/vanta/_base.js",
+      "url": "https://raw.githubusercontent.com/tengbao/vanta/f8b351906688b56f0fc744e53bde81fc3c56f150/src/_base.js",
+      "sha256": "5be36a2f7bf66f4cf775be24bad7c4f4c6d8c9c43410a837a51b131045762a8b"
+    },
+    {
+      "local": "original/vanta/vanta.net.js",
+      "url": "https://raw.githubusercontent.com/tengbao/vanta/f8b351906688b56f0fc744e53bde81fc3c56f150/src/vanta.net.js",
+      "sha256": "d34c4ab0ffac6df4bc100517d584b11419496c8382e2027198633c8394863a6b"
+    },
+    {
+      "local": "original/vanta/helpers.js",
+      "url": "https://raw.githubusercontent.com/tengbao/vanta/f8b351906688b56f0fc744e53bde81fc3c56f150/src/helpers.js",
+      "sha256": "74c3b6b3b10085c8bde6987ab8747b4d854dfec8d776cead17bbf9d0ee6fdb97"
+    },
+    {
+      "local": "original/vanta/LICENSE",
+      "url": "https://raw.githubusercontent.com/tengbao/vanta/f8b351906688b56f0fc744e53bde81fc3c56f150/LICENSE.md",
+      "sha256": "65df69dccc2a06fcf307e81da62c0f64b4abc03fe64a23944427a69642edadcb"
+    },
+    {
+      "local": "original/vanta/README.md",
+      "url": "https://raw.githubusercontent.com/tengbao/vanta/f8b351906688b56f0fc744e53bde81fc3c56f150/README.md",
+      "sha256": "483f2df9b99f4bd561aa16c9ddc829b2d7c422c9b659cdabd9494172bd840917"
+    },
+    {
+      "local": "original/vanta/package.json",
+      "url": "https://raw.githubusercontent.com/tengbao/vanta/f8b351906688b56f0fc744e53bde81fc3c56f150/package.json",
+      "sha256": "aa8e90ecb53efcf2d445f57d5529b30861d83de683d083d974b0283487eb2a52"
+    }
+  ],
+  "actualEmittedInputs": {
+    "node_modules/three-vanta/build/three.module.js": {
+      "bytesInOutput": 610555,
+      "sha256": "bd68cba29c7ff2dd9ab8c4480ca40c51becdb8892986742796a62cdfb0025c85"
+    }
+  },
+  "dependencies": [
+    {
+      "name": "three",
+      "version": "0.134.0",
+      "declaration": "MIT",
+      "note": "Original installed package text.",
+      "licenseFiles": {
+        "node_modules/three-vanta/LICENSE": "7dddf7c5b8fd10ee654db8857d75d104b5557889aa5a91fc4ca545ea7c07062f"
+      }
+    }
+  ],
+  "changes": [
+    "Original complete effect retained; no images, fonts, backend, media, fake canvas substitute or screenshots.",
+    "Shared isolated host tracks WebGL allocations and compile/link status; failures/context loss are visible and stop. Hidden unmount releases resources, visible return rebuilds original scene; stale callbacks cannot resume disposed work.",
+    "Actual554 compose/default CSP, GL command/status stubs, DOM and deterministic bounds tests. Native GPU compilation/pixels remain unverified.",
+    "Three0.134.0 matches original fixed README r134 recommendation. NET source unchanged. Original random points, distance links, colors, camera easing and pointer target calculation retained. No actual Agent topology or active raycaster picking claim.",
+    "_base init error no longer falls back to a plain background; it propagates to explicit failure. Destroy uses original listener teardown plus renderer.dispose/forceContextLoss and shared resource guard.",
+    "Unused copied StackOverflow clearThree helper removed entirely from shipped helpers, along with its import/call. New disposal uses documented scene.clear() and renderer.dispose(), and independent host-owned WebGL allocation ledger. No change to NET visual math.",
+    "Reduced motion allows initial rendering plus one queued original update, then no continuous RAF. No new visible parameter panel."
+  ],
+  "componentDiff": "--- original/_base.js\n+++ adapted/_base.js\n@@ -1,4 +1,4 @@\n-import {mobileCheck, q, color2Hex, clearThree} from './helpers.js'\n+import {mobileCheck, q, color2Hex} from './helpers.js'\n // const DEBUGMODE = window.location.toString().indexOf('VANTADEBUG') !== -1\n \n const win = typeof window == 'object'\n@@ -89,16 +89,7 @@\n     try {\n       this.init()\n     } catch (e) {\n-      // FALLBACK - just use color\n-      error('Init error', e)\n-      if (this.renderer && this.renderer.domElement) {\n-        this.el.removeChild(this.renderer.domElement)\n-      }\n-      if (this.options.backgroundColor) {\n-        console.log('[VANTA] Falling back to backgroundColor')\n-        this.el.style.background = color2Hex(this.options.backgroundColor)\n-      }\n-      return\n+      throw e\n     }\n \n     // After init\n@@ -402,12 +393,14 @@\n \n     const scene = this.scene\n     if (scene && scene.children) {\n-      clearThree(scene)\n+      scene.clear()\n     }\n     if (this.renderer) {\n       if (this.renderer.domElement) {\n-        this.el.removeChild(this.renderer.domElement)\n-      }\n+        this.renderer.domElement.remove()\n+      }\n+      this.renderer.dispose()\n+      this.renderer.forceContextLoss()\n       this.renderer = null\n       this.scene = null\n     }\n--- original/helpers.js\n+++ adapted/helpers.js\n@@ -45,20 +45,3 @@\n   return (0.299 * threeColor.r) + (0.587 * threeColor.g) + (0.114 * threeColor.b);\n }\n \n-export function clearThree(obj) {\n-  // https://stackoverflow.com/questions/30359830/how-do-i-clear-three-js-scene/48722282\n-  while (obj.children && obj.children.length > 0) {\n-    clearThree(obj.children[0])\n-    obj.remove(obj.children[0])\n-  }\n-  if (obj.geometry) obj.geometry.dispose()\n-  if (obj.material) { // in case of map, bumpMap, normalMap, envMap ...\n-    Object.keys(obj.material).forEach(prop => {\n-      if (!obj.material[prop]) return\n-      if (obj.material[prop] !== null && typeof obj.material[prop].dispose === 'function') {\n-        obj.material[prop].dispose()\n-      }\n-    })\n-    obj.material.dispose()\n-  }\n-}",
+  "fiberAdaptedSHA256": null,
+  "tests": [
+    {
+      "slug": "vanta-net",
+      "mode": "contextlost",
+      "pass": true,
+      "drawCommands": 292,
+      "shadersSubmitted": 4,
+      "allocated": 590,
+      "deleted": 590,
+      "contextLossRequests": 2,
+      "scope": "Original Three and original GLSL submitted to stubbed WebGL. No native shader compilation or pixels verified."
+    },
+    {
+      "slug": "vanta-net",
+      "mode": "reduced",
+      "pass": true,
+      "drawCommands": 864,
+      "shadersSubmitted": 12,
+      "allocated": 1746,
+      "deleted": 1746,
+      "contextLossRequests": 6,
+      "scope": "Original Three and original GLSL submitted to stubbed WebGL. No native shader compilation or pixels verified."
+    },
+    {
+      "slug": "vanta-net",
+      "mode": "earlyexit",
+      "pass": true,
+      "drawCommands": 142,
+      "shadersSubmitted": 4,
+      "allocated": 574,
+      "deleted": 574,
+      "contextLossRequests": 2,
+      "scope": "Original Three and original GLSL submitted to stubbed WebGL. No native shader compilation or pixels verified."
+    },
+    {
+      "slug": "vanta-net",
+      "mode": "initialhidden",
+      "pass": true,
+      "drawCommands": 1010,
+      "originalThreeSecondCycles": 0,
+      "matrixSubmissions": 1006,
+      "shadersSubmitted": 12,
+      "allocated": 1750,
+      "deleted": 1750,
+      "contextLossRequests": 6,
+      "scope": "Original Three and original GLSL submitted to stubbed WebGL. No native shader compilation or pixels verified."
+    },
+    {
+      "slug": "vanta-net",
+      "mode": "normal",
+      "pass": true,
+      "drawCommands": 1154,
+      "shadersSubmitted": 12,
+      "allocated": 1754,
+      "deleted": 1754,
+      "contextLossRequests": 6,
+      "scope": "Original Three and original GLSL submitted to stubbed WebGL. No native shader compilation or pixels verified."
+    },
+    {
+      "slug": "vanta-net",
+      "mode": "latefail",
+      "pass": true,
+      "drawCommands": 288,
+      "shadersSubmitted": 4,
+      "allocated": 582,
+      "deleted": 582,
+      "contextLossRequests": 2,
+      "scope": "Original Three and original GLSL submitted to stubbed WebGL. No native shader compilation or pixels verified."
+    },
+    {
+      "slug": "vanta-net",
+      "mode": "unsupported",
+      "pass": true,
+      "drawCommands": 0,
+      "originalThreeSecondCycles": 0,
+      "matrixSubmissions": 0,
+      "shadersSubmitted": 0,
+      "allocated": 0,
+      "deleted": 0,
+      "contextLossRequests": 0,
+      "scope": "Original Three and original GLSL submitted to stubbed WebGL. No native shader compilation or pixels verified."
+    },
+    {
+      "slug": "vanta-net",
+      "mode": "missingroot",
+      "pass": true,
+      "drawCommands": 0,
+      "shadersSubmitted": 0,
+      "allocated": 0,
+      "deleted": 0,
+      "contextLossRequests": 0,
+      "scope": "Original Three and original GLSL submitted to stubbed WebGL. No native shader compilation or pixels verified."
+    },
+    {
+      "slug": "vanta-net",
+      "mode": "shaderfail",
+      "pass": true,
+      "drawCommands": 0,
+      "shadersSubmitted": 1,
+      "allocated": 432,
+      "deleted": 432,
+      "contextLossRequests": 2,
+      "scope": "Original Three and original GLSL submitted to stubbed WebGL. No native shader compilation or pixels verified."
+    }
+  ],
+  "nativeVisualQA": "not-run"
+}
