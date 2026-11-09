@@ -1,0 +1,127 @@
+{
+  "repository": "https://github.com/CopilotKit/CopilotKit",
+  "revision": "c7815d9ac96f48fb3a64ad8c18e176a870c81763",
+  "sourcePath": "examples/showcases/deep-agents-job-search/src/components/ResumeUpload.tsx + JobsResults.tsx",
+  "sourceHashes": {
+    "package.json": "d04fb9e5c52ae4139cd5506f86d509b1fa34d78434a80584194037d4606eb0e1",
+    "LICENSE": "15a0e5343aea872c0573ad72feb6044b336f162d724cc1673c608e6b37ea071b",
+    "src/components/JobsResults.tsx": "d5866048c591a5df272a3fc0e778db7e8a757eee7b6c54cb3240e434eb85095b",
+    "src/components/ResumeUpload.tsx": "06124767b38a0993cc70ae60f0a8e6eb4547685f4c20193c379efdce4c93e69c",
+    "src/app/globals.css": "769edf77bd0d101a2d26e6c5656defba8cd885ff37d92279fa293a2756fe5651"
+  },
+  "runtimeDependencies": [
+    {
+      "name": "lucide-react",
+      "version": "0.555.0",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-coss-chat-local/node_modules/lucide-react",
+      "license": "ISC",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "3c57143f22dac950efebf84002e360bba5458c7b90fe583b0667aaaef1a7256e"
+      }
+    },
+    {
+      "name": "react",
+      "version": "19.3.1",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-coss-chat-local/node_modules/react",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+      }
+    },
+    {
+      "name": "react-dom",
+      "version": "19.3.1",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-coss-chat-local/node_modules/react-dom",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+      }
+    },
+    {
+      "name": "scheduler",
+      "version": "0.28.0",
+      "packagePath": "/workspace/scratch/15f43349f656/ui-coss-chat-local/node_modules/scheduler",
+      "license": "MIT",
+      "scope": "emitted-runtime",
+      "licenseSHA256": {
+        "LICENSE": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+      }
+    }
+  ],
+  "compiledCSSLicense": {
+    "name": "tailwindcss",
+    "version": "4.3.0",
+    "sha256": "60e0b68c0f35c078eef3a5d29419d0b03ff84ec1df9c3f9d6e39a519a5ae7985"
+  },
+  "adaptation": "Original CopilotKit Deep Agents Job Search ResumeUpload and complete JobsResults table retained, one upload/result demonstration family. Host supplies only internally-created fictional File fixtures and two fixed fictional job rows; no real resume picker, upload, parsing, AI skill inference, hiring decision or remote employer link. File picker explicitly disabled. Added demoFile/processDemo props route internally created files through ORIGINAL handleFileChange MIME whitelist; replaced original FormData+fetch with local300ms Promise that either returns an explicit fake result or rejects for testing. No file bytes are read, no real personal information collected. Original loading/error/success/reset/button styling and Good match column retained, persistent Chinese disclaimer says uploaded and matching labels describe only local demonstration states. JobsResults only loses href capability. Capture form before await fixes original event.currentTarget async lifetime; mounted/generation guards prevent old resolve/reject from setting state after new fixture/hide/exit, pending host timer cancelled and Promise rejected on teardown. Original source globalsCSS compiled, system fonts, no media. Host file-invalid/reset/failure controls are declared fixture UI, not original backend features. Actual package versions recorded; fixed original source is not claimed matching all npm versions. Tests actual569compose with original format rejection,disabled real picker,local failed submit/retry,success/two result rows,clear,hidden during pending Promise/stale callback/oldnodes,earlymodule/lateerror. Four modes and loader pass; all owned listeners/timers/RAF/observers0 and forbidden network/storage/clipboard/eval calls0. Native file selection deliberately unavailable, no native pixel validation. Source modifications fully preserved in ADAPTATION.diff.",
+  "nativeVisualVerified": false,
+  "loaderVerification": [
+    {
+      "slug": "resume",
+      "pass": true,
+      "utf16Bytes": 493988,
+      "fetches": 3,
+      "actualCreatePreviewLoader569": true,
+      "cacheHit": true,
+      "released": true,
+      "iframeExecution": false
+    }
+  ],
+  "tests": [
+    {
+      "mode": "normal",
+      "pass": true,
+      "actualCompose569": true,
+      "scope": "Disabled real file picker,local File fixture routed through original type validation,invalid format,local failure/retry,success original table,clear,hide during pending Promise/late callback/oldnodes,earlymodule/lateerror; no real upload/parsing/model",
+      "cleanup": {
+        "listeners": 0,
+        "timers": 0,
+        "raf": 0,
+        "observers": 0
+      },
+      "blockedCalls": 0
+    },
+    {
+      "mode": "early",
+      "pass": true,
+      "actualCompose569": true,
+      "scope": "Disabled real file picker,local File fixture routed through original type validation,invalid format,local failure/retry,success original table,clear,hide during pending Promise/late callback/oldnodes,earlymodule/lateerror; no real upload/parsing/model",
+      "cleanup": {
+        "listeners": 0,
+        "timers": 0,
+        "raf": 0,
+        "observers": 0
+      },
+      "blockedCalls": 0
+    },
+    {
+      "mode": "reduced",
+      "pass": true,
+      "actualCompose569": true,
+      "scope": "Disabled real file picker,local File fixture routed through original type validation,invalid format,local failure/retry,success original table,clear,hide during pending Promise/late callback/oldnodes,earlymodule/lateerror; no real upload/parsing/model",
+      "cleanup": {
+        "listeners": 0,
+        "timers": 0,
+        "raf": 0,
+        "observers": 0
+      },
+      "blockedCalls": 0
+    },
+    {
+      "mode": "failure",
+      "pass": true,
+      "actualCompose569": true,
+      "scope": "Disabled real file picker,local File fixture routed through original type validation,invalid format,local failure/retry,success original table,clear,hide during pending Promise/late callback/oldnodes,earlymodule/lateerror; no real upload/parsing/model",
+      "cleanup": {
+        "listeners": 0,
+        "timers": 0,
+        "raf": 0,
+        "observers": 0
+      },
+      "blockedCalls": 0
+    }
+  ]
+}
