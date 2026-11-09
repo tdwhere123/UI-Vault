@@ -1,0 +1,1627 @@
+{
+  "repository": "https://github.com/actualbudget/actual",
+  "revision": "7d4c52647b18f1abeae5cb8f09fdd16a6d6b334b",
+  "sourcePath": "packages/desktop-client/src/components/modals/BudgetAutomationsModal/AutomationEditorPane.tsx",
+  "previousSourcePath": "packages/desktop-client/src/components/modals/BudgetAutomationsModal/BudgetAutomationsModal.tsx",
+  "originals": [
+    {
+      "path": "LICENSE.txt",
+      "sha256": "71e4b3053e4622e1f5fc5d8aa5336350de32ead39247924c596d659b89b47b6f",
+      "gitBlob": "3898f370d3cef6eaa0cbe60b936512bba6383cfa"
+    },
+    {
+      "path": "packages/component-library/package.json",
+      "sha256": "0f70c066fb2a48a1bbe55e2f957d8fa326bf1fbe9f1005355f5889c271ff597d",
+      "gitBlob": "2762128a7f4e03a8287be6eecbf84ba016b594d5"
+    },
+    {
+      "path": "packages/component-library/src/AlignedText.tsx",
+      "sha256": "14ba788fb59d7d4ef9bbb59db3ccd00f0149da89a0b0ae9cc07e83f289b5fb0f",
+      "gitBlob": "a8d55357d37d07903ea79a3fb92e0969f42aa7fe"
+    },
+    {
+      "path": "packages/component-library/src/Block.tsx",
+      "sha256": "da87bbdd0d662fe04b363ebd8a5257922da0ca4a0a5065641b6f3e18aa834195",
+      "gitBlob": "ebafd3fc57f241c8f0f5a0cb7231872185640026"
+    },
+    {
+      "path": "packages/component-library/src/Button.tsx",
+      "sha256": "eab935bf6d82c8cbaa8c5e2c6118d65e6013bdacd8670d5fdfcbe03d80579a8e",
+      "gitBlob": "262531cb54d0904012a8aa6ad83cb9eaca32a362"
+    },
+    {
+      "path": "packages/component-library/src/InitialFocus.ts",
+      "sha256": "398e9d1558bacc74c6fc29236e17abdb9e74ac4f42a395937f804e01ef8a6df0",
+      "gitBlob": "7cf0625b5ed2e105d9892b83f7b8fb1361825eb8"
+    },
+    {
+      "path": "packages/component-library/src/Input.tsx",
+      "sha256": "afc385e4dd0acd7b909f4af7e423687ccf27ce0b5d7dbeb3a27d047a3590b297",
+      "gitBlob": "3f566c21104326a1c521b054ccef11d904808566"
+    },
+    {
+      "path": "packages/component-library/src/Menu.tsx",
+      "sha256": "8b302156fb968f84de93a445b08aae37bb0683fea78475bb8ea9078869199944",
+      "gitBlob": "56f27c1387d25590606d0ece4c6e87a1de3fb521"
+    },
+    {
+      "path": "packages/component-library/src/MonthPicker.tsx",
+      "sha256": "bce6ed3927b4fc24489a49fef422ca5a9612811fcd72e9086dd9c8c4d92d15c5",
+      "gitBlob": "488e3f96714e5b6cfcbf48a6b1724044d9b8b7d8"
+    },
+    {
+      "path": "packages/component-library/src/Popover.tsx",
+      "sha256": "b455ef5e4a7f47077048c74e7bc17afc781aaf0995e51f9225653ee625401cb5",
+      "gitBlob": "6fdbe94f22b4be7f4f10c97dba919b189533428c"
+    },
+    {
+      "path": "packages/component-library/src/Select.tsx",
+      "sha256": "e02f34702b9141ae4b4ee186b0a0e7e80966c882fdbd4fb20719f1fd4df0bb71",
+      "gitBlob": "338fdb65bae7ead6afeeffa31688f3c0622b5256"
+    },
+    {
+      "path": "packages/component-library/src/SpaceBetween.tsx",
+      "sha256": "a19cdd9dee01c4e41ef4de2583f092c143f6c78df9cf15435a887d35bc348f59",
+      "gitBlob": "0a6d226d60cfd71935ba5411280e60151a4727d3"
+    },
+    {
+      "path": "packages/component-library/src/Text.tsx",
+      "sha256": "343b3ecac92a9ba2e8dd821c119ceddbec92760742626c91f03dc353cebe0dc1",
+      "gitBlob": "ad2a22413e3a4061828fce2a12c020aa91a8654b"
+    },
+    {
+      "path": "packages/component-library/src/TextOneLine.tsx",
+      "sha256": "399f34b5d0869e77aadaac8e8e7a054cac2e5870fce01b9d118c91205cc25642",
+      "gitBlob": "b42b1f47c6c56451d836ebe922cd0f5025ed4c29"
+    },
+    {
+      "path": "packages/component-library/src/Toggle.tsx",
+      "sha256": "5201b7913a1a6eb4490ba9c1fefb763595b875de3d96c60e07d9dcf72575270c",
+      "gitBlob": "e245a8774b7ad1e66009d8f685929b89f2f5f7fd"
+    },
+    {
+      "path": "packages/component-library/src/Tooltip.tsx",
+      "sha256": "ddca65ddd0c06040e405ea80f768a7d5a214d8b3338160de4d26bba7a0d2350c",
+      "gitBlob": "3d87c13a757d0452fb836eb14c155a5e34cb1870"
+    },
+    {
+      "path": "packages/component-library/src/View.tsx",
+      "sha256": "89a241e6d79958ac76e29f222a091826d3fcc0000893424c1fea01b44f463fa4",
+      "gitBlob": "f8cdbd0defc847b972809ab0dca188f0b744df93"
+    },
+    {
+      "path": "packages/component-library/src/date-range-picker/GridButton.tsx",
+      "sha256": "17ec1f83bddd49c4d61c4f7fbc146aacce23ff106d64f80bbb2341cc201ebff6",
+      "gitBlob": "8209135e2218bc4ee096702e4bcc999faca57a00"
+    },
+    {
+      "path": "packages/component-library/src/date-range-picker/MonthGrid.tsx",
+      "sha256": "561ea51756024e16d271b0bee9549b2bb605b7c994cba967c2bef783316d293c",
+      "gitBlob": "fe4937044ec7d2e8a8033b70fc395f82ab6cbee7"
+    },
+    {
+      "path": "packages/component-library/src/date-range-picker/NavRow.tsx",
+      "sha256": "6a60ea980d7991f7e2c81666934b12729c2047f843e3055133d0a2290b915720",
+      "gitBlob": "c0632c57af4351b7f63b8c18720122d36c4cf43a"
+    },
+    {
+      "path": "packages/component-library/src/date-range-picker/util.ts",
+      "sha256": "2aa0e5e02663911a26f1701818d9a0fc91fb22b97d0910d5ba6c5f962bfb822a",
+      "gitBlob": "ff7f223fcd281d8a87d6bd96bfc9052f47cd9d88"
+    },
+    {
+      "path": "packages/component-library/src/hooks/useResponsive.ts",
+      "sha256": "9632902f124744e94f628224ebb9b229f1876dbb2fc56f9cd6cd7a60d3ec0b08",
+      "gitBlob": "481d793a0ec68b8266941bbcd81f78fb67f5c7c3"
+    },
+    {
+      "path": "packages/component-library/src/icons/AnimatedLoading.tsx",
+      "sha256": "664e4e22a10f9fa74024994079d02de9e1858b1dea8245f5c0c59ebf629c6ca8",
+      "gitBlob": "e53adeb0e9d48daa7a4ec790ae1f90ccde701a27"
+    },
+    {
+      "path": "packages/component-library/src/icons/Loading.tsx",
+      "sha256": "b2960a565bcf4e3e05c796195621729c61a8970753d27bba4282cbb47dc9ab8e",
+      "gitBlob": "9a18842c7fe7ab2964cc46e7e9c4f00eb7287957"
+    },
+    {
+      "path": "packages/component-library/src/icons/logo/Logo.tsx",
+      "sha256": "4fdbbc6b9b57305da0c4afe92d6c522de9a92a85cb35069ea40bb32335b6e023",
+      "gitBlob": "ab3ceea087335ee179246ee42218462b79fa87af"
+    },
+    {
+      "path": "packages/component-library/src/icons/logo/index.ts",
+      "sha256": "5752848cc9a4b95df3b3a294693f1f491c4a369fbb2430b10f3ad5665e43c35b",
+      "gitBlob": "c7d7d8ea7151dac21b936157d5d776a4b7019fef"
+    },
+    {
+      "path": "packages/component-library/src/icons/v0/Add.tsx",
+      "sha256": "1910e5bb6f9cfb602eb9fec57b75220602b3172fb658bb3d473716697e1c645c",
+      "gitBlob": "bee44a8fed8b7757fbd14ec2977b96b88efa6f9e"
+    },
+    {
+      "path": "packages/component-library/src/icons/v0/Delete.tsx",
+      "sha256": "ca137f41ad538314c93cc11fecc602381a26e1424aba0e94465a121cbf24f23c",
+      "gitBlob": "311e818354c22c4331c31fab6d49229e38758ec6"
+    },
+    {
+      "path": "packages/component-library/src/icons/v0/ExpandArrow.tsx",
+      "sha256": "b64df0aa8436e2f9bc16a21713a85d71dab033c1a04489bf782725a850007cfa",
+      "gitBlob": "1acbc21eebff0dde67699cbcb2f91b106cf2435c"
+    },
+    {
+      "path": "packages/component-library/src/icons/v0/Split.tsx",
+      "sha256": "78f79d107d0545428319398eb68ea9e5529c51a4fff561246e37420f5fec5560",
+      "gitBlob": "415196f6380b7ce16238a3cf366fde3a4d473c74"
+    },
+    {
+      "path": "packages/component-library/src/icons/v0/Subtract.tsx",
+      "sha256": "075b2ec96e69ba0c18366adf96128b05ae5fad4c87ecdf588b42a6262cc35069",
+      "gitBlob": "c2ed7f01b24fedbe0fa29b50f2910cc05d622b5d"
+    },
+    {
+      "path": "packages/component-library/src/icons/v0/index.ts",
+      "sha256": "035d3d4d96a4942441255d709f5e89c11d4d056cbe0b539add5d25eb5ca781a5",
+      "gitBlob": "c5f97c583e99f35d863f59ee049512f11c7cbc03"
+    },
+    {
+      "path": "packages/component-library/src/icons/v1/Add.tsx",
+      "sha256": "3638444f3f8c9b386d84e6f23b6e97b1b68d302d8c8b3532e008d94a7b0167db",
+      "gitBlob": "13ad08d24b940a3c4c33140e67c2310ed61049a4"
+    },
+    {
+      "path": "packages/component-library/src/icons/v1/ArrowThinRight.tsx",
+      "sha256": "eb5e11d93e854a13bf4911d5875ef136523412257a764561e5f957f3828ba727",
+      "gitBlob": "ec453bd2a1c43eadf0edd4d0cea5b35863ee2be1"
+    },
+    {
+      "path": "packages/component-library/src/icons/v1/Bookmark.tsx",
+      "sha256": "d9943d079a61ef291bd044049638c9ff757f306752593beb3589b3758870a2e8",
+      "gitBlob": "8be3adba9a705b7a8d426b2d5a9f1472ebb24ff7"
+    },
+    {
+      "path": "packages/component-library/src/icons/v1/ChartPie.tsx",
+      "sha256": "42b389d4afaf81de7104a2fd85355b885e72fabbd67758c4090346ee1778f878",
+      "gitBlob": "b239567e2cf74efe2c88d1be7c1d3594fc9f324f"
+    },
+    {
+      "path": "packages/component-library/src/icons/v1/Checkmark.tsx",
+      "sha256": "99b81e07d63eb355aa35d174564796bcf65c696c061b91ff56efd16c86333d71",
+      "gitBlob": "5e98954c330dc612f36bd423b2caea93c96aec37"
+    },
+    {
+      "path": "packages/component-library/src/icons/v1/CheveronDown.tsx",
+      "sha256": "cffc491fa7717ff4b54ac0955295dbd5865ec7ee209ed3ec11624ba1b379c132",
+      "gitBlob": "72428d816600c018642dc5d859ba28cd9f6e6e25"
+    },
+    {
+      "path": "packages/component-library/src/icons/v1/CheveronLeft.tsx",
+      "sha256": "7599ca41f4a9b65dccc8c1be9b1178d6eb4335b3c21332214bfad419f514fb6a",
+      "gitBlob": "fa9dabb5064ece853a36857eb0656e8989f1d11e"
+    },
+    {
+      "path": "packages/component-library/src/icons/v1/CheveronRight.tsx",
+      "sha256": "0abdb337575cfa093e000f2c47c12689fbcaeae9579d16ded565d1bdb6bcd4c0",
+      "gitBlob": "ccf4f760d7a244653d4f760a45d45dc6d8d50b7a"
+    },
+    {
+      "path": "packages/component-library/src/icons/v1/DotsHorizontalTriple.tsx",
+      "sha256": "00136ec3bd8d19bc1db71f8dbc737a1842726bc3a6425b48b8c56e6f29b6f4c1",
+      "gitBlob": "2bc575c6e29e1c6947d3f69edba964e96f96e9d3"
+    },
+    {
+      "path": "packages/component-library/src/icons/v1/Equals.tsx",
+      "sha256": "fe49c0e4fbe02ce41ce4b0058c3ab646cd292822ec9f3f46a4daf00f3ba0529f",
+      "gitBlob": "f68fd81302d60e3f3596b0dc42c44ee7b584b27a"
+    },
+    {
+      "path": "packages/component-library/src/icons/v1/ExclamationOutline.tsx",
+      "sha256": "c159668d638330764f563d9f7b45e708ae2ce0038341543895c95f3be74c986f",
+      "gitBlob": "25bec0a6cf6734042b580ea60153712529922817"
+    },
+    {
+      "path": "packages/component-library/src/icons/v1/Flag.tsx",
+      "sha256": "d60fa38c0f24f6da8bc7dffdb1bcf604fcb0a9065b7fbe294edb9686236aba49",
+      "gitBlob": "3f93835514f79dd72bc1c8eda103267526d430d9"
+    },
+    {
+      "path": "packages/component-library/src/icons/v1/InformationOutline.tsx",
+      "sha256": "9431ec242faaa58db666a03db4eddebddc782b252ff6e5777961dce292c554d8",
+      "gitBlob": "39384022d8946bb5adaa6e68c281cf6fac514228"
+    },
+    {
+      "path": "packages/component-library/src/icons/v1/Location.tsx",
+      "sha256": "022ecf60efa9282f38be7c8e164f42645835ee1036fe07e0850b9f2860592d09",
+      "gitBlob": "eaae5df6a743f1e0d35a3607d3149170c6239573"
+    },
+    {
+      "path": "packages/component-library/src/icons/v1/MoneyBag.tsx",
+      "sha256": "9871e800b673be96fe41943d21fb099b1b746d3238f06d284a0f03b024d8e7f9",
+      "gitBlob": "97e6b3e844f0ba7e3947caaae4171b6b3154954a"
+    },
+    {
+      "path": "packages/component-library/src/icons/v1/PiggyBank.tsx",
+      "sha256": "8d179af9febc8f9455ceb9453c90058672ad5585db7ecc79cc8ccf1f0ed1e0a3",
+      "gitBlob": "339b89bd3cb7fb8b41093d87cea4ef39e479667a"
+    },
+    {
+      "path": "packages/component-library/src/icons/v1/Share.tsx",
+      "sha256": "ddbec0aa083216eaebfaf99eeb1b9bfbee4e1e8cf384d9f4c460442b1990c5de",
+      "gitBlob": "9785dda65bc38a223a61b7d85af0373dae110c0e"
+    },
+    {
+      "path": "packages/component-library/src/icons/v1/Subtract.tsx",
+      "sha256": "519e4845e3e90729c122b722ff566fee0efcfb4b8ac5843888fb7140424fdb17",
+      "gitBlob": "d8c0affd462c4577e647f7e8c32d9fa3263bfc1e"
+    },
+    {
+      "path": "packages/component-library/src/icons/v1/Time.tsx",
+      "sha256": "5345781369d14fc36ed5b9fd1da865fca5b1cf54b8b16660b0b3fb4a289af2f4",
+      "gitBlob": "0e250b61477741174bd8d58b88fdd6821bf50d14"
+    },
+    {
+      "path": "packages/component-library/src/icons/v1/index.ts",
+      "sha256": "25f6a83366adebe660e6d796dfbe5d65184462ea590a559d284d6c28aad3a5a9",
+      "gitBlob": "51c8b958cd4818f6c16628cdc570814db130948f"
+    },
+    {
+      "path": "packages/component-library/src/icons/v2/AlertTriangle.tsx",
+      "sha256": "15bbd3d4b1d3a4ae49806455f96506e2498b9e0ed6dc4c7807769fd252f8ec80",
+      "gitBlob": "fba1c292ac9e8f98354555c4a07bf8280b3d41da"
+    },
+    {
+      "path": "packages/component-library/src/icons/v2/ArrowButtonDown1.tsx",
+      "sha256": "4d4067863941d2e3a4e644dab497253b5ca895dc6f99d824e4588cbd7f947aed",
+      "gitBlob": "2a948abcceb063da4d80a2834386131e57e8b260"
+    },
+    {
+      "path": "packages/component-library/src/icons/v2/ArrowButtonUp1.tsx",
+      "sha256": "20200fcc689f6c47ca0d22ef162c990d4d9efef1927b1404e7913542b4ee66e3",
+      "gitBlob": "54885ac1e9ca89a6aa1882d03e3d51f1b3d19643"
+    },
+    {
+      "path": "packages/component-library/src/icons/v2/ArrowsSynchronize.tsx",
+      "sha256": "ec72bfc04efeed2de7498a270817abedeb081194aebbee0eddc693948f2d4fe6",
+      "gitBlob": "1981332559b8f0e327732ba417be6e5da3db448b"
+    },
+    {
+      "path": "packages/component-library/src/icons/v2/Calendar3.tsx",
+      "sha256": "b5a41ab56474d3460b6de00c6348be983dfb62d98577830fcc46a2e955279f93",
+      "gitBlob": "f53d50055407e95bb80d484e48f89f01c4a0cccc"
+    },
+    {
+      "path": "packages/component-library/src/icons/v2/CustomNotesPaper.tsx",
+      "sha256": "bfcae1f0416487cc9adca417150f97d334a0c3d5820acc3b84ca6e3686ccf745",
+      "gitBlob": "1eabeeb824f11354789137c71b5be9b36f9ad298"
+    },
+    {
+      "path": "packages/component-library/src/icons/v2/InformationCircle.tsx",
+      "sha256": "bacbc75f5b062163ba7d533b65dcca44a90dff05e616e48b64994d19ef06267e",
+      "gitBlob": "7c9a65781f7f122131e1a4019c8e5c258541da54"
+    },
+    {
+      "path": "packages/component-library/src/icons/v2/Remove.tsx",
+      "sha256": "8168557360c338d4f1bc05dae897a6ee3105c67ad03d276ee6f0e65aeeb30a10",
+      "gitBlob": "21e4d841905ebe1afb4b7fcb78df97c2cc6d860b"
+    },
+    {
+      "path": "packages/component-library/src/icons/v2/index.ts",
+      "sha256": "74b5232ec55ab105a19a262e507813236e8ab6bb7f19bf345f3ad23fbb22b3d5",
+      "gitBlob": "b00ff209cf87d55081d087d6b6d0072f82e94a73"
+    },
+    {
+      "path": "packages/component-library/src/styles.ts",
+      "sha256": "79bb3f7f945ef201ddc7fdb6a0dfee0fa84f439a510dce18e08be429ae35572d",
+      "gitBlob": "8af950c8b5ced713456b4f65106062ce8d63c090"
+    },
+    {
+      "path": "packages/component-library/src/theme.ts",
+      "sha256": "05307dc6f927705a8c76e43579c910bf6415ce28b375eea19251dc51dd2b1726",
+      "gitBlob": "8d6d1e5058d04e1b1345ad04678659b161ce9353"
+    },
+    {
+      "path": "packages/component-library/src/themes/light.css",
+      "sha256": "7a7919f8f1cf75185dceb5ee012eff816457cf76cfbf96f56868eb0c14c86418",
+      "gitBlob": "d8ecb6df21d17f6f1799594b17a10e124fa3018f"
+    },
+    {
+      "path": "packages/component-library/src/themes/palette.css",
+      "sha256": "4c2d01c06c22c7460944b1f3890a8357a11a977ffb505b70843d1daf6beb53f4",
+      "gitBlob": "2a519dbe20aa44d09425aae5a7cb52bc195a91e5"
+    },
+    {
+      "path": "packages/component-library/src/tokens.ts",
+      "sha256": "de39adb316a2028b87132a7e3fadc706dcb278463dc0c7bdcd6112726ba3d467",
+      "gitBlob": "3c153874802b6621f19b44eb217bede85116454b"
+    },
+    {
+      "path": "packages/desktop-client/package.json",
+      "sha256": "813b1a26a2f669bc135d88cc5a691cf3599a4e8546f62320fea177500192e786",
+      "gitBlob": "081d6237716c79a2f917cd7aa609682349cf9508"
+    },
+    {
+      "path": "packages/desktop-client/src/accounts/accountsSlice.ts",
+      "sha256": "cc6b012cacf1b0eb8b734c1b83cf42b40573a055ba4f1a0789c1cc59f15a4daf",
+      "gitBlob": "e0edf2c7171c2881602cf7ab34ef39cecd8f0709"
+    },
+    {
+      "path": "packages/desktop-client/src/accounts/index.ts",
+      "sha256": "663f55d55acc5990919a6e7033a5af75983aaf87003dd2185629813de84c25b7",
+      "gitBlob": "d0720956a0e33da700dad0daafbb5d62b46e357b"
+    },
+    {
+      "path": "packages/desktop-client/src/accounts/mutations.ts",
+      "sha256": "5beb4df24b74049e4bd66ce39252d01dd7feb6317dda6d9a60ee042cf6077b9b",
+      "gitBlob": "ce453563388a11fc6882785c68ca546279dfc72b"
+    },
+    {
+      "path": "packages/desktop-client/src/accounts/queries.ts",
+      "sha256": "aa5c375948a3571e553a77cb90ab32991dbe487051ea461ec3a1a4d10d03490f",
+      "gitBlob": "80d3c272a85dce986564b8c999815f354979545b"
+    },
+    {
+      "path": "packages/desktop-client/src/app/appSlice.ts",
+      "sha256": "375844ea010d607c58f2b82bcb7825972251f073d2c7d4d1ad4a3a640b735579",
+      "gitBlob": "23dec32e37324403d8f246f521966f8dde99e7c3"
+    },
+    {
+      "path": "packages/desktop-client/src/budget/index.ts",
+      "sha256": "663f55d55acc5990919a6e7033a5af75983aaf87003dd2185629813de84c25b7",
+      "gitBlob": "d0720956a0e33da700dad0daafbb5d62b46e357b"
+    },
+    {
+      "path": "packages/desktop-client/src/budget/mutations.ts",
+      "sha256": "d0781dba39ddccd4de2cb5939d0559076741a91f272ad9c9921ca9507f1c01b9",
+      "gitBlob": "f409d62bdd3bc1b53c93e3b52d72e8297264764c"
+    },
+    {
+      "path": "packages/desktop-client/src/budget/queries.ts",
+      "sha256": "8e47af4f052fc4570ea6a02a916e7b3230578ef1c2f5c64dd65d3924430343ec",
+      "gitBlob": "215a6a6688dfb0492bfdeeb3ea7bf233dfb48fde"
+    },
+    {
+      "path": "packages/desktop-client/src/budgetfiles/budgetfilesSlice.ts",
+      "sha256": "8dad3ce2afaeaa3dc26fc0704b455f4f256d811afd6bc682ba1880fbbc0e42c2",
+      "gitBlob": "91f0faa7370640f9e60b8b07b0511222c4cca8c8"
+    },
+    {
+      "path": "packages/desktop-client/src/components/FeatureErrorFallback.tsx",
+      "sha256": "58cd604bbdc046be79b422bd95f72d295103dca0d4d9412020d70205083dea47",
+      "gitBlob": "7007f752bed812ef542b720aaeb4806205ecc4e2"
+    },
+    {
+      "path": "packages/desktop-client/src/components/FinancialText.tsx",
+      "sha256": "f14904dccffd67b8409f3ca480337889ed23307bd06fe5d34efcb8ef85151913",
+      "gitBlob": "1bf657ae916e602ccdffba84afc4466e7683ed79"
+    },
+    {
+      "path": "packages/desktop-client/src/components/FixedSizeList.tsx",
+      "sha256": "97d6a9b0b22706cc0b13cb0fafe3b1364c418e99eecdb67e176197c066bf6302",
+      "gitBlob": "a4d6db6dc9d1a278597c10eb624959e1a40b77fe"
+    },
+    {
+      "path": "packages/desktop-client/src/components/Notes.tsx",
+      "sha256": "925c48db0a1cad026088a9e298d96966af8072ed98ca84201a55e3dd7fd53346",
+      "gitBlob": "95e0278f15e05db2e6c7b5332e6e0a20715f9bca"
+    },
+    {
+      "path": "packages/desktop-client/src/components/NotesButton.tsx",
+      "sha256": "67257035fa65d9c7a11e9c9ab155f635206558fa50896fd91ae5235591cf59e8",
+      "gitBlob": "fa0076144ef52ec5d89333e5b81faa4231310375"
+    },
+    {
+      "path": "packages/desktop-client/src/components/PrivacyFilter.tsx",
+      "sha256": "89a36a7527fe70a96443d3b2f42019b6cdc1c690efc6a17cedbcdc86b398759d",
+      "gitBlob": "50b7eded64e33cbf234c27918a9363e06dde9441"
+    },
+    {
+      "path": "packages/desktop-client/src/components/alerts.tsx",
+      "sha256": "60e2806e457bd586e048ae01ff1184edf0d678b2620ab400687dabe3384f5dae",
+      "gitBlob": "050c3d646bb47f033e32b7dccb3771fad7a638d7"
+    },
+    {
+      "path": "packages/desktop-client/src/components/autocomplete/AccountAutocomplete.tsx",
+      "sha256": "852f71f076406d6e3e70b0818e7ee8890e8361bf3fa7a19a7d73db9bb60cf9a5",
+      "gitBlob": "627a2f5560070f9ad199f1eb10cab1031556f8af"
+    },
+    {
+      "path": "packages/desktop-client/src/components/autocomplete/Autocomplete.tsx",
+      "sha256": "bb6005aa6806a45865b4bc4c19e5e51fedef60e609ddb99c9bef936f59f51257",
+      "gitBlob": "f165a05f5549d231995fc33e3f6834d3771e4a87"
+    },
+    {
+      "path": "packages/desktop-client/src/components/autocomplete/CategoryAutocomplete.tsx",
+      "sha256": "70baf0d7aad0f3eef271c7bb6b3dbb14bd8f08b71f52b3429b040d9315fdeadb",
+      "gitBlob": "ac512b2132fdfa43da9a763eca2ea219685757e4"
+    },
+    {
+      "path": "packages/desktop-client/src/components/autocomplete/CategoryGroupAutocomplete.tsx",
+      "sha256": "7d9a53e9946a45cebfb7494b0589b0dbcde375657739ccc6e1da8453a018f413",
+      "gitBlob": "4c8618ed122541142352f24c686cfda8a50c6cb2"
+    },
+    {
+      "path": "packages/desktop-client/src/components/autocomplete/FilterAutocomplete.tsx",
+      "sha256": "f0bd3b8ecad6a70a9a4fc3327840f9396e2a2ce8b613d11540a8cb01881e9c43",
+      "gitBlob": "20612ec3f9a6aadcb82bde2dc4fe96338fe499a9"
+    },
+    {
+      "path": "packages/desktop-client/src/components/autocomplete/FilterList.tsx",
+      "sha256": "d9e032538599b7515bb44e7b15ce728f5729d2e92df257317f6516c10f5e2e37",
+      "gitBlob": "4f0dbc40d21801cf3a0201e75413878ba6bee283"
+    },
+    {
+      "path": "packages/desktop-client/src/components/autocomplete/ItemHeader.tsx",
+      "sha256": "57552ba4ab4dac2e9a1307a309029b563c4befe34d45d88e0adf872a3d500e57",
+      "gitBlob": "adadbf378bfbc35e9f739ab4210583aef2245f95"
+    },
+    {
+      "path": "packages/desktop-client/src/components/autocomplete/PayeeAutocomplete.tsx",
+      "sha256": "01aebf5063ede285d10712e8f3bbfb0641f46e09b6d38f164d39f556c373c63d",
+      "gitBlob": "fb416612a93c3baaedb423118383abf536e94ca9"
+    },
+    {
+      "path": "packages/desktop-client/src/components/autocomplete/ReportAutocomplete.tsx",
+      "sha256": "625f03daf066c42fba31b8c7369c14b801ae50ba5040732e82f8ed5227863ba9",
+      "gitBlob": "eafd6ac7869e599bb8b3f2097dda3dd0c05cf579"
+    },
+    {
+      "path": "packages/desktop-client/src/components/autocomplete/ReportList.tsx",
+      "sha256": "963668fbc85f2d1cb83581297eb504c97f1c87c87e31a66ff1a6b3601c74a782",
+      "gitBlob": "ac68e98e517b73a1ae04a31e797f28137f6cf931"
+    },
+    {
+      "path": "packages/desktop-client/src/components/autocomplete/filterCategorySuggestions.ts",
+      "sha256": "2a45dd5b52a9beccc048c6281a8fac19d9e1324f60a66489b57642a11238c031",
+      "gitBlob": "8a0e64da66000c8e351a46b2fd9492acf5978704"
+    },
+    {
+      "path": "packages/desktop-client/src/components/budget/BalanceWithCarryover.tsx",
+      "sha256": "3134d4c931eaf8116343944409029ecca66621aaae87cca8889207c860afbc4c",
+      "gitBlob": "83e5db1ed5dc85fee8d6ea1b2eefd44579a8e9b5"
+    },
+    {
+      "path": "packages/desktop-client/src/components/budget/GoalProgressRing.tsx",
+      "sha256": "ef77b5c03918c7bc6db1fb356f74bf1bb6a8eeb5166170097a17da50afc7d782",
+      "gitBlob": "6cdf55bb3b3039d1ee83909d6464aa3032c78002"
+    },
+    {
+      "path": "packages/desktop-client/src/components/budget/GoalStatus.tsx",
+      "sha256": "264fe7827e4733aeab2acf837eeafc25ee111510f3e5fee24e142d65933a7ab2",
+      "gitBlob": "b546bb8b6e8352b92d4a5f30933e03dce68267db"
+    },
+    {
+      "path": "packages/desktop-client/src/components/budget/MonthsContext.tsx",
+      "sha256": "fb1868978f75080d3170375a866e8ba6401791d0fa4f305d82f9ca67ef104798",
+      "gitBlob": "e77b328ac72f99dbbfa8cc74fbaceb4fc3871ee8"
+    },
+    {
+      "path": "packages/desktop-client/src/components/budget/envelope/BalanceMenu.tsx",
+      "sha256": "8ed39e30c63c4486d4b61615e91063616ea9fd594928c4143e1da5ea46641c22",
+      "gitBlob": "3c68dd28d6d1a082a43ed5f780a19e96142dbb44"
+    },
+    {
+      "path": "packages/desktop-client/src/components/budget/envelope/BalanceMovementMenu.tsx",
+      "sha256": "b577daf63cda67210501e22d67645a5952dbc2398c14bed93291a58ff1427790",
+      "gitBlob": "081e32bdcae5e055836c3bf024c0d7d3e0adc147"
+    },
+    {
+      "path": "packages/desktop-client/src/components/budget/envelope/BudgetMenu.tsx",
+      "sha256": "2256201d880a98216a68a758f57db5f3895c4b00ec5f786e39486c533af5b6de",
+      "gitBlob": "313bb91c1086975f0449f64eaa79d448a39467fb"
+    },
+    {
+      "path": "packages/desktop-client/src/components/budget/envelope/CoverMenu.tsx",
+      "sha256": "35551268dd277ceea7f62563020d6114b14eaa508a7280ae70c98a9ca3c17d4b",
+      "gitBlob": "a32011b02b40625d7cdccb643a4ce4505318b2e4"
+    },
+    {
+      "path": "packages/desktop-client/src/components/budget/envelope/EnvelopeBudgetComponents.tsx",
+      "sha256": "4695d1976b2c66a809b00f63ae2ed8e1b18a285b94989168961a1726dac1497f",
+      "gitBlob": "086dd32ba10743ceaacc1cc37e7a2dde4f131662"
+    },
+    {
+      "path": "packages/desktop-client/src/components/budget/envelope/EnvelopeBudgetContext.tsx",
+      "sha256": "2e07051ca26cecb039b66da6ed75e18a23f222c41da3ee6089c8fc85adc8d0e9",
+      "gitBlob": "c05ffc51fb8b717b18abc90911cc275fe204e111"
+    },
+    {
+      "path": "packages/desktop-client/src/components/budget/envelope/HoldMenu.tsx",
+      "sha256": "ba0db6d7c3c502e0ffb1d68bc86b15210c041f44559e1c5eb9b947e219f742fe",
+      "gitBlob": "fc203b449748cf733d6c3182d58e035ab2260858"
+    },
+    {
+      "path": "packages/desktop-client/src/components/budget/envelope/IncomeMenu.tsx",
+      "sha256": "93ce1ea18473ee1e0ac027b828902f8b125bed5ac8e94d7e85fe689861729a07",
+      "gitBlob": "4e197dd2b34959f86736ee8dca22dcb991a8f277"
+    },
+    {
+      "path": "packages/desktop-client/src/components/budget/envelope/TransferMenu.tsx",
+      "sha256": "74c10fed1c226654a38e1fed925720d7cf832e9bcc971be3902051f2973c7bbe",
+      "gitBlob": "c4bfab94de60565462dbf1039e42ddc460ab3c3c"
+    },
+    {
+      "path": "packages/desktop-client/src/components/budget/envelope/budgetsummary/BudgetMonthMenu.tsx",
+      "sha256": "793cfe4dac94bfffc63f0a6ba8d34522084b21e8aed857525a65db56462c8c96",
+      "gitBlob": "3299ddee8bff9870304aa8c227b639a6e8cc8f89"
+    },
+    {
+      "path": "packages/desktop-client/src/components/budget/envelope/budgetsummary/BudgetSummary.tsx",
+      "sha256": "858b1a6999867a43f9cbde72e44ec886b106ec4d0fdb6929f535ec248000276a",
+      "gitBlob": "c3c8598a8a9292f0a1c81488863261a9c84f66f9"
+    },
+    {
+      "path": "packages/desktop-client/src/components/budget/envelope/budgetsummary/ToBudget.tsx",
+      "sha256": "fae118d80646c4c601f1c28a097283b72fc7228584b01086423d188f6bba1b63",
+      "gitBlob": "d5f9b3d4555086003ed990d3a0a556285494d668"
+    },
+    {
+      "path": "packages/desktop-client/src/components/budget/envelope/budgetsummary/ToBudgetAmount.tsx",
+      "sha256": "3bfac5e53ea8b2db29a4bc50a4d7721f0ebbec2708292dba4800c926478e3fde",
+      "gitBlob": "a028742b51f5ec01c0c707432bd38f4e5fcfa4c0"
+    },
+    {
+      "path": "packages/desktop-client/src/components/budget/envelope/budgetsummary/ToBudgetMenu.tsx",
+      "sha256": "01d3b12acf55615c8ce674ddcc3744f76e8b4e64434c4e54d0ebf0f9649a90a2",
+      "gitBlob": "730731571d2d6eacf82429544c490da1ceba6dfb"
+    },
+    {
+      "path": "packages/desktop-client/src/components/budget/envelope/budgetsummary/TotalsList.tsx",
+      "sha256": "63c5d63c941bb1c15b3e8c4bf5391053f3c5b15e4bff1ec0e99bdf7b5a365d57",
+      "gitBlob": "c324a267c10ab925d53f1ac7648f9c60e698e569"
+    },
+    {
+      "path": "packages/desktop-client/src/components/budget/goals/ActiveEditor.tsx",
+      "sha256": "e93a55a370c5feeb0f1db6e68f785ce30104e978774cb806f778bd919486ad73",
+      "gitBlob": "e4815c9262ef7981de4ecb0c2ba2d4ce46cc1734"
+    },
+    {
+      "path": "packages/desktop-client/src/components/budget/goals/actions.ts",
+      "sha256": "b2c1cc8f2bcc31f03c0fbc4af2c945fb006699cf724015ef01cc8b51d1df7699",
+      "gitBlob": "d347aa48972756bf8a46658e51fd56de965b90a3"
+    },
+    {
+      "path": "packages/desktop-client/src/components/budget/goals/automationMessages.tsx",
+      "sha256": "c4699d08d0850f7237dcdbff3262e5de898e49597680ad93fa7b899733362f4d",
+      "gitBlob": "e47655d845d048e0bacde0fee5d6f43d7d2306af"
+    },
+    {
+      "path": "packages/desktop-client/src/components/budget/goals/constants.ts",
+      "sha256": "4366bdc6be52aae3107860dd18e1fff7fcc958b615a162879700663133881964",
+      "gitBlob": "cce1cf70c5c210724bc89dbbfce652beb396537d"
+    },
+    {
+      "path": "packages/desktop-client/src/components/budget/goals/displayTemplateMeta.ts",
+      "sha256": "2de451a7224d1fba445f88ce8817bd999251393f634fcad1c7cdc5d20a6199d8",
+      "gitBlob": "071c4eab3364db935e4ff6125bf6a2c8147f00e6"
+    },
+    {
+      "path": "packages/desktop-client/src/components/budget/goals/editor/AmountAdjustment.tsx",
+      "sha256": "9a012d5b82b1b9bc91cf09c1efa52f1999ccc0f3b7d5da92121d133f57523a42",
+      "gitBlob": "542712201ddf76ee3182a2021c4f155be38a0093"
+    },
+    {
+      "path": "packages/desktop-client/src/components/budget/goals/editor/BySaveAutomation.tsx",
+      "sha256": "8702d0b2ad5b71ed40addda58d920a434bb1686fe94e1f902a3a7067a9b49713",
+      "gitBlob": "7c97e811028fe653e9ba5b3f3165586b05858c25"
+    },
+    {
+      "path": "packages/desktop-client/src/components/budget/goals/editor/FixedAutomation.tsx",
+      "sha256": "fc980cf49ba48dfc15834525b322878750de2fad58e9e2eb6ee8427f187c2609",
+      "gitBlob": "b01f618aecd71c306ea263a350d4e60b38360e05"
+    },
+    {
+      "path": "packages/desktop-client/src/components/budget/goals/editor/HistoricalAutomation.tsx",
+      "sha256": "8a4c3627b10859c7d6bca2297ddb145322ad184af21f53b3c8f4f0d9ed844be1",
+      "gitBlob": "66945369d93769994d7c689381f5324f7da4913d"
+    },
+    {
+      "path": "packages/desktop-client/src/components/budget/goals/editor/LimitAutomation.tsx",
+      "sha256": "d37272332979a204a5478157d4abccf83f7c8097a91967cce5e63a76c40cab53",
+      "gitBlob": "bc5983978867a56feff10a6e32f2426444293c9b"
+    },
+    {
+      "path": "packages/desktop-client/src/components/budget/goals/editor/LongTermGoalAutomation.tsx",
+      "sha256": "c31d4b32d5fa2260f107c7b15c6078807ab68855d052202cccb14eed74a83b22",
+      "gitBlob": "2ed6db3c13befd935ade0ea318519660036d8e40"
+    },
+    {
+      "path": "packages/desktop-client/src/components/budget/goals/editor/PercentageAutomation.tsx",
+      "sha256": "0ea765dc21b3c05f334e9035cc6f97e02e1cd0ae1a214a3c1be04bfc1aa25756",
+      "gitBlob": "26e139be7ca5ad99626ef4ed0808d8af4a6ccc40"
+    },
+    {
+      "path": "packages/desktop-client/src/components/budget/goals/editor/RefillAutomation.tsx",
+      "sha256": "b1cff25a44d735edb135d43b591d894a8294368b03dd7f19c1b9b32adc198241",
+      "gitBlob": "80e5d94345c82e7421cf62b807bea8724013b901"
+    },
+    {
+      "path": "packages/desktop-client/src/components/budget/goals/editor/RemainderAutomation.tsx",
+      "sha256": "d0d67805097e1d660804bf6026fd038e94dd2898a5d28b48dc5cafab0d9aafb4",
+      "gitBlob": "d49f098f5671685b86e63f071490c93072535ad0"
+    },
+    {
+      "path": "packages/desktop-client/src/components/budget/goals/editor/ScheduleAutomation.tsx",
+      "sha256": "3f7b84641b25bf1329d6b1a47e5f4d4f7740fe7b58437b2a928131b50b14680e",
+      "gitBlob": "d0dd8a7501d94c51bf7850b5b2e52433f637c12a"
+    },
+    {
+      "path": "packages/desktop-client/src/components/budget/goals/editor/fieldLayout.ts",
+      "sha256": "f2a07b28803f1e9b3b7aeecd199078fc2978776d8717d2fe8cf5d0de31341a8f",
+      "gitBlob": "cb325605c0d572261d9869d7b7f9dcf4affbd6ca"
+    },
+    {
+      "path": "packages/desktop-client/src/components/budget/goals/formatMonthLabel.ts",
+      "sha256": "79f953626f51f3d8156e7eddb9fb0441ca3b0df1680644e750ececca34e3caad",
+      "gitBlob": "204247d1058eeb172543a60d5a7eded619967619"
+    },
+    {
+      "path": "packages/desktop-client/src/components/budget/goals/reducer.ts",
+      "sha256": "f4237524f2fc14aa371931bf7586482445b27d3798b0c0fa091224ea085f4772",
+      "gitBlob": "5b8552bb938db9da03259d67275cb92aba53d306"
+    },
+    {
+      "path": "packages/desktop-client/src/components/budget/goals/validateAutomation.ts",
+      "sha256": "6b3b8baa4f975abc9b3f96f0ea99729936452a9325d9847d834e4f7011f5c35f",
+      "gitBlob": "a912fd6cfeba841e34e9ad503b0d0cf830ffd93e"
+    },
+    {
+      "path": "packages/desktop-client/src/components/budget/util.ts",
+      "sha256": "81906f4207ed9b147682e96daf58c9e2abd094158dc98f7efc7bae12ca0a661a",
+      "gitBlob": "acb3d58b58be27feb7e60dde9ac349213335ad86"
+    },
+    {
+      "path": "packages/desktop-client/src/components/common/Link.tsx",
+      "sha256": "30b4e869ef907d5bc16d5ea2ba3e23611bbbf14bc89232c98d2187af8453cf58",
+      "gitBlob": "62da4dfe39dc95cf89876c6c89895748b975cd3d"
+    },
+    {
+      "path": "packages/desktop-client/src/components/common/Modal.tsx",
+      "sha256": "cea71c93549da0372c99f630d0e00e0bacf22a256a0107626fcd14f17d3e19dd",
+      "gitBlob": "47e85d4927df290b4213e4a29196d0a8f491f2cf"
+    },
+    {
+      "path": "packages/desktop-client/src/components/forms/LabeledCheckbox.tsx",
+      "sha256": "05de8cb137fd225a071bfe221bb6abf43e051e5fe6f43facb67137d5eedd56ed",
+      "gitBlob": "4295448b8dbaab0d96939ba133d95a982ecfb656"
+    },
+    {
+      "path": "packages/desktop-client/src/components/forms/index.tsx",
+      "sha256": "34f8facd6db12d2793a22f0fa63fc3ba9ec30dafc64f8e715ad1c73116ab627b",
+      "gitBlob": "1f0b84a6c2effafada411823992fa32aca1c0b0b"
+    },
+    {
+      "path": "packages/desktop-client/src/components/mobile/MobileForms.tsx",
+      "sha256": "3ba4bf49326029ed56a5a40cda862e219882548423007ff84cd61c4154f7365c",
+      "gitBlob": "8d5a1c63dd56d5d7b35e0fe7f15af7e928a8ac1a"
+    },
+    {
+      "path": "packages/desktop-client/src/components/modals/BudgetAutomationsModal/AutomationEditorPane.tsx",
+      "sha256": "248635d5928f36e1eb09ce257517f0777f4af6593364991522a20c717326150d",
+      "gitBlob": "9b8627c6b86d1eafb06d497c570af17ad41313fa"
+    },
+    {
+      "path": "packages/desktop-client/src/components/modals/BudgetAutomationsModal/TypePicker.tsx",
+      "sha256": "0ac5bdc477d230229b41795d3a84125887016885522f49978b33ebaa2bcc4198",
+      "gitBlob": "a2e60ff97de65bc333eb5e583de3901acde00839"
+    },
+    {
+      "path": "packages/desktop-client/src/components/select/DateSelect.tsx",
+      "sha256": "f60de2409dd56a326febd61819b20309c9eb7495cccc590bfcb43f9b4eba5ab9",
+      "gitBlob": "b24f1a8d952e9e95804e2f0716356d84f4ae3771"
+    },
+    {
+      "path": "packages/desktop-client/src/components/select/RecurringSchedulePicker.tsx",
+      "sha256": "c8e38341b16b610df6a694b901fa8eff2bd3f065a0f4a15280c19438c5391fe0",
+      "gitBlob": "37cd1ed9a0e15a8603026959b5e749e0979bd5a3"
+    },
+    {
+      "path": "packages/desktop-client/src/components/select/getFirstDayOfWeek.ts",
+      "sha256": "6c45b86c4574557857122c063cadfc1ffa369786acd3d92bc7b0685686c63817",
+      "gitBlob": "7918fab890f72aad1da0ec3386bfd6458e18ce4f"
+    },
+    {
+      "path": "packages/desktop-client/src/components/spreadsheet/CellValue.tsx",
+      "sha256": "3130bff271af36c5f8f1f96ae6540cc3a070e523706ffe04a21ce12d33eec4a4",
+      "gitBlob": "7b07bb95144d70ee6a9cb55d61a900f0299c7c88"
+    },
+    {
+      "path": "packages/desktop-client/src/components/table.tsx",
+      "sha256": "e6d20022888c1e6cd5e70a2a27ff4c1300e9a30c89135b1e567bf21f38380d8f",
+      "gitBlob": "6699c994f8a96b560b5859a2da98794a38443b07"
+    },
+    {
+      "path": "packages/desktop-client/src/components/util/AmountInput.tsx",
+      "sha256": "7ae3352ba51f887689a34757a9c0a3f35436700ced11e622140c94c191b0ac24",
+      "gitBlob": "147046933f26040806f1c028261520a33567c921"
+    },
+    {
+      "path": "packages/desktop-client/src/components/util/FinancialInput.tsx",
+      "sha256": "8728acb8666b9ba7b0123f8e5fca725783e1e171236fe727d305e88bc42c748a",
+      "gitBlob": "39844b57779ee8c8341a7186c3c1cfdabfc423aa"
+    },
+    {
+      "path": "packages/desktop-client/src/components/util/GenericInput.tsx",
+      "sha256": "0eeb3d5342f92355a9b27edba45fbf20448785f554e30549ded830fe251d4cd4",
+      "gitBlob": "6dd99beb2e311b581fcab20cc10f895439dde1a4"
+    },
+    {
+      "path": "packages/desktop-client/src/components/util/MonthInput.tsx",
+      "sha256": "803d0b154803dc76076faa7571c047597046a579ba3d33b349c068433645734b",
+      "gitBlob": "7bf870ef3282514527b81cc80a623d30700b0523"
+    },
+    {
+      "path": "packages/desktop-client/src/components/util/PercentInput.tsx",
+      "sha256": "31fc56b1dba0b32099e7c87dc026ef66124cbad9ad4327a0b9cf0d9061208579",
+      "gitBlob": "38959569ff92df1d0413ebc5f6505d64656c188f"
+    },
+    {
+      "path": "packages/desktop-client/src/hooks/useAccounts.ts",
+      "sha256": "d93bea7959d43c4b662de155c623140c01bd18997c6fde3192624bfd545c8417",
+      "gitBlob": "bcfdb1afb815a66faa15f9aa9c67025712079bc4"
+    },
+    {
+      "path": "packages/desktop-client/src/hooks/useCachedSchedules.tsx",
+      "sha256": "9de70d2e72fce713cf5a7816e881776db193773a0264adcc46e2e4e36fb6cd25",
+      "gitBlob": "acd106c60b12a945a2146154b2b0de61e46c9a36"
+    },
+    {
+      "path": "packages/desktop-client/src/hooks/useCategories.ts",
+      "sha256": "716402230674158509ee158ff6f8893aa21f8da92aa870e85d9a4af34ad55fc4",
+      "gitBlob": "ec2068678aec3f16131e84247d2d500148066fc6"
+    },
+    {
+      "path": "packages/desktop-client/src/hooks/useCategoryScheduleGoalTemplateIndicator.ts",
+      "sha256": "4657da6e5f5a2371943b074145c0983f0465623461dacbd9db35044b5a50cff5",
+      "gitBlob": "16069c236da0174df341c41170c0a49dfb2fafdd"
+    },
+    {
+      "path": "packages/desktop-client/src/hooks/useCategoryScheduleGoalTemplates.ts",
+      "sha256": "c92452fe3b4aa3f66bae8e17bd164e418ca6c833e953555f1f5981c0f9c98392",
+      "gitBlob": "e836e13f54de57638ee2a218e38c7a3673755a6e"
+    },
+    {
+      "path": "packages/desktop-client/src/hooks/useCommonPayees.ts",
+      "sha256": "0a0758e5270d742e72d7cdf48da81e03143b61dda9925f11541eca21ea07af3f",
+      "gitBlob": "5b4a38d5515db5c987403450e337c2c7ae5ac851"
+    },
+    {
+      "path": "packages/desktop-client/src/hooks/useDateFormat.ts",
+      "sha256": "d0a388372bb776e75000f0c6d83064133149df43f7eac9ce014991189ceba7ff",
+      "gitBlob": "9a4800ca221a54d80578292eb6f0ebddc8823ceb"
+    },
+    {
+      "path": "packages/desktop-client/src/hooks/useDaysOfWeek.ts",
+      "sha256": "9eb06ef34879d16ee889d19ecdd9a4a28c5bf425c02e6eeb9f57ab5857cd77d0",
+      "gitBlob": "600d351512b0228c53b1b9c3ebc5bbd46cb1a05b"
+    },
+    {
+      "path": "packages/desktop-client/src/hooks/useFeatureFlag.ts",
+      "sha256": "97aa0aaa66cdd729865c5d22f2a30496cc96a7d8e11d600012aaa84c9e95326a",
+      "gitBlob": "79bdf39d802969b3d1ebeb0fd6f7b5134c14315f"
+    },
+    {
+      "path": "packages/desktop-client/src/hooks/useFormat.ts",
+      "sha256": "9d4634120e54d6fc18330b7f1a941974739d1d3ec033521de7e1affe6e1b7a20",
+      "gitBlob": "02978663729f51a2362b3a8140c4f4856a1e28d5"
+    },
+    {
+      "path": "packages/desktop-client/src/hooks/useGlobalPref.ts",
+      "sha256": "e4740eb3f8527f023910eea70b76657f865aab219e4ea65a7bea5542310473fc",
+      "gitBlob": "5d3b00123b0b4e2ff9914596629aece0aa9e38a8"
+    },
+    {
+      "path": "packages/desktop-client/src/hooks/useIsTestEnv.ts",
+      "sha256": "3793a41ba0c533b0f10fa3994ad9aa4ee5c26e8e5c5b5b4b57fb221d7a0a4c2b",
+      "gitBlob": "4b31eac5b832d38c8e7b91c067da25ccb1847703"
+    },
+    {
+      "path": "packages/desktop-client/src/hooks/useLocale.ts",
+      "sha256": "e6502b9202ea0bb1455acb66d9767eb464eea2a895ea4ced05647e1b3ed5c399",
+      "gitBlob": "5ceb46fdaf39a415e48a2a7b6c64cb599e61ec43"
+    },
+    {
+      "path": "packages/desktop-client/src/hooks/useLocationPermission.ts",
+      "sha256": "082a5afe4fd7659bbae3a74ed0780b8d111843ccdbe7405d5540fa29c51290e5",
+      "gitBlob": "79ea33c593c16468b1e0631b705bbd7eab30e0b1"
+    },
+    {
+      "path": "packages/desktop-client/src/hooks/useMergedRefs.ts",
+      "sha256": "fc768acd8ca2aac88e88d9a3b8b7e8ded893b8c79e9ec929d7e398ab59bee2f7",
+      "gitBlob": "6bcdd39d9cb748c7a6e72658ede157c312f95a64"
+    },
+    {
+      "path": "packages/desktop-client/src/hooks/useModalState.ts",
+      "sha256": "940b20aed12f6a1d00f037e95a854a8d449c41827ed53ef4822df160dd308d61",
+      "gitBlob": "87b9bf46d9bdd2c72ba74bd93481ceac9830cb93"
+    },
+    {
+      "path": "packages/desktop-client/src/hooks/useNavigate.ts",
+      "sha256": "58de5bf8786ad3ef255fae43951b762743e5b56562bb1889ab8504c716242f18",
+      "gitBlob": "b8d97f37fadb2c49738f3c610efb442cfd7f1ddf"
+    },
+    {
+      "path": "packages/desktop-client/src/hooks/useNearbyPayees.ts",
+      "sha256": "6f3f22b1452dbe175efcf13195638f0c5941171bca621a98bf2c5e5c35810543",
+      "gitBlob": "860fb6614ebe9d9ab2431041e7f7c6a2180fee16"
+    },
+    {
+      "path": "packages/desktop-client/src/hooks/useNotes.ts",
+      "sha256": "4ca0591ea6722f7d6bd299d0cd30430c8b53558cf5dcd4ea2372b03aa6da60b3",
+      "gitBlob": "52ea95d1aec0284f058c54975719759a4b904ff6"
+    },
+    {
+      "path": "packages/desktop-client/src/hooks/usePayees.ts",
+      "sha256": "c6fd063a0ac2a5d1e0fafad181853f3529e3bae767487f55bdaae4c4608761fc",
+      "gitBlob": "e315146f435ae7983fdf30e34a5c186c50033ee7"
+    },
+    {
+      "path": "packages/desktop-client/src/hooks/usePrivacyMode.ts",
+      "sha256": "b26604b97389de0dbc706fbd761c531ed03dc50c4d36010d6586201bd8140004",
+      "gitBlob": "9fad6ae30ae29cd3125382263ca923873d6a108f"
+    },
+    {
+      "path": "packages/desktop-client/src/hooks/useProperFocus.tsx",
+      "sha256": "4cf33ed7c0d17435bc1967c528009bf08a165efc885104d2fc9c551cffe01250",
+      "gitBlob": "513adc03c717f19352645a01564a194130fd5674"
+    },
+    {
+      "path": "packages/desktop-client/src/hooks/useQuery.ts",
+      "sha256": "5f51454ede0e9a4e25fe5b2da901d5646aee9c067333e1d5a30e061a2866dd78",
+      "gitBlob": "127ff5dd419445c3c320ab76c3ad71accf755d5d"
+    },
+    {
+      "path": "packages/desktop-client/src/hooks/useReducedMotion.ts",
+      "sha256": "6b3886f2f46162dfcd48838fd16da2fb843031dcc0c35c7a4332226d5546ab1f",
+      "gitBlob": "d6df42d7b2e3eaca0e1fcbd1f996128d43c46662"
+    },
+    {
+      "path": "packages/desktop-client/src/hooks/useReports.ts",
+      "sha256": "4628bfff87f2d9e46ac61f448aa579b5ef22cc6a19b550e7d6515e3db9781ed9",
+      "gitBlob": "c9f1b2c029988baa9fdad91708ebefc2aba9a9c0"
+    },
+    {
+      "path": "packages/desktop-client/src/hooks/useSchedules.ts",
+      "sha256": "8699db2ad8ca6e0d9ba21ae69e4b28c861c82e8f1d0fc9e79df3deaca06de1a2",
+      "gitBlob": "73348f81bf4e5be25619f8728dfe0933d24123e6"
+    },
+    {
+      "path": "packages/desktop-client/src/hooks/useSelected.tsx",
+      "sha256": "cbaa8877718af6179449959b6e0af7b52e8fcfdee0beba951a86212e1dfab686",
+      "gitBlob": "b049d21f47a716a0373a09e9a44e8913b41fef83"
+    },
+    {
+      "path": "packages/desktop-client/src/hooks/useSheetName.tsx",
+      "sha256": "4b8c7bab46d0993204fe37764ba437e3f35a27bd07528ed9f439e0132cde67b2",
+      "gitBlob": "d0df68c416f6387060b074286c680e32d6cb37f9"
+    },
+    {
+      "path": "packages/desktop-client/src/hooks/useSheetValue.ts",
+      "sha256": "14552bb0007fa99e49a5249fe43283c7e942d4543c7f8404a6a37439d3dceee8",
+      "gitBlob": "1088ef6dc3632a7ef962b9c3d4deedb7f760e71b"
+    },
+    {
+      "path": "packages/desktop-client/src/hooks/useSpreadsheet.tsx",
+      "sha256": "c8aca4a907d1662acab44a4f1e8fb681c36a8dffc49fbfe314e2c38cdb9bcc65",
+      "gitBlob": "d26ad6e4fa8b244d201f461392b37e42f1e065cc"
+    },
+    {
+      "path": "packages/desktop-client/src/hooks/useSwipeToDismiss.ts",
+      "sha256": "85ccfe388292ef04c46911f174c5cec65d60f6ee3d39749a5fcc687a1521932d",
+      "gitBlob": "d6ac2675a3afc1f5522e3363d1505bfa14a9a91d"
+    },
+    {
+      "path": "packages/desktop-client/src/hooks/useSyncedPref.ts",
+      "sha256": "2a0cd9246714328dc879e5e3e19191077058286c0b1dbc992cdf6c2fad0fbb1b",
+      "gitBlob": "17f09ce3192140eace700a9750f011590aa381a6"
+    },
+    {
+      "path": "packages/desktop-client/src/hooks/useTransactionFilters.ts",
+      "sha256": "880b8eb6ceab73a477f189602da6903d990e75ca81be4231c9ff5a544be77930",
+      "gitBlob": "d4bb55bdba29a96b48fff0838f7b824276fa1880"
+    },
+    {
+      "path": "packages/desktop-client/src/hooks/useUndo.ts",
+      "sha256": "0dc2fd9a192f949700ae8c50e997589e70aa29a06b23ec56d9b74832640d7aaa",
+      "gitBlob": "38fc4c3055a72b7b59d8403ff5d5ec9de4c0a23d"
+    },
+    {
+      "path": "packages/desktop-client/src/i18n.ts",
+      "sha256": "402ba83409adf07ba60647deb5760691165703656c31da33a911b2132a8a1dd4",
+      "gitBlob": "c3a79e5544c01cae6ed4464edf330f14a0e57c64"
+    },
+    {
+      "path": "packages/desktop-client/src/languages.ts",
+      "sha256": "46ef5f26b3d97895529f108701544b8a069db6a91a36476fe1b77eed5785d093",
+      "gitBlob": "084895d4cd34f6fdd8c62f01079cb53582cf01a6"
+    },
+    {
+      "path": "packages/desktop-client/src/modals/modalsSlice.ts",
+      "sha256": "744deef1a63f5f3dc4a171896d9bbec3deb2181f081dce7b19c6fd2755b91c5b",
+      "gitBlob": "d9763f6359273e0557ac2d828e4f2c59f6a1bbeb"
+    },
+    {
+      "path": "packages/desktop-client/src/notifications/notificationsSlice.ts",
+      "sha256": "b67d43d08519e3a61d2cb0b732d084ac9971707a6ce1d50bbbeec1b903771da9",
+      "gitBlob": "17de482dceebc539e868539b21ff50fc7b39b0bd"
+    },
+    {
+      "path": "packages/desktop-client/src/payees/index.ts",
+      "sha256": "663f55d55acc5990919a6e7033a5af75983aaf87003dd2185629813de84c25b7",
+      "gitBlob": "d0720956a0e33da700dad0daafbb5d62b46e357b"
+    },
+    {
+      "path": "packages/desktop-client/src/payees/location-adapters.ts",
+      "sha256": "47e5d773d730a3cda7eec1a3572a76e4086b91f9d2b8baa6d8bbd51d1a0c4129",
+      "gitBlob": "f1ce72819b0d7ac4fca1635167660e5bde8f9018"
+    },
+    {
+      "path": "packages/desktop-client/src/payees/location-service.ts",
+      "sha256": "22b58418d5f4ab08bb511d2517d9d984c532bfb4a2fb555cb8e4a9e59f8c9324",
+      "gitBlob": "07825b1961cc93ab2967746991f71f4d470926b3"
+    },
+    {
+      "path": "packages/desktop-client/src/payees/location.ts",
+      "sha256": "79577080276b30ad6f2811ca09084752121a20c7559a65490d8b8cad82eb9b12",
+      "gitBlob": "33ec2b0b697a6ae2e1be752e9a330504a98e9a5c"
+    },
+    {
+      "path": "packages/desktop-client/src/payees/mutations.ts",
+      "sha256": "fc50e7abe312bdf6b9244feae3f9795c2482c724979f04eb7beb9b09d1157e87",
+      "gitBlob": "c87df0a2bba8892b7fb97af74856380cc21c302f"
+    },
+    {
+      "path": "packages/desktop-client/src/payees/queries.ts",
+      "sha256": "802a1bb055deafddaa622c87816e8227fb83733258649f8277464750787f8fb4",
+      "gitBlob": "a67785120230122f4e90ed3ac23274c2a06b8a84"
+    },
+    {
+      "path": "packages/desktop-client/src/prefs/prefsSlice.ts",
+      "sha256": "1bd2bae3f44ed3883b020c183718ef1cd2e63c6989b8c51e6172e926edc38bd6",
+      "gitBlob": "cd373b8fabdfee7756467395076df3ee109ce7cb"
+    },
+    {
+      "path": "packages/desktop-client/src/queries/aqlQuery.ts",
+      "sha256": "9cdf1f4e912635a535bdc8c3f537af2a2c8aa0aeca377faad9d42c68b58c7d17",
+      "gitBlob": "329325b1979f8f336690e9edc750e7f3c62f42f9"
+    },
+    {
+      "path": "packages/desktop-client/src/queries/index.ts",
+      "sha256": "51c38694a72716e1f27b93540a7eb4d8843d96d082580a9835575bf3db94b6bc",
+      "gitBlob": "7d35efd8fba9605e4bcea0a6f05c408c9c067f69"
+    },
+    {
+      "path": "packages/desktop-client/src/queries/liveQuery.ts",
+      "sha256": "c51bf50c10d31a5073dfb4121d7dd064aaf25e7934af136312b89208e7da1340",
+      "gitBlob": "3fc240b7b60ae4b64bda68894b8e8192cdd7151d"
+    },
+    {
+      "path": "packages/desktop-client/src/reports/index.ts",
+      "sha256": "ffa302ac0c327cd8d82f62477c037372936003f396055662c29ddbe6e3e7f044",
+      "gitBlob": "3cf1ef310b48e97cc14cb5a763b287e36ad07d84"
+    },
+    {
+      "path": "packages/desktop-client/src/reports/queries.ts",
+      "sha256": "dd58d8b7cc6e217c7a93f694142f80e1c5cf6d1b532c350e9cf60b7ff3acf19f",
+      "gitBlob": "b8fb68809eb5ff6897d633132438cbabb596689f"
+    },
+    {
+      "path": "packages/desktop-client/src/spreadsheet/bindings.ts",
+      "sha256": "369829fef24616bc76cf6a4b664ef5286ac53940aabdf2d5e6779f6dc593265f",
+      "gitBlob": "f7b34664bd19c2a6585a3de2372eed0afc999eaa"
+    },
+    {
+      "path": "packages/desktop-client/src/spreadsheet/index.ts",
+      "sha256": "3c39c21c7f16d96a687d05fc1155fe1c7ae4b8516814dcf89f1a746d6667e6f8",
+      "gitBlob": "a74f0760e1a179175f84592ec0019345ed8dfe81"
+    },
+    {
+      "path": "packages/desktop-client/src/transactions/transactionsSlice.ts",
+      "sha256": "5c0f42cc8472369a79d9b07962750632e8009c4464f0e3c6f0a54478e48a930b",
+      "gitBlob": "b89670189e94397c47260bfc254a428116af2e90"
+    },
+    {
+      "path": "packages/desktop-client/src/undo/index.ts",
+      "sha256": "7cf5f74bd321b0f14e5974796d0b5eacafd5a0b9be8f87e3f37de1ea3b9b31b1",
+      "gitBlob": "f226c23582157bb38d539f5c58dc77f999b78d03"
+    },
+    {
+      "path": "packages/desktop-client/src/users/usersSlice.ts",
+      "sha256": "1d131e3c421447c5e43f4168174e1b3ffddea4466b7e9d44dcf69da8a98325b1",
+      "gitBlob": "85a82f0e2aa2df15d910ad7de1fa836a45826b4b"
+    },
+    {
+      "path": "packages/desktop-client/src/util/error.ts",
+      "sha256": "79916962f84e69de6adb1270879588122e3a82aa5a3170fb453bb65d6c70400f",
+      "gitBlob": "6a255f522909a904e47166f6e1c8a063127f3bf2"
+    },
+    {
+      "path": "packages/desktop-client/src/util/markdown.ts",
+      "sha256": "760212f98185874f19b895aead20f92d75833deff8106fc5b43087a90970ab5a",
+      "gitBlob": "22fef6964f21290ff26c25b5a8db4a5d770d01b1"
+    },
+    {
+      "path": "packages/desktop-client/src/util/schedule.ts",
+      "sha256": "be9005220b138ad6f78f5586cd78fb477beb0a98648405fda4097d6316ec266a",
+      "gitBlob": "00718aa73e08213a929c1c73c883cb1803878483"
+    },
+    {
+      "path": "packages/desktop-client/src/util/versions.ts",
+      "sha256": "561f516b01ede1f95ef1375f8e005b1b40bcbe089b168e4f4554b80677386ab0",
+      "gitBlob": "354d5082af8e60003c4c0d0cb32bebb779641b86"
+    },
+    {
+      "path": "packages/loot-core/package.json",
+      "sha256": "00c6542e3ec33a06d024ffc871da6f88696a82bcfd862583fa71fd98b70e9475",
+      "gitBlob": "aad87b34e41b1b95d49741a0201cb1a746784eaa"
+    },
+    {
+      "path": "packages/loot-core/src/shared/arithmetic.ts",
+      "sha256": "25d6d4918c994a0dad4d83652b50ad857883d3f9e94cd572c683e9ded32b4cf5",
+      "gitBlob": "30d8e0a6b799fe0d52e2d0ad951564d4c6f01e27"
+    },
+    {
+      "path": "packages/loot-core/src/shared/constants.ts",
+      "sha256": "fc62801ad427a72cd38fa8a4d86dcefe59f632ebf33064dd1be4e5c8142cee98",
+      "gitBlob": "aaaaa6bc35a97ce0504cfbf69d085e7157a676c1"
+    },
+    {
+      "path": "packages/loot-core/src/shared/currencies.ts",
+      "sha256": "a78e5a70ea0a576c3e3267d56dbdb3a55dfb649647c0f1dba16fc07536d2f985",
+      "gitBlob": "a0a790bd2b803a2812853f8afe5b1c8fdb3a1684"
+    },
+    {
+      "path": "packages/loot-core/src/shared/errors.ts",
+      "sha256": "75798740a538272d7a2dcdfd89ee50529150e1b5b0e006cfa0a92f3e6a6549c0",
+      "gitBlob": "f9830b9da26bbf17c11808f0ac2f5f1f17ced005"
+    },
+    {
+      "path": "packages/loot-core/src/shared/locale.ts",
+      "sha256": "1f68efcaa708df4ba406d6eede8485e84e3936b6a459b1bd4477ea9c271426f0",
+      "gitBlob": "2c8decc2debaeaa634405c35342997b85e85d3c7"
+    },
+    {
+      "path": "packages/loot-core/src/shared/location-utils.ts",
+      "sha256": "34dc84a573bf6aed34c6efe131d2462fa2be8058682ae67c223656946f841352",
+      "gitBlob": "d68963420082e510e7f8f97b56510dddb4def1c9"
+    },
+    {
+      "path": "packages/loot-core/src/shared/memoize.ts",
+      "sha256": "f539db7c6fc5b826350840431726a0323d34ae6a032740a835c3469b2a302153",
+      "gitBlob": "b466230f9c3c102000db10f9e94e321651878e02"
+    },
+    {
+      "path": "packages/loot-core/src/shared/months.ts",
+      "sha256": "7fb8010b085fb87c0dfcd09f24acc1d7d5ec958e7981b2a335917491328a2aa5",
+      "gitBlob": "a9e02b2293e153f27b041a8b09953197a71ed5bc"
+    },
+    {
+      "path": "packages/loot-core/src/shared/normalisation.ts",
+      "sha256": "a3eb2322f8cce7ecf06a4c87aae444cf34ad4838140a76afd014af84dc047dfb",
+      "gitBlob": "1e5abd3e24754d4db8be8165e710342422cae529"
+    },
+    {
+      "path": "packages/loot-core/src/shared/platform.ts",
+      "sha256": "7ee9f0524cee08e6115a3f03fbc3ff8288f052ec35b2b9a0be0ba3425e3d0169",
+      "gitBlob": "37c82125ff48c95a5281e65a7cb7b5f1a2917e45"
+    },
+    {
+      "path": "packages/loot-core/src/shared/query.ts",
+      "sha256": "e4b93dea21ab9d73af8eeffcee818935c00c9a10427549a643ac133be0dfc685",
+      "gitBlob": "ea97cf80167146a601588ac500487ed82b7bd50c"
+    },
+    {
+      "path": "packages/loot-core/src/shared/schedules.ts",
+      "sha256": "0784368dd3650d2bc0d7b90885ed6a610079588f34d9c9acef3cc5914ec80cfd",
+      "gitBlob": "d40c2288da3cd55a6569702fe16fc7dcc26d9997"
+    },
+    {
+      "path": "packages/loot-core/src/shared/util.ts",
+      "sha256": "9ea3252854b0cc2f9f237cd9a2fa9b2e23fa856921ce5841cb0b44141a0a6dd1",
+      "gitBlob": "ce61649e055f00a429ced2bcf203e487dd7dd01e"
+    }
+  ],
+  "modifiedSourceFiles": [
+    {
+      "path": "packages/component-library/src/hooks/useResponsive.ts",
+      "sha256": "b1d4320c20002a64bc71b84c2113aade20d6ae82c8b0d973bc81cc73018501cb"
+    },
+    {
+      "path": "packages/component-library/src/icons/v0/index.ts",
+      "sha256": "170e0581de7cd49eb03531ff052a56138da3b8fee8266a7134ff9fc37b9f94b3"
+    },
+    {
+      "path": "packages/component-library/src/icons/v1/index.ts",
+      "sha256": "0441e54718578718b5a154aa35279e860050a824f5cb3df94268c7e97772a17d"
+    },
+    {
+      "path": "packages/component-library/src/icons/v2/index.ts",
+      "sha256": "adcfc8360581e75cdbe438aaa4407bfcf7fb3506c2728d303a376b4ef4de6d36"
+    },
+    {
+      "path": "packages/desktop-client/src/components/autocomplete/CategoryAutocomplete.tsx",
+      "sha256": "1e6068e09dea1116e083129016bc802bb9b0468c34f0f4481e2be55ee0109d66"
+    },
+    {
+      "path": "packages/desktop-client/src/components/util/GenericInput.tsx",
+      "sha256": "6b3b8c063114678ecc8eb7cf9fa9aee2cf88d4f0dc252325be6d1c3177b5cd65"
+    },
+    {
+      "path": "packages/desktop-client/src/hooks/useCategories.ts",
+      "sha256": "98c0903bd7e0f675db7979deb13c259b24bb90171a2f901bd7103a6389cb3a70"
+    },
+    {
+      "path": "packages/desktop-client/src/hooks/useGlobalPref.ts",
+      "sha256": "d4d8a4f97b65f98da8154bbff70f9dcb2a5d8581e7eefa5e0d06f2dad97abaa4"
+    },
+    {
+      "path": "packages/desktop-client/src/hooks/useSyncedPref.ts",
+      "sha256": "109b15b40c86ac8ee8ad99ca89790d38ba1825197485b65b2b640d4282cec461"
+    },
+    {
+      "path": "packages/loot-core/src/shared/locale.ts",
+      "sha256": "3a8d9c29690197cf92f670356795bfb663b677919847a978dae5f0d34a04e07c"
+    }
+  ],
+  "emittedLocalSources": [
+    "main.tsx",
+    "reject.ts",
+    "src/packages/component-library/src/Button.tsx",
+    "src/packages/component-library/src/Input.tsx",
+    "src/packages/component-library/src/Menu.tsx",
+    "src/packages/component-library/src/MonthPicker.tsx",
+    "src/packages/component-library/src/Popover.tsx",
+    "src/packages/component-library/src/Select.tsx",
+    "src/packages/component-library/src/SpaceBetween.tsx",
+    "src/packages/component-library/src/Text.tsx",
+    "src/packages/component-library/src/TextOneLine.tsx",
+    "src/packages/component-library/src/Toggle.tsx",
+    "src/packages/component-library/src/Tooltip.tsx",
+    "src/packages/component-library/src/View.tsx",
+    "src/packages/component-library/src/date-range-picker/GridButton.tsx",
+    "src/packages/component-library/src/date-range-picker/MonthGrid.tsx",
+    "src/packages/component-library/src/date-range-picker/NavRow.tsx",
+    "src/packages/component-library/src/date-range-picker/util.ts",
+    "src/packages/component-library/src/hooks/useResponsive.ts",
+    "src/packages/component-library/src/icons/AnimatedLoading.tsx",
+    "src/packages/component-library/src/icons/Loading.tsx",
+    "src/packages/component-library/src/icons/v0/Add.tsx",
+    "src/packages/component-library/src/icons/v0/Delete.tsx",
+    "src/packages/component-library/src/icons/v0/ExpandArrow.tsx",
+    "src/packages/component-library/src/icons/v0/Split.tsx",
+    "src/packages/component-library/src/icons/v0/Subtract.tsx",
+    "src/packages/component-library/src/icons/v1/Add.tsx",
+    "src/packages/component-library/src/icons/v1/ArrowThinRight.tsx",
+    "src/packages/component-library/src/icons/v1/Bookmark.tsx",
+    "src/packages/component-library/src/icons/v1/ChartPie.tsx",
+    "src/packages/component-library/src/icons/v1/Checkmark.tsx",
+    "src/packages/component-library/src/icons/v1/CheveronDown.tsx",
+    "src/packages/component-library/src/icons/v1/CheveronLeft.tsx",
+    "src/packages/component-library/src/icons/v1/CheveronRight.tsx",
+    "src/packages/component-library/src/icons/v1/DotsHorizontalTriple.tsx",
+    "src/packages/component-library/src/icons/v1/Equals.tsx",
+    "src/packages/component-library/src/icons/v1/ExclamationOutline.tsx",
+    "src/packages/component-library/src/icons/v1/Flag.tsx",
+    "src/packages/component-library/src/icons/v1/InformationOutline.tsx",
+    "src/packages/component-library/src/icons/v1/Location.tsx",
+    "src/packages/component-library/src/icons/v1/MoneyBag.tsx",
+    "src/packages/component-library/src/icons/v1/PiggyBank.tsx",
+    "src/packages/component-library/src/icons/v1/Share.tsx",
+    "src/packages/component-library/src/icons/v1/Subtract.tsx",
+    "src/packages/component-library/src/icons/v1/Time.tsx",
+    "src/packages/component-library/src/icons/v2/AlertTriangle.tsx",
+    "src/packages/component-library/src/icons/v2/ArrowButtonDown1.tsx",
+    "src/packages/component-library/src/icons/v2/ArrowButtonUp1.tsx",
+    "src/packages/component-library/src/icons/v2/ArrowsSynchronize.tsx",
+    "src/packages/component-library/src/icons/v2/Calendar3.tsx",
+    "src/packages/component-library/src/icons/v2/CustomNotesPaper.tsx",
+    "src/packages/component-library/src/icons/v2/InformationCircle.tsx",
+    "src/packages/component-library/src/icons/v2/Remove.tsx",
+    "src/packages/component-library/src/styles.ts",
+    "src/packages/component-library/src/theme.ts",
+    "src/packages/component-library/src/tokens.ts",
+    "src/packages/desktop-client/src/components/alerts.tsx",
+    "src/packages/desktop-client/src/components/autocomplete/Autocomplete.tsx",
+    "src/packages/desktop-client/src/components/autocomplete/CategoryAutocomplete.tsx",
+    "src/packages/desktop-client/src/components/autocomplete/ItemHeader.tsx",
+    "src/packages/desktop-client/src/components/autocomplete/filterCategorySuggestions.ts",
+    "src/packages/desktop-client/src/components/budget/goals/ActiveEditor.tsx",
+    "src/packages/desktop-client/src/components/budget/goals/actions.ts",
+    "src/packages/desktop-client/src/components/budget/goals/automationMessages.tsx",
+    "src/packages/desktop-client/src/components/budget/goals/constants.ts",
+    "src/packages/desktop-client/src/components/budget/goals/displayTemplateMeta.ts",
+    "src/packages/desktop-client/src/components/budget/goals/editor/AmountAdjustment.tsx",
+    "src/packages/desktop-client/src/components/budget/goals/editor/BySaveAutomation.tsx",
+    "src/packages/desktop-client/src/components/budget/goals/editor/FixedAutomation.tsx",
+    "src/packages/desktop-client/src/components/budget/goals/editor/HistoricalAutomation.tsx",
+    "src/packages/desktop-client/src/components/budget/goals/editor/LimitAutomation.tsx",
+    "src/packages/desktop-client/src/components/budget/goals/editor/LongTermGoalAutomation.tsx",
+    "src/packages/desktop-client/src/components/budget/goals/editor/PercentageAutomation.tsx",
+    "src/packages/desktop-client/src/components/budget/goals/editor/RefillAutomation.tsx",
+    "src/packages/desktop-client/src/components/budget/goals/editor/RemainderAutomation.tsx",
+    "src/packages/desktop-client/src/components/budget/goals/editor/ScheduleAutomation.tsx",
+    "src/packages/desktop-client/src/components/budget/goals/editor/fieldLayout.ts",
+    "src/packages/desktop-client/src/components/budget/goals/reducer.ts",
+    "src/packages/desktop-client/src/components/budget/goals/validateAutomation.ts",
+    "src/packages/desktop-client/src/components/common/Link.tsx",
+    "src/packages/desktop-client/src/components/forms/LabeledCheckbox.tsx",
+    "src/packages/desktop-client/src/components/forms/index.tsx",
+    "src/packages/desktop-client/src/components/mobile/MobileForms.tsx",
+    "src/packages/desktop-client/src/components/modals/BudgetAutomationsModal/AutomationEditorPane.tsx",
+    "src/packages/desktop-client/src/components/modals/BudgetAutomationsModal/TypePicker.tsx",
+    "src/packages/desktop-client/src/components/select/DateSelect.tsx",
+    "src/packages/desktop-client/src/components/select/getFirstDayOfWeek.ts",
+    "src/packages/desktop-client/src/components/util/AmountInput.tsx",
+    "src/packages/desktop-client/src/components/util/GenericInput.tsx",
+    "src/packages/desktop-client/src/components/util/MonthInput.tsx",
+    "src/packages/desktop-client/src/components/util/PercentInput.tsx",
+    "src/packages/desktop-client/src/hooks/useCategories.ts",
+    "src/packages/desktop-client/src/hooks/useDateFormat.ts",
+    "src/packages/desktop-client/src/hooks/useDaysOfWeek.ts",
+    "src/packages/desktop-client/src/hooks/useFormat.ts",
+    "src/packages/desktop-client/src/hooks/useGlobalPref.ts",
+    "src/packages/desktop-client/src/hooks/useLocale.ts",
+    "src/packages/desktop-client/src/hooks/useMergedRefs.ts",
+    "src/packages/desktop-client/src/hooks/useProperFocus.tsx",
+    "src/packages/desktop-client/src/hooks/useSyncedPref.ts",
+    "src/packages/loot-core/src/shared/arithmetic.ts",
+    "src/packages/loot-core/src/shared/currencies.ts",
+    "src/packages/loot-core/src/shared/locale.ts",
+    "src/packages/loot-core/src/shared/memoize.ts",
+    "src/packages/loot-core/src/shared/months.ts",
+    "src/packages/loot-core/src/shared/normalisation.ts",
+    "src/packages/loot-core/src/shared/platform.ts",
+    "src/packages/loot-core/src/shared/util.ts"
+  ],
+  "runtimeDependencies": [
+    {
+      "name": "@babel/runtime",
+      "version": "7.29.13",
+      "license": "MIT",
+      "scope": "emitted",
+      "files": [
+        {
+          "path": "deps/node_modules/@babel/runtime/LICENSE",
+          "sha256": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76"
+        }
+      ]
+    },
+    {
+      "name": "@emotion/cache",
+      "version": "11.14.0",
+      "license": "MIT",
+      "scope": "emitted",
+      "files": [
+        {
+          "path": "deps/node_modules/@emotion/cache/LICENSE",
+          "sha256": "6e8d23763cf7cb707ad8f6677aa502ebeca1dda447e6d6e57f6549c1625b9c4a"
+        }
+      ]
+    },
+    {
+      "name": "@emotion/css",
+      "version": "11.13.5",
+      "license": "MIT",
+      "scope": "emitted",
+      "files": [
+        {
+          "path": "deps/node_modules/@emotion/css/LICENSE",
+          "sha256": "6e8d23763cf7cb707ad8f6677aa502ebeca1dda447e6d6e57f6549c1625b9c4a"
+        }
+      ]
+    },
+    {
+      "name": "@emotion/hash",
+      "version": "0.9.2",
+      "license": "MIT",
+      "scope": "emitted",
+      "files": [
+        {
+          "path": "deps/node_modules/@emotion/hash/LICENSE",
+          "sha256": "6e8d23763cf7cb707ad8f6677aa502ebeca1dda447e6d6e57f6549c1625b9c4a"
+        }
+      ]
+    },
+    {
+      "name": "@emotion/memoize",
+      "version": "0.9.0",
+      "license": "MIT",
+      "scope": "emitted",
+      "files": [
+        {
+          "path": "deps/node_modules/@emotion/memoize/LICENSE",
+          "sha256": "6e8d23763cf7cb707ad8f6677aa502ebeca1dda447e6d6e57f6549c1625b9c4a"
+        }
+      ]
+    },
+    {
+      "name": "@emotion/serialize",
+      "version": "1.3.3",
+      "license": "MIT",
+      "scope": "emitted",
+      "files": [
+        {
+          "path": "deps/node_modules/@emotion/serialize/LICENSE",
+          "sha256": "6e8d23763cf7cb707ad8f6677aa502ebeca1dda447e6d6e57f6549c1625b9c4a"
+        }
+      ]
+    },
+    {
+      "name": "@emotion/sheet",
+      "version": "1.4.0",
+      "license": "MIT",
+      "scope": "emitted",
+      "files": [
+        {
+          "path": "deps/node_modules/@emotion/sheet/LICENSE",
+          "sha256": "6e8d23763cf7cb707ad8f6677aa502ebeca1dda447e6d6e57f6549c1625b9c4a"
+        }
+      ]
+    },
+    {
+      "name": "@emotion/unitless",
+      "version": "0.10.0",
+      "license": "MIT",
+      "scope": "emitted",
+      "files": [
+        {
+          "path": "deps/node_modules/@emotion/unitless/LICENSE",
+          "sha256": "6e8d23763cf7cb707ad8f6677aa502ebeca1dda447e6d6e57f6549c1625b9c4a"
+        }
+      ]
+    },
+    {
+      "name": "@emotion/utils",
+      "version": "1.4.2",
+      "license": "MIT",
+      "scope": "emitted",
+      "files": [
+        {
+          "path": "deps/node_modules/@emotion/utils/LICENSE",
+          "sha256": "6e8d23763cf7cb707ad8f6677aa502ebeca1dda447e6d6e57f6549c1625b9c4a"
+        }
+      ]
+    },
+    {
+      "name": "@internationalized/date",
+      "version": "3.12.4",
+      "license": "Apache-2.0",
+      "scope": "emitted",
+      "files": [
+        {
+          "path": "deps/node_modules/@internationalized/date/LICENSE",
+          "sha256": "7dfe6526888bac51759c99f9a51262ba2711a8c12a067f2181609dd9a4066b84"
+        }
+      ]
+    },
+    {
+      "name": "@internationalized/string",
+      "version": "3.2.10",
+      "license": "Apache-2.0",
+      "scope": "emitted",
+      "files": [
+        {
+          "path": "deps/node_modules/@internationalized/string/LICENSE",
+          "sha256": "7dfe6526888bac51759c99f9a51262ba2711a8c12a067f2181609dd9a4066b84"
+        }
+      ]
+    },
+    {
+      "name": "clsx",
+      "version": "2.1.1",
+      "license": "MIT",
+      "scope": "emitted",
+      "files": [
+        {
+          "path": "deps/node_modules/clsx/license",
+          "sha256": "9a9edad7baae52622bddf3c15b2ef8a33d2c89f2d25408ad13e8a7481c6b0c97"
+        }
+      ]
+    },
+    {
+      "name": "compute-scroll-into-view",
+      "version": "3.1.1",
+      "license": "MIT",
+      "scope": "emitted",
+      "files": [
+        {
+          "path": "deps/node_modules/compute-scroll-into-view/LICENSE",
+          "sha256": "dfe2b2d612c7c1de1f32dcab5969bd68ecac0022a7582ca8cd4594729b9c8664"
+        }
+      ]
+    },
+    {
+      "name": "date-fns",
+      "version": "4.4.0",
+      "license": "MIT",
+      "scope": "emitted",
+      "files": [
+        {
+          "path": "deps/node_modules/date-fns/LICENSE.md",
+          "sha256": "8d3951c38967b964b1fe259bfd200c2647cc04c858b55a4414e3122a60f1ef4b"
+        }
+      ]
+    },
+    {
+      "name": "downshift",
+      "version": "9.4.0",
+      "license": "MIT",
+      "scope": "emitted",
+      "files": [
+        {
+          "path": "deps/node_modules/downshift/LICENSE",
+          "sha256": "344d83316cc914b58e175f97942abc2ed8b9bb1a6221f5e03586422a2426a4d1"
+        }
+      ]
+    },
+    {
+      "name": "fzf",
+      "version": "0.5.2",
+      "license": "BSD-3-Clause",
+      "scope": "emitted",
+      "files": [
+        {
+          "path": "deps/node_modules/fzf/license.txt",
+          "sha256": "2097f666f88f859e2ee50a2868779b1cff41a27f765a71fb58e56e8e40add837"
+        }
+      ]
+    },
+    {
+      "name": "html-parse-stringify",
+      "version": "4.0.1",
+      "license": "MIT",
+      "scope": "emitted",
+      "files": [
+        {
+          "path": "deps/node_modules/html-parse-stringify/LICENSE",
+          "sha256": "3eb2802a4d0ea79f80977817451b056571dccd8373c9bf4e9be4b05f86afbf90"
+        }
+      ]
+    },
+    {
+      "name": "i18next",
+      "version": "26.4.4",
+      "license": "MIT",
+      "scope": "emitted",
+      "files": [
+        {
+          "path": "deps/node_modules/i18next/LICENSE",
+          "sha256": "1cd0a2b02a6cc40ef8ee16310d13eeffdd7b5de4a562fd3ee7c921d8eb54f60a"
+        }
+      ]
+    },
+    {
+      "name": "prop-types",
+      "version": "15.8.1",
+      "license": "MIT",
+      "scope": "emitted",
+      "files": [
+        {
+          "path": "deps/node_modules/prop-types/LICENSE",
+          "sha256": "f657f99d3fb9647db92628e96007aabb46e5f04f33e49999075aab8e250ca7ce"
+        }
+      ]
+    },
+    {
+      "name": "react",
+      "version": "19.3.1",
+      "license": "MIT",
+      "scope": "emitted",
+      "files": [
+        {
+          "path": "deps/node_modules/react/LICENSE",
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+        }
+      ]
+    },
+    {
+      "name": "react-aria",
+      "version": "3.53.1",
+      "license": "Apache-2.0",
+      "scope": "emitted",
+      "files": [
+        {
+          "path": "deps/node_modules/react-aria/LICENSE",
+          "sha256": "7dfe6526888bac51759c99f9a51262ba2711a8c12a067f2181609dd9a4066b84"
+        }
+      ]
+    },
+    {
+      "name": "react-aria-components",
+      "version": "1.22.1",
+      "license": "Apache-2.0",
+      "scope": "emitted",
+      "files": [
+        {
+          "path": "deps/node_modules/react-aria-components/LICENSE",
+          "sha256": "7dfe6526888bac51759c99f9a51262ba2711a8c12a067f2181609dd9a4066b84"
+        }
+      ]
+    },
+    {
+      "name": "react-dom",
+      "version": "19.3.1",
+      "license": "MIT",
+      "scope": "emitted",
+      "files": [
+        {
+          "path": "deps/node_modules/react-dom/LICENSE",
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+        }
+      ]
+    },
+    {
+      "name": "react-i18next",
+      "version": "17.0.16",
+      "license": "MIT",
+      "scope": "emitted",
+      "files": [
+        {
+          "path": "deps/node_modules/react-i18next/LICENSE",
+          "sha256": "29b8ae456ef442e53a98df183ad088cf98c2ece73aa84c462330c43e665b8ab2"
+        }
+      ]
+    },
+    {
+      "name": "react-is",
+      "version": "18.3.1",
+      "license": "MIT",
+      "scope": "emitted",
+      "files": [
+        {
+          "path": "deps/node_modules/react-is/LICENSE",
+          "sha256": "52412d7bc7ce4157ea628bbaacb8829e0a9cb3c58f57f99176126bc8cf2bfc85"
+        }
+      ]
+    },
+    {
+      "name": "react-stately",
+      "version": "3.51.0",
+      "license": "Apache-2.0",
+      "scope": "emitted",
+      "files": [
+        {
+          "path": "deps/node_modules/react-stately/LICENSE",
+          "sha256": "7dfe6526888bac51759c99f9a51262ba2711a8c12a067f2181609dd9a4066b84"
+        }
+      ]
+    },
+    {
+      "name": "scheduler",
+      "version": "0.28.0",
+      "license": "MIT",
+      "scope": "emitted",
+      "files": [
+        {
+          "path": "deps/node_modules/scheduler/LICENSE",
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+        }
+      ]
+    },
+    {
+      "name": "stylis",
+      "version": "4.2.0",
+      "license": "MIT",
+      "scope": "emitted",
+      "files": [
+        {
+          "path": "deps/node_modules/stylis/LICENSE",
+          "sha256": "88c579c6ee44b41137a21321190d177982e5b17d4fa1b83a4a2e3ea325a8fc9a"
+        }
+      ]
+    },
+    {
+      "name": "use-sync-external-store",
+      "version": "1.7.0",
+      "license": "MIT",
+      "scope": "emitted",
+      "files": [
+        {
+          "path": "deps/node_modules/use-sync-external-store/LICENSE",
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+        }
+      ]
+    }
+  ],
+  "packageLockSha256": "bcc08c1ec03db7b46f1a66ca7e527193f1a609f5feaecb8236ff9b389b92e1f6",
+  "modifications": "# Actual · 自动化规则编辑\n\n固定 actualbudget/actual@7d4c52647b18f1abeae5cb8f09fdd16a6d6b334b 的原 AutomationEditorPane → TypePicker / ActiveEditor / 九种完整表单。原组件、原样式令牌/主题、SVG图标、templateReducer、validateAutomation、金额格式与算术解析器保留。宿主只提供虚构类别/提醒和内存规则列表，并展示JSON表单状态。\n\n这是准确缩为原桌面编辑组件的预览，不是原 BudgetAutomationsModal 或预算服务。没有月度预算计算、贡献金额预览、保存生效、数据库、账户、真实交易、同步、登录、存储或任何外发。旧场景核心dry-run后端依赖没有被返回0假替代。原分类候选中余额显示及相关sheet订阅明确移除，而非假造余额；没有“成功保存”回执。\n\n可编辑原固定周期、提醒、截止日期、收入百分比、历史规则、补足上限、剩余分配、上限和长期目标表单；切换原类型、金额表达式/周期、日期、原本地校验、优先级与说明，添加/删除/重置仅宿主内存。固定示例起始日2026-11-01，日期校验使用本机当前日期；无用户真实财务资料。\n\n透明隔离：useGlobalPref/useSyncedPref/useCategories用固定本地fixture，不接Redux或查询。只展示原桌面分支，窄窗口横向滚动，不提供整App移动端modal；不把移动版伪装已接。原GenericInput仅保留本组件实际调用的date/string分支，DateSelect原日历组件与交互保留，删除未用的账户/收款人/报告等分支。英文日期locale只捆绑原date-fns enUS，系统字体，无外部字体或图片。TypePicker和表单核心未重画，所有原首选源码/适配差异hash见SOURCE。\n\n原声明React19.3.0，实际React/ReactDOM19.3.1；其余实际运行版本逐包见SOURCE（29包），完整MIT/Apache2/BSD3正文均在LICENSE。Actual根MIT仅覆盖实际选取公共源，不混入另有许可的sync-server。依赖没有用主MIT覆盖。\n\n运行包以原生UTF8顶层完整语句分2片，各独立可parse且<650KiB，不编码、不跨函数切割、不放宽CSP。宿主框架复用已验证的Shadcn Admin本地生命周期隔离。隐藏卸载、返回重置本地示例；退出清理原事件/任务/observer。\n\n验证：实际571 compose normal/missing/late关键测试；九表单真实Enter切类型、原算术输入200+50→250、优先级非负约束、原周期菜单选择weeks、说明文本安全、本地增删重置、hidden恢复/旧节点/退出，监听/timeout/RAF/observer0、禁止网络/storage/cookie/eval/Function调用0。另真实script元素执行的早期React模块异常有可见fallback；分片直接HTML顺序加载和生产loader缓存/释放通过。JSDOM布局/观察器是测试环境，不是浏览器像素/触摸或完整键盘辅助技术验收。\n\n公开仅运行文本、完整许可与来源/验证说明；完整原件、改后源码、构建脚本和测试保存在本地工作区，不假称源码ZIP已上传。\n"
+}
