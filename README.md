@@ -2,7 +2,7 @@
 
 网站：<https://tdwhere123.github.io/UI-Vault/>
 
-当前共收录 **706 条**：其中 **523 条可打开预览（241 条原始素材＋282 条后续接入预览）**，另有 **183 条仅来源记录**，不计入主图鉴预览数。原始 241 件包括 215 件精选界面、20 件保留基础素材、6 套图标系列。正在向 1000 件优质素材扩充；图标按系列单列，字重、尺寸和单枚 glyph 不凑数。已有图标重叠暂留待统一整理。
+当前共收录 **725 条**：其中 **524 条可打开预览（241 条原始素材＋283 条后续接入预览）**，另有 **201 条仅来源记录**，不计入主图鉴预览数。原始 241 件包括 215 件精选界面、20 件保留基础素材、6 套图标系列。正在向 1000 件优质素材扩充；图标按系列单列，字重、尺寸和单枚 glyph 不凑数。已有图标重叠暂留待统一整理。
 
 ## 当前内容
 
@@ -362,3 +362,11 @@ Added **26 source-only families** chosen for distinctive style rather than ordin
 Current totals: **706 collected = 523 previews + 183 source-only records**. This batch adds no completed runtime or screenshot. The 470 mapped covers and 53 posterless live previews remain, and all previous candidate objects and frontend behavior are preserved.
 
 Actual fixed source and licenses are recorded for each candidate. Root licenses do not cover personal portfolio content, brands, fonts, 3D models, sounds or system imagery by default. Two newly inspected Codrops repositories have actual MIT root texts, but GSAP/plugins and fonts still require separate closure before runtime redistribution; they are not a blanket Codrops license decision. RPGUI is Zlib, TinySynth Apache-2.0, not all MIT. Audio/MIDI/device permissions, remote iframe/data/analytics and authentication/payment actions have not been invoked. Private evidence paths are not presented as hosted archives. Full gaps and overlap notes are retained per record.
+
+## Liquid navigation and distinctive content · 524 previews / 725 collected
+
+Restored existing Meniscus liquid navigation as a genuine local preview, preserving its SVG trough geometry, spring integration, drag-to-nearest-tab and roving keyboard navigation. This is one existing design family, not five new tabs. External fonts use the original system fallback and the PNG grain is omitted; original SVG paths and gradients remain. Complete MIT and source evidence accompany seven text assets, with no runtime package or external service. Hidden, reduced motion, zero-size, drawing failure, late fonts and retained old-node cleanup are tested with controlled DOM/geometry/WAAPI mocks. Native pointer, pixel and device performance acceptance remains unrun. Camera/messages are original local panel text, not connected services.
+
+Added **19 source-only families**: folded DOM and physical paper, cut-corner surfaces, pixel messages, DOS typography and a carved toggle; terminal recordings, annotated EPUB reading, captioned galleries, structured-data graphs, timing diagrams and vector illustration; cinema detail, pixel-frame art, retro split-window audio, a knowledge garden and two differentiated reading layouts; one Maki cartographic icon series. Glyphs, palettes, tabs and states are not separate entries.
+
+Current totals: **725 collected = 524 previews + 201 source-only records**. Mapped covers remain 470; 54 preview entries use bounded live cards. Existing icon entries, Grok covers/reports and frontend behavior are unchanged. Root licenses are recorded at fixed revisions; model/HDR assets, photos, books, fonts, skins, trademark material, third-party dependencies and full application runtime are not automatically covered. Simple Icons was excluded pending per-brand rights, and source-only records do not imply completed downloads, previews or visual acceptance.
