@@ -2,7 +2,7 @@
 
 网站：<https://tdwhere123.github.io/UI-Vault/>
 
-当前共收录 **680 条**：其中 **522 条可打开预览（241 条原始素材＋281 条后续接入预览）**，另有 **158 条仅来源记录**，不计入主图鉴预览数。原始 241 件包括 215 件精选界面、20 件保留基础素材、6 套图标系列。正在向 1000 件优质素材扩充；图标按系列单列，字重、尺寸和单枚 glyph 不凑数。已有图标重叠暂留待统一整理。
+当前共收录 **680 条**：其中 **523 条可打开预览（241 条原始素材＋282 条后续接入预览）**，另有 **157 条仅来源记录**，不计入主图鉴预览数。原始 241 件包括 215 件精选界面、20 件保留基础素材、6 套图标系列。正在向 1000 件优质素材扩充；图标按系列单列，字重、尺寸和单枚 glyph 不凑数。已有图标重叠暂留待统一整理。
 
 ## 当前内容
 
@@ -346,3 +346,11 @@ Added **26 source-only families**, including **2 icon series**. Current totals a
 The batch emphasizes distinct original application and media/space workflows rather than component color variants. Fixed source paths, canonical repositories, actual root licenses and meaningful differences are recorded per candidate. Transitive code, media, fonts, commercial/enterprise imports, copyleft obligations and external service dependencies remain explicit adoption work, not covered by a root MIT or AGPL label. Public source records with known enterprise imports are conditional references only; no restricted enterprise implementation is copied or run. All screenshots remain with Grok.
 
 The Vanta record is specifically the NET spatial line field, not approval of all effects; the FOG shader's separate source attribution chain is unresolved and excluded. Audio examples are source code only, not redistribution of their recordings or microphone access. Agent/chat/diagram/document services are not connected, executed, signed, submitted or represented as functional local previews.
+
+## Original optical motion · 523 previews / 680 collected
+
+One existing Looper Loop18 source is restored as a real local Canvas2D preview, not a new source or screenshot. Totals: **680 collected = 523 previews + 157 source-only records**. The original black/white radial phase field adds an optical/art-led style; phases and playback controls are not extra entries. 470 mapped covers remain; 53 preview entries now use the existing posterless live-card path. No covers or old icon entries changed.
+
+Original fixed draw body, 800×800 canvas and two-second phase algorithm are unchanged; only an unused easing import is removed. Play/pause/reset/manual phase and lifecycle host are explicitly authored adaptation. Complete original MIT is retained and there are no runtime packages, image/font assets or network imports. Hidden/reduced/early exit/initial or later failure/context loss/old nodes are covered by production and independent tests. Six time samples match all 41,773 drawing commands against the original, with 13,923 arcs per frame. This command-level Canvas mock is not native pixel or device performance acceptance. Failures stop and report unavailable, never substitute a successful-looking static image.
+
+The frontend no longer repeats a generic visual-QA warning, per user presentation preference; this documentation and audit metadata retain the actual unverified pixel/performance boundary.
