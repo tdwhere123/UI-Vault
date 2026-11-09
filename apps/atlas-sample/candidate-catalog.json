@@ -3202,27 +3202,27 @@
   },
   {
     "id": "cuicui:advanced-bottom-action-menu",
-    "title": "advanced-bottom-action-menu",
     "source": "Cuicui",
-    "license": "MIT",
     "upstream": "https://github.com/damien-schneider/cuicui/tree/c7db00f2e98753c277f1aec6e316520038f4e0a0/packages/ui/cuicui/application-ui/action-menu/advanced-bottom-action-menu",
     "website": "",
-    "buildStatus": "Fixed source and root MIT reviewed; NOT built or runtime-tested; incomplete or overlapping candidate, excluded from gallery",
-    "batch": "batch-002",
-    "description": "原默认页仅Account/Password占位Tabs；展开菜单组合被注释，未成为可操作底部工具栏。",
+    "revision": "c7db00f2e98753c277f1aec6e316520038f4e0a0",
+    "title": "底部账户面板",
+    "description": "原账户与密码两个入口、展开面板与关闭交互；只展示原局部界面，不修改账户或密码。",
+    "behavior": "原账户与密码两个入口、展开面板与关闭交互；只展示原局部界面，不修改账户或密码。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "输入与选择",
+    "license": "MIT",
+    "batch": "cuicui-advanced-01",
+    "preview": "batches/cuicui-advanced-01/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original actual demo100cycle,focus/hidden/failure/cleanup and actual545compose verified; visual QA not run.",
     "gaps": [
-      "固定入口与根MIT已核，未构建；完整依赖与样式未验证。",
-      "独立MenuRoot有尺寸展开逻辑，但默认demo未连接，实际工具列表未使用，不能按名称宣称功能齐备。",
-      "无远程媒体或导出/剪贴板缺口；真实缺口是未连接组件、占位内容与焦点/窄屏适配。",
-      "与已有工具栏重合，不通过自创任务动作把未完成示例充数。",
-      "519轮源码复筛：原demo实际两段账户/密码占位及关闭按钮；Developer tools项目列表整个注释。不是已实现动作菜单。"
-    ],
-    "sourceReview": {
-      "revision": "c7db00f2e98753c277f1aec6e316520038f4e0a0",
-      "sha256": "8572fa04da442c8f22415114d0ea470882923836e7d6486cb15d82a036ee832a",
-      "decision": "keep source-only; do not count preview",
-      "note": "原demo实际两段账户/密码占位及关闭按钮；Developer tools项目列表整个注释。不是已实现动作菜单。"
-    }
+      "Browser visual/native keyboard defaults/CSP enforcement not verified.",
+      "Actual default is Account/Password/Close navigation only; commented large toolbar not enabled, no account editing.",
+      "Dynamic reduced-preference and hidden return reset default triggers; reduced disables transforms, opacity may animate."
+    ]
   },
   {
     "id": "cuicui:half-sided-glassmorphism",
@@ -3279,27 +3279,29 @@
   },
   {
     "id": "cuicui:dynamic-settings",
-    "title": "dynamic-settings",
     "source": "Cuicui",
-    "license": "MIT",
     "upstream": "https://github.com/damien-schneider/cuicui/tree/c7db00f2e98753c277f1aec6e316520038f4e0a0/packages/ui/cuicui/application-ui/settings/dynamic-settings",
     "website": "",
-    "buildStatus": "Fixed source and root MIT reviewed; NOT built or runtime-tested; incomplete or overlapping candidate, excluded from gallery",
-    "batch": "batch-002",
-    "description": "原胶囊展开设置面板的未完成示例，不是可应用的完整设置器。",
+    "revision": "c7db00f2e98753c277f1aec6e316520038f4e0a0",
+    "title": "动态设置面板",
+    "description": "原类别、比例与提示词面板；应用按钮仅演示提示后关闭，不保存或实施后台设置。",
+    "behavior": "原类别、比例与提示词面板；应用按钮仅演示提示后关闭，不保存或实施后台设置。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "输入与选择",
+    "license": "MIT; ISC",
+    "batch": "cuicui-settings-01",
+    "preview": "batches/cuicui-settings-01/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "pass",
     "gaps": [
-      "固定入口与根MIT已核，未构建，依赖许可尚未全链核验。",
-      "Dimensions明确TODO；比例状态未上提，Prompt未受控；Apply仅关闭和toast，没有实际验证或应用。",
-      "本项无远程媒体/导出/剪贴板缺口；不得补写功能后冒称原版已完成。",
-      "焦点/Escape/可访问名称与减少运动待验证；与现有设置和变形浮层重合，暂不恢复。",
-      "519轮源码复筛：Dimensions TODO无尺寸控件；Apply Changes仅关闭面板及toast成功，Prompt未保存/绑定。不能称真实已应用设置。"
-    ],
-    "sourceReview": {
-      "revision": "c7db00f2e98753c277f1aec6e316520038f4e0a0",
-      "sha256": "7d7fd6f8172cc60e069853cc289679f5d79f47abe87e4c339e6d855a90389cde",
-      "decision": "keep source-only; do not count preview",
-      "note": "Dimensions TODO无尺寸控件；Apply Changes仅关闭面板及toast成功，Prompt未保存/绑定。不能称真实已应用设置。"
-    }
+      "Dimensions is an upstream TODO, no slider or real dimension editing implemented.",
+      "Apply only closes the local panel and shows a Sonner demonstration receipt; nothing is saved/applied remotely or persisted.",
+      "Aspect selection and uncontrolled prompt reset on section unmount as upstream; no persistence invented.",
+      "Motion initial reduced preference tested; no claim of immediate dynamic OS-preference change.",
+      "Browser pixel/layout/animation and native keyboard default activation not visually tested."
+    ]
   },
   {
     "id": "cuicui:react-signature",
