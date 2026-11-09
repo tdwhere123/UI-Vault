@@ -13392,62 +13392,33 @@
   },
   {
     "id": "material-symbols:official-series",
-    "title": "Material Symbols 界面符号系列",
     "source": "Material Symbols",
     "repository": "https://github.com/google/material-design-icons",
     "revision": "10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7",
-    "sourcePath": "symbols/web/chat/materialsymbolsrounded/chat_24px.svg",
     "upstream": "https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/chat/materialsymbolsrounded/chat_24px.svg",
-    "license": "Apache-2.0 (fixed SVG source and complete root text verified; full series/runtime not closed)",
-    "behavior": "Google官方Material Symbols，采原rounded24px对话和搜索SVG文本，适合密集产品导航。",
-    "difference": "与Lucide/Fluent等重复语义明确；outlined/rounded/sharp及字重/尺寸只计一个系列，不收旧Material Icons作第二条。",
-    "gaps": [
-      "仅固定少量原SVG样本及README/完整根许可；未收全系列、不声称完整源码ZIP或可运行预览。",
-      "与既有系列语义重复；一系列仅一条，不按字重、颜色、尺寸或glyph拆页。",
-      "后续需按用途精选、全量SVG安全检查/实际依赖及附加NOTICE核查、离线检索分页与清理测试；浏览器视觉未验。",
-      "不收字体、品牌标志、PNG、封面或截图；封面统一由Grok处理。"
-    ],
-    "description": "Google官方Material Symbols，采原rounded24px对话和搜索SVG文本，适合密集产品导航。 与Lucide/Fluent等重复语义明确；outlined/rounded/sharp及字重/尺寸只计一个系列，不收旧Material Icons作第二条。",
-    "category": "图标系列",
+    "sourcePath": "symbols/web/chat/materialsymbolsrounded/chat_24px.svg",
     "licenseEvidence": {
       "url": "https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/LICENSE",
       "sha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd",
       "scope": "Full fixed root license read with exact original SVG samples; not a whole-series or future-runtime dependency audit"
     },
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-bulk-523",
-    "sourceScope": "2 original SVG text samples + original README + complete root license; no full asset download or preview",
+    "difference": "与Lucide/Fluent等重复语义明确；outlined/rounded/sharp及字重/尺寸只计一个系列，不收旧Material Icons作第二条。",
+    "title": "圆角界面图标精选",
+    "description": "适合智能工作台的218个原圆角二十四像素图标，可搜索分页；不是完整系列，其余名称、风格、字重和尺寸尚未接入。",
+    "behavior": "适合智能工作台的218个原圆角二十四像素图标，可搜索分页；不是完整系列，其余名称、风格、字重和尺寸尚未接入。",
     "kind": "图标系列",
-    "buildStatus": "fixed original SVG source and complete root license read; not built, run or visually accepted",
-    "sourceEvidence": [
-      {
-        "path": "symbols/web/chat/materialsymbolsrounded/chat_24px.svg",
-        "sha256": "da947cf56264abaad93709bc8eb24bd4c12567284473fcfed93fd421a57c33e1",
-        "viewBox": "0 -960 960 960",
-        "elements": [
-          "svg",
-          "path"
-        ]
-      },
-      {
-        "path": "symbols/web/search/materialsymbolsrounded/search_24px.svg",
-        "sha256": "8d12ac6ba27a23ccf0e57794c28481ce9c978efcb2f80ba6d2979ccdf238c993",
-        "viewBox": "0 -960 960 960",
-        "elements": [
-          "svg",
-          "path"
-        ]
-      }
-    ],
-    "counts": {
-      "independentFamily": 1,
-      "completedPreviews": 0
-    },
-    "format": "图标家族"
+    "format": "图标家族",
+    "category": "图标系列",
+    "license": "Apache-2.0",
+    "batch": "material-selected-01",
+    "preview": "batches/material-selected-01/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "passed",
+    "gaps": [
+      "4157名称目录中仅选218 Rounded24px默认图；未收其他风格、字重、grade、fill与尺寸",
+      "视觉未验，DOM与XML不等于像素验收"
+    ]
   },
   {
     "id": "majesticons:official-series",
@@ -14483,58 +14454,37 @@
   },
   {
     "id": "react-three-csg:live-solid-boolean",
-    "title": "实时三维布尔切割材质",
     "source": "React Three CSG",
     "repository": "https://github.com/pmndrs/react-three-csg",
     "revision": "b668971b2c65fdb2d0b615965634c2d73785355a",
-    "sourcePath": ".storybook/stories/advanced/Updating.stories.tsx",
     "upstream": "https://github.com/pmndrs/react-three-csg/blob/b668971b2c65fdb2d0b615965634c2d73785355a/.storybook/stories/advanced/Updating.stories.tsx",
-    "license": "MIT (selected fixed source verified; complete runtime/asset audit pending)",
-    "behavior": "原Updating场景旋转基础立方体并每帧重算球体差集；保留多材质切面示例为同族，原Setup含OrbitControls。",
-    "difference": "与已收Paper二维矢量布尔不同，为实体三维表面交集/差集与切面材质；自动变化不是已实现拖拽建模器。",
-    "description": "原Updating场景旋转基础立方体并每帧重算球体差集；保留多材质切面示例为同族，原Setup含OrbitControls。 与已收Paper二维矢量布尔不同，为实体三维表面交集/差集与切面材质；自动变化不是已实现拖拽建模器。",
-    "gaps": [
-      "three-bvh-csg/bvh、Three/fiber/drei完整运行许可和性能尚未闭合。",
-      "每帧64细分球体运算可能昂贵；需停帧/可用性/几何dispose及正常CSP验证，不称原完整编辑器已接入。",
-      "本轮仅固定源及许可文本检查；未安装构建/运行/测试交互或清理，也未验浏览器像素。无封面/截图；所有封面由Grok处理。"
-    ],
-    "category": "视觉与动效",
-    "format": "空间交互组件",
-    "kind": "原版视觉场景（仅来源）",
+    "sourcePath": ".storybook/stories/advanced/Updating.stories.tsx",
     "licenseEvidence": {
       "url": "https://github.com/pmndrs/react-three-csg/blob/b668971b2c65fdb2d0b615965634c2d73785355a/LICENSE",
       "sha256": "cd14add33d47bcecae9fed5559224ae135c5ec41e1d3a126601f5fbd82291834",
       "scope": "Complete fixed root license and selected source files read; runtime dependencies not closed"
     },
-    "sourceEvidence": [
-      {
-        "path": ".storybook/stories/advanced/Updating.stories.tsx",
-        "sha256": "67d4ce3933092f2d8fff76d266e88b8b4be38cde9460925ca68e876c6dec2865"
-      },
-      {
-        "path": ".storybook/stories/advanced/MultipleMaterials.stories.tsx",
-        "sha256": "850aa24a941e757c6b8f9d86f997eb2888c858c1120a2c8822ac743a137846f1"
-      },
-      {
-        "path": ".storybook/common/Setup.tsx",
-        "sha256": "dd993630aee5cfa4362baa18c33d23963d2153dc6d091ae7767f51b2d1e13655"
-      },
-      {
-        "path": "src/index.tsx",
-        "sha256": "a7cd60393c98cad91d41f38a840ead6d8e0c2b82a655e3b64c42f96efb804c96"
-      }
+    "difference": "与已收Paper二维矢量布尔不同，为实体三维表面交集/差集与切面材质；自动变化不是已实现拖拽建模器。",
+    "title": "实时立体布尔雕刻",
+    "description": "原实体布尔差集与轨道视角，真实CPU求交/Three渲染；不可用明确错误，不用假几何替代。",
+    "behavior": "原实体布尔差集与轨道视角，真实CPU求交/Three渲染；不可用明确错误，不用假几何替代。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "视觉与动效",
+    "license": "MIT",
+    "batch": "csg-boolean-01",
+    "preview": "batches/csg-boolean-01/live-solid-boolean/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "actual554 compose; original CSG geometry/rotation, Orbit camera and lifecycle checked under mocked GL",
+    "gaps": [
+      "原生GPU与像素待验，64细分连续布尔运算性能未做真实设备验收。"
     ],
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-bulk-524",
-    "sourceScope": "4 selected original source files plus README and complete license; no full runnable archive",
-    "buildStatus": "fixed selected source/license read; no runtime or visual verification",
-    "counts": {
-      "independentFamily": 1,
-      "completedPreviews": 0
+    "runtime": {
+      "scripts": [
+        "runtime-three.js",
+        "runtime.js"
+      ]
     }
   },
   {
@@ -16631,42 +16581,41 @@
   },
   {
     "id": "svgomg:vector-optimization-inspector",
-    "title": "矢量优化与源码对照检查",
     "source": "SVGOMG",
     "repository": "https://github.com/jakearchibald/svgomg",
     "revision": "f925656d40a507c512bf95ee14ad16445a4ad3ed",
-    "sourcePath": "src/js/page/main-controller.js",
     "upstream": "https://github.com/jakearchibald/svgomg/blob/f925656d40a507c512bf95ee14ad16445a4ad3ed/src/js/page/main-controller.js",
-    "license": "MIT (complete actual root text; runtime/media not closed)",
-    "behavior": "原 Material 风格优化界面把 SVG 图形/代码切换、平移缩放、优化开关、精度设置与体积结果串联，并以任务编号丢弃旧压缩结果。",
-    "difference": "与 Squoosh 同为优化但输入及操作独立：这里是可读 SVG 结构/属性变换和代码检查，不是位图有损压缩；整套一族，不按 SVGO 插件拆。",
-    "styleTags": [
-      "矢量源码/Material"
-    ],
-    "gaps": [
-      "原构造立即注册 serviceWorker 并访问 IndexedDB，SVGO/Prism/gzip worker 均需离线安全适配，不能扩 CSP。原 SVG 输入可能含主动内容/外链，必须审核清洗；全局 copy/paste/keydown 匿名监听、下载/剪贴板与晚到任务清理未闭合。依赖及 logo/字体许可未审。",
-      "仅只读源码筛选；未安装/构建/运行、交互生命周期或浏览器视觉验收。"
-    ],
-    "description": "原 Material 风格优化界面把 SVG 图形/代码切换、平移缩放、优化开关、精度设置与体积结果串联，并以任务编号丢弃旧压缩结果。 与 Squoosh 同为优化但输入及操作独立：这里是可读 SVG 结构/属性变换和代码检查，不是位图有损压缩；整套一族，不按 SVGO 插件拆。",
-    "category": "展示与媒体",
+    "sourcePath": "src/js/page/main-controller.js",
     "licenseEvidence": {
       "url": "https://github.com/jakearchibald/svgomg/blob/f925656d40a507c512bf95ee14ad16445a4ad3ed/LICENSE.md",
       "sha256": "fc238e99233704853d397eb25d538edfd5f2ddb2ad86d903bb33af99753897bb",
       "scope": "Complete actual root license; transitive code and media permissions not closed"
     },
-    "sourceEvidence": {
-      "localFile": "evidence/jakearchibald--svgomg--src__js__page__main-controller.js",
-      "sha256": "9cbb7573dae8c58514bc17259f2d772b1c0c8826d335addf64352296075b520a"
-    },
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-style-528",
-    "sourceScope": "Fixed original complete UI/demo source and full root license; not a runnable adaptation or full asset archive",
-    "kind": "原版交互场景（仅来源）",
-    "buildStatus": "fixed source and full root license read; not built/run/visually accepted"
+    "difference": "与 Squoosh 同为优化但输入及操作独立：这里是可读 SVG 结构/属性变换和代码检查，不是位图有损压缩；整套一族，不按 SVGO 插件拆。",
+    "title": "矢量图优化检查台",
+    "description": "原完整 SVGOMG Material 优化界面：真实 SVGO 插件/精度、体积与源码对照，限制为安全本地 SVG 文本。",
+    "behavior": "原完整 SVGOMG Material 优化界面：真实 SVGO 插件/精度、体积与源码对照，限制为安全本地 SVG 文本。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "展示与媒体",
+    "license": "MIT; ISC; BSD-2-Clause; BSD-3-Clause; BlueOak-1.0.0; Apache-2.0; Zlib; original public-domain fixture dedication",
+    "batch": "svgomg-01",
+    "preview": "batches/svgomg-01/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "pass",
+    "gaps": [
+      "Controlled JSDOM geometry/form-named-property fixture, not native SVG raster, font metrics, pointer pan/zoom or performance QA.",
+      "Original same-thread SVGO/gzip replaces worker transport. Inputs capped150k chars/2500elements; huge SVG documents unsupported.",
+      "Only safe vector SVG text accepted. Script/HTML/remote images/active animation/doctype/custom external references rejected; no file import/export/clipboard permission/cloud/storage.",
+      "System fonts replace original binary fonts; original SVG UI retained except external contribution link. Original public-domain car dedication is US-law based, not labeled CC0."
+    ],
+    "runtime": {
+      "scripts": [
+        "runtime-part-1.js",
+        "runtime.js"
+      ]
+    }
   },
   {
     "id": "beepbox:pattern-song-composer",
@@ -21115,6 +21064,230 @@
     "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
     "gaps": [
       "Original full Meta AstryX pages retained byte-for-byte, not rebuilt business shells. Fixed source0.7.12 repository and actual installedcore/theme/build0.7.11 compatibility runtime disclosed with exact emitted dependencies. All datasets, invoices, reports, users and CI results are illustrative. form-wizard-dialog is upstream isInline gallery presentation, NOT an actual opening modal or report list: original3steps report/data,frequency/date/timezone,recipients/attachment; completion toast/reset only, no scheduling or email. Existing form-wizard is a distinct4stepworkspace/invitation/plan/review flow, not this one. form-wizard-inline is original6stepCI local simulation including timer-driven Connect/Inspect/Trial and reachable runner-memory failure; no repository/network/command execution. dashboard-progress originalphase filtering of Gantt/workstreams/risks; comparison original analytics fixture controls; composition originalportfolio surface with range-label selection (do not claim selecting a range recomputes static series). documentation originalstaticcomponent landing page, no external destination or business action claimed. Original no-op Export/View more/Get started controls remain illustrations. Host blocks navigation and forms, labels fictional context explicitly, supplies shared neutralTheme/StyleX/LayerProvider and bounded lifecycle. Hidden unmount resets transient state; visible fresh mounts. No media or binary/font replacements. Each page independent IIFE. Tests actual553compose/createPreviewLoader/cache/release, originalkeyinteractions, sharedearly/late/reduced, CI simulatedfailure-to-recovery; no nativechartpixels/layout verification. CompiledStyleX CSS parsing warning recorded separately. Full rootMIT and actualemittedlicense texts inclvictory-vendor sublicenses; core/StyleX missing-fileofficialsupplements disclosed."
+    ]
+  },
+  {
+    "id": "astryx-core:collapsible",
+    "source": "Meta AstryX",
+    "repository": "https://github.com/meta/astryx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/core/src/Collapsible/Collapsible.doc.mjs",
+    "sourcePath": "packages/core/src/Collapsible/Collapsible.doc.mjs",
+    "licenseEvidence": {
+      "url": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/LICENSE",
+      "sha256": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473",
+      "scope": "Complete fixed original MIT; actual runtime dependency notices supplied in preview assets."
+    },
+    "title": "折叠内容",
+    "description": "原组件与明确的本地示例，保留原组件交互；状态与轻包装不拆成多个条目，不提供后台业务。",
+    "behavior": "原组件与明确的本地示例，保留原组件交互；状态与轻包装不拆成多个条目，不提供后台业务。",
+    "kind": "组件",
+    "format": "独立组件",
+    "category": "导航与组织",
+    "license": "MIT AND ISC AND BSD-3-Clause",
+    "batch": "astryx-navigation-01",
+    "preview": "batches/astryx-navigation-01/collapsible/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Original Meta AstryX navigation/menu/data-display components with explicitly host-authored minimal local fixtures. Not an official complete business app. Collapsible original controlled expansion; DropdownMenu original selection plus actual MoreMenu icon-trigger wrapper shown in same entry, not counted separately; ContextMenu original right-click local selection; Tabs original TabList local panel value; Stepper bounded local steps; List original selectable rows; MetadataList original static labelled sample facts; Token original remove plus host restore. All actions affect local illustrative state only, no network, files, clipboard, service commands or navigation. Same originalcore/neutraltheme/StyleX geometry, per-entry independent IIFE. Fixed source documentation0.7.12 versus installedcore/theme/build0.7.11 compatibility runtime disclosed. Hidden unmount resets localfixture; visible mounts fresh; exit/error cleans owned resources. Actual550compose and loader/cache/release plus each key interaction/exit, shared early/late/reduced under JSDOM. Pointer coordinates for contextmenu are synthetic event positions, not native placement geometry/visual acceptance. StyleX CSS parser warnings recorded separately. RootMIT and all actual emitteddependency full licenses; prior core/StyleX missing-file official supplements clearly identified. MoreMenu reviewed source only forwards configured icon-only props to DropdownMenu; oneentrycoversboth, no alias-based count increase."
+    ]
+  },
+  {
+    "id": "astryx-core:dropdown-menu",
+    "source": "Meta AstryX",
+    "repository": "https://github.com/meta/astryx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/core/src/DropdownMenu/DropdownMenu.doc.mjs",
+    "sourcePath": "packages/core/src/DropdownMenu/DropdownMenu.doc.mjs",
+    "licenseEvidence": {
+      "url": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/LICENSE",
+      "sha256": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473",
+      "scope": "Complete fixed original MIT; actual runtime dependency notices supplied in preview assets."
+    },
+    "title": "下拉与更多菜单",
+    "description": "原组件与明确的本地示例，保留原组件交互；状态与轻包装不拆成多个条目，不提供后台业务。",
+    "behavior": "原组件与明确的本地示例，保留原组件交互；状态与轻包装不拆成多个条目，不提供后台业务。",
+    "kind": "组件",
+    "format": "独立组件",
+    "category": "导航与组织",
+    "license": "MIT AND ISC AND BSD-3-Clause",
+    "batch": "astryx-navigation-01",
+    "preview": "batches/astryx-navigation-01/dropdown-menu/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Original Meta AstryX navigation/menu/data-display components with explicitly host-authored minimal local fixtures. Not an official complete business app. Collapsible original controlled expansion; DropdownMenu original selection plus actual MoreMenu icon-trigger wrapper shown in same entry, not counted separately; ContextMenu original right-click local selection; Tabs original TabList local panel value; Stepper bounded local steps; List original selectable rows; MetadataList original static labelled sample facts; Token original remove plus host restore. All actions affect local illustrative state only, no network, files, clipboard, service commands or navigation. Same originalcore/neutraltheme/StyleX geometry, per-entry independent IIFE. Fixed source documentation0.7.12 versus installedcore/theme/build0.7.11 compatibility runtime disclosed. Hidden unmount resets localfixture; visible mounts fresh; exit/error cleans owned resources. Actual550compose and loader/cache/release plus each key interaction/exit, shared early/late/reduced under JSDOM. Pointer coordinates for contextmenu are synthetic event positions, not native placement geometry/visual acceptance. StyleX CSS parser warnings recorded separately. RootMIT and all actual emitteddependency full licenses; prior core/StyleX missing-file official supplements clearly identified. MoreMenu reviewed source only forwards configured icon-only props to DropdownMenu; oneentrycoversboth, no alias-based count increase."
+    ]
+  },
+  {
+    "id": "astryx-core:context-menu",
+    "source": "Meta AstryX",
+    "repository": "https://github.com/meta/astryx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/core/src/ContextMenu/ContextMenu.doc.mjs",
+    "sourcePath": "packages/core/src/ContextMenu/ContextMenu.doc.mjs",
+    "licenseEvidence": {
+      "url": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/LICENSE",
+      "sha256": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473",
+      "scope": "Complete fixed original MIT; actual runtime dependency notices supplied in preview assets."
+    },
+    "title": "右键上下文菜单",
+    "description": "原组件与明确的本地示例，保留原组件交互；状态与轻包装不拆成多个条目，不提供后台业务。",
+    "behavior": "原组件与明确的本地示例，保留原组件交互；状态与轻包装不拆成多个条目，不提供后台业务。",
+    "kind": "组件",
+    "format": "独立组件",
+    "category": "导航与组织",
+    "license": "MIT AND ISC AND BSD-3-Clause",
+    "batch": "astryx-navigation-01",
+    "preview": "batches/astryx-navigation-01/context-menu/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Original Meta AstryX navigation/menu/data-display components with explicitly host-authored minimal local fixtures. Not an official complete business app. Collapsible original controlled expansion; DropdownMenu original selection plus actual MoreMenu icon-trigger wrapper shown in same entry, not counted separately; ContextMenu original right-click local selection; Tabs original TabList local panel value; Stepper bounded local steps; List original selectable rows; MetadataList original static labelled sample facts; Token original remove plus host restore. All actions affect local illustrative state only, no network, files, clipboard, service commands or navigation. Same originalcore/neutraltheme/StyleX geometry, per-entry independent IIFE. Fixed source documentation0.7.12 versus installedcore/theme/build0.7.11 compatibility runtime disclosed. Hidden unmount resets localfixture; visible mounts fresh; exit/error cleans owned resources. Actual550compose and loader/cache/release plus each key interaction/exit, shared early/late/reduced under JSDOM. Pointer coordinates for contextmenu are synthetic event positions, not native placement geometry/visual acceptance. StyleX CSS parser warnings recorded separately. RootMIT and all actual emitteddependency full licenses; prior core/StyleX missing-file official supplements clearly identified. MoreMenu reviewed source only forwards configured icon-only props to DropdownMenu; oneentrycoversboth, no alias-based count increase."
+    ]
+  },
+  {
+    "id": "astryx-core:tabs",
+    "source": "Meta AstryX",
+    "repository": "https://github.com/meta/astryx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/core/src/TabList/TabList.doc.mjs",
+    "sourcePath": "packages/core/src/TabList/TabList.doc.mjs",
+    "licenseEvidence": {
+      "url": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/LICENSE",
+      "sha256": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473",
+      "scope": "Complete fixed original MIT; actual runtime dependency notices supplied in preview assets."
+    },
+    "title": "选项卡",
+    "description": "原组件与明确的本地示例，保留原组件交互；状态与轻包装不拆成多个条目，不提供后台业务。",
+    "behavior": "原组件与明确的本地示例，保留原组件交互；状态与轻包装不拆成多个条目，不提供后台业务。",
+    "kind": "组件",
+    "format": "独立组件",
+    "category": "导航与组织",
+    "license": "MIT AND ISC AND BSD-3-Clause",
+    "batch": "astryx-navigation-01",
+    "preview": "batches/astryx-navigation-01/tabs/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Original Meta AstryX navigation/menu/data-display components with explicitly host-authored minimal local fixtures. Not an official complete business app. Collapsible original controlled expansion; DropdownMenu original selection plus actual MoreMenu icon-trigger wrapper shown in same entry, not counted separately; ContextMenu original right-click local selection; Tabs original TabList local panel value; Stepper bounded local steps; List original selectable rows; MetadataList original static labelled sample facts; Token original remove plus host restore. All actions affect local illustrative state only, no network, files, clipboard, service commands or navigation. Same originalcore/neutraltheme/StyleX geometry, per-entry independent IIFE. Fixed source documentation0.7.12 versus installedcore/theme/build0.7.11 compatibility runtime disclosed. Hidden unmount resets localfixture; visible mounts fresh; exit/error cleans owned resources. Actual550compose and loader/cache/release plus each key interaction/exit, shared early/late/reduced under JSDOM. Pointer coordinates for contextmenu are synthetic event positions, not native placement geometry/visual acceptance. StyleX CSS parser warnings recorded separately. RootMIT and all actual emitteddependency full licenses; prior core/StyleX missing-file official supplements clearly identified. MoreMenu reviewed source only forwards configured icon-only props to DropdownMenu; oneentrycoversboth, no alias-based count increase."
+    ]
+  },
+  {
+    "id": "astryx-core:stepper",
+    "source": "Meta AstryX",
+    "repository": "https://github.com/meta/astryx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/core/src/Stepper/Stepper.doc.mjs",
+    "sourcePath": "packages/core/src/Stepper/Stepper.doc.mjs",
+    "licenseEvidence": {
+      "url": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/LICENSE",
+      "sha256": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473",
+      "scope": "Complete fixed original MIT; actual runtime dependency notices supplied in preview assets."
+    },
+    "title": "步骤导航",
+    "description": "原组件与明确的本地示例，保留原组件交互；状态与轻包装不拆成多个条目，不提供后台业务。",
+    "behavior": "原组件与明确的本地示例，保留原组件交互；状态与轻包装不拆成多个条目，不提供后台业务。",
+    "kind": "组件",
+    "format": "独立组件",
+    "category": "导航与组织",
+    "license": "MIT AND ISC AND BSD-3-Clause",
+    "batch": "astryx-navigation-01",
+    "preview": "batches/astryx-navigation-01/stepper/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Original Meta AstryX navigation/menu/data-display components with explicitly host-authored minimal local fixtures. Not an official complete business app. Collapsible original controlled expansion; DropdownMenu original selection plus actual MoreMenu icon-trigger wrapper shown in same entry, not counted separately; ContextMenu original right-click local selection; Tabs original TabList local panel value; Stepper bounded local steps; List original selectable rows; MetadataList original static labelled sample facts; Token original remove plus host restore. All actions affect local illustrative state only, no network, files, clipboard, service commands or navigation. Same originalcore/neutraltheme/StyleX geometry, per-entry independent IIFE. Fixed source documentation0.7.12 versus installedcore/theme/build0.7.11 compatibility runtime disclosed. Hidden unmount resets localfixture; visible mounts fresh; exit/error cleans owned resources. Actual550compose and loader/cache/release plus each key interaction/exit, shared early/late/reduced under JSDOM. Pointer coordinates for contextmenu are synthetic event positions, not native placement geometry/visual acceptance. StyleX CSS parser warnings recorded separately. RootMIT and all actual emitteddependency full licenses; prior core/StyleX missing-file official supplements clearly identified. MoreMenu reviewed source only forwards configured icon-only props to DropdownMenu; oneentrycoversboth, no alias-based count increase."
+    ]
+  },
+  {
+    "id": "astryx-core:list",
+    "source": "Meta AstryX",
+    "repository": "https://github.com/meta/astryx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/core/src/List/List.doc.mjs",
+    "sourcePath": "packages/core/src/List/List.doc.mjs",
+    "licenseEvidence": {
+      "url": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/LICENSE",
+      "sha256": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473",
+      "scope": "Complete fixed original MIT; actual runtime dependency notices supplied in preview assets."
+    },
+    "title": "交互列表",
+    "description": "原组件与明确的本地示例，保留原组件交互；状态与轻包装不拆成多个条目，不提供后台业务。",
+    "behavior": "原组件与明确的本地示例，保留原组件交互；状态与轻包装不拆成多个条目，不提供后台业务。",
+    "kind": "组件",
+    "format": "独立组件",
+    "category": "导航与组织",
+    "license": "MIT AND ISC AND BSD-3-Clause",
+    "batch": "astryx-navigation-01",
+    "preview": "batches/astryx-navigation-01/list/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Original Meta AstryX navigation/menu/data-display components with explicitly host-authored minimal local fixtures. Not an official complete business app. Collapsible original controlled expansion; DropdownMenu original selection plus actual MoreMenu icon-trigger wrapper shown in same entry, not counted separately; ContextMenu original right-click local selection; Tabs original TabList local panel value; Stepper bounded local steps; List original selectable rows; MetadataList original static labelled sample facts; Token original remove plus host restore. All actions affect local illustrative state only, no network, files, clipboard, service commands or navigation. Same originalcore/neutraltheme/StyleX geometry, per-entry independent IIFE. Fixed source documentation0.7.12 versus installedcore/theme/build0.7.11 compatibility runtime disclosed. Hidden unmount resets localfixture; visible mounts fresh; exit/error cleans owned resources. Actual550compose and loader/cache/release plus each key interaction/exit, shared early/late/reduced under JSDOM. Pointer coordinates for contextmenu are synthetic event positions, not native placement geometry/visual acceptance. StyleX CSS parser warnings recorded separately. RootMIT and all actual emitteddependency full licenses; prior core/StyleX missing-file official supplements clearly identified. MoreMenu reviewed source only forwards configured icon-only props to DropdownMenu; oneentrycoversboth, no alias-based count increase."
+    ]
+  },
+  {
+    "id": "astryx-core:metadata-list",
+    "source": "Meta AstryX",
+    "repository": "https://github.com/meta/astryx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/core/src/MetadataList/MetadataList.doc.mjs",
+    "sourcePath": "packages/core/src/MetadataList/MetadataList.doc.mjs",
+    "licenseEvidence": {
+      "url": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/LICENSE",
+      "sha256": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473",
+      "scope": "Complete fixed original MIT; actual runtime dependency notices supplied in preview assets."
+    },
+    "title": "元数据列表",
+    "description": "原组件与明确的本地示例，保留原组件交互；状态与轻包装不拆成多个条目，不提供后台业务。",
+    "behavior": "原组件与明确的本地示例，保留原组件交互；状态与轻包装不拆成多个条目，不提供后台业务。",
+    "kind": "组件",
+    "format": "独立组件",
+    "category": "导航与组织",
+    "license": "MIT AND ISC AND BSD-3-Clause",
+    "batch": "astryx-navigation-01",
+    "preview": "batches/astryx-navigation-01/metadata-list/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Original Meta AstryX navigation/menu/data-display components with explicitly host-authored minimal local fixtures. Not an official complete business app. Collapsible original controlled expansion; DropdownMenu original selection plus actual MoreMenu icon-trigger wrapper shown in same entry, not counted separately; ContextMenu original right-click local selection; Tabs original TabList local panel value; Stepper bounded local steps; List original selectable rows; MetadataList original static labelled sample facts; Token original remove plus host restore. All actions affect local illustrative state only, no network, files, clipboard, service commands or navigation. Same originalcore/neutraltheme/StyleX geometry, per-entry independent IIFE. Fixed source documentation0.7.12 versus installedcore/theme/build0.7.11 compatibility runtime disclosed. Hidden unmount resets localfixture; visible mounts fresh; exit/error cleans owned resources. Actual550compose and loader/cache/release plus each key interaction/exit, shared early/late/reduced under JSDOM. Pointer coordinates for contextmenu are synthetic event positions, not native placement geometry/visual acceptance. StyleX CSS parser warnings recorded separately. RootMIT and all actual emitteddependency full licenses; prior core/StyleX missing-file official supplements clearly identified. MoreMenu reviewed source only forwards configured icon-only props to DropdownMenu; oneentrycoversboth, no alias-based count increase."
+    ]
+  },
+  {
+    "id": "astryx-core:token",
+    "source": "Meta AstryX",
+    "repository": "https://github.com/meta/astryx",
+    "revision": "b9ad7bf521a057bed914d2d85dc249314d937328",
+    "upstream": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/packages/core/src/Token/Token.doc.mjs",
+    "sourcePath": "packages/core/src/Token/Token.doc.mjs",
+    "licenseEvidence": {
+      "url": "https://github.com/meta/astryx/blob/b9ad7bf521a057bed914d2d85dc249314d937328/LICENSE",
+      "sha256": "a6855be541fc8f446acd1bc4f2f8efce1ace6dce71dba32fcd8da553ee54b473",
+      "scope": "Complete fixed original MIT; actual runtime dependency notices supplied in preview assets."
+    },
+    "title": "可移除标签",
+    "description": "原组件与明确的本地示例，保留原组件交互；状态与轻包装不拆成多个条目，不提供后台业务。",
+    "behavior": "原组件与明确的本地示例，保留原组件交互；状态与轻包装不拆成多个条目，不提供后台业务。",
+    "kind": "组件",
+    "format": "独立组件",
+    "category": "导航与组织",
+    "license": "MIT AND ISC AND BSD-3-Clause",
+    "batch": "astryx-navigation-01",
+    "preview": "batches/astryx-navigation-01/token/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Original Meta AstryX navigation/menu/data-display components with explicitly host-authored minimal local fixtures. Not an official complete business app. Collapsible original controlled expansion; DropdownMenu original selection plus actual MoreMenu icon-trigger wrapper shown in same entry, not counted separately; ContextMenu original right-click local selection; Tabs original TabList local panel value; Stepper bounded local steps; List original selectable rows; MetadataList original static labelled sample facts; Token original remove plus host restore. All actions affect local illustrative state only, no network, files, clipboard, service commands or navigation. Same originalcore/neutraltheme/StyleX geometry, per-entry independent IIFE. Fixed source documentation0.7.12 versus installedcore/theme/build0.7.11 compatibility runtime disclosed. Hidden unmount resets localfixture; visible mounts fresh; exit/error cleans owned resources. Actual550compose and loader/cache/release plus each key interaction/exit, shared early/late/reduced under JSDOM. Pointer coordinates for contextmenu are synthetic event positions, not native placement geometry/visual acceptance. StyleX CSS parser warnings recorded separately. RootMIT and all actual emitteddependency full licenses; prior core/StyleX missing-file official supplements clearly identified. MoreMenu reviewed source only forwards configured icon-only props to DropdownMenu; oneentrycoversboth, no alias-based count increase."
     ]
   }
 ]
