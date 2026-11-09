@@ -1,0 +1,137 @@
+{
+  "id": "mattertools:physical-scene-inspector",
+  "repository": "https://github.com/liabru/matter-tools",
+  "revision": "a7a20e1de3c8a819a9a924f5cf56aa5c0beafe15",
+  "sourcePath": "docs/demo/demo.js",
+  "sourcePaths": [
+    "docs/demo/demo.js",
+    "docs/demo/example.js",
+    "src/tools/Demo.js",
+    "src/tools/Gui.js",
+    "src/tools/Inspector.js",
+    "src/tools/Serializer.js"
+  ],
+  "originalHashes": {
+    "src/index.js": "cabf547a3ce1158fac8a305359cdf93ff62826be87fee79b96e8c425d715734f",
+    "src/styles/demo.css": "e0b374c2d43290ed0e1c199a8b4fa392f2de1ce8aca5cc15bf8321ec43978dc4",
+    "src/styles/gui.css": "b3fe4712c7f8e059c05cde875f9068dc6274a30f4fc76d83b74fb8d9647dfb82",
+    "src/styles/inspector.css": "a87eb1efaf66152df79a8ae4324dc7f3212eaae72ee3d82937ce5b7cbe22dcc9",
+    "src/tools/Common.js": "1431f5d0d1f32090518de466b3772b3a87d7ede8e875dc17cb272e2287e58728",
+    "src/tools/Demo.js": "adf9b25fc82f222cdd4391c6359579ca5a0ab9991882c0358016b50c14b4a348",
+    "src/tools/Gui.js": "deaf83b69252a8450c6f622f269f24aedd6219149f8f5ea1c3a3695ed6b2bcb9",
+    "src/tools/Inspector.js": "f12dc9526268a375aa7d550dc253c011a2481c4af7fd839c13aa26d70fb1f8f0",
+    "src/tools/Serializer.js": "d35bc0a688402d6e90ee9a972e526347ad4b5ec8faf7af9c7098083a08e73fe1",
+    "libs/resurrect-js/README.md": "ee01452e90e2693af3627adf378b98159152af7670f8bafcdaaafec63223a1c9",
+    "libs/resurrect-js/UNLICENSE": "7e12e5df4bae12cb21581ba157ced20e1986a0508dd10d0e8a4ab9a4cf94e85c",
+    "libs/resurrect-js/resurrect.js": "2481e4f2f7ab3b602d4ca202fbee6b06d721f52baf6f95776bf4c75cc3d6962a",
+    "docs/demo/demo.js": "5baed001f7c2f52fce41c4e62fd045654d9f2ef97d3cba475bd1d84c339eaf62",
+    "docs/demo/example.js": "81f8e023598404959c84ec3aa51279fd85a6e83d73906645cea2eb5ba8f8e84a",
+    "LICENSE": "43bf4be195829b3928d03a0abbd9b2b2905b4176d16e90968c18eac8a6bed652"
+  },
+  "adaptedHashes": {
+    "src/index.js": "cabf547a3ce1158fac8a305359cdf93ff62826be87fee79b96e8c425d715734f",
+    "src/styles/demo.css": "e0b374c2d43290ed0e1c199a8b4fa392f2de1ce8aca5cc15bf8321ec43978dc4",
+    "src/styles/gui.css": "a64b54d30d8df4c1587b3bf17fde530ef83f8052ca64e6ef636db521fd658cbc",
+    "src/styles/inspector.css": "a87eb1efaf66152df79a8ae4324dc7f3212eaae72ee3d82937ce5b7cbe22dcc9",
+    "src/tools/Common.js": "16c276b93a6ea3e293be5b0f40cc111f4afe5ae2f74cd1711ffef87cf4450c13",
+    "src/tools/Demo.js": "4e821a80a54342d9076c7df4bfabd3f3db49f4f44b466fa35ec871dbb6c5f2e6",
+    "src/tools/Gui.js": "206896425b3ce84d0055520dbf063c2271000bdc9c1044f5049d54eb59700b77",
+    "src/tools/Inspector.js": "f48aafb93ac151e95716e46bb1b90da68b801c82a830368405c3649600781428",
+    "src/tools/Memory.js": "2c22f59b570614e3035f28fcc6614123474b4215160d73bb23ee058475dfba72",
+    "src/tools/Serializer.js": "c578f2690b37d77b384b00894ec7215f9f2216cae36ba3787d0fbc6c84c5cec4",
+    "libs/resurrect-js/README.md": "ee01452e90e2693af3627adf378b98159152af7670f8bafcdaaafec63223a1c9",
+    "libs/resurrect-js/UNLICENSE": "7e12e5df4bae12cb21581ba157ced20e1986a0508dd10d0e8a4ab9a4cf94e85c",
+    "libs/resurrect-js/resurrect.js": "afcb521f5273b1fbb7155ad8e47a225df39050a602f7edd8136fe96cbbb1afda",
+    "main.js": "2321bfb9339dffb72ec6ab71f461c68a8403461ce83d9ed8ca4aeaec11618081",
+    "bootstrap.js": "d5351336a773dec3aa752a31af36ef88e865f91adedb85da1cc4e33cb454ee8d",
+    "example-local.js": "d894ea37606ad994fcd2e11cb09fa0459e26b93a9cf4cc1ac07e27798d50a669",
+    "matter-local.js": "1ce67ba5138ee7c3c409a862021054a87955c8839c91a0734a357598a3aa8d6d",
+    "dat-local.js": "914cfa667691ae839dda5ea493cd7cf448a0c11f84360ca87b9fec019328a063",
+    "jquery-local.js": "b4527416d075dfb44a88a5be59a8c81ee2da2e38076d7a32e8295caf7b3fc934",
+    "jstree-local.js": "e7bddda0fd2cfc43267ead99242c8a95e9b621f6c0c38434e93586811e9ff95a",
+    "jstree-local.css": "c0f5b52e7c93f51e69f3983b9685b3b9a2ccdc9f96b9cf7a23dcf1d3bcf74b13",
+    "adapt.py": "ca4984be3076c7431857a40bd164c13da3284d1e40b39eacf0da6d6c08de7994",
+    "build.mjs": "6fd7a62dbca03817d01948e35a7ebb327514723b8486fccb9cff5ddae4f7459c",
+    "package-lock.json": "e48bb65bb76fee7855ac70cd92f14e7979e75f97b42021904944c523baf53049"
+  },
+  "runtimePackages": [
+    {
+      "name": "matter-js",
+      "version": "0.16.1",
+      "declaredLicense": "MIT",
+      "licenseFile": "LICENSE",
+      "licenseSHA256": "ed182087be5b26734aa6d4789743de3a97417950e8c1e3ff2e3d19c6462720d3"
+    },
+    {
+      "name": "dat.gui",
+      "version": "0.7.7",
+      "declaredLicense": "Apache-2.0",
+      "licenseFile": "LICENSE",
+      "licenseSHA256": "47754d3064047c300714af25258efa782e144fdf1e835bfd1edbeb7f8f4ef9e4"
+    },
+    {
+      "name": "jquery",
+      "version": "3.5.1",
+      "declaredLicense": "MIT",
+      "licenseFile": "LICENSE.txt",
+      "licenseSHA256": "1ff603118efdb313799567cb4a408594954384f40843ca6f29c596f5b1f8907d"
+    },
+    {
+      "name": "jstree",
+      "version": "3.3.11",
+      "declaredLicense": "MIT",
+      "licenseFile": "LICENSE-MIT",
+      "licenseSHA256": "31211520f079a45fbe812303d02e864ce4465359715b7a10cb92852a6f8927a6"
+    },
+    {
+      "name": "keymaster",
+      "version": "1.6.2",
+      "declaredLicense": null,
+      "licenseFile": "MIT-LICENSE",
+      "licenseSHA256": "48db83a3e2c26d7c6afb6126e31e8d575daf0e028eff14bc870b4c3bf4bba39a"
+    }
+  ],
+  "changes": [
+    "Preserves original docs/demo/example.js Basic: 50 randomly generated rectangle/polygon bodies, four walls, real Matter Engine/Runner/Render/MouseConstraint. Basic2 is the same init and omitted, not a second family.",
+    "Uses original Demo/Gui/Inspector/JSTree/dat.gui layouts and behavior. Explicit source entry docs/demo/demo.js plus docs/demo/example.js; original sourceLink docs/examples/basic.js is erroneous and not used.",
+    "Original Inspector buttonGroup was built but never attached to topPanel. Minimal append restores original Pause/Help controls; no replacement inspector drawn.",
+    "Session-only Memory API replaces browser storage; inspector and GUI use same store, cleared on teardown. Load retains world/gravity identity so Inspector and GUI remain bound after original Engine.merge. Save/Clear/Load genuinely works locally, not persistence.",
+    "Resurrect indirect global eval replaced by globalThis; decoder constructors restricted to Date/RegExp/Number, prototype resolution to pure built-ins; DOM/Function/arbitrary constructor restoration rejects. Original circular graph/reference algorithm retained. Linked SO constructor hack and navigation handler replaced with independently written narrow logic.",
+    "No external capabilities: import/export routines disabled, no download/file picker, full-screen disabled, hash/source/title external navigation removed, jstree Worker disabled and force_text enabled, jquery DOMEval rejects and ajax XMLHttpRequest transport unavailable. No remote script loader.",
+    "Text-only assets: dat.gui inline GIF, Matter GUI GIF and JSTree bitmap assets removed. Local CSS triangles/diamond and selected background replace tree/folder affordances, not original bitmap pixel fidelity. No external fonts/media, no base64.",
+    "Reduced-motion initializes real static scene and uses input/click-triggered refresh; dat.gui listening RAF suppressed. Explicit local play button opts into original Matter loops. Hidden suspends scheduler with generation guards; pagehide destroys original tools, clears engine/memory and all recorded timers/listeners.",
+    "The unused original Vertices.isConvex implementation is omitted and throws unsupported if called; current fixed scene and tested original operations do not call it. No Paul Bourke implementation is redistributed.",
+    "JSTree queued Promise callbacks check original tree element still connected before completion, preventing late destroyed-tree mutation. Demo pending 500ms tool initialization is cancelled on switch/reset/exit. Partial/missing-root/context failure exits safely and displays explicit unavailable text rather than fake scene."
+  ],
+  "emittedMetafileSHA256": "7df0b70db1b1b892be03a62513ac71b5fd384a611a47cde694d99b0a6db5c67b",
+  "sourceOverride": "https://github.com/liabru/matter-tools/blob/a7a20e1de3c8a819a9a924f5cf56aa5c0beafe15/docs/demo/demo.js",
+  "nativeVisualQA": "not-run",
+  "emittedModuleBytes": {
+    "matter-local.js": 86612,
+    "dat-local.js": 50312,
+    "src/tools/Common.js": 602,
+    "src/tools/Memory.js": 189,
+    "libs/resurrect-js/resurrect.js": 5240,
+    "src/tools/Serializer.js": 730,
+    "src/styles/gui.css": 4608,
+    "src/tools/Gui.js": 4104,
+    "node_modules/keymaster/keymaster.js": 3066,
+    "jquery-local.js": 91652,
+    "jstree-local.js": 140805,
+    "jstree-local.css": 29332,
+    "src/styles/inspector.css": 6425,
+    "src/tools/Inspector.js": 13488,
+    "src/styles/demo.css": 7382,
+    "src/tools/Demo.js": 9359,
+    "src/index.js": 85,
+    "example-local.js": 1245,
+    "main.js": 2571
+  },
+  "localDependencyAliases": {
+    "matter-local.js": "matter-js/build/matter.js",
+    "dat-local.js": "dat.gui/build/dat.gui.js",
+    "jquery-local.js": "jquery/dist/jquery.js",
+    "jstree-local.js": "jstree/dist/jstree.js",
+    "jstree-local.css": "jstree/dist/themes/default/style.css"
+  }
+}
