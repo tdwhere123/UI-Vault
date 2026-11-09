@@ -15127,37 +15127,34 @@
   },
   {
     "id": "m4tt72:command-navigation-site",
-    "title": "m4tt72 · 可输入命令的复古个人站",
     "source": "m4tt72 Terminal",
     "repository": "https://github.com/m4tt72/terminal",
     "revision": "95f8cb488c56d492d8ec216e149f4cbfbd33c27d",
-    "sourcePath": "src/App.svelte",
     "upstream": "https://github.com/m4tt72/terminal/blob/95f8cb488c56d492d8ec216e149f4cbfbd33c27d/src/App.svelte",
-    "license": "MIT (root verified only; dependencies/assets not closed)",
-    "visualStyle": "整页等宽提示符、ASCII式输出与主题化细边框，用真实命令输入代替常规导航卡片。",
-    "behavior": "原Svelte输入按Enter调命令，方向键遍历历史、Tab补全，help/clear/echo等写入历史；支持主题和计算/待办命令入口。",
-    "difference": "区别已有流式日志/终端逐行输出：这里是可输入命令驱动内容导航的整站，但不是操作系统shell；不按命令拆条。",
-    "gaps": [
-      "commands原weather/curl会fetch外网，email/repo/donate等window.open；可选tracking脚本与命令事件上报，未来离线必须禁用而非直接运行。",
-      "todo/theme存储链、calc/convert实现、异步晚到/重复Enter/CSP边界尚未全审；只收原源，不冒称所有命令可离线。",
-      "仅来源，未构建/运行/视觉验收；传递依赖、媒体字体及CSP、重复操作/退出清理未全审，没有预览/截图或完整源码ZIP。"
-    ],
-    "description": "整页等宽提示符、ASCII式输出与主题化细边框，用真实命令输入代替常规导航卡片。 原Svelte输入按Enter调命令，方向键遍历历史、Tab补全，help/clear/echo等写入历史；支持主题和计算/待办命令入口。",
-    "category": "导航与组织",
+    "sourcePath": "src/App.svelte",
     "licenseEvidence": {
       "url": "https://github.com/m4tt72/terminal/blob/95f8cb488c56d492d8ec216e149f4cbfbd33c27d/LICENSE",
       "sha256": "66d50e93d8cb2b7a53b7b08c3a60e1043d1868902cef2683a885a8eb48d743d7",
       "scope": "Full root MIT read; selected fixed original source only; runtime and assets not cleared"
     },
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-style-526",
-    "sourceScope": "Selected fixed original code and complete root license evidence, not full runnable/archive",
-    "kind": "原版完整场景（仅来源）",
-    "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted"
+    "difference": "区别已有流式日志/终端逐行输出：这里是可输入命令驱动内容导航的整站，但不是操作系统shell；不按命令拆条。",
+    "title": "命令导航与本地工具终端",
+    "description": "原命令输入、历史、补全、计算、换算、待办及主题；本地内存状态，外发命令明确禁用。",
+    "behavior": "原命令输入、历史、补全、计算、换算、待办及主题；本地内存状态，外发命令明确禁用。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "导航与组织",
+    "license": "MIT (original UI, Svelte runtime and compiled Tailwind CSS)",
+    "batch": "m4tt-terminal-01",
+    "preview": "batches/m4tt-terminal-01/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "actual560 compose及原关键命令/键盘/中断退出/失败检查通过；视觉未验",
+    "gaps": [
+      "本地原命令导航演示，不是真实Shell；联网/邮件/付款/外链命令明确未执行。",
+      "原持久化改为退出清空的内存，输入512字符/历史与todo100条；不提供后台服务。",
+      "原二进制Cascadia字体未打包，系统等宽回退；真实浏览器视觉与滚动/焦点像素未验。"
+    ]
   },
   {
     "id": "brittany-v4:editorial-portfolio",
@@ -19025,56 +19022,38 @@
   },
   {
     "id": "svgfilter:node-material-editor",
-    "title": "节点式SVG材质编辑器",
     "source": "svg-filter-editor",
     "repository": "https://github.com/poletaevvlad/svg-filter-editor",
     "revision": "ecc2a0ce171680da51dad0276dbcfa5c6d04fc30",
-    "sourcePath": "src/index.html",
     "upstream": "https://github.com/poletaevvlad/svg-filter-editor/blob/ecc2a0ce171680da51dad0276dbcfa5c6d04fc30/src/index.html",
-    "website": "https://poletaevvlad.github.io/svg-filter-editor/",
-    "license": "MIT (root text verified; runtime/assets not closed)",
-    "behavior": "完整原应用通过节点连线与参数编辑组合模糊、位移、光照和混合，实现可见材质预览。",
-    "difference": "完整固定原始场景入口与补充脚本，不按预设/参数/颜色拆数；尚未运行验收。",
-    "description": "完整原应用通过节点连线与参数编辑组合模糊、位移、光照和混合，实现可见材质预览。",
-    "gaps": [
-      "根LICENSE.md为MIT，仓另有LICENSE-3RD-PARTY.md，包含React等真实第三方声明；需完整保留，不能误拿第三方文档当根许可。",
-      "入口需main.js/root.js、components/primitives、样式和Grunt构建；ReactDOM.render及旧依赖版本需兼容隔离，不能直接按现代React JSX接入。",
-      "SVG/image primitive及文本预览可能引用外部资源；演示限定本地固定素材，不自动读取用户文件/外链或导出到外部服务，导入安全待验。",
-      "节点连接与拖拽需键盘替代、可读结构/参数表及高成本滤镜限制；与Seeing工具区别为实际编辑连接，不逐primitive增加数量。",
-      "固定源码及完整根许可已存证；未构建、未运行、未截图，completedPreviewCount=0。"
-    ],
-    "category": "视觉与动效",
+    "sourcePath": "src/index.html",
     "licenseEvidence": {
       "url": "https://github.com/poletaevvlad/svg-filter-editor/blob/ecc2a0ce171680da51dad0276dbcfa5c6d04fc30/LICENSE.md",
       "sha256": "3f1af3283e9edbb39dabdeb0e82fa337ed29be4bd3cd5939946db382d629cdbf",
       "scope": "Complete original root license retained; runtime/media separate"
     },
-    "sourceSha256": "5c41318c37f83931b246bcb8b52b110d578c6f0fd60d4c716b2b479ec725f92d",
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-style-532",
-    "sourceScope": "Selected fixed original source and root license; full read-only repo clone retained privately",
-    "kind": "原版风格组件族（仅来源）",
-    "buildStatus": "Fixed source inspected; not built or visually accepted",
-    "additionalSourceEvidence": [
-      {
-        "sourcePath": "src/main.js",
-        "url": "https://github.com/poletaevvlad/svg-filter-editor/blob/ecc2a0ce171680da51dad0276dbcfa5c6d04fc30/src/main.js",
-        "sha256": "2ee2af893111ade2d68a2206f571f2ae96b9ef5702a83c3734790c38d7c2521d"
-      },
-      {
-        "sourcePath": "src/root.js",
-        "url": "https://github.com/poletaevvlad/svg-filter-editor/blob/ecc2a0ce171680da51dad0276dbcfa5c6d04fc30/src/root.js",
-        "sha256": "4e0ff16e1560689c009b0918a4a7d5202b1b530f44447d3525c478dd6e5db66e"
-      },
-      {
-        "sourcePath": "LICENSE-3RD-PARTY.md",
-        "url": "https://github.com/poletaevvlad/svg-filter-editor/blob/ecc2a0ce171680da51dad0276dbcfa5c6d04fc30/LICENSE-3RD-PARTY.md",
-        "sha256": "be7d350562a0f5114c504e22f806a9c2fc2fb4aebd373d937f7c686b3fac7d7d"
-      }
+    "difference": "完整固定原始场景入口与补充脚本，不按预设/参数/颜色拆数；尚未运行验收。",
+    "website": "https://poletaevvlad.github.io/svg-filter-editor/",
+    "title": "滤镜节点编排与代码查看",
+    "description": "原节点连线、滤镜参数、形状预览及代码视图；初始链明确为本地示例，外部媒体禁用。",
+    "behavior": "原节点连线、滤镜参数、形状预览及代码视图；初始链明确为本地示例，外部媒体禁用。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "展示与媒体",
+    "license": "MIT; ISC",
+    "batch": "svgfilter-editor-01",
+    "preview": "batches/svgfilter-editor-01/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "pass",
+    "gaps": [
+      "Controlled JSDOM geometry only; no native SVG filter raster/performance, actual pointer accuracy or pixel QA.",
+      "Original complete node/filter editor retained with original primitives, connection engine, parameter controls, shape/background/color editors and SVG code view. Authored initial SourceGraphic → GaussianBlur → Output chain is not an upstream preset.",
+      "Original CJS/ES import mixing converted to equivalent ESM exports; unused babel-polyfill generatorRuntime import removed, native generators retained. Original algorithms otherwise unchanged except bounded local input/node safeguards.",
+      "Original Less/SVG icon assets compiled to ordinary percent-encoded UTF8 SVG CSS resources; no binary images/screenshots. External Google fonts omitted for system fallback.",
+      "Image primitive remains available but only local fragment references reach feImage; no remote media fetching, uploads, file export, cloud or storage. External About links nonnavigating.",
+      "Inputs bounded to 64 nodes, integer parameters ±32, floating parameters ±1000. Reaching node cap fails clearly and requires reopen; no claim arbitrary-scale production authoring.",
+      "Hidden releases focus/drag through original blur handling but retains editable graph/state; no continuous application animation. Explicit disposal unmounts React and removes all iframe listeners/timers/RAF; old nodes cannot restart work."
     ]
   },
   {
