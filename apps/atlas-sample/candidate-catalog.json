@@ -14140,37 +14140,48 @@
   },
   {
     "id": "drawdb:relational-schema-workspace",
-    "title": "drawDB · 关系结构画布与字段编辑",
     "source": "drawDB",
     "repository": "https://github.com/drawdb-io/drawdb",
     "revision": "041dc2bc5f85edcaf3ccc2362905bb80f9e7bff1",
-    "sourcePath": "src/components/Workspace.jsx",
     "upstream": "https://github.com/drawdb-io/drawdb/blob/041dc2bc5f85edcaf3ccc2362905bb80f9e7bff1/src/components/Workspace.jsx",
-    "license": "AGPL-3.0 (root verified; runtime/media not closed)",
-    "behavior": "原数据库表/字段侧栏、表关系连线画布、区域及注释，选择/缩放/拖动和撤销重做上下文组成完整结构设计工作区。",
-    "difference": "区别BPMN流程/普通节点图：字段、主外键及关系模型是完整专业语义；不把每种数据库或表卡计为新条目。",
-    "gaps": [
-      "根为AGPL-3.0非MIT；未来运行或公开衍生版必须满足对应源码/许可义务，当前只是未改公共代码来源。",
-      "Workspace导入本地数据库/自动保存与GitHub gist共享API；原SQL/DBML导入导出、AI导入及存储链未审，不能直接离线打包。",
-      "仅来源：完整传递依赖/媒体字体许可、无网络CSP、状态/重复/中断清理与像素尚未运行审计；没有离线运行包或完整源码ZIP。"
-    ],
-    "description": "原数据库表/字段侧栏、表关系连线画布、区域及注释，选择/缩放/拖动和撤销重做上下文组成完整结构设计工作区。 区别BPMN流程/普通节点图：字段、主外键及关系模型是完整专业语义；不把每种数据库或表卡计为新条目。",
-    "category": "导航与组织",
+    "sourcePath": "src/components/Workspace.jsx",
     "licenseEvidence": {
       "url": "https://github.com/drawdb-io/drawdb/blob/041dc2bc5f85edcaf3ccc2362905bb80f9e7bff1/LICENSE",
       "sha256": "8486a10c4393cee1c25392769ddd3b2d6c242d6ec7928e1414efff7dfb2f07ef",
       "scope": "Complete actual root license read; selected original source only, runtime/assets not cleared."
     },
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-bulk-524",
-    "sourceScope": "Selected fixed original public source and complete root license evidence; not a complete runnable/archive or runtime audit",
-    "kind": "原版完整场景（仅来源）",
-    "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted",
-    "collectionPriority": "原版场景来源参考"
+    "difference": "区别BPMN流程/普通节点图：字段、主外键及关系模型是完整专业语义；不把每种数据库或表卡计为新条目。",
+    "title": "关系表结构与外键图形编辑",
+    "description": "原图形表结构、字段与外键编辑，支持本地新增关系及撤销重做；不连接数据库、导入导出、云端保存或代码编辑器，附完整对应源码。",
+    "behavior": "原图形表结构、字段与外键编辑，支持本地新增关系及撤销重做；不连接数据库、导入导出、云端保存或代码编辑器，附完整对应源码。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "数据与状态",
+    "license": "AGPL-3.0; MIT dependencies",
+    "batch": "drawdb-workspace-01",
+    "preview": "batches/drawdb-workspace-01/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "pass",
+    "gaps": [
+      "Original fixed Editor provider chain, Workspace, SidePanel, SVG Canvas/table/relationship components, ControlPanel local actions and Undo/Redo remain. Initial content is the original official template1 Blog database schema (5 tables,5 relationships), not invented remote data. This is a local visual relational-schema scene, not all hosted drawDB features.",
+      "Persistent Dexie storage is replaced by an explicitly transient fixture repository. Autosave/storage and network sharing/Gist, file transfer, image/PDF/SQL/DBML import/export, clipboard, cloud and AI paths are unavailable. Original dirty-state save callback only returns to a visibly labelled transient/not-saved state; it does not pretend persistence. Hidden restoration resets the original fixture; close discards edits.",
+      "Original table/field/relationship editing, new connector linking and history use original code. Original Rename form and title-setting flow are retained in a small local modal wrapper. SQL/DBML/Monaco, SQL-header and view-authoring controls are disabled; no replacement text field is passed off as Monaco. Dagre LR/TB and subject-area layout remain original; optional ELK backend is not included.",
+      "Official Semi UI named exports are resolved to their official component modules rather than the omnibus barrel, retaining original used implementation/style rules while avoiding unrelated parsed widgets. React18.3.1 and fixed installed dependency versions are recorded. Source and root license do not stand in for actual dependency notices.",
+      "Root and combined isolated application are AGPL-3.0. All applicable component MIT texts, author notices and compiled TailwindMIT are supplied. Full editable application/adapters, parsed dependency code/metadata/licenses, preferred official Semi gitHead TS/SCSS and React18.3.1 source additions, source-map original TS/JS, exact install manifest/lock and rebuild scripts accompany this scene as natural UTF8 files. No binary/source ZIP fiction. Source source-only packages are separately labelled.",
+      "Original media/font imports are not redistributed as encoded binaries. PNG/JPEG compilation inputs are transparently empty markers for the empty loader; UI source retains its text/path provenance. Existing original inline SVG components and licensed Semi SVG icons remain. Font Awesome/Bootstrap font glyph placeholders are explicit system symbols; original font/icon pixel fidelity is not claimed.",
+      "No CSP/sandbox/cache expansion. Three independently parsed natural runtime scripts each below700KiB. Top-level function promotion uses anonymous expressions so original outer self-rebinding semantics are retained. Any module exception closes owned resources and prevents later scripts from starting.",
+      "Actual575 compose tests use the real production bundle: original5-table/5-FK fixture, Add table→Undo/Redo, synthetic original pointer-port linking creates6th relationship→Undo, original FK-name editing including HTML-like text→Undo, hidden/reset/retained old node and complete final EventTarget/timer/RAF/interval/observer cleanup. Early module failure cleanup and blocked network/storage/eval APIs tested. No test-only state exposure.",
+      "Controlled JSDOM rectangle/SVG bbox/length/point and observer fixtures exercise behavior, not native geometry or visual accuracy. No native browser/screenshot, precise drag/touch ergonomics or exhaustive all-tool acceptance is claimed.",
+      "Actual createPreviewLoader/cache all-or-nothing/retry/remount uses 3614146 UTF16bytes/5entries within unchanged8MiB. Fresh final source extraction, normal npm install, npm run build and rebuilt production workflow test pass. Corresponding-source files are not loaded into runtime cache."
+    ],
+    "runtime": {
+      "scripts": [
+        "runtime-part-1.js",
+        "runtime-part-2.js",
+        "runtime.js"
+      ]
+    }
   },
   {
     "id": "documenso:document-preparation-flow",
@@ -16058,36 +16069,32 @@
   },
   {
     "id": "quartz-v4:linked-knowledge-garden",
-    "title": "图谱与双向链接数字花园",
     "source": "Quartz v4",
     "repository": "https://github.com/jackyzha0/quartz",
     "revision": "d25a6eabf96751ffca56f8a8139272def7a65041",
-    "sourcePath": "quartz.layout.ts",
     "upstream": "https://github.com/jackyzha0/quartz/blob/d25a6eabf96751ffca56f8a8139272def7a65041/quartz.layout.ts",
-    "license": "MIT (root verified only; dependencies/assets not closed)",
-    "behavior": "原整站布局组合文档树、搜索、正文、反向链接和局部/全局图谱；原D3力导向及Pixi图谱支持节点导航，FlexSearch查询内容。",
-    "difference": "不是普通文章列表：文档关系、引用回溯与图谱空间阅读组成同一知识场景；不拆Graph/Search/Explorer为多项。",
-    "gaps": [
-      "明确固定v4分支而非当前v5主线。原fetchData/搜索预览fetch依赖生成内容索引和页面；graph-visited用localStorage。Pixi/D3/Tween/FlexSearch及字体资源许可未闭合；源码可见清理注册不等于退出测试通过。",
-      "仅固定原件来源；未安装/构建/运行/截图/发布，CSP、媒体字体版权、完整运行许可、交互清理及浏览器视觉均未验。"
-    ],
-    "description": "原整站布局组合文档树、搜索、正文、反向链接和局部/全局图谱；原D3力导向及Pixi图谱支持节点导航，FlexSearch查询内容。 不是普通文章列表：文档关系、引用回溯与图谱空间阅读组成同一知识场景；不拆Graph/Search/Explorer为多项。",
-    "category": "导航与组织",
+    "sourcePath": "quartz.layout.ts",
     "licenseEvidence": {
       "url": "https://github.com/jackyzha0/quartz/blob/d25a6eabf96751ffca56f8a8139272def7a65041/LICENSE.txt",
       "sha256": "3553b1bda6785a2fdb0ccb5f1c93ea0b7969ae1456d0bb734964ae73ef02a1dc",
       "scope": "Complete root MIT read; dependency/media/font permissions not closed"
     },
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-style-527",
-    "sourceScope": "Selected fixed original code and complete root license evidence; not a complete runnable archive or runtime audit",
-    "kind": "原版完整场景（仅来源）",
-    "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted",
-    "sourceSha256": "c7ab084d6caba4447974f3e696df3e7fa677ad29ebf857aeb08e39df01dfa871"
+    "difference": "不是普通文章列表：文档关系、引用回溯与图谱空间阅读组成同一知识场景；不拆Graph/Search/Explorer为多项。",
+    "title": "笔记目录搜索与双向链接",
+    "description": "原目录、搜索、回链和主题组件，使用三个本地笔记；图谱依赖可用GPU，不连接真实笔记、发布或远程服务。",
+    "behavior": "原目录、搜索、回链和主题组件，使用三个本地笔记；图谱依赖可用GPU，不连接真实笔记、发布或远程服务。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "导航与组织",
+    "license": "MIT AND ISC AND BSD-3-Clause AND Apache-2.0",
+    "batch": "quartz-garden-01",
+    "preview": "batches/quartz-garden-01/garden/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "三篇本地虚构笔记；真实搜索/引用/目录交互通过。原图谱保留，只有GPU不可用分支已验，不声称原生GPU成功或像素通过。"
+    ]
   },
   {
     "id": "hugo-terminal:terminal-editorial-site",
