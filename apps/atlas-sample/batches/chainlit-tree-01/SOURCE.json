@@ -1,0 +1,1936 @@
+{
+  "repository": "https://github.com/Chainlit/chainlit",
+  "revision": "190ea74239d9e84b26e7c91bc2882dd038942564",
+  "entry": "frontend/src/components/chat/Messages/Message/index.tsx",
+  "sourceFiles": [
+    {
+      "path": "LICENSE",
+      "gitBlob": "c5e9eee238e0eeff0e7bac6f110c1874d01f68b7",
+      "sha256": "533327d8383c0092ee0274d4bb7baccf9033fcd112a4b7a55c1da720c516a6b3"
+    },
+    {
+      "path": "frontend/package.json",
+      "gitBlob": "61c76198b4223fb64cd26d9629454b9ac3cd891d",
+      "sha256": "08ba8a93fad1c3ee88b24e143cc644b81a131203c16f0b88e5fcc65527090ce2"
+    },
+    {
+      "path": "frontend/src/contexts/MessageContext.tsx",
+      "gitBlob": "45735b61f2918b0e378be3884a501c0344386581",
+      "sha256": "4128df3ca967cf5e9456245d4afb8db7ce1e908f77a3d922a7e878e32f10954d"
+    },
+    {
+      "path": "frontend/src/lib/utils.ts",
+      "gitBlob": "8bad968ef2f6b53b6e73fa6e215bcd78245c4a17",
+      "sha256": "a7afaf304e396b6dc052bc47f9077860fb5804f4dd77fc5b59a0a536e2d5fdf1"
+    },
+    {
+      "path": "frontend/src/index.css",
+      "gitBlob": "839ace08ab2a4012a02fdcfccbcc2b9f86e9c351",
+      "sha256": "b82e3537d82c5270e2946cb3002e383ab7accfe6386378a29ad0d6f8e372c6ba"
+    },
+    {
+      "path": "frontend/tailwind.config.js",
+      "gitBlob": "411ce375264f2a8f876ad4679fd4edbb1675c516",
+      "sha256": "e53e4f986a9fbf59c9b77ca25e2c4c6a2809766f5689aa84e619031f980906e7"
+    },
+    {
+      "path": "frontend/src/components/chat/Messages/Message/AskActionButtons.tsx",
+      "gitBlob": "5293f436ffe8e07ff1e98f075cc685a5a18ff4b1",
+      "sha256": "f42c5d5a708e635c9dc15b1739baa093deff5bfb321addc4a926f3200e433b26"
+    },
+    {
+      "path": "frontend/src/components/chat/Messages/Message/AskFileButton.tsx",
+      "gitBlob": "bcbef1e3eef943e8c401bf7c3262d65b6d5f9afa",
+      "sha256": "fc60a7e38a4580f94fa7b516b77cfcfeba66cb30bc26c6154adcefc9af1780c6"
+    },
+    {
+      "path": "frontend/src/components/chat/Messages/Message/Avatar.tsx",
+      "gitBlob": "5b5285dbcb6f8adac83ce3f50e301e36876928e0",
+      "sha256": "6a63d54dd4279d3417eaefd79178b16ddc15f702bc971369dc892ee370f85a52"
+    },
+    {
+      "path": "frontend/src/components/chat/Messages/Message/Buttons/Actions/ActionButton.tsx",
+      "gitBlob": "33ad82aa2049047e4b2cc4befbb6580ff568d1d4",
+      "sha256": "c4ff0d271d4b13092204e29c5c9bd8b97590642ce5b8b5bd3bcbd7a991a637c3"
+    },
+    {
+      "path": "frontend/src/components/chat/Messages/Message/Buttons/Actions/index.tsx",
+      "gitBlob": "802effddd140c433ef320a967eb898c8b98003a2",
+      "sha256": "6a91cc26724516441c5abc42a7fb6952db8d0ba451632efff63edf9ee0440094"
+    },
+    {
+      "path": "frontend/src/components/chat/Messages/Message/Buttons/DebugButton.tsx",
+      "gitBlob": "39662becaafb87c2411ce761d6e150718cc00032",
+      "sha256": "5c5cd8182b720d71b8844d7dbb9064e2b40574f19b4db41252917f0edb93278e"
+    },
+    {
+      "path": "frontend/src/components/chat/Messages/Message/Buttons/FeedbackButtons.tsx",
+      "gitBlob": "de8c752c1b51d483dc5ea3773da2ef081c734a2e",
+      "sha256": "127b973c59d9c53b375d09c9456aa026aa939ccf5a07917a41873df540f304a3"
+    },
+    {
+      "path": "frontend/src/components/chat/Messages/Message/Buttons/index.tsx",
+      "gitBlob": "a26aface744996cc171e54ad6047b46ef85c7fa8",
+      "sha256": "bd4611fa82a11a34d675f8780ff5e92ac3715e5b7f8dffe0063a596ad57fa4da"
+    },
+    {
+      "path": "frontend/src/components/chat/Messages/Message/Content/InlinedElements/InlineCustomElementList.tsx",
+      "gitBlob": "c92c2c02272a2b816d811e6c86f9b5d76aaa9f50",
+      "sha256": "6c74c68248a2d7fab9328d6e79a9936b48f553fa840bb72d33466480c8d849b8"
+    },
+    {
+      "path": "frontend/src/components/chat/Messages/Message/Content/InlinedElements/InlinedAudioList.tsx",
+      "gitBlob": "8fd892fc1a12747e0da2822cc952d65312b7920c",
+      "sha256": "07e41fafa9307f76e5f2b495e8a6ad6205adc719a4be76186284b79cc3fd3044"
+    },
+    {
+      "path": "frontend/src/components/chat/Messages/Message/Content/InlinedElements/InlinedDataframeList.tsx",
+      "gitBlob": "5624458974a3dfd2ccac27f67a9dfb7c609772c5",
+      "sha256": "a9d5e387b1020b51c2f08e333d6de01820efe6fd12ee48dfa9f49862f5b8b1a6"
+    },
+    {
+      "path": "frontend/src/components/chat/Messages/Message/Content/InlinedElements/InlinedFileList.tsx",
+      "gitBlob": "db55d4af397586f4e2936a15a10cd91addd283e6",
+      "sha256": "6d7693d56719c83eef074f345f0dc72769c282beb3faef20f1de6d05d9d69f1a"
+    },
+    {
+      "path": "frontend/src/components/chat/Messages/Message/Content/InlinedElements/InlinedImageList.tsx",
+      "gitBlob": "1a7c672c5b56817ceda3d15257355e7074bde4e0",
+      "sha256": "a0f1511526d21a8beecbb284f2cffb00c0aeeea9bf8bf257adc525506291793f"
+    },
+    {
+      "path": "frontend/src/components/chat/Messages/Message/Content/InlinedElements/InlinedPDFList.tsx",
+      "gitBlob": "fc733257fa2f2bc4cfd8785a7f4158da3deeb472",
+      "sha256": "0a007d6e73bfc3e1e14de8a3e6ed4711aa685a2a9b0462ca364d50903ab828a8"
+    },
+    {
+      "path": "frontend/src/components/chat/Messages/Message/Content/InlinedElements/InlinedPlotlyList.tsx",
+      "gitBlob": "02f73f46388f8de2bc61136ff41be88941f1b7be",
+      "sha256": "b8236d09f83ff49223fde2b06773ac144da308e59c54b031f0e30cae3246b1cc"
+    },
+    {
+      "path": "frontend/src/components/chat/Messages/Message/Content/InlinedElements/InlinedTextList.tsx",
+      "gitBlob": "c53e0343cca5fc932a08eb147d32f9133596b6d3",
+      "sha256": "bc4099ea780e915c1e4463fda9bfeb39ff927bf55738ee3987af7f2ffa562651"
+    },
+    {
+      "path": "frontend/src/components/chat/Messages/Message/Content/InlinedElements/InlinedVideoList.tsx",
+      "gitBlob": "1094bece12e7301a87808cb6c0b249cfd69c6122",
+      "sha256": "991d19bb8be8a260b938c377cbedb8beb3b4b1b028d91b6cf51f5fecd0eb1d5b"
+    },
+    {
+      "path": "frontend/src/components/chat/Messages/Message/Content/InlinedElements/index.tsx",
+      "gitBlob": "518d29e142365f0cc23bddf83dd66f6a370e84d3",
+      "sha256": "a9439d4d806d9ff1732886975a67a84bc28491d52fb3250d48d7dcc37a1adb91"
+    },
+    {
+      "path": "frontend/src/components/chat/Messages/Message/Content/index.tsx",
+      "gitBlob": "8c5c51a1ef30975858bac9932511acdd17a25db1",
+      "sha256": "ca045021e7e94b7d4b7cb836408c0b98fbf05d68daf5087027fbe42d67fb693f"
+    },
+    {
+      "path": "frontend/src/components/chat/Messages/Message/Step.tsx",
+      "gitBlob": "96432437bc70e97e1c0e6b8242166a58d5897b52",
+      "sha256": "e6e2adac6d3797c76d8e926842704edd0f7a538745e10e2a9c055b7c13a2cf57"
+    },
+    {
+      "path": "frontend/src/components/chat/Messages/Message/UserMessage.tsx",
+      "gitBlob": "ded29d011fa463db50c1fb7afd0bbfe109bd4fdb",
+      "sha256": "c687a6f3354c0cc1e7f055021fed96f8dcb7edc9acc5fd7792948af8c5f07e0e"
+    },
+    {
+      "path": "frontend/src/components/chat/Messages/Message/index.tsx",
+      "gitBlob": "a7ffe81ea4525ea76c9786c1dc5734c800b29258",
+      "sha256": "6e62a2972ba12a8e7c2171f3655b1884a6cd75fda4a89e0cfd5e3f9cb899e716"
+    },
+    {
+      "path": "frontend/src/components/chat/Messages/index.tsx",
+      "gitBlob": "369157aa676b4a153576462efc9025a0acfdbe14",
+      "sha256": "6cb38497f8809edaae129ecfe975b0bdaec11dbf652d5a561f1c23dec0b9366a"
+    },
+    {
+      "path": "frontend/src/components/i18n/Translator.tsx",
+      "gitBlob": "8681f88f862afb1c78beeb917ca11e7083a83db7",
+      "sha256": "738707a7efcf955fd94ad75f256e0e40db16bf96849da1d92511de47297a9dbd"
+    },
+    {
+      "path": "frontend/src/components/i18n/index.ts",
+      "gitBlob": "99be497cd86f39b47f773a0f8671a1aef57f8a5d",
+      "sha256": "ae2729fbbd877a22ae4b4ae34c25986856fafcb588601de738514d312a769ff8"
+    },
+    {
+      "path": "frontend/src/components/ui/accordion.tsx",
+      "gitBlob": "e608bf85406fe239340e35b3a7ab4547b56e845b",
+      "sha256": "0b4ee4d36399fda03c473930b1a0e2a378d11db10e9f5ea049b056168ed1b51e"
+    },
+    {
+      "path": "frontend/src/components/Markdown.tsx",
+      "gitBlob": "aad12e248e56c33618b2a33eb8e3a502dce47d81",
+      "sha256": "1be1b7f0ce044d2301849f8328f819e01e8df4c4b67f271e9883ef1dd3325f15"
+    },
+    {
+      "path": "frontend/src/components/BlinkingCursor.tsx",
+      "gitBlob": "dd9b7df511c5e002e972c6ebbc6cf5c25005192e",
+      "sha256": "d3f6e2f0593e3fdd2ee9d6f7ea9e475492a9bd6c933730b6243df6ff0485eefc"
+    },
+    {
+      "path": "frontend/src/components/Icon.tsx",
+      "gitBlob": "7064996b5c0a3d1c634fc8cdfcb2cc480b573eaf",
+      "sha256": "71d8279325f80bc2d193047c7f3b9e3a93f3095ace1a0c7bc1c3e14abcfd37d5"
+    },
+    {
+      "path": "frontend/src/lib/message.ts",
+      "gitBlob": "1fa943ea932aeb7059c2ef8b5ce58361b0da9275",
+      "sha256": "6c9dddfc20feeeda1adc2936f9c408eeb11d196f3f761872e9694a541ad005d2"
+    },
+    {
+      "path": "frontend/src/types/messageContext.ts",
+      "gitBlob": "87b79f1800d8e7e3de4044cb88919af68be9ed44",
+      "sha256": "19b814772343cf64cdb5969ac7a859b963a2617925211360f454114425934562"
+    },
+    {
+      "path": "frontend/src/hooks/useLayoutMaxWidth.tsx",
+      "gitBlob": "56798540fd0755b29d439fe3b630d168c43beae4",
+      "sha256": "8b6e571243dfc32affb0237c166df8c6f20fac6f7c5164f0e8dcac148913be21"
+    },
+    {
+      "path": "frontend/src/components/ui/avatar.tsx",
+      "gitBlob": "cb3caaf94f9043eff4ae0a1e9f3ce06a12b41503",
+      "sha256": "1525ba14a7d4489923673270dbfc93eb4ff8c1b94bc5683af6ae2647fc0d6cc1"
+    },
+    {
+      "path": "frontend/src/components/ui/skeleton.tsx",
+      "gitBlob": "a626d9baa6a2128151d0cfab9ba84b265908c867",
+      "sha256": "43b0afa75a641b3298dbe332a0a3cc214bb30f8b77d39c020ebc1f176f051321"
+    },
+    {
+      "path": "frontend/src/components/ui/tooltip.tsx",
+      "gitBlob": "f9ef06c0bc714fb209f852aaa1e257ec59a17281",
+      "sha256": "5f1504679bac1112a7fb317bdffe087c6e01d2effe57481c6e1004b1795f08a8"
+    },
+    {
+      "path": "frontend/src/components/ui/button.tsx",
+      "gitBlob": "84612e42303682a9e712fa0cd74e29dc48271140",
+      "sha256": "f482a1c65a2b96f77dd7c0c69b1360ba77c5c33e2a4bab02ac549fad43343478"
+    },
+    {
+      "path": "frontend/src/components/MarkdownAlert.tsx",
+      "gitBlob": "bcd4e8d02f5c69bdbd6e15f3b31dd18c1e9622d0",
+      "sha256": "2c4ab3826ae79f516f222574c31ee31567d5d571d3557e76af60ea682643bf66"
+    },
+    {
+      "path": "frontend/src/components/ui/aspect-ratio.tsx",
+      "gitBlob": "5dfdf1e67a885c95b0e2993d8154c0e9f73ab2c4",
+      "sha256": "2f5b0ed3cbcf84e526caad0c6b88d4457f8745a365c86cc74d924a1b6e013a36"
+    },
+    {
+      "path": "frontend/src/components/ui/card.tsx",
+      "gitBlob": "bc3ac0e43a2e3d0b31db7006bce6bb92aaf1b5c4",
+      "sha256": "d198d1a3d2e6e3d4bde0558f1ee7ea617507a01416a68a45f5821e1785e965c7"
+    },
+    {
+      "path": "frontend/src/components/ui/separator.tsx",
+      "gitBlob": "489a037f1b5132042030179b8b9e2d9ab455520d",
+      "sha256": "15f733d11dd6a9cc5dcf559077f72096e3203a24696ab1804d036f5a5aecf84f"
+    },
+    {
+      "path": "frontend/src/components/ui/table.tsx",
+      "gitBlob": "120b1704517b27f135b48fabc25c22e001ba7720",
+      "sha256": "3baeb3c0609177fa79526803b8e6fe6ab5656be967cfc676474fc038691eb569"
+    }
+  ],
+  "completeTreeVerified": true,
+  "rootNOTICE": "No root NOTICE or selected frontend LICENSE/NOTICE found in fixed complete tree.",
+  "originalCore": {
+    "components/chat/Messages/index.tsx": "import { MessageContext } from 'contexts/MessageContext';\nimport React, { memo, useContext, useMemo } from 'react';\n\nimport {\n  type IAction,\n  type IMessageElement,\n  type IStep\n} from '@chainlit/react-client';\n\nimport BlinkingCursor from '@/components/BlinkingCursor';\n\nimport { Message } from './Message';\n\ninterface Props {\n  messages: IStep[];\n  elements: IMessageElement[];\n  actions: IAction[];\n  indent: number;\n  isRunning?: boolean;\n  scorableRun?: IStep;\n}\n\nconst CL_RUN_NAMES = ['on_chat_start', 'on_message', 'on_audio_end'];\n\nconst hasActiveToolStep = (step: IStep): boolean => {\n  return (\n    step.steps?.some(\n      (s) =>\n        (s.type === 'tool' && s.start && !s.end && !s.isError) ||\n        s.type.includes('message') ||\n        hasActiveToolStep(s)\n    ) || false\n  );\n};\n\nconst hasAssistantMessage = (step: IStep): boolean => {\n  return (\n    step.steps?.some(\n      (s) => s.type === 'assistant_message' || hasAssistantMessage(s)\n    ) || false\n  );\n};\n\nconst Messages = memo(\n  ({ messages, elements, actions, indent, isRunning, scorableRun }: Props) => {\n    const messageContext = useContext(MessageContext);\n\n    const lastAssistantMessage = useMemo(() => {\n      return messages.findLast((m) => m.type === 'assistant_message');\n    }, [messages]);\n\n    const lastScorableAssistantMessage = useMemo(() => {\n      return scorableRun?.steps?.findLast(\n        (m) => m.type === 'assistant_message'\n      );\n    }, [scorableRun]);\n\n    return (\n      <>\n        {messages.map((m) => {\n          // Handle chainlit runs\n          if (CL_RUN_NAMES.includes(m.name)) {\n            const isRunning = !m.end && !m.isError && messageContext.loading;\n            const isToolCallCoT =\n              messageContext.cot === 'tool_call' ||\n              messageContext.cot === 'full';\n            const isHiddenCoT = messageContext.cot === 'hidden';\n\n            const showToolCoTLoader = isToolCallCoT\n              ? isRunning && !hasActiveToolStep(m)\n              : false;\n\n            const showHiddenCoTLoader = isHiddenCoT\n              ? isRunning && !hasAssistantMessage(m)\n              : false;\n            // Ignore on_chat_start for scorable run\n            const scorableRun =\n              !isRunning && m.name !== 'on_chat_start' ? m : undefined;\n            return (\n              <React.Fragment key={m.id}>\n                {m.steps?.length ? (\n                  <Messages\n                    messages={m.steps}\n                    elements={elements}\n                    actions={actions}\n                    indent={indent}\n                    isRunning={isRunning}\n                    scorableRun={scorableRun}\n                  />\n                ) : null}\n                {(showToolCoTLoader || showHiddenCoTLoader) &&\n                m.name !== 'on_chat_start' ? (\n                  <BlinkingCursor />\n                ) : null}\n              </React.Fragment>\n            );\n          } else {\n            // Score the current run\n            const _scorableRun = m.type === 'run' ? m : scorableRun;\n            // The message is scorable if it is the last assistant message of the run\n\n            const isRunLastAssistantMessage =\n              m.type === 'run' ? false : m === lastScorableAssistantMessage;\n\n            const isLastAssistantMessage = m === lastAssistantMessage;\n\n            const isScorable =\n              isRunLastAssistantMessage || isLastAssistantMessage;\n\n            return (\n              <Message\n                message={m}\n                elements={elements}\n                actions={actions}\n                key={m.id}\n                indent={indent}\n                isRunning={isRunning}\n                scorableRun={_scorableRun}\n                isScorable={isScorable}\n              />\n            );\n          }\n        })}\n      </>\n    );\n  }\n);\n\nexport { Messages };\n",
+    "components/chat/Messages/Message/index.tsx": "import { cn } from '@/lib/utils';\nimport { MessageContext } from 'contexts/MessageContext';\nimport { memo, useContext, useMemo, useRef } from 'react';\n\nimport {\n  type IAction,\n  type IMessageElement,\n  type IStep\n} from '@chainlit/react-client';\n\nimport { useLayoutMaxWidth } from 'hooks/useLayoutMaxWidth';\n\nimport { Messages } from '..';\nimport { AskActionButtons } from './AskActionButtons';\nimport { AskFileButton } from './AskFileButton';\nimport { MessageAvatar } from './Avatar';\nimport { MessageButtons } from './Buttons';\nimport { MessageContent } from './Content';\nimport Step from './Step';\nimport UserMessage from './UserMessage';\n\ninterface Props {\n  message: IStep;\n  elements: IMessageElement[];\n  actions: IAction[];\n  indent: number;\n  isRunning?: boolean;\n  isScorable?: boolean;\n  scorableRun?: IStep;\n}\n\nconst EMPTY_ELEMENTS: IMessageElement[] = [];\n\nconst Message = memo(\n  ({\n    message,\n    elements,\n    actions,\n    isRunning,\n    indent,\n    isScorable,\n    scorableRun\n  }: Props) => {\n    const { allowHtml, cot, latex, renderUserMarkdown, onError } =\n      useContext(MessageContext);\n    const layoutMaxWidth = useLayoutMaxWidth();\n    const contentRef = useRef<HTMLDivElement>(null);\n    const isUserMessage = message.type === 'user_message';\n    const isStep = !message.type.includes('message');\n    // Only keep tool calls if Chain of Thought is tool_call\n    const toolCallSkip =\n      isStep && cot === 'tool_call' && message.type !== 'tool';\n\n    const hiddenSkip = isStep && cot === 'hidden';\n\n    const skip = toolCallSkip || hiddenSkip;\n    const showInputSection = Boolean(message.input && message.showInput);\n    const shouldRenderOutput = !showInputSection || Boolean(message.output);\n\n    const userMessageContent = useMemo(\n      () => (\n        <MessageContent\n          elements={EMPTY_ELEMENTS}\n          message={message}\n          allowHtml={allowHtml}\n          latex={latex}\n          renderMarkdown={renderUserMarkdown}\n        />\n      ),\n      [message, allowHtml, latex]\n    );\n\n    if (skip) {\n      if (!message.steps) {\n        return null;\n      }\n      return (\n        <Messages\n          messages={message.steps}\n          elements={elements}\n          actions={actions}\n          indent={indent}\n          isRunning={isRunning}\n          scorableRun={scorableRun}\n        />\n      );\n    }\n\n    return (\n      <>\n        <div data-step-type={message.type} className=\"step py-2\">\n          <div\n            className=\"flex flex-col\"\n            style={{\n              maxWidth: indent ? '100%' : layoutMaxWidth\n            }}\n          >\n            <div\n              className={cn('flex flex-grow pb-2')}\n              id={`step-${message.id}`}\n            >\n              {/* User message is displayed differently */}\n              {isUserMessage ? (\n                <div className=\"flex flex-col flex-grow max-w-full\">\n                  <UserMessage message={message} elements={elements}>\n                    {userMessageContent}\n                  </UserMessage>\n                </div>\n              ) : (\n                <div className=\"ai-message flex gap-4 w-full\">\n                  {!isStep || !indent ? (\n                    <MessageAvatar\n                      author={message.metadata?.avatarName || message.name}\n                      isError={message.isError}\n                      iconName={message.metadata?.icon}\n                    />\n                  ) : null}\n                  {/* Display the step and its children */}\n                  {isStep ? (\n                    <Step step={message} isRunning={isRunning}>\n                      {showInputSection ? (\n                        <MessageContent\n                          elements={elements}\n                          message={message}\n                          allowHtml={allowHtml}\n                          latex={latex}\n                          renderMarkdown={true}\n                          sections={['input']}\n                        />\n                      ) : null}\n                      {message.steps ? (\n                        <Messages\n                          messages={message.steps.filter(\n                            (s) => !s.type.includes('message')\n                          )}\n                          elements={elements}\n                          actions={actions}\n                          indent={indent + 1}\n                          isRunning={isRunning}\n                        />\n                      ) : null}\n                      {shouldRenderOutput ? (\n                        <MessageContent\n                          ref={contentRef}\n                          elements={elements}\n                          message={message}\n                          allowHtml={allowHtml}\n                          latex={latex}\n                          renderMarkdown={true}\n                          sections={showInputSection ? ['output'] : undefined}\n                        />\n                      ) : null}\n                      <MessageButtons\n                        message={message}\n                        actions={actions}\n                        contentRef={contentRef}\n                      />\n                    </Step>\n                  ) : (\n                    // Display an assistant message\n                    <div className=\"flex flex-col items-start min-w-[150px] flex-grow gap-2\">\n                      <MessageContent\n                        ref={contentRef}\n                        elements={elements}\n                        message={message}\n                        allowHtml={allowHtml}\n                        latex={latex}\n                        renderMarkdown={true}\n                      />\n\n                      <AskFileButton messageId={message.id} onError={onError} />\n                      <AskActionButtons\n                        actions={actions}\n                        messageId={message.id}\n                      />\n\n                      <MessageButtons\n                        message={message}\n                        actions={actions}\n                        run={\n                          scorableRun && isScorable ? scorableRun : undefined\n                        }\n                        contentRef={contentRef}\n                      />\n                    </div>\n                  )}\n                </div>\n              )}\n            </div>\n          </div>\n        </div>\n        {/* Make sure the child assistant messages of a step are displayed at the root level. */}\n        {message.steps && isStep ? (\n          <Messages\n            messages={message.steps.filter((s) => s.type.includes('message'))}\n            elements={elements}\n            actions={actions}\n            indent={0}\n            isRunning={isRunning}\n            scorableRun={scorableRun}\n          />\n        ) : null}\n        {/* Display the child steps if the message is not a step (usually a user message). */}\n        {message.steps && !isStep ? (\n          <Messages\n            messages={message.steps}\n            elements={elements}\n            actions={actions}\n            indent={indent}\n            isRunning={isRunning}\n          />\n        ) : null}\n      </>\n    );\n  }\n);\n\nexport { Message };\n",
+    "components/chat/Messages/Message/Step.tsx": "import { cn } from '@/lib/utils';\nimport { PropsWithChildren, useEffect, useMemo, useState } from 'react';\n\nimport type { IStep } from '@chainlit/react-client';\n\nimport {\n  Accordion,\n  AccordionContent,\n  AccordionItem,\n  AccordionTrigger\n} from '@/components/ui/accordion';\nimport { Translator } from 'components/i18n';\n\ninterface Props {\n  step: IStep;\n  isRunning?: boolean;\n}\n\nexport default function Step({\n  step,\n  children,\n  isRunning\n}: PropsWithChildren<Props>) {\n  const using = useMemo(() => {\n    return isRunning && step.start && !step.end && !step.isError;\n  }, [step, isRunning]);\n\n  const hasContent = step.input || step.output || step.steps?.length;\n  const isError = step.isError;\n  const stepName = step.name;\n\n  const [openValue, setOpenValue] = useState<string>(\n    step.defaultOpen ? step.id : ''\n  );\n\n  // Auto-collapse when step finishes if autoCollapse is set\n  useEffect(() => {\n    if (!using && step.autoCollapse) {\n      setOpenValue('');\n    }\n  }, [using, step.autoCollapse]);\n\n  // If there's no content, just render the status without accordion\n  if (!hasContent) {\n    return (\n      <div className=\"flex flex-col flex-grow w-0\">\n        <p\n          className={cn(\n            'flex items-center gap-1 font-medium',\n            isError && 'text-red-500',\n            !using && 'text-muted-foreground',\n            using && 'loading-shimmer'\n          )}\n          id={`step-${stepName}`}\n        >\n          {using ? (\n            <>\n              <Translator path=\"chat.messages.status.using\" /> {stepName}\n            </>\n          ) : (\n            <>\n              <Translator path=\"chat.messages.status.used\" /> {stepName}\n            </>\n          )}\n        </p>\n      </div>\n    );\n  }\n\n  return (\n    <div className=\"flex flex-col flex-grow w-0\">\n      <Accordion\n        type=\"single\"\n        collapsible\n        value={openValue}\n        onValueChange={(val) => setOpenValue(val)}\n        className=\"w-full\"\n      >\n        <AccordionItem value={step.id} className=\"border-none\">\n          <AccordionTrigger\n            className={cn(\n              'flex items-center gap-1 justify-start transition-none p-0 hover:no-underline',\n              isError && 'text-red-500',\n              !using && 'text-muted-foreground hover:text-foreground',\n              using && 'loading-shimmer'\n            )}\n            id={`step-${stepName}`}\n          >\n            {using ? (\n              <>\n                <Translator path=\"chat.messages.status.using\" /> {stepName}\n              </>\n            ) : (\n              <>\n                <Translator path=\"chat.messages.status.used\" /> {stepName}\n              </>\n            )}\n          </AccordionTrigger>\n          <AccordionContent>\n            <div className=\"flex-grow mt-4 ml-1 pl-4 border-l-2 border-primary\">\n              {children}\n            </div>\n          </AccordionContent>\n        </AccordionItem>\n      </Accordion>\n    </div>\n  );\n}\n",
+    "components/chat/Messages/Message/Content/index.tsx": "import { prepareContent } from '@/lib/message';\nimport { isEqual } from 'lodash';\nimport { forwardRef, memo, useMemo } from 'react';\n\nimport type { IMessageElement, IStep } from '@chainlit/react-client';\n\nimport { CURSOR_PLACEHOLDER } from '@/components/BlinkingCursor';\nimport { Markdown } from '@/components/Markdown';\n\nimport { InlinedElements } from './InlinedElements';\n\ntype ContentSection = 'input' | 'output';\n\nexport interface Props {\n  elements: IMessageElement[];\n  message: IStep;\n  allowHtml?: boolean;\n  latex?: boolean;\n  renderMarkdown?: boolean;\n  sections?: ContentSection[];\n}\n\nconst getMessageRenderProps = (message: IStep) => ({\n  id: message.id,\n  output: message.output,\n  input: message.input,\n  language: message.language,\n  streaming: message.streaming,\n  showInput: message.showInput,\n  type: message.type\n});\n\nconst MessageContent = memo(\n  forwardRef<HTMLDivElement, Props>(\n    (\n      { message, elements, allowHtml, latex, renderMarkdown, sections },\n      ref\n    ) => {\n      const outputContent =\n        message.streaming && message.output\n          ? message.output + CURSOR_PLACEHOLDER\n          : message.output;\n\n      const {\n        preparedContent: output,\n        inlinedElements: outputInlinedElements,\n        refElements: outputRefElements\n      } = prepareContent({\n        elements,\n        id: message.id,\n        content: outputContent,\n        language: message.language\n      });\n\n      const selectedSections = sections ?? ['input', 'output'];\n      const sectionsSet = useMemo(\n        () => new Set(selectedSections),\n        [selectedSections]\n      );\n\n      const displayInput =\n        sectionsSet.has('input') && message.input && message.showInput;\n      const displayOutput = sectionsSet.has('output');\n\n      const isMessage = message.type.includes('message');\n\n      const outputMarkdown = displayOutput ? (\n        <>\n          {!isMessage && displayInput && message.output ? (\n            <div className=\"font-medium\">Output</div>\n          ) : null}\n          <Markdown\n            allowHtml={allowHtml}\n            latex={latex}\n            renderMarkdown={renderMarkdown}\n            refElements={outputRefElements}\n          >\n            {output}\n          </Markdown>\n        </>\n      ) : null;\n\n      let inputMarkdown;\n\n      if (displayInput) {\n        const inputContent =\n          message.streaming && message.input\n            ? message.input + CURSOR_PLACEHOLDER\n            : message.input;\n        const { preparedContent: input, refElements: inputRefElements } =\n          prepareContent({\n            elements,\n            id: message.id,\n            content: inputContent,\n            language:\n              typeof message.showInput === 'string'\n                ? message.showInput\n                : undefined\n          });\n\n        inputMarkdown = (\n          <>\n            <Markdown\n              allowHtml={allowHtml}\n              latex={latex}\n              renderMarkdown={renderMarkdown}\n              refElements={inputRefElements}\n            >\n              {input}\n            </Markdown>\n          </>\n        );\n      }\n\n      const markdownContent = (\n        <div className=\"flex flex-col gap-4\">\n          {inputMarkdown}\n          {outputMarkdown}\n        </div>\n      );\n\n      return (\n        <div ref={ref} className=\"message-content w-full flex flex-col gap-2\">\n          {displayInput || (displayOutput && output) ? markdownContent : null}\n          {displayOutput ? (\n            <InlinedElements elements={outputInlinedElements} />\n          ) : null}\n        </div>\n      );\n    }\n  ),\n  (prevProps, nextProps) => {\n    return (\n      prevProps.allowHtml === nextProps.allowHtml &&\n      prevProps.latex === nextProps.latex &&\n      prevProps.renderMarkdown === nextProps.renderMarkdown &&\n      prevProps.elements === nextProps.elements &&\n      isEqual(\n        prevProps.sections ?? ['input', 'output'],\n        nextProps.sections ?? ['input', 'output']\n      ) &&\n      isEqual(\n        getMessageRenderProps(prevProps.message),\n        getMessageRenderProps(nextProps.message)\n      )\n    );\n  }\n);\n\nexport { MessageContent };\n",
+    "components/Markdown.tsx": "import { cn } from '@/lib/utils';\nimport { omit } from 'lodash';\nimport { useContext, useMemo } from 'react';\nimport ReactMarkdown from 'react-markdown';\nimport { PluggableList } from 'react-markdown/lib';\nimport rehypeKatex from 'rehype-katex';\nimport rehypeRaw from 'rehype-raw';\nimport remarkDirective from 'remark-directive';\nimport remarkGfm from 'remark-gfm';\nimport remarkMath from 'remark-math';\nimport { visit } from 'unist-util-visit';\n\nimport { ChainlitContext, type IMessageElement } from '@chainlit/react-client';\n\nimport { AspectRatio } from '@/components/ui/aspect-ratio';\nimport { Card } from '@/components/ui/card';\nimport { Separator } from '@/components/ui/separator';\nimport {\n  Table,\n  TableBody,\n  TableCell,\n  TableHead,\n  TableHeader,\n  TableRow\n} from '@/components/ui/table';\n\nimport BlinkingCursor from './BlinkingCursor';\nimport CodeSnippet from './CodeSnippet';\nimport { ElementRef } from './Elements/ElementRef';\nimport {\n  type AlertProps,\n  MarkdownAlert,\n  alertComponents,\n  normalizeAlertType\n} from './MarkdownAlert';\n\ninterface Props {\n  allowHtml?: boolean;\n  latex?: boolean;\n  renderMarkdown?: boolean;\n  refElements?: IMessageElement[];\n  children: string;\n  className?: string;\n}\n\nconst cursorPlugin = () => {\n  return (tree: any) => {\n    visit(tree, 'text', (node: any, index, parent) => {\n      const placeholderPattern = /\\u200B/g;\n      const matches = [...(node.value?.matchAll(placeholderPattern) || [])];\n\n      if (matches.length > 0) {\n        const newNodes: any[] = [];\n        let lastIndex = 0;\n\n        matches.forEach((match) => {\n          const [fullMatch] = match;\n          const startIndex = match.index!;\n          const endIndex = startIndex + fullMatch.length;\n\n          if (startIndex > lastIndex) {\n            newNodes.push({\n              type: 'text',\n              value: node.value!.slice(lastIndex, startIndex)\n            });\n          }\n\n          newNodes.push({\n            type: 'blinkingCursor',\n            data: {\n              hName: 'blinkingCursor',\n              hProperties: { text: 'Blinking Cursor' }\n            }\n          });\n\n          lastIndex = endIndex;\n        });\n\n        if (lastIndex < node.value!.length) {\n          newNodes.push({\n            type: 'text',\n            value: node.value!.slice(lastIndex)\n          });\n        }\n\n        parent!.children.splice(index, 1, ...newNodes);\n      }\n    });\n  };\n};\n\nconst Markdown = ({\n  allowHtml,\n  latex,\n  renderMarkdown,\n  refElements,\n  className,\n  children\n}: Props) => {\n  const apiClient = useContext(ChainlitContext);\n\n  if (renderMarkdown === false) {\n    return (\n      <pre\n        className={cn('whitespace-pre-wrap break-words', className)}\n        style={{ fontFamily: 'inherit' }}\n      >\n        {children}\n      </pre>\n    );\n  }\n\n  const rehypePlugins = useMemo(() => {\n    let rehypePlugins: PluggableList = [];\n    if (allowHtml) {\n      rehypePlugins = [rehypeRaw as any, ...rehypePlugins];\n    }\n    if (latex) {\n      rehypePlugins = [rehypeKatex as any, ...rehypePlugins];\n    }\n    return rehypePlugins;\n  }, [allowHtml, latex]);\n\n  const remarkPlugins = useMemo(() => {\n    let remarkPlugins: PluggableList = [\n      cursorPlugin,\n      remarkGfm as any,\n      remarkDirective as any,\n      MarkdownAlert\n    ];\n\n    if (latex) {\n      remarkPlugins = [...remarkPlugins, remarkMath as any];\n    }\n    return remarkPlugins;\n  }, [latex]);\n\n  return (\n    <ReactMarkdown\n      className={cn('prose lg:prose-xl', className)}\n      remarkPlugins={remarkPlugins}\n      rehypePlugins={rehypePlugins}\n      components={{\n        ...alertComponents, // add alert components\n        code(props) {\n          return (\n            <code\n              {...omit(props, ['node'])}\n              className=\"relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold\"\n            />\n          );\n        },\n        pre({ children, ...props }: any) {\n          return <CodeSnippet {...props} />;\n        },\n        a({ children, ...props }) {\n          const name = children as string;\n          const element = refElements?.find((e) => e.name === name);\n          if (element) {\n            return <ElementRef element={element} />;\n          } else {\n            return (\n              <a\n                {...props}\n                className=\"text-primary hover:underline\"\n                target=\"_blank\"\n              >\n                {children}\n              </a>\n            );\n          }\n        },\n        img: (image: any) => {\n          // Check if the image source is actually a video file\n          const src = image.src.startsWith('/public')\n            ? apiClient.buildEndpoint(image.src)\n            : image.src;\n\n          const videoExtensions = [\n            '.mp4',\n            '.webm',\n            '.mov',\n            '.avi',\n            '.ogv',\n            '.m4v'\n          ];\n          const isVideo = videoExtensions.some((ext) =>\n            src.toLowerCase().split(/[?#]/)[0].endsWith(ext)\n          );\n\n          if (isVideo) {\n            return (\n              <div className=\"sm:max-w-sm md:max-w-md\">\n                <video\n                  src={src}\n                  controls\n                  className=\"w-full h-auto rounded-md\"\n                  style={{ maxWidth: '100%' }}\n                >\n                  Your browser does not support the video tag.\n                </video>\n              </div>\n            );\n          }\n\n          return (\n            <div className=\"sm:max-w-sm md:max-w-md\">\n              <AspectRatio\n                ratio={16 / 9}\n                className=\"bg-muted rounded-md overflow-hidden\"\n              >\n                <img\n                  src={src}\n                  alt={image.alt}\n                  className=\"h-full w-full object-contain\"\n                />\n              </AspectRatio>\n            </div>\n          );\n        },\n        blockquote(props) {\n          return (\n            <blockquote\n              {...omit(props, ['node'])}\n              className=\"mt-6 border-l-2 pl-6 italic\"\n            />\n          );\n        },\n        em(props) {\n          return <span {...omit(props, ['node'])} className=\"italic\" />;\n        },\n        strong(props) {\n          return <span {...omit(props, ['node'])} className=\"font-bold\" />;\n        },\n        hr() {\n          return <Separator />;\n        },\n        ul(props) {\n          return (\n            <ul\n              {...omit(props, ['node'])}\n              className=\"my-3 ml-3 list-disc pl-2 [&>li]:mt-1\"\n            />\n          );\n        },\n        ol(props) {\n          return (\n            <ol\n              {...omit(props, ['node'])}\n              className=\"my-3 ml-3 list-decimal pl-2 [&>li]:mt-1\"\n            />\n          );\n        },\n        h1(props) {\n          return (\n            <h1\n              {...omit(props, ['node'])}\n              className=\"scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl mt-8 first:mt-0\"\n            />\n          );\n        },\n        h2(props) {\n          return (\n            <h2\n              {...omit(props, ['node'])}\n              className=\"scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight mt-8 first:mt-0\"\n            />\n          );\n        },\n        h3(props) {\n          return (\n            <h3\n              {...omit(props, ['node'])}\n              className=\"scroll-m-20 text-2xl font-semibold tracking-tight mt-6 first:mt-0\"\n            />\n          );\n        },\n        h4(props) {\n          return (\n            <h4\n              {...omit(props, ['node'])}\n              className=\"scroll-m-20 text-xl font-semibold tracking-tight mt-6 first:mt-0\"\n            />\n          );\n        },\n        p(props) {\n          return (\n            <div\n              {...omit(props, ['node'])}\n              className=\"leading-7 [&:not(:first-child)]:mt-4 whitespace-pre-wrap break-words\"\n              role=\"article\"\n            />\n          );\n        },\n        table({ children, ...props }) {\n          return (\n            <Card className=\"[&:not(:first-child)]:mt-2 [&:not(:last-child)]:mb-2\">\n              <Table {...(props as any)}>{children}</Table>\n            </Card>\n          );\n        },\n        thead({ children, ...props }) {\n          return <TableHeader {...(props as any)}>{children}</TableHeader>;\n        },\n        tr({ children, ...props }) {\n          return <TableRow {...(props as any)}>{children}</TableRow>;\n        },\n        th({ children, ...props }) {\n          return <TableHead {...(props as any)}>{children}</TableHead>;\n        },\n        td({ children, ...props }) {\n          return <TableCell {...(props as any)}>{children}</TableCell>;\n        },\n        tbody({ children, ...props }) {\n          return <TableBody {...(props as any)}>{children}</TableBody>;\n        },\n        // @ts-expect-error custom plugin\n        blinkingCursor: () => <BlinkingCursor whitespace />,\n        alert: ({\n          type,\n          children,\n          ...props\n        }: AlertProps & { type?: string }) => {\n          const alertType = normalizeAlertType(type || props.variant || 'info');\n          return alertComponents.Alert({ variant: alertType, children });\n        }\n      }}\n    >\n      {children}\n    </ReactMarkdown>\n  );\n};\n\nexport { Markdown };\n",
+    "components/MarkdownAlert.tsx": "import { cn } from '@/lib/utils';\nimport {\n  AlertCircle,\n  AlertTriangle,\n  BellRing,\n  BookOpen,\n  Bug,\n  CheckCircle,\n  Clock,\n  Heart,\n  HelpCircle,\n  Info,\n  Lightbulb,\n  Rocket,\n  Shield\n} from 'lucide-react';\n// unist-util-visit is a utility for walking AST (Abstract Syntax Tree) nodes in markdown processing,\n// used here to find and transform ::: alert syntax into Alert components\nimport { visit } from 'unist-util-visit';\n\nimport { useConfig } from '@chainlit/react-client';\n\nimport { useTranslation } from '@/components/i18n/Translator';\n\nexport interface AlertProps {\n  variant: AlertVariant;\n  children?: React.ReactNode;\n}\n// Alert type definition\nexport const AlertTypes = [\n  'info',\n  'note',\n  'tip',\n  'important',\n  'warning',\n  'caution',\n  'debug',\n  'example',\n  'success',\n  'help',\n  'idea',\n  'pending',\n  'security',\n  'beta',\n  'best-practice'\n  // 'your-new-type';\n] as const;\nexport type AlertVariant = (typeof AlertTypes)[number];\n// Styles and icon configuration\nconst variantStyles = {\n  // Basic alerts\n  info: {\n    container:\n      'bg-blue-50 border-l-4 border-l-blue-400 dark:bg-blue-950 dark:border-l-blue-500',\n    icon: 'text-blue-500 dark:text-blue-400',\n    text: 'text-blue-700 dark:text-blue-200',\n    Icon: Info\n  },\n  note: {\n    container:\n      'bg-gray-50 border-l-4 border-l-gray-400 dark:bg-gray-900 dark:border-l-gray-500',\n    icon: 'text-gray-500 dark:text-gray-400',\n    text: 'text-gray-700 dark:text-gray-200',\n    Icon: BellRing\n  },\n  tip: {\n    container:\n      'bg-green-50 border-l-4 border-l-green-400 dark:bg-green-950 dark:border-l-green-500',\n    icon: 'text-green-500 dark:text-green-400',\n    text: 'text-green-700 dark:text-green-200',\n    Icon: CheckCircle\n  },\n  important: {\n    container:\n      'bg-purple-50 border-l-4 border-l-purple-400 dark:bg-purple-950 dark:border-l-purple-500',\n    icon: 'text-purple-500 dark:text-purple-400',\n    text: 'text-purple-700 dark:text-purple-200',\n    Icon: AlertCircle\n  },\n  warning: {\n    container:\n      'bg-yellow-50 border-l-4 border-l-yellow-400 dark:bg-yellow-950 dark:border-l-yellow-500',\n    icon: 'text-yellow-500 dark:text-yellow-400',\n    text: 'text-yellow-700 dark:text-yellow-200',\n    Icon: AlertTriangle\n  },\n  caution: {\n    container:\n      'bg-red-50 border-l-4 border-l-red-400 dark:bg-red-950 dark:border-l-red-500',\n    icon: 'text-red-500 dark:text-red-400',\n    text: 'text-red-700 dark:text-red-200',\n    Icon: AlertTriangle\n  },\n\n  // Development related\n  debug: {\n    container:\n      'bg-gray-50 border-l-4 border-l-gray-400 dark:bg-gray-900 dark:border-l-gray-500',\n    icon: 'text-gray-500 dark:text-gray-400',\n    text: 'text-gray-700 dark:text-gray-200',\n    Icon: Bug\n  },\n  example: {\n    container:\n      'bg-indigo-50 border-l-4 border-l-indigo-400 dark:bg-indigo-950 dark:border-l-indigo-500',\n    icon: 'text-indigo-500 dark:text-indigo-400',\n    text: 'text-indigo-700 dark:text-indigo-200',\n    Icon: BookOpen\n  },\n\n  // Functional alerts\n  success: {\n    container:\n      'bg-green-50 border-l-4 border-l-green-400 dark:bg-green-950 dark:border-l-green-500',\n    icon: 'text-green-500 dark:text-green-400',\n    text: 'text-green-700 dark:text-green-200',\n    Icon: CheckCircle\n  },\n  help: {\n    container:\n      'bg-blue-50 border-l-4 border-l-blue-400 dark:bg-blue-950 dark:border-l-blue-500',\n    icon: 'text-blue-500 dark:text-blue-400',\n    text: 'text-blue-700 dark:text-blue-200',\n    Icon: HelpCircle\n  },\n  idea: {\n    container:\n      'bg-yellow-50 border-l-4 border-l-yellow-400 dark:bg-yellow-950 dark:border-l-yellow-500',\n    icon: 'text-yellow-500 dark:text-yellow-400',\n    text: 'text-yellow-700 dark:text-yellow-200',\n    Icon: Lightbulb\n  },\n\n  // Status alerts\n  pending: {\n    container:\n      'bg-orange-50 border-l-4 border-l-orange-400 dark:bg-orange-950 dark:border-l-orange-500',\n    icon: 'text-orange-500 dark:text-orange-400',\n    text: 'text-orange-700 dark:text-orange-200',\n    Icon: Clock\n  },\n  security: {\n    container:\n      'bg-slate-50 border-l-4 border-l-slate-400 dark:bg-slate-950 dark:border-l-slate-500',\n    icon: 'text-slate-500 dark:text-slate-400',\n    text: 'text-slate-700 dark:text-slate-200',\n    Icon: Shield\n  },\n  beta: {\n    container:\n      'bg-violet-50 border-l-4 border-l-violet-400 dark:bg-violet-950 dark:border-l-violet-500',\n    icon: 'text-violet-500 dark:text-violet-400',\n    text: 'text-violet-700 dark:text-violet-200',\n    Icon: Rocket\n  },\n  'best-practice': {\n    container:\n      'bg-teal-50 border-l-4 border-l-teal-400 dark:bg-teal-950 dark:border-l-teal-500',\n    icon: 'text-teal-500 dark:text-teal-400',\n    text: 'text-teal-700 dark:text-teal-200',\n    Icon: Heart\n  }\n  // we can add new types here later, but remember to update translation.json file under \"alerts\".\n  //  'your-new-type': {\n  //    container: 'bg-teal-50 border-l-4 border-l-teal-400 dark:bg-teal-950 dark:border-l-teal-500',\n  //    icon: 'text-teal-500 dark:text-teal-400',\n  //    text: 'text-teal-700 dark:text-teal-200',\n  //    Icon: Heart\n  //  }\n};\nconst modernVariantStyles = {\n  // Basic alerts\n  info: {\n    container:\n      'bg-blue-50/80 rounded-2xl border border-blue-200 dark:bg-slate-800/30 dark:border-slate-500/40',\n    icon: 'text-blue-500 dark:text-blue-400',\n    text: 'text-slate-700 dark:text-slate-200',\n    Icon: Info\n  },\n  note: {\n    container:\n      'bg-gray-50/80 rounded-2xl border border-gray-300 dark:bg-gray-800/30 dark:border-gray-500/40',\n    icon: 'text-gray-500 dark:text-gray-400',\n    text: 'text-slate-700 dark:text-slate-200',\n    Icon: BellRing\n  },\n  tip: {\n    container:\n      'bg-green-50/80 rounded-2xl border border-green-200 dark:bg-green-800/30 dark:border-green-600/30',\n    icon: 'text-green-500 dark:text-green-400',\n    text: 'text-slate-700 dark:text-slate-200',\n    Icon: CheckCircle\n  },\n  important: {\n    container:\n      'bg-purple-50/80 rounded-2xl border border-purple-200 dark:bg-purple-800/20 dark:border-purple-600/30',\n    icon: 'text-purple-500 dark:text-purple-400',\n    text: 'text-slate-700 dark:text-slate-200',\n    Icon: AlertCircle\n  },\n  warning: {\n    container:\n      'bg-yellow-50/80 rounded-2xl border border-yellow-200 dark:bg-yellow-800/30 dark:border-yellow-600/30',\n    icon: 'text-yellow-500 dark:text-yellow-400',\n    text: 'text-slate-700 dark:text-slate-200',\n    Icon: AlertTriangle\n  },\n  caution: {\n    container:\n      'bg-red-50/80 rounded-2xl border border-red-200 dark:bg-red-900/30 dark:border-red-600/30',\n    icon: 'text-red-500 dark:text-red-400',\n    text: 'text-slate-700 dark:text-slate-200',\n    Icon: AlertTriangle\n  },\n  debug: {\n    container:\n      'bg-gray-50/80 rounded-2xl border border-gray-300 dark:bg-gray-800/30 dark:border-gray-500/40',\n    icon: 'text-gray-500 dark:text-gray-400',\n    text: 'text-slate-700 dark:text-slate-200',\n    Icon: Bug\n  },\n  example: {\n    container:\n      'bg-indigo-50/80 rounded-2xl border border-indigo-200 dark:bg-indigo-800/30 dark:border-indigo-600/30',\n    icon: 'text-indigo-500 dark:text-indigo-400',\n    text: 'text-slate-700 dark:text-slate-200',\n    Icon: BookOpen\n  },\n  success: {\n    container:\n      'bg-green-50/80 rounded-2xl border border-green-200 dark:bg-green-800/30 dark:border-green-600/30',\n    icon: 'text-green-500 dark:text-green-400',\n    text: 'text-slate-700 dark:text-slate-200',\n    Icon: CheckCircle\n  },\n  help: {\n    container:\n      'bg-blue-50/80 rounded-2xl border border-blue-200 dark:bg-blue-800/30 dark:border-blue-600/30',\n    icon: 'text-blue-500 dark:text-blue-400',\n    text: 'text-slate-700 dark:text-slate-200',\n    Icon: HelpCircle\n  },\n  idea: {\n    container:\n      'bg-yellow-50/80 rounded-2xl border border-yellow-200 dark:bg-yellow-800/30 dark:border-yellow-600/30',\n    icon: 'text-yellow-500 dark:text-yellow-400',\n    text: 'text-slate-700 dark:text-slate-200',\n    Icon: Lightbulb\n  },\n  pending: {\n    container:\n      'bg-orange-50/80 rounded-2xl border border-orange-200 dark:bg-orange-900/30 dark:border-orange-600/30',\n    icon: 'text-orange-500 dark:text-orange-400',\n    text: 'text-slate-700 dark:text-slate-200',\n    Icon: Clock\n  },\n  security: {\n    container:\n      'bg-slate-50/80 rounded-2xl border border-slate-300 dark:bg-slate-800/30 dark:border-slate-500/40',\n    icon: 'text-slate-500 dark:text-slate-400',\n    text: 'text-slate-700 dark:text-slate-200',\n    Icon: Shield\n  },\n  beta: {\n    container:\n      'bg-violet-50/80 rounded-2xl border border-violet-200 dark:bg-violet-800/20 dark:border-violet-600/30',\n    icon: 'text-violet-500 dark:text-violet-400',\n    text: 'text-slate-700 dark:text-slate-200',\n    Icon: Rocket\n  },\n  'best-practice': {\n    container:\n      'bg-teal-50/80 rounded-2xl border border-teal-200 dark:bg-teal-800/30 dark:border-teal-600/30',\n    icon: 'text-teal-500 dark:text-teal-400',\n    text: 'text-slate-700 dark:text-slate-200',\n    Icon: Heart\n  }\n};\n// Alert component\nconst AlertComponent = ({\n  variant,\n  children\n}: {\n  variant: AlertVariant;\n  children: React.ReactNode;\n}) => {\n  const { t } = useTranslation();\n  const configData = useConfig();\n  const useModernStyle = configData?.config?.ui?.alert_style === 'modern';\n  const styleSet = useModernStyle ? modernVariantStyles : variantStyles;\n  const style = styleSet[variant];\n  const Icon = style.Icon;\n\n  return (\n    <div className={cn('rounded-lg p-4 mb-4', style.container)}>\n      <div className=\"flex\">\n        <div className={cn('flex-shrink-0', style.icon)}>\n          <Icon className=\"w-5 h-5\" />\n        </div>\n        <div className=\"ml-3\">\n          <div className={cn('text-sm font-medium mb-1', style.text)}>\n            {t(`alerts.${variant}`)}\n          </div>\n          <div className={cn('text-sm', style.text)}>{children}</div>\n        </div>\n      </div>\n    </div>\n  );\n};\n// MarkdownAlert plugin\nexport const MarkdownAlert = () => {\n  return (tree: any) => {\n    visit(tree, 'text', (node) => {\n      const regex = /^:::\\s*([\\w-]+)\\n([\\s\\S]*?)\\n:::/i;\n      const match = node.value.match(regex);\n\n      if (match) {\n        const [, type, content] = match;\n        node.type = 'element';\n        node.data = {\n          hName: 'Alert',\n          hProperties: { variant: normalizeAlertType(type) }\n        };\n        node.children = [{ type: 'text', value: content.trim() }];\n      }\n    });\n  };\n};\nexport const normalizeAlertType = (type: string): AlertVariant => {\n  if (!type) return 'info';\n  const normalized = type.toLowerCase().replace(/[-_\\s]/g, '-');\n  if (!AlertTypes.includes(normalized as AlertVariant)) {\n    console.warn(`Invalid alert type \"${type}\", falling back to \"info\"`);\n    return 'info';\n  }\n  return normalized as AlertVariant;\n};\n\nexport const alertComponents = {\n  Alert: AlertComponent\n};\n",
+    "components/ui/accordion.tsx": "import { cn } from '@/lib/utils';\nimport * as AccordionPrimitive from '@radix-ui/react-accordion';\nimport { ChevronDown } from 'lucide-react';\nimport * as React from 'react';\n\nconst Accordion = AccordionPrimitive.Root;\n\nconst AccordionItem = React.forwardRef<\n  React.ElementRef<typeof AccordionPrimitive.Item>,\n  React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Item>\n>(({ className, ...props }, ref) => (\n  <AccordionPrimitive.Item\n    ref={ref}\n    className={cn('border-b', className)}\n    {...props}\n  />\n));\nAccordionItem.displayName = 'AccordionItem';\n\nconst AccordionTrigger = React.forwardRef<\n  React.ElementRef<typeof AccordionPrimitive.Trigger>,\n  React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger>\n>(({ className, children, ...props }, ref) => (\n  <AccordionPrimitive.Header className=\"flex\">\n    <AccordionPrimitive.Trigger\n      ref={ref}\n      className={cn(\n        'flex flex-1 items-center justify-between py-4 font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-180',\n        className\n      )}\n      {...props}\n    >\n      {children}\n      <ChevronDown className=\"h-4 w-4 shrink-0 transition-transform duration-200\" />\n    </AccordionPrimitive.Trigger>\n  </AccordionPrimitive.Header>\n));\nAccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName;\n\nconst AccordionContent = React.forwardRef<\n  React.ElementRef<typeof AccordionPrimitive.Content>,\n  React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Content>\n>(({ className, children, ...props }, ref) => (\n  <AccordionPrimitive.Content\n    ref={ref}\n    className=\"overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down\"\n    {...props}\n  >\n    <div className={cn('pb-4 pt-0', className)}>{children}</div>\n  </AccordionPrimitive.Content>\n));\n\nAccordionContent.displayName = AccordionPrimitive.Content.displayName;\n\nexport { Accordion, AccordionItem, AccordionTrigger, AccordionContent };\n",
+    "lib/message.ts": "import type { IMessageElement } from 'client-types/';\n\nconst toSafeLinkTarget = (name: string) =>\n  encodeURIComponent(name.replace(/\\s+/g, '_'))\n    .replace(/\\(/g, '%28')\n    .replace(/\\)/g, '%29'); // Encode parentheses to avoid issues in URLs\n\nconst isForIdMatch = (id: string | number | undefined, forId: string) => {\n  if (!forId || !id) {\n    return false;\n  }\n\n  return forId === id.toString();\n};\n\nconst escapeRegExp = (string: string) => {\n  // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#escaping\n  return string.replace(/[.*+?^${}()|[\\]\\\\]/g, '\\\\$&');\n};\n\nexport const prepareContent = ({\n  elements,\n  content,\n  id,\n  language\n}: {\n  elements: IMessageElement[];\n  content?: string;\n  id: string;\n  language?: string;\n}) => {\n  const elementNames = elements.map((e) => escapeRegExp(e.name));\n\n  // Sort by descending length to avoid matching substrings\n  elementNames.sort((a, b) => b.length - a.length);\n\n  const elementRegexp = elementNames.length\n    ? new RegExp(`(${elementNames.join('|')})`, 'g')\n    : undefined;\n\n  let preparedContent = content ? content.trim() : '';\n  const inlinedElements = elements.filter(\n    (e) => isForIdMatch(id, e?.forId) && e.display === 'inline'\n  );\n  const refElements: IMessageElement[] = [];\n\n  if (elementRegexp) {\n    preparedContent = preparedContent.replaceAll(elementRegexp, (match) => {\n      const element = elements.find((e) => {\n        const nameMatch = e.name === match;\n        const scopeMatch = isForIdMatch(id, e?.forId);\n        return nameMatch && scopeMatch;\n      });\n      const foundElement = !!element;\n\n      const inlined = element?.display === 'inline';\n      if (!foundElement) {\n        // Element reference does not exist, return plain text\n        return match;\n      } else if (inlined) {\n        // If element is inlined, add it to the list and return plain text\n        if (inlinedElements.indexOf(element) === -1) {\n          inlinedElements.push(element);\n        }\n        return match;\n      } else {\n        // Element is a reference, add it to the list and return link\n        refElements.push(element);\n        // Build a Markdown-safe link: escape text, and encode () in the slug\n        // The address in the link is not used anyway\n        return `[${match}](${toSafeLinkTarget(match)})`;\n      }\n    });\n  }\n\n  if (language && preparedContent) {\n    const prefix = `\\`\\`\\`${language}`;\n    const suffix = '```';\n    if (!preparedContent.startsWith('```')) {\n      preparedContent = `${prefix}\\n${preparedContent}\\n${suffix}`;\n    }\n  }\n  return {\n    preparedContent,\n    inlinedElements,\n    refElements\n  };\n};\n"
+  },
+  "adaptedHashes": {
+    "src/main.tsx": "8890be1823ce7d15e4809a5e7150e9c0fae400759139a63795febcb47e057e34",
+    "src/components/Markdown.tsx": "d9ea65ea45e7a5ae81859aaf5af30a81c1f989ed3d2af1f412c862f5cca9172b",
+    "src/components/Icon.tsx": "ab82097490203114bdafeb54df5e3982b5c95f4379a9b9c6a932348019a64a2b",
+    "src/components/chat/Messages/Message/Step.tsx": "ca99363b1c20e9eaeae464a01c821cb5c445081ccf8e42581a85334755ac817a"
+  },
+  "dependencies": [
+    {
+      "name": "react",
+      "version": "18.3.1",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "52412d7bc7ce4157ea628bbaacb8829e0a9cb3c58f57f99176126bc8cf2bfc85"
+        }
+      ]
+    },
+    {
+      "name": "scheduler",
+      "version": "0.23.2",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "52412d7bc7ce4157ea628bbaacb8829e0a9cb3c58f57f99176126bc8cf2bfc85"
+        }
+      ]
+    },
+    {
+      "name": "react-dom",
+      "version": "18.3.1",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "52412d7bc7ce4157ea628bbaacb8829e0a9cb3c58f57f99176126bc8cf2bfc85"
+        }
+      ]
+    },
+    {
+      "name": "clsx",
+      "version": "2.1.1",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "9a9edad7baae52622bddf3c15b2ef8a33d2c89f2d25408ad13e8a7481c6b0c97"
+        }
+      ]
+    },
+    {
+      "name": "tailwind-merge",
+      "version": "3.5.0",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "LICENSE.md",
+          "sha256": "d4c70c7ce38cea8778f0aed3fc0bef0a9dbd27f13bd8b6773cbd6d37941971e5"
+        }
+      ]
+    },
+    {
+      "name": "lucide-react",
+      "version": "1.8.0",
+      "scope": "emitted-js",
+      "licenseDeclaration": "ISC",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57"
+        }
+      ]
+    },
+    {
+      "name": "@radix-ui/react-context",
+      "version": "1.1.3",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+        }
+      ]
+    },
+    {
+      "name": "@radix-ui/react-use-callback-ref",
+      "version": "1.1.1",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Package omitted license; exact-version npm gitHead fcef0668a5c827e5a4baac405474d75680f9a4eb official repository full MIT, reused verified evidence.",
+      "licenseFiles": [
+        {
+          "name": "radix-fcef0668a5c827e5a4baac405474d75680f9a4eb-LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+        }
+      ]
+    },
+    {
+      "name": "@radix-ui/react-use-layout-effect",
+      "version": "1.1.1",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Package omitted license; exact-version npm gitHead fcef0668a5c827e5a4baac405474d75680f9a4eb official repository full MIT, reused verified evidence.",
+      "licenseFiles": [
+        {
+          "name": "radix-fcef0668a5c827e5a4baac405474d75680f9a4eb-LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+        }
+      ]
+    },
+    {
+      "name": "@radix-ui/react-compose-refs",
+      "version": "1.1.2",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Package omitted license; exact-version npm gitHead fcef0668a5c827e5a4baac405474d75680f9a4eb official repository full MIT, reused verified evidence.",
+      "licenseFiles": [
+        {
+          "name": "radix-fcef0668a5c827e5a4baac405474d75680f9a4eb-LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+        }
+      ]
+    },
+    {
+      "name": "@radix-ui/react-slot",
+      "version": "1.2.4",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+        }
+      ]
+    },
+    {
+      "name": "@radix-ui/react-primitive",
+      "version": "2.1.4",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+        }
+      ]
+    },
+    {
+      "name": "use-sync-external-store",
+      "version": "1.7.0",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+        }
+      ]
+    },
+    {
+      "name": "@radix-ui/react-use-is-hydrated",
+      "version": "0.1.0",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+        }
+      ]
+    },
+    {
+      "name": "@radix-ui/react-avatar",
+      "version": "1.1.11",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+        }
+      ]
+    },
+    {
+      "name": "@radix-ui/primitive",
+      "version": "1.1.3",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+        }
+      ]
+    },
+    {
+      "name": "@radix-ui/react-context",
+      "version": "1.1.2",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Package omitted license; exact-version npm gitHead fcef0668a5c827e5a4baac405474d75680f9a4eb official repository full MIT, reused verified evidence.",
+      "licenseFiles": [
+        {
+          "name": "radix-fcef0668a5c827e5a4baac405474d75680f9a4eb-LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+        }
+      ]
+    },
+    {
+      "name": "@radix-ui/react-slot",
+      "version": "1.2.3",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+        }
+      ]
+    },
+    {
+      "name": "@radix-ui/react-primitive",
+      "version": "2.1.3",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+        }
+      ]
+    },
+    {
+      "name": "@radix-ui/react-use-escape-keydown",
+      "version": "1.1.1",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Package omitted license; exact-version npm gitHead fcef0668a5c827e5a4baac405474d75680f9a4eb official repository full MIT, reused verified evidence.",
+      "licenseFiles": [
+        {
+          "name": "radix-fcef0668a5c827e5a4baac405474d75680f9a4eb-LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+        }
+      ]
+    },
+    {
+      "name": "@radix-ui/react-dismissable-layer",
+      "version": "1.1.11",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+        }
+      ]
+    },
+    {
+      "name": "@radix-ui/react-id",
+      "version": "1.1.1",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Package omitted license; exact-version npm gitHead fcef0668a5c827e5a4baac405474d75680f9a4eb official repository full MIT, reused verified evidence.",
+      "licenseFiles": [
+        {
+          "name": "radix-fcef0668a5c827e5a4baac405474d75680f9a4eb-LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+        }
+      ]
+    },
+    {
+      "name": "@floating-ui/utils",
+      "version": "0.2.12",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "0e4c9a9b6c71019cbbea3bdc20b01223110a9035700f9c960c8fcbf78c2325ce"
+        }
+      ]
+    },
+    {
+      "name": "@floating-ui/core",
+      "version": "1.8.0",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "0e4c9a9b6c71019cbbea3bdc20b01223110a9035700f9c960c8fcbf78c2325ce"
+        }
+      ]
+    },
+    {
+      "name": "@floating-ui/dom",
+      "version": "1.8.0",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "0e4c9a9b6c71019cbbea3bdc20b01223110a9035700f9c960c8fcbf78c2325ce"
+        }
+      ]
+    },
+    {
+      "name": "@floating-ui/react-dom",
+      "version": "2.1.9",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "0e4c9a9b6c71019cbbea3bdc20b01223110a9035700f9c960c8fcbf78c2325ce"
+        }
+      ]
+    },
+    {
+      "name": "@radix-ui/react-arrow",
+      "version": "1.1.7",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+        }
+      ]
+    },
+    {
+      "name": "@radix-ui/react-use-size",
+      "version": "1.1.1",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Package omitted license; exact-version npm gitHead fcef0668a5c827e5a4baac405474d75680f9a4eb official repository full MIT, reused verified evidence.",
+      "licenseFiles": [
+        {
+          "name": "radix-fcef0668a5c827e5a4baac405474d75680f9a4eb-LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+        }
+      ]
+    },
+    {
+      "name": "@radix-ui/react-popper",
+      "version": "1.2.8",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+        }
+      ]
+    },
+    {
+      "name": "@radix-ui/react-portal",
+      "version": "1.1.9",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+        }
+      ]
+    },
+    {
+      "name": "@radix-ui/react-presence",
+      "version": "1.1.5",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+        }
+      ]
+    },
+    {
+      "name": "@radix-ui/react-use-effect-event",
+      "version": "0.0.2",
+      "scope": "parsed-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+        }
+      ]
+    },
+    {
+      "name": "@radix-ui/react-use-controllable-state",
+      "version": "1.2.2",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+        }
+      ]
+    },
+    {
+      "name": "@radix-ui/react-visually-hidden",
+      "version": "1.2.3",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+        }
+      ]
+    },
+    {
+      "name": "@radix-ui/react-tooltip",
+      "version": "1.2.8",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+        }
+      ]
+    },
+    {
+      "name": "lodash",
+      "version": "4.18.1",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "f71e8ed126b46346494aad5486874cd8f0aafe95092ed67d2e3cb6110f939abc"
+        }
+      ]
+    },
+    {
+      "name": "devlop",
+      "version": "1.1.0",
+      "scope": "parsed-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "6f296a5eccc1dc96714bb94ebaa9cac25b0a1467d74cc5263ac4d0646ab01f62"
+        }
+      ]
+    },
+    {
+      "name": "comma-separated-tokens",
+      "version": "2.0.3",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "ca4662cb5d1b738fbe5350c0d5485ba11773b4b7208974082ae6e129a52d631d"
+        }
+      ]
+    },
+    {
+      "name": "estree-util-is-identifier-name",
+      "version": "3.0.0",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "536804b3adbff17dbbb9ed0d2bf9655b78f07640278581e37e3d7475282d5e61"
+        }
+      ]
+    },
+    {
+      "name": "hast-util-whitespace",
+      "version": "3.0.0",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "ca4662cb5d1b738fbe5350c0d5485ba11773b4b7208974082ae6e129a52d631d"
+        }
+      ]
+    },
+    {
+      "name": "property-information",
+      "version": "7.2.0",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "5d0698266086f217bb11ea0499d33453e401fe479fb9126ad04e625e63d3557b"
+        }
+      ]
+    },
+    {
+      "name": "space-separated-tokens",
+      "version": "2.0.2",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "ca4662cb5d1b738fbe5350c0d5485ba11773b4b7208974082ae6e129a52d631d"
+        }
+      ]
+    },
+    {
+      "name": "inline-style-parser",
+      "version": "0.2.9",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "395c95f20598da653ff1eb1cb9d74947c7fac689697147f1d192fd0242a0e635"
+        }
+      ]
+    },
+    {
+      "name": "style-to-object",
+      "version": "2.0.2",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "896c9fd6b5fc48ac31800b9d29a6e3ffcb0c2d534ed077ebfa5c2fa388cc38b7"
+        }
+      ]
+    },
+    {
+      "name": "unist-util-position",
+      "version": "5.0.0",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "63cb98b3f6abfb3c3592c16f88253c1bdc834087bf52671e8ce5609e4eb693cf"
+        }
+      ]
+    },
+    {
+      "name": "unist-util-stringify-position",
+      "version": "4.0.0",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "ca4662cb5d1b738fbe5350c0d5485ba11773b4b7208974082ae6e129a52d631d"
+        }
+      ]
+    },
+    {
+      "name": "vfile-message",
+      "version": "4.0.4",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+        }
+      ]
+    },
+    {
+      "name": "hast-util-to-jsx-runtime",
+      "version": "2.3.7",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+        }
+      ]
+    },
+    {
+      "name": "html-url-attributes",
+      "version": "3.0.1",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "e18cf5173e928f808f0cd208097fee8fbec9d28fc0255213938e4c559e29ff58"
+        }
+      ]
+    },
+    {
+      "name": "mdast-util-to-string",
+      "version": "4.0.0",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "63cb98b3f6abfb3c3592c16f88253c1bdc834087bf52671e8ce5609e4eb693cf"
+        }
+      ]
+    },
+    {
+      "name": "decode-named-character-reference",
+      "version": "1.3.0",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+        }
+      ]
+    },
+    {
+      "name": "micromark-util-chunked",
+      "version": "2.0.1",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+        }
+      ]
+    },
+    {
+      "name": "micromark-util-combine-extensions",
+      "version": "2.0.1",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+        }
+      ]
+    },
+    {
+      "name": "micromark-util-decode-numeric-character-reference",
+      "version": "2.0.2",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+        }
+      ]
+    },
+    {
+      "name": "micromark-util-encode",
+      "version": "2.0.1",
+      "scope": "parsed-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+        }
+      ]
+    },
+    {
+      "name": "micromark-util-normalize-identifier",
+      "version": "2.0.1",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+        }
+      ]
+    },
+    {
+      "name": "micromark-util-character",
+      "version": "2.1.1",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+        }
+      ]
+    },
+    {
+      "name": "micromark-util-sanitize-uri",
+      "version": "2.0.1",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+        }
+      ]
+    },
+    {
+      "name": "micromark",
+      "version": "4.0.3",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+        }
+      ]
+    },
+    {
+      "name": "micromark-factory-space",
+      "version": "2.1.0",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+        }
+      ]
+    },
+    {
+      "name": "micromark-util-edit-map",
+      "version": "1.0.0",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+        }
+      ]
+    },
+    {
+      "name": "micromark-util-classify-character",
+      "version": "2.0.1",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+        }
+      ]
+    },
+    {
+      "name": "micromark-util-resolve-all",
+      "version": "2.0.1",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+        }
+      ]
+    },
+    {
+      "name": "micromark-core-commonmark",
+      "version": "2.0.4",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+        }
+      ]
+    },
+    {
+      "name": "micromark-util-subtokenize",
+      "version": "2.1.0",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+        }
+      ]
+    },
+    {
+      "name": "micromark-factory-destination",
+      "version": "2.0.1",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+        }
+      ]
+    },
+    {
+      "name": "micromark-factory-label",
+      "version": "2.0.1",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+        }
+      ]
+    },
+    {
+      "name": "micromark-factory-title",
+      "version": "2.0.1",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+        }
+      ]
+    },
+    {
+      "name": "micromark-factory-whitespace",
+      "version": "2.0.1",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+        }
+      ]
+    },
+    {
+      "name": "micromark-util-html-tag-name",
+      "version": "2.0.1",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+        }
+      ]
+    },
+    {
+      "name": "micromark-util-decode-string",
+      "version": "2.0.1",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+        }
+      ]
+    },
+    {
+      "name": "mdast-util-from-markdown",
+      "version": "2.1.0",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+        }
+      ]
+    },
+    {
+      "name": "remark-parse",
+      "version": "11.0.0",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "413654b0a78b98661dce96d2aff2e4d075603d220b8483e28b1aa010ccc138b4"
+        }
+      ]
+    },
+    {
+      "name": "mdast-util-to-hast",
+      "version": "13.2.1",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "ca4662cb5d1b738fbe5350c0d5485ba11773b4b7208974082ae6e129a52d631d"
+        }
+      ]
+    },
+    {
+      "name": "trim-lines",
+      "version": "3.0.1",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "9f084fac69d8cf1e6ce983ba5a3499c7695ed74a26ec625c38f0fd19fddd5e10"
+        }
+      ]
+    },
+    {
+      "name": "@ungap/structured-clone",
+      "version": "1.4.0",
+      "scope": "emitted-js",
+      "licenseDeclaration": "ISC",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "dc6d4961d8b6ee747231582ae9c53ce1d66bf76bc9f5a28f554c0e97210953bf"
+        }
+      ]
+    },
+    {
+      "name": "unist-util-is",
+      "version": "6.0.1",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "82974dbf2639d13edab95c32ed9cb6c0867ede272cd2e07ce47ce8548fe55c05"
+        }
+      ]
+    },
+    {
+      "name": "unist-util-visit-parents",
+      "version": "6.1.0",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+        }
+      ]
+    },
+    {
+      "name": "unist-util-visit",
+      "version": "5.2.0",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+        }
+      ]
+    },
+    {
+      "name": "remark-rehype",
+      "version": "11.1.2",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+        }
+      ]
+    },
+    {
+      "name": "bail",
+      "version": "2.0.2",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "63cb98b3f6abfb3c3592c16f88253c1bdc834087bf52671e8ce5609e4eb693cf"
+        }
+      ]
+    },
+    {
+      "name": "extend",
+      "version": "3.0.2",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "97af7428f93afbab9bf79cd09254da1357161794f4255eb1b4599f04dd2d2e7c"
+        }
+      ]
+    },
+    {
+      "name": "is-plain-obj",
+      "version": "4.1.0",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3"
+        }
+      ]
+    },
+    {
+      "name": "trough",
+      "version": "2.2.0",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "6c03fd41cfd7c92d8aa8a2fa521b94b2683f059123281dcf921ddea9216b6254"
+        }
+      ]
+    },
+    {
+      "name": "vfile",
+      "version": "6.0.3",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "05811400116ed61f1a7693b78fe8ca6598c155a12f3978e609db4df648a4cb3d"
+        }
+      ]
+    },
+    {
+      "name": "unified",
+      "version": "11.0.5",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "05811400116ed61f1a7693b78fe8ca6598c155a12f3978e609db4df648a4cb3d"
+        }
+      ]
+    },
+    {
+      "name": "react-markdown",
+      "version": "9.0.1",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "b1683f31ae8586b92eb7e866ef545adc3098e697f65a4d3e2b1df2babcfa134b"
+        }
+      ]
+    },
+    {
+      "name": "ccount",
+      "version": "2.0.1",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "63cb98b3f6abfb3c3592c16f88253c1bdc834087bf52671e8ce5609e4eb693cf"
+        }
+      ]
+    },
+    {
+      "name": "character-entities-legacy",
+      "version": "3.0.0",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "63cb98b3f6abfb3c3592c16f88253c1bdc834087bf52671e8ce5609e4eb693cf"
+        }
+      ]
+    },
+    {
+      "name": "character-reference-invalid",
+      "version": "2.0.1",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "63cb98b3f6abfb3c3592c16f88253c1bdc834087bf52671e8ce5609e4eb693cf"
+        }
+      ]
+    },
+    {
+      "name": "is-decimal",
+      "version": "2.0.1",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "ca4662cb5d1b738fbe5350c0d5485ba11773b4b7208974082ae6e129a52d631d"
+        }
+      ]
+    },
+    {
+      "name": "is-hexadecimal",
+      "version": "2.0.1",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "ca4662cb5d1b738fbe5350c0d5485ba11773b4b7208974082ae6e129a52d631d"
+        }
+      ]
+    },
+    {
+      "name": "is-alphabetical",
+      "version": "2.0.1",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "ca4662cb5d1b738fbe5350c0d5485ba11773b4b7208974082ae6e129a52d631d"
+        }
+      ]
+    },
+    {
+      "name": "is-alphanumerical",
+      "version": "2.0.1",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "ca4662cb5d1b738fbe5350c0d5485ba11773b4b7208974082ae6e129a52d631d"
+        }
+      ]
+    },
+    {
+      "name": "parse-entities",
+      "version": "4.0.2",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "5d0698266086f217bb11ea0499d33453e401fe479fb9126ad04e625e63d3557b"
+        }
+      ]
+    },
+    {
+      "name": "stringify-entities",
+      "version": "4.0.4",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "9f084fac69d8cf1e6ce983ba5a3499c7695ed74a26ec625c38f0fd19fddd5e10"
+        }
+      ]
+    },
+    {
+      "name": "character-entities-html4",
+      "version": "2.1.0",
+      "scope": "parsed-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "63cb98b3f6abfb3c3592c16f88253c1bdc834087bf52671e8ce5609e4eb693cf"
+        }
+      ]
+    },
+    {
+      "name": "mdast-util-directive",
+      "version": "3.2.0",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+        }
+      ]
+    },
+    {
+      "name": "micromark-extension-directive",
+      "version": "3.0.2",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "536804b3adbff17dbbb9ed0d2bf9655b78f07640278581e37e3d7475282d5e61"
+        }
+      ]
+    },
+    {
+      "name": "remark-directive",
+      "version": "3.0.1",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+        }
+      ]
+    },
+    {
+      "name": "escape-string-regexp",
+      "version": "5.0.0",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3"
+        }
+      ]
+    },
+    {
+      "name": "mdast-util-find-and-replace",
+      "version": "3.0.4",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+        }
+      ]
+    },
+    {
+      "name": "mdast-util-gfm-autolink-literal",
+      "version": "2.1.0",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+        }
+      ]
+    },
+    {
+      "name": "mdast-util-gfm-footnote",
+      "version": "2.1.0",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+        }
+      ]
+    },
+    {
+      "name": "mdast-util-gfm-strikethrough",
+      "version": "2.0.1",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+        }
+      ]
+    },
+    {
+      "name": "markdown-table",
+      "version": "3.1.0",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+        }
+      ]
+    },
+    {
+      "name": "mdast-util-phrasing",
+      "version": "4.1.0",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "b6d1a4e1831b177acc96f22a817d4f0f4c18419355badc3125754445fc69e3a7"
+        }
+      ]
+    },
+    {
+      "name": "zwitch",
+      "version": "2.0.4",
+      "scope": "parsed-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "ca4662cb5d1b738fbe5350c0d5485ba11773b4b7208974082ae6e129a52d631d"
+        }
+      ]
+    },
+    {
+      "name": "mdast-util-to-markdown",
+      "version": "2.2.3",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+        }
+      ]
+    },
+    {
+      "name": "longest-streak",
+      "version": "3.1.0",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "9f084fac69d8cf1e6ce983ba5a3499c7695ed74a26ec625c38f0fd19fddd5e10"
+        }
+      ]
+    },
+    {
+      "name": "mdast-util-gfm-table",
+      "version": "2.0.1",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+        }
+      ]
+    },
+    {
+      "name": "mdast-util-gfm-task-list-item",
+      "version": "2.0.1",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+        }
+      ]
+    },
+    {
+      "name": "mdast-util-gfm",
+      "version": "3.1.0",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+        }
+      ]
+    },
+    {
+      "name": "micromark-extension-gfm-autolink-literal",
+      "version": "2.1.0",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "536804b3adbff17dbbb9ed0d2bf9655b78f07640278581e37e3d7475282d5e61"
+        }
+      ]
+    },
+    {
+      "name": "micromark-extension-gfm-footnote",
+      "version": "2.1.0",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "807a88522a850092aece49486207c17c313c4d5708ac276524840fe1caa0b0fa"
+        }
+      ]
+    },
+    {
+      "name": "micromark-extension-gfm-strikethrough",
+      "version": "2.1.0",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "536804b3adbff17dbbb9ed0d2bf9655b78f07640278581e37e3d7475282d5e61"
+        }
+      ]
+    },
+    {
+      "name": "micromark-extension-gfm-table",
+      "version": "2.1.2",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+        }
+      ]
+    },
+    {
+      "name": "micromark-extension-gfm-tagfilter",
+      "version": "2.0.0",
+      "scope": "parsed-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "536804b3adbff17dbbb9ed0d2bf9655b78f07640278581e37e3d7475282d5e61"
+        }
+      ]
+    },
+    {
+      "name": "micromark-extension-gfm-task-list-item",
+      "version": "2.1.0",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "536804b3adbff17dbbb9ed0d2bf9655b78f07640278581e37e3d7475282d5e61"
+        }
+      ]
+    },
+    {
+      "name": "micromark-extension-gfm",
+      "version": "3.0.0",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "536804b3adbff17dbbb9ed0d2bf9655b78f07640278581e37e3d7475282d5e61"
+        }
+      ]
+    },
+    {
+      "name": "remark-gfm",
+      "version": "4.0.1",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "license",
+          "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+        }
+      ]
+    },
+    {
+      "name": "@radix-ui/react-separator",
+      "version": "1.1.8",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+        }
+      ]
+    },
+    {
+      "name": "@radix-ui/react-collection",
+      "version": "1.1.7",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+        }
+      ]
+    },
+    {
+      "name": "@radix-ui/react-collapsible",
+      "version": "1.1.12",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+        }
+      ]
+    },
+    {
+      "name": "@radix-ui/react-direction",
+      "version": "1.1.1",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Package omitted license; exact-version npm gitHead fcef0668a5c827e5a4baac405474d75680f9a4eb official repository full MIT, reused verified evidence.",
+      "licenseFiles": [
+        {
+          "name": "radix-fcef0668a5c827e5a4baac405474d75680f9a4eb-LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+        }
+      ]
+    },
+    {
+      "name": "@radix-ui/react-accordion",
+      "version": "1.2.12",
+      "scope": "emitted-js",
+      "licenseDeclaration": "MIT",
+      "evidence": "Actual installed package original license text.",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+        }
+      ]
+    },
+    {
+      "name": "tailwindcss",
+      "version": "3.4.10",
+      "scope": "compiled-css",
+      "licenseDeclaration": "MIT",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "60e0b68c0f35c078eef3a5d29419d0b03ff84ec1df9c3f9d6e39a519a5ae7985"
+        }
+      ]
+    },
+    {
+      "name": "tailwindcss-animate",
+      "version": "1.0.7",
+      "scope": "compiled-css",
+      "licenseDeclaration": "MIT",
+      "licenseFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "d06945a5d85f4f6062393af30ad07d8afd1efa190c46cea6819b85c11764c7cd"
+        }
+      ]
+    }
+  ],
+  "changes": [
+    "Original Messages/Message recursion, input/output composition, Step accordion/defaultOpen/autoCollapse, original Markdown text/table/alert/cursor renderers and original CSS theme retained.",
+    "One original Step error-color bug fixed: !using muted class no longer overrides text-red-500 when isError, preserving intended error style.",
+    "Local fixture provides config, status translation, empty actions/elements and no user_message. Original service-only AskFile/AskAction/feedback/copy/debug/user editing branches removed from this bounded scene, not faked as services.",
+    "Original empty attachment branch remains null; non-empty attachments/user message fail closed. HTML/math/fenced-code/media/reference modules excluded; safe Markdown literal fixture uses original rich text renderers, no user-provided remote content.",
+    "Icon original name formatting retained but dictionary limited to 4 original Lucide glyphs used by fixture, no replacement drawings or avatar media.",
+    "Original frontend index.css/tailwind config compiled with host-only controls; original Inter/font-mono stack naturally falls back, no webfonts downloaded.",
+    "Host explicitly labels fictional public steps, local finish/error/view/reset controls; no model private reasoning, agent execution, backend, storage, upload or feedback.",
+    "Original internal cot enum names preserved to exercise full/tool_call/hidden rendering policy; labels describe public display scope only.",
+    "Owned lifecycle stops hidden timers/animations and releases listeners/tasks on exit; default CSP unchanged."
+  ],
+  "publication": "7 runtime/docs/notices files only. Full source/build/test workspace local; no archive claimed."
+}
