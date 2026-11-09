@@ -1,0 +1,632 @@
+{
+  "id": "react-three-csg:live-solid-boolean",
+  "repository": "https://github.com/pmndrs/react-three-csg",
+  "revision": "b668971b2c65fdb2d0b615965634c2d73785355a",
+  "originals": [
+    {
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/pmndrs/react-three-csg/b668971b2c65fdb2d0b615965634c2d73785355a/LICENSE",
+      "sha256": "cd14add33d47bcecae9fed5559224ae135c5ec41e1d3a126601f5fbd82291834"
+    },
+    {
+      "path": "src/index.tsx",
+      "url": "https://raw.githubusercontent.com/pmndrs/react-three-csg/b668971b2c65fdb2d0b615965634c2d73785355a/src/index.tsx",
+      "sha256": "a7cd60393c98cad91d41f38a840ead6d8e0c2b82a655e3b64c42f96efb804c96"
+    },
+    {
+      "path": ".storybook/common/Setup.tsx",
+      "url": "https://raw.githubusercontent.com/pmndrs/react-three-csg/b668971b2c65fdb2d0b615965634c2d73785355a/.storybook/common/Setup.tsx",
+      "sha256": "dd993630aee5cfa4362baa18c33d23963d2153dc6d091ae7767f51b2d1e13655"
+    },
+    {
+      "path": ".storybook/stories/advanced/Updating.stories.tsx",
+      "url": "https://raw.githubusercontent.com/pmndrs/react-three-csg/b668971b2c65fdb2d0b615965634c2d73785355a/.storybook/stories/advanced/Updating.stories.tsx",
+      "sha256": "67d4ce3933092f2d8fff76d266e88b8b4be38cde9460925ca68e876c6dec2865"
+    },
+    {
+      "path": "package.json",
+      "url": "https://raw.githubusercontent.com/pmndrs/react-three-csg/b668971b2c65fdb2d0b615965634c2d73785355a/package.json",
+      "sha256": "d98d7dee5515df5fe995ab5f709d03ced88541218ddb6b2ece928b00c309ba8c"
+    }
+  ],
+  "dependencies": [
+    {
+      "name": "react",
+      "version": "19.0.0",
+      "license": "MIT",
+      "note": "Original installed package license text.",
+      "licenseFiles": {
+        "node_modules/react/LICENSE": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+      }
+    },
+    {
+      "name": "scheduler",
+      "version": "0.25.0",
+      "license": "MIT",
+      "note": "Original installed package license text.",
+      "licenseFiles": {
+        "node_modules/scheduler/LICENSE": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+      }
+    },
+    {
+      "name": "react-dom",
+      "version": "19.0.0",
+      "license": "MIT",
+      "note": "Original installed package license text.",
+      "licenseFiles": {
+        "node_modules/react-dom/LICENSE": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+      }
+    },
+    {
+      "name": "react-reconciler",
+      "version": "0.31.0",
+      "license": "MIT",
+      "note": "Original installed package license text.",
+      "licenseFiles": {
+        "node_modules/react-reconciler/LICENSE": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+      }
+    },
+    {
+      "name": "use-sync-external-store",
+      "version": "1.7.0",
+      "license": "MIT",
+      "note": "Original installed package license text.",
+      "licenseFiles": {
+        "node_modules/use-sync-external-store/LICENSE": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+      }
+    },
+    {
+      "name": "@react-three/fiber",
+      "version": "9.0.4",
+      "license": "MIT",
+      "note": "Full official root MIT at npm9.0.4 gitHead17f42c97bd5290e5726301365c6b5bd1645d2c73; original npm archive omits file.",
+      "licenseFiles": {
+        "legal/FIBER-MIT": "9c35b5de7b7493a707fffe4eb23bd2f7f449153c1911f7c6eefb4e591fd5349a"
+      }
+    },
+    {
+      "name": "zustand",
+      "version": "5.1.0",
+      "license": "MIT",
+      "note": "Original installed package license text.",
+      "licenseFiles": {
+        "node_modules/zustand/LICENSE": "c1e6e266563517467b1bf874817d23e426f3149252bd7d42758cd697514b8417"
+      }
+    },
+    {
+      "name": "suspend-react",
+      "version": "0.1.3",
+      "license": "MIT",
+      "note": "Original installed package license text.",
+      "licenseFiles": {
+        "node_modules/suspend-react/LICENSE": "997e79b828d8b85d6f18730c8dbf58074811360a199506bd84e1263e17c227a2"
+      }
+    },
+    {
+      "name": "its-fine",
+      "version": "2.1.1",
+      "license": "MIT",
+      "note": "Original installed package license text.",
+      "licenseFiles": {
+        "node_modules/its-fine/LICENSE": "643123eeb38f154d93cb8323e1289a648d3f343b411a9340453c010e325d0c82"
+      }
+    },
+    {
+      "name": "react-use-measure",
+      "version": "2.1.7",
+      "license": "MIT",
+      "note": "Original installed package license text.",
+      "licenseFiles": {
+        "node_modules/react-use-measure/LICENSE": "1f9038eff8dbd6505a26f9d6830cc6da2b87ab1a9305d1100884986e9c11a31a"
+      }
+    },
+    {
+      "name": "three-mesh-bvh",
+      "version": "0.6.8",
+      "license": "MIT",
+      "note": "Original installed package license text.",
+      "licenseFiles": {
+        "node_modules/three-mesh-bvh/LICENSE": "b106ef6198a9862ed2b5b873e944ecf3583c631a84a7462d400ecc1910ce7fee"
+      }
+    },
+    {
+      "name": "three-bvh-csg",
+      "version": "0.0.16",
+      "license": "MIT",
+      "note": "Original installed package license text.",
+      "licenseFiles": {
+        "node_modules/three-bvh-csg/LICENSE": "6304348bc85aa6c2c2f1338f3d33f0c26dd300f3a0776d0c8f2a02c0c2fea52b"
+      }
+    },
+    {
+      "name": "@babel/runtime",
+      "version": "7.29.13",
+      "license": "MIT",
+      "note": "Original installed package license text.",
+      "licenseFiles": {
+        "node_modules/@babel/runtime/LICENSE": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76"
+      }
+    },
+    {
+      "name": "@react-three/drei",
+      "version": "10.0.3",
+      "license": "MIT",
+      "note": "Original installed package license text.",
+      "licenseFiles": {
+        "node_modules/@react-three/drei/LICENSE": "2e36b208b403882158daf95cae207087bbb830db4d434a79ebafffca177244c8"
+      }
+    },
+    {
+      "name": "three-stdlib",
+      "version": "2.36.1",
+      "license": "MIT",
+      "note": "Original installed package license text.",
+      "licenseFiles": {
+        "node_modules/three-stdlib/LICENSE": "28eb7edf059a39094aa3d169db1fec46ac4a6279c921a90f965828d92ec86e79"
+      }
+    },
+    {
+      "name": "three",
+      "version": "0.172.0",
+      "license": "MIT",
+      "note": "Original installed package license text.",
+      "licenseFiles": {
+        "node_modules/three/LICENSE": "4c40a1ef62450b857c3b2aaf294936304cd552d965fbcd9d32d4c5bcf4ba4454"
+      }
+    }
+  ],
+  "actualEmittedInputs": {
+    "node_modules/react/cjs/react.production.js": {
+      "bytesInOutput": 7577,
+      "sha256": "9d5546ae8149c2fc0e966974abdb50bb10db08a24e653e6cd694bb08b5989c5c"
+    },
+    "node_modules/react/index.js": {
+      "bytesInOutput": 51,
+      "sha256": "60caffdecbdc5db3bc4ec4e83df9488345ccb271d07533b9210bf5750918d97e"
+    },
+    "node_modules/scheduler/cjs/scheduler.production.js": {
+      "bytesInOutput": 3807,
+      "sha256": "dc5b1f0458d97354aadf8aa39007fc2a8ed3eddceb53279176d7f6a1a83b1065"
+    },
+    "node_modules/scheduler/index.js": {
+      "bytesInOutput": 51,
+      "sha256": "145965504d60007bc25486ab930b0367867dcd5d579ccd343c148d69349a7cfb"
+    },
+    "node_modules/react-dom/cjs/react-dom.production.js": {
+      "bytesInOutput": 3343,
+      "sha256": "b1c376f7e6959e632ced55094e07fad3bd43f57dfd2928c21bbcb29a3445419e"
+    },
+    "node_modules/react-dom/index.js": {
+      "bytesInOutput": 253,
+      "sha256": "ba1a3e33489f868371561777607e3ee5091df0f7ea3f1a10f789d6b86e4c1505"
+    },
+    "node_modules/react-dom/cjs/react-dom-client.production.js": {
+      "bytesInOutput": 168633,
+      "sha256": "a17be057437336a17c14ee04288cacbc3877900483418951f034b00123e7233b"
+    },
+    "node_modules/react-dom/client.js": {
+      "bytesInOutput": 253,
+      "sha256": "00e348ab3d6bc2eef908345d0bc4e008c95bcfecec060dfda5c4967953761396"
+    },
+    "node_modules/react-reconciler/cjs/react-reconciler-constants.production.js": {
+      "bytesInOutput": 201,
+      "sha256": "413c03d7cb39e4a1474d1dad2faa605bc0e861311bff9fc87a4e43d7dda3e09e"
+    },
+    "node_modules/react-reconciler/constants.js": {
+      "bytesInOutput": 51,
+      "sha256": "870e602f5927f785a471daf06a1f447b4f15cec5c3212137acb7c0b4f32d5fe9"
+    },
+    "node_modules/use-sync-external-store/cjs/use-sync-external-store-shim.production.js": {
+      "bytesInOutput": 778,
+      "sha256": "e8c2f1808804d75c9e0ffab8c37329b34f356140275dea0efe1e75684ded14fa"
+    },
+    "node_modules/use-sync-external-store/shim/index.js": {
+      "bytesInOutput": 51,
+      "sha256": "de571b60495a636e12a24000b78531994a819aba03917e679803c2b482c66a89"
+    },
+    "node_modules/use-sync-external-store/cjs/use-sync-external-store-shim/with-selector.production.js": {
+      "bytesInOutput": 813,
+      "sha256": "fc76f309604db72c728d7c46cc593c6bba65e3f3d00dd38a1c32032927bb94d8"
+    },
+    "node_modules/use-sync-external-store/shim/with-selector.js": {
+      "bytesInOutput": 51,
+      "sha256": "08f4e878658941dd77b3d9032d2f0818649dd0a093288e768526090e9f00556f"
+    },
+    "node_modules/react-reconciler/cjs/react-reconciler.production.js": {
+      "bytesInOutput": 111128,
+      "sha256": "babfb579664f8f6d7b636961c4a1540e449c420f1ac572f9ae6749cb10ce833e"
+    },
+    "node_modules/react-reconciler/index.js": {
+      "bytesInOutput": 51,
+      "sha256": "fc1202d3830276707d2eecaa0a664e7ca358a264e690dc6aec6c2f797523d2b5"
+    },
+    "node_modules/react/cjs/react-jsx-runtime.production.js": {
+      "bytesInOutput": 364,
+      "sha256": "1e46f15002696985e80c61d47aaa30dabb03c954270a690f5f7dfbbacfa9002b"
+    },
+    "node_modules/react/jsx-runtime.js": {
+      "bytesInOutput": 51,
+      "sha256": "b392951a77d0a2e6a6bd017e49d768481ae5b63c4109c6c31f622cf7b2433edc"
+    },
+    "node_modules/@react-three/fiber/dist/events-2895749c.esm.js": {
+      "bytesInOutput": 27559,
+      "sha256": "05b7821d6e83802a784476ed045ae7f842e59294326feb4916998c1a3e65c969"
+    },
+    "node_modules/zustand/esm/traditional.mjs": {
+      "bytesInOutput": 306,
+      "sha256": "ff7306ddb731b9a4443a3025664eb4f51ab8835a70972af29c4f0aeffe0101e1"
+    },
+    "node_modules/zustand/esm/vanilla.mjs": {
+      "bytesInOutput": 318,
+      "sha256": "27f48c11ca4de834f68c505b695d5e2db1c1ebface7303c0e920ab3957260357"
+    },
+    "node_modules/suspend-react/index.js": {
+      "bytesInOutput": 1032,
+      "sha256": "12b503b08c451b0f378d547b960399517da189f3d565ac8d0c909714b4d4bb4e"
+    },
+    "node_modules/its-fine/dist/index.js": {
+      "bytesInOutput": 1584,
+      "sha256": "108b5cddddb1786e5e3f521cfbcdc74586d6ad5e71c4ae45aa982c75142a97c7"
+    },
+    "node_modules/@react-three/fiber/dist/react-three-fiber.esm.js": {
+      "bytesInOutput": 1848,
+      "sha256": "7b94f23d789b4185b37c963eeaa912390dd2c0018d07281f0018ae19ff19f10e"
+    },
+    "node_modules/react-use-measure/dist/index.js": {
+      "bytesInOutput": 3173,
+      "sha256": "b9fe1ea95e47cb5682226cb9fa38c2d70744fab88250672c63dd9db8e608040c"
+    },
+    "node_modules/three-mesh-bvh/src/core/Constants.js": {
+      "bytesInOutput": 52,
+      "sha256": "99e8e1b2681de6e2613e8c774363ef140127e77c71e3f42a357a7e97dbe3fa79"
+    },
+    "node_modules/three-mesh-bvh/src/core/build/geometryUtils.js": {
+      "bytesInOutput": 1131,
+      "sha256": "3232b265bf1937633e5e96809e6e6f53de85705e846a7fbf6d9c85f5ad1f4af3"
+    },
+    "node_modules/three-mesh-bvh/src/utils/ArrayBoxUtilities.js": {
+      "bytesInOutput": 600,
+      "sha256": "f9e0c4933f48502977164cfacf8a62f7490512a9dd8df1040778987e9831f8ed"
+    },
+    "node_modules/three-mesh-bvh/src/core/build/computeBoundsUtils.js": {
+      "bytesInOutput": 1359,
+      "sha256": "af3289a2eff6b31c6a3250ed3e773873cba62bc2fa829d005358ef4c1d538f05"
+    },
+    "node_modules/three-mesh-bvh/src/core/build/splitUtils.js": {
+      "bytesInOutput": 1966,
+      "sha256": "78f1236d77d540caf011b2e03b7dce0375de96c9d24814f56347aad0dfad323a"
+    },
+    "node_modules/three-mesh-bvh/src/core/MeshBVHNode.js": {
+      "bytesInOutput": 30,
+      "sha256": "3d901548deb0946622b6819d3af6fb68c2c6c5d94e3dd2be249eed4eac219763"
+    },
+    "node_modules/three-mesh-bvh/src/core/build/sortUtils.generated.js": {
+      "bytesInOutput": 284,
+      "sha256": "fc5884edc26b5a3828265a972c7dca6e36aa609ca6037e7443216a9ec3ed63bc"
+    },
+    "node_modules/three-mesh-bvh/src/core/build/sortUtils_indirect.generated.js": {
+      "bytesInOutput": 247,
+      "sha256": "900513655a607506641192362e049f381235d69c131ca3e8cc1a70596df242b5"
+    },
+    "node_modules/three-mesh-bvh/src/core/build/buildTree.js": {
+      "bytesInOutput": 2439,
+      "sha256": "4dee8da92bce9a43e738e8a6922cd2d9864a2ef2dc5590ec20135cc97f758147"
+    },
+    "node_modules/three-mesh-bvh/src/math/SeparatingAxisBounds.js": {
+      "bytesInOutput": 981,
+      "sha256": "71e25278b674a244b5b3bc57c3d694c64ba4b473ab4ed5d00b67a92f6ca6fdd5"
+    },
+    "node_modules/three-mesh-bvh/src/math/MathUtilities.js": {
+      "bytesInOutput": 1310,
+      "sha256": "fef8090e904ae74be54a3595cabfe6881c0fa805a6a552968e8342fce69adf0f"
+    },
+    "node_modules/three-mesh-bvh/src/math/ExtendedTriangle.js": {
+      "bytesInOutput": 4192,
+      "sha256": "861c62fbc0087c25638f6ddd376de35b11840b9d271a1381b36b02f3b5d6e06d"
+    },
+    "node_modules/three-mesh-bvh/src/math/OrientedBox.js": {
+      "bytesInOutput": 3862,
+      "sha256": "cd2c11b66678b63d9889880ac2fe0d7b69d5ca21915f3ee680981c9945ed51e0"
+    },
+    "node_modules/three-mesh-bvh/src/utils/PrimitivePool.js": {
+      "bytesInOutput": 209,
+      "sha256": "91c2510b6414084634479cacb9af1dee2f56114025108d68ab0ae01814ba329a"
+    },
+    "node_modules/three-mesh-bvh/src/utils/ExtendedTrianglePool.js": {
+      "bytesInOutput": 68,
+      "sha256": "b6bf7e421537d4cb7be66f6d7a60a87eb8a96b45b41e51e89e344f81f4295a37"
+    },
+    "node_modules/three-mesh-bvh/src/core/utils/nodeBufferUtils.js": {
+      "bytesInOutput": 191,
+      "sha256": "91b9ee5a30742efb87b54b840159bb773feda4dc9289315ed0c6a0d846abcb6d"
+    },
+    "node_modules/three-mesh-bvh/src/core/utils/BufferStack.js": {
+      "bytesInOutput": 404,
+      "sha256": "ec755ad6ad19febf83c44f068780801c4930ae9f3d6dbc158068de5bb3f43180"
+    },
+    "node_modules/three-mesh-bvh/src/core/cast/shapecast.js": {
+      "bytesInOutput": 1118,
+      "sha256": "17ce29f5ac2c0df80425d220bd51d2ada317a29b4cc9c85482026dcc54dd9436"
+    },
+    "node_modules/three-mesh-bvh/src/core/cast/closestPointToPoint.js": {
+      "bytesInOutput": 458,
+      "sha256": "296711939d33aab99c7b887fedd97dae5a53a35ff6bb2ad9f9ecb181a5badcd4"
+    },
+    "node_modules/three-mesh-bvh/src/utils/ThreeRayIntersectUtilities.js": {
+      "bytesInOutput": 1254,
+      "sha256": "d1feda84418598c8d51a6b02029824b8b36a8125550b220d4ec54e2107cc3d0b"
+    },
+    "node_modules/three-mesh-bvh/src/utils/TriangleUtilities.js": {
+      "bytesInOutput": 226,
+      "sha256": "d18fae0ba460274dfd8807c5f51d408afd04d1def83b700c3b74d97fbdd7e497"
+    },
+    "node_modules/three-mesh-bvh/src/core/utils/iterationUtils.generated.js": {
+      "bytesInOutput": 446,
+      "sha256": "eb5370e87b7a206893b87a7dd4f4401e5d3c494ba3291595d3d22f402ba5d182"
+    },
+    "node_modules/three-mesh-bvh/src/core/cast/refit.generated.js": {
+      "bytesInOutput": 979,
+      "sha256": "1ebb2a905352b76c4dca806e822882db55729797ed6e85b28573670c00f21f1f"
+    },
+    "node_modules/three-mesh-bvh/src/core/utils/intersectUtils.js": {
+      "bytesInOutput": 74,
+      "sha256": "8e8be28fb86d025948864a986ac4aa00eb07572d666f225b8d83b27b7d4dd21f"
+    },
+    "node_modules/three-mesh-bvh/src/core/utils/iterationUtils_indirect.generated.js": {
+      "bytesInOutput": 494,
+      "sha256": "bb682cad784d4be66b85a7ab54353e59c41daac0c92543c4378be81e56122ccb"
+    },
+    "node_modules/three-mesh-bvh/src/core/cast/raycast.generated.js": {
+      "bytesInOutput": 313,
+      "sha256": "02a5a98a03fcc45f13f1ed7f41ace787f6cc6b4abcdc2ebc8efa3b3b9a8dd112"
+    },
+    "node_modules/three-mesh-bvh/src/core/cast/raycastFirst.generated.js": {
+      "bytesInOutput": 531,
+      "sha256": "8daec33133954b8a573f8386a0f008db51647f82a64b057ebe82b28580281ded"
+    },
+    "node_modules/three-mesh-bvh/src/core/cast/intersectsGeometry.generated.js": {
+      "bytesInOutput": 1189,
+      "sha256": "371f0a72b303072351b830b50580e6cf16f08744748ef8dc4bfb575cb83aac21"
+    },
+    "node_modules/three-mesh-bvh/src/core/cast/closestPointToGeometry.generated.js": {
+      "bytesInOutput": 1608,
+      "sha256": "0f981858f3971a6e1a86f4597fe02c0028e9c826ec213cc3b0cb0ffe2c040913"
+    },
+    "node_modules/three-mesh-bvh/src/core/cast/refit_indirect.generated.js": {
+      "bytesInOutput": 1048,
+      "sha256": "dfad563ce25443e75523171eb293d636261a183bebb0c2a56b88a85486225da8"
+    },
+    "node_modules/three-mesh-bvh/src/core/cast/raycast_indirect.generated.js": {
+      "bytesInOutput": 313,
+      "sha256": "d1a689eb95d3df1a92491de4aafd63e6fc06713950e93a9888dc409953e2ba96"
+    },
+    "node_modules/three-mesh-bvh/src/core/cast/raycastFirst_indirect.generated.js": {
+      "bytesInOutput": 531,
+      "sha256": "981e5f6d95a3b521c67972f7fbb790e1c8aaf6c0b6392d174abc7383a2c32bdb"
+    },
+    "node_modules/three-mesh-bvh/src/core/cast/intersectsGeometry_indirect.generated.js": {
+      "bytesInOutput": 1235,
+      "sha256": "860e0b300c59e7956dff8b2eba0d698ca397554507fdc4e3c8fea1ae922f75af"
+    },
+    "node_modules/three-mesh-bvh/src/core/cast/closestPointToGeometry_indirect.generated.js": {
+      "bytesInOutput": 1721,
+      "sha256": "b233234d031601808be957a1f2eb37a8d4d7389f3522861b904d35ccfaa6d9d7"
+    },
+    "node_modules/three-mesh-bvh/src/utils/BufferUtils.js": {
+      "bytesInOutput": 50,
+      "sha256": "f89ed3d098c822af307d2efd8335b5bcd1637c7964fa1b4f576a6e5efc3e27bc"
+    },
+    "node_modules/three-mesh-bvh/src/core/cast/bvhcast.js": {
+      "bytesInOutput": 1929,
+      "sha256": "1640523da90760f42e0cf1231b6d65800d68c6185e822c92b370e99d533ac007"
+    },
+    "node_modules/three-mesh-bvh/src/core/MeshBVH.js": {
+      "bytesInOutput": 4266,
+      "sha256": "9bb78852c4b9a90ac8d568c6a11b220e716d998ec0739657e963a1ee244215a1"
+    },
+    "node_modules/three-bvh-csg/src/core/utils/hashUtils.js": {
+      "bytesInOutput": 392,
+      "sha256": "671355a8eebed1432039a490925447908ef4a902c4e658d0968e474d6363715b"
+    },
+    "node_modules/three-bvh-csg/src/core/utils/geometryUtils.js": {
+      "bytesInOutput": 630,
+      "sha256": "3d2a0e3581d5b198c48694bb314f145647316cd97d9630260f4b0edb48f5e646"
+    },
+    "node_modules/three-bvh-csg/src/core/utils/halfEdgeUtils.js": {
+      "bytesInOutput": 1173,
+      "sha256": "3c2471475bb7e877d53835a1a8a00a5f27fe1eabb748449d53d6f02ed4534d7d"
+    },
+    "node_modules/three-bvh-csg/src/core/utils/RaySet.js": {
+      "bytesInOutput": 513,
+      "sha256": "45652a6c3ee9090f43d0fa39c40a8678cba5c5532fffe35214445cfbcf5a764e"
+    },
+    "node_modules/three-bvh-csg/src/core/utils/computeDisjointEdges.js": {
+      "bytesInOutput": 741,
+      "sha256": "99a3591e3fb4ed80bcfdbf971b9944c5d91372b5da47c6e406738a0ecf978270"
+    },
+    "node_modules/three-bvh-csg/src/core/HalfEdgeMap.js": {
+      "bytesInOutput": 2047,
+      "sha256": "2ef8da6fc05ef4657fc6484cf091bdde293165d929b5c36ef16383ea442371d2"
+    },
+    "node_modules/three-bvh-csg/src/core/Brush.js": {
+      "bytesInOutput": 969,
+      "sha256": "0b46d3c7435113e8782112d61afbbaebe45373799d654c1953531d1c7bd4f57a"
+    },
+    "node_modules/three-bvh-csg/src/core/utils/triangleUtils.js": {
+      "bytesInOutput": 322,
+      "sha256": "19394b89116214e478a08a28d0d111b8b362005a4693aff6935f10050a147846"
+    },
+    "node_modules/three-bvh-csg/src/core/TriangleSplitter.js": {
+      "bytesInOutput": 2888,
+      "sha256": "6ce375f4c07a857641a031e6d6ff6a92f5d94d727bead26017881b91b7192f71"
+    },
+    "node_modules/three-bvh-csg/src/core/TypeBackedArray.js": {
+      "bytesInOutput": 780,
+      "sha256": "d1d5c46b1a5bb2a682f0e2028aa84657acdc55667eac3759dbc5aeb0e8ebf32a"
+    },
+    "node_modules/three-bvh-csg/src/core/TypedAttributeData.js": {
+      "bytesInOutput": 1449,
+      "sha256": "368d48da0a44b4758b1ab4ddfd4f7377c9c53385402414765943b764bb73ff10"
+    },
+    "node_modules/three-bvh-csg/src/core/IntersectionMap.js": {
+      "bytesInOutput": 147,
+      "sha256": "236dc121434dc582f4862c5754eba38513c580d1c02dac35160a6f081be0f08c"
+    },
+    "node_modules/three-bvh-csg/src/core/operations/operationsUtils.js": {
+      "bytesInOutput": 3726,
+      "sha256": "44f028dc6b3964d0d95750484da2ce8cac69c536b5ac155971882b9209376ae1"
+    },
+    "node_modules/three-bvh-csg/src/core/debug/OperationDebugData.js": {
+      "bytesInOutput": 1485,
+      "sha256": "a74dcd7e759c1cd164358279ee3f1b1b9f9c40743ac4d1b073e7a0e8160ff6ed"
+    },
+    "node_modules/three-bvh-csg/src/core/operations/operations.js": {
+      "bytesInOutput": 2968,
+      "sha256": "3c1946444d05cd93cc44f9241f6e707c81bb79385a48d5d7f2ee57b7d9125263"
+    },
+    "node_modules/three-bvh-csg/src/core/Evaluator.js": {
+      "bytesInOutput": 3433,
+      "sha256": "42dbbcfbb74b181cac7c6d6a477174a5949798700219a2a2aac2710ad3901447"
+    },
+    "node_modules/@babel/runtime/helpers/esm/extends.js": {
+      "bytesInOutput": 219,
+      "sha256": "94d2689b0907907fbb08bae35e63abb07b35ebec5cdfd06ec9bdd8db3f611f1c"
+    },
+    "node_modules/@react-three/drei/core/OrbitControls.js": {
+      "bytesInOutput": 980,
+      "sha256": "cca79b7921feae626646e367089852890876bcf6a5f892689743578b24ab9469"
+    },
+    "node_modules/three-stdlib/controls/EventDispatcher.js": {
+      "bytesInOutput": 821,
+      "sha256": "5923cfcf6190505a0eaef03ecc86b389cfe9947ab697741ed19b9aef35a51a3e"
+    },
+    "node_modules/three-stdlib/controls/OrbitControls.js": {
+      "bytesInOutput": 13747,
+      "sha256": "43ad9d91407dc801105248c4c8a275015d4c7f28eebc5aabe09ff182954f99e3"
+    },
+    "node_modules/three/build/three.core.js": {
+      "bytesInOutput": 354800,
+      "sha256": "c269806166c61cc3ddf6f19b05fc31a50f6bdfc85902eaed723e972f9bb3e163"
+    },
+    "node_modules/three/build/three.module.js": {
+      "bytesInOutput": 321868,
+      "sha256": "2ac776db82c8cb8075433c63085028142f3e86e20016a0308b28943e8dbea238"
+    }
+  },
+  "componentDiff": "--- original/src/index.tsx\n+++ src/csg.tsx\n@@ -120,7 +120,7 @@\n           }\n         }\n       } catch (e) {\n-        console.log(e)\n+        throw e\n       }\n     }, [computeVertexNormals, ev])\n \n--- original/.storybook/common/Setup.tsx\n+++ src/Setup.tsx\n@@ -1,7 +1,7 @@\n import * as React from 'react'\n import { Vector3 } from 'three'\n import { Canvas, CanvasProps } from '@react-three/fiber'\n-import { OrbitControls } from '@react-three/drei'\n+import { OrbitControls } from '@react-three/drei/core/OrbitControls.js'\n \n type Props = React.PropsWithChildren<\n   CanvasProps & {\n@@ -20,7 +20,7 @@\n   lights = true,\n   ...restProps\n }: Props) => (\n-  <Canvas shadows camera={{ position: cameraPosition, fov: cameraFov }} {...restProps}>\n+  <Canvas frameloop={matchMedia(\"(prefers-reduced-motion:reduce)\").matches ? \"demand\" : \"always\"} shadows camera={{ position: cameraPosition, fov: cameraFov }} {...restProps}>\n     {children}    \n     {lights && (\n       <>\n@@ -28,6 +28,6 @@\n         <pointLight intensity={1} position={[0, 6, 0]} />\n       </>\n     )}\n-    {controls && <OrbitControls />}\n+    {controls && <OrbitControls enableDamping={!matchMedia(\"(prefers-reduced-motion:reduce)\").matches} />}\n   </Canvas>\n )--- original/.storybook/stories/advanced/Updating.stories.tsx\n+++ src/App.tsx\n@@ -1,7 +1,7 @@\n import { useFrame } from '@react-three/fiber'\n import React, { useRef } from 'react'\n-import { Base, BaseRef, CSGGeometryRef, Geometry, Subtraction } from '../../../src'\n-import { Setup } from '../../common'\n+import { Base, BaseRef, CSGGeometryRef, Geometry, Subtraction } from './csg'\n+import { Setup } from './Setup'\n \n export default {\n   title: 'Advanced / Updating',\n@@ -12,6 +12,7 @@\n   const base = useRef<BaseRef>(null!)\n \n   useFrame((_, delta) => {\n+    if(matchMedia(\"(prefers-reduced-motion:reduce)\").matches)return\n     base.current.rotation.x += 0.5 * delta\n     csg.current.update()\n   })\n",
+  "fiberPatches": {
+    "fiber-events-adapted.js": "61c5120af42e022246d1be6f4b7887177b460beeebd5076e36b8c3808d0a8111",
+    "fiber-canvas-adapted.js": "ace985d448b13fa497f75f2e776efe5ac296d2f2d996f44acb4b339c95d2d269"
+  },
+  "changes": [
+    "Original official Updating story + Setup + exact fixed CSG source, not a new boolean/editor UI. Box[1,1,1] at z-.5, subtraction sphere[.45,64,64], rotation .5*delta, every-frame evaluator.update, meshNormalMaterial, original camera(-5,4,4)/fov55/lights/OrbitControls retained.",
+    "Original CSG catch-console changed to propagate real evaluation failure into host failure boundary, not silently draw empty geometry.",
+    "Reduced preference pauses original rotation/update after initial Boolean evaluation, uses demand frames and no Orbit damping; native pointer drag still invalidates original camera rendering.",
+    "Pinned original declared React19.0/Fiber9.0.4/drei10.0.3/Three.172; original dependencies three-bvh-csg0.0.16 and three-mesh-bvh0.6.8. Remaining compatible transitive versions recorded, not claimed exact original lock.",
+    "Fiber default synchronous GL configure is awaited by original Canvas; added alive/catch around that async continuation to avoid late render/rejection on disposal.",
+    "Fiber500ms unmount cleanup changed to microtask, explicit renderer.dispose, and last inactive root cancels/resets global render loop to permit correct remount after host-owned cancellation.",
+    "Host owns GPU allocations/contextloss/compile/link failures and RAF/timers/listeners/observers; hidden and zero-size release then rebuild; unsupported GL shows real error without substitute visual.",
+    "Normal plain-text module split runtime-three.js then runtime.js via existing runtime.scripts loader, no binary encoding/CSP change. No images, external fonts, Workers, backend or remote imports."
+  ],
+  "tests": [
+    {
+      "slug": "live-solid-boolean",
+      "mode": "unsupported",
+      "pass": true,
+      "drawCommands": 0,
+      "originalThreeSecondCycles": 0,
+      "matrixSubmissions": 0,
+      "geometryBufferUploads": 0,
+      "shadersSubmitted": 0,
+      "allocated": 0,
+      "deleted": 0,
+      "contextLossRequests": 0,
+      "scope": "Original Three and original GLSL submitted to stubbed WebGL. No native shader compilation or pixels verified."
+    },
+    {
+      "slug": "live-solid-boolean",
+      "mode": "shaderfail",
+      "pass": true,
+      "drawCommands": 0,
+      "originalThreeSecondCycles": 0,
+      "matrixSubmissions": 0,
+      "geometryBufferUploads": 3,
+      "shadersSubmitted": 1,
+      "allocated": 12,
+      "deleted": 12,
+      "contextLossRequests": 1,
+      "scope": "Original Three and original GLSL submitted to stubbed WebGL. No native shader compilation or pixels verified."
+    },
+    {
+      "slug": "live-solid-boolean",
+      "mode": "earlyexit",
+      "pass": true,
+      "drawCommands": 0,
+      "originalThreeSecondCycles": 0,
+      "matrixSubmissions": 0,
+      "geometryBufferUploads": 0,
+      "shadersSubmitted": 0,
+      "allocated": 0,
+      "deleted": 0,
+      "contextLossRequests": 0,
+      "scope": "Original Three and original GLSL submitted to stubbed WebGL. No native shader compilation or pixels verified."
+    },
+    {
+      "slug": "live-solid-boolean",
+      "mode": "normal",
+      "pass": true,
+      "drawCommands": 7,
+      "originalThreeSecondCycles": 0,
+      "matrixSubmissions": 2,
+      "geometryBufferUploads": 21,
+      "shadersSubmitted": 4,
+      "allocated": 48,
+      "deleted": 48,
+      "contextLossRequests": 3,
+      "scope": "Original Three and original GLSL submitted to stubbed WebGL. No native shader compilation or pixels verified."
+    },
+    {
+      "slug": "live-solid-boolean",
+      "mode": "contextlost",
+      "pass": true,
+      "drawCommands": 1,
+      "originalThreeSecondCycles": 0,
+      "matrixSubmissions": 1,
+      "geometryBufferUploads": 3,
+      "shadersSubmitted": 2,
+      "allocated": 14,
+      "deleted": 14,
+      "contextLossRequests": 1,
+      "scope": "Original Three and original GLSL submitted to stubbed WebGL. No native shader compilation or pixels verified."
+    },
+    {
+      "slug": "live-solid-boolean",
+      "mode": "reduced",
+      "pass": true,
+      "drawCommands": 3,
+      "originalThreeSecondCycles": 0,
+      "matrixSubmissions": 3,
+      "geometryBufferUploads": 6,
+      "shadersSubmitted": 4,
+      "allocated": 28,
+      "deleted": 28,
+      "contextLossRequests": 3,
+      "scope": "Original Three and original GLSL submitted to stubbed WebGL. No native shader compilation or pixels verified."
+    },
+    {
+      "slug": "live-solid-boolean",
+      "mode": "missingroot",
+      "pass": true,
+      "drawCommands": 0,
+      "originalThreeSecondCycles": 0,
+      "matrixSubmissions": 0,
+      "geometryBufferUploads": 0,
+      "shadersSubmitted": 0,
+      "allocated": 0,
+      "deleted": 0,
+      "contextLossRequests": 0,
+      "scope": "Original Three and original GLSL submitted to stubbed WebGL. No native shader compilation or pixels verified."
+    }
+  ],
+  "visualQA": "native GPU/pixels not-run; original CPU geometry and Three renderer execute against simulated GL methods/status"
+}
