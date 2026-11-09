@@ -1,0 +1,106 @@
+{
+  "tests": [
+    {
+      "passed": true,
+      "mode": "atlas",
+      "checks": [
+        "Real baseline composePreview matched exact no-defer tags and inlined runtime/CSS with default CSP",
+        "Real portal menu, disabled-skip keyboard Home/End/Escape, actual onSelect local result and trigger focus",
+        "Original side/align exact mocked coordinates, flip-to-fit, material controls and outside-pointer dismissal repeated",
+        "Rapid drain/reopen cancellation and disabled Archive selection stay coherent",
+        "Hidden during open unmounts portal and state; restore rebuilds original page, old trigger inert",
+        "Exit removes portal, observers, owned globals and timers; no network/storage/clipboard/eval/worker attempt"
+      ],
+      "visualQA": "not-run",
+      "geometry": "mocked DOM rect/offset; not native layout or pixels"
+    },
+    {
+      "passed": true,
+      "mode": "early",
+      "checks": [
+        "Real baseline composePreview matched exact no-defer tags and inlined runtime/CSS with default CSP",
+        "Exit removes portal, observers, owned globals and timers; no network/storage/clipboard/eval/worker attempt"
+      ],
+      "visualQA": "not-run",
+      "geometry": "mocked DOM rect/offset; not native layout or pixels"
+    },
+    {
+      "passed": true,
+      "mode": "failure",
+      "checks": [
+        "Real baseline composePreview matched exact no-defer tags and inlined runtime/CSS with default CSP",
+        "Explicit failure event unmounts real component and displays unavailable",
+        "Exit removes portal, observers, owned globals and timers; no network/storage/clipboard/eval/worker attempt"
+      ],
+      "visualQA": "not-run",
+      "geometry": "mocked DOM rect/offset; not native layout or pixels"
+    },
+    {
+      "passed": true,
+      "mode": "frame-failure",
+      "checks": [
+        "Real baseline composePreview matched exact no-defer tags and inlined runtime/CSS with default CSP",
+        "Actual original renderer clipPath setter exception stops frame, unmounts component and reports unavailable",
+        "Exit removes portal, observers, owned globals and timers; no network/storage/clipboard/eval/worker attempt"
+      ],
+      "visualQA": "not-run",
+      "geometry": "mocked DOM rect/offset; not native layout or pixels"
+    },
+    {
+      "passed": true,
+      "mode": "hidden-early",
+      "checks": [
+        "Real baseline composePreview matched exact no-defer tags and inlined runtime/CSS with default CSP",
+        "Real portal menu, disabled-skip keyboard Home/End/Escape, actual onSelect local result and trigger focus",
+        "Original side/align exact mocked coordinates, flip-to-fit, material controls and outside-pointer dismissal repeated",
+        "Rapid drain/reopen cancellation and disabled Archive selection stay coherent",
+        "Hidden during open unmounts portal and state; restore rebuilds original page, old trigger inert",
+        "Exit removes portal, observers, owned globals and timers; no network/storage/clipboard/eval/worker attempt"
+      ],
+      "visualQA": "not-run",
+      "geometry": "mocked DOM rect/offset; not native layout or pixels"
+    },
+    {
+      "passed": true,
+      "mode": "normal",
+      "checks": [
+        "Real baseline composePreview matched exact no-defer tags and inlined runtime/CSS with default CSP",
+        "Real portal menu, disabled-skip keyboard Home/End/Escape, actual onSelect local result and trigger focus",
+        "Original side/align exact mocked coordinates, flip-to-fit, material controls and outside-pointer dismissal repeated",
+        "Rapid drain/reopen cancellation and disabled Archive selection stay coherent",
+        "Hidden during open unmounts portal and state; restore rebuilds original page, old trigger inert",
+        "Exit removes portal, observers, owned globals and timers; no network/storage/clipboard/eval/worker attempt"
+      ],
+      "visualQA": "not-run",
+      "geometry": "mocked DOM rect/offset; not native layout or pixels"
+    },
+    {
+      "passed": true,
+      "mode": "reduced",
+      "checks": [
+        "Real baseline composePreview matched exact no-defer tags and inlined runtime/CSS with default CSP",
+        "Real portal menu, disabled-skip keyboard Home/End/Escape, actual onSelect local result and trigger focus",
+        "Original side/align exact mocked coordinates, flip-to-fit, material controls and outside-pointer dismissal repeated",
+        "Rapid drain/reopen cancellation and disabled Archive selection stay coherent",
+        "Hidden during open unmounts portal and state; restore rebuilds original page, old trigger inert",
+        "Reduced-motion idle has zero RAF after settling",
+        "Exit removes portal, observers, owned globals and timers; no network/storage/clipboard/eval/worker attempt"
+      ],
+      "visualQA": "not-run",
+      "geometry": "mocked DOM rect/offset; not native layout or pixels"
+    },
+    {
+      "passed": true,
+      "mode": "render-failure",
+      "checks": [
+        "Real baseline composePreview matched exact no-defer tags and inlined runtime/CSS with default CSP",
+        "Actual original button creation failure is caught; fallback rendered and globals cleaned",
+        "Exit removes portal, observers, owned globals and timers; no network/storage/clipboard/eval/worker attempt"
+      ],
+      "visualQA": "not-run",
+      "geometry": "mocked DOM rect/offset; not native layout or pixels"
+    }
+  ],
+  "composePreview": "actual ui-vault-534 preview-runtime.mjs used, exact tags and default CSP inlined",
+  "visualQA": "not-run"
+}
