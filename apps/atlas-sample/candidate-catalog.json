@@ -517,20 +517,28 @@
   },
   {
     "id": "cult:hero-heatmap",
-    "title": "hero-heatmap",
     "source": "Cult UI",
-    "license": "MIT",
     "upstream": "https://github.com/nolly-studio/cult-ui/tree/d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
-    "website": "",
-    "buildStatus": "not built; upstream archive only",
-    "batch": "batch-001",
     "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/cult-archive-01/source-archive.zip",
     "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/cult-archive-01/manifest.json",
-    "description": "Split-layout hero section with responsive Heatmap shader visuals, CTA, and tech stack badges",
+    "website": "",
+    "revision": "d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+    "title": "热度轮廓主视觉",
+    "description": "原三组热度轮廓示例与真实着色器，保留原矢量素材及图像预处理；需要设备支持图形渲染，不支持时明确提示。",
+    "behavior": "原三组热度轮廓示例与真实着色器，保留原矢量素材及图像预处理；需要设备支持图形渲染，不支持时明确提示。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "视觉与动效",
+    "license": "MIT; Apache-2.0 (CVA and Paper diamond asset)",
+    "batch": "cult-image-heroes-01",
+    "preview": "batches/cult-image-heroes-01/heatmap/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "actual571 compose原算法/GL命令与清理通过，GPU视觉未验",
     "gaps": [
-      "Remote media and logos not downloaded or licensed by assumption",
-      "Source registry metadata may omit imports; original project package+lock retained",
-      "WebGL/shader support must be verified"
+      "真实 WebGL2/原生图像解码与像素视觉未验，能力失败明确停止，不显示替代效果。",
+      "原品牌/营销示例及 CTA 不表示实际服务或商标授权；不导航、不调用后台。",
+      "系统字体/浅色主题，隐藏后重建图形，预处理可能需要等待。"
     ]
   },
   {
@@ -948,19 +956,28 @@
   },
   {
     "id": "cult:hero-liquid-metal",
-    "title": "cult:hero-liquid-metal",
     "source": "Cult UI",
-    "license": "MIT",
     "upstream": "https://github.com/nolly-studio/cult-ui/tree/d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
-    "website": "",
-    "buildStatus": "not built",
-    "batch": "batch-001",
     "archive": "https://raw.githubusercontent.com/tdwhere123/UI-Vault/main/collections/pending/batch-001/cult-archive-02/source-archive.zip",
     "manifest": "https://github.com/tdwhere123/UI-Vault/blob/main/collections/pending/batch-001/cult-archive-02/manifest.json",
-    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "website": "",
+    "revision": "d71b1428b811c2779d46ea41b7ef8c9f9c9991c2",
+    "title": "液态金属轮廓主视觉",
+    "description": "原三组液态金属示例与真实着色器，保留原矢量轮廓及图像预处理；需要设备支持图形渲染，不支持时明确提示。",
+    "behavior": "原三组液态金属示例与真实着色器，保留原矢量轮廓及图像预处理；需要设备支持图形渲染，不支持时明确提示。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "视觉与动效",
+    "license": "MIT; Apache-2.0 (CVA and Paper diamond asset)",
+    "batch": "cult-image-heroes-01",
+    "preview": "batches/cult-image-heroes-01/liquid-metal/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "actual571 compose原算法/GL命令与清理通过，GPU视觉未验",
     "gaps": [
-      "WebGL if shader library used; unsupported rendering must not be counted as working",
-      "Remote media, commercial brand logos and device trademarks need separate asset review"
+      "真实 WebGL2/原生图像解码与像素视觉未验，能力失败明确停止，不显示替代效果。",
+      "原品牌/营销示例及 CTA 不表示实际服务或商标授权；不导航、不调用后台。",
+      "系统字体/浅色主题，隐藏后重建图形，预处理可能需要等待。"
     ]
   },
   {
@@ -4269,21 +4286,26 @@
   },
   {
     "id": "aicanvas:crypto-swap",
-    "title": "crypto-swap",
     "source": "AI Canvas free library",
-    "license": "MIT (free components-workspace explicitly designated by README)",
     "upstream": "https://github.com/aicanvas-me/aicanvas/tree/8164f1e423e4e654dd0828a941ba5cdda69f08fe/components-workspace/crypto-swap",
     "website": "",
-    "buildStatus": "not installed or built",
-    "batch": "batch-002",
-    "description": "源码已归档；视觉效果与交互尚未完成本轮验证。",
+    "revision": "8164f1e423e4e654dd0828a941ba5cdda69f08fe",
+    "title": "币种互换与滑点模拟",
+    "description": "原八币种选择、金额互换、滑点和兑换状态演示；全部本地模拟，不连接钱包、不执行交易。",
+    "behavior": "原八币种选择、金额互换、滑点和兑换状态演示；全部本地模拟，不连接钱包、不执行交易。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "输入与选择",
+    "license": "MIT; CC0-1.0 (coin marks, trademarks not granted)",
+    "batch": "crypto-swap-01",
+    "preview": "batches/crypto-swap-01/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "actual570 compose原关键交互与退出通过；视觉未验",
     "gaps": [
-      "Remote ImageKit/Unsplash artwork and fonts not archived or presumed MIT.",
-      "Tailwind v4/React19 and peer dependencies require integration. No site/premium CSS imported.",
-      "Original root scripts inject premium code and change Git hooks. They are retained only as evidence; do not run them. Prepare a separate minimal harness.",
-      "Crypto swap/music/charging are demo UI states, not verified transactions, playback or a real battery monitor. No wallet/API connected.",
-      "No install/build/browser/interaction/mobile validation.",
-      "源码 ZIP 本地已收集，尚未上传仓库；本页暂提供原始出处与上游演示。"
+      "原虚构余额/随机行情/模拟成功，不连接钱包或实际兑换。",
+      "Tailwind3编译原utilities与系统字体回退；不是原整站工具链。",
+      "JSDOM DOM/状态和资源清理通过；真实运动、弹层几何及像素未验。"
     ]
   },
   {
@@ -11689,36 +11711,37 @@
   },
   {
     "id": "puck:official-visual-page-builder",
-    "title": "Puck · 原版可视化页面编排器",
     "source": "puck",
     "repository": "https://github.com/puckeditor/puck",
     "revision": "d05542f4ddc3ade0275860cb91756dadd7ea791a",
-    "declaredVersion": "0.24.0",
     "upstream": "https://github.com/puckeditor/puck/blob/d05542f4ddc3ade0275860cb91756dadd7ea791a/packages/core/components/Puck/index.tsx",
-    "license": "MIT (original project code; runtime dependency audit pending)",
-    "description": "原版组件面板、画布拖放、字段编辑、层级大纲和历史；官方Bento等内容块可组合为说明页。仅源码收集，尚无离线预览。",
-    "previewStatus": "source-only",
-    "buildStatus": "source-only; official npm 0.24.0 no-iframe minimal mount pilot passed in JSDOM; complete dependency/interaction audit unfinished",
-    "sourceScope": "Selected exact source + full root license + package metadata + commit/tree evidence; NOT full repository/archive or closed runtime",
-    "batch": "source-review-514",
-    "gaps": [
-      "官方iframe.enabled=false最小Heading配置已实际挂载，无内iframe、网络/Worker调用；这不是完整Bento设计或原生浏览器/拖放验收。",
-      "试验运行源为npm @puckeditor/core0.24.0固定integrity，发布包无gitHead；不能将固定仓库源码SHA冒称其精确构建来源。",
-      "侧栏localStorage读取在opaque环境被捕获并产生warning，尚未禁用持久化；正式交付须覆盖resize/读写。",
-      "实际81个运行包许可未逐一闭合；react-remove-scroll-bar缺显式根许可文件需实际版本补证，不等于已被判不可用。",
-      "拖放、字段编辑、删除、历史/取消、重复挂载与订阅/定时器清理未完整验证。",
-      "官方复杂配置媒体/Cloud/发布路径仍待门控；仅源码候选，不增加可查看计数，封面交Grok。"
-    ],
-    "website": "https://github.com/puckeditor/puck",
-    "completedPreviewCount": 0,
     "licenseEvidence": {
       "url": "https://github.com/puckeditor/puck/blob/d05542f4ddc3ade0275860cb91756dadd7ea791a/LICENSE",
       "sha256": "74e836dc790cba90f8c818b0d2bdf4625910708e45419d4cf613af7df87736e9",
       "scope": "Original project source only; full runtime dependency/media review pending"
     },
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false
+    "website": "https://github.com/puckeditor/puck",
+    "title": "五组件页面布局编辑器",
+    "description": "原文字、网格、弹性布局和间距组件的字段、大纲、复制删除与历史编辑；本地五组件选段，不含媒体营销页或云端发布。",
+    "behavior": "原文字、网格、弹性布局和间距组件的字段、大纲、复制删除与历史编辑；本地五组件选段，不含媒体营销页或云端发布。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "数据与状态",
+    "license": "MIT AND ISC AND BSD-3-Clause AND 0BSD",
+    "batch": "puck-editor-01",
+    "preview": "batches/puck-editor-01/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [],
+    "runtime": {
+      "scripts": [
+        "runtime-start.js",
+        "runtime-code-01.js",
+        "runtime-code-02.js",
+        "runtime.js"
+      ]
+    }
   },
   {
     "id": "minipaint:original-layered-paint-workspace",
@@ -12267,35 +12290,32 @@
   },
   {
     "id": "copilotkit:presentation-coauthor",
-    "title": "图文演示与讲稿共创",
     "source": "CopilotKit",
     "repository": "https://github.com/CopilotKit/CopilotKit",
     "revision": "c7815d9ac96f48fb3a64ad8c18e176a870c81763",
-    "sourcePath": "examples/showcases/presentation/src/app/components/main/Presentation.tsx",
     "upstream": "https://github.com/CopilotKit/CopilotKit/blob/c7815d9ac96f48fb3a64ad8c18e176a870c81763/examples/showcases/presentation/src/app/components/main/Presentation.tsx",
-    "license": "MIT (root verified only; dependencies/assets not closed)",
-    "behavior": "原currentSlide选择、前后导航、正文/讲稿受控textarea、页码、增删入口及Copilot更新挂钩。",
-    "difference": "与impress空间演示不同：作者编辑正文和配套讲稿的完整图文场景；不拆导航按钮。",
-    "gaps": [
-      "原初始背景loremflickr照片权利未核；生成/研究/朗读依赖Agent/服务需停用或明确模拟；删末页、快速导航、字体/依赖、生命周期未验。",
-      "完整传递依赖及素材许可未审；默认CSP/无网络、交互和退出清理、浏览器像素均未验。"
-    ],
-    "description": "原currentSlide选择、前后导航、正文/讲稿受控textarea、页码、增删入口及Copilot更新挂钩。 与impress空间演示不同：作者编辑正文和配套讲稿的完整图文场景；不拆导航按钮。",
-    "category": "展示与媒体",
+    "sourcePath": "examples/showcases/presentation/src/app/components/main/Presentation.tsx",
     "licenseEvidence": {
       "url": "https://github.com/CopilotKit/CopilotKit/blob/c7815d9ac96f48fb3a64ad8c18e176a870c81763/LICENSE",
       "sha256": "15a0e5343aea872c0573ad72feb6044b336f162d724cc1673c608e6b37ea071b",
       "scope": "Full root MIT read; transitive runtime/media permissions not closed"
     },
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "batch": "source-bulk-522",
-    "sourceScope": "Selected fixed original code and complete root license evidence; no complete runnable/archive or runtime audit",
-    "kind": "原版完整场景（仅来源）",
-    "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted"
+    "difference": "与impress空间演示不同：作者编辑正文和配套讲稿的完整图文场景；不拆导航按钮。",
+    "title": "文字幻灯片与讲稿编辑",
+    "description": "原正文与讲稿编辑、增删和分页导航子流程，收起未接入的照片栏；不含图片、代理生成、研究或朗读。",
+    "behavior": "原正文与讲稿编辑、增删和分页导航子流程，收起未接入的照片栏；不含图片、代理生成、研究或朗读。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "展示与媒体",
+    "license": "MIT",
+    "batch": "presentation-text-01",
+    "preview": "batches/presentation-text-01/editor/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
+    "gaps": [
+      "Original Presentation, Slide, Header, Add/Delete/Nav/ActionButton and SlideNumberIndicator form a text-and-speaker-notes editing subflow, NOT the full original photo/AI presentation. Fixed initial and AddSlide loremflickr URL removed and original conditional image column collapsed; no replacement image or blank-image placeholder. Original text controls, 16:9 paper structure, page indicator, insert after current, delete resets index0, last-page guard and previous/next retained. Original backend hooks/useCopilotReadable/useAppendSlide/useUpdateSlide removed; research/Generate/Speak visibly unavailable and do not invoke prompt, Copilot, audio or APIs. Host adds Chinese scope notice and accessible button labels only. Actual fixed Tailwind customBlack/global aspect-ratio rules preserved; compiled with Tailwind4.3 rather than original v3, system fonts. Hide unmounts and intentionally resets unsaved demonstration text on return; no storage or network. Full diff retained locally. All four tests use actual570 compose: editing text/notes persists across original navigation,insert/delete/last-page bounds,10 cycles,disabled backend buttons,no media,hidden remount/oldnodes,earlymodule failure and later ErrorEvent cleanup. Actual570 loader cache/load/release test passes. Full owned listener/timer/RAF/observer ledger0 and forbidden APIs0. JSDOM verifies DOM/state only, not native pixels/keyboard editing or responsive geometry. Original source commit is independent of cached npm versions listed below."
+    ]
   },
   {
     "id": "copilotkit:research-sections-canvas",
@@ -12693,36 +12713,47 @@
   },
   {
     "id": "mermaid-live:diagram-authoring-workspace",
-    "title": "Mermaid Live · 原图表编写工作区",
     "source": "Mermaid Live Editor",
     "repository": "https://github.com/mermaid-js/mermaid-live-editor",
     "revision": "4e94efb6d7a20fb22fd743ac335065d24b80eb6a",
     "upstream": "https://github.com/mermaid-js/mermaid-live-editor/blob/4e94efb6d7a20fb22fd743ac335065d24b80eb6a/src/lib/components/Editor.svelte",
-    "website": "https://github.com/mermaid-js/mermaid-live-editor",
-    "license": "MIT root; runtime dependency and media closure not audited",
-    "category": "数据与状态",
-    "kind": "完整原版工作区（未适配）",
-    "description": "原Monaco代码/配置编辑、语法错误提示、SVG预览与平移缩放；支持原手绘渲染转换，整套图表编写场景只计一族。",
-    "previewStatus": "source-only",
-    "sourceCollectionReady": true,
-    "runtimeRedistributionAuditComplete": false,
-    "publicationReady": false,
-    "completedPreviewCount": 0,
-    "buildStatus": "fixed original source and complete root license read; not built, run or visually accepted",
-    "sourceScope": "Selected fixed original code and complete root license evidence; no complete runnable/archive or runtime audit",
     "licenseEvidence": {
       "url": "https://github.com/mermaid-js/mermaid-live-editor/blob/4e94efb6d7a20fb22fd743ac335065d24b80eb6a/LICENSE",
       "sha256": "a90f86af80823961bda369206527c3d20cecdde71a7f68b58ddacfddffeb6f14",
       "scope": "Complete root license; no transitive runtime/media license closure"
     },
+    "website": "https://github.com/mermaid-js/mermaid-live-editor",
+    "title": "流程图文本编辑与缩放",
+    "description": "原移动版代码编辑器、配置和流程图渲染缩放，以本地示例展示编辑与错误反馈；非桌面Monaco，不含所有图种或托管站服务。",
+    "behavior": "原移动版代码编辑器、配置和流程图渲染缩放，以本地示例展示编辑与错误反馈；非桌面Monaco，不含所有图种或托管站服务。",
+    "kind": "原版交互场景",
+    "format": "完整交互场景",
+    "category": "数据与状态",
+    "license": "MIT; ISC; BSD-2-Clause; BSD-3-Clause; Apache-2.0; Zlib",
+    "batch": "mermaid-mobile-01",
+    "preview": "batches/mermaid-mobile-01/index.html",
+    "previewStatus": "DOM-tested; visual-pending",
+    "browserVisualQA": "not-run",
+    "buildStatus": "pass",
     "gaps": [
-      "不同于已有静态流程卡/Markmap/BPMN拖拽画布，价值在代码/配置与图形联动；不把每个diagram类型分别计数。",
-      "原界面含MermaidChart登录/AI修复、统计、分享导出/远程链接；只能在未来明确禁用或离线改造，不运行或发送图表到外部。",
-      "Monaco worker、Mermaid及svg2roughjs/图标字体/样式完整依赖许可和CSP闭包未验；根MIT不是全资产授权。",
-      "SVG innerHTML插入、bindFunctions、超大图/恶意输入、异步render竞争/取消、拖缩/退出仍需验证；没有导出图片或截图。",
-      "全部封面与截图另行处理，本次只收集文本来源；没有预览或假公开源码ZIP。"
+      "Official fixed MobileEditor.svelte (real CodeMirror) branch and original View/renderAndPlaceDiagram/PanZoomState. Not desktop Monaco and not a fake substitute: the upstream Editor.svelte selects this component for mobile. The small local container, Code/Config/Reset and zoom buttons are authored integration, not a claim that the full hosted site/Navbar/History was reproduced.",
+      "Original default six-node Christmas/shopping flowchart retained except the optional fa:fa-car prefix was removed; Car text remains. No icon font/binary/font assets or screenshots. Original CodeMirror theme and view grid are preserved; system-font fallback and controlled SVG geometry tests do not constitute pixel/native/IME/drag QA.",
+      "Original Mermaid 12.3.0 flowchart renderer and Dagre layout retained, not a new renderer. Only registration lists were narrowed to flowchart/Dagre to meet local budget. Other diagram/layout loaders, ZenUML, AI, cloud login, sharing/URL import, analytics, font/image icons and rough conversion UI are unavailable; no claim of full-format hosted Mermaid support.",
+      "Original reactive input/validation and mobile edit callbacks retained. Persistence is in-memory; URL subscription never starts. Original View queue retained with disposed guards, original state adds generation checks, panzoom adds final destroy, and render failures gain a visible local alert. A local mode state selects the original light CodeMirror theme; diagram theme config is actually supported.",
+      "Local flowchart code limited to 5000 characters/100 statements and Mermaid maxEdges 80; only flowchart/graph directions accepted. Reject active HTML tags, external URLs, click links, initialization directives and font/image icons. Config limited to 3000 chars with theme/flowchart spacing+curve/look classic/layout dagre allowlist. Strict securityLevel, no external source, htmlLabels false and unchanged host CSP are enforced before actual rendering.",
+      "Original svg2roughjs code remains emitted through renderView but rough is fixed false in this selected scene; no untested hand-drawn control is advertised. No claim of mathematical/binary-font rendering fidelity beyond the original plain-text flowchart fixture.",
+      "88 positive-emitted npm package roots with full actual license texts, plus 2 Mermaid-embedded dependency sources: js-yaml4.3.2 and patched fastdom1.0.12. 26 js-yaml source files byte-match official npm, 2 fastdom source-map modifications are recorded. Fastdom full MIT is from its shipped README; Pako embedded Zlib notices are included separately. DOMPurify uses Apache-2.0 option; Khroma actual shipped license is MIT despite absent package field.",
+      "Actual570 adaptCandidate/createPreviewLoader/default cache: 4412070 UTF16 bytes, 6 entries, below unchanged 8388608 bytes. Cache reuse on remount, missing-script all-or-nothing and error retry passed. Four natural standalone JS chunks below 700KiB; no runtime eval/Function, worker or encoded binary delivery.",
+      "Functional JSDOM tests cover real CodeMirror edit/config callbacks, six-to-three-node original SVG changes, syntax/unsafe input rejection, reset, original panzoom, hidden state retention, late control/callback exit, early/queued exit, missing root and controlled SVG failure. Full listener/task/observer ledger clears; hidden finite parsing may settle. No native/browser/screenshot attempts."
     ],
-    "batch": "source-bulk-522"
+    "runtime": {
+      "scripts": [
+        "runtime-part-1.js",
+        "runtime-part-2.js",
+        "runtime-part-3.js",
+        "runtime.js"
+      ]
+    }
   },
   {
     "id": "novel:selection-writing-workspace",
