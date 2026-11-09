@@ -1,0 +1,9 @@
+# Obnoxious · 四种原标题动效
+
+Existing ID `obnoxious:expressive-text-motion`, fixed tholman/obnoxious.css revision `efccba04b49c092412048bf19e5d0f6db5955d6b`, complete Tim Holman MIT notice retained. The complete original demo layout, title, description, select and Run button are used. The unsafe Strobe option and entire strobe keyframe/rule are removed; source-family scope is four original title effects, not five. No new visual effect is invented.
+
+The fixed upstream distributed CSS supplies unchanged Shake It, Intensifies, Fontalicious and Twister keyframes. We do not rebuild the random SCSS to different generated geometry. Build-only PostCSS removes the strobe AST rules; no third-party JS shipped. Upstream original 10ms remove-class/reapply-class replay mechanism retained with named handlers, single pending timer and stopped/hidden/reduced guards. User controls explicitly start motion, default is static. Added always-accessible Stop button stops motion immediately; hiding, system reduced-motion changes and final disposal stop it. Reduced-motion disables Run and forces no animation. All original font-family keyframes name system fonts, no font files are distributed.
+
+Original Google font/Twitter script/social navigation are removed; local Arial fallback and source attribution stay visible. Added Chinese safety note and responsive title size, so font metrics differ. No full-screen flashing background or strobe runtime rules. Static output remains after disposal, controls disabled and callbacks removed. This is a typography demo, not any assistant or backend workflow.
+
+actual550 compose tests four original effect class transitions, default static, Stop, reduced-motion no animation, pending activation cancelled when hidden and final exit/old events inert. Tests inspect CSS and DOM state, not actual rendered motion or pixel safety measurements. Browser visual QA not run. One key-path pass, no duplicate matrix.
