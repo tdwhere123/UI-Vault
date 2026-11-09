@@ -1,0 +1,39 @@
+{
+  "repository": "https://github.com/tipsy/bubbly-bg",
+  "revision": "8783742f0940f76e374240526b90a7ea5296f521",
+  "version": "1.0.0",
+  "sourcePath": "src/bubbly-bg.js",
+  "originalFiles": [
+    {
+      "path": "LICENSE",
+      "sha256": "2f097968fc7aac645e2a07dc85c46a31bde4496fc5d9139736c976d983d718bf"
+    },
+    {
+      "path": "bubbly-bg.js",
+      "sha256": "87ebe3022a9c22a425c158d9ac406b3efec7f50434dfa96aa26d1c5637cc7ef0"
+    },
+    {
+      "path": "demo.html",
+      "sha256": "60f5209713097fbe382f46c31fa6fd0ecd980a1a6c103e85adf40b07a30a4ac7"
+    },
+    {
+      "path": "package.json",
+      "sha256": "5329c6fdc6363b500447b066bc4f789b395716747f24cc71d35f46f4115c1aac"
+    }
+  ],
+  "runtimeDependencies": [],
+  "sourceAdaptations": [
+    "Original Canvas engine and math retained, not a screenshot/static substitute. Host toolbar/native controls are authored isolation shell, not original dat.GUI/Vue documentation app.",
+    "Local decorative/math demonstration only, no microphone/audio-analysis/recognition/AI/backend. No audio permissions, data uploads, remote resources or binary packaging.",
+    "Private component-owned canvas, DPR fixed1 and measured width capped900px, no body background mutation. Zero-size defers construction and pauses existing loop; positive resize recovers.",
+    "Pause/resume preserves desired playback and parameter/model state; hidden stops draw loop, visible respects user pause/reduced choice. Restart explicitly recreates a fresh original model.",
+    "Reduced draws one real original frame with no RAF remaining. Canvas null context/startup/render errors and explicit contextlost events dispose and show real unavailable state. Event/observer ownership and terminal exit prevent stale controls from restoring work.",
+    "Original official demo configs[1] gradient #111 to #422, red bubble fill and white glow retained; cap bubble count24 via original config API. No image-producing presets included.",
+    "Original bubble object creation/arc fill/stroke/velocity/wraparound body preserved. Replace original wrong cancelAnimationFrame(draw) and unowned scheduler with request ID, start/stop/drawOnce/dispose controller.",
+    "Controller stop/resume preserves bubble array; size changes retain particles and original wraparound behavior, restart explicitly re-randomizes.",
+    "No upstream NOTICE file found in fixed repository text checkout; full Apache license and named modification notices retained, no fabricated upstream NOTICE."
+  ],
+  "browserVisualQA": "not-run",
+  "noAudioPermissions": true,
+  "canvasTest": "Canvas draw-command recorder and explicit RAF/bounds/ResizeObserver stubs; no pixels rendered"
+}
