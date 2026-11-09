@@ -1,0 +1,221 @@
+<!doctype html><html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Learn Git Branching</title>
+  <meta name="author" content="Peter Cottle">
+
+  
+  
+  
+  
+  
+
+  <!-- just testing some stuff -->
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+
+  <!-- end testing -->
+  <meta http-equiv="content-language" content="en">
+
+  
+  
+
+
+  <!-- Templates from here on out... -->
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <!-- The compiled and minified build file (that actually does everything) is below.
+       For a much easier time perusing the source, see the individual files at:
+          https://github.com/pcottle/learnGitBranching
+  -->
+  
+<link rel="stylesheet" href="runtime.css"></head>
+<body><aside id="local-boundary" style="position:fixed;right:12px;bottom:6px;z-index:9000;font:11px system-ui;background:#fff;color:#222;padding:3px 6px;border-radius:4px;pointer-events:none">本地 Git 模拟（英/简中） · 进度仅内存 · 不连接仓库/剪贴板/社交服务</aside>
+  <!-- Shown only if startup takes a beat; removed once the app has rendered.
+       A pure-CSS delayed fade-in means fast (e.g. English) loads never flash it. -->
+  <div id="appLoading" role="status">
+    <span class="visuallyHidden">Loading…</span>
+  </div>
+  <style>
+    #appLoading {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1000000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #5cbcfc;
+      opacity: 0;
+      animation: appLoadingFadeIn 150ms ease 250ms forwards;
+    }
+    #appLoading::after {
+      content: '';
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      border: 3px solid rgba(0, 0, 0, 0.2);
+      border-top-color: #222;
+      animation: appLoadingSpin 700ms linear infinite;
+    }
+    @keyframes appLoadingFadeIn {
+      to { opacity: 1; }
+    }
+    @keyframes appLoadingSpin {
+      to { transform: rotate(360deg); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      #appLoading::after { animation: none; }
+    }
+    #appLoading[hidden] { display: none; }
+    /* used for on-demand level loads: show at once, no delayed fade */
+    #appLoading.appLoading-visible { opacity: 1; animation: none; }
+  </style>
+
+  <!-- lol noscript. I did not write 9k+ lines of JS just for you to bounce off my website -->
+  <noscript>
+    <div style="z-index:1000000;background:red;color:white;position:absolute;top:0;left:0;height:300px;width:300px;">
+      This application simulates a git repository in your browser, so you will need
+      JS to use the app. Try enabling and refreshing the page -- Thanks!
+    </div>
+  </noscript>
+
+  <!-- The entire interface is within this div -->
+  <div id="interfaceWrapper" class="box horizontal flex1">
+    <div id="controls" class="box vertical flex1 visBackgroundColor">
+      <div id="commandLineHistory" class="box vertical flex3">
+          <div class="toolbar box vertical center">
+            <div class="controls box horizontal justify">
+              <div class="box flex1">
+                <div class="close">
+                </div>
+              </div>
+              <div class="box flex1">
+                <div class="minimize">
+                </div>
+              </div>
+              <div class="box flex1">
+                <div class="plus">
+                </div>
+              </div>
+            </div>
+            <div>
+              <label for="commandTextField">
+                <i aria-hidden="true" class="icon-home"></i>
+                <span class="visuallyHidden">Terminal –</span>
+                <span class="vcs-mode-aware intl-aware" data-intl="learn-git-branching">
+                  Learn Git Branching
+                </span>
+              </label>
+            </div>
+          </div>
+          <div id="levelToolbarMount">
+          </div>
+
+        <div id="terminal" class="box flex1 horizontal startAlign">
+          <div id="commandDisplay" class="box vertical flex1">
+          </div>
+        </div>
+
+        <div id="commandLineBar" class="box vertical flex0">
+          <div id="prompt" class="">
+            <span class="promptSign box">$</span>
+            <span class="cursor box">&nbsp;</span>
+            <p class="command"></p>
+            <div id="shadow"></div>
+          </div>
+          <textarea autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" id="commandTextField"></textarea>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="mainVisSpace" class="box flex2 horizontal transitionAll visBackgroundColor">
+      <span class="modeText transitionOpacity gitMode">
+        Git
+      </span>
+      <span class="modeText transitionOpacity hgMode">
+        Hg
+      </span>
+    </div>
+
+    <!-- If you drag the goal window to the right side of the screen, this gets shown and causes
+         the main visualization to squeeze a bit. This way, you could have the goal window hang out
+         on the right side of the screen and still see the repo visualization. -->
+    <div id="goalPlaceholder" class="box flex1 visBackgroundColor" style="display: none;"></div>
+
+  </div>
+
+  <div id="canvasHolder">
+  </div>
+
+  <div id="reactMount">
+  </div>
+
+  <div id="helperBarMount">
+  </div>
+
+  
+  
+
+
+<style>
+  .github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}
+</style>
+
+
+  <!-- Google tag (gtag.js) -->
+  
+  
+
+  
+
+
+<script src="runtime-part-1.js"></script><script src="runtime.js"></script></body></html>
