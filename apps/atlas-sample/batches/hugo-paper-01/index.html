@@ -1,0 +1,82 @@
+<!DOCTYPE html><html class="not-ready lg:text-base" style="--bg:#faf8f1" lang="en" dir="ltr"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  
+  <title>Emoji Support - Paper</title>
+
+  
+  <meta name="theme-color">
+
+  <meta name="description" content="Emoji can be enabled in a Hugo project in a number of ways.">
+  <meta name="author" content="lee.so">
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+
+  <meta name="generator" content="Hugo 0.148.2">
+<link rel="stylesheet" href="runtime.css"></head>
+<body class="bg-(--bg) text-black antialiased duration-200 ease-out [-webkit-tap-highlight-color:transparent] dark:text-white"><aside class="preview-note">原 Paper 模板与完整 Emoji Support 示例文章；文字表情由系统字体显示，主题切换只在当前预览内生效，外链不可导航。</aside><header class="mx-auto flex h-[4.5rem] max-w-(--w) px-8 whitespace-nowrap lg:justify-center">
+  <div class="relative z-50 flex items-center ltr:mr-auto rtl:ml-auto">
+    <a class="-translate-y-[1px] text-2xl font-medium" data-original-href="https://offline.invalid/" aria-disabled="true">Paper</a>
+    <div class="btn-dark text-[0px] ltr:ml-4 rtl:mr-4 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.svg)_left_center/cover_no-repeat] dark:invert dark:[background-position:right]" role="button" aria-label="Dark"></div>
+  </div>
+
+  <div class="btn-menu relative z-50 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden ltr:-mr-8 rtl:-ml-8" role="button" aria-label="Menu"></div>
+
+  
+
+  <div class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full flex-col justify-center bg-(--bg) pb-16 duration-200 select-none lg:static lg:h-auto lg:flex-row lg:bg-transparent! lg:pb-0 lg:transition-none"><nav class="lg:ml-12 lg:flex lg:flex-row lg:items-center lg:space-x-10 rtl:space-x-reverse"><a class="block text-center text-xl leading-[5rem] lg:text-base lg:font-normal" data-original-href="/emoji-support/" aria-disabled="true">Emoji Support</a></nav>
+  </div>
+</header>
+<main class="prose prose-neutral dark:prose-invert relative mx-auto min-h-[calc(100vh-9rem)] max-w-(--w) px-8 pt-14 pb-16"><article>
+  <header class="mb-14">
+    <h1 class="my-0! pb-2.5">Emoji Support</h1></header>
+
+  <section><p>Emoji can be enabled in a Hugo project in a number of ways.</p>
+<p>The <a data-original-href="https://gohugo.io/functions/emojify/" aria-disabled="true"><code>emojify</code></a> function can be called directly in templates or <a data-original-href="https://gohugo.io/templates/shortcode-templates/#inline-shortcodes" aria-disabled="true">Inline Shortcodes</a>.</p>
+<p>To enable emoji globally, set <code>enableEmoji</code> to <code>true</code> in your site’s <a data-original-href="https://gohugo.io/getting-started/configuration/" aria-disabled="true">configuration</a> and then you can type emoji shorthand codes directly in content files; e.g.</p>
+<p><span class="nowrap"><span class="emojify">🙈</span> <code>:see_no_evil:</code></span>  <span class="nowrap"><span class="emojify">🙉</span> <code>:hear_no_evil:</code></span>  <span class="nowrap"><span class="emojify">🙊</span> <code>:speak_no_evil:</code></span></p>
+<br>
+<p>The <a data-original-href="http://www.emoji-cheat-sheet.com/" aria-disabled="true">Emoji cheat sheet</a> is a useful reference for emoji shorthand codes.</p>
+<hr>
+<p><strong>N.B.</strong> The above steps enable Unicode Standard emoji characters and sequences in Hugo, however the rendering of these glyphs depends on the browser and the platform. To style the emoji you can either use a third party emoji font or a font stack; e.g.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>.emoji {
+</span></span><span style="display:flex;"><span>font-family: Apple Color Emoji, Segoe UI Emoji, NotoColorEmoji, Segoe UI Symbol, Android Emoji, EmojiSymbols;
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+
+
+<style>
+.emojify {
+	font-family: Apple Color Emoji, Segoe UI Emoji, NotoColorEmoji, Segoe UI Symbol, Android Emoji, EmojiSymbols;
+	font-size: 2rem;
+	vertical-align: middle;
+}
+@media screen and (max-width:650px) {
+  .nowrap {
+    display: block;
+    margin: 25px 0;
+  }
+}
+</style></section>
+
+  <footer class="mt-12 flex flex-wrap"><a class="mb-1.5 rounded-lg bg-black/[3%] px-5 py-1 no-underline hover:bg-black/[6%] ltr:mr-1.5 rtl:ml-1.5 dark:bg-white/[8%] dark:hover:bg-white/[12%]" data-original-href="https://offline.invalid/tags/emoji" aria-disabled="true">emoji</a></footer></article></main><footer class="mx-auto flex h-[4.5rem] max-w-(--w) items-center px-8 text-xs tracking-wider uppercase opacity-60">
+  <div class="mr-auto">©2026
+    <a class="link" data-original-href="https://offline.invalid/" aria-disabled="true">Paper</a></div>
+  <a class="link mx-6" rel="noopener" data-original-href="https://gohugo.io/" aria-disabled="true">powered by hugo️️</a>️
+  <a class="link" rel="noopener" data-original-href="https://github.com/nanxiaobei/hugo-paper" aria-disabled="true">hugo-paper</a>
+</footer>
+
+
+<script src="runtime.js"></script></body></html>
