@@ -2,7 +2,7 @@
 
 网站：<https://tdwhere123.github.io/UI-Vault/>
 
-当前共收录 **798 条**：其中 **528 条可打开预览（241 条原始素材＋287 条后续接入预览）**，另有 **270 条仅来源记录**，不计入主图鉴预览数。原始 241 件包括 215 件精选界面、20 件保留基础素材、6 套图标系列。正在向 1000 件优质素材扩充；图标按系列单列，字重、尺寸和单枚 glyph 不凑数。已有图标重叠暂留待统一整理。
+当前共收录 **815 条**：其中 **529 条可打开预览（241 条原始素材＋288 条后续接入预览）**，另有 **286 条仅来源记录**，不计入主图鉴预览数。原始 241 件包括 215 件精选界面、20 件保留基础素材、6 套图标系列。正在向 1000 件优质素材扩充；图标按系列单列，字重、尺寸和单枚 glyph 不凑数。已有图标重叠暂留待统一整理。
 
 ## 当前内容
 
@@ -404,3 +404,11 @@ Restored existing Nutshell as genuine inline nested reading, using a trusted off
 Added **18 source-only families**: audio/shape and sound-effect workflows, spring reordering, spatial periodic-table and visual synthesis; visual Git lessons, model inspection, transformer narration, decision-boundary experiments, score editing and a query-driven detective story; image enhancement, customer conversation and automation builders, plus three distinctive brand/portfolio pages; one Health Icons professional symbol series. Whole workflows and icon families count once, not each model, preset, glyph or appearance.
 
 Current totals: **798 collected = 528 previews + 270 source-only records**. Mapped covers remain 470; 58 posterless previews use bounded live cards. Existing records except the restored Nutshell item and all Grok covers/reports/main UI are preserved. Public MIT entry paths do not authorize excluded enterprise code or transitive services, AGPL sources still carry source obligations, and music/illustrations/models/fonts require separate closure. Health Icons symbols are static references, not medical decisions or access to health data.
+
+## Spatial palette and varied workflows · 529 previews / 815 collected
+
+Restored the existing Poline item with its original full picker page, web component and unchanged interpolation engine. Anchor dragging, saturation-ring rotation, point addition/removal, three-axis position functions, point count and closed-loop settings drive the original palette model. Original OKLch/Lch outputs are explicitly labelled as HSL-based approximations, not colorimetric conversions. Google fonts are removed; there are no external runtime dependencies, image captures, clipboard actions or host theme changes. Pointer cancellation, hidden-state cleanup, zero geometry and form-field keyboard isolation are covered by DOM tests, not native SVG, touch, color accuracy or pixel acceptance.
+
+Added **17 source-only families**: kinetic countdown, image palette extraction, multi-handle color editing, SVG filter-stage inspection and node-based filter editing; geographic narratives, inline audio, file-history time travel, code walkthroughs, Julia-orbit explanations and astronomical navigation; resume editing, public document-workbench entry paths, image-generation canvas, gallery and architectural narratives; one Mono Icons series. A whole workflow or icon family counts once, not each glyph, parameter or preset.
+
+Current totals: **815 collected = 529 previews + 286 source-only records**. Mapped covers remain 470; 59 posterless previews use bounded live cards. All existing records except the restored Poline item, all Grok covers/reports and the main UI are preserved. MPL/AGPL source obligations, third-party media and model rights remain explicit. Stirling's selected public editor/core entry paths do not authorize its excluded proprietary engine/processor or transitive services. Stellarium's original geolocation/network paths are noted as unexecuted, not silently enabled.
