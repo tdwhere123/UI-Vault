@@ -1,0 +1,131 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="runtime.css"></head><body><aside>本地合成音示例，点击播放才启用声音，建议低音量。原波形与包络演示；延迟/低通原控件改接本地波形，不是原音乐文件。没有麦克风或录音。离开页面立即停止。</aside><main class="container" id="content"><h2>波形与声效实验</h2><p id="status" role="status">静音，等待播放</p><h3 id="sound-from-waveform">Create sounds from wave forms</h3>
+                <pre><code class="language-javascript">
+var sineWave = new Pizzicato.Sound({ 
+    source: 'wave', 
+    options: {
+        frequency: 440
+    }
+});
+
+sineWave.play();
+                </code></pre>
+
+                <div class="slider-group">
+                    <div class="slider">
+                        <label for="volume-wave">Volume</label>
+                        <input type="range" min="0" max="0.3" step="0.01" value="0.15" id="volume-wave" />
+                        <div class="slider-value">1</div>
+                    </div>
+                </div>
+
+                <div class="controls">
+                    <button id="stop-wave" class="stop action" aria-label="停止"></button>
+                    <button id="play-wave" class="play action" aria-label="播放或暂停"></button>
+                </div>
+<h4 id="attack-release">Attack/Release</h4>
+                <pre><code class="language-javascript">
+var sineWave = new Pizzicato.Sound({ 
+    source: 'wave'
+});
+
+sineWave.attack = 0.5;
+sineWave.release = 1;
+sound.play();
+                </code></pre>
+
+                <div class="slider-group">
+                    <div class="slider">
+                        <label for="volume-release">Volume</label>
+                        <input type="range" min="0" max="0.3" step="0.01" value="0.15" id="volume-release" />
+                        <div class="slider-value">1</div>
+                    </div>
+                    <div class="slider">
+                        <label for="value-attack">Attack</label>
+                        <input type="range" min="0" max="3" step="0.01" value="0.5" id="value-attack" />
+                        <div class="slider-value">0.5</div>
+                    </div>
+                    <div class="slider">
+                        <label for="value-release">Release</label>
+                        <input type="range" min="0" max="3" step="0.01" value="1" id="value-release" />
+                        <div class="slider-value">1</div>
+                    </div>
+                </div>
+
+                <div class="controls">
+                    <button id="stop-release" class="stop action" aria-label="停止"></button>
+                    <button id="play-release" class="play action" aria-label="播放或暂停"></button>
+                </div>
+<h4 id="delay">Delay</h4>
+
+                <pre><code class="language-javascript">
+var delay = new Pizzicato.Effects.Delay({
+    feedback: 0.6,
+    time: 0.4,
+    mix: 0.5
+});
+
+sound.addEffect(delay);
+sound.play();
+                </code></pre>
+
+                <div class="slider-group">
+                    <div class="slider">
+                        <label for="volume-timba">Volume</label>
+                        <input type="range" min="0" max="0.3" step="0.01" value="0.15" id="volume-timba" />
+                        <div class="slider-value">1</div>
+                    </div>
+                    <div class="slider">
+                        <label for="delay-feedback">Feedback</label>
+                        <input type="range" min="0" max="1" step="0.01" value="0.6" id="delay-feedback" />
+                        <div class="slider-value">0.6</div>
+                    </div>
+                    <div class="slider">
+                        <label for="delay-time">Time</label>
+                        <input type="range" min="0" max="5" step="0.001" value="0.3" id="delay-time" />
+                        <div class="slider-value">0.3</div>
+                    </div>
+                    <div class="slider">
+                        <label for="delay-mix">Mix</label>
+                        <input type="range" min="0" max="1" step="0.001" value="0.5" id="delay-mix" />
+                        <div class="slider-value">0.5</div>
+                    </div>
+                </div>
+
+                <div class="controls">
+                    <button id="stop-timba" class="stop action" aria-label="停止"></button>
+                    <button id="play-timba" class="play action" aria-label="播放或暂停"></button>
+                </div>
+<h4 id="low-pass-filter">Low-Pass Filter</h4>
+
+                <pre><code class="language-javascript">
+var lowPassFilter = new Pizzicato.Effects.LowPassFilter({
+    frequency: 400,
+    peak: 10
+});
+
+sound.addEffect(lowPassFilter);
+sound.play();
+                </code></pre>
+
+                <div class="slider-group">
+                    <div class="slider">
+                        <label for="volume-synth">Volume</label>
+                        <input type="range" min="0" max="0.3" step="0.01" value="0.15" id="volume-synth" />
+                        <div class="slider-value">1</div>
+                    </div>
+                    <div class="slider">
+                        <label for="low-pass-filter-frequency">Frequency</label>
+                        <input type="range" min="10" max="22050" step="1" value="400" id="low-pass-filter-frequency" />
+                        <div class="slider-value">400</div>
+                    </div>
+                    <div class="slider">
+                        <label for="low-pass-filter-peak">Peak</label>
+                        <input type="range" min="0.0001" max="20" step="0.0001" value="10" id="low-pass-filter-peak" />
+                        <div class="slider-value">10</div>
+                    </div>
+                </div>
+
+                <div class="controls">
+                    <button id="stop-synth" class="stop action" aria-label="停止"></button>
+                    <button id="play-synth" class="play action" aria-label="播放或暂停"></button>
+                </div></main><script src="runtime.js"></script></body></html>
