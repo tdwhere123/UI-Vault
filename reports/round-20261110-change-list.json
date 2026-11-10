@@ -17,7 +17,6 @@
     "status": "candidate_only_not_browser_regressed",
     "tip_of_code_fix": "c8ba47c350e9771a7c41dd5f22c21976ff7eb119",
     "code_fix_commit_url": "https://github.com/tdwhere123/UI-Vault/commit/c8ba47c350e9771a7c41dd5f22c21976ff7eb119",
-    "followup_mapping_commit": "887f5b5ae9d83de8517b09915476e5a2bae51237",
     "categories_10": [
       {
         "id": "formity:branching-loop-interview",
@@ -65,7 +64,33 @@
       "silverbullet:document-navigation-workspace 与 minipaint:original-layered-paint-workspace 本就因核心视觉不可用而在待复核，本轮只核对/保留原因，不是新增淘汰或删除。",
       "未放宽 CSP、sandbox 或 form-action。"
     ],
-    "regression": "仅有代码级测试。本地站点（127.0.0.1:18771）真实浏览器复验仍 blocked。不得用线上旧站 56d4 证明这些修复已成立。"
+    "regression": "仅有代码级测试。本地站点（127.0.0.1:18771）真实浏览器复验仍 blocked。不得用线上旧站 56d4 证明这些修复已成立。",
+    "followup_887f5b": {
+      "commit": "887f5b5ae9d83de8517b09915476e5a2bae51237",
+      "not_only_26_reuse_and_reasons": true,
+      "included": [
+        "Map 26 hash-verified covers when preview/runtime hashes still matched the capture record; do not backfill 7 shared-runtime-changed covers.",
+        "Keep silverbullet, minipaint and astryx:library in needs-review with explicit reasons; correct UI Layouts and elastic-line descriptions without retiring them by old names.",
+        "Tighten the smoothui:image-metadata-preview first screen so the illustration can fit without widening the feature set."
+      ],
+      "metadata_first_screen_change": {
+        "id": "smoothui:image-metadata-preview",
+        "file": "apps/atlas-sample/batches/smooth-direct-01/runtime.js",
+        "evidence": "git show 887f5b5ae9d83de8517b09915476e5a2bae51237 -- apps/atlas-sample/batches/smooth-direct-01/runtime.js",
+        "wrapper_before": "flex min-h-[600px] items-center justify-center",
+        "wrapper_after": "flex min-h-0 h-full w-full box-border items-center justify-center overflow-auto p-3",
+        "image_before": "img with height:437 width:300 and no className",
+        "image_after": "className=\"max-h-[min(360px,70dvh)] w-auto h-auto object-contain\", same height:437 width:300",
+        "intent": "Fit the illustration on the first screen without widening the feature set.",
+        "browser_retest": "not_completed",
+        "do_not_claim_fixed": true,
+        "also_in_original_13_ineligible_because_affecting_files_changed": true,
+        "already_in_existing_review_36": true
+      },
+      "after_887f5b_only_covers_and_classification": true,
+      "do_not_say_preview_untouched_after_c8ba47": "The metadata preview change is in 887f5b itself. Commits after 887f5b only add covers, classification, evidence, or this documentation."
+    },
+    "followup_mapping_and_metadata_commit": "887f5b5ae9d83de8517b09915476e5a2bae51237"
   },
   "covers": {
     "preview_field_present": 788,
@@ -91,9 +116,7 @@
       "partial": 38,
       "sum": 277
     },
-    "interaction": "not_tested",
-    "visual_status": "awaiting_user_review",
-    "do_not_claim": "不称 0 故障或全恢复。38 张 partial 不是完整参考。hash 一致不是视觉验收。",
+    "do_not_claim": "不称 0 故障或全恢复。38 张 partial 不是完整参考。hash 一致不是视觉验收。不得把历史 470 张已映射封面全部写成 awaiting_user_review 或把 119 项 passed 抹掉。",
     "batches": {
       "batch01": {
         "attempts": 20,
@@ -136,6 +159,35 @@
         "partial": 7,
         "failed": 2,
         "mapped": 37
+      }
+    },
+    "review_and_interaction_scope": {
+      "do_not_generalize_historical_470_as_awaiting_or_untested_as_a_whole": true,
+      "new_online_mapped_277": {
+        "count": 277,
+        "cover_visual_review": "awaiting_user_review",
+        "interaction_acceptance": "not_tested",
+        "uniform": true,
+        "note": "This round’s newly ingested live captures. Records were written with these fields; none are marked passed."
+      },
+      "hash_reused_26": {
+        "count": 26,
+        "fields_unchanged_this_round": true,
+        "cover_visual_review": "awaiting_user_review",
+        "interaction_acceptance": "not_tested",
+        "note": "These original record fields already had these values at c8ba47 and were not rewritten when mapped at 887f5b or afterwards. Reported as found, not newly assigned."
+      },
+      "historical_mapped_470": {
+        "count": 470,
+        "status_not_rewritten": true,
+        "candidate_records_present": 229,
+        "cover_visual_review_counts": {
+          "passed": 119,
+          "awaiting_user_review": 110
+        },
+        "interaction_acceptance_on_those_229": "not_tested",
+        "baseline_catalog_covers_without_thumbnail_capture_record": 241,
+        "note": "Do not invent visual or interaction status for the 241 baseline catalog covers that have no reports/thumbnail-capture record. Retain the 119 passed marks; do not collapse the 470 into awaiting_user_review."
       }
     }
   },

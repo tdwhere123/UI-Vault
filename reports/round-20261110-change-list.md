@@ -8,9 +8,9 @@
 
 ## 1. 代码改动（仅候选，未真实修后回归）
 
-代码修复提交：[`c8ba47c3`](https://github.com/tdwhere123/UI-Vault/commit/c8ba47c350e9771a7c41dd5f22c21976ff7eb119)。未放宽 CSP / sandbox / form-action。本地图库访问（127.0.0.1:18771）仍 blocked，不得用线上旧站证明已修好。后续 [`887f5b5a`](https://github.com/tdwhere123/UI-Vault/commit/887f5b5ae9d83de8517b09915476e5a2bae51237) 只做 26 张 hash 复用映射并核对已有待复核原因。
+代码修复提交：[`c8ba47c3`](https://github.com/tdwhere123/UI-Vault/commit/c8ba47c350e9771a7c41dd5f22c21976ff7eb119)。未放宽 CSP / sandbox / form-action。本地图库访问（127.0.0.1:18771）仍 blocked，不得用线上旧站证明已修好。后续 [`887f5b5a`](https://github.com/tdwhere123/UI-Vault/commit/887f5b5ae9d83de8517b09915476e5a2bae51237) 并非只做 26 张 hash 复用与原因核对：该提交同时收紧了 `smoothui:image-metadata-preview` 的首屏（见下），且浏览器复验仍未完成。`887f5b` 之后的提交只做封面接入与分类，不再改 preview / runtime。
 
-十类候选修复：
+c8ba47 的十类候选修复（不含下一则 887f5b 的 metadata 小改）：
 
 1. `formity:branching-loop-interview`：访谈 Next 改为按钮点击路径，不再走 iframe 内原生 form submit。
 2. `copilotkit:resume-job-match`：简历上传控件改为 type=button 点击，不再走原生 submit。
@@ -23,6 +23,8 @@
 9. `featured/kanban`：看板箭头点击停止父级拖拽，并允许 unset dataTransfer。
 10. `fancy:elastic-line`：弹性线描边在无 pathLength=0 开场的情况下可见。影响文件已变且本就在待复核，未用线上旧站映射封面。
 
+887f5b 另有一项、不得从清单中遗漏：`smoothui:image-metadata-preview` 的首屏小改。`git show 887f5b5a -- apps/atlas-sample/batches/smooth-direct-01/runtime.js` 可见：演示外壳由 `min-h-[600px] items-center justify-center` 改为 `min-h-0 h-full w-full box-border items-center justify-center overflow-auto p-3`；插画由无 class、仅 `height:437 width:300` 改为增加 `className="max-h-[min(360px,70dvh)] w-auto h-auto object-contain"`，以便首屏放下示意图，不扩大功能集。此项待浏览器复验，不能称为已修好。该项因影响文件已变，也在原 13 项不能线上补拍之列，且本就在待复核。
+
 受限项：`astryx:library` 现缩略图是本地装饰 SVG，不是原模板摄影；`silverbullet` 与 `minipaint` 本就因核心视觉不可用而在待复核，只保留/核对原因，不是新增淘汰或删除。
 
 ## 2. 封面分区（788 是有 preview 的总数，不是缺封面数）
@@ -31,7 +33,7 @@
 - 公式：c8ba47 已映射 470 + 同 hash 真实复用 26 + 线上实拍成功映射 277 = 773。
 - 线上实拍尝试 **279** = 239 complete + 38 partial + 2 failed；成功映射 277；原 13 项排除未拍；2 项失败未映射。
 - 15 缺口 = 原排除 13 + 新失败 2，与实测一致，未凑数。
-- 全部已映射封面均为 `awaiting_user_review`，交互未测。不称 0 故障或全恢复。**38 张 partial 不是完整参考。**
+- 不要把历史 470 张已映射封面概括进本轮未审状态。本轮新接入的 277 张线上实拍封面，记录均为 `cover_visual_review: awaiting_user_review`、`interaction_acceptance: not_tested`。26 张 hash 复用沿用原记录字段（在 c8ba47 时已是上述两值，本轮未改写）。历史 470 保持原状：其中 229 张候选封面有 capture record，`cover_visual_review` 为 119 项 `passed`、110 项 `awaiting_user_review`，交互字段均为 `not_tested`；另 241 张基线 catalog 封面没有本路径下的 thumbnail-capture record，不为其编造视觉或交互状态。不称 0 故障或全恢复。**38 张 partial 不是完整参考。**
 
 ### 26 张 hash 复用（不是新的视觉验收）
 
