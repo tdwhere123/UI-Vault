@@ -40,7 +40,7 @@ export default [
     "recommendation": "review",
     "layer": "component",
     "scopeLabel": "文档树导航与本地编辑",
-    "reason": "与一般CM文档树高度重叠，SilverBullet独特知识机制没有展示",
+    "reason": "2026-11-10 浏览器复验：文档树可切换且无障碍快照有正文，但右侧编辑区在桌面视觉上持续空白。核心阅读/编辑视觉不可用，参考价值低。按既有 review 机制可逆移出默认精选并留在待复核，源码与条目保留。不宣称引擎已损坏。",
     "deliveredScope": "原TopBar/TreeView+text-document分支，宿主3文档两栏；移除page-live-preview、SpaceLua/Vim/插件/同步",
     "evidence": [
       "ui-vault-581/apps/atlas-sample/batches/silverbullet-documents-01/README.md",
@@ -269,7 +269,7 @@ export default [
     "recommendation": "review",
     "layer": "component",
     "scopeLabel": "AstryX · 素材库浏览与筛选",
-    "reason": "iframe CSP 阻断预览图，卡片预览区破图/空白，核心视觉缺失，不做封面",
+    "reason": "原 template-assets 图无法在现有 img-src（仅 data/blob）下加载。现有 30 张缩略图是本地装饰 SVG 替代素材，不是原模板摄影，视觉保真度降低，不能称为原视觉已修复。筛选/搜索仍可用，但主要参考价值已减弱，继续留在待复核，不进入默认精选。",
     "evidence": [
       "/workspace/scratch/15f43349f656/ui-vault-581/reports/thumbnail-capture/records/astryx--library.json",
       "/workspace/scratch/15f43349f656/ui-vault-581/reports/thumbnail-capture/final-closeout-summary.json"
@@ -395,8 +395,8 @@ export default [
     "id": "uilayout:timeline-animation-index",
     "recommendation": "review",
     "layer": "component",
-    "scopeLabel": "timeline-animation-index",
-    "reason": "Iframe screenshot is blank despite some accessibility text being present.",
+    "scopeLabel": "常见问题区块滚动显现",
+    "reason": "不是错文件映射。官方 timeline-animation/index.tsx 首屏就是 UI Layouts 常见问题区块目录，滚动显现才是时间线能力。中文名已改为「常见问题区块滚动显现」。保留原件，待浏览器复验滚动显现后再议，不凭旧名称淘汰。",
     "evidence": [
       "/workspace/scratch/15f43349f656/ui-vault-581/reports/thumbnail-capture/records/uilayout--timeline-animation-index.json",
       "/workspace/scratch/15f43349f656/ui-vault-581/reports/thumbnail-capture/final-closeout-summary.json"
@@ -1348,7 +1348,7 @@ export default [
     "recommendation": "review",
     "layer": "page",
     "scopeLabel": "原画笔/图层/历史完整",
-    "reason": "真实可画不等于原版外观；广泛资产改动可能显著影响工具可读性，优先原生复验。",
+    "reason": "2026-11-10 浏览器复验：画笔已选且坐标随指针变化，但多次真实拖绘后画布无可见笔迹。核心绘制不可用，代码根因未证，参考价值低。按既有 review 可逆移出默认精选并留在待复核，源码与条目保留。不继续无限改工具，也不把未证实损坏写成结论。",
     "deliveredScope": "原画笔/图层/历史完整，但功能图标/位图/字体全部改系统文字符号，默认平滑helper也有透明替换。",
     "evidence": [
       "ui-runtime-health-integration/apps/atlas-sample/batches/minipaint-workspace-01/README.md",
@@ -3663,9 +3663,9 @@ export default [
     "id": "fancy:elastic-line",
     "recommendation": "review",
     "layer": "experiment",
-    "reason": "历史观察待复验，非当前故障复现：原SVG二次曲线与pathLength动画存在，useDimensions依赖首次几何及resize；匹配资源的Grok只见大字未见线，需真实几何/线段复验，尚未证明根因。",
+    "reason": "2026-11-10 复验曾确认路径几何随拖动更新但曲线不可见。代码已去掉 pathLength:0 入场并固定可见描边，真实浏览器尚未复验，不能记通过。不凭名称淘汰。共享 runtime 变更后，同批已有 webp 与当前资源 hash 不再一致，不得盲回填，待重拍。",
     "scopeLabel": "弹性曲线排版实验",
-    "deliveredScope": "原SVG二次曲线与pathLength动画存在，useDimensions依赖首次几何及resize；匹配资源的Grok只见大字未见线，需真实几何/线段复验，尚未证明根因。",
+    "deliveredScope": "官方弹性线交互仍在；描边改为默认可见，待真实浏览器确认。不是名称错误条目。",
     "evidence": [
       "/tmp/ui-fancy-adapt/src/fancy/components/physics/elastic-line.tsx",
       "/tmp/ui-fancy-adapt/src/hooks/use-dimensions.ts"
