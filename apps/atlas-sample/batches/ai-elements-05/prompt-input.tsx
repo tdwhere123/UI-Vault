@@ -918,7 +918,21 @@ export const PromptInput = ({
       <form
         className={cn("w-full", className)}
         onSubmit={handleSubmit}
-        ref={formRef}
+        ref={(node) => {
+          formRef.current = node;
+          if (node) {
+            (node as HTMLFormElement & {
+              __promptInputSubmit?: (event?: Event) => unknown;
+            }).__promptInputSubmit = (event?: Event) => {
+              event?.preventDefault?.();
+              return handleSubmit({
+                preventDefault() {},
+                currentTarget: node,
+                target: node,
+              } as Parameters<typeof handleSubmit>[0]);
+            };
+          }
+        }}
         {...props}
       >
         <InputGroup className="overflow-hidden">{children}</InputGroup>
@@ -983,16 +997,20 @@ export const PromptInputTextarea = ({
         }
         e.preventDefault();
 
-        // Check if the submit button is disabled before submitting
+        // Call the in-form submit handler directly. Native requestSubmit() is
+        // blocked in the preview iframe (sandbox without allow-forms, form-action none).
         const { form } = e.currentTarget;
         const submitButton = form?.querySelector(
-          'button[type="submit"]'
+          'button[aria-label="Submit"], button[type="submit"]'
         ) as HTMLButtonElement | null;
         if (submitButton?.disabled) {
           return;
         }
 
-        form?.requestSubmit();
+        const submit = (
+          form as (HTMLFormElement & { __promptInputSubmit?: (event?: Event) => unknown }) | null
+        )?.__promptInputSubmit;
+        submit?.(e.nativeEvent);
       }
 
       // Remove last attachment when Backspace is pressed and textarea is empty
@@ -1243,6 +1261,14 @@ export const PromptInputSubmit = ({
         return;
       }
       onClick?.(e);
+      if (e.defaultPrevented) {
+        return;
+      }
+      e.preventDefault();
+      const form = e.currentTarget.form as
+        | (HTMLFormElement & { __promptInputSubmit?: (event?: Event) => unknown })
+        | null;
+      form?.__promptInputSubmit?.(e.nativeEvent);
     },
     [isGenerating, onStop, onClick]
   );
@@ -1253,7 +1279,7 @@ export const PromptInputSubmit = ({
       className={cn(className)}
       onClick={handleClick}
       size={size}
-      type={isGenerating && onStop ? "button" : "submit"}
+      type="button"
       variant={variant}
       {...props}
     >
