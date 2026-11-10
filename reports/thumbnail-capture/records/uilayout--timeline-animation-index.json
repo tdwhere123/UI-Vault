@@ -1,48 +1,122 @@
 {
   "id": "uilayout:timeline-animation-index",
-  "path": null,
-  "status": "failed",
-  "screenshot_status": "failed",
-  "compression_status": "not_attempted",
+  "path": "apps/atlas-sample/thumbnails/uilayout--timeline-animation-index.webp",
+  "status": "render_capture_processed",
+  "screenshot_status": "captured_render_confirmed",
+  "compression_status": "passed",
   "viewport": {
-    "width": null,
-    "height": null,
-    "status": "unknown"
+    "width": 1920,
+    "height": 1072
   },
-  "actions": "Captured default iframe frame; no navigation or external links.",
-  "render_state": "failed_blank_preview",
+  "actions": [
+    "Opened the live gallery detail from the card URL and captured the visible #demo iframe with a native desktop screenshot.",
+    "Returned to the gallery after capture.",
+    "Interaction was not tested.",
+    "Operator recorded this capture as partial; contain fitting must not be described as a complete restoration."
+  ],
+  "render_state": "Preview renders a UI Layouts FAQ-block index with a promotional banner; no scroll-timeline or FAQ-reveal behavior is visible in this first screen. Captured as shown, not described as a demonstrated animation.",
   "interaction_acceptance": "not_tested",
-  "failure_reason": "Iframe screenshot is blank despite some accessibility text being present.",
-  "cover_visual_review": "failed",
-  "presentation_class": "failed",
+  "failure_reason": null,
+  "source_screenshot_sha256": "a49a658753ee276251eabb6a9b3c3c66a3fa4c7282a8a5e0af2d1abd1b98557e",
+  "source_dimensions": [
+    680,
+    440
+  ],
+  "requested_rect": [
+    0,
+    0,
+    680,
+    440
+  ],
+  "fitted_crop_box": [
+    0,
+    0,
+    680,
+    440
+  ],
+  "resize": [
+    680,
+    440
+  ],
+  "fit": "contain",
+  "placement": {
+    "content_size": [
+      680,
+      440
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "background_rgb": [
+      255,
+      255,
+      255
+    ]
+  },
   "detail_url": "https://tdwhere123.github.io/UI-Vault/#/item/uilayout%3Atimeline-animation-index",
-  "baseline": "77ada4cd095d383cf1e9c774f7cc1518da9b1b55",
+  "baseline": "887f5b5ae9d83de8517b09915476e5a2bae51237",
   "resource_verification": [
     {
       "url": "https://tdwhere123.github.io/UI-Vault/batches/uilayout-next-02/timeline-animation-index.html",
       "repository_path": "apps/atlas-sample/batches/uilayout-next-02/timeline-animation-index.html",
       "public_sha256": "e69a33b1b694fa4a3723ac1adf40544b4ee0b2746f71f767d0aaaf594e43f461",
       "local_sha256": "e69a33b1b694fa4a3723ac1adf40544b4ee0b2746f71f767d0aaaf594e43f461",
+      "target_sha256": "e69a33b1b694fa4a3723ac1adf40544b4ee0b2746f71f767d0aaaf594e43f461",
       "bytes": 277,
       "match": true
     },
     {
       "url": "https://tdwhere123.github.io/UI-Vault/batches/uilayout-next-02/runtime.css",
       "repository_path": "apps/atlas-sample/batches/uilayout-next-02/runtime.css",
-      "public_sha256": "49ac10fb226d12bb57164f9e591ca75592e91aa888e6d7a6248ade5ad7a2938f",
-      "local_sha256": "49ac10fb226d12bb57164f9e591ca75592e91aa888e6d7a6248ade5ad7a2938f",
-      "bytes": 65579,
+      "public_sha256": "6e4abb243774627bfc5837150868913958a299772c85fdb845edf3aad2050e05",
+      "local_sha256": "6e4abb243774627bfc5837150868913958a299772c85fdb845edf3aad2050e05",
+      "target_sha256": "6e4abb243774627bfc5837150868913958a299772c85fdb845edf3aad2050e05",
+      "bytes": 65780,
       "match": true
     },
     {
       "url": "https://tdwhere123.github.io/UI-Vault/batches/uilayout-next-02/runtime.js",
       "repository_path": "apps/atlas-sample/batches/uilayout-next-02/runtime.js",
-      "public_sha256": "6b066a383be8557449bb0c2517373717b75e13eb547d0c6852c352059bd313bd",
-      "local_sha256": "6b066a383be8557449bb0c2517373717b75e13eb547d0c6852c352059bd313bd",
-      "bytes": 589756,
+      "public_sha256": "409c88ded52e56367ec33577851ca09a17b9d565c6989bf36a7312c73470d273",
+      "local_sha256": "409c88ded52e56367ec33577851ca09a17b9d565c6989bf36a7312c73470d273",
+      "target_sha256": "409c88ded52e56367ec33577851ca09a17b9d565c6989bf36a7312c73470d273",
+      "bytes": 590152,
       "match": true
     }
   ],
-  "capture_json_status": "failed_blank_preview",
-  "limitations": "Iframe screenshot is blank despite some accessibility text being present."
+  "cover_visual_review": "awaiting_user_review",
+  "webp_quality": 86,
+  "bytes": 9030,
+  "sha256": "2c59a0fbded6453b14e23a606bfe5abf26aba032bbeafd258c2ba74ead743631",
+  "presentation_class": "partial",
+  "capture_json_status": "partial",
+  "processor_note": "整 iframe contain；presentation=partial；awaiting_user_review；interaction not_tested。contain 处理不把已裁切/不完整原图声明为完整恢复。源图未二次裁掉内容。 本批使用已交付 680x440 PNG 整画布转换，不再次裁切。 本项按真实截图接入为 partial，记录原因保留。不把局部裁切、控件重叠、未见预期动效或资源缺失写成已修好或完整恢复，也不据此一刀切淘汰。",
+  "limitations": "Preview renders a UI Layouts FAQ-block index with a promotional banner; no scroll-timeline or FAQ-reveal behavior is visible in this first screen. Captured as shown, not described as a demonstrated animation.",
+  "source_live_sha": "56d4a215487cf1ea3a07d1a50ae612d33e93cc3b",
+  "target_sha": "887f5b5ae9d83de8517b09915476e5a2bae51237",
+  "live_sha_unchanged_during_capture": true,
+  "native_desktop_source_sha256": "178a4b25c586c63aa8af66ed6c9eb3ae67f2491129ee000955873b5d9976e8a1",
+  "capture_timestamp": "2026-11-10T16:35:49.360338+08:00",
+  "native_desktop_source_dimensions": [
+    1920,
+    1200
+  ],
+  "native_visible_iframe_rect": [
+    286,
+    375,
+    1538,
+    578
+  ],
+  "capture_method": "Native desktop screenshot of the live gallery detail preview iframe #demo; lossless PNG copy of the original tool screenshot, with a separate contain-fit cover PNG. No Browser screenshot or programmatic page capture.",
+  "source_png_preserved": true,
+  "supersedes_needs_recapture": {
+    "supersedes_unmapped_old_partial_or_needs_recapture": true,
+    "prior_status": "failed",
+    "prior_presentation_class": "failed",
+    "prior_limitations": "Iframe screenshot is blank despite some accessibility text being present.",
+    "prior_baseline": "77ada4cd095d383cf1e9c774f7cc1518da9b1b55",
+    "prior_sha256": null,
+    "previous_screenshot_sha256": null
+  }
 }

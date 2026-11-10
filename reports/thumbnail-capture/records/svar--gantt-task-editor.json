@@ -1,0 +1,73 @@
+{
+  "id": "svar:gantt-task-editor",
+  "path": null,
+  "status": "failed",
+  "screenshot_status": "failed_preview_no_main_ui",
+  "compression_status": "not_attempted",
+  "presentation_class": "failed",
+  "capture_json_status": "failed",
+  "mapped_as_catalog_cover": false,
+  "not_counted_as_success": true,
+  "not_used_as_normal_ui_cover": true,
+  "inventory_webp_not_substituted": true,
+  "cover_visual_review": "awaiting_user_review",
+  "interaction_acceptance": "not_tested",
+  "reason": "The preview iframe is blank and the gallery reports “ResizeObserver loop completed with undelivered notifications.” No Gantt UI rendered.",
+  "limitations": "The preview iframe is blank and the gallery reports “ResizeObserver loop completed with undelivered notifications.” No Gantt UI rendered.",
+  "unmapped_reason": "The live #demo preview shows only an error surface, not the main UI. The original capture is kept as evidence and must not be used as a normal UI cover. No inventory webp was substituted.",
+  "observed_message": "预览发生错误：ResizeObserver loop completed with undelivered notifications.",
+  "visual_confirmation": "The 680x440 #demo capture is a nearly blank white frame whose only visible content is this error sentence; no Gantt chrome, task rows, or timescale is present. This is the in-preview error surface, not a console-only log.",
+  "environment_scope": "Failure observed on the live 56d4 preview used only for same-content cover mapping to 887f5b. Root cause unknown. A single in-preview error message is not proof that the upstream source is broken. Do not permanently delete the catalog entry.",
+  "evidence_image": "reports/thumbnail-capture/evidence/svar--gantt-task-editor.failed-preview.png",
+  "evidence_image_sha256": "92d0f5332bef9353c8a18ee61b3d09bcbb4ea1c7c463eaa7bbe20e38a8507389",
+  "evidence_image_bytes": 5155,
+  "detail_url": "https://tdwhere123.github.io/UI-Vault/#/item/svar%3Agantt-task-editor",
+  "source_live_sha": "56d4a215487cf1ea3a07d1a50ae612d33e93cc3b",
+  "target_sha": "887f5b5ae9d83de8517b09915476e5a2bae51237",
+  "live_sha_unchanged_during_capture": true,
+  "baseline": "887f5b5ae9d83de8517b09915476e5a2bae51237",
+  "resource_verification": [
+    {
+      "url": "https://tdwhere123.github.io/UI-Vault/batches/svar-gantt-01/index.html",
+      "repository_path": "apps/atlas-sample/batches/svar-gantt-01/index.html",
+      "public_sha256": "7e6ecf8d51d41c334d46dadb1f326005f429da286e01f46f5477c83e3147706f",
+      "local_sha256": "7e6ecf8d51d41c334d46dadb1f326005f429da286e01f46f5477c83e3147706f",
+      "target_sha256": "7e6ecf8d51d41c334d46dadb1f326005f429da286e01f46f5477c83e3147706f",
+      "bytes": 458,
+      "match": true
+    },
+    {
+      "url": "https://tdwhere123.github.io/UI-Vault/batches/svar-gantt-01/runtime.css",
+      "repository_path": "apps/atlas-sample/batches/svar-gantt-01/runtime.css",
+      "public_sha256": "0fc7824b22af606602673fafd75f0812d27adb300f43d1ad7a8172b859f963c5",
+      "local_sha256": "0fc7824b22af606602673fafd75f0812d27adb300f43d1ad7a8172b859f963c5",
+      "target_sha256": "0fc7824b22af606602673fafd75f0812d27adb300f43d1ad7a8172b859f963c5",
+      "bytes": 192721,
+      "match": true
+    },
+    {
+      "url": "https://tdwhere123.github.io/UI-Vault/batches/svar-gantt-01/runtime.js",
+      "repository_path": "apps/atlas-sample/batches/svar-gantt-01/runtime.js",
+      "public_sha256": "e83c9a4f492a6af35c710e0dc004db40e23ed84b08574487ece8a46605824e02",
+      "local_sha256": "e83c9a4f492a6af35c710e0dc004db40e23ed84b08574487ece8a46605824e02",
+      "target_sha256": "e83c9a4f492a6af35c710e0dc004db40e23ed84b08574487ece8a46605824e02",
+      "bytes": 493371,
+      "match": true
+    }
+  ],
+  "native_desktop_source_sha256": "5026432c79be8b6233e8cb7277696d5990094555ca08dd7635747c90e41cd508",
+  "capture_timestamp": "2026-11-10T16:28:44.726101+08:00",
+  "native_desktop_source_dimensions": [
+    1920,
+    1200
+  ],
+  "native_visible_iframe_rect": [
+    286,
+    375,
+    1538,
+    578
+  ],
+  "capture_method": "Native desktop screenshot of the live gallery detail preview iframe #demo; lossless PNG copy of the original tool screenshot, with a separate contain-fit cover PNG. No Browser screenshot or programmatic page capture.",
+  "source_png_preserved": true,
+  "processor_note": "失败预览原截图仅作取证，不写入 thumbnails、不写入 catalog.thumbnail、不充当正常 UI 封面。不借库存旧图充数。根因未知，仅记录此环境预览失败。"
+}

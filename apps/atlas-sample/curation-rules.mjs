@@ -1421,10 +1421,10 @@ export default [
   },
   {
     "id": "jsoncrack:structured-data-atlas",
-    "recommendation": "retain",
+    "recommendation": "review",
     "layer": "component",
     "scopeLabel": "官方Chrome扩展Raw/Graph+节点详情",
-    "reason": "保留结构查看场景，不称官网Monaco全编辑器；同步布局输入上限与冷启动需关注。",
+    "reason": "2026-11-10 线上未改动预览补拍（hash 仅映射资格，非视觉验收）：#demo 预览为深色空窗，仅见 “JSON viewer unavailable. Close and reopen.” 及关闭/重开控件，未见结构化数据图谱或编辑主界面。这是预览内错误表面，不是仅有的 console 日志。仅记录此环境预览失败，根因未知，不能凭单条错误文案判定上游源码已损坏。按既有 review 机制可逆移出默认精选并留在待复核，源码与条目保留，不永久删除。错误界面截图只作取证，不作为正常 UI 封面，也不用库存旧图充数。",
     "deliveredScope": "官方Chrome扩展Raw/Graph+节点详情，原解析与ELK，本地输入明确宿主。",
     "evidence": [
       "ui-runtime-health-integration/apps/atlas-sample/batches/jsoncrack-extension-01/README.md",
@@ -9456,10 +9456,10 @@ export default [
   },
   {
     "id": "svar:gantt-task-editor",
-    "recommendation": "retain",
+    "recommendation": "review",
     "layer": "page",
     "scopeLabel": "原GanttEditor任务/依赖/侧栏",
-    "reason": "保留明确范围内的原示例/组件或原引擎场景；不因静态、无后台或未做native验收降级。范围差异单列，不冒称全站完整或原生通过。",
+    "reason": "2026-11-10 线上未改动预览补拍（hash 仅映射资格，非视觉验收）：#demo 预览几乎为空白白底，仅见「预览发生错误：ResizeObserver loop completed with undelivered notifications.」，未见 Gantt 主界面（无任务行、时间尺或编辑器外壳）。这是预览内错误表面，不是仅有的 console 日志。仅记录此环境预览失败，根因未知，不能凭单条 ResizeObserver 信息判定上游源码已损坏。按既有 review 机制可逆移出默认精选并留在待复核，源码与条目保留，不永久删除。错误界面截图只作取证，不作为正常 UI 封面，也不用库存旧图充数。",
     "deliveredScope": "原GanttEditor任务/依赖/侧栏；Lucide替字体图标，新建日期可能在窗外",
     "evidence": [
       "ui-runtime-health-integration/apps/atlas-sample/batches/svar-gantt-01/README.md",

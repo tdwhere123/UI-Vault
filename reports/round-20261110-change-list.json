@@ -1,0 +1,2000 @@
+{
+  "documentType": "round-change-list-final-20261110",
+  "generated_at_local": "2026-11-10 16:49:03",
+  "timezone": "Asia/Taipei (UTC+8)",
+  "published": false,
+  "merged_to_main": false,
+  "publication_approval": false,
+  "round_closed": true,
+  "no_automatic_next_step": true,
+  "live_site": "https://tdwhere123.github.io/UI-Vault/",
+  "source_live_sha_frozen": "56d4a215487cf1ea3a07d1a50ae612d33e93cc3b",
+  "target_sha": "887f5b5ae9d83de8517b09915476e5a2bae51237",
+  "feature_branch": "fix/browser-retest-20261110-aheng",
+  "feature_tip_note": "Exact commit SHA is the tip of this branch after the close-out commit. Branch blob links below resolve on that branch.",
+  "feature_branch_url": "https://github.com/tdwhere123/UI-Vault/tree/fix/browser-retest-20261110-aheng",
+  "code_fixes": {
+    "status": "candidate_only_not_browser_regressed",
+    "tip_of_code_fix": "c8ba47c350e9771a7c41dd5f22c21976ff7eb119",
+    "code_fix_commit_url": "https://github.com/tdwhere123/UI-Vault/commit/c8ba47c350e9771a7c41dd5f22c21976ff7eb119",
+    "followup_mapping_commit": "887f5b5ae9d83de8517b09915476e5a2bae51237",
+    "categories_10": [
+      {
+        "id": "formity:branching-loop-interview",
+        "change": "访谈 Next 改为按钮点击路径，不再走 iframe 内原生 form submit。"
+      },
+      {
+        "id": "copilotkit:resume-job-match",
+        "change": "简历上传控件改为 type=button 点击，不再走原生 submit。"
+      },
+      {
+        "id": "pdfjs:local-text-reader",
+        "change": "PDF 文本搜索不再只依赖 form submit。"
+      },
+      {
+        "id": "ai-elements prompt-input",
+        "change": "提示提交不再调用 requestSubmit。"
+      },
+      {
+        "id": "aicanvas:peel-corner-reveal",
+        "change": "揭页控件改为真实 button 并响应 click，不只依赖 onTap/onKeyDown。"
+      },
+      {
+        "id": "vis-timeline:local-task-planner",
+        "change": "时间线容器给予明确尺寸并延迟重绘。仍因核心呈现/影响文件变化未能线上补拍，且本就在待复核。"
+      },
+      {
+        "id": "astryx:library",
+        "change": "缩略图改为本地装饰 SVG fixture，不再指向 template-assets。受限：不是原模板摄影，不能称原视觉已修复；本就在待复核。"
+      },
+      {
+        "id": "uilayout:timeline-animation-index",
+        "change": "中文展示名改为符合官方 FAQ 目录首屏的实际内容。该项本就在待复核，封面按 FAQ 首屏以 partial 接入，未见滚动时间线动效。"
+      },
+      {
+        "id": "featured/kanban",
+        "change": "看板箭头点击停止父级拖拽，并允许 unset dataTransfer。"
+      },
+      {
+        "id": "fancy:elastic-line",
+        "change": "弹性线描边在无 pathLength=0 开场的情况下可见。影响文件已变且本就在待复核，未用线上旧站映射封面。"
+      }
+    ],
+    "restricted_items": [
+      "astryx:library 的本地 SVG 只是替代素材，不是原模板摄影。",
+      "silverbullet:document-navigation-workspace 与 minipaint:original-layered-paint-workspace 本就因核心视觉不可用而在待复核，本轮只核对/保留原因，不是新增淘汰或删除。",
+      "未放宽 CSP、sandbox 或 form-action。"
+    ],
+    "regression": "仅有代码级测试。本地站点（127.0.0.1:18771）真实浏览器复验仍 blocked。不得用线上旧站 56d4 证明这些修复已成立。"
+  },
+  "covers": {
+    "preview_field_present": 788,
+    "mapped_final": 773,
+    "missing_final": 15,
+    "missing_breakdown": {
+      "original_online_ineligible": 13,
+      "batch06_failed_unmapped": 2,
+      "sum": 15,
+      "formula": "470 already mapped at c8ba47 + 26 hash-reused + 277 mapped online captures = 773; 788-773=15"
+    },
+    "hash_verified_reused": 26,
+    "online_capture_attempts": 279,
+    "online_attempts_breakdown": {
+      "complete": 239,
+      "partial": 38,
+      "failed": 2,
+      "sum": 279
+    },
+    "online_mapped": 277,
+    "online_mapped_breakdown": {
+      "complete": 239,
+      "partial": 38,
+      "sum": 277
+    },
+    "interaction": "not_tested",
+    "visual_status": "awaiting_user_review",
+    "do_not_claim": "不称 0 故障或全恢复。38 张 partial 不是完整参考。hash 一致不是视觉验收。",
+    "batches": {
+      "batch01": {
+        "attempts": 20,
+        "complete": 13,
+        "partial": 7,
+        "failed": 0,
+        "mapped": 20
+      },
+      "batch02": {
+        "attempts": 40,
+        "complete": 24,
+        "partial": 16,
+        "failed": 0,
+        "mapped": 40
+      },
+      "batch03": {
+        "attempts": 60,
+        "complete": 55,
+        "partial": 5,
+        "failed": 0,
+        "mapped": 60
+      },
+      "batch04": {
+        "attempts": 60,
+        "complete": 58,
+        "partial": 2,
+        "failed": 0,
+        "mapped": 60
+      },
+      "batch05": {
+        "attempts": 60,
+        "complete": 59,
+        "partial": 1,
+        "failed": 0,
+        "mapped": 60
+      },
+      "batch06": {
+        "attempts": 39,
+        "complete": 30,
+        "partial": 7,
+        "failed": 2,
+        "mapped": 37
+      }
+    }
+  },
+  "hash_verified_reused_26": [
+    {
+      "id": "animata:aperture-reveal",
+      "title": "光圈揭幕滚动首屏",
+      "webp_path": "thumbnails/animata--aperture-reveal.webp",
+      "preview": "batches/animata-next-04/aperture-reveal.html",
+      "repo_webp": "apps/atlas-sample/thumbnails/animata--aperture-reveal.webp",
+      "hash_basis": "At tip c8ba47c3, current preview and runtime sha256 matched the existing capture record and the 680x440 webp still existed; mapped in 887f5b5a. Hash match was mapping eligibility only, not visual acceptance. Shared-runtime-changed items were not reused.",
+      "url": "https://github.com/tdwhere123/UI-Vault/blob/fix/browser-retest-20261110-aheng/apps/atlas-sample/thumbnails/animata--aperture-reveal.webp"
+    },
+    {
+      "id": "animata:product-features",
+      "title": "立体商品展示首屏",
+      "webp_path": "thumbnails/animata--product-features.webp",
+      "preview": "batches/animata-next-01/product-features.html",
+      "repo_webp": "apps/atlas-sample/thumbnails/animata--product-features.webp",
+      "hash_basis": "At tip c8ba47c3, current preview and runtime sha256 matched the existing capture record and the 680x440 webp still existed; mapped in 887f5b5a. Hash match was mapping eligibility only, not visual acceptance. Shared-runtime-changed items were not reused.",
+      "url": "https://github.com/tdwhere123/UI-Vault/blob/fix/browser-retest-20261110-aheng/apps/atlas-sample/thumbnails/animata--product-features.webp"
+    },
+    {
+      "id": "assistant-elements:research-report",
+      "title": "研究报告生成态",
+      "webp_path": "thumbnails/assistant-elements--research-report.webp",
+      "preview": "batches/assistant-elements-03/research-report.html",
+      "repo_webp": "apps/atlas-sample/thumbnails/assistant-elements--research-report.webp",
+      "hash_basis": "At tip c8ba47c3, current preview and runtime sha256 matched the existing capture record and the 680x440 webp still existed; mapped in 887f5b5a. Hash match was mapping eligibility only, not visual acceptance. Shared-runtime-changed items were not reused.",
+      "url": "https://github.com/tdwhere123/UI-Vault/blob/fix/browser-retest-20261110-aheng/apps/atlas-sample/thumbnails/assistant-elements--research-report.webp"
+    },
+    {
+      "id": "assistant-elements:stopped-run",
+      "title": "中断输出富显示",
+      "webp_path": "thumbnails/assistant-elements--stopped-run.webp",
+      "preview": "batches/assistant-elements-03/stopped-run.html",
+      "repo_webp": "apps/atlas-sample/thumbnails/assistant-elements--stopped-run.webp",
+      "hash_basis": "At tip c8ba47c3, current preview and runtime sha256 matched the existing capture record and the 680x440 webp still existed; mapped in 887f5b5a. Hash match was mapping eligibility only, not visual acceptance. Shared-runtime-changed items were not reused.",
+      "url": "https://github.com/tdwhere123/UI-Vault/blob/fix/browser-retest-20261110-aheng/apps/atlas-sample/thumbnails/assistant-elements--stopped-run.webp"
+    },
+    {
+      "id": "assistant-elements:terminal-block",
+      "title": "逐行终端输出",
+      "webp_path": "thumbnails/assistant-elements--terminal-block.webp",
+      "preview": "batches/assistant-elements-02/terminal-block.html",
+      "repo_webp": "apps/atlas-sample/thumbnails/assistant-elements--terminal-block.webp",
+      "hash_basis": "At tip c8ba47c3, current preview and runtime sha256 matched the existing capture record and the 680x440 webp still existed; mapped in 887f5b5a. Hash match was mapping eligibility only, not visual acceptance. Shared-runtime-changed items were not reused.",
+      "url": "https://github.com/tdwhere123/UI-Vault/blob/fix/browser-retest-20261110-aheng/apps/atlas-sample/thumbnails/assistant-elements--terminal-block.webp"
+    },
+    {
+      "id": "assistant-elements:tool-call",
+      "title": "工具调用详情",
+      "webp_path": "thumbnails/assistant-elements--tool-call.webp",
+      "preview": "batches/assistant-elements-02/tool-call.html",
+      "repo_webp": "apps/atlas-sample/thumbnails/assistant-elements--tool-call.webp",
+      "hash_basis": "At tip c8ba47c3, current preview and runtime sha256 matched the existing capture record and the 680x440 webp still existed; mapped in 887f5b5a. Hash match was mapping eligibility only, not visual acceptance. Shared-runtime-changed items were not reused.",
+      "url": "https://github.com/tdwhere123/UI-Vault/blob/fix/browser-retest-20261110-aheng/apps/atlas-sample/thumbnails/assistant-elements--tool-call.webp"
+    },
+    {
+      "id": "assistant-elements:tool-group",
+      "title": "并行工具组",
+      "webp_path": "thumbnails/assistant-elements--tool-group.webp",
+      "preview": "batches/assistant-elements-02/tool-group.html",
+      "repo_webp": "apps/atlas-sample/thumbnails/assistant-elements--tool-group.webp",
+      "hash_basis": "At tip c8ba47c3, current preview and runtime sha256 matched the existing capture record and the 680x440 webp still existed; mapped in 887f5b5a. Hash match was mapping eligibility only, not visual acceptance. Shared-runtime-changed items were not reused.",
+      "url": "https://github.com/tdwhere123/UI-Vault/blob/fix/browser-retest-20261110-aheng/apps/atlas-sample/thumbnails/assistant-elements--tool-group.webp"
+    },
+    {
+      "id": "assistant-elements:web-preview",
+      "title": "网页预览容器",
+      "webp_path": "thumbnails/assistant-elements--web-preview.webp",
+      "preview": "batches/assistant-elements-04/web-preview.html",
+      "repo_webp": "apps/atlas-sample/thumbnails/assistant-elements--web-preview.webp",
+      "hash_basis": "At tip c8ba47c3, current preview and runtime sha256 matched the existing capture record and the 680x440 webp still existed; mapped in 887f5b5a. Hash match was mapping eligibility only, not visual acceptance. Shared-runtime-changed items were not reused.",
+      "url": "https://github.com/tdwhere123/UI-Vault/blob/fix/browser-retest-20261110-aheng/apps/atlas-sample/thumbnails/assistant-elements--web-preview.webp"
+    },
+    {
+      "id": "assistant-elements:web-search",
+      "title": "搜索结果流",
+      "webp_path": "thumbnails/assistant-elements--web-search.webp",
+      "preview": "batches/assistant-elements-04/web-search.html",
+      "repo_webp": "apps/atlas-sample/thumbnails/assistant-elements--web-search.webp",
+      "hash_basis": "At tip c8ba47c3, current preview and runtime sha256 matched the existing capture record and the 680x440 webp still existed; mapped in 887f5b5a. Hash match was mapping eligibility only, not visual acceptance. Shared-runtime-changed items were not reused.",
+      "url": "https://github.com/tdwhere123/UI-Vault/blob/fix/browser-retest-20261110-aheng/apps/atlas-sample/thumbnails/assistant-elements--web-search.webp"
+    },
+    {
+      "id": "blode:lighting",
+      "title": "Blode · 窗景透视与光影材质",
+      "webp_path": "thumbnails/blode--lighting.webp",
+      "preview": "batches/blode-lighting-01/index.html",
+      "repo_webp": "apps/atlas-sample/thumbnails/blode--lighting.webp",
+      "hash_basis": "At tip c8ba47c3, current preview and runtime sha256 matched the existing capture record and the 680x440 webp still existed; mapped in 887f5b5a. Hash match was mapping eligibility only, not visual acceptance. Shared-runtime-changed items were not reused.",
+      "url": "https://github.com/tdwhere123/UI-Vault/blob/fix/browser-retest-20261110-aheng/apps/atlas-sample/thumbnails/blode--lighting.webp"
+    },
+    {
+      "id": "blode:markers",
+      "title": "Blode · 长文阅读刻度与章节轨道",
+      "webp_path": "thumbnails/blode--markers.webp",
+      "preview": "batches/blode-markers-01/index.html",
+      "repo_webp": "apps/atlas-sample/thumbnails/blode--markers.webp",
+      "hash_basis": "At tip c8ba47c3, current preview and runtime sha256 matched the existing capture record and the 680x440 webp still existed; mapped in 887f5b5a. Hash match was mapping eligibility only, not visual acceptance. Shared-runtime-changed items were not reused.",
+      "url": "https://github.com/tdwhere123/UI-Vault/blob/fix/browser-retest-20261110-aheng/apps/atlas-sample/thumbnails/blode--markers.webp"
+    },
+    {
+      "id": "cult:feature-carousel",
+      "title": "多层空间编排功能轮播",
+      "webp_path": "thumbnails/cult--feature-carousel.webp",
+      "preview": "batches/cult-carousel-01/feature-carousel.html",
+      "repo_webp": "apps/atlas-sample/thumbnails/cult--feature-carousel.webp",
+      "hash_basis": "At tip c8ba47c3, current preview and runtime sha256 matched the existing capture record and the 680x440 webp still existed; mapped in 887f5b5a. Hash match was mapping eligibility only, not visual acceptance. Shared-runtime-changed items were not reused.",
+      "url": "https://github.com/tdwhere123/UI-Vault/blob/fix/browser-retest-20261110-aheng/apps/atlas-sample/thumbnails/cult--feature-carousel.webp"
+    },
+    {
+      "id": "cult:floating-panel",
+      "title": "floating-panel",
+      "webp_path": "thumbnails/cult--floating-panel.webp",
+      "preview": "batches/cult-direct-02/floating-panel.html",
+      "repo_webp": "apps/atlas-sample/thumbnails/cult--floating-panel.webp",
+      "hash_basis": "At tip c8ba47c3, current preview and runtime sha256 matched the existing capture record and the 680x440 webp still existed; mapped in 887f5b5a. Hash match was mapping eligibility only, not visual acceptance. Shared-runtime-changed items were not reused.",
+      "url": "https://github.com/tdwhere123/UI-Vault/blob/fix/browser-retest-20261110-aheng/apps/atlas-sample/thumbnails/cult--floating-panel.webp"
+    },
+    {
+      "id": "cult:marketing-hero-analytics",
+      "title": "marketing-hero-analytics",
+      "webp_path": "thumbnails/cult--marketing-hero-analytics.webp",
+      "preview": "batches/cult-direct-01/marketing-hero-analytics.html",
+      "repo_webp": "apps/atlas-sample/thumbnails/cult--marketing-hero-analytics.webp",
+      "hash_basis": "At tip c8ba47c3, current preview and runtime sha256 matched the existing capture record and the 680x440 webp still existed; mapped in 887f5b5a. Hash match was mapping eligibility only, not visual acceptance. Shared-runtime-changed items were not reused.",
+      "url": "https://github.com/tdwhere123/UI-Vault/blob/fix/browser-retest-20261110-aheng/apps/atlas-sample/thumbnails/cult--marketing-hero-analytics.webp"
+    },
+    {
+      "id": "cult:side-panel",
+      "title": "页内上下文摘要侧栏",
+      "webp_path": "thumbnails/cult--side-panel.webp",
+      "preview": "batches/cult-sidepanel-01/side-panel.html",
+      "repo_webp": "apps/atlas-sample/thumbnails/cult--side-panel.webp",
+      "hash_basis": "At tip c8ba47c3, current preview and runtime sha256 matched the existing capture record and the 680x440 webp still existed; mapped in 887f5b5a. Hash match was mapping eligibility only, not visual acceptance. Shared-runtime-changed items were not reused.",
+      "url": "https://github.com/tdwhere123/UI-Vault/blob/fix/browser-retest-20261110-aheng/apps/atlas-sample/thumbnails/cult--side-panel.webp"
+    },
+    {
+      "id": "cult:toolbar-expandable",
+      "title": "toolbar-expandable",
+      "webp_path": "thumbnails/cult--toolbar-expandable.webp",
+      "preview": "batches/cult-direct-03/toolbar-expandable.html",
+      "repo_webp": "apps/atlas-sample/thumbnails/cult--toolbar-expandable.webp",
+      "hash_basis": "At tip c8ba47c3, current preview and runtime sha256 matched the existing capture record and the 680x440 webp still existed; mapped in 887f5b5a. Hash match was mapping eligibility only, not visual acceptance. Shared-runtime-changed items were not reused.",
+      "url": "https://github.com/tdwhere123/UI-Vault/blob/fix/browser-retest-20261110-aheng/apps/atlas-sample/thumbnails/cult--toolbar-expandable.webp"
+    },
+    {
+      "id": "excalidraw:local-board",
+      "title": "Excalidraw · 本地草图编辑（限定功能）",
+      "webp_path": "thumbnails/excalidraw--local-board.webp",
+      "preview": "batches/excalidraw-01/index.html",
+      "repo_webp": "apps/atlas-sample/thumbnails/excalidraw--local-board.webp",
+      "hash_basis": "At tip c8ba47c3, current preview and runtime sha256 matched the existing capture record and the 680x440 webp still existed; mapped in 887f5b5a. Hash match was mapping eligibility only, not visual acceptance. Shared-runtime-changed items were not reused.",
+      "url": "https://github.com/tdwhere123/UI-Vault/blob/fix/browser-retest-20261110-aheng/apps/atlas-sample/thumbnails/excalidraw--local-board.webp"
+    },
+    {
+      "id": "paperjs:boolean-material",
+      "title": "布尔材质 · 交叠与负空间",
+      "webp_path": "thumbnails/paperjs--boolean-material.webp",
+      "preview": "batches/paperjs-01/index.html",
+      "repo_webp": "apps/atlas-sample/thumbnails/paperjs--boolean-material.webp",
+      "hash_basis": "At tip c8ba47c3, current preview and runtime sha256 matched the existing capture record and the 680x440 webp still existed; mapped in 887f5b5a. Hash match was mapping eligibility only, not visual acceptance. Shared-runtime-changed items were not reused.",
+      "url": "https://github.com/tdwhere123/UI-Vault/blob/fix/browser-retest-20261110-aheng/apps/atlas-sample/thumbnails/paperjs--boolean-material.webp"
+    },
+    {
+      "id": "react-piano:local-note-keyboard",
+      "title": "React Piano · 本地音高键盘",
+      "webp_path": "thumbnails/react-piano--local-note-keyboard.webp",
+      "preview": "batches/react-piano-01/index.html",
+      "repo_webp": "apps/atlas-sample/thumbnails/react-piano--local-note-keyboard.webp",
+      "hash_basis": "At tip c8ba47c3, current preview and runtime sha256 matched the existing capture record and the 680x440 webp still existed; mapped in 887f5b5a. Hash match was mapping eligibility only, not visual acceptance. Shared-runtime-changed items were not reused.",
+      "url": "https://github.com/tdwhere123/UI-Vault/blob/fix/browser-retest-20261110-aheng/apps/atlas-sample/thumbnails/react-piano--local-note-keyboard.webp"
+    },
+    {
+      "id": "spring:notification-hub",
+      "title": "React Spring · 消息各有寿命",
+      "webp_path": "thumbnails/spring--notification-hub.webp",
+      "preview": "batches/spring-notification-01/index.html",
+      "repo_webp": "apps/atlas-sample/thumbnails/spring--notification-hub.webp",
+      "hash_basis": "At tip c8ba47c3, current preview and runtime sha256 matched the existing capture record and the 680x440 webp still existed; mapped in 887f5b5a. Hash match was mapping eligibility only, not visual acceptance. Shared-runtime-changed items were not reused.",
+      "url": "https://github.com/tdwhere123/UI-Vault/blob/fix/browser-retest-20261110-aheng/apps/atlas-sample/thumbnails/spring--notification-hub.webp"
+    },
+    {
+      "id": "surveyjs:project-decision-survey",
+      "title": "SurveyJS · 动态项目决策问卷",
+      "webp_path": "thumbnails/surveyjs--project-decision-survey.webp",
+      "preview": "batches/surveyjs-01/index.html",
+      "repo_webp": "apps/atlas-sample/thumbnails/surveyjs--project-decision-survey.webp",
+      "hash_basis": "At tip c8ba47c3, current preview and runtime sha256 matched the existing capture record and the 680x440 webp still existed; mapped in 887f5b5a. Hash match was mapping eligibility only, not visual acceptance. Shared-runtime-changed items were not reused.",
+      "url": "https://github.com/tdwhere123/UI-Vault/blob/fix/browser-retest-20261110-aheng/apps/atlas-sample/thumbnails/surveyjs--project-decision-survey.webp"
+    },
+    {
+      "id": "timelinejs:research-story",
+      "title": "TimelineJS · 研究故事时间线",
+      "webp_path": "thumbnails/timelinejs--research-story.webp",
+      "preview": "batches/timelinejs-01/index.html",
+      "repo_webp": "apps/atlas-sample/thumbnails/timelinejs--research-story.webp",
+      "hash_basis": "At tip c8ba47c3, current preview and runtime sha256 matched the existing capture record and the 680x440 webp still existed; mapped in 887f5b5a. Hash match was mapping eligibility only, not visual acceptance. Shared-runtime-changed items were not reused.",
+      "url": "https://github.com/tdwhere123/UI-Vault/blob/fix/browser-retest-20261110-aheng/apps/atlas-sample/thumbnails/timelinejs--research-story.webp"
+    },
+    {
+      "id": "uilayout:scroll-animation-repeat-scroll",
+      "title": "scroll-animation-repeat-scroll",
+      "webp_path": "thumbnails/uilayout--scroll-animation-repeat-scroll.webp",
+      "preview": "batches/uilayout-next-01/scroll-animation-repeat-scroll.html",
+      "repo_webp": "apps/atlas-sample/thumbnails/uilayout--scroll-animation-repeat-scroll.webp",
+      "hash_basis": "At tip c8ba47c3, current preview and runtime sha256 matched the existing capture record and the 680x440 webp still existed; mapped in 887f5b5a. Hash match was mapping eligibility only, not visual acceptance. Shared-runtime-changed items were not reused.",
+      "url": "https://github.com/tdwhere123/UI-Vault/blob/fix/browser-retest-20261110-aheng/apps/atlas-sample/thumbnails/uilayout--scroll-animation-repeat-scroll.webp"
+    },
+    {
+      "id": "uilayout:scroll-animation-sticky-hero-scroll",
+      "title": "scroll-animation-sticky-hero-scroll",
+      "webp_path": "thumbnails/uilayout--scroll-animation-sticky-hero-scroll.webp",
+      "preview": "batches/uilayout-next-01/scroll-animation-sticky-hero-scroll.html",
+      "repo_webp": "apps/atlas-sample/thumbnails/uilayout--scroll-animation-sticky-hero-scroll.webp",
+      "hash_basis": "At tip c8ba47c3, current preview and runtime sha256 matched the existing capture record and the 680x440 webp still existed; mapped in 887f5b5a. Hash match was mapping eligibility only, not visual acceptance. Shared-runtime-changed items were not reused.",
+      "url": "https://github.com/tdwhere123/UI-Vault/blob/fix/browser-retest-20261110-aheng/apps/atlas-sample/thumbnails/uilayout--scroll-animation-sticky-hero-scroll.webp"
+    },
+    {
+      "id": "uiverse:book-material",
+      "title": "翻页书 · 阅读等待动效",
+      "webp_path": "thumbnails/uiverse--book-material.webp",
+      "preview": "batches/uiverse-materials-01/book.html",
+      "repo_webp": "apps/atlas-sample/thumbnails/uiverse--book-material.webp",
+      "hash_basis": "At tip c8ba47c3, current preview and runtime sha256 matched the existing capture record and the 680x440 webp still existed; mapped in 887f5b5a. Hash match was mapping eligibility only, not visual acceptance. Shared-runtime-changed items were not reused.",
+      "url": "https://github.com/tdwhere123/UI-Vault/blob/fix/browser-retest-20261110-aheng/apps/atlas-sample/thumbnails/uiverse--book-material.webp"
+    },
+    {
+      "id": "wgo:branching-go-study",
+      "title": "WGo · 分支棋谱阅读",
+      "webp_path": "thumbnails/wgo--branching-go-study.webp",
+      "preview": "batches/wgo-01/index.html",
+      "repo_webp": "apps/atlas-sample/thumbnails/wgo--branching-go-study.webp",
+      "hash_basis": "At tip c8ba47c3, current preview and runtime sha256 matched the existing capture record and the 680x440 webp still existed; mapped in 887f5b5a. Hash match was mapping eligibility only, not visual acceptance. Shared-runtime-changed items were not reused.",
+      "url": "https://github.com/tdwhere123/UI-Vault/blob/fix/browser-retest-20261110-aheng/apps/atlas-sample/thumbnails/wgo--branching-go-study.webp"
+    }
+  ],
+  "online_attempts": {
+    "complete": [
+      {
+        "id": "tuftecss:margin-note-essay",
+        "batch": "batch01"
+      },
+      {
+        "id": "doodlecss:handdrawn-form-sheet",
+        "batch": "batch01"
+      },
+      {
+        "id": "astryx-core:indicator",
+        "batch": "batch01"
+      },
+      {
+        "id": "astryx-core:timer",
+        "batch": "batch01"
+      },
+      {
+        "id": "astryx-core:card",
+        "batch": "batch01"
+      },
+      {
+        "id": "astryx-core:avatar",
+        "batch": "batch01"
+      },
+      {
+        "id": "astryx-core:banner",
+        "batch": "batch01"
+      },
+      {
+        "id": "astryx-core:button",
+        "batch": "batch01"
+      },
+      {
+        "id": "astryx-core:checkbox",
+        "batch": "batch01"
+      },
+      {
+        "id": "astryx-core:drawer",
+        "batch": "batch01"
+      },
+      {
+        "id": "astryx-core:dialog",
+        "batch": "batch01"
+      },
+      {
+        "id": "astryx-core:segmented-control",
+        "batch": "batch01"
+      },
+      {
+        "id": "astryx-core:layout",
+        "batch": "batch01"
+      },
+      {
+        "id": "astryx-core:popover",
+        "batch": "batch02"
+      },
+      {
+        "id": "astryx-core:field",
+        "batch": "batch02"
+      },
+      {
+        "id": "astryx-core:markdown",
+        "batch": "batch02"
+      },
+      {
+        "id": "astryx-core:power-search",
+        "batch": "batch02"
+      },
+      {
+        "id": "nescss:pixel-message-balloons",
+        "batch": "batch02"
+      },
+      {
+        "id": "obnoxious:expressive-text-motion",
+        "batch": "batch02"
+      },
+      {
+        "id": "meny:folded-page-navigation",
+        "batch": "batch02"
+      },
+      {
+        "id": "meniscus:liquid-navigation",
+        "batch": "batch02"
+      },
+      {
+        "id": "momentum:kinetic-countdown",
+        "batch": "batch02"
+      },
+      {
+        "id": "vivus:drawn-camera-scene",
+        "batch": "batch02"
+      },
+      {
+        "id": "wired:handdrawn-combo",
+        "batch": "batch02"
+      },
+      {
+        "id": "oridomi:folded-dom-scenes",
+        "batch": "batch02"
+      },
+      {
+        "id": "chartxkcd:handdrawn-data-story",
+        "batch": "batch02"
+      },
+      {
+        "id": "proton:gravity-well-trails",
+        "batch": "batch02"
+      },
+      {
+        "id": "hugo-paper:paper-reading-site",
+        "batch": "batch02"
+      },
+      {
+        "id": "copilotkit:presentation-coauthor",
+        "batch": "batch02"
+      },
+      {
+        "id": "chatui:rich-service-conversation",
+        "batch": "batch02"
+      },
+      {
+        "id": "eldora:logo-cloud-04",
+        "batch": "batch02"
+      },
+      {
+        "id": "loopy:feedback-system-simulation",
+        "batch": "batch02"
+      },
+      {
+        "id": "nutshell:expandable-explanation-essay",
+        "batch": "batch02"
+      },
+      {
+        "id": "m4tt72:command-navigation-site",
+        "batch": "batch02"
+      },
+      {
+        "id": "motioncore:plasma-grid",
+        "batch": "batch02"
+      },
+      {
+        "id": "motioncore:liquid-metal",
+        "batch": "batch02"
+      },
+      {
+        "id": "motioncore:god-rays",
+        "batch": "batch02"
+      },
+      {
+        "id": "motioncore:glitter-cloth",
+        "batch": "batch03"
+      },
+      {
+        "id": "codrops:collaborative-type",
+        "batch": "batch03"
+      },
+      {
+        "id": "motioncore:fluid-simulation",
+        "batch": "batch03"
+      },
+      {
+        "id": "reactmotion:spring-ball-reorder",
+        "batch": "batch03"
+      },
+      {
+        "id": "codrops:scroll-typography-scenes",
+        "batch": "batch03"
+      },
+      {
+        "id": "copilotkit:discourse-evidence-report",
+        "batch": "batch03"
+      },
+      {
+        "id": "flowbite-admin:pricing-comparison-faq-page",
+        "batch": "batch03"
+      },
+      {
+        "id": "plop:buddy-cast",
+        "batch": "batch03"
+      },
+      {
+        "id": "material-symbols:official-series",
+        "batch": "batch03"
+      },
+      {
+        "id": "motioncore:underlay-navigation",
+        "batch": "batch03"
+      },
+      {
+        "id": "githistory:file-version-time-travel",
+        "batch": "batch03"
+      },
+      {
+        "id": "tremor-blocks:audit-evidence-reader",
+        "batch": "batch03"
+      },
+      {
+        "id": "copilotkit:flight-choice-confirmation",
+        "batch": "batch03"
+      },
+      {
+        "id": "sketchbook:datepicker",
+        "batch": "batch03"
+      },
+      {
+        "id": "bookstack:shelf-book-organization",
+        "batch": "batch03"
+      },
+      {
+        "id": "copilotkit:trip-intake-itinerary",
+        "batch": "batch03"
+      },
+      {
+        "id": "revealjs:scrolling-animated-brief",
+        "batch": "batch03"
+      },
+      {
+        "id": "maki:cartographic-poi-family",
+        "batch": "batch03"
+      },
+      {
+        "id": "smoothui:drawing-cursor",
+        "batch": "batch03"
+      },
+      {
+        "id": "tremor-blocks:partition-allocation",
+        "batch": "batch03"
+      },
+      {
+        "id": "smoothui:dither-chart",
+        "batch": "batch03"
+      },
+      {
+        "id": "cult:apple-keyboard",
+        "batch": "batch03"
+      },
+      {
+        "id": "uilayout:terminal-intro-sequence",
+        "batch": "batch03"
+      },
+      {
+        "id": "copilotkit:connected-tool-results",
+        "batch": "batch03"
+      },
+      {
+        "id": "css-doodle:generative-pattern-surface",
+        "batch": "batch03"
+      },
+      {
+        "id": "cult:illustration-card-grid",
+        "batch": "batch03"
+      },
+      {
+        "id": "uilayout:attachment-composer",
+        "batch": "batch03"
+      },
+      {
+        "id": "plop:ink-status-timeline",
+        "batch": "batch03"
+      },
+      {
+        "id": "react-arborist:budget-hierarchy",
+        "batch": "batch03"
+      },
+      {
+        "id": "wallabag:saved-article-reading",
+        "batch": "batch03"
+      },
+      {
+        "id": "augmented-ui:cut-corner-surfaces",
+        "batch": "batch03"
+      },
+      {
+        "id": "smoothui:book",
+        "batch": "batch03"
+      },
+      {
+        "id": "eldora:novatrix-background",
+        "batch": "batch03"
+      },
+      {
+        "id": "neobrutalism:orbital-star-landing",
+        "batch": "batch03"
+      },
+      {
+        "id": "liqui:glass-form",
+        "batch": "batch03"
+      },
+      {
+        "id": "cult:hero-color-panel",
+        "batch": "batch03"
+      },
+      {
+        "id": "fluent-system-color:exodus-selection",
+        "batch": "batch03"
+      },
+      {
+        "id": "fluidkit:morph-surface",
+        "batch": "batch03"
+      },
+      {
+        "id": "fluidkit:liquid-menu",
+        "batch": "batch03"
+      },
+      {
+        "id": "cuicui:advanced-bottom-action-menu",
+        "batch": "batch03"
+      },
+      {
+        "id": "cmdk:raycast-command-menu",
+        "batch": "batch03"
+      },
+      {
+        "id": "eldora:pricing-02",
+        "batch": "batch03"
+      },
+      {
+        "id": "codesurfer:code-walkthrough-deck",
+        "batch": "batch03"
+      },
+      {
+        "id": "uilayout:trading-price-flow",
+        "batch": "batch03"
+      },
+      {
+        "id": "astryx-core:thumbnail",
+        "batch": "batch03"
+      },
+      {
+        "id": "astryx:login-sso",
+        "batch": "batch03"
+      },
+      {
+        "id": "blode:dnd-grid",
+        "batch": "batch03"
+      },
+      {
+        "id": "game-icons:attributed-symbol-family",
+        "batch": "batch03"
+      },
+      {
+        "id": "pizzicato:audio-effect-playground",
+        "batch": "batch03"
+      },
+      {
+        "id": "cuicui:dynamic-settings",
+        "batch": "batch03"
+      },
+      {
+        "id": "eldora:header-01",
+        "batch": "batch03"
+      },
+      {
+        "id": "smoothui:job-listing-component",
+        "batch": "batch03"
+      },
+      {
+        "id": "astryx-core:badge",
+        "batch": "batch03"
+      },
+      {
+        "id": "chirpy:longform-knowledge-site",
+        "batch": "batch03"
+      },
+      {
+        "id": "astryx-core:icon",
+        "batch": "batch03"
+      },
+      {
+        "id": "smoothui:wallet-card",
+        "batch": "batch04"
+      },
+      {
+        "id": "smoothui:rich-popover",
+        "batch": "batch04"
+      },
+      {
+        "id": "astryx-core:scrollable-area",
+        "batch": "batch04"
+      },
+      {
+        "id": "fieldplay:vector-flow-explorer",
+        "batch": "batch04"
+      },
+      {
+        "id": "astryx-core:kbd",
+        "batch": "batch04"
+      },
+      {
+        "id": "astryx-core:metadata-list",
+        "batch": "batch04"
+      },
+      {
+        "id": "mattertools:physical-scene-inspector",
+        "batch": "batch04"
+      },
+      {
+        "id": "akar-icons:official-series",
+        "batch": "batch04"
+      },
+      {
+        "id": "astryx-core:outline",
+        "batch": "batch04"
+      },
+      {
+        "id": "radix-icons:official-series",
+        "batch": "batch04"
+      },
+      {
+        "id": "astryx-core:collapsible",
+        "batch": "batch04"
+      },
+      {
+        "id": "astryx-core:status-dot",
+        "batch": "batch04"
+      },
+      {
+        "id": "eva-icons:official-series",
+        "batch": "batch04"
+      },
+      {
+        "id": "cindyjs:julia-orbit-explanation",
+        "batch": "batch04"
+      },
+      {
+        "id": "astryx-core:info-tip",
+        "batch": "batch04"
+      },
+      {
+        "id": "astryx-core:tree-list",
+        "batch": "batch04"
+      },
+      {
+        "id": "uilayout:drawer-responsive-header",
+        "batch": "batch04"
+      },
+      {
+        "id": "astryx-core:tabs",
+        "batch": "batch04"
+      },
+      {
+        "id": "astryx-core:link",
+        "batch": "batch04"
+      },
+      {
+        "id": "chainlit:execution-message-tree",
+        "batch": "batch04"
+      },
+      {
+        "id": "openmoji:exodus-selection",
+        "batch": "batch04"
+      },
+      {
+        "id": "astryx-core:spinner",
+        "batch": "batch04"
+      },
+      {
+        "id": "astryx-core:tooltip",
+        "batch": "batch04"
+      },
+      {
+        "id": "astryx-core:blockquote",
+        "batch": "batch04"
+      },
+      {
+        "id": "astryx-core:code",
+        "batch": "batch04"
+      },
+      {
+        "id": "astryx-core:text",
+        "batch": "batch04"
+      },
+      {
+        "id": "astryx-core:empty-state",
+        "batch": "batch04"
+      },
+      {
+        "id": "astryx-core:divider",
+        "batch": "batch04"
+      },
+      {
+        "id": "astryx-core:skeleton",
+        "batch": "batch04"
+      },
+      {
+        "id": "astryx-core:citation",
+        "batch": "batch04"
+      },
+      {
+        "id": "mantine-ui:authentication-flow",
+        "batch": "batch04"
+      },
+      {
+        "id": "astryx-core:hover-card",
+        "batch": "batch04"
+      },
+      {
+        "id": "astryx-core:text-area",
+        "batch": "batch04"
+      },
+      {
+        "id": "astryx-core:token",
+        "batch": "batch04"
+      },
+      {
+        "id": "astryx-core:carousel",
+        "batch": "batch04"
+      },
+      {
+        "id": "astryx-core:progress-bar",
+        "batch": "batch04"
+      },
+      {
+        "id": "astryx-core:timestamp",
+        "batch": "batch04"
+      },
+      {
+        "id": "mantine-ui:contact-information-form",
+        "batch": "batch04"
+      },
+      {
+        "id": "astryx-core:resizable",
+        "batch": "batch04"
+      },
+      {
+        "id": "astryx-core:text-input",
+        "batch": "batch04"
+      },
+      {
+        "id": "astryx-core:file-input",
+        "batch": "batch04"
+      },
+      {
+        "id": "astryx-core:toolbar",
+        "batch": "batch04"
+      },
+      {
+        "id": "tremor-blocks:portfolio-performance-report",
+        "batch": "batch04"
+      },
+      {
+        "id": "astryx-core:number-input",
+        "batch": "batch04"
+      },
+      {
+        "id": "astryx-core:radio",
+        "batch": "batch04"
+      },
+      {
+        "id": "astryx-core:code-block",
+        "batch": "batch04"
+      },
+      {
+        "id": "astryx-core:list",
+        "batch": "batch04"
+      },
+      {
+        "id": "seeing-svg:filter-stage-inspector",
+        "batch": "batch04"
+      },
+      {
+        "id": "astryx:documentation",
+        "batch": "batch04"
+      },
+      {
+        "id": "uilayout:drawer-nested-vaul-drawer",
+        "batch": "batch04"
+      },
+      {
+        "id": "uilayout:image-reveal-image-reveal",
+        "batch": "batch04"
+      },
+      {
+        "id": "uilayout:linear-modal-standalone-version",
+        "batch": "batch04"
+      },
+      {
+        "id": "astryx-core:typeahead",
+        "batch": "batch04"
+      },
+      {
+        "id": "astryx:login-card",
+        "batch": "batch04"
+      },
+      {
+        "id": "astryx-core:chat",
+        "batch": "batch04"
+      },
+      {
+        "id": "astryx-core:breadcrumbs",
+        "batch": "batch04"
+      },
+      {
+        "id": "astryx-core:command-palette",
+        "batch": "batch04"
+      },
+      {
+        "id": "astryx-core:toast",
+        "batch": "batch04"
+      },
+      {
+        "id": "mantine-ui:responsive-mega-navigation",
+        "batch": "batch05"
+      },
+      {
+        "id": "astryx-core:switch",
+        "batch": "batch05"
+      },
+      {
+        "id": "astryx-core:slider",
+        "batch": "batch05"
+      },
+      {
+        "id": "astryx-core:lightbox",
+        "batch": "batch05"
+      },
+      {
+        "id": "astryx-core:app-shell",
+        "batch": "batch05"
+      },
+      {
+        "id": "cossui:event-type-ordering",
+        "batch": "batch05"
+      },
+      {
+        "id": "astryx:settings",
+        "batch": "batch05"
+      },
+      {
+        "id": "memos:personal-knowledge-timeline",
+        "batch": "batch05"
+      },
+      {
+        "id": "svgomg:vector-optimization-inspector",
+        "batch": "batch05"
+      },
+      {
+        "id": "astryx-core:context-menu",
+        "batch": "batch05"
+      },
+      {
+        "id": "astryx-core:selector",
+        "batch": "batch05"
+      },
+      {
+        "id": "copilotkit:a2ui-document-surfaces",
+        "batch": "batch05"
+      },
+      {
+        "id": "astryx-core:dropdown-menu",
+        "batch": "batch05"
+      },
+      {
+        "id": "astryx-core:tokenizer",
+        "batch": "batch05"
+      },
+      {
+        "id": "astryx-core:overflow-list",
+        "batch": "batch05"
+      },
+      {
+        "id": "astryx:detail-page",
+        "batch": "batch05"
+      },
+      {
+        "id": "astryx-core:pagination",
+        "batch": "batch05"
+      },
+      {
+        "id": "astryx-core:time-input",
+        "batch": "batch05"
+      },
+      {
+        "id": "astryx:form-two-column",
+        "batch": "batch05"
+      },
+      {
+        "id": "astryx-core:table",
+        "batch": "batch05"
+      },
+      {
+        "id": "astryx:contact-form",
+        "batch": "batch05"
+      },
+      {
+        "id": "diff2html:multi-file-patch-reader",
+        "batch": "batch05"
+      },
+      {
+        "id": "astryx-core:date-input",
+        "batch": "batch05"
+      },
+      {
+        "id": "tonejs:envelope-visual-scene",
+        "batch": "batch05"
+      },
+      {
+        "id": "netron:model-structure-explorer",
+        "batch": "batch05"
+      },
+      {
+        "id": "cossui:group-chat-demo",
+        "batch": "batch05"
+      },
+      {
+        "id": "spring:springy-boxes",
+        "batch": "batch05"
+      },
+      {
+        "id": "astryx:documentation-technical",
+        "batch": "batch05"
+      },
+      {
+        "id": "astryx:checkout-wizard",
+        "batch": "batch05"
+      },
+      {
+        "id": "astryx:settings-sidebar",
+        "batch": "batch05"
+      },
+      {
+        "id": "astryx:form-wizard",
+        "batch": "batch05"
+      },
+      {
+        "id": "astryx:form-wizard-inline",
+        "batch": "batch05"
+      },
+      {
+        "id": "react-three-csg:live-solid-boolean",
+        "batch": "batch05"
+      },
+      {
+        "id": "astryx:documentation-design",
+        "batch": "batch05"
+      },
+      {
+        "id": "learngitbranching:visual-command-lessons",
+        "batch": "batch05"
+      },
+      {
+        "id": "copilotkit:repo-doctor-tool-approval",
+        "batch": "batch05"
+      },
+      {
+        "id": "astryx:dashboard-scorecard",
+        "batch": "batch05"
+      },
+      {
+        "id": "astryx:form-wizard-vertical",
+        "batch": "batch05"
+      },
+      {
+        "id": "astryx:dashboard",
+        "batch": "batch05"
+      },
+      {
+        "id": "astryx:form-wizard-dialog",
+        "batch": "batch05"
+      },
+      {
+        "id": "astryx:dashboard-composition",
+        "batch": "batch05"
+      },
+      {
+        "id": "astryx:dashboard-comparison",
+        "batch": "batch05"
+      },
+      {
+        "id": "astryx:table-comparison",
+        "batch": "batch05"
+      },
+      {
+        "id": "astryx:table-page",
+        "batch": "batch05"
+      },
+      {
+        "id": "astryx:dashboard-alert-rail",
+        "batch": "batch05"
+      },
+      {
+        "id": "flag-icons:country-symbol-family",
+        "batch": "batch05"
+      },
+      {
+        "id": "bubbly:ambient-bubble-surface",
+        "batch": "batch05"
+      },
+      {
+        "id": "siriwave:fluorescent-voice-wave",
+        "batch": "batch05"
+      },
+      {
+        "id": "hugo-terminal:terminal-editorial-site",
+        "batch": "batch05"
+      },
+      {
+        "id": "poline:spatial-palette-picker",
+        "batch": "batch05"
+      },
+      {
+        "id": "vanta:spatial-network-field",
+        "batch": "batch05"
+      },
+      {
+        "id": "twine:branching-story-map",
+        "batch": "batch05"
+      },
+      {
+        "id": "aicanvas:stack-tower",
+        "batch": "batch05"
+      },
+      {
+        "id": "threejs:spatial-element-table",
+        "batch": "batch05"
+      },
+      {
+        "id": "miniflux:feed-reading-workspace",
+        "batch": "batch05"
+      },
+      {
+        "id": "aicanvas:charging-widget",
+        "batch": "batch05"
+      },
+      {
+        "id": "tremor-blocks:workspace-package-application",
+        "batch": "batch05"
+      },
+      {
+        "id": "aicanvas:ai-job-cards",
+        "batch": "batch05"
+      },
+      {
+        "id": "tailwind-blog:editorial-reader",
+        "batch": "batch05"
+      },
+      {
+        "id": "tailwind-blog:tagged-editorial-archive",
+        "batch": "batch06"
+      },
+      {
+        "id": "quartz-v4:linked-knowledge-garden",
+        "batch": "batch06"
+      },
+      {
+        "id": "actual:budget-automation-editor",
+        "batch": "batch06"
+      },
+      {
+        "id": "bruno:request-response-workspace",
+        "batch": "batch06"
+      },
+      {
+        "id": "astryx:dashboard-cohort-funnel",
+        "batch": "batch06"
+      },
+      {
+        "id": "astryx:table-collapsible",
+        "batch": "batch06"
+      },
+      {
+        "id": "astryx:dashboard-progress",
+        "batch": "batch06"
+      },
+      {
+        "id": "astryx:table-grouped",
+        "batch": "batch06"
+      },
+      {
+        "id": "plate:structured-stream-replay",
+        "batch": "batch06"
+      },
+      {
+        "id": "copilotkit:research-artifact-workspace",
+        "batch": "batch06"
+      },
+      {
+        "id": "aicanvas:crypto-swap",
+        "batch": "batch06"
+      },
+      {
+        "id": "copilotkit:research-sections-canvas",
+        "batch": "batch06"
+      },
+      {
+        "id": "shadcn-examples:mail-workspace",
+        "batch": "batch06"
+      },
+      {
+        "id": "aicanvas:curious-ai",
+        "batch": "batch06"
+      },
+      {
+        "id": "react-mosaic:tabbed-workspace",
+        "batch": "batch06"
+      },
+      {
+        "id": "dmn-js:decision-table-editor",
+        "batch": "batch06"
+      },
+      {
+        "id": "shadcn-admin:conversation-workspace",
+        "batch": "batch06"
+      },
+      {
+        "id": "shadcn-admin:settings-workspace",
+        "batch": "batch06"
+      },
+      {
+        "id": "puck:official-visual-page-builder",
+        "batch": "batch06"
+      },
+      {
+        "id": "beepbox:pattern-song-composer",
+        "batch": "batch06"
+      },
+      {
+        "id": "iconoir:official-series",
+        "batch": "batch06"
+      },
+      {
+        "id": "paperlab:physical-paper-presets",
+        "batch": "batch06"
+      },
+      {
+        "id": "plate:document-revisions",
+        "batch": "batch06"
+      },
+      {
+        "id": "twemoji:color-emoji-family",
+        "batch": "batch06"
+      },
+      {
+        "id": "fontawesome-free:interface-symbol-family",
+        "batch": "batch06"
+      },
+      {
+        "id": "jupyterlab:notebook-document-scene",
+        "batch": "batch06"
+      },
+      {
+        "id": "reactive-resume:paper-design-editor",
+        "batch": "batch06"
+      },
+      {
+        "id": "milkdown:crepe-document-workspace",
+        "batch": "batch06"
+      },
+      {
+        "id": "novel:selection-writing-workspace",
+        "batch": "batch06"
+      },
+      {
+        "id": "mermaid-live:diagram-authoring-workspace",
+        "batch": "batch06"
+      }
+    ],
+    "partial": [
+      {
+        "id": "psone:console-control-scene",
+        "batch": "batch01"
+      },
+      {
+        "id": "skeuos:tactile-controls",
+        "batch": "batch01"
+      },
+      {
+        "id": "7css:aero-glass-showcase",
+        "batch": "batch01"
+      },
+      {
+        "id": "98css:desktop-control-showcase",
+        "batch": "batch01"
+      },
+      {
+        "id": "8bitcn:quest-log",
+        "batch": "batch01"
+      },
+      {
+        "id": "astryx-core:calendar",
+        "batch": "batch01"
+      },
+      {
+        "id": "majesticons:official-series",
+        "batch": "batch01"
+      },
+      {
+        "id": "astryx-core:bottom-sheet",
+        "batch": "batch02"
+      },
+      {
+        "id": "pepicons:exodus-selection",
+        "batch": "batch02"
+      },
+      {
+        "id": "ionicons:complete-series",
+        "batch": "batch02"
+      },
+      {
+        "id": "looper:radial-phase-field",
+        "batch": "batch02"
+      },
+      {
+        "id": "iro:multi-handle-color-wheel",
+        "batch": "batch02"
+      },
+      {
+        "id": "latexcss:scholarly-article",
+        "batch": "batch02"
+      },
+      {
+        "id": "hanziwriter:stroke-practice-scene",
+        "batch": "batch02"
+      },
+      {
+        "id": "bytesize-icons:official-series",
+        "batch": "batch02"
+      },
+      {
+        "id": "papercss:paper-disclosure-notes",
+        "batch": "batch02"
+      },
+      {
+        "id": "blode:omni-color-picker",
+        "batch": "batch02"
+      },
+      {
+        "id": "healthicons:clinical-research-symbol-family",
+        "batch": "batch02"
+      },
+      {
+        "id": "mono-icons:compact-outline-family",
+        "batch": "batch02"
+      },
+      {
+        "id": "tinysynth:sound-design-console",
+        "batch": "batch02"
+      },
+      {
+        "id": "systemcss:monochrome-control-language",
+        "batch": "batch02"
+      },
+      {
+        "id": "motioncore:lava-lamp",
+        "batch": "batch02"
+      },
+      {
+        "id": "bootstra386:dos-component-language",
+        "batch": "batch02"
+      },
+      {
+        "id": "cult:illustration-fluid-rendering",
+        "batch": "batch03"
+      },
+      {
+        "id": "cult:fluid-ai-workloads",
+        "batch": "batch03"
+      },
+      {
+        "id": "cult:illustration-graph",
+        "batch": "batch03"
+      },
+      {
+        "id": "cult:hero-heatmap",
+        "batch": "batch03"
+      },
+      {
+        "id": "cult:hero-liquid-metal",
+        "batch": "batch03"
+      },
+      {
+        "id": "zulip:topic-organized-collaboration",
+        "batch": "batch04"
+      },
+      {
+        "id": "astryx-core:stepper",
+        "batch": "batch04"
+      },
+      {
+        "id": "react-avatar-editor:crop-studio",
+        "batch": "batch05"
+      },
+      {
+        "id": "svgfilter:node-material-editor",
+        "batch": "batch06"
+      },
+      {
+        "id": "wavedrom:timing-diagram-editor",
+        "batch": "batch06"
+      },
+      {
+        "id": "piskel:pixel-animation-workspace",
+        "batch": "batch06"
+      },
+      {
+        "id": "tfplayground:decision-boundary-training",
+        "batch": "batch06"
+      },
+      {
+        "id": "uilayout:timeline-animation-index",
+        "batch": "batch06"
+      },
+      {
+        "id": "react-page:multilingual-cell-editor",
+        "batch": "batch06"
+      },
+      {
+        "id": "drawdb:relational-schema-workspace",
+        "batch": "batch06"
+      }
+    ],
+    "failed": [
+      {
+        "id": "svar:gantt-task-editor",
+        "batch": "batch06"
+      },
+      {
+        "id": "jsoncrack:structured-data-atlas",
+        "batch": "batch06"
+      }
+    ]
+  },
+  "ineligible_13": [
+    {
+      "id": "fancy:css-box-carousel",
+      "name": "立体盒子轮播",
+      "reason_bucket": "affecting_files_changed",
+      "primary_exclusion_reason": "affecting_files_changed: 影响 #demo 的预览/runtime/依赖资源在线上 56d4 与目标 887f5b 之间已变化，不能用线上站映射到目标封面。",
+      "already_in_review_before_this_round": false,
+      "note": null
+    },
+    {
+      "id": "fancy:elastic-line",
+      "name": "弹性线条交互",
+      "reason_bucket": "pending_core_broken_and_affecting_files_changed",
+      "primary_exclusion_reason": "affecting_files_changed: 影响 #demo 的预览/runtime/依赖资源在线上 56d4 与目标 887f5b 之间已变化，不能用线上站映射到目标封面。",
+      "already_in_review_before_this_round": true,
+      "note": "本就在待复核；本次只沿用或核对原因，不是新增淘汰，也不是从目录删除。"
+    },
+    {
+      "id": "fancy:media-between-text",
+      "name": "文字间的媒体展示",
+      "reason_bucket": "affecting_files_changed",
+      "primary_exclusion_reason": "affecting_files_changed: 影响 #demo 的预览/runtime/依赖资源在线上 56d4 与目标 887f5b 之间已变化，不能用线上站映射到目标封面。",
+      "already_in_review_before_this_round": false,
+      "note": null
+    },
+    {
+      "id": "astryx:library",
+      "name": "素材库浏览与筛选",
+      "reason_bucket": "pending_core_broken_and_affecting_files_changed",
+      "primary_exclusion_reason": "affecting_files_changed: 影响 #demo 的预览/runtime/依赖资源在线上 56d4 与目标 887f5b 之间已变化，不能用线上站映射到目标封面。",
+      "already_in_review_before_this_round": true,
+      "note": "本就在待复核；本次只沿用或核对原因，不是新增淘汰，也不是从目录删除。"
+    },
+    {
+      "id": "blocknote:document-comments-workspace",
+      "name": "原版块文档与评论工作区",
+      "reason_bucket": "uncertain_excluded",
+      "primary_exclusion_reason": "uncertain_excluded: 证据不足、状态待复核，按“不确定即排除”不列入线上可拍。",
+      "already_in_review_before_this_round": true,
+      "note": "本就在待复核；本次只沿用或核对原因，不是新增淘汰，也不是从目录删除。"
+    },
+    {
+      "id": "copilotkit:resume-job-match",
+      "name": "简历样例校验与职位结果",
+      "reason_bucket": "pending_core_broken_and_affecting_files_changed",
+      "primary_exclusion_reason": "affecting_files_changed: 影响 #demo 的预览/runtime/依赖资源在线上 56d4 与目标 887f5b 之间已变化，不能用线上站映射到目标封面。",
+      "already_in_review_before_this_round": true,
+      "note": "本就在待复核；本次只沿用或核对原因，不是新增淘汰，也不是从目录删除。"
+    },
+    {
+      "id": "fancy:screensaver",
+      "name": "屏保游移动效",
+      "reason_bucket": "affecting_files_changed",
+      "primary_exclusion_reason": "affecting_files_changed: 影响 #demo 的预览/runtime/依赖资源在线上 56d4 与目标 887f5b 之间已变化，不能用线上站映射到目标封面。",
+      "already_in_review_before_this_round": true,
+      "note": "本就在待复核；本次只沿用或核对原因，不是新增淘汰，也不是从目录删除。"
+    },
+    {
+      "id": "formity:branching-loop-interview",
+      "name": "条件循环访谈",
+      "reason_bucket": "pending_core_broken_and_affecting_files_changed",
+      "primary_exclusion_reason": "affecting_files_changed: 影响 #demo 的预览/runtime/依赖资源在线上 56d4 与目标 887f5b 之间已变化，不能用线上站映射到目标封面。",
+      "already_in_review_before_this_round": false,
+      "note": null
+    },
+    {
+      "id": "minipaint:original-layered-paint-workspace",
+      "name": "原版多图层绘画工作区",
+      "reason_bucket": "pending_core_broken",
+      "primary_exclusion_reason": "pending_core_broken: 待修核心坏/本环境确认的核心呈现或操作失败，排除出线上同内容补拍（不是用旧站证明已修好）。",
+      "already_in_review_before_this_round": true,
+      "note": "本就在待复核；本次只沿用或核对原因，不是新增淘汰，也不是从目录删除。"
+    },
+    {
+      "id": "silverbullet:document-navigation-workspace",
+      "name": "标记文档与目录导航",
+      "reason_bucket": "pending_core_broken",
+      "primary_exclusion_reason": "pending_core_broken: 待修核心坏/本环境确认的核心呈现或操作失败，排除出线上同内容补拍（不是用旧站证明已修好）。",
+      "already_in_review_before_this_round": true,
+      "note": "本就在待复核；本次只沿用或核对原因，不是新增淘汰，也不是从目录删除。"
+    },
+    {
+      "id": "smoothui:image-metadata-preview",
+      "name": "图片元数据展开卡",
+      "reason_bucket": "affecting_files_changed",
+      "primary_exclusion_reason": "affecting_files_changed: 影响 #demo 的预览/runtime/依赖资源在线上 56d4 与目标 887f5b 之间已变化，不能用线上站映射到目标封面。",
+      "already_in_review_before_this_round": true,
+      "note": "本就在待复核；本次只沿用或核对原因，不是新增淘汰，也不是从目录删除。"
+    },
+    {
+      "id": "smoothui:pixel-brush-canvas",
+      "name": "像素画板与撤销",
+      "reason_bucket": "affecting_files_changed",
+      "primary_exclusion_reason": "affecting_files_changed: 影响 #demo 的预览/runtime/依赖资源在线上 56d4 与目标 887f5b 之间已变化，不能用线上站映射到目标封面。",
+      "already_in_review_before_this_round": true,
+      "note": "本就在待复核；本次只沿用或核对原因，不是新增淘汰，也不是从目录删除。"
+    },
+    {
+      "id": "vis-timeline:local-task-planner",
+      "name": "分组时序计划",
+      "reason_bucket": "pending_core_broken_and_affecting_files_changed",
+      "primary_exclusion_reason": "affecting_files_changed: 影响 #demo 的预览/runtime/依赖资源在线上 56d4 与目标 887f5b 之间已变化，不能用线上站映射到目标封面。",
+      "already_in_review_before_this_round": true,
+      "note": "本就在待复核；本次只沿用或核对原因，不是新增淘汰，也不是从目录删除。"
+    }
+  ],
+  "gaps_remaining_15": [
+    {
+      "id": "fancy:css-box-carousel",
+      "kind": "original_online_capture_ineligible",
+      "reason_bucket": "affecting_files_changed",
+      "reason": "affecting_files_changed: 影响 #demo 的预览/runtime/依赖资源在线上 56d4 与目标 887f5b 之间已变化，不能用线上站映射到目标封面。",
+      "already_in_review_before_this_round": false,
+      "note": null
+    },
+    {
+      "id": "fancy:elastic-line",
+      "kind": "original_online_capture_ineligible",
+      "reason_bucket": "pending_core_broken_and_affecting_files_changed",
+      "reason": "affecting_files_changed: 影响 #demo 的预览/runtime/依赖资源在线上 56d4 与目标 887f5b 之间已变化，不能用线上站映射到目标封面。",
+      "already_in_review_before_this_round": true,
+      "note": "本就在待复核；本次只沿用或核对原因，不是新增淘汰，也不是从目录删除。"
+    },
+    {
+      "id": "fancy:media-between-text",
+      "kind": "original_online_capture_ineligible",
+      "reason_bucket": "affecting_files_changed",
+      "reason": "affecting_files_changed: 影响 #demo 的预览/runtime/依赖资源在线上 56d4 与目标 887f5b 之间已变化，不能用线上站映射到目标封面。",
+      "already_in_review_before_this_round": false,
+      "note": null
+    },
+    {
+      "id": "astryx:library",
+      "kind": "original_online_capture_ineligible",
+      "reason_bucket": "pending_core_broken_and_affecting_files_changed",
+      "reason": "affecting_files_changed: 影响 #demo 的预览/runtime/依赖资源在线上 56d4 与目标 887f5b 之间已变化，不能用线上站映射到目标封面。",
+      "already_in_review_before_this_round": true,
+      "note": "本就在待复核；本次只沿用或核对原因，不是新增淘汰，也不是从目录删除。"
+    },
+    {
+      "id": "blocknote:document-comments-workspace",
+      "kind": "original_online_capture_ineligible",
+      "reason_bucket": "uncertain_excluded",
+      "reason": "uncertain_excluded: 证据不足、状态待复核，按“不确定即排除”不列入线上可拍。",
+      "already_in_review_before_this_round": true,
+      "note": "本就在待复核；本次只沿用或核对原因，不是新增淘汰，也不是从目录删除。"
+    },
+    {
+      "id": "copilotkit:resume-job-match",
+      "kind": "original_online_capture_ineligible",
+      "reason_bucket": "pending_core_broken_and_affecting_files_changed",
+      "reason": "affecting_files_changed: 影响 #demo 的预览/runtime/依赖资源在线上 56d4 与目标 887f5b 之间已变化，不能用线上站映射到目标封面。",
+      "already_in_review_before_this_round": true,
+      "note": "本就在待复核；本次只沿用或核对原因，不是新增淘汰，也不是从目录删除。"
+    },
+    {
+      "id": "fancy:screensaver",
+      "kind": "original_online_capture_ineligible",
+      "reason_bucket": "affecting_files_changed",
+      "reason": "affecting_files_changed: 影响 #demo 的预览/runtime/依赖资源在线上 56d4 与目标 887f5b 之间已变化，不能用线上站映射到目标封面。",
+      "already_in_review_before_this_round": true,
+      "note": "本就在待复核；本次只沿用或核对原因，不是新增淘汰，也不是从目录删除。"
+    },
+    {
+      "id": "formity:branching-loop-interview",
+      "kind": "original_online_capture_ineligible",
+      "reason_bucket": "pending_core_broken_and_affecting_files_changed",
+      "reason": "affecting_files_changed: 影响 #demo 的预览/runtime/依赖资源在线上 56d4 与目标 887f5b 之间已变化，不能用线上站映射到目标封面。",
+      "already_in_review_before_this_round": false,
+      "note": null
+    },
+    {
+      "id": "minipaint:original-layered-paint-workspace",
+      "kind": "original_online_capture_ineligible",
+      "reason_bucket": "pending_core_broken",
+      "reason": "pending_core_broken: 待修核心坏/本环境确认的核心呈现或操作失败，排除出线上同内容补拍（不是用旧站证明已修好）。",
+      "already_in_review_before_this_round": true,
+      "note": "本就在待复核；本次只沿用或核对原因，不是新增淘汰，也不是从目录删除。"
+    },
+    {
+      "id": "silverbullet:document-navigation-workspace",
+      "kind": "original_online_capture_ineligible",
+      "reason_bucket": "pending_core_broken",
+      "reason": "pending_core_broken: 待修核心坏/本环境确认的核心呈现或操作失败，排除出线上同内容补拍（不是用旧站证明已修好）。",
+      "already_in_review_before_this_round": true,
+      "note": "本就在待复核；本次只沿用或核对原因，不是新增淘汰，也不是从目录删除。"
+    },
+    {
+      "id": "smoothui:image-metadata-preview",
+      "kind": "original_online_capture_ineligible",
+      "reason_bucket": "affecting_files_changed",
+      "reason": "affecting_files_changed: 影响 #demo 的预览/runtime/依赖资源在线上 56d4 与目标 887f5b 之间已变化，不能用线上站映射到目标封面。",
+      "already_in_review_before_this_round": true,
+      "note": "本就在待复核；本次只沿用或核对原因，不是新增淘汰，也不是从目录删除。"
+    },
+    {
+      "id": "smoothui:pixel-brush-canvas",
+      "kind": "original_online_capture_ineligible",
+      "reason_bucket": "affecting_files_changed",
+      "reason": "affecting_files_changed: 影响 #demo 的预览/runtime/依赖资源在线上 56d4 与目标 887f5b 之间已变化，不能用线上站映射到目标封面。",
+      "already_in_review_before_this_round": true,
+      "note": "本就在待复核；本次只沿用或核对原因，不是新增淘汰，也不是从目录删除。"
+    },
+    {
+      "id": "vis-timeline:local-task-planner",
+      "kind": "original_online_capture_ineligible",
+      "reason_bucket": "pending_core_broken_and_affecting_files_changed",
+      "reason": "affecting_files_changed: 影响 #demo 的预览/runtime/依赖资源在线上 56d4 与目标 887f5b 之间已变化，不能用线上站映射到目标封面。",
+      "already_in_review_before_this_round": true,
+      "note": "本就在待复核；本次只沿用或核对原因，不是新增淘汰，也不是从目录删除。"
+    },
+    {
+      "id": "svar:gantt-task-editor",
+      "kind": "batch06_failed_preview_unmapped",
+      "reason_bucket": "this_environment_preview_failed_no_main_ui",
+      "reason": "#demo 几乎为空白白底，仅见「预览发生错误：ResizeObserver loop completed with undelivered notifications.」，未见 Gantt 主界面。 仅记录此环境预览失败，根因未知。不能凭单条 ResizeObserver 信息判定上游源码已损坏。错误界面原截图只作取证，不作为正常 UI 封面，不用库存旧图充数。",
+      "already_in_review_before_this_round": false,
+      "evidence": {
+        "repo_path": "reports/thumbnail-capture/evidence/svar--gantt-task-editor.failed-preview.png",
+        "url": "https://github.com/tdwhere123/UI-Vault/blob/fix/browser-retest-20261110-aheng/reports/thumbnail-capture/evidence/svar--gantt-task-editor.failed-preview.png"
+      },
+      "note": "新失败未映射；条目保留并新进入待复核。不是删除。"
+    },
+    {
+      "id": "jsoncrack:structured-data-atlas",
+      "kind": "batch06_failed_preview_unmapped",
+      "reason_bucket": "this_environment_preview_failed_no_main_ui",
+      "reason": "#demo 为深色空窗，仅见 “JSON viewer unavailable. Close and reopen.” 及关闭/重开控件，未见结构化数据图谱或编辑主界面。 仅记录此环境预览失败，根因未知。不能凭单条错误文案判定上游源码已损坏。错误界面原截图只作取证，不作为正常 UI 封面，不用库存旧图充数。",
+      "already_in_review_before_this_round": false,
+      "evidence": {
+        "repo_path": "reports/thumbnail-capture/evidence/jsoncrack--structured-data-atlas.failed-preview.png",
+        "url": "https://github.com/tdwhere123/UI-Vault/blob/fix/browser-retest-20261110-aheng/reports/thumbnail-capture/evidence/jsoncrack--structured-data-atlas.failed-preview.png"
+      },
+      "note": "新失败未映射；条目保留并新进入待复核。不是删除。"
+    }
+  ],
+  "existing_review_isolation_36": {
+    "count": 36,
+    "ids": [
+      "chatui:rich-service-conversation",
+      "quartz-v4:linked-knowledge-garden",
+      "bruno:request-response-workspace",
+      "silverbullet:document-navigation-workspace",
+      "pizzicato:audio-effect-playground",
+      "jupyterlab:notebook-document-scene",
+      "react-page:multilingual-cell-editor",
+      "blocknote:document-comments-workspace",
+      "copilotkit:presentation-coauthor",
+      "copilotkit:resume-job-match",
+      "eldora:logo-cloud-04",
+      "astryx:library",
+      "fancy:screensaver",
+      "smoothui:pixel-brush-canvas",
+      "uilayout:timeline-animation-index",
+      "vis-timeline:local-task-planner",
+      "aicanvas:stack-tower",
+      "blode:dnd-grid",
+      "blode:omni-color-picker",
+      "smoothui:image-metadata-preview",
+      "puck:official-visual-page-builder",
+      "milkdown:crepe-document-workspace",
+      "novel:selection-writing-workspace",
+      "actual:budget-automation-editor",
+      "reactive-resume:paper-design-editor",
+      "pdfjs:local-text-reader",
+      "minipaint:original-layered-paint-workspace",
+      "plate:structured-stream-replay",
+      "piskel:pixel-animation-workspace",
+      "astryx-core:thumbnail",
+      "astryx:login-sso",
+      "assistant-elements:web-preview",
+      "fancy:elastic-line",
+      "cult:marketing-hero-analytics",
+      "aicanvas:peel-corner-reveal",
+      "tailark:dusk-features-three"
+    ],
+    "note": "这 36 项在本轮新增分类之前就已经是 review / 待复核，已从默认精选隔离。不是本轮新下架。silverbullet 与 minipaint 都在其中。原件条目与路由全部保留。"
+  },
+  "new_review_from_confirmed_partials_7": {
+    "count": 7,
+    "items": [
+      {
+        "id": "cult:illustration-fluid-rendering",
+        "when": "batch03 capture, classified review at batch05 close-in",
+        "observed": "连接插画可见，主内容盒呈空白灰占位，预期标签未显示。",
+        "screenshot": {
+          "repo_path": "apps/atlas-sample/thumbnails/cult--illustration-fluid-rendering.webp",
+          "url": "https://github.com/tdwhere123/UI-Vault/blob/fix/browser-retest-20261110-aheng/apps/atlas-sample/thumbnails/cult--illustration-fluid-rendering.webp"
+        },
+        "record": {
+          "repo_path": "reports/thumbnail-capture/records/cult--illustration-fluid-rendering.json",
+          "url": "https://github.com/tdwhere123/UI-Vault/blob/fix/browser-retest-20261110-aheng/reports/thumbnail-capture/records/cult--illustration-fluid-rendering.json"
+        },
+        "action": "retain → review（可逆移出默认精选，源码与条目保留）",
+        "reason_scope": "局部视觉缺失，参考价值降低；不是源代码已损坏的结论，也不把封面当修复回归。"
+      },
+      {
+        "id": "cult:fluid-ai-workloads",
+        "when": "batch03 capture, classified review at batch05 close-in",
+        "observed": "连接插画可见，较大内容卡为空白灰占位，工作负载细节未显示。",
+        "screenshot": {
+          "repo_path": "apps/atlas-sample/thumbnails/cult--fluid-ai-workloads.webp",
+          "url": "https://github.com/tdwhere123/UI-Vault/blob/fix/browser-retest-20261110-aheng/apps/atlas-sample/thumbnails/cult--fluid-ai-workloads.webp"
+        },
+        "record": {
+          "repo_path": "reports/thumbnail-capture/records/cult--fluid-ai-workloads.json",
+          "url": "https://github.com/tdwhere123/UI-Vault/blob/fix/browser-retest-20261110-aheng/reports/thumbnail-capture/records/cult--fluid-ai-workloads.json"
+        },
+        "action": "retain → review（可逆移出默认精选，源码与条目保留）",
+        "reason_scope": "局部视觉缺失，参考价值降低；不是源代码已损坏的结论，也不把封面当修复回归。"
+      },
+      {
+        "id": "cult:illustration-graph",
+        "when": "batch03 capture, classified review at batch05 close-in",
+        "observed": "仅见中央蓝线，预期坐标轴、标签与数值均未显示。",
+        "screenshot": {
+          "repo_path": "apps/atlas-sample/thumbnails/cult--illustration-graph.webp",
+          "url": "https://github.com/tdwhere123/UI-Vault/blob/fix/browser-retest-20261110-aheng/apps/atlas-sample/thumbnails/cult--illustration-graph.webp"
+        },
+        "record": {
+          "repo_path": "reports/thumbnail-capture/records/cult--illustration-graph.json",
+          "url": "https://github.com/tdwhere123/UI-Vault/blob/fix/browser-retest-20261110-aheng/reports/thumbnail-capture/records/cult--illustration-graph.json"
+        },
+        "action": "retain → review（可逆移出默认精选，源码与条目保留）",
+        "reason_scope": "局部视觉缺失，参考价值降低；不是源代码已损坏的结论，也不把封面当修复回归。"
+      },
+      {
+        "id": "cult:hero-heatmap",
+        "when": "batch03 capture, classified review at batch05 close-in",
+        "observed": "首屏文案可见，预期 WebGL2 热力图形区域空白，未见明确失败提示。不把空白 WebGL 写成已证实的设备或引擎损坏。",
+        "screenshot": {
+          "repo_path": "apps/atlas-sample/thumbnails/cult--hero-heatmap.webp",
+          "url": "https://github.com/tdwhere123/UI-Vault/blob/fix/browser-retest-20261110-aheng/apps/atlas-sample/thumbnails/cult--hero-heatmap.webp"
+        },
+        "record": {
+          "repo_path": "reports/thumbnail-capture/records/cult--hero-heatmap.json",
+          "url": "https://github.com/tdwhere123/UI-Vault/blob/fix/browser-retest-20261110-aheng/reports/thumbnail-capture/records/cult--hero-heatmap.json"
+        },
+        "action": "retain → review（可逆移出默认精选，源码与条目保留）",
+        "reason_scope": "局部视觉缺失，参考价值降低；不是源代码已损坏的结论，也不把封面当修复回归。"
+      },
+      {
+        "id": "cult:hero-liquid-metal",
+        "when": "batch03 capture, classified review at batch05 close-in",
+        "observed": "首屏文案与 CTA 可见，预期 WebGL2 液态金属图形区域空白，未见明确失败提示。不把空白 WebGL 写成已证实的设备或引擎损坏。",
+        "screenshot": {
+          "repo_path": "apps/atlas-sample/thumbnails/cult--hero-liquid-metal.webp",
+          "url": "https://github.com/tdwhere123/UI-Vault/blob/fix/browser-retest-20261110-aheng/apps/atlas-sample/thumbnails/cult--hero-liquid-metal.webp"
+        },
+        "record": {
+          "repo_path": "reports/thumbnail-capture/records/cult--hero-liquid-metal.json",
+          "url": "https://github.com/tdwhere123/UI-Vault/blob/fix/browser-retest-20261110-aheng/reports/thumbnail-capture/records/cult--hero-liquid-metal.json"
+        },
+        "action": "retain → review（可逆移出默认精选，源码与条目保留）",
+        "reason_scope": "局部视觉缺失，参考价值降低；不是源代码已损坏的结论，也不把封面当修复回归。"
+      },
+      {
+        "id": "zulip:topic-organized-collaboration",
+        "when": "batch04 capture, classified review at batch05 close-in",
+        "observed": "页头与话题控件可见并显示 6 条消息计数，大面积会话/消息区空白。",
+        "screenshot": {
+          "repo_path": "apps/atlas-sample/thumbnails/zulip--topic-organized-collaboration.webp",
+          "url": "https://github.com/tdwhere123/UI-Vault/blob/fix/browser-retest-20261110-aheng/apps/atlas-sample/thumbnails/zulip--topic-organized-collaboration.webp"
+        },
+        "record": {
+          "repo_path": "reports/thumbnail-capture/records/zulip--topic-organized-collaboration.json",
+          "url": "https://github.com/tdwhere123/UI-Vault/blob/fix/browser-retest-20261110-aheng/reports/thumbnail-capture/records/zulip--topic-organized-collaboration.json"
+        },
+        "action": "retain → review（可逆移出默认精选，源码与条目保留）",
+        "reason_scope": "局部视觉缺失，参考价值降低；不是源代码已损坏的结论，也不把封面当修复回归。"
+      },
+      {
+        "id": "astryx-core:stepper",
+        "when": "batch04 capture, classified review at batch05 close-in",
+        "observed": "三步标签与控件可见，各步骤标记显示为 NaN 而非有效序号。",
+        "screenshot": {
+          "repo_path": "apps/atlas-sample/thumbnails/astryx-core--stepper.webp",
+          "url": "https://github.com/tdwhere123/UI-Vault/blob/fix/browser-retest-20261110-aheng/apps/atlas-sample/thumbnails/astryx-core--stepper.webp"
+        },
+        "record": {
+          "repo_path": "reports/thumbnail-capture/records/astryx-core--stepper.json",
+          "url": "https://github.com/tdwhere123/UI-Vault/blob/fix/browser-retest-20261110-aheng/reports/thumbnail-capture/records/astryx-core--stepper.json"
+        },
+        "action": "retain → review（可逆移出默认精选，源码与条目保留）",
+        "reason_scope": "局部视觉缺失，参考价值降低；不是源代码已损坏的结论，也不把封面当修复回归。"
+      }
+    ],
+    "note": "batch05 收口时新增的可逆分类，不是本批 06 再新增，也不计入既有 36。"
+  },
+  "new_review_from_failed_previews_2": {
+    "count": 2,
+    "items": [
+      {
+        "id": "svar:gantt-task-editor",
+        "when": "batch06 failed capture, classified review at final close-out",
+        "observed": "#demo 几乎为空白白底，仅见「预览发生错误：ResizeObserver loop completed with undelivered notifications.」，未见 Gantt 主界面。",
+        "visual_confirmation": "已直接查看 680×440 交付截图：不是仅有 console 日志，而是预览内错误表面，主 UI 未显示。",
+        "screenshot": {
+          "repo_path": "reports/thumbnail-capture/evidence/svar--gantt-task-editor.failed-preview.png",
+          "url": "https://github.com/tdwhere123/UI-Vault/blob/fix/browser-retest-20261110-aheng/reports/thumbnail-capture/evidence/svar--gantt-task-editor.failed-preview.png"
+        },
+        "record": {
+          "repo_path": "reports/thumbnail-capture/records/svar--gantt-task-editor.json",
+          "url": "https://github.com/tdwhere123/UI-Vault/blob/fix/browser-retest-20261110-aheng/reports/thumbnail-capture/records/svar--gantt-task-editor.json"
+        },
+        "action": "retain → review（可逆移出默认精选，源码与条目保留，不永久删除）",
+        "reason_scope": "仅记录此环境预览失败，根因未知。不能凭单条 ResizeObserver 信息判定上游源码已损坏。错误界面原截图只作取证，不作为正常 UI 封面，不用库存旧图充数。"
+      },
+      {
+        "id": "jsoncrack:structured-data-atlas",
+        "when": "batch06 failed capture, classified review at final close-out",
+        "observed": "#demo 为深色空窗，仅见 “JSON viewer unavailable. Close and reopen.” 及关闭/重开控件，未见结构化数据图谱或编辑主界面。",
+        "visual_confirmation": "已直接查看 680×440 交付截图：不是仅有 console 日志，而是预览内错误表面，主 UI 未显示。",
+        "screenshot": {
+          "repo_path": "reports/thumbnail-capture/evidence/jsoncrack--structured-data-atlas.failed-preview.png",
+          "url": "https://github.com/tdwhere123/UI-Vault/blob/fix/browser-retest-20261110-aheng/reports/thumbnail-capture/evidence/jsoncrack--structured-data-atlas.failed-preview.png"
+        },
+        "record": {
+          "repo_path": "reports/thumbnail-capture/records/jsoncrack--structured-data-atlas.json",
+          "url": "https://github.com/tdwhere123/UI-Vault/blob/fix/browser-retest-20261110-aheng/reports/thumbnail-capture/records/jsoncrack--structured-data-atlas.json"
+        },
+        "action": "retain → review（可逆移出默认精选，源码与条目保留，不永久删除）",
+        "reason_scope": "仅记录此环境预览失败，根因未知。不能凭单条错误文案判定上游源码已损坏。错误界面原截图只作取证，不作为正常 UI 封面，不用库存旧图充数。"
+      }
+    ],
+    "note": "本收口实际新增的 2 项可逆分类。待复核合计 36+7+2=45。"
+  },
+  "resulting_needs_review_total": 45,
+  "partials_38_are_not_complete_references": [
+    "psone:console-control-scene",
+    "skeuos:tactile-controls",
+    "7css:aero-glass-showcase",
+    "98css:desktop-control-showcase",
+    "8bitcn:quest-log",
+    "astryx-core:calendar",
+    "majesticons:official-series",
+    "astryx-core:bottom-sheet",
+    "pepicons:exodus-selection",
+    "ionicons:complete-series",
+    "looper:radial-phase-field",
+    "iro:multi-handle-color-wheel",
+    "latexcss:scholarly-article",
+    "hanziwriter:stroke-practice-scene",
+    "bytesize-icons:official-series",
+    "papercss:paper-disclosure-notes",
+    "blode:omni-color-picker",
+    "healthicons:clinical-research-symbol-family",
+    "mono-icons:compact-outline-family",
+    "tinysynth:sound-design-console",
+    "systemcss:monochrome-control-language",
+    "motioncore:lava-lamp",
+    "bootstra386:dos-component-language",
+    "cult:illustration-fluid-rendering",
+    "cult:fluid-ai-workloads",
+    "cult:illustration-graph",
+    "cult:hero-heatmap",
+    "cult:hero-liquid-metal",
+    "zulip:topic-organized-collaboration",
+    "astryx-core:stepper",
+    "react-avatar-editor:crop-studio",
+    "svgfilter:node-material-editor",
+    "wavedrom:timing-diagram-editor",
+    "piskel:pixel-animation-workspace",
+    "tfplayground:decision-boundary-training",
+    "uilayout:timeline-animation-index",
+    "react-page:multilingual-cell-editor",
+    "drawdb:relational-schema-workspace"
+  ],
+  "batch06_partials": [
+    {
+      "id": "svgfilter:node-material-editor",
+      "reason": "节点图可见，结果窗空白并提示连接到 Result；需用户连接的空初态，不算功能故障，未淘汰。"
+    },
+    {
+      "id": "wavedrom:timing-diagram-editor",
+      "reason": "编辑器与波形可见，但顶端 clk 轨迹在边界被裁切。"
+    },
+    {
+      "id": "piskel:pixel-animation-workspace",
+      "reason": "编辑控件可见，32×32 画布为空且未加载示例；空初态不算功能故障。本就在待复核，未新增淘汰。"
+    },
+    {
+      "id": "tfplayground:decision-boundary-training",
+      "reason": "网络、数据集与决策边界图可见，但本视口控件行标签重叠。"
+    },
+    {
+      "id": "uilayout:timeline-animation-index",
+      "reason": "首屏为 FAQ 目录与宣传条，未见滚动时间线动效。本就在待复核，未新增淘汰。"
+    },
+    {
+      "id": "react-page:multilingual-cell-editor",
+      "reason": "外壳与语言选择可见，中央画布无单元格；空初态不算功能故障。本就在待复核，未新增淘汰。"
+    },
+    {
+      "id": "drawdb:relational-schema-workspace",
+      "reason": "外壳与五表侧栏可见，画布大部分在视口外（仅裁到 blog_posts），logo 损坏，图库提示部分资源未载入。保留为 partial 范围，未一刀切淘汰。"
+    }
+  ]
+}
