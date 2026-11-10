@@ -5,32 +5,33 @@
   "screenshot_status": "captured_render_confirmed",
   "compression_status": "passed",
   "viewport": {
-    "width": null,
-    "height": null,
-    "status": "unknown"
+    "width": 1920,
+    "height": 1072
   },
   "actions": [
-    "Default responsive-header logo/menu button; drawer not opened."
+    "Opened the live gallery detail from the card URL and captured the visible #demo iframe with a native desktop screenshot.",
+    "Returned to the gallery after capture.",
+    "Interaction was not tested."
   ],
-  "render_state": "partial_content | 整 iframe contain；presentation=partial；awaiting_user_review；interaction not_tested；Only the compact header trigger is visible; menu content is closed.",
+  "render_state": "Opened the local responsive header drawer to show its close control, navigation labels and layout cards; no ordinary links were followed.",
   "interaction_acceptance": "not_tested",
   "failure_reason": null,
-  "source_screenshot_sha256": "8c600aa9fc8d1c2bd8cfe4f2a20c3489cc39778e96d12b1b0c29050f421e765f",
+  "source_screenshot_sha256": "ccd626d34050bf772c0fb13235f909decc6ed995c210474c3ae2c1664f4f6586",
   "source_dimensions": [
-    1538,
-    579
+    680,
+    440
   ],
   "requested_rect": [
     0,
     0,
-    1538,
-    579
+    680,
+    440
   ],
   "fitted_crop_box": [
     0,
     0,
-    1538,
-    579
+    680,
+    440
   ],
   "resize": [
     680,
@@ -40,26 +41,27 @@
   "placement": {
     "content_size": [
       680,
-      256
+      440
     ],
     "offset": [
       0,
-      92
+      0
     ],
     "background_rgb": [
-      248,
-      248,
-      246
+      255,
+      255,
+      255
     ]
   },
   "detail_url": "https://tdwhere123.github.io/UI-Vault/#/item/uilayout%3Adrawer-responsive-header",
-  "baseline": "77ada4cd095d383cf1e9c774f7cc1518da9b1b55",
+  "baseline": "887f5b5ae9d83de8517b09915476e5a2bae51237",
   "resource_verification": [
     {
       "url": "https://tdwhere123.github.io/UI-Vault/batches/uilayout-next-03/drawer-responsive-header.html",
       "repository_path": "apps/atlas-sample/batches/uilayout-next-03/drawer-responsive-header.html",
       "public_sha256": "59cd6cee345470427bbf3652fbda66f5f5e76ad3f1a687a64ecf870d43b646c8",
       "local_sha256": "59cd6cee345470427bbf3652fbda66f5f5e76ad3f1a687a64ecf870d43b646c8",
+      "target_sha256": "59cd6cee345470427bbf3652fbda66f5f5e76ad3f1a687a64ecf870d43b646c8",
       "bytes": 277,
       "match": true
     },
@@ -68,25 +70,52 @@
       "repository_path": "apps/atlas-sample/batches/uilayout-next-03/runtime.css",
       "public_sha256": "49ac10fb226d12bb57164f9e591ca75592e91aa888e6d7a6248ade5ad7a2938f",
       "local_sha256": "49ac10fb226d12bb57164f9e591ca75592e91aa888e6d7a6248ade5ad7a2938f",
+      "target_sha256": "49ac10fb226d12bb57164f9e591ca75592e91aa888e6d7a6248ade5ad7a2938f",
       "bytes": 65579,
       "match": true
     },
     {
       "url": "https://tdwhere123.github.io/UI-Vault/batches/uilayout-next-03/runtime.js",
       "repository_path": "apps/atlas-sample/batches/uilayout-next-03/runtime.js",
-      "public_sha256": "3ca985854b6f4f42e4193258e96bb6e3b60a6c97826a8bf1214d2f6cf772518c",
-      "local_sha256": "3ca985854b6f4f42e4193258e96bb6e3b60a6c97826a8bf1214d2f6cf772518c",
-      "bytes": 495674,
+      "public_sha256": "9425c3f50bdf06cda47195e57265b1f6f1764f3c1f215ffcc431c9a63e430106",
+      "local_sha256": "9425c3f50bdf06cda47195e57265b1f6f1764f3c1f215ffcc431c9a63e430106",
+      "target_sha256": "9425c3f50bdf06cda47195e57265b1f6f1764f3c1f215ffcc431c9a63e430106",
+      "bytes": 495976,
       "match": true
     }
   ],
   "cover_visual_review": "awaiting_user_review",
   "webp_quality": 86,
-  "bytes": 944,
-  "sha256": "c5816a0a749095f5f73c93ebde9e261977a4ac811c260001036c7eb45ec36ebd",
-  "presentation_class": "partial",
-  "processor_note": "整 iframe contain；presentation=partial；awaiting_user_review；interaction not_tested；Only the compact header trigger is visible; menu content is closed.",
-  "capture_json_status": "partial_content",
-  "limitations": "Only the compact header trigger is visible; menu content is closed.",
-  "not_counted_as_complete_success": true
+  "bytes": 4322,
+  "sha256": "dd21218fa0bc342508ee0f63093566772ec045e76ac13e43c50fa71fb4ee4c4b",
+  "presentation_class": "complete",
+  "capture_json_status": "complete",
+  "processor_note": "整 iframe contain；presentation=complete；awaiting_user_review；interaction not_tested。contain 处理不把已裁切/不完整原图声明为完整恢复。源图未二次裁掉内容。 本批使用已交付 680x440 PNG 整画布转换，不再次裁切。",
+  "limitations": "",
+  "source_live_sha": "56d4a215487cf1ea3a07d1a50ae612d33e93cc3b",
+  "target_sha": "887f5b5ae9d83de8517b09915476e5a2bae51237",
+  "live_sha_unchanged_during_capture": true,
+  "native_desktop_source_sha256": "18a4b4da79bab4bac47b6203ce088a296d3e16446906b974d0502ea46c761cea",
+  "capture_timestamp": "2026-11-10T15:26:22.620010+08:00",
+  "native_desktop_source_dimensions": [
+    1920,
+    1200
+  ],
+  "native_visible_iframe_rect": [
+    286,
+    375,
+    1538,
+    578
+  ],
+  "capture_method": "Native desktop screenshot of the live detail preview iframe; cropped and fit-to-canvas after capture only.",
+  "source_png_preserved": true,
+  "supersedes_needs_recapture": {
+    "supersedes_unmapped_old_partial_or_needs_recapture": true,
+    "prior_status": "render_capture_processed",
+    "prior_presentation_class": "partial",
+    "prior_limitations": "Only the compact header trigger is visible; menu content is closed.",
+    "prior_baseline": "77ada4cd095d383cf1e9c774f7cc1518da9b1b55",
+    "prior_sha256": "c5816a0a749095f5f73c93ebde9e261977a4ac811c260001036c7eb45ec36ebd",
+    "previous_screenshot_sha256": "8c600aa9fc8d1c2bd8cfe4f2a20c3489cc39778e96d12b1b0c29050f421e765f"
+  }
 }

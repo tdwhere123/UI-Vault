@@ -5,32 +5,33 @@
   "screenshot_status": "captured_render_confirmed",
   "compression_status": "passed",
   "viewport": {
-    "width": null,
-    "height": null,
-    "status": "unknown"
+    "width": 1920,
+    "height": 1072
   },
   "actions": [
-    "Default local image-reveal category list; no external navigation or hover."
+    "Opened the live gallery detail from the card URL and captured the visible #demo iframe with a native desktop screenshot.",
+    "Returned to the gallery after capture.",
+    "Interaction was not tested."
   ],
-  "render_state": "partial_content | 整 iframe contain；presentation=partial；awaiting_user_review；interaction not_tested；Reveal images are not visible in the default static state.",
+  "render_state": "Hovering the first row reveals its built-in SVG artwork alongside the label list; the other rows remain available below, and no links were opened.",
   "interaction_acceptance": "not_tested",
   "failure_reason": null,
-  "source_screenshot_sha256": "809a8b59957b009418e4ad844cd7112584e623df92385a95c41da59b35803806",
+  "source_screenshot_sha256": "78e8e4e822fdc775aacd42bdd39e4d72c41afbcea0d4ec32dd4cb5d39bac6f27",
   "source_dimensions": [
-    1538,
-    579
+    680,
+    440
   ],
   "requested_rect": [
     0,
     0,
-    1538,
-    579
+    680,
+    440
   ],
   "fitted_crop_box": [
     0,
     0,
-    1538,
-    579
+    680,
+    440
   ],
   "resize": [
     680,
@@ -40,53 +41,81 @@
   "placement": {
     "content_size": [
       680,
-      256
+      440
     ],
     "offset": [
       0,
-      92
+      0
     ],
     "background_rgb": [
-      248,
-      248,
-      246
+      255,
+      255,
+      255
     ]
   },
   "detail_url": "https://tdwhere123.github.io/UI-Vault/#/item/uilayout%3Aimage-reveal-image-reveal",
-  "baseline": "77ada4cd095d383cf1e9c774f7cc1518da9b1b55",
+  "baseline": "887f5b5ae9d83de8517b09915476e5a2bae51237",
   "resource_verification": [
     {
       "url": "https://tdwhere123.github.io/UI-Vault/batches/uilayout-next-02/image-reveal-image-reveal.html",
       "repository_path": "apps/atlas-sample/batches/uilayout-next-02/image-reveal-image-reveal.html",
       "public_sha256": "d6dd2dd8c1fc724175ed1bce801e3bf9af3c7791ae94c312e66994d83fa83fd8",
       "local_sha256": "d6dd2dd8c1fc724175ed1bce801e3bf9af3c7791ae94c312e66994d83fa83fd8",
+      "target_sha256": "d6dd2dd8c1fc724175ed1bce801e3bf9af3c7791ae94c312e66994d83fa83fd8",
       "bytes": 278,
       "match": true
     },
     {
       "url": "https://tdwhere123.github.io/UI-Vault/batches/uilayout-next-02/runtime.css",
       "repository_path": "apps/atlas-sample/batches/uilayout-next-02/runtime.css",
-      "public_sha256": "49ac10fb226d12bb57164f9e591ca75592e91aa888e6d7a6248ade5ad7a2938f",
-      "local_sha256": "49ac10fb226d12bb57164f9e591ca75592e91aa888e6d7a6248ade5ad7a2938f",
-      "bytes": 65579,
+      "public_sha256": "6e4abb243774627bfc5837150868913958a299772c85fdb845edf3aad2050e05",
+      "local_sha256": "6e4abb243774627bfc5837150868913958a299772c85fdb845edf3aad2050e05",
+      "target_sha256": "6e4abb243774627bfc5837150868913958a299772c85fdb845edf3aad2050e05",
+      "bytes": 65780,
       "match": true
     },
     {
       "url": "https://tdwhere123.github.io/UI-Vault/batches/uilayout-next-02/runtime.js",
       "repository_path": "apps/atlas-sample/batches/uilayout-next-02/runtime.js",
-      "public_sha256": "6b066a383be8557449bb0c2517373717b75e13eb547d0c6852c352059bd313bd",
-      "local_sha256": "6b066a383be8557449bb0c2517373717b75e13eb547d0c6852c352059bd313bd",
-      "bytes": 589756,
+      "public_sha256": "409c88ded52e56367ec33577851ca09a17b9d565c6989bf36a7312c73470d273",
+      "local_sha256": "409c88ded52e56367ec33577851ca09a17b9d565c6989bf36a7312c73470d273",
+      "target_sha256": "409c88ded52e56367ec33577851ca09a17b9d565c6989bf36a7312c73470d273",
+      "bytes": 590152,
       "match": true
     }
   ],
   "cover_visual_review": "awaiting_user_review",
   "webp_quality": 86,
-  "bytes": 7140,
-  "sha256": "8c485d16d4c71e3bc1eaa749be259221453136f35029a476d029d006cfa6a679",
-  "presentation_class": "partial",
-  "processor_note": "整 iframe contain；presentation=partial；awaiting_user_review；interaction not_tested；Reveal images are not visible in the default static state.",
-  "capture_json_status": "partial_content",
-  "limitations": "Reveal images are not visible in the default static state.",
-  "not_counted_as_complete_success": true
+  "bytes": 5274,
+  "sha256": "ad890795c6e6d5f79b5f714bc14e6ccdb779e539b9713f1c980fc687333962f3",
+  "presentation_class": "complete",
+  "capture_json_status": "complete",
+  "processor_note": "整 iframe contain；presentation=complete；awaiting_user_review；interaction not_tested。contain 处理不把已裁切/不完整原图声明为完整恢复。源图未二次裁掉内容。 本批使用已交付 680x440 PNG 整画布转换，不再次裁切。",
+  "limitations": "",
+  "source_live_sha": "56d4a215487cf1ea3a07d1a50ae612d33e93cc3b",
+  "target_sha": "887f5b5ae9d83de8517b09915476e5a2bae51237",
+  "live_sha_unchanged_during_capture": true,
+  "native_desktop_source_sha256": "94982af54f5c4079bf3f8809b373a863be10b641e605335d5eab5f82581bd5a5",
+  "capture_timestamp": "2026-11-10T15:42:12.720285+08:00",
+  "native_desktop_source_dimensions": [
+    1920,
+    1200
+  ],
+  "native_visible_iframe_rect": [
+    286,
+    399,
+    1538,
+    578
+  ],
+  "capture_method": "Native desktop screenshot of the live detail preview iframe; cropped and fit-to-canvas after capture only.",
+  "source_png_preserved": true,
+  "supersedes_needs_recapture": {
+    "supersedes_unmapped_old_partial_or_needs_recapture": true,
+    "prior_status": "render_capture_processed",
+    "prior_presentation_class": "partial",
+    "prior_limitations": "Reveal images are not visible in the default static state.",
+    "prior_baseline": "77ada4cd095d383cf1e9c774f7cc1518da9b1b55",
+    "prior_sha256": "8c485d16d4c71e3bc1eaa749be259221453136f35029a476d029d006cfa6a679",
+    "previous_screenshot_sha256": "809a8b59957b009418e4ad844cd7112584e623df92385a95c41da59b35803806"
+  }
 }

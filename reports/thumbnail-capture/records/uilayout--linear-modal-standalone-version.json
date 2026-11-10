@@ -5,32 +5,33 @@
   "screenshot_status": "captured_render_confirmed",
   "compression_status": "passed",
   "viewport": {
-    "width": null,
-    "height": null,
-    "status": "unknown"
+    "width": 1920,
+    "height": 1072
   },
   "actions": [
-    "Default local modal showcase grid; no modal opened."
+    "Opened the live gallery detail from the card URL and captured the visible #demo iframe with a native desktop screenshot.",
+    "Returned to the gallery after capture.",
+    "Interaction was not tested."
   ],
-  "render_state": "partial_content | 整 iframe contain；presentation=partial；awaiting_user_review；interaction not_tested；The overlay/modal content is not displayed in the default grid state.",
+  "render_state": "Opened the Accordion detail modal, showing its close button, replaced placeholder art, title and local tags; no external destination was followed.",
   "interaction_acceptance": "not_tested",
   "failure_reason": null,
-  "source_screenshot_sha256": "7a1ebbbc1641f354d8cbe49b661da6a87e59152508eda3ffb0b3563c71389e14",
+  "source_screenshot_sha256": "f94d41ed6d32846f25d967988980be383c2c7f8d442057cd19a298169b2fae73",
   "source_dimensions": [
-    1538,
-    579
+    680,
+    440
   ],
   "requested_rect": [
     0,
     0,
-    1538,
-    579
+    680,
+    440
   ],
   "fitted_crop_box": [
     0,
     0,
-    1538,
-    579
+    680,
+    440
   ],
   "resize": [
     680,
@@ -40,53 +41,81 @@
   "placement": {
     "content_size": [
       680,
-      256
+      440
     ],
     "offset": [
       0,
-      92
+      0
     ],
     "background_rgb": [
-      248,
-      248,
-      246
+      255,
+      255,
+      255
     ]
   },
   "detail_url": "https://tdwhere123.github.io/UI-Vault/#/item/uilayout%3Alinear-modal-standalone-version",
-  "baseline": "77ada4cd095d383cf1e9c774f7cc1518da9b1b55",
+  "baseline": "887f5b5ae9d83de8517b09915476e5a2bae51237",
   "resource_verification": [
     {
       "url": "https://tdwhere123.github.io/UI-Vault/batches/uilayout-next-02/linear-modal-standalone-version.html",
       "repository_path": "apps/atlas-sample/batches/uilayout-next-02/linear-modal-standalone-version.html",
       "public_sha256": "2e9b4288bf8ad955f47359699fa7c3891c3475441d06cfb3a2b62f07c57d22a8",
       "local_sha256": "2e9b4288bf8ad955f47359699fa7c3891c3475441d06cfb3a2b62f07c57d22a8",
+      "target_sha256": "2e9b4288bf8ad955f47359699fa7c3891c3475441d06cfb3a2b62f07c57d22a8",
       "bytes": 284,
       "match": true
     },
     {
       "url": "https://tdwhere123.github.io/UI-Vault/batches/uilayout-next-02/runtime.css",
       "repository_path": "apps/atlas-sample/batches/uilayout-next-02/runtime.css",
-      "public_sha256": "49ac10fb226d12bb57164f9e591ca75592e91aa888e6d7a6248ade5ad7a2938f",
-      "local_sha256": "49ac10fb226d12bb57164f9e591ca75592e91aa888e6d7a6248ade5ad7a2938f",
-      "bytes": 65579,
+      "public_sha256": "6e4abb243774627bfc5837150868913958a299772c85fdb845edf3aad2050e05",
+      "local_sha256": "6e4abb243774627bfc5837150868913958a299772c85fdb845edf3aad2050e05",
+      "target_sha256": "6e4abb243774627bfc5837150868913958a299772c85fdb845edf3aad2050e05",
+      "bytes": 65780,
       "match": true
     },
     {
       "url": "https://tdwhere123.github.io/UI-Vault/batches/uilayout-next-02/runtime.js",
       "repository_path": "apps/atlas-sample/batches/uilayout-next-02/runtime.js",
-      "public_sha256": "6b066a383be8557449bb0c2517373717b75e13eb547d0c6852c352059bd313bd",
-      "local_sha256": "6b066a383be8557449bb0c2517373717b75e13eb547d0c6852c352059bd313bd",
-      "bytes": 589756,
+      "public_sha256": "409c88ded52e56367ec33577851ca09a17b9d565c6989bf36a7312c73470d273",
+      "local_sha256": "409c88ded52e56367ec33577851ca09a17b9d565c6989bf36a7312c73470d273",
+      "target_sha256": "409c88ded52e56367ec33577851ca09a17b9d565c6989bf36a7312c73470d273",
+      "bytes": 590152,
       "match": true
     }
   ],
   "cover_visual_review": "awaiting_user_review",
   "webp_quality": 86,
-  "bytes": 3522,
-  "sha256": "b684e3d2cf95548022982c9a0f539428b62806e948c476800de4d3c75443e7bf",
-  "presentation_class": "partial",
-  "processor_note": "整 iframe contain；presentation=partial；awaiting_user_review；interaction not_tested；The overlay/modal content is not displayed in the default grid state.",
-  "capture_json_status": "partial_content",
-  "limitations": "The overlay/modal content is not displayed in the default grid state.",
-  "not_counted_as_complete_success": true
+  "bytes": 4040,
+  "sha256": "5c826bb82ef17c585571b6fc8ff2c33ad745c12dd12a25c9da16da4b38c22b8c",
+  "presentation_class": "complete",
+  "capture_json_status": "complete",
+  "processor_note": "整 iframe contain；presentation=complete；awaiting_user_review；interaction not_tested。contain 处理不把已裁切/不完整原图声明为完整恢复。源图未二次裁掉内容。 本批使用已交付 680x440 PNG 整画布转换，不再次裁切。",
+  "limitations": "",
+  "source_live_sha": "56d4a215487cf1ea3a07d1a50ae612d33e93cc3b",
+  "target_sha": "887f5b5ae9d83de8517b09915476e5a2bae51237",
+  "live_sha_unchanged_during_capture": true,
+  "native_desktop_source_sha256": "850c8764f578fac2c6cae272312d2becf1b93dca06cfa1606074d868dfac19ac",
+  "capture_timestamp": "2026-11-10T15:43:05.960602+08:00",
+  "native_desktop_source_dimensions": [
+    1920,
+    1200
+  ],
+  "native_visible_iframe_rect": [
+    286,
+    375,
+    1538,
+    578
+  ],
+  "capture_method": "Native desktop screenshot of the live detail preview iframe; cropped and fit-to-canvas after capture only.",
+  "source_png_preserved": true,
+  "supersedes_needs_recapture": {
+    "supersedes_unmapped_old_partial_or_needs_recapture": true,
+    "prior_status": "render_capture_processed",
+    "prior_presentation_class": "partial",
+    "prior_limitations": "The overlay/modal content is not displayed in the default grid state.",
+    "prior_baseline": "77ada4cd095d383cf1e9c774f7cc1518da9b1b55",
+    "prior_sha256": "b684e3d2cf95548022982c9a0f539428b62806e948c476800de4d3c75443e7bf",
+    "previous_screenshot_sha256": "7a1ebbbc1641f354d8cbe49b661da6a87e59152508eda3ffb0b3563c71389e14"
+  }
 }
