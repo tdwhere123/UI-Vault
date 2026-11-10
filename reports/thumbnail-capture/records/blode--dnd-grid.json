@@ -1,18 +1,67 @@
 {
   "id": "blode:dnd-grid",
-  "status": "needs_recapture",
-  "reason": "After scroll, primary grid still clips the top of tile A; main component incomplete for cover.",
-  "render_state": "DnD grid after scroll; upper tile A still truncated at iframe top.",
-  "operation": "Scrolled down to show lower tiles; large grid still clips the upper part of tile A at this iframe viewport.",
-  "previous_screenshot_sha256": "d4739316b37a1f5cd156cf8016f9d2fc47afcfc24552a6b1141dc706bebf6142",
+  "path": "apps/atlas-sample/thumbnails/blode--dnd-grid.webp",
+  "status": "render_capture_processed",
+  "screenshot_status": "captured_render_confirmed",
+  "compression_status": "passed",
+  "viewport": {
+    "width": 1920,
+    "height": 1072
+  },
+  "actions": [
+    "Opened the live gallery detail from the card URL and captured the visible #demo iframe with a native desktop screenshot.",
+    "Returned to the gallery after capture.",
+    "Interaction was not tested."
+  ],
+  "render_state": "The resizable, draggable tile board is shown after normal scrolling; the lower edge of tile H continues below this representative first-screen view.",
+  "interaction_acceptance": "not_tested",
+  "failure_reason": null,
+  "source_screenshot_sha256": "34148fe8e59654b17ed281bb90ee54bfd135089c398f71f775498a2677c7d436",
+  "source_dimensions": [
+    680,
+    440
+  ],
+  "requested_rect": [
+    0,
+    0,
+    680,
+    440
+  ],
+  "fitted_crop_box": [
+    0,
+    0,
+    680,
+    440
+  ],
+  "resize": [
+    680,
+    440
+  ],
+  "fit": "contain",
+  "placement": {
+    "content_size": [
+      680,
+      440
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "background_rgb": [
+      255,
+      255,
+      255
+    ]
+  },
   "detail_url": "https://tdwhere123.github.io/UI-Vault/#/item/blode%3Adnd-grid",
-  "baseline": "77ada4cd095d383cf1e9c774f7cc1518da9b1b55",
+  "baseline": "887f5b5ae9d83de8517b09915476e5a2bae51237",
   "resource_verification": [
     {
       "url": "https://tdwhere123.github.io/UI-Vault/batches/blode-spatial-01/dnd-grid/index.html",
       "repository_path": "apps/atlas-sample/batches/blode-spatial-01/dnd-grid/index.html",
       "public_sha256": "ff0f949d7f0f30784fb72a4efba96f5f93928c7cf35b5b6018d61add91ec01ba",
       "local_sha256": "ff0f949d7f0f30784fb72a4efba96f5f93928c7cf35b5b6018d61add91ec01ba",
+      "target_sha256": "ff0f949d7f0f30784fb72a4efba96f5f93928c7cf35b5b6018d61add91ec01ba",
       "bytes": 240,
       "match": true
     },
@@ -21,6 +70,7 @@
       "repository_path": "apps/atlas-sample/batches/blode-spatial-01/dnd-grid/runtime.css",
       "public_sha256": "fbbbe2789790369b56e597b94b9979be3488d8153c013325004cb9a4a912d445",
       "local_sha256": "fbbbe2789790369b56e597b94b9979be3488d8153c013325004cb9a4a912d445",
+      "target_sha256": "fbbbe2789790369b56e597b94b9979be3488d8153c013325004cb9a4a912d445",
       "bytes": 40283,
       "match": true
     },
@@ -29,14 +79,41 @@
       "repository_path": "apps/atlas-sample/batches/blode-spatial-01/dnd-grid/runtime.js",
       "public_sha256": "657028a43d075b943e69f6a9dd56b0252873a8d5b591807236509f3931e2344e",
       "local_sha256": "657028a43d075b943e69f6a9dd56b0252873a8d5b591807236509f3931e2344e",
+      "target_sha256": "657028a43d075b943e69f6a9dd56b0252873a8d5b591807236509f3931e2344e",
       "bytes": 799086,
       "match": true
     }
   ],
-  "interaction_acceptance": "not_tested",
-  "not_counted_as_success": true,
-  "path": null,
-  "screenshot_status": "needs_recapture",
-  "compression_status": "not_attempted",
-  "cover_visual_review": "needs_recapture"
+  "cover_visual_review": "awaiting_user_review",
+  "webp_quality": 86,
+  "bytes": 1728,
+  "sha256": "8f24cdbd1bf448178e80d2575d6c333787b402876fa22411d182b48004f908d9",
+  "presentation_class": "complete",
+  "capture_json_status": "complete",
+  "processor_note": "整 iframe contain；presentation=complete；awaiting_user_review；interaction not_tested。contain 处理不把已裁切/不完整原图声明为完整恢复。源图未二次裁掉内容。 本批使用已交付 680x440 PNG 整画布转换，不再次裁切。",
+  "limitations": "",
+  "source_live_sha": "56d4a215487cf1ea3a07d1a50ae612d33e93cc3b",
+  "target_sha": "887f5b5ae9d83de8517b09915476e5a2bae51237",
+  "live_sha_unchanged_during_capture": true,
+  "native_desktop_source_sha256": "5fd8a72b8e7a675f9126e032ccf9b795e2a59387eb2dc7c987cd06c4d898474e",
+  "capture_timestamp": "2026-11-10T15:12:11.383476+08:00",
+  "native_desktop_source_dimensions": [
+    1920,
+    1200
+  ],
+  "native_visible_iframe_rect": [
+    286,
+    375,
+    1538,
+    578
+  ],
+  "capture_method": "Native desktop screenshot of the live detail preview iframe; cropped and fit-to-canvas after capture only.",
+  "source_png_preserved": true,
+  "supersedes_needs_recapture": {
+    "supersedes_needs_recapture_record": true,
+    "prior_status": "needs_recapture",
+    "prior_reason": "After scroll, primary grid still clips the top of tile A; main component incomplete for cover.",
+    "prior_baseline": "77ada4cd095d383cf1e9c774f7cc1518da9b1b55",
+    "previous_screenshot_sha256": "d4739316b37a1f5cd156cf8016f9d2fc47afcfc24552a6b1141dc706bebf6142"
+  }
 }
