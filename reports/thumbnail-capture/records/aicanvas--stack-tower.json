@@ -1,24 +1,67 @@
 {
   "id": "aicanvas:stack-tower",
-  "path": null,
-  "status": "needs_recapture",
-  "screenshot_status": "needs_recapture",
-  "compression_status": "not_attempted",
-  "reason": "超高文字塔滚动后仍无法在 iframe 内完整显示，底部截断；主体不完整，needs_recapture，无封面",
-  "render_state": "partial_content_overflow",
-  "operation": "Scrolled iframe down 210px to show more of the tall type sculpture; lower rows remain beyond viewport.",
-  "actions": "Scrolled iframe down 210px to show more of the tall type sculpture; lower rows remain beyond viewport.",
+  "path": "apps/atlas-sample/thumbnails/aicanvas--stack-tower.webp",
+  "status": "render_capture_processed",
+  "screenshot_status": "captured_render_confirmed",
+  "compression_status": "passed",
+  "viewport": {
+    "width": 1920,
+    "height": 1072
+  },
+  "actions": [
+    "Opened the live gallery detail from the card URL and captured the visible #demo iframe with a native desktop screenshot.",
+    "Returned to the gallery after capture.",
+    "Interaction was not tested."
+  ],
+  "render_state": "Scrolled within the local preview to show the central layered STACK/TOWER sculpture; it continues below as intended content. This is a still image, not an animation or agent-status claim.",
   "interaction_acceptance": "not_tested",
-  "cover_visual_review": "needs_recapture",
-  "not_counted_as_success": true,
+  "failure_reason": null,
+  "source_screenshot_sha256": "e584702a985ecae1b3add396715cd4450ff62d18ae4f21eeaaec7e4d8cd5e1a9",
+  "source_dimensions": [
+    680,
+    440
+  ],
+  "requested_rect": [
+    0,
+    0,
+    680,
+    440
+  ],
+  "fitted_crop_box": [
+    0,
+    0,
+    680,
+    440
+  ],
+  "resize": [
+    680,
+    440
+  ],
+  "fit": "contain",
+  "placement": {
+    "content_size": [
+      680,
+      440
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "background_rgb": [
+      255,
+      255,
+      255
+    ]
+  },
   "detail_url": "https://tdwhere123.github.io/UI-Vault/#/item/aicanvas%3Astack-tower",
-  "baseline": "77ada4cd095d383cf1e9c774f7cc1518da9b1b55",
+  "baseline": "887f5b5ae9d83de8517b09915476e5a2bae51237",
   "resource_verification": [
     {
       "url": "https://tdwhere123.github.io/UI-Vault/batches/aicanvas-tower-01/index.html",
       "repository_path": "apps/atlas-sample/batches/aicanvas-tower-01/index.html",
       "public_sha256": "6e5640994465d0345ecdf9f96a1aed370371f656d6c752deaa1ba1112b44d7fc",
       "local_sha256": "6e5640994465d0345ecdf9f96a1aed370371f656d6c752deaa1ba1112b44d7fc",
+      "target_sha256": "6e5640994465d0345ecdf9f96a1aed370371f656d6c752deaa1ba1112b44d7fc",
       "bytes": 277,
       "match": true
     },
@@ -27,6 +70,7 @@
       "repository_path": "apps/atlas-sample/batches/aicanvas-tower-01/runtime.css",
       "public_sha256": "fc582931e3e923a19bffc68b34935cdae7c2db62d479de13add542ae47187209",
       "local_sha256": "fc582931e3e923a19bffc68b34935cdae7c2db62d479de13add542ae47187209",
+      "target_sha256": "fc582931e3e923a19bffc68b34935cdae7c2db62d479de13add542ae47187209",
       "bytes": 1029,
       "match": true
     },
@@ -35,13 +79,43 @@
       "repository_path": "apps/atlas-sample/batches/aicanvas-tower-01/runtime.js",
       "public_sha256": "ee4e4874d1252218f5d3d0d4d82b5e1827a67926e81a25d3a897b8dd8e7b7a0b",
       "local_sha256": "ee4e4874d1252218f5d3d0d4d82b5e1827a67926e81a25d3a897b8dd8e7b7a0b",
+      "target_sha256": "ee4e4874d1252218f5d3d0d4d82b5e1827a67926e81a25d3a897b8dd8e7b7a0b",
       "bytes": 354499,
       "match": true
     }
   ],
-  "previous_screenshot_sha256": "0bb73e957059392702b07fef2501154fc9f952cea3ebe59d56259a9821678a30",
-  "source_dimensions": [
+  "cover_visual_review": "awaiting_user_review",
+  "webp_quality": 86,
+  "bytes": 5724,
+  "sha256": "39e2ed30b38c5217196637fe5dfb62bdfddc8b74179e59394ee3edcb0575f64c",
+  "presentation_class": "complete",
+  "capture_json_status": "complete",
+  "processor_note": "整 iframe contain；presentation=complete；awaiting_user_review；interaction not_tested。contain 处理不把已裁切/不完整原图声明为完整恢复。源图未二次裁掉内容。 本批使用已交付 680x440 PNG 整画布转换，不再次裁切。",
+  "limitations": "",
+  "source_live_sha": "56d4a215487cf1ea3a07d1a50ae612d33e93cc3b",
+  "target_sha": "887f5b5ae9d83de8517b09915476e5a2bae51237",
+  "live_sha_unchanged_during_capture": true,
+  "native_desktop_source_sha256": "a3fd0082f728b8603f9d816bd5345185fa0b6cbb08fdb64fc38ce3932e283e42",
+  "capture_timestamp": "2026-11-10T16:13:26.402531+08:00",
+  "native_desktop_source_dimensions": [
+    1920,
+    1200
+  ],
+  "native_visible_iframe_rect": [
+    286,
+    375,
     1538,
-    579
-  ]
+    578
+  ],
+  "capture_method": "Native desktop screenshot of the live detail preview iframe; cropped and fit-to-canvas after capture only.",
+  "source_png_preserved": true,
+  "supersedes_needs_recapture": {
+    "supersedes_unmapped_old_partial_or_needs_recapture": true,
+    "prior_status": "needs_recapture",
+    "prior_presentation_class": null,
+    "prior_limitations": "超高文字塔滚动后仍无法在 iframe 内完整显示，底部截断；主体不完整，needs_recapture，无封面",
+    "prior_baseline": "77ada4cd095d383cf1e9c774f7cc1518da9b1b55",
+    "prior_sha256": null,
+    "previous_screenshot_sha256": "0bb73e957059392702b07fef2501154fc9f952cea3ebe59d56259a9821678a30"
+  }
 }
