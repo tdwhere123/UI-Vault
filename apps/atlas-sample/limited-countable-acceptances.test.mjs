@@ -85,7 +85,7 @@ function assertLimitedCountableCatalogBrowserVisualQA(catalog) {
 
 /** Sealed raw SHA-256 of each qualifying REVIEW and of the input manifest that REVIEW names.
  *  These are already-verified sealed-object constants, not a second inventory or a normalized collection fingerprint.
- *  251 Git inputs in the e5 FIXED-INPUTS.json manifest are distinct from the 452-entry e5 SHA256SUMS file.
+ *  The qualifying REVIEW's named FIXED-INPUTS.json input manifest (251 Git inputs) is distinct from that seal SHA256SUMS file (452 entries).
  */
 const MANTINE_LIMITED_COUNTABLE_REVIEW_SHA256 = '83a41207a9eb5e18df3364cb9a041cd00794930f912153a2b0b1bebddb274ea6';
 const MANTINE_LIMITED_COUNTABLE_INPUT_MANIFEST_SHA256 = 'd2405b32d1707a71b88b0a9c954fa96e77cf444a1945a0a1ba1ef4d2fb036025';
@@ -93,7 +93,7 @@ const ADDITIONAL_LIMITED_COUNTABLE_REVIEW_SHA256 = 'bdd3c47aaa729754062f59df7df7
 const ADDITIONAL_LIMITED_COUNTABLE_INPUT_MANIFEST_SHA256 = 'b71e61397d0a957cd03c6d8e8a5f37356eecaa58f5dc9ed9a166638626f40689';
 const UNSUPPORTED_APPENDED_INPUT_MANIFEST_SHA256 = '202dc651413919eeb28fe1eba021c8ec1d7d2acd51cbf9fcff3eebb618bfb799';
 const MANTINE_NORMALIZED_ISOLATION_COLLECTION_FINGERPRINT_SHA256 = 'f4837b9ed6d1140918fb92c596e575679179c2697453c46472de1b66ab0888ad';
-const E5_SEAL_SHA256SUMS_SHA256 = '3f5ef14d58e414df7252952c3bfb97b500aa71c52fdbf38c6fb8b8ea736a535c';
+const ADDITIONAL_LIMITED_COUNTABLE_SEAL_SHA256SUMS_SHA256 = '3f5ef14d58e414df7252952c3bfb97b500aa71c52fdbf38c6fb8b8ea736a535c';
 
 /** Qualifying evidence contract: reviewSha256 and frozenPathsSha256 bind as a pair to that acceptance's REVIEW and the input manifest it names. */
 function assertLimitedCountableQualifyingEvidence(records) {
@@ -154,7 +154,7 @@ test('named limited-countable records are the authority for the verified new ind
     assert.throws(() => assertLimitedCountableQualifyingEvidence(normalized), { name: 'AssertionError' }, id);
   }
   for (const id of ADDITIONAL_LIMITED_COUNTABLE_IDS) {
-    for (const wrong of [MANTINE_LIMITED_COUNTABLE_INPUT_MANIFEST_SHA256, E5_SEAL_SHA256SUMS_SHA256]) {
+    for (const wrong of [MANTINE_LIMITED_COUNTABLE_INPUT_MANIFEST_SHA256, ADDITIONAL_LIMITED_COUNTABLE_SEAL_SHA256SUMS_SHA256]) {
       const crossed = structuredClone(acc.verifiedNewIndependentRecords);
       crossed.find((r) => r.id === id).evidence.frozenPathsSha256 = wrong;
       assert.throws(() => assertLimitedCountableQualifyingEvidence(crossed), { name: 'AssertionError' }, `${id} ${wrong}`);
