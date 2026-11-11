@@ -29,7 +29,8 @@
         {
           "uses": "actions/checkout@v6",
           "with": {
-            "persist-credentials": false
+            "persist-credentials": false,
+            "fetch-depth": 0
           }
         },
         {
