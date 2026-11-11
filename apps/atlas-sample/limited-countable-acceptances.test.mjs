@@ -23,7 +23,7 @@ const SOURCE_COMMIT = '3695f76d56133051c9bd7bdacb05fddcfaf0c9d2';
 const E5 = 'e5f0ee43bd1957e70bbb6e012270e54d80e3c618';
 const EXPECTED_IDS = ['mantine-ui:table-sort', 'mantine-ui:double-navbar', 'mantine-ui:footer-links', 'daisyui:accordion', 'hyperui:application-modals'];
 const MANTINE_IDS = ['mantine-ui:table-sort', 'mantine-ui:double-navbar', 'mantine-ui:footer-links'];
-const E5_IDS = ['daisyui:accordion', 'hyperui:application-modals'];
+const ADDITIONAL_LIMITED_COUNTABLE_IDS = ['daisyui:accordion', 'hyperui:application-modals'];
 const POSTER_MANTINE_MANIFEST_IDS = [
   'mantine-ui:actions-grid', 'mantine-ui:card-gradient', 'mantine-ui:cookies-banner', 'mantine-ui:double-header',
   'mantine-ui:features-asymmetrical', 'mantine-ui:features-cards', 'mantine-ui:features-grid', 'mantine-ui:features-images',
@@ -67,6 +67,22 @@ function gitBlob(tip, rel) {
   return execFileSync('git', ['show', `${tip}:${rel}`], { cwd: REPO, maxBuffer: 32 * 1024 * 1024 });
 }
 
+/** Catalog contract for limited-countable entries: original three must keep browserVisualQA = 'not_run'; the two appended records may omit the field and must not be 'passed'. */
+function assertLimitedCountableCatalogBrowserVisualQA(catalog) {
+  for (const id of MANTINE_IDS) {
+    const entry = catalog.find((x) => x.id === id);
+    assert.ok(entry, id);
+    assert.equal(entry.browserVisualQA, 'not_run', id);
+  }
+  for (const id of ADDITIONAL_LIMITED_COUNTABLE_IDS) {
+    const entry = catalog.find((x) => x.id === id);
+    assert.ok(entry, id);
+    assert.equal(entry.browserVisualQA, undefined, id);
+    assert.notEqual(entry.browserVisualQA, 'passed', id);
+  }
+}
+
+
 test('named limited-countable records are the authority for the verified new independent count', async () => {
   const acc = await loadCollectionAccounting({
     atlasDir: ROOT,
@@ -83,7 +99,7 @@ test('named limited-countable records are the authority for the verified new ind
   assert.equal(acc.duplicateOriginalExclusions, 1);
   assert.equal(acc.novelSourceIdentityUpperBound, 531);
   assert.equal(acc.catalogRecordCount, 1226);
-  for (const id of E5_IDS) assert.equal(ids.includes(id), true);
+  for (const id of ADDITIONAL_LIMITED_COUNTABLE_IDS) assert.equal(ids.includes(id), true);
   for (const record of acc.verifiedNewIndependentRecords) {
     if (MANTINE_IDS.includes(record.id)) assert.equal(record.sourceCommit, SOURCE_COMMIT);
     else assert.equal(record.sourceCommit, E5);
@@ -108,11 +124,15 @@ test('named limited-countable records are the authority for the verified new ind
     const entry = catalog.find((x) => x.id === id);
     assert.ok(entry, id);
     assert.equal(itemIds.has(id), false, id);
-    if (entry.browserVisualQA !== undefined) assert.equal(entry.browserVisualQA, 'not_run');
-    assert.notEqual(entry.browserVisualQA, 'passed');
     assert.match(entry.buildStatus, /完整视觉与交互验收仍未接受/);
     assert.match(entry.description, /限定范围计入已核新增独立 UI/);
     assert.ok(entry.thumbnail, id);
+  }
+  assertLimitedCountableCatalogBrowserVisualQA(catalog);
+  for (const id of MANTINE_IDS) {
+    const stripped = structuredClone(catalog);
+    delete stripped.find((x) => x.id === id).browserVisualQA;
+    assert.throws(() => assertLimitedCountableCatalogBrowserVisualQA(stripped), { name: 'AssertionError' }, id);
   }
   const status = formatCollectionAccountingStatus(acc);
   assert.match(status, /已核新增独立 UI 5，均为限定可计/);
@@ -128,7 +148,8 @@ test('accounting rejects duplicate, unknown, or count-mismatched acceptance reco
   assert.equal(base.verifiedNewIndependentUIs, 5);
   const dup = structuredClone(ledger);
   dup.verifiedNewIndependentRecords.push(dup.verifiedNewIndependentRecords[0]);
-  dup.accounts.verifiedNewIndependentUIs = 4;
+  assert.equal(dup.verifiedNewIndependentRecords.length, 6);
+  dup.accounts.verifiedNewIndependentUIs = dup.verifiedNewIndependentRecords.length;
   assert.throws(() => collectionAccountingFrom(candidates, dup), /duplicate verifiedNewIndependent id/);
   const unknown = structuredClone(ledger);
   unknown.verifiedNewIndependentRecords[0].id = 'not-a-catalog:item';
@@ -328,7 +349,7 @@ test('page export projects the named limited-countable records and leaves covers
 });
 
 
-const E5_SCOPES = {
+const ADDITIONAL_LIMITED_COUNTABLE_SCOPES = {
   'daisyui:accordion': {
     sourceCommit: E5,
     scope: '完整原生 radio 三问问答组件；保持一项选中。',
@@ -370,7 +391,7 @@ const E5_SCOPES = {
   },
 };
 
-const HOST_UNCHANGED_BETWEEN_E5_AND_BASELINE = [
+const HOST_UNCHANGED_FROM_QUALIFYING_SOURCE_TO_BASELINE = [
   'apps/atlas-sample/preview-runtime.mjs',
   'apps/atlas-sample/preview-adapters.mjs',
   'apps/atlas-sample/preview-media.mjs',
@@ -382,7 +403,7 @@ const HOST_UNCHANGED_BETWEEN_E5_AND_BASELINE = [
   'apps/atlas-sample/index.html',
 ];
 
-test('ledger keeps the original three Mantine records and appends two unique e5 scopes without duplication', () => {
+test('ledger keeps the original three Mantine records and appends two unique limited-countable records without duplication', () => {
   const ledger = JSON.parse(readFileSync(join(ROOT, 'COLLECTION-LEDGER.json'), 'utf8'));
   const frozen = JSON.parse(gitBlob(BASELINE_COMMIT, 'apps/atlas-sample/COLLECTION-LEDGER.json').toString('utf8'));
   assert.equal(frozen.accounts.verifiedNewIndependentUIs, 3);
@@ -398,11 +419,11 @@ test('ledger keeps the original three Mantine records and appends two unique e5 
   assert.equal(ledger.accounts.verifiedNewIndependentUIs, 5);
   assert.equal(ledger.accounts.covers, 0);
   assert.equal(ledger.accounts.browserVisualQA, 0);
-  for (const id of E5_IDS) {
+  for (const id of ADDITIONAL_LIMITED_COUNTABLE_IDS) {
     const rec = ledger.verifiedNewIndependentRecords.find((r) => r.id === id);
-    assert.equal(rec.sourceCommit, E5_SCOPES[id].sourceCommit);
-    assert.equal(rec.scope, E5_SCOPES[id].scope);
-    assert.equal(rec.exclusions, E5_SCOPES[id].exclusions);
+    assert.equal(rec.sourceCommit, ADDITIONAL_LIMITED_COUNTABLE_SCOPES[id].sourceCommit);
+    assert.equal(rec.scope, ADDITIONAL_LIMITED_COUNTABLE_SCOPES[id].scope);
+    assert.equal(rec.exclusions, ADDITIONAL_LIMITED_COUNTABLE_SCOPES[id].exclusions);
     const copies = ledger.verifiedNewIndependentRecords.filter((r) => r.id === id);
     assert.equal(copies.length, 1, id);
   }
@@ -428,7 +449,7 @@ test('page-head status and ledger markdown project the same named five records',
 });
 
 test('accepted DaisyUI and HyperUI previews compose through the live host adapter and media loader to the frozen output hash', async () => {
-  for (const rel of HOST_UNCHANGED_BETWEEN_E5_AND_BASELINE) {
+  for (const rel of HOST_UNCHANGED_FROM_QUALIFYING_SOURCE_TO_BASELINE) {
     const live = readFileSync(join(REPO, rel));
     const baseline = gitBlob(BASELINE_COMMIT, rel);
     const source = gitBlob(E5, rel);
@@ -437,19 +458,19 @@ test('accepted DaisyUI and HyperUI previews compose through the live host adapte
   }
   const liveCandidatesJs = readFileSync(join(ROOT, 'candidates.js'), 'utf8');
   const baselineCandidatesJs = gitBlob(BASELINE_COMMIT, 'apps/atlas-sample/candidates.js').toString('utf8');
-  const e5CandidatesJs = gitBlob(E5, 'apps/atlas-sample/candidates.js').toString('utf8');
+  const qualifyingSourceCandidatesJs = gitBlob(E5, 'apps/atlas-sample/candidates.js').toString('utf8');
   assert.equal(liveCandidatesJs, baselineCandidatesJs);
-  assert.notEqual(baselineCandidatesJs, e5CandidatesJs);
+  assert.notEqual(baselineCandidatesJs, qualifyingSourceCandidatesJs);
   assert.match(baselineCandidatesJs, /formatCollectionAccountingStatus/);
-  assert.match(e5CandidatesJs, /已核新增\/封面\/实测为 0/);
+  assert.match(qualifyingSourceCandidatesJs, /已核新增\/封面\/实测为 0/);
   // Accounting 3→5 is a ledger projection. It is not evidence that host version text is unchanged.
   // version.json is written only at export from the ledger. candidates.js only formats that projection.
 
   const catalog = JSON.parse(readFileSync(join(ROOT, 'candidate-catalog.json'), 'utf8'));
   const items = JSON.parse(readFileSync(join(ROOT, 'items.json'), 'utf8')).map(localizeItem);
   const collected = catalog.filter((x) => x.preview).map(adaptCandidate).map(localizeItem);
-  for (const id of E5_IDS) {
-    const expect = E5_SCOPES[id];
+  for (const id of ADDITIONAL_LIMITED_COUNTABLE_IDS) {
+    const expect = ADDITIONAL_LIMITED_COUNTABLE_SCOPES[id];
     const detail = applyCuration([...items, ...collected], curationRules).filter((x) => x.id === id);
     assert.equal(detail.length, 1, id);
     const item = detail[0];
