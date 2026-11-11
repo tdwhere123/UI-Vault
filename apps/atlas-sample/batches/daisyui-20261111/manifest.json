@@ -569,7 +569,7 @@
     },
     {
       "id": "daisyui:tabs",
-      "title": "页签",
+      "title": "静态页签",
       "source": "daisyUI",
       "license": "MIT",
       "upstream": "https://github.com/saadeghi/daisyui/blob/8528585870d79e107f3b6a14d2e66b3b4d473e37/packages/docs/src/routes/(routes)/components/tab/+page.md",
@@ -578,8 +578,8 @@
       "category": "导航与组织",
       "format": "组件与效果",
       "kind": "组件",
-      "behavior": "切换页签",
-      "independenceNote": "官方完整页签组件，只收默认示例。",
+      "behavior": "静态页签样式示例。官方默认示例将 Tab 2 写死为选中样式，没有页签切换脚本。",
+      "independenceNote": "官方默认示例是静态页签样式（Tab 2 写死 tab-active，无切换脚本），只收默认示例。实际摘取的官方示例标题：Tabs。",
       "officialHeading": "Tabs",
       "officialAssets": [],
       "replacedAssets": 0,
@@ -592,10 +592,11 @@
       },
       "gaps": [
         "源码级独立性初筛：完整可复用组件可以收录；只收该族一条完整官方示例，不收配色、尺寸或编号小改。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
-        "源码级不同点：官方完整页签组件，只收默认示例。 实际摘取的官方示例标题：Tabs。",
+        "源码级不同点：官方默认示例是静态页签样式（Tab 2 写死 tab-active，无切换脚本），只收默认示例。实际摘取的官方示例标题：Tabs。",
         "预览使用官方文档中的示例 HTML，并用官方 daisyUI 插件经已有 Tailwind 编译样式。远程演示图已换自有占位，不冒称视觉复刻。预览挂载是窄适配，不等于视觉或交互已验收。",
         "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
-        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面"
+        "公开版本 57c9 上有过针对该静态示例的有限桌面观察；当前提交尚未再做桌面复验。此记录不代表完整视觉/交互验收或已核独立，也没有真实运行页封面。",
+        "57c9 桌面点击 Tab 1/3 并失焦后，较深样式仍只在 Tab 2，两张 after-blur 图字节相同；不能把 hover/focus 误认为持久切换。此记录不把“无内容面板”列为缺陷，也不升级为完整验收或独立计数。"
       ],
       "originalSha256": "d043b3604ae838a3c05aa2c2d4e20a918f2152275bf91c985bd9a5cf5419cf11",
       "originalSize": 195

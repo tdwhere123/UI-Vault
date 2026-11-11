@@ -689,7 +689,7 @@
     },
     {
       "id": "flowbite:tabs",
-      "title": "页签面板",
+      "title": "静态页签",
       "source": "Flowbite",
       "license": "MIT",
       "upstream": "https://github.com/themesberg/flowbite/blob/232ebdb33a9e37b31b293b9988d89b862ee121e5/content/components/tabs.md",
@@ -698,8 +698,8 @@
       "category": "导航与组织",
       "format": "组件与效果",
       "kind": "组件",
-      "behavior": "切换页签（已内置本地交互脚本，尚未做浏览器验收）",
-      "independenceNote": "官方完整页签面板，只收默认示例。",
+      "behavior": "静态页签导航与样式示例。官方默认示例将 Profile 写死为当前项，没有页签切换脚本。",
+      "independenceNote": "官方默认示例是静态页签导航样式（Profile 写死为当前项，无 data-tabs、无切换脚本），只收该默认示例。",
       "officialAssets": [],
       "placeholderAssets": [],
       "replacedAssets": 0,
@@ -712,10 +712,11 @@
       },
       "gaps": [
         "源码级独立性初筛：完整可复用组件可以收录；只收该族一条默认/指定完整示例，不收配色、尺寸或编号小改。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
-        "源码级不同点：官方完整页签面板，只收默认示例。",
+        "源码级不同点：官方默认示例是静态页签导航样式（Profile 写死为当前项，无 data-tabs、无切换脚本），只收该默认示例。",
         "预览使用官方文档示例 HTML 与已有 Flowbite 本地脚本/样式编译，远程或无授权图已换自有占位。这是窄适配，不等于视觉或交互已验收。",
         "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
-        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面"
+        "公开版本 57c9 上有过针对该静态示例的有限桌面观察；当前提交尚未再做桌面复验。此记录不代表完整视觉/交互验收或已核独立，也没有真实运行页封面。",
+        "57c9 桌面点击后失焦，持久选中仍为写死的 Profile，与该静态示例一致；不能把 hover/focus 误认为已切换。此记录不把“无内容面板”列为缺陷，也不升级为完整验收或独立计数。"
       ],
       "originalSha256": "207fbaa26c7021caf970400eae227a6a0d29548c54d1547b51af8aa1a4572afe",
       "originalSize": 858
