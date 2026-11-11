@@ -15,7 +15,7 @@ export async function exportPages(output,basePath='/UI-Vault/') {
   const source=join(root,'apps/atlas-sample');
   const files=['index.html','app.js','atlas-model.mjs','preview-runtime.mjs','preview-media.mjs','preview-adapters.mjs','collection-accounting.mjs','COLLECTION-LEDGER.json','COLLECTION-LEDGER.md','style.css','items.json','catalog.json','shell-icons.mjs','README.md','LICENSES.md','candidates.html','candidates.js','candidates.css','candidate-catalog.json','candidate-adapter.mjs','display-names.mjs','curation-policy.mjs','curation-rules.mjs','legacy-featured-candidates.mjs'];
   async function copy(relative){const s=join(source,relative),d=join(output,relative),info=await lstat(s);if(info.isSymbolicLink())throw Error('Symlinks not permitted');if(info.isDirectory()){await mkdir(d);for(const child of await readdir(s))await copy(relative+'/'+child)}else if(info.isFile())await copyFile(s,d);else throw Error('Unsupported input');}
-  for(const name of [...files,'assets','previews','originals','bundles','featured','thumbnails'])await copy(name);
+  for(const name of [...files,'assets','previews','originals','bundles','featured','thumbnails','licenses'])await copy(name);
   if((await readdir(source)).includes('batches'))await copy('batches');
   const items=JSON.parse(await readFile(join(output,'items.json'),'utf8'));
   if(!items.length||new Set(items.map(x=>x.id)).size!==items.length)throw Error('Expected nonempty, unique atlas materials');

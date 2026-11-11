@@ -47,6 +47,12 @@ Remix Icon当前官方许可限制独立图标集合的再分发，未纳入本�
 
 - **daisyUI**：MIT 原文见 [`batches/daisyui-20261111/LICENSE.txt`](batches/daisyui-20261111/LICENSE.txt)。预览取自官方文档完整示例 HTML，样式经官方 `packages/daisyui` 库构建产物与已有 Tailwind 编译。远程演示图已换自有占位，不冒称视觉复刻。待测预览批不计入已核库存。
 
+- **Tailwind CSS v4.3.3**：上述 Flowbite、HyperUI、daisyUI 预览实际在线分发的编译 CSS 适用 [官方 MIT 全文](licenses/tailwindcss-v4.3.3/LICENSE.txt)（Copyright (c) Tailwind Labs, Inc.；SHA256 `60e0b68c0f35c078eef3a5d29419d0b03ff84ec1df9c3f9d6e39a519a5ae7985`，1071 字节）。编译器短 banner 不是这份全文通知。具名绑定如下三组在线样式：
+  - Flowbite 在线 CSS [`batches/flowbite-20261111/runtime.css`](batches/flowbite-20261111/runtime.css)，SHA256 `0c5effb39a6f8107f1d190c902b93b21b61d98bf9872c52f8b59d2c448e17047`（49628 字节）。下载包 drawer 与 mega-menu 内的 `runtime.css` 为不同字节（SHA256 `4565be2988b00093e432de0a16a8a203a51ff5cd0ebe9099111a56fc3ee5d981`，40753 字节），其官方全文与 CSS hash 通知绑在对应源码 ZIP 内，不能与这条在线样式当作同一文件。
+  - HyperUI 在线 CSS [`batches/hyperui-20261111/runtime.css`](batches/hyperui-20261111/runtime.css)，SHA256 `97e0a9ac533a2fe8853abf5d41e943354142485d0590606712966750ad484a0a`（43708 字节）。
+  - daisyUI 在线 CSS [`batches/daisyui-20261111/runtime.css`](batches/daisyui-20261111/runtime.css)，SHA256 `d05b5c0fe8e8a71d3f91c3b60a733cf45d964156b44f2416b9d32d8d79b79927`（133360 字节）。
+  下载包内另有同一权威全文与所含 CSS hash 的绑定通知。本条目只覆盖所绑定的 Tailwind 生成 CSS，不授权或关闭 Flowbite 运行脚本中的 Popper 或其他第三方 JavaScript。
+
 - **Kokonut UI（本线扩收）**：MIT 原文见各 `batches/kokonut-20261111-*/LICENSE.txt` 与对应源码包；官方修订 `a16d64c0d99ab5c6304ebcb88860d8d8bf201fd0`。预览用已有 Vite 配方编译官方默认导出组件。`vaul`、`@radix-ui/react-dropdown-menu` 等构建依赖许可在源码包 `third-party-licenses/`。Unsplash 等未知第三方原图不随包再分发，预览已换自有占位，不冒称视觉复刻；originals/ 保留官方源文件。此前已编译但未入目录的 `card-field` / 焦散/墨水/垂幕背景仍按 2026-11-08 既有源码包接站。Kokonut UI Pro 未收录。
 - **Animata（本线扩收）**：MIT 原文见各 `batches/animata-20261111-*/LICENSE.md` 与既有 `animata-0*` 源码包；官方修订 `25c27e5a874c60a56dcc1609df3b2c4f5f8456f8`。演示入口来自官方 Storybook Primary。未知第三方原图已换自有占位，不冒称视觉复刻。因缺少可闭合本地依赖而未收入的条目（如 `video-chat` 的公共照片模块路径、部分商标图）未凑数收录。
 - **Magic UI（本线扩收）**：MIT 原文见既有 `batches/magicui-0*` 源码包。`dither-field` 与 `globe` 为既有官方 Vite 编译预览接站，不等于新视觉验收。未重试需额外媒体/API 或未闭合依赖的条目（如 tweet-card）。
