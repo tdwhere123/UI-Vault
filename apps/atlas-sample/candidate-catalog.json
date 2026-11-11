@@ -11961,7 +11961,7 @@
     "preview": "batches/minipaint-workspace-01/index.html",
     "previewStatus": "DOM-tested; visual-pending",
     "browserVisualQA": "not-run",
-    "buildStatus": "pass",
+    "buildStatus": "本地预览已组装。已接入正式版本 e9fd 的实拍裁切封面；该版本现场有界观察不是当前提交的桌面复验。完整视觉与交互验收仍未接受。",
     "gaps": [
       "Original miniPaint local painting, layer model, tool/dialog UI and undo/redo are retained. Blank initial canvas is drawable. No upload, download/export, clipboard import, cloud/media search or persistent storage; in-memory work is lost on close. Original file/help services are not started.",
       "Original default brush pressure=false uses an explicitly authored midpoint-quadratic smoothing helper instead of the unclosed StackOverflow-derived smoothing helper. Stroke appearance can differ. Original input sampling, layer/history pipeline and pressure=true variable-width drawing remain original. Standard viewport affine math, color conversions and throttle helpers are independently replaced; removed ambiguous helper bodies are NOT redistributed.",
@@ -11970,7 +11970,8 @@
       "Pica uses original JS resize/unsharp math only; WebWorker/WASM backend registration disabled. Hermite original single-thread resize retained with unused Worker-Blob creation removed. Original glfx WebGL effects remain but depend on real browser WebGL; CPU fixture does not validate them. WebFont requests are replaced by inactive callbacks with system fonts.",
       "Each runtime chunk consists of complete statements and independently parses. Top-level function declarations are promoted to equivalent var/function bindings before module execution, then each script is guarded with fail-closed try/catch to clean early module failures and skip later scripts. No eval, binary encoding transport, CSP or sandbox expansion.",
       "Lean actual570 production compose tests cover original brush drawing, pressure toggle, undo/redo, insert/duplicate layers, hidden/resume, old nodes/late callbacks and complete EventTarget/task cleanup. Early Canvas failure is caught. CPU Canvas/JSDOM layout fixture only, no native browser, screenshots, visual/touch/IME or whole-tool-matrix acceptance.",
-      "Actual default createPreviewLoader/cache all-or-nothing failure/retry/remount tested under unchanged8MiB budget; correspondence-source downloads are not inserted into runtime cache. No external model, backend or account is simulated."
+      "Actual default createPreviewLoader/cache all-or-nothing failure/retry/remount tested under unchanged8MiB budget; correspondence-source downloads are not inserted into runtime cache. No external model, backend or account is simulated.",
+      "已接入正式版本 e9fd 桌面实拍裁切封面（取自当时可见笔迹的画布与工具栏）。公开 e9fd 上画笔笔迹、撤销与重做的通过观察来自该版本现场报告，不是当前提交的桌面复验。原无笔迹失败图不作为封面。当前提交尚未再做桌面复验。此记录不是完整视觉/交互验收或已核独立。"
     ],
     "runtime": {
       "scripts": [
@@ -11978,7 +11979,8 @@
         "runtime-part-2.js",
         "runtime.js"
       ]
-    }
+    },
+    "thumbnail": "thumbnails/minipaint--original-layered-paint-workspace.webp"
   },
   {
     "id": "cossui:group-chat-demo",
@@ -16137,13 +16139,14 @@
     "preview": "batches/jsoncrack-extension-01/index.html",
     "previewStatus": "DOM-tested; visual-pending",
     "browserVisualQA": "not-run",
-    "buildStatus": "pass",
+    "buildStatus": "本地预览已组装。已接入正式版本 e9fd 的实拍裁切封面；该版本现场有界观察不是当前提交的桌面复验。完整视觉与交互验收仍未接受。",
     "gaps": [
       "Original Chrome Raw/Graph and node-detail scene, not the full website Monaco/tree/AI/cloud/export suite. Textarea and Apply are explicitly new local host UI.",
       "JSDOM controlled element/ResizeObserver geometry and SVG path length/point stubs, not native SVG raster/typography/pointer or performance verification. Actual ELK algorithm runs and creates graph nodes; path-measurement fixture is not claimed native geometric proof.",
       "Synchronous original ELK is limited to 30k input chars/600 values/depth20/200 rendered nodes; large graphs unsupported. No arbitrary large-input performance claim.",
       "Hidden returns to Raw and unmounts graph. Copy and external navigation unavailable. Default iframe/CSP unchanged.",
-      "Official React19.3.0 is from fixed repo catalog; upstream older peer warnings are retained, not claimed package-manager peer closure. Actual tested graph paths pass."
+      "Official React19.3.0 is from fixed repo catalog; upstream older peer warnings are retained, not claimed package-manager peer closure. Actual tested graph paths pass.",
+      "已接入正式版本 e9fd 桌面实拍裁切封面（取自当时可见的图谱与 Raw/Graph 状态）。公开 e9fd 上 Raw/Graph 与 Apply 本地示例的通过观察来自该版本现场报告，不是当前提交的桌面复验。原失败预览图不作为封面。当前提交尚未再做桌面复验。此记录不是完整视觉/交互验收或已核独立。"
     ],
     "originalCandidateSource": {
       "source": "JSON Crack",
@@ -16160,7 +16163,8 @@
         "runtime-part-2.js",
         "runtime.js"
       ]
-    }
+    },
+    "thumbnail": "thumbnails/jsoncrack--structured-data-atlas.webp"
   },
   {
     "id": "wavedrom:timing-diagram-editor",
@@ -22564,7 +22568,7 @@
     "upstream": "https://github.com/markmead/hyperui/blob/637323c8d3046645ac5f28edc2074d18f22a2b94/public/examples/application/dropdown/1.html",
     "website": "https://www.hyperui.dev/components/application/dropdown",
     "revision": "637323c8d3046645ac5f28edc2074d18f22a2b94",
-    "buildStatus": "本地预览已组装，尚未做真实浏览器视觉与交互验收",
+    "buildStatus": "本地预览已组装。公开 57c9 上指定开合操作失败；其后预览适配源码已变，尚未对当前提交做桌面复验。完整视觉与交互验收仍未接受。",
     "batch": "collection-20261111",
     "archive": "batches/hyperui-20261111/bundles/application-dropdown.zip",
     "manifest": "batches/hyperui-20261111/manifest.json",
@@ -22577,7 +22581,7 @@
     "behavior": "预览适配器展开/收起下拉选项（演示链接已拦截）",
     "gaps": [
       "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
-      "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面",
+      "公开版本 57c9 桌面 Chrome 已打开该项：菜单初态已展开，点击 Product chevron 与 Stock 未见开合切换，该次指定核心操作失败。其后官方预览脚本清单与本地适配源码已变更；57c9 的失败观察不能替代当前提交的复验。当前提交尚未再做桌面复验，也没有接入实拍封面。此记录不是完整视觉/交互验收，也不是已核独立。",
       "官方原件 application/dropdown/1.html 是静态展开菜单，官方 component.js 亦不提供开闭；预览开闭由本地适配器 dropdown-menu-preview.js 提供，不改原件。真实浏览器复测仍待上线后进行，不能记已验收封面或新增已核独立。",
       "正式详情预览经现有 runtime.scripts 契约拉取并在 srcdoc 内联 dropdown-menu-preview.js，不放宽 CSP 或 sandbox。真实浏览器复测仍待上线后进行，不能记已验收封面或新增已核独立。"
     ],
@@ -22692,7 +22696,7 @@
     "upstream": "https://github.com/markmead/hyperui/blob/637323c8d3046645ac5f28edc2074d18f22a2b94/public/examples/application/modals/1.html",
     "website": "https://www.hyperui.dev/components/application/modals",
     "revision": "637323c8d3046645ac5f28edc2074d18f22a2b94",
-    "buildStatus": "本地预览已组装；公开 57c9 桌面 Chrome 已完成指定有界观察并接入实拍封面，完整视觉与交互验收仍未接受",
+    "buildStatus": "本地预览已组装；公开 57c9 桌面 Chrome 已完成指定有界观察并接入实拍封面；当前提交尚未再做桌面复验。完整视觉与交互验收仍未接受。",
     "batch": "collection-20261111",
     "archive": "batches/hyperui-20261111/bundles/application-modals.zip",
     "manifest": "batches/hyperui-20261111/manifest.json",
@@ -22705,7 +22709,7 @@
     "behavior": "打开或关闭对话框",
     "gaps": [
       "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
-      "2026-11-11 桌面 Chrome 在公开 57c9（worktreeDirty=false）上已打开详情并完成指定安全核心操作：对话框可打开并关闭（含遮罩/Escape）。已接入实拍裁切封面。这是有界局部观察，不是完整视觉/交互验收，也不是已核独立。"
+      "公开版本 57c9（worktreeDirty=false）桌面 Chrome 已打开详情并完成指定安全核心操作：对话框可打开，并可用 Escape 与遮罩关闭。已接入该次实拍裁切封面。当前提交尚未再做桌面复验。这是有界局部观察，不是完整视觉/交互验收，也不是已核独立。"
     ],
     "thumbnail": "thumbnails/hyperui--application-modals.webp"
   },
@@ -25315,7 +25319,7 @@
     "upstream": "https://github.com/themesberg/flowbite/blob/232ebdb33a9e37b31b293b9988d89b862ee121e5/content/components/drawer.md",
     "website": "https://flowbite.com/docs/components/drawer/",
     "revision": "232ebdb33a9e37b31b293b9988d89b862ee121e5",
-    "buildStatus": "本地预览已组装；公开 57c9 桌面 Chrome 已完成指定有界观察并接入实拍封面，完整视觉与交互验收仍未接受",
+    "buildStatus": "本地预览已组装；公开 57c9 桌面 Chrome 已完成指定有界观察并接入实拍封面；当前提交尚未再做桌面复验。完整视觉与交互验收仍未接受。",
     "batch": "collection-20261111-c",
     "archive": "batches/flowbite-20261111/bundles/drawer.zip",
     "manifest": "batches/flowbite-20261111/manifest.json",
@@ -25329,7 +25333,7 @@
     "gaps": [
       "预览由文档中的原始HTML示例组装，并内置了本线保存的Flowbite脚本供属性控件使用；这是本地适配，不表示源交互已验证",
       "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
-      "2026-11-11 桌面 Chrome 在公开 57c9（worktreeDirty=false）上已打开详情并完成指定安全核心操作：左侧抽屉可打开并关闭。已接入实拍裁切封面。这是有界局部观察，不是完整视觉/交互验收，也不是已核独立。"
+      "公开版本 57c9（worktreeDirty=false）桌面 Chrome 已打开详情并完成指定安全核心操作：抽屉可打开并以关闭控件收起。已接入该次实拍裁切封面。当前提交尚未再做桌面复验。这是有界局部观察，不是完整视觉/交互验收，也不是已核独立。"
     ],
     "thumbnail": "thumbnails/flowbite--drawer.webp"
   },
@@ -25441,7 +25445,7 @@
     "upstream": "https://github.com/themesberg/flowbite/blob/232ebdb33a9e37b31b293b9988d89b862ee121e5/content/components/mega-menu.md",
     "website": "https://flowbite.com/docs/components/mega-menu/",
     "revision": "232ebdb33a9e37b31b293b9988d89b862ee121e5",
-    "buildStatus": "本地预览已组装；公开 57c9 桌面 Chrome 已完成指定有界观察并接入实拍封面，完整视觉与交互验收仍未接受",
+    "buildStatus": "本地预览已组装；公开 57c9 桌面 Chrome 已完成指定有界观察并接入实拍封面；当前提交尚未再做桌面复验。完整视觉与交互验收仍未接受。",
     "batch": "collection-20261111-c",
     "archive": "batches/flowbite-20261111/bundles/mega-menu.zip",
     "manifest": "batches/flowbite-20261111/manifest.json",
@@ -25456,7 +25460,7 @@
       "仍有远程或仓库外演示图（如第三方对象存储上的设备外形截图）无独立授权，继续用原创占位，未保存那些原图",
       "预览由文档中的原始HTML示例组装，并内置了本线保存的Flowbite脚本供属性控件使用；这是本地适配，不表示源交互已验证",
       "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
-      "2026-11-11 桌面 Chrome 在公开 57c9（worktreeDirty=false）上已打开详情并完成指定安全核心操作：大型导航菜单可展开/收起。已接入实拍裁切封面。这是有界局部观察，不是完整视觉/交互验收，也不是已核独立。"
+      "公开版本 57c9（worktreeDirty=false）桌面 Chrome 已打开详情并完成指定安全核心操作：大型菜单 Company 浮层可展开/收起。已接入该次实拍裁切封面。当前提交尚未再做桌面复验。这是有界局部观察，不是完整视觉/交互验收，也不是已核独立。"
     ],
     "thumbnail": "thumbnails/flowbite--mega-menu.webp"
   },
@@ -28967,7 +28971,7 @@
     "upstream": "https://github.com/creativetimofficial/notus-js/blob/e3ca2299dd2caab1ef37b420d2209c3b9c3fca5e/pages/admin/settings.html",
     "website": "https://www.creative-tim.com/product/notus-js",
     "revision": "e3ca2299dd2caab1ef37b420d2209c3b9c3fca5e",
-    "buildStatus": "本地预览已组装，尚未做真实浏览器视觉与交互验收",
+    "buildStatus": "本地预览已组装；公开 57c9 桌面 Chrome 已有指定字段本地状态观察；当时存在资源未载入。当前提交尚未再做桌面复验。完整视觉与交互验收仍未接受。",
     "batch": "collection-20261111-e",
     "archive": "batches/notus-20261111/bundles/settings.zip",
     "manifest": "batches/notus-20261111/manifest.json",
@@ -28982,7 +28986,7 @@
       "官方仓库或官方构建产物中的点阵图已按相对路径保存并列入源码包；站内预览经已有媒体清单映射，不等于视觉验收",
       "已按相对路径保存 Font Awesome woff2 并在 CSS 中以 data-uri 嵌入；已内置 Popper 与 Chart.js 2.9.3。依赖 Google Maps API 密钥的地图页未收录",
       "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
-      "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面"
+      "公开版本 57c9 桌面 Chrome 已打开该项，并观察到指定字段的本地显示状态可改并恢复。这只是控件状态，不表示账户资料已保存。当时可见部分资源未载入与破图，未接入正常实拍封面。当前提交尚未再做桌面复验。此记录不是完整视觉/交互验收或已核独立。"
     ],
     "runtime": {
       "assets": [
@@ -29404,7 +29408,7 @@
     "upstream": "https://github.com/ColorlibHQ/AdminLTE/blob/e13df78a4d0c287e5fa57308e293f63e44e9dd0f/dist/pages/file-manager.html",
     "website": "https://adminlte.io",
     "revision": "e13df78a4d0c287e5fa57308e293f63e44e9dd0f",
-    "buildStatus": "本地预览已组装，尚未做真实浏览器视觉与交互验收",
+    "buildStatus": "本地预览已组装；公开 57c9 桌面 Chrome 已有指定控件与视图状态观察，当时存在破图。当前提交尚未再做桌面复验。完整视觉与交互验收仍未接受。",
     "batch": "collection-20261111-e",
     "archive": "batches/adminlte-20261111/bundles/file-manager.zip",
     "manifest": "batches/adminlte-20261111/manifest.json",
@@ -29421,7 +29425,7 @@
       "AdminLTE 代码为 MIT。官方 README Image credits 只列出 Pixeden、Graphicsfuel、Pickaface、Unsplash、Uifaces、Unavatar，没有逐文件授权映射。署名不是再分发许可证据。不明原图已留私有原件待核，预览改用明确披露的自有占位，不冒称视觉复刻。AdminLTE 徽标仅作产品识别并注明商标，不宣称权利齐。",
       "Source Sans 3 字体为 SIL OFL 1.1；Bootstrap Icons 按官方 LICENSE 为 MIT；Bootstrap、Popper、OverlayScrollbars 为 MIT。",
       "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
-      "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面"
+      "公开版本 57c9 桌面 Chrome 已打开该项。搜索框文字可输入与清除，但未见结果过滤，故不称为检索已实现；网格/列表视图切换与布局变化已观察到。当时 AdminLTE Logo 破损，未接入正常实拍封面。当前提交尚未再做桌面复验。此记录只是控件与局部视图状态，不是业务文件操作或完整视觉/交互验收，也不是已核独立。"
     ],
     "runtime": {
       "assets": [
@@ -29889,7 +29893,7 @@
     "upstream": "https://github.com/ColorlibHQ/AdminLTE/blob/e13df78a4d0c287e5fa57308e293f63e44e9dd0f/dist/pages/calendar.html",
     "website": "https://adminlte.io",
     "revision": "e13df78a4d0c287e5fa57308e293f63e44e9dd0f",
-    "buildStatus": "本地预览已组装，尚未做真实浏览器视觉与交互验收",
+    "buildStatus": "本地预览已组装；公开 57c9 桌面 Chrome 已有指定有界月导航观察；当前提交尚未再做桌面复验。完整视觉与交互验收仍未接受。",
     "batch": "collection-20261111-f",
     "archive": "batches/adminlte-20261111/bundles/calendar.zip",
     "manifest": "batches/adminlte-20261111/manifest.json",
@@ -29906,7 +29910,7 @@
       "AdminLTE 代码为 MIT。官方 README Image credits 只列出 Pixeden、Graphicsfuel、Pickaface、Unsplash、Uifaces、Unavatar，没有逐文件授权映射。署名不是再分发许可证据。不明原图已留私有原件待核，预览改用明确披露的自有占位，不冒称视觉复刻。AdminLTE 徽标仅作产品识别并注明商标，不宣称权利齐。",
       "Source Sans 3 字体为 SIL OFL 1.1；Bootstrap Icons 按官方 LICENSE 为 MIT；Bootstrap、Popper、OverlayScrollbars 为 MIT。",
       "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
-      "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面",
+      "公开版本 57c9 桌面 Chrome 已打开该项并完成指定月导航：可进入下一月并返回。当前提交尚未再做桌面复验，也没有接入实拍封面。演示数据不表示真实日历同步。此记录不是完整视觉/交互验收或已核独立。",
       "该页额外官方库已按相对路径保存，并以现有 runtime.scripts 契约接入；页内初始化脚本已从预览 HTML 抽出为已声明分片，这是窄适配，不等于交互已验收。"
     ],
     "runtime": {
@@ -30030,7 +30034,7 @@
     "upstream": "https://github.com/ColorlibHQ/AdminLTE/blob/e13df78a4d0c287e5fa57308e293f63e44e9dd0f/dist/pages/kanban.html",
     "website": "https://adminlte.io",
     "revision": "e13df78a4d0c287e5fa57308e293f63e44e9dd0f",
-    "buildStatus": "本地预览已组装，尚未做真实浏览器视觉与交互验收",
+    "buildStatus": "本地预览已组装；公开 57c9 桌面 Chrome 已有指定有界拖放观察；当前提交尚未再做桌面复验。完整视觉与交互验收仍未接受。",
     "batch": "collection-20261111-f",
     "archive": "batches/adminlte-20261111/bundles/kanban.zip",
     "manifest": "batches/adminlte-20261111/manifest.json",
@@ -30047,7 +30051,7 @@
       "AdminLTE 代码为 MIT。官方 README Image credits 只列出 Pixeden、Graphicsfuel、Pickaface、Unsplash、Uifaces、Unavatar，没有逐文件授权映射。署名不是再分发许可证据。不明原图已留私有原件待核，预览改用明确披露的自有占位，不冒称视觉复刻。AdminLTE 徽标仅作产品识别并注明商标，不宣称权利齐。",
       "Source Sans 3 字体为 SIL OFL 1.1；Bootstrap Icons 按官方 LICENSE 为 MIT；Bootstrap、Popper、OverlayScrollbars 为 MIT。",
       "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
-      "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面",
+      "公开版本 57c9 桌面 Chrome 已打开该项并完成指定本地拖放往返（各向初试一次未见移动后，仅复试一次成功）。当前提交尚未再做桌面复验，也没有接入实拍封面。演示看板不表示真实任务或后台同步。此记录不是完整视觉/交互验收或已核独立。跨源近似对照本项未做具名比较，独立性保持 Unknown。",
       "该页额外官方库已按相对路径保存，并以现有 runtime.scripts 契约接入；页内初始化脚本已从预览 HTML 抽出为已声明分片，这是窄适配，不等于交互已验收。"
     ],
     "runtime": {
@@ -31003,7 +31007,7 @@
     "upstream": "https://github.com/tabler/tabler/blob/977102f79cc633074d5518fe1a288fa2ae7fbe27/preview/pages/search-results.astro",
     "website": "https://tabler.io",
     "revision": "977102f79cc633074d5518fe1a288fa2ae7fbe27",
-    "buildStatus": "本地预览已组装，尚未做真实浏览器视觉与交互验收",
+    "buildStatus": "本地预览已组装；公开 57c9 桌面 Chrome 已有指定筛选控件本地状态观察，当时存在破图。当前提交尚未再做桌面复验。完整视觉与交互验收仍未接受。",
     "batch": "collection-20261111-f",
     "archive": "batches/tabler-20261111/bundles/search-results.zip",
     "manifest": "batches/tabler-20261111/manifest.json",
@@ -31020,7 +31024,7 @@
       "Tabler 代码为 MIT。本批未收录依赖 ApexCharts 的页面，因官方说明其自第 5 版起不再是单纯 MIT。",
       "官方免费插画（computer-fix 等六张）按上游免费清单保留。头像、照片、封面等不明原图已留私有原件待核；预览改用明确披露的自有占位，不冒称视觉复刻。品牌/支付/浏览器等 SVG 为商标标识，不是再分发许可；预览中的标识已换自有占位。支付图标样式里的商标图形单独列为商标/Unknown，不宣称权利齐。",
       "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
-      "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面"
+      "公开版本 57c9 桌面 Chrome 已打开该项，并观察到指定筛选控件的本地选中状态可改并恢复。可见结果未随这些改变出现明显变化，未提交，不称为实际检索或过滤。当时多张结果缩略图破损，未接入正常实拍封面。当前提交尚未再做桌面复验。此记录不是完整视觉/交互验收或已核独立。"
     ],
     "runtime": {
       "assets": [
@@ -31422,7 +31426,7 @@
     "upstream": "https://github.com/tabler/tabler/blob/977102f79cc633074d5518fe1a288fa2ae7fbe27/preview/pages/settings.astro",
     "website": "https://tabler.io",
     "revision": "977102f79cc633074d5518fe1a288fa2ae7fbe27",
-    "buildStatus": "本地预览已组装，尚未做真实浏览器视觉与交互验收",
+    "buildStatus": "本地预览已组装；公开 57c9 桌面 Chrome 已有指定字段本地状态观察；当前提交尚未再做桌面复验。完整视觉与交互验收仍未接受。",
     "batch": "collection-20261111-f",
     "archive": "batches/tabler-20261111/bundles/settings.zip",
     "manifest": "batches/tabler-20261111/manifest.json",
@@ -31439,7 +31443,7 @@
       "Tabler 代码为 MIT。本批未收录依赖 ApexCharts 的页面，因官方说明其自第 5 版起不再是单纯 MIT。",
       "官方免费插画（computer-fix 等六张）按上游免费清单保留。头像、照片、封面等不明原图已留私有原件待核；预览改用明确披露的自有占位，不冒称视觉复刻。品牌/支付/浏览器等 SVG 为商标标识，不是再分发许可；预览中的标识已换自有占位。支付图标样式里的商标图形单独列为商标/Unknown，不宣称权利齐。",
       "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
-      "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面"
+      "公开版本 57c9 桌面 Chrome 已打开该项，并观察到指定字段与开关的本地显示状态可改并恢复。这只是控件状态，不表示账户已保存。当时截图只覆盖滚动视口，未接入完整实拍封面。当前提交尚未再做桌面复验。此记录不是完整视觉/交互验收或已核独立。"
     ],
     "runtime": {
       "assets": []
@@ -31677,7 +31681,7 @@
     "upstream": "https://github.com/tabler/tabler/blob/977102f79cc633074d5518fe1a288fa2ae7fbe27/preview/pages/fullcalendar.astro",
     "website": "https://tabler.io",
     "revision": "977102f79cc633074d5518fe1a288fa2ae7fbe27",
-    "buildStatus": "本地预览已组装，尚未做真实浏览器视觉与交互验收",
+    "buildStatus": "本地预览已组装；公开 57c9 桌面 Chrome 已有指定有界月导航观察；当前提交尚未再做桌面复验。完整视觉与交互验收仍未接受。",
     "batch": "collection-20261111-f",
     "archive": "batches/tabler-20261111/bundles/fullcalendar.zip",
     "manifest": "batches/tabler-20261111/manifest.json",
@@ -31694,7 +31698,7 @@
       "Tabler 代码为 MIT。本批未收录依赖 ApexCharts 的页面，因官方说明其自第 5 版起不再是单纯 MIT。",
       "官方免费插画（computer-fix 等六张）按上游免费清单保留。头像、照片、封面等不明原图已留私有原件待核；预览改用明确披露的自有占位，不冒称视觉复刻。品牌/支付/浏览器等 SVG 为商标标识，不是再分发许可；预览中的标识已换自有占位。支付图标样式里的商标图形单独列为商标/Unknown，不宣称权利齐。",
       "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
-      "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面",
+      "公开版本 57c9 桌面 Chrome 已打开该项并完成指定月导航：可进入下一月并返回。当前提交尚未再做桌面复验，也没有接入实拍封面。演示数据不表示真实日历同步。此记录不是完整视觉/交互验收或已核独立。",
       "该页额外官方库已按相对路径保存，并以现有 runtime.scripts 契约接入；页内初始化脚本已从预览 HTML 抽出为已声明分片，这是窄适配，不等于交互已验收。"
     ],
     "runtime": {
@@ -31893,7 +31897,7 @@
     "upstream": "https://github.com/tabler/tabler/blob/977102f79cc633074d5518fe1a288fa2ae7fbe27/preview/pages/datatables.astro",
     "website": "https://tabler.io",
     "revision": "977102f79cc633074d5518fe1a288fa2ae7fbe27",
-    "buildStatus": "本地预览已组装；公开 57c9 桌面 Chrome 已完成指定有界观察并接入实拍封面，完整视觉与交互验收仍未接受",
+    "buildStatus": "本地预览已组装；公开 57c9 桌面 Chrome 已完成指定有界观察并接入实拍封面；当前提交尚未再做桌面复验。完整视觉与交互验收仍未接受。",
     "batch": "collection-20261111-f",
     "archive": "batches/tabler-20261111/bundles/datatables.zip",
     "manifest": "batches/tabler-20261111/manifest.json",
@@ -31911,7 +31915,7 @@
       "官方免费插画（computer-fix 等六张）按上游免费清单保留。头像、照片、封面等不明原图已留私有原件待核；预览改用明确披露的自有占位，不冒称视觉复刻。品牌/支付/浏览器等 SVG 为商标标识，不是再分发许可；预览中的标识已换自有占位。支付图标样式里的商标图形单独列为商标/Unknown，不宣称权利齐。",
       "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
       "该页额外官方库已按相对路径保存，并以现有 runtime.scripts 契约接入；页内初始化脚本已从预览 HTML 抽出为已声明分片，这是窄适配，不等于交互已验收。",
-      "2026-11-11 桌面 Chrome 在公开 57c9（worktreeDirty=false）上已打开详情并完成指定安全核心操作：数据表按数量排序。已接入实拍裁切封面。这是有界局部观察，不是完整视觉/交互验收，也不是已核独立。"
+      "公开版本 57c9（worktreeDirty=false）桌面 Chrome 已打开详情并完成指定安全核心操作：主表 Name 与 Quantity 排序改变行序。已接入该次实拍裁切封面。当前提交尚未再做桌面复验。这是有界局部观察，不是完整视觉/交互验收，也不是已核独立。"
     ],
     "runtime": {
       "assets": [],
@@ -32347,7 +32351,7 @@
     "upstream": "https://github.com/themesberg/flowbite/blob/232ebdb33a9e37b31b293b9988d89b862ee121e5/content/components/accordion.md",
     "website": "https://flowbite.com/docs/components/accordion/",
     "revision": "232ebdb33a9e37b31b293b9988d89b862ee121e5",
-    "buildStatus": "本地预览已组装，尚未做真实浏览器视觉与交互验收",
+    "buildStatus": "本地预览已组装；公开 57c9 桌面 Chrome 已完成指定有界开合观察并接入实拍封面；当前提交尚未再做桌面复验。完整视觉与交互验收仍未接受。",
     "batch": "collection-20261111-g",
     "archive": "batches/flowbite-20261111/bundles/accordion.zip",
     "manifest": "batches/flowbite-20261111/manifest.json",
@@ -32363,11 +32367,12 @@
       "源码级不同点：官方完整手风琴问答组件，不是单按钮；只收默认示例，不收配色/间距细变。",
       "预览使用官方文档示例 HTML 与已有 Flowbite 本地脚本/样式编译，远程或无授权图已换自有占位。这是窄适配，不等于视觉或交互已验收。",
       "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
-      "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面"
+      "公开版本 57c9 桌面 Chrome 已打开该项并完成指定开合：互斥单开，再次点击可全闭。已接入该次实拍裁切封面。当前提交尚未再做桌面复验。这是有界局部观察，不是完整视觉/交互验收，也不是已核独立。"
     ],
     "runtime": {
       "assets": []
-    }
+    },
+    "thumbnail": "thumbnails/flowbite--accordion.webp"
   },
   {
     "id": "flowbite:carousel",
@@ -32377,7 +32382,7 @@
     "upstream": "https://github.com/themesberg/flowbite/blob/232ebdb33a9e37b31b293b9988d89b862ee121e5/content/components/carousel.md",
     "website": "https://flowbite.com/docs/components/carousel/",
     "revision": "232ebdb33a9e37b31b293b9988d89b862ee121e5",
-    "buildStatus": "本地预览已组装，尚未做真实浏览器视觉与交互验收",
+    "buildStatus": "本地预览已组装。公开 57c9 上预览为空白，指定操作不可测；当前提交尚未再做桌面复验。完整视觉与交互验收仍未接受。",
     "batch": "collection-20261111-g",
     "archive": "batches/flowbite-20261111/bundles/carousel.zip",
     "manifest": "batches/flowbite-20261111/manifest.json",
@@ -32393,7 +32398,7 @@
       "源码级不同点：官方完整走马灯，只收默认示例。",
       "预览使用官方文档示例 HTML 与已有 Flowbite 本地脚本/样式编译，远程或无授权图已换自有占位。这是窄适配，不等于视觉或交互已验收。",
       "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
-      "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面"
+      "公开版本 57c9 桌面 Chrome 已打开该项：预览保持空白，未见幻灯或控件，指定核心操作不可测。当前提交尚未再做桌面复验。未把该次失败图当作正常封面。轮播预览仍为 Unknown，不再重复同一探针。此记录不是完整视觉/交互验收或已核独立。"
     ],
     "runtime": {
       "assets": []
@@ -32648,7 +32653,7 @@
     "upstream": "https://github.com/themesberg/flowbite/blob/232ebdb33a9e37b31b293b9988d89b862ee121e5/content/components/footer.md",
     "website": "https://flowbite.com/docs/components/footer/",
     "revision": "232ebdb33a9e37b31b293b9988d89b862ee121e5",
-    "buildStatus": "本地预览已组装，尚未做真实浏览器视觉与交互验收",
+    "buildStatus": "本地预览已组装；公开 57c9 桌面 Chrome 已有指定静态范围观察并接入实拍封面；当前提交尚未再做桌面复验。完整视觉与交互验收仍未接受。",
     "batch": "collection-20261111-g",
     "archive": "batches/flowbite-20261111/bundles/footer.zip",
     "manifest": "batches/flowbite-20261111/manifest.json",
@@ -32664,11 +32669,12 @@
       "源码级不同点：官方完整页脚区块，只收默认示例。",
       "预览使用官方文档示例 HTML 与已有 Flowbite 本地脚本/样式编译，远程或无授权图已换自有占位。这是窄适配，不等于视觉或交互已验收。",
       "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
-      "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面"
+      "公开版本 57c9 上有过针对该静态页脚示例的有限桌面观察（展示及普通链接悬停，未点击链接）。已接入该次实拍裁切封面。当前提交尚未再做桌面复验。此记录不代表完整视觉/交互验收或已核独立，也不把静态链接展示计作动态业务交互通过。"
     ],
     "runtime": {
       "assets": []
-    }
+    },
+    "thumbnail": "thumbnails/flowbite--footer.webp"
   },
   {
     "id": "flowbite:banner",
@@ -32738,7 +32744,7 @@
     "upstream": "https://github.com/themesberg/flowbite/blob/232ebdb33a9e37b31b293b9988d89b862ee121e5/content/components/dropdowns.md",
     "website": "https://flowbite.com/docs/components/dropdowns/",
     "revision": "232ebdb33a9e37b31b293b9988d89b862ee121e5",
-    "buildStatus": "本地预览已组装；公开 57c9 桌面 Chrome 已完成指定有界观察并接入实拍封面，完整视觉与交互验收仍未接受",
+    "buildStatus": "本地预览已组装；公开 57c9 桌面 Chrome 已完成指定有界观察并接入实拍封面；当前提交尚未再做桌面复验。完整视觉与交互验收仍未接受。",
     "batch": "collection-20261111-g",
     "archive": "batches/flowbite-20261111/bundles/dropdown.zip",
     "manifest": "batches/flowbite-20261111/manifest.json",
@@ -32754,7 +32760,7 @@
       "源码级不同点：官方完整下拉菜单，只收默认示例。",
       "预览使用官方文档示例 HTML 与已有 Flowbite 本地脚本/样式编译，远程或无授权图已换自有占位。这是窄适配，不等于视觉或交互已验收。",
       "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
-      "2026-11-11 桌面 Chrome 在公开 57c9（worktreeDirty=false）上已打开详情并完成指定安全核心操作：菜单可展开/收起。已接入实拍裁切封面。这是有界局部观察，不是完整视觉/交互验收，也不是已核独立。"
+      "公开版本 57c9（worktreeDirty=false）桌面 Chrome 已打开详情并完成指定安全核心操作：菜单可展开/收起。已接入该次实拍裁切封面。当前提交尚未再做桌面复验。这是有界局部观察，不是完整视觉/交互验收，也不是已核独立。"
     ],
     "runtime": {
       "assets": []
@@ -33249,7 +33255,7 @@
     "upstream": "https://github.com/saadeghi/daisyui/blob/8528585870d79e107f3b6a14d2e66b3b4d473e37/packages/docs/src/routes/(routes)/components/accordion/+page.md",
     "website": "https://daisyui.com/components/accordion/",
     "revision": "8528585870d79e107f3b6a14d2e66b3b4d473e37",
-    "buildStatus": "本地预览已组装，尚未做真实浏览器视觉与交互验收",
+    "buildStatus": "本地预览已组装；公开 57c9 桌面 Chrome 已完成指定有界开合观察并接入实拍封面；当前提交尚未再做桌面复验。完整视觉与交互验收仍未接受。",
     "batch": "collection-20261111-g",
     "archive": "batches/daisyui-20261111/bundles/accordion.zip",
     "manifest": "batches/daisyui-20261111/manifest.json",
@@ -33265,11 +33271,12 @@
       "源码级不同点：官方完整手风琴，与其它来源问答组件结构不同。 实际摘取的官方示例标题：Accordion using radio inputs。",
       "预览使用官方文档中的示例 HTML，并用官方 daisyUI 插件经已有 Tailwind 编译样式。远程演示图已换自有占位，不冒称视觉复刻。预览挂载是窄适配，不等于视觉或交互已验收。",
       "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
-      "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面"
+      "公开版本 57c9 桌面 Chrome 已打开该项并完成指定开合：radio 互斥，再次点击当前项不会全闭，此为所见原生模型，不按不能全收起判故障。已接入该次实拍裁切封面。当前提交尚未再做桌面复验。这是有界局部观察，不是完整视觉/交互验收，也不是已核独立。"
     ],
     "runtime": {
       "assets": []
-    }
+    },
+    "thumbnail": "thumbnails/daisyui--accordion.webp"
   },
   {
     "id": "daisyui:steps",
@@ -39594,7 +39601,7 @@
     "website": "https://ui.mantine.dev/component/double-navbar",
     "revision": "963b955c5cef4bcc6008d40a0431e46ef771c254",
     "repository": "https://github.com/mantinedev/ui.mantine.dev",
-    "buildStatus": "本地预览已组装；公开 57c9 桌面 Chrome 已完成指定有界观察并接入实拍封面，完整视觉与交互验收仍未接受",
+    "buildStatus": "本地预览已组装；公开 57c9 桌面 Chrome 已完成指定有界观察并接入实拍封面；当前提交尚未再做桌面复验。完整视觉与交互验收仍未接受。",
     "batch": "collection-20261111-j",
     "archive": "batches/mantine-20261111-j/bundles/double-navbar.zip",
     "manifest": "batches/mantine-20261111-j/manifest.json",
@@ -39610,7 +39617,7 @@
       "本地预览使用内存配色管理与系统字体，不表示源界面既有交互已验收，也不表示后端业务成功。",
       "源码级不同点：官方完整示例 DoubleNavbar，按 ui.mantine.dev lib 入口对账此前未收；不是已收 AuthenticationForm / GetInTouch / HeaderMegaMenu 的改写。",
       "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。",
-      "2026-11-11 桌面 Chrome 在公开 57c9（worktreeDirty=false）上已打开详情并完成指定安全核心操作：双栏导航切换（Analytics / Clients）。已接入实拍裁切封面。这是有界局部观察，不是完整视觉/交互验收，也不是已核独立。"
+      "公开版本 57c9（worktreeDirty=false）桌面 Chrome 已打开详情并完成指定安全核心操作：双栏导航两层本地选中可见。已接入该次实拍裁切封面。当前提交尚未再做桌面复验。这是有界局部观察，不是完整视觉/交互验收，也不是已核独立。商标/标志权利仍按原记录 Unknown 边界，截图不构成新授权。"
     ],
     "runtime": {
       "css": "batches/mantine-20261111-j/double-navbar/runtime.css",
@@ -39673,7 +39680,7 @@
     "website": "https://ui.mantine.dev/component/faq-simple",
     "revision": "963b955c5cef4bcc6008d40a0431e46ef771c254",
     "repository": "https://github.com/mantinedev/ui.mantine.dev",
-    "buildStatus": "本地预览已组装，尚未做真实浏览器视觉与交互验收",
+    "buildStatus": "本地预览已组装；公开 57c9 桌面 Chrome 已有指定有界开合观察；当前提交尚未再做桌面复验。完整视觉与交互验收仍未接受。",
     "batch": "collection-20261111-j",
     "archive": "batches/mantine-20261111-j/bundles/faq-simple.zip",
     "manifest": "batches/mantine-20261111-j/manifest.json",
@@ -39687,7 +39694,7 @@
     "gaps": [
       "源码级独立性初筛：完整可复用组件可以收录；不收已采集项、配色变体、输入/按钮/滑块原语或仅布局网格。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
       "本地预览使用内存配色管理与系统字体，不表示源界面既有交互已验收，也不表示后端业务成功。",
-      "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面。",
+      "公开版本 57c9 桌面 Chrome 已打开该项并观察指定单开手风琴开合。当前提交尚未再做桌面复验，也没有接入实拍封面。与同源常见问题（背景变体）属近似待核，不自动判重复，也不作为两条已核独立。此记录不是完整视觉/交互验收或已核独立。",
       "源码级不同点：官方完整示例 FaqSimple，按 ui.mantine.dev lib 入口对账此前未收；不是已收 AuthenticationForm / GetInTouch / HeaderMegaMenu 的改写。",
       "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。"
     ],
@@ -39712,7 +39719,7 @@
     "website": "https://ui.mantine.dev/component/faq-with-bg",
     "revision": "963b955c5cef4bcc6008d40a0431e46ef771c254",
     "repository": "https://github.com/mantinedev/ui.mantine.dev",
-    "buildStatus": "本地预览已组装，尚未做真实浏览器视觉与交互验收",
+    "buildStatus": "本地预览已组装；公开 57c9 桌面 Chrome 已有指定有界开合观察；当前提交尚未再做桌面复验。完整视觉与交互验收仍未接受。",
     "batch": "collection-20261111-j",
     "archive": "batches/mantine-20261111-j/bundles/faq-with-bg.zip",
     "manifest": "batches/mantine-20261111-j/manifest.json",
@@ -39726,7 +39733,7 @@
     "gaps": [
       "源码级独立性初筛：完整可复用组件可以收录；不收已采集项、配色变体、输入/按钮/滑块原语或仅布局网格。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
       "本地预览使用内存配色管理与系统字体，不表示源界面既有交互已验收，也不表示后端业务成功。",
-      "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面。",
+      "公开版本 57c9 桌面 Chrome 已打开该项并观察指定单开手风琴开合。当前提交尚未再做桌面复验，也没有接入实拍封面。与同源简易常见问题属近似待核，不自动判重复，也不作为两条已核独立。此记录不是完整视觉/交互验收或已核独立。",
       "源码级不同点：官方完整示例 FaqWithBg，按 ui.mantine.dev lib 入口对账此前未收；不是已收 AuthenticationForm / GetInTouch / HeaderMegaMenu 的改写。",
       "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。"
     ],
@@ -39985,7 +39992,7 @@
     "website": "https://ui.mantine.dev/component/footer-links",
     "revision": "963b955c5cef4bcc6008d40a0431e46ef771c254",
     "repository": "https://github.com/mantinedev/ui.mantine.dev",
-    "buildStatus": "本地预览已组装，尚未做真实浏览器视觉与交互验收",
+    "buildStatus": "本地预览已组装；公开 57c9 桌面 Chrome 已有指定静态范围观察并接入实拍封面；当前提交尚未再做桌面复验。完整视觉与交互验收仍未接受。",
     "batch": "collection-20261111-j",
     "archive": "batches/mantine-20261111-j/bundles/footer-links.zip",
     "manifest": "batches/mantine-20261111-j/manifest.json",
@@ -39999,7 +40006,7 @@
     "gaps": [
       "源码级独立性初筛：完整可复用组件可以收录；不收已采集项、配色变体、输入/按钮/滑块原语或仅布局网格。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
       "本地预览使用内存配色管理与系统字体，不表示源界面既有交互已验收，也不表示后端业务成功。",
-      "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面。",
+      "公开版本 57c9 上有过针对该静态页脚示例的有限桌面观察（展示及普通链接悬停，未点击链接）。已接入该次实拍裁切封面。当前提交尚未再做桌面复验。此记录不代表完整视觉/交互验收或已核独立，也不把静态链接展示计作动态业务交互通过。",
       "源码级不同点：官方完整示例 FooterLinks，按 ui.mantine.dev lib 入口对账此前未收；不是已收 AuthenticationForm / GetInTouch / HeaderMegaMenu 的改写。",
       "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。"
     ],
@@ -40013,7 +40020,8 @@
       "countsAsIndependentOriginal": true
     },
     "sourcePath": "lib/FooterLinks/FooterLinks.tsx",
-    "browserVisualQA": "not_run"
+    "browserVisualQA": "not_run",
+    "thumbnail": "thumbnails/mantine-ui--footer-links.webp"
   },
   {
     "id": "mantine-ui:footer-simple",
@@ -41233,7 +41241,7 @@
     "website": "https://ui.mantine.dev/component/table-sort",
     "revision": "963b955c5cef4bcc6008d40a0431e46ef771c254",
     "repository": "https://github.com/mantinedev/ui.mantine.dev",
-    "buildStatus": "本地预览已组装；公开 57c9 桌面 Chrome 已完成指定有界观察并接入实拍封面，完整视觉与交互验收仍未接受",
+    "buildStatus": "本地预览已组装；公开 57c9 桌面 Chrome 已完成指定有界观察并接入实拍封面；当前提交尚未再做桌面复验。完整视觉与交互验收仍未接受。",
     "batch": "collection-20261111-j",
     "archive": "batches/mantine-20261111-j/bundles/table-sort.zip",
     "manifest": "batches/mantine-20261111-j/manifest.json",
@@ -41249,7 +41257,7 @@
       "本地预览使用内存配色管理与系统字体，不表示源界面既有交互已验收，也不表示后端业务成功。",
       "源码级不同点：官方完整示例 TableSort，按 ui.mantine.dev lib 入口对账此前未收；不是已收 AuthenticationForm / GetInTouch / HeaderMegaMenu 的改写。",
       "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。",
-      "2026-11-11 桌面 Chrome 在公开 57c9（worktreeDirty=false）上已打开详情并完成指定安全核心操作：表格按名称降序排序与搜索。已接入实拍裁切封面。这是有界局部观察，不是完整视觉/交互验收，也不是已核独立。"
+      "公开版本 57c9（worktreeDirty=false）桌面 Chrome 已打开详情并完成指定安全核心操作：本地搜索、清空恢复与 Name 列两次排序可见。已接入该次实拍裁切封面。当前提交尚未再做桌面复验。这是有界局部观察，不是完整视觉/交互验收，也不是已核独立。演示数据不表示真实后台。"
     ],
     "runtime": {
       "css": "batches/mantine-20261111-j/table-sort/runtime.css",
