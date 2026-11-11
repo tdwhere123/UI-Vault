@@ -250,8 +250,9 @@ test('export and count consumers read ledger marks; Oxbow duplicate no longer cl
   assert.equal(acc.duplicateOriginalExclusions, 1);
   assert.equal(acc.novelSourceIdentityUpperBound, 531);
   assert.notEqual(acc.catalogRecordCount, 531);
-  assert.equal(acc.verifiedNewIndependentUIs, 0);
+  assert.equal(acc.verifiedNewIndependentUIs, acc.verifiedNewIndependentRecords.length);
   assert.equal(acc.covers, 0);
+  assert.equal(acc.browserVisualQA, 0);
   const catalog = JSON.parse(readFileSync(join(root, 'candidate-catalog.json'), 'utf8'));
   const password = catalog.find((x) => x.id === 'oxbow:signin-password');
   const magic = catalog.find((x) => x.id === 'oxbow:signin-magic-link');

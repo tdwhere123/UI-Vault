@@ -1,6 +1,6 @@
 import {parsePageJump, detailHash} from './atlas-model.mjs';
 import {localizeItem} from './display-names.mjs';
-import {collectionAccountingFrom} from './collection-accounting.mjs';
+import {collectionAccountingFrom, formatCollectionAccountingStatus} from './collection-accounting.mjs';
 const $ = id => document.getElementById(id);
 const PAGE_SIZE = 18;
 let items = [], page = 1, pageCount = 1, disposed = false, loaded = false, loadGeneration = 0, loadController;
@@ -106,7 +106,7 @@ async function load() {
       const ledger = await ledgerResponse.json();
       const acc = collectionAccountingFrom(items, ledger);
       const accounting = $('collection-accounting');
-      if (accounting) accounting.textContent = `本线新增接站 ${acc.newCatalogConnects} · 旧源补接 ${acc.oldSourceReconnects} · 重复排除 ${acc.duplicateOriginalExclusions} · 新原件身份上限 ${acc.novelSourceIdentityUpperBound}（不是已核独立数；已核新增/封面/实测为 0）`;
+      if (accounting) accounting.textContent = formatCollectionAccountingStatus(acc);
     }
   } catch (ledgerError) {
     if (!current()) return;
