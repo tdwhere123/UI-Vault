@@ -9743,6 +9743,7 @@
     "revision": "353464dd6438ea31f4a6e416ab7e07d8cc0f519d",
     "batch": "vis-timeline-01",
     "preview": "batches/vis-timeline-01/index.html",
+    "thumbnail": "thumbnails/vis-timeline--local-task-planner.webp",
     "category": "导航与组织",
     "kind": "完整区块",
     "format": "时间轴工作区",
@@ -9759,7 +9760,8 @@
     "gaps": [
       "原生拖动几何、视觉、触屏与完整无障碍待验。",
       "当前时间ticker与自动resize轮询关闭；本地ResizeObserver销毁时释放。",
-      "完整依赖许可已保留；源码ZIP不提供线上下载。"
+      "完整依赖许可已保留；源码ZIP不提供线上下载。",
+      "已接入正式版本 e9fd 桌面实拍裁切封面（正常宽度可见 4 任务、3 泳道与日期轴；Review 条窄标签截断如实保留）。该图为渲染通过/整体 partial，未测编辑任务。公开 e9fd 上的 Fit/停止重启/窄回宽观察来自该版本现场报告，不是当前提交的桌面复验。当前提交尚未再做桌面复验。此记录不是完整视觉/交互验收或已核独立。"
     ]
   },
   {
@@ -17079,11 +17081,13 @@
     "license": "MIT",
     "batch": "silverbullet-documents-01",
     "preview": "batches/silverbullet-documents-01/index.html",
+    "thumbnail": "thumbnails/silverbullet--document-navigation-workspace.webp",
     "previewStatus": "DOM-tested; visual-pending",
     "browserVisualQA": "not-run",
     "buildStatus": "Original runtime and critical interaction/cleanup tested; browser visual QA not run",
     "gaps": [
-      "原文本编辑/树导航子流程，本地虚构文档，无完整MainUI/Space Lua/同步/持久保存。"
+      "原文本编辑/树导航子流程，本地虚构文档，无完整MainUI/Space Lua/同步/持久保存。",
+      "已接入正式版本 e9fd 桌面实拍裁切封面（目录可见示例/复盘.md，编辑区可见 Local desktop edit）。文档切换与键盘输入的通过观察来自阿衡在 e9fd 的现场报告，不是当前提交的桌面复验。同版 batch01 间歇错误页仍保留披露，不能称稳定修好，也不能归因未上线的 0a87166d / 77a19240。当前提交尚未再做桌面复验。此记录不是完整视觉/交互验收或已核独立。"
     ],
     "originalCandidateSource": {
       "source": "SilverBullet",
