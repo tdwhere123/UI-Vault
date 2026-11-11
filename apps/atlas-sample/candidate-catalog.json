@@ -22559,8 +22559,15 @@
     "gaps": [
       "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
       "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面",
-      "官方原件 application/dropdown/1.html 是静态展开菜单，官方 component.js 亦不提供开闭；预览开闭由本地适配器 dropdown-menu-preview.js 提供，不改原件。真实浏览器复测仍待上线后进行，不能记已验收封面或新增已核独立。"
-    ]
+      "官方原件 application/dropdown/1.html 是静态展开菜单，官方 component.js 亦不提供开闭；预览开闭由本地适配器 dropdown-menu-preview.js 提供，不改原件。真实浏览器复测仍待上线后进行，不能记已验收封面或新增已核独立。",
+      "正式详情预览经现有 runtime.scripts 契约拉取并在 srcdoc 内联 dropdown-menu-preview.js，不放宽 CSP 或 sandbox。真实浏览器复测仍待上线后进行，不能记已验收封面或新增已核独立。"
+    ],
+    "runtime": {
+      "scripts": [
+        "runtime.js",
+        "dropdown-menu-preview.js"
+      ]
+    }
   },
   {
     "id": "hyperui:application-empty-states",
