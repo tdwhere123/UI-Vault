@@ -6,7 +6,7 @@
     "oldSourceReconnects": 22,
     "duplicateOriginalExclusions": 1,
     "novelSourceIdentityUpperBound": 531,
-    "verifiedNewIndependentUIs": 3,
+    "verifiedNewIndependentUIs": 5,
     "covers": 0,
     "browserVisualQA": 0
   },
@@ -17,11 +17,11 @@
     "479 仍只是新原件身份上限，不是已核独立或闭包合格数。",
     "原件与条目均保留，未物理删除，也未用改几个字的已有源码重新计数。",
     "collection-20261111-j 新增 52 条此前未保存的 Mantine UI 官方完整示例（修订 963b955c5cef）。本线新接站现为 554，新原件身份上限 531 = 554 - 22 - 1。这仍只是源码身份初筛，不是已核独立，不能称为目标完成。",
-    "已核新增独立 UI 现为 3，仅计入分账具名记录中的限定范围（table-sort 本地搜索与 Name 双向排序；double-navbar 常驻双轨本地选中；footer-links 静态多栏与 Features 悬停），源码对照提交 3695f76d56133051c9bd7bdacb05fddcfaf0c9d2。不是完整视觉矩阵、当前提交亲测、真实后台或 24 条全部合格，也不把另外待验条目一并计入。封面与实测账仍按原义为 0。"
+    "已核新增独立 UI 现为 5。前 3 条仍为 table-sort / double-navbar / footer-links 的原限定范围，源码对照提交 3695f76d56133051c9bd7bdacb05fddcfaf0c9d2，记录原字节保留。另幂等追加 daisyui:accordion（完整原生 radio 三问问答组件；保持一项选中）与 hyperui:application-modals（完整居中原生 dialog；灰遮罩与有界关闭），源码对照提交 e5f0ee43bd1957e70bbb6e012270e54d80e3c618 的原验收限定，不把 57c9 截图会话当作 e5 新跑。不是完整视觉矩阵、当前提交亲测、真实后台或 55 条计入，也不把 7 个通知包或新图升为可计。封面与实测账仍按原义为 0。已核库存仍为 241。"
   ],
   "closureGapsRemaining": [
-    "限定可计的 3 条已写入具名分账；封面账与实测/真实浏览器整矩阵仍为 0，不能把本次限定计入写成整库视觉验收通过。",
-    "跨源视觉去重尚未在真实浏览器整库核验；除分账具名的 3 条限定可计外，其余条目不能称为已核独立。",
+    "限定可计的 5 条已写入具名分账；封面账与实测/真实浏览器整矩阵仍为 0，不能把本次限定计入写成整库视觉验收通过。",
+    "跨源视觉去重尚未在真实浏览器整库核验；除分账具名的 5 条限定可计外，其余条目不能称为已核独立。",
     "字体/图/商标 Unknown 标记保留，不假装已获授权。",
     "本轮修复了 Kokonut 单项入口与 Animata 构建工程/内部模块闭包，以及媒体桥、Tabler 不透明沙箱存储适配、依赖许可证与 21 份补接 manifest；代表包离线重建与针对回归见私有工作目录原始日志。"
   ],
@@ -79,6 +79,40 @@
         "archiveSha256": "48f987da4f95dd70fadaf8a366134730ce840155c59418618760eb2184bd4536",
         "thumbnail": "thumbnails/mantine-ui--footer-links.webp",
         "thumbnailSha256": "b488b86e3651556f31a16bcd2e2a98c9064e5d34a1798590c8ccc5246dc27e3a"
+      }
+    },
+    {
+      "id": "daisyui:accordion",
+      "sourceCommit": "e5f0ee43bd1957e70bbb6e012270e54d80e3c618",
+      "scope": "完整原生 radio 三问问答组件；保持一项选中。",
+      "exclusions": "第三项未在原验收中点选；移动或完整无障碍；当前提交的整矩阵或线上复验。",
+      "evidence": {
+        "reviewSha256": "bdd3c47aaa729754062f59df7df7b3f513aff2aeb58415f158b1bfc233579822",
+        "frozenPathsSha256": "202dc651413919eeb28fe1eba021c8ec1d7d2acd51cbf9fcff3eebb618bfb799",
+        "preview": "batches/daisyui-20261111/accordion.html",
+        "runtimeCss": "batches/daisyui-20261111/runtime.css",
+        "runtimeJs": "batches/daisyui-20261111/runtime.js",
+        "archive": "batches/daisyui-20261111/bundles/accordion.zip",
+        "archiveSha256": "9173f32aa22434cecd1fa9e7341da4122fe90bc3ee7dcf94efa822dc8e2e63f1",
+        "thumbnail": "thumbnails/daisyui--accordion.webp",
+        "thumbnailSha256": "61124b4e31ec454bc8f0aec7caa7f06d1d912d0606ecdb5f991c39a43982ba85"
+      }
+    },
+    {
+      "id": "hyperui:application-modals",
+      "sourceCommit": "e5f0ee43bd1957e70bbb6e012270e54d80e3c618",
+      "scope": "完整居中原生 dialog；灰遮罩与有界关闭（Escape 与点遮罩）。",
+      "exclusions": "完整业务矩阵或键盘无障碍全路径；Chart.js 等第三方权利不因本条计入而关闭；当前提交的整矩阵或线上复验。",
+      "evidence": {
+        "reviewSha256": "bdd3c47aaa729754062f59df7df7b3f513aff2aeb58415f158b1bfc233579822",
+        "frozenPathsSha256": "202dc651413919eeb28fe1eba021c8ec1d7d2acd51cbf9fcff3eebb618bfb799",
+        "preview": "batches/hyperui-20261111/application-modals.html",
+        "runtimeCss": "batches/hyperui-20261111/runtime.css",
+        "runtimeJs": "batches/hyperui-20261111/runtime.js",
+        "archive": "batches/hyperui-20261111/bundles/application-modals.zip",
+        "archiveSha256": "dccff83396cb7a88855106dc23784cd611f06f7516bd3846d6f39a5e38735c35",
+        "thumbnail": "thumbnails/hyperui--application-modals.webp",
+        "thumbnailSha256": "c19a20d40c3e19be71544586dab2d75e9f8ca6b953d34dc7cd38f52fde929dc7"
       }
     }
   ]

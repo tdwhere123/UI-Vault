@@ -22621,8 +22621,10 @@
     "behavior": "静态空状态说明",
     "gaps": [
       "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
-      "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面"
-    ]
+      "尚未在真实浏览器打开视觉与核心交互",
+      "列表封面为有限实拍裁切，不是完整全页或已核验收。"
+    ],
+    "thumbnail": "thumbnails/hyperui--application-empty-states.webp"
   },
   {
     "id": "hyperui:application-file-uploaders",
@@ -22713,11 +22715,11 @@
     "category": "输入与选择",
     "format": "组件与效果",
     "kind": "组件",
-    "description": "对话框，来自HyperUI固定修订 637323c8d304 的完整独立条目。",
+    "description": "对话框，来自HyperUI固定修订 637323c8d304 的完整独立条目。已按源码对照提交 e5f0ee43bd1957e70bbb6e012270e54d80e3c618 在限定范围计入已核新增独立 UI：完整居中原生 dialog、灰遮罩与有界关闭（Escape 与点遮罩）。不包括完整视觉矩阵、当前提交整矩阵或线上复验。",
     "behavior": "打开或关闭对话框",
     "gaps": [
       "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
-      "公开版本 57c9（worktreeDirty=false）桌面 Chrome 已打开详情并完成指定安全核心操作：对话框可打开，并可用 Escape 与遮罩关闭。已接入该次实拍裁切封面。当前提交尚未再做桌面复验。这是有界局部观察，不是完整视觉/交互验收，也不是已核独立。"
+      "公开版本 57c9（worktreeDirty=false）桌面 Chrome 已打开详情并完成指定安全核心操作：对话框可打开，并可用 Escape 与遮罩关闭。已接入该次实拍裁切封面。当前提交尚未再做桌面复验。这是有界局部观察，不是完整视觉/交互验收，该项已按源码对照提交 e5f0ee43bd1957e70bbb6e012270e54d80e3c618 在上述限定范围计入已核新增独立 UI。当前提交尚未再做整矩阵或线上复验。"
     ],
     "thumbnail": "thumbnails/hyperui--application-modals.webp"
   },
@@ -22766,8 +22768,10 @@
     "behavior": "静态指标卡片",
     "gaps": [
       "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
-      "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面"
-    ]
+      "尚未在真实浏览器打开视觉与核心交互",
+      "列表封面为有限实拍裁切，不是完整全页或已核验收。"
+    ],
+    "thumbnail": "thumbnails/hyperui--application-stats.webp"
   },
   {
     "id": "hyperui:application-steps",
@@ -22965,8 +22969,10 @@
     "behavior": "浏览功能卖点说明",
     "gaps": [
       "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
-      "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面"
-    ]
+      "尚未在真实浏览器打开视觉与核心交互",
+      "列表封面为有限实拍裁切，不是完整全页或已核验收。"
+    ],
+    "thumbnail": "thumbnails/hyperui--marketing-feature-grids.webp"
   },
   {
     "id": "hyperui:marketing-footers",
@@ -22989,8 +22995,10 @@
     "behavior": "浏览页脚链接（演示链接已拦截）",
     "gaps": [
       "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
-      "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面"
-    ]
+      "尚未在真实浏览器打开视觉与核心交互",
+      "本封面为上部单帧，不含 copyright 行，不能当作完整页脚。"
+    ],
+    "thumbnail": "thumbnails/hyperui--marketing-footers.webp"
   },
   {
     "id": "hyperui:marketing-headers",
@@ -25417,8 +25425,10 @@
     "gaps": [
       "预览由文档中的原始HTML示例组装，并内置了本线保存的Flowbite脚本供属性控件使用；这是本地适配，不表示源交互已验证",
       "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
-      "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面"
-    ]
+      "尚未在真实浏览器打开视觉与核心交互",
+      "列表封面为有限实拍裁切，不是完整全页或已核验收。"
+    ],
+    "thumbnail": "thumbnails/flowbite--list-features.webp"
   },
   {
     "id": "flowbite:list-stats",
@@ -33009,11 +33019,13 @@
       "源码级不同点：官方完整页脚区块。 实际摘取的官方示例标题：~Footer (vertical by default, horizontal for sm and up)。",
       "预览使用官方文档中的示例 HTML，并用官方 daisyUI 插件经已有 Tailwind 编译样式。远程演示图已换自有占位，不冒称视觉复刻。预览挂载是窄适配，不等于视觉或交互已验收。",
       "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
-      "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面"
+      "尚未在真实浏览器打开视觉与核心交互",
+      "列表封面为有限实拍裁切，不是完整全页或已核验收。"
     ],
     "runtime": {
       "assets": []
-    }
+    },
+    "thumbnail": "thumbnails/daisyui--footer.webp"
   },
   {
     "id": "daisyui:hero",
@@ -33039,11 +33051,13 @@
       "源码级不同点：官方完整首屏介绍区块。 实际摘取的官方示例标题：~Centered hero。",
       "预览使用官方文档中的示例 HTML，并用官方 daisyUI 插件经已有 Tailwind 编译样式。远程演示图已换自有占位，不冒称视觉复刻。预览挂载是窄适配，不等于视觉或交互已验收。",
       "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
-      "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面"
+      "尚未在真实浏览器打开视觉与核心交互",
+      "列表封面为有限实拍裁切，不是完整全页或已核验收。"
     ],
     "runtime": {
       "assets": []
-    }
+    },
+    "thumbnail": "thumbnails/daisyui--hero.webp"
   },
   {
     "id": "daisyui:hover-gallery",
@@ -33272,14 +33286,14 @@
     "category": "产品与营销",
     "format": "组件与效果",
     "kind": "组件",
-    "description": "问答手风琴，来自daisyUI固定修订 8528585870d7 的完整独立条目；此为源码级独立性初筛，跨源视觉去重待核，不能称为已核独立。",
+    "description": "问答手风琴，来自daisyUI固定修订 8528585870d7 的完整独立条目。已按源码对照提交 e5f0ee43bd1957e70bbb6e012270e54d80e3c618 在限定范围计入已核新增独立 UI：完整原生 radio 三问问答组件、保持一项选中。不包括完整视觉矩阵、当前提交整矩阵或线上复验。",
     "behavior": "展开问答手风琴",
     "gaps": [
-      "源码级独立性初筛：完整可复用组件可以收录；只收该族一条完整官方示例，不收配色、尺寸或编号小改。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
+      "源码级独立性初筛：完整可复用组件可以收录；只收该族一条完整官方示例，不收配色、尺寸或编号小改。跨源视觉去重尚未在真实浏览器核验，该项已按源码对照提交 e5f0ee43bd1957e70bbb6e012270e54d80e3c618 在限定范围计入已核新增独立 UI。当前提交尚未再做整矩阵或线上复验。",
       "源码级不同点：官方完整手风琴，与其它来源问答组件结构不同。 实际摘取的官方示例标题：Accordion using radio inputs。",
       "预览使用官方文档中的示例 HTML，并用官方 daisyUI 插件经已有 Tailwind 编译样式。远程演示图已换自有占位，不冒称视觉复刻。预览挂载是窄适配，不等于视觉或交互已验收。",
       "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
-      "公开版本 57c9 桌面 Chrome 已打开该项并完成指定开合：radio 互斥，再次点击当前项不会全闭，此为所见原生模型，不按不能全收起判故障。已接入该次实拍裁切封面。当前提交尚未再做桌面复验。这是有界局部观察，不是完整视觉/交互验收，也不是已核独立。"
+      "公开版本 57c9 桌面 Chrome 已打开该项并完成指定开合：radio 互斥，再次点击当前项不会全闭，此为所见原生模型，不按不能全收起判故障。已接入该次实拍裁切封面。当前提交尚未再做桌面复验。这是有界局部观察，不是完整视觉/交互验收，该项已按源码对照提交 e5f0ee43bd1957e70bbb6e012270e54d80e3c618 在上述限定范围计入已核新增独立 UI。当前提交尚未再做整矩阵或线上复验。"
     ],
     "runtime": {
       "assets": []
@@ -33310,11 +33324,13 @@
       "源码级不同点：官方完整步骤条，只收默认示例。 实际摘取的官方示例标题：~Horizontal。",
       "预览使用官方文档中的示例 HTML，并用官方 daisyUI 插件经已有 Tailwind 编译样式。远程演示图已换自有占位，不冒称视觉复刻。预览挂载是窄适配，不等于视觉或交互已验收。",
       "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
-      "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面"
+      "尚未在真实浏览器打开视觉与核心交互",
+      "列表封面为有限实拍裁切，不是完整全页或已核验收。"
     ],
     "runtime": {
       "assets": []
-    }
+    },
+    "thumbnail": "thumbnails/daisyui--steps.webp"
   },
   {
     "id": "daisyui:tabs",
@@ -39272,9 +39288,10 @@
     "gaps": [
       "源码级独立性初筛：完整可复用组件可以收录；不收已采集项、配色变体、输入/按钮/滑块原语或仅布局网格。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
       "本地预览使用内存配色管理与系统字体，不表示源界面既有交互已验收，也不表示后端业务成功。",
-      "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面。",
+      "尚未在真实浏览器打开视觉与核心交互",
       "源码级不同点：官方完整示例 ActionsGrid，按 ui.mantine.dev lib 入口对账此前未收；不是已收 AuthenticationForm / GetInTouch / HeaderMegaMenu 的改写。",
-      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。"
+      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。",
+      "列表封面为有限实拍裁切，不是完整全页或已核验收。"
     ],
     "runtime": {
       "css": "batches/mantine-20261111-j/actions-grid/runtime.css",
@@ -39286,7 +39303,8 @@
       "countsAsIndependentOriginal": true
     },
     "sourcePath": "lib/ActionsGrid/ActionsGrid.tsx",
-    "browserVisualQA": "not_run"
+    "browserVisualQA": "not_run",
+    "thumbnail": "thumbnails/mantine-ui--actions-grid.webp"
   },
   {
     "id": "mantine-ui:authentication-title",
@@ -39311,9 +39329,10 @@
     "gaps": [
       "源码级独立性初筛：完整可复用组件可以收录；不收已采集项、配色变体、输入/按钮/滑块原语或仅布局网格。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
       "本地预览使用内存配色管理与系统字体，不表示源界面既有交互已验收，也不表示后端业务成功。",
-      "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面。",
+      "尚未在真实浏览器打开视觉与核心交互",
       "源码级不同点：官方完整示例 AuthenticationTitle，按 ui.mantine.dev lib 入口对账此前未收；不是已收 AuthenticationForm / GetInTouch / HeaderMegaMenu 的改写。",
-      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。"
+      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。",
+      "列表封面为有限实拍裁切，不是完整全页或已核验收。"
     ],
     "runtime": {
       "css": "batches/mantine-20261111-j/authentication-title/runtime.css",
@@ -39325,7 +39344,8 @@
       "countsAsIndependentOriginal": true
     },
     "sourcePath": "lib/AuthenticationTitle/AuthenticationTitle.tsx",
-    "browserVisualQA": "not_run"
+    "browserVisualQA": "not_run",
+    "thumbnail": "thumbnails/mantine-ui--authentication-title.webp"
   },
   {
     "id": "mantine-ui:card-gradient",
@@ -39350,9 +39370,10 @@
     "gaps": [
       "源码级独立性初筛：完整可复用组件可以收录；不收已采集项、配色变体、输入/按钮/滑块原语或仅布局网格。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
       "本地预览使用内存配色管理与系统字体，不表示源界面既有交互已验收，也不表示后端业务成功。",
-      "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面。",
+      "尚未在真实浏览器打开视觉与核心交互",
       "源码级不同点：官方完整示例 CardGradient，按 ui.mantine.dev lib 入口对账此前未收；不是已收 AuthenticationForm / GetInTouch / HeaderMegaMenu 的改写。",
-      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。"
+      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。",
+      "列表封面为有限实拍裁切，不是完整全页或已核验收。"
     ],
     "runtime": {
       "css": "batches/mantine-20261111-j/card-gradient/runtime.css",
@@ -39364,7 +39385,8 @@
       "countsAsIndependentOriginal": true
     },
     "sourcePath": "lib/CardGradient/CardGradient.tsx",
-    "browserVisualQA": "not_run"
+    "browserVisualQA": "not_run",
+    "thumbnail": "thumbnails/mantine-ui--card-gradient.webp"
   },
   {
     "id": "mantine-ui:contact-us",
@@ -39389,9 +39411,10 @@
     "gaps": [
       "源码级独立性初筛：完整可复用组件可以收录；不收已采集项、配色变体、输入/按钮/滑块原语或仅布局网格。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
       "本地预览使用内存配色管理与系统字体，不表示源界面既有交互已验收，也不表示后端业务成功。",
-      "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面。",
+      "尚未在真实浏览器打开视觉与核心交互",
       "源码级不同点：官方完整示例 ContactUs，按 ui.mantine.dev lib 入口对账此前未收；不是已收 AuthenticationForm / GetInTouch / HeaderMegaMenu 的改写。",
-      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。"
+      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。",
+      "本封面背景下沿不完整，不能当作完整全页。"
     ],
     "runtime": {
       "css": "batches/mantine-20261111-j/contact-us/runtime.css",
@@ -39403,7 +39426,8 @@
       "countsAsIndependentOriginal": true
     },
     "sourcePath": "lib/ContactUs/ContactUs.tsx",
-    "browserVisualQA": "not_run"
+    "browserVisualQA": "not_run",
+    "thumbnail": "thumbnails/mantine-ui--contact-us.webp"
   },
   {
     "id": "mantine-ui:cookies-banner",
@@ -39428,9 +39452,10 @@
     "gaps": [
       "源码级独立性初筛：完整可复用组件可以收录；不收已采集项、配色变体、输入/按钮/滑块原语或仅布局网格。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
       "本地预览使用内存配色管理与系统字体，不表示源界面既有交互已验收，也不表示后端业务成功。",
-      "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面。",
+      "尚未在真实浏览器打开视觉与核心交互",
       "源码级不同点：官方完整示例 CookiesBanner，按 ui.mantine.dev lib 入口对账此前未收；不是已收 AuthenticationForm / GetInTouch / HeaderMegaMenu 的改写。",
-      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。"
+      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。",
+      "列表封面为有限实拍裁切，不是完整全页或已核验收。"
     ],
     "runtime": {
       "css": "batches/mantine-20261111-j/cookies-banner/runtime.css",
@@ -39442,7 +39467,8 @@
       "countsAsIndependentOriginal": true
     },
     "sourcePath": "lib/CookiesBanner/CookiesBanner.tsx",
-    "browserVisualQA": "not_run"
+    "browserVisualQA": "not_run",
+    "thumbnail": "thumbnails/mantine-ui--cookies-banner.webp"
   },
   {
     "id": "mantine-ui:dnd-list",
@@ -39467,9 +39493,10 @@
     "gaps": [
       "源码级独立性初筛：完整可复用组件可以收录；不收已采集项、配色变体、输入/按钮/滑块原语或仅布局网格。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
       "本地预览使用内存配色管理与系统字体，不表示源界面既有交互已验收，也不表示后端业务成功。",
-      "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面。",
+      "尚未在真实浏览器打开视觉与核心交互",
       "源码级不同点：官方完整示例 DndList，按 ui.mantine.dev lib 入口对账此前未收；不是已收 AuthenticationForm / GetInTouch / HeaderMegaMenu 的改写。",
-      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。"
+      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。",
+      "列表封面为有限实拍裁切，不是完整全页或已核验收。"
     ],
     "runtime": {
       "css": "batches/mantine-20261111-j/dnd-list/runtime.css",
@@ -39481,7 +39508,8 @@
       "countsAsIndependentOriginal": true
     },
     "sourcePath": "lib/DndList/DndList.tsx",
-    "browserVisualQA": "not_run"
+    "browserVisualQA": "not_run",
+    "thumbnail": "thumbnails/mantine-ui--dnd-list.webp"
   },
   {
     "id": "mantine-ui:dnd-list-handle",
@@ -39506,9 +39534,10 @@
     "gaps": [
       "源码级独立性初筛：完整可复用组件可以收录；不收已采集项、配色变体、输入/按钮/滑块原语或仅布局网格。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
       "本地预览使用内存配色管理与系统字体，不表示源界面既有交互已验收，也不表示后端业务成功。",
-      "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面。",
+      "尚未在真实浏览器打开视觉与核心交互",
       "源码级不同点：官方完整示例 DndListHandle，按 ui.mantine.dev lib 入口对账此前未收；不是已收 AuthenticationForm / GetInTouch / HeaderMegaMenu 的改写。",
-      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。"
+      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。",
+      "列表封面为有限实拍裁切，不是完整全页或已核验收。"
     ],
     "runtime": {
       "css": "batches/mantine-20261111-j/dnd-list-handle/runtime.css",
@@ -39520,7 +39549,8 @@
       "countsAsIndependentOriginal": true
     },
     "sourcePath": "lib/DndListHandle/DndListHandle.tsx",
-    "browserVisualQA": "not_run"
+    "browserVisualQA": "not_run",
+    "thumbnail": "thumbnails/mantine-ui--dnd-list-handle.webp"
   },
   {
     "id": "mantine-ui:dnd-table",
@@ -39545,9 +39575,10 @@
     "gaps": [
       "源码级独立性初筛：完整可复用组件可以收录；不收已采集项、配色变体、输入/按钮/滑块原语或仅布局网格。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
       "本地预览使用内存配色管理与系统字体，不表示源界面既有交互已验收，也不表示后端业务成功。",
-      "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面。",
+      "尚未在真实浏览器打开视觉与核心交互",
       "源码级不同点：官方完整示例 DndTable，按 ui.mantine.dev lib 入口对账此前未收；不是已收 AuthenticationForm / GetInTouch / HeaderMegaMenu 的改写。",
-      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。"
+      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。",
+      "列表封面为有限实拍裁切，不是完整全页或已核验收。"
     ],
     "runtime": {
       "css": "batches/mantine-20261111-j/dnd-table/runtime.css",
@@ -39559,7 +39590,8 @@
       "countsAsIndependentOriginal": true
     },
     "sourcePath": "lib/DndTable/DndTable.tsx",
-    "browserVisualQA": "not_run"
+    "browserVisualQA": "not_run",
+    "thumbnail": "thumbnails/mantine-ui--dnd-table.webp"
   },
   {
     "id": "mantine-ui:double-header",
@@ -39584,9 +39616,10 @@
     "gaps": [
       "源码级独立性初筛：完整可复用组件可以收录；不收已采集项、配色变体、输入/按钮/滑块原语或仅布局网格。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
       "本地预览使用内存配色管理与系统字体，不表示源界面既有交互已验收，也不表示后端业务成功。",
-      "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面。",
+      "尚未在真实浏览器打开视觉与核心交互",
       "源码级不同点：官方完整示例 DoubleHeader，按 ui.mantine.dev lib 入口对账此前未收；不是已收 AuthenticationForm / GetInTouch / HeaderMegaMenu 的改写。",
-      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。"
+      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。",
+      "因页头文字连写，未提供正常实拍封面。"
     ],
     "runtime": {
       "css": "batches/mantine-20261111-j/double-header/runtime.css",
@@ -39663,9 +39696,10 @@
     "gaps": [
       "源码级独立性初筛：完整可复用组件可以收录；不收已采集项、配色变体、输入/按钮/滑块原语或仅布局网格。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
       "本地预览使用内存配色管理与系统字体，不表示源界面既有交互已验收，也不表示后端业务成功。",
-      "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面。",
+      "尚未在真实浏览器打开视觉与核心交互",
       "源码级不同点：官方完整示例 DropzoneButton，按 ui.mantine.dev lib 入口对账此前未收；不是已收 AuthenticationForm / GetInTouch / HeaderMegaMenu 的改写。",
-      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。"
+      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。",
+      "本封面没有原生文件选择器画面，不能证明选择器或取消路径。"
     ],
     "runtime": {
       "css": "batches/mantine-20261111-j/dropzone-button/runtime.css",
@@ -39677,7 +39711,8 @@
       "countsAsIndependentOriginal": true
     },
     "sourcePath": "lib/DropzoneButton/DropzoneButton.tsx",
-    "browserVisualQA": "not_run"
+    "browserVisualQA": "not_run",
+    "thumbnail": "thumbnails/mantine-ui--dropzone-button.webp"
   },
   {
     "id": "mantine-ui:faq-simple",
@@ -39780,9 +39815,10 @@
     "gaps": [
       "源码级独立性初筛：完整可复用组件可以收录；不收已采集项、配色变体、输入/按钮/滑块原语或仅布局网格。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
       "本地预览使用内存配色管理与系统字体，不表示源界面既有交互已验收，也不表示后端业务成功。",
-      "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面。",
+      "尚未在真实浏览器打开视觉与核心交互",
       "源码级不同点：官方完整示例 FeaturesAsymmetrical，按 ui.mantine.dev lib 入口对账此前未收；不是已收 AuthenticationForm / GetInTouch / HeaderMegaMenu 的改写。",
-      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。"
+      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。",
+      "列表封面为有限实拍裁切，不是完整全页或已核验收。"
     ],
     "runtime": {
       "css": "batches/mantine-20261111-j/features-asymmetrical/runtime.css",
@@ -39794,7 +39830,8 @@
       "countsAsIndependentOriginal": true
     },
     "sourcePath": "lib/FeaturesAsymmetrical/FeaturesAsymmetrical.tsx",
-    "browserVisualQA": "not_run"
+    "browserVisualQA": "not_run",
+    "thumbnail": "thumbnails/mantine-ui--features-asymmetrical.webp"
   },
   {
     "id": "mantine-ui:features-cards",
@@ -39819,9 +39856,10 @@
     "gaps": [
       "源码级独立性初筛：完整可复用组件可以收录；不收已采集项、配色变体、输入/按钮/滑块原语或仅布局网格。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
       "本地预览使用内存配色管理与系统字体，不表示源界面既有交互已验收，也不表示后端业务成功。",
-      "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面。",
+      "尚未在真实浏览器打开视觉与核心交互",
       "源码级不同点：官方完整示例 FeaturesCards，按 ui.mantine.dev lib 入口对账此前未收；不是已收 AuthenticationForm / GetInTouch / HeaderMegaMenu 的改写。",
-      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。"
+      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。",
+      "列表封面为有限实拍裁切，不是完整全页或已核验收。"
     ],
     "runtime": {
       "css": "batches/mantine-20261111-j/features-cards/runtime.css",
@@ -39833,7 +39871,8 @@
       "countsAsIndependentOriginal": true
     },
     "sourcePath": "lib/FeaturesCards/FeaturesCards.tsx",
-    "browserVisualQA": "not_run"
+    "browserVisualQA": "not_run",
+    "thumbnail": "thumbnails/mantine-ui--features-cards.webp"
   },
   {
     "id": "mantine-ui:features-grid",
@@ -39858,9 +39897,10 @@
     "gaps": [
       "源码级独立性初筛：完整可复用组件可以收录；不收已采集项、配色变体、输入/按钮/滑块原语或仅布局网格。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
       "本地预览使用内存配色管理与系统字体，不表示源界面既有交互已验收，也不表示后端业务成功。",
-      "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面。",
+      "尚未在真实浏览器打开视觉与核心交互",
       "源码级不同点：官方完整示例 FeaturesGrid，按 ui.mantine.dev lib 入口对账此前未收；不是已收 AuthenticationForm / GetInTouch / HeaderMegaMenu 的改写。",
-      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。"
+      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。",
+      "本封面为底部滚动单帧，不含主标题，不能当作完整全页。"
     ],
     "runtime": {
       "css": "batches/mantine-20261111-j/features-grid/runtime.css",
@@ -39872,7 +39912,8 @@
       "countsAsIndependentOriginal": true
     },
     "sourcePath": "lib/FeaturesGrid/FeaturesGrid.tsx",
-    "browserVisualQA": "not_run"
+    "browserVisualQA": "not_run",
+    "thumbnail": "thumbnails/mantine-ui--features-grid.webp"
   },
   {
     "id": "mantine-ui:features-images",
@@ -39897,9 +39938,10 @@
     "gaps": [
       "源码级独立性初筛：完整可复用组件可以收录；不收已采集项、配色变体、输入/按钮/滑块原语或仅布局网格。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
       "本地预览使用内存配色管理与系统字体，不表示源界面既有交互已验收，也不表示后端业务成功。",
-      "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面。",
+      "尚未在真实浏览器打开视觉与核心交互",
       "源码级不同点：官方完整示例 FeaturesImages，按 ui.mantine.dev lib 入口对账此前未收；不是已收 AuthenticationForm / GetInTouch / HeaderMegaMenu 的改写。",
-      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。"
+      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。",
+      "列表封面为有限实拍裁切，不是完整全页或已核验收。"
     ],
     "runtime": {
       "css": "batches/mantine-20261111-j/features-images/runtime.css",
@@ -39911,7 +39953,8 @@
       "countsAsIndependentOriginal": true
     },
     "sourcePath": "lib/FeaturesImages/FeaturesImages.tsx",
-    "browserVisualQA": "not_run"
+    "browserVisualQA": "not_run",
+    "thumbnail": "thumbnails/mantine-ui--features-images.webp"
   },
   {
     "id": "mantine-ui:features-title",
@@ -39936,9 +39979,10 @@
     "gaps": [
       "源码级独立性初筛：完整可复用组件可以收录；不收已采集项、配色变体、输入/按钮/滑块原语或仅布局网格。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
       "本地预览使用内存配色管理与系统字体，不表示源界面既有交互已验收，也不表示后端业务成功。",
-      "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面。",
+      "尚未在真实浏览器打开视觉与核心交互",
       "源码级不同点：官方完整示例 FeaturesTitle，按 ui.mantine.dev lib 入口对账此前未收；不是已收 AuthenticationForm / GetInTouch / HeaderMegaMenu 的改写。",
-      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。"
+      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。",
+      "列表封面为有限实拍裁切，不是完整全页或已核验收。"
     ],
     "runtime": {
       "css": "batches/mantine-20261111-j/features-title/runtime.css",
@@ -39950,7 +39994,8 @@
       "countsAsIndependentOriginal": true
     },
     "sourcePath": "lib/FeaturesTitle/FeaturesTitle.tsx",
-    "browserVisualQA": "not_run"
+    "browserVisualQA": "not_run",
+    "thumbnail": "thumbnails/mantine-ui--features-title.webp"
   },
   {
     "id": "mantine-ui:footer-centered",
@@ -39975,9 +40020,10 @@
     "gaps": [
       "源码级独立性初筛：完整可复用组件可以收录；不收已采集项、配色变体、输入/按钮/滑块原语或仅布局网格。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
       "本地预览使用内存配色管理与系统字体，不表示源界面既有交互已验收，也不表示后端业务成功。",
-      "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面。",
+      "尚未在真实浏览器打开视觉与核心交互",
       "源码级不同点：官方完整示例 FooterCentered，按 ui.mantine.dev lib 入口对账此前未收；不是已收 AuthenticationForm / GetInTouch / HeaderMegaMenu 的改写。",
-      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。"
+      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。",
+      "列表封面为有限实拍裁切，不是完整全页或已核验收。"
     ],
     "runtime": {
       "css": "batches/mantine-20261111-j/footer-centered/runtime.css",
@@ -39989,7 +40035,8 @@
       "countsAsIndependentOriginal": true
     },
     "sourcePath": "lib/FooterCentered/FooterCentered.tsx",
-    "browserVisualQA": "not_run"
+    "browserVisualQA": "not_run",
+    "thumbnail": "thumbnails/mantine-ui--footer-centered.webp"
   },
   {
     "id": "mantine-ui:footer-links",
@@ -40054,9 +40101,10 @@
     "gaps": [
       "源码级独立性初筛：完整可复用组件可以收录；不收已采集项、配色变体、输入/按钮/滑块原语或仅布局网格。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
       "本地预览使用内存配色管理与系统字体，不表示源界面既有交互已验收，也不表示后端业务成功。",
-      "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面。",
+      "尚未在真实浏览器打开视觉与核心交互",
       "源码级不同点：官方完整示例 FooterSimple，按 ui.mantine.dev lib 入口对账此前未收；不是已收 AuthenticationForm / GetInTouch / HeaderMegaMenu 的改写。",
-      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。"
+      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。",
+      "列表封面为有限实拍裁切，不是完整全页或已核验收。"
     ],
     "runtime": {
       "css": "batches/mantine-20261111-j/footer-simple/runtime.css",
@@ -40068,7 +40116,8 @@
       "countsAsIndependentOriginal": true
     },
     "sourcePath": "lib/FooterSimple/FooterSimple.tsx",
-    "browserVisualQA": "not_run"
+    "browserVisualQA": "not_run",
+    "thumbnail": "thumbnails/mantine-ui--footer-simple.webp"
   },
   {
     "id": "mantine-ui:footer-social",
@@ -40093,9 +40142,10 @@
     "gaps": [
       "源码级独立性初筛：完整可复用组件可以收录；不收已采集项、配色变体、输入/按钮/滑块原语或仅布局网格。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
       "本地预览使用内存配色管理与系统字体，不表示源界面既有交互已验收，也不表示后端业务成功。",
-      "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面。",
+      "尚未在真实浏览器打开视觉与核心交互",
       "源码级不同点：官方完整示例 FooterSocial，按 ui.mantine.dev lib 入口对账此前未收；不是已收 AuthenticationForm / GetInTouch / HeaderMegaMenu 的改写。",
-      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。"
+      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。",
+      "列表封面为有限实拍裁切，不是完整全页或已核验收。"
     ],
     "runtime": {
       "css": "batches/mantine-20261111-j/footer-social/runtime.css",
@@ -40107,7 +40157,8 @@
       "countsAsIndependentOriginal": true
     },
     "sourcePath": "lib/FooterSocial/FooterSocial.tsx",
-    "browserVisualQA": "not_run"
+    "browserVisualQA": "not_run",
+    "thumbnail": "thumbnails/mantine-ui--footer-social.webp"
   },
   {
     "id": "mantine-ui:forgot-password",
@@ -40132,9 +40183,10 @@
     "gaps": [
       "源码级独立性初筛：完整可复用组件可以收录；不收已采集项、配色变体、输入/按钮/滑块原语或仅布局网格。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
       "本地预览使用内存配色管理与系统字体，不表示源界面既有交互已验收，也不表示后端业务成功。",
-      "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面。",
+      "尚未在真实浏览器打开视觉与核心交互",
       "源码级不同点：官方完整示例 ForgotPassword，按 ui.mantine.dev lib 入口对账此前未收；不是已收 AuthenticationForm / GetInTouch / HeaderMegaMenu 的改写。",
-      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。"
+      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。",
+      "列表封面为有限实拍裁切，不是完整全页或已核验收。"
     ],
     "runtime": {
       "css": "batches/mantine-20261111-j/forgot-password/runtime.css",
@@ -40146,7 +40198,8 @@
       "countsAsIndependentOriginal": true
     },
     "sourcePath": "lib/ForgotPassword/ForgotPassword.tsx",
-    "browserVisualQA": "not_run"
+    "browserVisualQA": "not_run",
+    "thumbnail": "thumbnails/mantine-ui--forgot-password.webp"
   },
   {
     "id": "mantine-ui:get-in-touch-simple",
@@ -40171,9 +40224,10 @@
     "gaps": [
       "源码级独立性初筛：完整可复用组件可以收录；不收已采集项、配色变体、输入/按钮/滑块原语或仅布局网格。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
       "本地预览使用内存配色管理与系统字体，不表示源界面既有交互已验收，也不表示后端业务成功。",
-      "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面。",
+      "尚未在真实浏览器打开视觉与核心交互",
       "源码级不同点：官方完整示例 GetInTouchSimple，按 ui.mantine.dev lib 入口对账此前未收；不是已收 AuthenticationForm / GetInTouch / HeaderMegaMenu 的改写。",
-      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。"
+      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。",
+      "列表封面为有限实拍裁切，不是完整全页或已核验收。"
     ],
     "runtime": {
       "css": "batches/mantine-20261111-j/get-in-touch-simple/runtime.css",
@@ -40185,7 +40239,8 @@
       "countsAsIndependentOriginal": true
     },
     "sourcePath": "lib/GetInTouchSimple/GetInTouchSimple.tsx",
-    "browserVisualQA": "not_run"
+    "browserVisualQA": "not_run",
+    "thumbnail": "thumbnails/mantine-ui--get-in-touch-simple.webp"
   },
   {
     "id": "mantine-ui:header-menu",
@@ -40210,9 +40265,10 @@
     "gaps": [
       "源码级独立性初筛：完整可复用组件可以收录；不收已采集项、配色变体、输入/按钮/滑块原语或仅布局网格。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
       "本地预览使用内存配色管理与系统字体，不表示源界面既有交互已验收，也不表示后端业务成功。",
-      "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面。",
+      "尚未在真实浏览器打开视觉与核心交互",
       "源码级不同点：官方完整示例 HeaderMenu，按 ui.mantine.dev lib 入口对账此前未收；不是已收 AuthenticationForm / GetInTouch / HeaderMegaMenu 的改写。",
-      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。"
+      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。",
+      "列表封面为有限实拍裁切，不是完整全页或已核验收。"
     ],
     "runtime": {
       "css": "batches/mantine-20261111-j/header-menu/runtime.css",
@@ -40224,7 +40280,8 @@
       "countsAsIndependentOriginal": true
     },
     "sourcePath": "lib/HeaderMenu/HeaderMenu.tsx",
-    "browserVisualQA": "not_run"
+    "browserVisualQA": "not_run",
+    "thumbnail": "thumbnails/mantine-ui--header-menu.webp"
   },
   {
     "id": "mantine-ui:header-search",
@@ -40249,9 +40306,10 @@
     "gaps": [
       "源码级独立性初筛：完整可复用组件可以收录；不收已采集项、配色变体、输入/按钮/滑块原语或仅布局网格。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
       "本地预览使用内存配色管理与系统字体，不表示源界面既有交互已验收，也不表示后端业务成功。",
-      "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面。",
+      "尚未在真实浏览器打开视觉与核心交互",
       "源码级不同点：官方完整示例 HeaderSearch，按 ui.mantine.dev lib 入口对账此前未收；不是已收 AuthenticationForm / GetInTouch / HeaderMegaMenu 的改写。",
-      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。"
+      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。",
+      "列表封面为有限实拍裁切，不是完整全页或已核验收。"
     ],
     "runtime": {
       "css": "batches/mantine-20261111-j/header-search/runtime.css",
@@ -40263,7 +40321,8 @@
       "countsAsIndependentOriginal": true
     },
     "sourcePath": "lib/HeaderSearch/HeaderSearch.tsx",
-    "browserVisualQA": "not_run"
+    "browserVisualQA": "not_run",
+    "thumbnail": "thumbnails/mantine-ui--header-search.webp"
   },
   {
     "id": "mantine-ui:header-simple",
@@ -40288,9 +40347,10 @@
     "gaps": [
       "源码级独立性初筛：完整可复用组件可以收录；不收已采集项、配色变体、输入/按钮/滑块原语或仅布局网格。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
       "本地预览使用内存配色管理与系统字体，不表示源界面既有交互已验收，也不表示后端业务成功。",
-      "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面。",
+      "尚未在真实浏览器打开视觉与核心交互",
       "源码级不同点：官方完整示例 HeaderSimple，按 ui.mantine.dev lib 入口对账此前未收；不是已收 AuthenticationForm / GetInTouch / HeaderMegaMenu 的改写。",
-      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。"
+      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。",
+      "列表封面为有限实拍裁切，不是完整全页或已核验收。"
     ],
     "runtime": {
       "css": "batches/mantine-20261111-j/header-simple/runtime.css",
@@ -40302,7 +40362,8 @@
       "countsAsIndependentOriginal": true
     },
     "sourcePath": "lib/HeaderSimple/HeaderSimple.tsx",
-    "browserVisualQA": "not_run"
+    "browserVisualQA": "not_run",
+    "thumbnail": "thumbnails/mantine-ui--header-simple.webp"
   },
   {
     "id": "mantine-ui:hero-text",
@@ -40327,9 +40388,10 @@
     "gaps": [
       "源码级独立性初筛：完整可复用组件可以收录；不收已采集项、配色变体、输入/按钮/滑块原语或仅布局网格。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
       "本地预览使用内存配色管理与系统字体，不表示源界面既有交互已验收，也不表示后端业务成功。",
-      "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面。",
+      "尚未在真实浏览器打开视觉与核心交互",
       "源码级不同点：官方完整示例 HeroText，按 ui.mantine.dev lib 入口对账此前未收；不是已收 AuthenticationForm / GetInTouch / HeaderMegaMenu 的改写。",
-      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。"
+      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。",
+      "列表封面为有限实拍裁切，不是完整全页或已核验收。"
     ],
     "runtime": {
       "css": "batches/mantine-20261111-j/hero-text/runtime.css",
@@ -40341,7 +40403,8 @@
       "countsAsIndependentOriginal": true
     },
     "sourcePath": "lib/HeroText/HeroText.tsx",
-    "browserVisualQA": "not_run"
+    "browserVisualQA": "not_run",
+    "thumbnail": "thumbnails/mantine-ui--hero-text.webp"
   },
   {
     "id": "mantine-ui:hero-title",
@@ -40366,9 +40429,10 @@
     "gaps": [
       "源码级独立性初筛：完整可复用组件可以收录；不收已采集项、配色变体、输入/按钮/滑块原语或仅布局网格。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
       "本地预览使用内存配色管理与系统字体，不表示源界面既有交互已验收，也不表示后端业务成功。",
-      "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面。",
+      "尚未在真实浏览器打开视觉与核心交互",
       "源码级不同点：官方完整示例 HeroTitle，按 ui.mantine.dev lib 入口对账此前未收；不是已收 AuthenticationForm / GetInTouch / HeaderMegaMenu 的改写。",
-      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。"
+      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。",
+      "列表封面为有限实拍裁切，不是完整全页或已核验收。"
     ],
     "runtime": {
       "css": "batches/mantine-20261111-j/hero-title/runtime.css",
@@ -40380,7 +40444,8 @@
       "countsAsIndependentOriginal": true
     },
     "sourcePath": "lib/HeroTitle/HeroTitle.tsx",
-    "browserVisualQA": "not_run"
+    "browserVisualQA": "not_run",
+    "thumbnail": "thumbnails/mantine-ui--hero-title.webp"
   },
   {
     "id": "mantine-ui:navbar-links-group",
@@ -40405,9 +40470,10 @@
     "gaps": [
       "源码级独立性初筛：完整可复用组件可以收录；不收已采集项、配色变体、输入/按钮/滑块原语或仅布局网格。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
       "本地预览使用内存配色管理与系统字体，不表示源界面既有交互已验收，也不表示后端业务成功。",
-      "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面。",
+      "尚未在真实浏览器打开视觉与核心交互",
       "源码级不同点：官方完整示例 NavbarLinksGroup，按 ui.mantine.dev lib 入口对账此前未收；不是已收 AuthenticationForm / GetInTouch / HeaderMegaMenu 的改写。",
-      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。"
+      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。",
+      "本封面中第三子项被截断，不能视为三项完整。"
     ],
     "runtime": {
       "css": "batches/mantine-20261111-j/navbar-links-group/runtime.css",
@@ -40419,7 +40485,8 @@
       "countsAsIndependentOriginal": true
     },
     "sourcePath": "lib/NavbarLinksGroup/NavbarLinksGroup.tsx",
-    "browserVisualQA": "not_run"
+    "browserVisualQA": "not_run",
+    "thumbnail": "thumbnails/mantine-ui--navbar-links-group.webp"
   },
   {
     "id": "mantine-ui:navbar-minimal",
@@ -40444,9 +40511,10 @@
     "gaps": [
       "源码级独立性初筛：完整可复用组件可以收录；不收已采集项、配色变体、输入/按钮/滑块原语或仅布局网格。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
       "本地预览使用内存配色管理与系统字体，不表示源界面既有交互已验收，也不表示后端业务成功。",
-      "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面。",
+      "尚未在真实浏览器打开视觉与核心交互",
       "源码级不同点：官方完整示例 NavbarMinimal，按 ui.mantine.dev lib 入口对账此前未收；不是已收 AuthenticationForm / GetInTouch / HeaderMegaMenu 的改写。",
-      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。"
+      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。",
+      "列表封面为有限实拍裁切，不是完整全页或已核验收。"
     ],
     "runtime": {
       "css": "batches/mantine-20261111-j/navbar-minimal/runtime.css",
@@ -40458,7 +40526,8 @@
       "countsAsIndependentOriginal": true
     },
     "sourcePath": "lib/NavbarMinimal/NavbarMinimal.tsx",
-    "browserVisualQA": "not_run"
+    "browserVisualQA": "not_run",
+    "thumbnail": "thumbnails/mantine-ui--navbar-minimal.webp"
   },
   {
     "id": "mantine-ui:navbar-segmented",
@@ -40483,9 +40552,10 @@
     "gaps": [
       "源码级独立性初筛：完整可复用组件可以收录；不收已采集项、配色变体、输入/按钮/滑块原语或仅布局网格。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
       "本地预览使用内存配色管理与系统字体，不表示源界面既有交互已验收，也不表示后端业务成功。",
-      "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面。",
+      "尚未在真实浏览器打开视觉与核心交互",
       "源码级不同点：官方完整示例 NavbarSegmented，按 ui.mantine.dev lib 入口对账此前未收；不是已收 AuthenticationForm / GetInTouch / HeaderMegaMenu 的改写。",
-      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。"
+      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。",
+      "列表封面为有限实拍裁切，不是完整全页或已核验收。"
     ],
     "runtime": {
       "css": "batches/mantine-20261111-j/navbar-segmented/runtime.css",
@@ -40497,7 +40567,8 @@
       "countsAsIndependentOriginal": true
     },
     "sourcePath": "lib/NavbarSegmented/NavbarSegmented.tsx",
-    "browserVisualQA": "not_run"
+    "browserVisualQA": "not_run",
+    "thumbnail": "thumbnails/mantine-ui--navbar-segmented.webp"
   },
   {
     "id": "mantine-ui:navbar-simple",
@@ -40522,9 +40593,10 @@
     "gaps": [
       "源码级独立性初筛：完整可复用组件可以收录；不收已采集项、配色变体、输入/按钮/滑块原语或仅布局网格。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
       "本地预览使用内存配色管理与系统字体，不表示源界面既有交互已验收，也不表示后端业务成功。",
-      "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面。",
+      "尚未在真实浏览器打开视觉与核心交互",
       "源码级不同点：官方完整示例 NavbarSimple，按 ui.mantine.dev lib 入口对账此前未收；不是已收 AuthenticationForm / GetInTouch / HeaderMegaMenu 的改写。",
-      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。"
+      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。",
+      "列表封面为有限实拍裁切，不是完整全页或已核验收。"
     ],
     "runtime": {
       "css": "batches/mantine-20261111-j/navbar-simple/runtime.css",
@@ -40536,7 +40608,8 @@
       "countsAsIndependentOriginal": true
     },
     "sourcePath": "lib/NavbarSimple/NavbarSimple.tsx",
-    "browserVisualQA": "not_run"
+    "browserVisualQA": "not_run",
+    "thumbnail": "thumbnails/mantine-ui--navbar-simple.webp"
   },
   {
     "id": "mantine-ui:not-found-title",
@@ -40561,9 +40634,10 @@
     "gaps": [
       "源码级独立性初筛：完整可复用组件可以收录；不收已采集项、配色变体、输入/按钮/滑块原语或仅布局网格。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
       "本地预览使用内存配色管理与系统字体，不表示源界面既有交互已验收，也不表示后端业务成功。",
-      "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面。",
+      "尚未在真实浏览器打开视觉与核心交互",
       "源码级不同点：官方完整示例 NotFoundTitle，按 ui.mantine.dev lib 入口对账此前未收；不是已收 AuthenticationForm / GetInTouch / HeaderMegaMenu 的改写。",
-      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。"
+      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。",
+      "列表封面为有限实拍裁切，不是完整全页或已核验收。"
     ],
     "runtime": {
       "css": "batches/mantine-20261111-j/not-found-title/runtime.css",
@@ -40575,7 +40649,8 @@
       "countsAsIndependentOriginal": true
     },
     "sourcePath": "lib/NotFoundTitle/NotFoundTitle.tsx",
-    "browserVisualQA": "not_run"
+    "browserVisualQA": "not_run",
+    "thumbnail": "thumbnails/mantine-ui--not-found-title.webp"
   },
   {
     "id": "mantine-ui:nothing-found-background",
@@ -40600,9 +40675,10 @@
     "gaps": [
       "源码级独立性初筛：完整可复用组件可以收录；不收已采集项、配色变体、输入/按钮/滑块原语或仅布局网格。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
       "本地预览使用内存配色管理与系统字体，不表示源界面既有交互已验收，也不表示后端业务成功。",
-      "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面。",
+      "尚未在真实浏览器打开视觉与核心交互",
       "源码级不同点：官方完整示例 NothingFoundBackground，按 ui.mantine.dev lib 入口对账此前未收；不是已收 AuthenticationForm / GetInTouch / HeaderMegaMenu 的改写。",
-      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。"
+      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。",
+      "列表封面为有限实拍裁切，不是完整全页或已核验收。"
     ],
     "runtime": {
       "css": "batches/mantine-20261111-j/nothing-found-background/runtime.css",
@@ -40614,7 +40690,8 @@
       "countsAsIndependentOriginal": true
     },
     "sourcePath": "lib/NothingFoundBackground/NothingFoundBackground.tsx",
-    "browserVisualQA": "not_run"
+    "browserVisualQA": "not_run",
+    "thumbnail": "thumbnails/mantine-ui--nothing-found-background.webp"
   },
   {
     "id": "mantine-ui:progress-card",
@@ -40639,9 +40716,10 @@
     "gaps": [
       "源码级独立性初筛：完整可复用组件可以收录；不收已采集项、配色变体、输入/按钮/滑块原语或仅布局网格。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
       "本地预览使用内存配色管理与系统字体，不表示源界面既有交互已验收，也不表示后端业务成功。",
-      "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面。",
+      "尚未在真实浏览器打开视觉与核心交互",
       "源码级不同点：官方完整示例 ProgressCard，按 ui.mantine.dev lib 入口对账此前未收；不是已收 AuthenticationForm / GetInTouch / HeaderMegaMenu 的改写。",
-      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。"
+      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。",
+      "列表封面为有限实拍裁切，不是完整全页或已核验收。"
     ],
     "runtime": {
       "css": "batches/mantine-20261111-j/progress-card/runtime.css",
@@ -40653,7 +40731,8 @@
       "countsAsIndependentOriginal": true
     },
     "sourcePath": "lib/ProgressCard/ProgressCard.tsx",
-    "browserVisualQA": "not_run"
+    "browserVisualQA": "not_run",
+    "thumbnail": "thumbnails/mantine-ui--progress-card.webp"
   },
   {
     "id": "mantine-ui:server-error",
@@ -40678,9 +40757,10 @@
     "gaps": [
       "源码级独立性初筛：完整可复用组件可以收录；不收已采集项、配色变体、输入/按钮/滑块原语或仅布局网格。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
       "本地预览使用内存配色管理与系统字体，不表示源界面既有交互已验收，也不表示后端业务成功。",
-      "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面。",
+      "尚未在真实浏览器打开视觉与核心交互",
       "源码级不同点：官方完整示例 ServerError，按 ui.mantine.dev lib 入口对账此前未收；不是已收 AuthenticationForm / GetInTouch / HeaderMegaMenu 的改写。",
-      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。"
+      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。",
+      "本封面背景下沿不完整，不能当作完整全页。"
     ],
     "runtime": {
       "css": "batches/mantine-20261111-j/server-error/runtime.css",
@@ -40692,7 +40772,8 @@
       "countsAsIndependentOriginal": true
     },
     "sourcePath": "lib/ServerError/ServerError.tsx",
-    "browserVisualQA": "not_run"
+    "browserVisualQA": "not_run",
+    "thumbnail": "thumbnails/mantine-ui--server-error.webp"
   },
   {
     "id": "mantine-ui:server-overload",
@@ -40717,9 +40798,10 @@
     "gaps": [
       "源码级独立性初筛：完整可复用组件可以收录；不收已采集项、配色变体、输入/按钮/滑块原语或仅布局网格。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
       "本地预览使用内存配色管理与系统字体，不表示源界面既有交互已验收，也不表示后端业务成功。",
-      "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面。",
+      "尚未在真实浏览器打开视觉与核心交互",
       "源码级不同点：官方完整示例 ServerOverload，按 ui.mantine.dev lib 入口对账此前未收；不是已收 AuthenticationForm / GetInTouch / HeaderMegaMenu 的改写。",
-      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。"
+      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。",
+      "本封面背景下沿不完整，不能当作完整全页。"
     ],
     "runtime": {
       "css": "batches/mantine-20261111-j/server-overload/runtime.css",
@@ -40731,7 +40813,8 @@
       "countsAsIndependentOriginal": true
     },
     "sourcePath": "lib/ServerOverload/ServerOverload.tsx",
-    "browserVisualQA": "not_run"
+    "browserVisualQA": "not_run",
+    "thumbnail": "thumbnails/mantine-ui--server-overload.webp"
   },
   {
     "id": "mantine-ui:stats-card",
@@ -40756,9 +40839,10 @@
     "gaps": [
       "源码级独立性初筛：完整可复用组件可以收录；不收已采集项、配色变体、输入/按钮/滑块原语或仅布局网格。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
       "本地预览使用内存配色管理与系统字体，不表示源界面既有交互已验收，也不表示后端业务成功。",
-      "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面。",
+      "尚未在真实浏览器打开视觉与核心交互",
       "源码级不同点：官方完整示例 StatsCard，按 ui.mantine.dev lib 入口对账此前未收；不是已收 AuthenticationForm / GetInTouch / HeaderMegaMenu 的改写。",
-      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。"
+      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。",
+      "列表封面为有限实拍裁切，不是完整全页或已核验收。"
     ],
     "runtime": {
       "css": "batches/mantine-20261111-j/stats-card/runtime.css",
@@ -40770,7 +40854,8 @@
       "countsAsIndependentOriginal": true
     },
     "sourcePath": "lib/StatsCard/StatsCard.tsx",
-    "browserVisualQA": "not_run"
+    "browserVisualQA": "not_run",
+    "thumbnail": "thumbnails/mantine-ui--stats-card.webp"
   },
   {
     "id": "mantine-ui:stats-controls",
@@ -40795,9 +40880,10 @@
     "gaps": [
       "源码级独立性初筛：完整可复用组件可以收录；不收已采集项、配色变体、输入/按钮/滑块原语或仅布局网格。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
       "本地预览使用内存配色管理与系统字体，不表示源界面既有交互已验收，也不表示后端业务成功。",
-      "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面。",
+      "尚未在真实浏览器打开视觉与核心交互",
       "源码级不同点：官方完整示例 StatsControls，按 ui.mantine.dev lib 入口对账此前未收；不是已收 AuthenticationForm / GetInTouch / HeaderMegaMenu 的改写。",
-      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。"
+      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。",
+      "列表封面为有限实拍裁切，不是完整全页或已核验收。"
     ],
     "runtime": {
       "css": "batches/mantine-20261111-j/stats-controls/runtime.css",
@@ -40809,7 +40895,8 @@
       "countsAsIndependentOriginal": true
     },
     "sourcePath": "lib/StatsControls/StatsControls.tsx",
-    "browserVisualQA": "not_run"
+    "browserVisualQA": "not_run",
+    "thumbnail": "thumbnails/mantine-ui--stats-controls.webp"
   },
   {
     "id": "mantine-ui:stats-grid",
@@ -40834,9 +40921,10 @@
     "gaps": [
       "源码级独立性初筛：完整可复用组件可以收录；不收已采集项、配色变体、输入/按钮/滑块原语或仅布局网格。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
       "本地预览使用内存配色管理与系统字体，不表示源界面既有交互已验收，也不表示后端业务成功。",
-      "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面。",
+      "尚未在真实浏览器打开视觉与核心交互",
       "源码级不同点：官方完整示例 StatsGrid，按 ui.mantine.dev lib 入口对账此前未收；不是已收 AuthenticationForm / GetInTouch / HeaderMegaMenu 的改写。",
-      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。"
+      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。",
+      "列表封面为有限实拍裁切，不是完整全页或已核验收。"
     ],
     "runtime": {
       "css": "batches/mantine-20261111-j/stats-grid/runtime.css",
@@ -40848,7 +40936,8 @@
       "countsAsIndependentOriginal": true
     },
     "sourcePath": "lib/StatsGrid/StatsGrid.tsx",
-    "browserVisualQA": "not_run"
+    "browserVisualQA": "not_run",
+    "thumbnail": "thumbnails/mantine-ui--stats-grid.webp"
   },
   {
     "id": "mantine-ui:stats-grid-icons",
@@ -40873,9 +40962,10 @@
     "gaps": [
       "源码级独立性初筛：完整可复用组件可以收录；不收已采集项、配色变体、输入/按钮/滑块原语或仅布局网格。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
       "本地预览使用内存配色管理与系统字体，不表示源界面既有交互已验收，也不表示后端业务成功。",
-      "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面。",
+      "尚未在真实浏览器打开视觉与核心交互",
       "源码级不同点：官方完整示例 StatsGridIcons，按 ui.mantine.dev lib 入口对账此前未收；不是已收 AuthenticationForm / GetInTouch / HeaderMegaMenu 的改写。",
-      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。"
+      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。",
+      "列表封面为有限实拍裁切，不是完整全页或已核验收。"
     ],
     "runtime": {
       "css": "batches/mantine-20261111-j/stats-grid-icons/runtime.css",
@@ -40887,7 +40977,8 @@
       "countsAsIndependentOriginal": true
     },
     "sourcePath": "lib/StatsGridIcons/StatsGridIcons.tsx",
-    "browserVisualQA": "not_run"
+    "browserVisualQA": "not_run",
+    "thumbnail": "thumbnails/mantine-ui--stats-grid-icons.webp"
   },
   {
     "id": "mantine-ui:stats-group",
@@ -40912,9 +41003,10 @@
     "gaps": [
       "源码级独立性初筛：完整可复用组件可以收录；不收已采集项、配色变体、输入/按钮/滑块原语或仅布局网格。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
       "本地预览使用内存配色管理与系统字体，不表示源界面既有交互已验收，也不表示后端业务成功。",
-      "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面。",
+      "尚未在真实浏览器打开视觉与核心交互",
       "源码级不同点：官方完整示例 StatsGroup，按 ui.mantine.dev lib 入口对账此前未收；不是已收 AuthenticationForm / GetInTouch / HeaderMegaMenu 的改写。",
-      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。"
+      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。",
+      "列表封面为有限实拍裁切，不是完整全页或已核验收。"
     ],
     "runtime": {
       "css": "batches/mantine-20261111-j/stats-group/runtime.css",
@@ -40926,7 +41018,8 @@
       "countsAsIndependentOriginal": true
     },
     "sourcePath": "lib/StatsGroup/StatsGroup.tsx",
-    "browserVisualQA": "not_run"
+    "browserVisualQA": "not_run",
+    "thumbnail": "thumbnails/mantine-ui--stats-group.webp"
   },
   {
     "id": "mantine-ui:stats-ring",
@@ -40951,9 +41044,10 @@
     "gaps": [
       "源码级独立性初筛：完整可复用组件可以收录；不收已采集项、配色变体、输入/按钮/滑块原语或仅布局网格。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
       "本地预览使用内存配色管理与系统字体，不表示源界面既有交互已验收，也不表示后端业务成功。",
-      "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面。",
+      "尚未在真实浏览器打开视觉与核心交互",
       "源码级不同点：官方完整示例 StatsRing，按 ui.mantine.dev lib 入口对账此前未收；不是已收 AuthenticationForm / GetInTouch / HeaderMegaMenu 的改写。",
-      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。"
+      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。",
+      "列表封面为有限实拍裁切，不是完整全页或已核验收。"
     ],
     "runtime": {
       "css": "batches/mantine-20261111-j/stats-ring/runtime.css",
@@ -40965,7 +41059,8 @@
       "countsAsIndependentOriginal": true
     },
     "sourcePath": "lib/StatsRing/StatsRing.tsx",
-    "browserVisualQA": "not_run"
+    "browserVisualQA": "not_run",
+    "thumbnail": "thumbnails/mantine-ui--stats-ring.webp"
   },
   {
     "id": "mantine-ui:stats-ring-card",
@@ -40990,9 +41085,10 @@
     "gaps": [
       "源码级独立性初筛：完整可复用组件可以收录；不收已采集项、配色变体、输入/按钮/滑块原语或仅布局网格。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
       "本地预览使用内存配色管理与系统字体，不表示源界面既有交互已验收，也不表示后端业务成功。",
-      "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面。",
+      "尚未在真实浏览器打开视觉与核心交互",
       "源码级不同点：官方完整示例 StatsRingCard，按 ui.mantine.dev lib 入口对账此前未收；不是已收 AuthenticationForm / GetInTouch / HeaderMegaMenu 的改写。",
-      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。"
+      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。",
+      "列表封面为有限实拍裁切，不是完整全页或已核验收。"
     ],
     "runtime": {
       "css": "batches/mantine-20261111-j/stats-ring-card/runtime.css",
@@ -41004,7 +41100,8 @@
       "countsAsIndependentOriginal": true
     },
     "sourcePath": "lib/StatsRingCard/StatsRingCard.tsx",
-    "browserVisualQA": "not_run"
+    "browserVisualQA": "not_run",
+    "thumbnail": "thumbnails/mantine-ui--stats-ring-card.webp"
   },
   {
     "id": "mantine-ui:stats-segments",
@@ -41029,9 +41126,10 @@
     "gaps": [
       "源码级独立性初筛：完整可复用组件可以收录；不收已采集项、配色变体、输入/按钮/滑块原语或仅布局网格。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
       "本地预览使用内存配色管理与系统字体，不表示源界面既有交互已验收，也不表示后端业务成功。",
-      "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面。",
+      "尚未在真实浏览器打开视觉与核心交互",
       "源码级不同点：官方完整示例 StatsSegments，按 ui.mantine.dev lib 入口对账此前未收；不是已收 AuthenticationForm / GetInTouch / HeaderMegaMenu 的改写。",
-      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。"
+      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。",
+      "列表封面为有限实拍裁切，不是完整全页或已核验收。"
     ],
     "runtime": {
       "css": "batches/mantine-20261111-j/stats-segments/runtime.css",
@@ -41043,7 +41141,8 @@
       "countsAsIndependentOriginal": true
     },
     "sourcePath": "lib/StatsSegments/StatsSegments.tsx",
-    "browserVisualQA": "not_run"
+    "browserVisualQA": "not_run",
+    "thumbnail": "thumbnails/mantine-ui--stats-segments.webp"
   },
   {
     "id": "mantine-ui:switches-card",
@@ -41068,9 +41167,10 @@
     "gaps": [
       "源码级独立性初筛：完整可复用组件可以收录；不收已采集项、配色变体、输入/按钮/滑块原语或仅布局网格。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
       "本地预览使用内存配色管理与系统字体，不表示源界面既有交互已验收，也不表示后端业务成功。",
-      "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面。",
+      "尚未在真实浏览器打开视觉与核心交互",
       "源码级不同点：官方完整示例 SwitchesCard，按 ui.mantine.dev lib 入口对账此前未收；不是已收 AuthenticationForm / GetInTouch / HeaderMegaMenu 的改写。",
-      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。"
+      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。",
+      "列表封面为有限实拍裁切，不是完整全页或已核验收。"
     ],
     "runtime": {
       "css": "batches/mantine-20261111-j/switches-card/runtime.css",
@@ -41082,7 +41182,8 @@
       "countsAsIndependentOriginal": true
     },
     "sourcePath": "lib/SwitchesCard/SwitchesCard.tsx",
-    "browserVisualQA": "not_run"
+    "browserVisualQA": "not_run",
+    "thumbnail": "thumbnails/mantine-ui--switches-card.webp"
   },
   {
     "id": "mantine-ui:table-of-contents",
@@ -41107,9 +41208,10 @@
     "gaps": [
       "源码级独立性初筛：完整可复用组件可以收录；不收已采集项、配色变体、输入/按钮/滑块原语或仅布局网格。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
       "本地预览使用内存配色管理与系统字体，不表示源界面既有交互已验收，也不表示后端业务成功。",
-      "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面。",
+      "尚未在真实浏览器打开视觉与核心交互",
       "源码级不同点：官方完整示例 TableOfContents，按 ui.mantine.dev lib 入口对账此前未收；不是已收 AuthenticationForm / GetInTouch / HeaderMegaMenu 的改写。",
-      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。"
+      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。",
+      "列表封面为有限实拍裁切，不是完整全页或已核验收。"
     ],
     "runtime": {
       "css": "batches/mantine-20261111-j/table-of-contents/runtime.css",
@@ -41121,7 +41223,8 @@
       "countsAsIndependentOriginal": true
     },
     "sourcePath": "lib/TableOfContents/TableOfContents.tsx",
-    "browserVisualQA": "not_run"
+    "browserVisualQA": "not_run",
+    "thumbnail": "thumbnails/mantine-ui--table-of-contents.webp"
   },
   {
     "id": "mantine-ui:table-of-contents-floating",
@@ -41146,9 +41249,10 @@
     "gaps": [
       "源码级独立性初筛：完整可复用组件可以收录；不收已采集项、配色变体、输入/按钮/滑块原语或仅布局网格。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
       "本地预览使用内存配色管理与系统字体，不表示源界面既有交互已验收，也不表示后端业务成功。",
-      "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面。",
+      "尚未在真实浏览器打开视觉与核心交互",
       "源码级不同点：官方完整示例 TableOfContentsFloating，按 ui.mantine.dev lib 入口对账此前未收；不是已收 AuthenticationForm / GetInTouch / HeaderMegaMenu 的改写。",
-      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。"
+      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。",
+      "列表封面为有限实拍裁切，不是完整全页或已核验收。"
     ],
     "runtime": {
       "css": "batches/mantine-20261111-j/table-of-contents-floating/runtime.css",
@@ -41160,7 +41264,8 @@
       "countsAsIndependentOriginal": true
     },
     "sourcePath": "lib/TableOfContentsFloating/TableOfContentsFloating.tsx",
-    "browserVisualQA": "not_run"
+    "browserVisualQA": "not_run",
+    "thumbnail": "thumbnails/mantine-ui--table-of-contents-floating.webp"
   },
   {
     "id": "mantine-ui:table-reviews",
@@ -41185,9 +41290,10 @@
     "gaps": [
       "源码级独立性初筛：完整可复用组件可以收录；不收已采集项、配色变体、输入/按钮/滑块原语或仅布局网格。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
       "本地预览使用内存配色管理与系统字体，不表示源界面既有交互已验收，也不表示后端业务成功。",
-      "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面。",
+      "尚未在真实浏览器打开视觉与核心交互",
       "源码级不同点：官方完整示例 TableReviews，按 ui.mantine.dev lib 入口对账此前未收；不是已收 AuthenticationForm / GetInTouch / HeaderMegaMenu 的改写。",
-      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。"
+      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。",
+      "列表封面为有限实拍裁切，不是完整全页或已核验收。"
     ],
     "runtime": {
       "css": "batches/mantine-20261111-j/table-reviews/runtime.css",
@@ -41199,7 +41305,8 @@
       "countsAsIndependentOriginal": true
     },
     "sourcePath": "lib/TableReviews/TableReviews.tsx",
-    "browserVisualQA": "not_run"
+    "browserVisualQA": "not_run",
+    "thumbnail": "thumbnails/mantine-ui--table-reviews.webp"
   },
   {
     "id": "mantine-ui:table-scroll-area",
@@ -41224,9 +41331,10 @@
     "gaps": [
       "源码级独立性初筛：完整可复用组件可以收录；不收已采集项、配色变体、输入/按钮/滑块原语或仅布局网格。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
       "本地预览使用内存配色管理与系统字体，不表示源界面既有交互已验收，也不表示后端业务成功。",
-      "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面。",
+      "尚未在真实浏览器打开视觉与核心交互",
       "源码级不同点：官方完整示例 TableScrollArea，按 ui.mantine.dev lib 入口对账此前未收；不是已收 AuthenticationForm / GetInTouch / HeaderMegaMenu 的改写。",
-      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。"
+      "独立 ZIP 含未改原件、预览入口、预构建 runtime 与构建配方。重建依赖已缓存的 pinned 依赖，不能称为自包含离线安装包。预览运行不依赖宿主媒体桥。Mantine 标志等商标未获额外授权，按 Unknown 分项披露。",
+      "列表封面为有限实拍裁切，不是完整全页或已核验收。"
     ],
     "runtime": {
       "css": "batches/mantine-20261111-j/table-scroll-area/runtime.css",
@@ -41238,7 +41346,8 @@
       "countsAsIndependentOriginal": true
     },
     "sourcePath": "lib/TableScrollArea/TableScrollArea.tsx",
-    "browserVisualQA": "not_run"
+    "browserVisualQA": "not_run",
+    "thumbnail": "thumbnails/mantine-ui--table-scroll-area.webp"
   },
   {
     "id": "mantine-ui:table-sort",

@@ -8,13 +8,36 @@ import { tmpdir } from 'node:os';
 import { execFileSync } from 'node:child_process';
 import { test } from 'node:test';
 import { collectionAccountingFrom, formatCollectionAccountingStatus, loadCollectionAccounting } from './collection-accounting.mjs';
+import { adaptCandidate } from './candidate-adapter.mjs';
+import { localizeItem } from './display-names.mjs';
+import { applyCuration } from './curation-policy.mjs';
+import curationRules from './curation-rules.mjs';
+import { composePreview, runtimeFor } from './preview-runtime.mjs';
+import { loadMediaAssets } from './preview-media.mjs';
 
-const ROOT = dirname(fileURLToPath(import.meta.url));
-const REPO = join(ROOT, '../..');
+const HERE = dirname(fileURLToPath(import.meta.url));
+const ROOT = process.env.ATLAS_SAMPLE_ROOT || HERE;
+const REPO = process.env.ATLAS_REPO || join(HERE, '../..');
+const BASELINE_COMMIT = '50a53e2646a560e9c042dc69aa801e3e21393eec';
 const SOURCE_COMMIT = '3695f76d56133051c9bd7bdacb05fddcfaf0c9d2';
 const E5 = 'e5f0ee43bd1957e70bbb6e012270e54d80e3c618';
-const EXPECTED_IDS = ['mantine-ui:table-sort', 'mantine-ui:double-navbar', 'mantine-ui:footer-links'];
-const PENDING_IDS = ['daisyui:accordion', 'hyperui:application-modals'];
+const EXPECTED_IDS = ['mantine-ui:table-sort', 'mantine-ui:double-navbar', 'mantine-ui:footer-links', 'daisyui:accordion', 'hyperui:application-modals'];
+const MANTINE_IDS = ['mantine-ui:table-sort', 'mantine-ui:double-navbar', 'mantine-ui:footer-links'];
+const E5_IDS = ['daisyui:accordion', 'hyperui:application-modals'];
+const POSTER_MANTINE_MANIFEST_IDS = [
+  'mantine-ui:actions-grid', 'mantine-ui:card-gradient', 'mantine-ui:cookies-banner', 'mantine-ui:double-header',
+  'mantine-ui:features-asymmetrical', 'mantine-ui:features-cards', 'mantine-ui:features-grid', 'mantine-ui:features-images',
+  'mantine-ui:features-title', 'mantine-ui:footer-centered', 'mantine-ui:footer-simple', 'mantine-ui:footer-social',
+  'mantine-ui:header-menu', 'mantine-ui:header-search', 'mantine-ui:header-simple', 'mantine-ui:hero-text',
+  'mantine-ui:hero-title', 'mantine-ui:navbar-links-group', 'mantine-ui:navbar-minimal', 'mantine-ui:navbar-segmented',
+  'mantine-ui:navbar-simple', 'mantine-ui:not-found-title', 'mantine-ui:nothing-found-background', 'mantine-ui:progress-card',
+  'mantine-ui:authentication-title', 'mantine-ui:contact-us', 'mantine-ui:dropzone-button', 'mantine-ui:forgot-password',
+  'mantine-ui:get-in-touch-simple', 'mantine-ui:server-error', 'mantine-ui:server-overload', 'mantine-ui:stats-card',
+  'mantine-ui:stats-controls', 'mantine-ui:stats-grid', 'mantine-ui:stats-grid-icons', 'mantine-ui:stats-group',
+  'mantine-ui:stats-ring', 'mantine-ui:stats-ring-card', 'mantine-ui:stats-segments', 'mantine-ui:switches-card',
+  'mantine-ui:dnd-list', 'mantine-ui:dnd-list-handle', 'mantine-ui:dnd-table', 'mantine-ui:table-of-contents',
+  'mantine-ui:table-of-contents-floating', 'mantine-ui:table-reviews', 'mantine-ui:table-scroll-area',
+];
 const BODY_PATHS = [
   'batches/mantine-20261111-j/bundles/table-sort.zip',
   'batches/mantine-20261111-j/bundles/double-navbar.zip',
@@ -51,8 +74,8 @@ test('named limited-countable records are the authority for the verified new ind
   });
   const ids = acc.verifiedNewIndependentRecords.map((r) => r.id);
   assert.deepEqual(ids, EXPECTED_IDS);
-  assert.equal(acc.verifiedNewIndependentUIs, 3);
-  assert.equal(new Set(ids).size, 3);
+  assert.equal(acc.verifiedNewIndependentUIs, 5);
+  assert.equal(new Set(ids).size, 5);
   assert.equal(acc.covers, 0);
   assert.equal(acc.browserVisualQA, 0);
   assert.equal(acc.newCatalogConnects, 554);
@@ -60,9 +83,10 @@ test('named limited-countable records are the authority for the verified new ind
   assert.equal(acc.duplicateOriginalExclusions, 1);
   assert.equal(acc.novelSourceIdentityUpperBound, 531);
   assert.equal(acc.catalogRecordCount, 1226);
-  for (const pending of PENDING_IDS) assert.equal(ids.includes(pending), false);
+  for (const id of E5_IDS) assert.equal(ids.includes(id), true);
   for (const record of acc.verifiedNewIndependentRecords) {
-    assert.equal(record.sourceCommit, SOURCE_COMMIT);
+    if (MANTINE_IDS.includes(record.id)) assert.equal(record.sourceCommit, SOURCE_COMMIT);
+    else assert.equal(record.sourceCommit, E5);
     assert.match(record.scope, /限定范围|完整/);
     assert.match(record.exclusions, /当前提交的整矩阵或线上复验/);
     const ev = record.evidence;
@@ -84,13 +108,14 @@ test('named limited-countable records are the authority for the verified new ind
     const entry = catalog.find((x) => x.id === id);
     assert.ok(entry, id);
     assert.equal(itemIds.has(id), false, id);
-    assert.equal(entry.browserVisualQA, 'not_run');
+    if (entry.browserVisualQA !== undefined) assert.equal(entry.browserVisualQA, 'not_run');
+    assert.notEqual(entry.browserVisualQA, 'passed');
     assert.match(entry.buildStatus, /完整视觉与交互验收仍未接受/);
     assert.match(entry.description, /限定范围计入已核新增独立 UI/);
     assert.ok(entry.thumbnail, id);
   }
   const status = formatCollectionAccountingStatus(acc);
-  assert.match(status, /已核新增独立 UI 3，均为限定可计/);
+  assert.match(status, /已核新增独立 UI 5，均为限定可计/);
   assert.match(status, /封面 0/);
   assert.match(status, /实测 0/);
   assert.doesNotMatch(status, /已核新增\/封面\/实测为 0/);
@@ -100,14 +125,14 @@ test('accounting rejects duplicate, unknown, or count-mismatched acceptance reco
   const candidates = JSON.parse(readFileSync(join(ROOT, 'candidate-catalog.json'), 'utf8'));
   const ledger = JSON.parse(readFileSync(join(ROOT, 'COLLECTION-LEDGER.json'), 'utf8'));
   const base = collectionAccountingFrom(candidates, ledger);
-  assert.equal(base.verifiedNewIndependentUIs, 3);
+  assert.equal(base.verifiedNewIndependentUIs, 5);
   const dup = structuredClone(ledger);
   dup.verifiedNewIndependentRecords.push(dup.verifiedNewIndependentRecords[0]);
   dup.accounts.verifiedNewIndependentUIs = 4;
   assert.throws(() => collectionAccountingFrom(candidates, dup), /duplicate verifiedNewIndependent id/);
   const unknown = structuredClone(ledger);
   unknown.verifiedNewIndependentRecords[0].id = 'not-a-catalog:item';
-  unknown.accounts.verifiedNewIndependentUIs = 3;
+  unknown.accounts.verifiedNewIndependentUIs = 5;
   assert.throws(() => collectionAccountingFrom(candidates, unknown), /not in the catalog/);
   const mismatch = structuredClone(ledger);
   mismatch.accounts.verifiedNewIndependentUIs = 0;
@@ -115,15 +140,16 @@ test('accounting rejects duplicate, unknown, or count-mismatched acceptance reco
   // A copied Daisy record with a matching count is accepted: the parser does not reject unverified IDs.
   const pending = structuredClone(ledger);
   const extra = structuredClone(ledger.verifiedNewIndependentRecords[0]);
-  extra.id = 'daisyui:accordion';
+  extra.id = 'daisyui:tabs';
   extra.scope = 'copied record used only as a parser control';
   pending.verifiedNewIndependentRecords.push(extra);
-  pending.accounts.verifiedNewIndependentUIs = 4;
+  pending.accounts.verifiedNewIndependentUIs = 6;
   const inflated = collectionAccountingFrom(candidates, pending);
-  assert.equal(inflated.verifiedNewIndependentUIs, 4);
+  assert.equal(inflated.verifiedNewIndependentUIs, 6);
   const productIds = ledger.verifiedNewIndependentRecords.map((r) => r.id);
-  assert.equal(productIds.includes('daisyui:accordion'), false);
-  assert.equal(productIds.includes('hyperui:application-modals'), false);
+  assert.equal(productIds.includes('daisyui:accordion'), true);
+  assert.equal(productIds.includes('hyperui:application-modals'), true);
+  assert.equal(productIds.includes('daisyui:tabs'), false);
 });
 
 
@@ -168,16 +194,17 @@ test('public consumers current fields match the limited countable ledger', () =>
   const catalog = JSON.parse(readFileSync(join(ROOT, 'candidate-catalog.json'), 'utf8'));
   const readme = readFileSync(join(ROOT, 'README.md'), 'utf8');
   const manifest = JSON.parse(readFileSync(join(ROOT, 'batches/mantine-20261111-j/manifest.json'), 'utf8'));
-  assert.equal(ledger.accounts.verifiedNewIndependentUIs, 3);
+  assert.equal(ledger.accounts.verifiedNewIndependentUIs, 5);
   assert.equal(ledger.accounts.covers, 0);
   assert.equal(ledger.accounts.browserVisualQA, 0);
-  assert.match(readme, /已核新增独立 UI 3/);
+  assert.match(readme, /已核新增独立 UI 5/);
+  assert.doesNotMatch(readme, /已核新增独立 UI 3/);
   assert.doesNotMatch(readme, /已核新增独立 UI 0/);
   assert.match(readme, /已核库存仍为 241/);
   assert.match(readme, /封面 0/);
   assert.match(readme, /真实浏览器整矩阵实测 0/);
   assert.equal(manifest.items.length, 52);
-  for (const id of EXPECTED_IDS) {
+  for (const id of MANTINE_IDS) {
     const entry = catalog.find((x) => x.id === id);
     const man = manifest.items.find((x) => x.id === id);
     assert.ok(entry && man, id);
@@ -194,7 +221,18 @@ test('public consumers current fields match the limited countable ledger', () =>
       assert.doesNotMatch(joined, /或已核独立/);
     }
   }
-  const otherManifest = manifest.items.filter((x) => !EXPECTED_IDS.includes(x.id));
+  const daisyManifest = JSON.parse(readFileSync(join(ROOT, 'batches/daisyui-20261111/manifest.json'), 'utf8'));
+  const hyperManifest = JSON.parse(readFileSync(join(ROOT, 'batches/hyperui-20261111/manifest.json'), 'utf8'));
+  for (const [id, man] of [['daisyui:accordion', daisyManifest.items.find((x) => x.id === 'daisyui:accordion')], ['hyperui:application-modals', hyperManifest.items.find((x) => x.id === 'hyperui:application-modals')]]) {
+    const entry = catalog.find((x) => x.id === id);
+    assert.ok(entry && man, id);
+    const joined = [...(entry.gaps || []), ...(man.gaps || [])].join('\n');
+    assert.match(joined, /限定范围计入已核新增独立 UI/);
+    assert.match(joined, /e5f0ee43bd1957e70bbb6e012270e54d80e3c618/);
+    assert.doesNotMatch(joined, /不能称为已核独立/);
+    assert.doesNotMatch(joined, /也不是已核独立/);
+  }
+  const otherManifest = manifest.items.filter((x) => !MANTINE_IDS.includes(x.id));
   assert.equal(otherManifest.length, 49);
   for (const item of otherManifest) {
     assert.match(item.gaps[0], /不能称为已核独立/);
@@ -214,20 +252,30 @@ test('accepted runtime inputs remain the frozen source bytes', () => {
   assert.equal(liveManifest.itemCount, 52);
   assert.equal(frozenManifest.itemCount, 52);
   const changed = [];
+  const posterGapChanged = [];
   for (let i = 0; i < frozenManifest.items.length; i++) {
     const live = liveManifest.items[i];
     const frozen = frozenManifest.items[i];
-    if (EXPECTED_IDS.includes(frozen.id)) {
+    if (MANTINE_IDS.includes(frozen.id)) {
       const { gaps: liveGaps, ...liveRest } = live;
       const { gaps: frozenGaps, ...frozenRest } = frozen;
       assert.deepEqual(liveRest, frozenRest, frozen.id);
       assert.notDeepEqual(liveGaps, frozenGaps, frozen.id);
       changed.push(frozen.id);
+    } else if (POSTER_MANTINE_MANIFEST_IDS.includes(frozen.id)) {
+      const { gaps: liveGaps, ...liveRest } = live;
+      const { gaps: frozenGaps, ...frozenRest } = frozen;
+      assert.deepEqual(liveRest, frozenRest, frozen.id);
+      assert.notDeepEqual(liveGaps, frozenGaps, frozen.id);
+      assert.doesNotMatch(liveGaps.join('\n'), /也没有真实运行页封面/);
+      assert.match(frozenGaps.join('\n'), /也没有真实运行页封面/);
+      posterGapChanged.push(frozen.id);
     } else {
       assert.deepEqual(live, frozen, frozen.id);
     }
   }
-  assert.deepEqual(changed.sort(), [...EXPECTED_IDS].sort());
+  assert.deepEqual(changed.sort(), [...MANTINE_IDS].sort());
+  assert.deepEqual(posterGapChanged.sort(), [...POSTER_MANTINE_MANIFEST_IDS].sort());
 });
 
 test('page export projects the named limited-countable records and leaves covers and visual QA at zero', async () => {
@@ -235,7 +283,7 @@ test('page export projects the named limited-countable records and leaves covers
   const out = await mkdtemp(join(tmpdir(), 'ui-vault-export-acceptances-'));
   try {
     const version = await exportPages(out);
-    assert.equal(version.collectionAccounting.verifiedNewIndependentUIs, 3);
+    assert.equal(version.collectionAccounting.verifiedNewIndependentUIs, 5);
     assert.deepEqual(version.collectionAccounting.verifiedNewIndependentRecords.map((r) => r.id), EXPECTED_IDS);
     assert.equal(version.collectionAccounting.covers, 0);
     assert.equal(version.collectionAccounting.browserVisualQA, 0);
@@ -245,17 +293,27 @@ test('page export projects the named limited-countable records and leaves covers
     const exportedLedger = JSON.parse(await readFile(join(out, 'COLLECTION-LEDGER.json'), 'utf8'));
     assert.deepEqual(exportedLedger.accounts, JSON.parse(readFileSync(join(ROOT, 'COLLECTION-LEDGER.json'), 'utf8')).accounts);
     const exportedReadme = await readFile(join(out, 'README.md'), 'utf8');
-    assert.match(exportedReadme, /已核新增独立 UI 3/);
+    assert.match(exportedReadme, /已核新增独立 UI 5/);
+    assert.doesNotMatch(exportedReadme, /已核新增独立 UI 3/);
     assert.doesNotMatch(exportedReadme, /已核新增独立 UI 0/);
     const exportedCatalog = JSON.parse(await readFile(join(out, 'candidate-catalog.json'), 'utf8'));
     const exportedManifest = JSON.parse(await readFile(join(out, 'batches/mantine-20261111-j/manifest.json'), 'utf8'));
-    for (const id of EXPECTED_IDS) {
+    const exportedDaisy = JSON.parse(await readFile(join(out, 'batches/daisyui-20261111/manifest.json'), 'utf8'));
+    const exportedHyper = JSON.parse(await readFile(join(out, 'batches/hyperui-20261111/manifest.json'), 'utf8'));
+    for (const id of MANTINE_IDS) {
       const gaps = exportedCatalog.find((x) => x.id === id).gaps;
       const manGaps = exportedManifest.items.find((x) => x.id === id).gaps;
       assert.match(gaps[0], /限定范围计入已核新增独立 UI/);
       assert.doesNotMatch(gaps[0], /不能称为已核独立/);
       assert.match(manGaps[0], /限定范围计入已核新增独立 UI/);
       assert.doesNotMatch(manGaps.join('\n'), /不能称为已核独立/);
+    }
+    for (const [id, man] of [['daisyui:accordion', exportedDaisy.items.find((x) => x.id === 'daisyui:accordion')], ['hyperui:application-modals', exportedHyper.items.find((x) => x.id === 'hyperui:application-modals')]]) {
+      const gaps = exportedCatalog.find((x) => x.id === id).gaps.join('\n');
+      assert.match(gaps, /限定范围计入已核新增独立 UI/);
+      assert.doesNotMatch(gaps, /不能称为已核独立/);
+      assert.doesNotMatch((man.gaps || []).join('\n'), /不能称为已核独立/);
+      assert.match((man.gaps || []).join('\n'), /限定范围计入已核新增独立 UI/);
     }
     for (const rel of [
       'thumbnails/mantine-ui--table-sort.webp',
@@ -266,5 +324,156 @@ test('page export projects the named limited-countable records and leaves covers
     }
   } finally {
     await rm(out, { recursive: true, force: true });
+  }
+});
+
+
+const E5_SCOPES = {
+  'daisyui:accordion': {
+    sourceCommit: E5,
+    scope: '完整原生 radio 三问问答组件；保持一项选中。',
+    exclusions: '第三项未在原验收中点选；移动或完整无障碍；当前提交的整矩阵或线上复验。',
+    preview: 'batches/daisyui-20261111/accordion.html',
+    composedSha256: 'ddb3b6a44d437298831d3ee7b29e6e88d566fa0ad8180d410f1a4a36f1d9683b',
+    composedBytes: 135952,
+    htmlSha256: '4c9d081d91ad4cf7ad5d2e96e266e6f3949daaa012760493990d7a3d1443f2ec',
+    cssSha256: 'd05b5c0fe8e8a71d3f91c3b60a733cf45d964156b44f2416b9d32d8d79b79927',
+    jsSha256: '3cb42e2b9cba44f749ddaf7e1a2323480c4bf6f8a7f77e893a5bfd3b971fb4a3',
+    runtime: {
+      allowLocalMedia: false,
+      key: 'batches/daisyui-20261111',
+      css: 'batches/daisyui-20261111/runtime.css',
+      js: 'batches/daisyui-20261111/runtime.js',
+      cssHref: 'runtime.css',
+      scriptSrc: 'runtime.js',
+      assets: [],
+    },
+  },
+  'hyperui:application-modals': {
+    sourceCommit: E5,
+    scope: '完整居中原生 dialog；灰遮罩与有界关闭（Escape 与点遮罩）。',
+    exclusions: '完整业务矩阵或键盘无障碍全路径；Chart.js 等第三方权利不因本条计入而关闭；当前提交的整矩阵或线上复验。',
+    preview: 'batches/hyperui-20261111/application-modals.html',
+    composedSha256: '725cd11c2b5e963c7169237d270b3d1373fbcca015299524dd7bbf0120989d61',
+    composedBytes: 266444,
+    htmlSha256: 'a4f76084615fe60bdbf9a57c2f34a869810f893795da44a99f39a96d17ea8dac',
+    cssSha256: '97e0a9ac533a2fe8853abf5d41e943354142485d0590606712966750ad484a0a',
+    jsSha256: '0dbfa8dd73b14b5844e8a1ccff2a3c90491d1415001e939d999e8c12a0007fb0',
+    runtime: {
+      allowLocalMedia: false,
+      key: 'batches/hyperui-20261111',
+      css: 'batches/hyperui-20261111/runtime.css',
+      js: 'batches/hyperui-20261111/runtime.js',
+      cssHref: 'runtime.css',
+      scriptSrc: 'runtime.js',
+    },
+  },
+};
+
+const HOST_UNCHANGED_BETWEEN_E5_AND_BASELINE = [
+  'apps/atlas-sample/preview-runtime.mjs',
+  'apps/atlas-sample/preview-adapters.mjs',
+  'apps/atlas-sample/preview-media.mjs',
+  'apps/atlas-sample/candidate-adapter.mjs',
+  'apps/atlas-sample/display-names.mjs',
+  'apps/atlas-sample/curation-policy.mjs',
+  'apps/atlas-sample/curation-rules.mjs',
+  'apps/atlas-sample/app.js',
+  'apps/atlas-sample/index.html',
+];
+
+test('ledger keeps the original three Mantine records and appends two unique e5 scopes without duplication', () => {
+  const ledger = JSON.parse(readFileSync(join(ROOT, 'COLLECTION-LEDGER.json'), 'utf8'));
+  const frozen = JSON.parse(gitBlob(BASELINE_COMMIT, 'apps/atlas-sample/COLLECTION-LEDGER.json').toString('utf8'));
+  assert.equal(frozen.accounts.verifiedNewIndependentUIs, 3);
+  assert.equal(frozen.verifiedNewIndependentRecords.length, 3);
+  assert.deepEqual(ledger.verifiedNewIndependentRecords.slice(0, 3), frozen.verifiedNewIndependentRecords);
+  for (const record of frozen.verifiedNewIndependentRecords) {
+    assert.equal(record.sourceCommit, SOURCE_COMMIT);
+  }
+  const ids = ledger.verifiedNewIndependentRecords.map((r) => r.id);
+  assert.deepEqual(ids, EXPECTED_IDS);
+  assert.equal(ids.length, 5);
+  assert.equal(new Set(ids).size, 5);
+  assert.equal(ledger.accounts.verifiedNewIndependentUIs, 5);
+  assert.equal(ledger.accounts.covers, 0);
+  assert.equal(ledger.accounts.browserVisualQA, 0);
+  for (const id of E5_IDS) {
+    const rec = ledger.verifiedNewIndependentRecords.find((r) => r.id === id);
+    assert.equal(rec.sourceCommit, E5_SCOPES[id].sourceCommit);
+    assert.equal(rec.scope, E5_SCOPES[id].scope);
+    assert.equal(rec.exclusions, E5_SCOPES[id].exclusions);
+    const copies = ledger.verifiedNewIndependentRecords.filter((r) => r.id === id);
+    assert.equal(copies.length, 1, id);
+  }
+});
+
+test('page-head status and ledger markdown project the same named five records', () => {
+  const acc = collectionAccountingFrom(
+    JSON.parse(readFileSync(join(ROOT, 'candidate-catalog.json'), 'utf8')),
+    JSON.parse(readFileSync(join(ROOT, 'COLLECTION-LEDGER.json'), 'utf8')),
+  );
+  const status = formatCollectionAccountingStatus(acc);
+  assert.match(status, /已核新增独立 UI 5，均为限定可计/);
+  assert.match(status, /封面 0/);
+  assert.doesNotMatch(status, /已核新增独立 UI 3/);
+  const ledgerMd = readFileSync(join(ROOT, 'COLLECTION-LEDGER.md'), 'utf8');
+  assert.match(ledgerMd, /已核新增独立 UI = 5/);
+  assert.doesNotMatch(ledgerMd, /已核新增独立 UI = 3/);
+  const page = readFileSync(join(ROOT, 'candidates.html'), 'utf8');
+  assert.match(page, /id="collection-accounting"/);
+  const script = readFileSync(join(ROOT, 'candidates.js'), 'utf8');
+  assert.match(script, /formatCollectionAccountingStatus\(acc\)/);
+  assert.doesNotMatch(script, /已核新增\/封面\/实测为 0/);
+});
+
+test('accepted DaisyUI and HyperUI previews compose through the live host adapter and media loader to the frozen output hash', async () => {
+  for (const rel of HOST_UNCHANGED_BETWEEN_E5_AND_BASELINE) {
+    const live = readFileSync(join(REPO, rel));
+    const baseline = gitBlob(BASELINE_COMMIT, rel);
+    const source = gitBlob(E5, rel);
+    assert.deepEqual(live, baseline, rel);
+    assert.deepEqual(live, source, rel);
+  }
+  const liveCandidatesJs = readFileSync(join(ROOT, 'candidates.js'), 'utf8');
+  const baselineCandidatesJs = gitBlob(BASELINE_COMMIT, 'apps/atlas-sample/candidates.js').toString('utf8');
+  const e5CandidatesJs = gitBlob(E5, 'apps/atlas-sample/candidates.js').toString('utf8');
+  assert.equal(liveCandidatesJs, baselineCandidatesJs);
+  assert.notEqual(baselineCandidatesJs, e5CandidatesJs);
+  assert.match(baselineCandidatesJs, /formatCollectionAccountingStatus/);
+  assert.match(e5CandidatesJs, /已核新增\/封面\/实测为 0/);
+  // Accounting 3→5 is a ledger projection. It is not evidence that host version text is unchanged.
+  // version.json is written only at export from the ledger. candidates.js only formats that projection.
+
+  const catalog = JSON.parse(readFileSync(join(ROOT, 'candidate-catalog.json'), 'utf8'));
+  const items = JSON.parse(readFileSync(join(ROOT, 'items.json'), 'utf8')).map(localizeItem);
+  const collected = catalog.filter((x) => x.preview).map(adaptCandidate).map(localizeItem);
+  for (const id of E5_IDS) {
+    const expect = E5_SCOPES[id];
+    const detail = applyCuration([...items, ...collected], curationRules).filter((x) => x.id === id);
+    assert.equal(detail.length, 1, id);
+    const item = detail[0];
+    const runtime = runtimeFor(item);
+    assert.deepEqual(runtime, expect.runtime, id);
+    assert.equal(item.preview, expect.preview, id);
+    const html = readFileSync(join(ROOT, item.preview), 'utf8');
+    const css = readFileSync(join(ROOT, runtime.css), 'utf8');
+    const js = readFileSync(join(ROOT, runtime.js), 'utf8');
+    assert.equal(sha256(html), expect.htmlSha256, id);
+    assert.equal(sha256(css), expect.cssSha256, id);
+    assert.equal(sha256(js), expect.jsSha256, id);
+    for (const rel of [item.preview, runtime.css, runtime.js]) {
+      assert.deepEqual(readFileSync(join(ROOT, rel)), gitBlob(E5, `apps/atlas-sample/${rel}`), rel);
+      assert.deepEqual(readFileSync(join(ROOT, rel)), gitBlob(BASELINE_COMMIT, `apps/atlas-sample/${rel}`), rel);
+    }
+    let mapping;
+    if (runtime.assets) {
+      const assets = await loadMediaAssets(runtime.assets);
+      mapping = assets.mapping;
+      assets.dispose();
+    }
+    const composed = composePreview(html, css, js, runtime, mapping);
+    assert.equal(sha256(composed), expect.composedSha256, id);
+    assert.equal(Buffer.byteLength(composed), expect.composedBytes, id);
   }
 });
