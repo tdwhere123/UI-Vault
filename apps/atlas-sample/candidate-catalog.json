@@ -32611,13 +32611,13 @@
   },
   {
     "id": "flowbite:tabs",
-    "title": "页签面板",
+    "title": "静态页签",
     "source": "Flowbite",
     "license": "MIT",
     "upstream": "https://github.com/themesberg/flowbite/blob/232ebdb33a9e37b31b293b9988d89b862ee121e5/content/components/tabs.md",
     "website": "https://flowbite.com/docs/components/tabs/",
     "revision": "232ebdb33a9e37b31b293b9988d89b862ee121e5",
-    "buildStatus": "本地预览已组装，尚未做真实浏览器视觉与交互验收",
+    "buildStatus": "本地预览已组装。收录的是官方默认静态导航样式示例，不是可切换页签；尚未另做真实浏览器视觉验收。",
     "batch": "collection-20261111-g",
     "archive": "batches/flowbite-20261111/bundles/tabs.zip",
     "manifest": "batches/flowbite-20261111/manifest.json",
@@ -32626,14 +32626,15 @@
     "category": "导航与组织",
     "format": "组件与效果",
     "kind": "组件",
-    "description": "页签面板，来自Flowbite固定修订 232ebdb33a9e 的完整独立条目；此为源码级独立性初筛，跨源视觉去重待核，不能称为已核独立。",
-    "behavior": "切换页签（已内置本地交互脚本，尚未做浏览器验收）",
+    "description": "静态页签导航示例，来自Flowbite固定修订 232ebdb33a9e 的完整独立条目；此为源码级独立性初筛，跨源视觉去重待核，不能称为已核独立。",
+    "behavior": "静态页签导航与样式示例。官方默认示例将 Profile 写死为当前项，没有页签切换脚本。",
     "gaps": [
       "源码级独立性初筛：完整可复用组件可以收录；只收该族一条默认/指定完整示例，不收配色、尺寸或编号小改。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
-      "源码级不同点：官方完整页签面板，只收默认示例。",
+      "源码级不同点：官方默认示例是静态页签导航样式（Profile 写死为当前项，无 data-tabs、无切换脚本），只收该默认示例。",
       "预览使用官方文档示例 HTML 与已有 Flowbite 本地脚本/样式编译，远程或无授权图已换自有占位。这是窄适配，不等于视觉或交互已验收。",
       "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
-      "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面"
+      "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面",
+      "57c9 桌面点击后失焦，持久选中仍为写死的 Profile，与该静态示例一致；不能把 hover/focus 误认为已切换。此记录不把“无内容面板”列为缺陷，也不升级为完整验收或独立计数。"
     ],
     "runtime": {
       "assets": []
@@ -33302,13 +33303,13 @@
   },
   {
     "id": "daisyui:tabs",
-    "title": "页签",
+    "title": "静态页签",
     "source": "daisyUI",
     "license": "MIT",
     "upstream": "https://github.com/saadeghi/daisyui/blob/8528585870d79e107f3b6a14d2e66b3b4d473e37/packages/docs/src/routes/(routes)/components/tab/+page.md",
     "website": "https://daisyui.com/components/tab/",
     "revision": "8528585870d79e107f3b6a14d2e66b3b4d473e37",
-    "buildStatus": "本地预览已组装，尚未做真实浏览器视觉与交互验收",
+    "buildStatus": "本地预览已组装。收录的是官方默认静态页签样式示例，不是可切换页签；尚未另做真实浏览器视觉验收。",
     "batch": "collection-20261111-g",
     "archive": "batches/daisyui-20261111/bundles/tabs.zip",
     "manifest": "batches/daisyui-20261111/manifest.json",
@@ -33317,14 +33318,15 @@
     "category": "导航与组织",
     "format": "组件与效果",
     "kind": "组件",
-    "description": "页签，来自daisyUI固定修订 8528585870d7 的完整独立条目；此为源码级独立性初筛，跨源视觉去重待核，不能称为已核独立。",
-    "behavior": "切换页签",
+    "description": "静态页签样式示例，来自daisyUI固定修订 8528585870d7 的完整独立条目；此为源码级独立性初筛，跨源视觉去重待核，不能称为已核独立。",
+    "behavior": "静态页签样式示例。官方默认示例将 Tab 2 写死为选中样式，没有页签切换脚本。",
     "gaps": [
       "源码级独立性初筛：完整可复用组件可以收录；只收该族一条完整官方示例，不收配色、尺寸或编号小改。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
-      "源码级不同点：官方完整页签组件，只收默认示例。 实际摘取的官方示例标题：Tabs。",
+      "源码级不同点：官方默认示例是静态页签样式（Tab 2 写死 tab-active，无切换脚本），只收默认示例。实际摘取的官方示例标题：Tabs。",
       "预览使用官方文档中的示例 HTML，并用官方 daisyUI 插件经已有 Tailwind 编译样式。远程演示图已换自有占位，不冒称视觉复刻。预览挂载是窄适配，不等于视觉或交互已验收。",
       "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
-      "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面"
+      "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面",
+      "57c9 桌面点击 Tab 1/3 并失焦后，较深样式仍只在 Tab 2，两张 after-blur 图字节相同；不能把 hover/focus 误认为持久切换。此记录不把“无内容面板”列为缺陷，也不升级为完整验收或独立计数。"
     ],
     "runtime": {
       "assets": []
