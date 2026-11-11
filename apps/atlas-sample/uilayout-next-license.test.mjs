@@ -205,3 +205,48 @@ test('downloadable source zips ship license materials and leave originals unchan
   assert.equal(evd.thisRebuild.jsEqualsProduction,false,batch);
  }
 });
+
+test('next-02/03 downloadable src includes proven runtime fixes; originals stay unpatched',()=>{
+ const repo=join(root,'..','..');
+ const ev2=JSON.parse(readFileSync(join(root,'batches/uilayout-next-02/SOURCE-RUNTIME.json'),'utf8'));
+ const ev3=JSON.parse(readFileSync(join(root,'batches/uilayout-next-03/SOURCE-RUNTIME.json'),'utf8'));
+ const zip2=join(repo,ev2.sourceZip.path);
+ const zip3=join(repo,ev3.sourceZip.path);
+ assert.equal(sha256(readFileSync(zip2)),ev2.sourceZip.sha256);
+ assert.equal(sha256(readFileSync(zip3)),ev3.sourceZip.sha256);
+ assert.equal(ev2.sourcePatchesInDownloadableZip.present,true);
+ assert.equal(ev3.sourcePatchesInDownloadableZip.present,true);
+ assert.equal(ev2.sourcePatchesInDownloadableZip.verifiedRebuild.jsEqualsProduction,false);
+ assert.equal(ev3.sourcePatchesInDownloadableZip.verifiedRebuild.jsEqualsProduction,false);
+ assert.equal(ev2.sourcePatchesInDownloadableZip.verifiedRebuild.npmCiExit,0);
+ assert.equal(ev3.sourcePatchesInDownloadableZip.verifiedRebuild.buildExit,0);
+
+ const genie=zipRead(zip2,'src/demos/mac/genie-effect.tsx').toString('utf8');
+ const genieOrig=zipRead(zip2,'originals/mac/genie-effect.tsx').toString('utf8');
+ assert.match(genie,/data-genie-snapshot-error/);
+ assert.match(genie,/snapshots could not be prepared/);
+ assert.doesNotMatch(genie,/if \(!cancelled\) onReady\(\[\]\);/);
+ assert.match(genieOrig,/if \(!cancelled\) onReady\(\[\]\);/);
+ assert.doesNotMatch(genieOrig,/data-genie-snapshot-error/);
+
+ const tl=zipRead(zip2,'src/components/ui/timeline-animation.tsx').toString('utf8');
+ const css=zipRead(zip2,'src/styles.css').toString('utf8');
+ assert.match(tl,/data-timeline-visible-first=\{isInView \? 'entered' : 'waiting'\}/);
+ assert.match(css,/body\[data-demo="timeline-animation-index"\] \[data-timeline-visible-first\]/);
+ assert.match(css,/opacity:1!important;filter:none!important/);
+
+ const color=zipRead(zip3,'src/demos/color-picker/raws-color-picker.tsx').toString('utf8');
+ const colorOrig=zipRead(zip3,'originals/color-picker/raws-color-picker.tsx').toString('utf8');
+ assert.match(color,/async function copyToClipboard/);
+ assert.match(color,/Copy unavailable/);
+ assert.match(color,/Select the HEX field and copy manually/);
+ assert.match(colorOrig,/function copyToClipboard\(\) \{\n    navigator\.clipboard\.writeText\(hexValue\);/);
+ assert.doesNotMatch(colorOrig,/Copy unavailable/);
+
+ const names2=zipNames(zip2);
+ const names3=zipNames(zip3);
+ assert.equal(names2.includes('SOURCE-PATCHES.md'),true);
+ assert.equal(names2.includes('THIRD_PARTY_NOTICES.txt'),true);
+ assert.equal(names3.includes('SOURCE-PATCHES.md'),true);
+ assert.equal(names3.includes('THIRD_PARTY_NOTICES.txt'),true);
+});

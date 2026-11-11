@@ -18,10 +18,10 @@
   },
   "sourceZip": {
     "path": "collections/pending/batch-001/uilayout-built-awaiting-qa/archives/uilayout-next-02/source.zip",
-    "sha256": "8dacd2feadf1e7fa3f7c1bac806a22ed3753465278ab28ee4835685de2a68a02",
-    "bytes": 139553,
+    "sha256": "5b6de42e33997a1a58b3cac55387c7765daa39eaf977c271a69846f9cd7e9fb0",
+    "bytes": 142888,
     "containsPortableLock": true,
-    "files": 52,
+    "files": 56,
     "selectedDemosOnlyInMainTsx": true,
     "alsoPreservesUnselectedOriginalsAndSharedHelpers": true,
     "previousSha256BeforeLicensePack": "c18fc3480ff9874bf278c869132cb6f06f677dd972c263876e6ad453428dfb94",
@@ -32,7 +32,9 @@
       "THIRD_PARTY_NOTICES.txt"
     ],
     "existingEntriesUnchanged": 49,
-    "originalsUnchangedFromPreviousZip": true
+    "originalsUnchangedFromPreviousZip": true,
+    "previousSha256BeforeSourcePatches": "8dacd2feadf1e7fa3f7c1bac806a22ed3753465278ab28ee4835685de2a68a02",
+    "previousBytesBeforeSourcePatches": 139553
   },
   "productionRuntime": {
     "js": {
@@ -694,5 +696,72 @@
       "LICENSE"
     ],
     "note": "Users who obtain this branch’s collections/.../source.zip receive the root MIT LICENSE plus THIRD_PARTY_NOTICES.txt, LICENSE-PACK.md and SOURCE-LICENSE.json. Catalog archive URLs that still point at main do not receive these additions until that URL is updated by a publish/merge, which this line does not do."
+  },
+  "sourcePatchesInDownloadableZip": {
+    "present": true,
+    "replacedOrAdded": {
+      "src/demos/mac/genie-effect.tsx": {
+        "bytes": 60639,
+        "sha256": "884d560141fbcc7078709e5b702ddb56abcdbd9923c447e6b67d3b9d45001c12"
+      },
+      "src/components/ui/timeline-animation.tsx": {
+        "bytes": 1480,
+        "sha256": "03886f12cf88f34bf54948efdbbebae36c022e8b25da6b6c32f94643b9ac04fb"
+      },
+      "src/styles.css": {
+        "bytes": 13519,
+        "sha256": "8ea2354b0bfb51d6c0cf31c71f122bbeff22c9174c7548d390c644eccf05f00f"
+      },
+      "SOURCE-PATCHES.md": {
+        "bytes": 1222,
+        "sha256": "3121529858c69553bb0025ae68e2e6a591d4f0cc6b0a21d269247a3aa5c45faf"
+      },
+      "LOAD-FIX-NOTES.md": {
+        "bytes": 940,
+        "sha256": "76dcd24b5b21bbfd920e82081fae71cb8308841ef91ebfe0f1bc239ac8beb166"
+      },
+      "genie-effect.PATCH.md": {
+        "bytes": 1482,
+        "sha256": "ade03d7abe668d988751612a4787ba4295b398384979b05bbbfa932981281016"
+      },
+      "genie-effect.diff": {
+        "bytes": 614,
+        "sha256": "6eeb11d4fe45c9e17a4a3e6ab2b4208c371e8075e631328b61487c2ba0aa4f13"
+      }
+    },
+    "note": "Proven preview corrections are now in the adapted src/ build recipe so a clean npm ci && npm run build does not drop them. originals/ are unchanged. A rebuild is not claimed byte-identical to the current production runtime.",
+    "verifiedRebuild": {
+      "npmCiExit": 0,
+      "buildExit": 0,
+      "builtJs": {
+        "sha256": "8f7c3abf7f5bb36f1b9bef4c38e53a0e38aa7d7acf42e731c9f82b80f5833a6c",
+        "bytes": 609859
+      },
+      "builtCss": {
+        "name": "ui-vault-uilayout-next.css",
+        "sha256": "99f6aaab588fbd6cb1f33c48223493462d42789a6579d02799fd002b6b84cdab",
+        "bytes": 65692
+      },
+      "jsEqualsProduction": false,
+      "cssEqualsProduction": false,
+      "markersInBuilt": {
+        "data-timeline-visible-first": {
+          "js": 1,
+          "css": 1
+        },
+        "data-genie-snapshot-error": {
+          "js": 2,
+          "css": 0
+        },
+        "Window preview unavailable": {
+          "js": 1,
+          "css": 0
+        },
+        "snapshots could not be prepared": {
+          "js": 1,
+          "css": 0
+        }
+      }
+    }
   }
 }

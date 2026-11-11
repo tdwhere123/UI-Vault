@@ -1,0 +1,96 @@
+{
+  "batch": "uilayout-next-02",
+  "verifiedAt": "2026-11-11 17:50 Asia/Taipei",
+  "parentCodeSha": "755e016ba6f89ace02b46eb3585713ce0cebfa88",
+  "inputZipBeforeSourcePatches": {
+    "sha256": "8dacd2feadf1e7fa3f7c1bac806a22ed3753465278ab28ee4835685de2a68a02",
+    "bytes": 139553
+  },
+  "outputZip": {
+    "sha256": "5b6de42e33997a1a58b3cac55387c7765daa39eaf977c271a69846f9cd7e9fb0",
+    "bytes": 142888,
+    "path": "collections/pending/batch-001/uilayout-built-awaiting-qa/archives/uilayout-next-02/source.zip"
+  },
+  "originalsUnchanged": true,
+  "productionRuntimeNotReplaced": true,
+  "rebuild": {
+    "npmCiExit": 0,
+    "buildExit": 0,
+    "builtJs": {
+      "sha256": "8f7c3abf7f5bb36f1b9bef4c38e53a0e38aa7d7acf42e731c9f82b80f5833a6c",
+      "bytes": 609859
+    },
+    "builtCss": {
+      "name": "ui-vault-uilayout-next.css",
+      "sha256": "99f6aaab588fbd6cb1f33c48223493462d42789a6579d02799fd002b6b84cdab",
+      "bytes": 65692
+    },
+    "productionJs": {
+      "sha256": "409c88ded52e56367ec33577851ca09a17b9d565c6989bf36a7312c73470d273",
+      "bytes": 590152
+    },
+    "productionCss": {
+      "sha256": "6e4abb243774627bfc5837150868913958a299772c85fdb845edf3aad2050e05",
+      "bytes": 65780
+    },
+    "markersInBuilt": {
+      "data-timeline-visible-first": {
+        "js": 1,
+        "css": 1
+      },
+      "data-genie-snapshot-error": {
+        "js": 2,
+        "css": 0
+      },
+      "Window preview unavailable": {
+        "js": 1,
+        "css": 0
+      },
+      "snapshots could not be prepared": {
+        "js": 1,
+        "css": 0
+      }
+    },
+    "jsEqualsProduction": false,
+    "cssEqualsProduction": false,
+    "onReadyEmptyArrayInBuiltJs": false,
+    "zip": {
+      "previousSha256": "8dacd2feadf1e7fa3f7c1bac806a22ed3753465278ab28ee4835685de2a68a02",
+      "previousBytes": 139553,
+      "sha256": "5b6de42e33997a1a58b3cac55387c7765daa39eaf977c271a69846f9cd7e9fb0",
+      "bytes": 142888,
+      "replacedOrAdded": {
+        "src/demos/mac/genie-effect.tsx": {
+          "bytes": 60639,
+          "sha256": "884d560141fbcc7078709e5b702ddb56abcdbd9923c447e6b67d3b9d45001c12"
+        },
+        "src/components/ui/timeline-animation.tsx": {
+          "bytes": 1480,
+          "sha256": "03886f12cf88f34bf54948efdbbebae36c022e8b25da6b6c32f94643b9ac04fb"
+        },
+        "src/styles.css": {
+          "bytes": 13519,
+          "sha256": "8ea2354b0bfb51d6c0cf31c71f122bbeff22c9174c7548d390c644eccf05f00f"
+        },
+        "SOURCE-PATCHES.md": {
+          "bytes": 1222,
+          "sha256": "3121529858c69553bb0025ae68e2e6a591d4f0cc6b0a21d269247a3aa5c45faf"
+        },
+        "LOAD-FIX-NOTES.md": {
+          "bytes": 940,
+          "sha256": "76dcd24b5b21bbfd920e82081fae71cb8308841ef91ebfe0f1bc239ac8beb166"
+        },
+        "genie-effect.PATCH.md": {
+          "bytes": 1482,
+          "sha256": "ade03d7abe668d988751612a4787ba4295b398384979b05bbbfa932981281016"
+        },
+        "genie-effect.diff": {
+          "bytes": 614,
+          "sha256": "6eeb11d4fe45c9e17a4a3e6ab2b4208c371e8075e631328b61487c2ba0aa4f13"
+        }
+      },
+      "originalsUnchanged": true
+    }
+  },
+  "interpretation": "Adapted source in the downloadable zip now includes the previously production-only corrections. Clean npm ci && vite build exited 0 and the built assets contain the fix markers. The current atlas production runtime was left in place and is not claimed byte-identical to this rebuild."
+}
