@@ -44,3 +44,5 @@
 | `hyperui:templates-saas-landing-page` | 订阅服务落地页 | [templates-saas-landing-page.html](templates-saas-landing-page.html) | [originals/templates-saas-landing-page.html](originals/templates-saas-landing-page.html) |
 | `hyperui:templates-storefront` | 商店首页 | [templates-storefront.html](templates-storefront.html) | [originals/templates-storefront.html](originals/templates-storefront.html) |
 | `hyperui:templates-support-inbox` | 客服收件箱整页 | [templates-support-inbox.html](templates-support-inbox.html) | [originals/templates-support-inbox.html](originals/templates-support-inbox.html) |
+
+`hyperui:application-dropdown` 的官方原件是静态展开菜单；可交互预览的开闭由同目录本地适配器 `dropdown-menu-preview.js` 提供，不改 `originals/`。共享 `runtime.js` 的链接与表单拦截未改。 真实浏览器复测仍待上线后进行。
