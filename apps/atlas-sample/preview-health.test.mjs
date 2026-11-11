@@ -1,4 +1,4 @@
-import test from'node:test';import assert from'node:assert/strict';import{composePreview,createPreviewLoader,createPreviewPool}from'./preview-runtime.mjs';
+import test from'node:test';import assert from'node:assert/strict';import{composePreview,createPreviewLoader,createPreviewPool,isBenignPreviewError,BENIGN_PREVIEW_ERROR_RE}from'./preview-runtime.mjs';
 const runtime={css:'a.css',js:'a.js',cssHref:'a.css',scriptSrc:'a.js'},html='<html><head><link rel="stylesheet" href="a.css"></head><body><div id="app"></div><script src="a.js"></script></body></html>',item={preview:'a.html',runtime};
 class Target extends EventTarget{count=0;addEventListener(k,f,o){super.addEventListener(k,f,o);if(k==='message')this.count++}removeEventListener(k,f,o){super.removeEventListener(k,f,o);if(k==='message')this.count--}}
 function fixture(code='',markup=html){const target=new Target(),frame={contentWindow:{},ownerDocument:{defaultView:target},dataset:{},isConnected:true,removeAttribute(k){delete this[k]}},states=[],errors=[],ready=[];const loader=createPreviewLoader({cache:{get:async u=>u==='a.html'?markup:u==='a.js'?code:''},diagnosticTimeoutMs:20});const handlers={onState:s=>states.push(s),onError:e=>errors.push(e),onReady:r=>ready.push(r)};return{target,frame,states,errors,ready,loader,handlers}}
@@ -14,3 +14,43 @@ test('CSP is first real head metadata for case/attributes/comments; missing/fake
 test('20 mounts/release cycles do not accumulate parent message listeners or delayed state',async()=>{const f=fixture();for(let i=0;i<20;i++){await f.loader.mount(f.frame,item,f.handlers);assert.equal(f.target.count,1);f.loader.release(f.frame);assert.equal(f.target.count,0)}const count=f.states.length;await delay(30);assert.equal(f.states.length,count)});
 
 test('legacy document without runtime only reports unverified on load',async()=>{const f=fixture();await f.loader.mount(f.frame,{preview:'legacy.html'},f.handlers);f.frame.onload();assert.equal(f.ready.length,0);assert.equal(f.states.at(-1).signal,'load-only');assert.equal(f.states.at(-1).phase,'unverified');f.loader.release(f.frame);assert.equal(f.target.count,0)});
+test('only known ResizeObserver loop diagnostics are benign, not a catch-all',()=>{
+ for(const message of['ResizeObserver loop completed with undelivered notifications.','ResizeObserver loop completed with undelivered notifications','ResizeObserver loop limit exceeded','ResizeObserver loop limit exceeded.'])assert.equal(isBenignPreviewError(message),true);
+ for(const message of['ResizeObserver','ResizeObserver loop','Script error.','JSON viewer unavailable. Close and reopen.','预览脚本执行失败','',null,undefined,123])assert.equal(isBenignPreviewError(message),false);
+});
+test('parent ignores benign ResizeObserver error posts and still accepts start; real errors remain fatal',async()=>{
+ const f=fixture();await f.loader.mount(f.frame,item,f.handlers);const cap=capability(f.frame);
+ post(f,{...cap,kind:'error',message:'ResizeObserver loop completed with undelivered notifications.'});
+ assert.equal(f.errors.length,0);assert.equal(typeof f.frame.srcdoc,'string');assert.notEqual(f.states.at(-1).phase,'error');
+ post(f,{...cap,kind:'started'});assert.equal(f.states.at(-1).phase,'unverified');assert.equal(f.ready[0].verified,false);
+ post(f,{...cap,kind:'error',message:'ResizeObserver loop limit exceeded'});
+ assert.equal(f.errors.length,0);assert.equal(f.states.at(-1).phase,'unverified');assert.equal(typeof f.frame.srcdoc,'string');
+ post(f,{...cap,kind:'error',message:'actual boom'});
+ assert.equal(f.errors[0].message,'actual boom');assert.equal(f.states.at(-1).phase,'error');assert.equal(f.frame.srcdoc,undefined);assert.equal(f.frame.src,'about:blank');
+ f.loader.release(f.frame);
+});
+test('injected health bootstrap swallows only ResizeObserver loop errors, stops later listeners, and still starts',async()=>{
+ const f=fixture();await f.loader.mount(f.frame,item,f.handlers);
+ const src=f.frame.srcdoc;const match=src.match(/<script>\(function\(config\)\{[\s\S]*?\}\)\(\{[\s\S]*?\}\);<\/script>/);
+ assert.ok(match);assert.ok(match[0].includes(String(BENIGN_PREVIEW_ERROR_RE)));
+ const messages=[];const listeners=[];
+ const window={addEventListener(type,fn,opts){listeners.push({type,fn,opts})},document:{readyState:'complete'}};
+ const {createContext,runInContext}=await import('node:vm');
+ runInContext(match[0].slice(8,-9),createContext({window,document:window.document,parent:{postMessage(data){messages.push(data)}}}));
+ const errorListener=listeners.find(l=>l.type==='error');
+ assert.equal(errorListener?.opts,true);
+ assert.equal(messages.map(m=>m.kind).join(','),'started');
+ let prevented=false,stopped=false;
+ errorListener.fn({message:'ResizeObserver loop completed with undelivered notifications.',cancelable:true,preventDefault(){prevented=true},stopImmediatePropagation(){stopped=true}});
+ assert.equal(prevented,true);assert.equal(stopped,true);assert.equal(messages.length,1);
+ const rejectListener=listeners.find(l=>l.type==='unhandledrejection');
+ const before=messages.length;
+ rejectListener.fn({reason:{message:'ResizeObserver loop limit exceeded'},cancelable:true,preventDefault(){},stopImmediatePropagation(){}});
+ assert.equal(messages.length,before);
+ errorListener.fn({message:'actual boom',cancelable:true,preventDefault(){},stopImmediatePropagation(){}});
+ assert.equal(messages.at(-1).kind,'error');assert.equal(messages.at(-1).message,'actual boom');
+ const after=messages.length;
+ rejectListener.fn({reason:{message:'async boom'},cancelable:true,preventDefault(){},stopImmediatePropagation(){}});
+ assert.equal(messages.length,after);
+ f.loader.release(f.frame);
+});

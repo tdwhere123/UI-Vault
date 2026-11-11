@@ -59,10 +59,14 @@ export function composePreview(html,css,js,runtime,mediaMapping){
 }
 /** A start signal is diagnostic only: it is never proof of visual or functional success. */
 const HEALTH_CHANNEL='ui-vault-preview-health-v1';
+/** Chrome reports these ResizeObserver loop diagnostics as window error events with a string message; they are not application failures. */
+export const BENIGN_PREVIEW_ERROR_RE=/ResizeObserver loop (?:completed with undelivered notifications|limit exceeded)\.?/i;
+export function isBenignPreviewError(message){return typeof message==='string'&&BENIGN_PREVIEW_ERROR_RE.test(message)}
+
 function healthNonce(){const values=new Uint32Array(4);if(!globalThis.crypto?.getRandomValues)throw Error('浏览器不支持安全预览诊断');globalThis.crypto.getRandomValues(values);return Array.from(values,x=>x.toString(16).padStart(8,'0')).join('')}
 function healthBootstrap(nonce,generation){
  const config=JSON.stringify({channel:HEALTH_CHANNEL,nonce,generation}).replace(/</g,'\\u003c');
- return `<script>(function(config){var failed=false,started=false,warned=false;var send=function(kind,message){try{parent.postMessage({channel:config.channel,nonce:config.nonce,generation:config.generation,kind:kind,message:String(message||'').slice(0,500)},'*')}catch(_){}};window.addEventListener('error',function(event){if(failed)return;if(typeof event.message!=='string'){if(!warned){warned=true;send('warning','预览资源加载出现告警')}return}failed=true;send('error',event.message||'预览脚本执行失败')},true);window.addEventListener('unhandledrejection',function(event){if(failed)return;failed=true;var reason=event.reason;var message='未处理的异步错误';try{if(reason&&typeof reason.message==='string')message=reason.message;else if(typeof reason==='string')message=reason}catch(_){}send('error',message)});var start=function(){if(started||failed)return;started=true;send('started','启动阶段未捕获异常；视觉与交互尚未验证')};if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start,{once:true});else start()})(`+config+`);</script>`;
+ return `<script>(function(config){var failed=false,started=false,warned=false,benign=`+BENIGN_PREVIEW_ERROR_RE+`;var send=function(kind,message){try{parent.postMessage({channel:config.channel,nonce:config.nonce,generation:config.generation,kind:kind,message:String(message||'').slice(0,500)},'*')}catch(_){}};var ignoreBenign=function(event,message){if(typeof message!=='string'||!benign.test(message))return false;if(event.cancelable)event.preventDefault();event.stopImmediatePropagation();return true};window.addEventListener('error',function(event){if(failed)return;if(ignoreBenign(event,event.message))return;if(typeof event.message!=='string'){if(!warned){warned=true;send('warning','预览资源加载出现告警')}return}failed=true;send('error',event.message||'预览脚本执行失败')},true);window.addEventListener('unhandledrejection',function(event){if(failed)return;var reason=event.reason;var message='未处理的异步错误';try{if(reason&&typeof reason.message==='string')message=reason.message;else if(typeof reason==='string')message=reason}catch(_){}if(ignoreBenign(event,message))return;failed=true;send('error',message)});var start=function(){if(started||failed)return;started=true;send('started','启动阶段未捕获异常；视觉与交互尚未验证')};if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start,{once:true});else start()})(`+config+`);</script>`;
 }
 /** Source identity + per-mount random capability + generation reject stale/cross-frame messages. */
 export function createPreviewLoader({cache=createTextCache(),connected=frame=>frame.isConnected,mediaLoader=loadMediaAssets,diagnosticTimeoutMs=5000}={}){
@@ -94,6 +98,7 @@ export function createPreviewLoader({cache=createTextCache(),connected=frame=>fr
     if(!data||typeof data!=='object'||data.channel!==HEALTH_CHANNEL||data.nonce!==nonce||data.generation!==version)return;
     if(data.kind==='error'){
      const message=typeof data.message==='string'?data.message.slice(0,500).replace(/[\u0000-\u001f]/g,' '):'预览运行时报错';
+     if(isBenignPreviewError(message))return;
      fail(Error(message),'runtime');
     }else if(data.kind==='warning'&&!warned){warned=true;state('unverified','检测到资源加载告警；运行效果尚未验证','resource-warning')}else if(data.kind==='started'&&!started){started=true;clearTimer();state('unverified',warned?'启动收到资源告警；视觉与交互尚未验证':'启动阶段未捕获异常；视觉与交互尚未验证',warned?'resource-warning':'started');onReady({verified:false,phase:'unverified'})}
    };
