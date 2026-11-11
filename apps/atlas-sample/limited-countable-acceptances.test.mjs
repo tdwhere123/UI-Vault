@@ -112,10 +112,11 @@ test('accounting rejects duplicate, unknown, or count-mismatched acceptance reco
   const mismatch = structuredClone(ledger);
   mismatch.accounts.verifiedNewIndependentUIs = 0;
   assert.throws(() => collectionAccountingFrom(candidates, mismatch), /does not match named records/);
+  // A copied Daisy record with a matching count is accepted: the parser does not reject unverified IDs.
   const pending = structuredClone(ledger);
   const extra = structuredClone(ledger.verifiedNewIndependentRecords[0]);
   extra.id = 'daisyui:accordion';
-  extra.scope = 'should not be counted without a named product record';
+  extra.scope = 'copied record used only as a parser control';
   pending.verifiedNewIndependentRecords.push(extra);
   pending.accounts.verifiedNewIndependentUIs = 4;
   const inflated = collectionAccountingFrom(candidates, pending);
@@ -123,6 +124,81 @@ test('accounting rejects duplicate, unknown, or count-mismatched acceptance reco
   const productIds = ledger.verifiedNewIndependentRecords.map((r) => r.id);
   assert.equal(productIds.includes('daisyui:accordion'), false);
   assert.equal(productIds.includes('hyperui:application-modals'), false);
+});
+
+
+test('accounting rejects a verified count above a zero identity upper bound', () => {
+  const candidates = JSON.parse(readFileSync(join(ROOT, 'candidate-catalog.json'), 'utf8'));
+  const ledger = JSON.parse(readFileSync(join(ROOT, 'COLLECTION-LEDGER.json'), 'utf8'));
+  const over = structuredClone(ledger);
+  over.accounts.newCatalogConnectsThisLine = 23;
+  over.accounts.novelSourceIdentityUpperBound = 0;
+  assert.throws(() => collectionAccountingFrom(candidates, over), /exceeds novel source identity upper bound/);
+  const negative = structuredClone(ledger);
+  negative.accounts.newCatalogConnectsThisLine = 20;
+  assert.throws(() => collectionAccountingFrom(candidates, negative), /novel-source identity upper bound is invalid/);
+});
+
+test('accounting rejects explicit null records and accepts missing or empty records with a zero count', () => {
+  const candidates = JSON.parse(readFileSync(join(ROOT, 'candidate-catalog.json'), 'utf8'));
+  const ledger = JSON.parse(readFileSync(join(ROOT, 'COLLECTION-LEDGER.json'), 'utf8'));
+  const nulled = structuredClone(ledger);
+  nulled.verifiedNewIndependentRecords = null;
+  nulled.accounts.verifiedNewIndependentUIs = 0;
+  assert.throws(() => collectionAccountingFrom(candidates, nulled), /must not be null/);
+  const missing = structuredClone(ledger);
+  delete missing.verifiedNewIndependentRecords;
+  missing.accounts.verifiedNewIndependentUIs = 0;
+  const fromMissing = collectionAccountingFrom(candidates, missing);
+  assert.deepEqual(fromMissing.verifiedNewIndependentRecords, []);
+  assert.equal(fromMissing.verifiedNewIndependentUIs, 0);
+  const empty = structuredClone(ledger);
+  empty.verifiedNewIndependentRecords = [];
+  empty.accounts.verifiedNewIndependentUIs = 0;
+  const fromEmpty = collectionAccountingFrom(candidates, empty);
+  assert.deepEqual(fromEmpty.verifiedNewIndependentRecords, []);
+  assert.equal(fromEmpty.verifiedNewIndependentUIs, 0);
+  const badShape = structuredClone(ledger);
+  badShape.verifiedNewIndependentRecords = { id: 'mantine-ui:table-sort' };
+  assert.throws(() => collectionAccountingFrom(candidates, badShape), /must be an array/);
+});
+
+test('public consumers current fields match the limited countable ledger', () => {
+  const ledger = JSON.parse(readFileSync(join(ROOT, 'COLLECTION-LEDGER.json'), 'utf8'));
+  const catalog = JSON.parse(readFileSync(join(ROOT, 'candidate-catalog.json'), 'utf8'));
+  const readme = readFileSync(join(ROOT, 'README.md'), 'utf8');
+  const manifest = JSON.parse(readFileSync(join(ROOT, 'batches/mantine-20261111-j/manifest.json'), 'utf8'));
+  assert.equal(ledger.accounts.verifiedNewIndependentUIs, 3);
+  assert.equal(ledger.accounts.covers, 0);
+  assert.equal(ledger.accounts.browserVisualQA, 0);
+  assert.match(readme, /已核新增独立 UI 3/);
+  assert.doesNotMatch(readme, /已核新增独立 UI 0/);
+  assert.match(readme, /已核库存仍为 241/);
+  assert.match(readme, /封面 0/);
+  assert.match(readme, /真实浏览器整矩阵实测 0/);
+  assert.equal(manifest.items.length, 52);
+  for (const id of EXPECTED_IDS) {
+    const entry = catalog.find((x) => x.id === id);
+    const man = manifest.items.find((x) => x.id === id);
+    assert.ok(entry && man, id);
+    assert.equal(entry.browserVisualQA, 'not_run');
+    for (const gaps of [entry.gaps, man.gaps]) {
+      assert.match(gaps[0], /当时初筛记录/);
+      assert.match(gaps[0], /限定范围计入已核新增独立 UI/);
+      assert.match(gaps[0], /3695f76d56133051c9bd7bdacb05fddcfaf0c9d2/);
+      assert.doesNotMatch(gaps[0], /不能称为已核独立/);
+      const joined = gaps.join('\n');
+      assert.match(joined, /限定范围计入已核新增独立 UI/);
+      assert.doesNotMatch(joined, /不能称为已核独立/);
+      assert.doesNotMatch(joined, /也不是已核独立/);
+      assert.doesNotMatch(joined, /或已核独立/);
+    }
+  }
+  const otherManifest = manifest.items.filter((x) => !EXPECTED_IDS.includes(x.id));
+  assert.equal(otherManifest.length, 49);
+  for (const item of otherManifest) {
+    assert.match(item.gaps[0], /不能称为已核独立/);
+  }
 });
 
 test('accepted runtime inputs remain the frozen source bytes', () => {
@@ -133,6 +209,25 @@ test('accepted runtime inputs remain the frozen source bytes', () => {
     assert.deepEqual(live, frozen, rel);
     assert.deepEqual(live, source, rel);
   }
+  const liveManifest = JSON.parse(readFileSync(join(ROOT, 'batches/mantine-20261111-j/manifest.json'), 'utf8'));
+  const frozenManifest = JSON.parse(gitBlob('1237bcea229b24f8e4edf983fffecda95b6d58e7', 'apps/atlas-sample/batches/mantine-20261111-j/manifest.json').toString('utf8'));
+  assert.equal(liveManifest.itemCount, 52);
+  assert.equal(frozenManifest.itemCount, 52);
+  const changed = [];
+  for (let i = 0; i < frozenManifest.items.length; i++) {
+    const live = liveManifest.items[i];
+    const frozen = frozenManifest.items[i];
+    if (EXPECTED_IDS.includes(frozen.id)) {
+      const { gaps: liveGaps, ...liveRest } = live;
+      const { gaps: frozenGaps, ...frozenRest } = frozen;
+      assert.deepEqual(liveRest, frozenRest, frozen.id);
+      assert.notDeepEqual(liveGaps, frozenGaps, frozen.id);
+      changed.push(frozen.id);
+    } else {
+      assert.deepEqual(live, frozen, frozen.id);
+    }
+  }
+  assert.deepEqual(changed.sort(), [...EXPECTED_IDS].sort());
 });
 
 test('page export projects the named limited-countable records and leaves covers and visual QA at zero', async () => {
@@ -149,6 +244,19 @@ test('page export projects the named limited-countable records and leaves covers
     assert.notEqual(version.candidates, 241);
     const exportedLedger = JSON.parse(await readFile(join(out, 'COLLECTION-LEDGER.json'), 'utf8'));
     assert.deepEqual(exportedLedger.accounts, JSON.parse(readFileSync(join(ROOT, 'COLLECTION-LEDGER.json'), 'utf8')).accounts);
+    const exportedReadme = await readFile(join(out, 'README.md'), 'utf8');
+    assert.match(exportedReadme, /已核新增独立 UI 3/);
+    assert.doesNotMatch(exportedReadme, /已核新增独立 UI 0/);
+    const exportedCatalog = JSON.parse(await readFile(join(out, 'candidate-catalog.json'), 'utf8'));
+    const exportedManifest = JSON.parse(await readFile(join(out, 'batches/mantine-20261111-j/manifest.json'), 'utf8'));
+    for (const id of EXPECTED_IDS) {
+      const gaps = exportedCatalog.find((x) => x.id === id).gaps;
+      const manGaps = exportedManifest.items.find((x) => x.id === id).gaps;
+      assert.match(gaps[0], /限定范围计入已核新增独立 UI/);
+      assert.doesNotMatch(gaps[0], /不能称为已核独立/);
+      assert.match(manGaps[0], /限定范围计入已核新增独立 UI/);
+      assert.doesNotMatch(manGaps.join('\n'), /不能称为已核独立/);
+    }
     for (const rel of [
       'thumbnails/mantine-ui--table-sort.webp',
       'batches/mantine-20261111-j/table-sort/runtime.js',

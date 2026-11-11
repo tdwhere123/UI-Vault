@@ -12,7 +12,8 @@ function requiredString(record, key) {
 
 export function verifiedNewIndependentRecordsFrom(ledger) {
   const records = ledger?.verifiedNewIndependentRecords;
-  if (records == null) return [];
+  if (records === undefined) return [];
+  if (records === null) throw Error('verifiedNewIndependentRecords must not be null');
   if (!Array.isArray(records)) throw Error('verifiedNewIndependentRecords must be an array');
   const seen = new Set();
   for (const record of records) {
@@ -45,6 +46,12 @@ export function collectionAccountingFrom(candidates, ledger) {
   const verifiedNewIndependentUIs = verifiedNewIndependentRecords.length;
   if (ledger.accounts.verifiedNewIndependentUIs !== verifiedNewIndependentUIs) {
     throw Error('ledger verifiedNewIndependentUIs does not match named records');
+  }
+  if (!Number.isInteger(novelSourceIdentityUpperBound) || novelSourceIdentityUpperBound < 0) {
+    throw Error('ledger novel-source identity upper bound is invalid');
+  }
+  if (verifiedNewIndependentUIs < 0 || verifiedNewIndependentUIs > novelSourceIdentityUpperBound) {
+    throw Error('verifiedNewIndependentUIs exceeds novel source identity upper bound');
   }
   return {
     catalogRecordCount: candidates.length,
