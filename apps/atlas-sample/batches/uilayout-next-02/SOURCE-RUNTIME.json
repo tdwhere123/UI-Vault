@@ -1,0 +1,679 @@
+{
+  "batch": "uilayout-next-02",
+  "catalogItems": [
+    "uilayout:timeline-animation-index",
+    "uilayout:mac-genie-effect",
+    "uilayout:linear-modal-standalone-version",
+    "uilayout:image-reveal-image-reveal",
+    "uilayout:drawer-nested-vaul-drawer"
+  ],
+  "compoundLicenseAssertion": "MIT; ISC; 0BSD",
+  "rootLicense": {
+    "file": "LICENSE",
+    "spdx": "MIT",
+    "copyright": "Copyright (c) 2024 UI LAYOUT",
+    "sha256": "25d698c61ceea4d42107ef85ef37d4449f1169ca24c7ee288db434688071e1e3",
+    "evidence": "SOURCE-LICENSE.json and official https://github.com/ui-layouts/uilayouts/blob/88d827d7ec342917ca06f6894e5add65fabbe5d8/LICENSE",
+    "sourceZipLicenseNote": "The LICENSE file inside each source.zip is the same MIT body as the official frozen upstream LICENSE, plus one extra trailing newline (1067 vs 1066 bytes). The batch ./LICENSE file matches the official 1066-byte text (SHA-256 25d698c61ceea4d42107ef85ef37d4449f1169ca24c7ee288db434688071e1e3)."
+  },
+  "sourceZip": {
+    "path": "collections/pending/batch-001/uilayout-built-awaiting-qa/archives/uilayout-next-02/source.zip",
+    "sha256": "c18fc3480ff9874bf278c869132cb6f06f677dd972c263876e6ad453428dfb94",
+    "bytes": 133818,
+    "containsPortableLock": true,
+    "files": 49,
+    "selectedDemosOnlyInMainTsx": true,
+    "alsoPreservesUnselectedOriginalsAndSharedHelpers": true
+  },
+  "productionRuntime": {
+    "js": {
+      "path": "batches/uilayout-next-02/runtime.js",
+      "sha256": "409c88ded52e56367ec33577851ca09a17b9d565c6989bf36a7312c73470d273",
+      "bytes": 590152
+    },
+    "css": {
+      "path": "batches/uilayout-next-02/runtime.css",
+      "sha256": "6e4abb243774627bfc5837150868913958a299772c85fdb845edf3aad2050e05",
+      "bytes": 65780
+    }
+  },
+  "directImportsFromSelectedDemosAndSharedComponents": [
+    "react",
+    "react-dom",
+    "clsx",
+    "tailwind-merge",
+    "motion/react",
+    "html-to-image",
+    "lucide-react",
+    "vaul",
+    "@radix-ui/react-tooltip"
+  ],
+  "lockClosurePackages": [
+    {
+      "name": "@floating-ui/core",
+      "version": "1.8.0",
+      "spdxFromLock": "MIT",
+      "resolved": "https://registry.npmjs.org/@floating-ui/core/-/core-1.8.0.tgz",
+      "integrity": "sha512-0CIZ5itps/8x7BG8dEIhs53BvCUH2PCoogtakwRTut+Arm58sJooJ0AuZhLw2HJYIR5cMLNPBSS728sPho2khQ==",
+      "licenseFileInTarball": "LICENSE",
+      "licenseSha256": "0e4c9a9b6c71019cbbea3bdc20b01223110a9035700f9c960c8fcbf78c2325ce",
+      "licenseText": "official-tarball"
+    },
+    {
+      "name": "@floating-ui/dom",
+      "version": "1.8.0",
+      "spdxFromLock": "MIT",
+      "resolved": "https://registry.npmjs.org/@floating-ui/dom/-/dom-1.8.0.tgz",
+      "integrity": "sha512-yXSrzeHZBTZadLOlfyhCkJHNeLJnHRnRInwdZ40L7ZiaAtrBwoYlsDrX3v5zB1Utk7CLfzcOVnVVWoXEky7Ceg==",
+      "licenseFileInTarball": "LICENSE",
+      "licenseSha256": "0e4c9a9b6c71019cbbea3bdc20b01223110a9035700f9c960c8fcbf78c2325ce",
+      "licenseText": "official-tarball"
+    },
+    {
+      "name": "@floating-ui/react-dom",
+      "version": "2.1.9",
+      "spdxFromLock": "MIT",
+      "resolved": "https://registry.npmjs.org/@floating-ui/react-dom/-/react-dom-2.1.9.tgz",
+      "integrity": "sha512-JDjEFGCpImxDCA7JJKviA0M9+RtmJdj0m/NVU5IMgBK+AmZouAQQ7/+2GLH0GXXY0YMw9oXPB8hKdbPYg5QLYg==",
+      "licenseFileInTarball": "LICENSE",
+      "licenseSha256": "0e4c9a9b6c71019cbbea3bdc20b01223110a9035700f9c960c8fcbf78c2325ce",
+      "licenseText": "official-tarball"
+    },
+    {
+      "name": "@floating-ui/utils",
+      "version": "0.2.12",
+      "spdxFromLock": "MIT",
+      "resolved": "https://registry.npmjs.org/@floating-ui/utils/-/utils-0.2.12.tgz",
+      "integrity": "sha512-HpCo8tmWzLVad5s2d19EhAz5zqrrQ6s69qd6moPMQvkOuSwDT1YgRfWSVuc4ennqrgv3OHppiOGMQ7oC13yIww==",
+      "licenseFileInTarball": "LICENSE",
+      "licenseSha256": "0e4c9a9b6c71019cbbea3bdc20b01223110a9035700f9c960c8fcbf78c2325ce",
+      "licenseText": "official-tarball"
+    },
+    {
+      "name": "@radix-ui/primitive",
+      "version": "1.1.7",
+      "spdxFromLock": "MIT",
+      "resolved": "https://registry.npmjs.org/@radix-ui/primitive/-/primitive-1.1.7.tgz",
+      "integrity": "sha512-rqWnm76nYT8HoNNqEjpgJ7Pw/DrBj5iBTrmEPo6HTX5+VJyBNOqTdv4g89G63HuR5g0AaENoAcH7Is5fF2kZ8Q==",
+      "licenseFileInTarball": "LICENSE",
+      "licenseSha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+      "licenseText": "official-tarball"
+    },
+    {
+      "name": "@radix-ui/primitive",
+      "version": "1.2.0",
+      "spdxFromLock": "MIT",
+      "resolved": "https://registry.npmjs.org/@radix-ui/primitive/-/primitive-1.2.0.tgz",
+      "integrity": "sha512-KABY+VMIRPJL+Vyzv/335FEhXXD/xDv8BMb1kl48/aXJZMH0LtHCTx5ga5RnxaEP3nZHtmTLf1P9vanmFX46bw==",
+      "licenseFileInTarball": "LICENSE",
+      "licenseSha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+      "licenseText": "official-tarball"
+    },
+    {
+      "name": "@radix-ui/react-arrow",
+      "version": "1.1.15",
+      "spdxFromLock": "MIT",
+      "resolved": "https://registry.npmjs.org/@radix-ui/react-arrow/-/react-arrow-1.1.15.tgz",
+      "integrity": "sha512-v4zggRcjadnI+ClKDuijlQEW4tw3NoaeHc/PwpKnLoLLKNUG4InLegkstooLcRIUWCs+8L22dGURCVuFfOKfnA==",
+      "licenseFileInTarball": "LICENSE",
+      "licenseSha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+      "licenseText": "official-tarball"
+    },
+    {
+      "name": "@radix-ui/react-compose-refs",
+      "version": "1.1.5",
+      "spdxFromLock": "MIT",
+      "resolved": "https://registry.npmjs.org/@radix-ui/react-compose-refs/-/react-compose-refs-1.1.5.tgz",
+      "integrity": "sha512-+48PbAAbq3didjJxa+OaWY2ZwgAKsNiRGyeHKszblZMQ+kcpd9pAaT11cMkGEie0vsOi3QdeTE6d5Fe3Gn61kA==",
+      "licenseFileInTarball": "LICENSE",
+      "licenseSha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+      "licenseText": "official-tarball"
+    },
+    {
+      "name": "@radix-ui/react-context",
+      "version": "1.2.2",
+      "spdxFromLock": "MIT",
+      "resolved": "https://registry.npmjs.org/@radix-ui/react-context/-/react-context-1.2.2.tgz",
+      "integrity": "sha512-RHCUGwKHDr0hDGg4X7ma4JG4/+12qxw8rkh5QKdDldlCvtja6nUx1Ef/8HVrJze81lEsgLQlqjzjGNHantgnQA==",
+      "licenseFileInTarball": "LICENSE",
+      "licenseSha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+      "licenseText": "official-tarball"
+    },
+    {
+      "name": "@radix-ui/react-context",
+      "version": "1.3.0",
+      "spdxFromLock": "MIT",
+      "resolved": "https://registry.npmjs.org/@radix-ui/react-context/-/react-context-1.3.0.tgz",
+      "integrity": "sha512-v5AYEocMISkbJ+1fTXzZpiFv7NRr3D2WiYbLIKf+FkmJ8VkP6d503eV2n34MFussHXY1pcoq3yfJiQH77dc4Mg==",
+      "licenseFileInTarball": "LICENSE",
+      "licenseSha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+      "licenseText": "official-tarball"
+    },
+    {
+      "name": "@radix-ui/react-dialog",
+      "version": "1.3.1",
+      "spdxFromLock": "MIT",
+      "resolved": "https://registry.npmjs.org/@radix-ui/react-dialog/-/react-dialog-1.3.1.tgz",
+      "integrity": "sha512-+0E4qvVTwjAWra9sEhJ+9BTsvHE00zkUuNw1VGh7S+Gc13dfYk+S1PVQdchWDj+XYHhAai7Z7IpzXVDCGsDplg==",
+      "licenseFileInTarball": "LICENSE",
+      "licenseSha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+      "licenseText": "official-tarball"
+    },
+    {
+      "name": "@radix-ui/react-dismissable-layer",
+      "version": "1.1.19",
+      "spdxFromLock": "MIT",
+      "resolved": "https://registry.npmjs.org/@radix-ui/react-dismissable-layer/-/react-dismissable-layer-1.1.19.tgz",
+      "integrity": "sha512-8g4pfOL9HoKKLWGiypT+dphVqjFfmcXO5GBnhsG6zI+lxAx/8feQpr+1LSN8Re3hiZ+XkLNS4O9ztK11/LzQ6w==",
+      "licenseFileInTarball": "LICENSE",
+      "licenseSha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+      "licenseText": "official-tarball"
+    },
+    {
+      "name": "@radix-ui/react-dismissable-layer",
+      "version": "1.2.1",
+      "spdxFromLock": "MIT",
+      "resolved": "https://registry.npmjs.org/@radix-ui/react-dismissable-layer/-/react-dismissable-layer-1.2.1.tgz",
+      "integrity": "sha512-KIfDcAsx+oVylFZ4xryVKusJUrLLhTQmfnJW4kwk4Km5myvhHCrj04hnWWUC166+xD4DHdH8tQGylwYX1h6+Pg==",
+      "licenseFileInTarball": "LICENSE",
+      "licenseSha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+      "licenseText": "official-tarball"
+    },
+    {
+      "name": "@radix-ui/react-focus-guards",
+      "version": "1.2.0",
+      "spdxFromLock": "MIT",
+      "resolved": "https://registry.npmjs.org/@radix-ui/react-focus-guards/-/react-focus-guards-1.2.0.tgz",
+      "integrity": "sha512-MPm5R0iRGUDrDnPNxmLBkv+X7pN4XKzt+MbWJEuJQsH3NFH4omrbpXpucyYCCKTSt+na/ZxGhEWQrWTZ0285cA==",
+      "licenseFileInTarball": "LICENSE",
+      "licenseSha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+      "licenseText": "official-tarball"
+    },
+    {
+      "name": "@radix-ui/react-focus-scope",
+      "version": "1.3.1",
+      "spdxFromLock": "MIT",
+      "resolved": "https://registry.npmjs.org/@radix-ui/react-focus-scope/-/react-focus-scope-1.3.1.tgz",
+      "integrity": "sha512-ugeMhbXt4y5S2T1GnIqbWDKEN962PDwnX1fN0eKOOgf5f63Dh2mn8F1FUySlgW0iF6GiVsRF32DzuDIWTUyQJg==",
+      "licenseFileInTarball": "LICENSE",
+      "licenseSha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+      "licenseText": "official-tarball"
+    },
+    {
+      "name": "@radix-ui/react-id",
+      "version": "1.1.4",
+      "spdxFromLock": "MIT",
+      "resolved": "https://registry.npmjs.org/@radix-ui/react-id/-/react-id-1.1.4.tgz",
+      "integrity": "sha512-TMQp2llA+RYn7JcjnrMnz7wN4pcVttPZnRZo52PLQsoLVKzNlVwUeHmfePgTgRluXFvlD3GD5g5MOVVTJCO0qA==",
+      "licenseFileInTarball": "LICENSE",
+      "licenseSha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+      "licenseText": "official-tarball"
+    },
+    {
+      "name": "@radix-ui/react-popper",
+      "version": "1.3.7",
+      "spdxFromLock": "MIT",
+      "resolved": "https://registry.npmjs.org/@radix-ui/react-popper/-/react-popper-1.3.7.tgz",
+      "integrity": "sha512-UsJrrd7w4wuKKTdvd/DNERVlwSlUcyXzjhyDwBk+3aPOsCjOY6ZSbxuw8E6lZTjjfP8Cpd0J8VVkrYUWyGYXyg==",
+      "licenseFileInTarball": "LICENSE",
+      "licenseSha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+      "licenseText": "official-tarball"
+    },
+    {
+      "name": "@radix-ui/react-portal",
+      "version": "1.1.17",
+      "spdxFromLock": "MIT",
+      "resolved": "https://registry.npmjs.org/@radix-ui/react-portal/-/react-portal-1.1.17.tgz",
+      "integrity": "sha512-vKQLcWypUnwZVvfV7UkGahH2g6ySe8M8R+zYBwPrv5byZ9QAW6cQVvNKo7GgmD+p8aYb6D9JBuvy8/WhOno2wQ==",
+      "licenseFileInTarball": "LICENSE",
+      "licenseSha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+      "licenseText": "official-tarball"
+    },
+    {
+      "name": "@radix-ui/react-portal",
+      "version": "1.2.0",
+      "spdxFromLock": "MIT",
+      "resolved": "https://registry.npmjs.org/@radix-ui/react-portal/-/react-portal-1.2.0.tgz",
+      "integrity": "sha512-StX7xXnaRU41VvFtMm9zlhVGz8XF6GmWWTXftkQaY+tqVkbs/R9UmAp5mLzHHapk5hM9RMZQvO/3usyIP/g42g==",
+      "licenseFileInTarball": "LICENSE",
+      "licenseSha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+      "licenseText": "official-tarball"
+    },
+    {
+      "name": "@radix-ui/react-presence",
+      "version": "1.1.10",
+      "spdxFromLock": "MIT",
+      "resolved": "https://registry.npmjs.org/@radix-ui/react-presence/-/react-presence-1.1.10.tgz",
+      "integrity": "sha512-3wyzCQ6+ubRA+D4uv9m95JYLXxmOHp05qjrkjeA7uKHHtjpPggQzc6DAb0URl7j67oR0K2foO4ip27TiX037Bw==",
+      "licenseFileInTarball": "LICENSE",
+      "licenseSha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+      "licenseText": "official-tarball"
+    },
+    {
+      "name": "@radix-ui/react-presence",
+      "version": "1.1.11",
+      "spdxFromLock": "MIT",
+      "resolved": "https://registry.npmjs.org/@radix-ui/react-presence/-/react-presence-1.1.11.tgz",
+      "integrity": "sha512-Z7/atlkab36Z8hm+V8zYc79r0W+tiOB1o0tun1By94JyadkekLQmtEAnBSP9XKXBNQsStoStS4+gX10JpS5akA==",
+      "licenseFileInTarball": "LICENSE",
+      "licenseSha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+      "licenseText": "official-tarball"
+    },
+    {
+      "name": "@radix-ui/react-primitive",
+      "version": "2.1.10",
+      "spdxFromLock": "MIT",
+      "resolved": "https://registry.npmjs.org/@radix-ui/react-primitive/-/react-primitive-2.1.10.tgz",
+      "integrity": "sha512-MucOnzh6hR5mid6VpkbglRAMYMjKLqRnGBbjXkzjK52fuQDd1qbkx78a5P40mkcnVXJdEVxm26E9OPAiUq7nBg==",
+      "licenseFileInTarball": "LICENSE",
+      "licenseSha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+      "licenseText": "official-tarball"
+    },
+    {
+      "name": "@radix-ui/react-primitive",
+      "version": "2.2.0",
+      "spdxFromLock": "MIT",
+      "resolved": "https://registry.npmjs.org/@radix-ui/react-primitive/-/react-primitive-2.2.0.tgz",
+      "integrity": "sha512-HCTSPMNqv55Qk0IX4geJbpyXazmqulcimwuyjxTkKi29v+QZbG2Zho9BnbBq4YS2PF+KlNb2CXoLz66uUmblkg==",
+      "licenseFileInTarball": "LICENSE",
+      "licenseSha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+      "licenseText": "official-tarball"
+    },
+    {
+      "name": "@radix-ui/react-slot",
+      "version": "1.3.3",
+      "spdxFromLock": "MIT",
+      "resolved": "https://registry.npmjs.org/@radix-ui/react-slot/-/react-slot-1.3.3.tgz",
+      "integrity": "sha512-qx7oqnYbxnK9kYI9m317qmFmEgo6ywqWvbTogdj7cL9p3/yx4M48p7Rnw5z3H890cL/ow/EeWJsuTykeZVXP5Q==",
+      "licenseFileInTarball": "LICENSE",
+      "licenseSha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+      "licenseText": "official-tarball"
+    },
+    {
+      "name": "@radix-ui/react-slot",
+      "version": "1.5.0",
+      "spdxFromLock": "MIT",
+      "resolved": "https://registry.npmjs.org/@radix-ui/react-slot/-/react-slot-1.5.0.tgz",
+      "integrity": "sha512-tyYd9ddPXAysAbdbD9eYxgwpCSv6f3PncqVSNKQFSR5lcJVLz3cb/pANDoYrLiHBpXv7skortyUgGUWsYuPPFQ==",
+      "licenseFileInTarball": "LICENSE",
+      "licenseSha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+      "licenseText": "official-tarball"
+    },
+    {
+      "name": "@radix-ui/react-tooltip",
+      "version": "1.2.16",
+      "spdxFromLock": "MIT",
+      "resolved": "https://registry.npmjs.org/@radix-ui/react-tooltip/-/react-tooltip-1.2.16.tgz",
+      "integrity": "sha512-6EamKFRRnlpdadndbZ6LMwycfwkwPte1B42hs6QA0gYhjaOKqW4PZ4pjaW9UrlDX5eVt/OjncE7BFTPL5nmZhg==",
+      "licenseFileInTarball": "LICENSE",
+      "licenseSha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+      "licenseText": "official-tarball"
+    },
+    {
+      "name": "@radix-ui/react-use-callback-ref",
+      "version": "1.1.4",
+      "spdxFromLock": "MIT",
+      "resolved": "https://registry.npmjs.org/@radix-ui/react-use-callback-ref/-/react-use-callback-ref-1.1.4.tgz",
+      "integrity": "sha512-R6OUY2e2fA6Yn6s+VSx5KBV6Nx8LQEhu+cz7LCej18rQ1HLyg9PSC9jP/ZNx0o6FAIK9c0F1kHylzSxKsdlkrQ==",
+      "licenseFileInTarball": "LICENSE",
+      "licenseSha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+      "licenseText": "official-tarball"
+    },
+    {
+      "name": "@radix-ui/react-use-callback-ref",
+      "version": "1.1.5",
+      "spdxFromLock": "MIT",
+      "resolved": "https://registry.npmjs.org/@radix-ui/react-use-callback-ref/-/react-use-callback-ref-1.1.5.tgz",
+      "integrity": "sha512-Y5GBf4NKeADoXI1geiMlMuMoURT3k9MizzzKhGb/m55H94aGigZ01PIpkvsO6lML13BA6XYAXSJ6gza7vTn5nw==",
+      "licenseFileInTarball": "LICENSE",
+      "licenseSha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+      "licenseText": "official-tarball"
+    },
+    {
+      "name": "@radix-ui/react-use-controllable-state",
+      "version": "1.2.6",
+      "spdxFromLock": "MIT",
+      "resolved": "https://registry.npmjs.org/@radix-ui/react-use-controllable-state/-/react-use-controllable-state-1.2.6.tgz",
+      "integrity": "sha512-uEQJGT97ZA/TgP/Hydw47lHu+/vQj6z/0jA+WeTbK1o9Rx45GImjpD0tc3W5ad3D6XTSR6e1yEO0FvGq6WQfVQ==",
+      "licenseFileInTarball": "LICENSE",
+      "licenseSha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+      "licenseText": "official-tarball"
+    },
+    {
+      "name": "@radix-ui/react-use-controllable-state",
+      "version": "1.3.0",
+      "spdxFromLock": "MIT",
+      "resolved": "https://registry.npmjs.org/@radix-ui/react-use-controllable-state/-/react-use-controllable-state-1.3.0.tgz",
+      "integrity": "sha512-TAcBI7bw2ljYCbv4+zuTSd6zICu8pRt6SDN2vJ/Z06K2MXh6I9WYFe/A9ovlFDtR5HVHGm5iDxDoABm/++dbKg==",
+      "licenseFileInTarball": "LICENSE",
+      "licenseSha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+      "licenseText": "official-tarball"
+    },
+    {
+      "name": "@radix-ui/react-use-effect-event",
+      "version": "0.0.5",
+      "spdxFromLock": "MIT",
+      "resolved": "https://registry.npmjs.org/@radix-ui/react-use-effect-event/-/react-use-effect-event-0.0.5.tgz",
+      "integrity": "sha512-7cshFL8HGS/7HEiHH+9kL9HBwp2sa9yX18Knwek6KYWmXwM7pegMgta2AXMQKI+rq3JnfSj9x8wYqFMTdG1Jgg==",
+      "licenseFileInTarball": "LICENSE",
+      "licenseSha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+      "licenseText": "official-tarball"
+    },
+    {
+      "name": "@radix-ui/react-use-layout-effect",
+      "version": "1.1.4",
+      "spdxFromLock": "MIT",
+      "resolved": "https://registry.npmjs.org/@radix-ui/react-use-layout-effect/-/react-use-layout-effect-1.1.4.tgz",
+      "integrity": "sha512-K20DkRkUwDnxEYMBPcg3Y6voLkEy5p5QQmszZgLngKKiC7dzBR/aEuK3w1qlx2JWDUNH6FluahYdgR3BP+QbYw==",
+      "licenseFileInTarball": "LICENSE",
+      "licenseSha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+      "licenseText": "official-tarball"
+    },
+    {
+      "name": "@radix-ui/react-use-rect",
+      "version": "1.1.4",
+      "spdxFromLock": "MIT",
+      "resolved": "https://registry.npmjs.org/@radix-ui/react-use-rect/-/react-use-rect-1.1.4.tgz",
+      "integrity": "sha512-cSOCh6JlkmfjLyNcLiu2nB4v+nm+dkZ+Q5KHWk/soo4U7ZLiEQFKHK9/YmtBHjfCEaU43IBKQOc4/uJmCaiCTQ==",
+      "licenseFileInTarball": "LICENSE",
+      "licenseSha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+      "licenseText": "official-tarball"
+    },
+    {
+      "name": "@radix-ui/react-use-size",
+      "version": "1.1.4",
+      "spdxFromLock": "MIT",
+      "resolved": "https://registry.npmjs.org/@radix-ui/react-use-size/-/react-use-size-1.1.4.tgz",
+      "integrity": "sha512-D3anSY15EJoxrihpsXI6SMrmmonnQtR2ni7arO+Lfdg3O95b9hNXxONk8jA5C8ANdF/h5HMAxejgs8PWJ6rlhw==",
+      "licenseFileInTarball": "LICENSE",
+      "licenseSha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+      "licenseText": "official-tarball"
+    },
+    {
+      "name": "@radix-ui/react-visually-hidden",
+      "version": "1.2.11",
+      "spdxFromLock": "MIT",
+      "resolved": "https://registry.npmjs.org/@radix-ui/react-visually-hidden/-/react-visually-hidden-1.2.11.tgz",
+      "integrity": "sha512-NFS86RYYZb4/exihaESBGOpMJFz8MGLAfu3mOBSGByVnVPC9JPASfYubxd/8KbkQK0sYAv8lVQDEQukDX/qXvQ==",
+      "licenseFileInTarball": "LICENSE",
+      "licenseSha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+      "licenseText": "official-tarball"
+    },
+    {
+      "name": "@radix-ui/rect",
+      "version": "1.1.3",
+      "spdxFromLock": "MIT",
+      "resolved": "https://registry.npmjs.org/@radix-ui/rect/-/rect-1.1.3.tgz",
+      "integrity": "sha512-JtyZR+mqgBibTo8xea3B6ZRmzZiM/YeVBtUkas6zMuXjAlfIFIW2FgqeM9eLyvEaYX66vr6DJMK+4U6LV0KhNw==",
+      "licenseFileInTarball": "LICENSE",
+      "licenseSha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+      "licenseText": "official-tarball"
+    },
+    {
+      "name": "aria-hidden",
+      "version": "1.2.6",
+      "spdxFromLock": "MIT",
+      "resolved": "https://registry.npmjs.org/aria-hidden/-/aria-hidden-1.2.6.tgz",
+      "integrity": "sha512-ik3ZgC9dY/lYVVM++OISsaYDeg1tb0VtP5uL3ouh1koGOaUMDPpbFIei4JkFimWUFPn90sbMNMXQAIVOlnYKJA==",
+      "licenseFileInTarball": "LICENSE",
+      "licenseSha256": "30f0cfddf483d1128e3610205020f2041a6c5e837aa999e0aa82e5576187d4a9",
+      "licenseText": "official-tarball"
+    },
+    {
+      "name": "clsx",
+      "version": "2.1.1",
+      "spdxFromLock": "MIT",
+      "resolved": "https://registry.npmjs.org/clsx/-/clsx-2.1.1.tgz",
+      "integrity": "sha512-eYm0QWBtUrBWZWG0d386OGAw16Z995PiOVo2B7bjWSbHedGl5e0ZWaq65kOGgUSNesEIDkB9ISbTg/JK9dhCZA==",
+      "licenseFileInTarball": "license",
+      "licenseSha256": "9a9edad7baae52622bddf3c15b2ef8a33d2c89f2d25408ad13e8a7481c6b0c97",
+      "licenseText": "official-tarball"
+    },
+    {
+      "name": "detect-node-es",
+      "version": "1.1.0",
+      "spdxFromLock": "MIT",
+      "resolved": "https://registry.npmjs.org/detect-node-es/-/detect-node-es-1.1.0.tgz",
+      "integrity": "sha512-ypdmJU/TbBby2Dxibuv7ZLW3Bs1QEmM7nHjEANfohJLvE0XVujisn1qPJcZxg+qDucsr+bP6fLD1rPS3AhJ7EQ==",
+      "licenseFileInTarball": "LICENSE",
+      "licenseSha256": "54b32293ea560d22cd9b62af9b2cda1a030d910a48c6601d227c5ff2338d95f8",
+      "licenseText": "official-tarball"
+    },
+    {
+      "name": "framer-motion",
+      "version": "14.10.1",
+      "spdxFromLock": "MIT",
+      "resolved": "https://registry.npmjs.org/framer-motion/-/framer-motion-14.10.1.tgz",
+      "integrity": "sha512-hT8WLczAcreOHG4EHymMtATztwUc3al1/88/stal3tpxYkMefGNzIPHHgFFHW3iLnrNY36BrKKJDuT2V7o8Tfw==",
+      "licenseFileInTarball": "LICENSE.md",
+      "licenseSha256": "5ff46083b88563822b0560dd6221ab89d2f74bc97a52d4c97a75020fd62c6f32",
+      "licenseText": "official-tarball"
+    },
+    {
+      "name": "get-nonce",
+      "version": "1.0.1",
+      "spdxFromLock": "MIT",
+      "resolved": "https://registry.npmjs.org/get-nonce/-/get-nonce-1.0.1.tgz",
+      "integrity": "sha512-FJhYRoDaiatfEkUK8HKlicmu/3SGFD51q3itKDGoSTysQJBnfOcxU5GxnhE1E6soB76MbT0MBtnKJuXyAx+96Q==",
+      "licenseFileInTarball": "LICENSE",
+      "licenseSha256": "acf3b087b348d2f2e731b9d4131af185aad694c1204ce14a46909483fd42da05",
+      "licenseText": "official-tarball"
+    },
+    {
+      "name": "html-to-image",
+      "version": "1.11.13",
+      "spdxFromLock": "MIT",
+      "resolved": "https://registry.npmjs.org/html-to-image/-/html-to-image-1.11.13.tgz",
+      "integrity": "sha512-cuOPoI7WApyhBElTTb9oqsawRvZ0rHhaHwghRLlTuffoD1B2aDemlCruLeZrUIIdvG7gs9xeELEPm6PhuASqrg==",
+      "licenseFileInTarball": "LICENSE",
+      "licenseSha256": "9fe73723f7a9e91057f73aafc9b6a3c3b2174db2b3ddc0a3a6a8ddf2bad68e37",
+      "licenseText": "official-tarball"
+    },
+    {
+      "name": "lucide-react",
+      "version": "1.70.0",
+      "spdxFromLock": "ISC",
+      "resolved": "https://registry.npmjs.org/lucide-react/-/lucide-react-1.70.0.tgz",
+      "integrity": "sha512-gCTPPN1MlQUBtUgdsUv+0CAUj+X8hifRUiRBw4E5v7lvDIOIpx0EZezdGQMSimS8pKA6esvullJub4GYr0mCHA==",
+      "licenseFileInTarball": "LICENSE",
+      "licenseSha256": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57",
+      "licenseText": "official-tarball"
+    },
+    {
+      "name": "motion",
+      "version": "14.10.1",
+      "spdxFromLock": "MIT",
+      "resolved": "https://registry.npmjs.org/motion/-/motion-14.10.1.tgz",
+      "integrity": "sha512-CRlxgrRmG5SNu5jxyYmiw3Oo6IrPq8xhQ0EmOm6WS6tx956G6O4WqVBA8ovrIwt4Sb/A9M0j2T2Vca7ze5PkRQ==",
+      "licenseFileInTarball": "LICENSE.md",
+      "licenseSha256": "1bf0dc3f7727723e5a032ed12164a47cf92c05204cb1a3485f123c24e2833ed1",
+      "licenseText": "official-tarball"
+    },
+    {
+      "name": "motion-dom",
+      "version": "14.10.1",
+      "spdxFromLock": "MIT",
+      "resolved": "https://registry.npmjs.org/motion-dom/-/motion-dom-14.10.1.tgz",
+      "integrity": "sha512-NzVzM7y3JJl3rYlVN4yM6kbziab/tHNBEV6gqOoAQIg8npHlIMhW2oPnzr0HkP+rR8xMoiX9+zSZ4BLaVuJadw==",
+      "licenseFileInTarball": "LICENSE.md",
+      "licenseSha256": "1bf0dc3f7727723e5a032ed12164a47cf92c05204cb1a3485f123c24e2833ed1",
+      "licenseText": "official-tarball"
+    },
+    {
+      "name": "motion-utils",
+      "version": "14.7.0",
+      "spdxFromLock": "MIT",
+      "resolved": "https://registry.npmjs.org/motion-utils/-/motion-utils-14.7.0.tgz",
+      "integrity": "sha512-woO0/Nb7ys75f94fjvQi/6leiHGvZUYkeHUPEZ3vxsV+9OpEVhkxp01x8MlRwX0zt31EqgXsKDAoBoJLC148Tw==",
+      "licenseFileInTarball": "LICENSE.md",
+      "licenseSha256": "1bf0dc3f7727723e5a032ed12164a47cf92c05204cb1a3485f123c24e2833ed1",
+      "licenseText": "official-tarball"
+    },
+    {
+      "name": "react",
+      "version": "19.3.0",
+      "spdxFromLock": "MIT",
+      "resolved": "https://registry.npmjs.org/react/-/react-19.3.0.tgz",
+      "integrity": "sha512-E8LUcbtBWt20bbl2YoHfx4ZDBdxVTfOKtCZn9cDSJ4l6/nuoApcpIBcj47t2wZoVX8g2ZHuMHbiShgCR1T5Sog==",
+      "licenseFileInTarball": "LICENSE",
+      "licenseSha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+      "licenseText": "official-tarball"
+    },
+    {
+      "name": "react-dom",
+      "version": "19.3.0",
+      "spdxFromLock": "MIT",
+      "resolved": "https://registry.npmjs.org/react-dom/-/react-dom-19.3.0.tgz",
+      "integrity": "sha512-JDk8dgif51OjFoDE70+OT9ICyYr+69HlmihNwp1+Nsfbna3t5sIiCa9ZJktDmQ4/1b/rn26hIAR2uYXDMr5r0Q==",
+      "licenseFileInTarball": "LICENSE",
+      "licenseSha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+      "licenseText": "official-tarball"
+    },
+    {
+      "name": "react-remove-scroll",
+      "version": "2.7.2",
+      "spdxFromLock": "MIT",
+      "resolved": "https://registry.npmjs.org/react-remove-scroll/-/react-remove-scroll-2.7.2.tgz",
+      "integrity": "sha512-Iqb9NjCCTt6Hf+vOdNIZGdTiH1QSqr27H/Ek9sv/a97gfueI/5h1s3yRi1nngzMUaOOToin5dI1dXKdXiF+u0Q==",
+      "licenseFileInTarball": "LICENSE",
+      "licenseSha256": "30f0cfddf483d1128e3610205020f2041a6c5e837aa999e0aa82e5576187d4a9",
+      "licenseText": "official-tarball"
+    },
+    {
+      "name": "react-remove-scroll-bar",
+      "version": "2.3.8",
+      "spdxFromLock": "MIT",
+      "resolved": "https://registry.npmjs.org/react-remove-scroll-bar/-/react-remove-scroll-bar-2.3.8.tgz",
+      "integrity": "sha512-9r+yi9+mgU33AKcj6IbT9oRCO78WriSj6t/cF8DWBZJ9aOGPOTEDvdUDz1FwKim7QXWwmHqtdHnRJfhAxEG46Q==",
+      "licenseFileInTarball": null,
+      "licenseSha256": null,
+      "licenseText": "Unknown-missing-from-tarball"
+    },
+    {
+      "name": "react-style-singleton",
+      "version": "2.2.3",
+      "spdxFromLock": "MIT",
+      "resolved": "https://registry.npmjs.org/react-style-singleton/-/react-style-singleton-2.2.3.tgz",
+      "integrity": "sha512-b6jSvxvVnyptAiLjbkWLE/lOnR4lfTtDAl+eUC7RZy+QQWc6wRzIV2CE6xBuMmDxc2qIihtDCZD5NPOFl7fRBQ==",
+      "licenseFileInTarball": "LICENSE",
+      "licenseSha256": "30f0cfddf483d1128e3610205020f2041a6c5e837aa999e0aa82e5576187d4a9",
+      "licenseText": "official-tarball"
+    },
+    {
+      "name": "scheduler",
+      "version": "0.28.0",
+      "spdxFromLock": "MIT",
+      "resolved": "https://registry.npmjs.org/scheduler/-/scheduler-0.28.0.tgz",
+      "integrity": "sha512-juorfCmIkIw8tT+p5BXSm6PJjQF/ycEYmKyzURCIt/RaZIhL+PulbQ9Yu2z1HdOJDdqDTlxA1+xKBmHXJsczAw==",
+      "licenseFileInTarball": "LICENSE",
+      "licenseSha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+      "licenseText": "official-tarball"
+    },
+    {
+      "name": "tailwind-merge",
+      "version": "3.7.0",
+      "spdxFromLock": "MIT",
+      "resolved": "https://registry.npmjs.org/tailwind-merge/-/tailwind-merge-3.7.0.tgz",
+      "integrity": "sha512-XPPUyAc+cvspz3lHTcR/QgPfW2A0lv/xQNIjX3HGhLR+Nq2lHaLq5MtTesHn8GUr3W3DguT2KT5x3NVgRtYwmA==",
+      "licenseFileInTarball": "LICENSE.md",
+      "licenseSha256": "d4c70c7ce38cea8778f0aed3fc0bef0a9dbd27f13bd8b6773cbd6d37941971e5",
+      "licenseText": "official-tarball"
+    },
+    {
+      "name": "tslib",
+      "version": "2.9.1",
+      "spdxFromLock": "0BSD",
+      "resolved": "https://registry.npmjs.org/tslib/-/tslib-2.9.1.tgz",
+      "integrity": "sha512-a4Ux9VKuIMHsOS7ENbEq6hK2ZGYIT27Rtl0E4eD9KqwxhKiQeMZE/9xb3IdYwWaSOyIBQLExhQgXDTYoiCxnWA==",
+      "licenseFileInTarball": "LICENSE.txt",
+      "licenseSha256": "210b19e543130388c68654b7497e967119ce17145f66ab7d85688fbd70f08751",
+      "licenseText": "official-tarball"
+    },
+    {
+      "name": "use-callback-ref",
+      "version": "1.3.3",
+      "spdxFromLock": "MIT",
+      "resolved": "https://registry.npmjs.org/use-callback-ref/-/use-callback-ref-1.3.3.tgz",
+      "integrity": "sha512-jQL3lRnocaFtu3V00JToYz/4QkNWswxijDaCVNZRiRTO3HQDLsdu1ZtmIUvV4yPp+rvWm5j0y0TG/S61cuijTg==",
+      "licenseFileInTarball": "LICENSE",
+      "licenseSha256": "30f0cfddf483d1128e3610205020f2041a6c5e837aa999e0aa82e5576187d4a9",
+      "licenseText": "official-tarball"
+    },
+    {
+      "name": "use-sidecar",
+      "version": "1.1.3",
+      "spdxFromLock": "MIT",
+      "resolved": "https://registry.npmjs.org/use-sidecar/-/use-sidecar-1.1.3.tgz",
+      "integrity": "sha512-Fedw0aZvkhynoPYlA5WXrMCAMm+nSWdZt6lzJQ7Ok8S6Q+VsHmHpRWndVRJ8Be0ZbkfPc5LRYH+5XrzXcEeLRQ==",
+      "licenseFileInTarball": "LICENSE",
+      "licenseSha256": "30f0cfddf483d1128e3610205020f2041a6c5e837aa999e0aa82e5576187d4a9",
+      "licenseText": "official-tarball"
+    },
+    {
+      "name": "vaul",
+      "version": "1.1.2",
+      "spdxFromLock": "MIT",
+      "resolved": "https://registry.npmjs.org/vaul/-/vaul-1.1.2.tgz",
+      "integrity": "sha512-ZFkClGpWyI2WUQjdLJ/BaGuV6AVQiJ3uELGk3OYtP+B6yCO7Cmn9vPFXVJkRaGkOJu3m8bQMgtyzNHixULceQA==",
+      "licenseFileInTarball": "LICENSE.md",
+      "licenseSha256": "b09b9ccf866cc09b502d9cf4679e2461beb1469709ea0c6a30009766e10b3acf",
+      "licenseText": "official-tarball"
+    }
+  ],
+  "stylesheetToolchain": {
+    "name": "tailwindcss",
+    "version": "4.3.3",
+    "spdxFromLock": "MIT",
+    "resolved": "https://registry.npmjs.org/tailwindcss/-/tailwindcss-4.3.3.tgz",
+    "integrity": "sha512-gOhV3P7ufE62QDGg1zVaTgCR+EtPv92k2nIhVcVKcLmxT1sUBsQGhnZj175j+MqRt4zLF7ic+sCYjfhxMxj7YQ==",
+    "licenseFileInTarball": "LICENSE",
+    "licenseSha256": "60e0b68c0f35c078eef3a5d29419d0b03ff84ec1df9c3f9d6e39a519a5ae7985",
+    "licenseText": "official-tarball",
+    "role": "compiled-stylesheet-toolchain"
+  },
+  "media": {
+    "productionRuntime": {
+      "unsplash": "absent",
+      "fonts.gstatic.com": "absent",
+      "noise.gif": "absent",
+      "macos.jpg / macicon.png files": "absent",
+      "classification": "Preview runtimes embed locally authored geometric SVG data URIs (identical landscape template, different hsl hues) in place of upstream remote photos and mac desktop/icon paths. These SVGs are self-made decorations, not the original photographs or mac assets, and are not a fidelity restore. Outgoing https links in the demos (docs, social, pro.ui-layouts.com, apple.com) are text references, not packaged media."
+    },
+    "adaptedDemosInSourceZip": {
+      "remotePhotosAndMacRaster": "replaced with the same family of self-made SVG data URIs",
+      "timelineNotoFireGif": "replaced with a plain text decorative star (✦), not the original artwork",
+      "classification": "self-made"
+    },
+    "preservedUpstreamOriginalsInSourceZip": {
+      "stillContain": "Unsplash photo URLs, fonts.gstatic.com Noto emoji GIF URL, /macos.jpg and /macicon.png paths",
+      "packagedRasterFiles": "none of those remote/path assets are stored as files in the zip or batch",
+      "classification": "upstream source text references retained; media rights for those photographs/GIF/raster files are not asserted here and they are not used by the production preview",
+      "footerLogo": "footers/animated-logo-footer.tsx keeps original inline SVG path letterforms from the UI Layouts source (upstream, MIT), not a replacement graphic"
+    },
+    "unusedSourceHelper": {
+      "src/lib/utils.ts": "contains remote og.jpg URLs on ui-layouts.com; those strings are not present in the production runtimes (not a preview asset). Rights not assessed."
+    },
+    "sharedCssSwapyUtilities": "Production CSS in all three batches contains Tailwind-generated [data-swapy-dragging] utilities from the shared stylesheet. That is not the swapy JavaScript library. The GPL-3.0 swapy package is in the next-01 JavaScript runtime only."
+  },
+  "compileRecipe": {
+    "recipePresent": true,
+    "sourceZipContains": [
+      "package.json",
+      "package-lock.json (lockfileVersion 3)",
+      "vite.config.ts",
+      "build script: vite build"
+    ],
+    "documentedBuild": "npm ci && npm run build",
+    "lockHasNoFileOrWorkspaceRefs": true,
+    "lockSha256": "e9d29d5bbb8db0d7a5022fa63fa76b4c2f19e8e7c6fb9453e7e3558f7a67c8be",
+    "cleanRebuildThisPass": false,
+    "feasibility": "The frozen zip already has a portable exact npm lock and Vite 8.3.1 build entry, so the compile recipe can be restored with npm ci && npm run build from that zip. This pass did not repeat a clean install or rebuild, and did not reconstruct the full devDependency license set (vite, typescript, tailwind toolchain natives, rolldown bindings, etc.).",
+    "currentRuntimeMayDiffer": "Each zip also has closure-build.log sizes for an earlier successful isolated build. Later preview-only patches exist in the atlas batch (uilayout-next-02 LOAD-FIX-NOTES / genie-effect patch; uilayout-next-03 raws-color-picker patch). A clean rebuild from the zip therefore is not claimed to be byte-identical to the current production runtime.js."
+  },
+  "remainingUnknown": [
+    "Full license text for react-remove-scroll-bar@2.3.8 (next-02 and next-03 closures only): missing from the published tarball and no matching git tag was found.",
+    "DevDependency license texts for a clean rebuild are not included.",
+    "Whether every lock-closure package is actually emitted into the minified runtime (tree-shaking) was not byte-proven for each transitive; the notices cover the evidenced import graph plus the lock closure, not a reconstructed module list from the minified bundle.",
+    "Browser visual and interaction acceptance remains unverified."
+  ]
+}

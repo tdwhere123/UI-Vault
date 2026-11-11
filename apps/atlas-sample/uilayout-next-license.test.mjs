@@ -63,17 +63,73 @@ test('uilayout-next-01/02/03 LICENSE files are the same verified original text',
  }
 });
 
-test('catalog MIT assertions for these items now point at the verified frozen LICENSE',()=>{
+const COMPOUND={
+ 'uilayout:drag-drag-items':'MIT; GPL-3.0; 0BSD',
+ 'uilayout:swapy-swapy-handle':'MIT; GPL-3.0; 0BSD',
+ 'uilayout:scroll-animation-sticky-hero-scroll':'MIT; GPL-3.0; 0BSD',
+ 'uilayout:scroll-animation-repeat-scroll':'MIT; GPL-3.0; 0BSD',
+ 'uilayout:timeline-animation-index':'MIT; ISC; 0BSD',
+ 'uilayout:mac-genie-effect':'MIT; ISC; 0BSD',
+ 'uilayout:linear-modal-standalone-version':'MIT; ISC; 0BSD',
+ 'uilayout:image-reveal-image-reveal':'MIT; ISC; 0BSD',
+ 'uilayout:drawer-nested-vaul-drawer':'MIT; ISC; 0BSD',
+ 'uilayout:drawer-responsive-header':'MIT; ISC; Apache-2.0; 0BSD',
+ 'uilayout:footers-animated-logo-footer':'MIT; ISC; Apache-2.0; 0BSD',
+ 'uilayout:card-product-card4':'MIT; ISC; Apache-2.0; 0BSD',
+ 'uilayout:color-picker-raws-color-picker':'MIT; ISC; Apache-2.0; 0BSD',
+};
+
+test('catalog root evidence stays on the frozen LICENSE, and license lists verified runtime SPDX',()=>{
  const catalog=JSON.parse(readFileSync(join(root,'candidate-catalog.json'),'utf8'));
  for(const id of IDS){
   const item=catalog.find(x=>x.id===id);
   assert.ok(item,id);
-  assert.equal(item.license,'MIT');
+  assert.equal(item.license,COMPOUND[id],id);
   assert.equal(item.repository,REPO);
   assert.equal(item.revision,REVISION);
   assert.equal(item.licenseEvidence?.url,LICENSE_URL);
   assert.equal(item.licenseEvidence?.sha256,EXPECTED_SHA);
-  assert.match(item.licenseEvidence?.scope||'',/Root original LICENSE only/);
+  assert.match(item.licenseEvidence?.scope||'',/Root original UI Layouts LICENSE only/);
+  assert.match(item.licenseEvidence?.scope||'',/does not make the whole bundle complete/);
   assert.match(item.upstream,new RegExp(`${REVISION}/apps/ui-layout/registry/components/`));
+ }
+});
+
+test('runtime notices include official tarball texts and do not treat a root LICENSE as completeness',()=>{
+ const n1=readFileSync(join(root,'batches/uilayout-next-01/THIRD_PARTY_NOTICES.txt'),'utf8');
+ const n2=readFileSync(join(root,'batches/uilayout-next-02/THIRD_PARTY_NOTICES.txt'),'utf8');
+ const n3=readFileSync(join(root,'batches/uilayout-next-03/THIRD_PARTY_NOTICES.txt'),'utf8');
+ assert.match(n1,/GNU GENERAL PUBLIC LICENSE/);
+ assert.match(n1,/swapy@1\.0\.5/);
+ assert.doesNotMatch(n2,/swapy@1\.0\.5/);
+ assert.doesNotMatch(n3,/swapy@1\.0\.5/);
+ assert.match(n2,/lucide-react@1\.70\.0/);
+ assert.match(n3,/lucide-react@1\.70\.0/);
+ assert.match(n3,/class-variance-authority@0\.7\.1/);
+ assert.doesNotMatch(n1,/class-variance-authority@0\.7\.1/);
+ assert.doesNotMatch(n2,/class-variance-authority@0\.7\.1/);
+ assert.match(n2,/react-remove-scroll-bar@2\.3\.8/);
+ assert.match(n2,/License text: Unknown for this exact published tarball/);
+ assert.doesNotMatch(n1,/react-remove-scroll-bar@2\.3\.8/);
+ const ev=JSON.parse(readFileSync(join(root,'batches/uilayout-next-01/SOURCE-RUNTIME.json'),'utf8'));
+ const swapy=ev.lockClosurePackages.find(x=>x.name==='swapy');
+ assert.equal(swapy.version,'1.0.5');
+ assert.equal(swapy.spdxFromLock,'GPL-3.0');
+ assert.equal(swapy.licenseText,'official-tarball');
+ assert.equal(typeof swapy.licenseSha256,'string');
+ assert.equal(swapy.licenseSha256.length,64);
+ assert.match(n1,new RegExp(swapy.licenseSha256));
+});
+
+test('production runtimes do not load upstream remote photos, the Noto GIF, or noise.gif',()=>{
+ for(const batch of BATCHES){
+  const js=readFileSync(join(root,'batches',batch,'runtime.js'),'utf8');
+  const css=readFileSync(join(root,'batches',batch,'runtime.css'),'utf8');
+  const all=js+css;
+  assert.equal(all.includes('unsplash'),false,batch);
+  assert.equal(all.includes('fonts.gstatic'),false,batch);
+  assert.equal(all.includes('noise.gif'),false,batch);
+  assert.equal(all.includes('macos.jpg'),false,batch);
+  assert.match(js,/data:image\/svg\+xml/);
  }
 });
