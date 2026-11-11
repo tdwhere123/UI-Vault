@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-Hans" class="font-sans antialiased">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>上传进度通知</title>
+  <link rel="stylesheet" href="runtime.css">
+</head>
+<body class="bg-background" data-demo="notification-upload">
+<div class="flex items-center justify-center p-8 py-40 bg-background lg:py-56"><!-- Copy Start --><!-- 
+// Make sure to change  "open: false",  to  open: true. On the z-data="{}".
+//
+//Programmatic usage:
+//
+// window.dispatchEvent(new CustomEvent('notify', {
+//  detail: { type:'success', title:'Saved', message:'All good', timeout: 4000 }
+// }))
+--><div class="w-full max-w-xl mx-auto" x-data="{
+      toast: { open:true, name:'design_assets.zip', size:'42 MB', progress:0, state:'idle', // idle | uploading | paused | done | error
+        timer:null, link:'#' },
+      show(detail={}){
+        // initialize
+        this.reset();
+        this.toast.name = detail.name || this.toast.name;
+        this.toast.size = detail.size || this.toast.size;
+        this.toast.link = detail.link || this.toast.link;
+        this.toast.open = true; this.toast.state='uploading';
+        this.tick();
+      },
+      tick(){
+        if (this.toast.timer) clearInterval(this.toast.timer);
+        this.toast.timer = setInterval(()=&gt;{
+          if (this.toast.state!=='uploading') return;
+          const step = Math.max(1, Math.round(5 + Math.random()*10));
+          this.toast.progress = Math.min(100, this.toast.progress + step);
+          if (this.toast.progress &gt;= 100){ this.finish(); }
+        }, 500);
+      },
+      pause(){ if(this.toast.state==='uploading'){ this.toast.state='paused'; } },
+      resume(){ if(this.toast.state==='paused'){ this.toast.state='uploading'; this.tick(); } },
+      cancel(){ this.reset(); this.toast.open=false; },
+      finish(){ this.toast.state='done'; if(this.toast.timer) { clearInterval(this.toast.timer); this.toast.timer=null; } },
+      reset(){ if(this.toast.timer){ clearInterval(this.toast.timer); } this.toast.timer=null; this.toast.progress=0; this.toast.state='idle'; },
+    }" x-init="window.addEventListener('notify-upload', (e)=&gt; show(e.detail||{}))"><!-- Demo trigger --><div class="flex items-center justify-center gap-2"><button class="relative flex items-center justify-center text-center font-medium transition-colors duration-200 ease-in-out select-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:z-10 justify-center rounded-md text-background bg-foreground outline outline-foreground hover:opacity-90 focus-visible:outline-border h-9 px-4 text-sm" @click="show({ name:'screenshots.tar.gz', size:'128 MB', link:'#' })">Click to simulate upload</button></div><!-- Live region (bottom-center, same as 02) --><div aria-live="polite" class="pointer-events-none fixed inset-x-0 bottom-0 flex justify-center px-4 pb-6 sm:px-6"><div class="flex w-full max-w-lg justify-center"><div x-show="toast.open" x-transition:enter="transform ease-out duration-300" x-transition:enter-start="translate-y-2 opacity-0" x-transition:enter-end="translate-y-0 opacity-100" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" class="pointer-events-auto w-full rounded-xl bg-background shadow-lg outline outline-1 outline-border/5 transition -outline-offset-1 outline-border/10" role="status"><div class="p-4"><template x-if="toast.state!=='done'"><div class="flex items-start gap-3"><div class="shrink-0 text-info"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler-arrow-refresh size-5"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M20 11a8.1 8.1 0 0 0 -15.5 -2m-.5 -4v4h4"></path><path d="M4 13a8.1 8.1 0 0 0 15.5 2m.5 4v-4h-4"></path></svg></div><div class="flex-1 min-w-0"><p class="undefined font-medium text-foreground">Uploading…</p><p class="mt-1 text-xs text-muted-foreground"><span x-text="toast.name"></span> · <span x-text="toast.size"></span></p><!-- progress bar --><div class="mt-2 h-2 w-full rounded-full bg-muted overflow-hidden"><div class="h-2 rounded-full bg-info" :style="`width:${toast.progress}%`"></div></div><div class="mt-2 flex items-center gap-2"><button class="relative flex items-center justify-center text-center font-medium transition-colors duration-200 ease-in-out select-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:z-10 justify-center rounded-md text-muted-foreground bg-muted outline outline-border hover:opacity-90 focus-visible:outline-border h-7 px-3 text-xs" type="button" @click="pause()" x-show="toast.state==='uploading'">Pause</button><button class="relative flex items-center justify-center text-center font-medium transition-colors duration-200 ease-in-out select-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:z-10 justify-center rounded-md text-muted-foreground bg-muted outline outline-border hover:opacity-90 focus-visible:outline-border h-7 px-3 text-xs" type="button" @click="resume()" x-show="toast.state==='paused'">Resume</button><button class="relative flex items-center justify-center text-center font-medium transition-colors duration-200 ease-in-out select-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:z-10 justify-center rounded-md text-foreground bg-background outline outline-border hover:bg-muted hover:shadow-sm focus-visible:outline-border h-7 px-3 text-xs" type="button" @click="cancel()">Cancel</button><span class="ml-auto text-[0.70rem] text-muted-foreground" x-text="toast.progress + '%'"></span></div></div><div class="ml-2 flex shrink-0"><button class="flex items-center justify-center text-center shadow-subtle font-medium duration-500 ease-in-out transition-colors focus:outline-2 focus:outline-offset-2 text-muted-foreground bg-muted outline outline-border hover:bg-muted focus:outline-border text-foreground bg-background outline-border hover:bg-muted focus:outline-border size-7 p-0.5 text-xs rounded-md" type="button" @click="cancel()"><span class="sr-only">Close</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler-wave-x size-4"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M18 6l-12 12"></path><path d="M6 6l12 12"></path></svg></button></div></div></template><template x-if="toast.state==='done'"><div class="flex items-start gap-3"><div class="shrink-0 text-success"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler-circle-check size-5"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M5 12l5 5l10 -10"></path></svg></div><div class="flex-1 min-w-0"><p class="text-sm font-medium text-foreground">Upload complete</p><p class="mt-1 text-xs text-muted-foreground"><span x-text="toast.name"></span> · <span x-text="toast.size"></span></p><div class="mt-2 flex items-center gap-2"><button class="relative flex items-center justify-center text-center font-medium transition-colors duration-200 ease-in-out select-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:z-10 justify-center rounded-md text-muted-foreground bg-muted outline outline-border hover:opacity-90 focus-visible:outline-border h-7 px-3 text-xs" :href="toast.link">Open</button><button class="relative flex items-center justify-center text-center font-medium transition-colors duration-200 ease-in-out select-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:z-10 justify-center rounded-md text-foreground bg-background outline outline-border hover:bg-muted hover:shadow-sm focus-visible:outline-border h-7 px-3 text-xs" type="button" @click="toast.open=false">Dismiss</button></div></div><div class="ml-2 flex shrink-0"><button type="button" class="inline-flex rounded-md text-muted-foreground focus:outline-2 focus:outline-offset-2 hover:text-foreground focus:outline-info" @click="toast.open=false"><span class="sr-only">Close</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler-wave-x size-5"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M18 6l-12 12"></path><path d="M6 6l12 12"></path></svg></button></div></div></template></div></div></div></div></div></div><!-- Programmatic usage:
+window.dispatchEvent(new CustomEvent('notify-upload', {
+  detail: { name: 'archive.zip', size: '80 MB', link: '/files/archive.zip' }
+}))
+-->
+  <script src="runtime.js"></script>
+</body>
+</html>

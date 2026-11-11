@@ -1,5 +1,6 @@
 import {parsePageJump, detailHash} from './atlas-model.mjs';
 import {localizeItem} from './display-names.mjs';
+import {collectionAccountingFrom} from './collection-accounting.mjs';
 const $ = id => document.getElementById(id);
 const PAGE_SIZE = 18;
 let items = [], page = 1, pageCount = 1, disposed = false, loaded = false, loadGeneration = 0, loadController;
@@ -98,7 +99,20 @@ async function load() {
   if (!Array.isArray(records)) throw Error('Invalid candidate catalog');
   if (!current()) return;
   items = records.filter(item => item && typeof item === 'object').map(localizeItem);
-  $('inventory-counts').textContent = `${items.length} 项扩展来源记录 · ${items.filter(hasPreview).length} 项已接入预览 · ${items.filter(item => !hasPreview(item)).length} 项仅来源`;
+  $('inventory-counts').textContent = `${items.length} 项扩展来源记录 · ${items.filter(hasPreview).length} 项已接入预览 · ${items.filter(item => !hasPreview(item)).length} 项仅来源（以上为目录记录数，不是新原件身份上限）`;
+  try {
+    const ledgerResponse = await fetch('COLLECTION-LEDGER.json', {signal:controller.signal});
+    if (ledgerResponse.ok) {
+      const ledger = await ledgerResponse.json();
+      const acc = collectionAccountingFrom(items, ledger);
+      const accounting = $('collection-accounting');
+      if (accounting) accounting.textContent = `本线新增接站 ${acc.newCatalogConnects} · 旧源补接 ${acc.oldSourceReconnects} · 重复排除 ${acc.duplicateOriginalExclusions} · 新原件身份上限 ${acc.novelSourceIdentityUpperBound}（不是已核独立数；已核新增/封面/实测为 0）`;
+    }
+  } catch (ledgerError) {
+    if (!current()) return;
+    const accounting = $('collection-accounting');
+    if (accounting) accounting.textContent = '本线分账未能读取。';
+  }
   $('total').textContent = items.length; $('nav-count').textContent = items.length;
   $('candidate-source').replaceChildren(el('option', '全部来源')); $('candidate-source').firstChild.value = '';
   for (const source of [...new Set(items.map(item => item.source).filter(Boolean))].sort()) { const option = el('option', source); option.value = source; $('candidate-source').append(option); }

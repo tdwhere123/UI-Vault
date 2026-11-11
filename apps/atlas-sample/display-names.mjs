@@ -94,7 +94,7 @@ export const CHINESE_TITLES = {
   "uilayout:swapy-swapy-handle": "拖柄交换布局",
   "uilayout:scroll-animation-sticky-hero-scroll": "吸附首屏滚动展示",
   "uilayout:scroll-animation-repeat-scroll": "重复滚动动效",
-  "uilayout:timeline-animation-index": "滚动时间线",
+  "uilayout:timeline-animation-index": "常见问题区块滚动显现",
   "uilayout:mac-genie-effect": "窗口收缩精灵动效",
   "uilayout:linear-modal-standalone-version": "快捷操作模态框",
   "uilayout:image-reveal-image-reveal": "图片揭示动效",

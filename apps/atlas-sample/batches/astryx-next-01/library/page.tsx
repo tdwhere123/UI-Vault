@@ -37,7 +37,7 @@ const ITEMS: LibraryItem[] = [
     category: 'Layout',
     type: 'Component',
     imageUrl:
-      '/template-assets/colorful-home-horizontal-1.png',
+      'data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22640%22%20height%3D%22400%22%20viewBox%3D%220%200%20640%20400%22%3E%3Crect%20width%3D%22640%22%20height%3D%22400%22%20fill%3D%22hsl%28161%2C32%25%2C84%25%29%22%2F%3E%3Ccircle%20cx%3D%22500%22%20cy%3D%2290%22%20r%3D%2256%22%20fill%3D%22hsl%28161%2C45%25%2C58%25%29%22%2F%3E%3Cpath%20d%3D%22M0%20400V290L160%2090L380%20350L520%20180L640%20320V400Z%22%20fill%3D%22hsl%28161%2C28%25%2C42%25%29%22%2F%3E%3Ctext%20x%3D%2224%22%20y%3D%2236%22%20font-size%3D%2218%22%20font-family%3D%22system-ui%2Csans-serif%22%20fill%3D%22hsl%28161%2C30%25%2C28%25%29%22%3ELocal%20decorative%20fixture%3C%2Ftext%3E%3C%2Fsvg%3E',
   },
   {
     id: '2',
@@ -47,7 +47,7 @@ const ITEMS: LibraryItem[] = [
     category: 'Layout',
     type: 'Component',
     imageUrl:
-      '/template-assets/illustrative-horizontal-3.png',
+      'data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22640%22%20height%3D%22400%22%20viewBox%3D%220%200%20640%20400%22%3E%3Crect%20width%3D%22640%22%20height%3D%22400%22%20fill%3D%22hsl%28155%2C32%25%2C84%25%29%22%2F%3E%3Ccircle%20cx%3D%22500%22%20cy%3D%2290%22%20r%3D%2256%22%20fill%3D%22hsl%28155%2C45%25%2C58%25%29%22%2F%3E%3Cpath%20d%3D%22M0%20400V290L160%2090L380%20350L520%20180L640%20320V400Z%22%20fill%3D%22hsl%28155%2C28%25%2C42%25%29%22%2F%3E%3Ctext%20x%3D%2224%22%20y%3D%2236%22%20font-size%3D%2218%22%20font-family%3D%22system-ui%2Csans-serif%22%20fill%3D%22hsl%28155%2C30%25%2C28%25%29%22%3ELocal%20decorative%20fixture%3C%2Ftext%3E%3C%2Fsvg%3E',
   },
   {
     id: '3',
@@ -57,7 +57,7 @@ const ITEMS: LibraryItem[] = [
     category: 'Layout',
     type: 'Component',
     imageUrl:
-      '/template-assets/light-working-horizontal-2.png',
+      'data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22640%22%20height%3D%22400%22%20viewBox%3D%220%200%20640%20400%22%3E%3Crect%20width%3D%22640%22%20height%3D%22400%22%20fill%3D%22hsl%28282%2C32%25%2C84%25%29%22%2F%3E%3Ccircle%20cx%3D%22500%22%20cy%3D%2290%22%20r%3D%2256%22%20fill%3D%22hsl%28282%2C45%25%2C58%25%29%22%2F%3E%3Cpath%20d%3D%22M0%20400V290L160%2090L380%20350L520%20180L640%20320V400Z%22%20fill%3D%22hsl%28282%2C28%25%2C42%25%29%22%2F%3E%3Ctext%20x%3D%2224%22%20y%3D%2236%22%20font-size%3D%2218%22%20font-family%3D%22system-ui%2Csans-serif%22%20fill%3D%22hsl%28282%2C30%25%2C28%25%29%22%3ELocal%20decorative%20fixture%3C%2Ftext%3E%3C%2Fsvg%3E',
   },
   {
     id: '4',
@@ -66,7 +66,7 @@ const ITEMS: LibraryItem[] = [
     category: 'Layout',
     type: 'Utility',
     imageUrl:
-      '/template-assets/moody-scene-horizontal-1.png',
+      'data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22640%22%20height%3D%22400%22%20viewBox%3D%220%200%20640%20400%22%3E%3Crect%20width%3D%22640%22%20height%3D%22400%22%20fill%3D%22hsl%28196%2C32%25%2C84%25%29%22%2F%3E%3Ccircle%20cx%3D%22500%22%20cy%3D%2290%22%20r%3D%2256%22%20fill%3D%22hsl%28196%2C45%25%2C58%25%29%22%2F%3E%3Cpath%20d%3D%22M0%20400V290L160%2090L380%20350L520%20180L640%20320V400Z%22%20fill%3D%22hsl%28196%2C28%25%2C42%25%29%22%2F%3E%3Ctext%20x%3D%2224%22%20y%3D%2236%22%20font-size%3D%2218%22%20font-family%3D%22system-ui%2Csans-serif%22%20fill%3D%22hsl%28196%2C30%25%2C28%25%29%22%3ELocal%20decorative%20fixture%3C%2Ftext%3E%3C%2Fsvg%3E',
   },
   {
     id: '5',
@@ -75,7 +75,7 @@ const ITEMS: LibraryItem[] = [
     category: 'Layout',
     type: 'Pattern',
     imageUrl:
-      '/template-assets/colorful-lifestyle-horizontal-2.png',
+      'data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22640%22%20height%3D%22400%22%20viewBox%3D%220%200%20640%20400%22%3E%3Crect%20width%3D%22640%22%20height%3D%22400%22%20fill%3D%22hsl%28130%2C32%25%2C84%25%29%22%2F%3E%3Ccircle%20cx%3D%22500%22%20cy%3D%2290%22%20r%3D%2256%22%20fill%3D%22hsl%28130%2C45%25%2C58%25%29%22%2F%3E%3Cpath%20d%3D%22M0%20400V290L160%2090L380%20350L520%20180L640%20320V400Z%22%20fill%3D%22hsl%28130%2C28%25%2C42%25%29%22%2F%3E%3Ctext%20x%3D%2224%22%20y%3D%2236%22%20font-size%3D%2218%22%20font-family%3D%22system-ui%2Csans-serif%22%20fill%3D%22hsl%28130%2C30%25%2C28%25%29%22%3ELocal%20decorative%20fixture%3C%2Ftext%3E%3C%2Fsvg%3E',
   },
   {
     id: '6',
@@ -84,7 +84,7 @@ const ITEMS: LibraryItem[] = [
     category: 'Layout',
     type: 'Component',
     imageUrl:
-      '/template-assets/light-scene-horizontal-1.png',
+      'data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22640%22%20height%3D%22400%22%20viewBox%3D%220%200%20640%20400%22%3E%3Crect%20width%3D%22640%22%20height%3D%22400%22%20fill%3D%22hsl%2849%2C32%25%2C84%25%29%22%2F%3E%3Ccircle%20cx%3D%22500%22%20cy%3D%2290%22%20r%3D%2256%22%20fill%3D%22hsl%2849%2C45%25%2C58%25%29%22%2F%3E%3Cpath%20d%3D%22M0%20400V290L160%2090L380%20350L520%20180L640%20320V400Z%22%20fill%3D%22hsl%2849%2C28%25%2C42%25%29%22%2F%3E%3Ctext%20x%3D%2224%22%20y%3D%2236%22%20font-size%3D%2218%22%20font-family%3D%22system-ui%2Csans-serif%22%20fill%3D%22hsl%2849%2C30%25%2C28%25%29%22%3ELocal%20decorative%20fixture%3C%2Ftext%3E%3C%2Fsvg%3E',
   },
   {
     id: '7',
@@ -94,7 +94,7 @@ const ITEMS: LibraryItem[] = [
     category: 'Forms',
     type: 'Component',
     imageUrl:
-      '/template-assets/moody-working-horizontal-1.png',
+      'data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22640%22%20height%3D%22400%22%20viewBox%3D%220%200%20640%20400%22%3E%3Crect%20width%3D%22640%22%20height%3D%22400%22%20fill%3D%22hsl%2833%2C32%25%2C84%25%29%22%2F%3E%3Ccircle%20cx%3D%22500%22%20cy%3D%2290%22%20r%3D%2256%22%20fill%3D%22hsl%2833%2C45%25%2C58%25%29%22%2F%3E%3Cpath%20d%3D%22M0%20400V290L160%2090L380%20350L520%20180L640%20320V400Z%22%20fill%3D%22hsl%2833%2C28%25%2C42%25%29%22%2F%3E%3Ctext%20x%3D%2224%22%20y%3D%2236%22%20font-size%3D%2218%22%20font-family%3D%22system-ui%2Csans-serif%22%20fill%3D%22hsl%2833%2C30%25%2C28%25%29%22%3ELocal%20decorative%20fixture%3C%2Ftext%3E%3C%2Fsvg%3E',
   },
   {
     id: '8',
@@ -103,7 +103,7 @@ const ITEMS: LibraryItem[] = [
     category: 'Forms',
     type: 'Component',
     imageUrl:
-      '/template-assets/colorful-working-horizontal-3.png',
+      'data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22640%22%20height%3D%22400%22%20viewBox%3D%220%200%20640%20400%22%3E%3Crect%20width%3D%22640%22%20height%3D%22400%22%20fill%3D%22hsl%28336%2C32%25%2C84%25%29%22%2F%3E%3Ccircle%20cx%3D%22500%22%20cy%3D%2290%22%20r%3D%2256%22%20fill%3D%22hsl%28336%2C45%25%2C58%25%29%22%2F%3E%3Cpath%20d%3D%22M0%20400V290L160%2090L380%20350L520%20180L640%20320V400Z%22%20fill%3D%22hsl%28336%2C28%25%2C42%25%29%22%2F%3E%3Ctext%20x%3D%2224%22%20y%3D%2236%22%20font-size%3D%2218%22%20font-family%3D%22system-ui%2Csans-serif%22%20fill%3D%22hsl%28336%2C30%25%2C28%25%29%22%3ELocal%20decorative%20fixture%3C%2Ftext%3E%3C%2Fsvg%3E',
   },
   {
     id: '9',
@@ -112,7 +112,7 @@ const ITEMS: LibraryItem[] = [
     category: 'Forms',
     type: 'Component',
     imageUrl:
-      '/template-assets/illustrative-horizontal-1.png',
+      'data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22640%22%20height%3D%22400%22%20viewBox%3D%220%200%20640%20400%22%3E%3Crect%20width%3D%22640%22%20height%3D%22400%22%20fill%3D%22hsl%2889%2C32%25%2C84%25%29%22%2F%3E%3Ccircle%20cx%3D%22500%22%20cy%3D%2290%22%20r%3D%2256%22%20fill%3D%22hsl%2889%2C45%25%2C58%25%29%22%2F%3E%3Cpath%20d%3D%22M0%20400V290L160%2090L380%20350L520%20180L640%20320V400Z%22%20fill%3D%22hsl%2889%2C28%25%2C42%25%29%22%2F%3E%3Ctext%20x%3D%2224%22%20y%3D%2236%22%20font-size%3D%2218%22%20font-family%3D%22system-ui%2Csans-serif%22%20fill%3D%22hsl%2889%2C30%25%2C28%25%29%22%3ELocal%20decorative%20fixture%3C%2Ftext%3E%3C%2Fsvg%3E',
   },
   {
     id: '10',
@@ -121,7 +121,7 @@ const ITEMS: LibraryItem[] = [
     category: 'Forms',
     type: 'Component',
     imageUrl:
-      '/template-assets/light-home-horizontal-1.png',
+      'data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22640%22%20height%3D%22400%22%20viewBox%3D%220%200%20640%20400%22%3E%3Crect%20width%3D%22640%22%20height%3D%22400%22%20fill%3D%22hsl%28304%2C32%25%2C84%25%29%22%2F%3E%3Ccircle%20cx%3D%22500%22%20cy%3D%2290%22%20r%3D%2256%22%20fill%3D%22hsl%28304%2C45%25%2C58%25%29%22%2F%3E%3Cpath%20d%3D%22M0%20400V290L160%2090L380%20350L520%20180L640%20320V400Z%22%20fill%3D%22hsl%28304%2C28%25%2C42%25%29%22%2F%3E%3Ctext%20x%3D%2224%22%20y%3D%2236%22%20font-size%3D%2218%22%20font-family%3D%22system-ui%2Csans-serif%22%20fill%3D%22hsl%28304%2C30%25%2C28%25%29%22%3ELocal%20decorative%20fixture%3C%2Ftext%3E%3C%2Fsvg%3E',
   },
   {
     id: '11',
@@ -130,7 +130,7 @@ const ITEMS: LibraryItem[] = [
     category: 'Forms',
     type: 'Component',
     imageUrl:
-      '/template-assets/moody-home-horizontal-2.png',
+      'data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22640%22%20height%3D%22400%22%20viewBox%3D%220%200%20640%20400%22%3E%3Crect%20width%3D%22640%22%20height%3D%22400%22%20fill%3D%22hsl%28159%2C32%25%2C84%25%29%22%2F%3E%3Ccircle%20cx%3D%22500%22%20cy%3D%2290%22%20r%3D%2256%22%20fill%3D%22hsl%28159%2C45%25%2C58%25%29%22%2F%3E%3Cpath%20d%3D%22M0%20400V290L160%2090L380%20350L520%20180L640%20320V400Z%22%20fill%3D%22hsl%28159%2C28%25%2C42%25%29%22%2F%3E%3Ctext%20x%3D%2224%22%20y%3D%2236%22%20font-size%3D%2218%22%20font-family%3D%22system-ui%2Csans-serif%22%20fill%3D%22hsl%28159%2C30%25%2C28%25%29%22%3ELocal%20decorative%20fixture%3C%2Ftext%3E%3C%2Fsvg%3E',
   },
   {
     id: '12',
@@ -140,7 +140,7 @@ const ITEMS: LibraryItem[] = [
     category: 'Forms',
     type: 'Component',
     imageUrl:
-      '/template-assets/colorful-product-1.png',
+      'data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22640%22%20height%3D%22400%22%20viewBox%3D%220%200%20640%20400%22%3E%3Crect%20width%3D%22640%22%20height%3D%22400%22%20fill%3D%22hsl%2856%2C32%25%2C84%25%29%22%2F%3E%3Ccircle%20cx%3D%22500%22%20cy%3D%2290%22%20r%3D%2256%22%20fill%3D%22hsl%2856%2C45%25%2C58%25%29%22%2F%3E%3Cpath%20d%3D%22M0%20400V290L160%2090L380%20350L520%20180L640%20320V400Z%22%20fill%3D%22hsl%2856%2C28%25%2C42%25%29%22%2F%3E%3Ctext%20x%3D%2224%22%20y%3D%2236%22%20font-size%3D%2218%22%20font-family%3D%22system-ui%2Csans-serif%22%20fill%3D%22hsl%2856%2C30%25%2C28%25%29%22%3ELocal%20decorative%20fixture%3C%2Ftext%3E%3C%2Fsvg%3E',
   },
   {
     id: '13',
@@ -150,7 +150,7 @@ const ITEMS: LibraryItem[] = [
     category: 'Navigation',
     type: 'Component',
     imageUrl:
-      '/template-assets/illustrative-horizontal-5.png',
+      'data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22640%22%20height%3D%22400%22%20viewBox%3D%220%200%20640%20400%22%3E%3Crect%20width%3D%22640%22%20height%3D%22400%22%20fill%3D%22hsl%289%2C32%25%2C84%25%29%22%2F%3E%3Ccircle%20cx%3D%22500%22%20cy%3D%2290%22%20r%3D%2256%22%20fill%3D%22hsl%289%2C45%25%2C58%25%29%22%2F%3E%3Cpath%20d%3D%22M0%20400V290L160%2090L380%20350L520%20180L640%20320V400Z%22%20fill%3D%22hsl%289%2C28%25%2C42%25%29%22%2F%3E%3Ctext%20x%3D%2224%22%20y%3D%2236%22%20font-size%3D%2218%22%20font-family%3D%22system-ui%2Csans-serif%22%20fill%3D%22hsl%289%2C30%25%2C28%25%29%22%3ELocal%20decorative%20fixture%3C%2Ftext%3E%3C%2Fsvg%3E',
   },
   {
     id: '14',
@@ -159,7 +159,7 @@ const ITEMS: LibraryItem[] = [
     category: 'Navigation',
     type: 'Pattern',
     imageUrl:
-      '/template-assets/light-working-horizontal-1.png',
+      'data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22640%22%20height%3D%22400%22%20viewBox%3D%220%200%20640%20400%22%3E%3Crect%20width%3D%22640%22%20height%3D%22400%22%20fill%3D%22hsl%28201%2C32%25%2C84%25%29%22%2F%3E%3Ccircle%20cx%3D%22500%22%20cy%3D%2290%22%20r%3D%2256%22%20fill%3D%22hsl%28201%2C45%25%2C58%25%29%22%2F%3E%3Cpath%20d%3D%22M0%20400V290L160%2090L380%20350L520%20180L640%20320V400Z%22%20fill%3D%22hsl%28201%2C28%25%2C42%25%29%22%2F%3E%3Ctext%20x%3D%2224%22%20y%3D%2236%22%20font-size%3D%2218%22%20font-family%3D%22system-ui%2Csans-serif%22%20fill%3D%22hsl%28201%2C30%25%2C28%25%29%22%3ELocal%20decorative%20fixture%3C%2Ftext%3E%3C%2Fsvg%3E',
   },
   {
     id: '15',
@@ -169,7 +169,7 @@ const ITEMS: LibraryItem[] = [
     category: 'Navigation',
     type: 'Pattern',
     imageUrl:
-      '/template-assets/moody-lifestyle-horizontal-1.png',
+      'data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22640%22%20height%3D%22400%22%20viewBox%3D%220%200%20640%20400%22%3E%3Crect%20width%3D%22640%22%20height%3D%22400%22%20fill%3D%22hsl%2860%2C32%25%2C84%25%29%22%2F%3E%3Ccircle%20cx%3D%22500%22%20cy%3D%2290%22%20r%3D%2256%22%20fill%3D%22hsl%2860%2C45%25%2C58%25%29%22%2F%3E%3Cpath%20d%3D%22M0%20400V290L160%2090L380%20350L520%20180L640%20320V400Z%22%20fill%3D%22hsl%2860%2C28%25%2C42%25%29%22%2F%3E%3Ctext%20x%3D%2224%22%20y%3D%2236%22%20font-size%3D%2218%22%20font-family%3D%22system-ui%2Csans-serif%22%20fill%3D%22hsl%2860%2C30%25%2C28%25%29%22%3ELocal%20decorative%20fixture%3C%2Ftext%3E%3C%2Fsvg%3E',
   },
   {
     id: '16',
@@ -178,7 +178,7 @@ const ITEMS: LibraryItem[] = [
     category: 'Navigation',
     type: 'Component',
     imageUrl:
-      '/template-assets/colorful-home-horizontal-2.png',
+      'data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22640%22%20height%3D%22400%22%20viewBox%3D%220%200%20640%20400%22%3E%3Crect%20width%3D%22640%22%20height%3D%22400%22%20fill%3D%22hsl%28223%2C32%25%2C84%25%29%22%2F%3E%3Ccircle%20cx%3D%22500%22%20cy%3D%2290%22%20r%3D%2256%22%20fill%3D%22hsl%28223%2C45%25%2C58%25%29%22%2F%3E%3Cpath%20d%3D%22M0%20400V290L160%2090L380%20350L520%20180L640%20320V400Z%22%20fill%3D%22hsl%28223%2C28%25%2C42%25%29%22%2F%3E%3Ctext%20x%3D%2224%22%20y%3D%2236%22%20font-size%3D%2218%22%20font-family%3D%22system-ui%2Csans-serif%22%20fill%3D%22hsl%28223%2C30%25%2C28%25%29%22%3ELocal%20decorative%20fixture%3C%2Ftext%3E%3C%2Fsvg%3E',
   },
   {
     id: '17',
@@ -188,7 +188,7 @@ const ITEMS: LibraryItem[] = [
     category: 'Navigation',
     type: 'Component',
     imageUrl:
-      '/template-assets/colorful-working-horizontal-1.png',
+      'data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22640%22%20height%3D%22400%22%20viewBox%3D%220%200%20640%20400%22%3E%3Crect%20width%3D%22640%22%20height%3D%22400%22%20fill%3D%22hsl%28313%2C32%25%2C84%25%29%22%2F%3E%3Ccircle%20cx%3D%22500%22%20cy%3D%2290%22%20r%3D%2256%22%20fill%3D%22hsl%28313%2C45%25%2C58%25%29%22%2F%3E%3Cpath%20d%3D%22M0%20400V290L160%2090L380%20350L520%20180L640%20320V400Z%22%20fill%3D%22hsl%28313%2C28%25%2C42%25%29%22%2F%3E%3Ctext%20x%3D%2224%22%20y%3D%2236%22%20font-size%3D%2218%22%20font-family%3D%22system-ui%2Csans-serif%22%20fill%3D%22hsl%28313%2C30%25%2C28%25%29%22%3ELocal%20decorative%20fixture%3C%2Ftext%3E%3C%2Fsvg%3E',
   },
   {
     id: '18',
@@ -197,7 +197,7 @@ const ITEMS: LibraryItem[] = [
     category: 'Navigation',
     type: 'Pattern',
     imageUrl:
-      '/template-assets/light-working-horizontal-3.png',
+      'data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22640%22%20height%3D%22400%22%20viewBox%3D%220%200%20640%20400%22%3E%3Crect%20width%3D%22640%22%20height%3D%22400%22%20fill%3D%22hsl%28296%2C32%25%2C84%25%29%22%2F%3E%3Ccircle%20cx%3D%22500%22%20cy%3D%2290%22%20r%3D%2256%22%20fill%3D%22hsl%28296%2C45%25%2C58%25%29%22%2F%3E%3Cpath%20d%3D%22M0%20400V290L160%2090L380%20350L520%20180L640%20320V400Z%22%20fill%3D%22hsl%28296%2C28%25%2C42%25%29%22%2F%3E%3Ctext%20x%3D%2224%22%20y%3D%2236%22%20font-size%3D%2218%22%20font-family%3D%22system-ui%2Csans-serif%22%20fill%3D%22hsl%28296%2C30%25%2C28%25%29%22%3ELocal%20decorative%20fixture%3C%2Ftext%3E%3C%2Fsvg%3E',
   },
   {
     id: '19',
@@ -207,7 +207,7 @@ const ITEMS: LibraryItem[] = [
     category: 'Feedback',
     type: 'Component',
     imageUrl:
-      '/template-assets/moody-working-horizontal-2.png',
+      'data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22640%22%20height%3D%22400%22%20viewBox%3D%220%200%20640%20400%22%3E%3Crect%20width%3D%22640%22%20height%3D%22400%22%20fill%3D%22hsl%28266%2C32%25%2C84%25%29%22%2F%3E%3Ccircle%20cx%3D%22500%22%20cy%3D%2290%22%20r%3D%2256%22%20fill%3D%22hsl%28266%2C45%25%2C58%25%29%22%2F%3E%3Cpath%20d%3D%22M0%20400V290L160%2090L380%20350L520%20180L640%20320V400Z%22%20fill%3D%22hsl%28266%2C28%25%2C42%25%29%22%2F%3E%3Ctext%20x%3D%2224%22%20y%3D%2236%22%20font-size%3D%2218%22%20font-family%3D%22system-ui%2Csans-serif%22%20fill%3D%22hsl%28266%2C30%25%2C28%25%29%22%3ELocal%20decorative%20fixture%3C%2Ftext%3E%3C%2Fsvg%3E',
   },
   {
     id: '20',
@@ -217,7 +217,7 @@ const ITEMS: LibraryItem[] = [
     category: 'Feedback',
     type: 'Component',
     imageUrl:
-      '/template-assets/illustrative-horizontal-2.png',
+      'data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22640%22%20height%3D%22400%22%20viewBox%3D%220%200%20640%20400%22%3E%3Crect%20width%3D%22640%22%20height%3D%22400%22%20fill%3D%22hsl%28140%2C32%25%2C84%25%29%22%2F%3E%3Ccircle%20cx%3D%22500%22%20cy%3D%2290%22%20r%3D%2256%22%20fill%3D%22hsl%28140%2C45%25%2C58%25%29%22%2F%3E%3Cpath%20d%3D%22M0%20400V290L160%2090L380%20350L520%20180L640%20320V400Z%22%20fill%3D%22hsl%28140%2C28%25%2C42%25%29%22%2F%3E%3Ctext%20x%3D%2224%22%20y%3D%2236%22%20font-size%3D%2218%22%20font-family%3D%22system-ui%2Csans-serif%22%20fill%3D%22hsl%28140%2C30%25%2C28%25%29%22%3ELocal%20decorative%20fixture%3C%2Ftext%3E%3C%2Fsvg%3E',
   },
   {
     id: '21',
@@ -226,7 +226,7 @@ const ITEMS: LibraryItem[] = [
     category: 'Feedback',
     type: 'Component',
     imageUrl:
-      '/template-assets/colorful-lifestyle-horizontal-1.png',
+      'data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22640%22%20height%3D%22400%22%20viewBox%3D%220%200%20640%20400%22%3E%3Crect%20width%3D%22640%22%20height%3D%22400%22%20fill%3D%22hsl%28311%2C32%25%2C84%25%29%22%2F%3E%3Ccircle%20cx%3D%22500%22%20cy%3D%2290%22%20r%3D%2256%22%20fill%3D%22hsl%28311%2C45%25%2C58%25%29%22%2F%3E%3Cpath%20d%3D%22M0%20400V290L160%2090L380%20350L520%20180L640%20320V400Z%22%20fill%3D%22hsl%28311%2C28%25%2C42%25%29%22%2F%3E%3Ctext%20x%3D%2224%22%20y%3D%2236%22%20font-size%3D%2218%22%20font-family%3D%22system-ui%2Csans-serif%22%20fill%3D%22hsl%28311%2C30%25%2C28%25%29%22%3ELocal%20decorative%20fixture%3C%2Ftext%3E%3C%2Fsvg%3E',
   },
   {
     id: '22',
@@ -235,7 +235,7 @@ const ITEMS: LibraryItem[] = [
     category: 'Feedback',
     type: 'Component',
     imageUrl:
-      '/template-assets/light-lifestyle-horizontal-1.png',
+      'data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22640%22%20height%3D%22400%22%20viewBox%3D%220%200%20640%20400%22%3E%3Crect%20width%3D%22640%22%20height%3D%22400%22%20fill%3D%22hsl%2892%2C32%25%2C84%25%29%22%2F%3E%3Ccircle%20cx%3D%22500%22%20cy%3D%2290%22%20r%3D%2256%22%20fill%3D%22hsl%2892%2C45%25%2C58%25%29%22%2F%3E%3Cpath%20d%3D%22M0%20400V290L160%2090L380%20350L520%20180L640%20320V400Z%22%20fill%3D%22hsl%2892%2C28%25%2C42%25%29%22%2F%3E%3Ctext%20x%3D%2224%22%20y%3D%2236%22%20font-size%3D%2218%22%20font-family%3D%22system-ui%2Csans-serif%22%20fill%3D%22hsl%2892%2C30%25%2C28%25%29%22%3ELocal%20decorative%20fixture%3C%2Ftext%3E%3C%2Fsvg%3E',
   },
   {
     id: '23',
@@ -245,7 +245,7 @@ const ITEMS: LibraryItem[] = [
     category: 'Feedback',
     type: 'Component',
     imageUrl:
-      '/template-assets/moody-home-horizontal-1.png',
+      'data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22640%22%20height%3D%22400%22%20viewBox%3D%220%200%20640%20400%22%3E%3Crect%20width%3D%22640%22%20height%3D%22400%22%20fill%3D%22hsl%28201%2C32%25%2C84%25%29%22%2F%3E%3Ccircle%20cx%3D%22500%22%20cy%3D%2290%22%20r%3D%2256%22%20fill%3D%22hsl%28201%2C45%25%2C58%25%29%22%2F%3E%3Cpath%20d%3D%22M0%20400V290L160%2090L380%20350L520%20180L640%20320V400Z%22%20fill%3D%22hsl%28201%2C28%25%2C42%25%29%22%2F%3E%3Ctext%20x%3D%2224%22%20y%3D%2236%22%20font-size%3D%2218%22%20font-family%3D%22system-ui%2Csans-serif%22%20fill%3D%22hsl%28201%2C30%25%2C28%25%29%22%3ELocal%20decorative%20fixture%3C%2Ftext%3E%3C%2Fsvg%3E',
   },
   {
     id: '24',
@@ -255,7 +255,7 @@ const ITEMS: LibraryItem[] = [
     category: 'Feedback',
     type: 'Component',
     imageUrl:
-      '/template-assets/colorful-working-horizontal-2.png',
+      'data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22640%22%20height%3D%22400%22%20viewBox%3D%220%200%20640%20400%22%3E%3Crect%20width%3D%22640%22%20height%3D%22400%22%20fill%3D%22hsl%2815%2C32%25%2C84%25%29%22%2F%3E%3Ccircle%20cx%3D%22500%22%20cy%3D%2290%22%20r%3D%2256%22%20fill%3D%22hsl%2815%2C45%25%2C58%25%29%22%2F%3E%3Cpath%20d%3D%22M0%20400V290L160%2090L380%20350L520%20180L640%20320V400Z%22%20fill%3D%22hsl%2815%2C28%25%2C42%25%29%22%2F%3E%3Ctext%20x%3D%2224%22%20y%3D%2236%22%20font-size%3D%2218%22%20font-family%3D%22system-ui%2Csans-serif%22%20fill%3D%22hsl%2815%2C30%25%2C28%25%29%22%3ELocal%20decorative%20fixture%3C%2Ftext%3E%3C%2Fsvg%3E',
   },
   {
     id: '25',
@@ -265,7 +265,7 @@ const ITEMS: LibraryItem[] = [
     category: 'Data',
     type: 'Component',
     imageUrl:
-      '/template-assets/illustrative-horizontal-4.png',
+      'data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22640%22%20height%3D%22400%22%20viewBox%3D%220%200%20640%20400%22%3E%3Crect%20width%3D%22640%22%20height%3D%22400%22%20fill%3D%22hsl%28194%2C32%25%2C84%25%29%22%2F%3E%3Ccircle%20cx%3D%22500%22%20cy%3D%2290%22%20r%3D%2256%22%20fill%3D%22hsl%28194%2C45%25%2C58%25%29%22%2F%3E%3Cpath%20d%3D%22M0%20400V290L160%2090L380%20350L520%20180L640%20320V400Z%22%20fill%3D%22hsl%28194%2C28%25%2C42%25%29%22%2F%3E%3Ctext%20x%3D%2224%22%20y%3D%2236%22%20font-size%3D%2218%22%20font-family%3D%22system-ui%2Csans-serif%22%20fill%3D%22hsl%28194%2C30%25%2C28%25%29%22%3ELocal%20decorative%20fixture%3C%2Ftext%3E%3C%2Fsvg%3E',
   },
   {
     id: '26',
@@ -275,7 +275,7 @@ const ITEMS: LibraryItem[] = [
     category: 'Data',
     type: 'Component',
     imageUrl:
-      '/template-assets/light-working-horizontal-4.png',
+      'data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22640%22%20height%3D%22400%22%20viewBox%3D%220%200%20640%20400%22%3E%3Crect%20width%3D%22640%22%20height%3D%22400%22%20fill%3D%22hsl%28272%2C32%25%2C84%25%29%22%2F%3E%3Ccircle%20cx%3D%22500%22%20cy%3D%2290%22%20r%3D%2256%22%20fill%3D%22hsl%28272%2C45%25%2C58%25%29%22%2F%3E%3Cpath%20d%3D%22M0%20400V290L160%2090L380%20350L520%20180L640%20320V400Z%22%20fill%3D%22hsl%28272%2C28%25%2C42%25%29%22%2F%3E%3Ctext%20x%3D%2224%22%20y%3D%2236%22%20font-size%3D%2218%22%20font-family%3D%22system-ui%2Csans-serif%22%20fill%3D%22hsl%28272%2C30%25%2C28%25%29%22%3ELocal%20decorative%20fixture%3C%2Ftext%3E%3C%2Fsvg%3E',
   },
   {
     id: '27',
@@ -285,7 +285,7 @@ const ITEMS: LibraryItem[] = [
     category: 'Data',
     type: 'Utility',
     imageUrl:
-      '/template-assets/moody-lifestyle-horizontal-2.png',
+      'data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22640%22%20height%3D%22400%22%20viewBox%3D%220%200%20640%20400%22%3E%3Crect%20width%3D%22640%22%20height%3D%22400%22%20fill%3D%22hsl%28152%2C32%25%2C84%25%29%22%2F%3E%3Ccircle%20cx%3D%22500%22%20cy%3D%2290%22%20r%3D%2256%22%20fill%3D%22hsl%28152%2C45%25%2C58%25%29%22%2F%3E%3Cpath%20d%3D%22M0%20400V290L160%2090L380%20350L520%20180L640%20320V400Z%22%20fill%3D%22hsl%28152%2C28%25%2C42%25%29%22%2F%3E%3Ctext%20x%3D%2224%22%20y%3D%2236%22%20font-size%3D%2218%22%20font-family%3D%22system-ui%2Csans-serif%22%20fill%3D%22hsl%28152%2C30%25%2C28%25%29%22%3ELocal%20decorative%20fixture%3C%2Ftext%3E%3C%2Fsvg%3E',
   },
   {
     id: '28',
@@ -294,7 +294,7 @@ const ITEMS: LibraryItem[] = [
     category: 'Data',
     type: 'Component',
     imageUrl:
-      '/template-assets/moody-scene-horizontal-2.png',
+      'data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22640%22%20height%3D%22400%22%20viewBox%3D%220%200%20640%20400%22%3E%3Crect%20width%3D%22640%22%20height%3D%22400%22%20fill%3D%22hsl%28269%2C32%25%2C84%25%29%22%2F%3E%3Ccircle%20cx%3D%22500%22%20cy%3D%2290%22%20r%3D%2256%22%20fill%3D%22hsl%28269%2C45%25%2C58%25%29%22%2F%3E%3Cpath%20d%3D%22M0%20400V290L160%2090L380%20350L520%20180L640%20320V400Z%22%20fill%3D%22hsl%28269%2C28%25%2C42%25%29%22%2F%3E%3Ctext%20x%3D%2224%22%20y%3D%2236%22%20font-size%3D%2218%22%20font-family%3D%22system-ui%2Csans-serif%22%20fill%3D%22hsl%28269%2C30%25%2C28%25%29%22%3ELocal%20decorative%20fixture%3C%2Ftext%3E%3C%2Fsvg%3E',
   },
   {
     id: '29',
@@ -304,7 +304,7 @@ const ITEMS: LibraryItem[] = [
     category: 'Data',
     type: 'Pattern',
     imageUrl:
-      '/template-assets/colorful-product-2.png',
+      'data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22640%22%20height%3D%22400%22%20viewBox%3D%220%200%20640%20400%22%3E%3Crect%20width%3D%22640%22%20height%3D%22400%22%20fill%3D%22hsl%28217%2C32%25%2C84%25%29%22%2F%3E%3Ccircle%20cx%3D%22500%22%20cy%3D%2290%22%20r%3D%2256%22%20fill%3D%22hsl%28217%2C45%25%2C58%25%29%22%2F%3E%3Cpath%20d%3D%22M0%20400V290L160%2090L380%20350L520%20180L640%20320V400Z%22%20fill%3D%22hsl%28217%2C28%25%2C42%25%29%22%2F%3E%3Ctext%20x%3D%2224%22%20y%3D%2236%22%20font-size%3D%2218%22%20font-family%3D%22system-ui%2Csans-serif%22%20fill%3D%22hsl%28217%2C30%25%2C28%25%29%22%3ELocal%20decorative%20fixture%3C%2Ftext%3E%3C%2Fsvg%3E',
   },
   {
     id: '30',
@@ -314,7 +314,7 @@ const ITEMS: LibraryItem[] = [
     category: 'Data',
     type: 'Component',
     imageUrl:
-      '/template-assets/moody-working-horizontal-3.png',
+      'data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22640%22%20height%3D%22400%22%20viewBox%3D%220%200%20640%20400%22%3E%3Crect%20width%3D%22640%22%20height%3D%22400%22%20fill%3D%22hsl%28194%2C32%25%2C84%25%29%22%2F%3E%3Ccircle%20cx%3D%22500%22%20cy%3D%2290%22%20r%3D%2256%22%20fill%3D%22hsl%28194%2C45%25%2C58%25%29%22%2F%3E%3Cpath%20d%3D%22M0%20400V290L160%2090L380%20350L520%20180L640%20320V400Z%22%20fill%3D%22hsl%28194%2C28%25%2C42%25%29%22%2F%3E%3Ctext%20x%3D%2224%22%20y%3D%2236%22%20font-size%3D%2218%22%20font-family%3D%22system-ui%2Csans-serif%22%20fill%3D%22hsl%28194%2C30%25%2C28%25%29%22%3ELocal%20decorative%20fixture%3C%2Ftext%3E%3C%2Fsvg%3E',
   },
 ];
 

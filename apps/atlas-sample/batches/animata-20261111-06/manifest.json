@@ -1,0 +1,90 @@
+{
+  "batch": "animata-20261111-06",
+  "revision": "25c27e5a874c60a56dcc1609df3b2c4f5f8456f8",
+  "itemCount": 2,
+  "items": [
+    {
+      "id": "animata:bar-chart",
+      "title": "柱状图",
+      "source": "Animata",
+      "license": "MIT",
+      "upstream": "https://github.com/codse/animata/blob/25c27e5a874c60a56dcc1609df3b2c4f5f8456f8/animata/graphs/bar-chart.tsx",
+      "website": "https://animata.design",
+      "revision": "25c27e5a874c60a56dcc1609df3b2c4f5f8456f8",
+      "category": "数据与状态",
+      "format": "组件与效果",
+      "kind": "组件",
+      "behavior": "查看柱状图",
+      "independenceNote": "官方完整组件 graphs/bar-chart，按官方入口对账此前未收；挂载官方 Primary story。",
+      "code": "batches/animata-20261111-06/originals/bar-chart.tsx",
+      "preview": "batches/animata-20261111-06/bar-chart.html",
+      "bundle": "batches/animata-20261111-06/bundles/bar-chart.zip",
+      "runtime": {
+        "assets": [
+          {
+            "key": "placeholder.jpg",
+            "path": "batches/animata-20261111-06/assets/placeholder.jpg",
+            "mime": "image/jpeg",
+            "bytes": 23858,
+            "sha256": "c8b94d7c7566e0951f251e24bd772a30a26d51122b0d99e57fa348168b3d34f2"
+          }
+        ]
+      },
+      "gaps": [
+        "源码级独立性初筛：完整可复用组件可以收录；只收该族一条完整官方示例，不收配色、尺寸或编号小改。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面",
+        "源码级不同点：官方完整组件 graphs/bar-chart，按官方目录对账此前未收。",
+        "使用已有 esbuild+Tailwind 配方，演示入口来自官方 Storybook Primary。未知第三方原图已换自有占位，不冒称视觉复刻。"
+      ],
+      "originalSha256": "5de5f13822174da5492ec1ebcb050b2ff292eded9c64256f7cbac6b9a8f9e0a4",
+      "originalSize": 2251,
+      "batchDir": "animata-20261111-06",
+      "packageEntry": "src/entry.tsx",
+      "packageOfficialComponent": "src/animata/graphs/bar-chart.tsx",
+      "packageOfficialStory": "src/animata/graphs/bar-chart.stories.tsx"
+    },
+    {
+      "id": "animata:donut-chart",
+      "title": "环形图",
+      "source": "Animata",
+      "license": "MIT",
+      "upstream": "https://github.com/codse/animata/blob/25c27e5a874c60a56dcc1609df3b2c4f5f8456f8/animata/graphs/donut-chart.tsx",
+      "website": "https://animata.design",
+      "revision": "25c27e5a874c60a56dcc1609df3b2c4f5f8456f8",
+      "category": "数据与状态",
+      "format": "组件与效果",
+      "kind": "组件",
+      "behavior": "查看环形图",
+      "independenceNote": "官方完整组件 graphs/donut-chart，按官方入口对账此前未收；挂载官方 Primary story。",
+      "code": "batches/animata-20261111-06/originals/donut-chart.tsx",
+      "preview": "batches/animata-20261111-06/donut-chart.html",
+      "bundle": "batches/animata-20261111-06/bundles/donut-chart.zip",
+      "runtime": {
+        "assets": [
+          {
+            "key": "placeholder.jpg",
+            "path": "batches/animata-20261111-06/assets/placeholder.jpg",
+            "mime": "image/jpeg",
+            "bytes": 23858,
+            "sha256": "c8b94d7c7566e0951f251e24bd772a30a26d51122b0d99e57fa348168b3d34f2"
+          }
+        ]
+      },
+      "gaps": [
+        "源码级独立性初筛：完整可复用组件可以收录；只收该族一条完整官方示例，不收配色、尺寸或编号小改。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面",
+        "源码级不同点：官方完整组件 graphs/donut-chart，按官方目录对账此前未收。",
+        "使用已有 esbuild+Tailwind 配方，演示入口来自官方 Storybook Primary。未知第三方原图已换自有占位，不冒称视觉复刻。"
+      ],
+      "originalSha256": "4fde9396ec5802a504102def3de8ee5878424854d7a7e633ac922d2a9558327b",
+      "originalSize": 2232,
+      "batchDir": "animata-20261111-06",
+      "packageEntry": "src/entry.tsx",
+      "packageOfficialComponent": "src/animata/graphs/donut-chart.tsx",
+      "packageOfficialStory": "src/animata/graphs/donut-chart.stories.tsx"
+    }
+  ],
+  "packaging": "Each zip includes the full esbuild+Tailwind engineering for its official Storybook Primary entry."
+}

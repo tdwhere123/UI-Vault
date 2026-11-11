@@ -1,0 +1,31 @@
+{
+  "baseline": "56d4a215487cf1ea3a07d1a50ae612d33e93cc3b",
+  "reviewedFrozenTip": "7be468859b88b31926148cf6f5775a75276f0ce6",
+  "accounts": {
+    "newCatalogConnectsThisLine": 554,
+    "oldSourceReconnects": 22,
+    "duplicateOriginalExclusions": 1,
+    "novelSourceIdentityUpperBound": 531,
+    "verifiedNewIndependentUIs": 0,
+    "covers": 0,
+    "browserVisualQA": 0
+  },
+  "notes": [
+    "主任务是新增优质 UI，不是新增 ID。502 是本线新写入 candidate-catalog 的 ID 数，不是已核独立数。",
+    "22 条为基线已有源码包仅补目录接站，不计入本轮新增原件。",
+    "Oxbow signin-password 与 signin-magic-link 同字节，独立原件只计 1，上限 479 = 502 - 22 - 1。",
+    "479 仍只是新原件身份上限，不是已核独立或闭包合格数。",
+    "原件与条目均保留，未物理删除，也未用改几个字的已有源码重新计数。",
+    "collection-20261111-j 新增 52 条此前未保存的 Mantine UI 官方完整示例（修订 963b955c5cef）。本线新接站现为 554，新原件身份上限 531 = 554 - 22 - 1。这仍只是源码身份初筛，不是已核独立，不能称为目标完成。"
+  ],
+  "closureGapsRemaining": [
+    "真实浏览器路径仍不可用，封面=0，实测=0。",
+    "跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
+    "字体/图/商标 Unknown 标记保留，不假装已获授权。",
+    "本轮修复了 Kokonut 单项入口与 Animata 构建工程/内部模块闭包，以及媒体桥、Tabler 不透明沙箱存储适配、依赖许可证与 21 份补接 manifest；代表包离线重建与针对回归见私有工作目录原始日志。"
+  ],
+  "packagingRepair": {
+    "kokonutSingleEntryZips": 47,
+    "animataEngineerZips": 46
+  }
+}

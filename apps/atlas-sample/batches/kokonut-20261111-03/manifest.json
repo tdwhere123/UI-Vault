@@ -1,0 +1,288 @@
+{
+  "batch": "kokonut-20261111-03",
+  "revision": "a16d64c0d99ab5c6304ebcb88860d8d8bf201fd0",
+  "itemCount": 8,
+  "items": [
+    {
+      "id": "kokonut:photo-straighten",
+      "title": "照片校正",
+      "source": "Kokonut UI",
+      "license": "MIT",
+      "upstream": "https://github.com/kokonut-labs/kokonutui/blob/a16d64c0d99ab5c6304ebcb88860d8d8bf201fd0/components/kokonutui/photo-straighten.tsx",
+      "website": "https://kokonutui.com/docs/components/photo-straighten",
+      "revision": "a16d64c0d99ab5c6304ebcb88860d8d8bf201fd0",
+      "category": "展示与媒体",
+      "format": "组件与效果",
+      "kind": "组件",
+      "behavior": "拖动校正照片角度（演示图为自有占位，不是原图复刻）",
+      "independenceNote": "官方完整组件 photo-straighten，按官方入口对账此前未收；挂载官方默认导出/默认演示数据。",
+      "code": "batches/kokonut-20261111-03/originals/photo-straighten.tsx",
+      "preview": "batches/kokonut-20261111-03/photo-straighten.html",
+      "bundle": "batches/kokonut-20261111-03/bundles/photo-straighten.zip",
+      "runtime": {
+        "assets": [
+          {
+            "key": "placeholder.jpg",
+            "path": "batches/kokonut-20261111-03/assets/placeholder.jpg",
+            "mime": "image/jpeg",
+            "bytes": 23858,
+            "sha256": "c8b94d7c7566e0951f251e24bd772a30a26d51122b0d99e57fa348168b3d34f2"
+          }
+        ]
+      },
+      "gaps": [
+        "源码级独立性初筛：完整可复用组件可以收录；只收该族一条完整官方示例，不收配色、尺寸或编号小改。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面",
+        "源码级不同点：官方完整组件 photo-straighten，按官方 registry 对账此前未收；不是配色或尺寸细变。",
+        "使用已有 Vite 配方编译官方默认导出组件。next/image、next/link 仅为预览宿主垫片。Unsplash 等未知第三方原图不随包再分发，已换自有占位，不冒称视觉复刻。"
+      ],
+      "originalSha256": "d7670c46edcad17192034f2bab90d836fb06b28f0507ec449a0cb4ac5691ed7b",
+      "originalSize": 11394,
+      "batchDir": "kokonut-20261111-03",
+      "packageEntry": "src/main.tsx",
+      "packageOfficialComponent": "src/components/photo-straighten.tsx"
+    },
+    {
+      "id": "kokonut:clip-trimmer",
+      "title": "片段修剪条",
+      "source": "Kokonut UI",
+      "license": "MIT",
+      "upstream": "https://github.com/kokonut-labs/kokonutui/blob/a16d64c0d99ab5c6304ebcb88860d8d8bf201fd0/components/kokonutui/clip-trimmer.tsx",
+      "website": "https://kokonutui.com/docs/components/clip-trimmer",
+      "revision": "a16d64c0d99ab5c6304ebcb88860d8d8bf201fd0",
+      "category": "展示与媒体",
+      "format": "组件与效果",
+      "kind": "组件",
+      "behavior": "拖动修剪片段起止（演示图为自有占位，不是原图复刻）",
+      "independenceNote": "官方完整组件 clip-trimmer，按官方入口对账此前未收；挂载官方默认导出/默认演示数据。",
+      "code": "batches/kokonut-20261111-03/originals/clip-trimmer.tsx",
+      "preview": "batches/kokonut-20261111-03/clip-trimmer.html",
+      "bundle": "batches/kokonut-20261111-03/bundles/clip-trimmer.zip",
+      "runtime": {
+        "assets": [
+          {
+            "key": "placeholder.jpg",
+            "path": "batches/kokonut-20261111-03/assets/placeholder.jpg",
+            "mime": "image/jpeg",
+            "bytes": 23858,
+            "sha256": "c8b94d7c7566e0951f251e24bd772a30a26d51122b0d99e57fa348168b3d34f2"
+          }
+        ]
+      },
+      "gaps": [
+        "源码级独立性初筛：完整可复用组件可以收录；只收该族一条完整官方示例，不收配色、尺寸或编号小改。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面",
+        "源码级不同点：官方完整组件 clip-trimmer，按官方 registry 对账此前未收；不是配色或尺寸细变。",
+        "使用已有 Vite 配方编译官方默认导出组件。next/image、next/link 仅为预览宿主垫片。Unsplash 等未知第三方原图不随包再分发，已换自有占位，不冒称视觉复刻。"
+      ],
+      "originalSha256": "9cb5f59be04f8787c40df06f6dcb619c63b6fc87dab16012878248217df01ebf",
+      "originalSize": 15702,
+      "batchDir": "kokonut-20261111-03",
+      "packageEntry": "src/main.tsx",
+      "packageOfficialComponent": "src/components/clip-trimmer.tsx"
+    },
+    {
+      "id": "kokonut:avatar-picker",
+      "title": "头像生成选择",
+      "source": "Kokonut UI",
+      "license": "MIT",
+      "upstream": "https://github.com/kokonut-labs/kokonutui/blob/a16d64c0d99ab5c6304ebcb88860d8d8bf201fd0/components/kokonutui/avatar-picker.tsx",
+      "website": "https://kokonutui.com/docs/components/avatar-picker",
+      "revision": "a16d64c0d99ab5c6304ebcb88860d8d8bf201fd0",
+      "category": "输入与选择",
+      "format": "组件与效果",
+      "kind": "组件",
+      "behavior": "生成并选择头像（本地生成，不是第三方头像）",
+      "independenceNote": "官方完整组件 avatar-picker，按官方入口对账此前未收；挂载官方默认导出/默认演示数据。",
+      "code": "batches/kokonut-20261111-03/originals/avatar-picker.tsx",
+      "preview": "batches/kokonut-20261111-03/avatar-picker.html",
+      "bundle": "batches/kokonut-20261111-03/bundles/avatar-picker.zip",
+      "runtime": {
+        "assets": []
+      },
+      "gaps": [
+        "源码级独立性初筛：完整可复用组件可以收录；只收该族一条完整官方示例，不收配色、尺寸或编号小改。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面",
+        "源码级不同点：官方完整组件 avatar-picker，按官方 registry 对账此前未收；不是配色或尺寸细变。",
+        "使用已有 Vite 配方编译官方默认导出组件。next/image、next/link 仅为预览宿主垫片。Unsplash 等未知第三方原图不随包再分发，已换自有占位，不冒称视觉复刻。"
+      ],
+      "originalSha256": "7fdd0e1f68d704454e296fcd39a625ba93e8934c0f4ed8a98c6a06d8a2eff0b1",
+      "originalSize": 37720,
+      "batchDir": "kokonut-20261111-03",
+      "packageEntry": "src/main.tsx",
+      "packageOfficialComponent": "src/components/avatar-picker.tsx"
+    },
+    {
+      "id": "kokonut:profile-dropdown",
+      "title": "资料下拉菜单",
+      "source": "Kokonut UI",
+      "license": "MIT",
+      "upstream": "https://github.com/kokonut-labs/kokonutui/blob/a16d64c0d99ab5c6304ebcb88860d8d8bf201fd0/components/kokonutui/profile-dropdown.tsx",
+      "website": "https://kokonutui.com/docs/components/profile-dropdown",
+      "revision": "a16d64c0d99ab5c6304ebcb88860d8d8bf201fd0",
+      "category": "导航与组织",
+      "format": "组件与效果",
+      "kind": "组件",
+      "behavior": "打开资料菜单并切换账户或主题（演示数据）",
+      "independenceNote": "官方完整组件 profile-dropdown，按官方入口对账此前未收；挂载官方默认导出/默认演示数据。",
+      "code": "batches/kokonut-20261111-03/originals/profile-dropdown.tsx",
+      "preview": "batches/kokonut-20261111-03/profile-dropdown.html",
+      "bundle": "batches/kokonut-20261111-03/bundles/profile-dropdown.zip",
+      "runtime": {
+        "assets": []
+      },
+      "gaps": [
+        "源码级独立性初筛：完整可复用组件可以收录；只收该族一条完整官方示例，不收配色、尺寸或编号小改。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面",
+        "源码级不同点：官方完整组件 profile-dropdown，按官方 registry 对账此前未收；不是配色或尺寸细变。",
+        "使用已有 Vite 配方编译官方默认导出组件。next/image、next/link 仅为预览宿主垫片。Unsplash 等未知第三方原图不随包再分发，已换自有占位，不冒称视觉复刻。"
+      ],
+      "originalSha256": "4fa0a5395d950016f3c0d065af074b674f9fa5d5acced470c609f61f5ff68c8b",
+      "originalSize": 35324,
+      "batchDir": "kokonut-20261111-03",
+      "packageEntry": "src/main.tsx",
+      "packageOfficialComponent": "src/components/profile-dropdown.tsx"
+    },
+    {
+      "id": "kokonut:morphic-navbar",
+      "title": "变形顶栏",
+      "source": "Kokonut UI",
+      "license": "MIT",
+      "upstream": "https://github.com/kokonut-labs/kokonutui/blob/a16d64c0d99ab5c6304ebcb88860d8d8bf201fd0/components/kokonutui/morphic-navbar.tsx",
+      "website": "https://kokonutui.com/docs/components/morphic-navbar",
+      "revision": "a16d64c0d99ab5c6304ebcb88860d8d8bf201fd0",
+      "category": "导航与组织",
+      "format": "组件与效果",
+      "kind": "组件",
+      "behavior": "使用变形顶栏导航（演示链接已拦截）",
+      "independenceNote": "官方完整组件 morphic-navbar，按官方入口对账此前未收；挂载官方默认导出/默认演示数据。",
+      "code": "batches/kokonut-20261111-03/originals/morphic-navbar.tsx",
+      "preview": "batches/kokonut-20261111-03/morphic-navbar.html",
+      "bundle": "batches/kokonut-20261111-03/bundles/morphic-navbar.zip",
+      "runtime": {
+        "assets": []
+      },
+      "gaps": [
+        "源码级独立性初筛：完整可复用组件可以收录；只收该族一条完整官方示例，不收配色、尺寸或编号小改。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面",
+        "源码级不同点：官方完整组件 morphic-navbar，按官方 registry 对账此前未收；不是配色或尺寸细变。",
+        "使用已有 Vite 配方编译官方默认导出组件。next/image、next/link 仅为预览宿主垫片。Unsplash 等未知第三方原图不随包再分发，已换自有占位，不冒称视觉复刻。"
+      ],
+      "originalSha256": "a95e3c6659b441f949e1454b02d38e869302395e9ffb643c8af9af47686ccab1",
+      "originalSize": 23183,
+      "batchDir": "kokonut-20261111-03",
+      "packageEntry": "src/main.tsx",
+      "packageOfficialComponent": "src/components/morphic-navbar.tsx"
+    },
+    {
+      "id": "kokonut:lightbox-grid",
+      "title": "灯箱图片栅格",
+      "source": "Kokonut UI",
+      "license": "MIT",
+      "upstream": "https://github.com/kokonut-labs/kokonutui/blob/a16d64c0d99ab5c6304ebcb88860d8d8bf201fd0/components/kokonutui/lightbox-grid.tsx",
+      "website": "https://kokonutui.com/docs/components/lightbox-grid",
+      "revision": "a16d64c0d99ab5c6304ebcb88860d8d8bf201fd0",
+      "category": "展示与媒体",
+      "format": "组件与效果",
+      "kind": "组件",
+      "behavior": "打开灯箱浏览图片（演示图为自有占位，不是原图复刻）",
+      "independenceNote": "官方完整组件 lightbox-grid，按官方入口对账此前未收；挂载官方默认导出/默认演示数据。",
+      "code": "batches/kokonut-20261111-03/originals/lightbox-grid.tsx",
+      "preview": "batches/kokonut-20261111-03/lightbox-grid.html",
+      "bundle": "batches/kokonut-20261111-03/bundles/lightbox-grid.zip",
+      "runtime": {
+        "assets": [
+          {
+            "key": "placeholder.jpg",
+            "path": "batches/kokonut-20261111-03/assets/placeholder.jpg",
+            "mime": "image/jpeg",
+            "bytes": 23858,
+            "sha256": "c8b94d7c7566e0951f251e24bd772a30a26d51122b0d99e57fa348168b3d34f2"
+          }
+        ]
+      },
+      "gaps": [
+        "源码级独立性初筛：完整可复用组件可以收录；只收该族一条完整官方示例，不收配色、尺寸或编号小改。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面",
+        "源码级不同点：官方完整组件 lightbox-grid，按官方 registry 对账此前未收；不是配色或尺寸细变。",
+        "使用已有 Vite 配方编译官方默认导出组件。next/image、next/link 仅为预览宿主垫片。Unsplash 等未知第三方原图不随包再分发，已换自有占位，不冒称视觉复刻。"
+      ],
+      "originalSha256": "68b134adfcf1e10366e8bf4f4b2b5021bcdd785b8ff0b3dd7e47bf78c08b49be",
+      "originalSize": 20908,
+      "batchDir": "kokonut-20261111-03",
+      "packageEntry": "src/main.tsx",
+      "packageOfficialComponent": "src/components/lightbox-grid.tsx"
+    },
+    {
+      "id": "kokonut:spoiler-text",
+      "title": "剧透遮罩文本",
+      "source": "Kokonut UI",
+      "license": "MIT",
+      "upstream": "https://github.com/kokonut-labs/kokonutui/blob/a16d64c0d99ab5c6304ebcb88860d8d8bf201fd0/components/kokonutui/spoiler-text.tsx",
+      "website": "https://kokonutui.com/docs/components/spoiler-text",
+      "revision": "a16d64c0d99ab5c6304ebcb88860d8d8bf201fd0",
+      "category": "展示与媒体",
+      "format": "组件与效果",
+      "kind": "组件",
+      "behavior": "揭示被遮罩的剧透文本",
+      "independenceNote": "官方完整组件 spoiler-text，按官方入口对账此前未收；挂载官方默认导出/默认演示数据。",
+      "code": "batches/kokonut-20261111-03/originals/spoiler-text.tsx",
+      "preview": "batches/kokonut-20261111-03/spoiler-text.html",
+      "bundle": "batches/kokonut-20261111-03/bundles/spoiler-text.zip",
+      "runtime": {
+        "assets": []
+      },
+      "gaps": [
+        "源码级独立性初筛：完整可复用组件可以收录；只收该族一条完整官方示例，不收配色、尺寸或编号小改。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面",
+        "源码级不同点：官方完整组件 spoiler-text，按官方 registry 对账此前未收；不是配色或尺寸细变。",
+        "使用已有 Vite 配方编译官方默认导出组件。next/image、next/link 仅为预览宿主垫片。Unsplash 等未知第三方原图不随包再分发，已换自有占位，不冒称视觉复刻。"
+      ],
+      "originalSha256": "8cc6935a348f0d0b432cb767de97ca65df59ff1450a1761dbe8c3c0d7a368bc2",
+      "originalSize": 16402,
+      "batchDir": "kokonut-20261111-03",
+      "packageEntry": "src/main.tsx",
+      "packageOfficialComponent": "src/components/spoiler-text.tsx"
+    },
+    {
+      "id": "kokonut:ai-autocomplete",
+      "title": "智能补全输入",
+      "source": "Kokonut UI",
+      "license": "MIT",
+      "upstream": "https://github.com/kokonut-labs/kokonutui/blob/a16d64c0d99ab5c6304ebcb88860d8d8bf201fd0/components/kokonutui/ai-autocomplete.tsx",
+      "website": "https://kokonutui.com/docs/components/ai-autocomplete",
+      "revision": "a16d64c0d99ab5c6304ebcb88860d8d8bf201fd0",
+      "category": "Agent与对话",
+      "format": "组件与效果",
+      "kind": "组件",
+      "behavior": "查看 AI 补全输入（不会调用真实模型）",
+      "independenceNote": "官方完整组件 ai-autocomplete，按官方入口对账此前未收；挂载官方默认导出/默认演示数据。",
+      "code": "batches/kokonut-20261111-03/originals/ai-autocomplete.tsx",
+      "preview": "batches/kokonut-20261111-03/ai-autocomplete.html",
+      "bundle": "batches/kokonut-20261111-03/bundles/ai-autocomplete.zip",
+      "runtime": {
+        "assets": []
+      },
+      "gaps": [
+        "源码级独立性初筛：完整可复用组件可以收录；只收该族一条完整官方示例，不收配色、尺寸或编号小改。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面",
+        "源码级不同点：官方完整组件 ai-autocomplete，按官方 registry 对账此前未收；不是配色或尺寸细变。",
+        "使用已有 Vite 配方编译官方默认导出组件。next/image、next/link 仅为预览宿主垫片。Unsplash 等未知第三方原图不随包再分发，已换自有占位，不冒称视觉复刻。"
+      ],
+      "originalSha256": "01a41ce3712048687e3cb96e3835a2b6e88b864ece1ff058a7fed82501e28c5d",
+      "originalSize": 13282,
+      "batchDir": "kokonut-20261111-03",
+      "packageEntry": "src/main.tsx",
+      "packageOfficialComponent": "src/components/ai-autocomplete.tsx"
+    }
+  ],
+  "packaging": "Each zip keeps the official Vite recipe, lockfile and shared UI/hooks, with a single-item src/main.tsx entry."
+}

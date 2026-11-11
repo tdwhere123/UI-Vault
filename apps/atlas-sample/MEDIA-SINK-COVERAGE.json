@@ -1,0 +1,15 @@
+{
+  "supported": [
+    "HTMLImageElement.prototype.src",
+    "HTMLImageElement.prototype.setAttribute('src')",
+    "CSSStyleDeclaration.backgroundImage",
+    "CSSStyleDeclaration.setProperty('background-image')"
+  ],
+  "uncovered": [
+    "CSSStyleDeclaration.background (style.background shorthand setter)",
+    "CSSStyleDeclaration.setProperty('background') shorthand",
+    "static stylesheet background: url() rules (not a JS style sink; current official remote-image packages use img.src or style.backgroundImage)"
+  ],
+  "cspUnchanged": "img-src data: blob: only; no allow-same-origin",
+  "scan": "15 official-remote-image packages have no style.background / setProperty('background') url() consumers. Real remote-image sinks are img.src and style.backgroundImage (image-carousel, case-study-card). style.background is recorded as uncovered; the shared bridge is not widened."
+}

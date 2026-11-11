@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="zh-Hans" class="font-sans antialiased">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>带菜单顶栏</title>
+  <link rel="stylesheet" href="runtime.css">
+</head>
+<body class="bg-base-100" data-demo="navbar">
+<div class="navbar bg-base-100 mb-32 shadow-sm">
+  <div class="flex-1">
+    <button class="btn btn-ghost text-xl">daisyUI</button>
+  </div>
+  <div class="flex-none">
+    <ul class="menu menu-horizontal">
+      <li><button>Link</button></li>
+      <li>
+        <details>
+          <summary>
+            Parent
+          </summary>
+          <ul class="p-2 bg-base-100">
+            <li><button>Link 1</button></li>
+            <li><button>Link 2</button></li>
+          </ul>
+        </details>
+      </li>
+    </ul>
+  </div>
+</div>
+  <script src="runtime.js"></script>
+</body>
+</html>

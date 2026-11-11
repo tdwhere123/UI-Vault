@@ -1,0 +1,295 @@
+{
+  "batch": "animata-20261111-04",
+  "revision": "25c27e5a874c60a56dcc1609df3b2c4f5f8456f8",
+  "itemCount": 7,
+  "items": [
+    {
+      "id": "animata:image-carousel",
+      "title": "图片走马灯",
+      "source": "Animata",
+      "license": "MIT",
+      "upstream": "https://github.com/codse/animata/blob/25c27e5a874c60a56dcc1609df3b2c4f5f8456f8/animata/carousel/image-carousel.tsx",
+      "website": "https://animata.design",
+      "revision": "25c27e5a874c60a56dcc1609df3b2c4f5f8456f8",
+      "category": "展示与媒体",
+      "format": "组件与效果",
+      "kind": "组件",
+      "behavior": "浏览图片走马灯（演示图为自有占位，不是原图复刻）",
+      "independenceNote": "官方完整组件 carousel/image-carousel，按官方入口对账此前未收；挂载官方 Primary story。",
+      "code": "batches/animata-20261111-04/originals/image-carousel.tsx",
+      "preview": "batches/animata-20261111-04/image-carousel.html",
+      "bundle": "batches/animata-20261111-04/bundles/image-carousel.zip",
+      "runtime": {
+        "assets": [
+          {
+            "key": "placeholder.jpg",
+            "path": "batches/animata-20261111-04/assets/placeholder.jpg",
+            "mime": "image/jpeg",
+            "bytes": 23858,
+            "sha256": "c8b94d7c7566e0951f251e24bd772a30a26d51122b0d99e57fa348168b3d34f2"
+          }
+        ]
+      },
+      "gaps": [
+        "源码级独立性初筛：完整可复用组件可以收录；只收该族一条完整官方示例，不收配色、尺寸或编号小改。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面",
+        "源码级不同点：官方完整组件 carousel/image-carousel，按官方目录对账此前未收。",
+        "使用已有 esbuild+Tailwind 配方，演示入口来自官方 Storybook Primary。未知第三方原图已换自有占位，不冒称视觉复刻。"
+      ],
+      "originalSha256": "bf82ecaf3ad10502b23f31bb15c84e62b39f1c4f106f5d831ae9f606799de398",
+      "originalSize": 2596,
+      "batchDir": "animata-20261111-04",
+      "packageEntry": "src/entry.tsx",
+      "packageOfficialComponent": "src/animata/carousel/image-carousel.tsx",
+      "packageOfficialStory": "src/animata/carousel/image-carousel.stories.tsx"
+    },
+    {
+      "id": "animata:pricing",
+      "title": "定价区块",
+      "source": "Animata",
+      "license": "MIT",
+      "upstream": "https://github.com/codse/animata/blob/25c27e5a874c60a56dcc1609df3b2c4f5f8456f8/animata/section/pricing.tsx",
+      "website": "https://animata.design",
+      "revision": "25c27e5a874c60a56dcc1609df3b2c4f5f8456f8",
+      "category": "产品与营销",
+      "format": "组件与效果",
+      "kind": "组件",
+      "behavior": "查看定价区块（演示链接已拦截）",
+      "independenceNote": "官方完整组件 section/pricing，按官方入口对账此前未收；挂载官方 Primary story。",
+      "code": "batches/animata-20261111-04/originals/pricing.tsx",
+      "preview": "batches/animata-20261111-04/pricing.html",
+      "bundle": "batches/animata-20261111-04/bundles/pricing.zip",
+      "runtime": {
+        "assets": [
+          {
+            "key": "placeholder.jpg",
+            "path": "batches/animata-20261111-04/assets/placeholder.jpg",
+            "mime": "image/jpeg",
+            "bytes": 23858,
+            "sha256": "c8b94d7c7566e0951f251e24bd772a30a26d51122b0d99e57fa348168b3d34f2"
+          }
+        ]
+      },
+      "gaps": [
+        "源码级独立性初筛：完整可复用组件可以收录；只收该族一条完整官方示例，不收配色、尺寸或编号小改。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面",
+        "源码级不同点：官方完整组件 section/pricing，按官方目录对账此前未收。",
+        "使用已有 esbuild+Tailwind 配方，演示入口来自官方 Storybook Primary。未知第三方原图已换自有占位，不冒称视觉复刻。"
+      ],
+      "originalSha256": "a1e3413e22ad129b8db63a47929226ffadc1d760372fa0f2504cf975267760cd",
+      "originalSize": 7158,
+      "batchDir": "animata-20261111-04",
+      "packageEntry": "src/entry.tsx",
+      "packageOfficialComponent": "src/animata/section/pricing.tsx",
+      "packageOfficialStory": "src/animata/section/pricing.stories.tsx"
+    },
+    {
+      "id": "animata:modal",
+      "title": "对话框",
+      "source": "Animata",
+      "license": "MIT",
+      "upstream": "https://github.com/codse/animata/blob/25c27e5a874c60a56dcc1609df3b2c4f5f8456f8/animata/overlay/modal.tsx",
+      "website": "https://animata.design",
+      "revision": "25c27e5a874c60a56dcc1609df3b2c4f5f8456f8",
+      "category": "输入与选择",
+      "format": "组件与效果",
+      "kind": "组件",
+      "behavior": "打开或关闭对话框",
+      "independenceNote": "官方完整组件 overlay/modal，按官方入口对账此前未收；挂载官方 Primary story。",
+      "code": "batches/animata-20261111-04/originals/modal.tsx",
+      "preview": "batches/animata-20261111-04/modal.html",
+      "bundle": "batches/animata-20261111-04/bundles/modal.zip",
+      "runtime": {
+        "assets": [
+          {
+            "key": "placeholder.jpg",
+            "path": "batches/animata-20261111-04/assets/placeholder.jpg",
+            "mime": "image/jpeg",
+            "bytes": 23858,
+            "sha256": "c8b94d7c7566e0951f251e24bd772a30a26d51122b0d99e57fa348168b3d34f2"
+          }
+        ]
+      },
+      "gaps": [
+        "源码级独立性初筛：完整可复用组件可以收录；只收该族一条完整官方示例，不收配色、尺寸或编号小改。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面",
+        "源码级不同点：官方完整组件 overlay/modal，按官方目录对账此前未收。",
+        "使用已有 esbuild+Tailwind 配方，演示入口来自官方 Storybook Primary。未知第三方原图已换自有占位，不冒称视觉复刻。"
+      ],
+      "originalSha256": "a816d3074f0a8b883099ce4192f495ce01d0cde1a610c64837b2d9692ac9793d",
+      "originalSize": 3232,
+      "batchDir": "animata-20261111-04",
+      "packageEntry": "src/entry.tsx",
+      "packageOfficialComponent": "src/animata/overlay/modal.tsx",
+      "packageOfficialStory": "src/animata/overlay/modal.stories.tsx"
+    },
+    {
+      "id": "animata:flower-menu",
+      "title": "花瓣菜单",
+      "source": "Animata",
+      "license": "MIT",
+      "upstream": "https://github.com/codse/animata/blob/25c27e5a874c60a56dcc1609df3b2c4f5f8456f8/animata/fabs/flower-menu.tsx",
+      "website": "https://animata.design",
+      "revision": "25c27e5a874c60a56dcc1609df3b2c4f5f8456f8",
+      "category": "导航与组织",
+      "format": "组件与效果",
+      "kind": "组件",
+      "behavior": "展开花瓣快捷菜单（外链已改为占位）",
+      "independenceNote": "官方完整组件 fabs/flower-menu，按官方入口对账此前未收；挂载官方 Primary story。",
+      "code": "batches/animata-20261111-04/originals/flower-menu.tsx",
+      "preview": "batches/animata-20261111-04/flower-menu.html",
+      "bundle": "batches/animata-20261111-04/bundles/flower-menu.zip",
+      "runtime": {
+        "assets": [
+          {
+            "key": "placeholder.jpg",
+            "path": "batches/animata-20261111-04/assets/placeholder.jpg",
+            "mime": "image/jpeg",
+            "bytes": 23858,
+            "sha256": "c8b94d7c7566e0951f251e24bd772a30a26d51122b0d99e57fa348168b3d34f2"
+          }
+        ]
+      },
+      "gaps": [
+        "源码级独立性初筛：完整可复用组件可以收录；只收该族一条完整官方示例，不收配色、尺寸或编号小改。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面",
+        "源码级不同点：官方完整组件 fabs/flower-menu，按官方目录对账此前未收。",
+        "使用已有 esbuild+Tailwind 配方，演示入口来自官方 Storybook Primary。未知第三方原图已换自有占位，不冒称视觉复刻。"
+      ],
+      "originalSha256": "9e1be21a17a52cf7f5b24d9e313f8ec5f9e0359867d8d03e1a7228b5e6c4d09f",
+      "originalSize": 8696,
+      "batchDir": "animata-20261111-04",
+      "packageEntry": "src/entry.tsx",
+      "packageOfficialComponent": "src/animata/fabs/flower-menu.tsx",
+      "packageOfficialStory": "src/animata/fabs/flower-menu.stories.tsx"
+    },
+    {
+      "id": "animata:animated-dock",
+      "title": "动画程序坞",
+      "source": "Animata",
+      "license": "MIT",
+      "upstream": "https://github.com/codse/animata/blob/25c27e5a874c60a56dcc1609df3b2c4f5f8456f8/animata/container/animated-dock.tsx",
+      "website": "https://animata.design",
+      "revision": "25c27e5a874c60a56dcc1609df3b2c4f5f8456f8",
+      "category": "导航与组织",
+      "format": "组件与效果",
+      "kind": "组件",
+      "behavior": "使用动画 Dock（演示链接已拦截）",
+      "independenceNote": "官方完整组件 container/animated-dock，按官方入口对账此前未收；挂载官方 Primary story。",
+      "code": "batches/animata-20261111-04/originals/animated-dock.tsx",
+      "preview": "batches/animata-20261111-04/animated-dock.html",
+      "bundle": "batches/animata-20261111-04/bundles/animated-dock.zip",
+      "runtime": {
+        "assets": [
+          {
+            "key": "placeholder.jpg",
+            "path": "batches/animata-20261111-04/assets/placeholder.jpg",
+            "mime": "image/jpeg",
+            "bytes": 23858,
+            "sha256": "c8b94d7c7566e0951f251e24bd772a30a26d51122b0d99e57fa348168b3d34f2"
+          }
+        ]
+      },
+      "gaps": [
+        "源码级独立性初筛：完整可复用组件可以收录；只收该族一条完整官方示例，不收配色、尺寸或编号小改。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面",
+        "源码级不同点：官方完整组件 container/animated-dock，按官方目录对账此前未收。",
+        "使用已有 esbuild+Tailwind 配方，演示入口来自官方 Storybook Primary。未知第三方原图已换自有占位，不冒称视觉复刻。"
+      ],
+      "originalSha256": "1f0b23eaab90b70dda6a23d058b130fe1a12aca51117cd0383108615d4094e62",
+      "originalSize": 7643,
+      "batchDir": "animata-20261111-04",
+      "packageEntry": "src/entry.tsx",
+      "packageOfficialComponent": "src/animata/container/animated-dock.tsx",
+      "packageOfficialStory": "src/animata/container/animated-dock.stories.tsx"
+    },
+    {
+      "id": "animata:announcement-ribbon",
+      "title": "公告丝带",
+      "source": "Animata",
+      "license": "MIT",
+      "upstream": "https://github.com/codse/animata/blob/25c27e5a874c60a56dcc1609df3b2c4f5f8456f8/animata/container/announcement-ribbon.tsx",
+      "website": "https://animata.design",
+      "revision": "25c27e5a874c60a56dcc1609df3b2c4f5f8456f8",
+      "category": "产品与营销",
+      "format": "组件与效果",
+      "kind": "组件",
+      "behavior": "查看公告丝带（演示链接已拦截）",
+      "independenceNote": "官方完整组件 container/announcement-ribbon，按官方入口对账此前未收；挂载官方 Primary story。",
+      "code": "batches/animata-20261111-04/originals/announcement-ribbon.tsx",
+      "preview": "batches/animata-20261111-04/announcement-ribbon.html",
+      "bundle": "batches/animata-20261111-04/bundles/announcement-ribbon.zip",
+      "runtime": {
+        "assets": [
+          {
+            "key": "placeholder.jpg",
+            "path": "batches/animata-20261111-04/assets/placeholder.jpg",
+            "mime": "image/jpeg",
+            "bytes": 23858,
+            "sha256": "c8b94d7c7566e0951f251e24bd772a30a26d51122b0d99e57fa348168b3d34f2"
+          }
+        ]
+      },
+      "gaps": [
+        "源码级独立性初筛：完整可复用组件可以收录；只收该族一条完整官方示例，不收配色、尺寸或编号小改。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面",
+        "源码级不同点：官方完整组件 container/announcement-ribbon，按官方目录对账此前未收。",
+        "使用已有 esbuild+Tailwind 配方，演示入口来自官方 Storybook Primary。未知第三方原图已换自有占位，不冒称视觉复刻。"
+      ],
+      "originalSha256": "3a0255c9485d29e5d3ca044e28c59bd575e62a5397e8ed344eca8e2aa025146c",
+      "originalSize": 3098,
+      "batchDir": "animata-20261111-04",
+      "packageEntry": "src/entry.tsx",
+      "packageOfficialComponent": "src/animata/container/announcement-ribbon.tsx",
+      "packageOfficialStory": "src/animata/container/announcement-ribbon.stories.tsx"
+    },
+    {
+      "id": "animata:nav-tabs",
+      "title": "导航页签",
+      "source": "Animata",
+      "license": "MIT",
+      "upstream": "https://github.com/codse/animata/blob/25c27e5a874c60a56dcc1609df3b2c4f5f8456f8/animata/container/nav-tabs.tsx",
+      "website": "https://animata.design",
+      "revision": "25c27e5a874c60a56dcc1609df3b2c4f5f8456f8",
+      "category": "导航与组织",
+      "format": "组件与效果",
+      "kind": "组件",
+      "behavior": "切换导航页签",
+      "independenceNote": "官方完整组件 container/nav-tabs，按官方入口对账此前未收；挂载官方 Primary story。",
+      "code": "batches/animata-20261111-04/originals/nav-tabs.tsx",
+      "preview": "batches/animata-20261111-04/nav-tabs.html",
+      "bundle": "batches/animata-20261111-04/bundles/nav-tabs.zip",
+      "runtime": {
+        "assets": [
+          {
+            "key": "placeholder.jpg",
+            "path": "batches/animata-20261111-04/assets/placeholder.jpg",
+            "mime": "image/jpeg",
+            "bytes": 23858,
+            "sha256": "c8b94d7c7566e0951f251e24bd772a30a26d51122b0d99e57fa348168b3d34f2"
+          }
+        ]
+      },
+      "gaps": [
+        "源码级独立性初筛：完整可复用组件可以收录；只收该族一条完整官方示例，不收配色、尺寸或编号小改。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面",
+        "源码级不同点：官方完整组件 container/nav-tabs，按官方目录对账此前未收。",
+        "使用已有 esbuild+Tailwind 配方，演示入口来自官方 Storybook Primary。未知第三方原图已换自有占位，不冒称视觉复刻。"
+      ],
+      "originalSha256": "13fba0c008c750cabd3bcad8c9b44242e1dc5c24f98a9c7c152c4e25066b1cd6",
+      "originalSize": 1255,
+      "batchDir": "animata-20261111-04",
+      "packageEntry": "src/entry.tsx",
+      "packageOfficialComponent": "src/animata/container/nav-tabs.tsx",
+      "packageOfficialStory": "src/animata/container/nav-tabs.stories.tsx"
+    }
+  ],
+  "packaging": "Each zip includes the full esbuild+Tailwind engineering for its official Storybook Primary entry."
+}

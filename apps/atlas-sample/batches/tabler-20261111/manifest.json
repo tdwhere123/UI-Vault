@@ -1,0 +1,2973 @@
+{
+  "source": "Tabler",
+  "repository": "https://github.com/tabler/tabler",
+  "revision": "977102f79cc633074d5518fe1a288fa2ae7fbe27",
+  "itemCount": 60,
+  "browserVisualQA": "not_run",
+  "covers": 0,
+  "items": [
+    {
+      "id": "tabler:billing",
+      "title": "订阅账单管理",
+      "source": "Tabler",
+      "license": "MIT",
+      "upstream": "https://github.com/tabler/tabler/blob/977102f79cc633074d5518fe1a288fa2ae7fbe27/preview/pages/billing.astro",
+      "website": "https://tabler.io",
+      "revision": "977102f79cc633074d5518fe1a288fa2ae7fbe27",
+      "category": "数据与状态",
+      "format": "完整页面",
+      "kind": "完整页面",
+      "behavior": "浏览套餐、支付方式与发票管理（官方构建产物已本地化；操作已拦截，不等于支付成功）",
+      "independenceNote": "订阅套餐加支付方式与发票管理的账单工作台。",
+      "eExisting": true,
+      "officialAssets": [],
+      "placeholderAssets": [],
+      "oversizedAssets": [],
+      "replacedAssets": 0,
+      "code": "batches/tabler-20261111/originals/billing.html",
+      "preview": "batches/tabler-20261111/billing.html",
+      "bundle": "batches/tabler-20261111/bundles/billing.zip",
+      "runtime": {
+        "assets": []
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "源码级不同点：订阅套餐加支付方式与发票管理的账单工作台。",
+        "Tabler 代码为 MIT。本批未收录依赖 ApexCharts 的页面，因官方说明其自第 5 版起不再是单纯 MIT。",
+        "官方免费插画（computer-fix 等六张）按上游免费清单保留。头像、照片、封面等不明原图已留私有原件待核；预览改用明确披露的自有占位，不冒称视觉复刻。品牌/支付/浏览器等 SVG 为商标标识，不是再分发许可；预览中的标识已换自有占位。支付图标样式里的商标图形单独列为商标/Unknown，不宣称权利齐。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面"
+      ],
+      "originalSha256": "724c201968dd4b24671544e9963f94e0fe832736453c4c995d219633df65433a",
+      "originalSize": 401423
+    },
+    {
+      "id": "tabler:pay",
+      "title": "课程结算页",
+      "source": "Tabler",
+      "license": "MIT",
+      "upstream": "https://github.com/tabler/tabler/blob/977102f79cc633074d5518fe1a288fa2ae7fbe27/preview/pages/pay.astro",
+      "website": "https://tabler.io",
+      "revision": "977102f79cc633074d5518fe1a288fa2ae7fbe27",
+      "category": "输入与选择",
+      "format": "完整页面",
+      "kind": "完整页面",
+      "behavior": "浏览课程结算与支付表单（官方构建产物已本地化；提交已拦截，不等于付款成功）",
+      "independenceNote": "课程结算与支付表单页。",
+      "eExisting": true,
+      "officialAssets": [],
+      "placeholderAssets": [
+        "ph-bg-cover.jpg"
+      ],
+      "oversizedAssets": [],
+      "replacedAssets": 1,
+      "code": "batches/tabler-20261111/originals/pay.html",
+      "preview": "batches/tabler-20261111/pay.html",
+      "bundle": "batches/tabler-20261111/bundles/pay.zip",
+      "runtime": {
+        "assets": [
+          {
+            "key": "ph-bg-cover.jpg",
+            "path": "batches/tabler-20261111/assets/ph-bg-cover.jpg",
+            "mime": "image/jpeg",
+            "bytes": 16443,
+            "sha256": "72fcfbf78167e5391ebf4d2b2b67488ebda19ae74ab45ba262e3db8cc28db1ce"
+          }
+        ]
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "源码级不同点：课程结算与支付表单页。",
+        "Tabler 代码为 MIT。本批未收录依赖 ApexCharts 的页面，因官方说明其自第 5 版起不再是单纯 MIT。",
+        "官方免费插画（computer-fix 等六张）按上游免费清单保留。头像、照片、封面等不明原图已留私有原件待核；预览改用明确披露的自有占位，不冒称视觉复刻。品牌/支付/浏览器等 SVG 为商标标识，不是再分发许可；预览中的标识已换自有占位。支付图标样式里的商标图形单独列为商标/Unknown，不宣称权利齐。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面"
+      ],
+      "originalSha256": "13b7063bd349fd36ca5030a20c20049299a4ecac49159dc920dcf67f903d7f4b",
+      "originalSize": 152419
+    },
+    {
+      "id": "tabler:two-step-verification",
+      "title": "两步验证流程",
+      "source": "Tabler",
+      "license": "MIT",
+      "upstream": "https://github.com/tabler/tabler/blob/977102f79cc633074d5518fe1a288fa2ae7fbe27/preview/pages/2-step-verification.astro",
+      "website": "https://tabler.io",
+      "revision": "977102f79cc633074d5518fe1a288fa2ae7fbe27",
+      "category": "输入与选择",
+      "format": "完整页面",
+      "kind": "完整页面",
+      "behavior": "浏览两步验证流程的两个连续官方屏幕：选择验证方式，以及输入验证码（官方构建产物已本地化；不会发送或校验远程验证码）。预览将两屏上下排列便于核验，不是官方单页原样。",
+      "independenceNote": "选择方式与输入验证码是同一两步验证工作流的连续屏幕，已合并为一个候选，源码包保留两份官方原件。不为数量拆开。",
+      "eExisting": true,
+      "officialAssets": [],
+      "placeholderAssets": [],
+      "oversizedAssets": [],
+      "replacedAssets": 0,
+      "code": "batches/tabler-20261111/originals/two-step-verification.html",
+      "preview": "batches/tabler-20261111/two-step-verification.html",
+      "bundle": "batches/tabler-20261111/bundles/two-step-verification.zip",
+      "runtime": {
+        "assets": []
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "源码级不同点：选择方式与输入验证码是同一两步验证工作流的连续屏幕，已合并为一个候选，源码包保留两份官方原件。不为数量拆开。",
+        "Tabler 代码为 MIT。本批未收录依赖 ApexCharts 的页面，因官方说明其自第 5 版起不再是单纯 MIT。",
+        "官方免费插画（computer-fix 等六张）按上游免费清单保留。头像、照片、封面等不明原图已留私有原件待核；预览改用明确披露的自有占位，不冒称视觉复刻。品牌/支付/浏览器等 SVG 为商标标识，不是再分发许可；预览中的标识已换自有占位。支付图标样式里的商标图形单独列为商标/Unknown，不宣称权利齐。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面",
+        "两步验证已合并为一个候选：源码包保留选择方式与输入验证码两份官方原件。预览上下排列是窄适配，不是官方单页原样。"
+      ],
+      "originalSha256": "48d0dd7f8b1ffd8b80cb0b760156adffa8fa2e9c9e5f0cc0aaed79e2dc2ef37d",
+      "originalSize": 168038
+    },
+    {
+      "id": "tabler:activity",
+      "title": "动态时间线",
+      "source": "Tabler",
+      "license": "MIT",
+      "upstream": "https://github.com/tabler/tabler/blob/977102f79cc633074d5518fe1a288fa2ae7fbe27/preview/pages/activity.astro",
+      "website": "https://tabler.io",
+      "revision": "977102f79cc633074d5518fe1a288fa2ae7fbe27",
+      "category": "数据与状态",
+      "format": "完整页面",
+      "kind": "完整页面",
+      "behavior": "浏览账户动态时间线（官方构建产物已本地化）",
+      "independenceNote": "账户动态时间线整页。",
+      "eExisting": true,
+      "officialAssets": [],
+      "placeholderAssets": [],
+      "oversizedAssets": [],
+      "replacedAssets": 0,
+      "code": "batches/tabler-20261111/originals/activity.html",
+      "preview": "batches/tabler-20261111/activity.html",
+      "bundle": "batches/tabler-20261111/bundles/activity.zip",
+      "runtime": {
+        "assets": []
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "源码级不同点：账户动态时间线整页。",
+        "Tabler 代码为 MIT。本批未收录依赖 ApexCharts 的页面，因官方说明其自第 5 版起不再是单纯 MIT。",
+        "官方免费插画（computer-fix 等六张）按上游免费清单保留。头像、照片、封面等不明原图已留私有原件待核；预览改用明确披露的自有占位，不冒称视觉复刻。品牌/支付/浏览器等 SVG 为商标标识，不是再分发许可；预览中的标识已换自有占位。支付图标样式里的商标图形单独列为商标/Unknown，不宣称权利齐。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面"
+      ],
+      "originalSha256": "4ac355e4d3aa24801b8c92091d785e1fbb9159307bb0dc2f8b1e8c95c7d1cf14",
+      "originalSize": 390184
+    },
+    {
+      "id": "tabler:trial-ended",
+      "title": "试用结束页",
+      "source": "Tabler",
+      "license": "MIT",
+      "upstream": "https://github.com/tabler/tabler/blob/977102f79cc633074d5518fe1a288fa2ae7fbe27/preview/pages/trial-ended.astro",
+      "website": "https://tabler.io",
+      "revision": "977102f79cc633074d5518fe1a288fa2ae7fbe27",
+      "category": "产品与营销",
+      "format": "完整页面",
+      "kind": "完整页面",
+      "behavior": "浏览试用结束与续订引导（官方构建产物已本地化；操作已拦截）",
+      "independenceNote": "试用结束与续订引导整页。",
+      "eExisting": true,
+      "officialAssets": [],
+      "placeholderAssets": [],
+      "oversizedAssets": [],
+      "replacedAssets": 0,
+      "code": "batches/tabler-20261111/originals/trial-ended.html",
+      "preview": "batches/tabler-20261111/trial-ended.html",
+      "bundle": "batches/tabler-20261111/bundles/trial-ended.zip",
+      "runtime": {
+        "assets": []
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "源码级不同点：试用结束与续订引导整页。",
+        "Tabler 代码为 MIT。本批未收录依赖 ApexCharts 的页面，因官方说明其自第 5 版起不再是单纯 MIT。",
+        "官方免费插画（computer-fix 等六张）按上游免费清单保留。头像、照片、封面等不明原图已留私有原件待核；预览改用明确披露的自有占位，不冒称视觉复刻。品牌/支付/浏览器等 SVG 为商标标识，不是再分发许可；预览中的标识已换自有占位。支付图标样式里的商标图形单独列为商标/Unknown，不宣称权利齐。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面"
+      ],
+      "originalSha256": "4f04b277af2c826641425113abecd86ffbe41658813f7140b82059aa09215793",
+      "originalSize": 149956
+    },
+    {
+      "id": "tabler:logs",
+      "title": "系统日志页",
+      "source": "Tabler",
+      "license": "MIT",
+      "upstream": "https://github.com/tabler/tabler/blob/977102f79cc633074d5518fe1a288fa2ae7fbe27/preview/pages/logs.astro",
+      "website": "https://tabler.io",
+      "revision": "977102f79cc633074d5518fe1a288fa2ae7fbe27",
+      "category": "数据与状态",
+      "format": "完整页面",
+      "kind": "完整页面",
+      "behavior": "浏览系统日志列表（官方构建产物已本地化）",
+      "independenceNote": "系统日志列表整页。",
+      "eExisting": true,
+      "officialAssets": [],
+      "placeholderAssets": [],
+      "oversizedAssets": [],
+      "replacedAssets": 0,
+      "code": "batches/tabler-20261111/originals/logs.html",
+      "preview": "batches/tabler-20261111/logs.html",
+      "bundle": "batches/tabler-20261111/bundles/logs.zip",
+      "runtime": {
+        "assets": []
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "源码级不同点：系统日志列表整页。",
+        "Tabler 代码为 MIT。本批未收录依赖 ApexCharts 的页面，因官方说明其自第 5 版起不再是单纯 MIT。",
+        "官方免费插画（computer-fix 等六张）按上游免费清单保留。头像、照片、封面等不明原图已留私有原件待核；预览改用明确披露的自有占位，不冒称视觉复刻。品牌/支付/浏览器等 SVG 为商标标识，不是再分发许可；预览中的标识已换自有占位。支付图标样式里的商标图形单独列为商标/Unknown，不宣称权利齐。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面"
+      ],
+      "originalSha256": "f582b33de5da552395200f1cc0840a17d9b3c7aafdbcab02846c02131673a364",
+      "originalSize": 357604
+    },
+    {
+      "id": "tabler:chat",
+      "title": "团队会话页",
+      "source": "Tabler",
+      "license": "MIT",
+      "upstream": "https://github.com/tabler/tabler/blob/977102f79cc633074d5518fe1a288fa2ae7fbe27/preview/pages/chat.astro",
+      "website": "https://tabler.io",
+      "revision": "977102f79cc633074d5518fe1a288fa2ae7fbe27",
+      "category": "Agent与对话",
+      "format": "完整页面",
+      "kind": "完整页面",
+      "behavior": "浏览团队会话与消息列（发送已拦截）",
+      "independenceNote": "团队会话列表加消息列，与 AdminLTE 管理端会话页结构不同（布局、导航与信息架构均非同壳）。",
+      "eExisting": false,
+      "officialAssets": [],
+      "placeholderAssets": [],
+      "oversizedAssets": [],
+      "replacedAssets": 0,
+      "code": "batches/tabler-20261111/originals/chat.html",
+      "preview": "batches/tabler-20261111/chat.html",
+      "bundle": "batches/tabler-20261111/bundles/chat.zip",
+      "runtime": {
+        "assets": []
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "源码级不同点：团队会话列表加消息列，与 AdminLTE 管理端会话页结构不同（布局、导航与信息架构均非同壳）。",
+        "Tabler 代码为 MIT。本批未收录依赖 ApexCharts 的页面，因官方说明其自第 5 版起不再是单纯 MIT。",
+        "官方免费插画（computer-fix 等六张）按上游免费清单保留。头像、照片、封面等不明原图已留私有原件待核；预览改用明确披露的自有占位，不冒称视觉复刻。品牌/支付/浏览器等 SVG 为商标标识，不是再分发许可；预览中的标识已换自有占位。支付图标样式里的商标图形单独列为商标/Unknown，不宣称权利齐。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面"
+      ],
+      "originalSha256": "a06e3dcef380cd40d6eccedc5107e4e7848e643e7f1fd8a273065a71b0dbc0f0",
+      "originalSize": 390699
+    },
+    {
+      "id": "tabler:invoice",
+      "title": "对账单据页",
+      "source": "Tabler",
+      "license": "MIT",
+      "upstream": "https://github.com/tabler/tabler/blob/977102f79cc633074d5518fe1a288fa2ae7fbe27/preview/pages/invoice.astro",
+      "website": "https://tabler.io",
+      "revision": "977102f79cc633074d5518fe1a288fa2ae7fbe27",
+      "category": "数据与状态",
+      "format": "完整页面",
+      "kind": "完整页面",
+      "behavior": "浏览对账单据（官方构建产物已本地化）",
+      "independenceNote": "Tabler 对账单据页的页眉、表格与操作区与 AdminLTE 可打印发票页结构不同，不是同壳填数。",
+      "eExisting": false,
+      "officialAssets": [],
+      "placeholderAssets": [],
+      "oversizedAssets": [],
+      "replacedAssets": 0,
+      "code": "batches/tabler-20261111/originals/invoice.html",
+      "preview": "batches/tabler-20261111/invoice.html",
+      "bundle": "batches/tabler-20261111/bundles/invoice.zip",
+      "runtime": {
+        "assets": []
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "源码级不同点：Tabler 对账单据页的页眉、表格与操作区与 AdminLTE 可打印发票页结构不同，不是同壳填数。",
+        "Tabler 代码为 MIT。本批未收录依赖 ApexCharts 的页面，因官方说明其自第 5 版起不再是单纯 MIT。",
+        "官方免费插画（computer-fix 等六张）按上游免费清单保留。头像、照片、封面等不明原图已留私有原件待核；预览改用明确披露的自有占位，不冒称视觉复刻。品牌/支付/浏览器等 SVG 为商标标识，不是再分发许可；预览中的标识已换自有占位。支付图标样式里的商标图形单独列为商标/Unknown，不宣称权利齐。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面"
+      ],
+      "originalSha256": "f4e1536e85c2a353d8049049f0b14346c97867e5a83ac0b342913e4ea8df4a47",
+      "originalSize": 359705
+    },
+    {
+      "id": "tabler:users",
+      "title": "成员目录页",
+      "source": "Tabler",
+      "license": "MIT",
+      "upstream": "https://github.com/tabler/tabler/blob/977102f79cc633074d5518fe1a288fa2ae7fbe27/preview/pages/users.astro",
+      "website": "https://tabler.io",
+      "revision": "977102f79cc633074d5518fe1a288fa2ae7fbe27",
+      "category": "数据与状态",
+      "format": "完整页面",
+      "kind": "完整页面",
+      "behavior": "浏览成员目录（预览头像为自有占位）",
+      "independenceNote": "成员卡片/目录布局，与 AdminLTE 用户表格目录结构不同。",
+      "eExisting": false,
+      "officialAssets": [],
+      "placeholderAssets": [],
+      "oversizedAssets": [],
+      "replacedAssets": 0,
+      "code": "batches/tabler-20261111/originals/users.html",
+      "preview": "batches/tabler-20261111/users.html",
+      "bundle": "batches/tabler-20261111/bundles/users.zip",
+      "runtime": {
+        "assets": []
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "源码级不同点：成员卡片/目录布局，与 AdminLTE 用户表格目录结构不同。",
+        "Tabler 代码为 MIT。本批未收录依赖 ApexCharts 的页面，因官方说明其自第 5 版起不再是单纯 MIT。",
+        "官方免费插画（computer-fix 等六张）按上游免费清单保留。头像、照片、封面等不明原图已留私有原件待核；预览改用明确披露的自有占位，不冒称视觉复刻。品牌/支付/浏览器等 SVG 为商标标识，不是再分发许可；预览中的标识已换自有占位。支付图标样式里的商标图形单独列为商标/Unknown，不宣称权利齐。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面"
+      ],
+      "originalSha256": "0a11319ac330d1db34f8cca328915749f2545f2cb905fb6a2d321edaefd1aa65",
+      "originalSize": 409862
+    },
+    {
+      "id": "tabler:search-results",
+      "title": "检索结果页",
+      "source": "Tabler",
+      "license": "MIT",
+      "upstream": "https://github.com/tabler/tabler/blob/977102f79cc633074d5518fe1a288fa2ae7fbe27/preview/pages/search-results.astro",
+      "website": "https://tabler.io",
+      "revision": "977102f79cc633074d5518fe1a288fa2ae7fbe27",
+      "category": "数据与状态",
+      "format": "完整页面",
+      "kind": "完整页面",
+      "behavior": "浏览检索结果（检索不会访问远程）",
+      "independenceNote": "Tabler 检索结果信息架构与 AdminLTE 带分类站内搜索结果页不同。",
+      "eExisting": false,
+      "officialAssets": [],
+      "placeholderAssets": [
+        "ph-beautiful-blonde-woman-relaxing-with-a-can-of-coke-on-a-tree-stump-by-the-beach.jpg",
+        "ph-brainstorming-session-with-creative-designers.jpg",
+        "ph-finances-us-dollars-and-bitcoins-currency-money.jpg",
+        "ph-group-of-people-brainstorming-and-taking-notes-2.jpg",
+        "ph-blue-sofa-with-pillows-in-a-designer-living-room-interior.jpg",
+        "ph-home-office-desk-with-macbook-iphone-calendar-watch-and-organizer.jpg",
+        "ph-young-woman-working-in-a-cafe.jpg",
+        "ph-everything-you-need-to-work-from-your-bed.jpg",
+        "ph-young-entrepreneur-working-from-a-modern-cafe.jpg",
+        "ph-finances-us-dollars-and-bitcoins-currency-money-2.jpg",
+        "ph-group-of-people-sightseeing-in-the-city.jpg",
+        "ph-color-palette-guide-sample-colors-catalog-.jpg",
+        "ph-stylish-workplace-with-computer-at-home.jpg",
+        "ph-pink-desk-in-the-home-office.jpg",
+        "ph-young-woman-sitting-on-the-sofa-and-working-on-her-laptop.jpg",
+        "ph-coffee-on-a-table-with-other-items.jpg",
+        "ph-young-entrepreneur-working-from-a-modern-cafe-2.jpg",
+        "ph-soft-photo-of-woman-on-the-bed-with-the-book-and-cup-of-coffee-in-hands.jpg"
+      ],
+      "oversizedAssets": [],
+      "replacedAssets": 18,
+      "code": "batches/tabler-20261111/originals/search-results.html",
+      "preview": "batches/tabler-20261111/search-results.html",
+      "bundle": "batches/tabler-20261111/bundles/search-results.zip",
+      "runtime": {
+        "assets": [
+          {
+            "key": "ph-beautiful-blonde-woman-relaxing-with-a-can-of-coke-on-a-tree-stump-by-the-beach.jpg",
+            "path": "batches/tabler-20261111/assets/ph-beautiful-blonde-woman-relaxing-with-a-can-of-coke-on-a-tree-stump-by-the-beach.jpg",
+            "mime": "image/jpeg",
+            "bytes": 36768,
+            "sha256": "ed19a1b687181268cfed502a0050de65e154c593ffce20516097af2ec1b7a433"
+          },
+          {
+            "key": "ph-brainstorming-session-with-creative-designers.jpg",
+            "path": "batches/tabler-20261111/assets/ph-brainstorming-session-with-creative-designers.jpg",
+            "mime": "image/jpeg",
+            "bytes": 36784,
+            "sha256": "e24b1914124e92ceafa0b2395358b3745eb3a5d518b842afd5ea260b6aa8748f"
+          },
+          {
+            "key": "ph-finances-us-dollars-and-bitcoins-currency-money.jpg",
+            "path": "batches/tabler-20261111/assets/ph-finances-us-dollars-and-bitcoins-currency-money.jpg",
+            "mime": "image/jpeg",
+            "bytes": 34047,
+            "sha256": "4d70a2e651d55e85d1a28e8e96ee52d91f8d62848e7279ac254f94e51443fc05"
+          },
+          {
+            "key": "ph-group-of-people-brainstorming-and-taking-notes-2.jpg",
+            "path": "batches/tabler-20261111/assets/ph-group-of-people-brainstorming-and-taking-notes-2.jpg",
+            "mime": "image/jpeg",
+            "bytes": 36427,
+            "sha256": "6dd1e2e0c9e5714e45f6a2c776bffe853d5c3e26d87cf977890819a073bffe30"
+          },
+          {
+            "key": "ph-blue-sofa-with-pillows-in-a-designer-living-room-interior.jpg",
+            "path": "batches/tabler-20261111/assets/ph-blue-sofa-with-pillows-in-a-designer-living-room-interior.jpg",
+            "mime": "image/jpeg",
+            "bytes": 34923,
+            "sha256": "79ac18015f4c73e405ec67bac4f1f3c6a7488258318b4ce51d270ee33d7723c8"
+          },
+          {
+            "key": "ph-home-office-desk-with-macbook-iphone-calendar-watch-and-organizer.jpg",
+            "path": "batches/tabler-20261111/assets/ph-home-office-desk-with-macbook-iphone-calendar-watch-and-organizer.jpg",
+            "mime": "image/jpeg",
+            "bytes": 36847,
+            "sha256": "4e521606150eb5ffd14a1542ba9ad76b035f2331756393e1e661e6559208c182"
+          },
+          {
+            "key": "ph-young-woman-working-in-a-cafe.jpg",
+            "path": "batches/tabler-20261111/assets/ph-young-woman-working-in-a-cafe.jpg",
+            "mime": "image/jpeg",
+            "bytes": 34031,
+            "sha256": "88bdcf80b689a813956ade7e2d0a9242b4d865648a9a40471ce86f8bb9398698"
+          },
+          {
+            "key": "ph-everything-you-need-to-work-from-your-bed.jpg",
+            "path": "batches/tabler-20261111/assets/ph-everything-you-need-to-work-from-your-bed.jpg",
+            "mime": "image/jpeg",
+            "bytes": 34424,
+            "sha256": "a8624308aa7601ebbae8f059b6630602dbf0b49a99e4c11af24c22d18dd0c551"
+          },
+          {
+            "key": "ph-young-entrepreneur-working-from-a-modern-cafe.jpg",
+            "path": "batches/tabler-20261111/assets/ph-young-entrepreneur-working-from-a-modern-cafe.jpg",
+            "mime": "image/jpeg",
+            "bytes": 36498,
+            "sha256": "cae1c0f93a126bae231a3a2c0e2e21faad05a2d2f8a568b9dfaf18964c579933"
+          },
+          {
+            "key": "ph-finances-us-dollars-and-bitcoins-currency-money-2.jpg",
+            "path": "batches/tabler-20261111/assets/ph-finances-us-dollars-and-bitcoins-currency-money-2.jpg",
+            "mime": "image/jpeg",
+            "bytes": 34541,
+            "sha256": "ed9ead2b84a4e89e7c0e186e8d64a97a6dbf2e157a1be022443810cb076ddebc"
+          },
+          {
+            "key": "ph-group-of-people-sightseeing-in-the-city.jpg",
+            "path": "batches/tabler-20261111/assets/ph-group-of-people-sightseeing-in-the-city.jpg",
+            "mime": "image/jpeg",
+            "bytes": 34711,
+            "sha256": "8ee7b47e86c86ad59d2ab46cae8ee78e3e938b506c4afce66bfa2f8066b01b20"
+          },
+          {
+            "key": "ph-color-palette-guide-sample-colors-catalog-.jpg",
+            "path": "batches/tabler-20261111/assets/ph-color-palette-guide-sample-colors-catalog-.jpg",
+            "mime": "image/jpeg",
+            "bytes": 37298,
+            "sha256": "17febee9ecbe44d2f683de72e304d47f69c9dc1b421e60cd3f37e4d3e9c4f149"
+          },
+          {
+            "key": "ph-stylish-workplace-with-computer-at-home.jpg",
+            "path": "batches/tabler-20261111/assets/ph-stylish-workplace-with-computer-at-home.jpg",
+            "mime": "image/jpeg",
+            "bytes": 35470,
+            "sha256": "13c6287863de75e913324a49a5519fdd5184f55495e05115849ad5942d79c9f5"
+          },
+          {
+            "key": "ph-pink-desk-in-the-home-office.jpg",
+            "path": "batches/tabler-20261111/assets/ph-pink-desk-in-the-home-office.jpg",
+            "mime": "image/jpeg",
+            "bytes": 35189,
+            "sha256": "1c0c70724c646273621c1f84b4e7222fe705fda331974d601e796cdf855d2590"
+          },
+          {
+            "key": "ph-young-woman-sitting-on-the-sofa-and-working-on-her-laptop.jpg",
+            "path": "batches/tabler-20261111/assets/ph-young-woman-sitting-on-the-sofa-and-working-on-her-laptop.jpg",
+            "mime": "image/jpeg",
+            "bytes": 35707,
+            "sha256": "98758b19b6384804d0b047ee008ba70d3f3fbfc3844242e19959c4bcb9bd6449"
+          },
+          {
+            "key": "ph-coffee-on-a-table-with-other-items.jpg",
+            "path": "batches/tabler-20261111/assets/ph-coffee-on-a-table-with-other-items.jpg",
+            "mime": "image/jpeg",
+            "bytes": 34930,
+            "sha256": "e09d1df3ae0ee5851d4f41b002d85e420eb774a5cbabaf6092d938c0ed2b2d54"
+          },
+          {
+            "key": "ph-young-entrepreneur-working-from-a-modern-cafe-2.jpg",
+            "path": "batches/tabler-20261111/assets/ph-young-entrepreneur-working-from-a-modern-cafe-2.jpg",
+            "mime": "image/jpeg",
+            "bytes": 35482,
+            "sha256": "82ea4ee5491e398f5c08c9662aae934cf6517f43239840fe744ccd425f49e088"
+          },
+          {
+            "key": "ph-soft-photo-of-woman-on-the-bed-with-the-book-and-cup-of-coffee-in-hands.jpg",
+            "path": "batches/tabler-20261111/assets/ph-soft-photo-of-woman-on-the-bed-with-the-book-and-cup-of-coffee-in-hands.jpg",
+            "mime": "image/jpeg",
+            "bytes": 36682,
+            "sha256": "876d03711aefdc44add7ad07a98b49ffad541102ac349cca5970c0116c092ee1"
+          }
+        ]
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "源码级不同点：Tabler 检索结果信息架构与 AdminLTE 带分类站内搜索结果页不同。",
+        "Tabler 代码为 MIT。本批未收录依赖 ApexCharts 的页面，因官方说明其自第 5 版起不再是单纯 MIT。",
+        "官方免费插画（computer-fix 等六张）按上游免费清单保留。头像、照片、封面等不明原图已留私有原件待核；预览改用明确披露的自有占位，不冒称视觉复刻。品牌/支付/浏览器等 SVG 为商标标识，不是再分发许可；预览中的标识已换自有占位。支付图标样式里的商标图形单独列为商标/Unknown，不宣称权利齐。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面"
+      ],
+      "originalSha256": "2104fca86f22e29ffaa4782fc13e5bebdc6f4ecc9ab5f50bf881866a23d74556",
+      "originalSize": 381508
+    },
+    {
+      "id": "tabler:job-listing",
+      "title": "职位检索页",
+      "source": "Tabler",
+      "license": "MIT",
+      "upstream": "https://github.com/tabler/tabler/blob/977102f79cc633074d5518fe1a288fa2ae7fbe27/preview/pages/job-listing.astro",
+      "website": "https://tabler.io",
+      "revision": "977102f79cc633074d5518fe1a288fa2ae7fbe27",
+      "category": "产品与营销",
+      "format": "完整页面",
+      "kind": "完整页面",
+      "behavior": "浏览职位检索列表（演示操作已拦截）",
+      "independenceNote": "职位检索与筛选列表，库存中无同壳来源。",
+      "eExisting": false,
+      "officialAssets": [],
+      "placeholderAssets": [],
+      "oversizedAssets": [],
+      "replacedAssets": 0,
+      "code": "batches/tabler-20261111/originals/job-listing.html",
+      "preview": "batches/tabler-20261111/job-listing.html",
+      "bundle": "batches/tabler-20261111/bundles/job-listing.zip",
+      "runtime": {
+        "assets": []
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "源码级不同点：职位检索与筛选列表，库存中无同壳来源。",
+        "Tabler 代码为 MIT。本批未收录依赖 ApexCharts 的页面，因官方说明其自第 5 版起不再是单纯 MIT。",
+        "官方免费插画（computer-fix 等六张）按上游免费清单保留。头像、照片、封面等不明原图已留私有原件待核；预览改用明确披露的自有占位，不冒称视觉复刻。品牌/支付/浏览器等 SVG 为商标标识，不是再分发许可；预览中的标识已换自有占位。支付图标样式里的商标图形单独列为商标/Unknown，不宣称权利齐。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面"
+      ],
+      "originalSha256": "8207a3c4d6476e74fda7cffc8ee747d107af7011c9c8e68b1df3874f035624a0",
+      "originalSize": 470558
+    },
+    {
+      "id": "tabler:tasks",
+      "title": "任务看板工作台",
+      "source": "Tabler",
+      "license": "MIT",
+      "upstream": "https://github.com/tabler/tabler/blob/977102f79cc633074d5518fe1a288fa2ae7fbe27/preview/pages/tasks.astro",
+      "website": "https://tabler.io",
+      "revision": "977102f79cc633074d5518fe1a288fa2ae7fbe27",
+      "category": "数据与状态",
+      "format": "完整页面",
+      "kind": "完整页面",
+      "behavior": "浏览任务看板并使用添加看板控件（持久化不会发生）",
+      "independenceNote": "带“添加看板”的分栏任务工作台，与 AdminLTE 看板及同库任务列表页结构不同。",
+      "eExisting": false,
+      "officialAssets": [],
+      "placeholderAssets": [
+        "ph-dashboard-1.jpg",
+        "ph-dashboard-3.jpg",
+        "ph-dashboard-2.jpg"
+      ],
+      "oversizedAssets": [],
+      "replacedAssets": 3,
+      "code": "batches/tabler-20261111/originals/tasks.html",
+      "preview": "batches/tabler-20261111/tasks.html",
+      "bundle": "batches/tabler-20261111/bundles/tasks.zip",
+      "runtime": {
+        "assets": [
+          {
+            "key": "ph-dashboard-1.jpg",
+            "path": "batches/tabler-20261111/assets/ph-dashboard-1.jpg",
+            "mime": "image/jpeg",
+            "bytes": 15912,
+            "sha256": "82a2f912dba68d5fa896ef49b6059d93ab7694103a0eab16ab1cfaa379308d53"
+          },
+          {
+            "key": "ph-dashboard-3.jpg",
+            "path": "batches/tabler-20261111/assets/ph-dashboard-3.jpg",
+            "mime": "image/jpeg",
+            "bytes": 16457,
+            "sha256": "48c0a0ef5ee8ffb62c1e2c887ed295a1028b2f543916352442001dee190efec8"
+          },
+          {
+            "key": "ph-dashboard-2.jpg",
+            "path": "batches/tabler-20261111/assets/ph-dashboard-2.jpg",
+            "mime": "image/jpeg",
+            "bytes": 16573,
+            "sha256": "d57f8805bbc5502871929d910d4a9790a358147f108f707149d2368da82ea153"
+          }
+        ]
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "源码级不同点：带“添加看板”的分栏任务工作台，与 AdminLTE 看板及同库任务列表页结构不同。",
+        "Tabler 代码为 MIT。本批未收录依赖 ApexCharts 的页面，因官方说明其自第 5 版起不再是单纯 MIT。",
+        "官方免费插画（computer-fix 等六张）按上游免费清单保留。头像、照片、封面等不明原图已留私有原件待核；预览改用明确披露的自有占位，不冒称视觉复刻。品牌/支付/浏览器等 SVG 为商标标识，不是再分发许可；预览中的标识已换自有占位。支付图标样式里的商标图形单独列为商标/Unknown，不宣称权利齐。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面"
+      ],
+      "originalSha256": "44890cf4500ba0dc180ec6814e78a1dd5f4b186f743a79faa315f6f9e3a3416b",
+      "originalSize": 603347
+    },
+    {
+      "id": "tabler:tasks-list",
+      "title": "任务列表页",
+      "source": "Tabler",
+      "license": "MIT",
+      "upstream": "https://github.com/tabler/tabler/blob/977102f79cc633074d5518fe1a288fa2ae7fbe27/preview/pages/tasks-list.astro",
+      "website": "https://tabler.io",
+      "revision": "977102f79cc633074d5518fe1a288fa2ae7fbe27",
+      "category": "数据与状态",
+      "format": "完整页面",
+      "kind": "完整页面",
+      "behavior": "浏览即将到来的任务列表（操作已拦截）",
+      "independenceNote": "“即将到来”任务列表，与同库看板工作台是不同结构的完整页面，不是换色或填数。",
+      "eExisting": false,
+      "officialAssets": [],
+      "placeholderAssets": [],
+      "oversizedAssets": [],
+      "replacedAssets": 0,
+      "code": "batches/tabler-20261111/originals/tasks-list.html",
+      "preview": "batches/tabler-20261111/tasks-list.html",
+      "bundle": "batches/tabler-20261111/bundles/tasks-list.zip",
+      "runtime": {
+        "assets": []
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "源码级不同点：“即将到来”任务列表，与同库看板工作台是不同结构的完整页面，不是换色或填数。",
+        "Tabler 代码为 MIT。本批未收录依赖 ApexCharts 的页面，因官方说明其自第 5 版起不再是单纯 MIT。",
+        "官方免费插画（computer-fix 等六张）按上游免费清单保留。头像、照片、封面等不明原图已留私有原件待核；预览改用明确披露的自有占位，不冒称视觉复刻。品牌/支付/浏览器等 SVG 为商标标识，不是再分发许可；预览中的标识已换自有占位。支付图标样式里的商标图形单独列为商标/Unknown，不宣称权利齐。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面"
+      ],
+      "originalSha256": "25dc17e88d4a87ad245688f58c640fcdca37642da7390a65564fee495fc7a734",
+      "originalSize": 431107
+    },
+    {
+      "id": "tabler:onboarding",
+      "title": "产品引导页",
+      "source": "Tabler",
+      "license": "MIT",
+      "upstream": "https://github.com/tabler/tabler/blob/977102f79cc633074d5518fe1a288fa2ae7fbe27/preview/pages/onboarding.astro",
+      "website": "https://tabler.io",
+      "revision": "977102f79cc633074d5518fe1a288fa2ae7fbe27",
+      "category": "输入与选择",
+      "format": "完整页面",
+      "kind": "完整页面",
+      "behavior": "浏览产品引导步骤（提交已拦截）",
+      "independenceNote": "产品引导整页，不是对话框组件。",
+      "eExisting": false,
+      "officialAssets": [],
+      "placeholderAssets": [],
+      "oversizedAssets": [],
+      "replacedAssets": 0,
+      "code": "batches/tabler-20261111/originals/onboarding.html",
+      "preview": "batches/tabler-20261111/onboarding.html",
+      "bundle": "batches/tabler-20261111/bundles/onboarding.zip",
+      "runtime": {
+        "assets": []
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "源码级不同点：产品引导整页，不是对话框组件。",
+        "Tabler 代码为 MIT。本批未收录依赖 ApexCharts 的页面，因官方说明其自第 5 版起不再是单纯 MIT。",
+        "官方免费插画（computer-fix 等六张）按上游免费清单保留。头像、照片、封面等不明原图已留私有原件待核；预览改用明确披露的自有占位，不冒称视觉复刻。品牌/支付/浏览器等 SVG 为商标标识，不是再分发许可；预览中的标识已换自有占位。支付图标样式里的商标图形单独列为商标/Unknown，不宣称权利齐。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面"
+      ],
+      "originalSha256": "2fa0f6d0faf289005cddfbfeeba7fb0d933a0822de715bb96ab28f0da76dcba2",
+      "originalSize": 155505
+    },
+    {
+      "id": "tabler:pricing",
+      "title": "定价卡片页",
+      "source": "Tabler",
+      "license": "MIT",
+      "upstream": "https://github.com/tabler/tabler/blob/977102f79cc633074d5518fe1a288fa2ae7fbe27/preview/pages/pricing.astro",
+      "website": "https://tabler.io",
+      "revision": "977102f79cc633074d5518fe1a288fa2ae7fbe27",
+      "category": "产品与营销",
+      "format": "完整页面",
+      "kind": "完整页面",
+      "behavior": "比较定价卡片（操作已拦截）",
+      "independenceNote": "定价卡片布局，与同库定价对照表以及 AdminLTE/Oxbow 定价页结构不同。",
+      "eExisting": false,
+      "officialAssets": [],
+      "placeholderAssets": [],
+      "oversizedAssets": [],
+      "replacedAssets": 0,
+      "code": "batches/tabler-20261111/originals/pricing.html",
+      "preview": "batches/tabler-20261111/pricing.html",
+      "bundle": "batches/tabler-20261111/bundles/pricing.zip",
+      "runtime": {
+        "assets": []
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "源码级不同点：定价卡片布局，与同库定价对照表以及 AdminLTE/Oxbow 定价页结构不同。",
+        "Tabler 代码为 MIT。本批未收录依赖 ApexCharts 的页面，因官方说明其自第 5 版起不再是单纯 MIT。",
+        "官方免费插画（computer-fix 等六张）按上游免费清单保留。头像、照片、封面等不明原图已留私有原件待核；预览改用明确披露的自有占位，不冒称视觉复刻。品牌/支付/浏览器等 SVG 为商标标识，不是再分发许可；预览中的标识已换自有占位。支付图标样式里的商标图形单独列为商标/Unknown，不宣称权利齐。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面"
+      ],
+      "originalSha256": "6ac615ead55886f889f88a08dd1ecbe81b2cbc0f8918ed7e5b1f146cd167728a",
+      "originalSize": 391367
+    },
+    {
+      "id": "tabler:pricing-table",
+      "title": "定价对照表页",
+      "source": "Tabler",
+      "license": "MIT",
+      "upstream": "https://github.com/tabler/tabler/blob/977102f79cc633074d5518fe1a288fa2ae7fbe27/preview/pages/pricing-table.astro",
+      "website": "https://tabler.io",
+      "revision": "977102f79cc633074d5518fe1a288fa2ae7fbe27",
+      "category": "产品与营销",
+      "format": "完整页面",
+      "kind": "完整页面",
+      "behavior": "浏览定价对照表（操作已拦截）",
+      "independenceNote": "表格型定价对照，与同库卡片定价不是同壳填数。",
+      "eExisting": false,
+      "officialAssets": [],
+      "placeholderAssets": [],
+      "oversizedAssets": [],
+      "replacedAssets": 0,
+      "code": "batches/tabler-20261111/originals/pricing-table.html",
+      "preview": "batches/tabler-20261111/pricing-table.html",
+      "bundle": "batches/tabler-20261111/bundles/pricing-table.zip",
+      "runtime": {
+        "assets": []
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "源码级不同点：表格型定价对照，与同库卡片定价不是同壳填数。",
+        "Tabler 代码为 MIT。本批未收录依赖 ApexCharts 的页面，因官方说明其自第 5 版起不再是单纯 MIT。",
+        "官方免费插画（computer-fix 等六张）按上游免费清单保留。头像、照片、封面等不明原图已留私有原件待核；预览改用明确披露的自有占位，不冒称视觉复刻。品牌/支付/浏览器等 SVG 为商标标识，不是再分发许可；预览中的标识已换自有占位。支付图标样式里的商标图形单独列为商标/Unknown，不宣称权利齐。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面"
+      ],
+      "originalSha256": "bd3f34ae2e50af3ababfd2a491cee6219abcfd04027c1b9ede7dc214a702416f",
+      "originalSize": 376768
+    },
+    {
+      "id": "tabler:profile",
+      "title": "资料主页",
+      "source": "Tabler",
+      "license": "MIT",
+      "upstream": "https://github.com/tabler/tabler/blob/977102f79cc633074d5518fe1a288fa2ae7fbe27/preview/pages/profile.astro",
+      "website": "https://tabler.io",
+      "revision": "977102f79cc633074d5518fe1a288fa2ae7fbe27",
+      "category": "数据与状态",
+      "format": "完整页面",
+      "kind": "完整页面",
+      "behavior": "浏览资料主页（预览头像为自有占位）",
+      "independenceNote": "Tabler 资料主页信息架构与 AdminLTE 个人主页不同。",
+      "eExisting": false,
+      "officialAssets": [],
+      "placeholderAssets": [
+        "ph-blue-sofa-with-pillows-in-a-designer-living-room-interior.jpg",
+        "ph-home-office-desk-with-macbook-iphone-calendar-watch-and-organizer.jpg",
+        "ph-young-woman-working-in-a-cafe.jpg"
+      ],
+      "oversizedAssets": [],
+      "replacedAssets": 3,
+      "code": "batches/tabler-20261111/originals/profile.html",
+      "preview": "batches/tabler-20261111/profile.html",
+      "bundle": "batches/tabler-20261111/bundles/profile.zip",
+      "runtime": {
+        "assets": [
+          {
+            "key": "ph-blue-sofa-with-pillows-in-a-designer-living-room-interior.jpg",
+            "path": "batches/tabler-20261111/assets/ph-blue-sofa-with-pillows-in-a-designer-living-room-interior.jpg",
+            "mime": "image/jpeg",
+            "bytes": 34923,
+            "sha256": "79ac18015f4c73e405ec67bac4f1f3c6a7488258318b4ce51d270ee33d7723c8"
+          },
+          {
+            "key": "ph-home-office-desk-with-macbook-iphone-calendar-watch-and-organizer.jpg",
+            "path": "batches/tabler-20261111/assets/ph-home-office-desk-with-macbook-iphone-calendar-watch-and-organizer.jpg",
+            "mime": "image/jpeg",
+            "bytes": 36847,
+            "sha256": "4e521606150eb5ffd14a1542ba9ad76b035f2331756393e1e661e6559208c182"
+          },
+          {
+            "key": "ph-young-woman-working-in-a-cafe.jpg",
+            "path": "batches/tabler-20261111/assets/ph-young-woman-working-in-a-cafe.jpg",
+            "mime": "image/jpeg",
+            "bytes": 34031,
+            "sha256": "88bdcf80b689a813956ade7e2d0a9242b4d865648a9a40471ce86f8bb9398698"
+          }
+        ]
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "源码级不同点：Tabler 资料主页信息架构与 AdminLTE 个人主页不同。",
+        "Tabler 代码为 MIT。本批未收录依赖 ApexCharts 的页面，因官方说明其自第 5 版起不再是单纯 MIT。",
+        "官方免费插画（computer-fix 等六张）按上游免费清单保留。头像、照片、封面等不明原图已留私有原件待核；预览改用明确披露的自有占位，不冒称视觉复刻。品牌/支付/浏览器等 SVG 为商标标识，不是再分发许可；预览中的标识已换自有占位。支付图标样式里的商标图形单独列为商标/Unknown，不宣称权利齐。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面"
+      ],
+      "originalSha256": "8e39428c1b8acdee4a31573eeb9bcf736dd0f77659c679463ada672f6269ceea",
+      "originalSize": 385764
+    },
+    {
+      "id": "tabler:settings",
+      "title": "账户设置页",
+      "source": "Tabler",
+      "license": "MIT",
+      "upstream": "https://github.com/tabler/tabler/blob/977102f79cc633074d5518fe1a288fa2ae7fbe27/preview/pages/settings.astro",
+      "website": "https://tabler.io",
+      "revision": "977102f79cc633074d5518fe1a288fa2ae7fbe27",
+      "category": "输入与选择",
+      "format": "完整页面",
+      "kind": "完整页面",
+      "behavior": "浏览账户设置（提交已拦截）。未收 settings-plan.html，因与本页同为账户设置同壳填数。",
+      "independenceNote": "只收 settings.html。跳过 settings-plan.html（同一“账户设置”同壳）。与 AdminLTE 系统设置页结构不同。",
+      "eExisting": false,
+      "officialAssets": [],
+      "placeholderAssets": [],
+      "oversizedAssets": [],
+      "replacedAssets": 0,
+      "code": "batches/tabler-20261111/originals/settings.html",
+      "preview": "batches/tabler-20261111/settings.html",
+      "bundle": "batches/tabler-20261111/bundles/settings.zip",
+      "runtime": {
+        "assets": []
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "源码级不同点：只收 settings.html。跳过 settings-plan.html（同一“账户设置”同壳）。与 AdminLTE 系统设置页结构不同。",
+        "Tabler 代码为 MIT。本批未收录依赖 ApexCharts 的页面，因官方说明其自第 5 版起不再是单纯 MIT。",
+        "官方免费插画（computer-fix 等六张）按上游免费清单保留。头像、照片、封面等不明原图已留私有原件待核；预览改用明确披露的自有占位，不冒称视觉复刻。品牌/支付/浏览器等 SVG 为商标标识，不是再分发许可；预览中的标识已换自有占位。支付图标样式里的商标图形单独列为商标/Unknown，不宣称权利齐。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面"
+      ],
+      "originalSha256": "f4b78ef2c05d004eb3b4282e87efc85ccd8c8d55493acf5b72a573fa202b02c8",
+      "originalSize": 361980
+    },
+    {
+      "id": "tabler:faq",
+      "title": "常见问题页",
+      "source": "Tabler",
+      "license": "MIT",
+      "upstream": "https://github.com/tabler/tabler/blob/977102f79cc633074d5518fe1a288fa2ae7fbe27/preview/pages/faq.astro",
+      "website": "https://tabler.io",
+      "revision": "977102f79cc633074d5518fe1a288fa2ae7fbe27",
+      "category": "产品与营销",
+      "format": "完整页面",
+      "kind": "完整页面",
+      "behavior": "浏览常见问题",
+      "independenceNote": "Tabler 常见问题页版式与 AdminLTE 问答整页、Oxbow 问答区块结构不同。",
+      "eExisting": false,
+      "officialAssets": [],
+      "placeholderAssets": [],
+      "oversizedAssets": [],
+      "replacedAssets": 0,
+      "code": "batches/tabler-20261111/originals/faq.html",
+      "preview": "batches/tabler-20261111/faq.html",
+      "bundle": "batches/tabler-20261111/bundles/faq.zip",
+      "runtime": {
+        "assets": []
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "源码级不同点：Tabler 常见问题页版式与 AdminLTE 问答整页、Oxbow 问答区块结构不同。",
+        "Tabler 代码为 MIT。本批未收录依赖 ApexCharts 的页面，因官方说明其自第 5 版起不再是单纯 MIT。",
+        "官方免费插画（computer-fix 等六张）按上游免费清单保留。头像、照片、封面等不明原图已留私有原件待核；预览改用明确披露的自有占位，不冒称视觉复刻。品牌/支付/浏览器等 SVG 为商标标识，不是再分发许可；预览中的标识已换自有占位。支付图标样式里的商标图形单独列为商标/Unknown，不宣称权利齐。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面"
+      ],
+      "originalSha256": "17d1726bed25df57e1b66561dd9e2aff279fe4218bf7ac49e8638ebf680f5d23",
+      "originalSize": 386600
+    },
+    {
+      "id": "tabler:wizard",
+      "title": "分步开通页",
+      "source": "Tabler",
+      "license": "MIT",
+      "upstream": "https://github.com/tabler/tabler/blob/977102f79cc633074d5518fe1a288fa2ae7fbe27/preview/pages/wizard.astro",
+      "website": "https://tabler.io",
+      "revision": "977102f79cc633074d5518fe1a288fa2ae7fbe27",
+      "category": "输入与选择",
+      "format": "完整页面",
+      "kind": "完整页面",
+      "behavior": "浏览分步开通（提交已拦截）",
+      "independenceNote": "分步开通向导，与 AdminLTE 分步表单页结构不同。",
+      "eExisting": false,
+      "officialAssets": [],
+      "placeholderAssets": [],
+      "oversizedAssets": [],
+      "replacedAssets": 0,
+      "code": "batches/tabler-20261111/originals/wizard.html",
+      "preview": "batches/tabler-20261111/wizard.html",
+      "bundle": "batches/tabler-20261111/bundles/wizard.zip",
+      "runtime": {
+        "assets": []
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "源码级不同点：分步开通向导，与 AdminLTE 分步表单页结构不同。",
+        "Tabler 代码为 MIT。本批未收录依赖 ApexCharts 的页面，因官方说明其自第 5 版起不再是单纯 MIT。",
+        "官方免费插画（computer-fix 等六张）按上游免费清单保留。头像、照片、封面等不明原图已留私有原件待核；预览改用明确披露的自有占位，不冒称视觉复刻。品牌/支付/浏览器等 SVG 为商标标识，不是再分发许可；预览中的标识已换自有占位。支付图标样式里的商标图形单独列为商标/Unknown，不宣称权利齐。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面"
+      ],
+      "originalSha256": "dbd8e0f8fb95046612c99ca067d85d64bfae0648aa3a5d8646dbd49ccd9e2696",
+      "originalSize": 179586
+    },
+    {
+      "id": "tabler:signatures",
+      "title": "签字确认页",
+      "source": "Tabler",
+      "license": "MIT",
+      "upstream": "https://github.com/tabler/tabler/blob/977102f79cc633074d5518fe1a288fa2ae7fbe27/preview/pages/signatures.astro",
+      "website": "https://tabler.io",
+      "revision": "977102f79cc633074d5518fe1a288fa2ae7fbe27",
+      "category": "输入与选择",
+      "format": "完整页面",
+      "kind": "完整页面",
+      "behavior": "在确认转账场景中签署（官方 signature_pad 已本地化；提交已拦截，不表示签章生效）",
+      "independenceNote": "带签名板的转账确认整页，不是签名组件原语单独陈列。",
+      "eExisting": false,
+      "officialAssets": [],
+      "placeholderAssets": [],
+      "oversizedAssets": [],
+      "replacedAssets": 0,
+      "code": "batches/tabler-20261111/originals/signatures.html",
+      "preview": "batches/tabler-20261111/signatures.html",
+      "bundle": "batches/tabler-20261111/bundles/signatures.zip",
+      "runtime": {
+        "assets": [],
+        "scripts": [
+          "signature-pad.js",
+          "page-signatures.js",
+          "runtime.js"
+        ]
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "源码级不同点：带签名板的转账确认整页，不是签名组件原语单独陈列。",
+        "Tabler 代码为 MIT。本批未收录依赖 ApexCharts 的页面，因官方说明其自第 5 版起不再是单纯 MIT。",
+        "官方免费插画（computer-fix 等六张）按上游免费清单保留。头像、照片、封面等不明原图已留私有原件待核；预览改用明确披露的自有占位，不冒称视觉复刻。品牌/支付/浏览器等 SVG 为商标标识，不是再分发许可；预览中的标识已换自有占位。支付图标样式里的商标图形单独列为商标/Unknown，不宣称权利齐。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面",
+        "该页额外官方库已按相对路径保存，并以现有 runtime.scripts 契约接入；页内初始化脚本已从预览 HTML 抽出为已声明分片，这是窄适配，不等于交互已验收。"
+      ],
+      "originalSha256": "2109e3302e02b4a663872e51d7c4bafaa9d96b802bfe208e2df67a57a1249a78",
+      "originalSize": 384810
+    },
+    {
+      "id": "tabler:terms-of-service",
+      "title": "服务条款页",
+      "source": "Tabler",
+      "license": "MIT",
+      "upstream": "https://github.com/tabler/tabler/blob/977102f79cc633074d5518fe1a288fa2ae7fbe27/preview/pages/terms-of-service.astro",
+      "website": "https://tabler.io",
+      "revision": "977102f79cc633074d5518fe1a288fa2ae7fbe27",
+      "category": "产品与营销",
+      "format": "完整页面",
+      "kind": "完整页面",
+      "behavior": "阅读服务条款",
+      "independenceNote": "服务条款整页。",
+      "eExisting": false,
+      "officialAssets": [],
+      "placeholderAssets": [],
+      "oversizedAssets": [],
+      "replacedAssets": 0,
+      "code": "batches/tabler-20261111/originals/terms-of-service.html",
+      "preview": "batches/tabler-20261111/terms-of-service.html",
+      "bundle": "batches/tabler-20261111/bundles/terms-of-service.zip",
+      "runtime": {
+        "assets": []
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "源码级不同点：服务条款整页。",
+        "Tabler 代码为 MIT。本批未收录依赖 ApexCharts 的页面，因官方说明其自第 5 版起不再是单纯 MIT。",
+        "官方免费插画（computer-fix 等六张）按上游免费清单保留。头像、照片、封面等不明原图已留私有原件待核；预览改用明确披露的自有占位，不冒称视觉复刻。品牌/支付/浏览器等 SVG 为商标标识，不是再分发许可；预览中的标识已换自有占位。支付图标样式里的商标图形单独列为商标/Unknown，不宣称权利齐。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面"
+      ],
+      "originalSha256": "11d2832b478d16a45eb6441f54c037d43bba60860f695cf6b6de8f68585117e2",
+      "originalSize": 159793
+    },
+    {
+      "id": "tabler:sign-in",
+      "title": "工作台登录页",
+      "source": "Tabler",
+      "license": "MIT",
+      "upstream": "https://github.com/tabler/tabler/blob/977102f79cc633074d5518fe1a288fa2ae7fbe27/preview/pages/sign-in.astro",
+      "website": "https://tabler.io",
+      "revision": "977102f79cc633074d5518fe1a288fa2ae7fbe27",
+      "category": "输入与选择",
+      "format": "完整页面",
+      "kind": "完整页面",
+      "behavior": "填写登录表单（提交已拦截，不表示登录成功）。未收封面/插画等细变。",
+      "independenceNote": "只收 sign-in.html，不收 cover/illustration/link 等细变。与 AdminLTE 后台卡片登录页结构不同。",
+      "eExisting": false,
+      "officialAssets": [],
+      "placeholderAssets": [],
+      "oversizedAssets": [],
+      "replacedAssets": 0,
+      "code": "batches/tabler-20261111/originals/sign-in.html",
+      "preview": "batches/tabler-20261111/sign-in.html",
+      "bundle": "batches/tabler-20261111/bundles/sign-in.zip",
+      "runtime": {
+        "assets": []
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "源码级不同点：只收 sign-in.html，不收 cover/illustration/link 等细变。与 AdminLTE 后台卡片登录页结构不同。",
+        "Tabler 代码为 MIT。本批未收录依赖 ApexCharts 的页面，因官方说明其自第 5 版起不再是单纯 MIT。",
+        "官方免费插画（computer-fix 等六张）按上游免费清单保留。头像、照片、封面等不明原图已留私有原件待核；预览改用明确披露的自有占位，不冒称视觉复刻。品牌/支付/浏览器等 SVG 为商标标识，不是再分发许可；预览中的标识已换自有占位。支付图标样式里的商标图形单独列为商标/Unknown，不宣称权利齐。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面"
+      ],
+      "originalSha256": "07cbc20d53c1e7fcdf3e9199c60b15a50ea938f936c6738e48849d3c7c409fa6",
+      "originalSize": 154266
+    },
+    {
+      "id": "tabler:sign-up",
+      "title": "工作台注册页",
+      "source": "Tabler",
+      "license": "MIT",
+      "upstream": "https://github.com/tabler/tabler/blob/977102f79cc633074d5518fe1a288fa2ae7fbe27/preview/pages/sign-up.astro",
+      "website": "https://tabler.io",
+      "revision": "977102f79cc633074d5518fe1a288fa2ae7fbe27",
+      "category": "输入与选择",
+      "format": "完整页面",
+      "kind": "完整页面",
+      "behavior": "填写注册表单（提交已拦截，不表示注册成功）",
+      "independenceNote": "只收 sign-up.html。与 AdminLTE 注册页及其它来源注册页结构不同。",
+      "eExisting": false,
+      "officialAssets": [],
+      "placeholderAssets": [],
+      "oversizedAssets": [],
+      "replacedAssets": 0,
+      "code": "batches/tabler-20261111/originals/sign-up.html",
+      "preview": "batches/tabler-20261111/sign-up.html",
+      "bundle": "batches/tabler-20261111/bundles/sign-up.zip",
+      "runtime": {
+        "assets": []
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "源码级不同点：只收 sign-up.html。与 AdminLTE 注册页及其它来源注册页结构不同。",
+        "Tabler 代码为 MIT。本批未收录依赖 ApexCharts 的页面，因官方说明其自第 5 版起不再是单纯 MIT。",
+        "官方免费插画（computer-fix 等六张）按上游免费清单保留。头像、照片、封面等不明原图已留私有原件待核；预览改用明确披露的自有占位，不冒称视觉复刻。品牌/支付/浏览器等 SVG 为商标标识，不是再分发许可；预览中的标识已换自有占位。支付图标样式里的商标图形单独列为商标/Unknown，不宣称权利齐。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面"
+      ],
+      "originalSha256": "5928a72aa6007394046a7546c0e26c8e27fa1465f472deda669b6ac720c8eae7",
+      "originalSize": 152476
+    },
+    {
+      "id": "tabler:forgot-password",
+      "title": "工作台找回密码页",
+      "source": "Tabler",
+      "license": "MIT",
+      "upstream": "https://github.com/tabler/tabler/blob/977102f79cc633074d5518fe1a288fa2ae7fbe27/preview/pages/forgot-password.astro",
+      "website": "https://tabler.io",
+      "revision": "977102f79cc633074d5518fe1a288fa2ae7fbe27",
+      "category": "输入与选择",
+      "format": "完整页面",
+      "kind": "完整页面",
+      "behavior": "填写找回密码表单（提交已拦截，不会发送邮件）",
+      "independenceNote": "独立完成的找回密码页，不是登录细变；与 AdminLTE 找回密码页结构不同。",
+      "eExisting": false,
+      "officialAssets": [],
+      "placeholderAssets": [],
+      "oversizedAssets": [],
+      "replacedAssets": 0,
+      "code": "batches/tabler-20261111/originals/forgot-password.html",
+      "preview": "batches/tabler-20261111/forgot-password.html",
+      "bundle": "batches/tabler-20261111/bundles/forgot-password.zip",
+      "runtime": {
+        "assets": []
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "源码级不同点：独立完成的找回密码页，不是登录细变；与 AdminLTE 找回密码页结构不同。",
+        "Tabler 代码为 MIT。本批未收录依赖 ApexCharts 的页面，因官方说明其自第 5 版起不再是单纯 MIT。",
+        "官方免费插画（computer-fix 等六张）按上游免费清单保留。头像、照片、封面等不明原图已留私有原件待核；预览改用明确披露的自有占位，不冒称视觉复刻。品牌/支付/浏览器等 SVG 为商标标识，不是再分发许可；预览中的标识已换自有占位。支付图标样式里的商标图形单独列为商标/Unknown，不宣称权利齐。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面"
+      ],
+      "originalSha256": "4499e7aa8e14141c581684b8edf5ec39045c6f2bd7314c648ccfd13428ec98df",
+      "originalSize": 148101
+    },
+    {
+      "id": "tabler:fullcalendar",
+      "title": "日程总览页",
+      "source": "Tabler",
+      "license": "MIT",
+      "upstream": "https://github.com/tabler/tabler/blob/977102f79cc633074d5518fe1a288fa2ae7fbe27/preview/pages/fullcalendar.astro",
+      "website": "https://tabler.io",
+      "revision": "977102f79cc633074d5518fe1a288fa2ae7fbe27",
+      "category": "数据与状态",
+      "format": "完整页面",
+      "kind": "完整页面",
+      "behavior": "浏览官方 FullCalendar 6.1.22 日程总览（库已本地化；不等于日程已验收）",
+      "independenceNote": "Tabler 日程总览依赖官方构建中的 FullCalendar 6.1.22，与 AdminLTE 行事历（7.1.1 及不同页布局）不是同壳或框架版本对译。",
+      "eExisting": false,
+      "officialAssets": [],
+      "placeholderAssets": [],
+      "oversizedAssets": [],
+      "replacedAssets": 0,
+      "code": "batches/tabler-20261111/originals/fullcalendar.html",
+      "preview": "batches/tabler-20261111/fullcalendar.html",
+      "bundle": "batches/tabler-20261111/bundles/fullcalendar.zip",
+      "runtime": {
+        "assets": [],
+        "scripts": [
+          "fullcalendar-6-1-22.js",
+          "page-fullcalendar.js",
+          "runtime.js"
+        ]
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "源码级不同点：Tabler 日程总览依赖官方构建中的 FullCalendar 6.1.22，与 AdminLTE 行事历（7.1.1 及不同页布局）不是同壳或框架版本对译。",
+        "Tabler 代码为 MIT。本批未收录依赖 ApexCharts 的页面，因官方说明其自第 5 版起不再是单纯 MIT。",
+        "官方免费插画（computer-fix 等六张）按上游免费清单保留。头像、照片、封面等不明原图已留私有原件待核；预览改用明确披露的自有占位，不冒称视觉复刻。品牌/支付/浏览器等 SVG 为商标标识，不是再分发许可；预览中的标识已换自有占位。支付图标样式里的商标图形单独列为商标/Unknown，不宣称权利齐。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面",
+        "该页额外官方库已按相对路径保存，并以现有 runtime.scripts 契约接入；页内初始化脚本已从预览 HTML 抽出为已声明分片，这是窄适配，不等于交互已验收。"
+      ],
+      "originalSha256": "c902108299346e1013e23c88279018102d00f79c56438d6def8da1eac8da901f",
+      "originalSize": 358049
+    },
+    {
+      "id": "tabler:gallery",
+      "title": "相册页",
+      "source": "Tabler",
+      "license": "MIT",
+      "upstream": "https://github.com/tabler/tabler/blob/977102f79cc633074d5518fe1a288fa2ae7fbe27/preview/pages/gallery.astro",
+      "website": "https://tabler.io",
+      "revision": "977102f79cc633074d5518fe1a288fa2ae7fbe27",
+      "category": "展示与媒体",
+      "format": "完整页面",
+      "kind": "完整页面",
+      "behavior": "浏览相册（预览使用自有占位，不是原图复刻）。未另收同库照片格或灯箱页。",
+      "independenceNote": "Tabler 相册页；同库 photogrid/lightbox 视为相近浏览族，不另计。与 AdminLTE 筛选相册页结构不同。官方照片因许可不明已改占位。",
+      "eExisting": false,
+      "officialAssets": [],
+      "placeholderAssets": [
+        "ph-beautiful-blonde-woman-relaxing-with-a-can-of-coke-on-a-tree-stump-by-the-beach.jpg",
+        "ph-brainstorming-session-with-creative-designers.jpg",
+        "ph-finances-us-dollars-and-bitcoins-currency-money.jpg",
+        "ph-group-of-people-brainstorming-and-taking-notes-2.jpg",
+        "ph-blue-sofa-with-pillows-in-a-designer-living-room-interior.jpg",
+        "ph-home-office-desk-with-macbook-iphone-calendar-watch-and-organizer.jpg",
+        "ph-young-woman-working-in-a-cafe.jpg",
+        "ph-everything-you-need-to-work-from-your-bed.jpg",
+        "ph-young-entrepreneur-working-from-a-modern-cafe.jpg",
+        "ph-finances-us-dollars-and-bitcoins-currency-money-2.jpg",
+        "ph-group-of-people-sightseeing-in-the-city.jpg",
+        "ph-color-palette-guide-sample-colors-catalog-.jpg",
+        "ph-stylish-workplace-with-computer-at-home.jpg",
+        "ph-pink-desk-in-the-home-office.jpg",
+        "ph-young-woman-sitting-on-the-sofa-and-working-on-her-laptop.jpg"
+      ],
+      "oversizedAssets": [],
+      "replacedAssets": 15,
+      "code": "batches/tabler-20261111/originals/gallery.html",
+      "preview": "batches/tabler-20261111/gallery.html",
+      "bundle": "batches/tabler-20261111/bundles/gallery.zip",
+      "runtime": {
+        "assets": [
+          {
+            "key": "ph-beautiful-blonde-woman-relaxing-with-a-can-of-coke-on-a-tree-stump-by-the-beach.jpg",
+            "path": "batches/tabler-20261111/assets/ph-beautiful-blonde-woman-relaxing-with-a-can-of-coke-on-a-tree-stump-by-the-beach.jpg",
+            "mime": "image/jpeg",
+            "bytes": 36768,
+            "sha256": "ed19a1b687181268cfed502a0050de65e154c593ffce20516097af2ec1b7a433"
+          },
+          {
+            "key": "ph-brainstorming-session-with-creative-designers.jpg",
+            "path": "batches/tabler-20261111/assets/ph-brainstorming-session-with-creative-designers.jpg",
+            "mime": "image/jpeg",
+            "bytes": 36784,
+            "sha256": "e24b1914124e92ceafa0b2395358b3745eb3a5d518b842afd5ea260b6aa8748f"
+          },
+          {
+            "key": "ph-finances-us-dollars-and-bitcoins-currency-money.jpg",
+            "path": "batches/tabler-20261111/assets/ph-finances-us-dollars-and-bitcoins-currency-money.jpg",
+            "mime": "image/jpeg",
+            "bytes": 34047,
+            "sha256": "4d70a2e651d55e85d1a28e8e96ee52d91f8d62848e7279ac254f94e51443fc05"
+          },
+          {
+            "key": "ph-group-of-people-brainstorming-and-taking-notes-2.jpg",
+            "path": "batches/tabler-20261111/assets/ph-group-of-people-brainstorming-and-taking-notes-2.jpg",
+            "mime": "image/jpeg",
+            "bytes": 36427,
+            "sha256": "6dd1e2e0c9e5714e45f6a2c776bffe853d5c3e26d87cf977890819a073bffe30"
+          },
+          {
+            "key": "ph-blue-sofa-with-pillows-in-a-designer-living-room-interior.jpg",
+            "path": "batches/tabler-20261111/assets/ph-blue-sofa-with-pillows-in-a-designer-living-room-interior.jpg",
+            "mime": "image/jpeg",
+            "bytes": 34923,
+            "sha256": "79ac18015f4c73e405ec67bac4f1f3c6a7488258318b4ce51d270ee33d7723c8"
+          },
+          {
+            "key": "ph-home-office-desk-with-macbook-iphone-calendar-watch-and-organizer.jpg",
+            "path": "batches/tabler-20261111/assets/ph-home-office-desk-with-macbook-iphone-calendar-watch-and-organizer.jpg",
+            "mime": "image/jpeg",
+            "bytes": 36847,
+            "sha256": "4e521606150eb5ffd14a1542ba9ad76b035f2331756393e1e661e6559208c182"
+          },
+          {
+            "key": "ph-young-woman-working-in-a-cafe.jpg",
+            "path": "batches/tabler-20261111/assets/ph-young-woman-working-in-a-cafe.jpg",
+            "mime": "image/jpeg",
+            "bytes": 34031,
+            "sha256": "88bdcf80b689a813956ade7e2d0a9242b4d865648a9a40471ce86f8bb9398698"
+          },
+          {
+            "key": "ph-everything-you-need-to-work-from-your-bed.jpg",
+            "path": "batches/tabler-20261111/assets/ph-everything-you-need-to-work-from-your-bed.jpg",
+            "mime": "image/jpeg",
+            "bytes": 34424,
+            "sha256": "a8624308aa7601ebbae8f059b6630602dbf0b49a99e4c11af24c22d18dd0c551"
+          },
+          {
+            "key": "ph-young-entrepreneur-working-from-a-modern-cafe.jpg",
+            "path": "batches/tabler-20261111/assets/ph-young-entrepreneur-working-from-a-modern-cafe.jpg",
+            "mime": "image/jpeg",
+            "bytes": 36498,
+            "sha256": "cae1c0f93a126bae231a3a2c0e2e21faad05a2d2f8a568b9dfaf18964c579933"
+          },
+          {
+            "key": "ph-finances-us-dollars-and-bitcoins-currency-money-2.jpg",
+            "path": "batches/tabler-20261111/assets/ph-finances-us-dollars-and-bitcoins-currency-money-2.jpg",
+            "mime": "image/jpeg",
+            "bytes": 34541,
+            "sha256": "ed9ead2b84a4e89e7c0e186e8d64a97a6dbf2e157a1be022443810cb076ddebc"
+          },
+          {
+            "key": "ph-group-of-people-sightseeing-in-the-city.jpg",
+            "path": "batches/tabler-20261111/assets/ph-group-of-people-sightseeing-in-the-city.jpg",
+            "mime": "image/jpeg",
+            "bytes": 34711,
+            "sha256": "8ee7b47e86c86ad59d2ab46cae8ee78e3e938b506c4afce66bfa2f8066b01b20"
+          },
+          {
+            "key": "ph-color-palette-guide-sample-colors-catalog-.jpg",
+            "path": "batches/tabler-20261111/assets/ph-color-palette-guide-sample-colors-catalog-.jpg",
+            "mime": "image/jpeg",
+            "bytes": 37298,
+            "sha256": "17febee9ecbe44d2f683de72e304d47f69c9dc1b421e60cd3f37e4d3e9c4f149"
+          },
+          {
+            "key": "ph-stylish-workplace-with-computer-at-home.jpg",
+            "path": "batches/tabler-20261111/assets/ph-stylish-workplace-with-computer-at-home.jpg",
+            "mime": "image/jpeg",
+            "bytes": 35470,
+            "sha256": "13c6287863de75e913324a49a5519fdd5184f55495e05115849ad5942d79c9f5"
+          },
+          {
+            "key": "ph-pink-desk-in-the-home-office.jpg",
+            "path": "batches/tabler-20261111/assets/ph-pink-desk-in-the-home-office.jpg",
+            "mime": "image/jpeg",
+            "bytes": 35189,
+            "sha256": "1c0c70724c646273621c1f84b4e7222fe705fda331974d601e796cdf855d2590"
+          },
+          {
+            "key": "ph-young-woman-sitting-on-the-sofa-and-working-on-her-laptop.jpg",
+            "path": "batches/tabler-20261111/assets/ph-young-woman-sitting-on-the-sofa-and-working-on-her-laptop.jpg",
+            "mime": "image/jpeg",
+            "bytes": 35707,
+            "sha256": "98758b19b6384804d0b047ee008ba70d3f3fbfc3844242e19959c4bcb9bd6449"
+          }
+        ]
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "源码级不同点：Tabler 相册页；同库 photogrid/lightbox 视为相近浏览族，不另计。与 AdminLTE 筛选相册页结构不同。官方照片因许可不明已改占位。",
+        "Tabler 代码为 MIT。本批未收录依赖 ApexCharts 的页面，因官方说明其自第 5 版起不再是单纯 MIT。",
+        "官方免费插画（computer-fix 等六张）按上游免费清单保留。头像、照片、封面等不明原图已留私有原件待核；预览改用明确披露的自有占位，不冒称视觉复刻。品牌/支付/浏览器等 SVG 为商标标识，不是再分发许可；预览中的标识已换自有占位。支付图标样式里的商标图形单独列为商标/Unknown，不宣称权利齐。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面"
+      ],
+      "originalSha256": "3d0a489bfa284f9f23755e0de3e15c932cfd173febaf52f368731af3b9207a09",
+      "originalSize": 411030
+    },
+    {
+      "id": "tabler:email-inbox",
+      "title": "邮件收件箱",
+      "source": "Tabler",
+      "license": "MIT",
+      "upstream": "https://github.com/tabler/tabler/blob/977102f79cc633074d5518fe1a288fa2ae7fbe27/preview/pages/email-inbox.astro",
+      "website": "https://tabler.io",
+      "revision": "977102f79cc633074d5518fe1a288fa2ae7fbe27",
+      "category": "数据与状态",
+      "format": "完整页面",
+      "kind": "完整页面",
+      "behavior": "浏览邮件收件箱（官方 HugeRTE 已随包保存；站内组合预览可能无法完成本地加载编辑器皮肤，不等于编辑器已验收；发送已拦截）",
+      "independenceNote": "邮件收件箱工作台，与 AdminLTE 文件夹邮件收件箱结构不同。HugeRTE 1.0.14 为 MIT，捆绑的 DOMPurify 为 MPL-2.0 与 Apache-2.0 双许可，见源码包说明。",
+      "eExisting": false,
+      "officialAssets": [],
+      "placeholderAssets": [],
+      "oversizedAssets": [],
+      "replacedAssets": 0,
+      "code": "batches/tabler-20261111/originals/email-inbox.html",
+      "preview": "batches/tabler-20261111/email-inbox.html",
+      "bundle": "batches/tabler-20261111/bundles/email-inbox.zip",
+      "runtime": {
+        "assets": [],
+        "scripts": [
+          "hugerte-1-0-14.js",
+          "hugerte-theme-icons.js",
+          "hugerte-plugins.js",
+          "page-email-inbox.js",
+          "runtime.js"
+        ]
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "源码级不同点：邮件收件箱工作台，与 AdminLTE 文件夹邮件收件箱结构不同。HugeRTE 1.0.14 为 MIT，捆绑的 DOMPurify 为 MPL-2.0 与 Apache-2.0 双许可，见源码包说明。",
+        "Tabler 代码为 MIT。本批未收录依赖 ApexCharts 的页面，因官方说明其自第 5 版起不再是单纯 MIT。",
+        "官方免费插画（computer-fix 等六张）按上游免费清单保留。头像、照片、封面等不明原图已留私有原件待核；预览改用明确披露的自有占位，不冒称视觉复刻。品牌/支付/浏览器等 SVG 为商标标识，不是再分发许可；预览中的标识已换自有占位。支付图标样式里的商标图形单独列为商标/Unknown，不宣称权利齐。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面",
+        "该页额外官方库已按相对路径保存，并以现有 runtime.scripts 契约接入；页内初始化脚本已从预览 HTML 抽出为已声明分片，这是窄适配，不等于交互已验收。",
+        "HugeRTE 官方皮肤 CSS 已内联，官方模型/主题/图标/插件已列入 runtime.scripts。暗色皮肤切换未闭合。不等于编辑器已验收。"
+      ],
+      "originalSha256": "870487daae156d22d223c8d1f160478f14761e26d52c30904a9768aa5faff214",
+      "originalSize": 577800
+    },
+    {
+      "id": "tabler:datatables",
+      "title": "数据表页",
+      "source": "Tabler",
+      "license": "MIT",
+      "upstream": "https://github.com/tabler/tabler/blob/977102f79cc633074d5518fe1a288fa2ae7fbe27/preview/pages/datatables.astro",
+      "website": "https://tabler.io",
+      "revision": "977102f79cc633074d5518fe1a288fa2ae7fbe27",
+      "category": "数据与状态",
+      "format": "完整页面",
+      "kind": "完整页面",
+      "behavior": "浏览可排序数据表（官方 List.js 已本地化）",
+      "independenceNote": "可排序数据表整页，不是文档中的表格原语。List.js 为 MIT。",
+      "eExisting": false,
+      "officialAssets": [],
+      "placeholderAssets": [],
+      "oversizedAssets": [],
+      "replacedAssets": 0,
+      "code": "batches/tabler-20261111/originals/datatables.html",
+      "preview": "batches/tabler-20261111/datatables.html",
+      "bundle": "batches/tabler-20261111/bundles/datatables.zip",
+      "runtime": {
+        "assets": [],
+        "scripts": [
+          "listjs.js",
+          "page-datatables.js",
+          "runtime.js"
+        ]
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "源码级不同点：可排序数据表整页，不是文档中的表格原语。List.js 为 MIT。",
+        "Tabler 代码为 MIT。本批未收录依赖 ApexCharts 的页面，因官方说明其自第 5 版起不再是单纯 MIT。",
+        "官方免费插画（computer-fix 等六张）按上游免费清单保留。头像、照片、封面等不明原图已留私有原件待核；预览改用明确披露的自有占位，不冒称视觉复刻。品牌/支付/浏览器等 SVG 为商标标识，不是再分发许可；预览中的标识已换自有占位。支付图标样式里的商标图形单独列为商标/Unknown，不宣称权利齐。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面",
+        "该页额外官方库已按相对路径保存，并以现有 runtime.scripts 契约接入；页内初始化脚本已从预览 HTML 抽出为已声明分片，这是窄适配，不等于交互已验收。"
+      ],
+      "originalSha256": "58e2616bb8aa9e6f36c9416ee7cfee9a85e112928dd751c765d629b68dfe847a",
+      "originalSize": 383040
+    },
+    {
+      "id": "tabler:dropzone",
+      "title": "文件投放区",
+      "source": "Tabler",
+      "license": "MIT",
+      "upstream": "https://github.com/tabler/tabler/blob/977102f79cc633074d5518fe1a288fa2ae7fbe27/preview/pages/dropzone.astro",
+      "website": "https://tabler.io",
+      "revision": "977102f79cc633074d5518fe1a288fa2ae7fbe27",
+      "category": "输入与选择",
+      "format": "组件与效果",
+      "kind": "组件",
+      "behavior": "在官方投放区中选择或拖入文件（官方 Dropzone 已本地化；实际上传已拦截）",
+      "independenceNote": "完整可复用的文件投放区（单文件、多文件与自定义标签），不是单按钮原语。与 Flowbite 拖放上传区来源和结构不同。",
+      "officialAssets": [],
+      "placeholderAssets": [],
+      "replacedAssets": 0,
+      "code": "batches/tabler-20261111/originals/dropzone.html",
+      "preview": "batches/tabler-20261111/dropzone.html",
+      "bundle": "batches/tabler-20261111/bundles/dropzone.zip",
+      "runtime": {
+        "assets": [],
+        "scripts": [
+          "dropzone.js",
+          "page-dropzone.js",
+          "runtime.js"
+        ]
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "源码级不同点：完整可复用的文件投放区（单文件、多文件与自定义标签），不是单按钮原语。与 Flowbite 拖放上传区来源和结构不同。",
+        "Tabler 代码为 MIT。本批未收录依赖 ApexCharts 的页面，因官方说明其自第 5 版起不再是单纯 MIT。",
+        "官方免费插画（computer-fix 等六张）按上游免费清单保留。头像、照片、封面等不明原图已留私有原件待核；预览改用明确披露的自有占位，不冒称视觉复刻。品牌/支付/浏览器等 SVG 为商标标识，不是再分发许可；预览中的标识已换自有占位。支付图标样式里的商标图形单独列为商标/Unknown，不宣称权利齐。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面",
+        "该页额外官方库已按相对路径保存，并以现有 runtime.scripts 契约接入；页内初始化脚本已从预览 HTML 抽出为已声明分片，这是窄适配，不等于交互已验收。"
+      ],
+      "originalSha256": "193314df87e63d3b797ad6032ac5bd4218ea1de1eab345987a41ddc42df1ff99",
+      "originalSize": 365332
+    },
+    {
+      "id": "tabler:tour",
+      "title": "功能导览",
+      "source": "Tabler",
+      "license": "MIT",
+      "upstream": "https://github.com/tabler/tabler/blob/977102f79cc633074d5518fe1a288fa2ae7fbe27/preview/pages/tour.astro",
+      "website": "https://tabler.io",
+      "revision": "977102f79cc633074d5518fe1a288fa2ae7fbe27",
+      "category": "导航与组织",
+      "format": "组件与效果",
+      "kind": "组件",
+      "behavior": "启动页面功能导览（官方 Driver.js 已本地化；不等于导览已验收）",
+      "independenceNote": "完整可复用的分步功能导览，不是单个高亮原语。",
+      "officialAssets": [],
+      "placeholderAssets": [],
+      "replacedAssets": 0,
+      "code": "batches/tabler-20261111/originals/tour.html",
+      "preview": "batches/tabler-20261111/tour.html",
+      "bundle": "batches/tabler-20261111/bundles/tour.zip",
+      "runtime": {
+        "assets": [],
+        "scripts": [
+          "driverjs.js",
+          "page-tour.js",
+          "runtime.js"
+        ]
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "源码级不同点：完整可复用的分步功能导览，不是单个高亮原语。",
+        "Tabler 代码为 MIT。本批未收录依赖 ApexCharts 的页面，因官方说明其自第 5 版起不再是单纯 MIT。",
+        "官方免费插画（computer-fix 等六张）按上游免费清单保留。头像、照片、封面等不明原图已留私有原件待核；预览改用明确披露的自有占位，不冒称视觉复刻。品牌/支付/浏览器等 SVG 为商标标识，不是再分发许可；预览中的标识已换自有占位。支付图标样式里的商标图形单独列为商标/Unknown，不宣称权利齐。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面",
+        "该页额外官方库已按相对路径保存，并以现有 runtime.scripts 契约接入；页内初始化脚本已从预览 HTML 抽出为已声明分片，这是窄适配，不等于交互已验收。"
+      ],
+      "originalSha256": "2521534dc820d695cc91e12f97e2eca8f8efd434e34395a18cd12fcc8179cab1",
+      "originalSize": 368755
+    },
+    {
+      "id": "tabler:sortable",
+      "title": "可排序列表",
+      "source": "Tabler",
+      "license": "MIT",
+      "upstream": "https://github.com/tabler/tabler/blob/977102f79cc633074d5518fe1a288fa2ae7fbe27/preview/pages/sortable.astro",
+      "website": "https://tabler.io",
+      "revision": "977102f79cc633074d5518fe1a288fa2ae7fbe27",
+      "category": "数据与状态",
+      "format": "组件与效果",
+      "kind": "组件",
+      "behavior": "在列表内或列表之间拖拽排序（官方 SortableJS 已本地化；持久化不会发生）",
+      "independenceNote": "完整可复用的可排序列表（单列与跨列），不是单按钮或空壳。",
+      "officialAssets": [],
+      "placeholderAssets": [],
+      "replacedAssets": 0,
+      "code": "batches/tabler-20261111/originals/sortable.html",
+      "preview": "batches/tabler-20261111/sortable.html",
+      "bundle": "batches/tabler-20261111/bundles/sortable.zip",
+      "runtime": {
+        "assets": [],
+        "scripts": [
+          "sortablejs.js",
+          "page-sortable.js",
+          "runtime.js"
+        ]
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "源码级不同点：完整可复用的可排序列表（单列与跨列），不是单按钮或空壳。",
+        "Tabler 代码为 MIT。本批未收录依赖 ApexCharts 的页面，因官方说明其自第 5 版起不再是单纯 MIT。",
+        "官方免费插画（computer-fix 等六张）按上游免费清单保留。头像、照片、封面等不明原图已留私有原件待核；预览改用明确披露的自有占位，不冒称视觉复刻。品牌/支付/浏览器等 SVG 为商标标识，不是再分发许可；预览中的标识已换自有占位。支付图标样式里的商标图形单独列为商标/Unknown，不宣称权利齐。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面",
+        "该页额外官方库已按相对路径保存，并以现有 runtime.scripts 契约接入；页内初始化脚本已从预览 HTML 抽出为已声明分片，这是窄适配，不等于交互已验收。"
+      ],
+      "originalSha256": "d44eb90a994c6aaac1925fe5ec727cf95fd1baee35c048a5e630c195843485bd",
+      "originalSize": 431784
+    },
+    {
+      "id": "tabler:cookie-banner",
+      "title": "隐私同意条",
+      "source": "Tabler",
+      "license": "MIT",
+      "upstream": "https://github.com/tabler/tabler/blob/977102f79cc633074d5518fe1a288fa2ae7fbe27/preview/pages/cookie-banner.astro",
+      "website": "https://tabler.io",
+      "revision": "977102f79cc633074d5518fe1a288fa2ae7fbe27",
+      "category": "输入与选择",
+      "format": "组件与效果",
+      "kind": "组件",
+      "behavior": "选择仅必要或全部同意（提交已拦截，不会写入真实同意记录）",
+      "independenceNote": "完整可复用的同意条（仅必要/全部允许），不是单按钮原语。",
+      "officialAssets": [],
+      "placeholderAssets": [],
+      "replacedAssets": 0,
+      "code": "batches/tabler-20261111/originals/cookie-banner.html",
+      "preview": "batches/tabler-20261111/cookie-banner.html",
+      "bundle": "batches/tabler-20261111/bundles/cookie-banner.zip",
+      "runtime": {
+        "assets": []
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "源码级不同点：完整可复用的同意条（仅必要/全部允许），不是单按钮原语。",
+        "Tabler 代码为 MIT。本批未收录依赖 ApexCharts 的页面，因官方说明其自第 5 版起不再是单纯 MIT。",
+        "官方免费插画（computer-fix 等六张）按上游免费清单保留。头像、照片、封面等不明原图已留私有原件待核；预览改用明确披露的自有占位，不冒称视觉复刻。品牌/支付/浏览器等 SVG 为商标标识，不是再分发许可；预览中的标识已换自有占位。支付图标样式里的商标图形单独列为商标/Unknown，不宣称权利齐。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面"
+      ],
+      "originalSha256": "360e5b7248fb90720c0339a00ce595c4163957783f805e34c4318ca642bd4d3f",
+      "originalSize": 355394
+    },
+    {
+      "id": "tabler:auth-lock",
+      "title": "锁屏页",
+      "source": "Tabler",
+      "license": "MIT",
+      "upstream": "https://github.com/tabler/tabler/blob/977102f79cc633074d5518fe1a288fa2ae7fbe27/preview/pages/auth-lock.astro",
+      "website": "https://tabler.io",
+      "revision": "977102f79cc633074d5518fe1a288fa2ae7fbe27",
+      "category": "输入与选择",
+      "format": "页面",
+      "kind": "完整页面",
+      "behavior": "在锁屏页解锁（演示，不会发生真实鉴权）",
+      "independenceNote": "官方完整锁屏页，与已收登录/注册不是同壳填数。",
+      "officialAssets": [],
+      "placeholderAssets": [],
+      "replacedAssets": 0,
+      "code": "batches/tabler-20261111/originals/auth-lock.html",
+      "preview": "batches/tabler-20261111/auth-lock.html",
+      "bundle": "batches/tabler-20261111/bundles/auth-lock.zip",
+      "runtime": {
+        "assets": []
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "Tabler 代码为 MIT。本批未收录依赖 ApexCharts 的页面，因官方说明其自第 5 版起不再是单纯 MIT。",
+        "官方免费插画（computer-fix 等六张）按上游免费清单保留。头像、照片、封面等不明原图已留私有原件待核；预览改用明确披露的自有占位，不冒称视觉复刻。品牌/支付/浏览器等 SVG 为商标标识，不是再分发许可；预览中的标识已换自有占位。支付图标样式里的商标图形单独列为商标/Unknown，不宣称权利齐。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面",
+        "源码级不同点：官方完整锁屏页，与已收登录/注册不是同壳填数。"
+      ],
+      "batchDir": "tabler-20261111",
+      "originalSha256": "0160f760d912358fdc39e2608745f3885457701eb554063ef9e81ab8b78e6515",
+      "originalSize": 148263
+    },
+    {
+      "id": "tabler:error-404",
+      "title": "404 页",
+      "source": "Tabler",
+      "license": "MIT",
+      "upstream": "https://github.com/tabler/tabler/blob/977102f79cc633074d5518fe1a288fa2ae7fbe27/preview/pages/error-404.astro",
+      "website": "https://tabler.io",
+      "revision": "977102f79cc633074d5518fe1a288fa2ae7fbe27",
+      "category": "数据与状态",
+      "format": "页面",
+      "kind": "完整页面",
+      "behavior": "查看 404 页（演示链接已拦截）",
+      "independenceNote": "官方完整 404 页。",
+      "officialAssets": [],
+      "placeholderAssets": [],
+      "replacedAssets": 0,
+      "code": "batches/tabler-20261111/originals/error-404.html",
+      "preview": "batches/tabler-20261111/error-404.html",
+      "bundle": "batches/tabler-20261111/bundles/error-404.zip",
+      "runtime": {
+        "assets": []
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "Tabler 代码为 MIT。本批未收录依赖 ApexCharts 的页面，因官方说明其自第 5 版起不再是单纯 MIT。",
+        "官方免费插画（computer-fix 等六张）按上游免费清单保留。头像、照片、封面等不明原图已留私有原件待核；预览改用明确披露的自有占位，不冒称视觉复刻。品牌/支付/浏览器等 SVG 为商标标识，不是再分发许可；预览中的标识已换自有占位。支付图标样式里的商标图形单独列为商标/Unknown，不宣称权利齐。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面",
+        "源码级不同点：官方完整 404 页。"
+      ],
+      "batchDir": "tabler-20261111",
+      "originalSha256": "d391be623ec51a24c4abb40771233a893ffcf3ff37f0e50b1240d92c9c2584ab",
+      "originalSize": 179845
+    },
+    {
+      "id": "tabler:error-maintenance",
+      "title": "维护页",
+      "source": "Tabler",
+      "license": "MIT",
+      "upstream": "https://github.com/tabler/tabler/blob/977102f79cc633074d5518fe1a288fa2ae7fbe27/preview/pages/error-maintenance.astro",
+      "website": "https://tabler.io",
+      "revision": "977102f79cc633074d5518fe1a288fa2ae7fbe27",
+      "category": "数据与状态",
+      "format": "页面",
+      "kind": "完整页面",
+      "behavior": "查看维护页",
+      "independenceNote": "官方完整维护页，与 404 结构不同。",
+      "officialAssets": [],
+      "placeholderAssets": [],
+      "replacedAssets": 0,
+      "code": "batches/tabler-20261111/originals/error-maintenance.html",
+      "preview": "batches/tabler-20261111/error-maintenance.html",
+      "bundle": "batches/tabler-20261111/bundles/error-maintenance.zip",
+      "runtime": {
+        "assets": []
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "Tabler 代码为 MIT。本批未收录依赖 ApexCharts 的页面，因官方说明其自第 5 版起不再是单纯 MIT。",
+        "官方免费插画（computer-fix 等六张）按上游免费清单保留。头像、照片、封面等不明原图已留私有原件待核；预览改用明确披露的自有占位，不冒称视觉复刻。品牌/支付/浏览器等 SVG 为商标标识，不是再分发许可；预览中的标识已换自有占位。支付图标样式里的商标图形单独列为商标/Unknown，不宣称权利齐。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面",
+        "源码级不同点：官方完整维护页，与 404 结构不同。"
+      ],
+      "batchDir": "tabler-20261111",
+      "originalSha256": "96ecf9edf6dcb810bad1bf45036df0b960dace24780505cf3f58f7735ff78070",
+      "originalSize": 165021
+    },
+    {
+      "id": "tabler:datagrid",
+      "title": "数据网格",
+      "source": "Tabler",
+      "license": "MIT",
+      "upstream": "https://github.com/tabler/tabler/blob/977102f79cc633074d5518fe1a288fa2ae7fbe27/preview/pages/datagrid.astro",
+      "website": "https://tabler.io",
+      "revision": "977102f79cc633074d5518fe1a288fa2ae7fbe27",
+      "category": "数据与状态",
+      "format": "页面",
+      "kind": "完整页面",
+      "behavior": "浏览数据网格",
+      "independenceNote": "官方完整数据网格页，与已收 datatables 不是同一实现。",
+      "officialAssets": [],
+      "placeholderAssets": [],
+      "replacedAssets": 0,
+      "code": "batches/tabler-20261111/originals/datagrid.html",
+      "preview": "batches/tabler-20261111/datagrid.html",
+      "bundle": "batches/tabler-20261111/bundles/datagrid.zip",
+      "runtime": {
+        "assets": []
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "Tabler 代码为 MIT。本批未收录依赖 ApexCharts 的页面，因官方说明其自第 5 版起不再是单纯 MIT。",
+        "官方免费插画（computer-fix 等六张）按上游免费清单保留。头像、照片、封面等不明原图已留私有原件待核；预览改用明确披露的自有占位，不冒称视觉复刻。品牌/支付/浏览器等 SVG 为商标标识，不是再分发许可；预览中的标识已换自有占位。支付图标样式里的商标图形单独列为商标/Unknown，不宣称权利齐。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面",
+        "源码级不同点：官方完整数据网格页，与已收 datatables 不是同一实现。"
+      ],
+      "batchDir": "tabler-20261111",
+      "originalSha256": "a67ffa75cafb2fd7ffc750711f691ae94f29016e94d9c9f75783dd36e7cd5573",
+      "originalSize": 397344
+    },
+    {
+      "id": "tabler:carousel",
+      "title": "走马灯页",
+      "source": "Tabler",
+      "license": "MIT",
+      "upstream": "https://github.com/tabler/tabler/blob/977102f79cc633074d5518fe1a288fa2ae7fbe27/preview/pages/carousel.astro",
+      "website": "https://tabler.io",
+      "revision": "977102f79cc633074d5518fe1a288fa2ae7fbe27",
+      "category": "展示与媒体",
+      "format": "组件与效果",
+      "kind": "组件",
+      "behavior": "浏览走马灯",
+      "independenceNote": "官方完整走马灯页/组件。",
+      "officialAssets": [],
+      "placeholderAssets": [
+        "ph-beautiful-blonde-woman-relaxing-with-a-can-of-coke-on-a-tree-stump-by-the-beach.jpg",
+        "ph-brainstorming-session-with-creative-designers.jpg",
+        "ph-finances-us-dollars-and-bitcoins-currency-money.jpg",
+        "ph-group-of-people-brainstorming-and-taking-notes-2.jpg",
+        "ph-blue-sofa-with-pillows-in-a-designer-living-room-interior.jpg",
+        "ph-home-office-desk-with-macbook-iphone-calendar-watch-and-organizer.jpg",
+        "ph-young-woman-working-in-a-cafe.jpg",
+        "ph-everything-you-need-to-work-from-your-bed.jpg",
+        "ph-young-entrepreneur-working-from-a-modern-cafe.jpg",
+        "ph-finances-us-dollars-and-bitcoins-currency-money-2.jpg",
+        "ph-group-of-people-sightseeing-in-the-city.jpg",
+        "ph-color-palette-guide-sample-colors-catalog-.jpg",
+        "ph-stylish-workplace-with-computer-at-home.jpg",
+        "ph-pink-desk-in-the-home-office.jpg",
+        "ph-young-woman-sitting-on-the-sofa-and-working-on-her-laptop.jpg",
+        "ph-coffee-on-a-table-with-other-items.jpg",
+        "ph-young-entrepreneur-working-from-a-modern-cafe-2.jpg",
+        "ph-soft-photo-of-woman-on-the-bed-with-the-book-and-cup-of-coffee-in-hands.jpg",
+        "ph-fairy-lights-at-the-beach-in-bulgaria.jpg",
+        "ph-woman-working-on-laptop-at-home-office.jpg",
+        "ph-modern-home-office.jpg",
+        "ph-blond-using-her-laptop-at-her-bedroom.jpg",
+        "ph-tropical-palm-leaves-floral-pattern-background.jpg",
+        "ph-woman-read-book-and-drink-coffee.jpg",
+        "ph-book-on-the-grass.jpg",
+        "ph-colorful-exotic-flowers-and-greenery.jpg",
+        "ph-workplace-with-laptop-on-table-at-home.jpg",
+        "ph-city-lights-reflected-in-the-water-at-night.jpg",
+        "ph-cryptocurrency-bitcoin-coins.jpg",
+        "ph-woman-read-book-and-drink-coffee-2.jpg",
+        "ph-friends-at-a-restaurant-drinking-wine.jpg",
+        "ph-beautiful-blonde-woman-on-a-wooden-pier-by-the-lake.jpg",
+        "ph-white-apple-imac-computer-with-elephant-mousepad.jpg",
+        "ph-workplace-with-laptop-on-table-at-home-2.jpg",
+        "ph-working-in-a-restaurant-macbook-cheese-cake-and-cup-of-coffee.jpg"
+      ],
+      "replacedAssets": 35,
+      "code": "batches/tabler-20261111/originals/carousel.html",
+      "preview": "batches/tabler-20261111/carousel.html",
+      "bundle": "batches/tabler-20261111/bundles/carousel.zip",
+      "runtime": {
+        "assets": [
+          {
+            "key": "ph-beautiful-blonde-woman-relaxing-with-a-can-of-coke-on-a-tree-stump-by-the-beach.jpg",
+            "path": "batches/tabler-20261111/assets/ph-beautiful-blonde-woman-relaxing-with-a-can-of-coke-on-a-tree-stump-by-the-beach.jpg",
+            "mime": "image/jpeg",
+            "bytes": 36768,
+            "sha256": "ed19a1b687181268cfed502a0050de65e154c593ffce20516097af2ec1b7a433"
+          },
+          {
+            "key": "ph-brainstorming-session-with-creative-designers.jpg",
+            "path": "batches/tabler-20261111/assets/ph-brainstorming-session-with-creative-designers.jpg",
+            "mime": "image/jpeg",
+            "bytes": 36784,
+            "sha256": "e24b1914124e92ceafa0b2395358b3745eb3a5d518b842afd5ea260b6aa8748f"
+          },
+          {
+            "key": "ph-finances-us-dollars-and-bitcoins-currency-money.jpg",
+            "path": "batches/tabler-20261111/assets/ph-finances-us-dollars-and-bitcoins-currency-money.jpg",
+            "mime": "image/jpeg",
+            "bytes": 34047,
+            "sha256": "4d70a2e651d55e85d1a28e8e96ee52d91f8d62848e7279ac254f94e51443fc05"
+          },
+          {
+            "key": "ph-group-of-people-brainstorming-and-taking-notes-2.jpg",
+            "path": "batches/tabler-20261111/assets/ph-group-of-people-brainstorming-and-taking-notes-2.jpg",
+            "mime": "image/jpeg",
+            "bytes": 36427,
+            "sha256": "6dd1e2e0c9e5714e45f6a2c776bffe853d5c3e26d87cf977890819a073bffe30"
+          },
+          {
+            "key": "ph-blue-sofa-with-pillows-in-a-designer-living-room-interior.jpg",
+            "path": "batches/tabler-20261111/assets/ph-blue-sofa-with-pillows-in-a-designer-living-room-interior.jpg",
+            "mime": "image/jpeg",
+            "bytes": 34923,
+            "sha256": "79ac18015f4c73e405ec67bac4f1f3c6a7488258318b4ce51d270ee33d7723c8"
+          },
+          {
+            "key": "ph-home-office-desk-with-macbook-iphone-calendar-watch-and-organizer.jpg",
+            "path": "batches/tabler-20261111/assets/ph-home-office-desk-with-macbook-iphone-calendar-watch-and-organizer.jpg",
+            "mime": "image/jpeg",
+            "bytes": 36847,
+            "sha256": "4e521606150eb5ffd14a1542ba9ad76b035f2331756393e1e661e6559208c182"
+          },
+          {
+            "key": "ph-young-woman-working-in-a-cafe.jpg",
+            "path": "batches/tabler-20261111/assets/ph-young-woman-working-in-a-cafe.jpg",
+            "mime": "image/jpeg",
+            "bytes": 34031,
+            "sha256": "88bdcf80b689a813956ade7e2d0a9242b4d865648a9a40471ce86f8bb9398698"
+          },
+          {
+            "key": "ph-everything-you-need-to-work-from-your-bed.jpg",
+            "path": "batches/tabler-20261111/assets/ph-everything-you-need-to-work-from-your-bed.jpg",
+            "mime": "image/jpeg",
+            "bytes": 34424,
+            "sha256": "a8624308aa7601ebbae8f059b6630602dbf0b49a99e4c11af24c22d18dd0c551"
+          },
+          {
+            "key": "ph-young-entrepreneur-working-from-a-modern-cafe.jpg",
+            "path": "batches/tabler-20261111/assets/ph-young-entrepreneur-working-from-a-modern-cafe.jpg",
+            "mime": "image/jpeg",
+            "bytes": 36498,
+            "sha256": "cae1c0f93a126bae231a3a2c0e2e21faad05a2d2f8a568b9dfaf18964c579933"
+          },
+          {
+            "key": "ph-finances-us-dollars-and-bitcoins-currency-money-2.jpg",
+            "path": "batches/tabler-20261111/assets/ph-finances-us-dollars-and-bitcoins-currency-money-2.jpg",
+            "mime": "image/jpeg",
+            "bytes": 34541,
+            "sha256": "ed9ead2b84a4e89e7c0e186e8d64a97a6dbf2e157a1be022443810cb076ddebc"
+          },
+          {
+            "key": "ph-group-of-people-sightseeing-in-the-city.jpg",
+            "path": "batches/tabler-20261111/assets/ph-group-of-people-sightseeing-in-the-city.jpg",
+            "mime": "image/jpeg",
+            "bytes": 34711,
+            "sha256": "8ee7b47e86c86ad59d2ab46cae8ee78e3e938b506c4afce66bfa2f8066b01b20"
+          },
+          {
+            "key": "ph-color-palette-guide-sample-colors-catalog-.jpg",
+            "path": "batches/tabler-20261111/assets/ph-color-palette-guide-sample-colors-catalog-.jpg",
+            "mime": "image/jpeg",
+            "bytes": 37298,
+            "sha256": "17febee9ecbe44d2f683de72e304d47f69c9dc1b421e60cd3f37e4d3e9c4f149"
+          },
+          {
+            "key": "ph-stylish-workplace-with-computer-at-home.jpg",
+            "path": "batches/tabler-20261111/assets/ph-stylish-workplace-with-computer-at-home.jpg",
+            "mime": "image/jpeg",
+            "bytes": 35470,
+            "sha256": "13c6287863de75e913324a49a5519fdd5184f55495e05115849ad5942d79c9f5"
+          },
+          {
+            "key": "ph-pink-desk-in-the-home-office.jpg",
+            "path": "batches/tabler-20261111/assets/ph-pink-desk-in-the-home-office.jpg",
+            "mime": "image/jpeg",
+            "bytes": 35189,
+            "sha256": "1c0c70724c646273621c1f84b4e7222fe705fda331974d601e796cdf855d2590"
+          },
+          {
+            "key": "ph-young-woman-sitting-on-the-sofa-and-working-on-her-laptop.jpg",
+            "path": "batches/tabler-20261111/assets/ph-young-woman-sitting-on-the-sofa-and-working-on-her-laptop.jpg",
+            "mime": "image/jpeg",
+            "bytes": 35707,
+            "sha256": "98758b19b6384804d0b047ee008ba70d3f3fbfc3844242e19959c4bcb9bd6449"
+          },
+          {
+            "key": "ph-coffee-on-a-table-with-other-items.jpg",
+            "path": "batches/tabler-20261111/assets/ph-coffee-on-a-table-with-other-items.jpg",
+            "mime": "image/jpeg",
+            "bytes": 34930,
+            "sha256": "e09d1df3ae0ee5851d4f41b002d85e420eb774a5cbabaf6092d938c0ed2b2d54"
+          },
+          {
+            "key": "ph-young-entrepreneur-working-from-a-modern-cafe-2.jpg",
+            "path": "batches/tabler-20261111/assets/ph-young-entrepreneur-working-from-a-modern-cafe-2.jpg",
+            "mime": "image/jpeg",
+            "bytes": 35482,
+            "sha256": "82ea4ee5491e398f5c08c9662aae934cf6517f43239840fe744ccd425f49e088"
+          },
+          {
+            "key": "ph-soft-photo-of-woman-on-the-bed-with-the-book-and-cup-of-coffee-in-hands.jpg",
+            "path": "batches/tabler-20261111/assets/ph-soft-photo-of-woman-on-the-bed-with-the-book-and-cup-of-coffee-in-hands.jpg",
+            "mime": "image/jpeg",
+            "bytes": 36682,
+            "sha256": "876d03711aefdc44add7ad07a98b49ffad541102ac349cca5970c0116c092ee1"
+          },
+          {
+            "key": "ph-fairy-lights-at-the-beach-in-bulgaria.jpg",
+            "path": "batches/tabler-20261111/assets/ph-fairy-lights-at-the-beach-in-bulgaria.jpg",
+            "mime": "image/jpeg",
+            "bytes": 33577,
+            "sha256": "5d92a53f50df8628d1e114e3bed1ba0f43c5a697c57e0c7ee9e9e177b83a5c36"
+          },
+          {
+            "key": "ph-woman-working-on-laptop-at-home-office.jpg",
+            "path": "batches/tabler-20261111/assets/ph-woman-working-on-laptop-at-home-office.jpg",
+            "mime": "image/jpeg",
+            "bytes": 36010,
+            "sha256": "1ace9491f6f2d427386c7130c1d610014a0bf37e0870c8bdd2bddebe3b31c32b"
+          },
+          {
+            "key": "ph-modern-home-office.jpg",
+            "path": "batches/tabler-20261111/assets/ph-modern-home-office.jpg",
+            "mime": "image/jpeg",
+            "bytes": 34834,
+            "sha256": "7f6798edaa8fe456bbcfcb34871267035d58f09f0d30110064c456244fd7106d"
+          },
+          {
+            "key": "ph-blond-using-her-laptop-at-her-bedroom.jpg",
+            "path": "batches/tabler-20261111/assets/ph-blond-using-her-laptop-at-her-bedroom.jpg",
+            "mime": "image/jpeg",
+            "bytes": 36521,
+            "sha256": "21c2b637a3aa6a8e3912cb0adc137a8fdaf13436624f0d145e9b88fdce65afec"
+          },
+          {
+            "key": "ph-tropical-palm-leaves-floral-pattern-background.jpg",
+            "path": "batches/tabler-20261111/assets/ph-tropical-palm-leaves-floral-pattern-background.jpg",
+            "mime": "image/jpeg",
+            "bytes": 35961,
+            "sha256": "f3526791fbbc566d9067adfa1aa0e042f3c42df3dcdca6860f50d7d46721849f"
+          },
+          {
+            "key": "ph-woman-read-book-and-drink-coffee.jpg",
+            "path": "batches/tabler-20261111/assets/ph-woman-read-book-and-drink-coffee.jpg",
+            "mime": "image/jpeg",
+            "bytes": 36423,
+            "sha256": "c332c4e214c257977e0dda4ed0e3215fda1d8744625b86f0a092e4f81cff1fb2"
+          },
+          {
+            "key": "ph-book-on-the-grass.jpg",
+            "path": "batches/tabler-20261111/assets/ph-book-on-the-grass.jpg",
+            "mime": "image/jpeg",
+            "bytes": 35119,
+            "sha256": "d1220bb8caa72c2baf9f242841fedcb93c1436c49f4dc678a2bcc1b0f933b387"
+          },
+          {
+            "key": "ph-colorful-exotic-flowers-and-greenery.jpg",
+            "path": "batches/tabler-20261111/assets/ph-colorful-exotic-flowers-and-greenery.jpg",
+            "mime": "image/jpeg",
+            "bytes": 35252,
+            "sha256": "e258937358669f81c854b8eeece79059a063106062078ec90ed221636ce0a2c4"
+          },
+          {
+            "key": "ph-workplace-with-laptop-on-table-at-home.jpg",
+            "path": "batches/tabler-20261111/assets/ph-workplace-with-laptop-on-table-at-home.jpg",
+            "mime": "image/jpeg",
+            "bytes": 33962,
+            "sha256": "0998b4443456b1d474ff7699f8e217641a4c09d5ee422056a88194268f595922"
+          },
+          {
+            "key": "ph-city-lights-reflected-in-the-water-at-night.jpg",
+            "path": "batches/tabler-20261111/assets/ph-city-lights-reflected-in-the-water-at-night.jpg",
+            "mime": "image/jpeg",
+            "bytes": 33066,
+            "sha256": "c23bfeba9902b54aeba553d0c8348a3cb01525f673d989f61a294851da874f5e"
+          },
+          {
+            "key": "ph-cryptocurrency-bitcoin-coins.jpg",
+            "path": "batches/tabler-20261111/assets/ph-cryptocurrency-bitcoin-coins.jpg",
+            "mime": "image/jpeg",
+            "bytes": 34223,
+            "sha256": "1cedb0cb2d191df856b2caa48953b01a903873bf8eb74ff465acceff4cbfebf3"
+          },
+          {
+            "key": "ph-woman-read-book-and-drink-coffee-2.jpg",
+            "path": "batches/tabler-20261111/assets/ph-woman-read-book-and-drink-coffee-2.jpg",
+            "mime": "image/jpeg",
+            "bytes": 35037,
+            "sha256": "9ace7396c529b023da413aa962225507aa7db07ce4a841571cae6c3c51afb31d"
+          },
+          {
+            "key": "ph-friends-at-a-restaurant-drinking-wine.jpg",
+            "path": "batches/tabler-20261111/assets/ph-friends-at-a-restaurant-drinking-wine.jpg",
+            "mime": "image/jpeg",
+            "bytes": 34847,
+            "sha256": "19d3475d1a21e2223d9780f4013d7b13c6af05687a5bacbbfcb3fd1bcfccbb1a"
+          },
+          {
+            "key": "ph-beautiful-blonde-woman-on-a-wooden-pier-by-the-lake.jpg",
+            "path": "batches/tabler-20261111/assets/ph-beautiful-blonde-woman-on-a-wooden-pier-by-the-lake.jpg",
+            "mime": "image/jpeg",
+            "bytes": 35878,
+            "sha256": "a8f36a2536fad8ca27275fe5d2498df528aa0b9783fc43b8b6667e59c29c03a0"
+          },
+          {
+            "key": "ph-white-apple-imac-computer-with-elephant-mousepad.jpg",
+            "path": "batches/tabler-20261111/assets/ph-white-apple-imac-computer-with-elephant-mousepad.jpg",
+            "mime": "image/jpeg",
+            "bytes": 35773,
+            "sha256": "4e5facbc2b401a70a23d05e07cb28b926a6b31461ff1f477c638b2c02640eb29"
+          },
+          {
+            "key": "ph-workplace-with-laptop-on-table-at-home-2.jpg",
+            "path": "batches/tabler-20261111/assets/ph-workplace-with-laptop-on-table-at-home-2.jpg",
+            "mime": "image/jpeg",
+            "bytes": 32375,
+            "sha256": "8cef211ad76c938c529243601e23c843008638000e1bafda0b6b5b15c2beabbf"
+          },
+          {
+            "key": "ph-working-in-a-restaurant-macbook-cheese-cake-and-cup-of-coffee.jpg",
+            "path": "batches/tabler-20261111/assets/ph-working-in-a-restaurant-macbook-cheese-cake-and-cup-of-coffee.jpg",
+            "mime": "image/jpeg",
+            "bytes": 35051,
+            "sha256": "487f9c042801716bb3d7a9f1f382806deaa33e7af7de0ab699236867e23b3235"
+          }
+        ]
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "Tabler 代码为 MIT。本批未收录依赖 ApexCharts 的页面，因官方说明其自第 5 版起不再是单纯 MIT。",
+        "官方免费插画（computer-fix 等六张）按上游免费清单保留。头像、照片、封面等不明原图已留私有原件待核；预览改用明确披露的自有占位，不冒称视觉复刻。品牌/支付/浏览器等 SVG 为商标标识，不是再分发许可；预览中的标识已换自有占位。支付图标样式里的商标图形单独列为商标/Unknown，不宣称权利齐。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面",
+        "源码级不同点：官方完整走马灯页/组件。"
+      ],
+      "batchDir": "tabler-20261111",
+      "originalSha256": "c23e6b72f4b46442c835f37c4b51475bf49353dca19fd2a2ac8958555d90d2a3",
+      "originalSize": 393723
+    },
+    {
+      "id": "tabler:hover-gallery",
+      "title": "悬停画廊",
+      "source": "Tabler",
+      "license": "MIT",
+      "upstream": "https://github.com/tabler/tabler/blob/977102f79cc633074d5518fe1a288fa2ae7fbe27/preview/pages/hover-gallery.astro",
+      "website": "https://tabler.io",
+      "revision": "977102f79cc633074d5518fe1a288fa2ae7fbe27",
+      "category": "展示与媒体",
+      "format": "页面",
+      "kind": "完整页面",
+      "behavior": "在画廊中悬停查看（官方图若权利不明已换占位）",
+      "independenceNote": "官方悬停画廊，与已收 gallery 交互不同。",
+      "officialAssets": [],
+      "placeholderAssets": [
+        "ph-backpack-1.jpg",
+        "ph-backpack-2.jpg",
+        "ph-backpack-3.jpg",
+        "ph-backpack-4.jpg",
+        "ph-backpack-5.jpg",
+        "ph-watch-1.jpg",
+        "ph-watch-2.jpg",
+        "ph-watch-3.jpg",
+        "ph-watch-4.jpg",
+        "ph-watch-5.jpg",
+        "ph-blue-sofa-with-pillows-in-a-designer-living-room-interior.jpg",
+        "ph-colorful-exotic-flowers-and-greenery.jpg",
+        "ph-city-lights-reflected-in-the-water-at-night.jpg"
+      ],
+      "replacedAssets": 13,
+      "code": "batches/tabler-20261111/originals/hover-gallery.html",
+      "preview": "batches/tabler-20261111/hover-gallery.html",
+      "bundle": "batches/tabler-20261111/bundles/hover-gallery.zip",
+      "runtime": {
+        "assets": [
+          {
+            "key": "ph-backpack-1.jpg",
+            "path": "batches/tabler-20261111/assets/ph-backpack-1.jpg",
+            "mime": "image/jpeg",
+            "bytes": 25529,
+            "sha256": "8fb802561e896393e85ed7b1d1a2fc5571d0ef3aec2085f8d407fe179a433902"
+          },
+          {
+            "key": "ph-backpack-2.jpg",
+            "path": "batches/tabler-20261111/assets/ph-backpack-2.jpg",
+            "mime": "image/jpeg",
+            "bytes": 24398,
+            "sha256": "b4d22894408892209e9aa54c872ff72817d1c7f43d8d9d9ab5c8550c3dc1f302"
+          },
+          {
+            "key": "ph-backpack-3.jpg",
+            "path": "batches/tabler-20261111/assets/ph-backpack-3.jpg",
+            "mime": "image/jpeg",
+            "bytes": 22492,
+            "sha256": "ef3c3b1b3f080ae3e90c8be347d3f0cbf89d031791da2ef5ff80c00ae31b673f"
+          },
+          {
+            "key": "ph-backpack-4.jpg",
+            "path": "batches/tabler-20261111/assets/ph-backpack-4.jpg",
+            "mime": "image/jpeg",
+            "bytes": 25010,
+            "sha256": "b76d209979b489f0826bf3c80a9eb52a56d62196a0b9f5dd61b1b0175dc94faf"
+          },
+          {
+            "key": "ph-backpack-5.jpg",
+            "path": "batches/tabler-20261111/assets/ph-backpack-5.jpg",
+            "mime": "image/jpeg",
+            "bytes": 24645,
+            "sha256": "755b11749e9cdb25f804e00ffa5fbfca34a128fadb4c7b0f4f872f41892a1474"
+          },
+          {
+            "key": "ph-watch-1.jpg",
+            "path": "batches/tabler-20261111/assets/ph-watch-1.jpg",
+            "mime": "image/jpeg",
+            "bytes": 24646,
+            "sha256": "e5bb3021f2b5baa027e2c33e6aca451e2da272fa049378787f4d33aa78e6ee8a"
+          },
+          {
+            "key": "ph-watch-2.jpg",
+            "path": "batches/tabler-20261111/assets/ph-watch-2.jpg",
+            "mime": "image/jpeg",
+            "bytes": 25839,
+            "sha256": "f00f77a25e2c7fa612835de04fda53126076c312138d15a7481ce4ad587c4b0a"
+          },
+          {
+            "key": "ph-watch-3.jpg",
+            "path": "batches/tabler-20261111/assets/ph-watch-3.jpg",
+            "mime": "image/jpeg",
+            "bytes": 23568,
+            "sha256": "d9dcdb6cdcc5fbc1d64ed468c50acb36e816a50e612e754b7e9f73451246a440"
+          },
+          {
+            "key": "ph-watch-4.jpg",
+            "path": "batches/tabler-20261111/assets/ph-watch-4.jpg",
+            "mime": "image/jpeg",
+            "bytes": 24044,
+            "sha256": "cb576ac6cbb775dbc6c3bc1b443c56347249d97d8828d5b454a7873378a8d06a"
+          },
+          {
+            "key": "ph-watch-5.jpg",
+            "path": "batches/tabler-20261111/assets/ph-watch-5.jpg",
+            "mime": "image/jpeg",
+            "bytes": 25524,
+            "sha256": "c317bfa69666d220159970133d4c0a1052fcdd3aad309a2c624d157732170df7"
+          },
+          {
+            "key": "ph-blue-sofa-with-pillows-in-a-designer-living-room-interior.jpg",
+            "path": "batches/tabler-20261111/assets/ph-blue-sofa-with-pillows-in-a-designer-living-room-interior.jpg",
+            "mime": "image/jpeg",
+            "bytes": 34923,
+            "sha256": "79ac18015f4c73e405ec67bac4f1f3c6a7488258318b4ce51d270ee33d7723c8"
+          },
+          {
+            "key": "ph-colorful-exotic-flowers-and-greenery.jpg",
+            "path": "batches/tabler-20261111/assets/ph-colorful-exotic-flowers-and-greenery.jpg",
+            "mime": "image/jpeg",
+            "bytes": 35252,
+            "sha256": "e258937358669f81c854b8eeece79059a063106062078ec90ed221636ce0a2c4"
+          },
+          {
+            "key": "ph-city-lights-reflected-in-the-water-at-night.jpg",
+            "path": "batches/tabler-20261111/assets/ph-city-lights-reflected-in-the-water-at-night.jpg",
+            "mime": "image/jpeg",
+            "bytes": 33066,
+            "sha256": "c23bfeba9902b54aeba553d0c8348a3cb01525f673d989f61a294851da874f5e"
+          }
+        ]
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "Tabler 代码为 MIT。本批未收录依赖 ApexCharts 的页面，因官方说明其自第 5 版起不再是单纯 MIT。",
+        "官方免费插画（computer-fix 等六张）按上游免费清单保留。头像、照片、封面等不明原图已留私有原件待核；预览改用明确披露的自有占位，不冒称视觉复刻。品牌/支付/浏览器等 SVG 为商标标识，不是再分发许可；预览中的标识已换自有占位。支付图标样式里的商标图形单独列为商标/Unknown，不宣称权利齐。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面",
+        "源码级不同点：官方悬停画廊，与已收 gallery 交互不同。"
+      ],
+      "batchDir": "tabler-20261111",
+      "originalSha256": "8f5f4530d776c5d321be97735c854ae3444054ac3d7b89be24bd0bb4c2603d66",
+      "originalSize": 363206
+    },
+    {
+      "id": "tabler:music",
+      "title": "音乐页",
+      "source": "Tabler",
+      "license": "MIT",
+      "upstream": "https://github.com/tabler/tabler/blob/977102f79cc633074d5518fe1a288fa2ae7fbe27/preview/pages/music.astro",
+      "website": "https://tabler.io",
+      "revision": "977102f79cc633074d5518fe1a288fa2ae7fbe27",
+      "category": "展示与媒体",
+      "format": "页面",
+      "kind": "完整页面",
+      "behavior": "查看音乐页（不会拉流）",
+      "independenceNote": "官方完整音乐页。",
+      "officialAssets": [],
+      "placeholderAssets": [
+        "ph-a4fb1d293bd8d3fd38352418c50fcf1369a7a87d.jpg",
+        "ph-f04bb6fba32e89475d9981007aff21e13745dec2.jpg",
+        "ph-c3f13b4f7a674abda9aa36fd72fa341e918c0f26.jpg",
+        "ph-4d4ab714dfca7b9df41d4a02a2c39394ebdeb6b6.jpg",
+        "ph-79b2422b467ad20c07576e8f8f5f2f1692ac7142.jpg",
+        "ph-aac97056fc02fe02c7e95f7ff77a07c6e82f7d6e.jpg",
+        "ph-859337f0eaa49b1ad6ed76719b7c1ae26d6412c8.jpg",
+        "ph-2e7357491deb8a6796ee8d9181ca9ea1f407bb5f.jpg",
+        "ph-c976bfc96d5e44820e553a16a6097cd02a61fd2f.jpg",
+        "ph-c9a8350feee77e9345eec4155cddc96694803d1a.jpg",
+        "ph-fe4ee21d30450829e5b172e806b3c1e14ca1e5f3.jpg",
+        "ph-f4e96086f44c4dff1758b1fc1338cd88c1b5ce9c.jpg",
+        "ph-73f4938130140174efb1cc0a82ececb277e40932.jpg",
+        "ph-cfb2a532996512eff95c4b0d566d067384aaa441.jpg"
+      ],
+      "replacedAssets": 14,
+      "code": "batches/tabler-20261111/originals/music.html",
+      "preview": "batches/tabler-20261111/music.html",
+      "bundle": "batches/tabler-20261111/bundles/music.zip",
+      "runtime": {
+        "assets": [
+          {
+            "key": "ph-a4fb1d293bd8d3fd38352418c50fcf1369a7a87d.jpg",
+            "path": "batches/tabler-20261111/assets/ph-a4fb1d293bd8d3fd38352418c50fcf1369a7a87d.jpg",
+            "mime": "image/jpeg",
+            "bytes": 7418,
+            "sha256": "49617d19fb652c7a7239976d884a5151153f01044eaa346b893b52aa897e37aa"
+          },
+          {
+            "key": "ph-f04bb6fba32e89475d9981007aff21e13745dec2.jpg",
+            "path": "batches/tabler-20261111/assets/ph-f04bb6fba32e89475d9981007aff21e13745dec2.jpg",
+            "mime": "image/jpeg",
+            "bytes": 7510,
+            "sha256": "eda390bc41abafbe8dc604b1eafbd0330c7c765d20265324992fa206dc634163"
+          },
+          {
+            "key": "ph-c3f13b4f7a674abda9aa36fd72fa341e918c0f26.jpg",
+            "path": "batches/tabler-20261111/assets/ph-c3f13b4f7a674abda9aa36fd72fa341e918c0f26.jpg",
+            "mime": "image/jpeg",
+            "bytes": 8229,
+            "sha256": "b67d9d305303864643182926aa2e89c2466844e51639f75774e22e2482c6291f"
+          },
+          {
+            "key": "ph-4d4ab714dfca7b9df41d4a02a2c39394ebdeb6b6.jpg",
+            "path": "batches/tabler-20261111/assets/ph-4d4ab714dfca7b9df41d4a02a2c39394ebdeb6b6.jpg",
+            "mime": "image/jpeg",
+            "bytes": 6722,
+            "sha256": "01097d5276dc589892849ab8d8a8e212030c27aaf69b63abdbc61b134db8f4c8"
+          },
+          {
+            "key": "ph-79b2422b467ad20c07576e8f8f5f2f1692ac7142.jpg",
+            "path": "batches/tabler-20261111/assets/ph-79b2422b467ad20c07576e8f8f5f2f1692ac7142.jpg",
+            "mime": "image/jpeg",
+            "bytes": 7406,
+            "sha256": "b0a81da7a152acdc3c6dbd7eec736184a6bd45684939244356c0574d33525968"
+          },
+          {
+            "key": "ph-aac97056fc02fe02c7e95f7ff77a07c6e82f7d6e.jpg",
+            "path": "batches/tabler-20261111/assets/ph-aac97056fc02fe02c7e95f7ff77a07c6e82f7d6e.jpg",
+            "mime": "image/jpeg",
+            "bytes": 7836,
+            "sha256": "a149d33ae597878df436a232881ecda12efeee17898bf28e3abba44ca2362aad"
+          },
+          {
+            "key": "ph-859337f0eaa49b1ad6ed76719b7c1ae26d6412c8.jpg",
+            "path": "batches/tabler-20261111/assets/ph-859337f0eaa49b1ad6ed76719b7c1ae26d6412c8.jpg",
+            "mime": "image/jpeg",
+            "bytes": 6913,
+            "sha256": "dd2fd42a358dabe6aea2a9420f9c32f7fec04b229555da558297de5748d7cb46"
+          },
+          {
+            "key": "ph-2e7357491deb8a6796ee8d9181ca9ea1f407bb5f.jpg",
+            "path": "batches/tabler-20261111/assets/ph-2e7357491deb8a6796ee8d9181ca9ea1f407bb5f.jpg",
+            "mime": "image/jpeg",
+            "bytes": 7431,
+            "sha256": "e0a67010f05b4d6794e28ed8125f95eaf82bb2b453c03321eec41f103c1ede79"
+          },
+          {
+            "key": "ph-c976bfc96d5e44820e553a16a6097cd02a61fd2f.jpg",
+            "path": "batches/tabler-20261111/assets/ph-c976bfc96d5e44820e553a16a6097cd02a61fd2f.jpg",
+            "mime": "image/jpeg",
+            "bytes": 6772,
+            "sha256": "ef7fd758228ace84f4c9fa5bed4478141a958fd5aa21e96732e996fbddfb9d2a"
+          },
+          {
+            "key": "ph-c9a8350feee77e9345eec4155cddc96694803d1a.jpg",
+            "path": "batches/tabler-20261111/assets/ph-c9a8350feee77e9345eec4155cddc96694803d1a.jpg",
+            "mime": "image/jpeg",
+            "bytes": 7071,
+            "sha256": "1b31da851925e703048596a33d112f0b6c5ab25101cef68836ee8f712a8bc604"
+          },
+          {
+            "key": "ph-fe4ee21d30450829e5b172e806b3c1e14ca1e5f3.jpg",
+            "path": "batches/tabler-20261111/assets/ph-fe4ee21d30450829e5b172e806b3c1e14ca1e5f3.jpg",
+            "mime": "image/jpeg",
+            "bytes": 7149,
+            "sha256": "40ddd4d5b3a0b053d0dfb3229a245ced97f421a2bc12ce0b17da520370d7101f"
+          },
+          {
+            "key": "ph-f4e96086f44c4dff1758b1fc1338cd88c1b5ce9c.jpg",
+            "path": "batches/tabler-20261111/assets/ph-f4e96086f44c4dff1758b1fc1338cd88c1b5ce9c.jpg",
+            "mime": "image/jpeg",
+            "bytes": 7373,
+            "sha256": "0973f6d8efa56c83c4871386e592eeab2eb17226566a173d4b82a36602f09b8d"
+          },
+          {
+            "key": "ph-73f4938130140174efb1cc0a82ececb277e40932.jpg",
+            "path": "batches/tabler-20261111/assets/ph-73f4938130140174efb1cc0a82ececb277e40932.jpg",
+            "mime": "image/jpeg",
+            "bytes": 7733,
+            "sha256": "ec3458a1bc0b27709d809156922ed1071541ad414b914dd14446d34e2b099523"
+          },
+          {
+            "key": "ph-cfb2a532996512eff95c4b0d566d067384aaa441.jpg",
+            "path": "batches/tabler-20261111/assets/ph-cfb2a532996512eff95c4b0d566d067384aaa441.jpg",
+            "mime": "image/jpeg",
+            "bytes": 7191,
+            "sha256": "e9c723250ce23f2dccdd8c3ad3e4e2285d6a3fa0f95c30c3f95d6cd96d240048"
+          }
+        ]
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "Tabler 代码为 MIT。本批未收录依赖 ApexCharts 的页面，因官方说明其自第 5 版起不再是单纯 MIT。",
+        "官方免费插画（computer-fix 等六张）按上游免费清单保留。头像、照片、封面等不明原图已留私有原件待核；预览改用明确披露的自有占位，不冒称视觉复刻。品牌/支付/浏览器等 SVG 为商标标识，不是再分发许可；预览中的标识已换自有占位。支付图标样式里的商标图形单独列为商标/Unknown，不宣称权利齐。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面",
+        "源码级不同点：官方完整音乐页。"
+      ],
+      "batchDir": "tabler-20261111",
+      "originalSha256": "22faddcbecad9b0d6c6d8e89d2a8006f2ce90448dd599cb3b3870738d22b40e5",
+      "originalSize": 429925
+    },
+    {
+      "id": "tabler:marketing-about",
+      "title": "营销关于页",
+      "source": "Tabler",
+      "license": "MIT",
+      "upstream": "https://github.com/tabler/tabler/blob/977102f79cc633074d5518fe1a288fa2ae7fbe27/preview/pages/marketing/about.astro",
+      "website": "https://tabler.io",
+      "revision": "977102f79cc633074d5518fe1a288fa2ae7fbe27",
+      "category": "产品与营销",
+      "format": "页面",
+      "kind": "完整页面",
+      "behavior": "阅读关于页（演示链接已拦截）",
+      "independenceNote": "官方营销关于整页。",
+      "officialAssets": [],
+      "placeholderAssets": [],
+      "replacedAssets": 0,
+      "code": "batches/tabler-20261111/originals/marketing-about.html",
+      "preview": "batches/tabler-20261111/marketing-about.html",
+      "bundle": "batches/tabler-20261111/bundles/marketing-about.zip",
+      "runtime": {
+        "assets": []
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "Tabler 代码为 MIT。本批未收录依赖 ApexCharts 的页面，因官方说明其自第 5 版起不再是单纯 MIT。",
+        "官方免费插画（computer-fix 等六张）按上游免费清单保留。头像、照片、封面等不明原图已留私有原件待核；预览改用明确披露的自有占位，不冒称视觉复刻。品牌/支付/浏览器等 SVG 为商标标识，不是再分发许可；预览中的标识已换自有占位。支付图标样式里的商标图形单独列为商标/Unknown，不宣称权利齐。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面",
+        "源码级不同点：官方营销关于整页。"
+      ],
+      "batchDir": "tabler-20261111",
+      "originalSha256": "5d62a609827604fc7baa5faa2238ccf66fe7446c854db15a66e2325dde7c714d",
+      "originalSize": 161621
+    },
+    {
+      "id": "tabler:marketing-real-estate",
+      "title": "地产营销页",
+      "source": "Tabler",
+      "license": "MIT",
+      "upstream": "https://github.com/tabler/tabler/blob/977102f79cc633074d5518fe1a288fa2ae7fbe27/preview/pages/marketing/real-estate.astro",
+      "website": "https://tabler.io",
+      "revision": "977102f79cc633074d5518fe1a288fa2ae7fbe27",
+      "category": "产品与营销",
+      "format": "页面",
+      "kind": "完整页面",
+      "behavior": "浏览地产营销页（演示图若权利不明已换占位）",
+      "independenceNote": "官方地产营销整页。",
+      "officialAssets": [],
+      "placeholderAssets": [],
+      "replacedAssets": 0,
+      "code": "batches/tabler-20261111/originals/marketing-real-estate.html",
+      "preview": "batches/tabler-20261111/marketing-real-estate.html",
+      "bundle": "batches/tabler-20261111/bundles/marketing-real-estate.zip",
+      "runtime": {
+        "assets": []
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "Tabler 代码为 MIT。本批未收录依赖 ApexCharts 的页面，因官方说明其自第 5 版起不再是单纯 MIT。",
+        "官方免费插画（computer-fix 等六张）按上游免费清单保留。头像、照片、封面等不明原图已留私有原件待核；预览改用明确披露的自有占位，不冒称视觉复刻。品牌/支付/浏览器等 SVG 为商标标识，不是再分发许可；预览中的标识已换自有占位。支付图标样式里的商标图形单独列为商标/Unknown，不宣称权利齐。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面",
+        "源码级不同点：官方地产营销整页。"
+      ],
+      "batchDir": "tabler-20261111",
+      "originalSha256": "3f0796896c38679dedf8f5a15662ca68342ea58eaf15f92a5214ca28929ea358",
+      "originalSize": 181497
+    },
+    {
+      "id": "tabler:marketing-testimonials",
+      "title": "评价页",
+      "source": "Tabler",
+      "license": "MIT",
+      "upstream": "https://github.com/tabler/tabler/blob/977102f79cc633074d5518fe1a288fa2ae7fbe27/preview/pages/marketing/testimonials.astro",
+      "website": "https://tabler.io",
+      "revision": "977102f79cc633074d5518fe1a288fa2ae7fbe27",
+      "category": "产品与营销",
+      "format": "页面",
+      "kind": "完整页面",
+      "behavior": "阅读评价页",
+      "independenceNote": "官方评价整页。",
+      "officialAssets": [],
+      "placeholderAssets": [],
+      "replacedAssets": 0,
+      "code": "batches/tabler-20261111/originals/marketing-testimonials.html",
+      "preview": "batches/tabler-20261111/marketing-testimonials.html",
+      "bundle": "batches/tabler-20261111/bundles/marketing-testimonials.zip",
+      "runtime": {
+        "assets": []
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "Tabler 代码为 MIT。本批未收录依赖 ApexCharts 的页面，因官方说明其自第 5 版起不再是单纯 MIT。",
+        "官方免费插画（computer-fix 等六张）按上游免费清单保留。头像、照片、封面等不明原图已留私有原件待核；预览改用明确披露的自有占位，不冒称视觉复刻。品牌/支付/浏览器等 SVG 为商标标识，不是再分发许可；预览中的标识已换自有占位。支付图标样式里的商标图形单独列为商标/Unknown，不宣称权利齐。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面",
+        "源码级不同点：官方评价整页。"
+      ],
+      "batchDir": "tabler-20261111",
+      "originalSha256": "6c765e083d2ea2cf8467dac9a6daf3d93f96cf7bf4241979a807098633103a11",
+      "originalSize": 183546
+    },
+    {
+      "id": "tabler:settings-plan",
+      "title": "方案设置页",
+      "source": "Tabler",
+      "license": "MIT",
+      "upstream": "https://github.com/tabler/tabler/blob/977102f79cc633074d5518fe1a288fa2ae7fbe27/preview/pages/settings-plan.astro",
+      "website": "https://tabler.io",
+      "revision": "977102f79cc633074d5518fe1a288fa2ae7fbe27",
+      "category": "输入与选择",
+      "format": "页面",
+      "kind": "完整页面",
+      "behavior": "查看方案设置（不会发生真实订阅变更）",
+      "independenceNote": "官方方案设置页，与已收通用设置页内容结构不同。",
+      "officialAssets": [],
+      "placeholderAssets": [],
+      "replacedAssets": 0,
+      "code": "batches/tabler-20261111/originals/settings-plan.html",
+      "preview": "batches/tabler-20261111/settings-plan.html",
+      "bundle": "batches/tabler-20261111/bundles/settings-plan.zip",
+      "runtime": {
+        "assets": []
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "Tabler 代码为 MIT。本批未收录依赖 ApexCharts 的页面，因官方说明其自第 5 版起不再是单纯 MIT。",
+        "官方免费插画（computer-fix 等六张）按上游免费清单保留。头像、照片、封面等不明原图已留私有原件待核；预览改用明确披露的自有占位，不冒称视觉复刻。品牌/支付/浏览器等 SVG 为商标标识，不是再分发许可；预览中的标识已换自有占位。支付图标样式里的商标图形单独列为商标/Unknown，不宣称权利齐。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面",
+        "源码级不同点：官方方案设置页，与已收通用设置页内容结构不同。"
+      ],
+      "batchDir": "tabler-20261111",
+      "originalSha256": "2e8dc8a349e83524d6f90df179ac8e95281389b03a24b74400d7855bdbf99f9e",
+      "originalSize": 379773
+    },
+    {
+      "id": "tabler:tracking",
+      "title": "物流追踪页",
+      "source": "Tabler",
+      "license": "MIT",
+      "upstream": "https://github.com/tabler/tabler/blob/977102f79cc633074d5518fe1a288fa2ae7fbe27/preview/pages/tracking.astro",
+      "website": "https://tabler.io",
+      "revision": "977102f79cc633074d5518fe1a288fa2ae7fbe27",
+      "category": "数据与状态",
+      "format": "页面",
+      "kind": "完整页面",
+      "behavior": "查看物流追踪（演示数据）",
+      "independenceNote": "官方物流追踪整页。",
+      "officialAssets": [],
+      "placeholderAssets": [],
+      "replacedAssets": 0,
+      "code": "batches/tabler-20261111/originals/tracking.html",
+      "preview": "batches/tabler-20261111/tracking.html",
+      "bundle": "batches/tabler-20261111/bundles/tracking.zip",
+      "runtime": {
+        "assets": []
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "Tabler 代码为 MIT。本批未收录依赖 ApexCharts 的页面，因官方说明其自第 5 版起不再是单纯 MIT。",
+        "官方免费插画（computer-fix 等六张）按上游免费清单保留。头像、照片、封面等不明原图已留私有原件待核；预览改用明确披露的自有占位，不冒称视觉复刻。品牌/支付/浏览器等 SVG 为商标标识，不是再分发许可；预览中的标识已换自有占位。支付图标样式里的商标图形单独列为商标/Unknown，不宣称权利齐。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面",
+        "源码级不同点：官方物流追踪整页。"
+      ],
+      "batchDir": "tabler-20261111",
+      "originalSha256": "c9e987388e1878898dc2a286fc2a2f8b2fc0168241df8d0272b38f55b2242039",
+      "originalSize": 383756
+    },
+    {
+      "id": "tabler:password-strength",
+      "title": "密码强度",
+      "source": "Tabler",
+      "license": "MIT",
+      "upstream": "https://github.com/tabler/tabler/blob/977102f79cc633074d5518fe1a288fa2ae7fbe27/preview/pages/password-strength.astro",
+      "website": "https://tabler.io",
+      "revision": "977102f79cc633074d5518fe1a288fa2ae7fbe27",
+      "category": "输入与选择",
+      "format": "组件与效果",
+      "kind": "组件",
+      "behavior": "输入并查看密码强度（演示，不会提交）",
+      "independenceNote": "官方完整密码强度组件，不是单输入框。",
+      "officialAssets": [],
+      "placeholderAssets": [],
+      "replacedAssets": 0,
+      "code": "batches/tabler-20261111/originals/password-strength.html",
+      "preview": "batches/tabler-20261111/password-strength.html",
+      "bundle": "batches/tabler-20261111/bundles/password-strength.zip",
+      "runtime": {
+        "assets": []
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "Tabler 代码为 MIT。本批未收录依赖 ApexCharts 的页面，因官方说明其自第 5 版起不再是单纯 MIT。",
+        "官方免费插画（computer-fix 等六张）按上游免费清单保留。头像、照片、封面等不明原图已留私有原件待核；预览改用明确披露的自有占位，不冒称视觉复刻。品牌/支付/浏览器等 SVG 为商标标识，不是再分发许可；预览中的标识已换自有占位。支付图标样式里的商标图形单独列为商标/Unknown，不宣称权利齐。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面",
+        "源码级不同点：官方完整密码强度组件，不是单输入框。"
+      ],
+      "batchDir": "tabler-20261111",
+      "originalSha256": "903715662e058c78fe7ec15c360829cb2be278cdaeda9a4294e517465824eddc",
+      "originalSize": 381401
+    },
+    {
+      "id": "tabler:confetti",
+      "title": "纸屑庆祝",
+      "source": "Tabler",
+      "license": "MIT",
+      "upstream": "https://github.com/tabler/tabler/blob/977102f79cc633074d5518fe1a288fa2ae7fbe27/preview/pages/confetti.astro",
+      "website": "https://tabler.io",
+      "revision": "977102f79cc633074d5518fe1a288fa2ae7fbe27",
+      "category": "展示与媒体",
+      "format": "组件与效果",
+      "kind": "组件",
+      "behavior": "触发纸屑效果",
+      "independenceNote": "官方完整纸屑庆祝组件。",
+      "officialAssets": [],
+      "placeholderAssets": [],
+      "replacedAssets": 0,
+      "code": "batches/tabler-20261111/originals/confetti.html",
+      "preview": "batches/tabler-20261111/confetti.html",
+      "bundle": "batches/tabler-20261111/bundles/confetti.zip",
+      "runtime": {
+        "assets": []
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "Tabler 代码为 MIT。本批未收录依赖 ApexCharts 的页面，因官方说明其自第 5 版起不再是单纯 MIT。",
+        "官方免费插画（computer-fix 等六张）按上游免费清单保留。头像、照片、封面等不明原图已留私有原件待核；预览改用明确披露的自有占位，不冒称视觉复刻。品牌/支付/浏览器等 SVG 为商标标识，不是再分发许可；预览中的标识已换自有占位。支付图标样式里的商标图形单独列为商标/Unknown，不宣称权利齐。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面",
+        "源码级不同点：官方完整纸屑庆祝组件。"
+      ],
+      "batchDir": "tabler-20261111",
+      "originalSha256": "fc7b5284d95991c8b7a76d4dfe63c284d1b375ffcb27c81d33ba5f1a7fcbf2d1",
+      "originalSize": 364610
+    },
+    {
+      "id": "tabler:marketing",
+      "title": "营销总页",
+      "source": "Tabler",
+      "license": "MIT",
+      "upstream": "https://github.com/tabler/tabler/blob/977102f79cc633074d5518fe1a288fa2ae7fbe27/preview/pages/marketing.astro",
+      "website": "https://tabler.io",
+      "revision": "977102f79cc633074d5518fe1a288fa2ae7fbe27",
+      "category": "产品与营销",
+      "format": "页面",
+      "kind": "完整页面",
+      "behavior": "浏览营销总页（演示链接已拦截）",
+      "independenceNote": "官方营销整页，与已收关于/评价/地产页不是同壳填数。",
+      "officialAssets": [],
+      "placeholderAssets": [
+        "ph-preview.jpg",
+        "ph-preview-dark.jpg"
+      ],
+      "replacedAssets": 2,
+      "code": "batches/tabler-20261111/originals/marketing.html",
+      "preview": "batches/tabler-20261111/marketing.html",
+      "bundle": "batches/tabler-20261111/bundles/marketing.zip",
+      "runtime": {
+        "assets": [
+          {
+            "key": "ph-preview.jpg",
+            "path": "batches/tabler-20261111/assets/ph-preview.jpg",
+            "mime": "image/jpeg",
+            "bytes": 25870,
+            "sha256": "cae3228f6e4c4a6a66ed3e9197e327bb6585637c9da98a729acd6b13205b7f49"
+          },
+          {
+            "key": "ph-preview-dark.jpg",
+            "path": "batches/tabler-20261111/assets/ph-preview-dark.jpg",
+            "mime": "image/jpeg",
+            "bytes": 28254,
+            "sha256": "1f8a1a8996af5085c38f8d1ba59697d7940b3ce1b1bca764fd18a6065d061b9c"
+          }
+        ]
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "Tabler 代码为 MIT。本批未收录依赖 ApexCharts 的页面，因官方说明其自第 5 版起不再是单纯 MIT。",
+        "官方免费插画（computer-fix 等六张）按上游免费清单保留。头像、照片、封面等不明原图已留私有原件待核；预览改用明确披露的自有占位，不冒称视觉复刻。品牌/支付/浏览器等 SVG 为商标标识，不是再分发许可；预览中的标识已换自有占位。支付图标样式里的商标图形单独列为商标/Unknown，不宣称权利齐。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面",
+        "源码级不同点：官方营销整页，与已收关于/评价/地产页不是同壳填数。"
+      ],
+      "batchDir": "tabler-20261111",
+      "originalSha256": "93a4d906a11a805310202bbb95d96b4a0fe0fdefc4c18eecc06b0f8059f82f4f",
+      "originalSize": 227728
+    },
+    {
+      "id": "tabler:marketing-pricing",
+      "title": "营销定价页",
+      "source": "Tabler",
+      "license": "MIT",
+      "upstream": "https://github.com/tabler/tabler/blob/977102f79cc633074d5518fe1a288fa2ae7fbe27/preview/pages/marketing/pricing.astro",
+      "website": "https://tabler.io",
+      "revision": "977102f79cc633074d5518fe1a288fa2ae7fbe27",
+      "category": "产品与营销",
+      "format": "页面",
+      "kind": "完整页面",
+      "behavior": "查看营销定价页（不会发生真实订阅）",
+      "independenceNote": "官方营销站点定价整页，与已收应用内定价表结构不同。",
+      "officialAssets": [],
+      "placeholderAssets": [],
+      "replacedAssets": 0,
+      "code": "batches/tabler-20261111/originals/marketing-pricing.html",
+      "preview": "batches/tabler-20261111/marketing-pricing.html",
+      "bundle": "batches/tabler-20261111/bundles/marketing-pricing.zip",
+      "runtime": {
+        "assets": []
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "Tabler 代码为 MIT。本批未收录依赖 ApexCharts 的页面，因官方说明其自第 5 版起不再是单纯 MIT。",
+        "官方免费插画（computer-fix 等六张）按上游免费清单保留。头像、照片、封面等不明原图已留私有原件待核；预览改用明确披露的自有占位，不冒称视觉复刻。品牌/支付/浏览器等 SVG 为商标标识，不是再分发许可；预览中的标识已换自有占位。支付图标样式里的商标图形单独列为商标/Unknown，不宣称权利齐。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面",
+        "源码级不同点：官方营销站点定价整页，与已收应用内定价表结构不同。"
+      ],
+      "batchDir": "tabler-20261111",
+      "originalSha256": "2dc558474b9dd095ad39eb108f3d2b5586909a828c84e341e8711ad0df36a282",
+      "originalSize": 178795
+    },
+    {
+      "id": "tabler:mockup-browser",
+      "title": "浏览器外壳",
+      "source": "Tabler",
+      "license": "MIT",
+      "upstream": "https://github.com/tabler/tabler/blob/977102f79cc633074d5518fe1a288fa2ae7fbe27/preview/pages/mockup-browser.astro",
+      "website": "https://tabler.io",
+      "revision": "977102f79cc633074d5518fe1a288fa2ae7fbe27",
+      "category": "展示与媒体",
+      "format": "组件与效果",
+      "kind": "组件",
+      "behavior": "查看浏览器外壳组件",
+      "independenceNote": "官方完整浏览器外壳组件。",
+      "officialAssets": [],
+      "placeholderAssets": [],
+      "replacedAssets": 0,
+      "code": "batches/tabler-20261111/originals/mockup-browser.html",
+      "preview": "batches/tabler-20261111/mockup-browser.html",
+      "bundle": "batches/tabler-20261111/bundles/mockup-browser.zip",
+      "runtime": {
+        "assets": []
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "Tabler 代码为 MIT。本批未收录依赖 ApexCharts 的页面，因官方说明其自第 5 版起不再是单纯 MIT。",
+        "官方免费插画（computer-fix 等六张）按上游免费清单保留。头像、照片、封面等不明原图已留私有原件待核；预览改用明确披露的自有占位，不冒称视觉复刻。品牌/支付/浏览器等 SVG 为商标标识，不是再分发许可；预览中的标识已换自有占位。支付图标样式里的商标图形单独列为商标/Unknown，不宣称权利齐。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面",
+        "源码级不同点：官方完整浏览器外壳组件。"
+      ],
+      "batchDir": "tabler-20261111",
+      "originalSha256": "2c5cf37494724768ab5a7e63962c5f1370c4dd9b4fbc31cc90532527808e0ee3",
+      "originalSize": 371626
+    },
+    {
+      "id": "tabler:scroll-spy",
+      "title": "滚动定位导航",
+      "source": "Tabler",
+      "license": "MIT",
+      "upstream": "https://github.com/tabler/tabler/blob/977102f79cc633074d5518fe1a288fa2ae7fbe27/preview/pages/scroll-spy.astro",
+      "website": "https://tabler.io",
+      "revision": "977102f79cc633074d5518fe1a288fa2ae7fbe27",
+      "category": "导航与组织",
+      "format": "页面",
+      "kind": "完整页面",
+      "behavior": "滚动时查看定位导航",
+      "independenceNote": "官方完整滚动定位页。",
+      "officialAssets": [],
+      "placeholderAssets": [],
+      "replacedAssets": 0,
+      "code": "batches/tabler-20261111/originals/scroll-spy.html",
+      "preview": "batches/tabler-20261111/scroll-spy.html",
+      "bundle": "batches/tabler-20261111/bundles/scroll-spy.zip",
+      "runtime": {
+        "assets": []
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "Tabler 代码为 MIT。本批未收录依赖 ApexCharts 的页面，因官方说明其自第 5 版起不再是单纯 MIT。",
+        "官方免费插画（computer-fix 等六张）按上游免费清单保留。头像、照片、封面等不明原图已留私有原件待核；预览改用明确披露的自有占位，不冒称视觉复刻。品牌/支付/浏览器等 SVG 为商标标识，不是再分发许可；预览中的标识已换自有占位。支付图标样式里的商标图形单独列为商标/Unknown，不宣称权利齐。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面",
+        "源码级不同点：官方完整滚动定位页。"
+      ],
+      "batchDir": "tabler-20261111",
+      "originalSha256": "87311339d9d9abdda5a4f98ffa0020eb01ab5a7ba9414c22ade453755b7b03a6",
+      "originalSize": 361710
+    },
+    {
+      "id": "tabler:error-500",
+      "title": "500 页",
+      "source": "Tabler",
+      "license": "MIT",
+      "upstream": "https://github.com/tabler/tabler/blob/977102f79cc633074d5518fe1a288fa2ae7fbe27/preview/pages/error-500.astro",
+      "website": "https://tabler.io",
+      "revision": "977102f79cc633074d5518fe1a288fa2ae7fbe27",
+      "category": "数据与状态",
+      "format": "页面",
+      "kind": "完整页面",
+      "behavior": "查看 500 页",
+      "independenceNote": "官方完整 500 页，与 404/维护页结构不同。",
+      "officialAssets": [],
+      "placeholderAssets": [],
+      "replacedAssets": 0,
+      "code": "batches/tabler-20261111/originals/error-500.html",
+      "preview": "batches/tabler-20261111/error-500.html",
+      "bundle": "batches/tabler-20261111/bundles/error-500.zip",
+      "runtime": {
+        "assets": []
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "Tabler 代码为 MIT。本批未收录依赖 ApexCharts 的页面，因官方说明其自第 5 版起不再是单纯 MIT。",
+        "官方免费插画（computer-fix 等六张）按上游免费清单保留。头像、照片、封面等不明原图已留私有原件待核；预览改用明确披露的自有占位，不冒称视觉复刻。品牌/支付/浏览器等 SVG 为商标标识，不是再分发许可；预览中的标识已换自有占位。支付图标样式里的商标图形单独列为商标/Unknown，不宣称权利齐。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面",
+        "源码级不同点：官方完整 500 页，与 404/维护页结构不同。"
+      ],
+      "batchDir": "tabler-20261111",
+      "originalSha256": "f0097ac2e3c0e80e0daa99d9137d7ad7eb710a3a102e482e4586cfe199bbb361",
+      "originalSize": 183883
+    },
+    {
+      "id": "tabler:clipboard",
+      "title": "剪贴板复制",
+      "source": "Tabler",
+      "license": "MIT",
+      "upstream": "https://github.com/tabler/tabler/blob/977102f79cc633074d5518fe1a288fa2ae7fbe27/preview/pages/clipboard.astro",
+      "website": "https://tabler.io",
+      "revision": "977102f79cc633074d5518fe1a288fa2ae7fbe27",
+      "category": "输入与选择",
+      "format": "组件与效果",
+      "kind": "组件",
+      "behavior": "复制文本到剪贴板（尚未验收）",
+      "independenceNote": "官方完整复制组件，不是单按钮原语。",
+      "officialAssets": [],
+      "placeholderAssets": [],
+      "replacedAssets": 0,
+      "code": "batches/tabler-20261111/originals/clipboard.html",
+      "preview": "batches/tabler-20261111/clipboard.html",
+      "bundle": "batches/tabler-20261111/bundles/clipboard.zip",
+      "runtime": {
+        "assets": []
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "Tabler 代码为 MIT。本批未收录依赖 ApexCharts 的页面，因官方说明其自第 5 版起不再是单纯 MIT。",
+        "官方免费插画（computer-fix 等六张）按上游免费清单保留。头像、照片、封面等不明原图已留私有原件待核；预览改用明确披露的自有占位，不冒称视觉复刻。品牌/支付/浏览器等 SVG 为商标标识，不是再分发许可；预览中的标识已换自有占位。支付图标样式里的商标图形单独列为商标/Unknown，不宣称权利齐。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面",
+        "源码级不同点：官方完整复制组件，不是单按钮原语。"
+      ],
+      "batchDir": "tabler-20261111",
+      "originalSha256": "61464527ca25900e6529ff8c2d291df2dc635a74dd458d4c0fddb7b3a170acb4",
+      "originalSize": 375972
+    },
+    {
+      "id": "tabler:offcanvas",
+      "title": "侧滑面板",
+      "source": "Tabler",
+      "license": "MIT",
+      "upstream": "https://github.com/tabler/tabler/blob/977102f79cc633074d5518fe1a288fa2ae7fbe27/preview/pages/offcanvas.astro",
+      "website": "https://tabler.io",
+      "revision": "977102f79cc633074d5518fe1a288fa2ae7fbe27",
+      "category": "导航与组织",
+      "format": "组件与效果",
+      "kind": "组件",
+      "behavior": "打开或关闭侧滑面板",
+      "independenceNote": "官方完整侧滑面板。",
+      "officialAssets": [],
+      "placeholderAssets": [],
+      "replacedAssets": 0,
+      "code": "batches/tabler-20261111/originals/offcanvas.html",
+      "preview": "batches/tabler-20261111/offcanvas.html",
+      "bundle": "batches/tabler-20261111/bundles/offcanvas.zip",
+      "runtime": {
+        "assets": []
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "Tabler 代码为 MIT。本批未收录依赖 ApexCharts 的页面，因官方说明其自第 5 版起不再是单纯 MIT。",
+        "官方免费插画（computer-fix 等六张）按上游免费清单保留。头像、照片、封面等不明原图已留私有原件待核；预览改用明确披露的自有占位，不冒称视觉复刻。品牌/支付/浏览器等 SVG 为商标标识，不是再分发许可；预览中的标识已换自有占位。支付图标样式里的商标图形单独列为商标/Unknown，不宣称权利齐。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面",
+        "源码级不同点：官方完整侧滑面板。"
+      ],
+      "batchDir": "tabler-20261111",
+      "originalSha256": "d98a8867f821b5c3c2ff67bc9abf28fac5d55d98ca70ebbeb9485c60bd91b83f",
+      "originalSize": 371088
+    },
+    {
+      "id": "tabler:segmented-control",
+      "title": "分段控件",
+      "source": "Tabler",
+      "license": "MIT",
+      "upstream": "https://github.com/tabler/tabler/blob/977102f79cc633074d5518fe1a288fa2ae7fbe27/preview/pages/segmented-control.astro",
+      "website": "https://tabler.io",
+      "revision": "977102f79cc633074d5518fe1a288fa2ae7fbe27",
+      "category": "输入与选择",
+      "format": "组件与效果",
+      "kind": "组件",
+      "behavior": "切换分段选项",
+      "independenceNote": "官方完整分段控件。",
+      "officialAssets": [],
+      "placeholderAssets": [],
+      "replacedAssets": 0,
+      "code": "batches/tabler-20261111/originals/segmented-control.html",
+      "preview": "batches/tabler-20261111/segmented-control.html",
+      "bundle": "batches/tabler-20261111/bundles/segmented-control.zip",
+      "runtime": {
+        "assets": []
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "Tabler 代码为 MIT。本批未收录依赖 ApexCharts 的页面，因官方说明其自第 5 版起不再是单纯 MIT。",
+        "官方免费插画（computer-fix 等六张）按上游免费清单保留。头像、照片、封面等不明原图已留私有原件待核；预览改用明确披露的自有占位，不冒称视觉复刻。品牌/支付/浏览器等 SVG 为商标标识，不是再分发许可；预览中的标识已换自有占位。支付图标样式里的商标图形单独列为商标/Unknown，不宣称权利齐。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面",
+        "源码级不同点：官方完整分段控件。"
+      ],
+      "batchDir": "tabler-20261111",
+      "originalSha256": "7eb8b1cd89db27d5346777b9b6f9e41fad019a7d0015174df6d2c7a395262ccc",
+      "originalSize": 448279
+    },
+    {
+      "id": "tabler:accordion",
+      "title": "手风琴",
+      "source": "Tabler",
+      "license": "MIT",
+      "upstream": "https://github.com/tabler/tabler/blob/977102f79cc633074d5518fe1a288fa2ae7fbe27/preview/pages/accordion.astro",
+      "website": "https://tabler.io",
+      "revision": "977102f79cc633074d5518fe1a288fa2ae7fbe27",
+      "category": "导航与组织",
+      "format": "组件与效果",
+      "kind": "组件",
+      "behavior": "展开或折叠手风琴",
+      "independenceNote": "官方完整手风琴，只收该族一条。",
+      "officialAssets": [],
+      "placeholderAssets": [],
+      "replacedAssets": 0,
+      "code": "batches/tabler-20261111/originals/accordion.html",
+      "preview": "batches/tabler-20261111/accordion.html",
+      "bundle": "batches/tabler-20261111/bundles/accordion.zip",
+      "runtime": {
+        "assets": []
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "Tabler 代码为 MIT。本批未收录依赖 ApexCharts 的页面，因官方说明其自第 5 版起不再是单纯 MIT。",
+        "官方免费插画（computer-fix 等六张）按上游免费清单保留。头像、照片、封面等不明原图已留私有原件待核；预览改用明确披露的自有占位，不冒称视觉复刻。品牌/支付/浏览器等 SVG 为商标标识，不是再分发许可；预览中的标识已换自有占位。支付图标样式里的商标图形单独列为商标/Unknown，不宣称权利齐。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面",
+        "源码级不同点：官方完整手风琴，只收该族一条。"
+      ],
+      "batchDir": "tabler-20261111",
+      "originalSha256": "c57b1dadb768d23649e75f39013bd44f5e3e45ec23eff730d3ae488709050721",
+      "originalSize": 424581
+    },
+    {
+      "id": "tabler:tabs",
+      "title": "页签",
+      "source": "Tabler",
+      "license": "MIT",
+      "upstream": "https://github.com/tabler/tabler/blob/977102f79cc633074d5518fe1a288fa2ae7fbe27/preview/pages/tabs.astro",
+      "website": "https://tabler.io",
+      "revision": "977102f79cc633074d5518fe1a288fa2ae7fbe27",
+      "category": "导航与组织",
+      "format": "组件与效果",
+      "kind": "组件",
+      "behavior": "切换页签",
+      "independenceNote": "官方完整页签组件，只收该族一条。",
+      "officialAssets": [],
+      "placeholderAssets": [],
+      "replacedAssets": 0,
+      "code": "batches/tabler-20261111/originals/tabs.html",
+      "preview": "batches/tabler-20261111/tabs.html",
+      "bundle": "batches/tabler-20261111/bundles/tabs.zip",
+      "runtime": {
+        "assets": []
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "Tabler 代码为 MIT。本批未收录依赖 ApexCharts 的页面，因官方说明其自第 5 版起不再是单纯 MIT。",
+        "官方免费插画（computer-fix 等六张）按上游免费清单保留。头像、照片、封面等不明原图已留私有原件待核；预览改用明确披露的自有占位，不冒称视觉复刻。品牌/支付/浏览器等 SVG 为商标标识，不是再分发许可；预览中的标识已换自有占位。支付图标样式里的商标图形单独列为商标/Unknown，不宣称权利齐。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面",
+        "源码级不同点：官方完整页签组件，只收该族一条。"
+      ],
+      "batchDir": "tabler-20261111",
+      "originalSha256": "edc15262cde2276c49bfa81ee0a03f55682cd4969b682a0f2a8425d0c8b85bfb",
+      "originalSize": 394300
+    },
+    {
+      "id": "tabler:steps",
+      "title": "步骤条",
+      "source": "Tabler",
+      "license": "MIT",
+      "upstream": "https://github.com/tabler/tabler/blob/977102f79cc633074d5518fe1a288fa2ae7fbe27/preview/pages/steps.astro",
+      "website": "https://tabler.io",
+      "revision": "977102f79cc633074d5518fe1a288fa2ae7fbe27",
+      "category": "导航与组织",
+      "format": "组件与效果",
+      "kind": "组件",
+      "behavior": "浏览步骤条",
+      "independenceNote": "官方完整步骤条。",
+      "officialAssets": [],
+      "placeholderAssets": [],
+      "replacedAssets": 0,
+      "code": "batches/tabler-20261111/originals/steps.html",
+      "preview": "batches/tabler-20261111/steps.html",
+      "bundle": "batches/tabler-20261111/bundles/steps.zip",
+      "runtime": {
+        "assets": []
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "Tabler 代码为 MIT。本批未收录依赖 ApexCharts 的页面，因官方说明其自第 5 版起不再是单纯 MIT。",
+        "官方免费插画（computer-fix 等六张）按上游免费清单保留。头像、照片、封面等不明原图已留私有原件待核；预览改用明确披露的自有占位，不冒称视觉复刻。品牌/支付/浏览器等 SVG 为商标标识，不是再分发许可；预览中的标识已换自有占位。支付图标样式里的商标图形单独列为商标/Unknown，不宣称权利齐。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面",
+        "源码级不同点：官方完整步骤条。"
+      ],
+      "batchDir": "tabler-20261111",
+      "originalSha256": "e91fb26fd9201faea630b073e8f0f3b32c99a8748ad75b277f34d4b36ac4890c",
+      "originalSize": 364552
+    },
+    {
+      "id": "tabler:toasts",
+      "title": "轻提示",
+      "source": "Tabler",
+      "license": "MIT",
+      "upstream": "https://github.com/tabler/tabler/blob/977102f79cc633074d5518fe1a288fa2ae7fbe27/preview/pages/toasts.astro",
+      "website": "https://tabler.io",
+      "revision": "977102f79cc633074d5518fe1a288fa2ae7fbe27",
+      "category": "数据与状态",
+      "format": "组件与效果",
+      "kind": "组件",
+      "behavior": "查看轻提示",
+      "independenceNote": "官方完整轻提示。",
+      "officialAssets": [],
+      "placeholderAssets": [],
+      "replacedAssets": 0,
+      "code": "batches/tabler-20261111/originals/toasts.html",
+      "preview": "batches/tabler-20261111/toasts.html",
+      "bundle": "batches/tabler-20261111/bundles/toasts.zip",
+      "runtime": {
+        "assets": []
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "Tabler 代码为 MIT。本批未收录依赖 ApexCharts 的页面，因官方说明其自第 5 版起不再是单纯 MIT。",
+        "官方免费插画（computer-fix 等六张）按上游免费清单保留。头像、照片、封面等不明原图已留私有原件待核；预览改用明确披露的自有占位，不冒称视觉复刻。品牌/支付/浏览器等 SVG 为商标标识，不是再分发许可；预览中的标识已换自有占位。支付图标样式里的商标图形单独列为商标/Unknown，不宣称权利齐。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面",
+        "源码级不同点：官方完整轻提示。"
+      ],
+      "batchDir": "tabler-20261111",
+      "originalSha256": "c9fe91c804795e4d83d7ca8c1d2b6108e4f4df03836328bd76a5ad537c216928",
+      "originalSize": 358632
+    },
+    {
+      "id": "tabler:pagination",
+      "title": "分页",
+      "source": "Tabler",
+      "license": "MIT",
+      "upstream": "https://github.com/tabler/tabler/blob/977102f79cc633074d5518fe1a288fa2ae7fbe27/preview/pages/pagination.astro",
+      "website": "https://tabler.io",
+      "revision": "977102f79cc633074d5518fe1a288fa2ae7fbe27",
+      "category": "导航与组织",
+      "format": "组件与效果",
+      "kind": "组件",
+      "behavior": "浏览分页",
+      "independenceNote": "官方完整分页组件。",
+      "officialAssets": [],
+      "placeholderAssets": [],
+      "replacedAssets": 0,
+      "code": "batches/tabler-20261111/originals/pagination.html",
+      "preview": "batches/tabler-20261111/pagination.html",
+      "bundle": "batches/tabler-20261111/bundles/pagination.zip",
+      "runtime": {
+        "assets": []
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "Tabler 代码为 MIT。本批未收录依赖 ApexCharts 的页面，因官方说明其自第 5 版起不再是单纯 MIT。",
+        "官方免费插画（computer-fix 等六张）按上游免费清单保留。头像、照片、封面等不明原图已留私有原件待核；预览改用明确披露的自有占位，不冒称视觉复刻。品牌/支付/浏览器等 SVG 为商标标识，不是再分发许可；预览中的标识已换自有占位。支付图标样式里的商标图形单独列为商标/Unknown，不宣称权利齐。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面",
+        "源码级不同点：官方完整分页组件。"
+      ],
+      "batchDir": "tabler-20261111",
+      "originalSha256": "2c4d54e340a0e29e3c28b789708b9d539b1c6b4f4a191f6c571e88fe87ab5715",
+      "originalSize": 363713
+    }
+  ],
+  "independenceScreening": "source-level-only",
+  "visualDedup": "pending"
+}

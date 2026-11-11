@@ -1,0 +1,36 @@
+<button data-popover-target="popover-user-profile" type="button" class="text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">User profile</button>
+
+<div data-popover id="popover-user-profile" role="tooltip" class="absolute z-10 invisible inline-block w-64 text-sm text-body transition-opacity duration-300 bg-neutral-primary-soft border border-default rounded-base shadow-xs opacity-0">
+    <div class="p-3">
+        <div class="flex items-center justify-between mb-2">
+            <a href="#">
+                <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-1.jpg" alt="Jese Leos">
+            </a>
+            <div>
+                <button type="button" class="text-white bg-brand hover:bg-brand-strong box-border border border-transparent focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded text-xs px-3 py-1.5 focus:outline-none">Follow</button>
+            </div>
+        </div>
+        <p class="text-sm font-semibold text-heading">
+            <a href="#">Jese Leos</a>
+        </p>
+        <p class="mb-3 text-sm font-normal text-body">
+            <a href="#" class="hover:underline">@jeseleos</a>
+        </p>
+        <p class="mb-4 text-sm">Open-source contributor & CEO. Building <a href="#" class="text-fg-brand hover:underline">flowbite.com</a>.</p>
+        <ul class="flex text-sm">
+            <li class="me-2.5">
+                <a href="#" class="hover:underline">
+                    <span class="font-medium text-heading">799</span>
+                    <span>Following</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="hover:underline">
+                    <span class="font-medium text-heading">3,758</span>
+                    <span>Followers</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div data-popper-arrow></div>
+</div>

@@ -1,0 +1,235 @@
+{
+  "batch": "uilayout-next-01",
+  "catalogItems": [
+    "uilayout:drag-drag-items",
+    "uilayout:swapy-swapy-handle",
+    "uilayout:scroll-animation-sticky-hero-scroll",
+    "uilayout:scroll-animation-repeat-scroll"
+  ],
+  "compoundLicenseAssertion": "MIT; GPL-3.0; 0BSD",
+  "rootLicense": {
+    "file": "LICENSE",
+    "spdx": "MIT",
+    "copyright": "Copyright (c) 2024 UI LAYOUT",
+    "sha256": "25d698c61ceea4d42107ef85ef37d4449f1169ca24c7ee288db434688071e1e3",
+    "evidence": "SOURCE-LICENSE.json and official https://github.com/ui-layouts/uilayouts/blob/88d827d7ec342917ca06f6894e5add65fabbe5d8/LICENSE",
+    "sourceZipLicenseNote": "The LICENSE file inside each source.zip is the same MIT body as the official frozen upstream LICENSE, plus one extra trailing newline (1067 vs 1066 bytes). The batch ./LICENSE file matches the official 1066-byte text (SHA-256 25d698c61ceea4d42107ef85ef37d4449f1169ca24c7ee288db434688071e1e3)."
+  },
+  "sourceZip": {
+    "path": "collections/pending/batch-001/uilayout-built-awaiting-qa/archives/uilayout-next-01/source.zip",
+    "sha256": "32a20ea3598b73a4542f83d9c3ac2d8dbc05cc93e89837c1db43c0169b0c99f8",
+    "bytes": 149905,
+    "containsPortableLock": true,
+    "files": 52,
+    "selectedDemosOnlyInMainTsx": true,
+    "alsoPreservesUnselectedOriginalsAndSharedHelpers": true,
+    "previousSha256BeforeLicensePack": "b142e0d8b0a4df3189bd482af68e8beeba0c9372f13679cbb6cbfe1caf5595e2",
+    "previousBytesBeforeLicensePack": 133783,
+    "licenseMaterialsAdded": [
+      "LICENSE-PACK.md",
+      "SOURCE-LICENSE.json",
+      "THIRD_PARTY_NOTICES.txt"
+    ],
+    "existingEntriesUnchanged": 49,
+    "originalsUnchangedFromPreviousZip": true
+  },
+  "productionRuntime": {
+    "js": {
+      "path": "batches/uilayout-next-01/runtime.js",
+      "sha256": "02542050df377a391f1b61c07217368b02c054d56fc133cdb1169d9a8429d9f9",
+      "bytes": 460598
+    },
+    "css": {
+      "path": "batches/uilayout-next-01/runtime.css",
+      "sha256": "49ac10fb226d12bb57164f9e591ca75592e91aa888e6d7a6248ade5ad7a2938f",
+      "bytes": 65579
+    }
+  },
+  "directImportsFromSelectedDemosAndSharedComponents": [
+    "react",
+    "react-dom",
+    "clsx",
+    "tailwind-merge",
+    "motion/react",
+    "swapy"
+  ],
+  "lockClosurePackages": [
+    {
+      "name": "clsx",
+      "version": "2.1.1",
+      "spdxFromLock": "MIT",
+      "resolved": "https://registry.npmjs.org/clsx/-/clsx-2.1.1.tgz",
+      "integrity": "sha512-eYm0QWBtUrBWZWG0d386OGAw16Z995PiOVo2B7bjWSbHedGl5e0ZWaq65kOGgUSNesEIDkB9ISbTg/JK9dhCZA==",
+      "licenseFileInTarball": "license",
+      "licenseSha256": "9a9edad7baae52622bddf3c15b2ef8a33d2c89f2d25408ad13e8a7481c6b0c97",
+      "licenseText": "official-tarball"
+    },
+    {
+      "name": "framer-motion",
+      "version": "14.10.1",
+      "spdxFromLock": "MIT",
+      "resolved": "https://registry.npmjs.org/framer-motion/-/framer-motion-14.10.1.tgz",
+      "integrity": "sha512-hT8WLczAcreOHG4EHymMtATztwUc3al1/88/stal3tpxYkMefGNzIPHHgFFHW3iLnrNY36BrKKJDuT2V7o8Tfw==",
+      "licenseFileInTarball": "LICENSE.md",
+      "licenseSha256": "5ff46083b88563822b0560dd6221ab89d2f74bc97a52d4c97a75020fd62c6f32",
+      "licenseText": "official-tarball"
+    },
+    {
+      "name": "motion",
+      "version": "14.10.1",
+      "spdxFromLock": "MIT",
+      "resolved": "https://registry.npmjs.org/motion/-/motion-14.10.1.tgz",
+      "integrity": "sha512-CRlxgrRmG5SNu5jxyYmiw3Oo6IrPq8xhQ0EmOm6WS6tx956G6O4WqVBA8ovrIwt4Sb/A9M0j2T2Vca7ze5PkRQ==",
+      "licenseFileInTarball": "LICENSE.md",
+      "licenseSha256": "1bf0dc3f7727723e5a032ed12164a47cf92c05204cb1a3485f123c24e2833ed1",
+      "licenseText": "official-tarball"
+    },
+    {
+      "name": "motion-dom",
+      "version": "14.10.1",
+      "spdxFromLock": "MIT",
+      "resolved": "https://registry.npmjs.org/motion-dom/-/motion-dom-14.10.1.tgz",
+      "integrity": "sha512-NzVzM7y3JJl3rYlVN4yM6kbziab/tHNBEV6gqOoAQIg8npHlIMhW2oPnzr0HkP+rR8xMoiX9+zSZ4BLaVuJadw==",
+      "licenseFileInTarball": "LICENSE.md",
+      "licenseSha256": "1bf0dc3f7727723e5a032ed12164a47cf92c05204cb1a3485f123c24e2833ed1",
+      "licenseText": "official-tarball"
+    },
+    {
+      "name": "motion-utils",
+      "version": "14.7.0",
+      "spdxFromLock": "MIT",
+      "resolved": "https://registry.npmjs.org/motion-utils/-/motion-utils-14.7.0.tgz",
+      "integrity": "sha512-woO0/Nb7ys75f94fjvQi/6leiHGvZUYkeHUPEZ3vxsV+9OpEVhkxp01x8MlRwX0zt31EqgXsKDAoBoJLC148Tw==",
+      "licenseFileInTarball": "LICENSE.md",
+      "licenseSha256": "1bf0dc3f7727723e5a032ed12164a47cf92c05204cb1a3485f123c24e2833ed1",
+      "licenseText": "official-tarball"
+    },
+    {
+      "name": "react",
+      "version": "19.3.0",
+      "spdxFromLock": "MIT",
+      "resolved": "https://registry.npmjs.org/react/-/react-19.3.0.tgz",
+      "integrity": "sha512-E8LUcbtBWt20bbl2YoHfx4ZDBdxVTfOKtCZn9cDSJ4l6/nuoApcpIBcj47t2wZoVX8g2ZHuMHbiShgCR1T5Sog==",
+      "licenseFileInTarball": "LICENSE",
+      "licenseSha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+      "licenseText": "official-tarball"
+    },
+    {
+      "name": "react-dom",
+      "version": "19.3.0",
+      "spdxFromLock": "MIT",
+      "resolved": "https://registry.npmjs.org/react-dom/-/react-dom-19.3.0.tgz",
+      "integrity": "sha512-JDk8dgif51OjFoDE70+OT9ICyYr+69HlmihNwp1+Nsfbna3t5sIiCa9ZJktDmQ4/1b/rn26hIAR2uYXDMr5r0Q==",
+      "licenseFileInTarball": "LICENSE",
+      "licenseSha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+      "licenseText": "official-tarball"
+    },
+    {
+      "name": "scheduler",
+      "version": "0.28.0",
+      "spdxFromLock": "MIT",
+      "resolved": "https://registry.npmjs.org/scheduler/-/scheduler-0.28.0.tgz",
+      "integrity": "sha512-juorfCmIkIw8tT+p5BXSm6PJjQF/ycEYmKyzURCIt/RaZIhL+PulbQ9Yu2z1HdOJDdqDTlxA1+xKBmHXJsczAw==",
+      "licenseFileInTarball": "LICENSE",
+      "licenseSha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+      "licenseText": "official-tarball"
+    },
+    {
+      "name": "swapy",
+      "version": "1.0.5",
+      "spdxFromLock": "GPL-3.0",
+      "resolved": "https://registry.npmjs.org/swapy/-/swapy-1.0.5.tgz",
+      "integrity": "sha512-XEzy5HCw7yESb7QajKTBJ+NA/BL0kAKlE7XhSMPZawF740X4ws/5CFtXRsVDQ+EztISC759a9+DJM9mxjz4hXg==",
+      "licenseFileInTarball": "LICENSE",
+      "licenseSha256": "8b1ba204bb69a0ade2bfcf65ef294a920f6bb361b317dba43c7ef29d96332b9b",
+      "licenseText": "official-tarball"
+    },
+    {
+      "name": "tailwind-merge",
+      "version": "3.7.0",
+      "spdxFromLock": "MIT",
+      "resolved": "https://registry.npmjs.org/tailwind-merge/-/tailwind-merge-3.7.0.tgz",
+      "integrity": "sha512-XPPUyAc+cvspz3lHTcR/QgPfW2A0lv/xQNIjX3HGhLR+Nq2lHaLq5MtTesHn8GUr3W3DguT2KT5x3NVgRtYwmA==",
+      "licenseFileInTarball": "LICENSE.md",
+      "licenseSha256": "d4c70c7ce38cea8778f0aed3fc0bef0a9dbd27f13bd8b6773cbd6d37941971e5",
+      "licenseText": "official-tarball"
+    },
+    {
+      "name": "tslib",
+      "version": "2.9.1",
+      "spdxFromLock": "0BSD",
+      "resolved": "https://registry.npmjs.org/tslib/-/tslib-2.9.1.tgz",
+      "integrity": "sha512-a4Ux9VKuIMHsOS7ENbEq6hK2ZGYIT27Rtl0E4eD9KqwxhKiQeMZE/9xb3IdYwWaSOyIBQLExhQgXDTYoiCxnWA==",
+      "licenseFileInTarball": "LICENSE.txt",
+      "licenseSha256": "210b19e543130388c68654b7497e967119ce17145f66ab7d85688fbd70f08751",
+      "licenseText": "official-tarball"
+    }
+  ],
+  "stylesheetToolchain": {
+    "name": "tailwindcss",
+    "version": "4.3.3",
+    "spdxFromLock": "MIT",
+    "resolved": "https://registry.npmjs.org/tailwindcss/-/tailwindcss-4.3.3.tgz",
+    "integrity": "sha512-gOhV3P7ufE62QDGg1zVaTgCR+EtPv92k2nIhVcVKcLmxT1sUBsQGhnZj175j+MqRt4zLF7ic+sCYjfhxMxj7YQ==",
+    "licenseFileInTarball": "LICENSE",
+    "licenseSha256": "60e0b68c0f35c078eef3a5d29419d0b03ff84ec1df9c3f9d6e39a519a5ae7985",
+    "licenseText": "official-tarball",
+    "role": "compiled-stylesheet-toolchain"
+  },
+  "media": {
+    "productionRuntime": {
+      "unsplash": "absent",
+      "fonts.gstatic.com": "absent",
+      "noise.gif": "absent",
+      "macos.jpg / macicon.png files": "absent",
+      "classification": "Preview runtimes embed locally authored geometric SVG data URIs (identical landscape template, different hsl hues) in place of upstream remote photos and mac desktop/icon paths. These SVGs are self-made decorations, not the original photographs or mac assets, and are not a fidelity restore. Outgoing https links in the demos (docs, social, pro.ui-layouts.com, apple.com) are text references, not packaged media."
+    },
+    "adaptedDemosInSourceZip": {
+      "remotePhotosAndMacRaster": "replaced with the same family of self-made SVG data URIs",
+      "timelineNotoFireGif": "replaced with a plain text decorative star (✦), not the original artwork",
+      "classification": "self-made"
+    },
+    "preservedUpstreamOriginalsInSourceZip": {
+      "stillContain": "Unsplash photo URLs, fonts.gstatic.com Noto emoji GIF URL, /macos.jpg and /macicon.png paths",
+      "packagedRasterFiles": "none of those remote/path assets are stored as files in the zip or batch",
+      "classification": "upstream source text references retained; media rights for those photographs/GIF/raster files are not asserted here and they are not used by the production preview",
+      "footerLogo": "footers/animated-logo-footer.tsx keeps original inline SVG path letterforms from the UI Layouts source (upstream, MIT), not a replacement graphic"
+    },
+    "unusedSourceHelper": {
+      "src/lib/utils.ts": "contains remote og.jpg URLs on ui-layouts.com; those strings are not present in the production runtimes (not a preview asset). Rights not assessed."
+    },
+    "sharedCssSwapyUtilities": "Production CSS in all three batches contains Tailwind-generated [data-swapy-dragging] utilities from the shared stylesheet. That is not the swapy JavaScript library. The GPL-3.0 swapy package is in the next-01 JavaScript runtime only."
+  },
+  "compileRecipe": {
+    "recipePresent": true,
+    "sourceZipContains": [
+      "package.json",
+      "package-lock.json (lockfileVersion 3)",
+      "vite.config.ts",
+      "build script: vite build"
+    ],
+    "documentedBuild": "npm ci && npm run build",
+    "lockHasNoFileOrWorkspaceRefs": true,
+    "lockSha256": "e9d29d5bbb8db0d7a5022fa63fa76b4c2f19e8e7c6fb9453e7e3558f7a67c8be",
+    "cleanRebuildThisPass": false,
+    "feasibility": "The frozen zip already has a portable exact npm lock and Vite 8.3.1 build entry, so the compile recipe can be restored with npm ci && npm run build from that zip. This pass did not repeat a clean install or rebuild, and did not reconstruct the full devDependency license set (vite, typescript, tailwind toolchain natives, rolldown bindings, etc.).",
+    "currentRuntimeMayDiffer": "Each zip also has closure-build.log sizes for an earlier successful isolated build. Later preview-only patches exist in the atlas batch (uilayout-next-02 LOAD-FIX-NOTES / genie-effect patch; uilayout-next-03 raws-color-picker patch). A clean rebuild from the zip therefore is not claimed to be byte-identical to the current production runtime.js."
+  },
+  "remainingUnknown": [
+    "Full license text for react-remove-scroll-bar@2.3.8 (next-02 and next-03 closures only): missing from the published tarball and no matching git tag was found.",
+    "DevDependency license texts for a clean rebuild are not included.",
+    "Whether every lock-closure package is actually emitted into the minified runtime (tree-shaking) was not byte-proven for each transitive; the notices cover the evidenced import graph plus the lock closure, not a reconstructed module list from the minified bundle.",
+    "Browser visual and interaction acceptance remains unverified.",
+    "The shared next-01 IIFE includes swapy@1.0.5 under GPL-3.0, so redistributing this runtime is not MIT-only. A commercial Swapy license is mentioned in that package README and was not obtained or used here."
+  ],
+  "licenseMaterialsInDownloadableSourceZip": {
+    "present": true,
+    "files": [
+      "LICENSE-PACK.md",
+      "SOURCE-LICENSE.json",
+      "THIRD_PARTY_NOTICES.txt",
+      "LICENSE"
+    ],
+    "note": "Users who obtain this branch’s collections/.../source.zip receive the root MIT LICENSE plus THIRD_PARTY_NOTICES.txt, LICENSE-PACK.md and SOURCE-LICENSE.json. Catalog archive URLs that still point at main do not receive these additions until that URL is updated by a publish/merge, which this line does not do."
+  }
+}

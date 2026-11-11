@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="zh-Hans" class="font-sans antialiased">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>自动化命令面板</title>
+  <link rel="stylesheet" href="runtime.css">
+</head>
+<body class="bg-background" data-demo="commandbar-04">
+<div class="flex items-center justify-center p-8 py-24 bg-background"><!-- Copy:start --><!--
+  
+  - [x-cloak] hides uninitialized Alpine content until hydration to avoid flicker.
+ 
+ 
+
+--><div class="w-full max-w-3xl overflow-hidden bg-background shadow-lg rounded-xl outline outline-border" x-data="{
+      // UI state
+      open: true,
+      step: 1, // 1: list, 2: configure, 3: done
+      query: '',
+      selected: 0,
+      filter: 'all', // all | favorites | scheduled
+      toast: '',
+      // data
+      automations: [
+        {
+          id: 'sync-users',
+          name: 'Sync Directory Users',
+          desc: 'Pull accounts from your identity provider',
+          icon: 'users',
+          tags: ['People','Read'],
+          params: [
+            { key:'scope', label:'Scope', type:'select', options:['All', 'Active only', 'Suspended only'], required:true, value:'All' },
+            { key:'notify', label:'Email summary to', type:'text', placeholder:'ops@company.com' },
+          ],
+        },
+        {
+          id: 'export-audit',
+          name: 'Export Audit Log',
+          desc: 'Download CSV with recent activity',
+          icon: 'download',
+          tags: ['Compliance','CSV'],
+          params: [
+            { key:'range', label:'Date range', type:'select', options:['Last 24h','Last 7 days','Last 30 days'], required:true, value:'Last 7 days' },
+            { key:'mask', label:'Mask sensitive fields', type:'toggle', value:true },
+          ],
+        },
+        {
+          id: 'generate-report',
+          name: 'Generate KPI Report',
+          desc: 'Produce a PDF summary for stakeholders',
+          icon: 'report',
+          tags: ['Executive','PDF'],
+          params: [
+            { key:'project', label:'Project', type:'text', placeholder:'e.g. Phoenix' },
+            { key:'includeCharts', label:'Include charts', type:'toggle', value:true },
+          ],
+        },
+        {
+          id: 'maintenance-window',
+          name: 'Schedule Maintenance Window',
+          desc: 'Notify users and set read‑only mode',
+          icon: 'calendar',
+          tags: ['Ops','Status'],
+          params: [
+            { key:'start', label:'Start', type:'datetime' },
+            { key:'end', label:'End', type:'datetime' },
+            { key:'message', label:'Banner message', type:'text', placeholder:'We’ll be back shortly' },
+          ],
+        },
+        {
+          id: 'reset-feature-flags',
+          name: 'Reset Feature Flags',
+          desc: 'Restore defaults for selected environment',
+          icon: 'tools',
+          tags: ['Config','Danger'],
+          params: [
+            { key:'environment', label:'Environment', type:'select', options:['Development','Staging','Production'], required:true, value:'Staging' },
+            { key:'confirm', label:'Type RESET to confirm', type:'text', placeholder:'RESET', required:true },
+          ],
+        },
+      ],
+      favorites: new Set(),
+      scheduled: [], // {id, name, at}
+      current: null, // selected automation object
+      form: {},
+      init(){
+        // Restore favorites
+        try { const raw = localStorage.getItem('oxbow-automation-favs'); if(raw) this.favorites = new Set(JSON.parse(raw)); } catch {}
+      },
+      saveFavs(){ try { localStorage.setItem('oxbow-automation-favs', JSON.stringify(Array.from(this.favorites))); } catch {} },
+      toggleFav(id){ this.favorites.has(id) ? this.favorites.delete(id) : this.favorites.add(id); this.saveFavs(); },
+      score(text, q){ q=(q||'').trim().toLowerCase(); if(!q) return 1; text=(text||'').toLowerCase(); if(text===q) return 1000; if(text.startsWith(q)) return 500; let i=0,j=0; while(i&lt;text.length&amp;&j&lt;q.length){ if(text[i]===q[j]) j++; i++; } return j===q.length?200:(text.includes(q)?100:-1); },
+      list(){
+        const q=this.query;
+        const rank=a=&gt; Math.max(this.score(a.name,q), this.score(a.desc,q), ...(a.tags||[]).map(t=&gt;this.score(t,q)));
+        return this.automations
+          .map(a=&gt;({a, s: rank(a)}))
+          .filter(x=&gt;x.s&gt;=0)
+          .filter(x=&gt; this.filter==='favorites' ? this.favorites.has(x.a.id) : true)
+          .filter(x=&gt; this.filter==='scheduled' ? this.scheduled.some(s=&gt;s.id===x.a.id) : true)
+          .sort((x,y)=&gt; y.s - x.s)
+          .map(x=&gt;x.a);
+      },
+      openWizard(a){ this.current = a; this.form = {}; (a.params||[]).forEach(p=&gt;{ if(p.value!==undefined) this.form[p.key]=p.value; }); this.step=2; },
+      back(){ if(this.step&gt;1){ this.step--; return; } this.open=false; },
+      quickRun(a){ this.toast='Running '+a.name+'…'; setTimeout(()=&gt;{ this.toast='Completed '+a.name; this.step=3; }, 600); },
+      runNow(){ if(!this.current) return; this.toast='Executing…'; setTimeout(()=&gt;{ this.toast='Success: '+this.current.name; this.step=3; }, 700); },
+      scheduleAt(){ if(!this.current) return; const at = this.form.start || new Date().toISOString(); this.scheduled.push({ id:this.current.id, name:this.current.name, at }); this.toast='Scheduled'; this.step=3; },
+      icon(name){ return name; },
+      isSelectedRow(kind,id){ return this.selectedKey()===`${kind}:${id}`; },
+      selectedKey(){ const rows=[...this.list().map(a=&gt;`item:${a.id}`)]; return rows[this.selected]||''; },
+      nextSel(){ const n=this.list().length; if(!n) return; this.selected=(this.selected+1)%n; },
+      prevSel(){ const n=this.list().length; if(!n) return; this.selected=(this.selected-1+n)%n; },
+      chooseSel(){ const rows=this.list(); const idx=this.selected; const a=rows[idx]; if(!a) return; this.openWizard(a); },
+      onKey(e){
+        // global open
+        if((e.metaKey||e.ctrlKey)&amp;&amp;!e.shiftKey&amp;&amp;!e.altKey&amp;&e.key.toLowerCase()==='k'){ e.preventDefault(); this.open=true; this.$nextTick(()=&gt; this.$refs.input?.focus()); }
+        if(e.key==='/'){ e.preventDefault(); this.open=true; this.$nextTick(()=&gt; this.$refs.input?.focus()); }
+        if(!this.open) return;
+        if(e.key==='Escape'){ if(this.step&gt;1){ this.back(); } else { this.open=false; } }
+        if(this.step===1){
+          if(e.key==='ArrowDown'){ e.preventDefault(); this.nextSel(); }
+          if(e.key==='ArrowUp'){ e.preventDefault(); this.prevSel(); }
+          if(e.key==='Enter' &amp;&amp; !e.shiftKey){ e.preventDefault(); this.chooseSel(); }
+          if(e.key==='Enter' &amp;&amp; e.shiftKey){ e.preventDefault(); const a=this.list()[this.selected]; if(a) this.quickRun(a); }
+        } else if(this.step===2){
+          if(e.key==='Enter' &amp;&amp; (e.metaKey||e.ctrlKey)){ e.preventDefault(); this.scheduleAt(); }
+          else if(e.key==='Enter'){ e.preventDefault(); this.runNow(); }
+        }
+      }
+    }" @keydown.window="onKey($event)"><!-- Header: search + filters --><div class="p-2"><div class="relative"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler-arrow-search size-5 pointer-events-none absolute top-3.5 left-4 text-muted-foreground" slot="icon"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"></path><path d="M21 21l-6 -6"></path></svg><input x-ref="input" x-model="query" @focus="open=true" class="w-full h-12 bg-transparent border-0 rounded-lg pr-28 text-foreground placeholder:text-muted-foreground pl-11 sm:text-sm ring-1 ring-border focus:outline-none focus:ring-2 focus:ring-border" placeholder="Run or schedule an automation…" autocomplete="off"><div class="pointer-events-none absolute right-2 top-1/2 -translate-y-1/2 hidden sm:flex gap-1 text-[0.70rem] text-muted-foreground"><kbd class="px-1 border rounded bg-background border-border">⌘</kbd><kbd class="px-1 border rounded bg-background border-border">K</kbd></div><button type="button" x-show="query.length&gt;0" @click="query=''; $nextTick(()=&gt; $refs.input?.focus())" class="absolute right-[3.75rem] top-1/2 -translate-y-1/2 size-7 inline-flex items-center justify-center rounded-md text-muted-foreground hover:text-muted-foreground hover:bg-background/10" aria-label="Clear search"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler-wave-x size-4"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M18 6l-12 12"></path><path d="M6 6l12 12"></path></svg></button></div><!-- Filters --><div class="mt-2 px-2 flex items-center gap-2 text-[12px]"><button @click="filter='all'" :class="filter==='all' ? 'bg-background text-foreground' : 'text-muted-foreground'" class="px-2 py-1 rounded-md">All</button><button @click="filter='favorites'" :class="filter==='favorites' ? 'bg-background text-foreground' : 'text-muted-foreground'" class="px-2 py-1 rounded-md">Favorites</button><button @click="filter='scheduled'" :class="filter==='scheduled' ? 'bg-background text-foreground' : 'text-muted-foreground'" class="px-2 py-1 rounded-md">Scheduled</button></div></div><!-- STEP 1: Automation list --><template x-if="step===1"><div class="py-1"><div class="px-6 py-1 text-[0.70rem] font-medium text-muted-foreground">Automations</div><ul class="divide-y divide-border"><template x-for="(a, idx) in list()" :key="a.id"><li :class="selected===idx ? 'bg-background/10 bg-background/5' : ''" class="flex items-center justify-between px-6 py-3 cursor-pointer gap-3 text-muted-foreground" @mouseenter="selected = idx"><div class="flex items-center gap-3"><div class="bg-background rounded-lg size-8 grid place-items-center"><template x-if="a.icon==='tools'"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler-arrow-tools size-4"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M3 21h4l13 -13a1.5 1.5 0 0 0 -4 -4l-13 13v4"></path><path d="M14.5 5.5l4 4"></path><path d="M12 8l-5 -5l-4 4l5 5"></path><path d="M7 8l-1.5 1.5"></path><path d="M16 12l5 5l-4 4l-5 -5"></path><path d="M16 17l-1.5 1.5"></path></svg></template><template x-if="a.icon==='download'"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler-accessibility size-4"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2"></path><path d="M7 11l5 5l5 -5"></path><path d="M12 4l0 12"></path></svg></template><template x-if="a.icon==='report'"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler-report size-4"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M8 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h5.697"></path><path d="M18 14v4h4"></path><path d="M18 11v-4a2 2 0 0 0 -2 -2h-2"></path><path d="M8 3m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v0a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z"></path><path d="M18 18m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0"></path><path d="M8 11h4"></path><path d="M8 15h3"></path></svg></template><template x-if="a.icon==='users'"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler-layout-users-group size-4"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M10 13a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path><path d="M8 21v-1a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v1"></path><path d="M15 5a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path><path d="M17 10h2a2 2 0 0 1 2 2v1"></path><path d="M5 5a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path><path d="M3 13v-1a2 2 0 0 1 2 -2h2"></path></svg></template><template x-if="a.icon==='calendar'"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler-layout-grid size-4"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z"></path><path d="M16 3v4"></path><path d="M8 3v4"></path><path d="M4 11h16"></path><path d="M11 15h1"></path><path d="M12 15v3"></path></svg></template></div><div><div class="text-sm font-medium" x-text="a.name"></div><div class="text-xs text-muted-foreground" x-text="a.desc"></div></div></div><div class="flex items-center gap-2"><template x-for="t in a.tags" :key="t"><span class="hidden md:inline text-[0.70rem] px-2 py-0.5 rounded-full bg-background/5 text-muted-foreground" x-text="t"></span></template><button class="flex items-center justify-center text-center shadow-subtle font-medium duration-500 ease-in-out transition-colors focus:outline-2 focus:outline-offset-2 text-muted-foreground bg-muted outline outline-border hover:bg-muted focus:outline-border text-foreground bg-background outline-border hover:bg-muted focus:outline-border size-7 p-0.5 text-xs rounded-md" @click.stop="toggleFav(a.id)" :aria-pressed="favorites.has(a.id)" :class="favorites.has(a.id)?'text-foreground':'text-muted-foreground'"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler-layout-settings size-4 opacity-70"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065z"></path><path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"></path></svg><span class="sr-only">Toggle favorite</span></button><button class="relative flex items-center justify-center text-center font-medium transition-colors duration-200 ease-in-out select-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:z-10 justify-center rounded-md text-muted-foreground bg-muted outline outline-border hover:opacity-90 focus-visible:outline-border h-7 px-3 text-xs" @click.stop="quickRun(a)">Run</button><button class="relative flex items-center justify-center text-center font-medium transition-colors duration-200 ease-in-out select-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:z-10 justify-center rounded-md text-muted-foreground bg-muted outline outline-border hover:opacity-90 focus-visible:outline-border h-7 px-3 text-xs" @click.stop="openWizard(a)">Configure</button></div></li></template><li x-show="list().length===0" class="px-6 py-6 text-sm italic text-center text-muted-foreground">Nothing to show</li></ul><!-- Scheduled overview --><div class="px-6 py-3" x-show="scheduled.length"><div class="text-[0.70rem] font-medium text-muted-foreground mb-2">Upcoming</div><ul class="text-xs space-y-1 text-muted-foreground"><template x-for="s in scheduled" :key="s.id + s.at"><li><span class="font-medium" x-text="s.name"></span> — <span x-text="s.at"></span></li></template></ul></div></div></template><!-- STEP 2: Configure form (dynamic) --><template x-if="step===2"><div class="px-4 py-3"><div class="px-2 text-[0.70rem] text-muted-foreground">Configure</div><div class="px-2 mt-2 text-sm font-medium text-muted-foreground" x-text="current?.name"></div><div class="items-center px-2 mt-2 grid grid-cols-1 md:grid-cols-2 gap-3"><template x-for="p in current?.params || []" :key="p.key"><div><label class="text-[0.70rem] text-muted-foreground block" x-text="p.label"></label><template x-if="p.type==='text'"><input type="text" class="w-full h-9 px-2 rounded-md ring-1 ring-border bg-transparent text-sm mt-0.5 border-border" :placeholder="p.placeholder || ''" x-model="form[p.key]"></template><template x-if="p.type==='toggle'"><label class="flex items-center text-sm gap-2"><input type="checkbox" class="border text-foreground rounded-md border-border" x-model="form[p.key]"><span class="text-muted-foreground" x-text="form[p.key] ? 'Enabled' : 'Disabled'"></span></label></template><template x-if="p.type==='select'"><select class="w-full h-9 px-2 rounded-md ring-1 ring-border bg-transparent text-sm rounded border-border text-muted-foreground mt-0.5" x-model="form[p.key]"><template x-for="opt in p.options || []" :key="opt"><option x-text="opt"></option></template></select></template><template x-if="p.type==='datetime'"><input type="datetime-local" class="w-full px-2 text-sm bg-transparent h-9 rounded-md ring-1 ring-border text-muted-foreground border-border" x-model="form[p.key]"></template></div></template></div><div class="flex items-center justify-between px-2 mt-4"><button class="relative flex items-center justify-center text-center font-medium transition-colors duration-200 ease-in-out select-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:z-10 justify-center rounded-md text-muted-foreground bg-muted outline outline-border hover:opacity-90 focus-visible:outline-border h-7 px-3 text-xs" @click="back()">Back</button><div class="flex items-center gap-2"><button class="relative flex items-center justify-center text-center font-medium transition-colors duration-200 ease-in-out select-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:z-10 justify-center rounded-md text-muted-foreground bg-muted outline outline-border hover:opacity-90 focus-visible:outline-border h-7 px-3 text-xs" title="Cmd/Ctrl + Enter" @click="scheduleAt()">Schedule</button><button class="relative flex items-center justify-center text-center font-medium transition-colors duration-200 ease-in-out select-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:z-10 justify-center rounded-md text-background bg-foreground outline outline-foreground hover:opacity-90 focus-visible:outline-border h-7 px-3 text-xs" @click="runNow()">Run now</button></div></div></div></template><!-- STEP 3: Done / feedback --><template x-if="step===3"><div class="px-6 py-10 text-center"><div class="inline-flex items-center justify-center rounded-full size-12 text-success bg-success/10"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler-circle-check size-5"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M5 12l5 5l10 -10"></path></svg></div><div class="mt-3 text-sm font-medium text-foreground" x-text="toast || 'Completed'"></div><div class="mt-2 text-xs text-muted-foreground">You can close this panel or run another automation.</div><div class="flex items-center justify-center mt-4 gap-2"><button class="relative flex items-center justify-center text-center font-medium transition-colors duration-200 ease-in-out select-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:z-10 justify-center rounded-md text-background bg-foreground outline outline-foreground hover:opacity-90 focus-visible:outline-border h-7 px-3 text-xs" @click="step=1; open=true; $nextTick(()=> $refs.input?.focus())">Run another</button><button class="relative flex items-center justify-center text-center font-medium transition-colors duration-200 ease-in-out select-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:z-10 justify-center rounded-md text-muted-foreground bg-muted outline outline-border hover:opacity-90 focus-visible:outline-border h-7 px-3 text-xs" @click="open=false">Close</button></div></div></template><!-- Footer help --><div class="px-4 py-2 text-[0.70rem] text-muted-foreground flex items-center justify-between bg-background/10"><div>Press <kbd class="px-1 border rounded bg-background border-border text-muted-foreground">/</kbd> to search • <kbd class="px-1 border rounded bg-background border-border text-muted-foreground">Shift</kbd> + <kbd class="px-1 border rounded bg-background border-border text-muted-foreground">↵</kbd>quick run</div><div class="items-center hidden sm:flex gap-2"><span class="flex items-center gap-1"><kbd class="px-1 border rounded bg-background border-border text-muted-foreground">↑</kbd><kbd class="px-1 border rounded bg-background border-border text-muted-foreground">↓</kbd> to navigate</span><span class="flex items-center gap-1"><kbd class="px-1 border rounded bg-background border-border text-muted-foreground">↵</kbd> to configure</span></div></div></div><!-- Copy: --></div>
+  <script src="runtime.js"></script>
+</body>
+</html>

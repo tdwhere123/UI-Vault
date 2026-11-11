@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="zh-Hans" class="font-sans antialiased">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>巨型菜单</title>
+  <link rel="stylesheet" href="runtime.css">
+</head>
+<body class="bg-base-100" data-demo="megamenu">
+<button class="btn sm:hidden" popovertarget="my-megamenu">Menu</button> // Opens the megamenu on small screens
+<div class="megamenu max-sm:megamenu-vertical" id="my-megamenu" popover>
+  ├── <span class="megamenu-active"></span> // the visual indicator that moves to the active item
+  │
+  ├── <button popovertarget="first">1</button> // Opens the first popover. all IDs must be unique and match the popovertarget value
+  ├── <div id="first" popover>
+  │
+  ├── <button popovertarget="second">2</button> // Opens the second popover
+  ├── <div id="second" popover>
+  │
+  ├── <button popovertarget="third">3</button> // Opens the third popover
+  ├── <div id="third" popover>
+  │
+  ╰── ... // max 10 popovers
+```
+  <script src="runtime.js"></script>
+</body>
+</html>

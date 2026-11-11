@@ -2,12 +2,24 @@
 export const MAX_MEDIA_BYTES=8*1024*1024,MAX_MEDIA_FILE_BYTES=1024*1024,MAX_MEDIA_FILES=64;
 const types={'image/png':'png','image/gif':'gif','image/jpeg':'jpe?g','image/webp':'webp'};
 const abortError=()=>Object.assign(Error('预览媒体请求已取消'),{name:'AbortError'});
+export function validateRemoteImageAliases(list){
+ if(list===undefined)return [];
+ if(!Array.isArray(list)||list.length>48)throw Error('预览媒体清单不合法');
+ const aliases=[],seen=new Set();
+ for(const raw of list){
+  if(typeof raw!=='string'||raw.length<12||raw.length>500||seen.has(raw))throw Error('预览媒体清单不合法');
+  let url;try{url=new URL(raw)}catch{throw Error('预览媒体清单不合法')}
+  if((url.protocol!=='https:'&&url.protocol!=='http:')||url.username||url.password)throw Error('预览媒体清单不合法');
+  seen.add(raw);aliases.push(raw);
+ }
+ return aliases;
+}
 export function validateMediaAssets(assets=[]){
  if(!Array.isArray(assets)||assets.length>MAX_MEDIA_FILES)throw Error('预览媒体清单不合法');
  let total=0;const keys=new Set(),paths=new Set();
  return assets.map(a=>{
   if(!a||typeof a.key!=='string'||! /^[A-Za-z0-9][A-Za-z0-9_.-]{0,95}$/.test(a.key)||keys.has(a.key)||typeof a.path!=='string'||a.path.length>240||! /^batches\/(?:[A-Za-z0-9_-]+\/)+[A-Za-z0-9][A-Za-z0-9_.-]*$/.test(a.path)||paths.has(a.path)||!Object.hasOwn(types,a.mime)||!new RegExp('\\.'+types[a.mime]+'$','i').test(a.path)||!Number.isSafeInteger(a.bytes)||a.bytes<1||a.bytes>MAX_MEDIA_FILE_BYTES||! /^[a-f0-9]{64}$/.test(a.sha256)||((total+=a.bytes)>MAX_MEDIA_BYTES))throw Error('预览媒体清单不合法');
-  keys.add(a.key);paths.add(a.path);return Object.freeze({key:a.key,path:a.path,mime:a.mime,bytes:a.bytes,sha256:a.sha256});
+  const aliases=validateRemoteImageAliases(a.aliases);keys.add(a.key);paths.add(a.path);return Object.freeze({key:a.key,path:a.path,mime:a.mime,bytes:a.bytes,sha256:a.sha256,...(aliases.length?{aliases}: {})});
  });
 }
 function signature(b,mime){
@@ -35,6 +47,7 @@ export async function loadMediaAssets(assets,{signal,baseURL=globalThis.document
    const hash=[...new Uint8Array(await crypto.subtle.digest('SHA-256',bytes))].map(n=>n.toString(16).padStart(2,'0')).join('');check();
    if(hash!==entry.sha256)throw Error('预览媒体校验失败');
    const blobURL=urlAPI.createObjectURL(new Blob([bytes],{type:entry.mime}));urls.push(blobURL);mapping[entry.key]=blobURL;
+   if(entry.aliases){for(const alias of entry.aliases){mapping[alias]=blobURL;try{const u=new URL(alias);mapping[u.origin+u.pathname]=blobURL;}catch{}}}
   }
   check();return {mapping:Object.freeze(mapping),dispose};
  }catch(error){dispose();throw error}

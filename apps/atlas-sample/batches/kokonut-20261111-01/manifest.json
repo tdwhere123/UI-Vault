@@ -1,0 +1,264 @@
+{
+  "batch": "kokonut-20261111-01",
+  "revision": "a16d64c0d99ab5c6304ebcb88860d8d8bf201fd0",
+  "itemCount": 8,
+  "items": [
+    {
+      "id": "kokonut:ai-prompt",
+      "title": "智能提示输入台",
+      "source": "Kokonut UI",
+      "license": "MIT",
+      "upstream": "https://github.com/kokonut-labs/kokonutui/blob/a16d64c0d99ab5c6304ebcb88860d8d8bf201fd0/components/kokonutui/ai-prompt.tsx",
+      "website": "https://kokonutui.com/docs/components/ai-prompt",
+      "revision": "a16d64c0d99ab5c6304ebcb88860d8d8bf201fd0",
+      "category": "Agent与对话",
+      "format": "组件与效果",
+      "kind": "组件",
+      "behavior": "编写并发送提示（不会调用真实模型）",
+      "independenceNote": "官方完整组件 ai-prompt，按官方入口对账此前未收；挂载官方默认导出/默认演示数据。",
+      "code": "batches/kokonut-20261111-01/originals/ai-prompt.tsx",
+      "preview": "batches/kokonut-20261111-01/ai-prompt.html",
+      "bundle": "batches/kokonut-20261111-01/bundles/ai-prompt.zip",
+      "runtime": {
+        "assets": []
+      },
+      "gaps": [
+        "源码级独立性初筛：完整可复用组件可以收录；只收该族一条完整官方示例，不收配色、尺寸或编号小改。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面",
+        "源码级不同点：官方完整组件 ai-prompt，按官方 registry 对账此前未收；不是配色或尺寸细变。",
+        "使用已有 Vite 配方编译官方默认导出组件。next/image、next/link 仅为预览宿主垫片。Unsplash 等未知第三方原图不随包再分发，已换自有占位，不冒称视觉复刻。"
+      ],
+      "originalSha256": "ff873074b58b1cc44372c782b47637c8e7301a718d0f6adcbaba4292e2a1a346",
+      "originalSize": 39125,
+      "batchDir": "kokonut-20261111-01",
+      "packageEntry": "src/main.tsx",
+      "packageOfficialComponent": "src/components/ai-prompt.tsx"
+    },
+    {
+      "id": "kokonut:smooth-drawer",
+      "title": "平滑订单抽屉",
+      "source": "Kokonut UI",
+      "license": "MIT",
+      "upstream": "https://github.com/kokonut-labs/kokonutui/blob/a16d64c0d99ab5c6304ebcb88860d8d8bf201fd0/components/kokonutui/smooth-drawer.tsx",
+      "website": "https://kokonutui.com/docs/components/smooth-drawer",
+      "revision": "a16d64c0d99ab5c6304ebcb88860d8d8bf201fd0",
+      "category": "输入与选择",
+      "format": "组件与效果",
+      "kind": "组件",
+      "behavior": "打开订单摘要抽屉（不会发生真实下单）",
+      "independenceNote": "官方完整组件 smooth-drawer，按官方入口对账此前未收；挂载官方默认导出/默认演示数据。",
+      "code": "batches/kokonut-20261111-01/originals/smooth-drawer.tsx",
+      "preview": "batches/kokonut-20261111-01/smooth-drawer.html",
+      "bundle": "batches/kokonut-20261111-01/bundles/smooth-drawer.zip",
+      "runtime": {
+        "assets": []
+      },
+      "gaps": [
+        "源码级独立性初筛：完整可复用组件可以收录；只收该族一条完整官方示例，不收配色、尺寸或编号小改。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面",
+        "源码级不同点：官方完整组件 smooth-drawer，按官方 registry 对账此前未收；不是配色或尺寸细变。",
+        "使用已有 Vite 配方编译官方默认导出组件。next/image、next/link 仅为预览宿主垫片。Unsplash 等未知第三方原图不随包再分发，已换自有占位，不冒称视觉复刻。"
+      ],
+      "originalSha256": "143c2944ca63b4c78f341a242448bce5fb744bae2ac7a9658a0897cecb04575c",
+      "originalSize": 17467,
+      "batchDir": "kokonut-20261111-01",
+      "packageEntry": "src/main.tsx",
+      "packageOfficialComponent": "src/components/smooth-drawer.tsx"
+    },
+    {
+      "id": "kokonut:file-upload",
+      "title": "文件上传区",
+      "source": "Kokonut UI",
+      "license": "MIT",
+      "upstream": "https://github.com/kokonut-labs/kokonutui/blob/a16d64c0d99ab5c6304ebcb88860d8d8bf201fd0/components/kokonutui/file-upload.tsx",
+      "website": "https://kokonutui.com/docs/components/file-upload",
+      "revision": "a16d64c0d99ab5c6304ebcb88860d8d8bf201fd0",
+      "category": "输入与选择",
+      "format": "组件与效果",
+      "kind": "组件",
+      "behavior": "选择或拖入文件（演示上传，不会发送到服务器）",
+      "independenceNote": "官方完整组件 file-upload，按官方入口对账此前未收；挂载官方默认导出/默认演示数据。",
+      "code": "batches/kokonut-20261111-01/originals/file-upload.tsx",
+      "preview": "batches/kokonut-20261111-01/file-upload.html",
+      "bundle": "batches/kokonut-20261111-01/bundles/file-upload.zip",
+      "runtime": {
+        "assets": []
+      },
+      "gaps": [
+        "源码级独立性初筛：完整可复用组件可以收录；只收该族一条完整官方示例，不收配色、尺寸或编号小改。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面",
+        "源码级不同点：官方完整组件 file-upload，按官方 registry 对账此前未收；不是配色或尺寸细变。",
+        "使用已有 Vite 配方编译官方默认导出组件。next/image、next/link 仅为预览宿主垫片。Unsplash 等未知第三方原图不随包再分发，已换自有占位，不冒称视觉复刻。"
+      ],
+      "originalSha256": "6883b4e05411aa2d18844bace18da85f6fecac374c4f89eccd00294d99569363",
+      "originalSize": 30149,
+      "batchDir": "kokonut-20261111-01",
+      "packageEntry": "src/main.tsx",
+      "packageOfficialComponent": "src/components/file-upload.tsx"
+    },
+    {
+      "id": "kokonut:action-search-bar",
+      "title": "命令搜索条",
+      "source": "Kokonut UI",
+      "license": "MIT",
+      "upstream": "https://github.com/kokonut-labs/kokonutui/blob/a16d64c0d99ab5c6304ebcb88860d8d8bf201fd0/components/kokonutui/action-search-bar.tsx",
+      "website": "https://kokonutui.com/docs/components/action-search-bar",
+      "revision": "a16d64c0d99ab5c6304ebcb88860d8d8bf201fd0",
+      "category": "导航与组织",
+      "format": "组件与效果",
+      "kind": "组件",
+      "behavior": "搜索并选择命令（演示数据）",
+      "independenceNote": "官方完整组件 action-search-bar，按官方入口对账此前未收；挂载官方默认导出/默认演示数据。",
+      "code": "batches/kokonut-20261111-01/originals/action-search-bar.tsx",
+      "preview": "batches/kokonut-20261111-01/action-search-bar.html",
+      "bundle": "batches/kokonut-20261111-01/bundles/action-search-bar.zip",
+      "runtime": {
+        "assets": []
+      },
+      "gaps": [
+        "源码级独立性初筛：完整可复用组件可以收录；只收该族一条完整官方示例，不收配色、尺寸或编号小改。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面",
+        "源码级不同点：官方完整组件 action-search-bar，按官方 registry 对账此前未收；不是配色或尺寸细变。",
+        "使用已有 Vite 配方编译官方默认导出组件。next/image、next/link 仅为预览宿主垫片。Unsplash 等未知第三方原图不随包再分发，已换自有占位，不冒称视觉复刻。"
+      ],
+      "originalSha256": "657c92cf00dca08acce26ad44455e3b5ae1c34d30aa80c54d5fd7b927a0eb12f",
+      "originalSize": 33597,
+      "batchDir": "kokonut-20261111-01",
+      "packageEntry": "src/main.tsx",
+      "packageOfficialComponent": "src/components/action-search-bar.tsx"
+    },
+    {
+      "id": "kokonut:ai-input-search",
+      "title": "智能搜索输入",
+      "source": "Kokonut UI",
+      "license": "MIT",
+      "upstream": "https://github.com/kokonut-labs/kokonutui/blob/a16d64c0d99ab5c6304ebcb88860d8d8bf201fd0/components/kokonutui/ai-input-search.tsx",
+      "website": "https://kokonutui.com/docs/components/ai-input-search",
+      "revision": "a16d64c0d99ab5c6304ebcb88860d8d8bf201fd0",
+      "category": "Agent与对话",
+      "format": "组件与效果",
+      "kind": "组件",
+      "behavior": "在 AI 搜索框中输入（不会调用真实模型）",
+      "independenceNote": "官方完整组件 ai-input-search，按官方入口对账此前未收；挂载官方默认导出/默认演示数据。",
+      "code": "batches/kokonut-20261111-01/originals/ai-input-search.tsx",
+      "preview": "batches/kokonut-20261111-01/ai-input-search.html",
+      "bundle": "batches/kokonut-20261111-01/bundles/ai-input-search.zip",
+      "runtime": {
+        "assets": []
+      },
+      "gaps": [
+        "源码级独立性初筛：完整可复用组件可以收录；只收该族一条完整官方示例，不收配色、尺寸或编号小改。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面",
+        "源码级不同点：官方完整组件 ai-input-search，按官方 registry 对账此前未收；不是配色或尺寸细变。",
+        "使用已有 Vite 配方编译官方默认导出组件。next/image、next/link 仅为预览宿主垫片。Unsplash 等未知第三方原图不随包再分发，已换自有占位，不冒称视觉复刻。"
+      ],
+      "originalSha256": "2daa3af07d1a96053edd4c8f1ece1b2a50de7c7d9603e85cafb5eb10e3eef7b6",
+      "originalSize": 46445,
+      "batchDir": "kokonut-20261111-01",
+      "packageEntry": "src/main.tsx",
+      "packageOfficialComponent": "src/components/ai-input-search.tsx"
+    },
+    {
+      "id": "kokonut:background-paths",
+      "title": "路径背景",
+      "source": "Kokonut UI",
+      "license": "MIT",
+      "upstream": "https://github.com/kokonut-labs/kokonutui/blob/a16d64c0d99ab5c6304ebcb88860d8d8bf201fd0/components/kokonutui/background-paths.tsx",
+      "website": "https://kokonutui.com/docs/components/background-paths",
+      "revision": "a16d64c0d99ab5c6304ebcb88860d8d8bf201fd0",
+      "category": "视觉与动效",
+      "format": "组件与效果",
+      "kind": "组件",
+      "behavior": "查看浮动路径背景",
+      "independenceNote": "官方完整组件 background-paths，按官方入口对账此前未收；挂载官方默认导出/默认演示数据。",
+      "code": "batches/kokonut-20261111-01/originals/background-paths.tsx",
+      "preview": "batches/kokonut-20261111-01/background-paths.html",
+      "bundle": "batches/kokonut-20261111-01/bundles/background-paths.zip",
+      "runtime": {
+        "assets": []
+      },
+      "gaps": [
+        "源码级独立性初筛：完整可复用组件可以收录；只收该族一条完整官方示例，不收配色、尺寸或编号小改。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面",
+        "源码级不同点：官方完整组件 background-paths，按官方 registry 对账此前未收；不是配色或尺寸细变。",
+        "使用已有 Vite 配方编译官方默认导出组件。next/image、next/link 仅为预览宿主垫片。Unsplash 等未知第三方原图不随包再分发，已换自有占位，不冒称视觉复刻。"
+      ],
+      "originalSha256": "d09fcec958f053419bf5ddb7f5a3ab6de63f517814e40a5f8b31d6461388b6a7",
+      "originalSize": 11397,
+      "batchDir": "kokonut-20261111-01",
+      "packageEntry": "src/main.tsx",
+      "packageOfficialComponent": "src/components/background-paths.tsx"
+    },
+    {
+      "id": "kokonut:smooth-tab",
+      "title": "平滑页签",
+      "source": "Kokonut UI",
+      "license": "MIT",
+      "upstream": "https://github.com/kokonut-labs/kokonutui/blob/a16d64c0d99ab5c6304ebcb88860d8d8bf201fd0/components/kokonutui/smooth-tab.tsx",
+      "website": "https://kokonutui.com/docs/components/smooth-tab",
+      "revision": "a16d64c0d99ab5c6304ebcb88860d8d8bf201fd0",
+      "category": "导航与组织",
+      "format": "组件与效果",
+      "kind": "组件",
+      "behavior": "切换平滑页签",
+      "independenceNote": "官方完整组件 smooth-tab，按官方入口对账此前未收；挂载官方默认导出/默认演示数据。",
+      "code": "batches/kokonut-20261111-01/originals/smooth-tab.tsx",
+      "preview": "batches/kokonut-20261111-01/smooth-tab.html",
+      "bundle": "batches/kokonut-20261111-01/bundles/smooth-tab.zip",
+      "runtime": {
+        "assets": []
+      },
+      "gaps": [
+        "源码级独立性初筛：完整可复用组件可以收录；只收该族一条完整官方示例，不收配色、尺寸或编号小改。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面",
+        "源码级不同点：官方完整组件 smooth-tab，按官方 registry 对账此前未收；不是配色或尺寸细变。",
+        "使用已有 Vite 配方编译官方默认导出组件。next/image、next/link 仅为预览宿主垫片。Unsplash 等未知第三方原图不随包再分发，已换自有占位，不冒称视觉复刻。"
+      ],
+      "originalSha256": "208d60717174642723193a624864b4323e44d5e29b2ea820be68a4de6991213c",
+      "originalSize": 20935,
+      "batchDir": "kokonut-20261111-01",
+      "packageEntry": "src/main.tsx",
+      "packageOfficialComponent": "src/components/smooth-tab.tsx"
+    },
+    {
+      "id": "kokonut:team-selector",
+      "title": "团队选择器",
+      "source": "Kokonut UI",
+      "license": "MIT",
+      "upstream": "https://github.com/kokonut-labs/kokonutui/blob/a16d64c0d99ab5c6304ebcb88860d8d8bf201fd0/components/kokonutui/team-selector.tsx",
+      "website": "https://kokonutui.com/docs/components/team-selector",
+      "revision": "a16d64c0d99ab5c6304ebcb88860d8d8bf201fd0",
+      "category": "输入与选择",
+      "format": "组件与效果",
+      "kind": "组件",
+      "behavior": "选择团队或成员（演示数据）",
+      "independenceNote": "官方完整组件 team-selector，按官方入口对账此前未收；挂载官方默认导出/默认演示数据。",
+      "code": "batches/kokonut-20261111-01/originals/team-selector.tsx",
+      "preview": "batches/kokonut-20261111-01/team-selector.html",
+      "bundle": "batches/kokonut-20261111-01/bundles/team-selector.zip",
+      "runtime": {
+        "assets": []
+      },
+      "gaps": [
+        "源码级独立性初筛：完整可复用组件可以收录；只收该族一条完整官方示例，不收配色、尺寸或编号小改。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面",
+        "源码级不同点：官方完整组件 team-selector，按官方 registry 对账此前未收；不是配色或尺寸细变。",
+        "使用已有 Vite 配方编译官方默认导出组件。next/image、next/link 仅为预览宿主垫片。Unsplash 等未知第三方原图不随包再分发，已换自有占位，不冒称视觉复刻。"
+      ],
+      "originalSha256": "b71fbb6c529c5a8dc357ab50efa0418ce464e700cb0fe6c5a3997fc6e4f5171d",
+      "originalSize": 19285,
+      "batchDir": "kokonut-20261111-01",
+      "packageEntry": "src/main.tsx",
+      "packageOfficialComponent": "src/components/team-selector.tsx"
+    }
+  ],
+  "packaging": "Each zip keeps the official Vite recipe, lockfile and shared UI/hooks, with a single-item src/main.tsx entry."
+}

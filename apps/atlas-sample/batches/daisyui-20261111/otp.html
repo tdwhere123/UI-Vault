@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="zh-Hans" class="font-sans antialiased">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>一次性验证码</title>
+  <link rel="stylesheet" href="runtime.css">
+</head>
+<body class="bg-base-100" data-demo="otp">
+<label class="otp">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <input type="text" autocomplete="one-time-code" inputmode="numeric" maxlength="4" pattern="[0-9]&#123;4}" required />
+</label>
+  <script src="runtime.js"></script>
+</body>
+</html>

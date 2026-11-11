@@ -1,0 +1,88 @@
+{
+  "batch": "animata-20261111-rest-02",
+  "revision": "25c27e5a874c60a56dcc1609df3b2c4f5f8456f8",
+  "itemCount": 2,
+  "items": [
+    {
+      "id": "animata:staggered-card",
+      "title": "交错卡片",
+      "source": "Animata",
+      "license": "MIT",
+      "upstream": "https://github.com/codse/animata/blob/25c27e5a874c60a56dcc1609df3b2c4f5f8456f8/animata/card/staggered-card.tsx",
+      "website": "https://animata.design",
+      "revision": "25c27e5a874c60a56dcc1609df3b2c4f5f8456f8",
+      "category": "展示与媒体",
+      "format": "组件与效果",
+      "kind": "组件",
+      "behavior": "查看交错卡片",
+      "independenceNote": "官方完整组件 card/staggered-card，按官方入口对账此前未收。",
+      "code": "batches/animata-20261111-rest-02/originals/staggered-card.tsx",
+      "preview": "batches/animata-20261111-rest-02/staggered-card.html",
+      "bundle": "batches/animata-20261111-rest-02/bundles/staggered-card.zip",
+      "runtime": {
+        "assets": [
+          {
+            "key": "placeholder.jpg",
+            "path": "batches/animata-20261111-rest-02/assets/placeholder.jpg",
+            "mime": "image/jpeg",
+            "bytes": 23858,
+            "sha256": "c8b94d7c7566e0951f251e24bd772a30a26d51122b0d99e57fa348168b3d34f2"
+          }
+        ]
+      },
+      "gaps": [
+        "源码级独立性初筛：完整可复用组件可以收录；只收该族一条完整官方示例，不收配色、尺寸或编号小改。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面",
+        "源码级不同点：官方完整组件 card/staggered-card。未知第三方原图已换自有占位，不冒称视觉复刻。"
+      ],
+      "originalSha256": "4ad4bbb489ab061edfeeb306fa9b33da25861fd3a7da5ab4181184a541910215",
+      "originalSize": 4281,
+      "batchDir": "animata-20261111-rest-02",
+      "packageEntry": "src/entry.tsx",
+      "packageOfficialComponent": "src/animata/card/staggered-card.tsx",
+      "packageOfficialStory": "src/animata/card/staggered-card.stories.tsx"
+    },
+    {
+      "id": "animata:vertical-tiles",
+      "title": "竖向瓷片预载",
+      "source": "Animata",
+      "license": "MIT",
+      "upstream": "https://github.com/codse/animata/blob/25c27e5a874c60a56dcc1609df3b2c4f5f8456f8/animata/preloader/vertical-tiles.tsx",
+      "website": "https://animata.design",
+      "revision": "25c27e5a874c60a56dcc1609df3b2c4f5f8456f8",
+      "category": "展示与媒体",
+      "format": "组件与效果",
+      "kind": "组件",
+      "behavior": "查看竖向瓷片预载动画",
+      "independenceNote": "官方完整组件 preloader/vertical-tiles，按官方入口对账此前未收。",
+      "code": "batches/animata-20261111-rest-02/originals/vertical-tiles.tsx",
+      "preview": "batches/animata-20261111-rest-02/vertical-tiles.html",
+      "bundle": "batches/animata-20261111-rest-02/bundles/vertical-tiles.zip",
+      "runtime": {
+        "assets": [
+          {
+            "key": "placeholder.jpg",
+            "path": "batches/animata-20261111-rest-02/assets/placeholder.jpg",
+            "mime": "image/jpeg",
+            "bytes": 23858,
+            "sha256": "c8b94d7c7566e0951f251e24bd772a30a26d51122b0d99e57fa348168b3d34f2"
+          }
+        ]
+      },
+      "gaps": [
+        "源码级独立性初筛：完整可复用组件可以收录；只收该族一条完整官方示例，不收配色、尺寸或编号小改。跨源视觉去重尚未在真实浏览器核验，不能称为已核独立。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面",
+        "源码级不同点：官方完整组件 preloader/vertical-tiles。未知第三方原图已换自有占位，不冒称视觉复刻。"
+      ],
+      "originalSha256": "03ae46a3efd87c753800b47e5c9ec428bb1ac8b9338b4ac8b917d0dfb755ab2f",
+      "originalSize": 2414,
+      "batchDir": "animata-20261111-rest-02",
+      "packageEntry": "src/entry.tsx",
+      "packageOfficialComponent": "src/animata/preloader/vertical-tiles.tsx",
+      "packageOfficialStory": "src/animata/preloader/vertical-tiles.stories.tsx"
+    }
+  ],
+  "packaging": "Each zip includes the full esbuild+Tailwind engineering for its official Storybook Primary entry."
+}

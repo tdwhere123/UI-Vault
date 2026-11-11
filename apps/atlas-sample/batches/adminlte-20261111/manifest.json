@@ -1,0 +1,1840 @@
+{
+  "source": "AdminLTE",
+  "repository": "https://github.com/ColorlibHQ/AdminLTE",
+  "revision": "e13df78a4d0c287e5fa57308e293f63e44e9dd0f",
+  "itemCount": 23,
+  "browserVisualQA": "not_run",
+  "covers": 0,
+  "items": [
+    {
+      "id": "adminlte:invoice",
+      "title": "发票整页",
+      "source": "AdminLTE",
+      "license": "MIT",
+      "upstream": "https://github.com/ColorlibHQ/AdminLTE/blob/e13df78a4d0c287e5fa57308e293f63e44e9dd0f/dist/pages/invoice.html",
+      "website": "https://adminlte.io",
+      "revision": "e13df78a4d0c287e5fa57308e293f63e44e9dd0f",
+      "category": "数据与状态",
+      "format": "完整页面",
+      "kind": "完整页面",
+      "behavior": "浏览可打印的发票整页（本地已内置样式、字体与脚本；提交与外链已拦截，不等于业务开票成功）",
+      "independenceNote": "官方可打印单据页：页眉账单信息、表格明细与合计，不是库存其它发票页的同壳填数。",
+      "eExisting": true,
+      "officialAssets": [
+        "AdminLTELogo.png"
+      ],
+      "placeholderAssets": [
+        "ph-user1-128x128.jpg",
+        "ph-user8-128x128.jpg",
+        "ph-user3-128x128.jpg",
+        "ph-user2-160x160.jpg"
+      ],
+      "oversizedAssets": [],
+      "replacedAssets": 4,
+      "code": "batches/adminlte-20261111/originals/invoice.html",
+      "preview": "batches/adminlte-20261111/invoice.html",
+      "bundle": "batches/adminlte-20261111/bundles/invoice.zip",
+      "runtime": {
+        "assets": [
+          {
+            "key": "ph-user1-128x128.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user1-128x128.jpg",
+            "mime": "image/jpeg",
+            "bytes": 3964,
+            "sha256": "0bbfd34c185a045e25d62c9ec5ecce395d3548a6906ee39ea61c3fa043df3c1c"
+          },
+          {
+            "key": "ph-user8-128x128.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user8-128x128.jpg",
+            "mime": "image/jpeg",
+            "bytes": 4071,
+            "sha256": "31c6690da5078c5981f02bed276fa5cd39622790fd10b746b77a76facdf3551b"
+          },
+          {
+            "key": "ph-user3-128x128.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user3-128x128.jpg",
+            "mime": "image/jpeg",
+            "bytes": 3859,
+            "sha256": "acdf80f8bd8bd1f8cf46efecc4c21c3371160685614afd97c1a550f62c8c446c"
+          },
+          {
+            "key": "ph-user2-160x160.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user2-160x160.jpg",
+            "mime": "image/jpeg",
+            "bytes": 4138,
+            "sha256": "a55e0de45c0cea347861d45ac5ea52e5d72e7b8af320eb13421e61ea3f65eeb9"
+          },
+          {
+            "key": "AdminLTELogo.png",
+            "path": "batches/adminlte-20261111/assets/AdminLTELogo.png",
+            "mime": "image/png",
+            "bytes": 2637,
+            "sha256": "b921c343846d962d04dac6339a291e375f89e2d26e89fb3ded1f7ae830f6d456"
+          }
+        ]
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "源码级不同点：官方可打印单据页：页眉账单信息、表格明细与合计，不是库存其它发票页的同壳填数。",
+        "AdminLTE 代码为 MIT。官方 README Image credits 只列出 Pixeden、Graphicsfuel、Pickaface、Unsplash、Uifaces、Unavatar，没有逐文件授权映射。署名不是再分发许可证据。不明原图已留私有原件待核，预览改用明确披露的自有占位，不冒称视觉复刻。AdminLTE 徽标仅作产品识别并注明商标，不宣称权利齐。",
+        "Source Sans 3 字体为 SIL OFL 1.1；Bootstrap Icons 按官方 LICENSE 为 MIT；Bootstrap、Popper、OverlayScrollbars 为 MIT。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面"
+      ],
+      "originalSha256": "6ea5cb3b967268d7cb99019b5419dba29e3fa37cee0658800a3d03c1920176b7",
+      "originalSize": 54963
+    },
+    {
+      "id": "adminlte:projects",
+      "title": "项目管理列表",
+      "source": "AdminLTE",
+      "license": "MIT",
+      "upstream": "https://github.com/ColorlibHQ/AdminLTE/blob/e13df78a4d0c287e5fa57308e293f63e44e9dd0f/dist/pages/projects.html",
+      "website": "https://adminlte.io",
+      "revision": "e13df78a4d0c287e5fa57308e293f63e44e9dd0f",
+      "category": "数据与状态",
+      "format": "完整页面",
+      "kind": "完整页面",
+      "behavior": "浏览项目管理列表与进度状态（本地依赖已内置；操作已被拦截）",
+      "independenceNote": "项目进度列表工作台。",
+      "eExisting": true,
+      "officialAssets": [
+        "AdminLTELogo.png"
+      ],
+      "placeholderAssets": [
+        "ph-user1-128x128.jpg",
+        "ph-user8-128x128.jpg",
+        "ph-user3-128x128.jpg",
+        "ph-user2-160x160.jpg"
+      ],
+      "oversizedAssets": [],
+      "replacedAssets": 4,
+      "code": "batches/adminlte-20261111/originals/projects.html",
+      "preview": "batches/adminlte-20261111/projects.html",
+      "bundle": "batches/adminlte-20261111/bundles/projects.zip",
+      "runtime": {
+        "assets": [
+          {
+            "key": "ph-user1-128x128.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user1-128x128.jpg",
+            "mime": "image/jpeg",
+            "bytes": 3964,
+            "sha256": "0bbfd34c185a045e25d62c9ec5ecce395d3548a6906ee39ea61c3fa043df3c1c"
+          },
+          {
+            "key": "ph-user8-128x128.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user8-128x128.jpg",
+            "mime": "image/jpeg",
+            "bytes": 4071,
+            "sha256": "31c6690da5078c5981f02bed276fa5cd39622790fd10b746b77a76facdf3551b"
+          },
+          {
+            "key": "ph-user3-128x128.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user3-128x128.jpg",
+            "mime": "image/jpeg",
+            "bytes": 3859,
+            "sha256": "acdf80f8bd8bd1f8cf46efecc4c21c3371160685614afd97c1a550f62c8c446c"
+          },
+          {
+            "key": "ph-user2-160x160.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user2-160x160.jpg",
+            "mime": "image/jpeg",
+            "bytes": 4138,
+            "sha256": "a55e0de45c0cea347861d45ac5ea52e5d72e7b8af320eb13421e61ea3f65eeb9"
+          },
+          {
+            "key": "AdminLTELogo.png",
+            "path": "batches/adminlte-20261111/assets/AdminLTELogo.png",
+            "mime": "image/png",
+            "bytes": 2637,
+            "sha256": "b921c343846d962d04dac6339a291e375f89e2d26e89fb3ded1f7ae830f6d456"
+          }
+        ]
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "源码级不同点：项目进度列表工作台。",
+        "AdminLTE 代码为 MIT。官方 README Image credits 只列出 Pixeden、Graphicsfuel、Pickaface、Unsplash、Uifaces、Unavatar，没有逐文件授权映射。署名不是再分发许可证据。不明原图已留私有原件待核，预览改用明确披露的自有占位，不冒称视觉复刻。AdminLTE 徽标仅作产品识别并注明商标，不宣称权利齐。",
+        "Source Sans 3 字体为 SIL OFL 1.1；Bootstrap Icons 按官方 LICENSE 为 MIT；Bootstrap、Popper、OverlayScrollbars 为 MIT。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面"
+      ],
+      "originalSha256": "c65a78b040d3bd268ec1473b4b3023f7e58615044c2e1e7fd755eb27833b895a",
+      "originalSize": 77729
+    },
+    {
+      "id": "adminlte:search-results",
+      "title": "站内搜索结果页",
+      "source": "AdminLTE",
+      "license": "MIT",
+      "upstream": "https://github.com/ColorlibHQ/AdminLTE/blob/e13df78a4d0c287e5fa57308e293f63e44e9dd0f/dist/pages/search-results.html",
+      "website": "https://adminlte.io",
+      "revision": "e13df78a4d0c287e5fa57308e293f63e44e9dd0f",
+      "category": "数据与状态",
+      "format": "完整页面",
+      "kind": "完整页面",
+      "behavior": "浏览带分类的站内搜索结果（本地依赖已内置；检索不会访问远程）",
+      "independenceNote": "带分类筛选的站内检索结果布局。",
+      "eExisting": true,
+      "officialAssets": [
+        "AdminLTELogo.png"
+      ],
+      "placeholderAssets": [
+        "ph-user1-128x128.jpg",
+        "ph-user8-128x128.jpg",
+        "ph-user3-128x128.jpg",
+        "ph-user2-160x160.jpg"
+      ],
+      "oversizedAssets": [],
+      "replacedAssets": 4,
+      "code": "batches/adminlte-20261111/originals/search-results.html",
+      "preview": "batches/adminlte-20261111/search-results.html",
+      "bundle": "batches/adminlte-20261111/bundles/search-results.zip",
+      "runtime": {
+        "assets": [
+          {
+            "key": "ph-user1-128x128.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user1-128x128.jpg",
+            "mime": "image/jpeg",
+            "bytes": 3964,
+            "sha256": "0bbfd34c185a045e25d62c9ec5ecce395d3548a6906ee39ea61c3fa043df3c1c"
+          },
+          {
+            "key": "ph-user8-128x128.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user8-128x128.jpg",
+            "mime": "image/jpeg",
+            "bytes": 4071,
+            "sha256": "31c6690da5078c5981f02bed276fa5cd39622790fd10b746b77a76facdf3551b"
+          },
+          {
+            "key": "ph-user3-128x128.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user3-128x128.jpg",
+            "mime": "image/jpeg",
+            "bytes": 3859,
+            "sha256": "acdf80f8bd8bd1f8cf46efecc4c21c3371160685614afd97c1a550f62c8c446c"
+          },
+          {
+            "key": "ph-user2-160x160.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user2-160x160.jpg",
+            "mime": "image/jpeg",
+            "bytes": 4138,
+            "sha256": "a55e0de45c0cea347861d45ac5ea52e5d72e7b8af320eb13421e61ea3f65eeb9"
+          },
+          {
+            "key": "AdminLTELogo.png",
+            "path": "batches/adminlte-20261111/assets/AdminLTELogo.png",
+            "mime": "image/png",
+            "bytes": 2637,
+            "sha256": "b921c343846d962d04dac6339a291e375f89e2d26e89fb3ded1f7ae830f6d456"
+          }
+        ]
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "源码级不同点：带分类筛选的站内检索结果布局。",
+        "AdminLTE 代码为 MIT。官方 README Image credits 只列出 Pixeden、Graphicsfuel、Pickaface、Unsplash、Uifaces、Unavatar，没有逐文件授权映射。署名不是再分发许可证据。不明原图已留私有原件待核，预览改用明确披露的自有占位，不冒称视觉复刻。AdminLTE 徽标仅作产品识别并注明商标，不宣称权利齐。",
+        "Source Sans 3 字体为 SIL OFL 1.1；Bootstrap Icons 按官方 LICENSE 为 MIT；Bootstrap、Popper、OverlayScrollbars 为 MIT。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面"
+      ],
+      "originalSha256": "d45ab849d91db889e1712d6de8ac97e122e7d05ae85a5f231aa053289edd9f41",
+      "originalSize": 67219
+    },
+    {
+      "id": "adminlte:theme-customize",
+      "title": "主题定制页",
+      "source": "AdminLTE",
+      "license": "MIT",
+      "upstream": "https://github.com/ColorlibHQ/AdminLTE/blob/e13df78a4d0c287e5fa57308e293f63e44e9dd0f/dist/generate/theme.html",
+      "website": "https://adminlte.io",
+      "revision": "e13df78a4d0c287e5fa57308e293f63e44e9dd0f",
+      "category": "输入与选择",
+      "format": "完整页面",
+      "kind": "完整页面",
+      "behavior": "使用官方页内脚本调整主题选项（本地依赖已内置；不等于视觉验收）",
+      "independenceNote": "主题令牌定制工作台。",
+      "eExisting": true,
+      "officialAssets": [
+        "AdminLTELogo.png"
+      ],
+      "placeholderAssets": [
+        "ph-user1-128x128.jpg",
+        "ph-user8-128x128.jpg",
+        "ph-user3-128x128.jpg",
+        "ph-user2-160x160.jpg"
+      ],
+      "oversizedAssets": [],
+      "replacedAssets": 4,
+      "code": "batches/adminlte-20261111/originals/theme-customize.html",
+      "preview": "batches/adminlte-20261111/theme-customize.html",
+      "bundle": "batches/adminlte-20261111/bundles/theme-customize.zip",
+      "runtime": {
+        "assets": [
+          {
+            "key": "ph-user1-128x128.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user1-128x128.jpg",
+            "mime": "image/jpeg",
+            "bytes": 3964,
+            "sha256": "0bbfd34c185a045e25d62c9ec5ecce395d3548a6906ee39ea61c3fa043df3c1c"
+          },
+          {
+            "key": "ph-user8-128x128.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user8-128x128.jpg",
+            "mime": "image/jpeg",
+            "bytes": 4071,
+            "sha256": "31c6690da5078c5981f02bed276fa5cd39622790fd10b746b77a76facdf3551b"
+          },
+          {
+            "key": "ph-user3-128x128.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user3-128x128.jpg",
+            "mime": "image/jpeg",
+            "bytes": 3859,
+            "sha256": "acdf80f8bd8bd1f8cf46efecc4c21c3371160685614afd97c1a550f62c8c446c"
+          },
+          {
+            "key": "ph-user2-160x160.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user2-160x160.jpg",
+            "mime": "image/jpeg",
+            "bytes": 4138,
+            "sha256": "a55e0de45c0cea347861d45ac5ea52e5d72e7b8af320eb13421e61ea3f65eeb9"
+          },
+          {
+            "key": "AdminLTELogo.png",
+            "path": "batches/adminlte-20261111/assets/AdminLTELogo.png",
+            "mime": "image/png",
+            "bytes": 2637,
+            "sha256": "b921c343846d962d04dac6339a291e375f89e2d26e89fb3ded1f7ae830f6d456"
+          }
+        ]
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "源码级不同点：主题令牌定制工作台。",
+        "AdminLTE 代码为 MIT。官方 README Image credits 只列出 Pixeden、Graphicsfuel、Pickaface、Unsplash、Uifaces、Unavatar，没有逐文件授权映射。署名不是再分发许可证据。不明原图已留私有原件待核，预览改用明确披露的自有占位，不冒称视觉复刻。AdminLTE 徽标仅作产品识别并注明商标，不宣称权利齐。",
+        "Source Sans 3 字体为 SIL OFL 1.1；Bootstrap Icons 按官方 LICENSE 为 MIT；Bootstrap、Popper、OverlayScrollbars 为 MIT。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面"
+      ],
+      "originalSha256": "2e1dc0bc4fdde5b5e382b5e444e0921b1f1d8e23cbb85b2abacf2ca6b85526bf",
+      "originalSize": 179533
+    },
+    {
+      "id": "adminlte:file-manager",
+      "title": "树状文件管理器",
+      "source": "AdminLTE",
+      "license": "MIT",
+      "upstream": "https://github.com/ColorlibHQ/AdminLTE/blob/e13df78a4d0c287e5fa57308e293f63e44e9dd0f/dist/pages/file-manager.html",
+      "website": "https://adminlte.io",
+      "revision": "e13df78a4d0c287e5fa57308e293f63e44e9dd0f",
+      "category": "数据与状态",
+      "format": "完整页面",
+      "kind": "完整页面",
+      "behavior": "浏览树加列表结构的管理端文件管理器（本地依赖已内置；文件操作已被拦截）",
+      "independenceNote": "左树右列表的文件管理器。",
+      "eExisting": true,
+      "officialAssets": [
+        "AdminLTELogo.png"
+      ],
+      "placeholderAssets": [
+        "ph-user1-128x128.jpg",
+        "ph-user8-128x128.jpg",
+        "ph-user3-128x128.jpg",
+        "ph-user2-160x160.jpg"
+      ],
+      "oversizedAssets": [],
+      "replacedAssets": 4,
+      "code": "batches/adminlte-20261111/originals/file-manager.html",
+      "preview": "batches/adminlte-20261111/file-manager.html",
+      "bundle": "batches/adminlte-20261111/bundles/file-manager.zip",
+      "runtime": {
+        "assets": [
+          {
+            "key": "ph-user1-128x128.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user1-128x128.jpg",
+            "mime": "image/jpeg",
+            "bytes": 3964,
+            "sha256": "0bbfd34c185a045e25d62c9ec5ecce395d3548a6906ee39ea61c3fa043df3c1c"
+          },
+          {
+            "key": "ph-user8-128x128.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user8-128x128.jpg",
+            "mime": "image/jpeg",
+            "bytes": 4071,
+            "sha256": "31c6690da5078c5981f02bed276fa5cd39622790fd10b746b77a76facdf3551b"
+          },
+          {
+            "key": "ph-user3-128x128.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user3-128x128.jpg",
+            "mime": "image/jpeg",
+            "bytes": 3859,
+            "sha256": "acdf80f8bd8bd1f8cf46efecc4c21c3371160685614afd97c1a550f62c8c446c"
+          },
+          {
+            "key": "ph-user2-160x160.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user2-160x160.jpg",
+            "mime": "image/jpeg",
+            "bytes": 4138,
+            "sha256": "a55e0de45c0cea347861d45ac5ea52e5d72e7b8af320eb13421e61ea3f65eeb9"
+          },
+          {
+            "key": "AdminLTELogo.png",
+            "path": "batches/adminlte-20261111/assets/AdminLTELogo.png",
+            "mime": "image/png",
+            "bytes": 2637,
+            "sha256": "b921c343846d962d04dac6339a291e375f89e2d26e89fb3ded1f7ae830f6d456"
+          }
+        ]
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "源码级不同点：左树右列表的文件管理器。",
+        "AdminLTE 代码为 MIT。官方 README Image credits 只列出 Pixeden、Graphicsfuel、Pickaface、Unsplash、Uifaces、Unavatar，没有逐文件授权映射。署名不是再分发许可证据。不明原图已留私有原件待核，预览改用明确披露的自有占位，不冒称视觉复刻。AdminLTE 徽标仅作产品识别并注明商标，不宣称权利齐。",
+        "Source Sans 3 字体为 SIL OFL 1.1；Bootstrap Icons 按官方 LICENSE 为 MIT；Bootstrap、Popper、OverlayScrollbars 为 MIT。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面"
+      ],
+      "originalSha256": "c9b802641fca5d29ad1579387065fc693d32b8926a87d874f5c3570346f4b85d",
+      "originalSize": 87369
+    },
+    {
+      "id": "adminlte:dashboard",
+      "title": "管理控制台整页",
+      "source": "AdminLTE",
+      "license": "MIT",
+      "upstream": "https://github.com/ColorlibHQ/AdminLTE/blob/e13df78a4d0c287e5fa57308e293f63e44e9dd0f/dist/index.html",
+      "website": "https://adminlte.io",
+      "revision": "e13df78a4d0c287e5fa57308e293f63e44e9dd0f",
+      "category": "数据与状态",
+      "format": "完整页面",
+      "kind": "完整页面",
+      "behavior": "浏览管理控制台小部件与概览（本地依赖已内置；不等于视觉验收）",
+      "independenceNote": "官方单栏侧栏加小部件网格的管理控制台。只收 index.html，不收同壳填数的 index2/index3。与库存中其它来源看板/控制台不是同一套页面壳。",
+      "eExisting": false,
+      "officialAssets": [
+        "AdminLTELogo.png"
+      ],
+      "placeholderAssets": [
+        "ph-user1-128x128.jpg",
+        "ph-user8-128x128.jpg",
+        "ph-user3-128x128.jpg",
+        "ph-user2-160x160.jpg",
+        "ph-user7-128x128.jpg",
+        "ph-user5-128x128.jpg",
+        "ph-user6-128x128.jpg"
+      ],
+      "oversizedAssets": [],
+      "replacedAssets": 7,
+      "code": "batches/adminlte-20261111/originals/dashboard.html",
+      "preview": "batches/adminlte-20261111/dashboard.html",
+      "bundle": "batches/adminlte-20261111/bundles/dashboard.zip",
+      "runtime": {
+        "assets": [
+          {
+            "key": "ph-user1-128x128.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user1-128x128.jpg",
+            "mime": "image/jpeg",
+            "bytes": 3964,
+            "sha256": "0bbfd34c185a045e25d62c9ec5ecce395d3548a6906ee39ea61c3fa043df3c1c"
+          },
+          {
+            "key": "ph-user8-128x128.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user8-128x128.jpg",
+            "mime": "image/jpeg",
+            "bytes": 4071,
+            "sha256": "31c6690da5078c5981f02bed276fa5cd39622790fd10b746b77a76facdf3551b"
+          },
+          {
+            "key": "ph-user3-128x128.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user3-128x128.jpg",
+            "mime": "image/jpeg",
+            "bytes": 3859,
+            "sha256": "acdf80f8bd8bd1f8cf46efecc4c21c3371160685614afd97c1a550f62c8c446c"
+          },
+          {
+            "key": "ph-user2-160x160.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user2-160x160.jpg",
+            "mime": "image/jpeg",
+            "bytes": 4138,
+            "sha256": "a55e0de45c0cea347861d45ac5ea52e5d72e7b8af320eb13421e61ea3f65eeb9"
+          },
+          {
+            "key": "AdminLTELogo.png",
+            "path": "batches/adminlte-20261111/assets/AdminLTELogo.png",
+            "mime": "image/png",
+            "bytes": 2637,
+            "sha256": "b921c343846d962d04dac6339a291e375f89e2d26e89fb3ded1f7ae830f6d456"
+          },
+          {
+            "key": "ph-user7-128x128.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user7-128x128.jpg",
+            "mime": "image/jpeg",
+            "bytes": 3919,
+            "sha256": "fcad07de3f47c9fe7669f04de0a3dc8dafbc4fdbe7d9e5b986f226e5bd54e72f"
+          },
+          {
+            "key": "ph-user5-128x128.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user5-128x128.jpg",
+            "mime": "image/jpeg",
+            "bytes": 4028,
+            "sha256": "f598ca34b6d7aacd4a57c4b0145de8ba3cbf99bc9f62d1b88f42e953e1a6d46c"
+          },
+          {
+            "key": "ph-user6-128x128.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user6-128x128.jpg",
+            "mime": "image/jpeg",
+            "bytes": 3838,
+            "sha256": "d814dc482f6ac21564ae64772e21bc32a8f8a4e2348b3783072255d98f3fee36"
+          }
+        ]
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "源码级不同点：官方单栏侧栏加小部件网格的管理控制台。只收 index.html，不收同壳填数的 index2/index3。与库存中其它来源看板/控制台不是同一套页面壳。",
+        "AdminLTE 代码为 MIT。官方 README Image credits 只列出 Pixeden、Graphicsfuel、Pickaface、Unsplash、Uifaces、Unavatar，没有逐文件授权映射。署名不是再分发许可证据。不明原图已留私有原件待核，预览改用明确披露的自有占位，不冒称视觉复刻。AdminLTE 徽标仅作产品识别并注明商标，不宣称权利齐。",
+        "Source Sans 3 字体为 SIL OFL 1.1；Bootstrap Icons 按官方 LICENSE 为 MIT；Bootstrap、Popper、OverlayScrollbars 为 MIT。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面"
+      ],
+      "originalSha256": "75fe18224bbf443c75d7092ac8c044a163e6b73dd858f1d6e445c94685ccd837",
+      "originalSize": 81978
+    },
+    {
+      "id": "adminlte:inbox",
+      "title": "文件夹邮件收件箱",
+      "source": "AdminLTE",
+      "license": "MIT",
+      "upstream": "https://github.com/ColorlibHQ/AdminLTE/blob/e13df78a4d0c287e5fa57308e293f63e44e9dd0f/dist/mailbox/inbox.html",
+      "website": "https://adminlte.io",
+      "revision": "e13df78a4d0c287e5fa57308e293f63e44e9dd0f",
+      "category": "数据与状态",
+      "format": "完整页面",
+      "kind": "完整页面",
+      "behavior": "浏览文件夹树与邮件列表（阅读页作为同一收件工作流相关屏保留在源码包中，不单独立条；操作已拦截）",
+      "independenceNote": "三栏文件夹树加邮件列表的收件箱。阅读页 read 与收件箱属同一工作流相关屏，不另计。与其它来源邮件工作台结构不同。",
+      "eExisting": false,
+      "officialAssets": [
+        "AdminLTELogo.png"
+      ],
+      "placeholderAssets": [
+        "ph-user1-128x128.jpg",
+        "ph-user8-128x128.jpg",
+        "ph-user3-128x128.jpg",
+        "ph-user2-160x160.jpg"
+      ],
+      "oversizedAssets": [],
+      "replacedAssets": 4,
+      "code": "batches/adminlte-20261111/originals/inbox.html",
+      "preview": "batches/adminlte-20261111/inbox.html",
+      "bundle": "batches/adminlte-20261111/bundles/inbox.zip",
+      "runtime": {
+        "assets": [
+          {
+            "key": "ph-user1-128x128.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user1-128x128.jpg",
+            "mime": "image/jpeg",
+            "bytes": 3964,
+            "sha256": "0bbfd34c185a045e25d62c9ec5ecce395d3548a6906ee39ea61c3fa043df3c1c"
+          },
+          {
+            "key": "ph-user8-128x128.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user8-128x128.jpg",
+            "mime": "image/jpeg",
+            "bytes": 4071,
+            "sha256": "31c6690da5078c5981f02bed276fa5cd39622790fd10b746b77a76facdf3551b"
+          },
+          {
+            "key": "ph-user3-128x128.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user3-128x128.jpg",
+            "mime": "image/jpeg",
+            "bytes": 3859,
+            "sha256": "acdf80f8bd8bd1f8cf46efecc4c21c3371160685614afd97c1a550f62c8c446c"
+          },
+          {
+            "key": "ph-user2-160x160.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user2-160x160.jpg",
+            "mime": "image/jpeg",
+            "bytes": 4138,
+            "sha256": "a55e0de45c0cea347861d45ac5ea52e5d72e7b8af320eb13421e61ea3f65eeb9"
+          },
+          {
+            "key": "AdminLTELogo.png",
+            "path": "batches/adminlte-20261111/assets/AdminLTELogo.png",
+            "mime": "image/png",
+            "bytes": 2637,
+            "sha256": "b921c343846d962d04dac6339a291e375f89e2d26e89fb3ded1f7ae830f6d456"
+          }
+        ]
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "源码级不同点：三栏文件夹树加邮件列表的收件箱。阅读页 read 与收件箱属同一工作流相关屏，不另计。与其它来源邮件工作台结构不同。",
+        "AdminLTE 代码为 MIT。官方 README Image credits 只列出 Pixeden、Graphicsfuel、Pickaface、Unsplash、Uifaces、Unavatar，没有逐文件授权映射。署名不是再分发许可证据。不明原图已留私有原件待核，预览改用明确披露的自有占位，不冒称视觉复刻。AdminLTE 徽标仅作产品识别并注明商标，不宣称权利齐。",
+        "Source Sans 3 字体为 SIL OFL 1.1；Bootstrap Icons 按官方 LICENSE 为 MIT；Bootstrap、Popper、OverlayScrollbars 为 MIT。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面",
+        "收件箱候选同时保留官方阅读页原件，作为同一工作流相关屏，不另计为独立体验。"
+      ],
+      "originalSha256": "4c4e35d85542ccee7073873cd8a0de1cc95eed7fbd737c873b84006b54aa58b5",
+      "originalSize": 71775
+    },
+    {
+      "id": "adminlte:compose",
+      "title": "写信页",
+      "source": "AdminLTE",
+      "license": "MIT",
+      "upstream": "https://github.com/ColorlibHQ/AdminLTE/blob/e13df78a4d0c287e5fa57308e293f63e44e9dd0f/dist/mailbox/compose.html",
+      "website": "https://adminlte.io",
+      "revision": "e13df78a4d0c287e5fa57308e293f63e44e9dd0f",
+      "category": "输入与选择",
+      "format": "完整页面",
+      "kind": "完整页面",
+      "behavior": "浏览写信工作台（提交已拦截，不表示邮件已发送）",
+      "independenceNote": "独立写信工作台，不是收件箱同壳换数据。",
+      "eExisting": false,
+      "officialAssets": [
+        "AdminLTELogo.png"
+      ],
+      "placeholderAssets": [
+        "ph-user1-128x128.jpg",
+        "ph-user8-128x128.jpg",
+        "ph-user3-128x128.jpg",
+        "ph-user2-160x160.jpg"
+      ],
+      "oversizedAssets": [],
+      "replacedAssets": 4,
+      "code": "batches/adminlte-20261111/originals/compose.html",
+      "preview": "batches/adminlte-20261111/compose.html",
+      "bundle": "batches/adminlte-20261111/bundles/compose.zip",
+      "runtime": {
+        "assets": [
+          {
+            "key": "ph-user1-128x128.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user1-128x128.jpg",
+            "mime": "image/jpeg",
+            "bytes": 3964,
+            "sha256": "0bbfd34c185a045e25d62c9ec5ecce395d3548a6906ee39ea61c3fa043df3c1c"
+          },
+          {
+            "key": "ph-user8-128x128.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user8-128x128.jpg",
+            "mime": "image/jpeg",
+            "bytes": 4071,
+            "sha256": "31c6690da5078c5981f02bed276fa5cd39622790fd10b746b77a76facdf3551b"
+          },
+          {
+            "key": "ph-user3-128x128.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user3-128x128.jpg",
+            "mime": "image/jpeg",
+            "bytes": 3859,
+            "sha256": "acdf80f8bd8bd1f8cf46efecc4c21c3371160685614afd97c1a550f62c8c446c"
+          },
+          {
+            "key": "ph-user2-160x160.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user2-160x160.jpg",
+            "mime": "image/jpeg",
+            "bytes": 4138,
+            "sha256": "a55e0de45c0cea347861d45ac5ea52e5d72e7b8af320eb13421e61ea3f65eeb9"
+          },
+          {
+            "key": "AdminLTELogo.png",
+            "path": "batches/adminlte-20261111/assets/AdminLTELogo.png",
+            "mime": "image/png",
+            "bytes": 2637,
+            "sha256": "b921c343846d962d04dac6339a291e375f89e2d26e89fb3ded1f7ae830f6d456"
+          }
+        ]
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "源码级不同点：独立写信工作台，不是收件箱同壳换数据。",
+        "AdminLTE 代码为 MIT。官方 README Image credits 只列出 Pixeden、Graphicsfuel、Pickaface、Unsplash、Uifaces、Unavatar，没有逐文件授权映射。署名不是再分发许可证据。不明原图已留私有原件待核，预览改用明确披露的自有占位，不冒称视觉复刻。AdminLTE 徽标仅作产品识别并注明商标，不宣称权利齐。",
+        "Source Sans 3 字体为 SIL OFL 1.1；Bootstrap Icons 按官方 LICENSE 为 MIT；Bootstrap、Popper、OverlayScrollbars 为 MIT。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面"
+      ],
+      "originalSha256": "39b625ba987d2eba23574a10fa0bfaf133effddacfc5b6f317a380cd288c934c",
+      "originalSize": 52675
+    },
+    {
+      "id": "adminlte:calendar",
+      "title": "行事历整页",
+      "source": "AdminLTE",
+      "license": "MIT",
+      "upstream": "https://github.com/ColorlibHQ/AdminLTE/blob/e13df78a4d0c287e5fa57308e293f63e44e9dd0f/dist/pages/calendar.html",
+      "website": "https://adminlte.io",
+      "revision": "e13df78a4d0c287e5fa57308e293f63e44e9dd0f",
+      "category": "数据与状态",
+      "format": "完整页面",
+      "kind": "完整页面",
+      "behavior": "浏览月视行事历与外部事件栏（官方 FullCalendar 7.1.1 已本地化；操作已拦截，不等于日程已同步）",
+      "independenceNote": "左侧外部事件栏加中央月视日历，依赖官方 FullCalendar 7.1.1，与其它来源日程页结构不同。",
+      "eExisting": false,
+      "officialAssets": [
+        "AdminLTELogo.png"
+      ],
+      "placeholderAssets": [
+        "ph-user1-128x128.jpg",
+        "ph-user8-128x128.jpg",
+        "ph-user3-128x128.jpg",
+        "ph-user2-160x160.jpg"
+      ],
+      "oversizedAssets": [],
+      "replacedAssets": 4,
+      "code": "batches/adminlte-20261111/originals/calendar.html",
+      "preview": "batches/adminlte-20261111/calendar.html",
+      "bundle": "batches/adminlte-20261111/bundles/calendar.zip",
+      "runtime": {
+        "assets": [
+          {
+            "key": "ph-user1-128x128.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user1-128x128.jpg",
+            "mime": "image/jpeg",
+            "bytes": 3964,
+            "sha256": "0bbfd34c185a045e25d62c9ec5ecce395d3548a6906ee39ea61c3fa043df3c1c"
+          },
+          {
+            "key": "ph-user8-128x128.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user8-128x128.jpg",
+            "mime": "image/jpeg",
+            "bytes": 4071,
+            "sha256": "31c6690da5078c5981f02bed276fa5cd39622790fd10b746b77a76facdf3551b"
+          },
+          {
+            "key": "ph-user3-128x128.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user3-128x128.jpg",
+            "mime": "image/jpeg",
+            "bytes": 3859,
+            "sha256": "acdf80f8bd8bd1f8cf46efecc4c21c3371160685614afd97c1a550f62c8c446c"
+          },
+          {
+            "key": "ph-user2-160x160.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user2-160x160.jpg",
+            "mime": "image/jpeg",
+            "bytes": 4138,
+            "sha256": "a55e0de45c0cea347861d45ac5ea52e5d72e7b8af320eb13421e61ea3f65eeb9"
+          },
+          {
+            "key": "AdminLTELogo.png",
+            "path": "batches/adminlte-20261111/assets/AdminLTELogo.png",
+            "mime": "image/png",
+            "bytes": 2637,
+            "sha256": "b921c343846d962d04dac6339a291e375f89e2d26e89fb3ded1f7ae830f6d456"
+          }
+        ],
+        "scripts": [
+          "fullcalendar-7-1-1.js",
+          "fullcalendar-bootstrap5-7-1-1.js",
+          "page-calendar.js",
+          "runtime.js"
+        ]
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "源码级不同点：左侧外部事件栏加中央月视日历，依赖官方 FullCalendar 7.1.1，与其它来源日程页结构不同。",
+        "AdminLTE 代码为 MIT。官方 README Image credits 只列出 Pixeden、Graphicsfuel、Pickaface、Unsplash、Uifaces、Unavatar，没有逐文件授权映射。署名不是再分发许可证据。不明原图已留私有原件待核，预览改用明确披露的自有占位，不冒称视觉复刻。AdminLTE 徽标仅作产品识别并注明商标，不宣称权利齐。",
+        "Source Sans 3 字体为 SIL OFL 1.1；Bootstrap Icons 按官方 LICENSE 为 MIT；Bootstrap、Popper、OverlayScrollbars 为 MIT。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面",
+        "该页额外官方库已按相对路径保存，并以现有 runtime.scripts 契约接入；页内初始化脚本已从预览 HTML 抽出为已声明分片，这是窄适配，不等于交互已验收。"
+      ],
+      "originalSha256": "9e9edccb9f015fad5fbe12d4e88e5ac8be4b7b3f9b5833852134d0e044ceda85",
+      "originalSize": 57245
+    },
+    {
+      "id": "adminlte:chat",
+      "title": "管理端会话页",
+      "source": "AdminLTE",
+      "license": "MIT",
+      "upstream": "https://github.com/ColorlibHQ/AdminLTE/blob/e13df78a4d0c287e5fa57308e293f63e44e9dd0f/dist/pages/chat.html",
+      "website": "https://adminlte.io",
+      "revision": "e13df78a4d0c287e5fa57308e293f63e44e9dd0f",
+      "category": "Agent与对话",
+      "format": "完整页面",
+      "kind": "完整页面",
+      "behavior": "浏览会话列表与消息列（发送已拦截）",
+      "independenceNote": "管理端会话列表加消息列，与其它来源聊天页不是同壳。",
+      "eExisting": false,
+      "officialAssets": [
+        "AdminLTELogo.png"
+      ],
+      "placeholderAssets": [
+        "ph-user1-128x128.jpg",
+        "ph-user8-128x128.jpg",
+        "ph-user3-128x128.jpg",
+        "ph-user2-160x160.jpg"
+      ],
+      "oversizedAssets": [],
+      "replacedAssets": 4,
+      "code": "batches/adminlte-20261111/originals/chat.html",
+      "preview": "batches/adminlte-20261111/chat.html",
+      "bundle": "batches/adminlte-20261111/bundles/chat.zip",
+      "runtime": {
+        "assets": [
+          {
+            "key": "ph-user1-128x128.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user1-128x128.jpg",
+            "mime": "image/jpeg",
+            "bytes": 3964,
+            "sha256": "0bbfd34c185a045e25d62c9ec5ecce395d3548a6906ee39ea61c3fa043df3c1c"
+          },
+          {
+            "key": "ph-user8-128x128.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user8-128x128.jpg",
+            "mime": "image/jpeg",
+            "bytes": 4071,
+            "sha256": "31c6690da5078c5981f02bed276fa5cd39622790fd10b746b77a76facdf3551b"
+          },
+          {
+            "key": "ph-user3-128x128.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user3-128x128.jpg",
+            "mime": "image/jpeg",
+            "bytes": 3859,
+            "sha256": "acdf80f8bd8bd1f8cf46efecc4c21c3371160685614afd97c1a550f62c8c446c"
+          },
+          {
+            "key": "ph-user2-160x160.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user2-160x160.jpg",
+            "mime": "image/jpeg",
+            "bytes": 4138,
+            "sha256": "a55e0de45c0cea347861d45ac5ea52e5d72e7b8af320eb13421e61ea3f65eeb9"
+          },
+          {
+            "key": "AdminLTELogo.png",
+            "path": "batches/adminlte-20261111/assets/AdminLTELogo.png",
+            "mime": "image/png",
+            "bytes": 2637,
+            "sha256": "b921c343846d962d04dac6339a291e375f89e2d26e89fb3ded1f7ae830f6d456"
+          }
+        ]
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "源码级不同点：管理端会话列表加消息列，与其它来源聊天页不是同壳。",
+        "AdminLTE 代码为 MIT。官方 README Image credits 只列出 Pixeden、Graphicsfuel、Pickaface、Unsplash、Uifaces、Unavatar，没有逐文件授权映射。署名不是再分发许可证据。不明原图已留私有原件待核，预览改用明确披露的自有占位，不冒称视觉复刻。AdminLTE 徽标仅作产品识别并注明商标，不宣称权利齐。",
+        "Source Sans 3 字体为 SIL OFL 1.1；Bootstrap Icons 按官方 LICENSE 为 MIT；Bootstrap、Popper、OverlayScrollbars 为 MIT。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面"
+      ],
+      "originalSha256": "336bd2e1aea2a6f6a973b7b113567b075f73424b2f882474e84e06e6718176f4",
+      "originalSize": 64141
+    },
+    {
+      "id": "adminlte:kanban",
+      "title": "分栏任务看板",
+      "source": "AdminLTE",
+      "license": "MIT",
+      "upstream": "https://github.com/ColorlibHQ/AdminLTE/blob/e13df78a4d0c287e5fa57308e293f63e44e9dd0f/dist/pages/kanban.html",
+      "website": "https://adminlte.io",
+      "revision": "e13df78a4d0c287e5fa57308e293f63e44e9dd0f",
+      "category": "数据与状态",
+      "format": "完整页面",
+      "kind": "完整页面",
+      "behavior": "浏览分栏看板并可拖拽卡片（SortableJS 已本地化；持久化不会发生）",
+      "independenceNote": "多列看板加 SortableJS 拖拽，与其它来源看板不是同壳填数。",
+      "eExisting": false,
+      "officialAssets": [
+        "AdminLTELogo.png"
+      ],
+      "placeholderAssets": [
+        "ph-user1-128x128.jpg",
+        "ph-user8-128x128.jpg",
+        "ph-user3-128x128.jpg",
+        "ph-user2-160x160.jpg"
+      ],
+      "oversizedAssets": [],
+      "replacedAssets": 4,
+      "code": "batches/adminlte-20261111/originals/kanban.html",
+      "preview": "batches/adminlte-20261111/kanban.html",
+      "bundle": "batches/adminlte-20261111/bundles/kanban.zip",
+      "runtime": {
+        "assets": [
+          {
+            "key": "ph-user1-128x128.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user1-128x128.jpg",
+            "mime": "image/jpeg",
+            "bytes": 3964,
+            "sha256": "0bbfd34c185a045e25d62c9ec5ecce395d3548a6906ee39ea61c3fa043df3c1c"
+          },
+          {
+            "key": "ph-user8-128x128.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user8-128x128.jpg",
+            "mime": "image/jpeg",
+            "bytes": 4071,
+            "sha256": "31c6690da5078c5981f02bed276fa5cd39622790fd10b746b77a76facdf3551b"
+          },
+          {
+            "key": "ph-user3-128x128.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user3-128x128.jpg",
+            "mime": "image/jpeg",
+            "bytes": 3859,
+            "sha256": "acdf80f8bd8bd1f8cf46efecc4c21c3371160685614afd97c1a550f62c8c446c"
+          },
+          {
+            "key": "ph-user2-160x160.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user2-160x160.jpg",
+            "mime": "image/jpeg",
+            "bytes": 4138,
+            "sha256": "a55e0de45c0cea347861d45ac5ea52e5d72e7b8af320eb13421e61ea3f65eeb9"
+          },
+          {
+            "key": "AdminLTELogo.png",
+            "path": "batches/adminlte-20261111/assets/AdminLTELogo.png",
+            "mime": "image/png",
+            "bytes": 2637,
+            "sha256": "b921c343846d962d04dac6339a291e375f89e2d26e89fb3ded1f7ae830f6d456"
+          }
+        ],
+        "scripts": [
+          "sortablejs-1-15-7.js",
+          "page-kanban.js",
+          "runtime.js"
+        ]
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "源码级不同点：多列看板加 SortableJS 拖拽，与其它来源看板不是同壳填数。",
+        "AdminLTE 代码为 MIT。官方 README Image credits 只列出 Pixeden、Graphicsfuel、Pickaface、Unsplash、Uifaces、Unavatar，没有逐文件授权映射。署名不是再分发许可证据。不明原图已留私有原件待核，预览改用明确披露的自有占位，不冒称视觉复刻。AdminLTE 徽标仅作产品识别并注明商标，不宣称权利齐。",
+        "Source Sans 3 字体为 SIL OFL 1.1；Bootstrap Icons 按官方 LICENSE 为 MIT；Bootstrap、Popper、OverlayScrollbars 为 MIT。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面",
+        "该页额外官方库已按相对路径保存，并以现有 runtime.scripts 契约接入；页内初始化脚本已从预览 HTML 抽出为已声明分片，这是窄适配，不等于交互已验收。"
+      ],
+      "originalSha256": "e51a2c562969c11b8aa6184aa5e48c5c6200844778a5317da0874a3c4ba7098e",
+      "originalSize": 65224
+    },
+    {
+      "id": "adminlte:gallery",
+      "title": "筛选相册页",
+      "source": "AdminLTE",
+      "license": "MIT",
+      "upstream": "https://github.com/ColorlibHQ/AdminLTE/blob/e13df78a4d0c287e5fa57308e293f63e44e9dd0f/dist/pages/gallery.html",
+      "website": "https://adminlte.io",
+      "revision": "e13df78a4d0c287e5fa57308e293f63e44e9dd0f",
+      "category": "展示与媒体",
+      "format": "完整页面",
+      "kind": "完整页面",
+      "behavior": "按分类浏览相册（预览使用自有占位，不是原图复刻）",
+      "independenceNote": "带分类筛选的相册网格。官方照片因许可不明已改占位。",
+      "eExisting": false,
+      "officialAssets": [
+        "AdminLTELogo.png"
+      ],
+      "placeholderAssets": [
+        "ph-user1-128x128.jpg",
+        "ph-user8-128x128.jpg",
+        "ph-user3-128x128.jpg",
+        "ph-user2-160x160.jpg",
+        "ph-photo1.jpg",
+        "ph-prod-1.jpg",
+        "ph-photo3.jpg",
+        "ph-prod-2.jpg",
+        "ph-photo2.jpg",
+        "ph-prod-3.jpg",
+        "ph-photo4.jpg",
+        "ph-prod-4.jpg",
+        "ph-prod-5.jpg"
+      ],
+      "oversizedAssets": [],
+      "replacedAssets": 13,
+      "code": "batches/adminlte-20261111/originals/gallery.html",
+      "preview": "batches/adminlte-20261111/gallery.html",
+      "bundle": "batches/adminlte-20261111/bundles/gallery.zip",
+      "runtime": {
+        "assets": [
+          {
+            "key": "ph-user1-128x128.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user1-128x128.jpg",
+            "mime": "image/jpeg",
+            "bytes": 3964,
+            "sha256": "0bbfd34c185a045e25d62c9ec5ecce395d3548a6906ee39ea61c3fa043df3c1c"
+          },
+          {
+            "key": "ph-user8-128x128.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user8-128x128.jpg",
+            "mime": "image/jpeg",
+            "bytes": 4071,
+            "sha256": "31c6690da5078c5981f02bed276fa5cd39622790fd10b746b77a76facdf3551b"
+          },
+          {
+            "key": "ph-user3-128x128.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user3-128x128.jpg",
+            "mime": "image/jpeg",
+            "bytes": 3859,
+            "sha256": "acdf80f8bd8bd1f8cf46efecc4c21c3371160685614afd97c1a550f62c8c446c"
+          },
+          {
+            "key": "ph-user2-160x160.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user2-160x160.jpg",
+            "mime": "image/jpeg",
+            "bytes": 4138,
+            "sha256": "a55e0de45c0cea347861d45ac5ea52e5d72e7b8af320eb13421e61ea3f65eeb9"
+          },
+          {
+            "key": "AdminLTELogo.png",
+            "path": "batches/adminlte-20261111/assets/AdminLTELogo.png",
+            "mime": "image/png",
+            "bytes": 2637,
+            "sha256": "b921c343846d962d04dac6339a291e375f89e2d26e89fb3ded1f7ae830f6d456"
+          },
+          {
+            "key": "ph-photo1.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-photo1.jpg",
+            "mime": "image/jpeg",
+            "bytes": 31803,
+            "sha256": "bf6fbde8da593179441d1d8a2192e7a7df32a5f4668acb28df49084ec406299b"
+          },
+          {
+            "key": "ph-prod-1.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-prod-1.jpg",
+            "mime": "image/jpeg",
+            "bytes": 12744,
+            "sha256": "60bff2e903f12430c7e9a2331940d8c6cee2ef0494118d15204a682667d82319"
+          },
+          {
+            "key": "ph-photo3.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-photo3.jpg",
+            "mime": "image/jpeg",
+            "bytes": 50488,
+            "sha256": "5ff003fd55a8fc904080f6ffb5361b0117f1f666cc641cf1c4d381f16d37b3eb"
+          },
+          {
+            "key": "ph-prod-2.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-prod-2.jpg",
+            "mime": "image/jpeg",
+            "bytes": 13177,
+            "sha256": "c1e9502a15b05abd1df0beefc86887333b51e3c21d5e9851ac05430333ba99d1"
+          },
+          {
+            "key": "ph-photo2.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-photo2.jpg",
+            "mime": "image/jpeg",
+            "bytes": 31567,
+            "sha256": "d2b9f7fe1e7bb455e25a2b8a22b06d0f9725545fbbf3e41ea48d08666903265c"
+          },
+          {
+            "key": "ph-prod-3.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-prod-3.jpg",
+            "mime": "image/jpeg",
+            "bytes": 11147,
+            "sha256": "e26564d8b0108a8af4c6e25b9d9fc9bb8f197ffd668741437e4a5fbae3f5ee40"
+          },
+          {
+            "key": "ph-photo4.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-photo4.jpg",
+            "mime": "image/jpeg",
+            "bytes": 46564,
+            "sha256": "903b733adec85609afc9a98ad287b306717a4091d06b79ecd7cf7502c21d6fe3"
+          },
+          {
+            "key": "ph-prod-4.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-prod-4.jpg",
+            "mime": "image/jpeg",
+            "bytes": 10333,
+            "sha256": "54e5052d3cd71b4fdabae266c4db9ebee36b0441343fb686e45db86b7edbdf86"
+          },
+          {
+            "key": "ph-prod-5.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-prod-5.jpg",
+            "mime": "image/jpeg",
+            "bytes": 13702,
+            "sha256": "1e6728d1c0e141d6e604a0bb6d5fb689dfab702b985859473bb4eddf7b15bfac"
+          }
+        ]
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "源码级不同点：带分类筛选的相册网格。官方照片因许可不明已改占位。",
+        "AdminLTE 代码为 MIT。官方 README Image credits 只列出 Pixeden、Graphicsfuel、Pickaface、Unsplash、Uifaces、Unavatar，没有逐文件授权映射。署名不是再分发许可证据。不明原图已留私有原件待核，预览改用明确披露的自有占位，不冒称视觉复刻。AdminLTE 徽标仅作产品识别并注明商标，不宣称权利齐。",
+        "Source Sans 3 字体为 SIL OFL 1.1；Bootstrap Icons 按官方 LICENSE 为 MIT；Bootstrap、Popper、OverlayScrollbars 为 MIT。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面"
+      ],
+      "originalSha256": "e24146034ce741971b1f694448d04701a099a3cefdfc9ff4b2e7000d941ad994",
+      "originalSize": 79875
+    },
+    {
+      "id": "adminlte:faq",
+      "title": "问答整页",
+      "source": "AdminLTE",
+      "license": "MIT",
+      "upstream": "https://github.com/ColorlibHQ/AdminLTE/blob/e13df78a4d0c287e5fa57308e293f63e44e9dd0f/dist/pages/faq.html",
+      "website": "https://adminlte.io",
+      "revision": "e13df78a4d0c287e5fa57308e293f63e44e9dd0f",
+      "category": "产品与营销",
+      "format": "完整页面",
+      "kind": "完整页面",
+      "behavior": "展开常见问题手风琴",
+      "independenceNote": "手风琴问答整页，与其它来源问答页结构不同。",
+      "eExisting": false,
+      "officialAssets": [
+        "AdminLTELogo.png"
+      ],
+      "placeholderAssets": [
+        "ph-user1-128x128.jpg",
+        "ph-user8-128x128.jpg",
+        "ph-user3-128x128.jpg",
+        "ph-user2-160x160.jpg"
+      ],
+      "oversizedAssets": [],
+      "replacedAssets": 4,
+      "code": "batches/adminlte-20261111/originals/faq.html",
+      "preview": "batches/adminlte-20261111/faq.html",
+      "bundle": "batches/adminlte-20261111/bundles/faq.zip",
+      "runtime": {
+        "assets": [
+          {
+            "key": "ph-user1-128x128.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user1-128x128.jpg",
+            "mime": "image/jpeg",
+            "bytes": 3964,
+            "sha256": "0bbfd34c185a045e25d62c9ec5ecce395d3548a6906ee39ea61c3fa043df3c1c"
+          },
+          {
+            "key": "ph-user8-128x128.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user8-128x128.jpg",
+            "mime": "image/jpeg",
+            "bytes": 4071,
+            "sha256": "31c6690da5078c5981f02bed276fa5cd39622790fd10b746b77a76facdf3551b"
+          },
+          {
+            "key": "ph-user3-128x128.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user3-128x128.jpg",
+            "mime": "image/jpeg",
+            "bytes": 3859,
+            "sha256": "acdf80f8bd8bd1f8cf46efecc4c21c3371160685614afd97c1a550f62c8c446c"
+          },
+          {
+            "key": "ph-user2-160x160.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user2-160x160.jpg",
+            "mime": "image/jpeg",
+            "bytes": 4138,
+            "sha256": "a55e0de45c0cea347861d45ac5ea52e5d72e7b8af320eb13421e61ea3f65eeb9"
+          },
+          {
+            "key": "AdminLTELogo.png",
+            "path": "batches/adminlte-20261111/assets/AdminLTELogo.png",
+            "mime": "image/png",
+            "bytes": 2637,
+            "sha256": "b921c343846d962d04dac6339a291e375f89e2d26e89fb3ded1f7ae830f6d456"
+          }
+        ]
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "源码级不同点：手风琴问答整页，与其它来源问答页结构不同。",
+        "AdminLTE 代码为 MIT。官方 README Image credits 只列出 Pixeden、Graphicsfuel、Pickaface、Unsplash、Uifaces、Unavatar，没有逐文件授权映射。署名不是再分发许可证据。不明原图已留私有原件待核，预览改用明确披露的自有占位，不冒称视觉复刻。AdminLTE 徽标仅作产品识别并注明商标，不宣称权利齐。",
+        "Source Sans 3 字体为 SIL OFL 1.1；Bootstrap Icons 按官方 LICENSE 为 MIT；Bootstrap、Popper、OverlayScrollbars 为 MIT。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面"
+      ],
+      "originalSha256": "11fc1fd826b0678409c2dc8b0c0a6254b978500f85d3342dcc5cb190fe43b471",
+      "originalSize": 63322
+    },
+    {
+      "id": "adminlte:pricing",
+      "title": "方案价格页",
+      "source": "AdminLTE",
+      "license": "MIT",
+      "upstream": "https://github.com/ColorlibHQ/AdminLTE/blob/e13df78a4d0c287e5fa57308e293f63e44e9dd0f/dist/pages/pricing.html",
+      "website": "https://adminlte.io",
+      "revision": "e13df78a4d0c287e5fa57308e293f63e44e9dd0f",
+      "category": "产品与营销",
+      "format": "完整页面",
+      "kind": "完整页面",
+      "behavior": "比较方案价格卡片（操作已拦截）",
+      "independenceNote": "方案卡片式定价页，与其它来源定价页结构不同。",
+      "eExisting": false,
+      "officialAssets": [
+        "AdminLTELogo.png"
+      ],
+      "placeholderAssets": [
+        "ph-user1-128x128.jpg",
+        "ph-user8-128x128.jpg",
+        "ph-user3-128x128.jpg",
+        "ph-user2-160x160.jpg"
+      ],
+      "oversizedAssets": [],
+      "replacedAssets": 4,
+      "code": "batches/adminlte-20261111/originals/pricing.html",
+      "preview": "batches/adminlte-20261111/pricing.html",
+      "bundle": "batches/adminlte-20261111/bundles/pricing.zip",
+      "runtime": {
+        "assets": [
+          {
+            "key": "ph-user1-128x128.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user1-128x128.jpg",
+            "mime": "image/jpeg",
+            "bytes": 3964,
+            "sha256": "0bbfd34c185a045e25d62c9ec5ecce395d3548a6906ee39ea61c3fa043df3c1c"
+          },
+          {
+            "key": "ph-user8-128x128.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user8-128x128.jpg",
+            "mime": "image/jpeg",
+            "bytes": 4071,
+            "sha256": "31c6690da5078c5981f02bed276fa5cd39622790fd10b746b77a76facdf3551b"
+          },
+          {
+            "key": "ph-user3-128x128.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user3-128x128.jpg",
+            "mime": "image/jpeg",
+            "bytes": 3859,
+            "sha256": "acdf80f8bd8bd1f8cf46efecc4c21c3371160685614afd97c1a550f62c8c446c"
+          },
+          {
+            "key": "ph-user2-160x160.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user2-160x160.jpg",
+            "mime": "image/jpeg",
+            "bytes": 4138,
+            "sha256": "a55e0de45c0cea347861d45ac5ea52e5d72e7b8af320eb13421e61ea3f65eeb9"
+          },
+          {
+            "key": "AdminLTELogo.png",
+            "path": "batches/adminlte-20261111/assets/AdminLTELogo.png",
+            "mime": "image/png",
+            "bytes": 2637,
+            "sha256": "b921c343846d962d04dac6339a291e375f89e2d26e89fb3ded1f7ae830f6d456"
+          }
+        ]
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "源码级不同点：方案卡片式定价页，与其它来源定价页结构不同。",
+        "AdminLTE 代码为 MIT。官方 README Image credits 只列出 Pixeden、Graphicsfuel、Pickaface、Unsplash、Uifaces、Unavatar，没有逐文件授权映射。署名不是再分发许可证据。不明原图已留私有原件待核，预览改用明确披露的自有占位，不冒称视觉复刻。AdminLTE 徽标仅作产品识别并注明商标，不宣称权利齐。",
+        "Source Sans 3 字体为 SIL OFL 1.1；Bootstrap Icons 按官方 LICENSE 为 MIT；Bootstrap、Popper、OverlayScrollbars 为 MIT。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面"
+      ],
+      "originalSha256": "45ee1bbc1b379fde639104a8cd0b6009b4090b7f51df1bf4a21dcbee8708ebd3",
+      "originalSize": 58957
+    },
+    {
+      "id": "adminlte:profile",
+      "title": "个人主页",
+      "source": "AdminLTE",
+      "license": "MIT",
+      "upstream": "https://github.com/ColorlibHQ/AdminLTE/blob/e13df78a4d0c287e5fa57308e293f63e44e9dd0f/dist/pages/profile.html",
+      "website": "https://adminlte.io",
+      "revision": "e13df78a4d0c287e5fa57308e293f63e44e9dd0f",
+      "category": "数据与状态",
+      "format": "完整页面",
+      "kind": "完整页面",
+      "behavior": "浏览个人资料与时间线（预览头像为自有占位）",
+      "independenceNote": "资料头栏加动态时间线的个人主页。",
+      "eExisting": false,
+      "officialAssets": [
+        "AdminLTELogo.png"
+      ],
+      "placeholderAssets": [
+        "ph-user1-128x128.jpg",
+        "ph-user8-128x128.jpg",
+        "ph-user3-128x128.jpg",
+        "ph-user2-160x160.jpg"
+      ],
+      "oversizedAssets": [],
+      "replacedAssets": 4,
+      "code": "batches/adminlte-20261111/originals/profile.html",
+      "preview": "batches/adminlte-20261111/profile.html",
+      "bundle": "batches/adminlte-20261111/bundles/profile.zip",
+      "runtime": {
+        "assets": [
+          {
+            "key": "ph-user1-128x128.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user1-128x128.jpg",
+            "mime": "image/jpeg",
+            "bytes": 3964,
+            "sha256": "0bbfd34c185a045e25d62c9ec5ecce395d3548a6906ee39ea61c3fa043df3c1c"
+          },
+          {
+            "key": "ph-user8-128x128.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user8-128x128.jpg",
+            "mime": "image/jpeg",
+            "bytes": 4071,
+            "sha256": "31c6690da5078c5981f02bed276fa5cd39622790fd10b746b77a76facdf3551b"
+          },
+          {
+            "key": "ph-user3-128x128.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user3-128x128.jpg",
+            "mime": "image/jpeg",
+            "bytes": 3859,
+            "sha256": "acdf80f8bd8bd1f8cf46efecc4c21c3371160685614afd97c1a550f62c8c446c"
+          },
+          {
+            "key": "ph-user2-160x160.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user2-160x160.jpg",
+            "mime": "image/jpeg",
+            "bytes": 4138,
+            "sha256": "a55e0de45c0cea347861d45ac5ea52e5d72e7b8af320eb13421e61ea3f65eeb9"
+          },
+          {
+            "key": "AdminLTELogo.png",
+            "path": "batches/adminlte-20261111/assets/AdminLTELogo.png",
+            "mime": "image/png",
+            "bytes": 2637,
+            "sha256": "b921c343846d962d04dac6339a291e375f89e2d26e89fb3ded1f7ae830f6d456"
+          }
+        ]
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "源码级不同点：资料头栏加动态时间线的个人主页。",
+        "AdminLTE 代码为 MIT。官方 README Image credits 只列出 Pixeden、Graphicsfuel、Pickaface、Unsplash、Uifaces、Unavatar，没有逐文件授权映射。署名不是再分发许可证据。不明原图已留私有原件待核，预览改用明确披露的自有占位，不冒称视觉复刻。AdminLTE 徽标仅作产品识别并注明商标，不宣称权利齐。",
+        "Source Sans 3 字体为 SIL OFL 1.1；Bootstrap Icons 按官方 LICENSE 为 MIT；Bootstrap、Popper、OverlayScrollbars 为 MIT。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面"
+      ],
+      "originalSha256": "a957351454cdeb8245c4d21b4e67021c4975413ca0f242155969f44eee50ec7e",
+      "originalSize": 64148
+    },
+    {
+      "id": "adminlte:settings",
+      "title": "系统设置页",
+      "source": "AdminLTE",
+      "license": "MIT",
+      "upstream": "https://github.com/ColorlibHQ/AdminLTE/blob/e13df78a4d0c287e5fa57308e293f63e44e9dd0f/dist/pages/settings.html",
+      "website": "https://adminlte.io",
+      "revision": "e13df78a4d0c287e5fa57308e293f63e44e9dd0f",
+      "category": "输入与选择",
+      "format": "完整页面",
+      "kind": "完整页面",
+      "behavior": "浏览系统设置表单（提交已拦截）",
+      "independenceNote": "系统设置表单整页，不是同壳换数据。",
+      "eExisting": false,
+      "officialAssets": [
+        "AdminLTELogo.png"
+      ],
+      "placeholderAssets": [
+        "ph-user1-128x128.jpg",
+        "ph-user8-128x128.jpg",
+        "ph-user3-128x128.jpg",
+        "ph-user2-160x160.jpg"
+      ],
+      "oversizedAssets": [],
+      "replacedAssets": 4,
+      "code": "batches/adminlte-20261111/originals/settings.html",
+      "preview": "batches/adminlte-20261111/settings.html",
+      "bundle": "batches/adminlte-20261111/bundles/settings.zip",
+      "runtime": {
+        "assets": [
+          {
+            "key": "ph-user1-128x128.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user1-128x128.jpg",
+            "mime": "image/jpeg",
+            "bytes": 3964,
+            "sha256": "0bbfd34c185a045e25d62c9ec5ecce395d3548a6906ee39ea61c3fa043df3c1c"
+          },
+          {
+            "key": "ph-user8-128x128.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user8-128x128.jpg",
+            "mime": "image/jpeg",
+            "bytes": 4071,
+            "sha256": "31c6690da5078c5981f02bed276fa5cd39622790fd10b746b77a76facdf3551b"
+          },
+          {
+            "key": "ph-user3-128x128.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user3-128x128.jpg",
+            "mime": "image/jpeg",
+            "bytes": 3859,
+            "sha256": "acdf80f8bd8bd1f8cf46efecc4c21c3371160685614afd97c1a550f62c8c446c"
+          },
+          {
+            "key": "ph-user2-160x160.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user2-160x160.jpg",
+            "mime": "image/jpeg",
+            "bytes": 4138,
+            "sha256": "a55e0de45c0cea347861d45ac5ea52e5d72e7b8af320eb13421e61ea3f65eeb9"
+          },
+          {
+            "key": "AdminLTELogo.png",
+            "path": "batches/adminlte-20261111/assets/AdminLTELogo.png",
+            "mime": "image/png",
+            "bytes": 2637,
+            "sha256": "b921c343846d962d04dac6339a291e375f89e2d26e89fb3ded1f7ae830f6d456"
+          }
+        ]
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "源码级不同点：系统设置表单整页，不是同壳换数据。",
+        "AdminLTE 代码为 MIT。官方 README Image credits 只列出 Pixeden、Graphicsfuel、Pickaface、Unsplash、Uifaces、Unavatar，没有逐文件授权映射。署名不是再分发许可证据。不明原图已留私有原件待核，预览改用明确披露的自有占位，不冒称视觉复刻。AdminLTE 徽标仅作产品识别并注明商标，不宣称权利齐。",
+        "Source Sans 3 字体为 SIL OFL 1.1；Bootstrap Icons 按官方 LICENSE 为 MIT；Bootstrap、Popper、OverlayScrollbars 为 MIT。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面"
+      ],
+      "originalSha256": "9f567fa8376d938cb008c7cb0b2270549cdc48f0343ae0e0a5d27d824190f225",
+      "originalSize": 64113
+    },
+    {
+      "id": "adminlte:users",
+      "title": "用户目录页",
+      "source": "AdminLTE",
+      "license": "MIT",
+      "upstream": "https://github.com/ColorlibHQ/AdminLTE/blob/e13df78a4d0c287e5fa57308e293f63e44e9dd0f/dist/users.html",
+      "website": "https://adminlte.io",
+      "revision": "e13df78a4d0c287e5fa57308e293f63e44e9dd0f",
+      "category": "数据与状态",
+      "format": "完整页面",
+      "kind": "完整页面",
+      "behavior": "浏览用户目录列表（预览头像为自有占位）",
+      "independenceNote": "用户表格目录，与其它来源成员页结构不同。",
+      "eExisting": false,
+      "officialAssets": [
+        "AdminLTELogo.png"
+      ],
+      "placeholderAssets": [
+        "ph-user1-128x128.jpg",
+        "ph-user8-128x128.jpg",
+        "ph-user3-128x128.jpg",
+        "ph-user2-160x160.jpg",
+        "ph-user6-128x128.jpg",
+        "ph-user4-128x128.jpg",
+        "ph-user7-128x128.jpg",
+        "ph-user5-128x128.jpg",
+        "ph-avatar5.jpg"
+      ],
+      "oversizedAssets": [],
+      "replacedAssets": 9,
+      "code": "batches/adminlte-20261111/originals/users.html",
+      "preview": "batches/adminlte-20261111/users.html",
+      "bundle": "batches/adminlte-20261111/bundles/users.zip",
+      "runtime": {
+        "assets": [
+          {
+            "key": "ph-user1-128x128.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user1-128x128.jpg",
+            "mime": "image/jpeg",
+            "bytes": 3964,
+            "sha256": "0bbfd34c185a045e25d62c9ec5ecce395d3548a6906ee39ea61c3fa043df3c1c"
+          },
+          {
+            "key": "ph-user8-128x128.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user8-128x128.jpg",
+            "mime": "image/jpeg",
+            "bytes": 4071,
+            "sha256": "31c6690da5078c5981f02bed276fa5cd39622790fd10b746b77a76facdf3551b"
+          },
+          {
+            "key": "ph-user3-128x128.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user3-128x128.jpg",
+            "mime": "image/jpeg",
+            "bytes": 3859,
+            "sha256": "acdf80f8bd8bd1f8cf46efecc4c21c3371160685614afd97c1a550f62c8c446c"
+          },
+          {
+            "key": "ph-user2-160x160.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user2-160x160.jpg",
+            "mime": "image/jpeg",
+            "bytes": 4138,
+            "sha256": "a55e0de45c0cea347861d45ac5ea52e5d72e7b8af320eb13421e61ea3f65eeb9"
+          },
+          {
+            "key": "AdminLTELogo.png",
+            "path": "batches/adminlte-20261111/assets/AdminLTELogo.png",
+            "mime": "image/png",
+            "bytes": 2637,
+            "sha256": "b921c343846d962d04dac6339a291e375f89e2d26e89fb3ded1f7ae830f6d456"
+          },
+          {
+            "key": "ph-user6-128x128.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user6-128x128.jpg",
+            "mime": "image/jpeg",
+            "bytes": 3838,
+            "sha256": "d814dc482f6ac21564ae64772e21bc32a8f8a4e2348b3783072255d98f3fee36"
+          },
+          {
+            "key": "ph-user4-128x128.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user4-128x128.jpg",
+            "mime": "image/jpeg",
+            "bytes": 4241,
+            "sha256": "8c5a858e51f953c0c31b07d60502db888fd7f74a11794fb337d702239fa33b54"
+          },
+          {
+            "key": "ph-user7-128x128.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user7-128x128.jpg",
+            "mime": "image/jpeg",
+            "bytes": 3919,
+            "sha256": "fcad07de3f47c9fe7669f04de0a3dc8dafbc4fdbe7d9e5b986f226e5bd54e72f"
+          },
+          {
+            "key": "ph-user5-128x128.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user5-128x128.jpg",
+            "mime": "image/jpeg",
+            "bytes": 4028,
+            "sha256": "f598ca34b6d7aacd4a57c4b0145de8ba3cbf99bc9f62d1b88f42e953e1a6d46c"
+          },
+          {
+            "key": "ph-avatar5.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-avatar5.jpg",
+            "mime": "image/jpeg",
+            "bytes": 5660,
+            "sha256": "23f0eb7a627c877b5c36ecbbb6b332f198f332a5f18669a70a8d15ef09af7648"
+          }
+        ]
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "源码级不同点：用户表格目录，与其它来源成员页结构不同。",
+        "AdminLTE 代码为 MIT。官方 README Image credits 只列出 Pixeden、Graphicsfuel、Pickaface、Unsplash、Uifaces、Unavatar，没有逐文件授权映射。署名不是再分发许可证据。不明原图已留私有原件待核，预览改用明确披露的自有占位，不冒称视觉复刻。AdminLTE 徽标仅作产品识别并注明商标，不宣称权利齐。",
+        "Source Sans 3 字体为 SIL OFL 1.1；Bootstrap Icons 按官方 LICENSE 为 MIT；Bootstrap、Popper、OverlayScrollbars 为 MIT。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面"
+      ],
+      "originalSha256": "ee57d2643c0ad7f12ff1a1d326bca14ca00a78d5c39a3aaa6ec512b61b2f6220",
+      "originalSize": 78036
+    },
+    {
+      "id": "adminlte:wizard",
+      "title": "分步表单页",
+      "source": "AdminLTE",
+      "license": "MIT",
+      "upstream": "https://github.com/ColorlibHQ/AdminLTE/blob/e13df78a4d0c287e5fa57308e293f63e44e9dd0f/dist/forms/wizard.html",
+      "website": "https://adminlte.io",
+      "revision": "e13df78a4d0c287e5fa57308e293f63e44e9dd0f",
+      "category": "输入与选择",
+      "format": "完整页面",
+      "kind": "完整页面",
+      "behavior": "浏览分步表单（提交已拦截）",
+      "independenceNote": "分步表单向导整页。",
+      "eExisting": false,
+      "officialAssets": [
+        "AdminLTELogo.png"
+      ],
+      "placeholderAssets": [
+        "ph-user1-128x128.jpg",
+        "ph-user8-128x128.jpg",
+        "ph-user3-128x128.jpg",
+        "ph-user2-160x160.jpg"
+      ],
+      "oversizedAssets": [],
+      "replacedAssets": 4,
+      "code": "batches/adminlte-20261111/originals/wizard.html",
+      "preview": "batches/adminlte-20261111/wizard.html",
+      "bundle": "batches/adminlte-20261111/bundles/wizard.zip",
+      "runtime": {
+        "assets": [
+          {
+            "key": "ph-user1-128x128.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user1-128x128.jpg",
+            "mime": "image/jpeg",
+            "bytes": 3964,
+            "sha256": "0bbfd34c185a045e25d62c9ec5ecce395d3548a6906ee39ea61c3fa043df3c1c"
+          },
+          {
+            "key": "ph-user8-128x128.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user8-128x128.jpg",
+            "mime": "image/jpeg",
+            "bytes": 4071,
+            "sha256": "31c6690da5078c5981f02bed276fa5cd39622790fd10b746b77a76facdf3551b"
+          },
+          {
+            "key": "ph-user3-128x128.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user3-128x128.jpg",
+            "mime": "image/jpeg",
+            "bytes": 3859,
+            "sha256": "acdf80f8bd8bd1f8cf46efecc4c21c3371160685614afd97c1a550f62c8c446c"
+          },
+          {
+            "key": "ph-user2-160x160.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user2-160x160.jpg",
+            "mime": "image/jpeg",
+            "bytes": 4138,
+            "sha256": "a55e0de45c0cea347861d45ac5ea52e5d72e7b8af320eb13421e61ea3f65eeb9"
+          },
+          {
+            "key": "AdminLTELogo.png",
+            "path": "batches/adminlte-20261111/assets/AdminLTELogo.png",
+            "mime": "image/png",
+            "bytes": 2637,
+            "sha256": "b921c343846d962d04dac6339a291e375f89e2d26e89fb3ded1f7ae830f6d456"
+          }
+        ]
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "源码级不同点：分步表单向导整页。",
+        "AdminLTE 代码为 MIT。官方 README Image credits 只列出 Pixeden、Graphicsfuel、Pickaface、Unsplash、Uifaces、Unavatar，没有逐文件授权映射。署名不是再分发许可证据。不明原图已留私有原件待核，预览改用明确披露的自有占位，不冒称视觉复刻。AdminLTE 徽标仅作产品识别并注明商标，不宣称权利齐。",
+        "Source Sans 3 字体为 SIL OFL 1.1；Bootstrap Icons 按官方 LICENSE 为 MIT；Bootstrap、Popper、OverlayScrollbars 为 MIT。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面"
+      ],
+      "originalSha256": "3fb7cb8b03ddca8c16883e5219efe79c1831b49d383d54146a4ab49110697a25",
+      "originalSize": 63409
+    },
+    {
+      "id": "adminlte:login",
+      "title": "后台卡片登录页",
+      "source": "AdminLTE",
+      "license": "MIT",
+      "upstream": "https://github.com/ColorlibHQ/AdminLTE/blob/e13df78a4d0c287e5fa57308e293f63e44e9dd0f/dist/examples/login.html",
+      "website": "https://adminlte.io",
+      "revision": "e13df78a4d0c287e5fa57308e293f63e44e9dd0f",
+      "category": "输入与选择",
+      "format": "完整页面",
+      "kind": "完整页面",
+      "behavior": "填写登录表单（提交已拦截，不表示登录成功）。未收 login-v2 等同壳细变。",
+      "independenceNote": "居中卡片登录。只收 examples/login.html，不收 login-v2 等布局细变。与其它来源登录页结构不同。",
+      "eExisting": false,
+      "officialAssets": [],
+      "placeholderAssets": [],
+      "oversizedAssets": [],
+      "replacedAssets": 0,
+      "code": "batches/adminlte-20261111/originals/login.html",
+      "preview": "batches/adminlte-20261111/login.html",
+      "bundle": "batches/adminlte-20261111/bundles/login.zip",
+      "runtime": {
+        "assets": []
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "源码级不同点：居中卡片登录。只收 examples/login.html，不收 login-v2 等布局细变。与其它来源登录页结构不同。",
+        "AdminLTE 代码为 MIT。官方 README Image credits 只列出 Pixeden、Graphicsfuel、Pickaface、Unsplash、Uifaces、Unavatar，没有逐文件授权映射。署名不是再分发许可证据。不明原图已留私有原件待核，预览改用明确披露的自有占位，不冒称视觉复刻。AdminLTE 徽标仅作产品识别并注明商标，不宣称权利齐。",
+        "Source Sans 3 字体为 SIL OFL 1.1；Bootstrap Icons 按官方 LICENSE 为 MIT；Bootstrap、Popper、OverlayScrollbars 为 MIT。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面"
+      ],
+      "originalSha256": "bec753830404ece0f7c8396968d83ff662ec745defb7b87144124d59087d3869",
+      "originalSize": 9251
+    },
+    {
+      "id": "adminlte:register",
+      "title": "后台卡片注册页",
+      "source": "AdminLTE",
+      "license": "MIT",
+      "upstream": "https://github.com/ColorlibHQ/AdminLTE/blob/e13df78a4d0c287e5fa57308e293f63e44e9dd0f/dist/examples/register.html",
+      "website": "https://adminlte.io",
+      "revision": "e13df78a4d0c287e5fa57308e293f63e44e9dd0f",
+      "category": "输入与选择",
+      "format": "完整页面",
+      "kind": "完整页面",
+      "behavior": "填写注册表单（提交已拦截，不表示注册成功）。未收 register-v2 等同壳细变。",
+      "independenceNote": "居中卡片注册。只收 examples/register.html。",
+      "eExisting": false,
+      "officialAssets": [],
+      "placeholderAssets": [],
+      "oversizedAssets": [],
+      "replacedAssets": 0,
+      "code": "batches/adminlte-20261111/originals/register.html",
+      "preview": "batches/adminlte-20261111/register.html",
+      "bundle": "batches/adminlte-20261111/bundles/register.zip",
+      "runtime": {
+        "assets": []
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "源码级不同点：居中卡片注册。只收 examples/register.html。",
+        "AdminLTE 代码为 MIT。官方 README Image credits 只列出 Pixeden、Graphicsfuel、Pickaface、Unsplash、Uifaces、Unavatar，没有逐文件授权映射。署名不是再分发许可证据。不明原图已留私有原件待核，预览改用明确披露的自有占位，不冒称视觉复刻。AdminLTE 徽标仅作产品识别并注明商标，不宣称权利齐。",
+        "Source Sans 3 字体为 SIL OFL 1.1；Bootstrap Icons 按官方 LICENSE 为 MIT；Bootstrap、Popper、OverlayScrollbars 为 MIT。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面"
+      ],
+      "originalSha256": "e57fbf134f38e99aa081665150f72795c28bc39b01624d0f911558f02b55efb4",
+      "originalSize": 9600
+    },
+    {
+      "id": "adminlte:forgot-password",
+      "title": "后台找回密码页",
+      "source": "AdminLTE",
+      "license": "MIT",
+      "upstream": "https://github.com/ColorlibHQ/AdminLTE/blob/e13df78a4d0c287e5fa57308e293f63e44e9dd0f/dist/examples/forgot-password.html",
+      "website": "https://adminlte.io",
+      "revision": "e13df78a4d0c287e5fa57308e293f63e44e9dd0f",
+      "category": "输入与选择",
+      "format": "完整页面",
+      "kind": "完整页面",
+      "behavior": "填写找回密码表单（提交已拦截，不会发送邮件）",
+      "independenceNote": "独立完成的找回密码页，不是登录页的细变。",
+      "eExisting": false,
+      "officialAssets": [],
+      "placeholderAssets": [],
+      "oversizedAssets": [],
+      "replacedAssets": 0,
+      "code": "batches/adminlte-20261111/originals/forgot-password.html",
+      "preview": "batches/adminlte-20261111/forgot-password.html",
+      "bundle": "batches/adminlte-20261111/bundles/forgot-password.zip",
+      "runtime": {
+        "assets": []
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "源码级不同点：独立完成的找回密码页，不是登录页的细变。",
+        "AdminLTE 代码为 MIT。官方 README Image credits 只列出 Pixeden、Graphicsfuel、Pickaface、Unsplash、Uifaces、Unavatar，没有逐文件授权映射。署名不是再分发许可证据。不明原图已留私有原件待核，预览改用明确披露的自有占位，不冒称视觉复刻。AdminLTE 徽标仅作产品识别并注明商标，不宣称权利齐。",
+        "Source Sans 3 字体为 SIL OFL 1.1；Bootstrap Icons 按官方 LICENSE 为 MIT；Bootstrap、Popper、OverlayScrollbars 为 MIT。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面"
+      ],
+      "originalSha256": "82711b47fd0c088d370378822ff4d3150e4f6bd73865f44a5ba2a600558bcf32",
+      "originalSize": 8058
+    },
+    {
+      "id": "adminlte:chartjs",
+      "title": "图表分析页",
+      "source": "AdminLTE",
+      "license": "MIT",
+      "upstream": "https://github.com/ColorlibHQ/AdminLTE/blob/e13df78a4d0c287e5fa57308e293f63e44e9dd0f/dist/charts/chartjs.html",
+      "website": "https://adminlte.io",
+      "revision": "e13df78a4d0c287e5fa57308e293f63e44e9dd0f",
+      "category": "数据与状态",
+      "format": "完整页面",
+      "kind": "完整页面",
+      "behavior": "浏览官方 Chart.js 4.5.1 图表分析页（库已本地化；不等于图表已验收）",
+      "independenceNote": "多图分析整页，依赖官方 Chart.js 4.5.1，不是换色变体。",
+      "eExisting": false,
+      "officialAssets": [
+        "AdminLTELogo.png"
+      ],
+      "placeholderAssets": [
+        "ph-user1-128x128.jpg",
+        "ph-user8-128x128.jpg",
+        "ph-user3-128x128.jpg",
+        "ph-user2-160x160.jpg"
+      ],
+      "oversizedAssets": [],
+      "replacedAssets": 4,
+      "code": "batches/adminlte-20261111/originals/chartjs.html",
+      "preview": "batches/adminlte-20261111/chartjs.html",
+      "bundle": "batches/adminlte-20261111/bundles/chartjs.zip",
+      "runtime": {
+        "assets": [
+          {
+            "key": "ph-user1-128x128.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user1-128x128.jpg",
+            "mime": "image/jpeg",
+            "bytes": 3964,
+            "sha256": "0bbfd34c185a045e25d62c9ec5ecce395d3548a6906ee39ea61c3fa043df3c1c"
+          },
+          {
+            "key": "ph-user8-128x128.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user8-128x128.jpg",
+            "mime": "image/jpeg",
+            "bytes": 4071,
+            "sha256": "31c6690da5078c5981f02bed276fa5cd39622790fd10b746b77a76facdf3551b"
+          },
+          {
+            "key": "ph-user3-128x128.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user3-128x128.jpg",
+            "mime": "image/jpeg",
+            "bytes": 3859,
+            "sha256": "acdf80f8bd8bd1f8cf46efecc4c21c3371160685614afd97c1a550f62c8c446c"
+          },
+          {
+            "key": "ph-user2-160x160.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user2-160x160.jpg",
+            "mime": "image/jpeg",
+            "bytes": 4138,
+            "sha256": "a55e0de45c0cea347861d45ac5ea52e5d72e7b8af320eb13421e61ea3f65eeb9"
+          },
+          {
+            "key": "AdminLTELogo.png",
+            "path": "batches/adminlte-20261111/assets/AdminLTELogo.png",
+            "mime": "image/png",
+            "bytes": 2637,
+            "sha256": "b921c343846d962d04dac6339a291e375f89e2d26e89fb3ded1f7ae830f6d456"
+          }
+        ],
+        "scripts": [
+          "chartjs-4-5-1.js",
+          "page-chartjs.js",
+          "runtime.js"
+        ]
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "源码级不同点：多图分析整页，依赖官方 Chart.js 4.5.1，不是换色变体。",
+        "AdminLTE 代码为 MIT。官方 README Image credits 只列出 Pixeden、Graphicsfuel、Pickaface、Unsplash、Uifaces、Unavatar，没有逐文件授权映射。署名不是再分发许可证据。不明原图已留私有原件待核，预览改用明确披露的自有占位，不冒称视觉复刻。AdminLTE 徽标仅作产品识别并注明商标，不宣称权利齐。",
+        "Source Sans 3 字体为 SIL OFL 1.1；Bootstrap Icons 按官方 LICENSE 为 MIT；Bootstrap、Popper、OverlayScrollbars 为 MIT。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面",
+        "该页额外官方库已按相对路径保存，并以现有 runtime.scripts 契约接入；页内初始化脚本已从预览 HTML 抽出为已声明分片，这是窄适配，不等于交互已验收。"
+      ],
+      "originalSha256": "f18adc7c0e34209f68f27509a930d6dadb9d2ff47bfa91a3e6f4fb8051109f4f",
+      "originalSize": 74459
+    },
+    {
+      "id": "adminlte:editors",
+      "title": "富文本编辑页",
+      "source": "AdminLTE",
+      "license": "MIT",
+      "upstream": "https://github.com/ColorlibHQ/AdminLTE/blob/e13df78a4d0c287e5fa57308e293f63e44e9dd0f/dist/forms/editors.html",
+      "website": "https://adminlte.io",
+      "revision": "e13df78a4d0c287e5fa57308e293f63e44e9dd0f",
+      "category": "输入与选择",
+      "format": "完整页面",
+      "kind": "完整页面",
+      "behavior": "浏览官方 Quill 2.0.3 编辑页（库已本地化；提交已拦截）。Quill 为 BSD-3-Clause。",
+      "independenceNote": "富文本编辑整页，不是表单原语。",
+      "eExisting": false,
+      "officialAssets": [
+        "AdminLTELogo.png"
+      ],
+      "placeholderAssets": [
+        "ph-user1-128x128.jpg",
+        "ph-user8-128x128.jpg",
+        "ph-user3-128x128.jpg",
+        "ph-user2-160x160.jpg"
+      ],
+      "oversizedAssets": [],
+      "replacedAssets": 4,
+      "code": "batches/adminlte-20261111/originals/editors.html",
+      "preview": "batches/adminlte-20261111/editors.html",
+      "bundle": "batches/adminlte-20261111/bundles/editors.zip",
+      "runtime": {
+        "assets": [
+          {
+            "key": "ph-user1-128x128.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user1-128x128.jpg",
+            "mime": "image/jpeg",
+            "bytes": 3964,
+            "sha256": "0bbfd34c185a045e25d62c9ec5ecce395d3548a6906ee39ea61c3fa043df3c1c"
+          },
+          {
+            "key": "ph-user8-128x128.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user8-128x128.jpg",
+            "mime": "image/jpeg",
+            "bytes": 4071,
+            "sha256": "31c6690da5078c5981f02bed276fa5cd39622790fd10b746b77a76facdf3551b"
+          },
+          {
+            "key": "ph-user3-128x128.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user3-128x128.jpg",
+            "mime": "image/jpeg",
+            "bytes": 3859,
+            "sha256": "acdf80f8bd8bd1f8cf46efecc4c21c3371160685614afd97c1a550f62c8c446c"
+          },
+          {
+            "key": "ph-user2-160x160.jpg",
+            "path": "batches/adminlte-20261111/assets/ph-user2-160x160.jpg",
+            "mime": "image/jpeg",
+            "bytes": 4138,
+            "sha256": "a55e0de45c0cea347861d45ac5ea52e5d72e7b8af320eb13421e61ea3f65eeb9"
+          },
+          {
+            "key": "AdminLTELogo.png",
+            "path": "batches/adminlte-20261111/assets/AdminLTELogo.png",
+            "mime": "image/png",
+            "bytes": 2637,
+            "sha256": "b921c343846d962d04dac6339a291e375f89e2d26e89fb3ded1f7ae830f6d456"
+          }
+        ],
+        "scripts": [
+          "quill-2-0-3.js",
+          "page-editors.js",
+          "runtime.js"
+        ]
+      },
+      "gaps": [
+        "源码级独立性初筛：不同来源、结构/交互/设计具有实质差异的完整页面可并存；不是“同一用途全库只留一件”。跨源视觉去重尚未在真实浏览器核验，本条不能称为已核独立。",
+        "源码级不同点：富文本编辑整页，不是表单原语。",
+        "AdminLTE 代码为 MIT。官方 README Image credits 只列出 Pixeden、Graphicsfuel、Pickaface、Unsplash、Uifaces、Unavatar，没有逐文件授权映射。署名不是再分发许可证据。不明原图已留私有原件待核，预览改用明确披露的自有占位，不冒称视觉复刻。AdminLTE 徽标仅作产品识别并注明商标，不宣称权利齐。",
+        "Source Sans 3 字体为 SIL OFL 1.1；Bootstrap Icons 按官方 LICENSE 为 MIT；Bootstrap、Popper、OverlayScrollbars 为 MIT。",
+        "本地预览脚本只拦截链接与表单提交，不表示源界面既有交互已验收，也不表示后端业务成功",
+        "尚未在真实浏览器打开视觉与核心交互，也没有真实运行页封面",
+        "该页额外官方库已按相对路径保存，并以现有 runtime.scripts 契约接入；页内初始化脚本已从预览 HTML 抽出为已声明分片，这是窄适配，不等于交互已验收。",
+        "Quill 2.0.3 为 BSD-3-Clause，许可证原文在源码包 vendor/LICENSE-QUILL.txt。"
+      ],
+      "originalSha256": "46c2483d5b7cf405240dbfa616707b1b1d85d533f0fbdd5f9d4a37e30b3c220b",
+      "originalSize": 56023
+    }
+  ],
+  "independenceScreening": "source-level-only",
+  "visualDedup": "pending"
+}

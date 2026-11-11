@@ -40,7 +40,7 @@ export default [
     "recommendation": "review",
     "layer": "component",
     "scopeLabel": "文档树导航与本地编辑",
-    "reason": "与一般CM文档树高度重叠，SilverBullet独特知识机制没有展示",
+    "reason": "2026-11-10 浏览器复验：文档树可切换且无障碍快照有正文，但右侧编辑区在桌面视觉上持续空白。核心阅读/编辑视觉不可用，参考价值低。按既有 review 机制可逆移出默认精选并留在待复核，源码与条目保留。不宣称引擎已损坏。",
     "deliveredScope": "原TopBar/TreeView+text-document分支，宿主3文档两栏；移除page-live-preview、SpaceLua/Vim/插件/同步",
     "evidence": [
       "ui-vault-581/apps/atlas-sample/batches/silverbullet-documents-01/README.md",
@@ -269,7 +269,7 @@ export default [
     "recommendation": "review",
     "layer": "component",
     "scopeLabel": "AstryX · 素材库浏览与筛选",
-    "reason": "iframe CSP 阻断预览图，卡片预览区破图/空白，核心视觉缺失，不做封面",
+    "reason": "原 template-assets 图无法在现有 img-src（仅 data/blob）下加载。现有 30 张缩略图是本地装饰 SVG 替代素材，不是原模板摄影，视觉保真度降低，不能称为原视觉已修复。筛选/搜索仍可用，但主要参考价值已减弱，继续留在待复核，不进入默认精选。",
     "evidence": [
       "/workspace/scratch/15f43349f656/ui-vault-581/reports/thumbnail-capture/records/astryx--library.json",
       "/workspace/scratch/15f43349f656/ui-vault-581/reports/thumbnail-capture/final-closeout-summary.json"
@@ -395,8 +395,8 @@ export default [
     "id": "uilayout:timeline-animation-index",
     "recommendation": "review",
     "layer": "component",
-    "scopeLabel": "timeline-animation-index",
-    "reason": "Iframe screenshot is blank despite some accessibility text being present.",
+    "scopeLabel": "常见问题区块滚动显现",
+    "reason": "不是错文件映射。官方 timeline-animation/index.tsx 首屏就是 UI Layouts 常见问题区块目录，滚动显现才是时间线能力。中文名已改为「常见问题区块滚动显现」。保留原件，待浏览器复验滚动显现后再议，不凭旧名称淘汰。",
     "evidence": [
       "/workspace/scratch/15f43349f656/ui-vault-581/reports/thumbnail-capture/records/uilayout--timeline-animation-index.json",
       "/workspace/scratch/15f43349f656/ui-vault-581/reports/thumbnail-capture/final-closeout-summary.json"
@@ -1348,7 +1348,7 @@ export default [
     "recommendation": "review",
     "layer": "page",
     "scopeLabel": "原画笔/图层/历史完整",
-    "reason": "真实可画不等于原版外观；广泛资产改动可能显著影响工具可读性，优先原生复验。",
+    "reason": "2026-11-10 浏览器复验：画笔已选且坐标随指针变化，但多次真实拖绘后画布无可见笔迹。核心绘制不可用，代码根因未证，参考价值低。按既有 review 可逆移出默认精选并留在待复核，源码与条目保留。不继续无限改工具，也不把未证实损坏写成结论。",
     "deliveredScope": "原画笔/图层/历史完整，但功能图标/位图/字体全部改系统文字符号，默认平滑helper也有透明替换。",
     "evidence": [
       "ui-runtime-health-integration/apps/atlas-sample/batches/minipaint-workspace-01/README.md",
@@ -1421,10 +1421,10 @@ export default [
   },
   {
     "id": "jsoncrack:structured-data-atlas",
-    "recommendation": "retain",
+    "recommendation": "review",
     "layer": "component",
     "scopeLabel": "官方Chrome扩展Raw/Graph+节点详情",
-    "reason": "保留结构查看场景，不称官网Monaco全编辑器；同步布局输入上限与冷启动需关注。",
+    "reason": "2026-11-10 线上未改动预览补拍（hash 仅映射资格，非视觉验收）：#demo 预览为深色空窗，仅见 “JSON viewer unavailable. Close and reopen.” 及关闭/重开控件，未见结构化数据图谱或编辑主界面。这是预览内错误表面，不是仅有的 console 日志。仅记录此环境预览失败，根因未知，不能凭单条错误文案判定上游源码已损坏。按既有 review 机制可逆移出默认精选并留在待复核，源码与条目保留，不永久删除。错误界面截图只作取证，不作为正常 UI 封面，也不用库存旧图充数。",
     "deliveredScope": "官方Chrome扩展Raw/Graph+节点详情，原解析与ELK，本地输入明确宿主。",
     "evidence": [
       "ui-runtime-health-integration/apps/atlas-sample/batches/jsoncrack-extension-01/README.md",
@@ -3663,9 +3663,9 @@ export default [
     "id": "fancy:elastic-line",
     "recommendation": "review",
     "layer": "experiment",
-    "reason": "历史观察待复验，非当前故障复现：原SVG二次曲线与pathLength动画存在，useDimensions依赖首次几何及resize；匹配资源的Grok只见大字未见线，需真实几何/线段复验，尚未证明根因。",
+    "reason": "2026-11-10 复验曾确认路径几何随拖动更新但曲线不可见。代码已去掉 pathLength:0 入场并固定可见描边，真实浏览器尚未复验，不能记通过。不凭名称淘汰。共享 runtime 变更后，同批已有 webp 与当前资源 hash 不再一致，不得盲回填，待重拍。",
     "scopeLabel": "弹性曲线排版实验",
-    "deliveredScope": "原SVG二次曲线与pathLength动画存在，useDimensions依赖首次几何及resize；匹配资源的Grok只见大字未见线，需真实几何/线段复验，尚未证明根因。",
+    "deliveredScope": "官方弹性线交互仍在；描边改为默认可见，待真实浏览器确认。不是名称错误条目。",
     "evidence": [
       "/tmp/ui-fancy-adapt/src/fancy/components/physics/elastic-line.tsx",
       "/tmp/ui-fancy-adapt/src/hooks/use-dimensions.ts"
@@ -4905,10 +4905,10 @@ export default [
   },
   {
     "id": "cult:hero-heatmap",
-    "recommendation": "retain",
+    "recommendation": "review",
     "layer": "component",
     "scopeLabel": "热力轮廓Shader首屏组",
-    "reason": "原构图与算法保留，不是AI生成服务；真实设备渲染待验，命令桩不能代表像素。",
+    "reason": "2026-11-10 线上未改动预览补拍（hash 仅映射资格，非视觉验收）：首屏文案可见，但预期 WebGL2 热力图形区域为空白，未见明确失败提示。核心主视觉不可用，参考价值降低。按既有 review 机制可逆移出默认精选并留在待复核，源码与条目保留。不把空白 WebGL 区写成已证实的设备或引擎损坏，也不把它当作已修好。",
     "deliveredScope": "原3组Demo、原Cult/diamond矢量、原图像预处理及Paper shader，CTA仅说明。",
     "evidence": "ui-cult-image-heroes-local/main.tsx; ui-cult-image-heroes-local/src/hero-heatmap-demo.tsx; ui-cult-image-heroes-local/src/hero-heatmap.tsx; ui-runtime-health-integration/apps/atlas-sample/batches/cult-image-heroes-01/heatmap/README.md"
   },
@@ -4995,28 +4995,28 @@ export default [
   },
   {
     "id": "cult:fluid-ai-workloads",
-    "recommendation": "retain",
+    "recommendation": "review",
     "layer": "component",
     "scopeLabel": "工作负载流体SVG插画",
-    "reason": "metadata准确静态插画，保留，不因无交互降级。",
+    "reason": "2026-11-10 线上未改动预览补拍（hash 仅映射资格，非视觉验收）：连接插画可见，但较大内容卡为空白灰占位，工作负载细节未显示。示意主体不完整，参考价值降低。按既有 review 机制可逆移出默认精选并留在待复核，源码与条目保留。不据此宣称组件已损坏，也不把空白示意当作已修好。",
     "deliveredScope": "原400×200 SVG曲线/层级/标记，示例仅传尺寸，无任务执行handler。",
     "evidence": "ui-cult-static-local/main.template.tsx; ui-cult-static-local/src/fluid-ai-workloads-demo.tsx; ui-cult-static-local/src/fluid-ai-workloads.tsx; ui-runtime-health-integration/apps/atlas-sample/batches/cult-static-01/fluid-ai-workloads/README.md"
   },
   {
     "id": "cult:illustration-fluid-rendering",
-    "recommendation": "retain",
+    "recommendation": "review",
     "layer": "component",
     "scopeLabel": "流体渲染SVG插画",
-    "reason": "保静态组件，不是实时渲染性能图或商务服务。",
+    "reason": "2026-11-10 线上未改动预览补拍（hash 仅映射资格，非视觉验收）：连接插画可见，但主内容盒呈空白灰占位，预期标签未显示。示意主体不完整，参考价值降低。按既有 review 机制可逆移出默认精选并留在待复核，源码与条目保留。不据此宣称组件已损坏，也不把空白示意当作已修好。",
     "deliveredScope": "原完整SVG图形/滤镜/Shopify等装饰标记，wrapper只挂原FluidRendering。",
     "evidence": "ui-cult-static-next-local/main.template.tsx; ui-cult-static-next-local/src/illustration-fluid-rendering-demo.tsx; ui-cult-static-next-local/src/illustration-fluid-rendering.tsx; ui-runtime-health-integration/apps/atlas-sample/batches/cult-static-02/illustration-fluid-rendering/README.md"
   },
   {
     "id": "cult:hero-liquid-metal",
-    "recommendation": "retain",
+    "recommendation": "review",
     "layer": "component",
     "scopeLabel": "液态金属Shader首屏组",
-    "reason": "保首屏组与真实Shader，不称整站；设备失败有明确停止，mockGPU非像素。",
+    "reason": "2026-11-10 线上未改动预览补拍（hash 仅映射资格，非视觉验收）：首屏文案与 CTA 可见，但预期 WebGL2 液态金属图形区域为空白，未见明确失败提示。核心主视觉不可用，参考价值降低。按既有 review 机制可逆移出默认精选并留在待复核，源码与条目保留。不把空白 WebGL 区写成已证实的设备或引擎损坏，也不把它当作已修好。",
     "deliveredScope": "原3组Demo/图像轮廓预处理/Paper着色器、原SVG资产与静态CTA。",
     "evidence": "ui-cult-image-heroes-local/main.tsx; ui-cult-image-heroes-local/src/hero-liquid-metal-demo.tsx; ui-cult-image-heroes-local/src/hero-liquid-metal.tsx; ui-runtime-health-integration/apps/atlas-sample/batches/cult-image-heroes-01/liquid-metal/README.md"
   },
@@ -5040,10 +5040,10 @@ export default [
   },
   {
     "id": "cult:illustration-graph",
-    "recommendation": "retain",
+    "recommendation": "review",
     "layer": "component",
     "scopeLabel": "图结构SVG插画",
-    "reason": "静态图形范围准确，保留不冒充图编辑器。",
+    "reason": "2026-11-10 线上未改动预览补拍（hash 仅映射资格，非视觉验收）：插画仅见中央蓝线，预期坐标轴、标签与数值均未显示。示意主体不完整，参考价值降低。按既有 review 机制可逆移出默认精选并留在待复核，源码与条目保留。不据此宣称组件已损坏，也不把缺失图形当作已修好。",
     "deliveredScope": "原节点/线条/filter的SVG与默认wrapper，不提供拖动或图数据编辑。",
     "evidence": "ui-cult-static-local/main.template.tsx; ui-cult-static-local/src/illustration-graph-demo.tsx; ui-cult-static-local/src/illustration-graph.tsx; ui-runtime-health-integration/apps/atlas-sample/batches/cult-static-01/illustration-graph/README.md"
   },
@@ -7147,10 +7147,10 @@ export default [
   },
   {
     "id": "astryx-core:stepper",
-    "recommendation": "retain",
+    "recommendation": "review",
     "layer": "component",
     "scopeLabel": "原三阶段步骤器",
-    "reason": "在明确演示边界内保留；未发现本轮新增已证不可达核心操作或假成功。原生效果未验不等于已证明失败。",
+    "reason": "2026-11-11 宿主夹具补步序号：原 Step 组件用 step+1 作为标记，宿主未传 step 导致 NaN。现已为 Prepare/Review/Done 传入 step 0/1/2。这是针对已证实夹具缺陷的最小修改，不是扩大修 UI。浏览器视觉确认仍未做，不能称为已修好。仍按既有 review 机制可逆留在待复核，源码与条目保留。此前 2026-11-10 线上未改动预览补拍记录了 NaN 外观（hash 仅映射资格，非视觉验收）。",
     "deliveredScope": "原三阶段步骤器；Next与reset，不是真实业务进度",
     "evidence": [
       "ui-astryx-navigation-local/src/stepper.tsx",
@@ -9456,10 +9456,10 @@ export default [
   },
   {
     "id": "svar:gantt-task-editor",
-    "recommendation": "retain",
+    "recommendation": "review",
     "layer": "page",
     "scopeLabel": "原GanttEditor任务/依赖/侧栏",
-    "reason": "保留明确范围内的原示例/组件或原引擎场景；不因静态、无后台或未做native验收降级。范围差异单列，不冒称全站完整或原生通过。",
+    "reason": "2026-11-10 线上未改动预览补拍（hash 仅映射资格，非视觉验收）：#demo 预览几乎为空白白底，仅见「预览发生错误：ResizeObserver loop completed with undelivered notifications.」，未见 Gantt 主界面（无任务行、时间尺或编辑器外壳）。这是预览内错误表面，不是仅有的 console 日志。仅记录此环境预览失败，根因未知，不能凭单条 ResizeObserver 信息判定上游源码已损坏。按既有 review 机制可逆移出默认精选并留在待复核，源码与条目保留，不永久删除。错误界面截图只作取证，不作为正常 UI 封面，也不用库存旧图充数。",
     "deliveredScope": "原GanttEditor任务/依赖/侧栏；Lucide替字体图标，新建日期可能在窗外",
     "evidence": [
       "ui-runtime-health-integration/apps/atlas-sample/batches/svar-gantt-01/README.md",
@@ -9889,10 +9889,10 @@ export default [
   },
   {
     "id": "zulip:topic-organized-collaboration",
-    "recommendation": "retain",
+    "recommendation": "review",
     "layer": "page",
     "scopeLabel": "原Zulip消息模板三话题六虚构消息",
-    "reason": "保留明确范围内的原示例/组件或原引擎场景；不因静态、无后台或未做native验收降级。范围差异单列，不冒称全站完整或原生通过。",
+    "reason": "2026-11-10 线上未改动预览补拍（hash 仅映射资格，非视觉验收）：页头与话题控件可见并显示 6 条消息计数，但大面积会话/消息区为空白，核心消息列表不可见。参考价值降低。按既有 review 机制可逆移出默认精选并留在待复核，源码与条目保留。不把消息区空白写成已证实的后端或引擎损坏，也不把它当作已修好。",
     "deliveredScope": "原Zulip消息模板三话题六虚构消息；原创本地筛选非narrow_state，Lucide替头像/功能图标",
     "evidence": [
       "ui-runtime-health-integration/apps/atlas-sample/batches/zulip-reading-01/README.md",

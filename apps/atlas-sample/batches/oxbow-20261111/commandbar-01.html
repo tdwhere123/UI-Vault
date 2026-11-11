@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-Hans" class="font-sans antialiased">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>命令面板</title>
+  <link rel="stylesheet" href="runtime.css">
+</head>
+<body class="bg-background" data-demo="commandbar-01">
+<!--
+  
+  - [x-cloak] hides uninitialized Alpine content until hydration to avoid flicker.
+ 
+ 
+
+--><div class="w-full max-w-md bg-background shadow-lg rounded-xl outline outline-border" x-data="{
+      open: true,
+      query: '',
+      selected: 0,
+      options: [
+        { id:'new', text:'New Project', desc:'Start something from scratch', icon:'plus', key:'N', href:'#new' },
+        { id:'tmpl', text:'Open Templates', desc:'Pick a starter pattern', icon:'component', key:'T', href:'#templates' },
+        { id:'docs', text:'View Docs', desc:'Guides and API reference', icon:'report', key:'D', href:'#docs' },
+        { id:'help', text:'Help &amp; Support', desc:'Contact and FAQ', icon:'lifebuoy', key:'H', href:'#help' },
+      ],
+      score(text, q){ q=(q||'').trim().toLowerCase(); if(!q) return 1; text=(text||'').toLowerCase(); if(text===q) return 1000; if(text.startsWith(q)) return 500; let i=0,j=0; while(i&lt;text.length&amp;&j&lt;q.length){ if(text[i]===q[j]) j++; i++; } return j===q.length?200:(text.includes(q)?100:-1); },
+      get filtered(){
+        const q=this.query; return this.options
+          .map(o=&gt;({o, s: Math.max(this.score(o.text,q), this.score(o.desc,q))}))
+          .filter(x=&gt;x.s&gt;=0)
+          .sort((a,b)=&gt; b.s - a.s)
+          .map(x=&gt;x.o);
+      },
+      openList(){ this.open = true; this.selected = 0; },
+      closeList(){ this.open = false; },
+      next(){ const n=this.filtered.length; if(!n) return; this.selected=(this.selected+1)%n; },
+      prev(){ const n=this.filtered.length; if(!n) return; this.selected=(this.selected-1+n)%n; },
+      choose(idx=this.selected){ const item=this.filtered[idx]; if(!item) return; window.dispatchEvent(new CustomEvent('cmd:choose', { detail:item })); this.closeList(); },
+      onKey(e){
+        // Open
+        if((e.metaKey||e.ctrlKey) &amp;&amp; !e.shiftKey &amp;&amp; !e.altKey &amp;&amp; e.key.toLowerCase()==='k'){ e.preventDefault(); this.openList(); this.$nextTick(()=&gt; this.$refs.input?.focus()); return; }
+        if(e.key==='/'){ e.preventDefault(); this.openList(); this.$nextTick(()=&gt; this.$refs.input?.focus()); return; }
+        if(!this.open) return;
+        if(e.key==='Escape'){ this.closeList(); return; }
+        // Single-letter shortcuts
+        const k = e.key.length===1 ? e.key.toUpperCase() : '';
+        if(k){ const idx=this.filtered.findIndex(o=&gt;o.key===k); if(idx&gt;-1){ e.preventDefault(); this.choose(idx); } }
+      }
+    }" @keydown.window="onKey($event)"><div class="p-2" @click.outside="closeList()"><div class="relative"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler-arrow-search size-5 pointer-events-none absolute top-3.5 left-4 text-muted-foreground" slot="icon"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"></path><path d="M21 21l-6 -6"></path></svg><input x-ref="input" x-model="query" @focus="openList()" @keydown.arrow-down.prevent="next()" @keydown.arrow-up.prevent="prev()" @keydown.enter.prevent="choose()" @keydown.escape.prevent="closeList()" class="w-full pr-16 bg-transparent border rounded-lg h-11 border-border text-foreground placeholder:text-muted-foreground pl-11 sm:text-sm focus:outline-none focus:border-border" placeholder="Quick actions…" autocomplete="off"><div class="pointer-events-none absolute right-2 top-1/2 -translate-y-1/2 hidden sm:flex gap-1 text-[0.70rem] text-muted-foreground"><kbd class="px-1 border rounded bg-background border-border">⌘</kbd><kbd class="px-1 border rounded bg-background border-border">K</kbd></div><button type="button" x-show="query.length&gt;0" @click="query=''; $nextTick(()=&gt; $refs.input?.focus())" class="absolute right-[3.1rem] top-1/2 -translate-y-1/2 size-7 inline-flex items-center justify-center rounded-md text-muted-foreground hover:text-muted-foreground hover:bg-background/10" aria-label="Clear search"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler-wave-x size-4"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M18 6l-12 12"></path><path d="M6 6l12 12"></path></svg></button></div><ul x-show="open" class="mt-2 overflow-auto rounded-lg max-h-64 ring-1 ring-border divide-y divide-border bg-background/5"><template x-for="(opt, idx) in filtered" :key="opt.id"><li :class="selected===idx ? 'bg-background/5' : ''" class="flex items-center justify-between px-3 py-2 cursor-pointer text-muted-foreground" @mouseenter="selected = idx" @click="choose(idx)"><div class="flex items-center gap-2"><div class="bg-background rounded size-7 grid place-items-center ring-1 ring-border"><template x-if="opt.icon==='plus'"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler-plus size-4"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M12 5l0 14"></path><path d="M5 12l14 0"></path></svg></template><template x-if="opt.icon==='component'"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler-layout-2 size-4"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M4 4m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v1a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z"></path><path d="M4 13m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v3a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z"></path><path d="M14 4m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v3a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z"></path><path d="M14 15m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v1a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z"></path></svg></template><template x-if="opt.icon==='report'"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler-report size-4"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M8 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h5.697"></path><path d="M18 14v4h4"></path><path d="M18 11v-4a2 2 0 0 0 -2 -2h-2"></path><path d="M8 3m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v0a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z"></path><path d="M18 18m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0"></path><path d="M8 11h4"></path><path d="M8 15h3"></path></svg></template><template x-if="opt.icon==='lifebuoy'"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler-arrow-lifebuoy size-4"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0"></path><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path><path d="M15 15l3.35 3.35"></path><path d="M9 15l-3.35 3.35"></path><path d="M5.65 5.65l3.35 3.35"></path><path d="M18.35 5.65l-3.35 3.35"></path></svg></template></div><div><div class="text-sm font-medium" x-text="opt.text"></div><div class="text-xs text-muted-foreground" x-text="opt.desc"></div></div></div><kbd class="text-[0.70rem] px-1 rounded bg-background border border-border text-muted-foreground" x-text="opt.key"></kbd></li></template><li x-show="filtered.length===0" class="px-3 py-4 text-sm italic text-center text-muted-foreground">No results</li></ul><div class="px-1 py-2 text-[0.70rem] text-muted-foreground flex items-center justify-between"><span>Tip: type / or press ⌘K</span><span class="hidden sm:inline">Use ↑ ↓ to navigate, ↵ to run</span></div></div></div>
+  <script src="runtime.js"></script>
+</body>
+</html>

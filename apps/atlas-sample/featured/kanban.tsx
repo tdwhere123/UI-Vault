@@ -74,8 +74,12 @@ export default function KanbanBoard({ as: Root = "main" }: { as?: "main" | "div"
             onOver={(on) => setOver(on ? c.id : (o) => (o === c.id ? null : o))}
             onMove={move}
             onDragStart={(id, e) => {
-              e.dataTransfer.setData("text/plain", id)
-              e.dataTransfer.effectAllowed = "move"
+              try {
+                e.dataTransfer.setData("text/plain", id)
+                e.dataTransfer.effectAllowed = "move"
+              } catch {
+                // Sandboxed preview iframes may reject setData; keep dragging id for drop.
+              }
               setDragging(id)
             }}
             onDragEnd={() => {

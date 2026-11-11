@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-Hans" class="font-sans antialiased">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>版本更新提示</title>
+  <link rel="stylesheet" href="runtime.css">
+</head>
+<body class="bg-background" data-demo="notification-update">
+<div class="flex items-center justify-center p-8 py-40 bg-background lg:py-56"><!-- Copy Start --><!-- 
+// Make sure to change  "open: false",  to  open: true. On the z-data="{}".
+//
+//Programmatic usage:
+//
+// window.dispatchEvent(new CustomEvent('notify', {
+//  detail: { type:'success', title:'Saved', message:'All good', timeout: 4000 }
+// }))
+--><div class="w-full max-w-xl mx-auto" x-data="{
+      toast: { open:true, version:'2.3.1', notes:'Performance improvements and small UI fixes.', expanded:false },
+      show(detail={}){
+        this.toast.version = detail.version || this.toast.version;
+        this.toast.notes = detail.notes || this.toast.notes;
+        this.toast.expanded = false;
+        this.toast.open = true;
+      },
+      reload(){ try{ location.reload(); }catch{ this.toast.open=false; } },
+      later(){ this.toast.open=false; }
+    }" x-init="window.addEventListener('notify', (e)=&gt; show(e.detail||{}))"><!-- Demo trigger --><div class="flex items-center justify-center gap-2"><button class="relative flex items-center justify-center text-center font-medium transition-colors duration-200 ease-in-out select-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:z-10 justify-center rounded-md text-muted-foreground bg-muted outline outline-border hover:opacity-90 focus-visible:outline-border h-9 px-4 text-sm" @click="show({ version:'3.0.0', notes:'Fresh look and faster previews.' })">Click to simulate update</button></div><!-- Live region (bottom-center) --><div aria-live="polite" class="fixed inset-x-0 bottom-0 flex justify-center px-4 pb-6 pointer-events-none sm:px-6"><div class="flex justify-center w-full max-w-lg"><div x-show="toast.open" x-transition:enter="transform ease-out duration-300" x-transition:enter-start="translate-y-2 opacity-0" x-transition:enter-end="translate-y-0 opacity-100" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" class="w-full bg-background shadow-lg pointer-events-auto rounded-xl outline outline-1 outline-border/5 transition -outline-offset-1 outline-border/10" role="status"><div class="p-4"><div class="flex items-start gap-3"><div class="text-info shrink-0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler-arrow-refresh size-5"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M20 11a8.1 8.1 0 0 0 -15.5 -2m-.5 -4v4h4"></path><path d="M4 13a8.1 8.1 0 0 0 15.5 2m.5 4v-4h-4"></path></svg></div><div class="flex-1 min-w-0"><div class="flex items-center gap-2"><p class="text-sm  text-sm font-medium text-foreground">Update available</p><span class="text-[0.70rem] px-2 py-0.5 rounded-full text-info bg-info/10">v<span x-text="toast.version"></span></span></div><p class="mt-1 text-xs text-muted-foreground line-clamp-2" x-text="toast.notes"></p><div class="flex items-center mt-4 gap-2"><button class="relative flex items-center justify-center text-center font-medium transition-colors duration-200 ease-in-out select-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:z-10 justify-center rounded-md text-background bg-foreground outline outline-foreground hover:opacity-90 focus-visible:outline-border h-7 px-3 text-xs" type="button" @click="reload()">Reload now</button><button class="relative flex items-center justify-center text-center font-medium transition-colors duration-200 ease-in-out select-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:z-10 justify-center rounded-md text-foreground bg-background outline outline-border hover:bg-muted hover:shadow-sm focus-visible:outline-border h-7 px-3 text-xs" type="button" @click="later()">Later</button><button type="button" class="ml-auto font-medium text-xs text-foreground duration-300 hover:underline hover:text-foreground" @click="toast.expanded=!toast.expanded" x-text="toast.expanded ? 'Hide notes' : 'View notes'"></button></div><div x-show="toast.expanded" x-transition.opacity class="mt-2 text-[0.70rem] text-muted-foreground bg-background/50 rounded-md p-2"><pre class="break-words whitespace-pre-wrap font-mono" x-text="toast.notes">
+                  </pre></div></div><div class="flex ml-2 shrink-0"><button class="flex items-center justify-center text-center shadow-subtle font-medium duration-500 ease-in-out transition-colors focus:outline-2 focus:outline-offset-2 text-muted-foreground bg-muted outline outline-border hover:bg-muted focus:outline-border text-foreground bg-background outline-border hover:bg-muted focus:outline-border size-7 p-0.5 text-xs rounded-md" type="button" @click="later()"><span class="sr-only">Close</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler-wave-x size-5"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M18 6l-12 12"></path><path d="M6 6l12 12"></path></svg></button></div></div></div></div></div></div></div><!-- Copy:end --></div>
+  <script src="runtime.js"></script>
+</body>
+</html>

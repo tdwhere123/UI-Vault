@@ -3,6 +3,7 @@ import { mkdir, readdir, copyFile, lstat, readFile, writeFile } from 'node:fs/pr
 import { resolve, join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { execFileSync } from 'node:child_process';
+import {collectionAccountingFrom} from '../apps/atlas-sample/collection-accounting.mjs';
 const root=resolve(dirname(fileURLToPath(import.meta.url)),'..');
 export async function exportPages(output,basePath='/UI-Vault/') {
   output=resolve(output);
@@ -12,7 +13,7 @@ export async function exportPages(output,basePath='/UI-Vault/') {
   const sha=execFileSync('git',['rev-parse','HEAD'],{cwd:root,encoding:'utf8'}).trim();
   const worktreeDirty=!!execFileSync('git',['status','--porcelain','--untracked-files=no'],{cwd:root,encoding:'utf8'}).trim();
   const source=join(root,'apps/atlas-sample');
-  const files=['index.html','app.js','atlas-model.mjs','preview-runtime.mjs','preview-media.mjs','style.css','items.json','catalog.json','shell-icons.mjs','README.md','LICENSES.md','candidates.html','candidates.js','candidates.css','candidate-catalog.json','candidate-adapter.mjs','display-names.mjs','curation-policy.mjs','curation-rules.mjs','legacy-featured-candidates.mjs'];
+  const files=['index.html','app.js','atlas-model.mjs','preview-runtime.mjs','preview-media.mjs','preview-adapters.mjs','collection-accounting.mjs','COLLECTION-LEDGER.json','COLLECTION-LEDGER.md','style.css','items.json','catalog.json','shell-icons.mjs','README.md','LICENSES.md','candidates.html','candidates.js','candidates.css','candidate-catalog.json','candidate-adapter.mjs','display-names.mjs','curation-policy.mjs','curation-rules.mjs','legacy-featured-candidates.mjs'];
   async function copy(relative){const s=join(source,relative),d=join(output,relative),info=await lstat(s);if(info.isSymbolicLink())throw Error('Symlinks not permitted');if(info.isDirectory()){await mkdir(d);for(const child of await readdir(s))await copy(relative+'/'+child)}else if(info.isFile())await copyFile(s,d);else throw Error('Unsupported input');}
   for(const name of [...files,'assets','previews','originals','bundles','featured','thumbnails'])await copy(name);
   if((await readdir(source)).includes('batches'))await copy('batches');
@@ -24,7 +25,10 @@ export async function exportPages(output,basePath='/UI-Vault/') {
   for(const x of items){if(!/^thumbnails\/[a-zA-Z0-9_-]+\.webp$/.test(x.thumbnail))throw Error('Invalid poster path');await lstat(join(output,x.thumbnail));}
   const candidates=JSON.parse(await readFile(join(output,'candidate-catalog.json'),'utf8'));
   for(const x of candidates)if(x.preview)await lstat(join(output,x.preview));
-  const version={candidates:candidates.length,unverifiedPreviews:candidates.filter(x=>x.preview).length,codeSha:sha,basePath,materials:items.length,posters,listPreviewMode:'poster-or-bounded-live',maxLiveCards:1,worktreeDirty};
+  const ledger=JSON.parse(await readFile(join(output,'COLLECTION-LEDGER.json'),'utf8'));
+  const accounting=collectionAccountingFrom(candidates,ledger);
+  if(accounting.oldSourceReconnects!==ledger.accounts.oldSourceReconnects||accounting.duplicateOriginalExclusions!==ledger.accounts.duplicateOriginalExclusions||accounting.novelSourceIdentityUpperBound!==ledger.accounts.novelSourceIdentityUpperBound)throw Error('Export collection accounting does not match ledger');
+  const version={candidates:candidates.length,unverifiedPreviews:candidates.filter(x=>x.preview).length,codeSha:sha,basePath,materials:items.length,posters,listPreviewMode:'poster-or-bounded-live',maxLiveCards:1,worktreeDirty,collectionAccounting:{newCatalogConnects:accounting.newCatalogConnects,oldSourceReconnects:accounting.oldSourceReconnects,duplicateOriginalExclusions:accounting.duplicateOriginalExclusions,novelSourceIdentityUpperBound:accounting.novelSourceIdentityUpperBound,verifiedNewIndependentUIs:accounting.verifiedNewIndependentUIs,covers:accounting.covers,note:'candidates and unverifiedPreviews are catalog record counts, not the new-original identity upper bound'}};
   await writeFile(join(output,'version.json'),JSON.stringify(version,null,2)+'\n');
   await writeFile(join(output,'.nojekyll'),'');
   return version;

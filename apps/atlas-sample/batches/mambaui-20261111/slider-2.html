@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en" class="font-sans antialiased">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>单值滑动条</title>
+  <link rel="stylesheet" href="runtime.css">
+</head>
+<body class="min-h-screen" data-demo="slider-2">
+<fieldset class="space-y-1 sm:w-60 text-gray-800">
+	<input
+	 class="w-full accent-violet-600"
+		type="range"
+		[min]="1"
+		[max]="5"
+	/>
+	<div class="flex justify-between px-1" aria-hidden="true">
+		<span>1</span>
+		<span>2</span>
+		<span>3</span>
+		<span>4</span>
+		<span>5</span>
+	</div>
+</fieldset>
+  <script src="runtime.js"></script>
+</body>
+</html>
