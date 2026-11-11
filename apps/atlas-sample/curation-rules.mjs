@@ -7150,7 +7150,7 @@ export default [
     "recommendation": "review",
     "layer": "component",
     "scopeLabel": "原三阶段步骤器",
-    "reason": "2026-11-10 线上未改动预览补拍（hash 仅映射资格，非视觉验收）：三步标签与控件可见，但各步骤标记显示为 NaN 而非有效序号，步骤器外观明显畸形。参考价值降低。按既有 review 机制可逆移出默认精选并留在待复核，源码与条目保留。不扩大修 UI，也不把 NaN 标记当作已修好。",
+    "reason": "2026-11-11 宿主夹具补步序号：原 Step 组件用 step+1 作为标记，宿主未传 step 导致 NaN。现已为 Prepare/Review/Done 传入 step 0/1/2。这是针对已证实夹具缺陷的最小修改，不是扩大修 UI。浏览器视觉确认仍未做，不能称为已修好。仍按既有 review 机制可逆留在待复核，源码与条目保留。此前 2026-11-10 线上未改动预览补拍记录了 NaN 外观（hash 仅映射资格，非视觉验收）。",
     "deliveredScope": "原三阶段步骤器；Next与reset，不是真实业务进度",
     "evidence": [
       "ui-astryx-navigation-local/src/stepper.tsx",
