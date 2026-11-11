@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {existsSync, readFileSync} from 'node:fs';
+import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
 import {dirname, join} from 'node:path';
 import {fileURLToPath} from 'node:url';
@@ -33,12 +34,51 @@ test('normal presentation removes generic QA badges without changing audit facts
 
 const CATALOG_ROOT = dirname(fileURLToPath(import.meta.url));
 function posterSha(buf){return createHash('sha256').update(buf).digest('hex')}
+
+/** Dimensions from the WebP bitstream itself, independent of the content hash. */
+function webpDimensions(buf) {
+  if (buf.toString('ascii', 0, 4) !== 'RIFF' || buf.toString('ascii', 8, 12) !== 'WEBP') throw new Error('not a WebP file');
+  let off = 12;
+  while (off + 8 <= buf.length) {
+    const tag = buf.toString('ascii', off, off + 4);
+    const size = buf.readUInt32LE(off + 4);
+    const data = off + 8;
+    if (tag === 'VP8X' && size >= 10) {
+      const width = 1 + buf[data + 4] + (buf[data + 5] << 8) + (buf[data + 6] << 16);
+      const height = 1 + buf[data + 7] + (buf[data + 8] << 8) + (buf[data + 9] << 16);
+      return { width, height };
+    }
+    if (tag === 'VP8L' && size >= 5) {
+      if (buf[data] !== 0x2f) throw new Error('invalid VP8L signature');
+      const bits = buf[data + 1] | (buf[data + 2] << 8) | (buf[data + 3] << 16) | (buf[data + 4] << 24);
+      return { width: (bits & 0x3fff) + 1, height: ((bits >> 14) & 0x3fff) + 1 };
+    }
+    off = data + size + (size & 1);
+  }
+  throw new Error('WebP dimensions not found');
+}
+
+/** Selected-poster contract: file bytes and, when declared, bitstream width/height. Hash match is not treated as visual completeness. */
+function assertSelectedPoster(id, buf, expect) {
+  assert.equal(buf.byteLength, expect.bytes, id);
+  assert.equal(posterSha(buf), expect.sha256, id);
+  if (expect.width != null || expect.height != null) {
+    const dim = webpDimensions(buf);
+    assert.equal(dim.width, expect.width, id);
+    assert.equal(dim.height, expect.height, id);
+  }
+}
+
+const SUPERSEDED_FEATURES_CARDS_POSTER_SHA256 = 'fb08487dc0ff0ce082971123a22e4bfa88e2389dbb5afae00dd461c9beeef788';
+const SUPERSEDED_FEATURES_CARDS_POSTER_COMMIT = 'd5f3dbd04ba04288cd2f609807b5fa7a062278b9';
+const REPO = join(CATALOG_ROOT, '../..');
+
 const SELECTED_POSTERS = {
   "mantine-ui:actions-grid": { rel: "thumbnails/mantine-ui--actions-grid.webp", sha256: "9c1e1df391fb7e55763c05ed2146dc9111c734d338c087d74c99b8a3a3032928", bytes: 20028 },
   "mantine-ui:card-gradient": { rel: "thumbnails/mantine-ui--card-gradient.webp", sha256: "b70d1eac3fc629174c5fb0cd31b34549d7899d12a5db068f0e32794d282da32f", bytes: 29000 },
   "mantine-ui:cookies-banner": { rel: "thumbnails/mantine-ui--cookies-banner.webp", sha256: "53fc5d8f22eae6319e7d8e91c4f37cb7294e20c16f0d2d1552fb822304201156", bytes: 8968 },
   "mantine-ui:features-asymmetrical": { rel: "thumbnails/mantine-ui--features-asymmetrical.webp", sha256: "aab442b62fab65b540d59609ab46510ce7a803e30fca37954bf19fc56375a6b0", bytes: 46376 },
-  "mantine-ui:features-cards": { rel: "thumbnails/mantine-ui--features-cards.webp", sha256: "fb08487dc0ff0ce082971123a22e4bfa88e2389dbb5afae00dd461c9beeef788", bytes: 69680 },
+  "mantine-ui:features-cards": { rel: "thumbnails/mantine-ui--features-cards.webp", sha256: "dcbda4f17a25cdfd96fa9210168e0dd264b90e09e3e93db26a6e7c82d59f0dbe", bytes: 70640, width: 1056, height: 520 },
   "mantine-ui:features-grid": { rel: "thumbnails/mantine-ui--features-grid.webp", sha256: "f63a4b281bddbb2bcc7d697b3913345c165a8ddf95d6007ca54d7249d976697e", bytes: 17782 },
   "mantine-ui:features-images": { rel: "thumbnails/mantine-ui--features-images.webp", sha256: "cc75e22e376871ee8bbf9c858a7564fe67f972967ddbb981d97fa6afde61360e", bytes: 24034 },
   "mantine-ui:features-title": { rel: "thumbnails/mantine-ui--features-title.webp", sha256: "743baed93909f820d3f8adc3ff6896d0851ed95aff3c446e2651203c170c7ee5", bytes: 41070 },
@@ -116,8 +156,7 @@ test('candidate posters are the selected crop bytes, double-header stays without
     assert.ok(entry, id);
     assert.equal(entry.thumbnail, expect.rel, id);
     const buf = readFileSync(join(CATALOG_ROOT, expect.rel));
-    assert.equal(buf.byteLength, expect.bytes, id);
-    assert.equal(posterSha(buf), expect.sha256, id);
+    assertSelectedPoster(id, buf, expect);
     assert.match(expect.rel, /^thumbnails\/[a-zA-Z0-9_-]+\.webp$/);
     const joined = (entry.gaps || []).join('\n');
     const special = PARTIAL_POSTER_GAPS[id];
@@ -125,6 +164,10 @@ test('candidate posters are the selected crop bytes, double-header stays without
     else assert.match(joined, /列表封面为有限实拍裁切，不是完整全页或已核验收。/, id);
     assert.doesNotMatch(joined, /也没有真实运行页封面/);
   }
+  const featuresCardsExpect = SELECTED_POSTERS['mantine-ui:features-cards'];
+  const supersededFeaturesCardsPoster = execFileSync('git', ['show', `${SUPERSEDED_FEATURES_CARDS_POSTER_COMMIT}:apps/atlas-sample/thumbnails/mantine-ui--features-cards.webp`], { cwd: REPO, maxBuffer: 32 * 1024 * 1024 });
+  assert.equal(posterSha(supersededFeaturesCardsPoster), SUPERSEDED_FEATURES_CARDS_POSTER_SHA256);
+  assert.throws(() => assertSelectedPoster('mantine-ui:features-cards', supersededFeaturesCardsPoster, featuresCardsExpect), { name: 'AssertionError' });
   const none = catalog.find((x) => x.id === NO_NORMAL_COVER_ID);
   assert.ok(none);
   assert.equal(none.thumbnail, undefined);
