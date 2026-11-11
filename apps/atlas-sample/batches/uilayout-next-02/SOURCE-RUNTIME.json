@@ -18,12 +18,21 @@
   },
   "sourceZip": {
     "path": "collections/pending/batch-001/uilayout-built-awaiting-qa/archives/uilayout-next-02/source.zip",
-    "sha256": "c18fc3480ff9874bf278c869132cb6f06f677dd972c263876e6ad453428dfb94",
-    "bytes": 133818,
+    "sha256": "8dacd2feadf1e7fa3f7c1bac806a22ed3753465278ab28ee4835685de2a68a02",
+    "bytes": 139553,
     "containsPortableLock": true,
-    "files": 49,
+    "files": 52,
     "selectedDemosOnlyInMainTsx": true,
-    "alsoPreservesUnselectedOriginalsAndSharedHelpers": true
+    "alsoPreservesUnselectedOriginalsAndSharedHelpers": true,
+    "previousSha256BeforeLicensePack": "c18fc3480ff9874bf278c869132cb6f06f677dd972c263876e6ad453428dfb94",
+    "previousBytesBeforeLicensePack": 133818,
+    "licenseMaterialsAdded": [
+      "LICENSE-PACK.md",
+      "SOURCE-LICENSE.json",
+      "THIRD_PARTY_NOTICES.txt"
+    ],
+    "existingEntriesUnchanged": 49,
+    "originalsUnchangedFromPreviousZip": true
   },
   "productionRuntime": {
     "js": {
@@ -675,5 +684,15 @@
     "DevDependency license texts for a clean rebuild are not included.",
     "Whether every lock-closure package is actually emitted into the minified runtime (tree-shaking) was not byte-proven for each transitive; the notices cover the evidenced import graph plus the lock closure, not a reconstructed module list from the minified bundle.",
     "Browser visual and interaction acceptance remains unverified."
-  ]
+  ],
+  "licenseMaterialsInDownloadableSourceZip": {
+    "present": true,
+    "files": [
+      "LICENSE-PACK.md",
+      "SOURCE-LICENSE.json",
+      "THIRD_PARTY_NOTICES.txt",
+      "LICENSE"
+    ],
+    "note": "Users who obtain this branch’s collections/.../source.zip receive the root MIT LICENSE plus THIRD_PARTY_NOTICES.txt, LICENSE-PACK.md and SOURCE-LICENSE.json. Catalog archive URLs that still point at main do not receive these additions until that URL is updated by a publish/merge, which this line does not do."
+  }
 }

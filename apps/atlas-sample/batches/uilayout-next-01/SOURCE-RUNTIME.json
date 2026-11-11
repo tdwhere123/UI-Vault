@@ -17,12 +17,21 @@
   },
   "sourceZip": {
     "path": "collections/pending/batch-001/uilayout-built-awaiting-qa/archives/uilayout-next-01/source.zip",
-    "sha256": "b142e0d8b0a4df3189bd482af68e8beeba0c9372f13679cbb6cbfe1caf5595e2",
-    "bytes": 133783,
+    "sha256": "32a20ea3598b73a4542f83d9c3ac2d8dbc05cc93e89837c1db43c0169b0c99f8",
+    "bytes": 149905,
     "containsPortableLock": true,
-    "files": 49,
+    "files": 52,
     "selectedDemosOnlyInMainTsx": true,
-    "alsoPreservesUnselectedOriginalsAndSharedHelpers": true
+    "alsoPreservesUnselectedOriginalsAndSharedHelpers": true,
+    "previousSha256BeforeLicensePack": "b142e0d8b0a4df3189bd482af68e8beeba0c9372f13679cbb6cbfe1caf5595e2",
+    "previousBytesBeforeLicensePack": 133783,
+    "licenseMaterialsAdded": [
+      "LICENSE-PACK.md",
+      "SOURCE-LICENSE.json",
+      "THIRD_PARTY_NOTICES.txt"
+    ],
+    "existingEntriesUnchanged": 49,
+    "originalsUnchangedFromPreviousZip": true
   },
   "productionRuntime": {
     "js": {
@@ -212,5 +221,15 @@
     "Whether every lock-closure package is actually emitted into the minified runtime (tree-shaking) was not byte-proven for each transitive; the notices cover the evidenced import graph plus the lock closure, not a reconstructed module list from the minified bundle.",
     "Browser visual and interaction acceptance remains unverified.",
     "The shared next-01 IIFE includes swapy@1.0.5 under GPL-3.0, so redistributing this runtime is not MIT-only. A commercial Swapy license is mentioned in that package README and was not obtained or used here."
-  ]
+  ],
+  "licenseMaterialsInDownloadableSourceZip": {
+    "present": true,
+    "files": [
+      "LICENSE-PACK.md",
+      "SOURCE-LICENSE.json",
+      "THIRD_PARTY_NOTICES.txt",
+      "LICENSE"
+    ],
+    "note": "Users who obtain this branch’s collections/.../source.zip receive the root MIT LICENSE plus THIRD_PARTY_NOTICES.txt, LICENSE-PACK.md and SOURCE-LICENSE.json. Catalog archive URLs that still point at main do not receive these additions until that URL is updated by a publish/merge, which this line does not do."
+  }
 }

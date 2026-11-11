@@ -1,0 +1,50 @@
+{
+  "batch": "uilayout-next-03",
+  "verifiedAt": "2026-11-11 17:44 Asia/Taipei",
+  "codeShaAtVerification": "c4270797e6bc78463279503d1fd948cfad9c773e",
+  "scratch": "/workspace/ui-vault-remaining15-20261111/rebuild-c4270797",
+  "environment": {
+    "node": "v22.19.0",
+    "npm": "10.9.3"
+  },
+  "inputZipBeforeLicensePack": {
+    "path": "collections/pending/batch-001/uilayout-built-awaiting-qa/archives/uilayout-next-03/source.zip",
+    "sha256": "c73751e14036a46ca50cb94b2383c1d74b85211cecd4406718361af417093964",
+    "bytes": 133794
+  },
+  "recipe": "npm ci --no-fund --no-audit && npm run build",
+  "npmCiExit": 0,
+  "buildExit": 0,
+  "thisRebuild": {
+    "modulesTransformed": null,
+    "js": {
+      "path": "/workspace/ui-vault-remaining15-20261111/rebuild-c4270797/uilayout-next-03/src/dist/runtime.js",
+      "sha256": "42a2ca1c66e3a591b797de2caa85df6b56cbc5a8fd5bc90bc469b351d94f4f5e",
+      "bytes": 502576
+    },
+    "css": [
+      {
+        "name": "ui-vault-uilayout-next.css",
+        "sha256": "49ac10fb226d12bb57164f9e591ca75592e91aa888e6d7a6248ade5ad7a2938f",
+        "bytes": 65579
+      }
+    ],
+    "jsEqualsProduction": false,
+    "cssEqualsProduction": true,
+    "jsByteDeltaProductionMinusBuilt": -6600,
+    "cssByteDeltaProductionMinusBuilt": 0,
+    "buildLogTail": "\n> build\n> vite build\n\nvite v8.3.1 building client environment for production...\ntransforming...\n✓ 2554 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/ui-vault-uilayout-next.css   65.57 kB │ gzip:  11.79 kB\ndist/runtime.js                  502.57 kB │ gzip: 157.81 kB\n\n✓ built in 410ms\n"
+  },
+  "productionRuntimeAtVerification": {
+    "js": {
+      "sha256": "9425c3f50bdf06cda47195e57265b1f6f1764f3c1f215ffcc431c9a63e430106",
+      "bytes": 495976
+    },
+    "css": {
+      "sha256": "49ac10fb226d12bb57164f9e591ca75592e91aa888e6d7a6248ade5ad7a2938f",
+      "bytes": 65579
+    }
+  },
+  "historicalClosureBuildLog": "npm warn Unknown env config \"http-proxy\". This will stop working in the next major version of npm.\n\n> build\n> vite build\n\nvite v8.3.1 building client environment for production...\ntransforming...\n✓ 2550 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/ui-vault-uilayout-next.css   65.57 kB │ gzip:  11.79 kB\ndist/runtime.js                  495.67 kB │ gzip: 156.20 kB\n\n✓ built in 355ms\n",
+  "interpretation": "npm ci and vite build exited 0 for the locked recipe. The current atlas production runtime is not claimed to be a byte-for-byte rebuild of this zip. later bounded patches (and minify/tooling variance versus the historical closure-build.log) remain. Production runtimes were not replaced by this rebuild."
+}

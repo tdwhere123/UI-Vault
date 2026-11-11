@@ -133,3 +133,75 @@ test('production runtimes do not load upstream remote photos, the Noto GIF, or n
   assert.match(js,/data:image\/svg\+xml/);
  }
 });
+
+import {execFileSync} from 'node:child_process';
+
+function zipNames(zipPath){
+ return execFileSync('unzip',['-Z','-1',zipPath],{encoding:'utf8'}).split(/\n/).filter(Boolean);
+}
+function zipRead(zipPath,name){
+ return execFileSync('unzip',['-p',zipPath,name]);
+}
+
+test('downloadable source zips ship license materials and leave originals unchanged',()=>{
+ const repo=join(root,'..','..');
+ const expectedOriginals={
+  'uilayout-next-01':[
+   'originals/drag/drag-items.tsx',
+   'originals/swapy/swapy-handle.tsx',
+   'originals/scroll-animation/sticky-hero-scroll.tsx',
+   'originals/scroll-animation/repeat-scroll.tsx',
+  ],
+  'uilayout-next-02':[
+   'originals/timeline-animation/index.tsx',
+   'originals/mac/genie-effect.tsx',
+   'originals/linear-modal/standalone-version.tsx',
+   'originals/image-reveal/image-reveal.tsx',
+   'originals/drawer/nested-vaul-drawer.tsx',
+  ],
+  'uilayout-next-03':[
+   'originals/drawer/responsive-header.tsx',
+   'originals/footers/animated-logo-footer.tsx',
+   'originals/card/product-card4.tsx',
+   'originals/color-picker/raws-color-picker.tsx',
+  ],
+ };
+ for(const batch of BATCHES){
+  const ev=JSON.parse(readFileSync(join(root,'batches',batch,'SOURCE-RUNTIME.json'),'utf8'));
+  const zipPath=join(repo,ev.sourceZip.path);
+  const zipBuf=readFileSync(zipPath);
+  assert.equal(sha256(zipBuf),ev.sourceZip.sha256,batch);
+  assert.equal(zipBuf.byteLength,ev.sourceZip.bytes,batch);
+  assert.match(ev.sourceZip.previousSha256BeforeLicensePack,/^[a-f0-9]{64}$/);
+  assert.notEqual(ev.sourceZip.previousSha256BeforeLicensePack,ev.sourceZip.sha256);
+  assert.equal(ev.licenseMaterialsInDownloadableSourceZip.present,true);
+  const names=zipNames(zipPath);
+  for(const need of ['LICENSE','THIRD_PARTY_NOTICES.txt','LICENSE-PACK.md','SOURCE-LICENSE.json','package-lock.json']){
+   assert.equal(names.includes(need),true,`${batch} missing ${need}`);
+  }
+  const notices=zipRead(zipPath,'THIRD_PARTY_NOTICES.txt').toString('utf8');
+  const pack=zipRead(zipPath,'LICENSE-PACK.md').toString('utf8');
+  if(batch==='uilayout-next-01'){
+   assert.match(notices,/swapy@1\.0\.5/);
+   assert.match(notices,/GNU GENERAL PUBLIC LICENSE/);
+   assert.match(pack,/GPL-3\.0/);
+   assert.match(pack,/It is not .MIT only/);
+   assert.match(pack,/does not license the\nwhole bundle/);
+  }else{
+   assert.doesNotMatch(notices,/swapy@1\.0\.5/);
+  }
+  if(batch!=='uilayout-next-01'){
+   assert.match(notices,/react-remove-scroll-bar@2\.3\.8/);
+   assert.match(notices,/License text: Unknown for this exact published tarball/);
+  }
+  for(const orig of expectedOriginals[batch]){
+   assert.equal(names.includes(orig),true,`${batch} missing ${orig}`);
+   const data=zipRead(zipPath,orig);
+   assert.ok(data.byteLength>0,orig);
+  }
+  const evd=JSON.parse(readFileSync(join(root,'batches',batch,'BUILD-EVIDENCE.json'),'utf8'));
+  assert.equal(evd.npmCiExit,0,batch);
+  assert.equal(evd.buildExit,0,batch);
+  assert.equal(evd.thisRebuild.jsEqualsProduction,false,batch);
+ }
+});

@@ -1,0 +1,50 @@
+{
+  "batch": "uilayout-next-02",
+  "verifiedAt": "2026-11-11 17:44 Asia/Taipei",
+  "codeShaAtVerification": "c4270797e6bc78463279503d1fd948cfad9c773e",
+  "scratch": "/workspace/ui-vault-remaining15-20261111/rebuild-c4270797",
+  "environment": {
+    "node": "v22.19.0",
+    "npm": "10.9.3"
+  },
+  "inputZipBeforeLicensePack": {
+    "path": "collections/pending/batch-001/uilayout-built-awaiting-qa/archives/uilayout-next-02/source.zip",
+    "sha256": "c18fc3480ff9874bf278c869132cb6f06f677dd972c263876e6ad453428dfb94",
+    "bytes": 133818
+  },
+  "recipe": "npm ci --no-fund --no-audit && npm run build",
+  "npmCiExit": 0,
+  "buildExit": 0,
+  "thisRebuild": {
+    "modulesTransformed": null,
+    "js": {
+      "path": "/workspace/ui-vault-remaining15-20261111/rebuild-c4270797/uilayout-next-02/src/dist/runtime.js",
+      "sha256": "5a23dcc0a06b2aaf9fd72a152c931fa3b9358cf433a98bc23f9973a2ed947afb",
+      "bytes": 609465
+    },
+    "css": [
+      {
+        "name": "ui-vault-uilayout-next.css",
+        "sha256": "49ac10fb226d12bb57164f9e591ca75592e91aa888e6d7a6248ade5ad7a2938f",
+        "bytes": 65579
+      }
+    ],
+    "jsEqualsProduction": false,
+    "cssEqualsProduction": false,
+    "jsByteDeltaProductionMinusBuilt": -19313,
+    "cssByteDeltaProductionMinusBuilt": 201,
+    "buildLogTail": "\n> build\n> vite build\n\nvite v8.3.1 building client environment for production...\ntransforming...\n✓ 2581 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/ui-vault-uilayout-next.css   65.57 kB │ gzip:  11.79 kB\ndist/runtime.js                  609.46 kB │ gzip: 195.03 kB\n\n✓ built in 504ms\n"
+  },
+  "productionRuntimeAtVerification": {
+    "js": {
+      "sha256": "409c88ded52e56367ec33577851ca09a17b9d565c6989bf36a7312c73470d273",
+      "bytes": 590152
+    },
+    "css": {
+      "sha256": "6e4abb243774627bfc5837150868913958a299772c85fdb845edf3aad2050e05",
+      "bytes": 65780
+    }
+  },
+  "historicalClosureBuildLog": "npm warn Unknown env config \"http-proxy\". This will stop working in the next major version of npm.\n\n> build\n> vite build\n\nvite v8.3.1 building client environment for production...\ntransforming...\n✓ 2568 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/ui-vault-uilayout-next.css   65.57 kB │ gzip:  11.79 kB\ndist/runtime.js                  589.75 kB │ gzip: 189.53 kB\n\n✓ built in 727ms\n",
+  "interpretation": "npm ci and vite build exited 0 for the locked recipe. The current atlas production runtime is not claimed to be a byte-for-byte rebuild of this zip. later bounded patches (and minify/tooling variance versus the historical closure-build.log) remain. Production runtimes were not replaced by this rebuild."
+}
