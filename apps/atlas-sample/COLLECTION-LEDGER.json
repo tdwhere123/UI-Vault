@@ -6,7 +6,7 @@
     "oldSourceReconnects": 22,
     "duplicateOriginalExclusions": 1,
     "novelSourceIdentityUpperBound": 531,
-    "verifiedNewIndependentUIs": 5,
+    "verifiedNewIndependentUIs": 40,
     "covers": 0,
     "browserVisualQA": 0
   },
@@ -17,11 +17,12 @@
     "479 仍只是新原件身份上限，不是已核独立或闭包合格数。",
     "原件与条目均保留，未物理删除，也未用改几个字的已有源码重新计数。",
     "collection-20261111-j 新增 52 条此前未保存的 Mantine UI 官方完整示例（修订 963b955c5cef）。本线新接站现为 554，新原件身份上限 531 = 554 - 22 - 1。这仍只是源码身份初筛，不是已核独立，不能称为目标完成。",
-    "已核新增独立 UI 现为 5。前 3 条仍为 table-sort / double-navbar / footer-links 的原限定范围，源码对照提交 3695f76d56133051c9bd7bdacb05fddcfaf0c9d2，记录原字节保留。另幂等追加 daisyui:accordion（完整原生 radio 三问问答组件；保持一项选中）与 hyperui:application-modals（完整居中原生 dialog；灰遮罩与有界关闭），源码对照提交 e5f0ee43bd1957e70bbb6e012270e54d80e3c618 的原验收限定，不把 57c9 截图会话当作 e5 新跑。不是完整视觉矩阵、当前提交亲测、真实后台或 55 条计入，也不把 7 个通知包或新图升为可计。封面与实测账仍按原义为 0。已核库存仍为 241。"
+    "历史5项入账记录：已核新增独立 UI 现为 5。前 3 条仍为 table-sort / double-navbar / footer-links 的原限定范围，源码对照提交 3695f76d56133051c9bd7bdacb05fddcfaf0c9d2，记录原字节保留。另幂等追加 daisyui:accordion（完整原生 radio 三问问答组件；保持一项选中）与 hyperui:application-modals（完整居中原生 dialog；灰遮罩与有界关闭），源码对照提交 e5f0ee43bd1957e70bbb6e012270e54d80e3c618 的原验收限定，不把 57c9 截图会话当作 e5 新跑。不是完整视觉矩阵、当前提交亲测、真实后台或 55 条计入，也不把 7 个通知包或新图升为可计。封面与实测账仍按原义为 0。已核库存仍为 241。",
+    "已核新增独立 UI 现为 40，仅限具名分账的明确 scope。保留原5项资格与证据；本次35项据 dde400f413f00fbc0d9c58a6ca6086c741b86304 固定输入的独立案头资格及原有界观察复用范围追加。35项同批进入既有用途/技术栈分类，库存从241增至276；旧5仍只在账本，不迁库存。不是55全部通过，不把54图、通知包、模拟数据或静态CTA当业务；整矩阵实测与封面账仍为0。"
   ],
   "closureGapsRemaining": [
-    "限定可计的 5 条已写入具名分账；封面账与实测/真实浏览器整矩阵仍为 0，不能把本次限定计入写成整库视觉验收通过。",
-    "跨源视觉去重尚未在真实浏览器整库核验；除分账具名的 5 条限定可计外，其余条目不能称为已核独立。",
+    "限定可计的40条均有具名scope及证据摘要；封面账与真实浏览器整矩阵仍为0，不表示整库视觉验收通过。",
+    "除具名40条限定资格外，其余条目不能称为已核独立；本55其余20仍为有条件通过4/不通过16（事实partial5、合并非代表11、身份Unknown4）。",
     "字体/图/商标 Unknown 标记保留，不假装已获授权。",
     "本轮修复了 Kokonut 单项入口与 Animata 构建工程/内部模块闭包，以及媒体桥、Tabler 不透明沙箱存储适配、依赖许可证与 21 份补接 manifest；代表包离线重建与针对回归见私有工作目录原始日志。"
   ],
@@ -113,6 +114,636 @@
         "archiveSha256": "dccff83396cb7a88855106dc23784cd611f06f7516bd3846d6f39a5e38735c35",
         "thumbnail": "thumbnails/hyperui--application-modals.webp",
         "thumbnailSha256": "c19a20d40c3e19be71544586dab2d75e9f8ca6b953d34dc7cd38f52fde929dc7"
+      }
+    },
+    {
+      "id": "mantine-ui:actions-grid",
+      "sourceCommit": "dde400f413f00fbc0d9c58a6ca6086c741b86304",
+      "scope": "限定范围：完整 3×3 Services，Credit cards 只 hover。",
+      "exclusions": "不签真实后台、外链目标或表单提交成功；不签完整键盘/触控或无障碍路径；当前提交的整矩阵或线上复验；原观察混版归属、未冻结外部响应、字体/图/商标 Unknown 仍按原证据保留。",
+      "evidence": {
+        "reviewSha256": "e9196e0c31068b7b8841213ebfc7ca075a1fffaeb02e593b456183aa51fd6098",
+        "frozenPathsSha256": "80254f618bcca23ee5580c36a52cb7f8c044accc38eddc83fa6fff3f4fd5a61f",
+        "preview": "batches/mantine-20261111-j/actions-grid/index.html",
+        "runtimeCss": "batches/mantine-20261111-j/actions-grid/runtime.css",
+        "runtimeJs": "batches/mantine-20261111-j/actions-grid/runtime.js",
+        "archive": "batches/mantine-20261111-j/bundles/actions-grid.zip",
+        "archiveSha256": "0ea3c0d14c7d484082a8a429fb5f7dfb278b8cec8900fc35af3deae9992ae7dc",
+        "thumbnail": "thumbnails/mantine-ui--actions-grid.webp",
+        "thumbnailSha256": "9c1e1df391fb7e55763c05ed2146dc9111c734d338c087d74c99b8a3a3032928",
+        "qualificationTableSha256": "fefc6d747aa352347c2d3be1fdacd96f3aba041f603fc658078e259146ea9b48"
+      }
+    },
+    {
+      "id": "mantine-ui:card-gradient",
+      "sourceCommit": "dde400f413f00fbc0d9c58a6ca6086c741b86304",
+      "scope": "限定范围：渐变卡完整，只 hover。",
+      "exclusions": "不签真实后台、外链目标或表单提交成功；不签完整键盘/触控或无障碍路径；当前提交的整矩阵或线上复验；原观察混版归属、未冻结外部响应、字体/图/商标 Unknown 仍按原证据保留。",
+      "evidence": {
+        "reviewSha256": "e9196e0c31068b7b8841213ebfc7ca075a1fffaeb02e593b456183aa51fd6098",
+        "frozenPathsSha256": "80254f618bcca23ee5580c36a52cb7f8c044accc38eddc83fa6fff3f4fd5a61f",
+        "preview": "batches/mantine-20261111-j/card-gradient/index.html",
+        "runtimeCss": "batches/mantine-20261111-j/card-gradient/runtime.css",
+        "runtimeJs": "batches/mantine-20261111-j/card-gradient/runtime.js",
+        "archive": "batches/mantine-20261111-j/bundles/card-gradient.zip",
+        "archiveSha256": "aebeed47a08a9de084ca707262c008629b54401af4877c0199f1149d6d402f6a",
+        "thumbnail": "thumbnails/mantine-ui--card-gradient.webp",
+        "thumbnailSha256": "b70d1eac3fc629174c5fb0cd31b34549d7899d12a5db068f0e32794d282da32f",
+        "qualificationTableSha256": "fefc6d747aa352347c2d3be1fdacd96f3aba041f603fc658078e259146ea9b48"
+      }
+    },
+    {
+      "id": "mantine-ui:cookies-banner",
+      "sourceCommit": "dde400f413f00fbc0d9c58a6ca6086c741b86304",
+      "scope": "限定范围：完整面板/按钮仅 hover，不是同意/偏好保存。",
+      "exclusions": "不签真实后台、外链目标或表单提交成功；不签完整键盘/触控或无障碍路径；当前提交的整矩阵或线上复验；原观察混版归属、未冻结外部响应、字体/图/商标 Unknown 仍按原证据保留。",
+      "evidence": {
+        "reviewSha256": "e9196e0c31068b7b8841213ebfc7ca075a1fffaeb02e593b456183aa51fd6098",
+        "frozenPathsSha256": "80254f618bcca23ee5580c36a52cb7f8c044accc38eddc83fa6fff3f4fd5a61f",
+        "preview": "batches/mantine-20261111-j/cookies-banner/index.html",
+        "runtimeCss": "batches/mantine-20261111-j/cookies-banner/runtime.css",
+        "runtimeJs": "batches/mantine-20261111-j/cookies-banner/runtime.js",
+        "archive": "batches/mantine-20261111-j/bundles/cookies-banner.zip",
+        "archiveSha256": "c1267d729581f678ec4f0c0e79cdf41057e1554a4f732d605a816b97fcaf7350",
+        "thumbnail": "thumbnails/mantine-ui--cookies-banner.webp",
+        "thumbnailSha256": "53fc5d8f22eae6319e7d8e91c4f37cb7294e20c16f0d2d1552fb822304201156",
+        "qualificationTableSha256": "fefc6d747aa352347c2d3be1fdacd96f3aba041f603fc658078e259146ea9b48"
+      }
+    },
+    {
+      "id": "mantine-ui:features-grid",
+      "sourceCommit": "dde400f413f00fbc0d9c58a6ca6086c741b86304",
+      "scope": "限定范围：标题+五卡以滚动帧合看；单底帧封面不含标题。Pokemon 占位非业务。无核心动作。",
+      "exclusions": "不签真实后台、外链目标或表单提交成功；不签完整键盘/触控或无障碍路径；当前提交的整矩阵或线上复验；原观察混版归属、未冻结外部响应、字体/图/商标 Unknown 仍按原证据保留。",
+      "evidence": {
+        "reviewSha256": "e9196e0c31068b7b8841213ebfc7ca075a1fffaeb02e593b456183aa51fd6098",
+        "frozenPathsSha256": "80254f618bcca23ee5580c36a52cb7f8c044accc38eddc83fa6fff3f4fd5a61f",
+        "preview": "batches/mantine-20261111-j/features-grid/index.html",
+        "runtimeCss": "batches/mantine-20261111-j/features-grid/runtime.css",
+        "runtimeJs": "batches/mantine-20261111-j/features-grid/runtime.js",
+        "archive": "batches/mantine-20261111-j/bundles/features-grid.zip",
+        "archiveSha256": "9fa4b599b312cc66f94a462e1319197ddd0daa0b4c7e797d8e9a21103e71e992",
+        "thumbnail": "thumbnails/mantine-ui--features-grid.webp",
+        "thumbnailSha256": "f63a4b281bddbb2bcc7d697b3913345c165a8ddf95d6007ca54d7249d976697e",
+        "qualificationTableSha256": "fefc6d747aa352347c2d3be1fdacd96f3aba041f603fc658078e259146ea9b48"
+      }
+    },
+    {
+      "id": "mantine-ui:features-images",
+      "sourceCommit": "dde400f413f00fbc0d9c58a6ca6086c741b86304",
+      "scope": "限定范围：四职业 SVG 与占位文案展示，不称真实营销。无核心动作。",
+      "exclusions": "不签真实后台、外链目标或表单提交成功；不签完整键盘/触控或无障碍路径；当前提交的整矩阵或线上复验；原观察混版归属、未冻结外部响应、字体/图/商标 Unknown 仍按原证据保留。",
+      "evidence": {
+        "reviewSha256": "e9196e0c31068b7b8841213ebfc7ca075a1fffaeb02e593b456183aa51fd6098",
+        "frozenPathsSha256": "80254f618bcca23ee5580c36a52cb7f8c044accc38eddc83fa6fff3f4fd5a61f",
+        "preview": "batches/mantine-20261111-j/features-images/index.html",
+        "runtimeCss": "batches/mantine-20261111-j/features-images/runtime.css",
+        "runtimeJs": "batches/mantine-20261111-j/features-images/runtime.js",
+        "archive": "batches/mantine-20261111-j/bundles/features-images.zip",
+        "archiveSha256": "b2955c024b7fbdfd87cb2bf4974eb0a8513254bbf7a35d2d5e2d4ece590ed0d7",
+        "thumbnail": "thumbnails/mantine-ui--features-images.webp",
+        "thumbnailSha256": "cc75e22e376871ee8bbf9c858a7564fe67f972967ddbb981d97fa6afde61360e",
+        "qualificationTableSha256": "fefc6d747aa352347c2d3be1fdacd96f3aba041f603fc658078e259146ea9b48"
+      }
+    },
+    {
+      "id": "mantine-ui:features-title",
+      "sourceCommit": "dde400f413f00fbc0d9c58a6ca6086c741b86304",
+      "scope": "限定范围：标题/四图标/CTA 展示；不签 CTA 业务，不点击。",
+      "exclusions": "不签真实后台、外链目标或表单提交成功；不签完整键盘/触控或无障碍路径；当前提交的整矩阵或线上复验；原观察混版归属、未冻结外部响应、字体/图/商标 Unknown 仍按原证据保留。",
+      "evidence": {
+        "reviewSha256": "e9196e0c31068b7b8841213ebfc7ca075a1fffaeb02e593b456183aa51fd6098",
+        "frozenPathsSha256": "80254f618bcca23ee5580c36a52cb7f8c044accc38eddc83fa6fff3f4fd5a61f",
+        "preview": "batches/mantine-20261111-j/features-title/index.html",
+        "runtimeCss": "batches/mantine-20261111-j/features-title/runtime.css",
+        "runtimeJs": "batches/mantine-20261111-j/features-title/runtime.js",
+        "archive": "batches/mantine-20261111-j/bundles/features-title.zip",
+        "archiveSha256": "edd1297121092de5f7bcbd59d93d4c1a5b084ca0f6b1c0ce199d155d5a01f350",
+        "thumbnail": "thumbnails/mantine-ui--features-title.webp",
+        "thumbnailSha256": "743baed93909f820d3f8adc3ff6896d0851ed95aff3c446e2651203c170c7ee5",
+        "qualificationTableSha256": "fefc6d747aa352347c2d3be1fdacd96f3aba041f603fc658078e259146ea9b48"
+      }
+    },
+    {
+      "id": "mantine-ui:footer-centered",
+      "sourceCommit": "dde400f413f00fbc0d9c58a6ca6086c741b86304",
+      "scope": "限定范围：Logo/五文字链/三社交展示与 hover，非外链业务。",
+      "exclusions": "不签真实后台、外链目标或表单提交成功；不签完整键盘/触控或无障碍路径；当前提交的整矩阵或线上复验；原观察混版归属、未冻结外部响应、字体/图/商标 Unknown 仍按原证据保留。",
+      "evidence": {
+        "reviewSha256": "e9196e0c31068b7b8841213ebfc7ca075a1fffaeb02e593b456183aa51fd6098",
+        "frozenPathsSha256": "80254f618bcca23ee5580c36a52cb7f8c044accc38eddc83fa6fff3f4fd5a61f",
+        "preview": "batches/mantine-20261111-j/footer-centered/index.html",
+        "runtimeCss": "batches/mantine-20261111-j/footer-centered/runtime.css",
+        "runtimeJs": "batches/mantine-20261111-j/footer-centered/runtime.js",
+        "archive": "batches/mantine-20261111-j/bundles/footer-centered.zip",
+        "archiveSha256": "530fae6dcc955b35492cf7cf4942811efd88257e4ca5f51a16c4f9e69732020d",
+        "thumbnail": "thumbnails/mantine-ui--footer-centered.webp",
+        "thumbnailSha256": "05f4d28cc22c0715a7f0c0c35c4cab792e32b6154248da4ebe7e68e59e3ca464",
+        "qualificationTableSha256": "fefc6d747aa352347c2d3be1fdacd96f3aba041f603fc658078e259146ea9b48"
+      }
+    },
+    {
+      "id": "mantine-ui:header-menu",
+      "sourceCommit": "dde400f413f00fbc0d9c58a6ca6086c741b86304",
+      "scope": "限定范围：Learn hover 展开四子项；子项未点（不要求点）。",
+      "exclusions": "不签真实后台、外链目标或表单提交成功；不签完整键盘/触控或无障碍路径；当前提交的整矩阵或线上复验；原观察混版归属、未冻结外部响应、字体/图/商标 Unknown 仍按原证据保留。",
+      "evidence": {
+        "reviewSha256": "e9196e0c31068b7b8841213ebfc7ca075a1fffaeb02e593b456183aa51fd6098",
+        "frozenPathsSha256": "80254f618bcca23ee5580c36a52cb7f8c044accc38eddc83fa6fff3f4fd5a61f",
+        "preview": "batches/mantine-20261111-j/header-menu/index.html",
+        "runtimeCss": "batches/mantine-20261111-j/header-menu/runtime.css",
+        "runtimeJs": "batches/mantine-20261111-j/header-menu/runtime.js",
+        "archive": "batches/mantine-20261111-j/bundles/header-menu.zip",
+        "archiveSha256": "6c43b84f09a2be7df47d7dd1c88bf523b4b70d27a9657b75da6caee8f3bcafd2",
+        "thumbnail": "thumbnails/mantine-ui--header-menu.webp",
+        "thumbnailSha256": "5ed874a174b64288faad0058317e32514a666ff6d1308053a0a2e04e51f352a5",
+        "qualificationTableSha256": "fefc6d747aa352347c2d3be1fdacd96f3aba041f603fc658078e259146ea9b48"
+      }
+    },
+    {
+      "id": "mantine-ui:header-simple",
+      "sourceCommit": "dde400f413f00fbc0d9c58a6ca6086c741b86304",
+      "scope": "限定范围：新07:57:26–07:58:55台北、起末version.png示dde/dirtyfalse的观察窗口：Features蓝底→Learn蓝底→Features蓝底，正常详情中的compose iframe。URL/frame about:blank不变是观察者记录，PNG自身没有地址栏/工具输出；未测外链业务/窄屏。旧混版Learn版本仍Unknown。",
+      "exclusions": "不签真实后台、外链目标或表单提交成功；不签完整键盘/触控或无障碍路径；当前提交的整矩阵或线上复验；原观察混版归属、未冻结外部响应、字体/图/商标 Unknown 仍按原证据保留。",
+      "evidence": {
+        "reviewSha256": "e9196e0c31068b7b8841213ebfc7ca075a1fffaeb02e593b456183aa51fd6098",
+        "frozenPathsSha256": "80254f618bcca23ee5580c36a52cb7f8c044accc38eddc83fa6fff3f4fd5a61f",
+        "preview": "batches/mantine-20261111-j/header-simple/index.html",
+        "runtimeCss": "batches/mantine-20261111-j/header-simple/runtime.css",
+        "runtimeJs": "batches/mantine-20261111-j/header-simple/runtime.js",
+        "archive": "batches/mantine-20261111-j/bundles/header-simple.zip",
+        "archiveSha256": "cf1822bd0d32bd72590e46d2b056252d2e6a228e68965820731392593f9cdf36",
+        "thumbnail": "thumbnails/mantine-ui--header-simple.webp",
+        "thumbnailSha256": "2be127d655708907ebd8a1b84865f8f41406999d9d281474e2dbf08477f49c98",
+        "qualificationTableSha256": "fefc6d747aa352347c2d3be1fdacd96f3aba041f603fc658078e259146ea9b48"
+      }
+    },
+    {
+      "id": "mantine-ui:hero-title",
+      "sourceCommit": "dde400f413f00fbc0d9c58a6ca6086c741b86304",
+      "scope": "限定范围：标题、说明、双 CTA 在滚动后单帧完整；未点击、不跟 GitHub 外链；不与残缺首帧拼接。",
+      "exclusions": "不签真实后台、外链目标或表单提交成功；不签完整键盘/触控或无障碍路径；当前提交的整矩阵或线上复验；原观察混版归属、未冻结外部响应、字体/图/商标 Unknown 仍按原证据保留。",
+      "evidence": {
+        "reviewSha256": "e9196e0c31068b7b8841213ebfc7ca075a1fffaeb02e593b456183aa51fd6098",
+        "frozenPathsSha256": "80254f618bcca23ee5580c36a52cb7f8c044accc38eddc83fa6fff3f4fd5a61f",
+        "preview": "batches/mantine-20261111-j/hero-title/index.html",
+        "runtimeCss": "batches/mantine-20261111-j/hero-title/runtime.css",
+        "runtimeJs": "batches/mantine-20261111-j/hero-title/runtime.js",
+        "archive": "batches/mantine-20261111-j/bundles/hero-title.zip",
+        "archiveSha256": "409f90ce055165a1e475b03ce863c2456d92d50613a1f81cf93f0d472d1b8dd6",
+        "thumbnail": "thumbnails/mantine-ui--hero-title.webp",
+        "thumbnailSha256": "50c24a4c9f3e6dac61ae225c71c4fd65afbd91c21657a5a90dea761b8ca43677",
+        "qualificationTableSha256": "fefc6d747aa352347c2d3be1fdacd96f3aba041f603fc658078e259146ea9b48"
+      }
+    },
+    {
+      "id": "mantine-ui:navbar-minimal",
+      "sourceCommit": "dde400f413f00fbc0d9c58a6ca6086c741b86304",
+      "scope": "限定范围：Tooltip/Calendar 本地 active 与底部项悬停可见，未点底控件（不要求点 Logout）。",
+      "exclusions": "不签真实后台、外链目标或表单提交成功；不签完整键盘/触控或无障碍路径；当前提交的整矩阵或线上复验；原观察混版归属、未冻结外部响应、字体/图/商标 Unknown 仍按原证据保留。",
+      "evidence": {
+        "reviewSha256": "e9196e0c31068b7b8841213ebfc7ca075a1fffaeb02e593b456183aa51fd6098",
+        "frozenPathsSha256": "80254f618bcca23ee5580c36a52cb7f8c044accc38eddc83fa6fff3f4fd5a61f",
+        "preview": "batches/mantine-20261111-j/navbar-minimal/index.html",
+        "runtimeCss": "batches/mantine-20261111-j/navbar-minimal/runtime.css",
+        "runtimeJs": "batches/mantine-20261111-j/navbar-minimal/runtime.js",
+        "archive": "batches/mantine-20261111-j/bundles/navbar-minimal.zip",
+        "archiveSha256": "1df551fff5328db545a6ec89c09906be86682d888a2cf294ea4d7f150cc5883d",
+        "thumbnail": "thumbnails/mantine-ui--navbar-minimal.webp",
+        "thumbnailSha256": "a77ff44c391914603b3ba170826d178b2b11c438a25242525910db683d055e1e",
+        "qualificationTableSha256": "fefc6d747aa352347c2d3be1fdacd96f3aba041f603fc658078e259146ea9b48"
+      }
+    },
+    {
+      "id": "mantine-ui:navbar-segmented",
+      "sourceCommit": "dde400f413f00fbc0d9c58a6ca6086c741b86304",
+      "scope": "限定范围：Account→System 七项列表切换，本地状态。",
+      "exclusions": "不签真实后台、外链目标或表单提交成功；不签完整键盘/触控或无障碍路径；当前提交的整矩阵或线上复验；原观察混版归属、未冻结外部响应、字体/图/商标 Unknown 仍按原证据保留。",
+      "evidence": {
+        "reviewSha256": "e9196e0c31068b7b8841213ebfc7ca075a1fffaeb02e593b456183aa51fd6098",
+        "frozenPathsSha256": "80254f618bcca23ee5580c36a52cb7f8c044accc38eddc83fa6fff3f4fd5a61f",
+        "preview": "batches/mantine-20261111-j/navbar-segmented/index.html",
+        "runtimeCss": "batches/mantine-20261111-j/navbar-segmented/runtime.css",
+        "runtimeJs": "batches/mantine-20261111-j/navbar-segmented/runtime.js",
+        "archive": "batches/mantine-20261111-j/bundles/navbar-segmented.zip",
+        "archiveSha256": "c345b11eb463690aa7f467f68bf168d3ab50bbfbe670f79aeb0ee3f14b56eb79",
+        "thumbnail": "thumbnails/mantine-ui--navbar-segmented.webp",
+        "thumbnailSha256": "ed5b52e5feb5772fbb1d89d4f78aa57fbe207cbfb029abd3138cf4733f364c24",
+        "qualificationTableSha256": "fefc6d747aa352347c2d3be1fdacd96f3aba041f603fc658078e259146ea9b48"
+      }
+    },
+    {
+      "id": "mantine-ui:nothing-found-background",
+      "sourceCommit": "dde400f413f00fbc0d9c58a6ca6086c741b86304",
+      "scope": "限定范围：404 背景/标题/说明/CTA 完整，只 hover 未导航。",
+      "exclusions": "不签真实后台、外链目标或表单提交成功；不签完整键盘/触控或无障碍路径；当前提交的整矩阵或线上复验；原观察混版归属、未冻结外部响应、字体/图/商标 Unknown 仍按原证据保留。",
+      "evidence": {
+        "reviewSha256": "e9196e0c31068b7b8841213ebfc7ca075a1fffaeb02e593b456183aa51fd6098",
+        "frozenPathsSha256": "80254f618bcca23ee5580c36a52cb7f8c044accc38eddc83fa6fff3f4fd5a61f",
+        "preview": "batches/mantine-20261111-j/nothing-found-background/index.html",
+        "runtimeCss": "batches/mantine-20261111-j/nothing-found-background/runtime.css",
+        "runtimeJs": "batches/mantine-20261111-j/nothing-found-background/runtime.js",
+        "archive": "batches/mantine-20261111-j/bundles/nothing-found-background.zip",
+        "archiveSha256": "915643205128fbb3bc5c0a584a02b238b6aeddbfc9c1540c5e4557b7326bafdf",
+        "thumbnail": "thumbnails/mantine-ui--nothing-found-background.webp",
+        "thumbnailSha256": "ec17a0a12b86c950d81ceaf58f0f1a149bc0554717650cd2c533d82f8e17ef41",
+        "qualificationTableSha256": "fefc6d747aa352347c2d3be1fdacd96f3aba041f603fc658078e259146ea9b48"
+      }
+    },
+    {
+      "id": "mantine-ui:progress-card",
+      "sourceCommit": "dde400f413f00fbc0d9c58a6ca6086c741b86304",
+      "scope": "限定范围：月目标与进度条静态完整。",
+      "exclusions": "不签真实后台、外链目标或表单提交成功；不签完整键盘/触控或无障碍路径；当前提交的整矩阵或线上复验；原观察混版归属、未冻结外部响应、字体/图/商标 Unknown 仍按原证据保留。",
+      "evidence": {
+        "reviewSha256": "e9196e0c31068b7b8841213ebfc7ca075a1fffaeb02e593b456183aa51fd6098",
+        "frozenPathsSha256": "80254f618bcca23ee5580c36a52cb7f8c044accc38eddc83fa6fff3f4fd5a61f",
+        "preview": "batches/mantine-20261111-j/progress-card/index.html",
+        "runtimeCss": "batches/mantine-20261111-j/progress-card/runtime.css",
+        "runtimeJs": "batches/mantine-20261111-j/progress-card/runtime.js",
+        "archive": "batches/mantine-20261111-j/bundles/progress-card.zip",
+        "archiveSha256": "e7c328b1043fb673e824b1245e0fc119a495a267a14f200db0f01c899b28cd99",
+        "thumbnail": "thumbnails/mantine-ui--progress-card.webp",
+        "thumbnailSha256": "95f401a3bf530393a66a7eb1c8204e7e39b34b227b2429e0fd2cc206a856d5a8",
+        "qualificationTableSha256": "fefc6d747aa352347c2d3be1fdacd96f3aba041f603fc658078e259146ea9b48"
+      }
+    },
+    {
+      "id": "mantine-ui:authentication-title",
+      "sourceCommit": "dde400f413f00fbc0d9c58a6ca6086c741b86304",
+      "scope": "限定范围：空占位完整；中态勾选 Remember me，后态恢复；未登录/注册。",
+      "exclusions": "不签真实后台、外链目标或表单提交成功；不签完整键盘/触控或无障碍路径；当前提交的整矩阵或线上复验；原观察混版归属、未冻结外部响应、字体/图/商标 Unknown 仍按原证据保留。",
+      "evidence": {
+        "reviewSha256": "e9196e0c31068b7b8841213ebfc7ca075a1fffaeb02e593b456183aa51fd6098",
+        "frozenPathsSha256": "80254f618bcca23ee5580c36a52cb7f8c044accc38eddc83fa6fff3f4fd5a61f",
+        "preview": "batches/mantine-20261111-j/authentication-title/index.html",
+        "runtimeCss": "batches/mantine-20261111-j/authentication-title/runtime.css",
+        "runtimeJs": "batches/mantine-20261111-j/authentication-title/runtime.js",
+        "archive": "batches/mantine-20261111-j/bundles/authentication-title.zip",
+        "archiveSha256": "2a7c5f82cbadb7a6b47eda137ec56e406ead0dfa40f6a5e70b94cfb20a6151f4",
+        "thumbnail": "thumbnails/mantine-ui--authentication-title.webp",
+        "thumbnailSha256": "2d89146f2a9bdc91608fc53c1c3abe096f2c347b1c5d218dd7ab8230229dc027",
+        "qualificationTableSha256": "fefc6d747aa352347c2d3be1fdacd96f3aba041f603fc658078e259146ea9b48"
+      }
+    },
+    {
+      "id": "mantine-ui:contact-us",
+      "sourceCommit": "dde400f413f00fbc0d9c58a6ca6086c741b86304",
+      "scope": "限定范围：联系信息与空表单静态全含；空白占位不补字，不联系、不发送。",
+      "exclusions": "不签真实后台、外链目标或表单提交成功；不签完整键盘/触控或无障碍路径；当前提交的整矩阵或线上复验；原观察混版归属、未冻结外部响应、字体/图/商标 Unknown 仍按原证据保留。",
+      "evidence": {
+        "reviewSha256": "e9196e0c31068b7b8841213ebfc7ca075a1fffaeb02e593b456183aa51fd6098",
+        "frozenPathsSha256": "80254f618bcca23ee5580c36a52cb7f8c044accc38eddc83fa6fff3f4fd5a61f",
+        "preview": "batches/mantine-20261111-j/contact-us/index.html",
+        "runtimeCss": "batches/mantine-20261111-j/contact-us/runtime.css",
+        "runtimeJs": "batches/mantine-20261111-j/contact-us/runtime.js",
+        "archive": "batches/mantine-20261111-j/bundles/contact-us.zip",
+        "archiveSha256": "a41cf9f0957aed442b3f882e7203a01d7c29ea1dcc28a3a55fa1f573117de9a4",
+        "thumbnail": "thumbnails/mantine-ui--contact-us.webp",
+        "thumbnailSha256": "cd43a1a3694171c9743d4e2ed28ef46105fdb73a04443f0feeb9d2d11c07e0a7",
+        "qualificationTableSha256": "fefc6d747aa352347c2d3be1fdacd96f3aba041f603fc658078e259146ea9b48"
+      }
+    },
+    {
+      "id": "mantine-ui:forgot-password",
+      "sourceCommit": "dde400f413f00fbc0d9c58a6ca6086c741b86304",
+      "scope": "限定范围：静态+hover；空邮箱占位，不编已填/发信/重置成功。",
+      "exclusions": "不签真实后台、外链目标或表单提交成功；不签完整键盘/触控或无障碍路径；当前提交的整矩阵或线上复验；原观察混版归属、未冻结外部响应、字体/图/商标 Unknown 仍按原证据保留。",
+      "evidence": {
+        "reviewSha256": "e9196e0c31068b7b8841213ebfc7ca075a1fffaeb02e593b456183aa51fd6098",
+        "frozenPathsSha256": "80254f618bcca23ee5580c36a52cb7f8c044accc38eddc83fa6fff3f4fd5a61f",
+        "preview": "batches/mantine-20261111-j/forgot-password/index.html",
+        "runtimeCss": "batches/mantine-20261111-j/forgot-password/runtime.css",
+        "runtimeJs": "batches/mantine-20261111-j/forgot-password/runtime.js",
+        "archive": "batches/mantine-20261111-j/bundles/forgot-password.zip",
+        "archiveSha256": "12e49a39570b349654aa92abffd59ced0db4798b966b223313f4fb35c3abb4fa",
+        "thumbnail": "thumbnails/mantine-ui--forgot-password.webp",
+        "thumbnailSha256": "87acc489299599657f8a9437e77c958b46d9a1215f0bc9da09d2531f5096a4cd",
+        "qualificationTableSha256": "fefc6d747aa352347c2d3be1fdacd96f3aba041f603fc658078e259146ea9b48"
+      }
+    },
+    {
+      "id": "mantine-ui:get-in-touch-simple",
+      "sourceCommit": "dde400f413f00fbc0d9c58a6ca6086c741b86304",
+      "scope": "限定范围：四空字段与 Send 完整展示；禁止 submit/Enter/校验动作。",
+      "exclusions": "不签真实后台、外链目标或表单提交成功；不签完整键盘/触控或无障碍路径；当前提交的整矩阵或线上复验；原观察混版归属、未冻结外部响应、字体/图/商标 Unknown 仍按原证据保留。",
+      "evidence": {
+        "reviewSha256": "e9196e0c31068b7b8841213ebfc7ca075a1fffaeb02e593b456183aa51fd6098",
+        "frozenPathsSha256": "80254f618bcca23ee5580c36a52cb7f8c044accc38eddc83fa6fff3f4fd5a61f",
+        "preview": "batches/mantine-20261111-j/get-in-touch-simple/index.html",
+        "runtimeCss": "batches/mantine-20261111-j/get-in-touch-simple/runtime.css",
+        "runtimeJs": "batches/mantine-20261111-j/get-in-touch-simple/runtime.js",
+        "archive": "batches/mantine-20261111-j/bundles/get-in-touch-simple.zip",
+        "archiveSha256": "e2ec484cfb082c7e0b8ef0ee884e56c96e752e9184efdc0f7a10e500cf36f6e4",
+        "thumbnail": "thumbnails/mantine-ui--get-in-touch-simple.webp",
+        "thumbnailSha256": "d7f02efba5f56c1144a47c93db79ab9679f3b30e7985552980338510a1b60ab9",
+        "qualificationTableSha256": "fefc6d747aa352347c2d3be1fdacd96f3aba041f603fc658078e259146ea9b48"
+      }
+    },
+    {
+      "id": "mantine-ui:stats-card",
+      "sourceCommit": "dde400f413f00fbc0d9c58a6ca6086c741b86304",
+      "scope": "限定范围：游泳挑战卡数字与进度静态完整。",
+      "exclusions": "不签真实后台、外链目标或表单提交成功；不签完整键盘/触控或无障碍路径；当前提交的整矩阵或线上复验；原观察混版归属、未冻结外部响应、字体/图/商标 Unknown 仍按原证据保留。",
+      "evidence": {
+        "reviewSha256": "e9196e0c31068b7b8841213ebfc7ca075a1fffaeb02e593b456183aa51fd6098",
+        "frozenPathsSha256": "80254f618bcca23ee5580c36a52cb7f8c044accc38eddc83fa6fff3f4fd5a61f",
+        "preview": "batches/mantine-20261111-j/stats-card/index.html",
+        "runtimeCss": "batches/mantine-20261111-j/stats-card/runtime.css",
+        "runtimeJs": "batches/mantine-20261111-j/stats-card/runtime.js",
+        "archive": "batches/mantine-20261111-j/bundles/stats-card.zip",
+        "archiveSha256": "e04aee19058386a98f1b63763f8211d273d6c509f8cfbb9c20deee81dca82e29",
+        "thumbnail": "thumbnails/mantine-ui--stats-card.webp",
+        "thumbnailSha256": "e5e486cb8aa2839d20c7a23ca2f97218fc2872d7af6433df6db9cc19412c4507",
+        "qualificationTableSha256": "fefc6d747aa352347c2d3be1fdacd96f3aba041f603fc658078e259146ea9b48"
+      }
+    },
+    {
+      "id": "mantine-ui:stats-controls",
+      "sourceCommit": "dde400f413f00fbc0d9c58a6ca6086c741b86304",
+      "scope": "限定范围：初态封面只含 24 October；24→25→24 三态在观察报告，不在封面。复用报告，不因封面未含三态重跑。",
+      "exclusions": "不签真实后台、外链目标或表单提交成功；不签完整键盘/触控或无障碍路径；当前提交的整矩阵或线上复验；原观察混版归属、未冻结外部响应、字体/图/商标 Unknown 仍按原证据保留。",
+      "evidence": {
+        "reviewSha256": "e9196e0c31068b7b8841213ebfc7ca075a1fffaeb02e593b456183aa51fd6098",
+        "frozenPathsSha256": "80254f618bcca23ee5580c36a52cb7f8c044accc38eddc83fa6fff3f4fd5a61f",
+        "preview": "batches/mantine-20261111-j/stats-controls/index.html",
+        "runtimeCss": "batches/mantine-20261111-j/stats-controls/runtime.css",
+        "runtimeJs": "batches/mantine-20261111-j/stats-controls/runtime.js",
+        "archive": "batches/mantine-20261111-j/bundles/stats-controls.zip",
+        "archiveSha256": "7e778e6ab8426d2708a516b85aa4b1151662c582aa4a1138807c13b833cae98c",
+        "thumbnail": "thumbnails/mantine-ui--stats-controls.webp",
+        "thumbnailSha256": "2f40c4b4b4825f9c96ae6cf0d6bc196ef964f56d98ef1b0ad65074478a0413f8",
+        "qualificationTableSha256": "fefc6d747aa352347c2d3be1fdacd96f3aba041f603fc658078e259146ea9b48"
+      }
+    },
+    {
+      "id": "mantine-ui:stats-grid",
+      "sourceCommit": "dde400f413f00fbc0d9c58a6ca6086c741b86304",
+      "scope": "限定范围：四统计卡正负/箭头完整；仅静态演示非查询。",
+      "exclusions": "不签真实后台、外链目标或表单提交成功；不签完整键盘/触控或无障碍路径；当前提交的整矩阵或线上复验；原观察混版归属、未冻结外部响应、字体/图/商标 Unknown 仍按原证据保留。",
+      "evidence": {
+        "reviewSha256": "e9196e0c31068b7b8841213ebfc7ca075a1fffaeb02e593b456183aa51fd6098",
+        "frozenPathsSha256": "80254f618bcca23ee5580c36a52cb7f8c044accc38eddc83fa6fff3f4fd5a61f",
+        "preview": "batches/mantine-20261111-j/stats-grid/index.html",
+        "runtimeCss": "batches/mantine-20261111-j/stats-grid/runtime.css",
+        "runtimeJs": "batches/mantine-20261111-j/stats-grid/runtime.js",
+        "archive": "batches/mantine-20261111-j/bundles/stats-grid.zip",
+        "archiveSha256": "cc1eab05b7d69d6fe1494582237e047b766270fee5edfb91346b77bb73ebf70c",
+        "thumbnail": "thumbnails/mantine-ui--stats-grid.webp",
+        "thumbnailSha256": "039af37241a7cc21a3711ed7e017b9ac59384ab4cfbc557fbc394d7ea7bdf319",
+        "qualificationTableSha256": "fefc6d747aa352347c2d3be1fdacd96f3aba041f603fc658078e259146ea9b48"
+      }
+    },
+    {
+      "id": "mantine-ui:stats-group",
+      "sourceCommit": "dde400f413f00fbc0d9c58a6ca6086c741b86304",
+      "scope": "限定范围：三段组静态示例文字完整；无核心动作。",
+      "exclusions": "不签真实后台、外链目标或表单提交成功；不签完整键盘/触控或无障碍路径；当前提交的整矩阵或线上复验；原观察混版归属、未冻结外部响应、字体/图/商标 Unknown 仍按原证据保留。",
+      "evidence": {
+        "reviewSha256": "e9196e0c31068b7b8841213ebfc7ca075a1fffaeb02e593b456183aa51fd6098",
+        "frozenPathsSha256": "80254f618bcca23ee5580c36a52cb7f8c044accc38eddc83fa6fff3f4fd5a61f",
+        "preview": "batches/mantine-20261111-j/stats-group/index.html",
+        "runtimeCss": "batches/mantine-20261111-j/stats-group/runtime.css",
+        "runtimeJs": "batches/mantine-20261111-j/stats-group/runtime.js",
+        "archive": "batches/mantine-20261111-j/bundles/stats-group.zip",
+        "archiveSha256": "18b70e9c4dacca91c455f05ef0c3fcb1896a7589ab65f65c8a37ea4dd5b45278",
+        "thumbnail": "thumbnails/mantine-ui--stats-group.webp",
+        "thumbnailSha256": "c6ff01aebf3ea3881950a691e4a2112538e94239d804f6a9249ebe27f1bc4aba",
+        "qualificationTableSha256": "fefc6d747aa352347c2d3be1fdacd96f3aba041f603fc658078e259146ea9b48"
+      }
+    },
+    {
+      "id": "mantine-ui:stats-ring",
+      "sourceCommit": "dde400f413f00fbc0d9c58a6ca6086c741b86304",
+      "scope": "限定范围：三环统计静态完整。",
+      "exclusions": "不签真实后台、外链目标或表单提交成功；不签完整键盘/触控或无障碍路径；当前提交的整矩阵或线上复验；原观察混版归属、未冻结外部响应、字体/图/商标 Unknown 仍按原证据保留。",
+      "evidence": {
+        "reviewSha256": "e9196e0c31068b7b8841213ebfc7ca075a1fffaeb02e593b456183aa51fd6098",
+        "frozenPathsSha256": "80254f618bcca23ee5580c36a52cb7f8c044accc38eddc83fa6fff3f4fd5a61f",
+        "preview": "batches/mantine-20261111-j/stats-ring/index.html",
+        "runtimeCss": "batches/mantine-20261111-j/stats-ring/runtime.css",
+        "runtimeJs": "batches/mantine-20261111-j/stats-ring/runtime.js",
+        "archive": "batches/mantine-20261111-j/bundles/stats-ring.zip",
+        "archiveSha256": "2ebb92116d841b987c70b6b59e493923bd0e8da2f7853fc0beee071c31aa764c",
+        "thumbnail": "thumbnails/mantine-ui--stats-ring.webp",
+        "thumbnailSha256": "cc8413f04f858c62bf6b7d81cf683e49a8e8433800f568a91448575d9dbe4d54",
+        "qualificationTableSha256": "fefc6d747aa352347c2d3be1fdacd96f3aba041f603fc658078e259146ea9b48"
+      }
+    },
+    {
+      "id": "mantine-ui:stats-ring-card",
+      "sourceCommit": "dde400f413f00fbc0d9c58a6ca6086c741b86304",
+      "scope": "限定范围：1887/447/76/81% 初态静态完整；不把算术合计当屏幕外事实；无核心动作。",
+      "exclusions": "不签真实后台、外链目标或表单提交成功；不签完整键盘/触控或无障碍路径；当前提交的整矩阵或线上复验；原观察混版归属、未冻结外部响应、字体/图/商标 Unknown 仍按原证据保留。",
+      "evidence": {
+        "reviewSha256": "e9196e0c31068b7b8841213ebfc7ca075a1fffaeb02e593b456183aa51fd6098",
+        "frozenPathsSha256": "80254f618bcca23ee5580c36a52cb7f8c044accc38eddc83fa6fff3f4fd5a61f",
+        "preview": "batches/mantine-20261111-j/stats-ring-card/index.html",
+        "runtimeCss": "batches/mantine-20261111-j/stats-ring-card/runtime.css",
+        "runtimeJs": "batches/mantine-20261111-j/stats-ring-card/runtime.js",
+        "archive": "batches/mantine-20261111-j/bundles/stats-ring-card.zip",
+        "archiveSha256": "5206b60a7af5b6a3dbf333e4a2cd8383a63ec220384acf4326a0809b32fdc0dc",
+        "thumbnail": "thumbnails/mantine-ui--stats-ring-card.webp",
+        "thumbnailSha256": "16d7727fdaf925efa6680892c4a9800ee1522d36382845de957d61aa714bc72c",
+        "qualificationTableSha256": "fefc6d747aa352347c2d3be1fdacd96f3aba041f603fc658078e259146ea9b48"
+      }
+    },
+    {
+      "id": "mantine-ui:stats-segments",
+      "sourceCommit": "dde400f413f00fbc0d9c58a6ca6086c741b86304",
+      "scope": "限定范围：分段占比静态完整。",
+      "exclusions": "不签真实后台、外链目标或表单提交成功；不签完整键盘/触控或无障碍路径；当前提交的整矩阵或线上复验；原观察混版归属、未冻结外部响应、字体/图/商标 Unknown 仍按原证据保留。",
+      "evidence": {
+        "reviewSha256": "e9196e0c31068b7b8841213ebfc7ca075a1fffaeb02e593b456183aa51fd6098",
+        "frozenPathsSha256": "80254f618bcca23ee5580c36a52cb7f8c044accc38eddc83fa6fff3f4fd5a61f",
+        "preview": "batches/mantine-20261111-j/stats-segments/index.html",
+        "runtimeCss": "batches/mantine-20261111-j/stats-segments/runtime.css",
+        "runtimeJs": "batches/mantine-20261111-j/stats-segments/runtime.js",
+        "archive": "batches/mantine-20261111-j/bundles/stats-segments.zip",
+        "archiveSha256": "9c5b6a849fabd60297a9bcec2d0f2a0be5f76122a2129229bdf6bfa309e86701",
+        "thumbnail": "thumbnails/mantine-ui--stats-segments.webp",
+        "thumbnailSha256": "9131f3793f7e04ab9b6e1c3fbb6fded22a1f2c4f3e899792ed184f93e20fb988",
+        "qualificationTableSha256": "fefc6d747aa352347c2d3be1fdacd96f3aba041f603fc658078e259146ea9b48"
+      }
+    },
+    {
+      "id": "mantine-ui:switches-card",
+      "sourceCommit": "dde400f413f00fbc0d9c58a6ca6086c741b86304",
+      "scope": "限定范围：Messages OFF→ON→OFF，非持久化保存。",
+      "exclusions": "不签真实后台、外链目标或表单提交成功；不签完整键盘/触控或无障碍路径；当前提交的整矩阵或线上复验；原观察混版归属、未冻结外部响应、字体/图/商标 Unknown 仍按原证据保留。",
+      "evidence": {
+        "reviewSha256": "e9196e0c31068b7b8841213ebfc7ca075a1fffaeb02e593b456183aa51fd6098",
+        "frozenPathsSha256": "80254f618bcca23ee5580c36a52cb7f8c044accc38eddc83fa6fff3f4fd5a61f",
+        "preview": "batches/mantine-20261111-j/switches-card/index.html",
+        "runtimeCss": "batches/mantine-20261111-j/switches-card/runtime.css",
+        "runtimeJs": "batches/mantine-20261111-j/switches-card/runtime.js",
+        "archive": "batches/mantine-20261111-j/bundles/switches-card.zip",
+        "archiveSha256": "0988274ce565965f5743f55a95fe48f3d3bc9893f817eaa9348b32bcdfb3c712",
+        "thumbnail": "thumbnails/mantine-ui--switches-card.webp",
+        "thumbnailSha256": "ae0ac088fdfc61aa36812d376b9b845bc4a88d5809f8cf067ed1c3ce159993d3",
+        "qualificationTableSha256": "fefc6d747aa352347c2d3be1fdacd96f3aba041f603fc658078e259146ea9b48"
+      }
+    },
+    {
+      "id": "mantine-ui:dnd-list",
+      "sourceCommit": "dde400f413f00fbc0d9c58a6ca6086c741b86304",
+      "scope": "限定范围：C-N-Y-Ba-Ce→N-C-Y-Ba-Ce→原序；只改本地次序。",
+      "exclusions": "不签真实后台、外链目标或表单提交成功；不签完整键盘/触控或无障碍路径；当前提交的整矩阵或线上复验；原观察混版归属、未冻结外部响应、字体/图/商标 Unknown 仍按原证据保留。",
+      "evidence": {
+        "reviewSha256": "e9196e0c31068b7b8841213ebfc7ca075a1fffaeb02e593b456183aa51fd6098",
+        "frozenPathsSha256": "80254f618bcca23ee5580c36a52cb7f8c044accc38eddc83fa6fff3f4fd5a61f",
+        "preview": "batches/mantine-20261111-j/dnd-list/index.html",
+        "runtimeCss": "batches/mantine-20261111-j/dnd-list/runtime.css",
+        "runtimeJs": "batches/mantine-20261111-j/dnd-list/runtime.js",
+        "archive": "batches/mantine-20261111-j/bundles/dnd-list.zip",
+        "archiveSha256": "a3a533d8c48d75f2e2908e9d9bbd66250437da428e05b51ada68e9a08324fd3d",
+        "thumbnail": "thumbnails/mantine-ui--dnd-list.webp",
+        "thumbnailSha256": "440b37ab3caf3b483a5d3663bbfc93a1aab930b69c792eed6cab871b8f31fa95",
+        "qualificationTableSha256": "fefc6d747aa352347c2d3be1fdacd96f3aba041f603fc658078e259146ea9b48"
+      }
+    },
+    {
+      "id": "mantine-ui:dnd-table",
+      "sourceCommit": "dde400f413f00fbc0d9c58a6ca6086c741b86304",
+      "scope": "限定范围：同上，只改本地次序。",
+      "exclusions": "不签真实后台、外链目标或表单提交成功；不签完整键盘/触控或无障碍路径；当前提交的整矩阵或线上复验；原观察混版归属、未冻结外部响应、字体/图/商标 Unknown 仍按原证据保留。",
+      "evidence": {
+        "reviewSha256": "e9196e0c31068b7b8841213ebfc7ca075a1fffaeb02e593b456183aa51fd6098",
+        "frozenPathsSha256": "80254f618bcca23ee5580c36a52cb7f8c044accc38eddc83fa6fff3f4fd5a61f",
+        "preview": "batches/mantine-20261111-j/dnd-table/index.html",
+        "runtimeCss": "batches/mantine-20261111-j/dnd-table/runtime.css",
+        "runtimeJs": "batches/mantine-20261111-j/dnd-table/runtime.js",
+        "archive": "batches/mantine-20261111-j/bundles/dnd-table.zip",
+        "archiveSha256": "91a40b6e6af0acaf81bbbbff814bafd5c2a91d9e510689eb095af018377f3edb",
+        "thumbnail": "thumbnails/mantine-ui--dnd-table.webp",
+        "thumbnailSha256": "9128484745e3e321ee75b000381ea3464013548b6659c16b35e1e4caea9afc40",
+        "qualificationTableSha256": "fefc6d747aa352347c2d3be1fdacd96f3aba041f603fc658078e259146ea9b48"
+      }
+    },
+    {
+      "id": "mantine-ui:table-of-contents-floating",
+      "sourceCommit": "dde400f413f00fbc0d9c58a6ca6086c741b86304",
+      "scope": "限定范围：干净静图未点击。旧 Usage 动作图保留，blob 全等下复用；不把新静帧当动作证书。",
+      "exclusions": "不签真实后台、外链目标或表单提交成功；不签完整键盘/触控或无障碍路径；当前提交的整矩阵或线上复验；原观察混版归属、未冻结外部响应、字体/图/商标 Unknown 仍按原证据保留。",
+      "evidence": {
+        "reviewSha256": "e9196e0c31068b7b8841213ebfc7ca075a1fffaeb02e593b456183aa51fd6098",
+        "frozenPathsSha256": "80254f618bcca23ee5580c36a52cb7f8c044accc38eddc83fa6fff3f4fd5a61f",
+        "preview": "batches/mantine-20261111-j/table-of-contents-floating/index.html",
+        "runtimeCss": "batches/mantine-20261111-j/table-of-contents-floating/runtime.css",
+        "runtimeJs": "batches/mantine-20261111-j/table-of-contents-floating/runtime.js",
+        "archive": "batches/mantine-20261111-j/bundles/table-of-contents-floating.zip",
+        "archiveSha256": "a3db7d520fcc627f84e4efb06f138523ad3d287bc9b03de28e09f780864a99dd",
+        "thumbnail": "thumbnails/mantine-ui--table-of-contents-floating.webp",
+        "thumbnailSha256": "036babe5d93cdcb8471d0ef012f9a2029141dbb64dc72bed0ddccf7230abf4bf",
+        "qualificationTableSha256": "fefc6d747aa352347c2d3be1fdacd96f3aba041f603fc658078e259146ea9b48"
+      }
+    },
+    {
+      "id": "mantine-ui:table-reviews",
+      "sourceCommit": "dde400f413f00fbc0d9c58a6ca6086c741b86304",
+      "scope": "限定范围：五列六行与比例静态齐；不签链接/查询/排序。干净图只去遮挡，不补动作。",
+      "exclusions": "不签真实后台、外链目标或表单提交成功；不签完整键盘/触控或无障碍路径；当前提交的整矩阵或线上复验；原观察混版归属、未冻结外部响应、字体/图/商标 Unknown 仍按原证据保留。",
+      "evidence": {
+        "reviewSha256": "e9196e0c31068b7b8841213ebfc7ca075a1fffaeb02e593b456183aa51fd6098",
+        "frozenPathsSha256": "80254f618bcca23ee5580c36a52cb7f8c044accc38eddc83fa6fff3f4fd5a61f",
+        "preview": "batches/mantine-20261111-j/table-reviews/index.html",
+        "runtimeCss": "batches/mantine-20261111-j/table-reviews/runtime.css",
+        "runtimeJs": "batches/mantine-20261111-j/table-reviews/runtime.js",
+        "archive": "batches/mantine-20261111-j/bundles/table-reviews.zip",
+        "archiveSha256": "89b64e5f9e210712a8e2f34b9d7d9cae771750c24846dde0bf362172250ccaef",
+        "thumbnail": "thumbnails/mantine-ui--table-reviews.webp",
+        "thumbnailSha256": "ff1659e52ad74925cc9d22184199774799d9c929ea8b312508f3b9045ea1a974",
+        "qualificationTableSha256": "fefc6d747aa352347c2d3be1fdacd96f3aba041f603fc658078e259146ea9b48"
+      }
+    },
+    {
+      "id": "mantine-ui:table-scroll-area",
+      "sourceCommit": "dde400f413f00fbc0d9c58a6ca6086c741b86304",
+      "scope": "限定范围：有限滚动视口；已签头部同位置及更多行/恢复，不拼接 30 行。",
+      "exclusions": "不签真实后台、外链目标或表单提交成功；不签完整键盘/触控或无障碍路径；当前提交的整矩阵或线上复验；原观察混版归属、未冻结外部响应、字体/图/商标 Unknown 仍按原证据保留。",
+      "evidence": {
+        "reviewSha256": "e9196e0c31068b7b8841213ebfc7ca075a1fffaeb02e593b456183aa51fd6098",
+        "frozenPathsSha256": "80254f618bcca23ee5580c36a52cb7f8c044accc38eddc83fa6fff3f4fd5a61f",
+        "preview": "batches/mantine-20261111-j/table-scroll-area/index.html",
+        "runtimeCss": "batches/mantine-20261111-j/table-scroll-area/runtime.css",
+        "runtimeJs": "batches/mantine-20261111-j/table-scroll-area/runtime.js",
+        "archive": "batches/mantine-20261111-j/bundles/table-scroll-area.zip",
+        "archiveSha256": "82beb7b2a15947f741163fc380fc0d1733e35c2bbd578e67fee34f7f8b0be31d",
+        "thumbnail": "thumbnails/mantine-ui--table-scroll-area.webp",
+        "thumbnailSha256": "021cb518f17fecf4eccbc2ee6b361b5b5e986c38c8a4225c3d85e7bec5238b4d",
+        "qualificationTableSha256": "fefc6d747aa352347c2d3be1fdacd96f3aba041f603fc658078e259146ea9b48"
+      }
+    },
+    {
+      "id": "hyperui:marketing-footers",
+      "sourceCommit": "dde400f413f00fbc0d9c58a6ca6086c741b86304",
+      "scope": "限定范围：主帧无底部 copyright（上下帧合看但不拼接）。Sign Up 禁止 submit。静态/空输入即可，不造订阅业务。",
+      "exclusions": "不签真实后台、外链目标或表单提交成功；不签完整键盘/触控或无障碍路径；当前提交的整矩阵或线上复验；原观察混版归属、未冻结外部响应、字体/图/商标 Unknown 仍按原证据保留。",
+      "evidence": {
+        "reviewSha256": "e9196e0c31068b7b8841213ebfc7ca075a1fffaeb02e593b456183aa51fd6098",
+        "frozenPathsSha256": "80254f618bcca23ee5580c36a52cb7f8c044accc38eddc83fa6fff3f4fd5a61f",
+        "preview": "batches/hyperui-20261111/marketing-footers.html",
+        "runtimeCss": "batches/hyperui-20261111/runtime.css",
+        "runtimeJs": "batches/hyperui-20261111/runtime.js",
+        "archive": "batches/hyperui-20261111/bundles/marketing-footers.zip",
+        "archiveSha256": "77bc99bb7b31dc9df331a02eb38bfcb4d2478a5dd25055e1300d62412e86d051",
+        "thumbnail": "thumbnails/hyperui--marketing-footers.webp",
+        "thumbnailSha256": "0a7874dc98bc3e6ca216d73c359794fed000f08cc498fa7d2d704f9ca8e86270",
+        "qualificationTableSha256": "fefc6d747aa352347c2d3be1fdacd96f3aba041f603fc658078e259146ea9b48"
+      }
+    },
+    {
+      "id": "hyperui:application-stats",
+      "sourceCommit": "dde400f413f00fbc0d9c58a6ca6086c741b86304",
+      "scope": "限定范围：镜像演示金额静态完整；不是实账。",
+      "exclusions": "不签真实后台、外链目标或表单提交成功；不签完整键盘/触控或无障碍路径；当前提交的整矩阵或线上复验；原观察混版归属、未冻结外部响应、字体/图/商标 Unknown 仍按原证据保留。",
+      "evidence": {
+        "reviewSha256": "e9196e0c31068b7b8841213ebfc7ca075a1fffaeb02e593b456183aa51fd6098",
+        "frozenPathsSha256": "80254f618bcca23ee5580c36a52cb7f8c044accc38eddc83fa6fff3f4fd5a61f",
+        "preview": "batches/hyperui-20261111/application-stats.html",
+        "runtimeCss": "batches/hyperui-20261111/runtime.css",
+        "runtimeJs": "batches/hyperui-20261111/runtime.js",
+        "archive": "batches/hyperui-20261111/bundles/application-stats.zip",
+        "archiveSha256": "b27de69493cb3bd1de2b0434d0e46d088ef3f884f26ec177c8ddce4518703d26",
+        "thumbnail": "thumbnails/hyperui--application-stats.webp",
+        "thumbnailSha256": "06d2475eea3bedebd507044e3ce82b9966dd0e095569f37ec2f436af5c106f54",
+        "qualificationTableSha256": "fefc6d747aa352347c2d3be1fdacd96f3aba041f603fc658078e259146ea9b48"
+      }
+    },
+    {
+      "id": "hyperui:application-empty-states",
+      "sourceCommit": "dde400f413f00fbc0d9c58a6ca6086c741b86304",
+      "scope": "限定范围：空状态与 CTA 文案齐；无创建/链接动作结果，不造创建业务。",
+      "exclusions": "不签真实后台、外链目标或表单提交成功；不签完整键盘/触控或无障碍路径；当前提交的整矩阵或线上复验；原观察混版归属、未冻结外部响应、字体/图/商标 Unknown 仍按原证据保留。",
+      "evidence": {
+        "reviewSha256": "e9196e0c31068b7b8841213ebfc7ca075a1fffaeb02e593b456183aa51fd6098",
+        "frozenPathsSha256": "80254f618bcca23ee5580c36a52cb7f8c044accc38eddc83fa6fff3f4fd5a61f",
+        "preview": "batches/hyperui-20261111/application-empty-states.html",
+        "runtimeCss": "batches/hyperui-20261111/runtime.css",
+        "runtimeJs": "batches/hyperui-20261111/runtime.js",
+        "archive": "batches/hyperui-20261111/bundles/application-empty-states.zip",
+        "archiveSha256": "35ece7c8776f124c401a75b1adc6315447276f2d2e03c9c6e6502a2183540caf",
+        "thumbnail": "thumbnails/hyperui--application-empty-states.webp",
+        "thumbnailSha256": "4fa1a4b1160dce640328e13d9038affaf70ab796f0faeccf627db2f392d270c1",
+        "qualificationTableSha256": "fefc6d747aa352347c2d3be1fdacd96f3aba041f603fc658078e259146ea9b48"
+      }
+    },
+    {
+      "id": "daisyui:steps",
+      "sourceCommit": "dde400f413f00fbc0d9c58a6ca6086c741b86304",
+      "scope": "限定范围：四步骤为固定展示，不是可用向导或购买结果。无核心动作。",
+      "exclusions": "不签真实后台、外链目标或表单提交成功；不签完整键盘/触控或无障碍路径；当前提交的整矩阵或线上复验；原观察混版归属、未冻结外部响应、字体/图/商标 Unknown 仍按原证据保留。",
+      "evidence": {
+        "reviewSha256": "e9196e0c31068b7b8841213ebfc7ca075a1fffaeb02e593b456183aa51fd6098",
+        "frozenPathsSha256": "80254f618bcca23ee5580c36a52cb7f8c044accc38eddc83fa6fff3f4fd5a61f",
+        "preview": "batches/daisyui-20261111/steps.html",
+        "runtimeCss": "batches/daisyui-20261111/runtime.css",
+        "runtimeJs": "batches/daisyui-20261111/runtime.js",
+        "archive": "batches/daisyui-20261111/bundles/steps.zip",
+        "archiveSha256": "59ebce6b92225dd1d7b9348027209eb3b69c29a7c5964d56ce36b277ca04a84f",
+        "thumbnail": "thumbnails/daisyui--steps.webp",
+        "thumbnailSha256": "407fdb8862de5f19fd769cc7eec6893981960421849f8ab1d027d09fe5f257f5",
+        "qualificationTableSha256": "fefc6d747aa352347c2d3be1fdacd96f3aba041f603fc658078e259146ea9b48"
       }
     }
   ]

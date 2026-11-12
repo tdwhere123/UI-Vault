@@ -11,9 +11,10 @@ import {adaptCandidate} from './candidate-adapter.mjs';
 import {legacyFeaturedCandidateIds} from './legacy-featured-candidates.mjs';
 import {composePreview,validateScriptNames,MAX_SCRIPT_BYTES} from './preview-runtime.mjs';
 const read=p=>readFile(new URL(p,import.meta.url),'utf8');
+const qualifiedInventoryIds=JSON.parse(readFileSync(new URL('test-fixtures/curation/qualified-inventory-scopes.json',import.meta.url),'utf8')).qualified.map(x=>x.id);
 test('source baseline is preserved; new families have previews or explicit reviewed source-only status',async()=>{
  const a=JSON.parse(await read('candidate-catalog.json')).map(adaptCandidate),b=JSON.parse(await read('items.json'));
- const baseline=JSON.parse(await read('candidate-baseline-ids.json'));assert.equal(baseline.length,185);assert(baseline.every(id=>a.some(x=>x.id===id)));assert(a.filter(x=>!baseline.includes(x.id)).every(x=>x.preview||(x.previewStatus==='source-only'&&x.sourceCollectionReady===true&&x.runtimeRedistributionAuditComplete===false&&x.completedPreviewCount===0&&/^[a-f0-9]{40}$/.test(x.revision)&&/^https:\/\/github\.com\//.test(x.licenseEvidence?.url||'')&&/^[a-f0-9]{64}$/.test(x.licenseEvidence?.sha256||''))));assert.equal(new Set([...a,...b].map(x=>x.id)).size,a.length+b.length);
+ const baseline=JSON.parse(await read('candidate-baseline-ids.json'));assert.equal(baseline.length,185);assert(baseline.every(id=>a.some(x=>x.id===id)));assert(a.filter(x=>!baseline.includes(x.id)).every(x=>x.preview||(x.previewStatus==='source-only'&&x.sourceCollectionReady===true&&x.runtimeRedistributionAuditComplete===false&&x.completedPreviewCount===0&&/^[a-f0-9]{40}$/.test(x.revision)&&/^https:\/\/github\.com\//.test(x.licenseEvidence?.url||'')&&/^[a-f0-9]{64}$/.test(x.licenseEvidence?.sha256||''))));assert.deepEqual(a.filter(x=>b.some(y=>y.id===x.id)).map(x=>x.id).sort(),[...qualifiedInventoryIds].sort());assert.equal(new Set([...a,...b].map(x=>x.id)).size,a.length+b.length-qualifiedInventoryIds.length);
  const categories=['Agent与对话','输入与选择','导航与组织','数据与状态','展示与媒体','产品与营销','视觉与动效','图标系列'];assert(a.every(x=>x.pending&&categories.includes(x.category)));
  assert(a.filter(x=>x.preview&&legacyFeaturedCandidateIds.has(x.id)).every(x=>x.featured));assert(a.filter(x=>x.preview&&!legacyFeaturedCandidateIds.has(x.id)&&!x.editorialApproval).every(x=>!x.featured));assert(a.filter(x=>!x.preview).every(x=>!x.featured));
  assert(a.filter(x=>x.format==='图标家族').every(x=>x.kind==='图标系列'));
@@ -148,9 +149,10 @@ test('candidate posters are the selected crop bytes, double-header stays without
   assert.equal(Object.keys(SELECTED_POSTERS).length, 54);
   assert.equal(ledger.accounts.covers, 0);
   assert.equal(ledger.accounts.browserVisualQA, 0);
-  assert.equal(ledger.accounts.verifiedNewIndependentUIs, 5);
-  assert.equal(items.length, 241);
-  assert.equal(items.some((x) => SELECTED_POSTERS[x.id] || x.id === NO_NORMAL_COVER_ID), false);
+  assert.equal(ledger.accounts.verifiedNewIndependentUIs, 40);
+  assert.equal(items.length, 276);
+  assert.deepEqual(items.filter(x=>SELECTED_POSTERS[x.id]).map(x=>x.id).sort(),[...qualifiedInventoryIds].sort());
+  assert.equal(items.some(x=>x.id===NO_NORMAL_COVER_ID),false);
   for (const [id, expect] of Object.entries(SELECTED_POSTERS)) {
     const entry = catalog.find((x) => x.id === id);
     assert.ok(entry, id);

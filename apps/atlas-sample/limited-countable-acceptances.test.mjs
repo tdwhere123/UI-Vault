@@ -21,7 +21,14 @@ const REPO = process.env.ATLAS_REPO || join(HERE, '../..');
 const BASELINE_COMMIT = '50a53e2646a560e9c042dc69aa801e3e21393eec';
 const SOURCE_COMMIT = '3695f76d56133051c9bd7bdacb05fddcfaf0c9d2';
 const E5 = 'e5f0ee43bd1957e70bbb6e012270e54d80e3c618';
-const EXPECTED_IDS = ['mantine-ui:table-sort', 'mantine-ui:double-navbar', 'mantine-ui:footer-links', 'daisyui:accordion', 'hyperui:application-modals'];
+const PREVIOUSLY_ACCEPTED_IDS = ['mantine-ui:table-sort', 'mantine-ui:double-navbar', 'mantine-ui:footer-links', 'daisyui:accordion', 'hyperui:application-modals'];
+const CLASSIFIED_SCOPES = JSON.parse(readFileSync(new URL('test-fixtures/curation/qualified-inventory-scopes.json', import.meta.url), 'utf8')).qualified;
+const CLASSIFIED_IDS = CLASSIFIED_SCOPES.map(x => x.id);
+const EXPECTED_IDS = [...PREVIOUSLY_ACCEPTED_IDS, ...CLASSIFIED_IDS];
+const CLASSIFIED_SOURCE_COMMIT = 'dde400f413f00fbc0d9c58a6ca6086c741b86304';
+const CLASSIFIED_REVIEW_SHA256 = 'e9196e0c31068b7b8841213ebfc7ca075a1fffaeb02e593b456183aa51fd6098';
+const CLASSIFIED_INPUT_MANIFEST_SHA256 = '80254f618bcca23ee5580c36a52cb7f8c044accc38eddc83fa6fff3f4fd5a61f';
+const CLASSIFIED_QUALIFICATION_TABLE_SHA256 = 'fefc6d747aa352347c2d3be1fdacd96f3aba041f603fc658078e259146ea9b48';
 const MANTINE_IDS = ['mantine-ui:table-sort', 'mantine-ui:double-navbar', 'mantine-ui:footer-links'];
 const ADDITIONAL_LIMITED_COUNTABLE_IDS = ['daisyui:accordion', 'hyperui:application-modals'];
 const POSTER_MANTINE_MANIFEST_IDS = [
@@ -106,6 +113,10 @@ function assertLimitedCountableQualifyingEvidence(records) {
     } else if (ADDITIONAL_LIMITED_COUNTABLE_IDS.includes(record.id)) {
       assert.equal(ev.reviewSha256, ADDITIONAL_LIMITED_COUNTABLE_REVIEW_SHA256, record.id);
       assert.equal(ev.frozenPathsSha256, ADDITIONAL_LIMITED_COUNTABLE_INPUT_MANIFEST_SHA256, record.id);
+    } else if (CLASSIFIED_IDS.includes(record.id)) {
+      assert.equal(ev.reviewSha256, CLASSIFIED_REVIEW_SHA256, record.id);
+      assert.equal(ev.frozenPathsSha256, CLASSIFIED_INPUT_MANIFEST_SHA256, record.id);
+      assert.equal(ev.qualificationTableSha256, CLASSIFIED_QUALIFICATION_TABLE_SHA256, record.id);
     } else {
       assert.fail(`unexpected limited-countable id ${record.id}`);
     }
@@ -120,8 +131,8 @@ test('named limited-countable records are the authority for the verified new ind
   });
   const ids = acc.verifiedNewIndependentRecords.map((r) => r.id);
   assert.deepEqual(ids, EXPECTED_IDS);
-  assert.equal(acc.verifiedNewIndependentUIs, 5);
-  assert.equal(new Set(ids).size, 5);
+  assert.equal(acc.verifiedNewIndependentUIs, 40);
+  assert.equal(new Set(ids).size, 40);
   assert.equal(acc.covers, 0);
   assert.equal(acc.browserVisualQA, 0);
   assert.equal(acc.newCatalogConnects, 554);
@@ -132,7 +143,8 @@ test('named limited-countable records are the authority for the verified new ind
   for (const id of ADDITIONAL_LIMITED_COUNTABLE_IDS) assert.equal(ids.includes(id), true);
   for (const record of acc.verifiedNewIndependentRecords) {
     if (MANTINE_IDS.includes(record.id)) assert.equal(record.sourceCommit, SOURCE_COMMIT);
-    else assert.equal(record.sourceCommit, E5);
+    else if (ADDITIONAL_LIMITED_COUNTABLE_IDS.includes(record.id)) assert.equal(record.sourceCommit, E5);
+    else assert.equal(record.sourceCommit, CLASSIFIED_SOURCE_COMMIT);
     assert.match(record.scope, /限定范围|完整/);
     assert.match(record.exclusions, /当前提交的整矩阵或线上复验/);
     const ev = record.evidence;
@@ -166,9 +178,9 @@ test('named limited-countable records are the authority for the verified new ind
   assert.doesNotMatch(footer.scope, /点击导航|社交目标成功|真实后台/);
   const catalog = JSON.parse(readFileSync(join(ROOT, 'candidate-catalog.json'), 'utf8'));
   const items = JSON.parse(readFileSync(join(ROOT, 'items.json'), 'utf8'));
-  assert.equal(items.length, 241);
+  assert.equal(items.length, 276);
   const itemIds = new Set(items.map((x) => x.id));
-  for (const id of EXPECTED_IDS) {
+  for (const id of PREVIOUSLY_ACCEPTED_IDS) {
     const entry = catalog.find((x) => x.id === id);
     assert.ok(entry, id);
     assert.equal(itemIds.has(id), false, id);
@@ -183,7 +195,7 @@ test('named limited-countable records are the authority for the verified new ind
     assert.throws(() => assertLimitedCountableCatalogBrowserVisualQA(stripped), { name: 'AssertionError' }, id);
   }
   const status = formatCollectionAccountingStatus(acc);
-  assert.match(status, /已核新增独立 UI 5，均为限定可计/);
+  assert.match(status, /已核新增独立 UI 40，均为限定可计/);
   assert.match(status, /封面 0/);
   assert.match(status, /实测 0/);
   assert.doesNotMatch(status, /已核新增\/封面\/实测为 0/);
@@ -193,15 +205,15 @@ test('accounting rejects duplicate, unknown, or count-mismatched acceptance reco
   const candidates = JSON.parse(readFileSync(join(ROOT, 'candidate-catalog.json'), 'utf8'));
   const ledger = JSON.parse(readFileSync(join(ROOT, 'COLLECTION-LEDGER.json'), 'utf8'));
   const base = collectionAccountingFrom(candidates, ledger);
-  assert.equal(base.verifiedNewIndependentUIs, 5);
+  assert.equal(base.verifiedNewIndependentUIs, 40);
   const dup = structuredClone(ledger);
   dup.verifiedNewIndependentRecords.push(dup.verifiedNewIndependentRecords[0]);
-  assert.equal(dup.verifiedNewIndependentRecords.length, 6);
+  assert.equal(dup.verifiedNewIndependentRecords.length, 41);
   dup.accounts.verifiedNewIndependentUIs = dup.verifiedNewIndependentRecords.length;
   assert.throws(() => collectionAccountingFrom(candidates, dup), /duplicate verifiedNewIndependent id/);
   const unknown = structuredClone(ledger);
   unknown.verifiedNewIndependentRecords[0].id = 'not-a-catalog:item';
-  unknown.accounts.verifiedNewIndependentUIs = 5;
+  unknown.accounts.verifiedNewIndependentUIs = 40;
   assert.throws(() => collectionAccountingFrom(candidates, unknown), /not in the catalog/);
   const mismatch = structuredClone(ledger);
   mismatch.accounts.verifiedNewIndependentUIs = 0;
@@ -212,9 +224,9 @@ test('accounting rejects duplicate, unknown, or count-mismatched acceptance reco
   extra.id = 'daisyui:tabs';
   extra.scope = 'copied record used only as a parser control';
   pending.verifiedNewIndependentRecords.push(extra);
-  pending.accounts.verifiedNewIndependentUIs = 6;
+  pending.accounts.verifiedNewIndependentUIs = 41;
   const inflated = collectionAccountingFrom(candidates, pending);
-  assert.equal(inflated.verifiedNewIndependentUIs, 6);
+  assert.equal(inflated.verifiedNewIndependentUIs, 41);
   const productIds = ledger.verifiedNewIndependentRecords.map((r) => r.id);
   assert.equal(productIds.includes('daisyui:accordion'), true);
   assert.equal(productIds.includes('hyperui:application-modals'), true);
@@ -263,13 +275,13 @@ test('public consumers current fields match the limited countable ledger', () =>
   const catalog = JSON.parse(readFileSync(join(ROOT, 'candidate-catalog.json'), 'utf8'));
   const readme = readFileSync(join(ROOT, 'README.md'), 'utf8');
   const manifest = JSON.parse(readFileSync(join(ROOT, 'batches/mantine-20261111-j/manifest.json'), 'utf8'));
-  assert.equal(ledger.accounts.verifiedNewIndependentUIs, 5);
+  assert.equal(ledger.accounts.verifiedNewIndependentUIs, 40);
   assert.equal(ledger.accounts.covers, 0);
   assert.equal(ledger.accounts.browserVisualQA, 0);
-  assert.match(readme, /已核新增独立 UI 5/);
+  assert.match(readme, /已核新增独立 UI 40/);
   assert.doesNotMatch(readme, /已核新增独立 UI 3/);
   assert.doesNotMatch(readme, /已核新增独立 UI 0/);
-  assert.match(readme, /已核库存仍为 241/);
+  assert.match(readme, /已核库存现为 276/);
   assert.match(readme, /封面 0/);
   assert.match(readme, /真实浏览器整矩阵实测 0/);
   assert.equal(manifest.items.length, 52);
@@ -301,8 +313,8 @@ test('public consumers current fields match the limited countable ledger', () =>
     assert.doesNotMatch(joined, /不能称为已核独立/);
     assert.doesNotMatch(joined, /也不是已核独立/);
   }
-  const otherManifest = manifest.items.filter((x) => !MANTINE_IDS.includes(x.id));
-  assert.equal(otherManifest.length, 49);
+  const otherManifest = manifest.items.filter((x) => !MANTINE_IDS.includes(x.id) && !CLASSIFIED_IDS.includes(x.id));
+  assert.equal(otherManifest.length, 18);
   for (const item of otherManifest) {
     assert.match(item.gaps[0], /不能称为已核独立/);
   }
@@ -352,17 +364,17 @@ test('page export projects the named limited-countable records and leaves covers
   const out = await mkdtemp(join(tmpdir(), 'ui-vault-export-acceptances-'));
   try {
     const version = await exportPages(out);
-    assert.equal(version.collectionAccounting.verifiedNewIndependentUIs, 5);
+    assert.equal(version.collectionAccounting.verifiedNewIndependentUIs, 40);
     assert.deepEqual(version.collectionAccounting.verifiedNewIndependentRecords.map((r) => r.id), EXPECTED_IDS);
     assert.equal(version.collectionAccounting.covers, 0);
     assert.equal(version.collectionAccounting.browserVisualQA, 0);
-    assert.equal(version.materials, 241);
-    assert.equal(version.posters, 241);
-    assert.notEqual(version.candidates, 241);
+    assert.equal(version.materials, 276);
+    assert.equal(version.posters, 276);
+    assert.notEqual(version.candidates, 276);
     const exportedLedger = JSON.parse(await readFile(join(out, 'COLLECTION-LEDGER.json'), 'utf8'));
     assert.deepEqual(exportedLedger.accounts, JSON.parse(readFileSync(join(ROOT, 'COLLECTION-LEDGER.json'), 'utf8')).accounts);
     const exportedReadme = await readFile(join(out, 'README.md'), 'utf8');
-    assert.match(exportedReadme, /已核新增独立 UI 5/);
+    assert.match(exportedReadme, /已核新增独立 UI 40/);
     assert.doesNotMatch(exportedReadme, /已核新增独立 UI 3/);
     assert.doesNotMatch(exportedReadme, /已核新增独立 UI 0/);
     const exportedCatalog = JSON.parse(await readFile(join(out, 'candidate-catalog.json'), 'utf8'));
@@ -451,7 +463,7 @@ const HOST_UNCHANGED_FROM_QUALIFYING_SOURCE_TO_BASELINE = [
   'apps/atlas-sample/index.html',
 ];
 
-test('ledger keeps the original three Mantine records and appends two unique limited-countable records without duplication', () => {
+test('ledger retains the earlier frozen records and appends unique scoped qualifications without duplication', () => {
   const ledger = JSON.parse(readFileSync(join(ROOT, 'COLLECTION-LEDGER.json'), 'utf8'));
   const frozen = JSON.parse(gitBlob(BASELINE_COMMIT, 'apps/atlas-sample/COLLECTION-LEDGER.json').toString('utf8'));
   assert.equal(frozen.accounts.verifiedNewIndependentUIs, 3);
@@ -462,9 +474,9 @@ test('ledger keeps the original three Mantine records and appends two unique lim
   }
   const ids = ledger.verifiedNewIndependentRecords.map((r) => r.id);
   assert.deepEqual(ids, EXPECTED_IDS);
-  assert.equal(ids.length, 5);
-  assert.equal(new Set(ids).size, 5);
-  assert.equal(ledger.accounts.verifiedNewIndependentUIs, 5);
+  assert.equal(ids.length, 40);
+  assert.equal(new Set(ids).size, 40);
+  assert.equal(ledger.accounts.verifiedNewIndependentUIs, 40);
   assert.equal(ledger.accounts.covers, 0);
   assert.equal(ledger.accounts.browserVisualQA, 0);
   for (const id of ADDITIONAL_LIMITED_COUNTABLE_IDS) {
@@ -477,17 +489,17 @@ test('ledger keeps the original three Mantine records and appends two unique lim
   }
 });
 
-test('page-head status and ledger markdown project the same named five records', () => {
+test('page-head status and ledger markdown project the same named limited records', () => {
   const acc = collectionAccountingFrom(
     JSON.parse(readFileSync(join(ROOT, 'candidate-catalog.json'), 'utf8')),
     JSON.parse(readFileSync(join(ROOT, 'COLLECTION-LEDGER.json'), 'utf8')),
   );
   const status = formatCollectionAccountingStatus(acc);
-  assert.match(status, /已核新增独立 UI 5，均为限定可计/);
+  assert.match(status, /已核新增独立 UI 40，均为限定可计/);
   assert.match(status, /封面 0/);
   assert.doesNotMatch(status, /已核新增独立 UI 3/);
   const ledgerMd = readFileSync(join(ROOT, 'COLLECTION-LEDGER.md'), 'utf8');
-  assert.match(ledgerMd, /已核新增独立 UI = 5/);
+  assert.match(ledgerMd, /已核新增独立 UI = 40/);
   assert.doesNotMatch(ledgerMd, /已核新增独立 UI = 3/);
   const page = readFileSync(join(ROOT, 'candidates.html'), 'utf8');
   assert.match(page, /id="collection-accounting"/);
@@ -544,5 +556,25 @@ test('accepted DaisyUI and HyperUI previews compose through the live host adapte
     const composed = composePreview(html, css, js, runtime, mapping);
     assert.equal(sha256(composed), expect.composedSha256, id);
     assert.equal(Buffer.byteLength(composed), expect.composedBytes, id);
+  }
+});
+
+// The source-input index covers 55; the sealed verdict table selects only 35.
+test('classified evidence rejects a source index or verdict table substituted for the qualifying pair', () => {
+  const records = JSON.parse(readFileSync(join(ROOT, 'COLLECTION-LEDGER.json'), 'utf8')).verifiedNewIndependentRecords;
+  const earlier = JSON.parse(gitBlob(CLASSIFIED_SOURCE_COMMIT, 'apps/atlas-sample/COLLECTION-LEDGER.json')).verifiedNewIndependentRecords;
+  assert.deepEqual(records.slice(0, 5), earlier);
+  for (const {id, scope} of CLASSIFIED_SCOPES) {
+    const record = records.find(x => x.id === id);
+    assert.equal(record.scope, '限定范围：' + scope, id);
+    for (const [field, wrong] of [
+      ['reviewSha256', CLASSIFIED_INPUT_MANIFEST_SHA256],
+      ['frozenPathsSha256', CLASSIFIED_QUALIFICATION_TABLE_SHA256],
+      ['qualificationTableSha256', CLASSIFIED_INPUT_MANIFEST_SHA256],
+    ]) {
+      const changed = structuredClone(records);
+      changed.find(x => x.id === id).evidence[field] = wrong;
+      assert.throws(() => assertLimitedCountableQualifyingEvidence(changed), {name:'AssertionError'}, id+' '+field);
+    }
   }
 });
