@@ -24,3 +24,6 @@
 | `merakiui:form-search` | 搜索框 | [form-search.html](form-search.html) | [originals/form-search.html](originals/form-search.html) |
 | `merakiui:form-account-settings` | 账户设置表单 | [form-account-settings.html](form-account-settings.html) | [originals/form-account-settings.html](originals/form-account-settings.html) |
 | `merakiui:blog-single-post` | 博文阅读页 | [blog-single-post.html](blog-single-post.html) | [originals/blog-single-post.html](originals/blog-single-post.html) |
+
+## 2026-11-12 alerts-error 关闭按钮（上游范围）
+公开站 GUI（见证据目录 public-gui-six/REPORT.md 原件，本处只引用）观察：点击关闭后提示仍在，仅见焦点样式。对照原件与预览，关闭按钮均无 onclick / 关闭脚本 / Alpine 接线，与上游静态标记一致。此为仅呈现，不补造关闭业务动作，不因此判整批失败，也不称为交互通过。

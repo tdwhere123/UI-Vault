@@ -46,3 +46,9 @@
 | `hyperui:templates-support-inbox` | 客服收件箱整页 | [templates-support-inbox.html](templates-support-inbox.html) | [originals/templates-support-inbox.html](originals/templates-support-inbox.html) |
 
 `hyperui:application-dropdown` 的官方原件是静态展开菜单；可交互预览的开闭由同目录本地适配器 `dropdown-menu-preview.js` 提供，不改 `originals/`。共享 `runtime.js` 的链接与表单拦截未改。 真实浏览器复测仍待上线后进行。
+
+## 2026-11-12 Chart.js 许可文本
+application-charts 的 ZIP 内本就有与 chartjs/Chart.js 标签 v4.5.1 官方正文字节相同的 `chart.js/LICENSE.md`，runtime.js 亦为 4.5.1。独立核验按批内工作树记为「本批无随包文本」。现将同一官方正文放到批目录 `chart.js/LICENSE.md`，ZIP 未改。不因此把该条升为权利已齐之外的正式入库。
+
+## 2026-11-12 application-breadcrumbs 公开站观察与上游范围
+公开站 GUI（public-gui-six/REPORT.md 原件）观察：静态层级 Home › Category › Product 可见，链接目标均为 `#`。属静态层级呈现，未要求状态交互，不把未点击写成交互通过。

@@ -9,3 +9,6 @@ Tabler 代码为 MIT。`dist/libs` 中的第三方库保持各自许可，原文
 支付图标 CSS 中内嵌的商标图形单独列为商标/Unknown，不宣称权利齐。
 两步验证的“选择方式”与“输入验证码”是同一工作流的连续屏幕，已合并为一个候选，源码包同时保留两份官方原件。
 未做浏览器验收，无封面，不计入已核库存。
+
+## 2026-11-12 预览头像接线（activity / auth-lock / billing / clipboard）
+这四条预览原先仍引用盘上不存在的 `./static/avatars/*.jpg`。现已改接本批既有自有哈希占位 `assets/ph-[40hex].jpg`（14 张循环，稳定映射见证据目录 `raw/tabler-avatar-placeholder-map-20261112.json`），并加上 `data-atlas-placeholder` 与「自有占位，不是原图复刻」说明。原件仍保留官方路径，不把不明权属官方头像再分发。不宣称视觉复刻或权利已齐。

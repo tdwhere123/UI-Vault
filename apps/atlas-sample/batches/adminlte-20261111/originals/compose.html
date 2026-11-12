@@ -1,6 +1,9 @@
 <!doctype html>
 <html lang="en">
   <head>
+  <!-- 本地可用适配（2026-11-12）：样式改用已证明包含 AdminLTE/Bootstrap/OverlayScrollbars/Source Sans 3/Bootstrap Icons 的 runtime.css；去掉失效的 adminlte.css 引用。官方 CDN 样式链接保留作出处。runtime.css 不含 FullCalendar 插件样式（calendar 原件若仍有其 CDN，该插件样式缺口未闭合）。 -->
+  <link rel="stylesheet" href="runtime.css">
+
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>AdminLTE 4 | Mailbox - Compose</title>
 
@@ -68,8 +71,7 @@
     <!--begin::Accessibility Features-->
     <!-- Skip links will be dynamically added by accessibility.js -->
     <meta name="supported-color-schemes" content="light dark" />
-    <link rel="preload" href="../css/adminlte.css" as="style" />
-    <!--end::Accessibility Features-->
+<!--end::Accessibility Features-->
 
     <!--begin::Fonts-->
     <link
@@ -99,8 +101,7 @@
     <!--end::Third Party Plugin(Bootstrap Icons)-->
 
     <!--begin::Required Plugin(AdminLTE)-->
-    <link rel="stylesheet" href="../css/adminlte.css" />
-    <!--end::Required Plugin(AdminLTE)-->
+<!--end::Required Plugin(AdminLTE)-->
   </head>
   <body class="layout-fixed sidebar-expand-lg bg-body-tertiary">
     <div class="app-wrapper">
