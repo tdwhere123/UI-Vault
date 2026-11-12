@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Toggle-switches/AbanoubMagdy1_pink-panda-32.html</title>
+<link rel="stylesheet" href="runtime.css">
+<style>
+  /* preview shell only; official rules stay in the sourced snippet */
+  html,body{margin:0;min-height:100%;background:#f4f4f5;color:#111;}
+  body{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px;box-sizing:border-box;}
+</style>
+</head>
+<body>
+<!-- official Uiverse Galaxy snippet follows; bytes identical to official path -->
+<label class="switch">
+  <input type="checkbox">
+  <span class="slider"></span>
+</label>
+<style>
+/* From Uiverse.io by AbanoubMagdy1 - Tags: switch */
+/* The switch - the box around the slider */
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.4em;
+  width: 1.4em;
+  border-radius: 20px;
+  left: 0.3em;
+  bottom: 0.3em;
+  background-color: white;
+  transition: .3s cubic-bezier(0,2.18,.64,.69);
+}
+
+input:checked + .slider {
+  background-color: #3bd826;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #3bd826;
+}
+
+input:checked + .slider:before {
+  transform: translateX(1.5em);
+}
+</style>
+</body>
+<script src="runtime.js"></script>
+</html>

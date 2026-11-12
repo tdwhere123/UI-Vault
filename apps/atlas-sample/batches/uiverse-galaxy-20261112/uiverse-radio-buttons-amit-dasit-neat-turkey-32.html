@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Radio-buttons/AmIt-DasIT_neat-turkey-32.html</title>
+<link rel="stylesheet" href="runtime.css">
+<style>
+  /* preview shell only; official rules stay in the sourced snippet */
+  html,body{margin:0;min-height:100%;background:#f4f4f5;color:#111;}
+  body{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px;box-sizing:border-box;}
+</style>
+</head>
+<body>
+<!-- official Uiverse Galaxy snippet follows; bytes identical to official path -->
+<div class="radio-input">
+  <label class="label">
+    <input type="radio" name="radio" checked="">
+    <span class="check"></span>
+  </label>
+  <label class="label">
+    <input type="radio" name="radio">
+    <span class="check"></span>
+  </label>
+      
+  <label class="label">
+    <input type="radio" name="radio">
+    <span class="check"></span>
+  </label>
+</div>
+<style>
+/* From Uiverse.io by AmIt-DasIT - Tags: dark, shadow, radio, neumorphism */
+.radio-input .label input {
+  display: none;
+}
+
+.radio-input {
+  display: flex;
+  gap: 20px;
+}
+
+.radio-input .label {
+  display: flex;
+}
+
+.radio-input .label .check {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+  border: 3px solid transparent;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5),
+   -1px -1px 4px rgba(255, 255, 255, 0.5);
+}
+
+.radio-input .label input:checked + .check {
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5),
+   -1px -1px 4px rgba(255, 255, 255, 0.5),
+   inset 3px 3px 6px rgba(0, 0, 0, 0.5),
+   inset -1px -1px 4px rgba(255, 255, 255, 0.5);
+  transform: scale(1.1);
+}
+</style>
+</body>
+<script src="runtime.js"></script>
+</html>

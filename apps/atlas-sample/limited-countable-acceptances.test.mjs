@@ -139,7 +139,8 @@ test('named limited-countable records are the authority for the verified new ind
   assert.equal(acc.oldSourceReconnects, 22);
   assert.equal(acc.duplicateOriginalExclusions, 1);
   assert.equal(acc.novelSourceIdentityUpperBound, 531);
-  assert.equal(acc.catalogRecordCount, 1226);
+  // Catalog record count is not the formal 40 or the identity upper bound.
+  assert.equal(acc.catalogRecordCount, 1281);
   for (const id of ADDITIONAL_LIMITED_COUNTABLE_IDS) assert.equal(ids.includes(id), true);
   for (const record of acc.verifiedNewIndependentRecords) {
     if (MANTINE_IDS.includes(record.id)) assert.equal(record.sourceCommit, SOURCE_COMMIT);
