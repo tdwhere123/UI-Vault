@@ -66,3 +66,19 @@ test('inventory details preserve the frozen candidate runtime, source, ZIP and p
   for(const file of [item.code,item.bundle,item.thumbnail])assert(readFileSync(new URL(file,ROOT)).length>0,id);
  }
 });
+
+test('classified inventory keywords drop present-tense independence denials and keep searchable identity',()=>{
+ const presentDenial=/此为源码级独立性初筛，跨源视觉去重待核，不能称为已核独立/;
+ const denied=[];
+ for(const {id} of input.qualified){
+  const item=items.find(x=>x.id===id);assert(item,id);
+  const row=catalog.find(x=>x.id===id);assert(row,id);
+  assert.equal(typeof item.keywords,'string',id);
+  assert.equal(item.keywords,row.keywords,id);
+  assert(item.keywords.includes(item.title),`${id} keywords must include title`);
+  assert(item.keywords.includes(item.id),`${id} keywords must include id`);
+  assert(item.keywords.includes(item.source),`${id} keywords must include source`);
+  if(presentDenial.test(item.keywords)||item.keywords.includes('不能称为已核独立'))denied.push(id);
+ }
+ assert.deepEqual(denied,[],'present-tense independence denial remains in keywords: '+denied.join(', '));
+});
